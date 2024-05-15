@@ -69,4 +69,5 @@ export {
   ChevronLeftIcon,
   ChevronRightIcon,
   DotsHorizontalIcon,
+  PlusIcon,
 } from "@radix-ui/react-icons";

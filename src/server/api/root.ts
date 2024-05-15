@@ -1,8 +1,8 @@
-import { userRouter } from "./routers/user/user.procedure";
+import { classroomRouter } from "./routers/classroom/classroom.procedure";
 import { createTRPCRouter } from "./trpc";
 
 export const appRouter = createTRPCRouter({
-  user: userRouter,
+  classroom: classroomRouter,
 });
 
 export type AppRouter = typeof appRouter;

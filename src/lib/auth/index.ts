@@ -5,6 +5,7 @@ import { env } from "@/env.js";
 import { db } from "@/server/db";
 import { sessions, users, type User as DbUser } from "@/server/db/schema";
 import { absoluteUrl } from "@/lib/utils"
+import { type Roles } from "../constants";
 
 const adapter = new DrizzlePostgreSQLAdapter(db, sessions, users);
 
@@ -17,7 +18,7 @@ export const lucia = new Lucia(adapter, {
       id: attributes.id,
       email: attributes.email,
       emailVerified: attributes.emailVerified,
-      role: attributes.role,
+      role: attributes.role as Roles,
       avatar: attributes.avatar,
       createdAt: attributes.createdAt,
       updatedAt: attributes.updatedAt,
