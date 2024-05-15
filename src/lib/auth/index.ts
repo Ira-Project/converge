@@ -1,14 +1,10 @@
 import { Lucia, TimeSpan } from "lucia";
-import { Discord } from "arctic";
+import { Google } from "arctic";
 import { DrizzlePostgreSQLAdapter } from "@lucia-auth/adapter-drizzle";
 import { env } from "@/env.js";
 import { db } from "@/server/db";
 import { sessions, users, type User as DbUser } from "@/server/db/schema";
 import { absoluteUrl } from "@/lib/utils"
-
-// Uncomment the following lines if you are using nodejs 18 or lower. Not required in Node.js 20, CloudFlare Workers, Deno, Bun, and Vercel Edge Functions.
-// import { webcrypto } from "node:crypto";
-// globalThis.crypto = webcrypto as Crypto;
 
 const adapter = new DrizzlePostgreSQLAdapter(db, sessions, users);
 
@@ -37,10 +33,10 @@ export const lucia = new Lucia(adapter, {
   },
 });
 
-export const discord = new Discord(
-  env.DISCORD_CLIENT_ID,
-  env.DISCORD_CLIENT_SECRET,
-  absoluteUrl("/login/discord/callback")
+export const google = new Google(
+  env.GOOGLE_CLIENT_ID,
+  env.GOOGLE_CLIENT_SECRET,
+  absoluteUrl("/login/google/callback")
 );
 
 declare module "lucia" {

@@ -8,7 +8,6 @@
  */
 
 import { uncachedValidateRequest } from "@/lib/auth/validate-request";
-import { stripe } from "@/lib/stripe";
 import { db } from "@/server/db";
 import { initTRPC, TRPCError, type inferAsyncReturnType } from "@trpc/server";
 import superjson from "superjson";
@@ -33,7 +32,6 @@ export const createTRPCContext = async (opts: { headers: Headers }) => {
     user,
     db,
     headers: opts.headers,
-    stripe: stripe,
   };
 };
 

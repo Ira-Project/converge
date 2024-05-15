@@ -71,7 +71,7 @@ export async function login(_: any, formData: FormData): Promise<ActionResponse<
   const session = await lucia.createSession(existingUser.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
-  return redirect(Paths.Dashboard);
+  return redirect(Paths.Home);
 }
 
 export async function signup(_: any, formData: FormData): Promise<ActionResponse<SignupInput>> {
@@ -186,7 +186,7 @@ export async function verifyEmail(_: any, formData: FormData): Promise<{ error: 
   const session = await lucia.createSession(user.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
-  redirect(Paths.Dashboard);
+  redirect(Paths.Home);
 }
 
 export async function sendPasswordResetLink(
@@ -253,7 +253,7 @@ export async function resetPassword(
   const session = await lucia.createSession(dbToken.userId, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
-  redirect(Paths.Dashboard);
+  redirect(Paths.Home);
 }
 
 const timeFromNow = (time: Date) => {

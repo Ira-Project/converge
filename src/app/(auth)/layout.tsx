@@ -2,7 +2,9 @@ import type { ReactNode } from "react";
 
 const AuthLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="grid min-h-screen place-items-center p-4">{children}</div>
+    <main className="h-screen flex items-center justify-center">
+      {children}
+    </main>
   );
 };
 

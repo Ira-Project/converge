@@ -1,5 +1,5 @@
 {
-  "name": "next-lucia-auth",
+  "name": "ira-project",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -12,8 +12,7 @@
     "dev": "next dev",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit",
-    "stripe:listen": "stripe listen --forward-to localhost:3000/api/webhooks/stripe --latest"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.3.4",
@@ -52,7 +51,6 @@
     "remark-gfm": "^4.0.0",
     "server-only": "^0.0.1",
     "sonner": "^1.4.41",
-    "stripe": "^14.25.0",
     "superjson": "^2.2.1",
     "tailwind-merge": "^2.2.2",
     "tailwindcss-animate": "^1.0.7",
