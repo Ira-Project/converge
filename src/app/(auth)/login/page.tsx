@@ -11,7 +11,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { APP_TITLE } from "@/lib/constants";
-import { LoginForm } from "./_components/login-form";
+import { LoginForm } from "./login-form";
 import { GoogleSignIn } from "../../../components/google-signin";
 
 export const metadata = {

@@ -1,14 +1,11 @@
 "use server";
 
-/* eslint @typescript-eslint/no-explicit-any:0, @typescript-eslint/prefer-optional-chain:0 */
-
-import { z } from "zod";
+import { z } from "zod"; 
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { generateId, Scrypt } from "lucia";
 import { isWithinExpirationDate, TimeSpan, createDate } from "oslo";
 import { generateRandomString, alphabet } from "oslo/crypto";
-import { eq } from "drizzle-orm";
 import { lucia } from "@/lib/auth";
 import { db } from "@/server/db";
 import {
@@ -23,13 +20,14 @@ import { sendMail, EmailTemplate } from "@/lib/email";
 import { validateRequest } from "@/lib/auth/validate-request";
 import { Paths } from "../constants";
 import { env } from "@/env";
+import { eq } from "drizzle-orm";
 
 export interface ActionResponse<T> {
   fieldError?: Partial<Record<keyof T, string | undefined>>;
   formError?: string;
 }
 
-export async function login(_: any, formData: FormData): Promise<ActionResponse<LoginInput>> {
+export async function login(_: unknown, formData: FormData): Promise<ActionResponse<LoginInput>> {
   const obj = Object.fromEntries(formData.entries());
 
   const parsed = loginSchema.safeParse(obj);
@@ -55,7 +53,7 @@ export async function login(_: any, formData: FormData): Promise<ActionResponse<
     };
   }
 
-  if (!existingUser || !existingUser?.hashedPassword) {
+  if (!existingUser?.hashedPassword) {
     return {
       formError: "Incorrect email or password",
     };
@@ -74,7 +72,7 @@ export async function login(_: any, formData: FormData): Promise<ActionResponse<
   return redirect(Paths.Home);
 }
 
-export async function signup(_: any, formData: FormData): Promise<ActionResponse<SignupInput>> {
+export async function signup(_: unknown, formData: FormData): Promise<ActionResponse<SignupInput>> {
   const obj = Object.fromEntries(formData.entries());
 
   const parsed = signupSchema.safeParse(obj);
@@ -143,7 +141,7 @@ export async function resendVerificationEmail(): Promise<{
     where: (table, { eq }) => eq(table.userId, user.id),
     columns: { expiresAt: true },
   });
-
+  
   if (lastSent && isWithinExpirationDate(lastSent.expiresAt)) {
     return {
       error: `Please wait ${timeFromNow(lastSent.expiresAt)} before resending`,
@@ -155,7 +153,7 @@ export async function resendVerificationEmail(): Promise<{
   return { success: true };
 }
 
-export async function verifyEmail(_: any, formData: FormData): Promise<{ error: string } | void> {
+export async function verifyEmail(_: unknown, formData: FormData): Promise<{ error: string } | void> {
   const code = formData.get("code");
   if (typeof code !== "string" || code.length !== 8) {
     return { error: "Invalid code" };
@@ -190,7 +188,7 @@ export async function verifyEmail(_: any, formData: FormData): Promise<{ error: 
 }
 
 export async function sendPasswordResetLink(
-  _: any,
+  _: unknown,
   formData: FormData,
 ): Promise<{ error?: string; success?: boolean }> {
   const email = formData.get("email");
@@ -218,7 +216,7 @@ export async function sendPasswordResetLink(
 }
 
 export async function resetPassword(
-  _: any,
+  _: unknown,
   formData: FormData,
 ): Promise<{ error?: string; success?: boolean }> {
   const obj = Object.fromEntries(formData.entries());
@@ -271,7 +269,7 @@ async function generateEmailVerificationCode(userId: string, email: string): Pro
     userId,
     email,
     code,
-    expiresAt: createDate(new TimeSpan(10, "m")), // 10 minutes
+    expiresAt: createDate(new TimeSpan(2, "m")), // 2 minutes
   });
   return code;
 }

@@ -24,7 +24,7 @@ export const VerifyCode = () => {
     if (resendState?.error) {
       toast(resendState.error, {
         icon: <ExclamationTriangleIcon className="h-5 w-5 text-destructive" />,
-      });
+      }); 
     }
   }, [resendState?.error, resendState?.success]);
 

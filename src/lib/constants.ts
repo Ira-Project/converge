@@ -1,6 +1,6 @@
 export const APP_TITLE = "Ira Project";
 export const DATABASE_PREFIX = "ira_project";
-export const EMAIL_SENDER = '"Acme" <noreply@acme.com>';
+export const EMAIL_SENDER = 'contact@iraproject.com';
 
 export enum Paths {
   Home = "/",
