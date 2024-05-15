@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import {
   DropdownMenu,
   DropdownMenuLabel,
@@ -10,8 +9,6 @@ import {
 import {
   DropdownMenuTrigger,
   DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
 import {
   AlertDialog,

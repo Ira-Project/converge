@@ -27,7 +27,7 @@ export default async function SignupPage() {
   return (
     <Card className="w-[400px]">
       <CardHeader className="flex items-center mb-4">
-        <Image src="/logo.png" alt="Ira Logo" width={48} height={48} />
+        <Image src="/images/logo.png" alt="Ira Logo" width={48} height={48} />
         <CardTitle>{APP_TITLE}</CardTitle>
       </CardHeader>
       <CardContent>

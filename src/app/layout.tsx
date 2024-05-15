@@ -11,7 +11,7 @@ import { APP_TITLE } from "@/lib/constants";
 export const metadata: Metadata = {
   title: APP_TITLE,
   description: "Learn by teaching your AI buddy",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+  icons: [{ rel: "icon", url: "/images/favicon.ico" }],
 };
 
 export const viewport: Viewport = {

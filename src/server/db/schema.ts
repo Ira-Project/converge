@@ -6,7 +6,7 @@ import {
   timestamp,
   varchar,
 } from "drizzle-orm/pg-core";
-import { DATABASE_PREFIX as prefix } from "@/lib/constants";
+import { Roles, DATABASE_PREFIX as prefix } from "@/lib/constants";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -14,7 +14,7 @@ export const users = pgTable(
   "users",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
-    role: varchar("role", { length: 255 }).default("student").notNull(),
+    role: varchar("role", { length: 255 }).default(Roles.Student).notNull(),
     email: varchar("email", { length: 255 }).unique().notNull(),
     emailVerified: boolean("email_verified").default(false).notNull(),
     hashedPassword: varchar("hashed_password", { length: 255 }),

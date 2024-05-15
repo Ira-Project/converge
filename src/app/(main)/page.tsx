@@ -8,7 +8,7 @@ import { redirect } from "next/navigation";
   
   return (
     <>
-      <main className="h-screen flex items-center justify-center">
+      <main className="flex items-center justify-center">
         HOME
       </main>
     </>

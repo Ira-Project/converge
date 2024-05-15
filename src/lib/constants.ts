@@ -9,3 +9,8 @@ export enum Paths {
   VerifyEmail = "/verify-email",
   ResetPassword = "/reset-password",
 }
+
+export enum Roles {
+  Student = "student",
+  Teacher = "teacher",
+}

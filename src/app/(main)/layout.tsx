@@ -1,12 +1,12 @@
 import { type ReactNode } from "react";
-import { Header } from "./_components/header";
+import { Navbar } from '@/components/navbar';
 
 const MainLayout = ({ children }: { children: ReactNode }) => {
   return (
-    <>
-      <Header />
+    <div>
+      <Navbar />
       {children}
-    </>
+    </div>
   );
 };
 
