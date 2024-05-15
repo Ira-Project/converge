@@ -54,28 +54,6 @@ export const UserDropdown = ({
           {email}
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuGroup>
-          <DropdownMenuItem
-            className="cursor-pointer text-muted-foreground"
-            asChild
-          >
-            <Link href="/dashboard">Dashboard</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem
-            className="cursor-pointer text-muted-foreground"
-            asChild
-          >
-            <Link href="/dashboard/billing">Billing</Link>
-          </DropdownMenuItem>
-          <DropdownMenuItem
-            className="cursor-pointer text-muted-foreground"
-            asChild
-          >
-            <Link href="/dashboard/settings">Settings</Link>
-          </DropdownMenuItem>
-        </DropdownMenuGroup>
-        <DropdownMenuSeparator />
-
         <DropdownMenuLabel className="p-0">
           <SignoutConfirmation />
         </DropdownMenuLabel>
@@ -121,7 +99,7 @@ const SignoutConfirmation = () => {
             Sign out from {APP_TITLE}?
           </AlertDialogTitle>
           <AlertDialogDescription>
-            You will be redirected to the home page.
+            You will be redirected to the login page.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <div className="flex flex-col-reverse gap-2 sm:flex-row sm:justify-center">
