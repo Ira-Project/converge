@@ -1,15 +1,11 @@
 'use client';
 import { useRouter } from 'next/navigation'
 
-import { CreateClassroomForm } from "./create-classroom-form";
+import { JoinClassroomForm } from "./join-classroom-form";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { type RouterOutputs } from '@/trpc/shared';
 
-interface Props {
-  subjects: RouterOutputs["subject"]["list"];
-}
 
-export default function CreateClassroomModal({ subjects } : Props) {
+export default function JoinClassroomModal() {
 
   const router = useRouter();
 
@@ -20,10 +16,10 @@ export default function CreateClassroomModal({ subjects } : Props) {
       <DialogContent>
         <DialogHeader>
           <DialogTitle className="flex flex-row items-center">
-            Create Classroom
+            Join Classroom
           </DialogTitle>
         </DialogHeader>
-        <CreateClassroomForm subjects={subjects} />
+        <JoinClassroomForm />
       </DialogContent>
     </Dialog>
   );

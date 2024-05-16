@@ -9,6 +9,7 @@ import { users } from "@/server/db/schema";
 
 type GoogleUser = {
   id: string;
+  name: string | null;
   email: string | null;
   picture: string | null;
 }
@@ -37,7 +38,7 @@ export async function GET(request: Request): Promise<Response> {
     });
     const user = (await response.json()) as GoogleUser; 
 
-    if (!user.email) {
+    if (!user.email || !user.name) {
       return new Response(
         JSON.stringify({
           error: "Your Google account must have a verified email address.",
@@ -55,6 +56,7 @@ export async function GET(request: Request): Promise<Response> {
       const userId = generateId(21);
       await db.insert(users).values({
         id: userId,
+        name: user.name,
         email: user.email,
         emailVerified: true,
         avatar: user.picture,

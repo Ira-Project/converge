@@ -6,3 +6,9 @@ export const createClassroomSchema = z.object({
   subject: z.string(),
 });
 export type CreateClassroomInput = z.infer<typeof createClassroomSchema>;
+
+export const joinClassroomSchema = z.object({
+  code: z.string().min(5).max(5),
+  name: z.string(),
+});
+export type JoinClassroomInput = z.infer<typeof joinClassroomSchema>;

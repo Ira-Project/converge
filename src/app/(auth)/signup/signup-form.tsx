@@ -16,6 +16,15 @@ export const SignUpForm: React.FC = () => {
     <>
       <form action={formAction} className="grid gap-4">
         <div className="space-y-1.5">
+          <Label>Name</Label>
+          <Input
+            required
+            placeholder="Enter your full name"
+            autoComplete="name"
+            name="name"
+          />
+        </div>
+        <div className="space-y-1.5">
           <Label>Email</Label>
           <Input
             required

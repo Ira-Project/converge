@@ -36,7 +36,7 @@ import Link from "next/link";
           </div>
           <Separator />
           <Suspense fallback={ <ClassroomCardSkeleton /> }>
-            <div className="flex flex-row gap-6 max-w-full overflow-x-scroll"> 
+            <div className="flex flex-row gap-6 max-w-full overflow-x-scroll pb-6"> 
               {classrooms?.map((classroom) => (
                 <div key={classroom.classroom.id} className="flex flex-row"> 
                   <ClassroomCard key={classroom.classroom.id} classroom={classroom.classroom} />

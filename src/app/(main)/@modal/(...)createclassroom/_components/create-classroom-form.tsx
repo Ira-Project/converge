@@ -11,8 +11,8 @@ import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { LoadingButton } from "@/components/loading-button";
 import { api } from "@/trpc/react";
-
 import { type RouterOutputs } from '@/trpc/shared';
+import { revalidateClassroomListQuery } from "../../_actions/revalidateCache";
 
 interface Props {
   subjects: RouterOutputs["subject"]["list"];
@@ -34,6 +34,7 @@ export const CreateClassroomForm = ({ subjects }: Props) => {
 
   const onSubmit = form.handleSubmit(async (values) => {
     const id = await createClassroom.mutateAsync({...values});
+    await revalidateClassroomListQuery();
     router.replace(`/classroom/${id}`)
   });
 

@@ -86,7 +86,7 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
     };
   }
 
-  const { email, password } = parsed.data;
+  const { email, password, name } = parsed.data;
 
   const existingUser = await db.query.users.findFirst({
     where: (table, { eq }) => eq(table.email, email),
@@ -103,6 +103,7 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
   const hashedPassword = await new Scrypt().hash(password);
   await db.insert(users).values({
     id: userId,
+    name,
     email,
     hashedPassword,
   });
