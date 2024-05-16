@@ -9,6 +9,7 @@ import { Suspense } from "react";
 import { ClassroomCard } from "./_components.tsx/classroom-card";
 import { ClassroomCardSkeleton } from "./_components.tsx/classroom-skeleton";
 import Link from "next/link";
+import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
  export default async function SignIn({}) {
   const { user } = await validateRequest();
@@ -36,13 +37,16 @@ import Link from "next/link";
           </div>
           <Separator />
           <Suspense fallback={ <ClassroomCardSkeleton /> }>
-            <div className="flex flex-row gap-6 max-w-full overflow-x-scroll pb-6"> 
-              {classrooms?.map((classroom) => (
-                <div key={classroom.classroom.id} className="flex flex-row"> 
-                  <ClassroomCard key={classroom.classroom.id} classroom={classroom.classroom} />
-                </div>
-              ))}
-            </div>
+            <ScrollArea className="w-full whitespace-nowrap rounded-md overscroll-x-contain">
+              <div className="flex flex-row gap-6 w-max pb-6"> 
+                {classrooms?.map((classroom) => (
+                  <div key={classroom.classroom.id} className="flex flex-row"> 
+                    <ClassroomCard key={classroom.classroom.id} classroom={classroom.classroom} />
+                  </div>
+                ))}
+              </div>
+              <ScrollBar orientation="horizontal" />
+            </ScrollArea>
         </Suspense>
         </div>
       </main>
