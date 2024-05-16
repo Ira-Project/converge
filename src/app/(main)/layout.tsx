@@ -1,11 +1,12 @@
 import { type ReactNode } from "react";
 import { Navbar } from '@/components/navbar';
 
-const MainLayout = ({ children }: { children: ReactNode }) => {
+const MainLayout = ({ modal, children }: { modal: ReactNode, children: ReactNode }) => {
   return (
     <div>
       <Navbar />
-      {children}
+      <div>{modal}</div>
+      <div>{children}</div>
     </div>
   );
 };

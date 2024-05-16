@@ -86,6 +86,7 @@ export const classrooms = pgTable(
     name: varchar("name", { length: 255 }).notNull(),
     description: varchar("description", { length: 255 }),
     subjectId: integer("subject_id").references(() => subjects.id),
+    code: varchar("code", { length: 8 }).unique().notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
@@ -113,6 +114,8 @@ export const subjects = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   }
 );
+
+export type Subjects = typeof subjects.$inferSelect;
 
 export const subjectRelations = relations(subjects, ({ many }) => ({
   classrooms: many(classrooms),

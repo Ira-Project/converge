@@ -29,7 +29,7 @@ export function ClassroomCard({ classroom } : ClassroomCardProps) {
     <Card className="w-96" key={classroom.id}>
       <CardHeader>
         <CardTitle>{classroom.name}</CardTitle>
-        <CardTitle>{classroom.subject?.name}</CardTitle>
+        <CardTitle>{classroom.subject?.name ? classroom.subject?.name : "_"}</CardTitle>
       </CardHeader>
       <CardContent>
         <CardDescription className="line-clamp-2">
