@@ -34,9 +34,9 @@ export const ClassroomList = async({ role } :  { role: Roles} ) => {
               </div>
             :
               <div className="text-muted-foreground flex flex-row"> 
-                No classrooms to show.{" "}
+                No classrooms to show. {" "} 
                 <Link href="/joinclassroom" className="underline"> Join one </Link>
-                {" "}to get started.
+                {" "} to get started.
               </div>
         }
       </Suspense>
