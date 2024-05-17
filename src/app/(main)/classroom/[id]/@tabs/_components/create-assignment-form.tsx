@@ -44,7 +44,7 @@ export const CreateAssignmentForm = ({ assignmentTemplates } : Props) => {
           name="assignmentTemplateId"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Choose a Topic to Assign</FormLabel>
+              <FormLabel asChild>Choose a Topic to Assign</FormLabel>
               <FormControl>
                 <Suspense fallback={ <Skeleton className="w-full h-8"/> } >
                   <Select value={field.value} name={field.name} onValueChange={field.onChange} >
@@ -71,9 +71,9 @@ export const CreateAssignmentForm = ({ assignmentTemplates } : Props) => {
                 </Suspense>
               </FormControl>
               <FormDescription>
-                Don't see what you're looking for? {" "}
-                <Link href="mailto:contact@iraproject.com">
-                  <span className="underline">Contact Us</span>
+                Don't see what you're looking for? Email us at {" "}
+                <Link href="mailto:contact@iraproject.com" target="_blank">
+                  <span className="underline">contact@iraproject.com</span>
                 </Link> 
                 {" "}
                 we'd be happy to create it for you.

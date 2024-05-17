@@ -26,7 +26,7 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
 }
 
 export const getClassroomTeachers = async (ctx: ProtectedTRPCContext, input: GetClassroomTeachersInput) => {
-  const teachers = await ctx.db.query.usersToClassrooms.findMany({
+  return await ctx.db.query.usersToClassrooms.findMany({
     where: (table, { eq }) => 
       and(
         eq(table.classroomId, input.id), 
@@ -46,11 +46,10 @@ export const getClassroomTeachers = async (ctx: ProtectedTRPCContext, input: Get
       }
     }
   });
-  return teachers.flatMap((teacher) => { teacher.createdAt, teacher.user } );
 }
 
 export const getClassroomStudents = async (ctx: ProtectedTRPCContext, input: GetClassroomStudentsInput) => {
-  const students = await ctx.db.query.usersToClassrooms.findMany({
+  return await ctx.db.query.usersToClassrooms.findMany({
     where: (table, { eq }) => 
       and(
         eq(table.classroomId, input.id), 
@@ -70,8 +69,6 @@ export const getClassroomStudents = async (ctx: ProtectedTRPCContext, input: Get
       }
     }
   });
-
-  return students.flatMap((student) => { student.createdAt, student.user } );
 }
 
 

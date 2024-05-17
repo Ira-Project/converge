@@ -1,6 +1,23 @@
 await import("./src/env.js");
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'lh3.googleusercontent.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'source.boringavatars.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'converge-ira-project.s3.ap-south-1.amazonaws.com'
+      }
+    ],
+  },
+};
 
 export default config;

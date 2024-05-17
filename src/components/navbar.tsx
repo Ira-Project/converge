@@ -7,7 +7,6 @@ import { ThemeToggle } from "@/components/theme-toggle";
 
 export const Navbar = async () => {
   const { user } = await validateRequest();
-
   return (
     <header className="sticky top-0 z-10 p-0">
       <div className="flex items-center gap-2 px-2 py-2 lg:px-4">
@@ -16,7 +15,7 @@ export const Navbar = async () => {
         </Link>
         <div className="ml-auto flex items-center gap-4">
           <ThemeToggle />
-          {user ? <UserDropdown email={user.email} avatar={user.avatar} /> : null}
+          {user ? <UserDropdown email={user.email} avatar={user.avatar} name={user.name}/> : null}
         </div>
       </div>
     </header>
