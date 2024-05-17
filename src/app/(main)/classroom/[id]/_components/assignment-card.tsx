@@ -15,24 +15,28 @@ interface AssignmentCardProps {
 export function AssignmentCard({ assignment } : AssignmentCardProps) {
   
   return (
-    <Card className="w-full p-4">
-      <div className="flex flex-row items-end">
-        <div>
-          <div className="text-lg font-semibold">
-            {assignment.name}
+    <>
+      <Card className="w-full p-4">
+        <div className="flex flex-row items-end">
+          <div>
+            <div className="text-lg font-normal">
+              {assignment.name}
+            </div>
+            <div className="font-light">
+              Probability
+            </div>
           </div>
-          Probability
-        </div>
-        <div className="ml-auto">
-          <div className="flex flex-row items-center">
-            <CalendarIcon className="w-4 h-4 mr-2" />
-            <CardDescription>
-              Due on {new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}
-            </CardDescription>
+          <div className="ml-auto">
+            <div className="flex flex-row items-center">
+              <CalendarIcon className="w-4 h-4 mr-2" />
+              <CardDescription>
+                Due on {new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}
+              </CardDescription>
+            </div>
           </div>
         </div>
-      </div>
-    </Card>
+      </Card>
+    </>
   );
 }
 

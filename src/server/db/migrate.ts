@@ -7,10 +7,17 @@ import * as assignment from "./schema/assignment";
 import * as classroom from "./schema/classroom";
 import * as subject from "./schema/subject";
 import * as user from "./schema/user";
+import { assignmentTemplates } from "./schema/assignmentTemplate";
 
 export async function runMigrate() {
   const connection = postgres(env.DATABASE_URL);
-  const schema = { ...assignment, ...classroom, ...subject, ...user };
+  const schema = { 
+    ...assignment, 
+    ...classroom, 
+    ...subject, 
+    ...user,
+    ...assignmentTemplates
+  };
   const db = drizzle(connection, { schema });
 
   console.log("⏳ Running migrations...");

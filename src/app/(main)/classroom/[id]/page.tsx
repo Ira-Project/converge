@@ -6,7 +6,8 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Suspense } from "react";
 import { api } from "@/trpc/server";import { Button } from "@/components/ui/button";
 import { AssignmentCard } from "./_components/assignment-card";
-import { CreateAssignmentForm } from "./_components/create-assignment-form";
+import { AssignmentCardSkeleton } from "./_components/assignment-card-skeleton";
+import { CreateAssignmentSection } from "./_components/create-assignment-section";
 
  export default async function ClassroomPage({ params } : { params: { id: string } }) {
   const { user } = await validateRequest();
@@ -36,29 +37,33 @@ import { CreateAssignmentForm } from "./_components/create-assignment-form";
           </div>
           <Separator />
         </div>
-        <div className="flex flex-row pt-8 gap-8">
-          <div className="w-2/3 min-h-48">
+        <div className="flex flex-row pt-8 gap-8 h-full">
+          <div className="w-2/3">
             <div className="flex flex-col gap-8">
               <div>
                 <p className="text-xl font-semibold mb-4">Ongoing Assignments</p>
-                <div className="flex flex-col gap-4">
-                  {ongoingAssignments.map(assignment => (
-                    <AssignmentCard key={assignment.id} assignment={assignment} />
-                  ))}
-                </div>
+                <Suspense fallback={<AssignmentCardSkeleton />}>
+                  <div className="flex flex-col gap-4">
+                    {ongoingAssignments.map(assignment => (
+                      <AssignmentCard key={assignment.id} assignment={assignment} />
+                    ))}
+                  </div>
+                </Suspense>
               </div>
               <div>
                 <p className="text-xl font-semibold mb-4">Past Assignments</p>
-                <div className="flex flex-col gap-4">
-                  {pastAssignments.map(assignment => (
-                    <AssignmentCard key={assignment.id} assignment={assignment} />
-                  ))}
-                </div>
+                <Suspense fallback={<AssignmentCardSkeleton />}>
+                  <div className="flex flex-col gap-4">
+                    {pastAssignments.map(assignment => (
+                      <AssignmentCard key={assignment.id} assignment={assignment} />
+                    ))}
+                  </div>
+                </Suspense>
               </div>
             </div>
           </div>
           <div className="w-1/3">
-            <CreateAssignmentForm />
+            <CreateAssignmentSection />
           </div>
         </div>
       </main>

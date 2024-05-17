@@ -9,29 +9,21 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { LoadingButton } from "@/components/loading-button";
 import { z } from "zod";
 import Link from "next/link";
+import type { RouterOutputs } from "@/trpc/shared";
+import { Skeleton } from "@/components/ui/skeleton";
+import { Suspense } from "react";
 
-// interface Props {
-//   subjects: RouterOutputs["subject"]["list"];
-// }
+interface Props {
+  assignmentTemplates: RouterOutputs["assignmentTemplate"]["list"];
+}
 
 const assignmentTemplateSelectionSchema = z.object({
   assignmentTemplateId: z.string(),
 });
 
-export const CreateAssignmentForm = () => {
+export const CreateAssignmentForm = ({ assignmentTemplates } : Props) => {
 
   const router = useRouter();
-
-  const assignmentTemplates = [
-    {
-      id: "1",
-      name: "Probability",
-    },
-    {
-      id: "2",
-      name: "Arithmetic Progression",
-    },
-  ]
 
   const form = useForm({
     defaultValues: {
@@ -45,18 +37,16 @@ export const CreateAssignmentForm = () => {
   });
 
   return (
-    <div className="flex flex-col gap-4">
-      <p className="text-xl font-semibold">Create Assignment</p>
-      <p className="text-sm"> You will be able to customise the due date, maximum score and time limit in the next screen.</p>
-      <Form {...form}>
-        <form onSubmit={onSubmit} className="grid gap-4">
-          <FormField
-            control={form.control}
-            name="assignmentTemplateId"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Choose a Topic to Assign</FormLabel>
-                <FormControl>
+    <Form {...form}>
+      <form onSubmit={onSubmit} className="grid gap-4">
+        <FormField
+          control={form.control}
+          name="assignmentTemplateId"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Choose a Topic to Assign</FormLabel>
+              <FormControl>
+                <Suspense fallback={ <Skeleton className="w-full h-8"/> } >
                   <Select value={field.value} name={field.name} onValueChange={field.onChange} >
                     <SelectTrigger>
                       <SelectValue 
@@ -78,27 +68,27 @@ export const CreateAssignmentForm = () => {
                       </SelectGroup>
                     </SelectContent>
                   </Select>
-                </FormControl>
-                <FormDescription>
-                  Don't see what you're looking for? {" "}
-                  <Link href="mailto:contact@iraproject.com">
-                    <span className="underline">Contact Us</span>
-                  </Link> 
-                  {" "}
-                  we'd be happy to create it for you.
-                  
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )} 
-          />
-          <LoadingButton 
-            disabled={!form.formState.isDirty}
-            className="w-fit ml-auto">
-              Preview
-          </LoadingButton>
-        </form>
-      </Form>
-    </div>
+                </Suspense>
+              </FormControl>
+              <FormDescription>
+                Don't see what you're looking for? {" "}
+                <Link href="mailto:contact@iraproject.com">
+                  <span className="underline">Contact Us</span>
+                </Link> 
+                {" "}
+                we'd be happy to create it for you.
+                
+              </FormDescription>
+              <FormMessage />
+            </FormItem>
+          )} 
+        />
+        <LoadingButton 
+          disabled={!form.formState.isDirty}
+          className="w-fit ml-auto">
+            Preview
+        </LoadingButton>
+      </form>
+    </Form>
   );
 }

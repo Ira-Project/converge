@@ -1,6 +1,6 @@
 import { and } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { CreateClassroomInput, GetClassroomInput, JoinClassroomInput } from "./classroom.input";
+import type { CreateClassroomInput, GetClassroomInput, GetClassroomStudentsInput, GetClassroomTeachersInput, JoinClassroomInput } from "./classroom.input";
 import { generateId } from "lucia";
 import { classrooms, usersToClassrooms } from "@/server/db/schema/classroom";
 import { Roles } from "@/lib/constants";
@@ -12,6 +12,7 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
     columns: {
       id: true,
       name: true,
+      code: true,
       description: true,
     },
     with: {
@@ -20,24 +21,60 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
           name: true,
         }
       },
-      classroomMembers: {
+    }
+  });
+}
+
+export const getClassroomTeachers = async (ctx: ProtectedTRPCContext, input: GetClassroomTeachersInput) => {
+  const teachers = await ctx.db.query.usersToClassrooms.findMany({
+    where: (table, { eq }) => 
+      and(
+        eq(table.classroomId, input.id), 
+        eq(table.isDeleted, false),
+        eq(table.role, Roles.Teacher)
+      ),
+    columns: {
+      createdAt: true,
+    },
+    with: {
+      user: {
         columns: {
-          role: true,
-          createdAt: true,
-        },
-        with: {
-          user: {
-            columns: {
-              id: true,
-              name: true,
-              avatar: true,
-            }
-          }
+          id: true,
+          name: true,
+          avatar: true,
         }
       }
     }
   });
+  return teachers.flatMap((teacher) => { teacher.createdAt, teacher.user } );
 }
+
+export const getClassroomStudents = async (ctx: ProtectedTRPCContext, input: GetClassroomStudentsInput) => {
+  const students = await ctx.db.query.usersToClassrooms.findMany({
+    where: (table, { eq }) => 
+      and(
+        eq(table.classroomId, input.id), 
+        eq(table.isDeleted, false),
+        eq(table.role, Roles.Student)
+      ),
+    columns: {
+      createdAt: true,
+    },
+    with: {
+      user: {
+        columns: {
+          id: true,
+          name: true,
+          avatar: true,
+        }
+      }
+    }
+  });
+
+  return students.flatMap((student) => { student.createdAt, student.user } );
+}
+
+
 
 export const listClassrooms = async (ctx: ProtectedTRPCContext) => {
   return await ctx.db.query.usersToClassrooms.findMany({

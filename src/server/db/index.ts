@@ -6,6 +6,7 @@ import * as assignment from "./schema/assignment";
 import * as classroom from "./schema/classroom";
 import * as subject from "./schema/subject";
 import * as user from "./schema/user";
+import * as assignmentTemplates from "./schema/assignmentTemplate";
 
 
 export const client = postgres(env.DATABASE_URL, {
@@ -13,4 +14,12 @@ export const client = postgres(env.DATABASE_URL, {
   prepare: false,
 });
 
-export const db = drizzle(client, { schema: {...assignment, ...classroom, ...subject, ...user }});
+export const db = drizzle(client, { schema: 
+  {
+    ...assignment, 
+    ...classroom, 
+    ...subject, 
+    ...user,
+    ...assignmentTemplates
+  }
+});

@@ -5,6 +5,16 @@ export const getClassroomSchema = z.object({
 });
 export type GetClassroomInput = z.infer<typeof getClassroomSchema>;
 
+export const getClassroomTeachersSchema = z.object({
+  id: z.string(),
+});
+export type GetClassroomTeachersInput = z.infer<typeof getClassroomTeachersSchema>;
+
+export const getClassroomStudentsSchema = z.object({
+  id: z.string(),
+});
+export type GetClassroomStudentsInput = z.infer<typeof getClassroomStudentsSchema>;
+
 export const createClassroomSchema = z.object({
   name: z.string().min(3).max(255),
   description: z.string().max(255),
