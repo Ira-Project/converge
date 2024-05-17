@@ -28,11 +28,15 @@ export const ClassroomList = async({ role } :  { role: Roles} ) => {
           :
             role === Roles.Teacher ?
               <div className="text-muted-foreground flex flex-row"> 
-                Don't have any classrooms yet. <Link href="/createclassroom"> Create one </Link> to get started.
+                Don't have any classrooms yet.{" "}
+                <Link href="/createclassroom" className="underline"> Create one </Link>
+                {" "}to get started.
               </div>
             :
               <div className="text-muted-foreground flex flex-row"> 
-                No classrooms to show. <Link href="/joinclassroom"> Join one </Link> to get started.
+                No classrooms to show.{" "}
+                <Link href="/joinclassroom" className="underline"> Join one </Link>
+                {" "}to get started.
               </div>
         }
       </Suspense>
