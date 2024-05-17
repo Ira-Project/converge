@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "next build",
+    "build": "corepack enable && next build",
     "db:push": "dotenv drizzle-kit push:pg",
     "db:generate": "dotenv drizzle-kit generate:pg",
     "db:migrate": "dotenv tsx src/server/db/migrate.ts",
