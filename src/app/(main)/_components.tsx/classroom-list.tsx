@@ -27,17 +27,22 @@ export const ClassroomList = async({ role } :  { role: Roles} ) => {
             </ScrollArea>
           :
             role === Roles.Teacher ?
-              <div className="text-muted-foreground flex flex-row"> 
-                Don't have any classrooms yet.{" "}
-                <Link href="/createclassroom" className="underline"> Create one </Link>
-                {" "}to get started.
-              </div>
-            :
-              <div className="text-muted-foreground flex flex-row"> 
-                No classrooms to show. {" "} 
-                <Link href="/joinclassroom" className="underline"> Join one </Link>
+              
+              <p className="text-muted-foreground"> 
+                Don't have any classrooms yet? {" "}
+                <Link href="/createclassroom" className="underline"> 
+                  <span>Create one</span> 
+                </Link>
                 {" "} to get started.
-              </div>
+              </p>
+            :
+              <p className="text-muted-foreground"> 
+                No classrooms to show. {" "} 
+                <Link href="/joinclassroom" className="underline">
+                  <span>Join one</span>
+                </Link>
+                {" "} to get started.
+              </p>
         }
       </Suspense>
     </>
