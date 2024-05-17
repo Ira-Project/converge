@@ -12,7 +12,7 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
   return (
     <div>
       <div className="flex flex-col gap-8">
-        <div>
+        <section>
           <p className="text-xl font-semibold mb-4">Ongoing Assignments</p>
           <Suspense fallback={<AssignmentCardSkeleton />}>
             <div className="flex flex-col gap-4">
@@ -21,8 +21,8 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
               ))}
             </div>
           </Suspense>
-        </div>
-        <div>
+        </section>
+        <section>
           <p className="text-xl font-semibold mb-4">Past Assignments</p>
           <Suspense fallback={<AssignmentCardSkeleton />}>
             <div className="flex flex-col gap-4">
@@ -31,7 +31,7 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
               ))}
             </div>
           </Suspense>
-        </div>
+        </section>
       </div>
     </div>
   );

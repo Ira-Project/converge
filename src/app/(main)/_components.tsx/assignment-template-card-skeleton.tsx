@@ -1,24 +1,13 @@
 import {
   Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
 } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 
 export function AssignmentTemplateCardSkeleton( ) {
   return (
-    <Card className="w-96">
-      <CardHeader>
-        <Skeleton className="h-6 w-48" />
-        <Skeleton className="h-6 w-36" />
-      </CardHeader>
-      <CardContent>
-        <Skeleton className="h-10 w-80" />
-      </CardContent>
-      <CardFooter>
-        <Skeleton className="h-5 w-36" />
-      </CardFooter>
+    <Card className="w-96 h-48 relative">
+      <Skeleton className="absolute rounded-t-md top-0 left-0 w-96 h-32" />
+      <Skeleton className="absolute bottom-4 left-4 w-32 h-6" />
     </Card>
   );
 }

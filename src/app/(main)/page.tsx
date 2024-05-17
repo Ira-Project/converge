@@ -15,7 +15,7 @@ import { AssignmentTemplateList } from "./_components.tsx/assignment-templates-l
   return (
     <>
       <main className="flex flex-col p-16 gap-16">
-        <div className="flex flex-col gap-4">
+        <section className="flex flex-col gap-6">
           <div className="flex row items-center">
             <p className="text-3xl font-semibold"> Classes </p>
             <Link 
@@ -30,16 +30,17 @@ import { AssignmentTemplateList } from "./_components.tsx/assignment-templates-l
               </Button>
             </Link>
           </div>
-          <Separator />
           <ClassroomList role={user.role} />
-        </div>
+        </section>
         {
           user.role === Roles.Teacher &&
-          <div className="flex flex-col gap-4">
-            <p className="text-2xl font-semibold"> Assignment Templates </p>
-            <Separator />
+          <section className="flex flex-col gap-6">
+            <div className="flex flex-col gap-2">
+              <p className="text-2xl font-semibold"> Assignment Templates </p>
+              <p className="text-muted-foreground"> You don't need a classroom to create an assignment. Simply select a template, preview and share the link with your students. </p>
+            </div>
             <AssignmentTemplateList />
-          </div>
+          </section>
         }
       </main>
     </>

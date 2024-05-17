@@ -13,7 +13,7 @@ interface AssignmentTemplateCardProps {
 export function AssignmentTemplateCard({ id, name, imageUrl } : AssignmentTemplateCardProps) {
 
   return (
-    <Link href={`/create-assignmetn/${id}`}>
+    <Link href={`/create-assignment/${id}`}>
       <Card className="w-96 relative">
         <Image 
           className="rounded-md w-full h-auto block bg-black bg-opacity-90"
