@@ -1,12 +1,10 @@
 import { defineConfig } from "drizzle-kit";
-import { DATABASE_PREFIX } from "@/lib/constants";
 
 export default defineConfig({
   schema: "./src/server/db/schema/*",
   out: "./drizzle",
-  driver: "pg",
+  dialect: "postgresql",
   dbCredentials: {
-    connectionString: process.env.DATABASE_URL!,
-  },
-  tablesFilter: [`${DATABASE_PREFIX}_*`],
+    url: process.env.DATABASE_URL!,
+  }
 });

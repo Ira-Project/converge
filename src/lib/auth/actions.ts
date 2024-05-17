@@ -202,7 +202,7 @@ export async function sendPasswordResetLink(
       where: (table, { eq }) => eq(table.email, parsed.data),
     });
 
-    if (!user || !user.emailVerified) return { error: "Provided email is invalid." };
+    if (!user?.emailVerified) return { error: "Provided email is invalid." };
 
     const verificationToken = await generatePasswordResetToken(user.id);
 
