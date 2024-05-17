@@ -11,7 +11,7 @@ import { ClassroomCardSkeleton } from "./_components.tsx/classroom-skeleton";
 import Link from "next/link";
 import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
 
- export default async function SignIn({}) {
+ export default async function Home({}) {
   const { user } = await validateRequest();
   if (!user) redirect(Paths.Login);
 

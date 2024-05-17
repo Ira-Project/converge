@@ -3,7 +3,7 @@ import { Google } from "arctic";
 import { DrizzlePostgreSQLAdapter } from "@lucia-auth/adapter-drizzle";
 import { env } from "@/env.js";
 import { db } from "@/server/db";
-import { sessions, users, type User as DbUser } from "@/server/db/schema";
+import { sessions, users, type User as DbUser } from "@/server/db/schema/user";
 import { absoluteUrl } from "@/lib/utils"
 import { type Roles } from "../constants";
 

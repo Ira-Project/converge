@@ -15,7 +15,7 @@ import {
   type SignupInput,
   resetPasswordSchema,
 } from "@/lib/validators/auth";
-import { emailVerificationCodes, passwordResetTokens, users } from "@/server/db/schema";
+import { emailVerificationCodes, passwordResetTokens, users } from "@/server/db/schema/user";
 import { sendMail, EmailTemplate } from "@/lib/email";
 import { validateRequest } from "@/lib/auth/validate-request";
 import { Paths } from "../constants";

@@ -1,5 +1,10 @@
 import { z } from "zod";
 
+export const getClassroomSchema = z.object({
+  id: z.string(),
+});
+export type GetClassroomInput = z.infer<typeof getClassroomSchema>;
+
 export const createClassroomSchema = z.object({
   name: z.string().min(3).max(255),
   description: z.string().max(255),

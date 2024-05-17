@@ -3,6 +3,9 @@ import * as services from "./classroom.service";
 import * as inputs from "./classroom.input";
 
 export const classroomRouter = createTRPCRouter({
+  get: protectedProcedure
+    .input(inputs.getClassroomSchema)
+    .query(({ ctx, input }) => services.getClassroom(ctx, input)),
   list: protectedProcedure
     .query(({ ctx }) => services.listClassrooms(ctx)),  
   create: protectedProcedure

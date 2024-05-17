@@ -3,10 +3,14 @@ import { drizzle } from "drizzle-orm/postgres-js";
 import { migrate } from "drizzle-orm/postgres-js/migrator";
 
 import { env } from "@/env";
-import * as schema from "./schema";
+import * as assignment from "./schema/assignment";
+import * as classroom from "./schema/classroom";
+import * as subject from "./schema/subject";
+import * as user from "./schema/user";
 
 export async function runMigrate() {
   const connection = postgres(env.DATABASE_URL);
+  const schema = { ...assignment, ...classroom, ...subject, ...user };
   const db = drizzle(connection, { schema });
 
   console.log("⏳ Running migrations...");

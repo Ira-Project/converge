@@ -1,10 +1,43 @@
 import { and } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { CreateClassroomInput, JoinClassroomInput } from "./classroom.input";
+import type { CreateClassroomInput, GetClassroomInput, JoinClassroomInput } from "./classroom.input";
 import { generateId } from "lucia";
-import { classrooms, usersToClassrooms } from "@/server/db/schema";
+import { classrooms, usersToClassrooms } from "@/server/db/schema/classroom";
 import { Roles } from "@/lib/constants";
 import { TRPCClientError } from "@trpc/client";
+
+export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroomInput) => {
+  return await ctx.db.query.classrooms.findFirst({
+    where: (table, { eq }) => and(eq(table.id, input.id), eq(table.isDeleted, false)),
+    columns: {
+      id: true,
+      name: true,
+      description: true,
+    },
+    with: {
+      subject: {
+        columns: {
+          name: true,
+        }
+      },
+      classroomMembers: {
+        columns: {
+          role: true,
+          createdAt: true,
+        },
+        with: {
+          user: {
+            columns: {
+              id: true,
+              name: true,
+              avatar: true,
+            }
+          }
+        }
+      }
+    }
+  });
+}
 
 export const listClassrooms = async (ctx: ProtectedTRPCContext) => {
   return await ctx.db.query.usersToClassrooms.findMany({

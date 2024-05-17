@@ -5,7 +5,7 @@ import { eq } from "drizzle-orm";
 import { google, lucia } from "@/lib/auth";
 import { db } from "@/server/db";
 import { Paths } from "@/lib/constants";
-import { users } from "@/server/db/schema";
+import { users } from "@/server/db/schema/user";
 
 type GoogleUser = {
   id: string;
