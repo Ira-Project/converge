@@ -4,25 +4,20 @@ import { Separator } from "@/components/ui/separator";
 import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { PlusIcon } from "@radix-ui/react-icons";
-import { api } from "@/trpc/server";
-import { Suspense } from "react";
-import { ClassroomCard } from "./_components.tsx/classroom-card";
-import { ClassroomCardSkeleton } from "./_components.tsx/classroom-skeleton";
 import Link from "next/link";
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
+import { ClassroomList } from "./_components.tsx/classroom-list";
+import { AssignmentTemplateList } from "./_components.tsx/assignment-templates-list";
 
  export default async function Home({}) {
   const { user } = await validateRequest();
   if (!user) redirect(Paths.Login);
-
-  const classrooms = await api.classroom.list.query();
   
   return (
     <>
-      <main className="p-16">
-        <div className="flex flex-col gap-8">
+      <main className="flex flex-col p-16 gap-16">
+        <div className="flex flex-col gap-4">
           <div className="flex row items-center">
-            <p className="text-4xl font-semibold"> Classes </p>
+            <p className="text-3xl font-semibold"> Classes </p>
             <Link 
               href={
                 user.role === Roles.Teacher ? "/createclassroom" : "/joinclassroom"
@@ -36,19 +31,16 @@ import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area";
             </Link>
           </div>
           <Separator />
-          <Suspense fallback={ <ClassroomCardSkeleton /> }>
-            <ScrollArea className="w-full whitespace-nowrap rounded-md overscroll-x-contain">
-              <div className="flex flex-row gap-6 w-max pb-6"> 
-                {classrooms?.map((classroom) => (
-                  <div key={classroom.classroom.id} className="flex flex-row"> 
-                    <ClassroomCard key={classroom.classroom.id} classroom={classroom.classroom} />
-                  </div>
-                ))}
-              </div>
-              <ScrollBar orientation="horizontal" />
-            </ScrollArea>
-        </Suspense>
+          <ClassroomList role={user.role} />
         </div>
+        {
+          user.role === Roles.Teacher &&
+          <div className="flex flex-col gap-4">
+            <p className="text-2xl font-semibold"> Assignment Templates </p>
+            <Separator />
+            <AssignmentTemplateList />
+          </div>
+        }
       </main>
     </>
   );

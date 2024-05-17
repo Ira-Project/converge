@@ -3,11 +3,11 @@ import { Suspense } from "react";
 import { AssignmentCardSkeleton } from "./assignment-card-skeleton";
 import { AssignmentCard } from "./assignment-card";
 
-export const AssignmentList = async ({ id }: { id: string }) => {
+export const AssignmentList = async ({ id }: { id?: string }) => {
 
-  const { pastAssignments, ongoingAssignments } = await api.assignment.list.query({
-    classroomId: id,
-  });
+  const { pastAssignments, ongoingAssignments } = await api.assignment.list.query(
+    { classroomId: id }
+  );
 
   return (
     <div>

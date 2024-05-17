@@ -6,6 +6,7 @@ import { api } from "@/trpc/server";
 import { redirect } from "next/navigation";
 import { Suspense, type ReactNode } from "react";
 import { TabsGroup } from "./@tabs/_components/tabs-group";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 
 const ClassroomTabLayout = async ({ 
   tabs, 
@@ -25,10 +26,22 @@ const ClassroomTabLayout = async ({
 
   return (
     <main className="p-16">
-      <div className="flex flex-col gap-8">
-        <div className="flex row items-center">
+      <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
+          <Breadcrumb>
+            <BreadcrumbList>
+              <BreadcrumbItem>
+                <BreadcrumbLink href="/">Home</BreadcrumbLink>
+              </BreadcrumbItem>
+              <BreadcrumbSeparator />
+              <BreadcrumbItem>
+                <BreadcrumbPage>Classroom</BreadcrumbPage>
+              </BreadcrumbItem>
+            </BreadcrumbList>
+          </Breadcrumb>
           <Suspense fallback={ <Skeleton className="h-8 w-96" /> }>
             <p className="text-4xl font-semibold"> {classroom?.name} </p>
+            <p className="text-md text-muted-foreground"> {classroom?.description} </p>
           </Suspense>
         </div>
         <TabsGroup id={params.id} role={user.role} />
