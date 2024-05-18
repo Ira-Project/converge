@@ -4,8 +4,8 @@ import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { PlusIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
-import { ClassroomList } from "./_components.tsx/classroom-list";
-import { AssignmentTemplateList } from "./_components.tsx/assignment-templates-list";
+import { ClassroomList } from "./_components/classroom-list";
+import { AssignmentTemplateList } from "./_components/assignment-templates-list";
 
  export default async function Home({}) {
   const { user } = await validateRequest();

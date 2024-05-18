@@ -5,5 +5,8 @@ import * as inputs from "./assignment.input";
 export const assignmentRouter = createTRPCRouter({
   list: protectedProcedure
     .input(inputs.listAssignmentsSchema)
-    .query(({ ctx, input }) => services.listAssignments(ctx, input)),  
+    .query(({ ctx, input }) => services.listAssignments(ctx, input)), 
+  create: protectedProcedure
+    .input(inputs.createAssignmentSchema)
+    .mutation(({ ctx, input }) => services.createAssignment(ctx, input)), 
 });

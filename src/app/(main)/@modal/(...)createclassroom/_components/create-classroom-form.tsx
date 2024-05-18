@@ -35,7 +35,7 @@ export const CreateClassroomForm = ({ subjects }: Props) => {
   const onSubmit = form.handleSubmit(async (values) => {
     const id = await createClassroom.mutateAsync({...values});
     await revalidateClassroomListQuery();
-    router.replace(`/classroom/${id}`)
+    void router.replace(`/classroom/${id}`)
   });
 
   return (
@@ -96,8 +96,14 @@ export const CreateClassroomForm = ({ subjects }: Props) => {
             </FormItem>
           )} 
         />
+        {
+          createClassroom.error &&
+          <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">
+            {createClassroom.error.message}
+          </ul>
+        }
         <LoadingButton 
-          disabled={!form.formState.isDirty}
+          disabled={!form.formState.isDirty || createClassroom.isLoading}
           loading={createClassroom.isLoading}
           className="w-fit ml-auto">
             Create Classroom

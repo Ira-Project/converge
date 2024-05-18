@@ -7,6 +7,7 @@ import * as classroom from "./schema/classroom";
 import * as subject from "./schema/subject";
 import * as user from "./schema/user";
 import * as assignmentTemplates from "./schema/assignmentTemplate";
+import * as concept from "./schema/concept";
 
 
 export const client = postgres(env.DATABASE_URL, {
@@ -20,6 +21,7 @@ export const db = drizzle(client, { schema:
     ...classroom, 
     ...subject, 
     ...user,
-    ...assignmentTemplates
+    ...assignmentTemplates,
+    ...concept
   }
 });

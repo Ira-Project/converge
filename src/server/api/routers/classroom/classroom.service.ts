@@ -71,8 +71,6 @@ export const getClassroomStudents = async (ctx: ProtectedTRPCContext, input: Get
   });
 }
 
-
-
 export const listClassrooms = async (ctx: ProtectedTRPCContext) => {
   return await ctx.db.query.usersToClassrooms.findMany({
     where: (table, { eq }) => and(eq(table.userId, ctx.user.id), eq(table.isDeleted, false)),

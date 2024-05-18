@@ -1,6 +1,8 @@
 import { and } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { ListAssignmentsInput } from "./assignment.input";
+import type { CreateAssignmentInput, ListAssignmentsInput } from "./assignment.input";
+import { assignments } from "@/server/db/schema/assignment";
+import { generateId } from "lucia";
 
 export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssignmentsInput) => {
   let assignments;
@@ -13,14 +15,8 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
         dueDate: true,
         createdAt: true,
         createdBy: true,
+        topic: true,
       }, 
-      with: {
-        assignmentTemplate: {
-          columns: {
-            name: true,
-          }
-        }
-      }
     })
   } else {
     assignments = await ctx.db.query.assignments.findMany({
@@ -31,14 +27,8 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
         dueDate: true,
         createdAt: true,
         createdBy: true,
+        topic: true,
       }, 
-      with: {
-        assignmentTemplate: {
-          columns: {
-            name: true,
-          }
-        }
-      }
     })
   }
   
@@ -48,3 +38,20 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
     pastAssignments: assignments.filter(assignment => assignment.dueDate <= now)
   }
 };
+
+export const createAssignment = async (ctx: ProtectedTRPCContext, input: CreateAssignmentInput) => {
+  
+  const id = generateId(21);
+
+  await ctx.db.insert(assignments).values({
+    id: id,
+    name: input.name,
+    classroomId: input.classId,
+    dueDate: input.dueDate,
+    maxPoints: input.maxPoints ? input.maxPoints : null,
+    timeLimit: input.timeLimit ? input.timeLimit : null,
+    createdBy: ctx.user.id,
+  }).returning();
+
+  return id;
+}
