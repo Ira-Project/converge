@@ -1,6 +1,5 @@
 import { validateRequest } from "@/lib/auth/validate-request";
 import { Paths, Roles } from "@/lib/constants";
-import { Separator } from "@/components/ui/separator";
 import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { PlusIcon } from "@radix-ui/react-icons";
@@ -18,7 +17,8 @@ import { AssignmentTemplateList } from "./_components.tsx/assignment-templates-l
         <section className="flex flex-col gap-6">
           <div className="flex row items-center">
             <p className="text-3xl font-semibold"> Classes </p>
-            <Link 
+            <Link
+              prefetch={true} 
               href={
                 user.role === Roles.Teacher ? "/createclassroom" : "/joinclassroom"
               } 
