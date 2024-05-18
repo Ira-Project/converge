@@ -14,6 +14,13 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
         createdAt: true,
         createdBy: true,
       }, 
+      with: {
+        assignmentTemplate: {
+          columns: {
+            name: true,
+          }
+        }
+      }
     })
   } else {
     assignments = await ctx.db.query.assignments.findMany({
@@ -25,6 +32,13 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
         createdAt: true,
         createdBy: true,
       }, 
+      with: {
+        assignmentTemplate: {
+          columns: {
+            name: true,
+          }
+        }
+      }
     })
   }
   

@@ -1,7 +1,7 @@
 import { api } from "@/trpc/server";
 import { Suspense } from "react";
-import { AssignmentCardSkeleton } from "./assignment-card-skeleton";
-import { AssignmentCard } from "./assignment-card";
+import { AssignmentTableSkeleton } from "./assignment-table-skeleton";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 export const AssignmentList = async ({ id }: { id?: string }) => {
 
@@ -14,23 +14,61 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
       <div className="flex flex-col gap-8">
         <section>
           <p className="text-xl font-semibold mb-4">Ongoing Assignments</p>
-          <Suspense fallback={<AssignmentCardSkeleton />}>
-            <div className="flex flex-col gap-4">
-              {ongoingAssignments.map(assignment => (
-                <AssignmentCard key={assignment.id} assignment={assignment} />
-              ))}
-            </div>
-          </Suspense>
+            {
+              ongoingAssignments.length === 0 
+              ?
+                <p className="text-muted-foreground">No ongoing assignments found</p>
+              :
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-1/2">Assignment</TableHead>
+                    <TableHead className="w-1/4">Topic</TableHead>
+                    <TableHead className="w-1/4">Due Date</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <Suspense fallback={<AssignmentTableSkeleton />}>
+                    {ongoingAssignments.map(assignment => (
+                      <TableRow key={assignment.id}>
+                        <TableCell>{assignment.name}</TableCell>
+                        <TableCell>{assignment.assignmentTemplate?.name}</TableCell>
+                        <TableCell>{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
+                      </TableRow> 
+                    ))}
+                  </Suspense>
+                </TableBody>
+              </Table>
+            }
         </section>
         <section>
           <p className="text-xl font-semibold mb-4">Past Assignments</p>
-          <Suspense fallback={<AssignmentCardSkeleton />}>
-            <div className="flex flex-col gap-4">
-              {pastAssignments.map(assignment => (
-                <AssignmentCard key={assignment.id} assignment={assignment} />
-              ))}
-            </div>
-          </Suspense>
+            {
+              pastAssignments.length === 0 
+              ?
+                <p className="text-muted-foreground">No past assignments found</p>
+              :
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead className="w-1/2">Assignment</TableHead>
+                    <TableHead className="w-1/4">Topic</TableHead>
+                    <TableHead className="w-1/4">Due Date</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <Suspense fallback={<AssignmentTableSkeleton />}>
+                    {pastAssignments.map(assignment => (
+                      <TableRow key={assignment.id}>
+                        <TableCell>{assignment.name}</TableCell>
+                        <TableCell>{assignment.assignmentTemplate?.name}</TableCell>
+                        <TableCell>{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
+                      </TableRow> 
+                    ))}
+                  </Suspense>
+                </TableBody>
+              </Table>
+            }
         </section>
       </div>
     </div>
