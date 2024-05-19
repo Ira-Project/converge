@@ -12,7 +12,7 @@ export const assignmentTemplates = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     name: varchar("name", { length: 255 }).notNull(),
     imageUrl: varchar("image_url", { length: 255 }).notNull(),
-    conceptGraphId: integer("concept_graph_id"). references(() => conceptGraphs.id),
+    conceptGraphId: integer("concept_graph_id"). references(() => conceptGraphs.id).notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),

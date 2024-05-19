@@ -19,9 +19,10 @@ import { api } from "@/trpc/react";
 
 interface Props {
   classrooms: RouterOutputs["classroom"]["list"];
+  conceptGraphId: number;
 }
 
-export const CreateFullAssignmentForm = ({ classrooms }: Props) => {
+export const CreateFullAssignmentForm = ({ classrooms, conceptGraphId }: Props) => {
 
   const router = useRouter();
   const createAssignment = api.assignment.create.useMutation();
@@ -38,7 +39,12 @@ export const CreateFullAssignmentForm = ({ classrooms }: Props) => {
   })
 
   const onSubmit = form.handleSubmit(async (values) => {
-    const id = await createAssignment.mutateAsync({...values});
+    const id = await createAssignment.mutateAsync(
+      {
+        ...values,
+        conceptGraphId: conceptGraphId,
+      }
+    );
     void router.replace(`/assignment/${id}`)
   });
 

@@ -51,7 +51,8 @@ export const createAssignment = async (ctx: ProtectedTRPCContext, input: CreateA
     maxPoints: input.maxPoints ? input.maxPoints : null,
     timeLimit: input.timeLimit ? input.timeLimit : null,
     createdBy: ctx.user.id,
-  }).returning();
+    conceptGraphId: input.conceptGraphId,
+  });
 
   return id;
 }

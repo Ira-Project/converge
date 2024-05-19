@@ -80,13 +80,13 @@ export const map:Concept[] = [
     ],
     concept_formula: "",
     calculation_required: true,
-    parent_concepts: [ 1 ]
+    parent_concepts: [1]
   },
   {
     concept_id: 6,
     concept_text: [
       {
-        question: "In an experiment, how to calculate probability?",
+        question: "What is probability of an event in an experiment?",
         answers: [
           "The probability of an event in an experiment is defined as the number of trials in which the event happened divided by the total number of trials.",
           "It's the fraction of times an event occurs out of the total attempts made.",
@@ -108,7 +108,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "P(Event) = Number of trials in which the event happened / Total number of trials",
     calculation_required: true,
-    parent_concepts: [5]
+    parent_concepts: [2, 4]
   },
   {
     concept_id: 8,
@@ -126,7 +126,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "",
     calculation_required: false,
-    parent_concepts: [ 1 ],
+    parent_concepts: [6],
   },
   {
     concept_id: 9,
@@ -144,7 +144,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "",
     calculation_required: false,
-    parent_concepts: [5],
+    parent_concepts: [4],
   },
   {
     concept_id: 10,
@@ -162,7 +162,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "",
     calculation_required: false,
-    parent_concepts: [5],
+    parent_concepts: [4],
   },
   {
     concept_id: 11,
@@ -180,7 +180,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "P(Event A and Event B) = P(Event A) * P(Event B)",
     calculation_required: false,
-    parent_concepts: [7, 9, 10],
+    parent_concepts: [6, 9],
   },
   {
     concept_id: 12,
@@ -198,7 +198,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "P(Event A and Event B) = P(Event A) * P(Event B after Event A has occurred)",
     calculation_required: true,
-    parent_concepts: [7, 9, 10], 
+    parent_concepts: [6, 9], 
   },
   {
     concept_id: 13,
@@ -226,7 +226,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "P(Event A not happening) = 1 - P(Event A)",
     calculation_required: true,
-    parent_concepts: [7],
+    parent_concepts: [6],
   },
   {
     concept_id: 14,
@@ -244,7 +244,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "",
     calculation_required: false,
-    parent_concepts: [5],
+    parent_concepts: [4],
   },
   {
     concept_id: 16,
@@ -262,7 +262,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "",
     calculation_required: false,
-    parent_concepts: [5],
+    parent_concepts: [4],
   },
   {
     concept_id: 17,
@@ -280,7 +280,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "",
     calculation_required: false,
-    parent_concepts: [5],
+    parent_concepts: [4],
   },
   {
     concept_id: 18,
@@ -298,6 +298,6 @@ export const map:Concept[] = [
     ],
     concept_formula: "P(Total outcomes) = 1",
     calculation_required: false,
-    parent_concepts: [2, 7],
+    parent_concepts: [2, 6],
   }
 ]

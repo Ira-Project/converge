@@ -33,13 +33,13 @@ export const ConceptGraph = (
   return (
     <div className="flex flex-col gap-4">
       <p className="text-lg font-semibold"> Concept Graph </p>
-        <div className="w-80 h-48 border p-2">
+        <div className="w-[336px] h-48 border p-2 rounded-md">
           <ForceGraph2D
             ref={graphRef}
             graphData={data}
             minZoom={0.5}
-            width={300}
-            height={150}
+            width={320}
+            height={176}
             nodeRelSize={4}
             nodeLabel={
               (node) => {

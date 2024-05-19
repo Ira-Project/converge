@@ -11,5 +11,6 @@ export const createAssignmentSchema = z.object({
   dueDate: z.date().min(new Date()),
   maxPoints: z.number().min(0).max(100).optional(),
   timeLimit: z.number().optional(),
+  conceptGraphId: z.number(),
 });
 export type CreateAssignmentInput = z.infer<typeof createAssignmentSchema>;
