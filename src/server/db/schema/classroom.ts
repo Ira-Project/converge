@@ -7,6 +7,7 @@ import {
   integer,
   pgEnum,
   primaryKey,
+  text,
 } from "drizzle-orm/pg-core";
 import { Roles, DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
@@ -22,8 +23,8 @@ export const classrooms = pgTable(
   "classrooms",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
-    name: varchar("name", { length: 255 }).notNull(),
-    description: varchar("description", { length: 255 }),
+    name: text("name").notNull(),
+    description: text("description"),
     subjectId: integer("subject_id").references(() => subjects.id),
     code: varchar("code", { length: 8 }).unique().notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
@@ -33,7 +34,6 @@ export const classrooms = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   }
 );
-
 export const classroomRelations = relations(classrooms, ({ many, one }) => ({
   classroomMembers: many(usersToClassrooms),
   subject: one(subjects, {
@@ -42,6 +42,8 @@ export const classroomRelations = relations(classrooms, ({ many, one }) => ({
   }),
   assignments: many(assignments),
 }));
+
+
 
 export const usersToClassrooms = pgTable(
   "user_class_relations",
@@ -64,7 +66,6 @@ export const usersToClassrooms = pgTable(
     userIdx: index("class_member_user_idx").on(t.userId),
   }),
 )
-
 export const usersToClassesRelations = relations(usersToClassrooms, ({ one }) => ({
   user: one(users, {
     fields: [usersToClassrooms.userId],

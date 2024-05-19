@@ -8,6 +8,8 @@ import * as subject from "./schema/subject";
 import * as user from "./schema/user";
 import * as assignmentTemplates from "./schema/assignmentTemplate";
 import * as concept from "./schema/concept";
+import * as assignmentDetails from "./schema/assignmentDetails";
+import * as explanations from "./schema/explanations";
 
 
 export const client = postgres(env.DATABASE_URL, {
@@ -22,6 +24,8 @@ export const db = drizzle(client, { schema:
     ...subject, 
     ...user,
     ...assignmentTemplates,
-    ...concept
+    ...concept,
+    ...assignmentDetails,
+    ...explanations,
   }
 });

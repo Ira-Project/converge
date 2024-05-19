@@ -1,5 +1,6 @@
 "use client";
 import type { RouterOutputs } from "@/trpc/shared";
+import { useTheme } from "next-themes";
 import { useEffect, useRef } from "react";
 import ForceGraph2D, { type ForceGraphMethods } from 'react-force-graph-2d';
 
@@ -12,18 +13,19 @@ export const ConceptGraph = (
   { assignmentTemplate } : Props
 ) => {
 
+  const theme = useTheme();
   const graphRef = useRef<ForceGraphMethods>();
   
   useEffect(() => {
     graphRef.current?.zoom(0.9, 1000)
   }, [])
 
-  const nodes = assignmentTemplate?.conceptGraphs?.concepts.map((concept) => ({ 
-    id: concept.id.toString(), 
-    name: concept.conceptQuestions?.[0]?.text ?? "",
-  })) ?? []
+  const nodes = assignmentTemplate.conceptGraphs.conceptToGraphs?.map((conceptToGraphs) => ({ 
+    id: conceptToGraphs.concept.id.toString(), 
+    name: conceptToGraphs.concept.conceptQuestions[0]?.text ?? "No Name"
+  }));
 
-  const links = assignmentTemplate?.conceptGraphs?.conceptGraphEdges.map((edge) => ({ source: edge.parent?.toString(), target: edge.child?.toString() })) ?? []
+  const links = assignmentTemplate.conceptGraphs.conceptGraphEdges.map((edge) => ({ source: edge.parent.toString(), target: edge.child.toString() }));
 
   const data = {
     nodes: nodes,
@@ -40,13 +42,14 @@ export const ConceptGraph = (
             minZoom={0.5}
             width={320}
             height={176}
-            nodeRelSize={4}
+            nodeRelSize={5}
             nodeLabel={
               (node) => {
                 return nodes.find(n => n.id === node.id)?.name ?? "No Name";
               }
             }
-            nodeColor={() => '#0F172A'}
+            linkColor={() => theme.resolvedTheme === 'light' ? '#D9D9D9' : '#D9D9D9'}
+            nodeColor={() => theme.resolvedTheme === 'light' ? '#0F172A' : '#FFFFFF'}
             linkWidth={2}
           />
         </div>

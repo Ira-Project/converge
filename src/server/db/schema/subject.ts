@@ -3,7 +3,7 @@ import {
   serial,
   boolean,
   timestamp,
-  varchar,
+  text,
 } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
@@ -15,7 +15,7 @@ export const subjects = pgTable(
   "subjects",
   {
     id: serial("id").primaryKey(),
-    name: varchar("name", { length: 255 }).notNull(),
+    name: text("name").notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),

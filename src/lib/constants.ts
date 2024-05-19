@@ -14,3 +14,10 @@ export enum Roles {
   Student = "student",
   Teacher = "teacher",
 }
+
+export enum QuestionStatus {
+  CORRECT = "correct",
+  INCORRECT = "incorrect",
+  UNANSWERED = "unanswered",
+  LOADING = "loading"
+}

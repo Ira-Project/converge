@@ -4,8 +4,7 @@ import { CreateFullAssignmentForm } from "./create-full-assignment-form"
 import dynamic from "next/dynamic";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
-import { redirect } from "next/navigation";
-import { Paths } from "@/lib/constants";
+import { BackButton } from "@/components/back-button";
 
 const ConceptGraph = dynamic(
   () => import("./concept-graph").then((mod) => mod.ConceptGraph),
@@ -14,18 +13,21 @@ const ConceptGraph = dynamic(
   }
 );
 
-export const CreateAssignmentAside = async ( { id } : { id: string}) => {
+interface Props {
+  id: string;
+}
+
+export const CreateAssignmentAside = async ( {id } : Props ) => {
 
   const classrooms = await api.classroom.list.query();
   const assignmentTemplate = await api.assignmentTemplate.get.query({ id });
 
-  if(!assignmentTemplate) redirect(Paths.Login);
-
   return (
-    <div className="w-96 bg-white z-20 fixed left-0 top-0 h-screen flex flex-col p-6 gap-8 shadow-md">
+    <div className="w-96 bg-background z-20 fixed left-0 top-0 h-screen flex flex-col p-6 gap-4 shadow-md">
+        <BackButton className="text-muted-foreground p-0 text-left mr-auto" variant="link"> ← Back </BackButton>
         <p className="text-lg font-semibold"> Create Assignment </p>
         <Suspense fallback={<Skeleton className="w-full h-8" />}>
-          <CreateFullAssignmentForm classrooms={classrooms} conceptGraphId={assignmentTemplate.conceptGraphs.id} />
+          <CreateFullAssignmentForm classrooms={classrooms} assignmentTemplateId={id} />
         </Suspense>
         <Suspense fallback={<Skeleton className="w-full h-60" />}>
           <ConceptGraph assignmentTemplate={assignmentTemplate} />

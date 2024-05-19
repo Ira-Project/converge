@@ -19,10 +19,10 @@ import { api } from "@/trpc/react";
 
 interface Props {
   classrooms: RouterOutputs["classroom"]["list"];
-  conceptGraphId: number;
+  assignmentTemplateId: string;
 }
 
-export const CreateFullAssignmentForm = ({ classrooms, conceptGraphId }: Props) => {
+export const CreateFullAssignmentForm = ({ classrooms, assignmentTemplateId }: Props) => {
 
   const router = useRouter();
   const createAssignment = api.assignment.create.useMutation();
@@ -42,7 +42,7 @@ export const CreateFullAssignmentForm = ({ classrooms, conceptGraphId }: Props) 
     const id = await createAssignment.mutateAsync(
       {
         ...values,
-        conceptGraphId: conceptGraphId,
+        assignmentTemplateId: assignmentTemplateId,
       }
     );
     void router.replace(`/assignment/${id}`)
@@ -172,7 +172,7 @@ export const CreateFullAssignmentForm = ({ classrooms, conceptGraphId }: Props) 
           disabled={!form.formState.isDirty || createAssignment.isLoading}
           loading={createAssignment.isLoading}
           className="w-fit ml-auto">
-            Create Classroom
+            Create Assignment
         </LoadingButton>
       </form>
     </Form>

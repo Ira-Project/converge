@@ -1,6 +1,6 @@
 import { db } from ".";
 import { map, type Concept } from "./concept_map";
-import { conceptAnswers, conceptGraphEdges, conceptGraphRoots, conceptGraphs, conceptQuestions, concepts } from "./schema/concept";
+import { conceptAnswers, conceptGraphEdges, conceptGraphRoots, conceptGraphs, conceptQuestions, concepts, conceptsToGraphs } from "./schema/concept";
 
 const mapFromJsonToDb: Record<number, number> = {}
 
@@ -18,13 +18,18 @@ async function createConceptGraphFromMap(conceptMap: Concept[]) {
     const conceptList = await db.insert(concepts).values({
       calculationRequired: concept.calculation_required,
       formula: concept.concept_formula,
-      conceptGraphId: conceptGraph.id
     }).returning();
+
     const conceptDb = conceptList[0]
 
     if(!conceptDb?.id) {
       throw new Error("Failed to create concept")
     }
+
+    await db.insert(conceptsToGraphs).values({
+      conceptId: conceptDb.id,
+      conceptGraphId: conceptGraph.id
+    }) 
 
     mapFromJsonToDb[concept.concept_id] = conceptDb.id
 

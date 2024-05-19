@@ -71,5 +71,6 @@ export {
   DotsHorizontalIcon,
   PlusIcon,
   Cross1Icon,
-  ClipboardCopyIcon
+  ClipboardCopyIcon,
+  PaperPlaneIcon
 } from "@radix-ui/react-icons";

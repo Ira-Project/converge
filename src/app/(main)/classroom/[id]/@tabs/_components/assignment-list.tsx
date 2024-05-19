@@ -32,7 +32,7 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
                     {ongoingAssignments.map(assignment => (
                       <TableRow key={assignment.id}>
                         <TableCell>{assignment.name}</TableCell>
-                        <TableCell>{assignment.topic}</TableCell>
+                        <TableCell>{assignment.assignmentTemplate.name}</TableCell>
                         <TableCell>{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
                       </TableRow> 
                     ))}
@@ -61,7 +61,7 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
                     {pastAssignments.map(assignment => (
                       <TableRow key={assignment.id}>
                         <TableCell>{assignment.name}</TableCell>
-                        <TableCell>{assignment.topic}</TableCell>
+                        <TableCell>{assignment.assignmentTemplate.name}</TableCell>
                         <TableCell>{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
                       </TableRow> 
                     ))}

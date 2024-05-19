@@ -1,18 +1,19 @@
-import { boolean, integer, pgTableCreator, timestamp, varchar } from "drizzle-orm/pg-core";
+import { boolean, integer, pgTableCreator, timestamp, varchar, text } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { users } from "./user";
 import { relations } from "drizzle-orm";
 import { conceptGraphs } from "./concept";
+import { questions } from "./assignmentDetails";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
 export const assignmentTemplates = pgTable(
-  "assignmentTemplates",
+  "assignment_templates",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
-    name: varchar("name", { length: 255 }).notNull(),
-    imageUrl: varchar("image_url", { length: 255 }).notNull(),
-    conceptGraphId: integer("concept_graph_id"). references(() => conceptGraphs.id).notNull(),
+    name: text("name").notNull(),
+    imageUrl: text("image_url").notNull(),
+    conceptGraphId: integer("concept_graph_id").references(() => conceptGraphs.id).notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
@@ -21,9 +22,10 @@ export const assignmentTemplates = pgTable(
   }
 );
 
-export const assignmentTemplateRelations = relations(assignmentTemplates, ({ one }) => ({
+export const assignmentTemplateRelations = relations(assignmentTemplates, ({ one, many }) => ({
   conceptGraphs: one(conceptGraphs, {
     fields: [assignmentTemplates.conceptGraphId],
     references: [conceptGraphs.id],
   }),
+  questions: many(questions),
 }));

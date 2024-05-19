@@ -52,7 +52,7 @@ export const CreateAssignmentForm = ({ assignmentTemplates } : Props) => {
                       <SelectValue 
                         onBlur={field.onBlur}
                         ref={field.ref}
-                        placeholder="Select a subject" />
+                        placeholder="Select a topic" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectGroup>

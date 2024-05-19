@@ -14,7 +14,7 @@ export const listAssignmentTemplates = async (ctx: ProtectedTRPCContext) => {
 };
 
 export const getAssignmentTemplate = async (ctx: ProtectedTRPCContext, input: GetAssignmentTemplateInput) => {
-  return await ctx.db.query.assignmentTemplates.findFirst({
+  const template = await ctx.db.query.assignmentTemplates.findFirst({
     where: (table, { eq }) => eq(table.id, input.id),
     columns: {
       id: true,
@@ -23,19 +23,46 @@ export const getAssignmentTemplate = async (ctx: ProtectedTRPCContext, input: Ge
     with: {
       conceptGraphs: {
         with: {
-          concepts: {
+          conceptToGraphs: {
             with: {
-              conceptQuestions: {
+              concept: {
                 with: {
-                  conceptAnswers: true
-                }
-              }
-            }
+                  conceptQuestions: {
+                    columns: {
+                      text: true,
+                    },
+                  }
+                },
+              },
+            },
           },
-          conceptGraphEdges: true,
-          conceptGraphRoot: true
+          conceptGraphEdges: {
+            with: {
+              fromConcept: {
+                columns: {
+                  id: true,
+                },
+              },
+            },
+          },
+          conceptGraphRoot: {
+            columns: {
+              id: true,
+            },
+          },
+        },
+      },
+      questions: {
+        columns: {
+          id: true,
+          question: true,
+          answer: true,
         },
       }
     }
   });
+  if (!template) {
+    throw new Error("Assignment template not found");
+  }
+  return template;
 }
