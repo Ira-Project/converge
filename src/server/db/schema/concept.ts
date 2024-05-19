@@ -55,8 +55,8 @@ export const conceptGraphEdges = pgTable(
   "conceptGraphEdges",
   {
     id: serial("id").primaryKey(),
-    parent: integer("parent").references(() => concepts.id),
-    child: integer("child").references(() => concepts.id),
+    parent: integer("parent").references(() => concepts.id).notNull(),
+    child: integer("child").references(() => concepts.id).notNull(),
     conceptGraphId: integer("concept_graph_id").references(() => conceptGraphs.id),
   }
 )
@@ -80,7 +80,7 @@ export const conceptGraphRoots = pgTable(
   "conceptGraphRoots",
   {
     id: serial("id").primaryKey(),
-    conceptId: integer("concept_id").references(() => concepts.id),
+    conceptId: integer("concept_id").references(() => concepts.id).notNull(),
     conceptGraphId: integer("concept_graph_id").references(() => conceptGraphs.id),
   }
 )
@@ -97,7 +97,7 @@ export const conceptGraphRootRelations = relations(conceptGraphRoots, ({ one }) 
 
 
 export const conceptQuestions = pgTable(
-  "conceptExplanationQuestions",
+  "conceptQuestions",
   {
     id: serial("id").primaryKey(),
     text: varchar("question", { length: 255 }).notNull(),

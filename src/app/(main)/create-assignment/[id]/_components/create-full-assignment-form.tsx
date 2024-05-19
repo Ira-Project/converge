@@ -163,7 +163,7 @@ export const CreateFullAssignmentForm = ({ classrooms }: Props) => {
           </ul>
         }
         <LoadingButton 
-          disabled={!form.formState.isDirty || !createAssignment.isLoading}
+          disabled={!form.formState.isDirty || createAssignment.isLoading}
           loading={createAssignment.isLoading}
           className="w-fit ml-auto">
             Create Classroom

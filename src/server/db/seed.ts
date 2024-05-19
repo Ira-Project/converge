@@ -13,7 +13,7 @@ async function createConceptGraphFromMap(conceptMap: Concept[]) {
     throw new Error("Failed to create concept graph")
   }
 
-  for ( const concept of conceptMap) {
+  for (const concept of conceptMap) {
     
     const conceptList = await db.insert(concepts).values({
       calculationRequired: concept.calculation_required,
@@ -45,7 +45,6 @@ async function createConceptGraphFromMap(conceptMap: Concept[]) {
           conceptQuestionId: conceptQuestion.id
         })
       }
-
     }
 
     if(concept.parent_concepts.length === 0) {
@@ -56,8 +55,14 @@ async function createConceptGraphFromMap(conceptMap: Concept[]) {
     }
 
     for (const parent of concept.parent_concepts) {
+
+      const parentId = mapFromJsonToDb[parent]
+      if(!parentId) {
+        console.log("Parent not found", parent)
+        continue
+      }
       await db.insert(conceptGraphEdges).values({
-        parent: mapFromJsonToDb[parent],
+        parent: parentId,
         child: conceptDb.id,
         conceptGraphId: conceptGraph.id
       })
