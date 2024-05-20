@@ -11,13 +11,11 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   }
 
   const channelB = supabaseClient.channel(input.channelName)
-  setTimeout(() => {return}, 5000);  
   channelB.subscribe((status) => {
     if(status !== 'SUBSCRIBED') {
       console.log("Channel not subscribed", status);
       return;
     } 
-    setTimeout(() => {return}, 5000);
     void channelB.send({
       type: 'broadcast',
       event: 'action',
@@ -27,6 +25,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     });
   })
 
+  await supabaseClient.removeChannel(channelB)
   return;
   
 }
