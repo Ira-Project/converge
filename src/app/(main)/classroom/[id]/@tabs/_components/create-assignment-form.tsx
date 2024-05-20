@@ -44,7 +44,7 @@ export const CreateAssignmentForm = ({ assignmentTemplates } : Props) => {
           name="assignmentTemplateId"
           render={({ field }) => (
             <FormItem>
-              <FormLabel asChild>Choose a Topic to Assign</FormLabel>
+              <FormLabel asChild><legend>Choose a Topic to Assign</legend></FormLabel>
               <FormControl>
                 <Suspense fallback={ <Skeleton className="w-full h-8"/> } >
                   <Select value={field.value} name={field.name} onValueChange={field.onChange} >

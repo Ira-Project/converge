@@ -57,7 +57,7 @@ export const createAssignment = async (ctx: ProtectedTRPCContext, input: CreateA
 
   await ctx.db.insert(assignments).values({
     id: id,
-    name: input.name,
+    name: input.assignmentName,
     classroomId: input.classId,
     dueDate: input.dueDate,
     maxPoints: input.maxPoints ? input.maxPoints : null,

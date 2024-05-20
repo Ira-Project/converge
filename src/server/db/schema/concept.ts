@@ -130,7 +130,7 @@ export const conceptsToGraphsRelations = relations(conceptsToGraphs, ({ one }) =
 }));
 
 export const conceptGraphToRootConcepts = pgTable(
-  "concept_graph_to_root_concepts",
+  "concept_graphs_to_root_concepts",
   {
     conceptGraphId: varchar("concept_graph_id", {length: 21}).notNull().references(() => conceptGraphs.id),
     conceptId: varchar("concept_id", {length: 21}).notNull().references(() => concepts.id),
@@ -141,8 +141,8 @@ export const conceptGraphToRootConcepts = pgTable(
   },
   (t) => ({
     pk: primaryKey({ columns: [t.conceptGraphId, t.conceptId] }),
-    conceptGraphIdx: index("concept_graph_to_roots_concept_graph_idx").on(t.conceptGraphId),
-    conceptIdx: index("concept_graph_to_roots_concept_idx").on(t.conceptId),
+    conceptGraphIdx: index("concept_graph_to_roots_concept_graph_index").on(t.conceptGraphId),
+    conceptIdx: index("concept_graph_to_roots_concept_index").on(t.conceptId),
   }),
 )
 export const conceptGraphToRootsRelations = relations(conceptGraphToRootConcepts, ({ one }) => ({

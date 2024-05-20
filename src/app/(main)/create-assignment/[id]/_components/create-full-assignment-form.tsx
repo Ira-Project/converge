@@ -29,7 +29,7 @@ export const CreateFullAssignmentForm = ({ classrooms, assignmentTemplateId }: P
   
   const form = useForm({
     defaultValues: {
-      name: "",
+      assignmentName: "",
       classId: "",
       dueDate: addDays(new Date(), 1),
       maxPoints: undefined,
@@ -53,10 +53,10 @@ export const CreateFullAssignmentForm = ({ classrooms, assignmentTemplateId }: P
       <form className="grid gap-4" onSubmit={onSubmit}>
         <FormField
           control={form.control}
-          name="name"
+          name="assignmentName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Assignment Name</FormLabel>
               <FormControl>
                 <Input {...field} required placeholder="Enter your assignment name here"/>
               </FormControl>
@@ -69,7 +69,7 @@ export const CreateFullAssignmentForm = ({ classrooms, assignmentTemplateId }: P
           name="classId"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel asChild><legend>Subject</legend></FormLabel>
               <FormControl>
                 <Select value={field.value} name={field.name} onValueChange={field.onChange} >
                   <SelectTrigger>

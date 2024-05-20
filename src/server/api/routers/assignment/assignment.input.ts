@@ -6,7 +6,7 @@ export const listAssignmentsSchema = z.object({
 export type ListAssignmentsInput = z.infer<typeof listAssignmentsSchema>;
 
 export const createAssignmentSchema = z.object({
-  name: z.string(),
+  assignmentName: z.string(),
   classId: z.string(),
   dueDate: z.date().min(new Date()),
   maxPoints: z.number().min(0).max(100).optional(),

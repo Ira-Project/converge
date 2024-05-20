@@ -9,6 +9,7 @@
 
 import { uncachedValidateRequest } from "@/lib/auth/validate-request";
 import { db } from "@/server/db";
+import { realtimeDb } from "@/server/realtime_db";
 import { initTRPC, TRPCError, type inferAsyncReturnType } from "@trpc/server";
 import superjson from "superjson";
 import { ZodError } from "zod";
@@ -31,6 +32,7 @@ export const createTRPCContext = async (opts: { headers: Headers }) => {
     session,
     user,
     db,
+    realtimeDb,
     headers: opts.headers,
   };
 };

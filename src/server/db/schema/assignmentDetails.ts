@@ -4,7 +4,6 @@ import {
   boolean,
   timestamp,
   varchar,
-  integer,
   text
 } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";

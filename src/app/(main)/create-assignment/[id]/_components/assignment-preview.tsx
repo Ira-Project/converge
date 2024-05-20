@@ -50,14 +50,25 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
   console.log("channelName", channelName);
 
   useEffect(() => {
-    const channelA = supabaseClient.channel(channelName)
+    const channelA = supabaseClient.channel('table-db-changes')
     channelA
       .on(
-        'broadcast',
-        { event: 'action' }, 
-        (action) => {
-          const stateDispatch = action.payload as unknown as AssignmentUpdateActions;
-          questionsStateDispatch(stateDispatch); 
+        'postgres_changes',
+        {
+          schema: 'public',
+          event: 'INSERT',
+          table: 'ira_project_actions',
+          filter: 'channel_id=eq.' + channelName,
+        },
+        (payload) => {
+          console.log("RECEIVED: ", payload);
+          const actionPayload = payload.new.payload as JSON;
+          const actionType = payload.new.actionType as AssignmentUpdateActions;
+          const action = {
+            type: actionType,
+            payload: actionPayload,
+          } as unknown as AssignmentUpdateActions;
+          questionsStateDispatch(action)
         }
       )
       .subscribe((status) => {
@@ -98,7 +109,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
             name="explanation"
             render={({ field }) => (
               <FormItem>
-                <FormLabel asChild>Explanation</FormLabel>
+                <FormLabel asChild><legend>Explanation</legend></FormLabel>
                 <FormControl>
                   <Textarea 
                     {...field} 
