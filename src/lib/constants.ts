@@ -22,6 +22,11 @@ export enum QuestionStatus {
   LOADING = "loading"
 }
 
+export type AssignmentState = {
+  questions: QuestionState[];
+  validNodeIds: string[];
+}
+
 export type QuestionState = {
   id: string;
   status: QuestionStatus;
@@ -31,18 +36,18 @@ export type QuestionState = {
   workingComplete: boolean;
 };
 
-export enum QuestionsUpdateActionType {
+export enum AssignmentUpdateActionType {
   SET_LOADING = 'Set Loading',
   UPDATE_EXPLANATION = 'Update Explanation',
   UPDATE_STATUS = 'Update Question Status',
 }
 
-export type QuestionsUpdateActions = 
+export type AssignmentUpdateActions = 
   | { 
-      type: QuestionsUpdateActionType.SET_LOADING; 
+      type: AssignmentUpdateActionType.SET_LOADING; 
     }
   | {
-      type: QuestionsUpdateActionType.UPDATE_EXPLANATION;
+      type: AssignmentUpdateActionType.UPDATE_EXPLANATION;
       payload: { 
         explanation: string,
         questionId: string
@@ -50,7 +55,7 @@ export type QuestionsUpdateActions =
       }
     }
   | {
-      type: QuestionsUpdateActionType.UPDATE_STATUS;
+      type: AssignmentUpdateActionType.UPDATE_STATUS;
       payload: { 
         questionId: string, 
         newStatus: QuestionStatus, 

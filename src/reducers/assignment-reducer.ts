@@ -1,15 +1,14 @@
-import { QuestionStatus } from "@/lib/constants";
-import { type QuestionState, type QuestionsUpdateActions, QuestionsUpdateActionType  } from "@/lib/constants";
-
+import { type AssignmentState, QuestionStatus } from "@/lib/constants";
+import { type AssignmentUpdateActions, AssignmentUpdateActionType  } from "@/lib/constants";
 
 export const questionReducer = (
-  state: QuestionState[],
-  action: QuestionsUpdateActions
+  state: AssignmentState,
+  action: AssignmentUpdateActions
 ) => {
   switch (action.type) {
 
-    case QuestionsUpdateActionType.SET_LOADING:
-      return state.map((question) => {
+    case AssignmentUpdateActionType.SET_LOADING:
+      const newQuestions = state.questions.map((question) => {
         return {
           ...question,
           status: QuestionStatus.LOADING,
@@ -17,10 +16,16 @@ export const questionReducer = (
           workingComplete: false,
         };
       });
-
-    case QuestionsUpdateActionType.UPDATE_EXPLANATION:
       return {
-        ...state.map((question) => {
+        ...state,
+        questions: newQuestions,
+
+      }
+
+    case AssignmentUpdateActionType.UPDATE_EXPLANATION:
+      return {
+        ...state,
+        questions: state.questions.map((question) => {
           if (question.id === action.payload.questionId) {
             return {
               ...question,
@@ -32,9 +37,10 @@ export const questionReducer = (
         }),
       };
       
-    case QuestionsUpdateActionType.UPDATE_STATUS:
+    case AssignmentUpdateActionType.UPDATE_STATUS:
       return {
-        ...state.map((question) => {
+        ...state,
+        questions: state.questions.map((question) => {
           if (question.id === action.payload.questionId) {
             return {
               ...question,

@@ -11,12 +11,12 @@ import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { ScrollBar } from "@/components/ui/scroll-area";
 import { PaperPlaneIcon } from "@radix-ui/react-icons";
 import { Accordion } from "@/components/ui/accordion";
-import { QuestionAccordionItem } from "../../../../../components/question-accordion-item";
+import { QuestionAccordionItem } from "@/components/question-accordion-item";
 import { QuestionStatus } from "@/lib/constants";
 import { supabaseClient } from "@/lib/supabaseClient";
-import { use, useEffect, useReducer, useState } from "react";
-import { type QuestionState, type QuestionsUpdateActions } from "@/lib/constants";
-import { questionReducer } from "../reducers/question-reducer";
+import { useEffect, useReducer, useState } from "react";
+import { type AssignmentState, type AssignmentUpdateActions } from "@/lib/constants";
+import { questionReducer } from "@/reducers/assignment-reducer";
 import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
 
 interface Props {
@@ -27,16 +27,21 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
 
   const explanationMutation = api.explanation.explain.useMutation();
 
-  const initialState:QuestionState[] = assignmentTemplate.questions.map((question) => ({
-    id: question.id.toString(),
-    status: QuestionStatus.UNANSWERED,
-    questionText: question.question,
-    answerText: question.answer,
-    working: "",
-    workingComplete: false,
-  }));
+  const initialState: AssignmentState = {
+    validNodeIds: [],
+    questions: assignmentTemplate.questions.map((question) => {
+      return {
+        id: question.id.toString(),
+        status: QuestionStatus.UNANSWERED,
+        questionText: question.question,
+        answerText: question.answer,
+        working: "",
+        workingComplete: false,
+      };
+    }),
+  };
 
-  const [questionsState, questionsStateDispatch] = useReducer(questionReducer, initialState);
+  const [assignmentState, questionsStateDispatch] = useReducer(questionReducer, initialState);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
   const channelName = "hello";
@@ -48,7 +53,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
         'broadcast',
         { event: 'action' }, 
         (action) => {
-          const stateDispatch = action.payload as unknown as QuestionsUpdateActions;
+          const stateDispatch = action.payload as unknown as AssignmentUpdateActions;
           questionsStateDispatch(stateDispatch); 
         }
       )
@@ -122,7 +127,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
       <ScrollArea className="gap-4 flex flex-col overflow-y-auto pr-4">
         <Accordion type="single" collapsible className="w-full">
           {
-            questionsState.map((question) => (
+            assignmentState.questions.map((question) => (
               <QuestionAccordionItem 
                 status={question.status}
                 key={question.id}
