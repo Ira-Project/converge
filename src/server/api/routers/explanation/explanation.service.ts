@@ -11,10 +11,12 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   }
 
   const channelB = supabaseClient.channel(input.channelName)
+  
   channelB.subscribe((status) => {
     if(status !== 'SUBSCRIBED') {
+      console.log("Channel not subscribed", status);
       return;
-    }
+    } 
     void channelB.send({
       type: 'broadcast',
       event: 'action',

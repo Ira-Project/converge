@@ -18,6 +18,7 @@ import { useEffect, useReducer, useState } from "react";
 import { type AssignmentState, type AssignmentUpdateActions } from "@/lib/constants";
 import { questionReducer } from "@/reducers/assignment-reducer";
 import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
+import { generateId } from "lucia";
 
 interface Props {
   assignmentTemplate: RouterOutputs["assignmentTemplate"]["get"]; 
@@ -44,7 +45,8 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
   const [assignmentState, questionsStateDispatch] = useReducer(questionReducer, initialState);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const channelName = "hello";
+  const channelName = generateId(21);
+  console.log("channelName", channelName);
 
   useEffect(() => {
     const channelA = supabaseClient.channel(channelName)
