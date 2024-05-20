@@ -2,6 +2,7 @@ import { db } from ".";
 import { 
   conceptAnswers, 
   conceptGraphEdges, 
+  conceptGraphToRootConcepts, 
   conceptGraphs, 
   concepts, 
   conceptsToGraphs, 
@@ -9,13 +10,15 @@ import {
 import { eq, or, and } from "drizzle-orm";
 
 
-import json from './concepts.json'
+import conceptsJson from './concepts.json'
+import graphJson from './graphs.json'
+
 import { generateId } from "lucia";
 
 
 async function createConcepts() {
 
-  for(const concept of json.concepts) {
+  for(const concept of conceptsJson.concepts) {
     
     await db.insert(concepts).values({
       id: concept.concept_uuid,
@@ -33,7 +36,7 @@ async function createConcepts() {
     }
   }
 
-  for(const concept of json.concepts) {
+  for(const concept of conceptsJson.concepts) {
 
     for(const similar_concepts of concept.similar_concepts) {
       const sc = await db.select().from(similarConcepts).where(
@@ -55,4 +58,50 @@ async function createConcepts() {
   }
 }
 
+async function createGraph() {
+
+  const conceptGraphId = "u1o8fhfhuhtgescgcp2s5"; //generateId(21);
+
+  // await db.insert(conceptGraphs).values({
+  //   id: conceptGraphId,
+  //   name: "Probability assignment template",  
+  // })
+
+  // for(const node of graphJson.nodes) {
+  //   await db.insert(conceptsToGraphs).values({
+  //     conceptId: node,
+  //     conceptGraphId: conceptGraphId
+  //   })
+  // }
+
+  type dictionaryKeys = keyof typeof graphJson.adjacency_dict;
+// 
+  // for(const parent in graphJson.adjacency_dict) {
+
+  //   const parentString = parent as dictionaryKeys;
+  //   const children = graphJson.adjacency_dict[parentString];
+
+  //   for(const child of children) {
+
+  //     await db.insert(conceptGraphEdges).values({
+  //       id: generateId(21),
+  //       parent: parent,
+  //       child: child,
+  //       conceptGraphId: conceptGraphId
+  //     })
+  //   }
+  // }
+
+  for(const root of graphJson.root_ids) {
+
+    console.log(root);
+    await db.insert(conceptGraphToRootConcepts).values({
+      conceptGraphId: conceptGraphId,
+      conceptId: root
+    })
+    
+  }
+}
+
+await createGraph();
 // await createConcepts();

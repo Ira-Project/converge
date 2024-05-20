@@ -15,7 +15,7 @@ import { QuestionAccordionItem } from "@/components/question-accordion-item";
 import { QuestionStatus } from "@/lib/constants";
 import { supabaseClient } from "@/lib/supabaseClient";
 import { useEffect, useReducer, useState } from "react";
-import { type AssignmentState, type AssignmentUpdateActions } from "@/lib/constants";
+import { type AssignmentState, type AssignmentUpdateActions, AssignmentUpdateActionType } from "@/lib/constants";
 import { questionReducer } from "@/reducers/assignment-reducer";
 import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
 import { generateId } from "lucia";
@@ -47,8 +47,6 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
 
   const [channelName, setChannelName] = useState<string>(generateId(21));
 
-  console.log("channelName", channelName);
-
   useEffect(() => {
     const channelA = supabaseClient.channel('table-db-changes')
     channelA
@@ -61,7 +59,6 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
           filter: 'channel_id=eq.' + channelName, 
         },
         (payload) => {
-          console.log("RECEIVED: ", payload);
           const actionPayload = payload.new.payload as JSON;
           const actionType = payload.new.actionType as AssignmentUpdateActions;
           const action = {
@@ -73,12 +70,8 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
       )
       .subscribe((status) => {
         if(status === 'SUBSCRIBED') {
-          console.log("SUBSCRIBED");
           setIsSubscribed(true);
           return;
-        } else {
-          console.log("UNSUBSCRIBED", status);
-          setIsSubscribed(false);
         }
       });
 
@@ -98,6 +91,9 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
 
 
   const onSubmit = form.handleSubmit(async (values) => {
+    questionsStateDispatch({
+      type: AssignmentUpdateActionType.SET_LOADING,
+    })
     await explanationMutation.mutateAsync({
       explanation: values.explanation,
       channelName: channelName,

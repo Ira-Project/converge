@@ -106,7 +106,6 @@ export const conceptsToGraphs = pgTable(
   {
     conceptId: varchar("concept_id", {length: 21}).notNull().references(() => concepts.id),
     conceptGraphId: varchar("concept_graph_id", {length: 21}).notNull().references(() => conceptGraphs.id),
-    showVisualization: boolean("show_visualization").default(true).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -130,7 +129,7 @@ export const conceptsToGraphsRelations = relations(conceptsToGraphs, ({ one }) =
 }));
 
 export const conceptGraphToRootConcepts = pgTable(
-  "concept_graphs_to_root_concepts",
+  "concept_graph_to_root_concepts",
   {
     conceptGraphId: varchar("concept_graph_id", {length: 21}).notNull().references(() => conceptGraphs.id),
     conceptId: varchar("concept_id", {length: 21}).notNull().references(() => concepts.id),
