@@ -21,3 +21,38 @@ export enum QuestionStatus {
   UNANSWERED = "unanswered",
   LOADING = "loading"
 }
+
+export type QuestionState = {
+  id: string;
+  status: QuestionStatus;
+  questionText: string;
+  answerText: string
+  working: string;
+  workingComplete: boolean;
+};
+
+export enum QuestionsUpdateActionType {
+  SET_LOADING = 'Set Loading',
+  UPDATE_EXPLANATION = 'Update Explanation',
+  UPDATE_STATUS = 'Update Question Status',
+}
+
+export type QuestionsUpdateActions = 
+  | { 
+      type: QuestionsUpdateActionType.SET_LOADING; 
+    }
+  | {
+      type: QuestionsUpdateActionType.UPDATE_EXPLANATION;
+      payload: { 
+        explanation: string,
+        questionId: string
+        isLast: boolean 
+      }
+    }
+  | {
+      type: QuestionsUpdateActionType.UPDATE_STATUS;
+      payload: { 
+        questionId: string, 
+        newStatus: QuestionStatus, 
+      }
+    }

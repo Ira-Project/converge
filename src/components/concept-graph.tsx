@@ -6,18 +6,20 @@ import ForceGraph2D, { type ForceGraphMethods } from 'react-force-graph-2d';
 
 interface Props {
   assignmentTemplate: RouterOutputs["assignmentTemplate"]["get"];
+  width?: number;
+  height?: number;
+  zoom?: number;
 }
 
-
 export const ConceptGraph = (
-  { assignmentTemplate } : Props
+  { assignmentTemplate, width, height, zoom } : Props
 ) => {
 
   const theme = useTheme();
   const graphRef = useRef<ForceGraphMethods>();
   
   useEffect(() => {
-    graphRef.current?.zoom(0.9, 1000)
+    graphRef.current?.zoom(zoom ?? 0.9, 1000)
   }, [])
 
   const nodes = assignmentTemplate.conceptGraphs.conceptToGraphs?.map((conceptToGraphs) => ({ 
@@ -40,8 +42,8 @@ export const ConceptGraph = (
             ref={graphRef}
             graphData={data}
             minZoom={0.5}
-            width={320}
-            height={176}
+            width={width ?? 320}
+            height={height ?? 176}
             nodeRelSize={5}
             nodeLabel={
               (node) => {

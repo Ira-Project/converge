@@ -21,7 +21,6 @@ export function AssignmentTemplateCard({ id, name, imageUrl } : AssignmentTempla
           alt={name} 
           width={0}
           height={0}
-          objectFit="cover"
           sizes="100vw" />
         <p className="absolute bottom-4 left-4 text-white font-bold text-lg"> 
           {name}

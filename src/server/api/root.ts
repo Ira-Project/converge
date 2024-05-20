@@ -1,6 +1,7 @@
 import { assignmentRouter } from "./routers/assignment/assignment.procedure";
 import { assignmentTemplateRouter } from "./routers/assignmentTemplate/assignmentTemplate.procedure";
 import { classroomRouter } from "./routers/classroom/classroom.procedure";
+import { explanationRouter } from "./routers/explanation/explanation.procedure";
 import { subjectRouter } from "./routers/subject/subject.procedure";
 import { createTRPCRouter } from "./trpc";
 
@@ -9,6 +10,7 @@ export const appRouter = createTRPCRouter({
   subject: subjectRouter,
   assignment: assignmentRouter,
   assignmentTemplate: assignmentTemplateRouter,
+  explanation: explanationRouter,
 });
 
 export type AppRouter = typeof appRouter;

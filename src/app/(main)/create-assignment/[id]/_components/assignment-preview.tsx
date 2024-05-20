@@ -11,8 +11,13 @@ import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { ScrollBar } from "@/components/ui/scroll-area";
 import { PaperPlaneIcon } from "@radix-ui/react-icons";
 import { Accordion } from "@/components/ui/accordion";
-import { QuestionAccordionItem } from "./question-accordion-item";
+import { QuestionAccordionItem } from "../../../../../components/question-accordion-item";
 import { QuestionStatus } from "@/lib/constants";
+import { supabaseClient } from "@/lib/supabase";
+import { useEffect, useReducer } from "react";
+import { type QuestionState, type QuestionsUpdateActions } from "@/lib/constants";
+import { questionReducer } from "../reducers/question-reducer";
+import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
 
 interface Props {
   assignmentTemplate: RouterOutputs["assignmentTemplate"]["get"]; 
@@ -20,27 +25,54 @@ interface Props {
 
 export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
 
-  // const createAssignment = api.assignment.create.useMutation();
+  const explanationMutation = api.explanation.explain.useMutation();
 
+  const initialState:QuestionState[] = assignmentTemplate.questions.map((question) => ({
+    id: question.id.toString(),
+    status: QuestionStatus.UNANSWERED,
+    questionText: question.question,
+    answerText: question.answer,
+    working: "",
+    workingComplete: false,
+  }));
+
+  const [questionsState, questionsStateDispatch] = useReducer(questionReducer, initialState);
+
+  const channelName = "hello";
+
+  useEffect(() => {
+    const channelA = supabaseClient.channel(channelName)
+    channelA
+      .on(
+        'broadcast',
+        { event: 'action' }, 
+        (action) => {
+          const stateDispatch = action.payload as unknown as QuestionsUpdateActions;
+          questionsStateDispatch(stateDispatch); 
+        }
+      )
+      .subscribe()
+
+    return () => {
+      void supabaseClient.removeChannel(channelA)
+    }
+  }, [supabaseClient, channelName]);
+  
   
   const form = useForm({
     defaultValues: {
       explanation: "",
+      channelName: channelName,
     },
-    // resolver: zodResolver(createAssignmentSchema),
+    resolver: zodResolver(explainSchema),
   })
 
-  const questions = [...assignmentTemplate.questions]
 
   const onSubmit = form.handleSubmit(async (values) => {
-
-    // const id = await createAssignment.mutateAsync(
-    //   {
-    //     ...values,
-    //     conceptGraphId: conceptGraphId,
-    //   }
-    // );
-    // void router.replace(`/assignment/${id}`)
+    await explanationMutation.mutateAsync({
+      explanation: values.explanation,
+      channelName: channelName,
+    });
   });
 
   return (
@@ -52,7 +84,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
             name="explanation"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Explanation</FormLabel>
+                <FormLabel asChild>Explanation</FormLabel>
                 <FormControl>
                   <Textarea 
                     {...field} 
@@ -65,33 +97,33 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
               </FormItem>
             )} 
           />
-          {
-            // createAssignment.error &&
-            // <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">
-            //   {createAssignment.error.message}
-            // </ul>
-          }
           <LoadingButton 
             dontShowChildrenWhileLoading
-            disabled={!form.formState.isDirty} // || createAssignment.isLoading}
-            // loading={createAssignment.isLoading}
+            disabled={!form.formState.isDirty || explanationMutation.isLoading} 
+            loading={explanationMutation.isLoading}
             className="ml-auto mr-4 p-2 -translate-y-16 h-8 w-8">
               <PaperPlaneIcon />
           </LoadingButton>
+          {
+            explanationMutation.error &&
+            <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive -translate-y-16 mt-4">
+              {explanationMutation.error.message}
+            </ul>
+          }
         </form>
       </Form>
       <p className="font-semibold"> Questions </p>
       <ScrollArea className="gap-4 flex flex-col overflow-y-auto pr-4">
         <Accordion type="single" collapsible className="w-full">
           {
-            questions.map((question) => (
+            questionsState.map((question) => (
               <QuestionAccordionItem 
-                status={QuestionStatus.UNANSWERED}
+                status={question.status}
                 key={question.id}
                 id={question.id.toString()}
-                questionText={question.question}
-                answerText={question.answer} 
-                workingText={question.id === 7 ? "This is a working text" : undefined}
+                questionText={question.questionText}
+                answerText={question.answerText} 
+                workingText={question.working !== "" ? question.working : undefined}
                 />
             ))
           }
