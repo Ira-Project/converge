@@ -7,7 +7,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { BackButton } from "@/components/back-button";
 
 const ConceptGraph = dynamic(
-  () => import("@/components/concept-graph").then((mod) => mod.ConceptGraph),
+  () => import("../../../../../components/concept-graph").then((mod) => mod.ConceptGraph),
   {
     ssr: false,
   }

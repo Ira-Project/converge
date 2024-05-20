@@ -1,6 +1,6 @@
 import type { ProtectedTRPCContext } from "../../trpc";
 import { type ExplainInput } from "./explanation.input";
-import { supabaseClient } from "@/lib/supabase";
+import { supabaseClient } from "@/lib/supabaseClient";
 import { type QuestionsUpdateActions, QuestionsUpdateActionType } from "@/lib/constants";
 // import { explanation } from "@/server/db/schema/explanations";
 

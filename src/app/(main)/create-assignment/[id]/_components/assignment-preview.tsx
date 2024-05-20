@@ -13,7 +13,7 @@ import { PaperPlaneIcon } from "@radix-ui/react-icons";
 import { Accordion } from "@/components/ui/accordion";
 import { QuestionAccordionItem } from "../../../../../components/question-accordion-item";
 import { QuestionStatus } from "@/lib/constants";
-import { supabaseClient } from "@/lib/supabase";
+import { supabaseClient } from "@/lib/supabaseClient";
 import { useEffect, useReducer } from "react";
 import { type QuestionState, type QuestionsUpdateActions } from "@/lib/constants";
 import { questionReducer } from "../reducers/question-reducer";
