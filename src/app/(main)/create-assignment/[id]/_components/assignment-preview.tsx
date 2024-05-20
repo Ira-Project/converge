@@ -58,7 +58,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
           schema: 'public',
           event: 'INSERT',
           table: 'ira_project_actions',
-          filter: 'channel_id=eq.' + channelName,
+          // filter: 'channel_id=eq.' + channelName, 
         },
         (payload) => {
           console.log("RECEIVED: ", payload);
