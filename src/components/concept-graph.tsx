@@ -15,6 +15,8 @@ export const ConceptGraph = (
   { assignmentTemplate, width, height, zoom } : Props
 ) => {
 
+  if(typeof window === 'undefined') return <></>;
+
   const theme = useTheme();
   const graphRef = useRef<ForceGraphMethods>();
   
