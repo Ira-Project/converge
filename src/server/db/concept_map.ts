@@ -83,10 +83,28 @@ export const map:Concept[] = [
     parent_concepts: [1]
   },
   {
+    concept_id: 8,
+    concept_text: [
+      {
+        question: "What are equally likely outcomes?",
+        answers: [
+          "If each outcome of an experiment or a trial has the same chance of occurring, the outcomes are said to be equally likely.",
+          "Outcomes are considered equally likely when they all have the same probability of happening.",
+          "They are called equally likely outcomes because each one is as probable as the others.",
+          "When no single outcome has a greater chance of occurring than any other, these are termed equally likely outcomes.",
+          "Equally likely implies that every possible result of an action has an identical likelihood of taking place."
+        ]
+      }
+    ],
+    concept_formula: "",
+    calculation_required: false,
+    parent_concepts: [2, 4, 6],
+  },
+  {
     concept_id: 6,
     concept_text: [
       {
-        question: "What is probability of an event in an experiment?",
+        question: "In an experiment, how to calculate probability?",
         answers: [
           "The probability of an event in an experiment is defined as the number of trials in which the event happened divided by the total number of trials.",
           "It's the fraction of times an event occurs out of the total attempts made.",
@@ -108,25 +126,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "P(Event) = Number of trials in which the event happened / Total number of trials",
     calculation_required: true,
-    parent_concepts: [2, 4]
-  },
-  {
-    concept_id: 8,
-    concept_text: [
-      {
-        question: "What are equally likely outcomes?",
-        answers: [
-          "If each outcome of an experiment or a trial has the same chance of occurring, the outcomes are said to be equally likely.",
-          "Outcomes are considered equally likely when they all have the same probability of happening.",
-          "They are called equally likely outcomes because each one is as probable as the others.",
-          "When no single outcome has a greater chance of occurring than any other, these are termed equally likely outcomes.",
-          "Equally likely implies that every possible result of an action has an identical likelihood of taking place."
-        ]
-      }
-    ],
-    concept_formula: "",
-    calculation_required: false,
-    parent_concepts: [6],
+    parent_concepts: [4]
   },
   {
     concept_id: 9,
@@ -180,7 +180,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "P(Event A and Event B) = P(Event A) * P(Event B)",
     calculation_required: false,
-    parent_concepts: [6, 9],
+    parent_concepts: [6, 9, 10],
   },
   {
     concept_id: 12,
@@ -198,7 +198,7 @@ export const map:Concept[] = [
     ],
     concept_formula: "P(Event A and Event B) = P(Event A) * P(Event B after Event A has occurred)",
     calculation_required: true,
-    parent_concepts: [6, 9], 
+    parent_concepts: [6, 9, 10], 
   },
   {
     concept_id: 13,

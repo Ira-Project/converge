@@ -17,11 +17,30 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
       console.log("Channel not subscribed", status);
       return;
     } 
+
+    //TO DO LOGIC FOR THE AI 
+
+
+
+
+
+
+
+
+
+
+
     void channelB.send({
       type: 'broadcast',
       event: 'action',
       payload: payload,
-    })
+    }).then(() => {
+      console.log("Payload sent to channel");
+    });
   })
+
+  setTimeout(() => {return}, 5000);
+
+  return;
   
 }

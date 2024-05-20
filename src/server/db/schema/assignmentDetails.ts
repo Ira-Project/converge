@@ -20,7 +20,8 @@ export const questions = pgTable(
     id: serial("id").primaryKey(),
     question: text("question").notNull(),
     answer: text("answer").notNull(),
-    conceptGraphId: integer("concept_graph_id").references(() => conceptGraphs.id), //TODO: Make it not null later
+    conceptGraphId: varchar("concept_graph_id", { length: 21 }).references(() => conceptGraphs.id), 
+    //TODO: Make it not null later
     assignmentTemplateId: varchar("assignment_template_id", { length: 21 }).references(() => assignmentTemplates.id).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
@@ -28,6 +29,7 @@ export const questions = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   }
 );
+
 export const questionRelations = relations(questions, ({ one }) => ({
   conceptGraph: one(conceptGraphs, {
     fields: [questions.conceptGraphId],

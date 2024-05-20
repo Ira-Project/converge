@@ -1,4 +1,4 @@
-import { boolean, integer, pgTableCreator, timestamp, varchar, text } from "drizzle-orm/pg-core";
+import { boolean, pgTableCreator, timestamp, varchar, text } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { users } from "./user";
 import { relations } from "drizzle-orm";
@@ -13,7 +13,7 @@ export const assignmentTemplates = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name").notNull(),
     imageUrl: text("image_url").notNull(),
-    conceptGraphId: integer("concept_graph_id").references(() => conceptGraphs.id).notNull(),
+    conceptGraphId: varchar("concept_graph_id", { length: 21 }).references(() => conceptGraphs.id),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),

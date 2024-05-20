@@ -20,7 +20,8 @@ export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 export const conceptGraphs = pgTable(
   "concept_graphs",
   {
-    id: serial("id").primaryKey(),
+    id: varchar("id", { length: 21 }).primaryKey(),
+    name: text("name"),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -39,7 +40,8 @@ export const conceptGraphRelations = relations(conceptGraphs, ({ many, one }) =>
 export const concepts = pgTable(
   "concepts",
   {
-    id: serial("id").primaryKey(),
+    id: varchar("id", { length: 21 }).primaryKey(),
+    text: text("text").notNull(),
     calculationRequired: boolean("calculation_required").default(false).notNull(),
     formula: varchar("formula", { length: 255 }),
     createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -50,17 +52,16 @@ export const concepts = pgTable(
 )
 export const conceptRelations = relations(concepts, ({ many }) => ({
   conceptsToGraphs: many(conceptsToGraphs),
-  conceptQuestions: many(conceptQuestions),
 }));
 
 
 export const conceptGraphEdges = pgTable(
   "concept_graph_edges",
   {
-    id: serial("id").primaryKey(),
-    parent: integer("parent").references(() => concepts.id).notNull(),
-    child: integer("child").references(() => concepts.id).notNull(),
-    conceptGraphId: integer("concept_graph_id").references(() => conceptGraphs.id),
+    id: varchar("id", { length: 21 }).primaryKey(),
+    parent: varchar("parent", { length: 21 }).references(() => concepts.id).notNull(),
+    child: varchar("child", { length: 21 }).references(() => concepts.id).notNull(),
+    conceptGraphId: varchar("concept_graph_id", { length: 21 }).references(() => conceptGraphs.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -86,9 +87,9 @@ export const conceptGraphEdgeRelations = relations(conceptGraphEdges, ({ one }) 
 export const conceptGraphRoots = pgTable(
   "concept_graph_roots",
   {
-    id: serial("id").primaryKey(),
-    conceptId: integer("concept_id").references(() => concepts.id).notNull(),
-    conceptGraphId: integer("concept_graph_id").references(() => conceptGraphs.id),
+    id: varchar("id", { length: 21 }).primaryKey(),
+    conceptId: varchar("concept_id", { length: 21 }).notNull().references(() => concepts.id),
+    conceptGraphId: varchar("concept_graph_id", { length: 21 }).notNull().references(() => conceptGraphs.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -107,33 +108,12 @@ export const conceptGraphRootRelations = relations(conceptGraphRoots, ({ one }) 
 }));
 
 
-export const conceptQuestions = pgTable(
-  "concept_questions",
-  {
-    id: serial("id").primaryKey(),
-    text: text("question").notNull(),
-    conceptId: integer("concept_id").references(() => concepts.id),
-    createdAt: timestamp("created_at").defaultNow().notNull(),
-    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
-    isDeleted: boolean("is_deleted").default(false).notNull(),
-    deletedAt: timestamp("deleted_at", { mode: "date" }),
-  }
-)
-export const conceptQuestionRelations = relations(conceptQuestions, ({ one, many }) => ({
-  concept: one(concepts, {
-    fields: [conceptQuestions.conceptId],
-    references: [concepts.id],
-  }),
-  conceptAnswers: many(conceptAnswers),
-}));
-
-
 export const conceptAnswers = pgTable(
   "concept_answers",
   {
-    id: serial("id").primaryKey(),
+    id: varchar("id", { length: 21 }).primaryKey(),
     text: text("text").notNull(),
-    conceptQuestionId: integer("concept_question_id").references(() => conceptQuestions.id),
+    conceptId: varchar("concept_id", { length: 21 }).notNull().references(() => concepts.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -141,9 +121,9 @@ export const conceptAnswers = pgTable(
   }
 )
 export const conceptAnswerRelations = relations(conceptAnswers, ({ one }) => ({
-  conceptQuestion: one(conceptQuestions, {
-    fields: [conceptAnswers.conceptQuestionId],
-    references: [conceptQuestions.id],
+  conceptQuestion: one(concepts, {
+    fields: [conceptAnswers.conceptId],
+    references: [concepts.id],
   }),
 }));
 
@@ -151,8 +131,9 @@ export const conceptAnswerRelations = relations(conceptAnswers, ({ one }) => ({
 export const conceptsToGraphs = pgTable(
   "concepts_to_graphs",
   {
-    conceptId: integer("concept_id").notNull().references(() => concepts.id),
-    conceptGraphId: integer("concept_graph_id").notNull().references(() => conceptGraphs.id),
+    conceptId: varchar("concept_id", {length: 21}).notNull().references(() => concepts.id),
+    conceptGraphId: varchar("concept_graph_id", {length: 21}).notNull().references(() => conceptGraphs.id),
+    showVisualization: boolean("show_visualization").default(true).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),

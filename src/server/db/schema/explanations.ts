@@ -41,7 +41,7 @@ export const correctConcepts = pgTable(
   {
     id: serial("id").primaryKey(),
     explanationId: varchar("explanation_id", { length: 21 }).references(() => explanation.id).notNull(),
-    conceptId: integer("concept_id").references(() => conceptGraphs.id).notNull(),
+    conceptId: varchar("concept_id", { length: 21 }).references(() => conceptGraphs.id).notNull(),
   }
 );
 export const correctConceptRelations = relations(correctConcepts, ({ one }) => ({
