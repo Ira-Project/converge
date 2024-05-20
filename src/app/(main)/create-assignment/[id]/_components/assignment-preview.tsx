@@ -73,8 +73,12 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
       )
       .subscribe((status) => {
         if(status === 'SUBSCRIBED') {
+          console.log("SUBSCRIBED");
           setIsSubscribed(true);
           return;
+        } else {
+          console.log("UNSUBSCRIBED", status);
+          setIsSubscribed(false);
         }
       });
 
