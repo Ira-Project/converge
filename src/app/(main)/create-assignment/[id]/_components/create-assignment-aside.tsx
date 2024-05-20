@@ -24,16 +24,18 @@ export const CreateAssignmentAside = async ( {id } : Props ) => {
   const assignmentTemplate = await api.assignmentTemplate.get.query({ id });
 
   return (
-    <div className="w-96 bg-background z-20 fixed left-0 top-0 h-screen flex flex-col py-6 pl-6 pr-2 gap-4 shadow-md">
+    <div className="w-96 bg-background z-20 fixed left-0 top-0 h-screen gap-4 shadow-md">
       <ScrollArea className="overflow-y-auto pr-4">
-        <BackButton className="text-muted-foreground p-0 text-left mr-auto" variant="link"> ← Back </BackButton>
-        <p className="text-lg font-semibold"> Create Assignment </p>
-        <Suspense fallback={<Skeleton className="w-full h-8" />}>
-          <CreateFullAssignmentForm classrooms={classrooms} assignmentTemplateId={id} />
-        </Suspense>
-        <Suspense fallback={<Skeleton className="w-full h-60" />}>
-          <ConceptGraph assignmentTemplate={assignmentTemplate} />
-        </Suspense>
+        <div className="flex flex-col gap-4 py-6 pl-6 pr-2">
+          <BackButton className="text-muted-foreground p-0 text-left mr-auto" variant="link"> ← Back </BackButton>
+          <p className="text-lg font-semibold"> Create Assignment </p>
+          <Suspense fallback={<Skeleton className="w-full h-8" />}>
+            <CreateFullAssignmentForm classrooms={classrooms} assignmentTemplateId={id} />
+          </Suspense>
+          <Suspense fallback={<Skeleton className="w-full h-60" />}>
+            <ConceptGraph assignmentTemplate={assignmentTemplate} />
+          </Suspense>
+        </div>
       </ScrollArea>
     </div>
   )
