@@ -48,6 +48,7 @@ export const concepts = pgTable(
 )
 export const conceptRelations = relations(concepts, ({ many }) => ({
   conceptsToGraphs: many(conceptsToGraphs),
+  similarConcepts: many(similarConcepts),  
 }));
 
 
@@ -77,27 +78,6 @@ export const conceptGraphEdgeRelations = relations(conceptGraphEdges, ({ one }) 
     fields: [conceptGraphEdges.conceptGraphId],
     references: [conceptGraphs.id],
   }),
-}));
-
-
-export const conceptGraphRoots = pgTable(
-  "concept_graph_roots",
-  {
-    id: varchar("id", { length: 21 }).primaryKey(),
-    conceptId: varchar("concept_id", { length: 21 }).notNull().references(() => concepts.id),
-    conceptGraphId: varchar("concept_graph_id", { length: 21 }).notNull().references(() => conceptGraphs.id),
-    createdAt: timestamp("created_at").defaultNow().notNull(),
-    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
-    isDeleted: boolean("is_deleted").default(false).notNull(),
-    deletedAt: timestamp("deleted_at", { mode: "date" }),
-  }
-)
-export const conceptGraphRootRelations = relations(conceptGraphRoots, ({ one, many }) => ({
-  concept: one(concepts, {
-    fields: [conceptGraphRoots.conceptId],
-    references: [concepts.id],
-  }),
-  conceptGraph: many(conceptGraphToRoots),
 }));
 
 
@@ -155,16 +135,16 @@ export const conceptGraphToRoots = pgTable(
   "concept_graph_to_roots",
   {
     conceptGraphId: varchar("concept_graph_id", {length: 21}).notNull().references(() => conceptGraphs.id),
-    conceptRootId: varchar("concept_root_id", {length: 21}).notNull().references(() => conceptGraphRoots.id),
+    conceptId: varchar("concept_id", {length: 21}).notNull().references(() => concepts.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   },
   (t) => ({
-    pk: primaryKey({ columns: [t.conceptGraphId, t.conceptRootId] }),
+    pk: primaryKey({ columns: [t.conceptGraphId, t.conceptId] }),
     conceptGraphIdx: index("concept_graph_to_roots_concept_graph_idx").on(t.conceptGraphId),
-    conceptRootIdx: index("concept_graph_to_roots_concept_root_idx").on(t.conceptRootId),
+    conceptRootIdx: index("concept_graph_to_roots_concept_root_idx").on(t.conceptId),
   }),
 )
 export const conceptGraphToRootsRelations = relations(conceptGraphToRoots, ({ one }) => ({
@@ -172,8 +152,32 @@ export const conceptGraphToRootsRelations = relations(conceptGraphToRoots, ({ on
     fields: [conceptGraphToRoots.conceptGraphId],
     references: [conceptGraphs.id],
   }),
-  conceptRoot: one(conceptGraphRoots, {
-    fields: [conceptGraphToRoots.conceptRootId],
-    references: [conceptGraphRoots.id],
+  conceptRoot: one(concepts, {
+    fields: [conceptGraphToRoots.conceptId],
+    references: [concepts.id],
+  }),
+}));
+
+
+export const similarConcepts = pgTable(
+  "similar_concepts",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    conceptId: varchar("concept_id", { length: 21 }).notNull().references(() => concepts.id),
+    similarConceptId: varchar("similar_concept_id", { length: 21 }).notNull().references(() => concepts.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+)
+export const similarConceptRelations = relations(similarConcepts, ({ one }) => ({
+  concept: one(concepts, {
+    fields: [similarConcepts.conceptId],
+    references: [concepts.id],
+  }),
+  similarConcept: one(concepts, {
+    fields: [similarConcepts.similarConceptId],
+    references: [concepts.id],
   }),
 }));
