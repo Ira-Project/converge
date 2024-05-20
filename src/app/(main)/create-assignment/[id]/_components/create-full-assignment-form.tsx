@@ -69,7 +69,7 @@ export const CreateFullAssignmentForm = ({ classrooms, assignmentTemplateId }: P
           name="classId"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel asChild>Subject</FormLabel>
               <FormControl>
                 <Select value={field.value} name={field.name} onValueChange={field.onChange} >
                   <SelectTrigger>

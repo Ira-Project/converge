@@ -45,7 +45,8 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
   const [assignmentState, questionsStateDispatch] = useReducer(questionReducer, initialState);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const channelName = generateId(21);
+  const [channelName, setChannelName] = useState<string>(generateId(21));
+
   console.log("channelName", channelName);
 
   useEffect(() => {
