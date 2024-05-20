@@ -29,7 +29,6 @@ export const getAssignmentTemplate = async (ctx: ProtectedTRPCContext, input: Ge
             },
           },
           conceptGraphEdges: true,
-          conceptGraphRoot: true,
         },
       },
       questions: {

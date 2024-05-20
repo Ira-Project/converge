@@ -24,12 +24,12 @@ export const ConceptGraph = (
     graphRef.current?.zoom(zoom ?? 0.9, 1000)
   }, [])
 
-  const nodes = assignmentTemplate.conceptGraphs.conceptToGraphs?.map((conceptToGraphs) => ({ 
+  const nodes = assignmentTemplate.conceptGraphs?.conceptToGraphs?.map((conceptToGraphs) => ({ 
     id: conceptToGraphs.concept.id.toString(), 
     name: conceptToGraphs.concept.text,
-  }));
+  })) ?? [];
 
-  const links = assignmentTemplate.conceptGraphs.conceptGraphEdges.map((edge) => ({ source: edge.parent.toString(), target: edge.child.toString() }));
+  const links = assignmentTemplate.conceptGraphs?.conceptGraphEdges.map((edge) => ({ source: edge.parent.toString(), target: edge.child.toString() })) ?? [];
 
   const data = {
     nodes: nodes,

@@ -9,7 +9,6 @@ import {
 } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
-import { assignments } from "./assignment";
 import { assignmentTemplates } from "./assignmentTemplate";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
@@ -26,12 +25,11 @@ export const conceptGraphs = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   }
 );
-export const conceptGraphRelations = relations(conceptGraphs, ({ many, one }) => ({
-  assignments: many(assignments),
+export const conceptGraphRelations = relations(conceptGraphs, ({ many }) => ({
   assignmentTemplates: many(assignmentTemplates),
   conceptToGraphs: many(conceptsToGraphs),
   conceptGraphEdges: many(conceptGraphEdges),
-  conceptGraphRoot: one(conceptGraphRoots),
+  conceptGraphToRoots: many(conceptGraphToRoots),
 }));
 
 
@@ -94,15 +92,12 @@ export const conceptGraphRoots = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   }
 )
-export const conceptGraphRootRelations = relations(conceptGraphRoots, ({ one }) => ({
+export const conceptGraphRootRelations = relations(conceptGraphRoots, ({ one, many }) => ({
   concept: one(concepts, {
     fields: [conceptGraphRoots.conceptId],
     references: [concepts.id],
   }),
-  conceptGraph: one(conceptGraphs, {
-    fields: [conceptGraphRoots.conceptGraphId],
-    references: [conceptGraphs.id],
-  }),
+  conceptGraph: many(conceptGraphToRoots),
 }));
 
 
@@ -151,5 +146,34 @@ export const conceptsToGraphsRelations = relations(conceptsToGraphs, ({ one }) =
   conceptGraph: one(conceptGraphs, {
     fields: [conceptsToGraphs.conceptGraphId],
     references: [conceptGraphs.id],
+  }),
+}));
+
+
+
+export const conceptGraphToRoots = pgTable(
+  "concept_graph_to_roots",
+  {
+    conceptGraphId: varchar("concept_graph_id", {length: 21}).notNull().references(() => conceptGraphs.id),
+    conceptRootId: varchar("concept_root_id", {length: 21}).notNull().references(() => conceptGraphRoots.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  },
+  (t) => ({
+    pk: primaryKey({ columns: [t.conceptGraphId, t.conceptRootId] }),
+    conceptGraphIdx: index("concept_graph_to_roots_concept_graph_idx").on(t.conceptGraphId),
+    conceptRootIdx: index("concept_graph_to_roots_concept_root_idx").on(t.conceptRootId),
+  }),
+)
+export const conceptGraphToRootsRelations = relations(conceptGraphToRoots, ({ one }) => ({
+  conceptGraph: one(conceptGraphs, {
+    fields: [conceptGraphToRoots.conceptGraphId],
+    references: [conceptGraphs.id],
+  }),
+  conceptRoot: one(conceptGraphRoots, {
+    fields: [conceptGraphToRoots.conceptRootId],
+    references: [conceptGraphRoots.id],
   }),
 }));

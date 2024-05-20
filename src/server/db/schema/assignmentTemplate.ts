@@ -21,7 +21,6 @@ export const assignmentTemplates = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   }
 );
-
 export const assignmentTemplateRelations = relations(assignmentTemplates, ({ one, many }) => ({
   conceptGraphs: one(conceptGraphs, {
     fields: [assignmentTemplates.conceptGraphId],
