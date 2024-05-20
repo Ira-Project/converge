@@ -14,7 +14,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { QuestionAccordionItem } from "../../../../../components/question-accordion-item";
 import { QuestionStatus } from "@/lib/constants";
 import { supabaseClient } from "@/lib/supabaseClient";
-import { useEffect, useReducer } from "react";
+import { use, useEffect, useReducer, useState } from "react";
 import { type QuestionState, type QuestionsUpdateActions } from "@/lib/constants";
 import { questionReducer } from "../reducers/question-reducer";
 import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
@@ -37,6 +37,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
   }));
 
   const [questionsState, questionsStateDispatch] = useReducer(questionReducer, initialState);
+  const [isSubscribed, setIsSubscribed] = useState(false);
 
   const channelName = "hello";
 
@@ -51,7 +52,12 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
           questionsStateDispatch(stateDispatch); 
         }
       )
-      .subscribe()
+      .subscribe((status) => {
+        if(status === 'SUBSCRIBED') {
+          setIsSubscribed(true);
+          return;
+        }
+      });
 
     return () => {
       void supabaseClient.removeChannel(channelA)
@@ -99,8 +105,8 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
           />
           <LoadingButton 
             dontShowChildrenWhileLoading
-            disabled={!form.formState.isDirty || explanationMutation.isLoading} 
-            loading={explanationMutation.isLoading}
+            disabled={!form.formState.isDirty || explanationMutation.isLoading || !isSubscribed} 
+            loading={explanationMutation.isLoading || !isSubscribed}
             className="ml-auto mr-4 p-2 -translate-y-16 h-8 w-8">
               <PaperPlaneIcon />
           </LoadingButton>
