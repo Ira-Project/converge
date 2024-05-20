@@ -1,10 +1,8 @@
 import {
   pgTableCreator,
-  serial,
   boolean,
   timestamp,
   varchar,
-  integer,
   text,
   primaryKey,
   index,

@@ -25,31 +25,11 @@ export const getAssignmentTemplate = async (ctx: ProtectedTRPCContext, input: Ge
         with: {
           conceptToGraphs: {
             with: {
-              concept: {
-                with: {
-                  conceptQuestions: {
-                    columns: {
-                      text: true,
-                    },
-                  }
-                },
-              },
+              concept: true,
             },
           },
-          conceptGraphEdges: {
-            with: {
-              fromConcept: {
-                columns: {
-                  id: true,
-                },
-              },
-            },
-          },
-          conceptGraphRoot: {
-            columns: {
-              id: true,
-            },
-          },
+          conceptGraphEdges: true,
+          conceptGraphRoot: true,
         },
       },
       questions: {

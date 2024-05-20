@@ -26,7 +26,7 @@ export const ConceptGraph = (
 
   const nodes = assignmentTemplate.conceptGraphs.conceptToGraphs?.map((conceptToGraphs) => ({ 
     id: conceptToGraphs.concept.id.toString(), 
-    name: conceptToGraphs.concept.conceptQuestions[0]?.text ?? "No Name"
+    name: conceptToGraphs.concept.text,
   }));
 
   const links = assignmentTemplate.conceptGraphs.conceptGraphEdges.map((edge) => ({ source: edge.parent.toString(), target: edge.child.toString() }));
@@ -49,6 +49,7 @@ export const ConceptGraph = (
             nodeRelSize={5}
             nodeLabel={
               (node) => {
+                // TO DO: Optimise this to avoid O(n) lookup
                 return nodes.find(n => n.id === node.id)?.name ?? "No Name";
               }
             }
