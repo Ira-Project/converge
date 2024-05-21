@@ -26,12 +26,14 @@ async function createConcepts() {
       text: concept.concept_question,
       formula: concept.concept_formula,
       calculationRequired: concept.calculation_required === "Yes" ? true : false,
-    })
+    }) 
 
     for(const answer of concept.concept_rephrases) {
+      const embeddingVector = createEmbedding(answer);
       await db.insert(conceptAnswers).values({
         id: generateId(21),
         text: answer,
+        embedding: embeddingVector,
         conceptId: concept.concept_uuid
       })
     }
