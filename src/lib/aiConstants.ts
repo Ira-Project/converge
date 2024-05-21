@@ -5,3 +5,5 @@ export const NO_EXPLANATION_RESPONSES = [
   "I'm having trouble grasping the concepts needed to tackle this question based on your explanation. Could you please clarify further?",
   "Your explanation was a bit unclear to me, and I'm struggling to grasp the necessary concepts to tackle this question. Could you please clarify your explanation?"
 ]
+
+export const DEFAULT_TEMPERATURE = 1;

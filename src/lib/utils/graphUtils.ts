@@ -7,6 +7,11 @@ export type CleanConceptGraph = {
   roots: string[]
 }
 
+export type ConceptWithSimilarConcepts = {
+  id: string;
+  similarConcepts: string[]
+}
+
 
 function createAdjacencyDict(edges: { source: string, target: string }[]) {
   const adjacencyDict: Record<string, string[]> = {};
@@ -36,7 +41,7 @@ function createReverseAdjacencyDict(edges: { source: string, target: string }[])
 
 export function getValidAndIsolatedNodes(
   conceptIds: string[],
-  conceptGraphs: CleanConceptGraph,
+  conceptGraph: CleanConceptGraph,
 ) : {  validNodes: string[],  isolatedNodes: string[] }
 {
   const validNodes:string[] = [];
@@ -45,7 +50,7 @@ export function getValidAndIsolatedNodes(
   // Handle case where no roots are present
 
   let rootsPresent = false;
-  for (const root of conceptGraphs.roots) {
+  for (const root of conceptGraph.roots) {
     if(conceptIds.includes(root)) {
       rootsPresent = true;
       break;
@@ -61,11 +66,11 @@ export function getValidAndIsolatedNodes(
 
   // Traversing the tree to get the valid nodes
 
-  const adjacencyDict = createAdjacencyDict(conceptGraphs.edges);
-  const reverseAdjacencyDict = createReverseAdjacencyDict(conceptGraphs.edges);
+  const adjacencyDict = createAdjacencyDict(conceptGraph.edges);
+  const reverseAdjacencyDict = createReverseAdjacencyDict(conceptGraph.edges);
 
   const nodesVisited = new Set();
-  const stack = [...conceptGraphs.roots];
+  const stack = [...conceptGraph.roots];
 
   while(stack.length > 0) {
     const currentNode = stack.shift()!;    
@@ -102,4 +107,62 @@ export function getValidAndIsolatedNodes(
     validNodes: validNodes,
     isolatedNodes: isolatedNodes,
   }
+}
+
+export function getMissingParentsFromIsolatedNodes(
+  isolatedNodes: string[],
+  conceptGraph: CleanConceptGraph,
+) : string[] {
+  
+  const missingParents: string[] = [];
+
+  const adjacencyDict = createAdjacencyDict(conceptGraph.edges);
+
+  const nodesVisited = new Set();
+  const stack = [...conceptGraph.roots];
+
+  while(stack.length > 0) {
+    const currentNode = stack.shift()!;
+    if(isolatedNodes.includes(currentNode)) {
+      break;
+    } else {
+      missingParents.push(currentNode);
+    }
+    if (adjacencyDict.hasOwnProperty(currentNode)) {
+      const childNodes = adjacencyDict[currentNode]!;
+      for (const childNode of childNodes) {
+        if (!nodesVisited.has(childNode)) {
+          stack.push(childNode);
+          nodesVisited.add(childNode);
+        }
+      }
+    }
+  }
+
+  return missingParents
+
+}
+
+
+export function getConceptQuestions(
+  conceptIds: string[],
+  separatorString: string,
+  concepts: ConceptWithSimilarConcepts[],
+  conceptDictionary: Record<string, string>
+) : string[]
+{
+  const conceptQuestions: string[] = [];
+  const similarConceptSet = new Set();
+  for (const conceptId of conceptIds) {
+    if (similarConceptSet.has(conceptId)) {
+      continue;
+    }
+    const concept = concepts.find(({ id }) => id === conceptId);
+    const conceptText = conceptDictionary[conceptId];
+    concept?.similarConcepts.forEach((id) => similarConceptSet.add(id));
+    const singleConceptStringList = [conceptText, ...concept?.similarConcepts.map((id) => conceptDictionary[id]) ?? []];
+    conceptQuestions.push(singleConceptStringList.join(separatorString));  
+  }
+
+  return conceptQuestions;
 }

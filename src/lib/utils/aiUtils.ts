@@ -1,4 +1,4 @@
-import { NO_EXPLANATION_RESPONSES } from "../aiConstants"
+import { DEFAULT_TEMPERATURE, NO_EXPLANATION_RESPONSES } from "../aiConstants"
 import { openai } from "../openai"
 
 export function getEmbeddingThreshold(prompt: string) {
@@ -56,4 +56,39 @@ export function compareVectors(vector1: number[], vector2: number[], threshold: 
 export function getNoExplanationResponse() {
   const randomInteger = Math.floor(Math.random() * NO_EXPLANATION_RESPONSES.length);
   return NO_EXPLANATION_RESPONSES[randomInteger];
+}
+
+export async function createAssistant(
+  {
+    modelName,
+    assistantName,
+    assistantInstructions,
+    temperature = DEFAULT_TEMPERATURE,
+  } : {
+    modelName: string,
+    assistantName: string,
+    assistantInstructions: string,
+    temperature?: number,
+  }
+) {
+  const assistant = await openai.beta.assistants.create({
+    model: modelName,
+    name: assistantName,
+    instructions: assistantInstructions,
+    temperature: temperature,
+  });
+  
+  return assistant;
+}
+
+export async function createThread(
+  messages : {
+    role: "user" | "assistant",
+    content: string
+  }[]
+) {
+  const thread = await openai.beta.threads.create({
+    messages: messages
+  });
+  return thread;
 }

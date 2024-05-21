@@ -49,7 +49,8 @@ export const concepts = pgTable(
 )
 export const conceptRelations = relations(concepts, ({ many }) => ({
   conceptsToGraphs: many(conceptsToGraphs),
-  similarConcepts: many(similarConcepts),  
+  similarConceptFrom: many(similarConcepts, { relationName: "conceptFrom"}),  
+  similarConceptTo: many(similarConcepts, { relationName: "conceptTo"}),  
   conceptAnswers: many(conceptAnswers),
 }));
 
@@ -132,7 +133,7 @@ export const conceptsToGraphsRelations = relations(conceptsToGraphs, ({ one }) =
 }));
 
 export const conceptGraphToRootConcepts = pgTable(
-  "concept_graph_to_root_concepts",
+  "concept_graphs_to_root_concepts",
   {
     conceptGraphId: varchar("concept_graph_id", {length: 21}).notNull().references(() => conceptGraphs.id),
     conceptId: varchar("concept_id", {length: 21}).notNull().references(() => concepts.id),
@@ -163,8 +164,8 @@ export const similarConcepts = pgTable(
   "similar_concepts",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
-    conceptId: varchar("concept_id", { length: 21 }).notNull().references(() => concepts.id),
-    similarConceptId: varchar("similar_concept_id", { length: 21 }).notNull().references(() => concepts.id),
+    conceptFromId: varchar("concept_id", { length: 21 }).notNull().references(() => concepts.id),
+    conceptToId: varchar("similar_concept_id", { length: 21 }).notNull().references(() => concepts.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -172,12 +173,14 @@ export const similarConcepts = pgTable(
   }
 )
 export const similarConceptRelations = relations(similarConcepts, ({ one }) => ({
-  concept: one(concepts, {
-    fields: [similarConcepts.conceptId],
+  conceptFrom: one(concepts, {
+    fields: [similarConcepts.conceptFromId],
     references: [concepts.id],
+    relationName: "conceptFrom"
   }),
-  similarConcept: one(concepts, {
-    fields: [similarConcepts.similarConceptId],
+  conceptTo: one(concepts, {
+    fields: [similarConcepts.conceptToId],
     references: [concepts.id],
+    relationName: "conceptTo"
   }),
 }));
