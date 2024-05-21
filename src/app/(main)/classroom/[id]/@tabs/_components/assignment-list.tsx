@@ -2,6 +2,8 @@ import { api } from "@/trpc/server";
 import { Suspense } from "react";
 import { AssignmentTableSkeleton } from "./assignment-table-skeleton";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { Paths } from "@/lib/constants";
+import Link from "next/link";
 
 export const AssignmentList = async ({ id }: { id?: string }) => {
 
@@ -31,10 +33,14 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
                   <Suspense fallback={<AssignmentTableSkeleton />}>
                     {ongoingAssignments.map(assignment => (
                       <TableRow key={assignment.id}>
-                        <TableCell>{assignment.name}</TableCell>
+                        <TableCell>
+                          <Link href={`${Paths.Assignment}${assignment.id}`} key={assignment.id}>
+                            <span className="underline">{assignment.name}</span>
+                          </Link>
+                        </TableCell>
                         <TableCell>{assignment.assignmentTemplate.name}</TableCell>
                         <TableCell>{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
-                      </TableRow> 
+                        </TableRow> 
                     ))}
                   </Suspense>
                 </TableBody>

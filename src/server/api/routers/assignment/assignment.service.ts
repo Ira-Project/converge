@@ -1,6 +1,6 @@
 import { and } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { CreateAssignmentInput, ListAssignmentsInput } from "./assignment.input";
+import type { CreateAssignmentInput, ListAssignmentsInput, GetAssignmentInput } from "./assignment.input";
 import { assignments } from "@/server/db/schema/assignment";
 import { generateId } from "lucia";
 
@@ -67,4 +67,48 @@ export const createAssignment = async (ctx: ProtectedTRPCContext, input: CreateA
   });
 
   return id;
+}
+
+export const getAssignment = async (ctx: ProtectedTRPCContext, input: GetAssignmentInput) => {
+  return await ctx.db.query.assignments.findFirst({
+    where: (table, { eq }) => eq(table.id, input.assignmentId),
+    columns: {
+      id: true,
+      name: true,
+      dueDate: true,
+      createdAt: true,
+      createdBy: true,
+      maxPoints: true,
+      timeLimit: true,
+    },
+    with : {
+      classroom: {
+        columns: {
+          id: true,
+          name: true,
+        }
+      },
+      assignmentTemplate: {
+        with: {
+          conceptGraphs: {
+            with: {
+              conceptToGraphs: {
+                with: {
+                  concept: true,
+                },
+              },
+              conceptGraphEdges: true,
+            },
+          },
+          questions: {
+            columns: {
+              id: true,
+              question: true,
+              answer: true,
+            },
+          }
+        }
+      }
+    }
+  });
 }

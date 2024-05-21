@@ -72,5 +72,7 @@ export {
   PlusIcon,
   Cross1Icon,
   ClipboardCopyIcon,
-  PaperPlaneIcon
+  PaperPlaneIcon,
+  QuestionMarkIcon,
+  ClockIcon
 } from "@radix-ui/react-icons";

@@ -8,6 +8,9 @@ export enum Paths {
   Signup = "/signup",
   VerifyEmail = "/verify-email",
   ResetPassword = "/reset-password",
+  Classroom = "/classroom/",
+  Assignment = "/assignment/",
+  CreateAssignment = "/create-assignment/",
 }
 
 export enum Roles {

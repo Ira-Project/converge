@@ -12,15 +12,29 @@ import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { CalendarIcon } from "@radix-ui/react-icons";
 import { Calendar } from "@/components/ui/calendar";
-import { createAssignmentSchema } from "@/server/api/routers/assignment/assignment.input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { api } from "@/trpc/react";
+import { z } from "zod";
+import { Paths } from "@/lib/constants";
 
 interface Props {
   classrooms: RouterOutputs["classroom"]["list"];
   assignmentTemplateId: string;
 }
+
+const createAssignmentFormSchema = z.object({
+  assignmentName: z.string(),
+  classId: z.string().optional(),
+  dueDate: z.date().min(new Date()),
+  maxPoints: z.string().optional()
+    .refine(value => !value || parseInt(value) > 0, "Max points must be greater than 0")
+    .refine(value => !value || parseInt(value) <= 100, "Max points must be less than 100"),
+  timeLimit: z.string().optional()
+    .refine(value => !value || parseInt(value) > 0, "Time limit must be greater than 0 minutes")
+    .refine(value => !value || parseInt(value) < 1000, "Time limit must be less than 1000 minutes")
+});
+
 
 export const CreateFullAssignmentForm = ({ classrooms, assignmentTemplateId }: Props) => {
 
@@ -30,22 +44,29 @@ export const CreateFullAssignmentForm = ({ classrooms, assignmentTemplateId }: P
   const form = useForm({
     defaultValues: {
       assignmentName: "",
-      classId: "",
+      classId: undefined,
       dueDate: addDays(new Date(), 1),
       maxPoints: undefined,
       timeLimit: undefined,
     },
-    resolver: zodResolver(createAssignmentSchema),
+    resolver: zodResolver(createAssignmentFormSchema),
   })
 
   const onSubmit = form.handleSubmit(async (values) => {
+    const maxPoints:number|undefined = values.maxPoints && parseInt(values.maxPoints);
+    const timeLimit:number|undefined = values.timeLimit && parseInt(values.timeLimit);
+
     const id = await createAssignment.mutateAsync(
       {
-        ...values,
+        assignmentName: values.assignmentName,
+        classId: values.classId ? values.classId : undefined,
+        maxPoints: maxPoints, 
+        timeLimit: timeLimit,
         assignmentTemplateId: assignmentTemplateId,
+        dueDate: values.dueDate,
       }
     );
-    void router.replace(`/assignment/${id}`)
+    void router.replace(`${Paths.Assignment}${id}`)
   });
 
   return (
