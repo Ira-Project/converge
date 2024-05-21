@@ -1,3 +1,4 @@
+import { TRPCClientError } from "@trpc/client"
 import { DEFAULT_TEMPERATURE, NO_EXPLANATION_RESPONSES } from "../aiConstants"
 import { openai } from "../openai"
 
@@ -91,4 +92,38 @@ export async function createThread(
     messages: messages
   });
   return thread;
+}
+
+export async function getTextResponseFromThread(
+  threadId: string,
+  assistantId: string
+): Promise<string> {
+
+  let run = await openai.beta.threads.runs.createAndPoll(
+    threadId, 
+    {
+      assistant_id: assistantId,
+    }
+  )
+
+  while (['queued', 'in_progress', 'cancelling'].includes(run.status)) {
+    await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for 1 seconds
+    run = await openai.beta.threads.runs.retrieve(
+      run.thread_id,
+      run.id
+    );
+  }
+
+  if (run.status === 'completed') {
+    const messages = await openai.beta.threads.messages.list(threadId);
+    const response = messages.data[0]?.content[0];
+    if(response?.type === "text") {
+      return response.text.value;
+    } else {
+      throw new TRPCClientError("Error: Response is not text");
+    }
+  }
+
+  throw new TRPCClientError("Error: Thread run failed");
+
 }
