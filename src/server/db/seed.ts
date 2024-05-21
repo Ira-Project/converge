@@ -44,16 +44,16 @@ async function createConcepts() {
     for(const similar_concepts of concept.similar_concepts) {
       const sc = await db.select().from(similarConcepts).where(
         or(
-          and(eq(similarConcepts.conceptId, concept.concept_uuid), eq(similarConcepts.similarConceptId, similar_concepts) ),
-          and(eq(similarConcepts.conceptId, similar_concepts), eq(similarConcepts.similarConceptId, concept.concept_uuid) )
+          and(eq(similarConcepts.conceptToId, concept.concept_uuid), eq(similarConcepts.conceptFromId, similar_concepts) ),
+          and(eq(similarConcepts.conceptFromId, similar_concepts), eq(similarConcepts.conceptToId, concept.concept_uuid) )
         )
       );
 
       if(sc.length === 0) {
         await db.insert(similarConcepts).values({
           id: generateId(21),
-          conceptId: concept.concept_uuid,
-          similarConceptId: similar_concepts
+          conceptFromId: concept.concept_uuid,
+          conceptToId: similar_concepts
         })
       }
     }
