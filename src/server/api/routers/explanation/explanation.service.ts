@@ -1,4 +1,4 @@
-import { cosineSimilarity, createEmbedding, getEmbeddingThreshold, getNoExplanationResponse } from "@/lib/utils/aiUtils";
+import { cosineSimilarity, createEmbedding, getEmbeddingThreshold, getIrrelevantExplanationResponse, getNoExplanationResponse } from "@/lib/utils/aiUtils";
 import type { ProtectedTRPCContext } from "../../trpc";
 import { type ExplainInput } from "./explanation.input";
 import { AssignmentUpdateActionType, QuestionStatus } from "@/lib/constants";
@@ -89,6 +89,17 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     }
   }
 
+  const conceptIdsPresentInExplanation = conceptsPresentInExplanation.map(({ id }) => id);
+  
+  await ctx.realtimeDb.insert(actions).values({
+    id: generateId(21),
+    channelId: input.channelName,
+    actionType: AssignmentUpdateActionType.UPDATE_VALID_NODES,
+    payload: {
+      validNodeIds: conceptIdsPresentInExplanation,
+    }
+  })
+
   // -----------
   // Handle case where no concepts are present in the explanation
   // -----------
@@ -166,6 +177,29 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
 
     const conceptsPresentInExplanationIds = 
       conceptsPresentInExplanation.filter(({ id }) => questionGraph.nodes.includes(id)).map(({ id }) => id);
+
+
+    // -----------
+    // Handle case where concepts present are irrelevant to the question
+    // -----------
+
+    if(!conceptsPresentInExplanationIds.length) {
+
+      // TO DO: create the computed answers object
+
+      await ctx.realtimeDb.insert(actions).values({
+        id: generateId(21),
+        channelId: input.channelName,
+        actionType: AssignmentUpdateActionType.UPDATE_EXPLANATION_AND_STATUS,
+        payload: {
+          questionId: question.id,
+          newStatus: QuestionStatus.INCORRECT,
+          explanation: getIrrelevantExplanationResponse(),
+        }
+      })
+
+      continue;
+    }
 
     const { validNodes, isolatedNodes } = getValidAndIsolatedNodes(
       conceptsPresentInExplanationIds,

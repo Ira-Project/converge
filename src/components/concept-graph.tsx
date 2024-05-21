@@ -58,7 +58,7 @@ export const ConceptGraph = (
       nodeColor={
         (node) => {
           if(validNodes?.includes(node?.id as string)) {
-            return '#00FF00';
+            return '#3CBE8F';
           }
           return theme.resolvedTheme === 'light' ? '#0F172A' : '#FFFFFF'
         }

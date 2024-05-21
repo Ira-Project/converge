@@ -45,6 +45,7 @@ export enum AssignmentUpdateActionType {
   UPDATE_EXPLANATION = 'Update Explanation',
   UPDATE_STATUS = 'Update Question Status',
   UPDATE_EXPLANATION_AND_STATUS = 'Update Explanation and Status',
+  UPDATE_VALID_NODES = 'Update Valid Nodes',
 }
 
 export type AssignmentUpdateActions = 
@@ -67,10 +68,16 @@ export type AssignmentUpdateActions =
       }
     }
   | {
-    type: AssignmentUpdateActionType.UPDATE_EXPLANATION_AND_STATUS;
-    payload: { 
-      questionId: string, 
-      newStatus: QuestionStatus, 
-      explanation: string,
+      type: AssignmentUpdateActionType.UPDATE_EXPLANATION_AND_STATUS;
+      payload: { 
+        questionId: string, 
+        newStatus: QuestionStatus, 
+        explanation: string,
+      }
     }
-  }
+  | {
+      type: AssignmentUpdateActionType.UPDATE_VALID_NODES;
+      payload: { 
+        validNodeIds: string[],
+      }
+    }

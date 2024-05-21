@@ -66,6 +66,12 @@ export const questionReducer = (
           return question;
         }),
       };
+
+    case AssignmentUpdateActionType.UPDATE_VALID_NODES:
+      return {
+        ...state,
+        validNodeIds: action.payload.validNodeIds,
+      };
     
     default:
       return state;

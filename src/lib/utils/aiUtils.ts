@@ -1,5 +1,5 @@
 import { TRPCClientError } from "@trpc/client"
-import { DEFAULT_TEMPERATURE, NO_EXPLANATION_RESPONSES } from "../aiConstants"
+import { DEFAULT_TEMPERATURE, IRRELEVANT_EXPLANATION_RESPONSES, NO_EXPLANATION_RESPONSES } from "../aiConstants"
 import { openai } from "../openai"
 
 export function getEmbeddingThreshold(prompt: string) {
@@ -57,6 +57,11 @@ export function compareVectors(vector1: number[], vector2: number[], threshold: 
 export function getNoExplanationResponse() {
   const randomInteger = Math.floor(Math.random() * NO_EXPLANATION_RESPONSES.length);
   return NO_EXPLANATION_RESPONSES[randomInteger];
+}
+
+export function getIrrelevantExplanationResponse() {
+  const randomInteger = Math.floor(Math.random() * IRRELEVANT_EXPLANATION_RESPONSES.length);
+  return IRRELEVANT_EXPLANATION_RESPONSES[randomInteger];
 }
 
 export async function createAssistant(
