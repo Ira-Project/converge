@@ -7,6 +7,7 @@ import { useFormState } from "react-dom";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
+import { Paths } from "@/lib/constants";
 
 export const SignUpForm: React.FC = () => {
 
@@ -47,7 +48,7 @@ export const SignUpForm: React.FC = () => {
 
         <div className="flex flex-wrap justify-between">
           <Button variant={"link"} size={"sm"} className="p-0" asChild>
-            <Link href={"/login"}>
+            <Link href={Paths.Login}>
               Already signed up? Login instead.
             </Link>
           </Button>

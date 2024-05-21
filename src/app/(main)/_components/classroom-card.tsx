@@ -6,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Roles } from "@/lib/constants";
+import { Paths, Roles } from "@/lib/constants";
 import Link from "next/link";
 
 interface ClassroomCardProps {
@@ -27,7 +27,7 @@ export function ClassroomCard({ classroom } : ClassroomCardProps) {
 
   const numberOfStudents = classroom.classroomMembers.filter(member => member.role === Roles.Student).length;
   return (
-    <Link href={`/classroom/${classroom.id}`}>
+    <Link href={`${Paths.Classroom}${classroom.id}`}>
       <Card className="w-96">
         <CardHeader>
           <CardTitle>{classroom.name}</CardTitle>

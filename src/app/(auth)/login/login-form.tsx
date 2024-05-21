@@ -7,6 +7,7 @@ import { useFormState } from "react-dom";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
+import { Paths } from "@/lib/constants";
 
 export const LoginForm: React.FC = () => {
 
@@ -38,10 +39,10 @@ export const LoginForm: React.FC = () => {
 
         <div className="flex flex-wrap justify-between">
           <Button variant={"link"} size={"sm"} className="p-0" asChild>
-            <Link href={"/signup"}>Not signed up? Sign up now.</Link>
+            <Link href={Paths.Signup}>Not signed up? Sign up now.</Link>
           </Button>
           <Button variant={"link"} size={"sm"} className="p-0" asChild>
-            <Link href={"/reset-password"}>Forgot password?</Link>
+            <Link href={Paths.ResetPassword}>Forgot password?</Link>
           </Button>
         </div>
 

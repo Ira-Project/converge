@@ -3,6 +3,7 @@ import {
 } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
+import { Paths } from "@/lib/constants";
 
 interface AssignmentTemplateCardProps {
   id: string;
@@ -13,7 +14,7 @@ interface AssignmentTemplateCardProps {
 export function AssignmentTemplateCard({ id, name, imageUrl } : AssignmentTemplateCardProps) {
 
   return (
-    <Link href={`/create-assignment/${id}`}>
+    <Link href={`${Paths.CreateAssignment}${id}`}>
       <Card className="w-96 relative">
         <Image 
           className="rounded-md w-full h-auto block bg-black bg-opacity-90"

@@ -31,7 +31,7 @@ export default async function SignupPage() {
         <CardTitle>{APP_TITLE}</CardTitle>
       </CardHeader>
       <CardContent>
-        <Link href="/login/google">
+        <Link href={Paths.GoogleLogin}>
           <GoogleSignIn text="Sign Up with Google"/>
         </Link>
         <div className="my-4 flex items-center">

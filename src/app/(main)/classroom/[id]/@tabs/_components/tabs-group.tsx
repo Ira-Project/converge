@@ -1,6 +1,6 @@
 'use client';
 import { Button } from "@/components/ui/button";
-import { Roles } from "@/lib/constants";
+import { Paths, Roles } from "@/lib/constants";
 import Link from "next/link";
 import { useSelectedLayoutSegment } from "next/navigation";
 
@@ -15,7 +15,7 @@ export function TabsGroup({ id, role }: { id: string, role: Roles }) {
 
   return (
     <div className="flex gap-4">
-      <Link href={`/classroom/${id}/`}>
+      <Link href={`${Paths.Classroom}${id}/`}>
         <Button variant={activeTab !== Tabs.People ? "secondary" : "ghost"} >
           Assignments
         </Button>
@@ -23,7 +23,7 @@ export function TabsGroup({ id, role }: { id: string, role: Roles }) {
       { 
         role === Roles.Teacher && 
         <Button variant={activeTab === Tabs.People ? "secondary" : "ghost"}>
-          <Link href={`/classroom/${id}/people`}>People</Link>
+          <Link href={`${Paths.Classroom}${id}/people`}>People</Link>
         </Button>
       }
     </div>
