@@ -10,13 +10,13 @@ import { type RouterOutputs } from '@/trpc/shared';
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import { CalendarIcon } from "@radix-ui/react-icons";
 import { Calendar } from "@/components/ui/calendar";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { api } from "@/trpc/react";
 import { z } from "zod";
 import { Paths } from "@/lib/constants";
+import { CalendarIcon } from "@/components/icons";
 
 interface Props {
   classrooms: RouterOutputs["classroom"]["list"];

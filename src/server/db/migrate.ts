@@ -11,6 +11,8 @@ import * as assignmentTemplates from "./schema/assignmentTemplate";
 import * as concept from "./schema/concept";
 import * as assignmentDetails from "./schema/assignmentDetails";
 import * as explanations from "./schema/explanations";
+import * as testAttempts from "./schema/testAttempt";
+
 
 export async function runMigrate() {
   const connection = postgres(env.DATABASE_URL);
@@ -23,6 +25,7 @@ export async function runMigrate() {
     ...concept,
     ...assignmentDetails,
     ...explanations,
+    ...testAttempts,
   };
   const db = drizzle(connection, { schema });
 

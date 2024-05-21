@@ -5,27 +5,23 @@ import { AssignmentUpdateActionType, QuestionStatus } from "@/lib/constants";
 import { generateId } from "lucia";
 import { actions } from "@/server/realtime_db/schema/actions";
 import { type CleanConceptGraph, getValidAndIsolatedNodes } from "@/lib/utils/graphUtils";
+import { explanations } from "@/server/db/schema/explanations";
 
 
 export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) => {
   
-  // await ctx.realtimeDb.insert(actions).values({
-  //   id: generateId(21),
-  //   channelId: input.channelName,
-  //   actionType: AssignmentUpdateActionType.SET_LOADING,
-  //   payload: {}
-  // })
-
   // -----------
   // Create the explanation object along with embedding
   // -----------
 
   const explanationEmbeddingVector = await createEmbedding(input.explanation);
+  // const explanationId = generateId(21);
 
   // await ctx.db.insert(explanations).values({
-  //   id: generateId(21),
+  //   id: explanationId,
   //   text: input.explanation,
   //   assignmentTemplateId: input.assignmentTemplateId,
+  //   testAttemptId: input.testAttemptId!,
   //   embedding: explanationEmbeddingVector,
   //   createdBy: ctx.user.id,
   // })
@@ -94,6 +90,9 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     })
 
     for (const question of questionIds) {
+
+      // TO DO: create the computed answers object
+
       await ctx.realtimeDb.insert(actions).values({
         id: generateId(21),
         channelId: input.channelName,

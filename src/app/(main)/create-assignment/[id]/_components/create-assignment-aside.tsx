@@ -33,7 +33,12 @@ export const CreateAssignmentAside = async ( {id } : Props ) => {
             <CreateFullAssignmentForm classrooms={classrooms} assignmentTemplateId={id} />
           </Suspense>
           <Suspense fallback={<Skeleton className="w-full h-60" />}>
-            <ConceptGraph assignmentTemplate={assignmentTemplate} />
+            <div className="flex flex-col gap-4">
+              <p className="text-lg font-semibold"> Concept Graph </p>
+              <div className="w-[336px] h-48 border p-2 rounded-md">
+                <ConceptGraph assignmentTemplate={assignmentTemplate} />
+              </div>
+            </div>
           </Suspense>
         </div>
       </ScrollArea>

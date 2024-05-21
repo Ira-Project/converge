@@ -9,7 +9,6 @@ import { api } from "@/trpc/react";
 import { Textarea } from "@/components/ui/textarea";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { ScrollBar } from "@/components/ui/scroll-area";
-import { PaperPlaneIcon } from "@radix-ui/react-icons";
 import { Accordion } from "@/components/ui/accordion";
 import { QuestionAccordionItem } from "@/components/question-accordion-item";
 import { QuestionStatus } from "@/lib/constants";
@@ -17,8 +16,9 @@ import { supabaseClient } from "@/lib/supabaseClient";
 import { useEffect, useReducer, useState } from "react";
 import { type AssignmentState, type AssignmentUpdateActions, AssignmentUpdateActionType } from "@/lib/constants";
 import { questionReducer } from "@/reducers/assignment-reducer";
-import { explainTemplateSchema } from "@/server/api/routers/explanation/explanation.input";
+import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
 import { generateId } from "lucia";
+import { PaperPlaneIcon } from "@/components/icons";
 
 interface Props {
   assignmentTemplate: RouterOutputs["assignmentTemplate"]["get"]; 
@@ -87,7 +87,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
       channelName: channelName,
       assignmentTemplateId: assignmentTemplate.id,
     },
-    resolver: zodResolver(explainTemplateSchema),
+    resolver: zodResolver(explainSchema),
   })
 
 

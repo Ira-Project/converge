@@ -74,5 +74,6 @@ export {
   ClipboardCopyIcon,
   PaperPlaneIcon,
   QuestionMarkIcon,
-  ClockIcon
+  ClockIcon,
+  CalendarIcon,
 } from "@radix-ui/react-icons";

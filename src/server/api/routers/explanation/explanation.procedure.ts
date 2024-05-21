@@ -5,7 +5,7 @@ import * as inputs from "./explanation.input";
 export const explanationRouter = createTRPCRouter({
 
   explain: protectedProcedure
-    .input(inputs.explainTemplateSchema)
+    .input(inputs.explainSchema)
     .mutation(({ ctx, input }) => services.explain(ctx, input)),
 
 });

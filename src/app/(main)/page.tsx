@@ -2,10 +2,10 @@ import { validateRequest } from "@/lib/auth/validate-request";
 import { Paths, Roles } from "@/lib/constants";
 import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
-import { PlusIcon } from "@radix-ui/react-icons";
 import Link from "next/link";
 import { ClassroomList } from "./_components/classroom-list";
 import { AssignmentTemplateList } from "./_components/assignment-templates-list";
+import { PlusIcon } from "@/components/icons";
 
  export default async function Home({}) {
   const { user } = await validateRequest();

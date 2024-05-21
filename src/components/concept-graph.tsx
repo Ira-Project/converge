@@ -9,10 +9,12 @@ interface Props {
   width?: number;
   height?: number;
   zoom?: number;
+  validNodes?: string[];
+  hideLabels?: boolean;
 }
 
 export const ConceptGraph = (
-  { assignmentTemplate, width, height, zoom } : Props
+  { assignmentTemplate, width, height, zoom, validNodes, hideLabels } : Props
 ) => {
 
   if(typeof window === 'undefined') return <></>;
@@ -37,28 +39,31 @@ export const ConceptGraph = (
   }
 
   return (
-    <div className="flex flex-col gap-4">
-      <p className="text-lg font-semibold"> Concept Graph </p>
-        <div className="w-[336px] h-48 border p-2 rounded-md">
-          <ForceGraph2D
-            ref={graphRef}
-            linkWidth={1}
-            graphData={data}
-            minZoom={0.5}
-            width={width ?? 320}
-            height={height ?? 176}
-            nodeRelSize={5}
-            nodeLabel={
-              (node) => {
-                // TO DO: Optimise this to avoid O(n) lookup
-                return nodes.find(n => n.id === node.id)?.name ?? "No Name";
-              }
-            }
-            linkColor={() => theme.resolvedTheme === 'light' ? '#D9D9D9' : '#D9D9D9'}
-            nodeColor={() => theme.resolvedTheme === 'light' ? '#0F172A' : '#FFFFFF'}
-          />
-        </div>
-    </div>
+    <ForceGraph2D
+      ref={graphRef}
+      linkWidth={1}
+      graphData={data}
+      minZoom={0.5}
+      width={width ?? 320}
+      height={height ?? 176}
+      nodeRelSize={5}
+      nodeLabel={
+        (node) => {
+          // TO DO: Optimise this to avoid O(n) lookup
+          if(hideLabels) return "";
+          return nodes.find(n => n.id === node.id)?.name ?? "No Name";
+        }
+      }
+      linkColor={() => theme.resolvedTheme === 'light' ? '#D9D9D9' : '#D9D9D9'}
+      nodeColor={
+        (node) => {
+          if(validNodes?.includes(node?.id as string)) {
+            return '#00FF00';
+          }
+          return theme.resolvedTheme === 'light' ? '#0F172A' : '#FFFFFF'
+        }
+      }
+    />
   )
 }
 
