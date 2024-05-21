@@ -6,6 +6,7 @@ import {
   text,
   primaryKey,
   index,
+  json,
 } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
@@ -49,6 +50,7 @@ export const concepts = pgTable(
 export const conceptRelations = relations(concepts, ({ many }) => ({
   conceptsToGraphs: many(conceptsToGraphs),
   similarConcepts: many(similarConcepts),  
+  conceptAnswers: many(conceptAnswers),
 }));
 
 
@@ -86,6 +88,7 @@ export const conceptAnswers = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     text: text("text").notNull(),
+    embedding: json("embedding").notNull(),
     conceptId: varchar("concept_id", { length: 21 }).notNull().references(() => concepts.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
@@ -94,7 +97,7 @@ export const conceptAnswers = pgTable(
   }
 )
 export const conceptAnswerRelations = relations(conceptAnswers, ({ one }) => ({
-  conceptQuestion: one(concepts, {
+  concept: one(concepts, {
     fields: [conceptAnswers.conceptId],
     references: [concepts.id],
   }),
@@ -140,8 +143,8 @@ export const conceptGraphToRootConcepts = pgTable(
   },
   (t) => ({
     pk: primaryKey({ columns: [t.conceptGraphId, t.conceptId] }),
-    conceptGraphIdx: index("concept_graph_to_roots_concept_graph_index").on(t.conceptGraphId),
-    conceptIdx: index("concept_graph_to_roots_concept_index").on(t.conceptId),
+    conceptGraphIdx: index("concept_graph_to_roots_concept_graph_idx").on(t.conceptGraphId),
+    conceptIdx: index("concept_graph_to_roots_concept_idx").on(t.conceptId),
   }),
 )
 export const conceptGraphToRootsRelations = relations(conceptGraphToRootConcepts, ({ one }) => ({

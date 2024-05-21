@@ -2,6 +2,7 @@ import { AccordionContent, AccordionItem, AccordionTrigger } from "@/components/
 import { QuestionCard } from "./question-card";
 import { type QuestionStatus } from "@/lib/constants";
 import { Card } from "@/components/ui/card";
+import { Separator } from "./ui/separator";
 
 interface QuestionAccordionProps {
   id: string;
@@ -23,7 +24,8 @@ export function QuestionAccordionItem({ id, status, questionText, answerText, wo
             <QuestionCard status={status} questionText={questionText} answerText={answerText} />
           </AccordionTrigger>
           <AccordionContent>
-            <p className="mt-4">
+            <Separator className="my-4"/>
+            <p>
               {workingText}
             </p>
           </AccordionContent>

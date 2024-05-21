@@ -17,7 +17,7 @@ import { supabaseClient } from "@/lib/supabaseClient";
 import { useEffect, useReducer, useState } from "react";
 import { type AssignmentState, type AssignmentUpdateActions, AssignmentUpdateActionType } from "@/lib/constants";
 import { questionReducer } from "@/reducers/assignment-reducer";
-import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
+import { explainTemplateSchema } from "@/server/api/routers/explanation/explanation.input";
 import { generateId } from "lucia";
 
 interface Props {
@@ -45,7 +45,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
   const [assignmentState, questionsStateDispatch] = useReducer(questionReducer, initialState);
   const [isSubscribed, setIsSubscribed] = useState(false);
 
-  const [channelName, setChannelName] = useState<string>(generateId(21));
+  const [channelName] = useState<string>(generateId(21));
 
   useEffect(() => {
     const channelA = supabaseClient.channel('table-db-changes')
@@ -85,8 +85,9 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
     defaultValues: {
       explanation: "",
       channelName: channelName,
+      assignmentTemplateId: assignmentTemplate.id,
     },
-    resolver: zodResolver(explainSchema),
+    resolver: zodResolver(explainTemplateSchema),
   })
 
 
@@ -97,6 +98,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
     await explanationMutation.mutateAsync({
       explanation: values.explanation,
       channelName: channelName,
+      assignmentTemplateId: assignmentTemplate.id,
     });
   });
 
@@ -115,8 +117,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
                     {...field} 
                     className="h-40 resize-none pr-8"
                     required 
-                    placeholder="Enter your explanation here">                      
-                  </Textarea>
+                    placeholder="Enter your explanation here" />                      
                 </FormControl>
                 <FormMessage />
               </FormItem>

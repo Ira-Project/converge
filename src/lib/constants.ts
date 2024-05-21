@@ -40,6 +40,7 @@ export enum AssignmentUpdateActionType {
   SET_LOADING = 'Set Loading',
   UPDATE_EXPLANATION = 'Update Explanation',
   UPDATE_STATUS = 'Update Question Status',
+  UPDATE_EXPLANATION_AND_STATUS = 'Update Explanation and Status',
 }
 
 export type AssignmentUpdateActions = 
@@ -61,3 +62,11 @@ export type AssignmentUpdateActions =
         newStatus: QuestionStatus, 
       }
     }
+  | {
+    type: AssignmentUpdateActionType.UPDATE_EXPLANATION_AND_STATUS;
+    payload: { 
+      questionId: string, 
+      newStatus: QuestionStatus, 
+      explanation: string,
+    }
+  }

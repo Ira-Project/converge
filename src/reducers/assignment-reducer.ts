@@ -50,6 +50,22 @@ export const questionReducer = (
           return question;
         }),
       };
+
+    case AssignmentUpdateActionType.UPDATE_EXPLANATION_AND_STATUS:
+      return {
+        ...state,
+        questions: state.questions.map((question) => {
+          if (question.id == action.payload.questionId) {
+            return {
+              ...question,
+              status: action.payload.newStatus,
+              working: question.working + action.payload.explanation,
+              workingComplete: true,
+            };
+          }
+          return question;
+        }),
+      };
     
     default:
       return state;

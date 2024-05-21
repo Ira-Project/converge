@@ -16,12 +16,13 @@ import { users } from "./user";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
-export const explanation = pgTable(
+export const explanations = pgTable(
   "explanation",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     text: text("text").notNull(),
     assignmentId: varchar("assignmentId", { length: 21 }).references(() => assignments.id || assignmentTemplates.id),
+    assignmentTemplateId: varchar("assignment_template_id", { length: 21 }).references(() => assignmentTemplates.id),
     embedding: json("embedding"),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -30,7 +31,7 @@ export const explanation = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   }
 );
-export const explanationRelations = relations(explanation, ({ many }) => ({
+export const explanationRelations = relations(explanations, ({ many }) => ({
   correctConcepts: many(correctConcepts),
 }));
 
@@ -39,14 +40,14 @@ export const correctConcepts = pgTable(
   "correct_concepts",
   {
     id: serial("id").primaryKey(),
-    explanationId: varchar("explanation_id", { length: 21 }).references(() => explanation.id).notNull(),
+    explanationId: varchar("explanation_id", { length: 21 }).references(() => explanations.id).notNull(),
     conceptId: varchar("concept_id", { length: 21 }).references(() => conceptGraphs.id).notNull(),
   }
 );
 export const correctConceptRelations = relations(correctConcepts, ({ one }) => ({
-  explanation: one(explanation, {
+  explanation: one(explanations, {
     fields: [correctConcepts.explanationId],
-    references: [explanation.id],
+    references: [explanations.id],
   }),
   concept: one(conceptGraphs, {
     fields: [correctConcepts.conceptId],

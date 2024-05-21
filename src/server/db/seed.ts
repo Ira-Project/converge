@@ -14,6 +14,7 @@ import conceptsJson from './concepts.json'
 import graphJson from './graphs.json'
 
 import { generateId } from "lucia";
+import { createEmbedding } from "@/lib/utils/aiUtils";
 
 
 async function createConcepts() {
@@ -60,41 +61,40 @@ async function createConcepts() {
 
 async function createGraph() {
 
-  const conceptGraphId = "u1o8fhfhuhtgescgcp2s5"; //generateId(21);
+  const conceptGraphId = generateId(21);
 
-  // await db.insert(conceptGraphs).values({
-  //   id: conceptGraphId,
-  //   name: "Probability assignment template",  
-  // })
+  await db.insert(conceptGraphs).values({
+    id: conceptGraphId,
+    name: graphJson.question,  
+  })
 
-  // for(const node of graphJson.nodes) {
-  //   await db.insert(conceptsToGraphs).values({
-  //     conceptId: node,
-  //     conceptGraphId: conceptGraphId
-  //   })
-  // }
+  for(const node of graphJson.nodes) {
+    await db.insert(conceptsToGraphs).values({
+      conceptId: node,
+      conceptGraphId: conceptGraphId
+    })
+  }
 
   type dictionaryKeys = keyof typeof graphJson.adjacency_dict;
-// 
-  // for(const parent in graphJson.adjacency_dict) {
 
-  //   const parentString = parent as dictionaryKeys;
-  //   const children = graphJson.adjacency_dict[parentString];
+  for(const parent in graphJson.adjacency_dict) {
 
-  //   for(const child of children) {
+    const parentString = parent as dictionaryKeys;
+    const children = graphJson.adjacency_dict[parentString];
 
-  //     await db.insert(conceptGraphEdges).values({
-  //       id: generateId(21),
-  //       parent: parent,
-  //       child: child,
-  //       conceptGraphId: conceptGraphId
-  //     })
-  //   }
-  // }
+    for(const child of children) {
+
+      await db.insert(conceptGraphEdges).values({
+        id: generateId(21),
+        parent: parent,
+        child: child,
+        conceptGraphId: conceptGraphId
+      })
+    }
+  }
 
   for(const root of graphJson.root_ids) {
 
-    console.log(root);
     await db.insert(conceptGraphToRootConcepts).values({
       conceptGraphId: conceptGraphId,
       conceptId: root
@@ -103,5 +103,20 @@ async function createGraph() {
   }
 }
 
-await createGraph();
+async function conceptAnswerEmbeddings() {
+
+  const conceptAnswerList = await db.select().from(conceptAnswers);
+
+  for(const conceptAnswer of conceptAnswerList) {
+
+    const embeddingVector = createEmbedding(conceptAnswer.text);
+
+    await db.update(conceptAnswers).set({
+      embedding: embeddingVector
+    }).where(eq(conceptAnswers.id, conceptAnswer.id))
+  }
+}
+
+// await conceptAnswerEmbeddings();
+// await createGraph();
 // await createConcepts();

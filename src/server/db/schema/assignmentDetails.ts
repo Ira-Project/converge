@@ -19,8 +19,7 @@ export const questions = pgTable(
     id: serial("id").primaryKey(),
     question: text("question").notNull(),
     answer: text("answer").notNull(),
-    conceptGraphId: varchar("concept_graph_id", { length: 21 }).references(() => conceptGraphs.id), 
-    //TODO: Make it not null later
+    conceptGraphId: varchar("concept_graph_id", { length: 21 }).references(() => conceptGraphs.id).notNull(), 
     assignmentTemplateId: varchar("assignment_template_id", { length: 21 }).references(() => assignmentTemplates.id).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),

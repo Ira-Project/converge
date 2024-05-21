@@ -42,6 +42,7 @@ export const ConceptGraph = (
         <div className="w-[336px] h-48 border p-2 rounded-md">
           <ForceGraph2D
             ref={graphRef}
+            linkWidth={1}
             graphData={data}
             minZoom={0.5}
             width={width ?? 320}
@@ -55,7 +56,6 @@ export const ConceptGraph = (
             }
             linkColor={() => theme.resolvedTheme === 'light' ? '#D9D9D9' : '#D9D9D9'}
             nodeColor={() => theme.resolvedTheme === 'light' ? '#0F172A' : '#FFFFFF'}
-            linkWidth={2}
           />
         </div>
     </div>

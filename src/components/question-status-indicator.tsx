@@ -6,19 +6,19 @@ export function QuestionStatusIndicator({ status } : { status: QuestionStatus })
     <>
       {
         status === QuestionStatus.UNANSWERED &&
-          <div className="min-w-8 min-h-8 rounded-full bg-slate-500" /> 
+          <div className="min-w-4 min-h-4 rounded-full bg-slate-200" /> 
       }
       {
         status === QuestionStatus.CORRECT && 
-          <div className="min-w-8 min-h-8 rounded-full bg-green-600" />
+          <div className="min-w-4 min-h-4 rounded-full bg-green-400" />
       }
       {
         status === QuestionStatus.INCORRECT && 
-          <div className="min-w-8 min-h-8 rounded-full bg-red-600" />
+          <div className="min-w-4 min-h-4 rounded-full bg-red-400" />
       }
       {
         status === QuestionStatus.LOADING && 
-          <AnimatedSpinner className="w-8 h-8" />
+          <AnimatedSpinner className="w-4 h-4" />
       }
     </>
   )
