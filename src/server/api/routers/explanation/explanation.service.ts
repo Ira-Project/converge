@@ -194,7 +194,6 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
         conceptsWithSimilarConcepts, 
         conceptDictionary
       );
-      console.log(missingConceptQuestionStrings); 
 
       promises.push(
         getResponseForMissingConcepts(missingConceptQuestionStrings, input.explanation)
