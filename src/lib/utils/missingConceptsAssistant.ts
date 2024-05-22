@@ -1,4 +1,4 @@
-import { createAssistant, createThread, getTextResponseFromThread } from "./aiUtils";
+import { createAssistant, createThread, deleteAssistant, getTextResponseFromThread } from "./aiUtils";
 import { convertStringArrayToNumberedList } from "./promptUtils";
 
 const MISSING_CONCEPTS_ASSISTANT_NAME = "Missing Concepts"
@@ -22,5 +22,7 @@ export async function getResponseForMissingConcepts(
   })  
 
   const thread = await createThread([{ role: "user", content: inputExplanation }]);
-  return await getTextResponseFromThread(thread.id, assistant.id);
+  const response = await getTextResponseFromThread(thread.id, assistant.id);
+  void deleteAssistant(assistant.id);
+  return response;
 }

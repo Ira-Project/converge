@@ -67,6 +67,7 @@ export type AssignmentUpdateActions =
         questionId: string, 
         newStatus: QuestionStatus, 
         computedAnswer?: string,
+        isLast: boolean
       }
     }
   | {

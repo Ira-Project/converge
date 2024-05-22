@@ -27,7 +27,7 @@ export const questionReducer = (
       return {
         ...state,
         questions: state.questions.map((question) => {
-          if (question.id === action.payload.questionId) {
+          if (question.id == action.payload.questionId) {
             return {
               ...question,
               working: question.working + action.payload.explanation,
@@ -42,11 +42,12 @@ export const questionReducer = (
       return {
         ...state,
         questions: state.questions.map((question) => {
-          if (question.id === action.payload.questionId) {
+          if (question.id == action.payload.questionId) {
             return {
               ...question,
               status: action.payload.newStatus,
-              computedAnswerText: action.payload.computedAnswer ?? ""
+              computedAnswerText: action.payload.computedAnswer ?? "",
+              workingComplete: action.payload.isLast,
             };
           }
           return question;

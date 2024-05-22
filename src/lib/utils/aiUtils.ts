@@ -1,5 +1,5 @@
 import { TRPCClientError } from "@trpc/client"
-import { DEFAULT_TEMPERATURE, IRRELEVANT_EXPLANATION_RESPONSES, NO_EXPLANATION_RESPONSES } from "../aiConstants"
+import { DEFAULT_TEMPERATURE, DEFAULT_TOP_P, IRRELEVANT_EXPLANATION_RESPONSES, NO_EXPLANATION_RESPONSES } from "../aiConstants"
 import { openai } from "../openai"
 
 export function getEmbeddingThreshold(prompt: string) {
@@ -70,11 +70,15 @@ export async function createAssistant(
     assistantName,
     assistantInstructions,
     temperature = DEFAULT_TEMPERATURE,
+    isJson = false, 
+    topP = DEFAULT_TOP_P
   } : {
     modelName: string,
     assistantName: string,
     assistantInstructions: string,
     temperature?: number,
+    isJson?: boolean
+    topP?: number
   }
 ) {
   const assistant = await openai.beta.assistants.create({
@@ -82,6 +86,8 @@ export async function createAssistant(
     name: assistantName,
     instructions: assistantInstructions,
     temperature: temperature,
+    response_format: isJson ? { "type": "json_object" } : "auto",
+    top_p: topP,
   });
   
   return assistant;
@@ -131,4 +137,45 @@ export async function getTextResponseFromThread(
 
   throw new TRPCClientError("Error: Thread run failed");
 
+}
+
+export async function getJsonResponseFromThread(
+  threadId: string,
+  assistantId: string,
+): Promise<JSON> {
+
+  let run = await openai.beta.threads.runs.createAndPoll(
+    threadId, 
+    {
+      assistant_id: assistantId,
+    }
+  )
+
+  while (['queued', 'in_progress', 'cancelling'].includes(run.status)) {
+    await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for 1 seconds
+    run = await openai.beta.threads.runs.retrieve(
+      run.thread_id,
+      run.id
+    );
+  }
+
+  if (run.status === 'completed') {
+    const messages = await openai.beta.threads.messages.list(threadId);
+    const response = messages.data[0]?.content[0];
+    if(response?.type === "text") {
+      const responseJson = JSON.parse(response.text.value) as JSON;
+      return responseJson
+    } else {
+      throw new TRPCClientError("Error: Response is not text");
+    }
+  }
+
+  throw new TRPCClientError("Error: Thread run failed");
+
+}
+
+export async function deleteAssistant(
+  assistantId: string,
+) {
+  await openai.beta.assistants.del(assistantId);
 }

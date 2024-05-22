@@ -16,6 +16,7 @@ import * as testAttempts from "./schema/testAttempt";
 export const client = postgres(env.DATABASE_URL, {
   max_lifetime: 10, 
   prepare: false,
+  onnotice: () => {return},
 });
 
 export const db = drizzle(client, { schema: 

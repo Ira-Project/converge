@@ -8,6 +8,9 @@ import { type CleanConceptGraph, getValidAndIsolatedNodes, getMissingParentsFrom
 import { type ConceptWithSimilarConcepts } from "@/lib/utils/graphUtils";
 import { explanations } from "@/server/db/schema/explanations";
 import { getResponseForMissingConcepts } from "@/lib/utils/missingConceptsAssistant";
+import { checkConceptWithExplanation } from "@/lib/utils/conceptPresentAssistant";
+import { applyConcepts } from "@/lib/utils/applyConceptsAssistant";
+import { compareAnswers } from "@/lib/utils/questionUtils";
 
 
 export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) => {
@@ -17,16 +20,16 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   // -----------
 
   const explanationEmbeddingVector = await createEmbedding(input.explanation);
-  // const explanationId = generateId(21);
+  const explanationId = generateId(21);
 
-  // await ctx.db.insert(explanations).values({
-  //   id: explanationId,
-  //   text: input.explanation,
-  //   assignmentTemplateId: input.assignmentTemplateId,
-  //   testAttemptId: input.testAttemptId!,
-  //   embedding: explanationEmbeddingVector,
-  //   createdBy: ctx.user.id,
-  // })
+  await ctx.db.insert(explanations).values({
+    id: explanationId,
+    text: input.explanation,
+    assignmentTemplateId: input.assignmentTemplateId,
+    testAttemptId: input.testAttemptId!,
+    embedding: explanationEmbeddingVector,
+    createdBy: ctx.user.id,
+  })
 
   // -----------
   // RAG Process to Determine which concepts are present in the explanation
@@ -131,14 +134,15 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   }
 
   // -----------
-  // Get the valid and isolated nodes from the explanation 
+  // Get the list of questions
   // -----------
 
   const questions = await ctx.db.query.questions.findMany({
     where: (table, { eq }) => eq(table.assignmentTemplateId, input.assignmentTemplateId),
     columns: {
       id: true,
-      question: true
+      question: true,
+      answer: true,
     },
     with: {
       conceptGraph: {
@@ -165,8 +169,18 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     }
   })
 
-  const promises = [];
+  // -----------
+  // Handle the cases where explanation is not sufficient for computation
+  // -----------
 
+  const noValidNodesPromises = [];
+  const remainingQuestions: {
+    id: number,
+    questionText: string,
+    questionGraph: CleanConceptGraph;
+    answer: string,
+  }[] = [];
+  
   for(const question of questions) {
 
     const questionGraph:CleanConceptGraph = {
@@ -186,7 +200,6 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     if(!conceptsPresentInExplanationIds.length) {
 
       // TO DO: create the computed answers object
-
       await ctx.realtimeDb.insert(actions).values({
         id: generateId(21),
         channelId: input.channelName,
@@ -229,7 +242,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
         conceptDictionary
       );
 
-      promises.push(
+      noValidNodesPromises.push(
         getResponseForMissingConcepts(missingConceptQuestionStrings, input.explanation)
           .then(async (response) => {
             // TO DO: create the computed answers object
@@ -245,13 +258,125 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
             })
           })
       );
+      continue;
     }      
-
-      
     
+    remainingQuestions.push({
+      id: question.id,
+      questionText: question.question,
+      questionGraph: questionGraph,
+      answer: question.answer
+    })
       
   }
 
-  await Promise.all(promises);
+  if(remainingQuestions.length === 0) {
+    await Promise.all(noValidNodesPromises);
+    return;
+  } 
+  void Promise.all(noValidNodesPromises);
+  
+  // -----------
+  // Handle the cases where explanation is not sufficient for computation
+  // -----------
 
+  const conceptPresentAssistantId = conceptsInGraph?.conceptPresentAssistantId ?? "";
+  const conceptPresentPromises = [
+    ...concepts.map(async (concept) => 
+      await checkConceptWithExplanation(conceptPresentAssistantId, input.explanation, concept.text, concept.id))
+  ]
+  const answersWithAnswerPresent = await Promise.all(conceptPresentPromises);
+  const answersPresent = answersWithAnswerPresent.filter(({ answerPresent }) => answerPresent);
+
+  const conceptApplyPromises = [];
+
+  for (const question of remainingQuestions) {
+
+    const answersForQuestion = answersPresent.filter(({ conceptId }) => 
+      question.questionGraph.nodes.includes(conceptId)).map((answer) => answer.conceptId);
+
+    const { validNodes,  isolatedNodes } = getValidAndIsolatedNodes(
+      answersForQuestion,
+      question.questionGraph
+    );
+
+    if(validNodes.length == 0) {
+      const missingParents = getMissingParentsFromIsolatedNodes(isolatedNodes, question.questionGraph);
+      const conceptsWithSimilarConcepts:ConceptWithSimilarConcepts[] = concepts.map(
+        ({id, similarConceptFrom}) => {
+          const similarConcepts = similarConceptFrom.filter(({conceptToId}) => question.questionGraph.nodes.includes(conceptToId));
+          return {
+            id, 
+            similarConcepts: similarConcepts.map(({conceptToId}) => conceptToId)
+          }
+        }).filter(({id}) => question.questionGraph.nodes.includes(id));
+
+      const missingConceptQuestionStrings = getConceptQuestions(
+        missingParents,
+        ' OR ', 
+        conceptsWithSimilarConcepts, 
+        conceptDictionary
+      );
+
+      noValidNodesPromises.push(
+        getResponseForMissingConcepts(missingConceptQuestionStrings, input.explanation)
+          .then(async (response) => {
+            // TO DO: create the computed answers object
+            await ctx.realtimeDb.insert(actions).values({
+              id: generateId(21),
+              channelId: input.channelName,
+              actionType: AssignmentUpdateActionType.UPDATE_EXPLANATION_AND_STATUS,
+              payload: {
+                questionId: question.id,
+                newStatus: QuestionStatus.INCORRECT,
+                explanation: response,
+              }
+            })
+          })
+      );
+      continue;
+    }
+
+    const validNodeIds = validNodes.map((id) => { 
+      const concept = concepts.find(({ id: conceptId }) => conceptId === id);
+      return {
+        id: id, 
+        answer: answersPresent.find(({ conceptId }) => conceptId === id)?.answer ?? "", 
+        calculationRequired: concept?.calculationRequired ?? false 
+      }
+    });
+
+    const nodesToRemove:string[] = [];
+    const nodesVisited:string[] = [];
+    for(const validNodeId of validNodeIds) {
+      nodesVisited.push(validNodeId.id);
+      const similarConceptIds = concepts.find(({ id }) => id === validNodeId.id)?.similarConceptFrom.map(({ conceptToId }) => conceptToId) ?? [];
+      const similarConceptsToRemove = similarConceptIds.filter((id) => !nodesVisited.includes(id));
+      nodesToRemove.push(...similarConceptsToRemove);
+    }
+
+    const validNodeIdsFiltered = validNodeIds.filter(({ id }) => !nodesToRemove.includes(id));
+
+    conceptApplyPromises.push(
+      applyConcepts(ctx, question.id, question.questionText, validNodeIdsFiltered,input.channelName)
+        .then(async ({ finalWorking, finalAnswer }) => {
+          const isCorrect = compareAnswers(finalAnswer!, question.answer);
+          await ctx.realtimeDb.insert(actions).values({
+            id: generateId(21),
+            channelId: input.channelName,
+            actionType: AssignmentUpdateActionType.UPDATE_STATUS,
+            payload: {
+              questionId: question.id,
+              newStatus: isCorrect ? QuestionStatus.CORRECT : QuestionStatus.INCORRECT,
+              explanation: finalWorking,
+              computedAnswer: finalAnswer, 
+              isLast: true
+            }
+          })
+        }
+      )
+    )
+  }
+
+  await Promise.all(conceptApplyPromises);
 }

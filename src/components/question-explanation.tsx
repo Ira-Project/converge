@@ -1,5 +1,4 @@
 import { AnimatedSpinner } from "./icons";
-import Image from "next/image";
 
 interface QuestionExplanationProps {
   workingText: string;
@@ -18,16 +17,16 @@ export function QuestionExplanation({ workingComplete, workingText } : QuestionE
         width={64}
         height={64}
       /> */}
-      <p>
-        {workingText}
-        {
-          !workingComplete && 
-          <div className="flex flex-row justify-center mt-2">
-            <AnimatedSpinner />
-          </div>
-        }
-      </p>
-    </div>
+        <div>
+          <p dangerouslySetInnerHTML={{ __html: workingText }} />
+          {
+            !workingComplete && 
+            <div className="flex flex-row justify-center mt-2">
+              <AnimatedSpinner />
+            </div>
+          }
+        </div>
+      </div>
   );
 }
 

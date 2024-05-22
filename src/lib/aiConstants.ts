@@ -16,4 +16,12 @@ export const IRRELEVANT_EXPLANATION_RESPONSES = [
   "I'm finding it difficult to understand how to address this question based on your explanation. Can you please provide more insights?"
 ]
 
+export const NONE_STRINGS = [
+  "none",
+  "null",
+  "",
+  "nan",
+]
+
 export const DEFAULT_TEMPERATURE = 1;
+export const DEFAULT_TOP_P = 1
