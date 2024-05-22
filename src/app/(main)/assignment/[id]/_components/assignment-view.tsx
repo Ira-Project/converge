@@ -24,6 +24,8 @@ import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { PaperPlaneIcon } from "@/components/icons";
 import { Skeleton } from "@/components/ui/skeleton";
+import SubmissionModal from "./submission-modal";
+import ConfirmationModal from "./confirmation-modal";
 
 const ConceptGraph = dynamic(
   () => import("../../../../../components/concept-graph").then((mod) => mod.ConceptGraph),
@@ -46,6 +48,7 @@ interface Props {
 export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentName, classroom, timeLimit }: Props) => {
 
   const explanationMutation = api.explanation.explain.useMutation();
+  const submissionMutation = api.testAttempt.submit.useMutation();
 
   const initialState: AssignmentState = {
     validNodeIds: [],
@@ -122,6 +125,17 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
       assignmentTemplateId: assignmentTemplate.id,
     });
   });
+
+  const [submissionModalOpen, setSubmissionmodalOpen] = useState(false);
+  const [confirmationModalOpen, setConfirmationModalOpen] = useState(false);
+
+  const submitAssignment = async () => {
+    await submissionMutation.mutateAsync({
+      testAttemptId: testAttemptId,
+    });
+    setConfirmationModalOpen(false);
+    setSubmissionmodalOpen(true);
+  }
 
   return (
     <div className="max-h-[calc(100vh-64px)] overflow-y-hidden grid grid-rows-[auto_auto_1fr_auto] px-16 py-12 gap-4">
@@ -232,8 +246,15 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
         </ScrollArea>
       </div>
       <div className="ml-auto mr-4">
-        <Button>Submit Assignment</Button>
+        <Button onClick={() => setConfirmationModalOpen(true)}>
+          Submit Assignment
+        </Button>
       </div>
+      <ConfirmationModal 
+        open={confirmationModalOpen} 
+        onSubmit={submitAssignment} 
+        loading={submissionMutation.isLoading} />
+      <SubmissionModal open={submissionModalOpen || true} />
     </div>
   );
 }
