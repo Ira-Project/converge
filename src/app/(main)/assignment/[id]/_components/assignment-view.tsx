@@ -254,7 +254,7 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
         open={confirmationModalOpen} 
         onSubmit={submitAssignment} 
         loading={submissionMutation.isLoading} />
-      <SubmissionModal open={submissionModalOpen || true} />
+      <SubmissionModal open={submissionModalOpen} />
     </div>
   );
 }
