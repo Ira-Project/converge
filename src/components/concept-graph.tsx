@@ -11,10 +11,12 @@ interface Props {
   zoom?: number;
   validNodes?: string[];
   hideLabels?: boolean;
+  nodeColor?: string;
+  linkWidth?: number;
 }
 
 export const ConceptGraph = (
-  { assignmentTemplate, width, height, zoom, validNodes, hideLabels } : Props
+  { assignmentTemplate, width, height, zoom, validNodes, hideLabels, nodeColor, linkWidth } : Props
 ) => {
 
   if(typeof window === 'undefined') return <></>;
@@ -41,11 +43,11 @@ export const ConceptGraph = (
   return (
     <ForceGraph2D
       ref={graphRef}
-      linkWidth={1}
+      linkWidth={linkWidth ?? 1}
       graphData={data}
       minZoom={0.5}
       width={width ?? 320}
-      height={height ?? 176}
+      height={height ?? 180}
       nodeRelSize={5}
       nodeLabel={
         (node) => {
@@ -59,6 +61,9 @@ export const ConceptGraph = (
         (node) => {
           if(validNodes?.includes(node?.id as string)) {
             return '#3CBE8F';
+          }
+          if(nodeColor) {
+            return nodeColor;
           }
           return theme.resolvedTheme === 'light' ? '#0F172A' : '#FFFFFF'
         }

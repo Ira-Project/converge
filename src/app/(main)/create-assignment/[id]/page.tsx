@@ -14,9 +14,11 @@ import { AssignmentPreview } from "./_components/assignment-preview";
   return (
     <>
       <CreateAssignmentAside id={params.id} />
-      <div className="ml-96 px-16 h-[calc(100vh-108px)] overflow-y-hidden flex flex-col gap-4">
-        <p className="text-3xl font-semibold"> {assignmentTemplate.name} Preview </p>
-        <p>This is a preview. Your students will see a version of this view along with the concept graph. </p>
+      <div className="ml-96 pl-16 pr-8 h-[calc(100vh-108px)] overflow-y-hidden flex flex-col gap-4">
+        <div className="pr-8 flex flex-col gap-4">
+          <p className="text-3xl font-semibold"> {assignmentTemplate.name} Preview </p>
+          <p>This is a preview. Your students will see a version of this view along with the concept graph. </p>
+        </div>
         <AssignmentPreview assignmentTemplate={assignmentTemplate} />
       </div>
     </>

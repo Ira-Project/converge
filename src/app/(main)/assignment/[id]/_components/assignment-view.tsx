@@ -13,7 +13,7 @@ import { Accordion } from "@/components/ui/accordion";
 import { QuestionAccordionItem } from "@/components/question-accordion-item";
 import { QuestionStatus } from "@/lib/constants";
 import { supabaseClient } from "@/lib/supabaseClient";
-import { useEffect, useReducer, useState } from "react";
+import { Suspense, useEffect, useReducer, useState } from "react";
 import { type AssignmentState, type AssignmentUpdateActions, AssignmentUpdateActionType } from "@/lib/constants";
 import { questionReducer } from "@/reducers/assignment-reducer";
 import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
@@ -23,6 +23,7 @@ import AssignmentHeader from "./assignment-header";
 import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { PaperPlaneIcon } from "@/components/icons";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const ConceptGraph = dynamic(
   () => import("../../../../../components/concept-graph").then((mod) => mod.ConceptGraph),
@@ -54,6 +55,7 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
         status: QuestionStatus.UNANSWERED,
         questionText: question.question,
         answerText: question.answer,
+        computedAnswerText: "",
         working: "",
         workingComplete: false,
       };
@@ -144,11 +146,15 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
               <Tooltip>
                 <TooltipTrigger asChild>
                   <div>
-                    <p className="w-full text-center text-sm text-muted-foreground pb-2"> Concept Map </p>
-                    <ConceptGraph 
-                      hideLabels
-                      validNodes={assignmentState.validNodeIds}
-                      assignmentTemplate={assignmentTemplate}/>
+                    <p className="w-full text-center text-sm text-muted-foreground pb-2"> Ira's Knowledge </p>
+                    <Suspense fallback={<Skeleton className="w-80 h-48" />}>
+                      <ConceptGraph 
+                        hideLabels
+                        linkWidth={0.5}
+                        nodeColor="#e2e8f0"
+                        validNodes={assignmentState.validNodeIds}
+                        assignmentTemplate={assignmentTemplate}/>
+                    </Suspense>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="max-w-48">
@@ -161,7 +167,7 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
       </div>
       <div className="grid grid-cols-2 items-center gap-16">
         <p className="font-semibold"> Explanation </p>
-        <p className="font-semibold"> Question </p>
+        <p className="font-semibold"> Questions </p>
       </div>
       <div className="grid grid-cols-2 min-h-0 gap-16">
         <div>
@@ -201,21 +207,25 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
             </form>
           </Form>
         </div>
-        <ScrollArea className="grid overflow-y-auto pr-4">
+        <ScrollArea className="grid overflow-y-auto pr-6">
           <div className="flex flex-col gap-4">
             <Accordion type="single" collapsible className="w-full">
-              {
-                assignmentState.questions.map((question) => (
-                  <QuestionAccordionItem 
-                    status={question.status}
-                    key={question.id}
-                    id={question.id.toString()}
-                    questionText={question.questionText}
-                    answerText={question.answerText} 
-                    workingText={question.working !== "" ? question.working : undefined}
-                    />
-                ))
-              }
+              <Suspense fallback={<Skeleton className="w-full h-16"/>}>
+                {
+                  assignmentState.questions.map((question) => (
+                    <QuestionAccordionItem 
+                      status={question.status}
+                      key={question.id}
+                      id={question.id.toString()}
+                      questionText={question.questionText}
+                      answerText={question.answerText} 
+                      workingText={question.working !== "" ? question.working : undefined}
+                      workingComplete={question.workingComplete}
+                      computedAnswerText={question.computedAnswerText}
+                      />
+                  ))
+                }
+              </Suspense>
             </Accordion>
           </div>
           <ScrollBar orientation="vertical" />

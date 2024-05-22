@@ -13,6 +13,7 @@ export const questionReducer = (
           ...question,
           status: QuestionStatus.LOADING,
           working: '',
+          computedAnswerText: "",
           workingComplete: false,
         };
       });
@@ -45,6 +46,7 @@ export const questionReducer = (
             return {
               ...question,
               status: action.payload.newStatus,
+              computedAnswerText: action.payload.computedAnswer ?? ""
             };
           }
           return question;
@@ -60,6 +62,7 @@ export const questionReducer = (
               ...question,
               status: action.payload.newStatus,
               working: question.working + action.payload.explanation,
+              computedAnswerText: action.payload.computedAnswer ?? "",
               workingComplete: true,
             };
           }

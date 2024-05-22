@@ -36,6 +36,7 @@ export type QuestionState = {
   status: QuestionStatus;
   questionText: string;
   answerText: string
+  computedAnswerText: string;
   working: string;
   workingComplete: boolean;
 };
@@ -57,7 +58,7 @@ export type AssignmentUpdateActions =
       payload: { 
         explanation: string,
         questionId: string
-        isLast: boolean 
+        isLast: boolean
       }
     }
   | {
@@ -65,6 +66,7 @@ export type AssignmentUpdateActions =
       payload: { 
         questionId: string, 
         newStatus: QuestionStatus, 
+        computedAnswer?: string,
       }
     }
   | {
@@ -73,6 +75,7 @@ export type AssignmentUpdateActions =
         questionId: string, 
         newStatus: QuestionStatus, 
         explanation: string,
+        computedAnswer?: string,
       }
     }
   | {

@@ -13,12 +13,13 @@ import { Accordion } from "@/components/ui/accordion";
 import { QuestionAccordionItem } from "@/components/question-accordion-item";
 import { QuestionStatus } from "@/lib/constants";
 import { supabaseClient } from "@/lib/supabaseClient";
-import { useEffect, useReducer, useState } from "react";
+import { Suspense, useEffect, useReducer, useState } from "react";
 import { type AssignmentState, type AssignmentUpdateActions, AssignmentUpdateActionType } from "@/lib/constants";
 import { questionReducer } from "@/reducers/assignment-reducer";
 import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
 import { generateId } from "lucia";
 import { PaperPlaneIcon } from "@/components/icons";
+import { Skeleton } from "@/components/ui/skeleton";
 
 interface Props {
   assignmentTemplate: RouterOutputs["assignmentTemplate"]["get"]; 
@@ -36,6 +37,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
         status: QuestionStatus.UNANSWERED,
         questionText: question.question,
         answerText: question.answer,
+        computedAnswerText: "",
         working: "",
         workingComplete: false,
       };
@@ -105,7 +107,7 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
   return (
     <>
       <Form {...form}>
-        <form className="grid gap-4" onSubmit={onSubmit}>
+        <form className="grid gap-4 pr-8" onSubmit={onSubmit}>
           <FormField
             control={form.control}
             name="explanation"
@@ -140,20 +142,24 @@ export const AssignmentPreview = ({ assignmentTemplate }: Props) => {
       </Form>
       <p className="font-semibold"> Questions </p>
       <ScrollArea className="gap-4 flex flex-col overflow-y-auto pr-4">
-        <Accordion type="single" collapsible className="w-full">
-          {
-            assignmentState.questions.map((question) => (
-              <QuestionAccordionItem 
-                status={question.status}
-                key={question.id}
-                id={question.id.toString()}
-                questionText={question.questionText}
-                answerText={question.answerText} 
-                workingText={question.working !== "" ? question.working : undefined}
-                />
-            ))
-          }
-          </Accordion>
+        <Accordion type="single" collapsible className="w-full pr-4">
+          <Suspense fallback={<Skeleton className="w-full h-16"/>}>
+            {
+              assignmentState.questions.map((question) => (
+                <QuestionAccordionItem 
+                  status={question.status}
+                  key={question.id}
+                  id={question.id.toString()}
+                  questionText={question.questionText}
+                  answerText={question.answerText} 
+                  workingText={question.working !== "" ? question.working : undefined}
+                  workingComplete={question.workingComplete}
+                  computedAnswerText={question.computedAnswerText}
+                  />
+              ))
+            }
+          </Suspense>
+        </Accordion>
         <ScrollBar orientation="vertical" />
       </ScrollArea>
     </>
