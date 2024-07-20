@@ -38,7 +38,7 @@ export const CreateAssignmentForm = ({ assignmentTemplates } : Props) => {
 
   return (
     <Form {...form}>
-      <form onSubmit={onSubmit} className="grid gap-4">
+      <form onSubmit={onSubmit} className="grid gap-2">
         <FormField
           control={form.control}
           name="assignmentTemplateId"
@@ -70,15 +70,6 @@ export const CreateAssignmentForm = ({ assignmentTemplates } : Props) => {
                   </Select>
                 </Suspense>
               </FormControl>
-              <FormDescription>
-                Don't see what you're looking for? Email us at {" "}
-                <Link href="mailto:contact@iraproject.com" target="_blank">
-                  <span className="underline">contact@iraproject.com</span>
-                </Link> 
-                {" "}
-                we'd be happy to create it for you.
-                
-              </FormDescription>
               <FormMessage />
             </FormItem>
           )} 

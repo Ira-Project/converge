@@ -25,7 +25,7 @@ const ClassroomTabLayout = async ({
   });
 
   return (
-    <main className="p-16">
+    <main className="p-16 py-8">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <Breadcrumb>

@@ -11,6 +11,8 @@ import * as concept from "./schema/concept";
 import * as assignmentDetails from "./schema/assignmentDetails";
 import * as explanations from "./schema/explanations";
 import * as testAttempts from "./schema/testAttempt";
+import { lessonPlanFiles } from "./schema/lessonPlan";
+import { assignmentDataFiles } from "./schema/assignmentData";
 
 
 export const client = postgres(env.DATABASE_URL, {
@@ -30,5 +32,7 @@ export const db = drizzle(client, { schema:
     ...assignmentDetails,
     ...explanations,
     ...testAttempts,
+    ...lessonPlanFiles,
+    ...assignmentDataFiles
   }
 });

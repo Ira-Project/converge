@@ -23,6 +23,8 @@ export const env = createEnv({
     GOOGLE_CLIENT_SECRET: z.string().trim().min(1),
     OPENAI_API_KEY: z.string().trim().min(1),
     REALTIME_DATABASE_URL: z.string().url(),
+    AWS_ACCESS_KEY_ID: z.string().trim().min(1),
+    AWS_SECRET_ACCESS_KEY: z.string().trim().min(1),
   },
 
   /**
@@ -54,6 +56,8 @@ export const env = createEnv({
     GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
     REALTIME_DATABASE_URL: process.env.REALTIME_DATABASE_URL,
+    AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
+    AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
     // Client-side env vars
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,

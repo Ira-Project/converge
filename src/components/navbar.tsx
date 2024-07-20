@@ -12,7 +12,7 @@ export const Navbar = async () => {
     <header className="sticky top-0 z-10 p-0">
       <div className="flex items-center gap-2 px-2 py-2 lg:px-4">
         <Link href={Paths.Home}>
-          <Image priority src="/images/logo.png" alt="Logo" height={32} width={40} />
+          <Image priority src="/images/logo.png" alt="Logo" height={32} width={32} />
         </Link>
         <div className="ml-auto flex items-center gap-4">
           <ThemeToggle />

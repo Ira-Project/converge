@@ -12,6 +12,8 @@ import * as concept from "./schema/concept";
 import * as assignmentDetails from "./schema/assignmentDetails";
 import * as explanations from "./schema/explanations";
 import * as testAttempts from "./schema/testAttempt";
+import { lessonPlanFiles } from "./schema/lessonPlan";
+import { assignmentDataFiles } from "./schema/assignmentData";
 
 
 export async function runMigrate() {
@@ -26,6 +28,8 @@ export async function runMigrate() {
     ...assignmentDetails,
     ...explanations,
     ...testAttempts,
+    ...lessonPlanFiles,
+    ...assignmentDataFiles
   };
   const db = drizzle(connection, { schema });
 

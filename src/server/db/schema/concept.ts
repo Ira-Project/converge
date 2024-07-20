@@ -133,7 +133,7 @@ export const conceptsToGraphsRelations = relations(conceptsToGraphs, ({ one }) =
 }));
 
 export const conceptGraphToRootConcepts = pgTable(
-  "concept_graph_to_root_concepts",
+  "concepts_graph_to_root_concepts",
   {
     conceptGraphId: varchar("concept_graph_id", {length: 21}).notNull().references(() => conceptGraphs.id),
     conceptId: varchar("concept_id", {length: 21}).notNull().references(() => concepts.id),

@@ -7,15 +7,18 @@ import { env } from "@/env";
 import { EMAIL_SENDER } from "@/lib/constants";
 import { createTransport, type TransportOptions } from "nodemailer";
 import type { ComponentProps } from "react";
+import { FileUploadedTemplate } from "./templates/file-uploaded";
 
 export enum EmailTemplate {
   EmailVerification = "EmailVerification",
   PasswordReset = "PasswordReset",
+  FileUploaded = "FileUploaded",
 }
 
 export type PropsMap = {
   [EmailTemplate.EmailVerification]: ComponentProps<typeof EmailVerificationTemplate>;
   [EmailTemplate.PasswordReset]: ComponentProps<typeof ResetPasswordTemplate>;
+  [EmailTemplate.FileUploaded]: ComponentProps<typeof FileUploadedTemplate>;
 };
 
 const getEmailTemplate = <T extends EmailTemplate>(template: T, props: PropsMap[NoInfer<T>]) => {
@@ -32,6 +35,13 @@ const getEmailTemplate = <T extends EmailTemplate>(template: T, props: PropsMap[
         subject: "Reset your password",
         body: render(
           <ResetPasswordTemplate {...(props as PropsMap[EmailTemplate.PasswordReset])} />,
+        ),
+      };
+    case EmailTemplate.FileUploaded:
+      return {
+        subject: "File uploaded",
+        body: render(
+          <FileUploadedTemplate {...(props as PropsMap[EmailTemplate.FileUploaded])} />,
         ),
       };
     default:

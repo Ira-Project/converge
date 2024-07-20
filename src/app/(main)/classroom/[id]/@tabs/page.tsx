@@ -12,10 +12,10 @@ export default async function ClassroomPage({ params } : { params: { id: string 
   return (
     <>
       <div className="flex flex-row pt-8 gap-8 h-full">
-        <div className="w-3/4">
+        <div className="w-2/3">
           <AssignmentList id={params.id} />
         </div>
-        <div className="w-1/4">
+        <div className="w-1/3">
           {
             user.role === Roles.Teacher && <CreateAssignmentSection />
           }

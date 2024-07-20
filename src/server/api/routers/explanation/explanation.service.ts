@@ -358,7 +358,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     const validNodeIdsFiltered = validNodeIds.filter(({ id }) => !nodesToRemove.includes(id));
 
     conceptApplyPromises.push(
-      applyConcepts(ctx, question.id, question.questionText, validNodeIdsFiltered,input.channelName)
+      applyConcepts(ctx, question.id, question.questionText, validNodeIdsFiltered, input.channelName)
         .then(async ({ finalWorking, finalAnswer }) => {
           const isCorrect = compareAnswers(finalAnswer!, question.answer);
           await ctx.realtimeDb.insert(actions).values({

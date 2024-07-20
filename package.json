@@ -16,6 +16,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.616.0",
+    "@aws-sdk/s3-request-presigner": "^3.616.0",
     "@hookform/resolvers": "^3.4.0",
     "@lucia-auth/adapter-drizzle": "1.0.7",
     "@radix-ui/react-accordion": "^1.1.2",
