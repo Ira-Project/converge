@@ -156,7 +156,7 @@ export async function resendVerificationEmail(): Promise<{
 
 export async function verifyEmail(_: unknown, formData: FormData): Promise<{ error: string } | void> {
   const code = formData.get("code");
-  if (typeof code !== "string" || code.length !== 8) {
+  if (typeof code !== "string" || code.length !== 6) {
     return { error: "Invalid code" };
   }
   const { user } = await validateRequest();
