@@ -265,12 +265,12 @@ const timeFromNow = (time: Date) => {
 
 async function generateEmailVerificationCode(userId: string, email: string): Promise<string> {
   await db.delete(emailVerificationCodes).where(eq(emailVerificationCodes.userId, userId));
-  const code = generateRandomString(8, alphabet("0-9")); // 8 digit code
+  const code = generateRandomString(6, alphabet("0-9")); // 6 digit code
   await db.insert(emailVerificationCodes).values({
     userId,
     email,
     code,
-    expiresAt: createDate(new TimeSpan(2, "m")), // 2 minutes
+    expiresAt: createDate(new TimeSpan(5, "m")), // 2 minutes
   });
   return code;
 }
