@@ -13,7 +13,13 @@ const LOADING_COMPUTED_ANSWER_TEXT = "Pending"
 const COULD_NOT_COMPUTE_ANSWER_TEXT = "Could not compute"
 
 function getComputedAnswerText(computedAnswer:string, status: QuestionStatus) {
-  if(computedAnswer !== "") return computedAnswer
+  if(computedAnswer !== "") {
+    const computedAnswerNumber = parseFloat(computedAnswer)
+    if(!isNaN(computedAnswerNumber)) {
+      return parseFloat(computedAnswerNumber.toFixed(4))
+    }
+    return computedAnswer
+  }
 
   if(status === QuestionStatus.CORRECT || status === QuestionStatus.INCORRECT) {
     return COULD_NOT_COMPUTE_ANSWER_TEXT

@@ -37,7 +37,6 @@ import { PlusIcon } from "@/components/icons";
           <section className="flex flex-col gap-6">
             <div className="flex flex-col gap-2">
               <p className="text-2xl font-semibold"> Assignment Templates </p>
-              <p className="text-muted-foreground"> You don't need a classroom to create an assignment. Simply select a template, preview and share the link with your students. </p>
             </div>
             <AssignmentTemplateList />
           </section>

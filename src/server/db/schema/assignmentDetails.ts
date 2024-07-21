@@ -20,7 +20,7 @@ export const questions = pgTable(
     question: text("question").notNull(),
     answer: text("answer").notNull(),
     conceptGraphId: varchar("concept_graph_id", { length: 21 }).references(() => conceptGraphs.id).notNull(), 
-    assignmentTemplateId: varchar("assignment_template_id", { length: 21 }).references(() => assignmentTemplates.id).notNull(),
+    assignmentTemplateId: varchar("assignment_template_id", { length: 21 }).references(() => assignmentTemplates.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),

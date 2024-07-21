@@ -94,7 +94,7 @@ export const UploadLessonPlanForm = () => {
           disabled={!form.formState.isDirty || getPresignedUrl.isLoading || uploadLessonPlan.isLoading || loading}
           loading={getPresignedUrl.isLoading || uploadLessonPlan.isLoading || loading}
           className="w-fit ml-auto">
-            Upload Lesson Plan
+            Upload
         </LoadingButton>
       </form>
     </Form>

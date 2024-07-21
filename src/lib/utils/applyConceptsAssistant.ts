@@ -1,5 +1,5 @@
 import { type ProtectedTRPCContext } from "@/server/api/trpc";
-import { createAssistant, createThread, deleteAssistant, getJsonResponseFromThread } from "./aiUtils";
+import { createAssistant, createMessage, createThread, deleteAssistant, getJsonResponseFromThread } from "./aiUtils";
 import { performCalculation } from "./calculationUtils";
 import { NONE_STRINGS } from "../aiConstants";
 import { actions } from "@/server/realtime_db/schema/actions";
@@ -37,8 +37,6 @@ export async function applyConcepts(
   finalAnswer: number | undefined,
 }> 
 { 
-  console.log("-----------------");
-  console.log(questionText);
   
   let finalWorking = "";
   let finalAnswer: number | undefined;
@@ -56,6 +54,8 @@ export async function applyConcepts(
 
   let firstThread = true;
 
+  const thread = await createThread([])
+
   for(const concept of validNodes) {
     if(!concept.calculationRequired) {
       continue
@@ -70,9 +70,11 @@ export async function applyConcepts(
     }
     userMessage += `\n${APPLY_EXPLANATION_MESSAGE}`
     
-    const thread = await createThread([
-      { role: "user", content: userMessage }
-    ]);
+    await createMessage({
+      role: "user",
+      content: userMessage
+    }, thread.id)
+
     const responseJson = await getJsonResponseFromThread(thread.id, assistant.id) as unknown as Record<string , string | number>;
 
     let calculation = responseJson?.Calculation;

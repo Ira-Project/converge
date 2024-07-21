@@ -105,6 +105,16 @@ export async function createThread(
   return thread;
 }
 
+export async function createMessage(
+  messages : {
+    role: "user" | "assistant",
+    content: string
+  },
+  threadId: string
+) {
+  await openai.beta.threads.messages.create(threadId, messages);
+}
+
 export async function getTextResponseFromThread(
   threadId: string,
   assistantId: string
