@@ -154,16 +154,16 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
               }
             }
           },
-          conceptGraphToRoots: {
+          conceptGraphRoots: {
             with: {
-              conceptRoot: {
+              rootConcept: {
                 columns: { id: true }
               }
             }
           },
           conceptGraphEdges: {
             columns: { id: true, parent: true, child: true }
-          }
+          },
         }
       }
     }
@@ -186,7 +186,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     const questionGraph:CleanConceptGraph = {
       nodes: question.conceptGraph?.conceptToGraphs?.map(({ concept }) => concept.id) ?? [],
       edges: question.conceptGraph?.conceptGraphEdges?.map(({ parent, child }) => ({ source: parent, target: child })) ?? [],
-      roots: question.conceptGraph?.conceptGraphToRoots?.map(({ conceptRoot }) => conceptRoot.id) ?? [],
+      roots: question.conceptGraph?.conceptGraphRoots?.map(({ rootConcept }) => rootConcept.id) ?? [],
     };
 
     const conceptsPresentInExplanationIds = 

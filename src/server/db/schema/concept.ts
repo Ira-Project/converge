@@ -7,10 +7,12 @@ import {
   primaryKey,
   index,
   json,
+  serial,
 } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
 import { assignmentTemplates } from "./assignmentTemplate";
+import { courses } from './subject';
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -30,7 +32,8 @@ export const conceptGraphRelations = relations(conceptGraphs, ({ many }) => ({
   assignmentTemplates: many(assignmentTemplates),
   conceptToGraphs: many(conceptsToGraphs),
   conceptGraphEdges: many(conceptGraphEdges),
-  conceptGraphToRoots: many(conceptGraphToRootConcepts),
+  conceptGraphRoots: many(conceptGraphRootConcepts),
+  courses: many(courses),
 }));
 
 
@@ -132,9 +135,10 @@ export const conceptsToGraphsRelations = relations(conceptsToGraphs, ({ one }) =
   }),
 }));
 
-export const conceptGraphToRootConcepts = pgTable(
-  "concept_graph_to_root_concepts",
+export const conceptGraphRootConcepts = pgTable(
+  "concept_graph_root_concepts",
   {
+    id: serial("id").primaryKey(),
     conceptGraphId: varchar("concept_graph_id", {length: 21}).notNull().references(() => conceptGraphs.id),
     conceptId: varchar("concept_id", {length: 21}).notNull().references(() => concepts.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -143,22 +147,20 @@ export const conceptGraphToRootConcepts = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   },
   (t) => ({
-    pk: primaryKey({ columns: [t.conceptGraphId, t.conceptId] }),
-    conceptGraphIdx: index("concept_graph_to_roots_concept_graph_idx").on(t.conceptGraphId),
-    conceptIdx: index("concept_graph_to_roots_concept_idx").on(t.conceptId),
+    conceptGraphIdx: index("concept_graph_roots_concept_graph_idx").on(t.conceptGraphId),
+    conceptIdx: index("concept_graph_roots_concept_idx").on(t.conceptId),
   }),
 )
-export const conceptGraphToRootsRelations = relations(conceptGraphToRootConcepts, ({ one }) => ({
+export const conceptGraphRootsRelations = relations(conceptGraphRootConcepts, ({ one }) => ({
   conceptGraph: one(conceptGraphs, {
-    fields: [conceptGraphToRootConcepts.conceptGraphId],
+    fields: [conceptGraphRootConcepts.conceptGraphId],
     references: [conceptGraphs.id],
   }),
-  conceptRoot: one(concepts, {
-    fields: [conceptGraphToRootConcepts.conceptId],
+  rootConcept: one(concepts, {
+    fields: [conceptGraphRootConcepts.conceptId],
     references: [concepts.id],
   }),
 }));
-
 
 export const similarConcepts = pgTable(
   "similar_concepts",
