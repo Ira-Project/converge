@@ -2,7 +2,7 @@ import { db } from ".";
 import { 
   conceptAnswers, 
   conceptGraphEdges, 
-  conceptGraphToRootConcepts, 
+  conceptGraphRootConcepts, 
   conceptGraphs, 
   concepts, 
   conceptsToGraphs, 
@@ -97,7 +97,7 @@ async function createGraph() {
 
   for(const root of graphJson.root_ids) {
 
-    await db.insert(conceptGraphToRootConcepts).values({
+    await db.insert(conceptGraphRootConcepts).values({
       conceptGraphId: conceptGraphId,
       conceptId: root
     })
