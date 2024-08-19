@@ -1,16 +1,20 @@
 'use client'
-import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
 import { LoadingButton } from "@/components/loading-button";
 
 export default function ConfirmationModal({ 
-  open, 
+  // open, 
   onSubmit, 
   loading,
-} : { open: boolean, onSubmit: () => void, loading: boolean }) {  
+  // onClose,
+} : { onSubmit: () => void, loading: boolean }) {  
 
   return (
-    <Dialog open={open}>
+    <Dialog>
+      <DialogTrigger asChild>
+        <Button>Submit Assignment</Button>
+      </DialogTrigger>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Are you sure you want to submit?</DialogTitle>

@@ -20,7 +20,6 @@ import { explainSchema } from "@/server/api/routers/explanation/explanation.inpu
 import { generateId } from "lucia";
 import dynamic from "next/dynamic";
 import AssignmentHeader from "./assignment-header";
-import { Button } from "@/components/ui/button";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { PaperPlaneIcon } from "@/components/icons";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -127,13 +126,11 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
   });
 
   const [submissionModalOpen, setSubmissionmodalOpen] = useState(false);
-  const [confirmationModalOpen, setConfirmationModalOpen] = useState(false);
 
   const submitAssignment = async () => {
     await submissionMutation.mutateAsync({
       testAttemptId: testAttemptId,
     });
-    setConfirmationModalOpen(false);
     setSubmissionmodalOpen(true);
   }
 
@@ -246,14 +243,10 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
         </ScrollArea>
       </div>
       <div className="ml-auto mr-4">
-        <Button onClick={() => setConfirmationModalOpen(true)}>
-          Submit Assignment
-        </Button>
+        <ConfirmationModal 
+          onSubmit={submitAssignment} 
+          loading={submissionMutation.isLoading} />
       </div>
-      <ConfirmationModal 
-        open={confirmationModalOpen} 
-        onSubmit={submitAssignment} 
-        loading={submissionMutation.isLoading} />
       <SubmissionModal open={submissionModalOpen} />
     </div>
   );
