@@ -1,8 +1,7 @@
 'use client';
 
 import { useForm } from "react-hook-form";
-import { Form, FormControl, FormField, FormItem, FormMessage } from "@/components/ui/form";
-import { LoadingButton } from "@/components/loading-button";
+import { Form } from "@/components/ui/form";
 import { type RouterOutputs } from '@/trpc/shared'
 import { zodResolver } from "@hookform/resolvers/zod";
 import { api } from "@/trpc/react";
@@ -20,7 +19,6 @@ import { generateId } from "lucia";
 import dynamic from "next/dynamic";
 import AssignmentHeader from "./assignment-header";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
-import { PaperPlaneIcon } from "@/components/icons";
 import { Skeleton } from "@/components/ui/skeleton";
 import SubmissionModal from "./submission-modal";
 import ConfirmationModal from "./confirmation-modal";
@@ -45,7 +43,6 @@ interface Props {
 }
 
 export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentName, classroom, timeLimit }: Props) => {
-
   const explanationMutation = api.explanation.explain.useMutation();
   const submissionMutation = api.testAttempt.submit.useMutation();
 
@@ -102,7 +99,6 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
     }
   }, [supabaseClient, channelName]);
   
-  
   const form = useForm({
     defaultValues: {
       explanation: "",
@@ -112,7 +108,6 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
     },
     resolver: zodResolver(explainSchema),
   })
-
 
   const onSubmit = form.handleSubmit(async (values) => {
     questionsStateDispatch({
@@ -184,18 +179,10 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
         <div>
           <Form {...form}>
             <form className="h-full" onSubmit={onSubmit}>
-              <FormField
-                control={form.control}
-                name="explanation"
-                render={({ field }) => (
-                  <FormItem className="h-full">
-                    <FormControl>
-                      <RichInput />
-                    </FormControl>
-                    <FormMessage />
-                  </FormItem>
-                )} 
-              />
+              <RichInput 
+                updateValue={(value: string) => form.setValue('explanation', value)}
+                loading={explanationMutation.isLoading || !isSubscribed}
+                disabled={explanationMutation.isLoading || !isSubscribed}/>
               {
                 explanationMutation.error &&
                 <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive -translate-y-16 mt-4">

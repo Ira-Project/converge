@@ -8,6 +8,8 @@ addStyles();
 export default function MathElement({ text }: { text: string | undefined }) {
 
   return (
-    <StaticMathField>{text}</StaticMathField>
+    <div className="py-2">
+      <StaticMathField>{text}</StaticMathField>
+    </div>
   );
 }

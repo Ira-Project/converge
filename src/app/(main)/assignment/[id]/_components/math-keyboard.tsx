@@ -3,8 +3,6 @@ import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogT
 import React, { useState } from 'react'
 import { addStyles, EditableMathField } from 'react-mathquill'
 
-// inserts the required css to the <head> block.
-// you can skip this, if you want to do that by yourself.
 addStyles()
 
 type MathKeyboardDialogProps = {
@@ -22,7 +20,7 @@ export default function MathKeyboardDialog({ insertHandler } : MathKeyboardDialo
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline" className="flex justify-start mr-auto ml-4 p-2 -translate-y-20 h-8 w-8 italic">
+        <Button variant="outline" className="italic h-8 w-8">
           fx
         </Button>
       </DialogTrigger>

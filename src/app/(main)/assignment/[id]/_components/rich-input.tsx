@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState } from "react"
-import { createEditor, Editor, type Descendant } from 'slate'
+import { createEditor, Editor, Node, type Descendant } from 'slate'
 import { Slate, Editable, withReact, type RenderElementProps } from 'slate-react'
 
 import { type BaseEditor } from 'slate'
@@ -41,24 +41,22 @@ declare module 'slate' {
 const initialValue = [
   {
     type: 'paragraph',
-    children: [{ text: 'A line of text in a paragraph.' }],
-  },
-  {
-    type: 'paragraph',
-    children: [{ text: 'A second line of text in a paragraph.' }],
+    children: [{ text: '' }],
   },
 ] as Descendant[]
 
-export function RichInput() {
+export function RichInput(
+  { updateValue, loading, disabled } : 
+  { updateValue: (value: string) => void, loading: boolean, disabled: boolean }) {
 
   const [editor] = useState(() => withReact(createEditor()))
 
-  if(typeof window !== 'undefined') {
-    
-  }
-  
-  // Define a rendering function based on the element passed to `props`. We use
-  // `useCallback` here to memoize the function for subsequent renders.
+  const onChange = useCallback(() => {
+    const value = editor.children.map(
+      (node) => Node.string(node)).join('\n')
+    updateValue(value)
+  }, [])
+
   const renderElement = useCallback((props: RenderElementProps) => {
     switch(props.element.type) {
       case 'math':
@@ -75,27 +73,32 @@ export function RichInput() {
 
   return (
     <>
-      <div className="h-full resize-none p-2 pr-8 border-solid border-slate-100 border-2">
+      <div className="h-full resize-none p-4 pr-8 border-solid border-slate-100 border-2">
         <Slate
           editor={editor}
+          onChange={onChange}
           initialValue={initialValue}>
           <Editable 
-            className="focus-visible:outline-none"
+            style={{ minHeight: '100%', width: '100%'}}
+            className="focus-visible:outline-none max-h-full"
             renderElement={renderElement} />
         </Slate>
       </div>
-      <div className="flex">
-        <div className="justify-start mr-auto ml-4 p-2 h-8 w-8">
+      <div className="flex -translate-y-12">
+        <div className="justify-start items-center mr-auto ml-4">
           <MathKeyboardDialog
             insertHandler={addMathBlock} />
         </div>
-        <LoadingButton 
-          dontShowChildrenWhileLoading
-          // disabled={!form.formState.isDirty || explanationMutation.isLoading || !isSubscribed} 
-          // loading={explanationMutation.isLoading || !isSubscribed}
-          className="justify-end ml-auto mr-4 p-2 h-8 w-8">
-            <PaperPlaneIcon />
-        </LoadingButton>
+        <div className="justify-end items-center ml-auto mr-4">
+          <LoadingButton 
+            dontShowChildrenWhileLoading
+            loading={loading}
+            disabled={disabled}
+            className="p-2 h-8 w-8"
+            type="submit">
+              <PaperPlaneIcon />
+          </LoadingButton>
+        </div>
       </div>
     </>
   )
