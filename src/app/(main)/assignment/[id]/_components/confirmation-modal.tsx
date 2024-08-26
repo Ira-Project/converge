@@ -4,10 +4,8 @@ import { Button } from '@/components/ui/button';
 import { LoadingButton } from "@/components/loading-button";
 
 export default function ConfirmationModal({ 
-  // open, 
   onSubmit, 
   loading,
-  // onClose,
 } : { onSubmit: () => void, loading: boolean }) {  
 
   return (

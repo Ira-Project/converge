@@ -6,7 +6,6 @@ import { LoadingButton } from "@/components/loading-button";
 import { type RouterOutputs } from '@/trpc/shared'
 import { zodResolver } from "@hookform/resolvers/zod";
 import { api } from "@/trpc/react";
-import { Textarea } from "@/components/ui/textarea";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { ScrollBar } from "@/components/ui/scroll-area";
 import { Accordion } from "@/components/ui/accordion";
@@ -25,6 +24,7 @@ import { PaperPlaneIcon } from "@/components/icons";
 import { Skeleton } from "@/components/ui/skeleton";
 import SubmissionModal from "./submission-modal";
 import ConfirmationModal from "./confirmation-modal";
+import { RichInput } from "./rich-input";
 
 const ConceptGraph = dynamic(
   () => import("../../../../../components/concept-graph").then((mod) => mod.ConceptGraph),
@@ -190,25 +190,12 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
                 render={({ field }) => (
                   <FormItem className="h-full">
                     <FormControl>
-                      <Textarea 
-                        {...field} 
-                        className="h-full resize-none pr-8"
-                        required 
-                        placeholder="Enter your explanation here" />                      
+                      <RichInput />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
                 )} 
               />
-              <div className="w-full">
-              <LoadingButton 
-                dontShowChildrenWhileLoading
-                disabled={!form.formState.isDirty || explanationMutation.isLoading || !isSubscribed} 
-                loading={explanationMutation.isLoading || !isSubscribed}
-                className="flex justify-end ml-auto mr-4 p-2 -translate-y-12 h-8 w-8">
-                  <PaperPlaneIcon />
-              </LoadingButton>
-              </div>
               {
                 explanationMutation.error &&
                 <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive -translate-y-16 mt-4">
