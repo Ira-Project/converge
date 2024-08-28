@@ -15,6 +15,7 @@ export default function MathKeyboardDialog({ insertHandler } : MathKeyboardDialo
 
   function onHandleInsert(): void {
     insertHandler(latex)
+    setLatex('')
   }
 
   return (
@@ -26,22 +27,30 @@ export default function MathKeyboardDialog({ insertHandler } : MathKeyboardDialo
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle className="mb-4"> Insert Equation</DialogTitle>
+          <DialogTitle className="mb-6"> Insert Equation</DialogTitle>
           <EditableMathField
             latex={latex}
             onChange={(mathField) => {
               setLatex(mathField.latex())
             }}
           />
+          <div className="pt-4 text-slate-600 text-sm">
+            <p>Instructions for using the math keyboard: </p>
+            <p> 1. For super scripts use ^, for subscripts use _ </p>
+            <p> 2. For fractions simply use / </p>
+            <p> 3. For square roots use \sqrt </p>
+          </div>
         </DialogHeader>
         <DialogFooter>
           <DialogClose asChild>
             <Button variant="outline">Cancel</Button>
           </DialogClose>
-          <Button onClick={onHandleInsert}>
-            Insert
-          </Button>
-        </DialogFooter>
+          <DialogClose asChild>
+            <Button onClick={onHandleInsert}>
+              Insert
+            </Button>
+          </DialogClose>
+      </DialogFooter>
       </DialogContent>
     </Dialog>
   )

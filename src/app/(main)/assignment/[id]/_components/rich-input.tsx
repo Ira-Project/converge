@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState } from "react"
-import { createEditor, Editor, Node, type Descendant } from 'slate'
+import { createEditor, Editor, Node, Path, Transforms, type Descendant } from 'slate'
 import { Slate, Editable, withReact, type RenderElementProps } from 'slate-react'
 
 import { type BaseEditor } from 'slate'
@@ -24,6 +24,7 @@ export type ParagraphElement = {
 export type MathElement = {
   type: 'math'
   children: CustomText[]
+  latex: string,
 }
 
 export type CustomElement = ParagraphElement | MathElement;
@@ -60,14 +61,16 @@ export function RichInput(
   const renderElement = useCallback((props: RenderElementProps) => {
     switch(props.element.type) {
       case 'math':
-        return <MathElement text={props.element.children[0]?.text} />
+        return <MathElement 
+          latex={props.element.latex}
+          elementProps={props} />
       default:
         return <DefaultElement {...props} />
     }
   }, [])
 
   const addMathBlock = (latex: string) => {
-    Editor.insertNode(editor, { type: 'math', children: [{ text: latex }] })
+    Editor.insertNode(editor, { type: 'math', children: [{ text: ''}], latex: latex })
     Editor.insertNode(editor, { type: 'paragraph', children: [{ text: '' }] })
   }
 
@@ -79,7 +82,7 @@ export function RichInput(
           onChange={onChange}
           initialValue={initialValue}>
           <Editable 
-            style={{ minHeight: '100%', width: '100%'}}
+            style={{ minHeight: '100%'}}
             className="focus-visible:outline-none max-h-full"
             renderElement={renderElement} />
         </Slate>
