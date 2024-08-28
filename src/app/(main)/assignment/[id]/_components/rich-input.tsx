@@ -1,7 +1,7 @@
 'use client';
 
 import { useCallback, useState } from "react"
-import { createEditor, Editor, Node, Path, Transforms, type Descendant } from 'slate'
+import { createEditor, Editor, Node, type Descendant } from 'slate'
 import { Slate, Editable, withReact, type RenderElementProps } from 'slate-react'
 
 import { type BaseEditor } from 'slate'

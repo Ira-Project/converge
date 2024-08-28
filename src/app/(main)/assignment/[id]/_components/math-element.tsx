@@ -10,7 +10,7 @@ export default function MathElement({ elementProps, latex }:
   { elementProps: RenderElementProps, latex: string }) {
 
   return (
-    <div className="py-2 bg-slate-100" {...elementProps.attributes}>
+    <div className="my-1 p-1 bg-slate-100" {...elementProps.attributes}>
       <StaticMathField
         contentEditable={false}
       >
