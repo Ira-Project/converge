@@ -40,7 +40,7 @@ const ClassroomTabLayout = async ({
             </BreadcrumbList>
           </Breadcrumb>
           <Suspense fallback={ <Skeleton className="h-8 w-96" /> }>
-            <p className="text-4xl font-semibold"> {classroom?.name} </p>
+            <p className="text-4xl font-semibold"> {classroom?.course?.name} - {classroom?.name}</p>
             <p className="text-md text-muted-foreground"> {classroom?.description} </p>
           </Suspense>
         </div>

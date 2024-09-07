@@ -85,3 +85,9 @@ export type AssignmentUpdateActions =
         validNodeIds: string[],
       }
     }
+
+export enum ConceptStatus {
+  CORRECT = "Yes",
+  INCORRECT = "No",
+  NOT_PRESENT = "Unknown"
+}

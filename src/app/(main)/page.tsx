@@ -4,7 +4,6 @@ import { redirect } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ClassroomList } from "./_components/classroom-list";
-import { AssignmentTemplateList } from "./_components/assignment-templates-list";
 import { PlusIcon } from "@/components/icons";
 
  export default async function Home({}) {
@@ -32,15 +31,6 @@ import { PlusIcon } from "@/components/icons";
           </div>
           <ClassroomList role={user.role} />
         </section>
-        {
-          user.role === Roles.Teacher &&
-          <section className="flex flex-col gap-6">
-            <div className="flex flex-col gap-2">
-              <p className="text-2xl font-semibold"> Assignment Templates </p>
-            </div>
-            <AssignmentTemplateList />
-          </section>
-        }
       </main>
     </>
   );

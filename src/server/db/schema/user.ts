@@ -19,7 +19,7 @@ export const users = pgTable(
   "users",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
-    role: varchar("role", { length: 255 }).default(Roles.Teacher).notNull(),
+    role: roleEnum('role').default(Roles.Student).notNull(),
     name: varchar("name", { length: 255 }).notNull(),
     email: varchar("email", { length: 255 }).unique().notNull(),
     emailVerified: boolean("email_verified").default(false).notNull(),

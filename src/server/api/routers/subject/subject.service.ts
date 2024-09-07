@@ -1,7 +1,7 @@
 import type { ProtectedTRPCContext } from "../../trpc";
 
-export const listSubjects = async (ctx: ProtectedTRPCContext) => {
-  return await ctx.db.query.subjects.findMany({
+export const listCourses = async (ctx: ProtectedTRPCContext) => {
+  return await ctx.db.query.courses.findMany({
     where: (table, { eq }) => eq(table.isDeleted, false),
     columns: {
       id: true,

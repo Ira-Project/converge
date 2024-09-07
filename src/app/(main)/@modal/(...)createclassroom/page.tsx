@@ -3,9 +3,9 @@ import CreateClassroomModal from "./_components/create-classroom-modal";
 
 export default async function Page() {
 
-  const subjects = await api.subject.list.query();  
+  const courses = await api.subject.listCourses.query();  
 
   return (
-    <CreateClassroomModal subjects={subjects} />    
+    <CreateClassroomModal courses={courses} />    
   );
 }

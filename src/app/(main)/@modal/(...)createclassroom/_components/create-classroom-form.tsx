@@ -15,10 +15,10 @@ import { type RouterOutputs } from '@/trpc/shared';
 import { revalidateClassroomListQuery } from "../../_actions/revalidateCache";
 
 interface Props {
-  subjects: RouterOutputs["subject"]["list"];
+  courses: RouterOutputs["subject"]["listCourses"];
 }
 
-export const CreateClassroomForm = ({ subjects }: Props) => {
+export const CreateClassroomForm = ({ courses }: Props) => {
 
   const router = useRouter();
 
@@ -27,7 +27,7 @@ export const CreateClassroomForm = ({ subjects }: Props) => {
     defaultValues: {
       name: "",
       description: "",
-      subject: "",
+      course: "",
     },
     resolver: zodResolver(createClassroomSchema),
   })
@@ -69,23 +69,23 @@ export const CreateClassroomForm = ({ subjects }: Props) => {
         />
         <FormField
           control={form.control}
-          name="subject"
+          name="course"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Subject</FormLabel>
+              <FormLabel>Course</FormLabel>
               <FormControl>
                 <Select value={field.value} name={field.name} onValueChange={field.onChange} >
                   <SelectTrigger>
                     <SelectValue 
                       onBlur={field.onBlur}
                       ref={field.ref}
-                      placeholder="Select a subject" />
+                      placeholder="Select a Course" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
                       {
-                        subjects.map(subject => (
-                          <SelectItem key={subject.id} value={subject.id.toLocaleString()}>{subject.name}</SelectItem>
+                        courses.map(course => (
+                          <SelectItem key={course.id} value={course.id.toLocaleString()}>{course.name}</SelectItem>
                         ))
                       }
                     </SelectGroup>

@@ -12,8 +12,4 @@ export const fileUploadRouter = createTRPCRouter({
     .input(inputs.uploadFileSchema)
     .mutation(({ ctx, input }) => services.uploadLessonPlan(ctx, input)),
 
-  uploadAssignmentData: protectedProcedure
-    .input(inputs.uploadFileSchema)
-    .mutation(({ ctx, input }) => services.uploadAssignmentData(ctx, input)),
-
 });

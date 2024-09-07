@@ -1,26 +1,24 @@
 import {
   pgTableCreator,
-  serial,
   boolean,
   timestamp,
   varchar,
   text
 } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
-import { conceptGraphs } from "./concept";
-import { assignmentTemplates } from "./assignmentTemplate";
 import { relations } from "drizzle-orm/relations";
+import { assignments } from "./assignment";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
 export const questions = pgTable(
   "questions",
   {
-    id: serial("id").primaryKey(),
+    id: varchar("id", { length: 21 }).primaryKey(),
     question: text("question").notNull(),
     answer: text("answer").notNull(),
-    conceptGraphId: varchar("concept_graph_id", { length: 21 }).references(() => conceptGraphs.id).notNull(), 
-    assignmentTemplateId: varchar("assignment_template_id", { length: 21 }).references(() => assignmentTemplates.id),
+    lambdaUrl: text("lambda_url").notNull(),
+    assignmentId: varchar("assignment_id", { length: 21 }).references(() => assignments.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -29,13 +27,9 @@ export const questions = pgTable(
 );
 
 export const questionRelations = relations(questions, ({ one }) => ({
-  conceptGraph: one(conceptGraphs, {
-    fields: [questions.conceptGraphId],
-    references: [conceptGraphs.id],
-  }),
-  assignmentTemplate: one(assignmentTemplates, {
-    fields: [questions.assignmentTemplateId],
-    references: [assignmentTemplates.id],
+  assignmentTemplate: one(assignments, {
+    fields: [questions.assignmentId],
+    references: [assignments.id],
   }),
 }));
 

@@ -6,10 +6,10 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { type RouterOutputs } from '@/trpc/shared';
 
 interface Props {
-  subjects: RouterOutputs["subject"]["list"];
+  courses: RouterOutputs["subject"]["listCourses"];
 }
 
-export default function CreateClassroomModal({ subjects } : Props) {
+export default function CreateClassroomModal({ courses } : Props) {
 
   const router = useRouter();
 
@@ -23,7 +23,7 @@ export default function CreateClassroomModal({ subjects } : Props) {
             Create Classroom
           </DialogTitle>
         </DialogHeader>
-        <CreateClassroomForm subjects={subjects} />
+        <CreateClassroomForm courses={courses} />
       </DialogContent>
     </Dialog>
   );

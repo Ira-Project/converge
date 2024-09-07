@@ -4,14 +4,13 @@ import {
   index,
   timestamp,
   varchar,
-  integer,
   pgEnum,
   primaryKey,
   text,
 } from "drizzle-orm/pg-core";
 import { Roles, DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
-import { courses, subjects } from "./subject";
+import { courses } from "./subject";
 import { users } from "./user";
 import { assignments } from "./assignment";
 
@@ -25,8 +24,7 @@ export const classrooms = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name").notNull(),
     description: text("description"),
-    subjectId: integer("subject_id").references(() => subjects.id),
-    courseId: integer("course_id").references(() => courses.id),
+    courseId: varchar("course_id", { length: 21 }).references(() => courses.id),
     code: varchar("code", { length: 8 }).unique().notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -37,18 +35,12 @@ export const classrooms = pgTable(
 );
 export const classroomRelations = relations(classrooms, ({ many, one }) => ({
   classroomMembers: many(usersToClassrooms),
-  subject: one(subjects, {
-    fields: [classrooms.subjectId],
-    references: [subjects.id],
-  }),
   course: one(courses, {
-    fields: [classrooms.subjectId],
+    fields: [classrooms.courseId],
     references: [courses.id],
   }),
   assignments: many(assignments),
 }));
-
-
 
 export const usersToClassrooms = pgTable(
   "user_class_relations",
@@ -56,7 +48,7 @@ export const usersToClassrooms = pgTable(
     userId: varchar("user_id", { length: 21 })
       .notNull()
       .references(() => users.id),
-    classroomId: varchar("group_id", { length: 21 })
+    classroomId: varchar("classroom_id", { length: 21 })
       .notNull()
       .references(() => classrooms.id),
     role: roleEnum("role").notNull(),

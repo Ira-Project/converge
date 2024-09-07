@@ -16,7 +16,7 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
       description: true,
     },
     with: {
-      subject: {
+      course: {
         columns: {
           name: true,
         }
@@ -86,7 +86,7 @@ export const listClassrooms = async (ctx: ProtectedTRPCContext) => {
           description: true,
         }, 
         with: {
-          subject: {
+          course: {
             columns: {
               name: true,
             }
@@ -105,10 +105,10 @@ export const listClassrooms = async (ctx: ProtectedTRPCContext) => {
 export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateClassroomInput) => { 
   const id = generateId(21);
   await ctx.db.insert(classrooms).values({
-    id, 
+    id: id, 
     name: input.name,
     description: input.description,
-    subjectId: input.subject ? Number(input.subject) : null,
+    courseId: input.course ? input.course : null,
     code: generateId(5).toUpperCase(),
     createdBy: ctx.user.id,  
   })

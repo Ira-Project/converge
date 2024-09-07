@@ -1,20 +1,20 @@
 import {
   pgTableCreator,
-  serial,
   boolean,
   timestamp,
   varchar,
-  json,
   text,
-  integer,
+  pgEnum,
 } from "drizzle-orm/pg-core";
-import { DATABASE_PREFIX as prefix } from "@/lib/constants";
-import { conceptGraphs } from "./concept";
-import { assignmentTemplates } from "./assignmentTemplate";
+import { ConceptStatus, DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm/relations";
 import { users } from "./user";
 import { testAttempts } from "./testAttempt";
-import { questions } from "./assignmentDetails";
+import { questions } from "./questions";
+import { concepts } from "./concept";
+
+export const conceptStatusEnum = pgEnum('status', [ConceptStatus.CORRECT, ConceptStatus.INCORRECT, ConceptStatus.NOT_PRESENT]);
+
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -23,9 +23,7 @@ export const explanations = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     text: text("text").notNull(),
-    assignmentTemplateId: varchar("assignment_template_id", { length: 21 }).references(() => assignmentTemplates.id).notNull(),
     testAttemptId: varchar("test_attempt_id", { length: 21 }).references(() => testAttempts.id),
-    embedding: json("embedding"),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
@@ -33,31 +31,35 @@ export const explanations = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   }
 );
-export const explanationRelations = relations(explanations, ({ many }) => ({
-  correctConcepts: many(correctConcepts),
+export const explanationRelations = relations(explanations, ({ one, many }) => ({
+  correctConcepts: many(conceptStatus),
   computedAnswers: many(computedAnswers),
+  testAttempts: one(testAttempts, {
+    fields: [explanations.testAttemptId],
+    references: [testAttempts.id],
+  }),
 }));
 
 
-export const correctConcepts = pgTable(
-  "correct_concepts",
+export const conceptStatus = pgTable(
+  "concept_status",
   {
-    id: serial("id").primaryKey(),
+    id: varchar("id", { length: 21 }).primaryKey(),
+    status: conceptStatusEnum("status").notNull().default(ConceptStatus.NOT_PRESENT),
     explanationId: varchar("explanation_id", { length: 21 }).references(() => explanations.id).notNull(),
-    conceptId: varchar("concept_id", { length: 21 }).references(() => conceptGraphs.id).notNull(),
+    conceptId: varchar("concept_id", { length: 21 }).references(() => concepts.id).notNull(),
   }
 );
-export const correctConceptRelations = relations(correctConcepts, ({ one }) => ({
+export const correctConceptRelations = relations(conceptStatus, ({ one }) => ({
   explanation: one(explanations, {
-    fields: [correctConcepts.explanationId],
+    fields: [conceptStatus.explanationId],
     references: [explanations.id],
   }),
-  concept: one(conceptGraphs, {
-    fields: [correctConcepts.conceptId],
-    references: [conceptGraphs.id],
+  concept: one(concepts, {
+    fields: [conceptStatus.conceptId],
+    references: [concepts.id],
   }),
 }));
-
 
 
 export const computedAnswers = pgTable(
@@ -65,10 +67,10 @@ export const computedAnswers = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     explanationId: varchar("test_attempt_id", { length: 21 }).notNull().references(() => testAttempts.id),
-    questionId: integer("question_id").notNull().references(() => questions.id),
+    questionId: varchar("question_id", { length: 21 }).notNull().references(() => questions.id),
     computedAnswer: text("computed_answer").notNull(),
     isCorrect: boolean("is_correct").notNull().default(false),
-    explanationText: text("explanation_text"),
+    workingText: text("explanation_text"),
   }
 )
 export const computedAnswerRelations = relations(computedAnswers, ({ one }) => ({

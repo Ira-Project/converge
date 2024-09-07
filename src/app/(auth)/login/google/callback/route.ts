@@ -4,7 +4,7 @@ import { OAuth2RequestError } from "arctic";
 import { eq } from "drizzle-orm";
 import { google, lucia } from "@/lib/auth";
 import { db } from "@/server/db";
-import { Paths } from "@/lib/constants";
+import { Paths, Roles } from "@/lib/constants";
 import { users } from "@/server/db/schema/user";
 
 type GoogleUser = {
@@ -60,6 +60,7 @@ export async function GET(request: Request): Promise<Response> {
         email: user.email,
         emailVerified: true,
         avatar: user.picture,
+        role: Roles.Student
       });
       const session = await lucia.createSession(userId, {});
       const sessionCookie = lucia.createSessionCookie(session.id);

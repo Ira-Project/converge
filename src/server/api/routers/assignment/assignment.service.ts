@@ -1,8 +1,6 @@
 import { and } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { CreateAssignmentInput, ListAssignmentsInput, GetAssignmentInput } from "./assignment.input";
-import { assignments } from "@/server/db/schema/assignment";
-import { generateId } from "lucia";
+import type { ListAssignmentsInput, GetAssignmentInput } from "./assignment.input";
 
 export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssignmentsInput) => {
   let assignments;
@@ -15,9 +13,12 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
         dueDate: true,
         createdAt: true,
         createdBy: true,
+        description: true,
+        imageUrl: true,
+        isLive: true,
       }, 
       with: {
-        assignmentTemplate: {
+        topic: {
           columns: {
             name: true,
           }
@@ -33,9 +34,12 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
         dueDate: true,
         createdAt: true,
         createdBy: true,
+        description: true,
+        imageUrl: true,
+        isLive: true,
       }, 
       with: {
-        assignmentTemplate: {
+        topic: {
           columns: {
             name: true,
           }
@@ -51,24 +55,6 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
   }
 };
 
-export const createAssignment = async (ctx: ProtectedTRPCContext, input: CreateAssignmentInput) => {
-  
-  const id = generateId(21);
-
-  await ctx.db.insert(assignments).values({
-    id: id,
-    name: input.assignmentName,
-    classroomId: input.classId,
-    dueDate: input.dueDate,
-    maxPoints: input.maxPoints ? input.maxPoints : null,
-    timeLimit: input.timeLimit ? input.timeLimit : null,
-    createdBy: ctx.user.id,
-    assignmentTemplateId: input.assignmentTemplateId,
-  });
-
-  return id;
-}
-
 export const getAssignment = async (ctx: ProtectedTRPCContext, input: GetAssignmentInput) => {
   return await ctx.db.query.assignments.findFirst({
     where: (table, { eq }) => eq(table.id, input.assignmentId),
@@ -80,34 +66,30 @@ export const getAssignment = async (ctx: ProtectedTRPCContext, input: GetAssignm
       createdBy: true,
       maxPoints: true,
       timeLimit: true,
+      description: true,
+      imageUrl: true,
+      isLive: true,
+      showAnswers: true,
+      showConcepts: true,
     },
     with : {
+      topic: {
+        columns: {
+          name: true,
+        }
+      },
       classroom: {
         columns: {
           id: true,
           name: true,
         }
       },
-      assignmentTemplate: {
-        with: {
-          conceptGraphs: {
-            with: {
-              conceptToGraphs: {
-                with: {
-                  concept: true,
-                },
-              },
-              conceptGraphEdges: true,
-            },
-          },
-          questions: {
-            columns: {
-              id: true,
-              question: true,
-              answer: true,
-            },
-          }
-        }
+      questions: {
+        columns: {
+          id: true,
+          question: true,
+          answer: true,
+        },
       }
     }
   });

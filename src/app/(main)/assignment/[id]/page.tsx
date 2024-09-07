@@ -20,13 +20,14 @@ export default async function AssignmentPage({ params } : { params: { id: string
         classroom={assignment.classroom}
         assignmentName={assignment.name}
         timeLimit={assignment.timeLimit}
-        numberOfQuestions = {assignment.assignmentTemplate?.questions.length}
+        numberOfQuestions = {assignment.questions.length}
       />
       <AssignmentView 
+        topic={assignment.topic.name}
+        questions={assignment.questions}
         assignmentName={assignment.name}
         classroom={assignment.classroom}
         timeLimit={assignment.timeLimit}
-        assignmentTemplate={assignment.assignmentTemplate}
         testAttemptId={testAttemptId} />
     </main>
   );

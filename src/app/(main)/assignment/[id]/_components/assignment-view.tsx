@@ -2,7 +2,6 @@
 
 import { useForm } from "react-hook-form";
 import { Form } from "@/components/ui/form";
-import { type RouterOutputs } from '@/trpc/shared'
 import { zodResolver } from "@hookform/resolvers/zod";
 import { api } from "@/trpc/react";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
@@ -16,7 +15,6 @@ import { type AssignmentState, type AssignmentUpdateActions, AssignmentUpdateAct
 import { questionReducer } from "@/reducers/assignment-reducer";
 import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
 import { generateId } from "lucia";
-import dynamic from "next/dynamic";
 import AssignmentHeader from "./assignment-header";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Skeleton } from "@/components/ui/skeleton";
@@ -24,33 +22,31 @@ import SubmissionModal from "./submission-modal";
 import ConfirmationModal from "./confirmation-modal";
 import { RichInput } from "./rich-input";
 
-const ConceptGraph = dynamic(
-  () => import("../../../../../components/concept-graph").then((mod) => mod.ConceptGraph),
-  {
-    ssr: false,
-  }
-);
-
 interface Props {
+  topic: string;
+  questions: {
+    id: string,
+    question: string,
+    answer: string,
+  }[];
   assignmentName: string;
   classroom?: {
     name: string;
     id: string;
   } | null;
   timeLimit?: number | null;
-  assignmentTemplate: RouterOutputs["assignmentTemplate"]["get"];
   testAttemptId: string;
 }
 
-export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentName, classroom, timeLimit }: Props) => {
+export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName, classroom, timeLimit }: Props) => {
   const explanationMutation = api.explanation.explain.useMutation();
   const submissionMutation = api.testAttempt.submit.useMutation();
 
   const initialState: AssignmentState = {
     validNodeIds: [],
-    questions: assignmentTemplate.questions.map((question) => {
+    questions: questions.map((question) => {
       return {
-        id: question.id.toString(),
+        id: question.id,
         status: QuestionStatus.UNANSWERED,
         questionText: question.question,
         answerText: question.answer,
@@ -103,7 +99,6 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
     defaultValues: {
       explanation: "",
       channelName: channelName,
-      assignmentTemplateId: assignmentTemplate.id,
       testAttemptId: testAttemptId,
     },
     resolver: zodResolver(explainSchema),
@@ -116,7 +111,7 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
     await explanationMutation.mutateAsync({
       explanation: values.explanation,
       channelName: channelName,
-      assignmentTemplateId: assignmentTemplate.id,
+      testAttemptId: testAttemptId,
     });
   });
 
@@ -137,11 +132,12 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
               assignmentName={assignmentName}
               classroom={classroom}
               timeLimit={timeLimit}
-              numberOfQuestions={assignmentTemplate.questions.length} />
+              numberOfQuestions={0} 
+              />
             <p className="text-muted-foreground">
               {`
                 Can you teach the concepts of 
-                ${assignmentTemplate.name.toLocaleLowerCase()} 
+                ${topic.toLocaleLowerCase()} 
                 so Ira can successfully answer the questions?
               `}  
             </p>
@@ -153,14 +149,6 @@ export const AssignmentView = ({ assignmentTemplate, testAttemptId, assignmentNa
                 <TooltipTrigger asChild>
                   <div>
                     <p className="w-full text-center text-sm text-muted-foreground pb-2"> Ira's Knowledge </p>
-                    <Suspense fallback={<Skeleton className="w-80 h-48" />}>
-                      <ConceptGraph 
-                        hideLabels
-                        linkWidth={0.5}
-                        nodeColor="#e2e8f0"
-                        validNodes={assignmentState.validNodeIds}
-                        assignmentTemplate={assignmentTemplate}/>
-                    </Suspense>
                   </div>
                 </TooltipTrigger>
                 <TooltipContent className="max-w-48">

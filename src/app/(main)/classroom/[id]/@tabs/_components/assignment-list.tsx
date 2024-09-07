@@ -35,10 +35,10 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
                       <TableRow key={assignment.id}>
                         <TableCell>
                           <Link href={`${Paths.Assignment}${assignment.id}`} key={assignment.id}>
-                            <span className="underline">{assignment.name}</span>
+                            <span className="underline">{assignment.topic?.name}</span>
                           </Link>
                         </TableCell>
-                        <TableCell>{assignment.assignmentTemplate.name}</TableCell>
+                        <TableCell>{assignment.name}</TableCell>
                         <TableCell>{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
                         </TableRow> 
                     ))}
@@ -67,7 +67,7 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
                     {pastAssignments.map(assignment => (
                       <TableRow key={assignment.id}>
                         <TableCell>{assignment.name}</TableCell>
-                        <TableCell>{assignment.assignmentTemplate.name}</TableCell>
+                        <TableCell>{assignment.topic?.name}</TableCell>
                         <TableCell>{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
                       </TableRow> 
                     ))}
