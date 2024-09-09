@@ -9,7 +9,7 @@ interface QuestionAccordionProps {
   id: string;
   status: QuestionStatus;
   questionText: string;
-  answerText: string;
+  // answerText: string;
   workingText?: string;
   workingComplete: boolean;
   computedAnswerText: string;
@@ -19,7 +19,7 @@ export function QuestionAccordionItem({
   id, 
   status, 
   questionText, 
-  answerText, 
+  // answerText, 
   workingText, 
   computedAnswerText, 
   workingComplete 
@@ -35,7 +35,7 @@ export function QuestionAccordionItem({
             <QuestionCard 
               status={status} 
               questionText={questionText} 
-              answerText={answerText} 
+              // answerText={answerText} 
               computedAnswer={computedAnswerText} />
           </AccordionTrigger>
           <AccordionContent>
@@ -49,7 +49,7 @@ export function QuestionAccordionItem({
           <QuestionCard 
             status={status} 
             questionText={questionText} 
-            answerText={answerText} 
+            // answerText={answerText} 
             computedAnswer={computedAnswerText} />
         </AccordionItem>
       }

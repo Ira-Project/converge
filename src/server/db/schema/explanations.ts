@@ -66,7 +66,7 @@ export const computedAnswers = pgTable(
   "computed_answers",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
-    explanationId: varchar("test_attempt_id", { length: 21 }).notNull().references(() => testAttempts.id),
+    explanationId: varchar("explanation_id", { length: 21 }).notNull().references(() => explanations.id),
     questionId: varchar("question_id", { length: 21 }).notNull().references(() => questions.id),
     computedAnswer: text("computed_answer").notNull(),
     isCorrect: boolean("is_correct").notNull().default(false),

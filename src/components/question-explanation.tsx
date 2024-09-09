@@ -6,6 +6,7 @@ interface QuestionExplanationProps {
 }
 
 export function QuestionExplanation({ workingComplete, workingText } : QuestionExplanationProps) {
+  workingText = workingText.replace(/\n/g, "<br />");
 
   return (
     <div className="flex flex-row gap-4">

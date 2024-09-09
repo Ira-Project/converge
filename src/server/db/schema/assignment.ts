@@ -18,7 +18,7 @@ export const assignments = pgTable(
     description: text("description"),
     imageUrl: text("image_url"),
     topicId: varchar("topic_id", { length: 21 }).notNull().references(() => topics.id),
-    dueDate: timestamp("due_date").notNull(),
+    dueDate: timestamp("due_date"),
     maxPoints: integer("max_points"),
     timeLimit: integer("time_limit"),
     classroomId: varchar("classroom_id").references(() => classrooms.id),

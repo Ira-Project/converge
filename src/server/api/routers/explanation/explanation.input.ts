@@ -4,6 +4,7 @@ export const explainSchema = z.object({
   explanation: z.string(),
   channelName: z.string(),
   testAttemptId: z.string().optional(),
+  assignmentId: z.string(),
 });
 export type ExplainInput = z.infer<typeof explainSchema>;
 

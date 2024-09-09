@@ -27,9 +27,9 @@ interface Props {
   questions: {
     id: string,
     question: string,
-    answer: string,
   }[];
   assignmentName: string;
+  assignmentId: string;
   classroom?: {
     name: string;
     id: string;
@@ -38,7 +38,7 @@ interface Props {
   testAttemptId: string;
 }
 
-export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName, classroom, timeLimit }: Props) => {
+export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName, assignmentId, classroom, timeLimit }: Props) => {
   const explanationMutation = api.explanation.explain.useMutation();
   const submissionMutation = api.testAttempt.submit.useMutation();
 
@@ -49,7 +49,7 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
         id: question.id,
         status: QuestionStatus.UNANSWERED,
         questionText: question.question,
-        answerText: question.answer,
+        // answerText: question.answer,
         computedAnswerText: "",
         working: "",
         workingComplete: false,
@@ -100,6 +100,7 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
       explanation: "",
       channelName: channelName,
       testAttemptId: testAttemptId,
+      assignmentId: assignmentId, 
     },
     resolver: zodResolver(explainSchema),
   })
@@ -108,9 +109,11 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
     questionsStateDispatch({
       type: AssignmentUpdateActionType.SET_LOADING,
     })
+
     await explanationMutation.mutateAsync({
       explanation: values.explanation,
       channelName: channelName,
+      assignmentId: assignmentId,
       testAttemptId: testAttemptId,
     });
   });
@@ -144,7 +147,7 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
         </div>
         <div className="flex flex-col gap-8">
           <div className="ml-auto">
-            <TooltipProvider>
+            {/* <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <div>
@@ -155,7 +158,7 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
                   <small>The concept map represents the AI's knowledge. As you explain the nodes will turn green indicating that a concept has been understood</small>
                 </TooltipContent>
               </Tooltip>
-            </TooltipProvider>
+            </TooltipProvider> */}
           </div>
         </div>
       </div>
@@ -191,7 +194,7 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
                       key={question.id}
                       id={question.id.toString()}
                       questionText={question.questionText}
-                      answerText={question.answerText} 
+                      //answerText={question.answerText} 
                       workingText={question.working !== "" ? question.working : undefined}
                       workingComplete={question.workingComplete}
                       computedAnswerText={question.computedAnswerText}

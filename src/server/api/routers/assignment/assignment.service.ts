@@ -50,8 +50,8 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
   
   const now = new Date();
   return {
-    ongoingAssignments: assignments.filter(assignment => assignment.dueDate > now),
-    pastAssignments: assignments.filter(assignment => assignment.dueDate <= now)
+    ongoingAssignments: assignments.filter(assignment => assignment.dueDate ? assignment.dueDate > now : true),
+    pastAssignments: assignments.filter(assignment => assignment.dueDate ? assignment.dueDate <= now : false)
   }
 };
 
@@ -88,7 +88,6 @@ export const getAssignment = async (ctx: ProtectedTRPCContext, input: GetAssignm
         columns: {
           id: true,
           question: true,
-          answer: true,
         },
       }
     }

@@ -35,7 +35,7 @@ export type QuestionState = {
   id: string;
   status: QuestionStatus;
   questionText: string;
-  answerText: string
+  // answerText: string
   computedAnswerText: string;
   working: string;
   workingComplete: boolean;

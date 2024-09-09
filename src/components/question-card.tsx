@@ -4,7 +4,7 @@ import { QuestionStatus } from "@/lib/constants";
 interface QuestionCardProps {
   status: QuestionStatus;
   questionText: string;
-  answerText: string;
+  // answerText: string;
   computedAnswer: string;
 }
 
@@ -34,7 +34,7 @@ function getComputedAnswerText(computedAnswer:string, status: QuestionStatus) {
 }
 
 
-export function QuestionCard({ status, questionText, answerText, computedAnswer } : QuestionCardProps) {
+export function QuestionCard({ status, questionText, computedAnswer } : QuestionCardProps) {
 
   return (
     <div className="flex flex-row items-center gap-4 w-full">
@@ -42,8 +42,7 @@ export function QuestionCard({ status, questionText, answerText, computedAnswer 
       <div className="flex flex-col w-full text-left gap-1">
         <p className="font-normal text-md"> {questionText} </p>
         <div className="flex flex-row w-full text-muted-foreground text-sm">
-          <p> Answer: {answerText} </p>
-          <p className="ml-auto mr-4"> 
+          <p className=""> 
             Ira's Answer: {getComputedAnswerText(computedAnswer, status)} 
           </p>
         </div>

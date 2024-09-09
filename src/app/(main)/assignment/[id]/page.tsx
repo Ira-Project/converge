@@ -28,6 +28,7 @@ export default async function AssignmentPage({ params } : { params: { id: string
         assignmentName={assignment.name}
         classroom={assignment.classroom}
         timeLimit={assignment.timeLimit}
+        assignmentId={params.id}
         testAttemptId={testAttemptId} />
     </main>
   );

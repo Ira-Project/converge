@@ -24,10 +24,10 @@ export const conceptLists = pgTable(
   }
 );
 export const conceptListRelations = relations(conceptLists, ({ many }) => ({
+  conceptListConcepts: many(conceptListConcepts),
   question: many(questions),
   courses: many(courses),
 }));
-
 
 export const concepts = pgTable(
   "concepts",
@@ -44,4 +44,27 @@ export const concepts = pgTable(
 )
 export const conceptRelations = relations(concepts, ({ many }) => ({
   conceptLists: many(conceptLists),
+}));
+
+export const conceptListConcepts = pgTable(
+  "concept_list_concepts",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    conceptListId: varchar("concept_list_id", { length: 21 }).notNull().references(() => conceptLists.id),
+    conceptId: varchar("concept_id", { length: 21 }).notNull().references(() => concepts.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+)
+export const conceptListConceptRelations = relations(conceptListConcepts, ({ one }) => ({
+  conceptList: one(conceptLists, {
+    fields: [conceptListConcepts.conceptListId],
+    references: [conceptLists.id],
+  }),
+  concept: one(concepts, {
+    fields: [conceptListConcepts.conceptId],
+    references: [concepts.id],
+  }),
 }));
