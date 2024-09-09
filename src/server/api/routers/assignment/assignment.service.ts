@@ -88,6 +88,7 @@ export const getAssignment = async (ctx: ProtectedTRPCContext, input: GetAssignm
         columns: {
           id: true,
           question: true,
+          image: true,
         },
       }
     }

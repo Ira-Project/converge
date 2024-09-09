@@ -64,6 +64,7 @@ export const questionReducer = (
               status: action.payload.newStatus,
               working: question.working + action.payload.explanation,
               computedAnswerText: action.payload.computedAnswer ?? "",
+              image: action.payload.image ?? "",
               workingComplete: true,
             };
           }

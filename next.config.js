@@ -15,6 +15,10 @@ const config = {
       {
         protocol: 'https',
         hostname: 'converge-ira-project.s3.ap-south-1.amazonaws.com'
+      },
+      {
+        protocol: 'https',
+        hostname: 'converge-question-images.s3.us-west-1.amazonaws.com'
       }
     ],
   },

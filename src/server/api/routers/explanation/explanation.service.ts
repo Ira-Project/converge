@@ -11,6 +11,7 @@ type ResponseType = {
     isCorrect: boolean;
     working: string;
     answer: string;
+    image?: string;
   }
 }
 
@@ -112,6 +113,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
           newStatus: body.isCorrect ? QuestionStatus.CORRECT : QuestionStatus.INCORRECT,
           explanation: body.working,
           computedAnswer: body.answer,
+          image: body.image ? body.image : undefined,
         }
     })
     .then(async () => {

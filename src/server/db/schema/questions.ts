@@ -17,6 +17,7 @@ export const questions = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     question: text("question").notNull(),
     lambdaUrl: text("lambda_url").notNull(),
+    image: text("image"),
     assignmentId: varchar("assignment_id", { length: 21 }).references(() => assignments.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),

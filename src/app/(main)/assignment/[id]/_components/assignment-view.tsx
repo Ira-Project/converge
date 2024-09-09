@@ -16,7 +16,6 @@ import { questionReducer } from "@/reducers/assignment-reducer";
 import { explainSchema } from "@/server/api/routers/explanation/explanation.input";
 import { generateId } from "lucia";
 import AssignmentHeader from "./assignment-header";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { Skeleton } from "@/components/ui/skeleton";
 import SubmissionModal from "./submission-modal";
 import ConfirmationModal from "./confirmation-modal";
@@ -27,6 +26,7 @@ interface Props {
   questions: {
     id: string,
     question: string,
+    image?: string | null,
   }[];
   assignmentName: string;
   assignmentId: string;
@@ -49,8 +49,9 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
         id: question.id,
         status: QuestionStatus.UNANSWERED,
         questionText: question.question,
-        // answerText: question.answer,
+        questionImage: question.image,
         computedAnswerText: "",
+        image: question.image ?? "",
         working: "",
         workingComplete: false,
       };
@@ -146,20 +147,6 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
             </p>
         </div>
         <div className="flex flex-col gap-8">
-          <div className="ml-auto">
-            {/* <TooltipProvider>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <div>
-                    <p className="w-full text-center text-sm text-muted-foreground pb-2"> Ira's Knowledge </p>
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent className="max-w-48">
-                  <small>The concept map represents the AI's knowledge. As you explain the nodes will turn green indicating that a concept has been understood</small>
-                </TooltipContent>
-              </Tooltip>
-            </TooltipProvider> */}
-          </div>
         </div>
       </div>
       <div className="grid grid-cols-2 items-center gap-16">
@@ -194,7 +181,9 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
                       key={question.id}
                       id={question.id.toString()}
                       questionText={question.questionText}
+                      questionImage={question.questionImage ?? undefined}
                       //answerText={question.answerText} 
+                      image={question.image}
                       workingText={question.working !== "" ? question.working : undefined}
                       workingComplete={question.workingComplete}
                       computedAnswerText={question.computedAnswerText}

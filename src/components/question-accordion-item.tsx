@@ -4,6 +4,7 @@ import { type QuestionStatus } from "@/lib/constants";
 import { Card } from "@/components/ui/card";
 import { Separator } from "./ui/separator";
 import { QuestionExplanation } from "./question-explanation";
+import Image from "next/image";
 
 interface QuestionAccordionProps {
   id: string;
@@ -11,6 +12,8 @@ interface QuestionAccordionProps {
   questionText: string;
   // answerText: string;
   workingText?: string;
+  image?: string;
+  questionImage?: string;
   workingComplete: boolean;
   computedAnswerText: string;
 }
@@ -19,6 +22,8 @@ export function QuestionAccordionItem({
   id, 
   status, 
   questionText, 
+  image,
+  questionImage,
   // answerText, 
   workingText, 
   computedAnswerText, 
@@ -36,11 +41,21 @@ export function QuestionAccordionItem({
               status={status} 
               questionText={questionText} 
               // answerText={answerText} 
+              questionImage={questionImage}
               computedAnswer={computedAnswerText} />
           </AccordionTrigger>
           <AccordionContent>
             <Separator className="my-4"/>
             <QuestionExplanation workingText={workingText} workingComplete={workingComplete} />
+            {
+              image && 
+              <Image
+                className="mt-2 mx-auto flex"
+                width={150}
+                height={150}
+                src={`data:image/svg+xml;base64,${btoa(image)}`} 
+                alt="Working SVG" />
+            }
           </AccordionContent>
         </AccordionItem>
       </>
@@ -49,6 +64,7 @@ export function QuestionAccordionItem({
           <QuestionCard 
             status={status} 
             questionText={questionText} 
+            questionImage={questionImage}
             // answerText={answerText} 
             computedAnswer={computedAnswerText} />
         </AccordionItem>

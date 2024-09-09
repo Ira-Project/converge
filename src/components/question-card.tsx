@@ -1,11 +1,13 @@
 import { QuestionStatusIndicator } from "./question-status-indicator";
 import { QuestionStatus } from "@/lib/constants";
+import Image from 'next/image'
 
 interface QuestionCardProps {
   status: QuestionStatus;
   questionText: string;
   // answerText: string;
   computedAnswer: string;
+  questionImage?: string;
 }
 
 const UNANSWERED_COMPUTED_ANSWER_TEXT = "N/A"
@@ -34,13 +36,22 @@ function getComputedAnswerText(computedAnswer:string, status: QuestionStatus) {
 }
 
 
-export function QuestionCard({ status, questionText, computedAnswer } : QuestionCardProps) {
+export function QuestionCard({ status, questionText, computedAnswer, questionImage } : QuestionCardProps) {
 
   return (
     <div className="flex flex-row items-center gap-4 w-full">
       <QuestionStatusIndicator status={status} />
       <div className="flex flex-col w-full text-left gap-1">
         <p className="font-normal text-md"> {questionText} </p>
+        {
+          questionImage && 
+          <Image
+            className="mb-2"
+            alt="Question Image"
+            width={150}
+            height={150}
+            src={questionImage} />
+        }
         <div className="flex flex-row w-full text-muted-foreground text-sm">
           <p className=""> 
             Ira's Answer: {getComputedAnswerText(computedAnswer, status)} 
