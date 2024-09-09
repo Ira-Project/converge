@@ -46,9 +46,8 @@ export function QuestionCard({ status, questionText, computedAnswer, questionIma
         {
           questionImage && 
           <Image
-            className="mb-2"
             alt="Question Image"
-            width={150}
+            width={500}
             height={150}
             src={questionImage} />
         }

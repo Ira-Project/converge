@@ -65,6 +65,8 @@ export const questionReducer = (
               working: question.working + action.payload.explanation,
               computedAnswerText: action.payload.computedAnswer ?? "",
               image: action.payload.image ?? "",
+              imageWidth: action.payload.imageWidth ?? undefined,
+              imageHeight: action.payload.imageHeight ?? undefined,
               workingComplete: true,
             };
           }

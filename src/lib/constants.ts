@@ -36,6 +36,8 @@ export type QuestionState = {
   status: QuestionStatus;
   questionText: string;
   image: string;
+  imageHeight?: number;
+  imageWidth?: number;
   questionImage?: string | null;
   // answerText: string
   computedAnswerText: string;
@@ -80,6 +82,8 @@ export type AssignmentUpdateActions =
         explanation: string,
         computedAnswer?: string,
         image?: string,
+        imageWidth?: number,
+        imageHeight?: number,
       }
     }
   | {

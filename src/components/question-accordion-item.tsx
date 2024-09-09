@@ -13,6 +13,8 @@ interface QuestionAccordionProps {
   // answerText: string;
   workingText?: string;
   image?: string;
+  imageWidth?: number;
+  imageHeight?: number;
   questionImage?: string;
   workingComplete: boolean;
   computedAnswerText: string;
@@ -23,6 +25,8 @@ export function QuestionAccordionItem({
   status, 
   questionText, 
   image,
+  imageWidth,
+  imageHeight,
   questionImage,
   // answerText, 
   workingText, 
@@ -33,7 +37,7 @@ export function QuestionAccordionItem({
   return (
     <Card className="p-4 mb-4">
     {
-      workingText ?
+      workingText ?? image ?
       <>
         <AccordionItem value={id.toString()}>
           <AccordionTrigger className="p-0 m-0">
@@ -46,13 +50,13 @@ export function QuestionAccordionItem({
           </AccordionTrigger>
           <AccordionContent>
             <Separator className="my-4"/>
-            <QuestionExplanation workingText={workingText} workingComplete={workingComplete} />
+            <QuestionExplanation workingText={workingText ? workingText : "Here's what I drew"} workingComplete={workingComplete} />
             {
               image && 
               <Image
                 className="mt-2 mx-auto flex"
-                width={150}
-                height={150}
+                width={imageWidth ? imageWidth : 800}
+                height={imageHeight ? imageHeight : 400}
                 src={`data:image/svg+xml;base64,${btoa(image)}`} 
                 alt="Working SVG" />
             }

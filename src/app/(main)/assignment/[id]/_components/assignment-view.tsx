@@ -51,7 +51,9 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
         questionText: question.question,
         questionImage: question.image,
         computedAnswerText: "",
-        image: question.image ?? "",
+        image: "",
+        imageHeight: undefined,
+        imageWidth: undefined,
         working: "",
         workingComplete: false,
       };
@@ -184,6 +186,8 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
                       questionImage={question.questionImage ?? undefined}
                       //answerText={question.answerText} 
                       image={question.image}
+                      imageHeight={question.imageHeight}
+                      imageWidth={question.imageWidth}
                       workingText={question.working !== "" ? question.working : undefined}
                       workingComplete={question.workingComplete}
                       computedAnswerText={question.computedAnswerText}

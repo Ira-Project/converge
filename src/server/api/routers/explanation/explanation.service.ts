@@ -12,6 +12,8 @@ type ResponseType = {
     working: string;
     answer: string;
     image?: string;
+    imageHeight?: number;
+    imageWidth?: number;
   }
 }
 
@@ -104,6 +106,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
       console.log(index, "Lambda JSON Conversion", Date.now())
       const responseJson = data as ResponseType;
       const body = responseJson.body;
+      console.log(body)
       await ctx.realtimeDb.insert(actions).values({
         id: generateId(21),
         channelId: input.channelName,
@@ -114,6 +117,8 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
           explanation: body.working,
           computedAnswer: body.answer,
           image: body.image ? body.image : undefined,
+          imageHeight: body.imageHeight ? body.imageHeight : undefined,
+          imageWidth: body.imageWidth ? body.imageWidth : undefined,
         }
     })
     .then(async () => {
