@@ -30,8 +30,8 @@ export function ClassroomCard({ classroom } : ClassroomCardProps) {
     <Link href={`${Paths.Classroom}${classroom.id}`}>
       <Card className="w-96">
         <CardHeader>
-          <CardTitle>{classroom.name}</CardTitle>
-          <CardTitle>{classroom.course?.name ? classroom.course?.name : "_"}</CardTitle>
+          <CardTitle className="font-light">{classroom.name}</CardTitle>
+          <CardTitle className="text-md font-medium">{classroom.course?.name ? classroom.course?.name : "_"}</CardTitle>
         </CardHeader>
         <CardContent>
           <CardDescription className="line-clamp-2">
