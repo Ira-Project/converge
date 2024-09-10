@@ -30,15 +30,12 @@ const TUTORIAL_STEPS = [
 export function TutorialCarousel() {
   return (
     <Carousel>
-      <p className="font-semibold text-lg text-center">
-        How to take the assignment?
-      </p>
       <CarouselContent>
         {
           TUTORIAL_STEPS.map((item, index) => (
             <CarouselItem key={index}>
               <div className="flex flex-col gap-4">
-                <p className="text-muted-foreground text-sm mt-2 text-center">
+                <p className="text-muted-foreground text-sm text-center">
                   {item.description}
                 </p>
                 <Image 

@@ -3,7 +3,7 @@ import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { classrooms } from "./classroom";
 import { users } from "./user";
 import { relations } from "drizzle-orm";
-import { questions } from "./questions";
+import { questions, questionToAssignment } from "./questions";
 import { conceptLists } from "./concept";
 import { topics } from "./subject";
 
@@ -48,5 +48,6 @@ export const assignmentRelations = relations(assignments, ({ one, many }) => ({
     references: [topics.id],
   }),
   questions: many(questions),
+  questionToAssignment: many(questionToAssignment),
 }));
 

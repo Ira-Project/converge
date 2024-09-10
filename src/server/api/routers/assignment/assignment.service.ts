@@ -1,6 +1,7 @@
-import { and } from "drizzle-orm";
+import { and, asc } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
 import type { ListAssignmentsInput, GetAssignmentInput } from "./assignment.input";
+import { questionToAssignment } from "@/server/db/schema/questions";
 
 export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssignmentsInput) => {
   let assignments;
@@ -84,13 +85,18 @@ export const getAssignment = async (ctx: ProtectedTRPCContext, input: GetAssignm
           name: true,
         }
       },
-      questions: {
-        columns: {
-          id: true,
-          question: true,
-          image: true,
-        },
-      }
+      questionToAssignment: {
+        orderBy: [asc(questionToAssignment.order)],
+        with: {
+          question: {
+            columns: {
+              id: true,
+              question: true,
+              image: true,
+            }
+          },
+        }
+      },
     }
   });
 }

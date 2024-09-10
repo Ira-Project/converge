@@ -39,7 +39,7 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
                           </Link>
                         </TableCell>
                         <TableCell>{assignment.name}</TableCell>
-                        <TableCell>{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
+                        <TableCell>{assignment.dueDate && new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
                         </TableRow> 
                     ))}
                   </Suspense>
@@ -68,7 +68,7 @@ export const AssignmentList = async ({ id }: { id?: string }) => {
                       <TableRow key={assignment.id}>
                         <TableCell>{assignment.name}</TableCell>
                         <TableCell>{assignment.topic?.name}</TableCell>
-                        <TableCell>{new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
+                        <TableCell>{assignment.dueDate && new Intl.DateTimeFormat('en-US', { dateStyle: 'full' }).format(assignment.dueDate)}</TableCell>
                       </TableRow> 
                     ))}
                   </Suspense>

@@ -7,17 +7,18 @@ import {
 import { eq } from "drizzle-orm";
 import { generateId } from "lucia";
 import { assignments } from "./schema/assignment";
-import { answers, questions } from "./schema/questions";
+import { answers, questions, questionToAssignment } from "./schema/questions";
 
-// Parameters for assignment creation
-const topicId = "2";
-const classroomId = "k9arrnbmgan5ggfi7kubi";
-const assignmentName = "Assignment 1";
-const lambdaUrl = "https://tnb4hxjpso44rkfkn7lon2xgru0vmqmj.lambda-url.us-west-1.on.aws/"
 import json from "./assignment.json";
 
 
-async function createAssignment() {
+async function createAssignmentFromJson() {
+
+  // Parameters for assignment creation
+  const topicId = "2";
+  const classroomId = "k9arrnbmgan5ggfi7kubi";
+  const assignmentName = "Assignment 1";
+  const lambdaUrl = "https://tnb4hxjpso44rkfkn7lon2xgru0vmqmj.lambda-url.us-west-1.on.aws/"
 
   // Create a Concept List Object
   const conceptList = {
@@ -76,12 +77,13 @@ async function createAssignment() {
   await db.insert(assignments).values(assignment)
 
   // Create the questions object
-  for (const question of json.Questions) {
+  for (const [index, question] of json.Questions.entries()) {
+    const questionId = generateId(21)
     const questionObject = {
-      id: generateId(21),
+      id: questionId,
       question: question.Question,
       lambdaUrl: lambdaUrl,
-      assignmentId: assignment.id,
+      topicId: topicId,
       createdAt: new Date(),
       updatedAt: new Date(),
     }
@@ -89,14 +91,44 @@ async function createAssignment() {
     for (const answer of question.Answer) {
       const answerObject = {
         id: generateId(21),
-        questionId: questionObject.id,
+        questionId: questionId,
         answer: answer,
         createdAt: new Date(),
         updatedAt: new Date(),
       }
       await db.insert(answers).values(answerObject)
     }
+    await db.insert(questionToAssignment).values({
+      id: generateId(21),
+      order: index,
+      questionId: questionId,
+      assignmentId: assignment.id,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    })
+
   }
 }
 
-void createAssignment()
+async function addQuestionsFromTopic() {
+
+  // Parameters for assignment creation
+  const topicId = "2";
+  const assignmentId = "iVE91v6Zl5PuBwOXni8P4";
+
+  const questionList = await db.select().from(questions).where(
+    eq(questions.topicId, topicId),
+  )
+
+  for (const question of questionList) {
+    await db.insert(questionToAssignment).values({
+      id: generateId(21),
+      questionId: question.id,
+      assignmentId: assignmentId,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    })
+  }
+
+}
+

@@ -89,6 +89,9 @@ importers:
       arctic:
         specifier: ^1.8.1
         version: 1.9.2
+      boring-avatars:
+        specifier: ^1.11.1
+        version: 1.11.1
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -2279,6 +2282,9 @@ packages:
   binary-extensions@2.3.0:
     resolution: {integrity: sha512-Ceh+7ox5qe7LJuLHoY0feh3pHuUDHAcRUeyL2VYghZwfpkNIy/+8Ocg0a3UuSoYzavmylwuLWQOf3hl0jjMMIw==}
     engines: {node: '>=8'}
+
+  boring-avatars@1.11.1:
+    resolution: {integrity: sha512-SLOgRIXEsIUS6BkE5r6mI6l5ec0E1rhDL9WuVufye8BJj2S/C8xpjFy7M0uxBahLmC5hoAtmmN+YpMWkOyx1AA==}
 
   bowser@2.11.0:
     resolution: {integrity: sha512-AlcaJBi/pqqJBIQ8U9Mcpc9i8Aqxn88Skv5d+xBX006BY5u8N3mGLHa5Lgppa7L/HfwgwLgZ6NYs+Ag6uUmJRA==}
@@ -6546,6 +6552,8 @@ snapshots:
   bezier-js@6.1.4: {}
 
   binary-extensions@2.3.0: {}
+
+  boring-avatars@1.11.1: {}
 
   bowser@2.11.0: {}
 

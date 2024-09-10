@@ -44,12 +44,16 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
       conceptListId: true,
     },
     with: {
-      questions: {
-        columns: {
-          id: true,
-          lambdaUrl: true,
+      questionToAssignment: {
+        with: {
+          question: {
+            columns: {
+              id: true,
+              lambdaUrl: true,
+            }
+          }
         }
-      }
+      },
     }
   });
 
@@ -83,7 +87,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     console.log("GROQ Done", Date.now())
   } 
   
-  const questionList = assignment?.questions ?? [];
+  const questionList = assignment?.questionToAssignment.map(({ question }) => question) ?? [];
 
   const questionPromises = []
 

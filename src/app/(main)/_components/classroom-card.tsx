@@ -14,7 +14,7 @@ interface ClassroomCardProps {
     id: string;
     name: string;
     description?: string | null;
-    subject: {
+    course: {
       name: string;
     } | null;
     classroomMembers: {
@@ -31,7 +31,7 @@ export function ClassroomCard({ classroom } : ClassroomCardProps) {
       <Card className="w-96">
         <CardHeader>
           <CardTitle>{classroom.name}</CardTitle>
-          <CardTitle>{classroom.subject?.name ? classroom.subject?.name : "_"}</CardTitle>
+          <CardTitle>{classroom.course?.name ? classroom.course?.name : "_"}</CardTitle>
         </CardHeader>
         <CardContent>
           <CardDescription className="line-clamp-2">

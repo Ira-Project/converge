@@ -25,6 +25,7 @@ import { logout } from "@/lib/auth/actions";
 import { APP_TITLE } from "@/lib/constants";
 import { toast } from "sonner";
 import Image from "next/image";
+import Avatar from 'boring-avatars'
 
 export const UserDropdown = ({
   name,
@@ -40,14 +41,18 @@ export const UserDropdown = ({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className={className}>
+      {
+        avatar ?
         <Image
           unoptimized={avatar === null}
-          src={avatar ?? "https://source.boringavatars.com/marble/60/" + name}
+          src={avatar}
           alt="Avatar"
           className="block h-8 w-8 rounded-full leading-none"
           width={64}
-          height={64}
-        />
+          height={64} /> 
+        :
+        <Avatar name={name} size={32} variant="bauhaus" />
+      }
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuLabel className="text-muted-foreground">

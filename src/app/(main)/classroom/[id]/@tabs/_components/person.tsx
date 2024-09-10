@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Avatar from 'boring-avatars'
 
 export const Person = async (
   { name, avatar, joinedAt, } : 
@@ -7,14 +8,19 @@ export const Person = async (
   
   return (
     <div className="flex flex-row items-center gap-4">
-      <Image
-        unoptimized={avatar === null}
-        src={avatar ?? "https://source.boringavatars.com/marble/60/" + name}
-        alt="Avatar"
-        className="block h-8 w-8 rounded-full leading-none"
-        width={64}
-        height={64}
-      />
+      {
+        avatar ?
+        <Image
+          unoptimized={avatar === null}
+          src={avatar}
+          alt="Avatar"
+          className="block h-8 w-8 rounded-full leading-none"
+          width={64}
+          height={64} /> 
+        :
+        <Avatar name={name} size={32} variant="bauhaus" />
+      }
+      
       <p> {name} </p>
       {
         joinedAt && 
