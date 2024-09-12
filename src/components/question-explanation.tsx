@@ -1,4 +1,9 @@
+'use client'
+
 import { AnimatedSpinner } from "./icons";
+import dynamic from 'next/dynamic';
+
+const FormattedText = dynamic(() => import('./formatted-text'), { ssr: false });
 
 interface QuestionExplanationProps {
   workingText: string;
@@ -19,7 +24,7 @@ export function QuestionExplanation({ workingComplete, workingText } : QuestionE
         height={64}
       /> */}
         <div>
-          <p dangerouslySetInnerHTML={{ __html: workingText }} />
+          <FormattedText text={workingText} />
           {
             !workingComplete && 
             <div className="flex flex-row justify-center mt-2">

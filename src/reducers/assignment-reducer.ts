@@ -15,6 +15,7 @@ export const questionReducer = (
           working: '',
           computedAnswerText: "",
           workingComplete: false,
+          image: "",
         };
       });
       return {

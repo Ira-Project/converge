@@ -13,7 +13,8 @@
               "woollen ball is an insulator",
               "metal ball is a conductor"
           ],
-          "not_required_concepts": ["Do charges reside on the surface of a conductor?", "Do charges reside across the volume of an insulator?"]
+          "not_required_concepts": ["Do charges reside on the surface of a conductor?", "Do charges reside across the volume of an insulator?"],
+          "lambda_url": "/physics/ap_physics_c_em/electric_charge/1"
       },
       {
           "question_id": 2,
@@ -30,7 +31,8 @@
               "metal sphere is a conductor",
               "uncharged objects do not attract or repel one another"
           ],
-          "not_required_concepts": []
+          "not_required_concepts": [],
+          "lambda_url": "/physics/ap_physics_c_em/electric_charge/2"
       },
       {
           "question_id": 3,
@@ -47,7 +49,8 @@
               "metal plate is a conductor",
               "air is an insulator"
           ],
-          "not_required_concepts": ["Is the separation of charges in a material called polarization?"]
+          "not_required_concepts": ["Is the separation of charges in a material called polarization?"],
+          "lambda_url": "/physics/ap_physics_c_em/electric_charge/3"
       },
       {
           "question_id": 4,
@@ -64,7 +67,8 @@
               "plastic is a insulator",
               "air is an insulator"
           ],
-          "not_required_concepts": ["Is the separation of charges in a material called polarization?", "Is the transfer of charges without contact called induction?"]
+          "not_required_concepts": ["Is the separation of charges in a material called polarization?", "Is the transfer of charges without contact called induction?"],
+          "lambda_url": "/physics/ap_physics_c_em/electric_charge/4"
       },
       {
           "question_id": 5,
@@ -79,7 +83,8 @@
               "metal rod is a conductor",
               "metal ruler is a conductor"
           ],
-          "not_required_concepts": ["Is the flow of charges by contact called conduction?"]
+          "not_required_concepts": ["Is the flow of charges by contact called conduction?"],
+          "lambda_url": "/physics/ap_physics_c_em/electric_charge/5"
       }
   ]
 }

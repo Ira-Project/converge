@@ -10,15 +10,15 @@ import { assignments } from "./schema/assignment";
 import { answers, questions, questionToAssignment } from "./schema/questions";
 
 import json from "./assignment.json";
+import { courses, subjects, topics } from "./schema/subject";
 
 
 async function createAssignmentFromJson() {
 
   // Parameters for assignment creation
   const topicId = "2";
-  const classroomId = "k9arrnbmgan5ggfi7kubi";
+  const classroomId = "a301vzft4213hgdir4z0b";
   const assignmentName = "Assignment 1";
-  const lambdaUrl = "https://tnb4hxjpso44rkfkn7lon2xgru0vmqmj.lambda-url.us-west-1.on.aws/"
 
   // Create a Concept List Object
   const conceptList = {
@@ -70,8 +70,6 @@ async function createAssignmentFromJson() {
     topicId: topicId,
     classroomId: classroomId,
     conceptListId: conceptList.id,
-    createdAt: new Date(),
-    updatedAt: new Date(),
   }
 
   await db.insert(assignments).values(assignment)
@@ -82,7 +80,7 @@ async function createAssignmentFromJson() {
     const questionObject = {
       id: questionId,
       question: question.Question,
-      lambdaUrl: lambdaUrl,
+      lambdaUrl: question.lambda_url,
       topicId: topicId,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -132,3 +130,66 @@ async function addQuestionsFromTopic() {
 
 }
 
+async function createCoursesSubjectsAndTopics() {
+  const list = [
+    {
+      id: 1,
+      name: "Mathematics",
+      courses: [
+        {
+          id: 1,
+          name: "AP Statistics",
+          topics: [
+            {
+              id: 1,
+              name: "Basic Probability"
+            }
+          ]
+        },
+      ]
+    },
+    {
+      id: 2,
+      name: "Physics",
+      courses: [
+        {
+          id: 2,
+          name: "AP Physics C: Electricity and Magnetism",
+          topics: [
+            {
+              id: 2,
+              name: "Electric Charge"
+            }
+          ]
+        },
+      ]
+    }
+  ]
+
+  for (const subject of list) {
+    
+    await db.insert(subjects).values({
+      id: subject.id.toLocaleString(),
+      name: subject.name,
+    }).onConflictDoNothing({ target: subjects.id })
+
+    for (const course of subject.courses) {
+      await db.insert(courses).values({
+        id: course.id.toLocaleString(),
+        name: course.name,
+        subjectId: subject.id.toLocaleString(),
+      }).onConflictDoNothing({ target: courses.id })
+
+      for (const topic of course.topics) {
+        await db.insert(topics).values({
+          id: topic.id.toLocaleString(),
+          name: topic.name,
+          courseId: course.id.toLocaleString(),
+        }).onConflictDoNothing({ target: topics.id })
+      }
+    }
+    
+  }
+}
+
+void createAssignmentFromJson();

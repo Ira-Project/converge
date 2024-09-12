@@ -91,23 +91,25 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
 
   const questionPromises = []
 
-  const body = JSON.stringify({
-    explanation: input.explanation,
-    concepts: verificationJson ? verificationJson : undefined,
-  })
-
   for(const [index, question] of questionList.entries()) {
-      
-    const response = fetch(question.lambdaUrl, {
+    const fetchUrl = `${process.env.BASE_REASONING_ENGINE_URL}${question.lambdaUrl}`;
+    const response = fetch(fetchUrl, {
       method: "POST",
-      body: body
+      body: JSON.stringify({
+        explanation: input.explanation,
+        concepts: verificationJson ? verificationJson.verifications : [],
+      }),
+      headers: {
+        "content-type": "application/json",
+        'Accept': 'application/json',
+      },
     })
     .then((response) => {
-      console.log(index, "Lambda Responded", Date.now())
+      console.log(index, "Reasoning Responded", Date.now())
       return response.json()
     })
     .then(async (data) => {
-      console.log(index, "Lambda JSON Conversion", Date.now())
+      console.log(index, "Reasoning JSON Conversion", Date.now())
       const responseJson = data as ResponseType;
       const body = responseJson.body;
       console.log(body)
