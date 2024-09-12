@@ -26,6 +26,7 @@ export const env = createEnv({
     REALTIME_DATABASE_URL: z.string().url(),
     AWS_ACCESS_KEY_ID: z.string().trim().min(1),
     AWS_SECRET_ACCESS_KEY: z.string().trim().min(1),
+    BASE_REASONING_ENGINE_URL: z.string().trim().min(1),
   },
 
   /**
@@ -60,6 +61,7 @@ export const env = createEnv({
     REALTIME_DATABASE_URL: process.env.REALTIME_DATABASE_URL,
     AWS_ACCESS_KEY_ID: process.env.AWS_ACCESS_KEY_ID,
     AWS_SECRET_ACCESS_KEY: process.env.AWS_SECRET_ACCESS_KEY,
+    BASE_REASONING_ENGINE_URL: process.env.BASE_REASONING_ENGINE_URL,
     // Client-side env vars
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
