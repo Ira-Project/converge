@@ -1,6 +1,12 @@
+'use client'
+
 import { QuestionStatusIndicator } from "./question-status-indicator";
 import { QuestionStatus } from "@/lib/constants";
 import Image from 'next/image'
+import dynamic from 'next/dynamic';
+
+const FormattedText = dynamic(() => import('./formatted-text'), { ssr: false });
+
 
 interface QuestionCardProps {
   status: QuestionStatus;
@@ -42,7 +48,10 @@ export function QuestionCard({ status, questionText, computedAnswer, questionIma
     <div className="flex flex-row items-center gap-4 w-full">
       <QuestionStatusIndicator status={status} />
       <div className="flex flex-col w-full text-left gap-1">
-        <p className="font-normal text-md"> {questionText} </p>
+        <div className="font-normal text-md"> 
+          <FormattedText 
+            text={questionText} />
+        </div>
         {
           questionImage && 
           <Image

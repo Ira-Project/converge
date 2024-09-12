@@ -74,3 +74,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.mq-root-block,
+.mq-math-mode .mq-root-block {
+  vertical-align: unset !important;
+  overflow: unset !important;
+}
