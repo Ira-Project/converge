@@ -12,6 +12,14 @@ import { answers, questions, questionToAssignment } from "./schema/questions";
 import json from "./assignment.json";
 import { courses, subjects, topics } from "./schema/subject";
 
+type QuestionType = {
+  id: string,
+  question: string,
+  lambdaUrl: string,
+  topicId: string,
+  image?: string
+}
+
 
 async function createAssignmentFromJson() {
 
@@ -77,13 +85,14 @@ async function createAssignmentFromJson() {
   // Create the questions object
   for (const [index, question] of json.Questions.entries()) {
     const questionId = generateId(21)
-    const questionObject = {
+    const questionObject:QuestionType = {
       id: questionId,
       question: question.Question,
       lambdaUrl: question.lambda_url,
       topicId: topicId,
-      createdAt: new Date(),
-      updatedAt: new Date(),
+    }
+    if(question.image) {
+      questionObject.image = question.image
     }
     await db.insert(questions).values(questionObject)
     for (const answer of question.Answer) {
