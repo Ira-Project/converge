@@ -188,7 +188,7 @@ export async function verifyEmail(_: unknown, formData: FormData): Promise<{ err
   await lucia.invalidateUserSessions(user.id);
   await db.update(users).set({ 
     emailVerified: true,
-    role: preloadedUsers ? Roles.Teacher : Roles.Student,
+    role: preloadedUsers ? preloadedUsers.role : Roles.Student,
   }).where(eq(users.id, user.id));
   const session = await lucia.createSession(user.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);

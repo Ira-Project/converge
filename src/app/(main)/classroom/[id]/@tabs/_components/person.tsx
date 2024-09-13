@@ -3,7 +3,7 @@ import Avatar from 'boring-avatars'
 
 export const Person = async (
   { name, avatar, joinedAt, } : 
-  { name: string, avatar: string | null, joinedAt?: Date}
+  { name?: string, avatar: string | null, joinedAt?: Date}
 ) => {
   
   return (
@@ -21,7 +21,7 @@ export const Person = async (
         <Avatar name={name} size={32} variant="bauhaus" />
       }
       
-      <p> {name} </p>
+      <p> {name ?? "Anonymous"} </p>
       {
         joinedAt && 
         <p className="text-sm text-muted-foreground ml-auto"> 

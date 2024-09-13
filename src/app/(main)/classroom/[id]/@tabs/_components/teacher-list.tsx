@@ -13,7 +13,7 @@ export const TeacherList = async ({ id, showJoinedAt } : { id: string, showJoine
         <div key={teacher.user.id}>
           <Person 
             key={teacher.user.id}
-            name={teacher.user.name}
+            name={teacher.user.name ?? undefined}
             avatar={teacher.user.avatar}
             joinedAt={showJoinedAt ? teacher.createdAt : undefined} />
         </div>

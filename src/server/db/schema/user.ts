@@ -87,6 +87,7 @@ export const preloadedUsers = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     email: varchar("email", { length: 255 }).unique().notNull(),
     notOnboarded: boolean("not_onboarded").default(true).notNull(),
+    role: roleEnum('role').default(Roles.Student).notNull(),
   },
   (t) => ({
     emailIdx: index("preloaded_user_email_idx").on(t.email),

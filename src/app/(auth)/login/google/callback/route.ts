@@ -65,7 +65,7 @@ export async function GET(request: Request): Promise<Response> {
         email: user.email,
         emailVerified: true,
         avatar: user.picture,
-        role: preloadedUsers ? Roles.Teacher : Roles.Student,
+        role: preloadedUsers ? preloadedUsers.role : Roles.Student,
       });
 
       const session = await lucia.createSession(userId, {});

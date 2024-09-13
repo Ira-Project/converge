@@ -153,7 +153,7 @@ export const joinClassroom = async (ctx: ProtectedTRPCContext, input: JoinClassr
   }
 
   const teachers = classroom.classroomMembers.filter(
-    (member) => member.role === Roles.Teacher).map((member) => member.user.name.toLocaleLowerCase());
+    (member) => member.role === Roles.Teacher).map((member) => member.user.name?.toLocaleLowerCase() ?? "Anonymous");
 
   if(!teachers.includes(input.name.toLocaleLowerCase().trim())) {
     throw new TRPCClientError(
