@@ -10,7 +10,6 @@ import { LoadingButton } from "@/components/loading-button";
 import { Paths } from "@/lib/constants";
 import { MultiSelect } from "@/components/ui/multi-select";
 import { updateUserSchema } from "@/server/api/routers/preloadedUsers/preloadedUsers.input";
-import { useEffect } from "react";
 
 interface Props {
   courses: RouterOutputs["subject"]["listCourses"];
@@ -37,17 +36,13 @@ export const UpdateUserForm = ({ courses, subjects, email, name }: Props) => {
 
   const form  = useForm({
     defaultValues: {
-      name: "",
+      name: name ?? "",
       email: email,
       courses: new Array<string>(),
       subjects: new Array<string>(),
     },
     resolver: zodResolver(updateUserSchema),
   })
-
-  useEffect(() => {
-    form.setValue("name", name ?? "");
-  }, []);
 
   const onSubmit = form.handleSubmit(async (values) => {
     await updateUser.mutateAsync(values);
@@ -119,7 +114,7 @@ export const UpdateUserForm = ({ courses, subjects, email, name }: Props) => {
         <div className="flex flex-row">
           <LoadingButton 
             type="submit"
-            disabled={!form.formState.isDirty || updateUser.isLoading}
+            disabled={updateUser.isLoading}
             loading={updateUser.isLoading}
             className="w-fit ml-auto my-auto">
               Submit
