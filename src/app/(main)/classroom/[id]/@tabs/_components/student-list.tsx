@@ -13,7 +13,7 @@ export const StudentsList = async ({ id, showJoinedAt } : { id: string, showJoin
         <div key={student.user.id}>
           <Person 
             key={student.user.id}
-            name={student.user.name}
+            name={student.user.name ?? undefined}
             avatar={student.user.avatar}
             joinedAt={showJoinedAt ? student.createdAt : undefined} />
         </div>

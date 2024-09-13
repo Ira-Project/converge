@@ -1,9 +1,9 @@
 import type { ProtectedTRPCContext } from "../../trpc";
 import { type ExplainInput } from "./explanation.input";
 import { generateId } from "lucia";
-import { computedAnswers, explanations } from "@/server/db/schema/explanations";
+import { computedAnswers, conceptStatus, explanations } from "@/server/db/schema/explanations";
 import { actions } from "@/server/realtime_db/schema/actions";
-import { AssignmentUpdateActionType, QuestionStatus } from "@/lib/constants";
+import { AssignmentUpdateActionType, ConceptStatus, QuestionStatus } from "@/lib/constants";
 import { readExplanation } from "@/lib/utils/readExplanation";
 
 type ResponseType = {
@@ -57,6 +57,8 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     }
   });
 
+  const questionPromises = []
+
   const conceptListId = assignment?.conceptListId;
   console.log("Assignment Found", Date.now())
   // Remove this check once we have 
@@ -68,6 +70,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
       with: {
         concept: {
           columns: {
+            id: true,
             text: true,
           }
         }
@@ -84,12 +87,25 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
       concepts = []
     }
     verificationJson = await readExplanation(concepts, input.explanation)
+    for(const verification of verificationJson.verifications) {
+      const conceptStatusId = generateId(21);
+      const verifiedConcept = conceptListConcepts.find((concept) => concept.concept.text === verification.verification_question);
+      console.log(verifiedConcept);
+      if(verifiedConcept) {
+        const conceptStatusCreation = ctx.db.insert(conceptStatus).values({
+          id: conceptStatusId,
+          status: verification.verification_answer === "Yes" ? ConceptStatus.CORRECT : ConceptStatus.INCORRECT,
+          explanationId: explanationId,
+          conceptId: verifiedConcept.concept.id,
+        })
+        questionPromises.push(conceptStatusCreation)
+      }
+    }
     console.log("GROQ Done", Date.now())
   } 
   
   const questionList = assignment?.questionToAssignment.map(({ question }) => question) ?? [];
 
-  const questionPromises = []
 
   for(const [index, question] of questionList.entries()) {
     const fetchUrl = `${process.env.BASE_REASONING_ENGINE_URL}${question.lambdaUrl}`;

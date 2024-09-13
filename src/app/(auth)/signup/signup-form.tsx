@@ -19,8 +19,7 @@ export const SignUpForm: React.FC = () => {
         <div className="space-y-1.5">
           <Label>Name</Label>
           <Input
-            required
-            placeholder="Enter your full name"
+            placeholder="Enter your full name (optional)"
             autoComplete="name"
             name="name"
           />

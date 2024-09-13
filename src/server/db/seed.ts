@@ -12,6 +12,14 @@ import { answers, questions, questionToAssignment } from "./schema/questions";
 import json from "./assignment.json";
 import { courses, subjects, topics } from "./schema/subject";
 
+type QuestionType = {
+  id: string,
+  question: string,
+  lambdaUrl: string,
+  topicId: string,
+  image?: string
+}
+
 
 async function createAssignmentFromJson() {
 
@@ -77,13 +85,14 @@ async function createAssignmentFromJson() {
   // Create the questions object
   for (const [index, question] of json.Questions.entries()) {
     const questionId = generateId(21)
-    const questionObject = {
+    const questionObject:QuestionType = {
       id: questionId,
       question: question.Question,
       lambdaUrl: question.lambda_url,
       topicId: topicId,
-      createdAt: new Date(),
-      updatedAt: new Date(),
+    }
+    if(question.image) {
+      questionObject.image = question.image
     }
     await db.insert(questions).values(questionObject)
     for (const answer of question.Answer) {
@@ -146,6 +155,71 @@ async function createCoursesSubjectsAndTopics() {
             }
           ]
         },
+        {
+          id: 3,
+          name: "Algebra 1",
+          topics: []
+        },
+        {
+          id: 4,
+          name: "Algebra 2",
+          topics: []
+        },
+        {
+          id: 5,
+          name: "Geomery",
+          topics: []
+        },
+        {
+          id: 6,
+          name: "Precalculus",
+          topics: []
+        },
+        {
+          id: 7,
+          name: "Statistics",
+          topics: []
+        },
+        {
+          id: 8,
+          name: "Calculus A/B",
+          topics: []
+        },
+        {
+          id: 9,
+          name: "Calculus B/C",
+          topics: []
+        },
+        {
+          id: 10,
+          name: "IB DP Mathematics: Analysis and Approaches (SL)",
+          topics: []
+        },
+        {
+          id: 11,
+          name: "IB DP Mathematics: Analysis and Approaches (HL)",
+          topics: []
+        },
+        {
+          id: 12,
+          name: "IB DP Mathematics: Applications and Interpretation (SL)",
+          topics: []
+        },
+        {
+          id: 13,
+          name: "IB DP Mathematics: Applications and Interpretation (HL)",
+          topics: []
+        },
+        {
+          id: 14,
+          name: "IB MYP Standard Mathematics",
+          topics: []
+        },
+        {
+          id: 15,
+          name: "IB MYP Extended Mathematics",
+          topics: []
+        },
       ]
     },
     {
@@ -161,6 +235,103 @@ async function createCoursesSubjectsAndTopics() {
               name: "Electric Charge"
             }
           ]
+        },
+        {
+          id: 16,
+          name: "AP Physics C: Mechanics",
+          topics: []
+        },
+        {
+          id: 17,
+          name: "AP Physics 1 - Algebra Based",
+          topics: []
+        },
+        {
+          id: 18,
+          name: "AP Physics 2: Algebra Based",
+          topics: []
+        },
+        {
+          id: 19,
+          name: "AP Physics C: Mechanics",
+          topics: []
+        },
+        {
+          id: 20,
+          name: "Physics Standard",
+          topics: []
+        },
+        {
+          id: 21,
+          name: "Physics Honors",
+          topics: []
+        },
+        {
+          id: 22,
+          name: "IB Physics SL",
+          topics: []
+        },
+        {
+          id: 23,
+          name: "IB Physics HL",
+          topics: []
+        },
+        {
+          id: 23,
+          name: "Conceptual Physics (Regular C)",
+          topics: []
+        },
+      ]
+    },
+    {
+      id: 3,
+      name: "Chemistry",
+      courses: [
+        {
+          id: 24,
+          name: "Chemistry Standard",
+          topics: []
+        },
+        {
+          id: 25,
+          name: "Chemistry Honors",
+          topics: []
+        },
+        {
+          id: 26,
+          name: "IB Chemistry SL",
+          topics: []
+        },
+        {
+          id: 27,
+          name: "IB Chemistry HL",
+          topics: []
+        },
+      ]
+    },
+    {
+      id: 4,
+      name: "Biology",
+      courses: [
+        {
+          id: 24,
+          name: "Biology Standard",
+          topics: []
+        },
+        {
+          id: 25,
+          name: "Biology Honors",
+          topics: []
+        },
+        {
+          id: 26,
+          name: "IB Biology SL",
+          topics: []
+        },
+        {
+          id: 27,
+          name: "IB Biology HL",
+          topics: []
         },
       ]
     }
@@ -191,5 +362,3 @@ async function createCoursesSubjectsAndTopics() {
     
   }
 }
-
-void createAssignmentFromJson();

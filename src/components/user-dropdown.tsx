@@ -33,7 +33,7 @@ export const UserDropdown = ({
   avatar,
   className,
 }: {
-  name: string,
+  name?: string,
   email: string;
   avatar?: string | null;
   className?: string;
@@ -51,7 +51,7 @@ export const UserDropdown = ({
           width={64}
           height={64} /> 
         :
-        <Avatar name={name} size={32} variant="bauhaus" />
+        <Avatar name={name ?? "anonymous"} size={32} variant="bauhaus" />
       }
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">

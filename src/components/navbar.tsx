@@ -16,7 +16,7 @@ export const Navbar = async () => {
         </Link>
         <div className="ml-auto flex items-center gap-4">
           <ThemeToggle />
-          {user ? <UserDropdown email={user.email} avatar={user.avatar} name={user.name}/> : null}
+          {user ? <UserDropdown email={user.email} avatar={user.avatar} name={user.name ?? undefined}/> : null}
         </div>
       </div>
     </header>
