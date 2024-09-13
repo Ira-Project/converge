@@ -10,6 +10,7 @@ import { relations } from "drizzle-orm";
 import { classrooms } from "./classroom";
 import { conceptLists } from "./concept";
 import { assignments } from "./assignment";
+import { users } from "./user";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -29,6 +30,7 @@ export type Subjects = typeof subjects.$inferSelect;
 
 export const subjectRelations = relations(subjects, ({ many }) => ({
   courses: many(courses),
+  teachers: many(users),
 }));
 
 export const courses = pgTable(
@@ -58,6 +60,7 @@ export const courseRelations = relations(courses, ({ one, many }) => ({
   }),
   topics: many(courses),
   classrooms: many(classrooms),
+  teachers: many(users),
 }));
 
 export const topics = pgTable(

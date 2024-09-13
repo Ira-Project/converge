@@ -36,6 +36,7 @@ export async function GET(request: Request): Promise<Response> {
         Authorization: `Bearer ${tokens.accessToken}`
       }
     });
+    
     const user = (await response.json()) as GoogleUser; 
 
     if (!user.email || !user.name) {
@@ -52,6 +53,10 @@ export async function GET(request: Request): Promise<Response> {
         eq(table.email, user.email!)
     });
 
+    const preloadedUsers = await db.query.preloadedUsers.findFirst({
+      where: (table, { eq }) => eq(table.email, user.email!),
+    });
+
     if (!existingUser) {
       const userId = generateId(21);
       await db.insert(users).values({
@@ -60,8 +65,9 @@ export async function GET(request: Request): Promise<Response> {
         email: user.email,
         emailVerified: true,
         avatar: user.picture,
-        role: Roles.Student
+        role: preloadedUsers ? Roles.Teacher : Roles.Student,
       });
+
       const session = await lucia.createSession(userId, {});
       const sessionCookie = lucia.createSessionCookie(session.id);
       cookies().set(
@@ -69,6 +75,14 @@ export async function GET(request: Request): Promise<Response> {
         sessionCookie.value,
         sessionCookie.attributes,
       );
+
+      if(preloadedUsers?.notOnboarded) {
+        return new Response(null, {
+          status: 302,
+          headers: { Location: Paths.Onboarding },
+        });
+      }
+      
       return new Response(null, {
         status: 302,
         headers: { Location: Paths.Home },
@@ -92,6 +106,14 @@ export async function GET(request: Request): Promise<Response> {
       sessionCookie.value,
       sessionCookie.attributes,
     );
+
+    if(preloadedUsers?.notOnboarded) {
+      return new Response(null, {
+        status: 302,
+        headers: { Location: Paths.Onboarding },
+      });
+    }
+
     return new Response(null, {
       status: 302,
       headers: { Location: Paths.Home },

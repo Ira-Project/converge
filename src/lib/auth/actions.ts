@@ -18,7 +18,7 @@ import {
 import { emailVerificationCodes, passwordResetTokens, users } from "@/server/db/schema/user";
 import { sendMail, EmailTemplate } from "@/lib/email";
 import { validateRequest } from "@/lib/auth/validate-request";
-import { Paths } from "../constants";
+import { Paths, Roles } from "../constants";
 import { env } from "@/env";
 import { eq } from "drizzle-orm";
 
@@ -180,12 +180,25 @@ export async function verifyEmail(_: unknown, formData: FormData): Promise<{ err
 
   if (dbCode.email !== user.email) return { error: "Email does not match" };
 
+  const preloadedUsers = await db.query.preloadedUsers.findFirst({
+    where: (table, { eq }) => eq(table.email, user.email),
+  });
+
+
   await lucia.invalidateUserSessions(user.id);
-  await db.update(users).set({ emailVerified: true }).where(eq(users.id, user.id));
+  await db.update(users).set({ 
+    emailVerified: true,
+    role: preloadedUsers ? Roles.Teacher : Roles.Student,
+  }).where(eq(users.id, user.id));
   const session = await lucia.createSession(user.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+
+  if(preloadedUsers?.notOnboarded) {
+    redirect(Paths.Onboarding);
+  }
   redirect(Paths.Home);
+  
 }
 
 export async function sendPasswordResetLink(
