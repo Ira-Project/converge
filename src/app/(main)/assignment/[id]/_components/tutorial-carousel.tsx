@@ -17,10 +17,6 @@ const TUTORIAL_STEPS = [
     imageUrl: '/images/Tutorial Step 2.png'
   },
   {
-    description: "The concept map on the top right represents the AI’s knowledge. As you explain the nodes will turn green indicating that a concept has been understood.",
-    imageUrl: '/images/Tutorial Step 3.png'
-  },
-  {
     description: "Remember there are no penalties for wrong answers. You can try as many as explanations as you need. Once you’re satisfied submit the test using the button on the bottom right. All the best!",
     imageUrl: '/images/Tutorial Step 4.png'
   },

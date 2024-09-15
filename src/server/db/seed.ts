@@ -9,7 +9,7 @@ import { generateId } from "lucia";
 import { assignments } from "./schema/assignment";
 import { answers, questions, questionToAssignment } from "./schema/questions";
 
-import json from "./assignment.json";
+import json from "./electric_charge.json";
 import { courses, subjects, topics } from "./schema/subject";
 
 type QuestionType = {
@@ -25,8 +25,8 @@ async function createAssignmentFromJson() {
 
   // Parameters for assignment creation
   const topicId = "2";
-  const classroomId = "a301vzft4213hgdir4z0b";
-  const assignmentName = "Assignment 1";
+  const classroomId = "57bsuucqbms01vgg9pg86";
+  const assignmentName = "Demo Assignment";
 
   // Create a Concept List Object
   const conceptList = {
@@ -77,7 +77,7 @@ async function createAssignmentFromJson() {
     name: assignmentName,
     topicId: topicId,
     classroomId: classroomId,
-    conceptListId: conceptList.id,
+    conceptListId: json.conceptListId,
   }
 
   await db.insert(assignments).values(assignment)
@@ -108,7 +108,7 @@ async function createAssignmentFromJson() {
     await db.insert(questionToAssignment).values({
       id: generateId(21),
       order: index,
-      questionId: questionId,
+      questionId: question.id,
       assignmentId: assignment.id,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -116,6 +116,39 @@ async function createAssignmentFromJson() {
 
   }
 }
+
+async function createExistingAssignmentFromJson() {
+
+  // Parameters for assignment creation
+  const topicId = "2";
+  const classroomId = "57bsuucqbms01vgg9pg86";
+  const assignmentName = "Demo Assignment";
+  
+  // Create the assignment object
+  const assignment = {
+    id: generateId(21),
+    name: assignmentName,
+    topicId: topicId,
+    classroomId: classroomId,
+    conceptListId: json.conceptListId,
+  }
+
+  await db.insert(assignments).values(assignment)
+
+  // Map question objects to assignment
+  for (const [index, question] of json.Questions.entries()) {
+    await db.insert(questionToAssignment).values({
+      id: generateId(21),
+      order: index,
+      questionId: question.id,
+      assignmentId: assignment.id,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    })
+
+  }
+}
+
 
 async function addQuestionsFromTopic() {
 
