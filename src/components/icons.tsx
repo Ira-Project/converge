@@ -76,4 +76,5 @@ export {
   QuestionMarkIcon,
   ClockIcon,
   CalendarIcon,
+  TrashIcon,
 } from "@radix-ui/react-icons";

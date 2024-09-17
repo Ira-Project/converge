@@ -1,4 +1,3 @@
-import { ClockIcon } from "@/components/icons";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Paths } from "@/lib/constants";
 
@@ -8,11 +7,9 @@ interface Props {
     name: string;
     id: string;
   } | null;
-  timeLimit?: number | null;
-  numberOfQuestions: number;
 }
 
-export default function AssignmentHeader({ assignmentName, classroom, timeLimit, numberOfQuestions }: Props) {  
+export default function AssignmentHeader({ assignmentName, classroom }: Props) {  
 
   return (
     <div className="flex flex-col gap-2">
@@ -32,16 +29,6 @@ export default function AssignmentHeader({ assignmentName, classroom, timeLimit,
       </Breadcrumb>
       <div className="flex flex-row items-center text-3xl font-semibold">
         {assignmentName}
-      </div>
-      <div className="text-muted-foreground text-xs flex flex-row gap-2 items-center">
-        <ClockIcon />
-        <p>
-          {timeLimit ? `${timeLimit} minutes` : "No Time Limit"}
-        </p>
-        <p>|</p>
-        <p>
-          {numberOfQuestions} Questions
-        </p>
       </div>
     </div>
   );

@@ -18,6 +18,7 @@ type ResponseType = {
 }
 
 export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) => {
+
   
   // -----------
   // Create the explanation object

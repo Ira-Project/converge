@@ -6,30 +6,26 @@ import { TutorialCarousel } from "./tutorial-carousel";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { Paths } from "@/lib/constants";
 
-import { ClockIcon, QuestionMarkIcon } from "@/components/icons";
-
 const Dialog = dynamic(() => import('@/components/ui/dialog').then((mod) => mod.Dialog), { ssr: false });
 
 interface Props {
-  assignmentName: string;
+  assignmentName?: string;
+  topic: string;
   classroom?: {
     name: string;
     id: string;
   } | null;
-  timeLimit?: number | null;
-  numberOfQuestions: number;
 }
 
-export default function AssignmentTutorialModal({ assignmentName, classroom, timeLimit, numberOfQuestions }: Props) {  
+export default function AssignmentTutorialModal({ assignmentName, classroom, topic }: Props) {  
 
   return (
     <Dialog defaultOpen>
       <DialogTrigger asChild>
         <Button 
-          className='absolute right-4 bottom-4 text-muted-foreground rounded-full'
-          variant="outline" 
-          size="icon">
-          <QuestionMarkIcon />
+          size="sm"
+          variant="outlineSecondary" >
+            Help
         </Button>
       </DialogTrigger>
       <DialogContent 
@@ -52,17 +48,7 @@ export default function AssignmentTutorialModal({ assignmentName, classroom, tim
             </BreadcrumbList>
           </Breadcrumb>
           <div className="flex flex-row items-center text-3xl font-semibold my-2">
-            {assignmentName}
-          </div>
-          <div className="text-muted-foreground text-xs flex flex-row gap-2 items-center">
-            <ClockIcon />
-            <p>
-              {timeLimit ? `${timeLimit} minutes` : "No Time Limit"}
-            </p>
-            <p>|</p>
-            <p>
-              {numberOfQuestions} Questions
-            </p>
+            {assignmentName && `${assignmentName} - `} {topic}
           </div>
         </DialogTitle>
         <DialogDescription className="m-0 text-black mx-auto text-lg font-semibold">

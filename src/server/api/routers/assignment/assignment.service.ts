@@ -1,7 +1,8 @@
-import { and, asc } from "drizzle-orm";
+import { and, asc, eq } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { ListAssignmentsInput, GetAssignmentInput } from "./assignment.input";
+import type { ListAssignmentsInput, GetAssignmentInput, MakeAssignmentLiveInput } from "./assignment.input";
 import { questionToAssignment } from "@/server/db/schema/questions";
+import { assignments } from "@/server/db/schema/assignment";
 
 export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssignmentsInput) => {
   let assignments;
@@ -99,4 +100,14 @@ export const getAssignment = async (ctx: ProtectedTRPCContext, input: GetAssignm
       },
     }
   });
+}
+
+export const makeAssignmentLive = async (ctx: ProtectedTRPCContext, input: MakeAssignmentLiveInput) => {
+
+  return await ctx.db.update(assignments).set({
+    isLive: true,
+    name: input.assignmentName,
+    dueDate: input.dueDate,
+  }).where(eq(assignments.id, input.assignmentId));
+  
 }

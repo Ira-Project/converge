@@ -1,11 +1,13 @@
 import {
   Carousel,
+  type CarouselApi,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import Image from "next/image"
+import { useEffect, useState } from "react";
 
 const TUTORIAL_STEPS = [
   {
@@ -24,8 +26,29 @@ const TUTORIAL_STEPS = [
 
 
 export function TutorialCarousel() {
+
+  const [api, setApi] = useState<CarouselApi>()
+
+  const [current, setCurrent] = useState(0)
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    if (!api) {
+      return
+    }
+ 
+    setCount(api.scrollSnapList().length)
+    setCurrent(api.selectedScrollSnap() + 1)
+ 
+    api.on("select", () => {
+      setCurrent(api.selectedScrollSnap() + 1)
+    })
+  }, [api])
+
+
+
   return (
-    <Carousel>
+    <Carousel setApi={setApi}>
       <CarouselContent>
         {
           TUTORIAL_STEPS.map((item, index) => (
@@ -44,6 +67,17 @@ export function TutorialCarousel() {
           ))
         }
       </CarouselContent>
+      <div className="flex justify-center gap-2 flex-row mt-4">
+          {
+            TUTORIAL_STEPS.map((_, index) => (
+              <button 
+                onClick={() => api?.scrollTo(index)}
+                key={index}
+                className={`w-2 h-2 rounded-full ${current === index + 1 ? 'bg-primary' : 'bg-muted-foreground'}`}>
+              </button>
+            ))
+          }
+      </div>
       <CarouselPrevious />
       <CarouselNext />
     </Carousel>

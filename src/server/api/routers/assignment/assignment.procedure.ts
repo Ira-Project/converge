@@ -9,4 +9,7 @@ export const assignmentRouter = createTRPCRouter({
   get: protectedProcedure
     .input(inputs.getAssignmentSchema)
     .query(({ ctx, input }) => services.getAssignment(ctx, input)),
+  makeLive: protectedProcedure
+    .input(inputs.makeAssignmentLiveSchema)
+    .mutation(({ ctx, input }) => services.makeAssignmentLive(ctx, input)),
 });

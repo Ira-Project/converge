@@ -14,7 +14,7 @@ export const assignments = pgTable(
   "assignments",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
-    name: text("name").notNull(),
+    name: text("name"),
     description: text("description"),
     imageUrl: text("image_url"),
     topicId: varchar("topic_id", { length: 21 }).notNull().references(() => topics.id),

@@ -1,4 +1,3 @@
-'use client'
 import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
 import { LoadingButton } from "@/components/loading-button";
@@ -11,7 +10,7 @@ export default function ConfirmationModal({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button>Submit Assignment</Button>
+        <Button size="sm">Submit Assignment</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
