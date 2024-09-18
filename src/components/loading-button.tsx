@@ -18,7 +18,7 @@ const LoadingButton = forwardRef<HTMLButtonElement, LoadingButtonProps>(
         ref={ref}
         {...props}
         disabled={props.disabled ? props.disabled : loading}
-        className={cn(className, "relative")}
+        className={cn(className, "relative min-w-8")}
       >
         {
           !(loading && dontShowChildrenWhileLoading) &&

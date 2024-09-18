@@ -1,7 +1,6 @@
 import { validateRequest } from "@/lib/auth/validate-request";
 import { Paths } from "@/lib/constants";
 import { redirect } from "next/navigation";
-import AssignmentTutorialModal from "./_components/assignment-tutorial-modal";
 import { api } from "@/trpc/server";
 import { AssignmentView } from "./_components/assignment-view";
 
@@ -15,20 +14,15 @@ export default async function AssignmentPage({ params } : { params: { id: string
   if (!assignment) redirect(Paths.Home);
   
   return (
-    <main className="">
-      <AssignmentTutorialModal 
-        classroom={assignment.classroom}
-        assignmentName={assignment.name}
-        timeLimit={assignment.timeLimit}
-        numberOfQuestions = {assignment.questionToAssignment.length}
-      />
+    <main>
       <AssignmentView 
         topic={assignment.topic.name}
         questions={assignment.questionToAssignment.map(q => q.question)}
-        assignmentName={assignment.name}
+        assignmentName={assignment.name ?? undefined}
         classroom={assignment.classroom}
         timeLimit={assignment.timeLimit}
         assignmentId={params.id}
+        isLive={assignment.isLive}
         testAttemptId={testAttemptId} />
     </main>
   );

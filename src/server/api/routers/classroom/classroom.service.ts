@@ -5,6 +5,8 @@ import { generateId } from "lucia";
 import { classrooms, usersToClassrooms } from "@/server/db/schema/classroom";
 import { Roles } from "@/lib/constants";
 import { TRPCClientError } from "@trpc/client";
+import { assignments } from "@/server/db/schema/assignment";
+import { questionToAssignment } from "@/server/db/schema/questions";
 
 export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroomInput) => {
   return await ctx.db.query.classrooms.findFirst({
@@ -112,6 +114,58 @@ export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateCl
     code: generateId(5).toUpperCase(),
     createdBy: ctx.user.id,  
   })
+
+  const course = await ctx.db.query.courses.findFirst({
+    where: (table, { eq }) => eq(table.id, input.course),
+    columns: {
+      name: true,
+    },
+    with: {
+      topics: {
+        columns: {
+          id: true,
+          name: true,
+          conceptListId: true,
+        },
+        with: {
+          questions: {
+            columns: {
+              id: true,
+            }
+          }
+        }
+      }
+    }
+  });
+
+  if(!course) {
+    throw new TRPCClientError(
+      "Course not found. Please check the course and try again."
+    )
+  }
+
+  for (const topic of course.topics) {
+
+    const assignmentId = generateId(21);
+    await ctx.db.insert(assignments).values({
+      id: assignmentId,
+      topicId: topic.id,
+      classroomId: id,
+      createdBy: ctx.user.id,
+      conceptListId: topic.conceptListId,
+      isLive: false,
+      isLocked: topic.questions.length === 0,
+    });
+
+    for (const question of topic.questions) {
+      await ctx.db.insert(questionToAssignment).values({
+        id: generateId(21),
+        questionId: question.id,
+        assignmentId: assignmentId,
+      });
+    }
+    
+  }
 
   await ctx.db.insert(usersToClassrooms).values({
     userId: ctx.user.id,

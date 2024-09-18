@@ -80,3 +80,13 @@
   vertical-align: unset !important;
   overflow: unset !important;
 }
+
+.mathquill-editable {
+  outline: none;
+  border: none;
+}
+
+.mq-focused {
+  outline: none !important;
+  border: none !important;
+}
