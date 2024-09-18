@@ -11,6 +11,7 @@ import { classrooms } from "./classroom";
 import { conceptLists } from "./concept";
 import { assignments } from "./assignment";
 import { users } from "./user";
+import { questions } from "./questions";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -19,6 +20,7 @@ export const subjects = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name").notNull(),
+    demoClassroomId: varchar("demo_classroom_id", { length: 21 }),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -58,7 +60,7 @@ export const courseRelations = relations(courses, ({ one, many }) => ({
     fields: [courses.conceptListId],
     references: [courses.id],
   }),
-  topics: many(courses),
+  topics: many(topics),
   classrooms: many(classrooms),
   teachers: many(users),
 }));
@@ -69,6 +71,7 @@ export const topics = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name").notNull(),
     courseId: varchar("course_id", { length: 21 }).references(() => courses.id),
+    conceptListId: varchar("concept_list_id").references(() => conceptLists.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -80,5 +83,10 @@ export const topicRelations = relations(topics, ({ one, many }) => ({
     fields: [topics.courseId],
     references: [courses.id],
   }),
+  conceptLists: one(topics, {
+    fields: [topics.conceptListId],
+    references: [topics.id],
+  }),
   assignments: many(assignments),
+  questions: many(questions),
 }));

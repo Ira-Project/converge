@@ -4,13 +4,13 @@ import {
   conceptLists, 
   concepts, 
 } from "./schema/concept";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { generateId } from "lucia";
-import { assignments } from "./schema/assignment";
 import { answers, questions, questionToAssignment } from "./schema/questions";
 
 import json from "./electric_charge.json";
 import { courses, subjects, topics } from "./schema/subject";
+import { classrooms } from "./schema/classroom";
 
 type QuestionType = {
   id: string,
@@ -21,17 +21,15 @@ type QuestionType = {
 }
 
 
-async function createAssignmentFromJson() {
+async function createQuestionsAndConceptListFromJson() {
 
   // Parameters for assignment creation
-  const topicId = "2";
-  const classroomId = "57bsuucqbms01vgg9pg86";
-  const assignmentName = "Demo Assignment";
+  const topicId = "01nfgjnqcqsbc9am0nr59";
 
   // Create a Concept List Object
   const conceptList = {
     id: generateId(21),
-    name: assignmentName,
+    name: json.name,
     createdAt: new Date(),
     updatedAt: new Date(),
   }
@@ -67,23 +65,23 @@ async function createAssignmentFromJson() {
         conceptId: conceptId,
       })
     } else {
-      // TO DO CHECK IF ITS IN LIST AND ADD IF NOT
+      await db.insert(conceptListConcepts).values({
+        id: generateId(21),
+        conceptListId: conceptList.id,
+        conceptId: existingConcept[0].id,
+      })
     }
   }
   
-  // Create the assignment object
-  const assignment = {
-    id: generateId(21),
-    name: assignmentName,
-    topicId: topicId,
-    classroomId: classroomId,
-    conceptListId: json.conceptListId,
-  }
-
-  await db.insert(assignments).values(assignment)
+  // Add conceptList ID to topic
+  await db.update(topics).set({
+    conceptListId: conceptList.id,
+  }).where(
+    eq(topics.id, topicId),
+  )
 
   // Create the questions object
-  for (const [index, question] of json.Questions.entries()) {
+  for (const question of json.Questions) {
     const questionId = generateId(21)
     const questionObject:QuestionType = {
       id: questionId,
@@ -105,52 +103,10 @@ async function createAssignmentFromJson() {
       }
       await db.insert(answers).values(answerObject)
     }
-    await db.insert(questionToAssignment).values({
-      id: generateId(21),
-      order: index,
-      questionId: question.id,
-      assignmentId: assignment.id,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    })
-
   }
 }
 
-async function createExistingAssignmentFromJson() {
-
-  // Parameters for assignment creation
-  const topicId = "2";
-  const classroomId = "57bsuucqbms01vgg9pg86";
-  const assignmentName = "Demo Assignment";
-  
-  // Create the assignment object
-  const assignment = {
-    id: generateId(21),
-    name: assignmentName,
-    topicId: topicId,
-    classroomId: classroomId,
-    conceptListId: json.conceptListId,
-  }
-
-  await db.insert(assignments).values(assignment)
-
-  // Map question objects to assignment
-  for (const [index, question] of json.Questions.entries()) {
-    await db.insert(questionToAssignment).values({
-      id: generateId(21),
-      order: index,
-      questionId: question.id,
-      assignmentId: assignment.id,
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    })
-
-  }
-}
-
-
-async function addQuestionsFromTopic() {
+async function addQuestionsToAssignmentFromTopic() {
 
   // Parameters for assignment creation
   const topicId = "2";
@@ -175,194 +131,190 @@ async function addQuestionsFromTopic() {
 async function createCoursesSubjectsAndTopics() {
   const list = [
     {
-      id: 1,
       name: "Mathematics",
       courses: [
         {
-          id: 1,
           name: "AP Statistics",
           topics: [
             {
-              id: 1,
               name: "Basic Probability"
             }
           ]
         },
         {
-          id: 3,
           name: "Algebra 1",
           topics: []
         },
         {
-          id: 4,
           name: "Algebra 2",
           topics: []
         },
         {
-          id: 5,
           name: "Geomery",
           topics: []
         },
         {
-          id: 6,
           name: "Precalculus",
           topics: []
         },
         {
-          id: 7,
           name: "Statistics",
           topics: []
         },
         {
-          id: 8,
           name: "Calculus A/B",
           topics: []
         },
         {
-          id: 9,
           name: "Calculus B/C",
           topics: []
         },
         {
-          id: 10,
           name: "IB DP Mathematics: Analysis and Approaches (SL)",
           topics: []
         },
         {
-          id: 11,
           name: "IB DP Mathematics: Analysis and Approaches (HL)",
           topics: []
         },
         {
-          id: 12,
           name: "IB DP Mathematics: Applications and Interpretation (SL)",
           topics: []
         },
         {
-          id: 13,
           name: "IB DP Mathematics: Applications and Interpretation (HL)",
           topics: []
         },
         {
-          id: 14,
           name: "IB MYP Standard Mathematics",
           topics: []
         },
         {
-          id: 15,
           name: "IB MYP Extended Mathematics",
           topics: []
         },
       ]
     },
     {
-      id: 2,
       name: "Physics",
       courses: [
         {
-          id: 2,
           name: "AP Physics C: Electricity and Magnetism",
           topics: [
             {
-              id: 2,
               name: "Electric Charge"
-            }
+            },
           ]
         },
         {
-          id: 16,
           name: "AP Physics C: Mechanics",
           topics: []
         },
         {
-          id: 17,
           name: "AP Physics 1 - Algebra Based",
           topics: []
         },
         {
-          id: 18,
           name: "AP Physics 2: Algebra Based",
           topics: []
         },
         {
-          id: 19,
           name: "AP Physics C: Mechanics",
           topics: []
         },
         {
-          id: 20,
           name: "Physics Standard",
           topics: []
         },
         {
-          id: 21,
           name: "Physics Honors",
           topics: []
         },
         {
-          id: 22,
           name: "IB Physics SL",
-          topics: []
+          topics: [
+            {
+              name: "Kinematics"
+            },
+            {
+              name: "Forces and Momentum"
+            },
+            {
+              name: "Work Energy and Power"
+            },
+            {
+              name: "Gravitational Fields"
+            },
+            {
+              name: "Electric Charge"
+            },
+            {
+              name: "Electric and Magnetic Fields"
+            },
+            {
+              name: "Thermal Energy Transfer"
+            },
+            {
+              name: "Gas Laws"
+            },
+            {
+              name: "Wave Model"
+            },
+            {
+              name: "Wave Phenomena"
+            },
+            {
+              name: "Structure of the Atom"
+            },
+          ]
         },
         {
-          id: 23,
           name: "IB Physics HL",
           topics: []
         },
         {
-          id: 23,
           name: "Conceptual Physics (Regular C)",
           topics: []
         },
       ]
     },
     {
-      id: 3,
       name: "Chemistry",
       courses: [
         {
-          id: 24,
           name: "Chemistry Standard",
           topics: []
         },
         {
-          id: 25,
           name: "Chemistry Honors",
           topics: []
         },
         {
-          id: 26,
           name: "IB Chemistry SL",
           topics: []
         },
         {
-          id: 27,
           name: "IB Chemistry HL",
           topics: []
         },
       ]
     },
     {
-      id: 4,
       name: "Biology",
       courses: [
         {
-          id: 24,
           name: "Biology Standard",
           topics: []
         },
         {
-          id: 25,
           name: "Biology Honors",
           topics: []
         },
         {
-          id: 26,
           name: "IB Biology SL",
           topics: []
         },
         {
-          id: 27,
           name: "IB Biology HL",
           topics: []
         },
@@ -371,27 +323,74 @@ async function createCoursesSubjectsAndTopics() {
   ]
 
   for (const subject of list) {
-    
-    await db.insert(subjects).values({
-      id: subject.id.toLocaleString(),
-      name: subject.name,
-    }).onConflictDoNothing({ target: subjects.id })
+
+    const existingSubject = await db.selectDistinct().from(subjects).where(
+      eq(subjects.name, subject.name),
+    )
+
+    let subjectId = generateId(21);
+
+    if (existingSubject?.[0]?.id === undefined) {
+      await db.insert(subjects).values({
+        id: subjectId,
+        name: subject.name,
+      })
+    } else {
+      subjectId = existingSubject[0].id
+    }
+  
 
     for (const course of subject.courses) {
-      await db.insert(courses).values({
-        id: course.id.toLocaleString(),
-        name: course.name,
-        subjectId: subject.id.toLocaleString(),
-      }).onConflictDoNothing({ target: courses.id })
+      
+      const existingCourse = await db.selectDistinct().from(courses).where(
+        and(
+          eq(courses.name, course.name),
+          eq(courses.subjectId, subjectId),
+        )
+      )
+
+      let courseId = generateId(21);
+      if (existingCourse?.[0]?.id === undefined) {
+        await db.insert(courses).values({
+          id: courseId,
+          name: course.name,
+          subjectId: subjectId,
+        })
+      } else {
+        courseId = existingCourse[0].id
+      }
 
       for (const topic of course.topics) {
+        
+        const existingTopic = await db.selectDistinct().from(topics).where(
+          and(
+            eq(topics.name, topic.name),
+            eq(topics.courseId, courseId),
+          )
+        )
+
+        if (existingTopic?.[0]?.id !== undefined) {
+          continue
+        }
+
         await db.insert(topics).values({
-          id: topic.id.toLocaleString(),
+          id: generateId(21),
           name: topic.name,
-          courseId: course.id.toLocaleString(),
-        }).onConflictDoNothing({ target: topics.id })
+          courseId: courseId,
+        });
+
       }
     }
     
   }
 }
+
+async function deleteClassroom() {
+  const classroomId = "6d0wtmkugo5k0imgmo6k6";
+  
+  await db.delete(classrooms).where(
+    eq(classrooms.id, classroomId),
+  )
+}
+
+void createQuestionsAndConceptListFromJson();
