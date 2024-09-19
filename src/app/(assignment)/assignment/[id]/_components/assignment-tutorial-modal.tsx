@@ -20,11 +20,11 @@ interface Props {
 export default function AssignmentTutorialModal({ assignmentName, classroom, topic }: Props) {  
 
   return (
-    <Dialog defaultOpen>
+    <Dialog>
       <DialogTrigger asChild>
         <Button 
           size="sm"
-          variant="outlineSecondary" >
+          variant="outlineSecondary">
             Help
         </Button>
       </DialogTrigger>

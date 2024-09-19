@@ -4,7 +4,6 @@ import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle, DialogTr
 import { addDays, format } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { LoadingButton } from "@/components/loading-button";
-import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
@@ -21,7 +20,6 @@ export default function AssignmentPublishModal({
   assignmentId, 
 } : { assignmentId: string }) {  
 
-  const router = useRouter();
   const makeAssignmentLive = api.assignment.makeLive.useMutation();
   
   const form = useForm({

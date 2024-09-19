@@ -225,7 +225,7 @@ async function createCoursesSubjectsAndTopics() {
           topics: []
         },
         {
-          name: "Physics Demo",
+          name: "Physics",
           topics: [
             {
               name: "Kinematics",

@@ -8,7 +8,7 @@ import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { ScrollBar } from "@/components/ui/scroll-area";
 import { Accordion } from "@/components/ui/accordion";
 import { QuestionAccordionItem } from "@/components/question-accordion-item";
-import { QuestionStatus } from "@/lib/constants";
+import { QuestionStatus, Roles } from "@/lib/constants";
 import { supabaseClient } from "@/lib/supabaseClient";
 import { Suspense, useEffect, useReducer, useState } from "react";
 import { type AssignmentState, type AssignmentUpdateActions, AssignmentUpdateActionType } from "@/lib/constants";
@@ -47,9 +47,10 @@ interface Props {
   } | null;
   timeLimit?: number | null;
   testAttemptId: string;
+  role: Roles;
 }
 
-export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName, assignmentId, classroom, isLive, dueDate }: Props) => {
+export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName, assignmentId, classroom, isLive, dueDate, role }: Props) => {
   const explanationMutation = api.explanation.explain.useMutation();
   const submissionMutation = api.testAttempt.submit.useMutation();
 
@@ -178,8 +179,11 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
                 topic={topic}
                 classroom={classroom}
                 assignmentName={assignmentName} />
-              <AssignmentPublishModal 
-                assignmentId={assignmentId} />
+              {
+                role === Roles.Teacher && 
+                <AssignmentPublishModal 
+                  assignmentId={assignmentId} />
+              }
             </>
           }
         </div>
