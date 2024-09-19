@@ -55,45 +55,47 @@ export const UploadLessonPlanForm = () => {
 
   return (
     <Form {...form}>
-      <form onSubmit={onSubmit} className="grid gap-2">
-        <FormField
-          control={form.control}
-          name="file"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>File</FormLabel>
-              <FormControl>
-                <Input 
-                  {...field} 
-                  id="file" 
-                  value={undefined}
-                  onChange={(e) => {
-                    e.target.files 
-                      && e.target.files[0] !== null 
-                      && field.onChange(e.target.files[0])
-                    e.target.files 
-                      && e.target.files[0] !== null 
-                      && e.target.files[0]?.name
-                      && setFileName(e.target.files[0]?.name)                    
-                  }}
-                  type="file" />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )} 
-        />
-        {
-          (getPresignedUrl.error ?? uploadLessonPlan.error) &&
-          <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">
-            {getPresignedUrl.error ? 
-              getPresignedUrl.error.message : 
-              uploadLessonPlan.error ? uploadLessonPlan.error.message : "An Error occured"}
-          </ul>
-        }
+      <form onSubmit={onSubmit} className="flex flex-row gap-2">
+        <div>
+          <FormField
+            control={form.control}
+            name="file"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>File</FormLabel>
+                <FormControl>
+                  <Input 
+                    {...field} 
+                    id="file" 
+                    value={undefined}
+                    onChange={(e) => {
+                      e.target.files 
+                        && e.target.files[0] !== null 
+                        && field.onChange(e.target.files[0])
+                      e.target.files 
+                        && e.target.files[0] !== null 
+                        && e.target.files[0]?.name
+                        && setFileName(e.target.files[0]?.name)                    
+                    }}
+                    type="file" />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} 
+          />
+          {
+            (getPresignedUrl.error ?? uploadLessonPlan.error) &&
+            <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">
+              {getPresignedUrl.error ? 
+                getPresignedUrl.error.message : 
+                uploadLessonPlan.error ? uploadLessonPlan.error.message : "An Error occured"}
+            </ul>
+          }
+        </div>
         <LoadingButton 
           disabled={!form.formState.isDirty || getPresignedUrl.isLoading || uploadLessonPlan.isLoading || loading}
           loading={getPresignedUrl.isLoading || uploadLessonPlan.isLoading || loading}
-          className="w-fit ml-auto">
+          className="w-fit mt-auto">
             Upload
         </LoadingButton>
       </form>

@@ -135,6 +135,7 @@ async function createCoursesSubjectsAndTopics() {
   const list = [
     {
       name: "Mathematics",
+      imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Math.svg",
       courses: [
         {
           name: "AP Statistics",
@@ -196,6 +197,7 @@ async function createCoursesSubjectsAndTopics() {
     },
     {
       name: "Physics",
+      imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Physics.svg",
       courses: [
         {
           name: "AP Physics C: Electricity and Magnetism",
@@ -226,13 +228,49 @@ async function createCoursesSubjectsAndTopics() {
           name: "Physics Demo",
           topics: [
             {
-              name: "Electric Charge",
-              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Electric+Charge.png"
+              name: "Kinematics",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Kinematics.png"
+            },
+            {
+              name: "Forces and Momentum",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Forces+and+Momentum.png"
             },
             {
               name: "Work, Energy and Power",
               imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Work%2C+Energy+and+Power.png"
-            }
+            },
+            {
+              name: "Gravitational Fields",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Gravitational+Fields.png"
+            },
+            {
+              name: "Electric Charge",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Electric+Charge.png"
+            },
+            {
+              name: "Magnetic Fields",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Magnetic+Fields.png"
+            },
+            {
+              name: "Thermal Energy Transfer",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Thermal+Energy+Transfer.png"
+            },
+            {
+              name: "Gas Laws",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Gas+Laws.png"
+            },
+            {
+              name: "Wave Model",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Wave+Model.png"
+            },
+            {
+              name: "Wave Phenomena",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Wave+Phenomena.png"
+            },
+            {
+              name: "Structure of the Atom",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Structure+of+the+Atom.png"
+            },
           ]
         },
         {
@@ -304,6 +342,7 @@ async function createCoursesSubjectsAndTopics() {
     },
     {
       name: "Chemistry",
+      imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Chemistry.svg",
       courses: [
         {
           name: "Chemistry Standard",
@@ -325,6 +364,7 @@ async function createCoursesSubjectsAndTopics() {
     },
     {
       name: "Biology",
+      imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Biology.svg",
       courses: [
         {
           name: "Biology Standard",
@@ -360,6 +400,11 @@ async function createCoursesSubjectsAndTopics() {
         name: subject.name,
       })
     } else {
+      await db.update(subjects).set({
+        imageUrl: subject.imageUrl,
+      }).where(
+        eq(subjects.id, existingSubject[0].id),
+      )
       subjectId = existingSubject[0].id
     }
   
@@ -425,5 +470,3 @@ async function uploadPreloadedUsers() {
     }).onConflictDoNothing({ target: preloadedUsers.email })
   }
 }
-
-void createCoursesSubjectsAndTopics()

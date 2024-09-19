@@ -77,4 +77,8 @@ export {
   ClockIcon,
   CalendarIcon,
   TrashIcon,
+  LockClosedIcon,
+  StackIcon,
+  HomeIcon,
+  PersonIcon,
 } from "@radix-ui/react-icons";
