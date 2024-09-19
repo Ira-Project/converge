@@ -16,6 +16,7 @@ export default async function AssignmentPage({ params } : { params: { id: string
   return (
     <main>
       <AssignmentView 
+        role={user.role}
         topic={assignment.topic.name}
         questions={assignment.questionToAssignment.map(q => q.question)}
         assignmentName={assignment.name ?? undefined}

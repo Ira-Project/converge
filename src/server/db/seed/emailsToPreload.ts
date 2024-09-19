@@ -198,5 +198,5 @@ export const emailsToPreload =
   "edward.parker@if-koeln.de",
   "maxime.martin@if-kowln.de",
   "meena.talasila@gmail.com",
-  "likhit.nayak@gmail.com"
+  "likhitnayak@gmail.com"
 ]

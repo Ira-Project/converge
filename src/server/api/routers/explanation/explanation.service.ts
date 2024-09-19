@@ -115,6 +115,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
       body: JSON.stringify({
         explanation: input.explanation,
         concepts: verificationJson ? verificationJson.verifications : [],
+        formula: input.formula,
       }),
       headers: {
         "content-type": "application/json",

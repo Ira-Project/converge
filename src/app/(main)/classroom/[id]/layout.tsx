@@ -1,5 +1,5 @@
 import { Paths, Roles } from "@/lib/constants";
-import { HomeIcon, PersonIcon, StackIcon } from "@/components/icons";
+import { HomeIcon } from "@/components/icons";
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { InviteStudents } from "./_components/invite-students";
 
@@ -57,14 +57,16 @@ export default async function ClassroomPage({ tabs, params }: { tabs: ReactNode,
             <h1 className="text-3xl">
               {classroom?.course?.name ?? classroom?.name}
             </h1>
-            <div className="flex flex-row gap-4 mt-2 text-lg my-auto">
-              <InviteStudents code={classroom.code} />
-            </div>
             {
               user.role === Roles.Teacher &&
-              <div className="flex flex-row mt-8 gap-4 "> 
-                <TabComponent id={params.id}/>
-              </div>
+              <>
+                <div className="flex flex-row gap-4 mt-2 text-lg my-auto">
+                  <InviteStudents code={classroom.code} />
+                </div>
+                <div className="flex flex-row mt-8 gap-4 "> 
+                  <TabComponent id={params.id}/>
+                </div>
+              </>
             }
           </div>
         </div>
