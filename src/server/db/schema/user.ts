@@ -88,6 +88,8 @@ export const preloadedUsers = pgTable(
     email: varchar("email", { length: 255 }).unique().notNull(),
     notOnboarded: boolean("not_onboarded").default(true).notNull(),
     role: roleEnum('role').default(Roles.Student).notNull(),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
   },
   (t) => ({
     emailIdx: index("preloaded_user_email_idx").on(t.email),

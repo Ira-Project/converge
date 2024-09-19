@@ -11,8 +11,8 @@ export const CopyClassroomCode = ({ code }: { code: string }) => {
   return (
     <div className="flex flex-row gap-4">
       <Suspense fallback={<Skeleton className="w-full h-8"/>}>
-        <Input value={code} readOnly />
-        <Button variant="outline" size="icon">
+        <Input className="bg-white" value={code} readOnly />
+        <Button variant="outline" size="icon" className="bg-white">
           <ClipboardCopyIcon
             onClick={() => {
               void navigator.clipboard.writeText(code);

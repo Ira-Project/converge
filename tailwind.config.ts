@@ -22,6 +22,9 @@ export default {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        iraPink: "hsl(var(--ira-pink))",
+        iraYellow: "hsl(var(--ira-yellow))",
+        iraYellowLight: "hsl(var(--ira-yellow-light))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

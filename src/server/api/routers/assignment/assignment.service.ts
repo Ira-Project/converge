@@ -1,13 +1,12 @@
-import { and, asc, eq } from "drizzle-orm";
+import { and, asc, desc, eq } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
 import type { ListAssignmentsInput, GetAssignmentInput, MakeAssignmentLiveInput } from "./assignment.input";
 import { questionToAssignment } from "@/server/db/schema/questions";
 import { assignments } from "@/server/db/schema/assignment";
 
 export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssignmentsInput) => {
-  let assignments;
-  if (input.classroomId !== undefined) {
-    assignments = await ctx.db.query.assignments.findMany({
+  
+    const assignmentList = await ctx.db.query.assignments.findMany({
       where: (table, { eq }) => and(eq(table.classroomId, input.classroomId!), eq(table.isDeleted, false)),
       columns: {
         id: true,
@@ -18,43 +17,33 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
         description: true,
         imageUrl: true,
         isLive: true,
+        isLocked: true,
       }, 
       with: {
         topic: {
           columns: {
             name: true,
+            imageUrl: true,
           }
         }
-      }
+      },
+      orderBy: [asc(assignments.dueDate), desc(assignments.isLive), asc(assignments.isLocked)],
     })
-  } else {
-    assignments = await ctx.db.query.assignments.findMany({
-      where: (table, { eq }) => and(eq(table.isDeleted, false), eq(table.createdBy, ctx.user.id)),
-      columns: {
-        id: true,
-        name: true,
-        dueDate: true,
-        createdAt: true,
-        createdBy: true,
-        description: true,
-        imageUrl: true,
-        isLive: true,
-      }, 
-      with: {
-        topic: {
-          columns: {
-            name: true,
-          }
-        }
+
+    const now = new Date();
+    let activeIndex = 0;
+
+    for (const [_, assignment]  of assignmentList.entries()) {
+      if (assignment.dueDate && assignment.dueDate < now) {
+        activeIndex++;
       }
-    })
-  }
-  
-  const now = new Date();
-  return {
-    ongoingAssignments: assignments.filter(assignment => assignment.dueDate ? assignment.dueDate > now : true),
-    pastAssignments: assignments.filter(assignment => assignment.dueDate ? assignment.dueDate <= now : false)
-  }
+    }
+
+    return {
+      assignmentList,
+      activeIndex,
+    }
+
 };
 
 export const getAssignment = async (ctx: ProtectedTRPCContext, input: GetAssignmentInput) => {

@@ -23,6 +23,7 @@ export default async function AssignmentPage({ params } : { params: { id: string
         timeLimit={assignment.timeLimit}
         assignmentId={params.id}
         isLive={assignment.isLive}
+        dueDate={assignment.dueDate ?? undefined}
         testAttemptId={testAttemptId} />
     </main>
   );

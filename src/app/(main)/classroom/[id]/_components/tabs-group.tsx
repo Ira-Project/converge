@@ -14,7 +14,7 @@ export function TabsGroup({ id, role }: { id: string, role: Roles }) {
   const activeTab = useSelectedLayoutSegment('tabs');
 
   return (
-    <div className="flex gap-4">
+    <div className="flex gap-4 bg-white">
       <Link href={`${Paths.Classroom}${id}/`}>
         <Button variant={activeTab !== Tabs.People ? "secondary" : "ghost"} >
           Assignments

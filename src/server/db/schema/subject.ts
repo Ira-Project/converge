@@ -20,6 +20,7 @@ export const subjects = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name").notNull(),
+    imageUrl: text("image_url"),
     demoClassroomId: varchar("demo_classroom_id", { length: 21 }),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
@@ -70,6 +71,7 @@ export const topics = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name").notNull(),
+    imageUrl: text("image_url"),
     courseId: varchar("course_id", { length: 21 }).references(() => courses.id),
     conceptListId: varchar("concept_list_id").references(() => conceptLists.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),

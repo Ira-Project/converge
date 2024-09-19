@@ -37,6 +37,7 @@ interface Props {
     question: string,
     image?: string | null,
   }[];
+  dueDate?: Date;
   assignmentName?: string;
   assignmentId: string;
   isLive: boolean;
@@ -48,7 +49,7 @@ interface Props {
   testAttemptId: string;
 }
 
-export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName, assignmentId, classroom, isLive }: Props) => {
+export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName, assignmentId, classroom, isLive, dueDate }: Props) => {
   const explanationMutation = api.explanation.explain.useMutation();
   const submissionMutation = api.testAttempt.submit.useMutation();
 
@@ -165,7 +166,8 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
                 assignmentName={assignmentName} />
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading} />
+                loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
+                />
             </>
             : 
             <>
@@ -183,8 +185,8 @@ export const AssignmentView = ({ topic, questions, testAttemptId, assignmentName
         </div>
         
       </div>
-      <div className="grid grid-cols-[0.9fr_1.1fr] h-[calc(100vh-52px)] overflow-y-hidden">
-        <div className="flex flex-col gap-4 w-full px-8 py-8 overflow-y-hidden border-r-slate-200 border shadow-lg bg-[#FFD470] bg-opacity-20">
+      <div className="grid grid-cols-[0.9fr_1.1fr] h-[calc(100vh-48px)] overflow-y-hidden">
+        <div className="flex flex-col gap-4 w-full px-8 py-8 overflow-y-hidden border-r-slate-200 border shadow-lg bg-iraYellowLight bg-opacity-20">
             <Form {...form}>
               <form 
                 onSubmit={onSubmit} 
