@@ -15,6 +15,10 @@ export const StudentsList = async (
   return (
     <div className="flex flex-col gap-4">
       <p className="text-xl font-semibold">Students</p>
+      {
+        students.length === 0 && 
+        <p>No students have joined yet. Share the classroom code to invite them.</p>
+      }
       {students.map(student => (
         <div key={student.user.id}>
           <Person 

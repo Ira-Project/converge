@@ -1,55 +1,77 @@
-import { Separator } from "@/components/ui/separator";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Paths, Roles } from "@/lib/constants";
+import { HomeIcon, PersonIcon, StackIcon } from "@/components/icons";
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import { InviteStudents } from "./_components/invite-students";
+
+import Image from "next/image";
+import { type ReactNode } from "react";
 import { validateRequest } from "@/lib/auth/validate-request";
-import { Paths } from "@/lib/constants";
 import { api } from "@/trpc/server";
 import { redirect } from "next/navigation";
-import { Suspense, type ReactNode } from "react";
-import { TabsGroup } from "./@tabs/_components/tabs-group";
-import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
+import TabComponent from "./_components/tab-component";
 
-const ClassroomTabLayout = async ({ 
-  tabs, 
-  params 
-}:{ 
-  children: ReactNode, 
-  tabs: ReactNode,
-  params: { id: string } 
-}) => {
+export default async function ClassroomPage({ tabs, params }: { tabs: ReactNode, params: { id: string } }) {
   
   const { user } = await validateRequest();
   if (!user) redirect(Paths.Login);
 
-  const classroom = await api.classroom.get.query({
-    id: params.id,
-  });
+  const classroom = await api.classroom.get.query({ id: params.id });
 
+
+  if(!classroom) redirect(Paths.Home);
+
+  
   return (
-    <main className="p-16 py-8">
-      <div className="flex flex-col gap-4">
-        <div className="flex flex-col gap-2">
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem>
-                <BreadcrumbLink href={Paths.Home}>Home</BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Classroom</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb>
-          <Suspense fallback={ <Skeleton className="h-8 w-96" /> }>
-            <p className="text-2xl font-semibold"> {classroom?.course?.name}</p>
-            <p className="text-md text-muted-foreground"> {classroom?.description} </p>
-          </Suspense>
+    <div className="grid grid-cols-[0.45fr_0.55fr] gap-16 h-[calc(100vh-52px)] overflow-hidden max-w-screen-lg mx-auto">
+      <div className="mt-[10%] flex flex-col gap-4">
+        <div className="border-1 p-8 rounded-md flex flex-col gap-4 bg-iraYellowLight">
+          <Image 
+            style={{color: "#EF476F", fill: "#EF476F", stroke: "#EF476F"}}
+            color="#EF476F"
+            src={classroom?.course?.subject?.imageUrl ?? ""}
+            width={100}
+            height={100}
+            alt={classroom?.course?.name ?? ""}
+          />
+
+          <div className="flex flex-col gap-2">
+          <div>
+              <Breadcrumb>
+                <BreadcrumbList>
+                  <BreadcrumbItem>
+                    <BreadcrumbLink href={Paths.Home}>
+                      <HomeIcon height={15} width={15}/>
+                    </BreadcrumbLink>
+                  </BreadcrumbItem>
+                  <BreadcrumbSeparator />
+                  <BreadcrumbItem>
+                    <BreadcrumbPage>
+                      <span className="text-md">
+                        Classroom
+                      </span>
+                    </BreadcrumbPage>
+                  </BreadcrumbItem>
+                </BreadcrumbList>
+              </Breadcrumb>
+            </div>
+            <h1 className="text-3xl">
+              {classroom?.course?.name ?? classroom?.name}
+            </h1>
+            <div className="flex flex-row gap-4 mt-2 text-lg my-auto">
+              <InviteStudents code={classroom.code} />
+            </div>
+            {
+              user.role === Roles.Teacher &&
+              <div className="flex flex-row mt-8 gap-4 "> 
+                <TabComponent id={params.id}/>
+              </div>
+            }
+          </div>
         </div>
-        <TabsGroup id={params.id} role={user.role} />
-        <Separator />
       </div>
-      {tabs}
-    </main>
+      { 
+        tabs
+      }
+    </div>
   );
 };
-
-export default ClassroomTabLayout;
