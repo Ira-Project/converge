@@ -9,7 +9,6 @@ import { and, eq } from "drizzle-orm";
 import { generateId } from "lucia";
 import { answers, questions, questionToAssignment } from "../schema/questions";
 
-import json from "./electric_charge.json";
 import { courses, subjects, topics } from "../schema/subject";
 import { emailsToPreload } from './emailsToPreload'
 import { preloadedUsers } from "../schema/user";
@@ -20,14 +19,15 @@ type QuestionType = {
   question: string,
   lambdaUrl: string,
   topicId: string,
-  image?: string
-}
+  image: string,
+} 
 
+
+import json from "./work_energy_power.json";
 
 async function createQuestionsAndConceptListFromJson() {
 
-  // Parameters for assignment creation
-  const topicId = "01nfgjnqcqsbc9am0nr59";
+  const topicId = "hr1g0lm4lalm2zrft7f26";
 
   // Create a Concept List Object
   const conceptList = {
@@ -36,22 +36,9 @@ async function createQuestionsAndConceptListFromJson() {
     createdAt: new Date(),
     updatedAt: new Date(),
   }
-  await db.insert(conceptLists).values(conceptList)
+  await db.insert(conceptLists).values(conceptList)  
 
-  const conceptSet = new Set<string>()
-  // Iterate through concept list and make master list of concepts
-  for (const question of json.Questions) {
-    for (const concept_arr of question.required_concepts) { 
-      for (const concept of concept_arr) {
-        conceptSet.add(concept)
-      }
-    }
-    for(const concept of question.not_required_concepts) {
-      conceptSet.add(concept)
-    }
-  }
-
-  for (const concept of conceptSet) {
+  for (const concept of json.concepts) {
     // Check if concept already exists
     const existingConcept = await db.select().from(concepts).where(
       eq(concepts.text, concept),
@@ -84,28 +71,22 @@ async function createQuestionsAndConceptListFromJson() {
   )
 
   // Create the questions object
-  for (const question of json.Questions) {
+  for (const question of json.questions) {
     const questionId = generateId(21)
     const questionObject:QuestionType = {
       id: questionId,
-      question: question.Question,
+      question: question.question,
       lambdaUrl: question.lambda_url,
       topicId: topicId,
-    }
-    if(question.image) {
-      questionObject.image = question.image
+      image: question.image,
     }
     await db.insert(questions).values(questionObject)
-    for (const answer of question.Answer) {
-      const answerObject = {
-        id: generateId(21),
-        questionId: questionId,
-        answer: answer,
-        createdAt: new Date(),
-        updatedAt: new Date(),
-      }
-      await db.insert(answers).values(answerObject)
+    const answerObject = {
+      id: generateId(21),
+      questionId: questionId,
+      answer: question.answer,
     }
+    await db.insert(answers).values(answerObject)
   }
 }
 
@@ -400,11 +381,7 @@ async function createCoursesSubjectsAndTopics() {
         name: subject.name,
       })
     } else {
-      await db.update(subjects).set({
-        imageUrl: subject.imageUrl,
-      }).where(
-        eq(subjects.id, existingSubject[0].id),
-      )
+      // Update fields if needed
       subjectId = existingSubject[0].id
     }
   
@@ -426,6 +403,7 @@ async function createCoursesSubjectsAndTopics() {
           subjectId: subjectId,
         })
       } else {
+        // Update fields if needed
         courseId = existingCourse[0].id
       }
 
@@ -438,23 +416,16 @@ async function createCoursesSubjectsAndTopics() {
           )
         )
 
-        if (existingTopic?.[0]?.id !== undefined) {
-          if(topic.imageUrl !== "") {
-            await db.update(topics).set({
-              imageUrl: topic.imageUrl,
-            }).where(
-              eq(topics.id, existingTopic[0].id),
-            )
-          }
+        if (existingTopic?.[0]?.id === undefined) {
+          await db.insert(topics).values({
+            id: generateId(21),
+            name: topic.name,
+            courseId: courseId,
+            imageUrl: topic.imageUrl,
+          });
+        } else {
+          // Update fields if needed
         }
-
-        await db.insert(topics).values({
-          id: generateId(21),
-          name: topic.name,
-          courseId: courseId,
-          imageUrl: topic.imageUrl,
-        });
-
       }
     }
     
@@ -470,3 +441,11 @@ async function uploadPreloadedUsers() {
     }).onConflictDoNothing({ target: preloadedUsers.email })
   }
 }
+
+
+// void createCoursesSubjectsAndTopics();
+
+void createQuestionsAndConceptListFromJson();
+
+// void addQuestionsToAssignmentFromTopic();
+// void uploadPreloadedUsers();
