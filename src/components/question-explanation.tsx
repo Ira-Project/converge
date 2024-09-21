@@ -11,28 +11,27 @@ interface QuestionExplanationProps {
 }
 
 export function QuestionExplanation({ workingComplete, workingText } : QuestionExplanationProps) {
+  const workingTextList = workingText.split("\n");
   workingText = workingText.replace(/\n/g, "<br />");
 
   return (
-    <div className="flex flex-row gap-4">
-      {/* <Image
-        unoptimized
-        src={"https://source.boringavatars.com/marble/60/Ira"}
-        alt="Avatar"
-        className="block h-8 w-8 rounded-full leading-none"
-        width={64}
-        height={64}
-      /> */}
-        <div>
-          <FormattedText text={workingText} />
-          {
-            !workingComplete && 
-            <div className="flex flex-row justify-center mt-2">
-              <AnimatedSpinner />
+    <>
+      {
+        workingTextList.map((line, index) => {
+          return (
+            <div key={index} className="flex flex-row gap-4">
+              <FormattedText text={line} />
+              {
+                !workingComplete && 
+                <div className="flex flex-row justify-center mt-2">
+                  <AnimatedSpinner />
+                </div>
+              }
             </div>
-          }
-        </div>
-      </div>
+          );
+        })
+      }
+    </>
   );
 }
 

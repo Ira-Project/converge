@@ -48,6 +48,8 @@ export const conceptStatus = pgTable(
     status: conceptStatusEnum("status").notNull().default(ConceptStatus.NOT_PRESENT),
     explanationId: varchar("explanation_id", { length: 21 }).references(() => explanations.id).notNull(),
     conceptId: varchar("concept_id", { length: 21 }).references(() => concepts.id).notNull(),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
   }
 );
 export const correctConceptRelations = relations(conceptStatus, ({ one }) => ({
