@@ -32,7 +32,7 @@ export const explanations = pgTable(
   }
 );
 export const explanationRelations = relations(explanations, ({ one, many }) => ({
-  correctConcepts: many(conceptStatus),
+  conceptStatus: many(conceptStatus),
   computedAnswers: many(computedAnswers),
   testAttempts: one(testAttempts, {
     fields: [explanations.testAttemptId],
@@ -52,7 +52,7 @@ export const conceptStatus = pgTable(
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
   }
 );
-export const correctConceptRelations = relations(conceptStatus, ({ one }) => ({
+export const conceptStatusRelations = relations(conceptStatus, ({ one }) => ({
   explanation: one(explanations, {
     fields: [conceptStatus.explanationId],
     references: [explanations.id],
