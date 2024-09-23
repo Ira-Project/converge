@@ -23,8 +23,10 @@ export function AssignmentCard({
   role: Roles
 }) {
 
-  const locked = isLocked ?? (role === Roles.Student && (!isLive));
-  
+  const isPast = (dueDate && new Date(dueDate) < new Date()) ?? false;
+  // eslint-disable-next-line @typescript-eslint/prefer-nullish-coalescing
+  const locked = isLocked || (role === Roles.Student && (!isLive)) || (isPast && role === Roles.Student);
+
   return (
     <div className="mb-4">
       {
@@ -35,7 +37,8 @@ export function AssignmentCard({
             dueDate={dueDate}
             imageUrl={imageUrl}
             locked={locked}
-            isLive={isLive} />
+            isLive={isLive}
+            isPast={isPast} />
         </div>
           :
           <Link href={`${Paths.Assignment}${id}`}>
@@ -44,7 +47,8 @@ export function AssignmentCard({
               dueDate={dueDate}
               imageUrl={imageUrl}
               locked={locked}
-              isLive={isLive} />
+              isLive={isLive}
+              isPast={isPast} />
         </Link>
       }
     </div>
@@ -57,12 +61,14 @@ function CardContent({
   imageUrl,
   isLive,
   locked,
+  isPast,
 }: {
   topic: string,
   dueDate?: Date,
   imageUrl?: string,
   isLive: boolean,
   locked: boolean,
+  isPast: boolean,
 }) {
   
   return (
@@ -102,8 +108,13 @@ function CardContent({
                   className="my-auto"
                   width={20} 
                   height={20} />
-                  LOCKED
+                  {isPast ? 'PAST DUE DATE' : 'LOCKED'}
               </div>
+            :
+            isPast ?
+              <p className="ml-auto rounded-md border-2 py-1 px-2 text-sm font-bold text-muted-foreground">
+                PAST ASSIGNMENT
+              </p>
             :
             isLive ?
               <p className="ml-auto bg-red-500 text-white rounded-md py-1 px-2 text-sm font-bold">

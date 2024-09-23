@@ -27,7 +27,16 @@ import json from "./work_energy_power.json";
 
 async function createQuestionsAndConceptListFromJson() {
 
-  const topicId = "hr1g0lm4lalm2zrft7f26";
+  const topicId = "yyyah4hvk5r7188h7mgkk";
+
+  const topic = await db.select().from(topics).where(
+    eq(topics.id, topicId),
+  )
+
+  if(topic?.[0] === undefined || topic[0].conceptListId !== null) {
+    console.log("Topic not found or already has a concept list")
+    return
+  }
 
   // Create a Concept List Object
   const conceptList = {
@@ -93,8 +102,16 @@ async function createQuestionsAndConceptListFromJson() {
 async function addQuestionsToAssignmentFromTopic() {
 
   // Parameters for assignment creation
-  const topicId = "2";
-  const assignmentId = "iVE91v6Zl5PuBwOXni8P4";
+  const topicId = "yyyah4hvk5r7188h7mgkk";
+  const assignmentId = "9pcpaym65ccyj9rtlz6xd";
+
+  const existingQuestions = await db.select().from(questionToAssignment).where(
+    eq(questionToAssignment.assignmentId, assignmentId),
+  )
+  if(existingQuestions.length > 0) {
+    console.log("Assignment already has questions")
+    return
+  }
 
   const questionList = await db.select().from(questions).where(
     eq(questions.topicId, topicId),
@@ -444,8 +461,7 @@ async function uploadPreloadedUsers() {
 
 
 // void createCoursesSubjectsAndTopics();
+// void createQuestionsAndConceptListFromJson();
 
-void createQuestionsAndConceptListFromJson();
-
-// void addQuestionsToAssignmentFromTopic();
+void addQuestionsToAssignmentFromTopic();
 // void uploadPreloadedUsers();
