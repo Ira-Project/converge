@@ -191,6 +191,51 @@ async function createCoursesSubjectsAndTopics() {
           name: "IB MYP Extended Mathematics",
           topics: []
         },
+        {
+          name: "Mathematics",
+          topics: [
+            {
+              name: "Algebraic Expressions",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Algebraic+Expressions.png"
+            },
+            {
+              name: "Quadratic Equations",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Quadratic+Equations.png"
+            },
+            {
+              name: "Functions",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Functions.png"
+            },
+            {
+              name: "Complex Numbers",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Complex+Numbers.png"
+            },
+            {
+              name: "Trigonometry",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Trigonometry.png"
+            },
+            {
+              name: "Limits and Continuity",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Limits+and+Continuity.png"
+            },
+            {
+              name: "Differentiation",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Differentiation.png"
+            },
+            {
+              name: "Integration",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Integration.png"
+            },
+            {
+              name: "Probability",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Probability.png"
+            },
+            {
+              name: "Distributions",
+              imageUrl: "https://converge-ira-project.s3.ap-south-1.amazonaws.com/Distributions.png"
+            }
+          ]
+        }
       ]
     },
     {
@@ -463,5 +508,5 @@ async function uploadPreloadedUsers() {
 // void createCoursesSubjectsAndTopics();
 // void createQuestionsAndConceptListFromJson();
 
-void addQuestionsToAssignmentFromTopic();
+// void addQuestionsToAssignmentFromTopic();
 // void uploadPreloadedUsers();

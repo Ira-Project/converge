@@ -21,6 +21,7 @@ import { validateRequest } from "@/lib/auth/validate-request";
 import { Paths, Roles } from "../constants";
 import { env } from "@/env";
 import { eq } from "drizzle-orm";
+import { usersToClassrooms } from "@/server/db/schema/classroom";
 
 export interface ActionResponse<T> {
   fieldError?: Partial<Record<keyof T, string | undefined>>;
@@ -196,6 +197,20 @@ export async function verifyEmail(_: unknown, formData: FormData): Promise<{ err
 
   if(preloadedUsers?.notOnboarded) {
     redirect(Paths.Onboarding);
+  }
+
+  const subjects = await db.query.subjects.findMany();
+
+  if(!preloadedUsers) {
+    for (const subject of subjects) {
+      if(subject.demoClassroomId) {
+        await db.insert(usersToClassrooms).values({
+          userId: user.id,
+          classroomId: subject.demoClassroomId,
+          role: Roles.Student,
+        })
+      }
+    }
   }
   redirect(Paths.Home);
   

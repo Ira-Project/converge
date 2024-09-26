@@ -6,6 +6,7 @@ import { google, lucia } from "@/lib/auth";
 import { db } from "@/server/db";
 import { Paths, Roles } from "@/lib/constants";
 import { users } from "@/server/db/schema/user";
+import { usersToClassrooms } from "@/server/db/schema/classroom";
 
 type GoogleUser = {
   id: string;
@@ -81,6 +82,20 @@ export async function GET(request: Request): Promise<Response> {
           status: 302,
           headers: { Location: Paths.Onboarding },
         });
+      }
+
+      const subjects = await db.query.subjects.findMany();
+
+      if(!preloadedUsers) {
+        for (const subject of subjects) {
+          if(subject.demoClassroomId) {
+            await db.insert(usersToClassrooms).values({
+              userId: userId,
+              classroomId: subject.demoClassroomId,
+              role: Roles.Student,
+            })
+          }
+        }
       }
       
       return new Response(null, {
