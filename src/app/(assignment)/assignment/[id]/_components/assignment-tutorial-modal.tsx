@@ -20,7 +20,7 @@ interface Props {
 export default function AssignmentTutorialModal({ assignmentName, classroom, topic }: Props) {  
 
   return (
-    <Dialog>
+    <Dialog defaultOpen>
       <DialogTrigger asChild>
         <Button 
           size="sm"
@@ -55,7 +55,14 @@ export default function AssignmentTutorialModal({ assignmentName, classroom, top
           How to take the assignment?
         </DialogDescription>
         <div className="px-16">
-          <TutorialCarousel />
+          {/* <TutorialCarousel /> */}
+          <div className="relative pb-[57.02%] h-0 border-0">
+            <iframe 
+              src="https://www.loom.com/embed/307a3d4d5b764eadb430e488aff50f7d?sid=bdbf8333-2c42-44d2-8bcf-210c9dea8d5e" 
+              className="absolute w-full h-full"
+              allowFullScreen
+            />
+          </div>
         </div>
         <DialogFooter>
           <DialogClose asChild>
