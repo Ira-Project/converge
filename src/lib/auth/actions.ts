@@ -69,7 +69,7 @@ export async function login(_: unknown, formData: FormData): Promise<ActionRespo
 
   const session = await lucia.createSession(existingUser.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
-  cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+  (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
   return redirect(Paths.Home);
 }
 
@@ -114,7 +114,7 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
 
   const session = await lucia.createSession(userId, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
-  cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+  (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
   return redirect(Paths.VerifyEmail);
 }
 
@@ -127,7 +127,7 @@ export async function logout(): Promise<{ error: string } | void> {
   }
   await lucia.invalidateSession(session.id);
   const sessionCookie = lucia.createBlankSessionCookie();
-  cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+  (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
   return redirect("/login");
 }
 
@@ -193,7 +193,7 @@ export async function verifyEmail(_: unknown, formData: FormData): Promise<{ err
   }).where(eq(users.id, user.id));
   const session = await lucia.createSession(user.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
-  cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+  (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
 
   if(preloadedUsers?.notOnboarded) {
     redirect(Paths.Onboarding);
@@ -279,7 +279,7 @@ export async function resetPassword(
   await db.update(users).set({ hashedPassword }).where(eq(users.id, dbToken.userId));
   const session = await lucia.createSession(dbToken.userId, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
-  cookies().set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+  (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
   redirect(Paths.Home);
 }
 

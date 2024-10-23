@@ -19,8 +19,8 @@ export async function GET(request: Request): Promise<Response> {
   const url = new URL(request.url);
   const code = url.searchParams.get("code");
   const state = url.searchParams.get("state");
-  const storedState = cookies().get("state")?.value ?? null;
-  const storedCodeVerifier = cookies().get("code_verifier")?.value ?? null;
+  const storedState = (await cookies()).get("state")?.value ?? null;
+  const storedCodeVerifier = (await cookies()).get("code_verifier")?.value ?? null;
 
   if (!code || !state || !storedState || state !== storedState || !storedCodeVerifier) {
     return new Response(null, {
@@ -71,7 +71,7 @@ export async function GET(request: Request): Promise<Response> {
 
       const session = await lucia.createSession(userId, {});
       const sessionCookie = lucia.createSessionCookie(session.id);
-      cookies().set(
+      (await cookies()).set(
         sessionCookie.name,
         sessionCookie.value,
         sessionCookie.attributes,
@@ -116,7 +116,7 @@ export async function GET(request: Request): Promise<Response> {
 
     const session = await lucia.createSession(existingUser.id, {});
     const sessionCookie = lucia.createSessionCookie(session.id);
-    cookies().set(
+    (await cookies()).set(
       sessionCookie.name,
       sessionCookie.value,
       sessionCookie.attributes,

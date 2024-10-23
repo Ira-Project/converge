@@ -33,7 +33,7 @@ export const listAssignments = async (ctx: ProtectedTRPCContext, input: ListAssi
     const now = new Date();
     let activeIndex = 0;
 
-    for (const [_, assignment]  of assignmentList.entries()) {
+    for (const [, assignment]  of assignmentList.entries()) {
       if (assignment.dueDate && assignment.dueDate < now) {
         activeIndex++;
       }
