@@ -10,8 +10,13 @@ import { api } from "@/trpc/server";
 import { redirect } from "next/navigation";
 import TabComponent from "./_components/tab-component";
 
-export default async function ClassroomPage({ tabs, params }: { tabs: ReactNode, params: { id: string } }) {
-  
+export default async function ClassroomPage(props: { tabs: ReactNode, params: Promise<{ id: string }> }) {
+  const params = await props.params;
+
+  const {
+    tabs
+  } = props;
+
   const { user } = await validateRequest();
   if (!user) redirect(Paths.Login);
 
@@ -20,7 +25,7 @@ export default async function ClassroomPage({ tabs, params }: { tabs: ReactNode,
 
   if(!classroom) redirect(Paths.Home);
 
-  
+
   return (
     <div className="grid grid-cols-[0.45fr_0.55fr] gap-16 h-[calc(100vh-52px)] overflow-hidden max-w-screen-lg mx-auto">
       <div className="mt-[10%] flex flex-col gap-4">

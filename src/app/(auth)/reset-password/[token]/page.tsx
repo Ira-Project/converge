@@ -12,11 +12,12 @@ export const metadata = {
   description: "Reset Password Page",
 };
 
-export default function ResetPasswordPage({
-  params,
-}: {
-  params: { token: string };
-}) {
+export default async function ResetPasswordPage(
+  props: {
+    params: Promise<{ token: string }>;
+  }
+) {
+  const params = await props.params;
   return (
     <Card className="w-full max-w-md">
       <CardHeader className="space-y-1">
