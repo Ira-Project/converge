@@ -1,0 +1,83 @@
+{
+  "name": "Work, Energy and Power",
+  "topicId": "",
+  "reasoningQuestions": [
+      {
+        "questionText": "A block of mass $!$5kg$!$ starting from rest pulled up on a smooth incline plane making an angle of $!$30∘$!$ with horizontal with an affective acceleration of  $!$1 ms−2$!$. What is the power delivered by the pulling force at $!$t = 10s$!$ from the start?",
+        "questionImage": "",
+        "answerText": "50 Watts",
+        "answerImage": "",
+        "numberOfSteps": 3,
+        "topicId": "",
+        "answerOptions": [
+          {
+            "id": "a1b2c3d4e5f6g7h8i9j0k",
+            "optionText": "Power delivered by the pulling force can be calculated using the formula $!$P = Fv$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "l1m2n3o4p5q6r7s8t9u0v",
+            "optionText": "Velocity of the block can be calculated using the formula $!$v = u + at$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "w1x2y3z4a5b6c7d8e9f0g",
+            "optionText": "The force applied to the block can be calculated using the formula $!$F = ma$!$.\n",
+            "optionImage": ""
+          },
+          {
+            "id": "s1t2u3v4w5x6y7z8a9b0c",
+            "optionText": "The force applied to the block can be calculated using the formula $!$F = mg m*g*sinθ$!$.",
+            "optionImage": ""
+          },
+          {
+            "id": "d1e2f3g4h5i6j7k8l9m0n",
+            "optionText": "The force applied to the block can be calculated using the formula $!$F = ma + m*g*sinθ$!$.",
+            "optionImage": ""
+          },
+          {
+            "id": "o1p2q3r4s5t6u7v8w9x0y",
+            "optionText": "Power delivered by the pulling force can be calculated using the formula $!$P = W /t$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "z1a2b3c4d5e6f7g8h9i0j",
+            "optionText": "Work done by the pulling force can be calculated using the formula $!$W = Fd$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "k1l2m3n4o5p6q7r8s9t0u",
+            "optionText": "Distance travelled by the block can be calculated using the formula $!$d = ut + 1/2at^2$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "asdf091231asdfaqwer0k",
+            "optionText": "Work done is equal to the change in kinetic energy of the block using the formula $!$KE = 1/2mv^2$!$",
+            "optionImage": ""
+          }
+        ],
+        "pathways": [
+          {
+            "steps": [
+              {
+                "stepNumber": 1,
+                "isCorrect": true,
+                "answerOptionId": "a1b2c3d4e5f6g7h8i9j0k"
+              },
+              {
+                "stepNumber": 2,
+                "isCorrect": true,
+                "answerOptionId": "l1m2n3o4p5q6r7s8t9u0v"
+              },
+              {
+                "stepNumber": 3,
+                "isCorrect": false,
+                "answerOptionId": "w1x2y3z4a5b6c7d8e9f0g"
+              }
+            ]
+          }
+
+        ]
+      }
+  ]
+}

@@ -12,6 +12,7 @@ import { conceptLists } from "./concept";
 import { assignments } from "./assignment";
 import { users } from "./user";
 import { questions } from "./questions";
+import { reasoningQuestions } from "./reasoningQuestions";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -91,4 +92,5 @@ export const topicRelations = relations(topics, ({ one, many }) => ({
   }),
   assignments: many(assignments),
   questions: many(questions),
+  reasoningQuestions: many(reasoningQuestions),
 }));

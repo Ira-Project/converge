@@ -81,4 +81,7 @@ export {
   StackIcon,
   HomeIcon,
   PersonIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  RotateCounterClockwiseIcon
 } from "@radix-ui/react-icons";

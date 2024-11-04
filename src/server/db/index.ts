@@ -10,7 +10,10 @@ import * as concept from "./schema/concept";
 import * as assignmentDetails from "./schema/questions";
 import * as explanations from "./schema/explanations";
 import * as testAttempts from "./schema/testAttempt";
-import { lessonPlanFiles } from "./schema/lessonPlan";
+import * as lessonPlanFiles from "./schema/lessonPlan";
+import * as reasoningQuestions from "./schema/reasoningQuestions";
+import * as reasoningQuestionAttempts from "./schema/reasoningQuestionAttempts";
+import * as reasoningAssignments from "./schema/reasoningAssignment";
 
 export const client = postgres(env.DATABASE_URL, {
   max_lifetime: 10, 
@@ -29,5 +32,8 @@ export const db = drizzle(client, { schema:
     ...explanations,
     ...testAttempts,
     ...lessonPlanFiles,
+    ...reasoningAssignments,
+    ...reasoningQuestionAttempts,
+    ...reasoningQuestions,
   }
 });

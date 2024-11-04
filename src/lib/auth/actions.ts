@@ -118,17 +118,17 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
   return redirect(Paths.VerifyEmail);
 }
 
-export async function logout(): Promise<{ error: string } | void> {
+export async function logout(): Promise<never> {
   const { session } = await validateRequest();
   if (!session) {
-    return {
-      error: "No session found",
-    };
+    redirect("/login");
   }
+
   await lucia.invalidateSession(session.id);
   const sessionCookie = lucia.createBlankSessionCookie();
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
-  return redirect("/login");
+  
+  redirect("/login");
 }
 
 export async function resendVerificationEmail(): Promise<{

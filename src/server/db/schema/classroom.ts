@@ -13,6 +13,7 @@ import { relations } from "drizzle-orm";
 import { courses } from "./subject";
 import { users } from "./user";
 import { assignments } from "./assignment";
+import { reasoningQuestions } from "./reasoningQuestions";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -40,6 +41,7 @@ export const classroomRelations = relations(classrooms, ({ many, one }) => ({
     references: [courses.id],
   }),
   assignments: many(assignments),
+  reasoningQuestions: many(reasoningQuestions),
 }));
 
 export const usersToClassrooms = pgTable(
