@@ -76,6 +76,7 @@ export const getAssignment = async (ctx: ProtectedTRPCContext, input: GetAssignm
         }
       },
       questionToAssignment: {
+        where: (table, { eq }) => eq(table.isDeleted, false),
         orderBy: [asc(questionToAssignment.order)],
         with: {
           question: {
