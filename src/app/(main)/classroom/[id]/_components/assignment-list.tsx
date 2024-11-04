@@ -11,7 +11,7 @@ import { AssignmentCard } from "./assignment-card";
 import { UploadLessonPlanForm } from "./upload-lesson-plan-form";
 
 
-export const AssignmentList = async (
+export const AssignmentList = (
   { assignments, role } : 
   { assignments: RouterOutputs["assignment"]["list"], role: Roles }
 ) => {

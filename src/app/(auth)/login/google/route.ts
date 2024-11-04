@@ -11,7 +11,9 @@ export async function GET(): Promise<Response> {
   );
 
   // store state verifier as cookie
-  cookies().set("state", state, {
+  (await
+    // store state verifier as cookie
+    cookies()).set("state", state, {
     secure: true, // set to false in localhost
     path: "/",
     httpOnly: true,
@@ -19,7 +21,9 @@ export async function GET(): Promise<Response> {
   });
 
   // store code verifier as cookie
-  cookies().set("code_verifier", codeVerifier, {
+  (await
+    // store code verifier as cookie
+    cookies()).set("code_verifier", codeVerifier, {
     secure: true, // set to false in localhost
     path: "/",
     httpOnly: true,

@@ -4,7 +4,8 @@ import { redirect } from "next/navigation";
 import { api } from "@/trpc/server";
 import { AssignmentView } from "./_components/assignment-view";
 
-export default async function AssignmentPage({ params } : { params: { id: string } }) {
+export default async function AssignmentPage(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params;
   const { user } = await validateRequest();
   if (!user) redirect(Paths.Login);
 
@@ -12,7 +13,7 @@ export default async function AssignmentPage({ params } : { params: { id: string
   const testAttemptId = await api.testAttempt.create.mutate({ assignmentId: params.id })
 
   if (!assignment) redirect(Paths.Home);
-  
+
   return (
     <main>
       <AssignmentView 
