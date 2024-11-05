@@ -130,7 +130,6 @@ export async function logout(): Promise<never> {
   
   redirect("/login");
 }
-
 export async function resendVerificationEmail(): Promise<{
   error?: string;
   success?: boolean;

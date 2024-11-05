@@ -34,6 +34,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     text: input.explanation,
     testAttemptId: input.testAttemptId!,
     createdBy: ctx.user.id,
+    formula: input.formula?.join("\n"),
   })
 
   console.log("Explanation Created", Date.now())
@@ -49,6 +50,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     },
     with: {
       questionToAssignment: {
+        where: (table, { eq }) => eq(table.isDeleted, false),
         with: {
           question: {
             columns: {
@@ -71,6 +73,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     id: string
     status: ConceptStatus
   }[] = []
+  
   if(conceptListId) {
     console.log("ConceptList Found", Date.now())
     let conceptListConcepts = await ctx.db.query.conceptListConcepts.findMany({
