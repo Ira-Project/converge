@@ -34,6 +34,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     text: input.explanation,
     testAttemptId: input.testAttemptId!,
     createdBy: ctx.user.id,
+    formula: input.formula?.join("\n"),
   })
 
   console.log("Explanation Created", Date.now())
