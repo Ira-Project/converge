@@ -152,6 +152,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
           image: body.image ? body.image : undefined,
           imageHeight: body.imageHeight ? body.imageHeight : undefined,
           imageWidth: body.imageWidth ? body.imageWidth : undefined,
+          explanationId: explanationId,
         }
       })
       .then(async () => {
