@@ -23,6 +23,7 @@ export const explanations = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     text: text("text").notNull(),
+    formula: text("formula"),
     testAttemptId: varchar("test_attempt_id", { length: 21 }).references(() => testAttempts.id),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),
