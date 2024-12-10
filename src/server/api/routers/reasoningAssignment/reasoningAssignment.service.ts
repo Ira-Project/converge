@@ -1,6 +1,6 @@
-import { asc, eq } from "drizzle-orm";
+import { asc, eq, sql } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { CreateReasoningAssignmentAttemptInput, GetReasoningAssignmentInput, MakeReasoningAssignmentLiveInput } from "./reasoningAssignment.input";
+import type { CreateReasoningAssignmentAttemptInput, GetReasoningAssignmentInput, MakeReasoningAssignmentLiveInput, SubmitReasoningAssignmentAttemptInput } from "./reasoningAssignment.input";
 import { reasoningAssignmentAttempts, reasoningAssignments } from "@/server/db/schema/reasoningAssignment";
 import { reasoningQuestionToAssignment } from "@/server/db/schema/reasoningQuestions";
 import { generateId } from "lucia";
@@ -80,4 +80,25 @@ export const createReasoningAssignmentAttempt = async (ctx: ProtectedTRPCContext
   return id;
 }
 
-// TODO: Implement submit reasoning assignment attempt
+export const submitReasoningAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: SubmitReasoningAssignmentAttemptInput) => {
+
+  let score = 0.0;
+  for (const status of input.statuses) {
+    if (status === 'complete') {
+      score += 1;
+    }
+    if (status === 'part2') {
+      score += 0.5;
+    }
+    if (status === 'part3') {
+      score += 0.75;
+    }
+  }
+
+  await ctx.db.update(reasoningAssignmentAttempts)
+    .set({
+      score: sql`${score}`,
+      submittedAt: new Date(),
+    })
+    .where(eq(reasoningAssignmentAttempts.id, input.attemptId))
+}

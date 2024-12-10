@@ -5,12 +5,14 @@ import * as inputs from "./reasoning.input";
 export const reasoningRouter = createTRPCRouter({
   part1EvaluatePathway: protectedProcedure
     .input(inputs.part1EvaluatePathwaySchema)
-    .mutation(({ ctx, input }) => services.part1EvaluatePathway(ctx, input))
-});
+    .mutation(({ ctx, input }) => services.part1EvaluatePathway(ctx, input)),
 
-// part2IncorrectOptionsInPathway: protectedProcedure
-//   .input(inputs.part2IncorrectOptionsInPathwaySchema)
-//   .query(({ ctx, input }) => services.part2EvaluateIncorrectOptionsInPathway(ctx, input)),
-// part3FinalCorrectOptions: protectedProcedure
-//   .input(inputs.part3FinalCorrectOptionsSchema)
-//   .mutation(({ ctx, input }) => services.part3FinalCorrectOp(ctx, input)),
+  part2CorrectPathway: protectedProcedure
+    .input(inputs.part2CorrectPathwaySchema)
+    .mutation(({ ctx, input }) => services.part2CorrectPathway(ctx, input)),
+
+  part3FinalCorrectAnswer: protectedProcedure
+    .input(inputs.part3FinalCorrectAnswerSchema)
+    .mutation(({ ctx, input }) => services.part3FinalCorrectAnswer(ctx, input)),
+
+});

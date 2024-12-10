@@ -3,17 +3,17 @@ import { motion } from 'framer-motion';
 import FormattedText from '@/components/formatted-text';
 import { PathwayStepResult } from '@/server/api/routers/reasoning/reasoning.service';
 
-const getPathwayStepColor = (result: PathwayStepResult): string => {
+export const getPathwayStepColor = (result: PathwayStepResult): string => {
   switch (result) {
     case PathwayStepResult.CORRECT:
-      return 'bg-green-100 border-green-500';
+      return '!bg-green-100 !border-green-500';
     case PathwayStepResult.WRONG:
-      return 'bg-red-100 border-red-500';
+      return '!bg-red-100 !border-red-500';
     case PathwayStepResult.WRONG_POSITION:
-      return 'bg-yellow-100 border-yellow-500';
+      return '!bg-yellow-100 !border-yellow-500';
     case PathwayStepResult.PENDING:
     default:
-      return 'bg-gray-50 border-gray-300';
+      return '!bg-gray-50 !border-gray-300';
   }
 };
 
@@ -56,6 +56,10 @@ const DropZone: React.FC<DropZoneProps> = ({
       border-2
       border-dashed
       transition-all
+      flex
+      items-center
+      text-sm
+      ${getPathwayStepColor(status)}
       ${isDragging ? 'border-gray-400 bg-gray-100' : 'border-gray-300'}
       ${step 
         ? 'bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1),0_4px_6px_rgba(0,0,0,0.05)] translate-y-[-1px]' 
@@ -68,7 +72,6 @@ const DropZone: React.FC<DropZoneProps> = ({
       before:inset-0
       before:rounded-lg
       ${!step && 'before:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]'}
-      ${getPathwayStepColor(status)}
     `}
     onDragOver={onDragOver}
     onDrop={(e) => onDrop(e, index)}

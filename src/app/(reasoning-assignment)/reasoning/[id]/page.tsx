@@ -9,7 +9,6 @@ export default async function AssignmentPage(props: { params: Promise<{ id: stri
   const { user } = await validateRequest();
   if (!user) redirect(Paths.Login);
 
-  // const assignment = await api.assignment.get.query({ assignmentId: params.id });
   const reasoningAssignment = await api.reasoningAssignment.get.query({ assignmentId: params.id });
   const reasoningAttemptId = await api.reasoningAssignment.createAttempt.mutate({ assignmentId: params.id });
 

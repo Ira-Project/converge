@@ -10,6 +10,9 @@ import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm/relations";
 import { topics } from "./subject";
 import { reasoningAssignments } from "./reasoningAssignment";
+import { sql } from "drizzle-orm";
+import { reasoningPathwayAttempts, reasoningPathwayAttemptSteps } from "./reasoningQuestionAttempts";
+import { reasoningAttemptFinalAnswer } from "./reasoningQuestionAttempts";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -23,6 +26,7 @@ export const reasoningQuestions = pgTable(
     answerText: text("answer").notNull(),
     answerImage: text("answer_image"),
     numberOfSteps: integer("number_of_steps").notNull(),
+    correctAnswers: text("correct_answers").array().notNull().default(sql`'{}'::text[]`),
     topicId: varchar("topic_id", { length: 21 }).references(() => topics.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
@@ -38,6 +42,11 @@ export const reasoningQuestionRelations = relations(reasoningQuestions, ({ one, 
     fields: [reasoningQuestions.topicId],
     references: [topics.id],
   }),
+  finalAnswer: one(reasoningAttemptFinalAnswer, {
+    fields: [reasoningQuestions.id],
+    references: [reasoningAttemptFinalAnswer.questionId],
+  }),
+  attempts: many(reasoningPathwayAttempts)
 }));
 
 // Junction table linking reasoning questions to assignments with ordering capability
@@ -85,6 +94,7 @@ export const reasoningAnswerOptionRelations = relations(reasoningAnswerOptions, 
     references: [reasoningQuestions.id],
   }),
   steps: many(reasoningPathwayStep),
+  reasoningPathwayAttemptSteps: many(reasoningPathwayAttemptSteps),
 }));
 
 // Table for defining different solution pathways for a reasoning question

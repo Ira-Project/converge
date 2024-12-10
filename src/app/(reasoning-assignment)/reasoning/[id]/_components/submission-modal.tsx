@@ -17,14 +17,14 @@ export default function SubmissionModal({ open } : { open: boolean }) {
         <DialogHeader>
           <DialogTitle className="mb-4 text-2xl">Assignment Submitted!</DialogTitle>
           <DialogDescription>
-            There's a lot of things I've learned from you.
-            Thank you for teaching me. Wishing you a day as awesome as you are!
+            Thank you for helping me fix the mistakes I made. I sure learnt a lot from you.
+            Wishing you a day as awesome as you are!
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
           <DialogClose asChild>
             <Button variant="link">
-              Back to Home
+              Back to Homepage
             </Button>
           </DialogClose>
         </DialogFooter>

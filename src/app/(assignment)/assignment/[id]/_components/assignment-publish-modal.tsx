@@ -13,8 +13,8 @@ import { Calendar } from "@/components/ui/calendar";
 import { CalendarIcon } from "@/components/icons";
 import { api } from "@/trpc/react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { makeAssignmentLiveSchema } from "@/server/api/routers/assignment/assignment.input";
 import { DialogDescription } from "@radix-ui/react-dialog";
+import { makeAssignmentLiveSchema } from "@/server/api/routers/explainingAssignment/explainingAssignment.input";
 
 export default function AssignmentPublishModal({ 
   assignmentId, 

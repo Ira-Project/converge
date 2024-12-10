@@ -11,7 +11,7 @@ const DraggableStep: React.FC<DraggableStepProps> = ({ step, onDragStart }) => (
   <motion.div
     className="bg-white p-3 rounded-lg shadow-md cursor-move border border-gray-200
               transform transition-transform hover:translate-y-[-2px]
-              relative before:absolute before:inset-x-0 before:bottom-0 before:h-1 before:bg-gray-100 before:rounded-b-lg"
+              relative before:absolute before:inset-x-0 before:bottom-0 before:h-1 before:bg-gray-100 before:rounded-b-lg text-sm"
     whileHover={{ scale: 1.02 }}
     whileDrag={{ scale: 1.05, opacity: 0.8 }}
     style={{

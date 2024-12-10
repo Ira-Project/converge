@@ -7,18 +7,17 @@ export const part1EvaluatePathwaySchema = z.object({
 });
 export type Part1EvaluatePathwayInput = z.infer<typeof part1EvaluatePathwaySchema>;
 
-export const part2IncorrectOptionsInPathwaySchema = z.object({
+export const part2CorrectPathwaySchema = z.object({
   attemptId: z.string(),
   questionId: z.string(),
   optionIds: z.array(z.string()),
   pathwayId: z.string(),
 });
-export type Part2IncorrectOptionsInPathwayInput = z.infer<typeof part2IncorrectOptionsInPathwaySchema>;
+export type part2CorrectPathwayInput = z.infer<typeof part2CorrectPathwaySchema>;
 
-export const part3FinalCorrectOptionsSchema = z.object({
+export const part3FinalCorrectAnswerSchema = z.object({
   attemptId: z.string(),
   questionId: z.string(),
-  optionIds: z.array(z.string()),
-  pathwayId: z.string(),
+  answer: z.string(),
 });
-export type Part3FinalCorrectOptionsInput = z.infer<typeof part3FinalCorrectOptionsSchema>;
+export type Part3FinalCorrectAnswerInput = z.infer<typeof part3FinalCorrectAnswerSchema>;
