@@ -22,7 +22,6 @@ type QuestionType = {
   image: string,
 } 
 
-
 import json from "./work_energy_power.json";
 import reasoningJson from "./reasoning/work_energy_power.json";
 import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../schema/reasoningQuestions";
@@ -539,6 +538,7 @@ async function createReasoningQuestionsFromJson() {
         questionText: reasoningQuestion.questionText,
         questionImage: reasoningQuestion.questionImage,
         answerText: reasoningQuestion.answerText, 
+        correctAnswers: reasoningQuestion.correctAnswers,
         answerImage: reasoningQuestion.answerImage,
         numberOfSteps: reasoningQuestion.numberOfSteps,
         topicId: topicId,
@@ -550,7 +550,7 @@ async function createReasoningQuestionsFromJson() {
       const existingOption = await db.select().from(reasoningAnswerOptions).where(
         and(
           eq(reasoningAnswerOptions.questionId, questionId),
-          eq(reasoningAnswerOptions.optionText, option.optionText)
+          eq(reasoningAnswerOptions.id, option.id)
         )
       )
 
@@ -592,13 +592,24 @@ async function createReasoningQuestionsFromJson() {
 
         // Create the steps for this pathway
         for (const step of pathway.steps) {
-          await db.insert(reasoningPathwayStep).values({
-            id: generateId(21),
-            pathwayId: pathwayId,
-            answerOptionId: step.answerOptionId,
-            stepNumber: step.stepNumber,
-            isCorrect: step.isCorrect,
-          })
+          // Check if the step already exists
+          const existingStep = await db.select().from(reasoningPathwayStep).where(
+            and(
+              eq(reasoningPathwayStep.pathwayId, pathwayId),
+              eq(reasoningPathwayStep.answerOptionId, step.answerOptionId)
+            )
+          ) 
+
+          if (existingStep?.[0]?.id === undefined) {
+            await db.insert(reasoningPathwayStep).values({
+              id: generateId(21),
+              pathwayId: pathwayId,
+              answerOptionId: step.answerOptionId,
+              stepNumber: step.stepNumber,
+              isCorrect: step.isCorrect,
+              replacementOptionId: step.replacementOptionId,
+            })
+          }
         }
       }
     }
@@ -658,10 +669,8 @@ async function createReasoningAssignmentFromTopic() {
   }
 }
 
-// void createReasoningQuestionsFromJson();
+void createReasoningQuestionsFromJson();
 // void createReasoningAssignmentFromTopic();
-
-
 
 // void createCoursesSubjectsAndTopics();
 // void createQuestionsAndConceptListFromJson();

@@ -377,7 +377,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ reas
 
               {/* Answer Section */}
               <div className="space-y-4">
-                <h3 className="font-semibold text-center">Answer</h3>
+                <h3 className="font-semibold text-center">Incorrectly Computed Answer</h3>
                 <p className="text-lg text-center leading-relaxed">
                   <FormattedText text={currentQuestion?.question.answerText ?? ''} />
                 </p>
@@ -420,9 +420,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ reas
           </>
 
           {/* Part 2 */}
-
           <>
-          
             <AnimatePresence>
               {(currentState?.part === 'part2' || currentState?.part === 'part3' || currentState?.part === 'complete') && (
                 <motion.div
@@ -433,7 +431,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ reas
                 >
                   <div className="space-y-6">
                     <h3 className="text-center text-lg">Fix Ira’s mistake by replacing the incorrect option with the correct reasoning pathway.</h3>
-                    <div className={`grid ${currentState.part === 'part3' ? 'grid-cols-[1fr_auto_1fr]' : 'grid-cols-2'} gap-8`}>
+                    <div className={`grid ${currentState.part === 'part3' || currentState.part === 'complete' ? 'grid-cols-[1fr_auto_1fr]' : 'grid-cols-2'} gap-8`}>
                       <div className="space-y-2">
                         <h4 className="font-medium">Ira's Reasoning:</h4>
                         {currentState.reasoningPathwayOptions.map((step, index) => (
@@ -441,7 +439,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ reas
                             key={index}
                             text={step?.text ?? ''}
                             status={
-                              currentState.part === 'part3' 
+                              (currentState?.part === 'part3' || currentState?.part === 'complete')
                               && currentState.incorrectSteps?.includes(index) 
                               ? PathwayStepResult.WRONG
                               : PathwayStepResult.PENDING
@@ -450,7 +448,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ reas
                         ))}
                       </div>
                       {
-                        currentState.part === 'part3' && (
+                        (currentState?.part === 'part3' || currentState?.part === 'complete') && (
                           <div className="text-center text-lg flex items-center justify-center">
                             <ArrowRightIcon className="w-6 h-6" />
                           </div>
@@ -459,8 +457,8 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ reas
                       
                       <div className="space-y-2">
                         <h4 className="font-medium">Correct Reasoning:</h4>
-                        {currentState.part2Steps.map((step, index) => (
-                          currentState.part === 'part2' ? (
+                        {currentState?.part2Steps.map((step, index) => (
+                          currentState?.part === 'part2' ? (
                           <DropZone
                             key={index}
                             index={index}
@@ -480,7 +478,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ reas
                           )
                         ))}
                         {
-                          currentState.part === 'part2' && (
+                          currentState?.part === 'part2' && (
                             <button
                               onClick={resetPart2}
                               className="mt-2 flex items-center text-sm text-gray-600 hover:text-gray-900"
@@ -493,7 +491,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ reas
                       </div>
                     </div>
                     {
-                      currentState.part === 'part2' && (
+                      currentState?.part === 'part2' && (
                         <div className="mt-8 p-4 bg-gray-50 rounded-lg">
                           <h3 className="font-semibold mb-4">Available Steps</h3>
                           <div className="grid grid-cols-2 gap-2">
@@ -524,11 +522,9 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ reas
                     </LoadingButton>
                   )}
 
-
                 </motion.div>
               )}
             </AnimatePresence>
-
           </>
 
           {/* Part 3 */}
