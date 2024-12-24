@@ -28,6 +28,7 @@ export const users = pgTable(
     avatar: varchar("avatar", { length: 255 }),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isOnboarded: boolean("is_onboarded").default(false).notNull(),
   },
   (t) => ({
     emailIdx: index("user_email_idx").on(t.email),
@@ -37,6 +38,7 @@ export const usersRelations = relations(users, ({ many }) => ({
   classMembers: many(usersToClassrooms),
   teacherCourses: many(teacherCourses),
   teacherSubjects: many(teacherSubjects),
+  teacherGrades: many(teacherGrades),
 }));
 
 export type User = typeof users.$inferSelect;
@@ -134,3 +136,17 @@ export const teacherSubjectsRelations = relations(teacherSubjects, ({ one }) => 
   }),
 }));
 
+export const teacherGrades = pgTable(
+  "teacher_grades",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    userId: varchar("user_id", { length: 21 }).notNull().references(() => users.id),
+    grade: varchar("grade").notNull(),
+  },
+);
+export const teacherGradesRelations = relations(teacherGrades, ({ one }) => ({
+  user: one(users, {
+    fields: [teacherGrades.userId],
+    references: [users.id],
+  }),
+}));

@@ -13,7 +13,7 @@ import { UploadLessonPlanForm } from "./upload-lesson-plan-form";
 
 export const AssignmentList = (
   { assignments, role } : 
-  { assignments: RouterOutputs["assignment"]["list"], role: Roles }
+  { assignments: RouterOutputs["explanationAssignment"]["list"], role: Roles }
 ) => {
   const { assignmentList, activeIndex } = assignments;  
 

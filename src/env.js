@@ -48,7 +48,7 @@ export const env = createEnv({
    */
   runtimeEnv: {
     // Server-side env vars
-    DATABASE_URL: process.env.DATABASE_URL,
+    DATABASE_URL: process.env.ENVIRONMENT === 'dev' ? process.env.DATABASE_URL_DEV : process.env.DATABASE_URL_PROD,
     NODE_ENV: process.env.NODE_ENV,
     SMTP_HOST: process.env.SMTP_HOST,
     SMTP_PORT: parseInt(process.env.SMTP_PORT ?? ""),

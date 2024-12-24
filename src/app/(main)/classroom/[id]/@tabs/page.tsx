@@ -10,11 +10,11 @@ export default async function Page(props: { params: Promise<{ id: string }> }) {
   const { user } = await validateRequest();
   if (!user) redirect(Paths.Login);
 
-  const assignments = await api.assignment.list.query({ classroomId: params.id });
+  const explainAssignments = await api.explanationAssignment.list.query({ classroomId: params.id });
 
   return (
     <div className="max-h-full overflow-hidden mt-[20%]">
-      <AssignmentList assignments={assignments} role={user.role} />
+      <AssignmentList assignments={explainAssignments} role={user.role} />
     </div>
   );
 }

@@ -15,7 +15,7 @@ interface Props {
   code: string;
   role: Roles;
   classroom: RouterOutputs['classroom']['get'];
-  assignments: RouterOutputs['assignment']['list'];
+  assignments: RouterOutputs['explanationAssignment']['list'];
   students: RouterOutputs['classroom']['students'];
 }
 

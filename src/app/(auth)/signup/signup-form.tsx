@@ -3,15 +3,15 @@ import { PasswordInput } from "@/components/password-input";
 import { signup } from "@/lib/auth/actions";
 import { Label } from "@/components/ui/label";
 import { SubmitButton } from "@/components/submit-button";
-import { useFormState } from "react-dom";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Input } from "@/components/ui/input";
 import { Paths } from "@/lib/constants";
+import { useActionState } from "react";
 
 export const SignUpForm: React.FC = () => {
 
-  const [state, formAction] = useFormState(signup, null);
+  const [state, formAction] = useActionState(signup, null);
 
   return (
     <>

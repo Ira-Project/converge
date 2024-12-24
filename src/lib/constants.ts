@@ -13,8 +13,11 @@ export enum Paths {
   ResetPassword = "/reset-password",
   GoogleLogin = "/login/google",
   Classroom = "/classroom/",
-  Assignment = "/assignment/",
+  LearnByTeaching = "/learn-by-teaching/",
+  ReasoningPathway = "/reasoning-pathway/",
   CreateAssignment = "/create-assignment/",
+  CreateClassroom = "/create-classroom/",
+  JoinClassroom = "/join-classroom/",
 }
 
 export enum Roles {
@@ -101,3 +104,42 @@ export enum ConceptStatus {
   INCORRECT = "No",
   NOT_PRESENT = "Unknown"
 }
+
+export enum ReasoningPathwayStepResult {
+  CORRECT = "correct",
+  WRONG = "wrong",
+  WRONG_POSITION = "wrong_position",
+  PENDING = "pending"
+}
+
+export enum ActivityType {
+  LearnByTeaching = "Learn By Teaching",
+  ReasonTrace = "Reason Trace",
+  ReadAndRelay = "Read and Relay",
+  KnowledgeZap = "Knowledge Zap",
+  StepSolve = "Step Solve",
+  HumanVsAI = "Human vs AI",
+}
+
+export const GradesOptions = [
+  {
+    value: "9",
+    label: "9",
+    locked: true,
+  },
+  {
+    value: "10",
+    label: "10",
+    locked: true,
+  },
+  {
+    value: "11",
+    label: "11",
+    locked: false,
+  },
+  {
+    value: "12",
+    label: "12",
+    locked: false,
+  },
+]

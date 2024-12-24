@@ -8,11 +8,11 @@ import {
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
 import { classrooms } from "./classroom";
-import { conceptLists } from "./concept";
-import { assignments } from "./assignment";
+import { conceptLists } from "./learnByTeaching/concept";
+import { explainAssignments } from "./learnByTeaching/explainAssignment";
 import { users } from "./user";
-import { questions } from "./questions";
-import { reasoningQuestions } from "./reasoningQuestions";
+import { reasoningQuestions } from "./reasoning/reasoningQuestions";
+import { explainQuestions } from "./learnByTeaching/questions";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -22,6 +22,7 @@ export const subjects = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name").notNull(),
     imageUrl: text("image_url"),
+    locked: boolean("locked").default(false).notNull(),
     demoClassroomId: varchar("demo_classroom_id", { length: 21 }),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
@@ -42,8 +43,8 @@ export const courses = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name").notNull(),
+    locked: boolean("locked").default(false).notNull(),
     subjectId: varchar("subject_id", { length: 21 }).references(() => subjects.id),
-    conceptListId: varchar("concept_list_id").references(() => conceptLists.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -58,10 +59,6 @@ export const courseRelations = relations(courses, ({ one, many }) => ({
     fields: [courses.subjectId],
     references: [subjects.id],
   }),
-  conceptLists: one(courses, {
-    fields: [courses.conceptListId],
-    references: [courses.id],
-  }),
   topics: many(topics),
   classrooms: many(classrooms),
   teachers: many(users),
@@ -74,7 +71,7 @@ export const topics = pgTable(
     name: text("name").notNull(),
     imageUrl: text("image_url"),
     courseId: varchar("course_id", { length: 21 }).references(() => courses.id),
-    conceptListId: varchar("concept_list_id").references(() => conceptLists.id),
+    conceptListId: varchar("concept_list_id").references(() => conceptLists.id), // TODO: remove this
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
@@ -90,7 +87,7 @@ export const topicRelations = relations(topics, ({ one, many }) => ({
     fields: [topics.conceptListId],
     references: [topics.id],
   }),
-  assignments: many(assignments),
-  questions: many(questions),
+  explainAssignments: many(explainAssignments),
+  questions: many(explainQuestions),
   reasoningQuestions: many(reasoningQuestions),
 }));

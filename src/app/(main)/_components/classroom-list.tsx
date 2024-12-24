@@ -4,7 +4,7 @@ import { ClassroomCardSkeleton } from "./classroom-skeleton";
 import { Suspense } from "react";
 import { api } from "@/trpc/server";
 import Link from "next/link";
-import { Roles } from "@/lib/constants";
+import { Paths, Roles } from "@/lib/constants";
 
 export const ClassroomList = async({ role } :  { role: Roles} ) => {
   
@@ -30,7 +30,7 @@ export const ClassroomList = async({ role } :  { role: Roles} ) => {
               
               <p className="text-muted-foreground"> 
                 Don't have any classrooms yet? {" "}
-                <Link href="/createclassroom" className="underline"> 
+                <Link href={Paths.CreateClassroom} className="underline"> 
                   <span>Create one</span> 
                 </Link>
                 {" "} to get started.
@@ -38,7 +38,7 @@ export const ClassroomList = async({ role } :  { role: Roles} ) => {
             :
               <p className="text-muted-foreground"> 
                 No classrooms to show. {" "} 
-                <Link href="/joinclassroom" className="underline">
+                <Link href={Paths.JoinClassroom} className="underline">
                   <span>Join one</span>
                 </Link>
                 {" "} to get started.

@@ -41,7 +41,7 @@ export function AssignmentCard({
             isPast={isPast} />
         </div>
           :
-          <Link href={`${Paths.Assignment}${id}`}>
+          <Link href={`${Paths.LearnByTeaching}${id}`}>
             <CardContent
               topic={topic}
               dueDate={dueDate}

@@ -4,10 +4,10 @@ import {
   conceptListConcepts,
   conceptLists, 
   concepts, 
-} from "../schema/concept";
+} from "../schema/learnByTeaching/concept";
 import { and, eq } from "drizzle-orm";
 import { generateId } from "lucia";
-import { answers, questions, questionToAssignment } from "../schema/questions";
+import { answers, explainQuestions, questionToAssignment } from "../schema/learnByTeaching/questions";
 
 import { courses, subjects, topics } from "../schema/subject";
 import { emailsToPreload } from './emailsToPreload'
@@ -24,8 +24,8 @@ type QuestionType = {
 
 import json from "./work_energy_power.json";
 import reasoningJson from "./reasoning/work_energy_power.json";
-import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../schema/reasoningQuestions";
-import { reasoningAssignments } from "../schema/reasoningAssignment";
+import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../schema/reasoning/reasoningQuestions";
+import { reasoningAssignments } from "../schema/reasoning/reasoningAssignment";
 
 async function createQuestionsAndConceptListFromJson() {
 
@@ -91,7 +91,7 @@ async function createQuestionsAndConceptListFromJson() {
       topicId: topicId,
       image: question.image,
     }
-    await db.insert(questions).values(questionObject)
+    await db.insert(explainQuestions).values(questionObject)
     const answerObject = {
       id: generateId(21),
       questionId: questionId,
@@ -115,8 +115,8 @@ async function addQuestionsToAssignmentFromTopic() {
     return
   }
 
-  const questionList = await db.select().from(questions).where(
-    eq(questions.topicId, topicId),
+  const questionList = await db.select().from(explainQuestions).where(
+    eq(explainQuestions.topicId, topicId),
   )
 
   for (const question of questionList) {

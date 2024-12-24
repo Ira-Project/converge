@@ -6,7 +6,6 @@ import { google, lucia } from "@/lib/auth";
 import { db } from "@/server/db";
 import { Paths, Roles } from "@/lib/constants";
 import { users } from "@/server/db/schema/user";
-import { usersToClassrooms } from "@/server/db/schema/classroom";
 
 type GoogleUser = {
   id: string;
@@ -54,10 +53,6 @@ export async function GET(request: Request): Promise<Response> {
         eq(table.email, user.email!)
     });
 
-    const preloadedUsers = await db.query.preloadedUsers.findFirst({
-      where: (table, { eq }) => eq(table.email, user.email!),
-    });
-
     if (!existingUser) {
       const userId = generateId(21);
       await db.insert(users).values({
@@ -66,7 +61,7 @@ export async function GET(request: Request): Promise<Response> {
         email: user.email,
         emailVerified: true,
         avatar: user.picture,
-        role: preloadedUsers ? preloadedUsers.role : Roles.Student,
+        role: Roles.Teacher,
       });
 
       const session = await lucia.createSession(userId, {});
@@ -77,30 +72,9 @@ export async function GET(request: Request): Promise<Response> {
         sessionCookie.attributes,
       );
 
-      if(preloadedUsers?.notOnboarded) {
-        return new Response(null, {
-          status: 302,
-          headers: { Location: Paths.Onboarding },
-        });
-      }
-
-      const subjects = await db.query.subjects.findMany();
-
-      if(!preloadedUsers) {
-        for (const subject of subjects) {
-          if(subject.demoClassroomId) {
-            await db.insert(usersToClassrooms).values({
-              userId: userId,
-              classroomId: subject.demoClassroomId,
-              role: Roles.Student,
-            })
-          }
-        }
-      }
-      
       return new Response(null, {
         status: 302,
-        headers: { Location: Paths.Home },
+        headers: { Location: Paths.Onboarding },
       });
     }
 
@@ -122,7 +96,7 @@ export async function GET(request: Request): Promise<Response> {
       sessionCookie.attributes,
     );
 
-    if(preloadedUsers?.notOnboarded) {
+    if(!existingUser?.isOnboarded) {
       return new Response(null, {
         status: 302,
         headers: { Location: Paths.Onboarding },

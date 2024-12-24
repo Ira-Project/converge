@@ -3,16 +3,15 @@
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectGroup, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
-import { createClassroomSchema } from "@/server/api/routers/classroom/classroom.input";
-import { useRouter } from 'next/navigation'
-import { zodResolver } from "@hookform/resolvers/zod";
+// import { useRouter } from 'next/navigation'
+// import { zodResolver } from "@hookform/resolvers/zod";
 
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { LoadingButton } from "@/components/loading-button";
-import { api } from "@/trpc/react";
+// import { api } from "@/trpc/react";
 import { type RouterOutputs } from '@/trpc/shared';
-import { revalidateClassroomListQuery } from "../../_actions/revalidateCache";
+// import { revalidateClassroomListQuery } from "../../_actions/revalidateCache";
 
 interface Props {
   courses: RouterOutputs["subject"]["listCourses"];
@@ -20,22 +19,22 @@ interface Props {
 
 export const CreateClassroomForm = ({ courses }: Props) => {
 
-  const router = useRouter();
+  // const router = useRouter();
 
-  const createClassroom = api.classroom.create.useMutation();
+  // const createClassroom = api.classroom.create.useMutation();
   const form = useForm({
     defaultValues: {
       name: "",
       description: "",
       course: "",
     },
-    resolver: zodResolver(createClassroomSchema),
+    // resolver: zodResolver(createClassroomSchema),
   })
 
-  const onSubmit = form.handleSubmit(async (values) => {
-    const id = await createClassroom.mutateAsync({...values});
-    await revalidateClassroomListQuery();
-    void router.replace(`/classroom/${id}`)
+  const onSubmit = form.handleSubmit(async () => {
+    //const id = await createClassroom.mutateAsync({...values});
+    // await revalidateClassroomListQuery();
+    // void router.replace(`/classroom/${id}`)
   });
 
   return (
@@ -97,14 +96,14 @@ export const CreateClassroomForm = ({ courses }: Props) => {
           )} 
         />
         {
-          createClassroom.error &&
-          <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">
-            {createClassroom.error.message}
-          </ul>
+          // createClassroom.error &&
+          // <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">
+          //   {createClassroom.error.message}
+          // </ul>
         }
         <LoadingButton 
-          disabled={!form.formState.isDirty || createClassroom.isLoading}
-          loading={createClassroom.isLoading}
+          // disabled={!form.formState.isDirty || createClassroom.isLoading}
+          // loading={createClassroom.isLoading}
           className="w-fit ml-auto">
             Create Classroom
         </LoadingButton>

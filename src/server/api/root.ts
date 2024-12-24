@@ -1,22 +1,22 @@
-import { assignmentRouter } from "./routers/explainingAssignment/explainingAssignment.procedure";
+import { explanationAssignmentRouter } from "./routers/learnByTeachingActivity/explanationAssignment/explainingAssignment.procedure";
 import { classroomRouter } from "./routers/classroom/classroom.procedure";
-import { explanationRouter } from "./routers/explanation/explanation.procedure";
+import { explanationRouter } from "./routers/learnByTeachingActivity/explanation/explanation.procedure";
 import { fileUploadRouter } from "./routers/fileUpload/fileUpload.procedure";
-import { preloadedUsersRouter } from "./routers/preloadedUsers/preloadedUsers.procedure";
+import { userOnboardingRouter } from "./routers/userOnboarding/userOnboarding.procedure";
 import { subjectRouter } from "./routers/subject/subject.procedure";
-import { testAttemptRouter } from "./routers/testAttempt/testAttempt.procedure";
+import { explainTestAttemptRouter } from "./routers/learnByTeachingActivity/explainTestAttempt/explainTestAttempt.procedure";
 import { createTRPCRouter } from "./trpc";
-import { reasoningAssignmentRouter } from "./routers/reasoningAssignment/reasoningAssignment.procedure";
-import { reasoningRouter } from "./routers/reasoning/reasoning.procedure";
+import { reasoningAssignmentRouter } from "./routers/reasoningActivity/reasoningAssignment/reasoningAssignment.procedure";
+import { reasoningRouter } from "./routers/reasoningActivity/reasoning/reasoning.procedure";
 
 export const appRouter = createTRPCRouter({
   classroom: classroomRouter,
   subject: subjectRouter,
-  assignment: assignmentRouter,
+  explanationAssignment: explanationAssignmentRouter,
   explanation: explanationRouter,
-  testAttempt: testAttemptRouter,
+  explainTestAttempt: explainTestAttemptRouter,
   fileUpload: fileUploadRouter,
-  preloadedUsers: preloadedUsersRouter,
+  userOnboardingRouter: userOnboardingRouter,
   reasoningAssignment: reasoningAssignmentRouter,
   reasoning: reasoningRouter,
 });

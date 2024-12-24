@@ -3,14 +3,14 @@ import { drizzle } from "drizzle-orm/postgres-js";
 import { migrate } from "drizzle-orm/postgres-js/migrator";
 
 import { env } from "@/env";
-import * as assignment from "./schema/assignment";
+import * as assignment from "./schema/learnByTeaching/explainAssignment";
 import * as classroom from "./schema/classroom";
 import * as subject from "./schema/subject";
 import * as user from "./schema/user";
-import * as concept from "./schema/concept";
-import * as assignmentDetails from "./schema/questions";
-import * as explanations from "./schema/explanations";
-import * as testAttempts from "./schema/testAttempt";
+import * as concept from "./schema/learnByTeaching/concept";
+import * as assignmentDetails from "./schema/learnByTeaching/questions";
+import * as explanations from "./schema/learnByTeaching/explanations";
+import * as testAttempts from "./schema/learnByTeaching/explainTestAttempt";
 import { lessonPlanFiles } from "./schema/lessonPlan";
 
 

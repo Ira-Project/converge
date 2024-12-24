@@ -10,6 +10,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { LoadingButton } from "@/components/loading-button";
 import { api } from "@/trpc/react";
 import { revalidateClassroomListQuery } from "../../_actions/revalidateCache";
+import { Paths } from "@/lib/constants";
 
 export const JoinClassroomForm = () => {
 
@@ -27,7 +28,7 @@ export const JoinClassroomForm = () => {
   const onSubmit = form.handleSubmit(async (values) => {
     const id = await joinClassroom.mutateAsync({...values});
     await revalidateClassroomListQuery();
-    router.replace(`/classroom/${id}`)
+    router.replace(`${Paths.Classroom}${id}`)
   });
 
   return (

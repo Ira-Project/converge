@@ -12,8 +12,7 @@ import { Roles, DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
 import { courses } from "./subject";
 import { users } from "./user";
-import { assignments } from "./assignment";
-import { reasoningQuestions } from "./reasoningQuestions";
+import { explainAssignments } from "./learnByTeaching/explainAssignment";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -32,6 +31,7 @@ export const classrooms = pgTable(
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
     deletedAt: timestamp("deleted_at", { mode: "date" }),
+    isDemo: boolean("is_demo").default(true).notNull(),
   }
 );
 export const classroomRelations = relations(classrooms, ({ many, one }) => ({
@@ -40,8 +40,7 @@ export const classroomRelations = relations(classrooms, ({ many, one }) => ({
     fields: [classrooms.courseId],
     references: [courses.id],
   }),
-  assignments: many(assignments),
-  reasoningQuestions: many(reasoningQuestions),
+  explainAssignments: many(explainAssignments),
 }));
 
 export const usersToClassrooms = pgTable(

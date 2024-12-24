@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import { useFormState } from "react-dom";
+import { useActionState, useEffect } from "react";
 import { toast } from "sonner";
 import { ExclamationTriangleIcon } from "@/components/icons";
 import { SubmitButton } from "@/components/submit-button";
@@ -10,7 +9,7 @@ import { Label } from "@/components/ui/label";
 import { resetPassword } from "@/lib/auth/actions";
 
 export function ResetPassword({ token }: { token: string }) {
-  const [state, formAction] = useFormState(resetPassword, null);
+  const [state, formAction] = useActionState(resetPassword, null);
 
   useEffect(() => {
     if (state?.error) {
