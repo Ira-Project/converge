@@ -23,7 +23,7 @@ export default function AssignmentTutorialModal({ assignmentName, classroom, top
       <DialogTrigger asChild>
         <Button 
           size="sm"
-          variant="outlineSecondary">
+          variant="link">
             Help
         </Button>
       </DialogTrigger>
@@ -42,16 +42,16 @@ export default function AssignmentTutorialModal({ assignmentName, classroom, top
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>
-                <BreadcrumbPage>Assignment</BreadcrumbPage>
+                <BreadcrumbPage>Activity</BreadcrumbPage>
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <div className="flex flex-row items-center text-3xl font-semibold my-2">
+          <div className="flex flex-row items-center text-xl font-semibold my-2 text-amber-700">
             {assignmentName && `${assignmentName} - `} {topic}
           </div>
         </DialogTitle>
-        <DialogDescription className="m-0 text-black mx-auto text-lg font-semibold">
-          How to take the assignment?
+        <DialogDescription className="m-0 mx-auto font-medium">
+          How to do the activity?
         </DialogDescription>
         <div className="px-16">
           {/* <TutorialCarousel /> */}
@@ -65,8 +65,8 @@ export default function AssignmentTutorialModal({ assignmentName, classroom, top
         </div>
         <DialogFooter>
           <DialogClose asChild>
-            <Button>
-              Start Assignment
+            <Button className="bg-amber-700 text-white hover:bg-amber-900">
+              Start Activity
             </Button>
           </DialogClose>
         </DialogFooter>

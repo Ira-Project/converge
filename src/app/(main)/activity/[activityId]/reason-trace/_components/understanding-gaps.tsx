@@ -5,7 +5,7 @@ import { api } from '@/trpc/server';
 
 const UnderstandingGaps = async ({ activityId }: { activityId: string }) => {
 
-  const data = await api.learnByTeaching.getUnderstandingGaps.query({
+  const data = await api.explainTestAttempt.getUnderstandingGaps.query({
     activityId: activityId,
   });
 

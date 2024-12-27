@@ -13,7 +13,7 @@ import { formatDateShort } from '@/lib/utils';
 
 const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
 
-  const submissions = await api.learnByTeaching.getSubmissions.query({ activityId });
+  const submissions = await api.explainTestAttempt.getSubmissions.query({ activityId });
 
   return (
     <div>

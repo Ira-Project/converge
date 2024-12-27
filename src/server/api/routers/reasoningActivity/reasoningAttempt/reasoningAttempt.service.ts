@@ -1,7 +1,7 @@
 import { asc, eq, sql } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../../trpc";
-import type { CreateReasoningAssignmentAttemptInput, GetReasoningAssignmentInput, MakeReasoningAssignmentLiveInput, SubmitReasoningAssignmentAttemptInput } from "./reasoningAssignment.input";
-import { reasoningAssignmentAttempts, reasoningAssignments } from "@/server/db/schema/reasoning/reasoningAssignment";
+import type { CreateReasoningAssignmentAttemptInput, GetReasoningAssignmentInput, SubmitReasoningAssignmentAttemptInput } from "./reasoningAttempt.input";
+import { reasoningAssignmentAttempts } from "@/server/db/schema/reasoning/reasoningAssignment";
 import { reasoningQuestionToAssignment } from "@/server/db/schema/reasoning/reasoningQuestions";
 import { generateId } from "lucia";
 
@@ -58,16 +58,6 @@ export const getReasoningAssignment = async (ctx: ProtectedTRPCContext, input: G
       },
     }
   });
-}
-
-export const makeReasoningAssignmentLive = async (ctx: ProtectedTRPCContext, input: MakeReasoningAssignmentLiveInput) => {
-
-  return await ctx.db.update(reasoningAssignments).set({
-    isLive: true,
-    name: input.assignmentName,
-    dueDate: input.dueDate,
-  }).where(eq(reasoningAssignments.id, input.assignmentId));
-  
 }
 
 export const createReasoningAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: CreateReasoningAssignmentAttemptInput) => {

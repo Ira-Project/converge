@@ -5,7 +5,7 @@ import { api } from "@/trpc/server";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Link } from "@react-email/components";
-import AssignmentShareModal from "./live/_components/explain-assignment-share-modal";
+import AssignmentShareModal from "./live/_components/reason-assignment-share-modal";
 import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils";
 import UnderstandingGaps from "./_components/understanding-gaps";
 import AnalyticsCards from "./_components/analytics-cards";
@@ -26,19 +26,19 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
   return (
     <main className="flex flex-col">
       {/* Header */}
-      <div className="mb-8 p-8 bg-amber-100">
+      <div className="mb-8 p-8 bg-rose-100">
         <div className="flex items-center gap-4 mb-4">
           <div className="flex flex-row gap-4">
             <Image src={activityMetaData.iconImage} alt={activityMetaData.title} width={60} height={60} />
             <div className="flex flex-col my-auto">
-              <h1 className="text-2xl font-bold text-amber-700">{activityMetaData.title}</h1>
-              <p className="text-amber-700">{activity.topic?.name}</p>
+              <h1 className="text-2xl font-bold text-rose-700">{activityMetaData.title}</h1>
+              <p className="text-rose-700">{activity.topic?.name}</p>
             </div>
           </div>
           <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
             { user.role !== Roles.Teacher ?
               <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
-                <Button className="bg-amber-700 text-white">
+                <Button className="bg-rose-700 text-white">
                   Start
                 </Button>
               </Link>

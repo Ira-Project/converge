@@ -10,7 +10,7 @@ import { ConceptStatus, DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm/relations";
 import { users } from "../user";
 import { explainTestAttempts } from "./explainTestAttempt";
-import { explainQuestions } from "./questions";
+import { explainQuestions } from "./explainQuestions";
 import { concepts } from "./concept";
 
 export const conceptStatusEnum = pgEnum('status', [ConceptStatus.CORRECT, ConceptStatus.INCORRECT, ConceptStatus.NOT_PRESENT]);
@@ -33,8 +33,8 @@ export const explanations = pgTable(
   }
 );
 export const explanationRelations = relations(explanations, ({ one, many }) => ({
-  conceptStatus: many(conceptStatus),
-  computedAnswers: many(computedAnswers),
+  explainConceptStatus: many(explainConceptStatus),
+  explainComputedAnswers: many(explainComputedAnswers),
   testAttempts: one(explainTestAttempts, {
     fields: [explanations.testAttemptId],
     references: [explainTestAttempts.id],
@@ -42,8 +42,8 @@ export const explanationRelations = relations(explanations, ({ one, many }) => (
 }));
 
 
-export const conceptStatus = pgTable(
-  "concept_status",
+export const explainConceptStatus = pgTable(
+  "explain_concept_status",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     status: conceptStatusEnum("status").notNull().default(ConceptStatus.NOT_PRESENT),
@@ -53,20 +53,20 @@ export const conceptStatus = pgTable(
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
   }
 );
-export const conceptStatusRelations = relations(conceptStatus, ({ one }) => ({
+export const explainConceptStatusRelations = relations(explainConceptStatus, ({ one }) => ({
   explanation: one(explanations, {
-    fields: [conceptStatus.explanationId],
+    fields: [explainConceptStatus.explanationId],
     references: [explanations.id],
   }),
   concept: one(concepts, {
-    fields: [conceptStatus.conceptId],
+    fields: [explainConceptStatus.conceptId],
     references: [concepts.id],
   }),
 }));
 
 
-export const computedAnswers = pgTable(
-  "computed_answers",
+export const explainComputedAnswers = pgTable(
+  "explain_computed_answers",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     explanationId: varchar("explanation_id", { length: 21 }).notNull().references(() => explanations.id),
@@ -74,15 +74,17 @@ export const computedAnswers = pgTable(
     computedAnswer: text("computed_answer").notNull(),
     isCorrect: boolean("is_correct").notNull().default(false),
     workingText: text("explanation_text"),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
   }
 )
-export const computedAnswerRelations = relations(computedAnswers, ({ one }) => ({
+export const explainComputedAnswerRelations = relations(explainComputedAnswers, ({ one }) => ({
   explanation: one(explanations, {
-    fields: [computedAnswers.explanationId],
+    fields: [explainComputedAnswers.explanationId],
     references: [explanations.id],
   }),
   question: one(explainQuestions, {
-    fields: [computedAnswers.questionId],
+    fields: [explainComputedAnswers.questionId],
     references: [explainQuestions.id],
   }),
 }));

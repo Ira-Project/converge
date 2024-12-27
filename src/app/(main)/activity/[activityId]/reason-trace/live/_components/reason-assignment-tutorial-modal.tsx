@@ -46,12 +46,12 @@ export default function AssignmentTutorialModal({ assignmentName, classroom, top
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <div className="flex flex-row items-center text-xl font-semibold my-2 text-amber-700">
+          <div className="flex flex-row items-center text-xl font-semibold my-2 text-rose-700">
             {assignmentName && `${assignmentName} - `} {topic}
           </div>
         </DialogTitle>
         <DialogDescription className="m-0 mx-auto font-medium">
-          How to take the assignment?
+          How to do the activity?
         </DialogDescription>
         <div className="px-16">
           {/* <TutorialCarousel /> */}
@@ -65,8 +65,8 @@ export default function AssignmentTutorialModal({ assignmentName, classroom, top
         </div>
         <DialogFooter>
           <DialogClose asChild>
-            <Button className="bg-amber-700 text-white hover:bg-amber-900">
-              Start Assignment
+            <Button className="bg-rose-700 text-white hover:bg-rose-900">
+              Start Activity
             </Button>
           </DialogClose>
         </DialogFooter>

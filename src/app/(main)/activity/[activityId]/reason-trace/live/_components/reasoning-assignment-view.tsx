@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import SubmissionModal from './submission-modal';
-import AssignmentTutorialModal from '@/app/(activities)/(leanByTeachingActivity)/learn-by-teaching/[id]/_components/assignment-tutorial-modal';
-import ConfirmationModal from './confirmation-modal';
-import AssignmentPublishModal from '@/app/(activities)/(leanByTeachingActivity)/learn-by-teaching/[id]/_components/assignment-publish-modal';
+import AssignmentTutorialModal from './reason-assignment-tutorial-modal';
+import ConfirmationModal from './reason-confirmation-modal';
+import AssignmentShareModal from './reason-assignment-share-modal'
 import DropZone from './drop-zone';
 import DraggableStep from './draggable-step';
 import { type RouterOutputs } from '@/trpc/shared';
@@ -313,8 +313,9 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ reas
                 assignmentName={"Hello"} />
               {
                 true && 
-                <AssignmentPublishModal 
-                  assignmentId={"1"} />
+                <AssignmentShareModal 
+                  activityId={"1"} 
+                  isLive={false} />
               }
             </>
           }

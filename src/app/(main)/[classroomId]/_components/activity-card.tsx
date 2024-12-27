@@ -12,7 +12,7 @@ interface ActivityCardProps {
 }
 
 const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
-  const { id, type, isLive, isLocked, order, dueDate, classroomId } = activity;
+  const { id, type, isLive, dueDate } = activity;
   const { url, iconImage, title, helpUrl, tags, colour, description } = getMetaDataFromActivityType(type, id);
 
 

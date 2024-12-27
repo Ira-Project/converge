@@ -11,7 +11,7 @@ import { classrooms } from "./classroom";
 import { explainAssignments } from "./learnByTeaching/explainAssignment";
 import { users } from "./user";
 import { reasoningQuestions } from "./reasoning/reasoningQuestions";
-import { explainQuestions } from "./learnByTeaching/questions";
+import { explainQuestions } from "./learnByTeaching/explainQuestions";
 import { activity } from "./activity";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);

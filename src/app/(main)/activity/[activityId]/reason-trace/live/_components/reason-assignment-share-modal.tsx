@@ -10,65 +10,95 @@ import { Input } from "@/components/ui/input";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { Calendar } from "@/components/ui/calendar";
-import { CalendarIcon } from "@/components/icons";
+import { CalendarIcon, Share1Icon } from "@/components/icons";
 import { api } from "@/trpc/react";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { makeReasoningAssignmentLiveSchema } from "@/server/api/routers/reasoningActivity/reasoningAssignment/reasoningAssignment.input";
 import { DialogDescription } from "@radix-ui/react-dialog";
+import { makeActivityLiveSchema } from "@/server/api/routers/learnByTeachingActivity/explanationAssignment/explainingAssignment.input";
+import { useState, useEffect } from "react";
+import { Check, Copy } from "lucide-react";
 
-export default function AssignmentPublishModal({ 
-  assignmentId, 
-} : { assignmentId: string }) {  
+export default function AssignmentShareModal({ 
+  activityId, isLive
+} : { activityId: string, isLive: boolean }) {  
 
-  const makeReasoningAssignmentLive = api.reasoningAssignment.makeLive.useMutation();
+  const makeAssignmentLive = api.explanationAssignment.makeLive.useMutation();
+
+  const [liveState, setLiveState] = useState<boolean>(isLive);
   
   const form = useForm({
     defaultValues: {
-      assignmentId: assignmentId,
-      assignmentName: "",
+      activityId: activityId,
       dueDate: addDays(new Date(), 1),
     },
-    resolver: zodResolver(makeReasoningAssignmentLiveSchema),
+    resolver: zodResolver(makeActivityLiveSchema),
   })
 
   const onSubmit = form.handleSubmit(async (values) => {
-    console.log("DUDE", values)
-    await makeReasoningAssignmentLive.mutateAsync({
-      assignmentName: values.assignmentName,
-      assignmentId: assignmentId,
+    await makeAssignmentLive.mutateAsync({
+      activityId: activityId,
       dueDate: values.dueDate,
     });
-    // TODO - redirect to statistics page
-    // void router.replace(`${Paths.Assignment}${id}`)
+    setLiveState(true);
   });
+
+  const [copied, setCopied] = useState(false);
+  
+  const [assignmentLink, setAssignmentLink] = useState<string>('');
+
+  useEffect(() => {
+    // Set the assignment link after component mounts
+    setAssignmentLink(`${window.location.origin}/assignment/${activityId}`);
+  }, [activityId]);
+
+  const copyToClipboard = async () => {
+    await navigator.clipboard.writeText(assignmentLink);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button size="sm">Publish</Button>
+        <Button size="sm" className="bg-rose-700 hover:bg-rose-900">
+          Share
+          <Share1Icon />
+        </Button>
       </DialogTrigger>
-      <DialogContent>
+      <DialogContent className="p-8 pb-16">
         <DialogHeader>
-          <DialogTitle>Publish Assignment</DialogTitle>
+          <DialogTitle>Share Activity</DialogTitle>
         </DialogHeader>
-        <Form {...form}>
-          <form className="grid gap-4" onSubmit={onSubmit}>
-            <DialogDescription className="text-sm">
-              Make your assignment available to your students by filling out the details below.
+        { liveState ?
+          <div className="space-y-4">
+            <p className="text-sm text-muted-foreground">
+              This activity is live. Share the link with your students:
+            </p>
+            <div className="flex gap-2">
+              <Input 
+                readOnly 
+                value={assignmentLink}
+                className="flex-1"
+              />
+              <Button
+                size="icon"
+                variant="outline"
+                onClick={copyToClipboard}
+                className="shrink-0"
+              >
+                {copied ? 
+                  <Check className="h-4 w-4" /> : 
+                  <Copy className="h-4 w-4" />
+                }
+              </Button>
+            </div>
+          </div>
+          :
+          <Form {...form}>
+            <form className="grid gap-4" onSubmit={onSubmit}>
+              <DialogDescription className="text-sm">
+              Make your activity available to your students
             </DialogDescription>
-            <FormField
-              control={form.control}
-              name="assignmentName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Assignment Name</FormLabel>
-                  <FormControl>
-                    <Input {...field} required placeholder="Enter your assignment name here"/>
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )} 
-            />
             <FormField
               control={form.control}
               name="dueDate"
@@ -115,15 +145,17 @@ export default function AssignmentPublishModal({
                 <Button variant="outline">Cancel</Button>
               </DialogClose>
               <LoadingButton 
-                onClick={onSubmit}
-                loading={makeReasoningAssignmentLive.isLoading}
-                type="submit">
-                Publish
-              </LoadingButton>
-            </div>
-          </form>
-        </Form>
-      </DialogContent>
+                  className="bg-amber-700 hover:bg-amber-900"
+                  onClick={onSubmit}
+                  loading={makeAssignmentLive.isLoading}
+                  type="submit">
+                  Publish
+                </LoadingButton>
+              </div>
+            </form>
+          </Form>
+        }
+      </DialogContent>  
     </Dialog>
   );
 }

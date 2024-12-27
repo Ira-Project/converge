@@ -3,7 +3,7 @@ import {
   boolean,
   timestamp,
   varchar,
-  integer,
+  doublePrecision,
 } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
@@ -20,7 +20,7 @@ export const explainTestAttempts = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     activityId: varchar("activity_id", { length: 21 }).references(() => activity.id),
     assignmentId: varchar("assignment_id", { length: 21 }).references(() => explainAssignments.id),
-    score: integer("score"),
+    score: doublePrecision("score"),
     submittedAt: timestamp("submitted_at", { mode: "date" }),
     userId: varchar("user_id", { length: 21 }).notNull().references(() => users.id).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),

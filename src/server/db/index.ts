@@ -7,7 +7,7 @@ import * as classroom from "./schema/classroom";
 import * as subject from "./schema/subject";
 import * as user from "./schema/user";
 import * as concept from "./schema/learnByTeaching/concept";
-import * as assignmentDetails from "./schema/learnByTeaching/questions";
+import * as assignmentDetails from "./schema/learnByTeaching/explainQuestions";
 import * as explanations from "./schema/learnByTeaching/explanations";
 import * as testAttempts from "./schema/learnByTeaching/explainTestAttempt";
 import * as lessonPlanFiles from "./schema/lessonPlan";

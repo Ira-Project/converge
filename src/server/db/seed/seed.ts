@@ -7,7 +7,7 @@ import {
 } from "../schema/learnByTeaching/concept";
 import { and, eq } from "drizzle-orm";
 import { generateId } from "lucia";
-import { answers, explainQuestions, questionToAssignment } from "../schema/learnByTeaching/questions";
+import { answers, explainQuestions, questionToAssignment } from "../schema/learnByTeaching/explainQuestions";
 
 import { courses, subjects, topics } from "../schema/subject";
 import { emailsToPreload } from './emailsToPreload'
@@ -34,53 +34,7 @@ async function createQuestionsAndConceptListFromJson() {
   const topic = await db.select().from(topics).where(
     eq(topics.id, topicId),
   )
-
-  if(topic?.[0] === undefined || topic[0].conceptListId !== null) {
-    console.log("Topic not found or already has a concept list")
-    return
-  }
-
-  // Create a Concept List Object
-  const conceptList = {
-    id: generateId(21),
-    name: json.name,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  }
-  await db.insert(conceptLists).values(conceptList)  
-
-  for (const concept of json.concepts) {
-    // Check if concept already exists
-    const existingConcept = await db.select().from(concepts).where(
-      eq(concepts.text, concept),
-    )
-    if (existingConcept?.[0]?.id === undefined) {
-      const conceptId = generateId(21)
-      await db.insert(concepts).values({
-        id: conceptId,
-        text: concept,
-      })
-      await db.insert(conceptListConcepts).values({
-        id: generateId(21),
-        conceptListId: conceptList.id,
-        conceptId: conceptId,
-      })
-    } else {
-      await db.insert(conceptListConcepts).values({
-        id: generateId(21),
-        conceptListId: conceptList.id,
-        conceptId: existingConcept[0].id,
-      })
-    }
-  }
   
-  // Add conceptList ID to topic
-  await db.update(topics).set({
-    conceptListId: conceptList.id,
-  }).where(
-    eq(topics.id, topicId),
-  )
-
   // Create the questions object
   for (const question of json.questions) {
     const questionId = generateId(21)

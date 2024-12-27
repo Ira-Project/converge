@@ -1,10 +1,11 @@
-import { boolean, integer, pgTableCreator, timestamp, varchar, text, decimal } from "drizzle-orm/pg-core";
+import { boolean, integer, pgTableCreator, timestamp, varchar, text, decimal, doublePrecision } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { classrooms } from "../classroom";
 import { users } from "../user";
 import { relations } from "drizzle-orm";
 import { topics } from "../subject";
 import { reasoningQuestionToAssignment } from "./reasoningQuestions";
+import { activity } from "../activity";
 
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
@@ -56,7 +57,8 @@ export const reasoningAssignmentAttempts = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     assignmentId: varchar("assignment_id", { length: 21 }).references(() => reasoningAssignments.id),
-    score: decimal("score"),
+    activityId: varchar("activity_id", { length: 21 }).references(() => activity.id),
+    score: doublePrecision("score"),
     submittedAt: timestamp("submitted_at", { mode: "date" }),
     userId: varchar("user_id", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
@@ -70,6 +72,10 @@ export const reasoningAssignmentAttemptRelations = relations(reasoningAssignment
   assignment: one(reasoningAssignments, {
     fields: [reasoningAssignmentAttempts.assignmentId],
     references: [reasoningAssignments.id],
+  }),
+  activity: one(activity, {
+    fields: [reasoningAssignmentAttempts.activityId],
+    references: [activity.id],
   }),
 }));
 

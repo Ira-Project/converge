@@ -14,15 +14,16 @@ import { CalendarIcon, Share1Icon } from "@/components/icons";
 import { api } from "@/trpc/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { DialogDescription } from "@radix-ui/react-dialog";
-import { makeActivityLiveSchema } from "@/server/api/routers/learnByTeachingActivity/explanationAssignment/explainingAssignment.input";
+import { makeActivityLiveSchema } from "@/server/api/routers/activities/activities.input";
 import { useState, useEffect } from "react";
 import { Check, Copy } from "lucide-react";
+import { Paths } from "@/lib/constants";
 
 export default function AssignmentShareModal({ 
   activityId, isLive
 } : { activityId: string, isLive: boolean }) {  
 
-  const makeAssignmentLive = api.explanationAssignment.makeLive.useMutation();
+  const makeAssignmentLive = api.activities.makeActivityLive.useMutation();
 
   const [liveState, setLiveState] = useState<boolean>(isLive);
   
@@ -48,7 +49,7 @@ export default function AssignmentShareModal({
 
   useEffect(() => {
     // Set the assignment link after component mounts
-    setAssignmentLink(`${window.location.origin}/assignment/${activityId}`);
+    setAssignmentLink(`${window.location.origin}${Paths.Activity}${activityId}${Paths.LearnByTeaching}${Paths.LiveActivity}`);
   }, [activityId]);
 
   const copyToClipboard = async () => {
@@ -67,12 +68,12 @@ export default function AssignmentShareModal({
       </DialogTrigger>
       <DialogContent className="p-8 pb-16">
         <DialogHeader>
-          <DialogTitle>Share Assignment</DialogTitle>
+          <DialogTitle>Share Activity</DialogTitle>
         </DialogHeader>
         { liveState ?
           <div className="space-y-4">
             <p className="text-sm text-muted-foreground">
-              This assignment is live. Share the link with your students:
+              This activity is live. Share the link with your students:
             </p>
             <div className="flex gap-2">
               <Input 
@@ -97,7 +98,7 @@ export default function AssignmentShareModal({
           <Form {...form}>
             <form className="grid gap-4" onSubmit={onSubmit}>
               <DialogDescription className="text-sm">
-              Make your assignment available to your students
+              Make your activity available to your students
             </DialogDescription>
             <FormField
               control={form.control}

@@ -2,7 +2,7 @@ import { boolean, integer, pgTableCreator, timestamp, varchar, text } from "driz
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { users } from "../user";
 import { relations } from "drizzle-orm";
-import { explainQuestions, questionToAssignment } from "./questions";
+import { explainQuestions, explainQuestionToAssignment } from "./explainQuestions";
 import { conceptLists } from "./concept";
 import { topics } from "../subject";
 
@@ -40,7 +40,7 @@ export const explainAssignmentRelations = relations(explainAssignments, ({ one, 
     references: [topics.id],
   }),
   questions: many(explainQuestions),
-  questionToAssignment: many(questionToAssignment),
+  questionToAssignment: many(explainQuestionToAssignment),
 }));
 
 

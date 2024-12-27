@@ -1,7 +1,7 @@
 import { eq } from "drizzle-orm";
 import { activity } from "@/server/db/schema/activity";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { GetActivitiesInput, GetActivityInput } from "./activities.input";
+import type { GetActivitiesInput, GetActivityInput, MakeActivityLiveInput } from "./activities.input";
 import type { ActivityType } from "@/lib/constants";
 
 export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivitiesInput) => {
@@ -108,3 +108,16 @@ export const getActivity = async (ctx: ProtectedTRPCContext, input: GetActivityI
   })
   return act;
 }
+
+export const makeActivityLive = async (ctx: ProtectedTRPCContext, input: MakeActivityLiveInput) => {
+
+  return await ctx.db.update(activity).set({
+    isLive: true,
+    dueDate: input.dueDate,
+  }).where(eq(activity.id, input.activityId));
+  
+} 
+
+
+
+

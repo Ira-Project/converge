@@ -8,7 +8,7 @@ import {
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
 import { courses } from '../subject';
-import { explainQuestions } from "./questions";
+import { explainQuestions } from "./explainQuestions";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 

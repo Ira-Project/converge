@@ -19,12 +19,12 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { RichInput } from "./rich-input";
 import { LoadingButton } from "@/components/loading-button";
 import SubmissionModal from "./submission-modal";
-import ConfirmationModal from "./confirmation-modal";
-import AssignmentTutorialModal from "./assignment-tutorial-modal";
+import ConfirmationModal from "./explain-confirmation-modal";
+import AssignmentTutorialModal from "./explain-assignment-tutorial-modal";
 import dynamic from 'next/dynamic';
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
-import AssignmentShareModal from "./assignment-share-modal";
+import AssignmentShareModal from "./explain-assignment-share-modal";
 
 const FormulaInput = dynamic(() => import('./formula-input'), { ssr: false });
 
@@ -52,7 +52,7 @@ interface Props {
 
 export const AssignmentView = ({ activityId, topic, questions, testAttemptId, assignmentName, assignmentId, classroom, isLive, dueDate, role }: Props) => {
   const explanationMutation = api.explanation.explain.useMutation();
-  const submissionMutation = api.explainTestAttempt.submit.useMutation();
+  const submissionMutation = api.learnByTeaching.submit.useMutation();
 
   const initialState: AssignmentState = {
     validNodeIds: [],

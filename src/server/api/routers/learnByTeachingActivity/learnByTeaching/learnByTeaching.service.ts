@@ -1,9 +1,10 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import { type SubmitTestAttemptSchema, type CreateTestAttemptInput, type GetSubmissionsInput, type GetUnderstandingGapsInput, type GetAnalyticsCardsInput } from "./explainTestAttempt.input";
+import { type SubmitTestAttemptSchema, type CreateTestAttemptInput, type GetSubmissionsInput, type GetUnderstandingGapsInput, type GetAnalyticsCardsInput, type GetLearnByTeachingActivityInput } from "./learnByTeaching.input";
 import { explainTestAttempts } from "@/server/db/schema/learnByTeaching/explainTestAttempt";
 import { eq } from "drizzle-orm";
-import { ConceptStatus, Roles } from "@/lib/constants";
+import { ActivityType, ConceptStatus, Roles } from "@/lib/constants";
+import { explainAssignments } from "@/server/db/schema/learnByTeaching/explainAssignment";
 
 export const createTestAttempt = async (ctx: ProtectedTRPCContext, input: CreateTestAttemptInput) => { 
   const id = generateId(21);
@@ -22,16 +23,16 @@ export const submitTestAttempt = async (ctx: ProtectedTRPCContext, input: Submit
     where: (explanation, { eq }) => eq(explanation.testAttemptId, input.testAttemptId),
     orderBy: (explanation, { desc }) => [desc(explanation.createdAt)],
     with: {
-      computedAnswers: true,
+      explainComputedAnswers: true,
     }
   })
   
-  const score = finalExplanation?.computedAnswers?.filter((answer) => answer.isCorrect).length;
-  const totalQuestions = finalExplanation?.computedAnswers?.length;
+  const score = finalExplanation?.explainComputedAnswers?.filter((answer) => answer.isCorrect).length;
+  const totalQuestions = finalExplanation?.explainComputedAnswers?.length;
   
   await ctx.db.update(explainTestAttempts)
     .set({
-      score: score && totalQuestions ? score / totalQuestions : 0,
+      score: score && totalQuestions ? score / totalQuestions : 0.0,
       submittedAt: submissionTime,
     })
     .where(eq(explainTestAttempts.id, input.testAttemptId))
@@ -92,7 +93,7 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
             id: true,
           },
           with: {
-            conceptStatus: {
+            explainConceptStatus: {
               with: {
                 concept: {
                   columns: {
@@ -117,7 +118,7 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
             id: true,
           },
           with: {
-            conceptStatus: {
+            explainConceptStatus: {
               with: {
                 concept: {
                   columns: {
@@ -137,7 +138,7 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
 
   submissions.forEach(submission => {
     submission.explanations.forEach(explanation => {
-      explanation.conceptStatus.forEach(conceptStatus => {
+      explanation.explainConceptStatus.forEach(conceptStatus => {
         if(conceptScores.has(conceptStatus.conceptId)) {
           const scoreData = conceptScores.get(conceptStatus.conceptId)!;
           scoreData.total += 1;
@@ -168,7 +169,7 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
   }));
 
   // Sort by score in descending order
-  const conceptList = conceptUnderstanding.sort((a, b) => b.score - a.score).slice(0, 3);
+  const conceptList = conceptUnderstanding.sort((a, b) => a.score - b.score).slice(0, 3);
   return conceptList;
 
 }
@@ -218,4 +219,30 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
     submissionCount,
     averageExplanationsPerSubmission
   };
+}
+
+export const getLearnByTeachingActivity = async (ctx: ProtectedTRPCContext, input: GetLearnByTeachingActivityInput) => {
+  const activity = await ctx.db.query.activity.findFirst({
+    where: (activity, { eq }) => eq(activity.id, input.activityId),
+  });
+
+  const assignmentId = activity?.assignmentId;
+
+  if(!assignmentId || activity?.type !== ActivityType.LearnByTeaching) {
+    throw new Error("Assignment not found");  
+  }
+
+  const assignment = await ctx.db.query.explainAssignments.findFirst({
+    where: (assignment, { eq }) => eq(explainAssignments.id, assignmentId),
+    with: {
+      questionToAssignment: {
+        with: {
+          question: true,
+        }
+      }
+    }
+  });
+
+  return assignment;
+
 }

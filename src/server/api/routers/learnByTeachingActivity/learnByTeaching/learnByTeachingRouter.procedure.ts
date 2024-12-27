@@ -1,8 +1,8 @@
 import { createTRPCRouter, protectedProcedure } from "../../../trpc";
-import * as services from "./explainTestAttempt.service";
-import * as inputs from "./explainTestAttempt.input";
+import * as services from "./learnByTeaching.service";
+import * as inputs from "./learnByTeaching.input";
 
-export const explainTestAttemptRouter = createTRPCRouter({
+export const learnByTeachingRouter = createTRPCRouter({
   create: protectedProcedure
     .input(inputs.createTestAttemptSchema)
     .mutation(({ ctx, input }) => services.createTestAttempt(ctx, input)),
@@ -22,4 +22,8 @@ export const explainTestAttemptRouter = createTRPCRouter({
   getAnalyticsCards: protectedProcedure
     .input(inputs.getAnalyticsCardsInput)
     .query(({ ctx, input }) => services.getAnalyticsCards(ctx, input)),
+
+  getLearnByTeachingActivity: protectedProcedure
+    .input(inputs.getLearnByTeachingActivityInput)
+    .query(({ ctx, input }) => services.getLearnByTeachingActivity(ctx, input)),
 });

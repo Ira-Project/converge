@@ -4,7 +4,7 @@ import { api } from '@/trpc/server';
 
 const AnalyticsCards = async ({ activityId }: { activityId: string }) => {
 
-  const data = await api.learnByTeaching.getAnalyticsCards.query({ activityId });  
+  const data = await api.explainTestAttempt.getAnalyticsCards.query({ activityId });  
 
   return (
     <div className="flex flex-col gap-4">

@@ -28,16 +28,16 @@ export const explainQuestions = pgTable(
   }
 );
 export const questionRelations = relations(explainQuestions, ({ one, many }) => ({
-  questionToAssignment: many(questionToAssignment),
-  answers: many(answers),
+  explainQuestionToAssignment: many(explainQuestionToAssignment),
+  explainAnswers: many(explainAnswers),
   topic: one(topics, {
     fields: [explainQuestions.topicId],
     references: [topics.id],
   }),
 }));
 
-export const questionToAssignment = pgTable(
-  "question_to_assignment",
+export const explainQuestionToAssignment = pgTable(
+  "explain_question_to_assignment",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     order: integer("order"),
@@ -49,20 +49,20 @@ export const questionToAssignment = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   }
 )
-export const questionToAssignmentRelations = relations(questionToAssignment, ({ one }) => ({
+export const explainQuestionToAssignmentRelations = relations(explainQuestionToAssignment, ({ one }) => ({
   question: one(explainQuestions, {
-    fields: [questionToAssignment.questionId],
+    fields: [explainQuestionToAssignment.questionId],
     references: [explainQuestions.id],
   }),
   assignment: one(explainAssignments, {
-    fields: [questionToAssignment.assignmentId],
+    fields: [explainQuestionToAssignment.assignmentId],
     references: [explainAssignments.id],
   }),
 }));
 
 
-export const answers = pgTable(
-  "answers",
+export const explainAnswers = pgTable(
+  "explain_answers",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     questionId: varchar("question_id", { length: 21 }).references(() => explainQuestions.id),
@@ -73,9 +73,9 @@ export const answers = pgTable(
     deletedAt: timestamp("deleted_at", { mode: "date" }),
   }
 );
-export const answerRelations = relations(answers, ({ one }) => ({
+export const explainAnswerRelations = relations(explainAnswers, ({ one }) => ({
   question: one(explainQuestions, {
-    fields: [answers.questionId],
+    fields: [explainAnswers.questionId],
     references: [explainQuestions.id],
   }),
 }));

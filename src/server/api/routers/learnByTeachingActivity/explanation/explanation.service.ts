@@ -1,7 +1,7 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { type ExplainInput } from "./explanation.input";
 import { generateId } from "lucia";
-import { computedAnswers, conceptStatus, explanations } from "@/server/db/schema/learnByTeaching/explanations";
+import { explainComputedAnswers, explainConceptStatus, explanations } from "@/server/db/schema/learnByTeaching/explanations";
 import { actions } from "@/server/realtime_db/schema/actions";
 import { AssignmentUpdateActionType, ConceptStatus, QuestionStatus } from "@/lib/constants";
 
@@ -157,7 +157,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
       })
       .then(async () => {
           console.log(index, "Created RealtimeDB Object", Date.now())
-          await ctx.db.insert(computedAnswers).values({
+          await ctx.db.insert(explainComputedAnswers).values({
             id: generateId(21),
             explanationId: explanationId,
             questionId: question.id,
@@ -174,7 +174,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   await Promise.all(questionPromises)
   for (const concept of concepts) {
     console.log("Concept: ", concept)
-    await ctx.db.insert(conceptStatus).values({
+    await ctx.db.insert(explainConceptStatus).values({
       id: generateId(21),
       explanationId: explanationId,
       conceptId: concept.id,

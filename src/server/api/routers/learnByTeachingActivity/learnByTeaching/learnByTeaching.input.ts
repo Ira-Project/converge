@@ -24,3 +24,8 @@ export const getAnalyticsCardsInput = z.object({
   activityId: z.string(),
 });
 export type GetAnalyticsCardsInput = z.infer<typeof getAnalyticsCardsInput>;
+
+export const getLearnByTeachingActivityInput = z.object({
+  activityId: z.string(),
+});
+export type GetLearnByTeachingActivityInput = z.infer<typeof getLearnByTeachingActivityInput>;
