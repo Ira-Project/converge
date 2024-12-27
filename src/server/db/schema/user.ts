@@ -29,6 +29,7 @@ export const users = pgTable(
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isOnboarded: boolean("is_onboarded").default(false).notNull(),
+    defaultClassroomId: varchar("default_classroom_id", { length: 21 }),
   },
   (t) => ({
     emailIdx: index("user_email_idx").on(t.email),

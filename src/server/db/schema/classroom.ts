@@ -7,6 +7,7 @@ import {
   pgEnum,
   primaryKey,
   text,
+  integer,
 } from "drizzle-orm/pg-core";
 import { Roles, DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
@@ -25,6 +26,7 @@ export const classrooms = pgTable(
     name: text("name").notNull(),
     description: text("description"),
     courseId: varchar("course_id", { length: 21 }).references(() => courses.id),
+    grade: integer("grade"),
     code: varchar("code", { length: 8 }).unique().notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),

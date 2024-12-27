@@ -10,10 +10,6 @@ import { createClassroom } from "@/lib/utils/createClassroom";
 
 export const updateUser = async (ctx: ProtectedTRPCContext, input: updateUserInput) => {
   
-  await ctx.db.update(users)
-    .set({name: input.name, isOnboarded: true})
-    .where(eq(users.email, ctx.user.email));
-
   await ctx.db.update(preloadedUsers)
     .set({notOnboarded: false})
     .where(eq(preloadedUsers.email, input.email));
@@ -70,6 +66,12 @@ export const updateUser = async (ctx: ProtectedTRPCContext, input: updateUserInp
   }
 
   //Creating a classroom for the teacher
-  const classroomId = await createClassroom(ctx.user.id, ctx.user.name ?? "anonymous", input.courses, input.subjects, input.grades);
+  const classroomId = await createClassroom(ctx.user.id, ctx.user.name ?? "anonymous");
+
+  await ctx.db.update(users)
+    .set({name: input.name, isOnboarded: true, defaultClassroomId: classroomId})
+    .where(eq(users.email, ctx.user.email));
+
+
   return classroomId;
 }

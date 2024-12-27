@@ -105,7 +105,7 @@ export async function GET(request: Request): Promise<Response> {
 
     return new Response(null, {
       status: 302,
-      headers: { Location: Paths.Home },
+      headers: { Location: `${Paths.Classroom}${existingUser.defaultClassroomId}` },
     });
     
   } catch (e) {

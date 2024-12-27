@@ -5,19 +5,18 @@ export const EMAIL_SENDER = 'contact@iraproject.com';
 export const LATEX_DELIMITER = "$!$";
 
 export enum Paths {
-  Home = "/",
   Login = "/login",
   Signup = "/signup",
   Onboarding = '/onboarding',
   VerifyEmail = "/verify-email",
   ResetPassword = "/reset-password",
   GoogleLogin = "/login/google",
-  Classroom = "/classroom/",
+  Classroom = "/",
   LearnByTeaching = "/learn-by-teaching/",
-  ReasoningPathway = "/reasoning-pathway/",
+  ReasonTrace = "/reason-trace/",
   CreateAssignment = "/create-assignment/",
-  CreateClassroom = "/create-classroom/",
-  JoinClassroom = "/join-classroom/",
+  Activity = "/activity/",
+  LiveActivity = "/live",
 }
 
 export enum Roles {

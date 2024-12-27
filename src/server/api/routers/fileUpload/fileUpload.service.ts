@@ -28,7 +28,7 @@ export const getPreSignedUrl = async (ctx: ProtectedTRPCContext, input: PreSigne
   const command = new PutObjectCommand(
     { 
       Bucket: 'converge-ira-project', 
-      Key: `${ctx.user.email}-${input.fileName}` 
+      Key: `${ctx.user.email}-${input.topicName}-${input.fileName}` 
     }
   );
   const url = await getSignedUrl(s3, command, { expiresIn: 3600 });
@@ -41,7 +41,7 @@ export const uploadLessonPlan = async (ctx: ProtectedTRPCContext, input: UploadF
 
   await ctx.db.insert(lessonPlanFiles).values({
     id: id,
-    name: input.fileName,
+    name: input.topicName,
     url: input.url,
     createdBy: ctx.user.id,
   });

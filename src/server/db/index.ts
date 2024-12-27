@@ -14,6 +14,7 @@ import * as lessonPlanFiles from "./schema/lessonPlan";
 import * as reasoningQuestions from "./schema/reasoning/reasoningQuestions";
 import * as reasoningQuestionAttempts from "./schema/reasoning/reasoningQuestionAttempts";
 import * as reasoningAssignments from "./schema/reasoning/reasoningAssignment";
+import * as activity from "./schema/activity";
 
 export const client = postgres(env.DATABASE_URL, {
   max_lifetime: 10, 
@@ -35,5 +36,6 @@ export const db = drizzle(client, { schema:
     ...reasoningAssignments,
     ...reasoningQuestionAttempts,
     ...reasoningQuestions,
+    ...activity,
   }
 });

@@ -51,7 +51,7 @@ export function SendResetEmail() {
 
       <SubmitButton className="w-full">Reset Password</SubmitButton>
       <Button variant="outline" className="w-full" asChild>
-        <Link href={Paths.Home}>Cancel</Link>
+        <Link href={Paths.Login}>Cancel</Link>
       </Button>
     </form>
   );

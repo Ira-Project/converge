@@ -10,6 +10,7 @@ import { relations } from "drizzle-orm";
 import { explainAssignments } from "./explainAssignment";
 import { explanations } from "./explanations";
 import { users } from "../user";
+import { activity } from "../activity";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -17,7 +18,8 @@ export const explainTestAttempts = pgTable(
   "explain_test_attempts",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
-    assignmentId: varchar("assignment_id", { length: 21 }).notNull().references(() => explainAssignments.id),
+    activityId: varchar("activity_id", { length: 21 }).references(() => activity.id),
+    assignmentId: varchar("assignment_id", { length: 21 }).references(() => explainAssignments.id),
     score: integer("score"),
     submittedAt: timestamp("submitted_at", { mode: "date" }),
     userId: varchar("user_id", { length: 21 }).notNull().references(() => users.id).notNull(),
@@ -25,7 +27,6 @@ export const explainTestAttempts = pgTable(
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
     deletedAt: timestamp("deleted_at", { mode: "date" }),
-    // TODO: Add activity id
   }
 )
 export const explainTestAttemptRelations = relations(explainTestAttempts, ({ one, many }) => ({
@@ -33,5 +34,13 @@ export const explainTestAttemptRelations = relations(explainTestAttempts, ({ one
     fields: [explainTestAttempts.assignmentId],
     references: [explainAssignments.id],
   }),
+  activity: one(activity, {
+    fields: [explainTestAttempts.activityId],
+    references: [activity.id],
+  }),
   explanations: many(explanations),
+  user: one(users, {
+    fields: [explainTestAttempts.userId],
+    references: [users.id],
+  }),
 }));

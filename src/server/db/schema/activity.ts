@@ -36,6 +36,7 @@ export const activity = pgTable("activity", {
   classroomId: varchar("classroom_id", { length: 21 }).references(() => classrooms.id),
   isLive: boolean("is_live").default(false).notNull(),
   isLocked: boolean("is_locked").default(false).notNull(),
+  dueDate: timestamp("due_date", { mode: "date" }),
   order: integer("order").notNull(),
   points: integer("points").notNull(),
   topicId: varchar("topic_id", { length: 21 }).references(() => topics.id),

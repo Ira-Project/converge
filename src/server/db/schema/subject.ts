@@ -8,11 +8,11 @@ import {
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
 import { classrooms } from "./classroom";
-import { conceptLists } from "./learnByTeaching/concept";
 import { explainAssignments } from "./learnByTeaching/explainAssignment";
 import { users } from "./user";
 import { reasoningQuestions } from "./reasoning/reasoningQuestions";
 import { explainQuestions } from "./learnByTeaching/questions";
+import { activity } from "./activity";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -71,11 +71,12 @@ export const topics = pgTable(
     name: text("name").notNull(),
     imageUrl: text("image_url"),
     courseId: varchar("course_id", { length: 21 }).references(() => courses.id),
-    conceptListId: varchar("concept_list_id").references(() => conceptLists.id), // TODO: remove this
+    description: text("description"),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
     deletedAt: timestamp("deleted_at", { mode: "date" }),
+    slug: text("slug").default("").notNull(),
   }
 );
 export const topicRelations = relations(topics, ({ one, many }) => ({
@@ -83,10 +84,7 @@ export const topicRelations = relations(topics, ({ one, many }) => ({
     fields: [topics.courseId],
     references: [courses.id],
   }),
-  conceptLists: one(topics, {
-    fields: [topics.conceptListId],
-    references: [topics.id],
-  }),
+  activities: many(activity),
   explainAssignments: many(explainAssignments),
   questions: many(explainQuestions),
   reasoningQuestions: many(reasoningQuestions),

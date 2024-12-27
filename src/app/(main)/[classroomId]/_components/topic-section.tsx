@@ -1,0 +1,27 @@
+import React from 'react';
+import ActivityCard from './activity-card';
+import { type Topic } from '../types';
+
+interface TopicSectionProps {
+  topic: Topic;
+}
+
+const TopicSection: React.FC<TopicSectionProps> = ({ topic }) => {
+  const { name, description, activities, slug } = topic;
+  
+  return (
+    <div className="mb-8 px-4" id={slug}>
+      <h2 className="text-xl font-semibold mb-2">{name}</h2>
+      <p className="text-muted-foreground mb-6">{description}</p>
+      
+      <h3 className="text-lg font-medium mb-4">Activities</h3>
+      <div className="flex flex-row gap-4">
+        {activities.map((activity, index) => (
+          <ActivityCard key={index} activity={activity} />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default TopicSection;

@@ -13,6 +13,7 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
       name: true,
       code: true,
       description: true,
+      grade: true,
     },
     with: {
       course: {
@@ -22,7 +23,7 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
         with: {
           subject: {
             columns: {
-              imageUrl: true,
+              name: true,
             }
           }
         }

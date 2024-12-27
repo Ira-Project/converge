@@ -8,6 +8,7 @@ import { explainTestAttemptRouter } from "./routers/learnByTeachingActivity/expl
 import { createTRPCRouter } from "./trpc";
 import { reasoningAssignmentRouter } from "./routers/reasoningActivity/reasoningAssignment/reasoningAssignment.procedure";
 import { reasoningRouter } from "./routers/reasoningActivity/reasoning/reasoning.procedure";
+import { activitiesRouter } from "./routers/activities/activities.procedure";
 
 export const appRouter = createTRPCRouter({
   classroom: classroomRouter,
@@ -19,6 +20,7 @@ export const appRouter = createTRPCRouter({
   userOnboardingRouter: userOnboardingRouter,
   reasoningAssignment: reasoningAssignmentRouter,
   reasoning: reasoningRouter,
+  activities: activitiesRouter,
 });
 
 export type AppRouter = typeof appRouter;

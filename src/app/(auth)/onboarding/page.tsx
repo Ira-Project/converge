@@ -23,6 +23,8 @@ export default async function VerifyEmailPage() {
 
   if (!user) redirect(Paths.Login);
 
+  if (user.isOnboarded) redirect(`${Paths.Classroom}${user.classroomId}`);
+
   const courses = await api.subject.listCourses.query();
   const subjects = await api.subject.listSubjects.query();
 

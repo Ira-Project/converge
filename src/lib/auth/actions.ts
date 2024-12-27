@@ -70,11 +70,11 @@ export async function login(_: unknown, formData: FormData): Promise<ActionRespo
   const sessionCookie = lucia.createSessionCookie(session.id);
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
 
-  if(!existingUser?.isOnboarded) {
+  if(!existingUser?.isOnboarded || !existingUser?.defaultClassroomId) {
     return redirect(Paths.Onboarding);
   }
 
-  return redirect(Paths.Home);
+  redirect(`${Paths.Classroom}${existingUser.defaultClassroomId}`); 
 }
 
 export async function signup(_: unknown, formData: FormData): Promise<ActionResponse<SignupInput>> {
@@ -263,7 +263,12 @@ export async function resetPassword(
   const session = await lucia.createSession(dbToken.userId, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
-  redirect(Paths.Home);
+
+  const user = await db.query.users.findFirst({
+    where: (table, { eq }) => eq(table.id, dbToken.userId),
+  });
+  if (user?.defaultClassroomId) redirect(`${Paths.Classroom}${user.defaultClassroomId}`); 
+  return redirect(Paths.Onboarding);
 }
 
 const timeFromNow = (time: Date) => {

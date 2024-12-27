@@ -80,6 +80,7 @@ export async function createClassroom(
       order: activityId.order,
       points: activityId.points,
       classroomId: classroom[0]?.id,
+      topicId: activityId.topicId,
       createdBy: userId,
       isLive: false,
       isLocked: false,

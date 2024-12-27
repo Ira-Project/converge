@@ -10,4 +10,16 @@ export const explainTestAttemptRouter = createTRPCRouter({
   submit: protectedProcedure
     .input(inputs.submitTestAttemptSchema)
     .mutation(({ ctx, input }) => services.submitTestAttempt(ctx, input)),
+  
+  getSubmissions: protectedProcedure
+    .input(inputs.getSubmissionsInput)
+    .query(({ ctx, input }) => services.getSubmissions(ctx, input)),
+
+  getUnderstandingGaps: protectedProcedure
+    .input(inputs.getUnderstandingGapsInput)
+    .query(({ ctx, input }) => services.getUnderstandingGaps(ctx, input)),
+
+  getAnalyticsCards: protectedProcedure
+    .input(inputs.getAnalyticsCardsInput)
+    .query(({ ctx, input }) => services.getAnalyticsCards(ctx, input)),
 });
