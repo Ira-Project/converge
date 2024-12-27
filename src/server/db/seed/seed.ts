@@ -7,7 +7,7 @@ import {
 } from "../schema/learnByTeaching/concept";
 import { and, eq } from "drizzle-orm";
 import { generateId } from "lucia";
-import { answers, explainQuestions, questionToAssignment } from "../schema/learnByTeaching/explainQuestions";
+import { explainAnswers, explainQuestions, explainQuestionToAssignment } from "../schema/learnByTeaching/explainQuestions";
 
 import { courses, subjects, topics } from "../schema/subject";
 import { emailsToPreload } from './emailsToPreload'
@@ -51,7 +51,7 @@ async function createQuestionsAndConceptListFromJson() {
       questionId: questionId,
       answer: question.answer,
     }
-    await db.insert(answers).values(answerObject)
+    await db.insert(explainAnswers).values(answerObject)
   }
 }
 
@@ -61,8 +61,8 @@ async function addQuestionsToAssignmentFromTopic() {
   const topicId = "yyyah4hvk5r7188h7mgkk";
   const assignmentId = "9pcpaym65ccyj9rtlz6xd";
 
-  const existingQuestions = await db.select().from(questionToAssignment).where(
-    eq(questionToAssignment.assignmentId, assignmentId),
+  const existingQuestions = await db.select().from(explainQuestionToAssignment).where(
+    eq(explainQuestionToAssignment.assignmentId, assignmentId),
   )
   if(existingQuestions.length > 0) {
     console.log("Assignment already has questions")
@@ -74,7 +74,7 @@ async function addQuestionsToAssignmentFromTopic() {
   )
 
   for (const question of questionList) {
-    await db.insert(questionToAssignment).values({
+    await db.insert(explainQuestionToAssignment).values({
       id: generateId(21),
       questionId: question.id,
       assignmentId: assignmentId,
@@ -624,6 +624,7 @@ async function createReasoningAssignmentFromTopic() {
 }
 
 void createReasoningQuestionsFromJson();
+
 // void createReasoningAssignmentFromTopic();
 
 // void createCoursesSubjectsAndTopics();
