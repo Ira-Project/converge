@@ -1,8 +1,7 @@
 "use client";
 import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
-import { useEffect, useRef } from "react";
-import { useFormState } from "react-dom";
+import { useActionState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import { ExclamationTriangleIcon } from "@/components/icons";
 import {
@@ -13,8 +12,8 @@ import {
 import { SubmitButton } from "@/components/submit-button";
 
 export const VerifyCode = () => {
-  const [verifyEmailState, verifyEmailAction] = useFormState(verifyEmail, null);
-  const [resendState, resendAction] = useFormState(resendEmail, null);
+  const [verifyEmailState, verifyEmailAction] = useActionState(verifyEmail, null);
+  const [resendState, resendAction] = useActionState(resendEmail, null);
   const codeFormRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {

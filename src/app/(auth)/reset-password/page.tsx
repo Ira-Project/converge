@@ -18,7 +18,7 @@ export const metadata = {
 export default async function ForgotPasswordPage() {
   const { user } = await validateRequest();
 
-  if (user) redirect(Paths.Home);
+  if (user?.classroomId) redirect(`${Paths.Classroom}${user.classroomId}`); 
 
   return (
     <Card className="w-full max-w-md">

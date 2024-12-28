@@ -4,10 +4,10 @@ import {
   conceptListConcepts,
   conceptLists, 
   concepts, 
-} from "../schema/concept";
+} from "../schema/learnByTeaching/concept";
 import { and, eq } from "drizzle-orm";
 import { generateId } from "lucia";
-import { answers, questions, questionToAssignment } from "../schema/questions";
+import { explainAnswers, explainQuestions, explainQuestionToAssignment } from "../schema/learnByTeaching/explainQuestions";
 
 import { courses, subjects, topics } from "../schema/subject";
 import { emailsToPreload } from './emailsToPreload'
@@ -22,8 +22,10 @@ type QuestionType = {
   image: string,
 } 
 
-
 import json from "./work_energy_power.json";
+import reasoningJson from "./reasoning/work_energy_power.json";
+import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../schema/reasoning/reasoningQuestions";
+import { reasoningAssignments } from "../schema/reasoning/reasoningAssignment";
 
 async function createQuestionsAndConceptListFromJson() {
 
@@ -32,53 +34,7 @@ async function createQuestionsAndConceptListFromJson() {
   const topic = await db.select().from(topics).where(
     eq(topics.id, topicId),
   )
-
-  if(topic?.[0] === undefined || topic[0].conceptListId !== null) {
-    console.log("Topic not found or already has a concept list")
-    return
-  }
-
-  // Create a Concept List Object
-  const conceptList = {
-    id: generateId(21),
-    name: json.name,
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  }
-  await db.insert(conceptLists).values(conceptList)  
-
-  for (const concept of json.concepts) {
-    // Check if concept already exists
-    const existingConcept = await db.select().from(concepts).where(
-      eq(concepts.text, concept),
-    )
-    if (existingConcept?.[0]?.id === undefined) {
-      const conceptId = generateId(21)
-      await db.insert(concepts).values({
-        id: conceptId,
-        text: concept,
-      })
-      await db.insert(conceptListConcepts).values({
-        id: generateId(21),
-        conceptListId: conceptList.id,
-        conceptId: conceptId,
-      })
-    } else {
-      await db.insert(conceptListConcepts).values({
-        id: generateId(21),
-        conceptListId: conceptList.id,
-        conceptId: existingConcept[0].id,
-      })
-    }
-  }
   
-  // Add conceptList ID to topic
-  await db.update(topics).set({
-    conceptListId: conceptList.id,
-  }).where(
-    eq(topics.id, topicId),
-  )
-
   // Create the questions object
   for (const question of json.questions) {
     const questionId = generateId(21)
@@ -89,13 +45,13 @@ async function createQuestionsAndConceptListFromJson() {
       topicId: topicId,
       image: question.image,
     }
-    await db.insert(questions).values(questionObject)
+    await db.insert(explainQuestions).values(questionObject)
     const answerObject = {
       id: generateId(21),
       questionId: questionId,
       answer: question.answer,
     }
-    await db.insert(answers).values(answerObject)
+    await db.insert(explainAnswers).values(answerObject)
   }
 }
 
@@ -105,20 +61,20 @@ async function addQuestionsToAssignmentFromTopic() {
   const topicId = "yyyah4hvk5r7188h7mgkk";
   const assignmentId = "9pcpaym65ccyj9rtlz6xd";
 
-  const existingQuestions = await db.select().from(questionToAssignment).where(
-    eq(questionToAssignment.assignmentId, assignmentId),
+  const existingQuestions = await db.select().from(explainQuestionToAssignment).where(
+    eq(explainQuestionToAssignment.assignmentId, assignmentId),
   )
   if(existingQuestions.length > 0) {
     console.log("Assignment already has questions")
     return
   }
 
-  const questionList = await db.select().from(questions).where(
-    eq(questions.topicId, topicId),
+  const questionList = await db.select().from(explainQuestions).where(
+    eq(explainQuestions.topicId, topicId),
   )
 
   for (const question of questionList) {
-    await db.insert(questionToAssignment).values({
+    await db.insert(explainQuestionToAssignment).values({
       id: generateId(21),
       questionId: question.id,
       assignmentId: assignmentId,
@@ -504,6 +460,172 @@ async function uploadPreloadedUsers() {
   }
 }
 
+async function createReasoningQuestionsFromJson() {
+  const topicId = "yyyah4hvk5r7188h7mgkk";
+  const topic = await db.select().from(topics).where(
+    eq(topics.id, topicId),
+  )
+
+  if(topic?.[0] === undefined) {
+    console.log("Topic not found")
+    return
+  }
+
+  for (const reasoningQuestion of reasoningJson.reasoningQuestions) {
+    // Check if question already exists
+    const existingQuestion = await db.select().from(reasoningQuestions).where(
+      and(
+        eq(reasoningQuestions.questionText, reasoningQuestion.questionText),
+        eq(reasoningQuestions.topicId, topicId)
+      )
+    )
+
+    let questionId: string;
+    if (existingQuestion?.[0]?.id !== undefined) {
+      console.log(`Question "${reasoningQuestion.questionText.substring(0, 30)}..." already exists`)
+      questionId = existingQuestion[0].id;
+    } else {
+      // Create the reasoning question
+      questionId = generateId(21)
+      await db.insert(reasoningQuestions).values({
+        id: questionId,
+        questionText: reasoningQuestion.questionText,
+        questionImage: reasoningQuestion.questionImage,
+        answerText: reasoningQuestion.answerText, 
+        correctAnswers: reasoningQuestion.correctAnswers,
+        answerImage: reasoningQuestion.answerImage,
+        numberOfSteps: reasoningQuestion.numberOfSteps,
+        topicId: topicId,
+      })
+    }
+
+    // Check and create answer options
+    for (const option of reasoningQuestion.answerOptions) {
+      const existingOption = await db.select().from(reasoningAnswerOptions).where(
+        and(
+          eq(reasoningAnswerOptions.questionId, questionId),
+          eq(reasoningAnswerOptions.id, option.id)
+        )
+      )
+
+      if (existingOption?.[0]?.id === undefined) {
+        await db.insert(reasoningAnswerOptions).values({
+          id: option.id,
+          questionId: questionId,
+          optionText: option.optionText,
+          optionImage: option.optionImage,
+        })
+      }
+    }
+
+    // Check and create pathways and steps
+    for (const pathway of reasoningQuestion.pathways) {
+      // Check if a similar pathway exists by comparing its steps
+      const existingPathways = await db.select().from(reasoningPathway).where(
+        eq(reasoningPathway.questionId, questionId)
+      )
+
+      let pathwayExists = false;
+      for (const existingPathway of existingPathways) {
+        const existingSteps = await db.select().from(reasoningPathwayStep).where(
+          eq(reasoningPathwayStep.pathwayId, existingPathway.id)
+        )
+
+        if (existingSteps.length > 0) {
+          pathwayExists = true;
+          break;
+        }
+      }
+
+      if (!pathwayExists) {
+        const pathwayId = generateId(21)
+        await db.insert(reasoningPathway).values({
+          id: pathwayId,
+          questionId: questionId,
+        })
+
+        // Create the steps for this pathway
+        for (const step of pathway.steps) {
+          // Check if the step already exists
+          const existingStep = await db.select().from(reasoningPathwayStep).where(
+            and(
+              eq(reasoningPathwayStep.pathwayId, pathwayId),
+              eq(reasoningPathwayStep.answerOptionId, step.answerOptionId)
+            )
+          ) 
+
+          if (existingStep?.[0]?.id === undefined) {
+            await db.insert(reasoningPathwayStep).values({
+              id: generateId(21),
+              pathwayId: pathwayId,
+              answerOptionId: step.answerOptionId,
+              stepNumber: step.stepNumber,
+              isCorrect: step.isCorrect,
+              replacementOptionId: step.replacementOptionId,
+            })
+          }
+        }
+      }
+    }
+  }
+}
+
+async function createReasoningAssignmentFromTopic() {
+  // Parameters for assignment creation
+  const topicId = "yyyah4hvk5r7188h7mgkk";
+  const assignmentName = "Work, Energy and Power Assignment";
+
+  // Check if assignment already exists
+  const existingAssignment = await db.select().from(reasoningAssignments).where(
+    and(
+      eq(reasoningAssignments.topicId, topicId),
+      eq(reasoningAssignments.name, assignmentName)
+    )
+  );
+
+  if (existingAssignment?.[0]?.id !== undefined) {
+    console.log(`Assignment "${assignmentName}" already exists`)
+    return
+  }
+
+  const assignmentId = generateId(21);
+
+  // Get all reasoning questions for this topic
+  const questionList = await db.select().from(reasoningQuestions).where(
+    and(
+      eq(reasoningQuestions.topicId, topicId),
+      eq(reasoningQuestions.isDeleted, false)
+    )
+  );
+
+  // Create the assignment
+  await db.insert(reasoningAssignments).values({
+    id: assignmentId,
+    topicId: topicId,
+    name: "Work, Energy and Power Assignment", 
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  });
+
+  // Add questions to the assignment
+  for (let i = 0; i < questionList.length; i++) {
+    const questionId = questionList[i]?.id;
+    if (questionId) {
+      await db.insert(reasoningQuestionToAssignment).values({
+        id: generateId(21),
+        questionId: questionId,
+        assignmentId: assignmentId,
+        order: i + 1,
+        createdAt: new Date(),
+        updatedAt: new Date()
+      });
+    }
+  }
+}
+
+// void createReasoningQuestionsFromJson();
+
+// void createReasoningAssignmentFromTopic();
 
 // void createCoursesSubjectsAndTopics();
 // void createQuestionsAndConceptListFromJson();

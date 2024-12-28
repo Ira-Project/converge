@@ -35,7 +35,7 @@ export function QuestionAccordionItem({
 } : QuestionAccordionProps) {
 
   return (
-    <Card className="p-4 mb-4">
+    <Card className="p-4 mb-4 text-sm">
     {
       workingText ?? image ?
       <>

@@ -31,6 +31,7 @@ const GoogleIcon = forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
     className={cn(className)}
     width={21}
     height={20}
+    viewBox="0 0 21 20"
     fill="none"
     ref={ref}
     {...props}
@@ -81,4 +82,11 @@ export {
   StackIcon,
   HomeIcon,
   PersonIcon,
+  ArrowLeftIcon,
+  ArrowRightIcon,
+  RotateCounterClockwiseIcon,
+  ExternalLinkIcon,
+  Share1Icon,
+  BarChartIcon,
+  FileTextIcon,
 } from "@radix-ui/react-icons";

@@ -15,13 +15,6 @@ export const getClassroomStudentsSchema = z.object({
 });
 export type GetClassroomStudentsInput = z.infer<typeof getClassroomStudentsSchema>;
 
-export const createClassroomSchema = z.object({
-  name: z.string().min(3).max(255),
-  description: z.string().max(255),
-  course: z.string(),
-});
-export type CreateClassroomInput = z.infer<typeof createClassroomSchema>;
-
 export const joinClassroomSchema = z.object({
   code: z.string().min(5).max(5),
   name: z.string(),

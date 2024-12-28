@@ -6,6 +6,7 @@ export const listCourses = async (ctx: ProtectedTRPCContext) => {
     columns: {
       id: true,
       name: true,
+      locked: true,
     },
   });
 };
@@ -16,6 +17,7 @@ export const listSubjects = async (ctx: ProtectedTRPCContext) => {
     columns: {
       id: true,
       name: true,
+      locked: true,
     },
   });
 };

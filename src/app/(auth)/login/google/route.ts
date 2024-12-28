@@ -14,7 +14,7 @@ export async function GET(): Promise<Response> {
   (await
     // store state verifier as cookie
     cookies()).set("state", state, {
-    secure: true, // set to false in localhost
+    secure: process.env.NODE_ENV === "production", // set to false in localhost
     path: "/",
     httpOnly: true,
     maxAge: 60 * 10 // 10 min
@@ -24,7 +24,7 @@ export async function GET(): Promise<Response> {
   (await
     // store code verifier as cookie
     cookies()).set("code_verifier", codeVerifier, {
-    secure: true, // set to false in localhost
+    secure: process.env.NODE_ENV === "production", // set to false in localhost
     path: "/",
     httpOnly: true,
     maxAge: 60 * 10 // 10 min

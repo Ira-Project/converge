@@ -21,7 +21,6 @@ import { validateRequest } from "@/lib/auth/validate-request";
 import { Paths, Roles } from "../constants";
 import { env } from "@/env";
 import { eq } from "drizzle-orm";
-import { usersToClassrooms } from "@/server/db/schema/classroom";
 
 export interface ActionResponse<T> {
   fieldError?: Partial<Record<keyof T, string | undefined>>;
@@ -70,7 +69,12 @@ export async function login(_: unknown, formData: FormData): Promise<ActionRespo
   const session = await lucia.createSession(existingUser.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
-  return redirect(Paths.Home);
+
+  if(!existingUser?.isOnboarded || !existingUser?.defaultClassroomId) {
+    return redirect(Paths.Onboarding);
+  }
+
+  redirect(`${Paths.Classroom}${existingUser.defaultClassroomId}`); 
 }
 
 export async function signup(_: unknown, formData: FormData): Promise<ActionResponse<SignupInput>> {
@@ -130,6 +134,7 @@ export async function logout(): Promise<never> {
   
   redirect("/login");
 }
+
 export async function resendVerificationEmail(): Promise<{
   error?: string;
   success?: boolean;
@@ -180,39 +185,18 @@ export async function verifyEmail(_: unknown, formData: FormData): Promise<{ err
 
   if (dbCode.email !== user.email) return { error: "Email does not match" };
 
-  const preloadedUsers = await db.query.preloadedUsers.findFirst({
-    where: (table, { eq }) => eq(table.email, user.email),
-  });
 
 
   await lucia.invalidateUserSessions(user.id);
   await db.update(users).set({ 
     emailVerified: true,
-    role: preloadedUsers ? preloadedUsers.role : Roles.Student,
+    role: Roles.Teacher,
   }).where(eq(users.id, user.id));
   const session = await lucia.createSession(user.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
 
-  if(preloadedUsers?.notOnboarded) {
-    redirect(Paths.Onboarding);
-  }
-
-  const subjects = await db.query.subjects.findMany();
-
-  if(!preloadedUsers) {
-    for (const subject of subjects) {
-      if(subject.demoClassroomId) {
-        await db.insert(usersToClassrooms).values({
-          userId: user.id,
-          classroomId: subject.demoClassroomId,
-          role: Roles.Student,
-        })
-      }
-    }
-  }
-  redirect(Paths.Home);
-  
+  redirect(Paths.Onboarding);
 }
 
 export async function sendPasswordResetLink(
@@ -279,7 +263,12 @@ export async function resetPassword(
   const session = await lucia.createSession(dbToken.userId, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
-  redirect(Paths.Home);
+
+  const user = await db.query.users.findFirst({
+    where: (table, { eq }) => eq(table.id, dbToken.userId),
+  });
+  if (user?.defaultClassroomId) redirect(`${Paths.Classroom}${user.defaultClassroomId}`); 
+  return redirect(Paths.Onboarding);
 }
 
 const timeFromNow = (time: Date) => {
