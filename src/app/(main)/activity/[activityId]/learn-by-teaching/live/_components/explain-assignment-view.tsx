@@ -38,7 +38,6 @@ interface Props {
     image?: string | null,
   }[];
   dueDate?: Date;
-  assignmentName?: string;
   assignmentId: string;
   isLive: boolean;
   classroom?: {
@@ -50,7 +49,7 @@ interface Props {
   role: Roles;
 }
 
-export const AssignmentView = ({ activityId, topic, questions, testAttemptId, assignmentName, assignmentId, classroom, isLive, dueDate, role }: Props) => {
+export const AssignmentView = ({ activityId, topic, questions, testAttemptId, assignmentId, classroom, isLive, dueDate, role }: Props) => {
   const explanationMutation = api.explanation.explain.useMutation();
   const submissionMutation = api.learnByTeaching.submit.useMutation();
 
@@ -162,8 +161,7 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
             <>
               <AssignmentTutorialModal 
                 topic={topic}
-                classroom={classroom}
-                assignmentName={assignmentName} />
+                classroom={classroom} />
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
                 loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
@@ -173,15 +171,13 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
             <>
               <AssignmentTutorialModal 
                 topic={topic}
-                classroom={classroom}
-                assignmentName={assignmentName} />
+                classroom={classroom} />
               <AssignmentShareModal 
                 activityId={activityId}
                 isLive={isLive} />
             </>
           }
         </div>
-        
       </div>
       <div className="grid grid-cols-[0.9fr_1.1fr] h-[calc(100vh-48px)] overflow-y-hidden">
         <div className="flex flex-col gap-4 w-full px-8 py-8 overflow-y-hidden border-r-slate-200 border-r bg-amber-50">

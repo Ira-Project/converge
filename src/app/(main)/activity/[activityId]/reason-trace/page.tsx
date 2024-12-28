@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@react-email/components";
 import AssignmentShareModal from "./live/_components/reason-assignment-share-modal";
 import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils";
-import UnderstandingGaps from "./_components/understanding-gaps";
+import UnderstandingGaps from "./_components/question-analytics";
 import AnalyticsCards from "./_components/analytics-cards";
 import { BarChartIcon, FileTextIcon } from "@/components/icons";
 import SubmissionsTable from "./_components/submission-table";

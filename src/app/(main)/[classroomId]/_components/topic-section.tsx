@@ -1,12 +1,14 @@
 import React from 'react';
 import ActivityCard from './activity-card';
 import { type Topic } from '../types';
+import { type Roles } from '@/lib/constants';
 
 interface TopicSectionProps {
   topic: Topic;
+  role: Roles;
 }
 
-const TopicSection: React.FC<TopicSectionProps> = ({ topic }) => {
+const TopicSection: React.FC<TopicSectionProps> = ({ topic, role }) => {
   const { name, description, activities, slug } = topic;
   
   return (
@@ -17,7 +19,7 @@ const TopicSection: React.FC<TopicSectionProps> = ({ topic }) => {
       <h3 className="text-lg font-medium mb-4">Activities</h3>
       <div className="flex flex-row gap-4">
         {activities.map((activity, index) => (
-          <ActivityCard key={index} activity={activity} />
+          <ActivityCard key={index} activity={activity} role={role} />
         ))}
       </div>
     </div>

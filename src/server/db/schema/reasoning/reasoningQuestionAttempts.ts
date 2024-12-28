@@ -20,6 +20,7 @@ export const reasoningPathwayAttempts = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     part: integer("part").notNull().default(1),
     attemptId: varchar("attempt_id", { length: 21 }).references(() => reasoningAssignmentAttempts.id),
+    correct: boolean("correct").notNull().default(false),
     questionId: varchar("question_id", { length: 21 }).references(() => reasoningQuestions.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),

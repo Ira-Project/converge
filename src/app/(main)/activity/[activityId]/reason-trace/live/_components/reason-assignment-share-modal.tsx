@@ -14,15 +14,15 @@ import { CalendarIcon, Share1Icon } from "@/components/icons";
 import { api } from "@/trpc/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { DialogDescription } from "@radix-ui/react-dialog";
-import { makeActivityLiveSchema } from "@/server/api/routers/learnByTeachingActivity/explanationAssignment/explainingAssignment.input";
 import { useState, useEffect } from "react";
 import { Check, Copy } from "lucide-react";
+import { makeActivityLiveSchema } from "@/server/api/routers/activities/activities.input";
 
 export default function AssignmentShareModal({ 
   activityId, isLive
 } : { activityId: string, isLive: boolean }) {  
 
-  const makeAssignmentLive = api.explanationAssignment.makeLive.useMutation();
+  const makeAssignmentLive = api.activities.makeActivityLive.useMutation();
 
   const [liveState, setLiveState] = useState<boolean>(isLive);
   

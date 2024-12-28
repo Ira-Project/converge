@@ -5,28 +5,32 @@ import { ReasoningPathwayStepResult } from '@/lib/constants';
 const getPathwayStepColor = (result: ReasoningPathwayStepResult): string => {
   switch (result) {
     case ReasoningPathwayStepResult.CORRECT:
-      return '!bg-green-100 !border-green-500';
+      return '!bg-green-300';
     case ReasoningPathwayStepResult.WRONG:
-      return '!bg-red-100 !border-red-500';
+      return '!bg-red-300';
     case ReasoningPathwayStepResult.WRONG_POSITION:
-      return '!bg-yellow-100 !border-yellow-500';
+      return '!bg-yellow-300';
     case ReasoningPathwayStepResult.PENDING:
     default:
-      return '!bg-gray-50 !border-gray-300';
+      return '';
   }
 };
 
 const StaticStep: React.FC<{ text: string; status: ReasoningPathwayStepResult }> = ({ text, status }) => (
   <div className={`
-    min-h-[60px]
-    p-3
-    rounded-lg
+    min-h-[40px]
     flex
     items-center
     text-sm
+    line-clamp-1
+    px-4 py-2 
+    my-auto 
+    rounded-3xl
     ${getPathwayStepColor(status)}
   `}>
-    <FormattedText text={text ?? ''} />
+    <div className="mx-auto text-center w-full leading-8 line-clamp-1">
+      <FormattedText text={text ?? ''} />
+    </div>
   </div>
 );
 

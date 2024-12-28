@@ -9,14 +9,23 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
   const { user } = await validateRequest();
   if (!user) redirect(Paths.Login);
 
-  const reasoningAssignment = await api.reasoningAssignment.get.query({ assignmentId: params.activityId });
-  const reasoningAttemptId = await api.reasoningAssignment.createAttempt.mutate({ assignmentId: params.activityId });
+  const activity = await api.activities.getActivity.query({ activityId: params.activityId });
+  const reasoningAssignment = await api.reasonTrace.get.query({ activityId: params.activityId });
+  const reasoningAttemptId = await api.reasonTrace.createAttempt.mutate({ activityId: params.activityId });
 
-  if (!reasoningAssignment || !reasoningAttemptId) redirect(`${Paths.Classroom}${user.classroomId}`);
+  if (!activity || !reasoningAssignment || !reasoningAttemptId) redirect(`${Paths.Classroom}${user.classroomId}`);
 
   return (
     <main>
-      <ReasoningAssignmentView reasoningAssignment={reasoningAssignment} reasoningAttemptId={reasoningAttemptId} />
+      <ReasoningAssignmentView 
+        activityId={params.activityId}
+        topic={activity?.topic?.name ?? ""}
+        isLive={activity.isLive}
+        role={user.role}
+        reasoningAssignment={reasoningAssignment}
+        reasoningAttemptId={reasoningAttemptId} 
+        dueDate={activity.dueDate ?? undefined}
+        />
     </main>
   );
 };

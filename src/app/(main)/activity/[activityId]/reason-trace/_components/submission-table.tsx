@@ -13,7 +13,7 @@ import { formatDateShort } from '@/lib/utils';
 
 const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
 
-  const submissions = await api.explainTestAttempt.getSubmissions.query({ activityId });
+  const submissions = await api.reasonTrace.getSubmissions.query({ activityId });
 
   return (
     <div>
@@ -35,7 +35,7 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
           ) : (
             submissions.map((submission) => (
               <TableRow className="grid grid-cols-[1fr_250px_200px]" key={submission.id}>
-                <TableCell>{submission.user.name}</TableCell>
+                <TableCell>{submission.user?.name}</TableCell>
                 <TableCell>
                   {submission.submittedAt ? 
                     formatDateShort(submission.submittedAt) : ""

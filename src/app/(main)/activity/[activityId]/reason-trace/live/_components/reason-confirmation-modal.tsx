@@ -12,7 +12,7 @@ export default function ConfirmationModal({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button size="sm">Submit Activity</Button>
+        <Button className="bg-rose-700 text-white" size="sm">Submit Activity</Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -26,6 +26,7 @@ export default function ConfirmationModal({
             <Button variant="outline">Cancel</Button>
           </DialogClose>
           <LoadingButton 
+            className="bg-rose-700 text-white"
             loading={loading}
             disabled={loading}
             onClick={ async () => {

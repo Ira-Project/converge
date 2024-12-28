@@ -1,6 +1,7 @@
+"use client";
+
 import { LATEX_DELIMITER } from "@/lib/constants";
 import { addStyles, StaticMathField } from "react-mathquill";
-
 
 addStyles();
 

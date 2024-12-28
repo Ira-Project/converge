@@ -8,7 +8,6 @@ import { Paths } from "@/lib/constants";
 const Dialog = dynamic(() => import('@/components/ui/dialog').then((mod) => mod.Dialog), { ssr: false });
 
 interface Props {
-  assignmentName?: string;
   topic: string;
   classroom?: {
     name: string;
@@ -16,7 +15,7 @@ interface Props {
   } | null;
 }
 
-export default function AssignmentTutorialModal({ assignmentName, classroom, topic }: Props) {  
+export default function AssignmentTutorialModal({ classroom, topic }: Props) {  
 
   return (
     <Dialog defaultOpen>
@@ -47,7 +46,7 @@ export default function AssignmentTutorialModal({ assignmentName, classroom, top
             </BreadcrumbList>
           </Breadcrumb>
           <div className="flex flex-row items-center text-xl font-semibold my-2 text-amber-700">
-            {assignmentName && `${assignmentName} - `} {topic}
+            {topic}
           </div>
         </DialogTitle>
         <DialogDescription className="m-0 mx-auto font-medium">

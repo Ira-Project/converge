@@ -10,7 +10,7 @@ import { activitiesRouter } from "./routers/activities/activities.procedure";
 import { explanationRouter } from "./routers/learnByTeachingActivity/explanation/explanation.procedure";
 import { learnByTeachingRouter } from "./routers/learnByTeachingActivity/learnByTeaching/learnByTeachingRouter.procedure";
 
-import { reasoningAssignmentRouter } from "./routers/reasoningActivity/reasoningAttempt/reasoningAttempt.procedure";
+import { reasonTraceRouter } from "./routers/reasoningActivity/reasonTrace/reasonTrace.procedure";
 import { reasoningRouter } from "./routers/reasoningActivity/reasoning/reasoning.procedure";
 
 
@@ -24,7 +24,7 @@ export const appRouter = createTRPCRouter({
   learnByTeaching: learnByTeachingRouter,
   explanation: explanationRouter,
   
-  reasoningAssignment: reasoningAssignmentRouter,
+  reasonTrace: reasonTraceRouter,
   reasoning: reasoningRouter,  
 });
 

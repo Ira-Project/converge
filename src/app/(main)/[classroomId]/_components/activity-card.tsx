@@ -5,13 +5,14 @@ import Image from 'next/image';
 import { ExternalLinkIcon, InfoCircledIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { cn, formatDateShort } from '@/lib/utils';
-import { Paths } from '@/lib/constants';
+import { Paths, Roles } from '@/lib/constants';
 
 interface ActivityCardProps {
   activity: Activity;
+  role: Roles;
 }
 
-const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
+const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role }) => {
   const { id, type, isLive, dueDate } = activity;
   const { url, iconImage, title, helpUrl, tags, colour, description } = getMetaDataFromActivityType(type, id);
 
@@ -57,7 +58,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity }) => {
       </div>
       <div className="flex gap-3 my-auto items-start vertical-align-middle">
         <Link href={`${url}${Paths.LiveActivity}`} className="p-0 underline text-xs my-auto">
-          Preview
+          { role === Roles.Teacher ? "Preview" : "Start Activity"}
         </Link>
         <Link href={url} className="my-auto mx-2">
           <ExternalLinkIcon className="w-5 h-5" />

@@ -16,8 +16,6 @@ export const explainAssignments = pgTable(
     name: text("name"),
     description: text("description"),
     topicId: varchar("topic_id", { length: 21 }).notNull().references(() => topics.id),
-    dueDate: timestamp("due_date"),
-    timeLimit: integer("time_limit"),
     order: integer("order"),
     showConcepts: boolean("show_concepts").default(false).notNull(),
     showAnswers: boolean("show_answers").default(true).notNull(),

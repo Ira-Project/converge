@@ -8,7 +8,6 @@ import { Paths } from "@/lib/constants";
 const Dialog = dynamic(() => import('@/components/ui/dialog').then((mod) => mod.Dialog), { ssr: false });
 
 interface Props {
-  assignmentName?: string;
   topic: string;
   classroom?: {
     name: string;
@@ -16,7 +15,7 @@ interface Props {
   } | null;
 }
 
-export default function AssignmentTutorialModal({ assignmentName, classroom, topic }: Props) {  
+export default function AssignmentTutorialModal({ classroom, topic }: Props) {  
 
   return (
     <Dialog defaultOpen>
@@ -47,17 +46,16 @@ export default function AssignmentTutorialModal({ assignmentName, classroom, top
             </BreadcrumbList>
           </Breadcrumb>
           <div className="flex flex-row items-center text-xl font-semibold my-2 text-rose-700">
-            {assignmentName && `${assignmentName} - `} {topic}
+            {topic}
           </div>
         </DialogTitle>
         <DialogDescription className="m-0 mx-auto font-medium">
           How to do the activity?
         </DialogDescription>
         <div className="px-16">
-          {/* <TutorialCarousel /> */}
           <div className="relative pb-[57.02%] h-0 border-0">
             <iframe 
-              src="https://www.loom.com/embed/307a3d4d5b764eadb430e488aff50f7d?sid=bdbf8333-2c42-44d2-8bcf-210c9dea8d5e" 
+              src="https://www.loom.com/embed/6a83ce6654894c0c914ba27e6082953e?sid=d3cb0c2c-089e-430d-8ce7-22af4233cef3" 
               className="absolute w-full h-full"
               allowFullScreen
             />

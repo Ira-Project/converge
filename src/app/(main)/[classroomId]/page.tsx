@@ -3,8 +3,15 @@ import { Separator } from "@/components/ui/separator";
 import { api } from "@/trpc/server";
 import { UploadLessonPlanForm } from './_components/upload-lesson-plan-form';
 import Image from "next/image";
+import { redirect } from 'next/navigation';
+import { validateRequest } from '@/lib/auth/validate-request';
+import { Paths } from '@/lib/constants';
 
 export default async function ClassroomPage(props: { params: Promise<{ classroomId: string }> }) {
+
+  const { user } = await validateRequest();
+  if (!user) redirect(Paths.Login);
+
   const params = await props.params;
   const topics = await api.activities.getActivities.query({ classroomId: params.classroomId });
   const classroom = await api.classroom.get.query({ id: params.classroomId });
@@ -26,7 +33,7 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
       <div className="px-4 mt-40 flex flex-col gap-8 w-full">
         {topics.map((topic, index) => (
           <div key={index}>
-            <TopicSection topic={topic} />
+            <TopicSection topic={topic} role={user.role}/>
             <Separator />
           </div>
         ))}

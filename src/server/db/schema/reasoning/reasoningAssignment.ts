@@ -1,11 +1,11 @@
-import { boolean, integer, pgTableCreator, timestamp, varchar, text, decimal, doublePrecision } from "drizzle-orm/pg-core";
+import { boolean, integer, pgTableCreator, timestamp, varchar, text, doublePrecision } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
-import { classrooms } from "../classroom";
 import { users } from "../user";
 import { relations } from "drizzle-orm";
 import { topics } from "../subject";
 import { reasoningQuestionToAssignment } from "./reasoningQuestions";
 import { activity } from "../activity";
+import { reasoningAttemptFinalAnswer, reasoningPathwayAttempts } from "./reasoningQuestionAttempts";
 
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
@@ -20,15 +20,8 @@ export const reasoningAssignments = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name"),
     description: text("description"),
-    imageUrl: text("image_url"),
     topicId: varchar("topic_id", { length: 21 }).notNull().references(() => topics.id),
-    dueDate: timestamp("due_date"),
-    maxPoints: integer("max_points"),
-    timeLimit: integer("time_limit"),
     order: integer("order"),
-    classroomId: varchar("classroom_id").references(() => classrooms.id),
-    isLocked: boolean("is_locked").default(false).notNull(),
-    isLive: boolean("is_live").default(false).notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
@@ -37,10 +30,6 @@ export const reasoningAssignments = pgTable(
   }
 );
 export const reasoningAssignmentRelations = relations(reasoningAssignments, ({ one, many }) => ({
-  classroom: one(classrooms, {
-    fields: [reasoningAssignments.classroomId],
-    references: [classrooms.id],
-  }),
   topic: one(topics, {
     fields: [reasoningAssignments.topicId],
     references: [topics.id],
@@ -65,10 +54,9 @@ export const reasoningAssignmentAttempts = pgTable(
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
     deletedAt: timestamp("deleted_at", { mode: "date" }),
-    // TODO: Add activity id
   }
 )
-export const reasoningAssignmentAttemptRelations = relations(reasoningAssignmentAttempts, ({ one }) => ({
+export const reasoningAssignmentAttemptRelations = relations(reasoningAssignmentAttempts, ({ one, many }) => ({
   assignment: one(reasoningAssignments, {
     fields: [reasoningAssignmentAttempts.assignmentId],
     references: [reasoningAssignments.id],
@@ -76,6 +64,12 @@ export const reasoningAssignmentAttemptRelations = relations(reasoningAssignment
   activity: one(activity, {
     fields: [reasoningAssignmentAttempts.activityId],
     references: [activity.id],
+  }),
+  reasoningPathwayAttempts: many(reasoningPathwayAttempts),
+  reasoningAttemptFinalAnswer: many(reasoningAttemptFinalAnswer),
+  user: one(users, {
+    fields: [reasoningAssignmentAttempts.userId],
+    references: [users.id],
   }),
 }));
 

@@ -24,7 +24,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
       }
     case ActivityType.ReasonTrace:
         return {
-          url: `${Paths.Activity}${id}/${Paths.ReasonTrace}`,
+          url: `${Paths.Activity}${id}${Paths.ReasonTrace}`,
           iconImage: "/images/reason-trace.png",
           title: "Reason Trace",
           helpUrl: "",

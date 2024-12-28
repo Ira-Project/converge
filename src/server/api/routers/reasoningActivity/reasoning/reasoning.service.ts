@@ -3,6 +3,7 @@ import { generateId } from "lucia";
 import { reasoningAttemptFinalAnswer, reasoningPathwayAttempts, reasoningPathwayAttemptSteps } from "@/server/db/schema/reasoning/reasoningQuestionAttempts";
 import type { Part1EvaluatePathwayInput, part2CorrectPathwayInput, Part3FinalCorrectAnswerInput } from "./reasoning.input";
 import { ReasoningPathwayStepResult } from "@/lib/constants";
+import { eq } from "drizzle-orm";
 
 
 export const part1EvaluatePathway = async (ctx: ProtectedTRPCContext, input: Part1EvaluatePathwayInput) => {
@@ -38,9 +39,11 @@ export const part1EvaluatePathway = async (ctx: ProtectedTRPCContext, input: Par
   const results: { optionId: string, result: ReasoningPathwayStepResult }[] = []
   // Check if pathways exist and get the first one's ID
   let pathwayId = reasoningPathways[0]?.id;
-  
+
+  let overallCorrect = true;
 
   for (const [index, optionId] of input.optionIds.entries()) {
+    
     let result = ReasoningPathwayStepResult.WRONG;
     
     // First check if the option exists in the correct position
@@ -66,6 +69,10 @@ export const part1EvaluatePathway = async (ctx: ProtectedTRPCContext, input: Par
       }
     }
 
+    if (result !== ReasoningPathwayStepResult.CORRECT) {
+      overallCorrect = false;
+    }
+
     await ctx.db.insert(reasoningPathwayAttemptSteps).values({
       id: generateId(21),
       questionAttemptId: id,
@@ -78,6 +85,13 @@ export const part1EvaluatePathway = async (ctx: ProtectedTRPCContext, input: Par
       optionId,
       result,
     });
+  }
+
+  // Update the part 1 attempt object if correct
+  if (overallCorrect) {
+    await ctx.db.update(reasoningPathwayAttempts).set({
+      correct: true,
+    }).where(eq(reasoningPathwayAttempts.id, id));
   }
 
   return {
@@ -124,6 +138,8 @@ export const part2CorrectPathway = async (ctx: ProtectedTRPCContext, input: part
   
   const incorrectOptions = []
 
+  let overallCorrect = true;
+
   for (const [index, optionId] of input.optionIds.entries()) {
     let result = ReasoningPathwayStepResult.WRONG;
     
@@ -146,6 +162,10 @@ export const part2CorrectPathway = async (ctx: ProtectedTRPCContext, input: part
       }
     }
 
+    if (result !== ReasoningPathwayStepResult.CORRECT) {
+      overallCorrect = false;
+    }
+
     await ctx.db.insert(reasoningPathwayAttemptSteps).values({
       id: generateId(21),
       questionAttemptId: id,
@@ -158,6 +178,13 @@ export const part2CorrectPathway = async (ctx: ProtectedTRPCContext, input: part
       optionId,
       result,
     });
+  }
+
+  // Update the part 2 attempt object if correct
+  if (overallCorrect) {
+    await ctx.db.update(reasoningPathwayAttempts).set({
+      correct: true,
+    }).where(eq(reasoningPathwayAttempts.id, id));
   }
 
   return {

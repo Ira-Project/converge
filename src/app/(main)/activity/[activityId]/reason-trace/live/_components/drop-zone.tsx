@@ -3,17 +3,22 @@ import { motion } from 'framer-motion';
 import FormattedText from '@/components/formatted-text';
 import { ReasoningPathwayStepResult } from '@/lib/constants';
 
-export const getPathwayStepColor = (result: ReasoningPathwayStepResult): string => {
+export const getPathwayStepColor = (result: ReasoningPathwayStepResult, step: Step | null): string => {
+  if (!step) {
+    return '!bg-rose-100';
+  }
+  
   switch (result) {
     case ReasoningPathwayStepResult.CORRECT:
-      return '!bg-green-100 !border-green-500';
+      return '!bg-green-300';
     case ReasoningPathwayStepResult.WRONG:
-      return '!bg-red-100 !border-red-500';
+      return '!bg-red-300';
     case ReasoningPathwayStepResult.WRONG_POSITION:
-      return '!bg-yellow-100 !border-yellow-500';
+      return '!bg-yellow-200';
     case ReasoningPathwayStepResult.PENDING:
     default:
-      return '!bg-gray-50 !border-gray-300';
+      return '!bg-rose-50';
+      
   }
 };
 
@@ -43,42 +48,48 @@ const DropZone: React.FC<DropZoneProps> = ({
   status,
 }) => (
   <motion.div
-    variants={{
-      idle: { border: "2px solid #e5e7eb", scale: 1 },
-      hover: { border: "2px solid #9ca3af", scale: 1.02 }
-    }}
     initial="idle"
     animate={isDragging ? "hover" : "idle"}
     className={`
-      min-h-[60px]
-      p-3
-      rounded-lg
-      border-2
-      border-dashed
+      h-12
+      px-3
+      py-2
+      rounded-3xl
       transition-all
       flex
       items-center
+      leading-6
       text-sm
-      ${getPathwayStepColor(status)}
+      line-clamp-1
+      ${getPathwayStepColor(status, step)}
       ${isDragging ? 'border-gray-400 bg-gray-100' : 'border-gray-300'}
-      ${step 
-        ? 'bg-white shadow-[0_2px_4px_rgba(0,0,0,0.1),0_4px_6px_rgba(0,0,0,0.05)] translate-y-[-1px]' 
-        : 'bg-gray-50 shadow-inner'
-      }
       hover:border-gray-400
       cursor-pointer
       relative
       before:absolute
       before:inset-0
       before:rounded-lg
-      ${!step && 'before:shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)]'}
     `}
+    style={
+      step ?
+      {
+        boxShadow: '4px 4px 8px rgba(247, 232, 233, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
+      }
+      : status === ReasoningPathwayStepResult.PENDING
+      ? {
+        border: '1px solid #d9d9d9',
+        boxShadow: '0px 2px 4px rgba(0, 0, 0, 25%) inset',
+      }
+      : {}
+    }
     onDragOver={onDragOver}
     onDrop={(e) => onDrop(e, index)}
     draggable={!!step}
     onDragStartCapture={(e: React.DragEvent<HTMLDivElement>) => step && onDragStart(e, step, index)}
   >
-    <FormattedText text={step?.text ??''} />
+    <div className="mx-auto w-full text-center line-clamp-1">
+      <FormattedText  text={step?.text ??''} />
+    </div>
   </motion.div>
 );
 
