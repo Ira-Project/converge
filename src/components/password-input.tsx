@@ -3,11 +3,10 @@
 import * as React from "react";
 import { EyeOpenIcon, EyeCloseIcon } from "@/components/icons";
 import { Button } from "@/components/ui/button";
-import { Input, type InputProps } from "@/components/ui/input";
-
+import { Input } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
 
-const PasswordInputComponent = React.forwardRef<HTMLInputElement, InputProps>(
+const PasswordInputComponent = React.forwardRef<HTMLInputElement, React.InputHTMLAttributes<HTMLInputElement>>(
   ({ className, ...props }, ref) => {
     const [showPassword, setShowPassword] = React.useState(false);
 

@@ -7,9 +7,10 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { LoadingButton } from "@/components/loading-button";
-import { Paths } from "@/lib/constants";
+import { GradesOptions, Paths } from "@/lib/constants";
 import { MultiSelect } from "@/components/ui/multi-select";
-import { updateUserSchema } from "@/server/api/routers/preloadedUsers/preloadedUsers.input";
+import { updateUserSchema } from "@/server/api/routers/userOnboarding/userOnboarding.input";
+import { Badge } from "@/components/ui/badge";
 
 interface Props {
   courses: RouterOutputs["subject"]["listCourses"];
@@ -18,6 +19,14 @@ interface Props {
   name?: string;
 }
 
+const BadgeIcon = () => (
+  <Badge 
+    className="py-0 px-2 mx-4 bg-slate-400"
+    variant="outline">
+    <span className="text-xs text-white">Coming Soon</span>
+  </Badge>
+);
+
 export const UpdateUserForm = ({ courses, subjects, email, name }: Props) => {
 
   const router = useRouter();
@@ -25,14 +34,22 @@ export const UpdateUserForm = ({ courses, subjects, email, name }: Props) => {
   const courseOptions = courses.map((course) => ({
     label: course.name,
     value: course.id,
+    icon: course.locked ? BadgeIcon : undefined,
   }));
 
   const subjectOptions = subjects.map((subject) => ({
     label: subject.name,
     value: subject.id,
+    icon: subject.locked ? BadgeIcon : undefined,
   }));
 
-  const updateUser = api.preloadedUsers.updateUser.useMutation();
+  const gradeOptions = GradesOptions.map((grade) => ({
+    label: grade.label,
+    value: grade.value,
+    icon: grade.locked ? BadgeIcon : undefined,
+  }));
+
+  const updateUser = api.userOnboardingRouter.updateUser.useMutation();
 
   const form  = useForm({
     defaultValues: {
@@ -40,13 +57,15 @@ export const UpdateUserForm = ({ courses, subjects, email, name }: Props) => {
       email: email,
       courses: new Array<string>(),
       subjects: new Array<string>(),
+      grades: new Array<string>(),
     },
     resolver: zodResolver(updateUserSchema),
   })
 
   const onSubmit = form.handleSubmit(async (values) => {
-    await updateUser.mutateAsync(values);
-    void router.push(Paths.Home);
+    console.log("values", values);
+    const classroomId = await updateUser.mutateAsync(values);
+    void router.push(`${Paths.Classroom}${classroomId}`);
   });
 
   return (
@@ -99,6 +118,24 @@ export const UpdateUserForm = ({ courses, subjects, email, name }: Props) => {
                     form.setValue("courses", value);
                   }}
                   options={courseOptions}
+                  {...field}                />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )} 
+        />
+        <FormField
+          control={form.control}
+          name="grades"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>What grades do you teach?</FormLabel>
+              <FormControl>
+                <MultiSelect
+                  onValueChange={(value) => {
+                    form.setValue("grades", value);
+                  }}
+                  options={gradeOptions}
                   {...field}                />
               </FormControl>
               <FormMessage />

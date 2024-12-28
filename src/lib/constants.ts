@@ -5,16 +5,18 @@ export const EMAIL_SENDER = 'contact@iraproject.com';
 export const LATEX_DELIMITER = "$!$";
 
 export enum Paths {
-  Home = "/",
   Login = "/login",
   Signup = "/signup",
   Onboarding = '/onboarding',
   VerifyEmail = "/verify-email",
   ResetPassword = "/reset-password",
   GoogleLogin = "/login/google",
-  Classroom = "/classroom/",
-  Assignment = "/assignment/",
+  Classroom = "/",
+  LearnByTeaching = "/learn-by-teaching/",
+  ReasonTrace = "/reason-trace/",
   CreateAssignment = "/create-assignment/",
+  Activity = "/activity/",
+  LiveActivity = "/live",
 }
 
 export enum Roles {
@@ -101,3 +103,42 @@ export enum ConceptStatus {
   INCORRECT = "No",
   NOT_PRESENT = "Unknown"
 }
+
+export enum ReasoningPathwayStepResult {
+  CORRECT = "correct",
+  WRONG = "wrong",
+  WRONG_POSITION = "wrong_position",
+  PENDING = "pending"
+}
+
+export enum ActivityType {
+  LearnByTeaching = "Learn By Teaching",
+  ReasonTrace = "Reason Trace",
+  ReadAndRelay = "Read and Relay",
+  KnowledgeZap = "Knowledge Zap",
+  StepSolve = "Step Solve",
+  HumanVsAI = "Human vs AI",
+}
+
+export const GradesOptions = [
+  {
+    value: "9",
+    label: "9",
+    locked: true,
+  },
+  {
+    value: "10",
+    label: "10",
+    locked: true,
+  },
+  {
+    value: "11",
+    label: "11",
+    locked: false,
+  },
+  {
+    value: "12",
+    label: "12",
+    locked: false,
+  },
+]

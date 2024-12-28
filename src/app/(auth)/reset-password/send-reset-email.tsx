@@ -1,7 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
-import { useFormState } from "react-dom";
+import { useActionState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
@@ -14,7 +13,7 @@ import { ExclamationTriangleIcon } from "@/components/icons";
 import { Paths } from "@/lib/constants";
 
 export function SendResetEmail() {
-  const [state, formAction] = useFormState(sendPasswordResetLink, null);
+  const [state, formAction] = useActionState(sendPasswordResetLink, null);
   const router = useRouter();
 
   useEffect(() => {
@@ -52,7 +51,7 @@ export function SendResetEmail() {
 
       <SubmitButton className="w-full">Reset Password</SubmitButton>
       <Button variant="outline" className="w-full" asChild>
-        <Link href={Paths.Home}>Cancel</Link>
+        <Link href={Paths.Login}>Cancel</Link>
       </Button>
     </form>
   );
