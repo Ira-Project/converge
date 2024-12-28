@@ -32,7 +32,7 @@ export const submitTestAttempt = async (ctx: ProtectedTRPCContext, input: Submit
   
   await ctx.db.update(explainTestAttempts)
     .set({
-      score: score && totalQuestions ? score / totalQuestions : 0.0,
+      score2: score && totalQuestions ? score / totalQuestions : 0.0,
       submittedAt: submissionTime,
     })
     .where(eq(explainTestAttempts.id, input.testAttemptId))
@@ -210,7 +210,7 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
     });
   }
 
-  const averageScore = submissions.reduce((a, b) => a + (b.score ?? 0), 0) / submissions.length;
+  const averageScore = submissions.reduce((a, b) => a + (b.score2 ?? 0), 0) / submissions.length;
   const submissionCount = submissions.length;
   const averageExplanationsPerSubmission = submissions.reduce((a, b) => a + (b.explanations.length ?? 0), 0) / submissions.length;
     

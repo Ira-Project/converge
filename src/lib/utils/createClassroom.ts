@@ -35,6 +35,30 @@ const activityIdsDev: { topicId: string, assignmentId: string, name: string, typ
 ]
 
 const activityIdsProd: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
+  {
+    name: "Work, Energy and Power",
+    type: ActivityType.LearnByTeaching,
+    topicId: "yyyah4hvk5r7188h7mgkk",
+    assignmentId: "9pcpaym65ccyj9rtlz6xd",
+    order: 0,
+    points: 100
+  },
+  {
+    name: "Electric Charge",
+    type: ActivityType.LearnByTeaching,
+    topicId: "4vqur7i8x3p40quh8uthb",
+    assignmentId: "nlamr2cgjenrhof24k3i6",
+    order: 0,
+    points: 100
+  },
+  {
+    name: "Work, Energy and Power",
+    type: ActivityType.ReasonTrace,
+    topicId: "yyyah4hvk5r7188h7mgkk",
+    assignmentId: "higfjthbjvq05ujje389k",
+    order: 1,
+    points: 100
+  }
 ]
 
 const activityIds = process.env.ENVIRONMENT === 'dev' ? activityIdsDev : activityIdsProd;

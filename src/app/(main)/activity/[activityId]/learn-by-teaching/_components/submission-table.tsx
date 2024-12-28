@@ -41,7 +41,7 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
                     formatDateShort(submission.submittedAt) : ""
                   }
                 </TableCell>
-                <TableCell>{submission.score ? `${(submission.score * 100).toFixed(2)}%` : "0%"}</TableCell>
+                <TableCell>{submission.score2 ? `${(submission.score2 * 100).toFixed(2)}%` : "0%"}</TableCell>
               </TableRow>
             ))
           )}

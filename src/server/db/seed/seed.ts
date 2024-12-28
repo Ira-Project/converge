@@ -461,7 +461,7 @@ async function uploadPreloadedUsers() {
 }
 
 async function createReasoningQuestionsFromJson() {
-  const topicId = "ll3dh4ahr5eseomk70lun";
+  const topicId = "yyyah4hvk5r7188h7mgkk";
   const topic = await db.select().from(topics).where(
     eq(topics.id, topicId),
   )
@@ -572,7 +572,7 @@ async function createReasoningQuestionsFromJson() {
 
 async function createReasoningAssignmentFromTopic() {
   // Parameters for assignment creation
-  const topicId = "ll3dh4ahr5eseomk70lun";
+  const topicId = "yyyah4hvk5r7188h7mgkk";
   const assignmentName = "Work, Energy and Power Assignment";
 
   // Check if assignment already exists
@@ -623,7 +623,7 @@ async function createReasoningAssignmentFromTopic() {
   }
 }
 
-void createReasoningQuestionsFromJson();
+// void createReasoningQuestionsFromJson();
 
 // void createReasoningAssignmentFromTopic();
 
