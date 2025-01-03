@@ -2,7 +2,7 @@ import { validateRequest } from "@/lib/auth/validate-request";
 import { Paths } from "@/lib/constants";
 import { redirect } from "next/navigation";
 import { api } from "@/trpc/server";
-import ReasoningAssignmentView from "./_components/reasoning-assignment-view";
+import KnowledgeZapAssignmentView from "./_components/knowledge-zap-assignment-view";
 
 export default async function ActivityPage(props: { params: Promise<{ activityId: string, classroomId: string }> }) {
   const params = await props.params;
@@ -11,21 +11,22 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
 
   const activity = await api.activities.getActivity.query({ activityId: params.activityId });
 
-  const reasoningAssignment = await api.reasonTrace.get.query({ activityId: params.activityId });
-  const reasoningAttemptId = await api.reasonTrace.createAttempt.mutate({ activityId: params.activityId });
+  const knowledgeZapAssignment = await api.knowledgeZap.getKnowledgeZapActivity.query({ activityId: params.activityId });
+  const knowledgeZapAttemptId = await api.knowledgeZap.createAssignmentAttempt.mutate({ activityId: params.activityId });
 
-  if (!activity || !reasoningAssignment || !reasoningAttemptId) redirect(`${Paths.Classroom}${params.classroomId}`);
+  if (!activity || !knowledgeZapAssignment || !knowledgeZapAttemptId) redirect(`${Paths.Classroom}${params.classroomId}`);
 
   return (
     <main>
-      <ReasoningAssignmentView 
+      <KnowledgeZapAssignmentView 
+        assignmentAttemptId={knowledgeZapAttemptId}
         activityId={params.activityId}
         topic={activity?.topic?.name ?? ""}
         isLive={activity.isLive}
-        classroomId={params.classroomId}
         role={user.role}
-        reasoningAssignment={reasoningAssignment}
-        reasoningAttemptId={reasoningAttemptId} 
+        classroomId={params.classroomId}
+        knowledgeZapAssignment={knowledgeZapAssignment}
+        knowledgeZapAttemptId={knowledgeZapAttemptId} 
         dueDate={activity.dueDate ?? undefined}
         />
     </main>

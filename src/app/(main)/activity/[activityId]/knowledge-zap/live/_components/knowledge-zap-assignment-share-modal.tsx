@@ -49,7 +49,7 @@ export default function AssignmentShareModal({
 
   useEffect(() => {
     // Set the assignment link after component mounts
-    setAssignmentLink(`${window.location.origin}${Paths.Activity}${activityId}${Paths.ReasonTrace}${Paths.LiveActivity}`);
+    setAssignmentLink(`${window.location.origin}${Paths.Activity}${activityId}${Paths.KnowledgeZap}${Paths.LiveActivity}`);
   }, [activityId]);
 
   const copyToClipboard = async () => {
@@ -61,7 +61,7 @@ export default function AssignmentShareModal({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button size="sm" className="bg-rose-700 hover:bg-rose-900">
+        <Button size="sm" className="bg-lime-700 hover:bg-lime-900">
           Share
           <Share1Icon />
         </Button>
@@ -146,7 +146,7 @@ export default function AssignmentShareModal({
                 <Button variant="outline">Cancel</Button>
               </DialogClose>
               <LoadingButton 
-                  className="bg-rose-700 hover:bg-rose-900"
+                  className="bg-lime-700 hover:bg-lime-900"
                   onClick={onSubmit}
                   loading={makeAssignmentLive.isLoading}
                   type="submit">

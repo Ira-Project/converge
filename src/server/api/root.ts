@@ -13,6 +13,8 @@ import { learnByTeachingRouter } from "./routers/learnByTeachingActivity/learnBy
 import { reasonTraceRouter } from "./routers/reasoningActivity/reasonTrace/reasonTrace.procedure";
 import { reasoningRouter } from "./routers/reasoningActivity/reasoning/reasoning.procedure";
 
+import { knowledgeZapRouter } from "./routers/knowledgeZapActivity/knowledgeZap/knowledgeZap.procedure";
+import { knowledgeQuestionsRouter } from "./routers/knowledgeZapActivity/knowledgeQuestions/knowledgeQuestions.procedure";
 
 export const appRouter = createTRPCRouter({
   classroom: classroomRouter,
@@ -26,6 +28,9 @@ export const appRouter = createTRPCRouter({
   
   reasonTrace: reasonTraceRouter,
   reasoning: reasoningRouter,  
+
+  knowledgeZap: knowledgeZapRouter,
+  knowledgeQuestions: knowledgeQuestionsRouter,
 });
 
 export type AppRouter = typeof appRouter;
