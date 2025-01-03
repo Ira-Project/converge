@@ -14,6 +14,7 @@ export enum Paths {
   Classroom = "/",
   LearnByTeaching = "/learn-by-teaching/",
   ReasonTrace = "/reason-trace/",
+  KnowledgeZap = "/knowledge-zap/",
   CreateAssignment = "/create-assignment/",
   Activity = "/activity/",
   LiveActivity = "/live",
@@ -44,7 +45,6 @@ export type QuestionState = {
   imageHeight?: number;
   imageWidth?: number;
   questionImage?: string | null;
-  // answerText: string
   computedAnswerText: string;
   working: string;
   workingComplete: boolean;
@@ -142,3 +142,9 @@ export const GradesOptions = [
     locked: false,
   },
 ]
+
+export enum KnowledgeZapQuestionType {
+  MULTIPLE_CHOICE = "multiple_choice",
+  MATCHING = "matching",
+  ORDERING = "ordering",
+}

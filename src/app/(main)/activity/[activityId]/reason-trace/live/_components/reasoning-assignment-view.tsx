@@ -31,10 +31,7 @@ interface ReasoningAssignmentViewProps {
   topic: string;
   dueDate?: Date;
   isLive: boolean;
-  classroom?: {
-    name: string;
-    id: string;
-  } | null;
+  classroomId: string;
   role: Roles;
 }
 
@@ -61,7 +58,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   activityId,
   topic,
   isLive,
-  classroom,
+  classroomId,
   role,
   dueDate
 }) => {
@@ -316,7 +313,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
             <>
               <AssignmentTutorialModal 
                 topic={topic}
-                classroom={classroom} />
+                classroomId={classroomId} />
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
                 loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
@@ -326,7 +323,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
             <>
               <AssignmentTutorialModal 
                 topic={topic}
-                classroom={classroom} />
+                classroomId={classroomId} />
               <AssignmentShareModal 
                 activityId={activityId}
                 isLive={isLive} />

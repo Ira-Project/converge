@@ -1,0 +1,614 @@
+{
+  "name": "Simple Harmonic Motion",
+  "topicId": "qY4JbQSoTts2eHzmUE9Gx",
+  "latexDelimiter": "$!$",
+  "multipleChoiceQuestions": [
+    {
+      "id": "ZjuTLnh2umt8b4xzPWSpm",
+      "variants": [
+        {
+          "id": "TtS1mzySVrJoxjp1zkaOK",
+          "question": "A pendulum oscillates with simple harmonic motion (SHM). The length of the pendulum is $!$10 m$!$ and the gravitational acceleration is $!$10 ms^{-2}$!$. What is the period of the pendulum?",
+          "image": null,
+          "options": [
+            {
+              "text": "$!$\\pi$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$2\\pi$!$",
+              "image": null,
+              "isCorrect": true
+            },
+            {
+              "text": "$!$4\\pi$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$8\\pi$!$",
+              "image": null,
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": "0n8Cc3zmEmVQZQdQL8Ftg",
+          "question": "A simple pendulum is displaced from its equilibrium position by an angle $!$\\theta$!$ and is allowed to oscillate with simple harmonic motion (SHM). Which of the following quantities does not depend on $!$\\theta$!$?",
+          "image": null,
+          "options": [
+              {
+                "text": "The period of oscillation",
+                "image": null,
+                "isCorrect": true
+              },
+              {
+                "text": "The maximum displacement of the pendulum",
+                "image": null,
+                "isCorrect": false
+              },
+              {
+                "text": "The average velocity of the pendulum",
+                "image": null,
+                "isCorrect": false
+              },
+              {
+                "text": "The maximum acceleration of the pendulum",
+                "image": null,
+                "isCorrect": false
+              }
+            ]
+        },
+        {
+          "id": "WWwLl5Y4ZpL54mEpXlGeA",
+          "question": "The length of an oscillating pendulum is increased by a factor of 4. Assuming all other factors remain constant, by what factor does the period change?",
+          "image": null,
+          "options": [
+            {
+              "text": "$!$2$!$",
+              "image": null,
+              "isCorrect": true 
+            },
+            {
+              "text": "$!$4$!$", 
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$1/2$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$1/4$!$",
+              "image": null,
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": "KHG3RwQooFb7hKMIgxDLw",
+          "question": "A simple pendulum is oscillating with a period of $!$\\pi$!$ seconds. Assuming that the pendulum is undergoing simple harmonic motion (SHM), and the gravitational acceleration is $!$10 ms^{-2}$!$, calculate the length of the pendulum.",
+          "image": null,
+          "options": [
+            {
+              "text": "$!$20 m$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$10 m$!$", 
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$5 m$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$2.5 m$!$",
+              "image": null,
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "id": "X9pSHG9mIwFcCnmiNU2Xv",
+          "question": "A pendulum undergoes simple harmonic motion (SHM) with a period of $!$8\\pi$!$ seconds. If the gravitational acceleration is $!$10 ms^{-2}$!$, determine the length of the pendulum.",
+          "image": null,
+          "options": [
+            {
+              "text": "$!$20 m$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$40 m$!$", 
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$80 m$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$160 m$!$",
+              "image": null,
+              "isCorrect": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nBwMD7hKNGpc0lV0YfOVk",
+      "variants": [
+        {
+          "id": "JAidt2QKCC8DGv3HD8Cng",
+          "question": "A mass-spring system exhibits simple harmonic motion (SHM) with frequency $!$f_1$!$ on planet A, where the gravitational field strength is $!$g_A$!$. When the same system is moved to planet B with gravitational field strength $!$g_B$!$, where $!$\\frac{g_A}{g_B} = \\4$!$, what is the new frequency $!$f_2$!$ of oscillation?",
+          "image": null,
+          "options": [
+            {
+              "text": "$!$f_1$!$",
+              "image": null,
+              "isCorrect": true
+            },
+            {
+              "text": "$!$2f_1$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$f_1/2$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$f_1/4$!$",
+              "image": null,
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": "alWGu0ttYsNOsPWEDTtPY",
+          "question": "For an object undergoing simple harmonic motion (SHM), when does its acceleration reach its maximum value?",
+          "image": null,
+          "options": [
+            {
+              "text": "When the object reaches its maximum displacement from equilibrium",
+              "image": null,
+              "isCorrect": true
+            },
+            {
+              "text": "When the object reaches its maximum velocity",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "The acceleration remains the same throughout the motion",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "The acceleration is always non-zero during the motion",
+              "image": null,
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": "0HZCh4azv2tZjtUdjouf5",
+          "question": "Consider a pendulum undergoing simple harmonic motion (SHM). Which of these statements incorrectly describes the pendulum's motion?",
+          "image": null,
+          "options": [
+            {
+              "text": "The acceleration is always directed toward the equilibrium point.",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "For half of the oscillation period, velocity and acceleration are in opposite directions.",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "The magnitude of acceleration is proportional to the displacement from equilibrium.",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "The magnitude of the restoring force is proportional to the pendulum's velocity.",
+              "image": null,
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "id": "m3cFc0DIzUCNwEQy3KCPQ", 
+          "question": "When a mass undergoes simple harmonic motion (SHM) on a spring, what is true about the period of oscillation of this system?",
+          "image": null,
+          "options": [
+            {
+              "text": "It is independent of the mass of the object.",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "It is influenced by the acceleration due to gravity.",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "It is influenced by the length of the spring.",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "It is influenced by the spring constant.",
+              "image": null,
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "id": "9YXruvEWwUN4bw2ZQrCQ4",
+          "question": "A mass-spring system is displaced from its equilibrium position and when released, it oscillates with simple harmonic motion (SHM). If acceleration is $!$a$!$, $!$s$!$ is the displacement from equilibrium, and $!$v$!$ is the velocity of the mass, which of the following statements is true?",
+          "image": null,
+          "options": [
+            {
+              "text": "$!$a \\propto -v$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$a \\propto v$!$",
+              "image": null,
+              "isCorrect": false
+            },
+            {
+              "text": "$!$a \\propto -s$!$",
+              "image": null,
+              "isCorrect": true
+            },
+            {
+              "text": "$!$a \\propto s$!$",
+              "image": null,
+              "isCorrect": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0t3Bz7vLRbzvFFXt7jQ5r",
+      "variants": [
+        {
+          "id": "wVdfLMcClR08aKz6bw72J",
+          "question": "A particle undergoes simple harmonic motion (SHM) with a period of $!$2 s$!$. Which graph correctly represents the variation of kinetic energy $!$KE$!$ with time?",
+          "image": null,
+          "options": [
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_A_img_1.png",
+              "isCorrect": true
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_B_img_1.png",
+              "isCorrect": false
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_C_img_1.png",
+              "isCorrect": false
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_D_img_1.png",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": "YvOTPN5oHn9rIix8Jg0fp",
+          "question": "A particle undergoes simple harmonic motion (SHM) with a period of $!$1 s$!$. Which graph correctly represents the variation of kinetic energy $!$KE$!$ with time?",
+          "image": null,
+          "options": [
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_A_img_1.png",
+              "isCorrect": false
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_B_img_1.png",
+              "isCorrect": true
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_C_img_1.png",
+              "isCorrect": false
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_D_img_1.png",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": "Ko2FF1UlSenDzEgJuNqCS",
+          "question": "A particle undergoes simple harmonic motion (SHM) with a graph showing the variation of acceleration $!$a$!$ with time $!$t$!$. Which graph correctly represents the variation of velocity $!$v$!$ with time?",
+          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_img_2.png",
+          "options": [
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_A_img_2.png",
+              "isCorrect": false
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_B_img_2.png",
+              "isCorrect": true
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_C_img_2.png",
+              "isCorrect": false
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_D_img_2.png",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": "vsKKu1LpLHC0eVrLSsgzR",
+          "question": "A particle undergoes simple harmonic motion (SHM) with a graph showing the variation of acceleration $!$a$!$ with time $!$t$!$. Which graph correctly represents the variation of velocity $!$v$!$ with time?",
+          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_img_3.png",
+          "options": [
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_A_img_2.png",
+              "isCorrect": true
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_B_img_2.png",
+              "isCorrect": false
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_C_img_2.png",
+              "isCorrect": false
+            },
+            {
+              "text": "",
+              "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q4_D_img_2.png",
+              "isCorrect": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingQuestions": [
+    {
+      "id": "lffr6zc38rKB45Mk6us4M",
+      "variants": [
+        {
+          "id": "Z8vl4iM1AhXOFQluWgrD5",
+          "question": "For a mass-spring system displaced from equilibrium towards the right, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
+          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_1.png",
+          "options": [
+            {
+              "optionA": "Point A",
+              "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
+            },
+            {
+              "optionA": "Point B",
+              "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
+            },
+            {
+              "optionA": "Point C",
+              "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
+            },
+            {
+              "optionA": "Point D",
+              "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
+            }
+          ]
+        },
+        {
+          "id": "lpz1Yow6kIVoknamPcrwB",
+          "question": "For a mass-spring system displaced from equilibrium towards the right, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
+          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_2.png",
+          "options": [
+            {
+              "optionA": "Point A",
+              "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
+            },
+            {
+              "optionA": "Point B",
+              "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
+            },
+            {
+              "optionA": "Point C",
+              "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
+            },
+            {
+              "optionA": "Point D",
+              "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
+            }
+          ]
+        },
+        {
+          "id": "q9oHHwhaPymaJN7kfR4O2",
+          "question": "For a mass-spring system displaced from equilibrium towards the left, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
+          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_1.png",
+          "options": [
+            {
+              "optionA": "Point A",
+              "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
+            },
+            {
+              "optionA": "Point B",
+              "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
+            },
+            {
+              "optionA": "Point C",
+              "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
+            },
+            {
+              "optionA": "Point D",
+              "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
+            }
+          ]
+        },
+        {
+          "id": "4TGgroKPwy5pKDhJPsXa4",
+          "question": "For a mass-spring system displaced from equilibrium towards the left, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
+          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_2.png",
+          "options": [
+            {
+              "optionA": "Point A",
+              "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
+            },
+            {
+              "optionA": "Point B",
+              "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
+            },
+            {
+              "optionA": "Point C",
+              "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
+            },
+            {
+              "optionA": "Point D",
+              "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "orderingQuestions": [
+    {
+      "id": "XZifwc0GgOUmwNjKE02No",
+      "variants": [
+        {
+          "id": "bjLek91Ro0VVfgMptVcwA",
+          "question": "Order the given mass-spring systems from the one with the largest period to the one with the smallest period.",
+          "image": null,
+          "options": [
+            {
+              "text": "Mass $!$2M$!$ attached to spring with spring constant $!$k$!$",
+              "image": null,
+              "order": 1
+            },
+            {
+              "text": "Mass $!$M$!$ attached to spring with spring constant $!$k$!$",
+              "image": null,
+              "order": 2
+            },
+            {
+              "text": "Mass $!$M$!$ attached to spring with spring constant $!$2k$!$",
+              "image": null,
+              "order": 3
+            },
+            {
+              "text": "Mass $!$M$!$ attached to two springs in parallel, each with spring constant $!$2k$!$",
+              "image": null,
+              "order": 4
+            }
+          ]
+        },
+        {
+          "id": "VzbzIvggPnG4SuffJfD8G",
+          "question": "Order the given mass-spring systems from the one with the largest period to the one with the smallest period.",
+          "image": null,
+          "options": [
+            {
+              "text": "Mass $!$2M$!$ attached to spring with spring constant $!$k$!$",
+              "image": null,
+              "order": 1
+            },
+            {
+              "text": "Mass $!$M$!$ attached to two springs in series, each with spring constant $!$k$!$",
+              "image": null,
+              "order": 2
+            },
+            {
+              "text": "Mass $!$M$!$ attached to spring with spring constant $!$2k$!$",
+              "image": null,
+              "order": 3
+            },
+            {
+              "text": "Mass $!$M$!$ attached to spring with spring constant $!$3k$!$",
+              "image": null,
+              "order": 4
+            }
+          ]
+        },
+        {
+          "id": "jSfb53IRKxiEtoFgqDw36",
+          "question": "Order the given mass-spring systems from the one with the smallest period to the one with the largest period.",
+          "image": null,
+          "options": [
+            {
+              "text": "Mass $!$2M$!$ attached to spring with spring constant $!$k$!$",
+              "image": null,
+              "order": 4
+            },
+            {
+              "text": "Mass $!$M$!$ attached to spring with spring constant $!$k$!$",
+              "image": null,
+              "order": 3
+            },
+            {
+              "text": "Mass $!$M$!$ attached to spring with spring constant $!$2k$!$",
+              "image": null,
+              "order": 2
+            },
+            {
+              "text": "Mass $!$M$!$ attached to two springs in parallel, each with spring constant $!$2k$!$",
+              "image": null,
+              "order": 1
+            }
+          ]
+        },
+        {
+          "id": "2sqMDl9db1HF1R2ZEC6QF",
+          "question": "Order the given mass-spring systems from the one with the smallest period to the one with the largest period.",
+          "image": null,
+          "options": [
+            {
+              "text": "Mass $!$2M$!$ attached to spring with spring constant $!$k$!$",
+              "image": null,
+              "order": 4
+            },
+            {
+              "text": "Mass $!$M$!$ attached to two springs in series, each with spring constant $!$k$!$",
+              "image": null,
+              "order": 3
+            },
+            {
+              "text": "Mass $!$M$!$ attached to spring with spring constant $!$2k$!$",
+              "image": null,
+              "order": 2
+            },
+            {
+              "text": "Mass $!$M$!$ attached to spring with spring constant $!$3k$!$",
+              "image": null,
+              "order": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

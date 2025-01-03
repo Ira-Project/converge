@@ -1,0 +1,87 @@
+{
+  "name": "Sample Topic",
+  "topicId": "1",
+  "multipleChoiceQuestions": [
+    {
+      "id": "1",
+      "variants": [
+        {
+          "id": "1",
+          "question": "asdf",
+          "options": [
+            {
+              "text": "A",
+              "isCorrect": true
+            },
+            {
+              "text": "B",
+              "isCorrect": false
+            },
+            {
+              "text": "C",
+              "isCorrect": false
+            },
+            {
+              "text": "D",
+              "isCorrect": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "matchingQuestions": [
+    {
+      "id": "2",
+      "variants": [
+        {
+          "id": "1",
+          "question": "asdf",
+          "options": [
+            {
+              "optionA": "A",
+              "optionB": "a"
+            },
+            {
+              "optionA": "B",
+              "optionB": "b"
+            },
+            {
+              "optionA": "C",
+              "optionB": "c"
+            },
+            {
+              "optionA": "D",
+              "optionB": "d"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "orderingQuestions": [
+    {
+      "id": "3",
+      "variants": [
+        {
+          "id": "1",
+          "question": "asdf",
+          "options": [
+            {
+              "text": "A",
+              "order": 1
+            },
+            {
+              "text": "B",
+              "order": 2
+            },
+            {
+              "text": "C",
+              "order": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

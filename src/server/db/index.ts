@@ -15,6 +15,12 @@ import * as reasoningQuestions from "./schema/reasoning/reasoningQuestions";
 import * as reasoningQuestionAttempts from "./schema/reasoning/reasoningQuestionAttempts";
 import * as reasoningAssignments from "./schema/reasoning/reasoningAssignment";
 import * as activity from "./schema/activity";
+import * as knowledgeZapAssignment from "./schema/knowledgeZap/knowledgeZapAssignment";
+import * as knowledgeZapQuestions from "./schema/knowledgeZap/knowledgeZapQuestions";
+import * as matchingQuestions from "./schema/knowledgeZap/matchingQuestions";
+import * as multipleChoiceQuestions from "./schema/knowledgeZap/multipleChoiceQuestions";
+import * as orderingQuestions from "./schema/knowledgeZap/orderingQuestions";
+
 
 export const client = postgres(env.DATABASE_URL, {
   max_lifetime: 10, 
@@ -22,20 +28,23 @@ export const client = postgres(env.DATABASE_URL, {
   onnotice: () => {return},
 });
 
-export const db = drizzle(client, { schema: 
-  {
-    ...assignment, 
-    ...classroom, 
-    ...subject, 
-    ...user,
-    ...concept,
-    ...assignmentDetails,
-    ...explanations,
-    ...testAttempts,
-    ...lessonPlanFiles,
-    ...reasoningAssignments,
-    ...reasoningQuestionAttempts,
-    ...reasoningQuestions,
-    ...activity,
-  }
-});
+export const db = drizzle(client, { schema: {
+  ...assignment, 
+  ...classroom, 
+  ...subject, 
+  ...user,
+  ...concept,
+  ...assignmentDetails,
+  ...explanations,
+  ...testAttempts,
+  ...lessonPlanFiles,
+  ...reasoningAssignments,
+  ...reasoningQuestionAttempts,
+  ...reasoningQuestions,
+  ...activity,
+  ...knowledgeZapAssignment,
+  ...knowledgeZapQuestions,
+  ...matchingQuestions,
+  ...multipleChoiceQuestions,
+  ...orderingQuestions,
+}});
