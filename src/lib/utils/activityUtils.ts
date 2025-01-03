@@ -32,6 +32,16 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
           colour: "rose",
           description: "A spin on the popular 'Wordle' game. Spot the flaw in Ira's reasoning and correct it.",
         }
+    case ActivityType.KnowledgeZap:
+      return {
+        url: `${Paths.Activity}${id}/${Paths.KnowledgeZap}`,
+        iconImage: "/images/knowledge-zap.png",
+        title: "Knowledge Zap",
+        helpUrl: "",
+        tags: ["Knowledge", "Evaluation"],
+        colour: "lime",
+        description: "Test your knowledge on a topic by answering questions.",
+      }
     default:
       return {
         url: "",

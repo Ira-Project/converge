@@ -33,7 +33,7 @@ export default function AssignmentTutorialModal({ classroomId, topic }: Props) {
               <BreadcrumbItem>
                 <BreadcrumbLink 
                   href={`${Paths.Classroom}${classroomId}`}>
-                    Classroom
+                  Classroom
                 </BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
@@ -42,7 +42,7 @@ export default function AssignmentTutorialModal({ classroomId, topic }: Props) {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <div className="flex flex-row items-center text-xl font-semibold my-2 text-rose-700">
+          <div className="flex flex-row items-center text-xl font-semibold my-2 text-lime-700">
             {topic}
           </div>
         </DialogTitle>
@@ -51,6 +51,7 @@ export default function AssignmentTutorialModal({ classroomId, topic }: Props) {
         </DialogDescription>
         <div className="px-16">
           <div className="relative pb-[57.02%] h-0 border-0">
+            {/* TODO: Add the actual video */}
             <iframe 
               src="https://www.loom.com/embed/6a83ce6654894c0c914ba27e6082953e?sid=d3cb0c2c-089e-430d-8ce7-22af4233cef3" 
               className="absolute w-full h-full"
@@ -60,7 +61,7 @@ export default function AssignmentTutorialModal({ classroomId, topic }: Props) {
         </div>
         <DialogFooter>
           <DialogClose asChild>
-            <Button className="bg-rose-700 text-white hover:bg-rose-900">
+            <Button className="bg-lime-700 text-white hover:bg-lime-900">
               Start Activity
             </Button>
           </DialogClose>

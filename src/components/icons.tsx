@@ -78,6 +78,7 @@ export {
   ClockIcon,
   CalendarIcon,
   TrashIcon,
+  GridIcon,
   LockClosedIcon,
   StackIcon,
   HomeIcon,
@@ -89,4 +90,5 @@ export {
   Share1Icon,
   BarChartIcon,
   FileTextIcon,
+  LightningBoltIcon,
 } from "@radix-ui/react-icons";

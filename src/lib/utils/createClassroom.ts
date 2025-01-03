@@ -31,6 +31,14 @@ const activityIdsDev: { topicId: string, assignmentId: string, name: string, typ
     assignmentId: "m4wszne63v7tql2l3pqay",
     order: 1,
     points: 100
+  },
+  {    
+    name: "Simple Harmonic Motion",
+    type: ActivityType.KnowledgeZap,
+    topicId: "QoUD52AFmibtZ7SGqIbmI",
+    assignmentId: "u1d6i0d60nsik7nkehwu5",
+    order: 0,
+    points: 100
   }
 ]
 
@@ -58,7 +66,15 @@ const activityIdsProd: { topicId: string, assignmentId: string, name: string, ty
     assignmentId: "higfjthbjvq05ujje389k",
     order: 1,
     points: 100
-  }
+  },
+  {    
+    name: "Simple Harmonic Motion",
+    type: ActivityType.KnowledgeZap,
+    topicId: "qY4JbQSoTts2eHzmUE9Gx",
+    assignmentId: "wbwuap0ew2u2n155y0z2j",
+    order: 0,
+    points: 100
+  },
 ]
 
 const activityIds = process.env.ENVIRONMENT === 'dev' ? activityIdsDev : activityIdsProd;
