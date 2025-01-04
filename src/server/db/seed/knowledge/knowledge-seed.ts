@@ -3,7 +3,6 @@ import { db } from "../..";
 import { eq } from "drizzle-orm";
 import { generateId } from "lucia";
 
-import json from "./simple_harmonic_motion.json";
 import { knowledgeZapAssignments } from "../../schema/knowledgeZap/knowledgeZapAssignment";
 import { multipleChoiceAnswerOptions, multipleChoiceQuestions } from "../../schema/knowledgeZap/multipleChoiceQuestions";
 import { KnowledgeZapQuestionType } from "@/lib/constants";
@@ -11,9 +10,13 @@ import { knowledgeZapQuestions, knowledgeZapQuestionToAssignment } from "../../s
 import { matchingAnswerOptions, matchingQuestions } from "../../schema/knowledgeZap/matchingQuestions";
 import { orderingAnswerOptions, orderingQuestions } from "../../schema/knowledgeZap/orderingQuestions";
 
+import json from "./simple_harmonic_motion.json";
+
 export async function createKnowledgeZapAssignment() {
+
+  const topicId = process.env.ENVIRONMENT === "prod" ? json.topicIdProd : json.topicIdDev;
   // Check if assignment already exists
-  const existingAssignment = await db.select().from(knowledgeZapAssignments).where(eq(knowledgeZapAssignments.topicId, json.topicId));
+  const existingAssignment = await db.select().from(knowledgeZapAssignments).where(eq(knowledgeZapAssignments.topicId, topicId));
 
   let knowledgeZapAssignment;
 
@@ -25,7 +28,7 @@ export async function createKnowledgeZapAssignment() {
       id: generateId(21),
       name: json.name,
       description: "Knowledge Zap",
-      topicId: json.topicId,
+      topicId: topicId,
       createdAt: new Date(),
       updatedAt: new Date(),
     }).returning({
@@ -45,7 +48,7 @@ export async function createKnowledgeZapAssignment() {
     const existingQuestions = await db.select().from(knowledgeZapQuestions).where(eq(knowledgeZapQuestions.id, questions.id));
     
     if (existingQuestions.length > 0) {
-      console.log(`Multiple choice question already exists`);
+      console.log(`Multiple choice question already exists`, questions.id);
       continue;
     }
 
@@ -53,7 +56,7 @@ export async function createKnowledgeZapAssignment() {
       id: questions.id,
       question: "Knowledge Zap Question",
       type: KnowledgeZapQuestionType.MULTIPLE_CHOICE, 
-      topicId: json.topicId,
+      topicId: topicId,
       questionId: [],
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -117,7 +120,7 @@ export async function createKnowledgeZapAssignment() {
       id: questions.id,
       question: "Knowledge Zap Question",
       type: KnowledgeZapQuestionType.MATCHING, 
-      topicId: json.topicId,
+      topicId: topicId,
       questionId: [],
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -174,7 +177,7 @@ export async function createKnowledgeZapAssignment() {
       id: questions.id,
       question: "Knowledge Zap Question",
       type: KnowledgeZapQuestionType.ORDERING, 
-      topicId: json.topicId,
+      topicId: topicId,
       questionId: [],
       createdAt: new Date(),
       updatedAt: new Date(),

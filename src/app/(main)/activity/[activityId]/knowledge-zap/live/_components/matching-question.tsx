@@ -33,6 +33,11 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
 
   const checkMatchingAnswer = api.knowledgeQuestions.checkMatchingAnswer.useMutation();
 
+  // Add helper function to clean LaTeX content for data attributes
+  const cleanLatexForDataAttribute = (text: string) => {
+    return text.replace(/\$!\$(.*?)\$!\$/g, 'latex_$1')
+      .replace(/[^a-zA-Z0-9-_]/g, '_');
+  };
 
   const handleSubmit = async () => {
     const result = await checkMatchingAnswer.mutateAsync({
@@ -73,8 +78,8 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
 
     // Draw lines for each match
     matches.forEach(match => {
-      const termElement = container.querySelector(`[data-option="${match.optionA}"]`);
-      const defElement = container.querySelector(`[data-option="${match.optionB}"]`);
+      const termElement = container.querySelector(`[data-option="${cleanLatexForDataAttribute(match.optionA)}"]`);
+      const defElement = container.querySelector(`[data-option="${cleanLatexForDataAttribute(match.optionB)}"]`);
       
       if (termElement && defElement) {
         const termRect = termElement.getBoundingClientRect();
@@ -146,7 +151,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
     isSelected: boolean,
   ) => {
     return `w-full p-3 text-left rounded-lg transition-colors text-center text-sm
-    ${isSelected ? 'bg-lime-200' : 'bg-lime-100'}`;
+    ${isSelected ? 'bg-lime-300' : 'bg-lime-100'}`;
   };
 
   const handleContinue = () => {
@@ -165,7 +170,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
 
   return (
     <div className="flex flex-col gap-8">
-      <p className="text-2xl text-center leading-10"> 
+      <p className="text-xl text-center leading-8"> 
         <FormattedText text={question} />
       </p>
       {imageUrl && (
@@ -182,11 +187,18 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
           {optionsA.map((option) => (
             <button
               key={option}
-              data-option={option}
-              onClick={() => setSelectedTerm(option)}
+              data-option={cleanLatexForDataAttribute(option)}
+              onClick={() => {
+                if (selectedDefinition) {
+                  handleMatch(option, selectedDefinition);
+                } else {
+                  setSelectedTerm(option);
+                }
+              }}
               className={`${getButtonClassNames(
                 selectedTerm === option,
               )} flex-1`}
+              disabled={matches.some(m => m.optionA === option) && !selectedDefinition}
               style={{
                 boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
               }}
@@ -199,7 +211,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
           {optionsB.map((def) => (
             <button
               key={def}
-              data-option={def}
+              data-option={cleanLatexForDataAttribute(def)}
               onClick={() => {
                 if (selectedTerm) {
                   handleMatch(selectedTerm, def);
@@ -215,7 +227,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
                 boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
               }}
             >
-              {def}
+              <FormattedText text={def} />
             </button>
           ))}
         </div>
