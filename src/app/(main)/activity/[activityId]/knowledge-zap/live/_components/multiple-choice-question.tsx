@@ -41,7 +41,7 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
     isSelected: boolean,
   ) => {
     return `w-full p-3 text-left rounded-lg transition-colors text-center text-sm
-    ${isSelected ? 'bg-lime-200' : 'bg-lime-100'}`;
+    ${isSelected ? 'bg-lime-300' : 'bg-lime-100'}`;
   };
 
 

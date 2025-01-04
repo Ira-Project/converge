@@ -78,7 +78,9 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
 
   return (
     <div className="flex flex-col gap-8">
-      <p className="text-2xl text-center mb-4"> {question} </p>
+      <p className="text-xl text-center mb-4 leading-8"> 
+        <FormattedText text={question} />
+      </p>
       <p className="text-sm text-center text-muted-foreground">Put it in the correct order</p>
       <div className="flex flex-row gap-8 px-32 relative w-full">
         <div className="flex flex-col justify-center">
