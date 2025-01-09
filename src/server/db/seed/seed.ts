@@ -11,6 +11,7 @@ import { classrooms } from "../schema/classroom";
 import { activity } from "../schema/activity";
 
 import { createKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
+import { createStepSolveAssignment } from "./stepSolve/stepSolve-seed";
 
 async function createCoursesSubjectsAndTopics() {
   const list = [
@@ -388,12 +389,39 @@ async function uploadPreloadedUsers() {
 }
 
 
-const activityIds: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
+const activityIdsDev: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
+  {    
+    name: "Simple Harmonic Motion",
+    type: ActivityType.KnowledgeZap,
+    topicId: "QoUD52AFmibtZ7SGqIbmI",
+    assignmentId: "888dtusghs9q8nbb21fg0",
+    order: 0,
+    points: 100
+  },
+  {    
+    name: "Thermodynamics",
+    type: ActivityType.KnowledgeZap,
+    topicId: "6PPsDBZy9nMXjt6GeUcOp",
+    assignmentId: "63qd53u5u7pnh8mol99e2",
+    order: 0,
+    points: 100
+  },
+]
+
+const activityIdsProd: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
   {    
     name: "Simple Harmonic Motion",
     type: ActivityType.KnowledgeZap,
     topicId: "qY4JbQSoTts2eHzmUE9Gx",
-    assignmentId: "wbwuap0ew2u2n155y0z2j",
+    assignmentId: "qu3rnkdk84nesmbrow0ib",
+    order: 0,
+    points: 100
+  },
+  {    
+    name: "Thermodynamics",
+    type: ActivityType.KnowledgeZap,
+    topicId: "jA5iZ5cKkLy1GIvdT30HQ",
+    assignmentId: "o7yheiv6bl31sqm2dh726",
     order: 0,
     points: 100
   },
@@ -402,6 +430,8 @@ const activityIds: { topicId: string, assignmentId: string, name: string, type: 
 
 async function addActivitiesClassrooms(classroomId: string) {
 
+
+
   const classes = await db.select().from(classrooms).where(eq(classrooms.id, classroomId));
 
   const classroom = classes[0];
@@ -409,6 +439,8 @@ async function addActivitiesClassrooms(classroomId: string) {
   if(!classroom) {
     throw new Error("Classroom not found");
   }
+
+  const activityIds = process.env.ENVIRONMENT === "prod" ? activityIdsProd : activityIdsDev;
 
   for(const activityId of activityIds) {
     await db.insert(activity).values({
@@ -428,6 +460,25 @@ async function addActivitiesClassrooms(classroomId: string) {
 
 }
 
-// await addActivitiesClassrooms("qskhg964cbzym6z30201b");
+
+const devClassrooms = [
+  "8pify78tp9sjnn9f55ls0",
+  "uldhld6cq0iqihr474cd4"
+]
+
+const prodClassrooms = [
+  "dyo82wqgtabd18x3wcqq8",
+  "ijlzd5fim95uvrcq46qgr",
+  "qskhg964cbzym6z30201b",
+  "be98owll7hr706yw0686w",
+]
+
+
+const classroomsToAddActivities = process.env.ENVIRONMENT === "prod" ? prodClassrooms : devClassrooms;
+
+// for(const classroomId of classroomsToAddActivities) {
+//   await addActivitiesClassrooms(classroomId);
+// }
 
 // await createKnowledgeZapAssignment();
+//await createStepSolveAssignment();

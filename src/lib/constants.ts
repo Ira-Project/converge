@@ -15,6 +15,7 @@ export enum Paths {
   LearnByTeaching = "/learn-by-teaching/",
   ReasonTrace = "/reason-trace/",
   KnowledgeZap = "/knowledge-zap/",
+  StepSolve = "/step-solve/",
   CreateAssignment = "/create-assignment/",
   Activity = "/activity/",
   LiveActivity = "/live",

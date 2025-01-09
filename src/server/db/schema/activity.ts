@@ -40,7 +40,6 @@ export const activity = pgTable("activity", {
   order: integer("order").notNull(),
   points: integer("points").notNull(),
   topicId: varchar("topic_id", { length: 21 }).references(() => topics.id),
-  attemptId: varchar("attempt_id", { length: 21 }),
   createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
