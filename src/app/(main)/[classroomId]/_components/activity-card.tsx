@@ -42,6 +42,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role }) => {
           "text-amber-700": colour === "amber",
           "text-rose-700": colour === "rose",
           "text-lime-700": colour === "lime",
+          "text-teal-700": colour === "teal",
         }
       )}> 
         {tags.map((tag, index) => (
