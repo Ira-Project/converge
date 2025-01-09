@@ -42,6 +42,16 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         colour: "lime",
         description: "Test your knowledge on a topic by answering questions.",
       }
+    case ActivityType.StepSolve:
+      return {
+        url: `${Paths.Activity}${id}/${Paths.StepSolve}`,
+        iconImage: "/images/step-solve.png",
+        title: "Step Solve",
+        helpUrl: "",
+        tags: ["Reasoning", "Evaluation"],
+        colour: "teal",
+        description: "Learn how to problem solve by solving a question step by step.",
+      }
     default:
       return {
         url: "",

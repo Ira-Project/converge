@@ -15,6 +15,8 @@ import { reasoningRouter } from "./routers/reasoningActivity/reasoning/reasoning
 
 import { knowledgeZapRouter } from "./routers/knowledgeZapActivity/knowledgeZap/knowledgeZap.procedure";
 import { knowledgeQuestionsRouter } from "./routers/knowledgeZapActivity/knowledgeQuestions/knowledgeQuestions.procedure";
+import { stepSolveRouter } from "./routers/stepSolveActivity/stepSolve/stepSolve.procedure";
+import { stepSolveCheckStepRouter } from "./routers/stepSolveActivity/checkStep/checkStep.procedure";
 
 export const appRouter = createTRPCRouter({
   classroom: classroomRouter,
@@ -31,6 +33,9 @@ export const appRouter = createTRPCRouter({
 
   knowledgeZap: knowledgeZapRouter,
   knowledgeQuestions: knowledgeQuestionsRouter,
+
+  stepSolve: stepSolveRouter,
+  stepSolveCheckStep: stepSolveCheckStepRouter,
 });
 
 export type AppRouter = typeof appRouter;

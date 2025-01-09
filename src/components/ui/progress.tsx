@@ -8,7 +8,7 @@ import { cn } from "@/lib/utils"
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>,
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root> & {
-    color?: 'default' | 'amber' | 'rose'
+    color?: 'default' | 'amber' | 'rose' | 'teal'
   }
 >(({ className, value, color = 'default', ...props }, ref) => (
   <ProgressPrimitive.Root
@@ -26,6 +26,7 @@ const Progress = React.forwardRef<
           'bg-primary': color === 'default',
           'bg-amber-400': color === 'amber',
           'bg-rose-400': color === 'rose',
+          'bg-teal-400': color === 'teal',
         }
       )}
       style={{ transform: `translateX(-${100 - (value ?? 0)}%)` }}
