@@ -12,12 +12,12 @@ export default async function ActivityLayout(props: { params: Promise<{ activity
   const params = await props.params;
   const { user } = await validateRequest();
   
-  if (!user) redirect(Paths.Login);
-  if (!user.isOnboarded || !user.classroomId) redirect(Paths.Onboarding);
+  if (user && (!user.isOnboarded || !user.classroomId)) redirect(Paths.Onboarding);
 
-  const activity = await api.activities.getActivity.query({ activityId: params.activityId });
-
-  if(!activity) redirect(`${Paths.Classroom}/${user.classroomId}`);
+  let activity;
+  if(user) {
+    activity = await api.activities.getActivity.query({ activityId: params.activityId });
+  }
 
   return (
     <>

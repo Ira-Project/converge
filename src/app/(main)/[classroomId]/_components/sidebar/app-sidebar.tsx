@@ -20,7 +20,7 @@ import Image from "next/image"
 
 interface AppSidebarProps {
   classroom: RouterOutputs["classroom"]["get"];
-  user: {
+  user?: {
     id: string;
     name: string | null;
     email: string;
@@ -64,9 +64,9 @@ export function AppSidebar({ classroom, user, activities, students }: AppSidebar
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={{
-          name: user.name ?? "Unknown",
-          email: user.email,
-          avatar: user.avatar,
+          name: user?.name ?? "Unknown",
+          email: user?.email ?? "Unknown",
+          avatar: user?.avatar ?? null,
         }} />
       </SidebarFooter>
       <SidebarRail />

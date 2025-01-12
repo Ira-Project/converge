@@ -27,7 +27,10 @@ export interface ActionResponse<T> {
   formError?: string;
 }
 
-export async function login(_: unknown, formData: FormData): Promise<ActionResponse<LoginInput>> {
+export async function login(
+  _: unknown,
+  formData: FormData,
+): Promise<ActionResponse<LoginInput>> {
   const obj = Object.fromEntries(formData.entries());
 
   const parsed = loginSchema.safeParse(obj);
@@ -69,6 +72,10 @@ export async function login(_: unknown, formData: FormData): Promise<ActionRespo
   const session = await lucia.createSession(existingUser.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+
+  if(obj.redirect === "false") {
+    return {};
+  }
 
   if(!existingUser?.isOnboarded || !existingUser?.defaultClassroomId) {
     return redirect(Paths.Onboarding);

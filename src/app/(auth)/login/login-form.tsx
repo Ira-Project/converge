@@ -9,13 +9,20 @@ import { Input } from "@/components/ui/input";
 import { Paths } from "@/lib/constants";
 import { useActionState } from "react";
 
-export const LoginForm: React.FC = () => {
+interface LoginFormProps {
+  onSuccess?: () => void;
+}
+
+export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
 
   const [state, formAction] = useActionState(login, null);
 
   return (
     <>
-      <form action={formAction} className="grid gap-4">
+      <form action={(formData) => {
+        formAction(formData);
+        onSuccess?.();
+      }} className="grid gap-4">
         <div className="space-y-1.5">
           <Label>Email</Label>
           <Input
@@ -45,6 +52,8 @@ export const LoginForm: React.FC = () => {
             <Link href={Paths.ResetPassword}>Forgot password?</Link>
           </Button>
         </div>
+
+        <Input type="hidden" name="redirect" value={"false"} />
 
         {state?.fieldError ? (
           <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">
