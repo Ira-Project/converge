@@ -3,23 +3,22 @@ import { Separator } from "@/components/ui/separator";
 import { api } from "@/trpc/server";
 import { UploadLessonPlanForm } from './_components/upload-lesson-plan-form';
 import Image from "next/image";
-import { redirect } from 'next/navigation';
 import { validateRequest } from '@/lib/auth/validate-request';
-import { Paths, Roles } from '@/lib/constants';
-import { headers } from 'next/headers';
-import Link from 'next/link';
+import { Roles } from '@/lib/constants';
 
 export default async function ClassroomPage(props: { params: Promise<{ classroomId: string }> }) {
+  const [{ user }, params] = await Promise.all([
+    validateRequest(),
+    props.params
+  ]);
 
-  const { user } = await validateRequest();
-
-  const params = await props.params;
-
-  let classroom;
-  let topics;
-  if(user) {
-    classroom = await api.classroom.get.query({ id: params.classroomId });
-    topics = await api.activities.getActivities.query({ classroomId: params.classroomId });
+  let classroom, topics, userToClassroom: { role: Roles } | undefined;
+  if (user) {
+    [classroom, topics, userToClassroom] = await Promise.all([
+      api.classroom.get.query({ id: params.classroomId }),
+      api.activities.getActivities.query({ classroomId: params.classroomId }),
+      api.classroom.getOrCreateUserToClassroom.query({ classroomId: params.classroomId })
+    ]);
   }
   
   return (
@@ -39,7 +38,7 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
       <div className="px-4 mt-40 flex flex-col gap-8 w-full">
         {topics?.map((topic, index) => (
           <div key={index}>
-            <TopicSection topic={topic} role={user?.role ?? Roles.Student}/>
+            <TopicSection topic={topic} role={userToClassroom?.role ?? Roles.Student}/>
             <Separator />
           </div>
         ))}

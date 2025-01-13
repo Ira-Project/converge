@@ -15,9 +15,12 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
   const params = await props.params;
   const { user } = await validateRequest();
 
-  let activity;
+  let activity, userToClassroom;
   if(user) {
     activity = await api.activities.getActivity.query({ activityId: params.activityId });
+    if(activity?.classroomId) {
+      userToClassroom = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: activity?.classroomId });
+    }
   }
 
   const activityMetaData = getMetaDataFromActivityType(ActivityType.StepSolve, activity?.id);
@@ -35,7 +38,7 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
             </div>
           </div>
           <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-            { user?.role !== Roles.Teacher ?
+            { userToClassroom?.role !== Roles.Teacher ?
               <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
                 <Button className="bg-teal-700 text-white">
                   Start

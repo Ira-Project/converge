@@ -3,19 +3,25 @@ import { PasswordInput } from "@/components/password-input";
 import { signup } from "@/lib/auth/actions";
 import { Label } from "@/components/ui/label";
 import { SubmitButton } from "@/components/submit-button";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import { Paths } from "@/lib/constants";
 import { useActionState } from "react";
 
-export const SignUpForm: React.FC = () => {
+// The onSuccess prop is used to prevent a redirect to the verify email page
+// and to specify a different success callback
+// This is useful when the signup form is used in a modal
+
+export const SignUpForm: React.FC<{ onSuccess?: () => void }> = ({ onSuccess }) => {
 
   const [state, formAction] = useActionState(signup, null);
 
   return (
     <>
-      <form action={formAction} className="grid gap-4">
+      <form 
+        action={(formData) => {
+          formAction(formData);
+          if (onSuccess) onSuccess();
+        }}
+        className="grid gap-4">
         <div className="space-y-1.5">
           <Label>Name</Label>
           <Input
@@ -45,13 +51,12 @@ export const SignUpForm: React.FC = () => {
           />
         </div>
 
-        <div className="flex flex-wrap justify-between">
-          <Button variant={"link"} size={"sm"} className="p-0" asChild>
-            <Link href={Paths.Login}>
-              Already signed up? Login instead.
-            </Link>
-          </Button>
-        </div>
+        {
+          onSuccess && (
+            <input type="hidden" name="modal" value="true" />
+          )
+        }
+    
 
         {state?.fieldError ? (
           <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">

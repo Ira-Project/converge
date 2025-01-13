@@ -13,6 +13,7 @@ import {
 import { APP_TITLE } from "@/lib/constants";
 import { SignUpForm } from "./signup-form";
 import { GoogleSignIn } from "../../../components/google-signin";
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "Sign Up",
@@ -40,6 +41,13 @@ export default async function SignupPage() {
           <div className="flex-grow border-t border-muted" />
         </div>
         <SignUpForm />
+        <div className="flex flex-wrap justify-between">
+          <Button variant={"link"} size={"sm"} className="p-0" asChild>
+            <Link href={Paths.Login}>
+              Already signed up? Login instead.
+            </Link>
+          </Button>
+        </div>
       </CardContent>
     </Card>
   )

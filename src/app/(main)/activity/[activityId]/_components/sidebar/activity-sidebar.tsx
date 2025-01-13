@@ -19,15 +19,12 @@ import { type ActivityType, Paths } from "@/lib/constants"
 import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils"
 import Link from "next/link"
 
-
-
 interface ActivitySidebarProps {
   activity: RouterOutputs["activities"]["getActivity"];
   user?: {
     id: string;
     name: string | null;
     email: string;
-    role: string;
     isOnboarded: boolean;
     avatar: string | null;
     classroomId: string | null;

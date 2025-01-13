@@ -24,7 +24,6 @@ interface AppSidebarProps {
     id: string;
     name: string | null;
     email: string;
-    role: string;
     isOnboarded: boolean;
     avatar: string | null;
   };

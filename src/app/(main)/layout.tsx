@@ -9,7 +9,7 @@ export default async function Layout({
   const { user } = await validateRequest();
   return (
     <>
-      <AuthModal user={user ?? null}/>
+      <AuthModal user={user}/>
       {children}
     </>
   )

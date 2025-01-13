@@ -3,26 +3,17 @@ import { PasswordInput } from "@/components/password-input";
 import { login } from "@/lib/auth/actions";
 import { Label } from "@/components/ui/label";
 import { SubmitButton } from "@/components/submit-button";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import { Paths } from "@/lib/constants";
 import { useActionState } from "react";
 
-interface LoginFormProps {
-  onSuccess?: () => void;
-}
 
-export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
+export const LoginForm: React.FC = () => {
 
   const [state, formAction] = useActionState(login, null);
 
   return (
     <>
-      <form action={(formData) => {
-        formAction(formData);
-        onSuccess?.();
-      }} className="grid gap-4">
+      <form action={formAction} className="grid gap-4">
         <div className="space-y-1.5">
           <Label>Email</Label>
           <Input
@@ -43,17 +34,6 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onSuccess }) => {
             placeholder="********"
           />
         </div>
-
-        <div className="flex flex-wrap justify-between">
-          <Button variant={"link"} size={"sm"} className="p-0" asChild>
-            <Link href={Paths.Signup}>Not signed up? Sign up now.</Link>
-          </Button>
-          <Button variant={"link"} size={"sm"} className="p-0" asChild>
-            <Link href={Paths.ResetPassword}>Forgot password?</Link>
-          </Button>
-        </div>
-
-        <Input type="hidden" name="redirect" value={"false"} />
 
         {state?.fieldError ? (
           <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">

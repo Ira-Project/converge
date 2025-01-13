@@ -17,4 +17,7 @@ export const classroomRouter = createTRPCRouter({
   join: protectedProcedure
     .input(inputs.joinClassroomSchema)
     .mutation(({ ctx, input }) => services.joinClassroom(ctx, input)),
+  getOrCreateUserToClassroom: protectedProcedure
+    .input(inputs.getOrCreateUserToClassroomSchema)
+    .query(({ ctx, input }) => services.getOrCreateUserToClassroom(ctx, input)),
 });

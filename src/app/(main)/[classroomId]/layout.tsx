@@ -12,9 +12,6 @@ export default async function MainLayout(props: { params: Promise<{ classroomId:
   const params = await props.params;
   const { user } = await validateRequest();
   
-  // if (!user) redirect(Paths.Login);
-  // if (!user?.isOnboarded) redirect(Paths.Onboarding);
-
   let classroom;
   let activities;
   let students;
@@ -22,9 +19,11 @@ export default async function MainLayout(props: { params: Promise<{ classroomId:
     classroom = await api.classroom.get.query({ id: params.classroomId, });
     activities = await api.activities.getActivities.query({ classroomId: params.classroomId });
     students = await api.classroom.students.query({ id: params.classroomId });
+    
+    if(!user.isOnboarded) {
+      redirect(Paths.Onboarding);
+    }
   }
-
-  // if(!classroom) redirect(Paths.Onboarding);
 
   return (
     <>
