@@ -12,6 +12,7 @@ import { Separator } from '@/components/ui/separator';
 import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationNext, PaginationLink } from "@/components/ui/pagination"
 import StepSolveStepComponent from './step-component';
 import FormattedText from '@/components/formatted-text';
+import Image from 'next/image';
 
 interface StepSolveActivityViewProps {
   stepSolveAssignment: RouterOutputs["stepSolve"]["getAssignment"];
@@ -166,6 +167,17 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
             <>
               <div className="text-center text-lg">
                 <FormattedText text={currentQuestion?.q.questionText ?? ""} />
+                <div className="flex justify-center">
+                  {
+                    currentQuestion?.q.questionImage &&
+                    <Image
+                      src={currentQuestion.q.questionImage}
+                      alt="Question Image"
+                      width={500}
+                      height={500}
+                    />
+                  }
+                </div>
               </div>
             </>
 

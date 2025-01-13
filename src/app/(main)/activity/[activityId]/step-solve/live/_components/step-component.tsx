@@ -114,7 +114,11 @@ const StepSolveStepComponent = ({
             )
           )}
 
-          {stepTextPart2 && <FormattedText text={stepTextPart2 ?? ''} />}
+          {stepTextPart2 && 
+            <div className="text-center">
+              <FormattedText text={stepTextPart2 ?? ''} />
+            </div>
+          }
 
           {!isCompleted ? (
             answer && answer?.length > 0 && (        
