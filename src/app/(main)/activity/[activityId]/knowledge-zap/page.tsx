@@ -1,6 +1,5 @@
 import { validateRequest } from "@/lib/auth/validate-request";
-import { type ActivityType, Paths, Roles } from "@/lib/constants";
-import { redirect } from "next/navigation";
+import { ActivityType, Paths, Roles } from "@/lib/constants";
 import { api } from "@/trpc/server";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
@@ -15,13 +14,16 @@ import HeatMap from "./_components/heat-map";
 export default async function AssignmentPage(props: { params: Promise<{ activityId: string }> }) {
   const params = await props.params;
   const { user } = await validateRequest();
-  if (!user) redirect(Paths.Login);
 
-  const activity = await api.activities.getActivity.query({ activityId: params.activityId });
-  
-  if (!activity) redirect(`${Paths.Classroom}${user.classroomId}`);
+  let activity, userToClassroom;
+  if(user) {
+    activity = await api.activities.getActivity.query({ activityId: params.activityId });
+    if(activity?.classroomId) {
+      userToClassroom = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: activity?.classroomId });
+    }
+  }
 
-  const activityMetaData = getMetaDataFromActivityType(activity.type as ActivityType, activity.id);
+  const activityMetaData = getMetaDataFromActivityType(ActivityType.KnowledgeZap, activity?.id);
 
   return (
     <main className="flex flex-col">
@@ -32,11 +34,11 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
             <Image src={activityMetaData.iconImage} alt={activityMetaData.title} width={60} height={60} />
             <div className="flex flex-col my-auto">
               <h1 className="text-2xl font-bold text-lime-700">{activityMetaData.title}</h1>
-              <p className="text-lime-700">{activity.topic?.name}</p>
+              <p className="text-lime-700">{activity?.topic?.name}</p>
             </div>
           </div>
           <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-            { user.role !== Roles.Teacher ?
+            { userToClassroom?.role !== Roles.Teacher ?
               <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
                 <Button className="bg-lime-700 text-white">
                   Start
@@ -49,9 +51,9 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
                     Preview
                   </Button>
                 </Link>
-                <AssignmentShareModal 
+                {activity && <AssignmentShareModal 
                   activityId={activity.id}
-                  isLive={activity.isLive} />
+                  isLive={activity.isLive} />}
               </div>
             }
           </div>
@@ -65,7 +67,7 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
           <BarChartIcon className="w-4 h-4 my-auto" />
           <p className="text-lg font-medium">Activity Analytics</p>
         </div>
-        <AnalyticsCards activityId={activity.id} />
+        {activity && <AnalyticsCards activityId={activity.id} />}
       </div>
 
       {/* Submissions */}
@@ -74,7 +76,7 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
           <FileTextIcon className="w-4 h-4 my-auto" />
           <p className="text-lg font-medium">Submissions</p>
         </div>
-        <SubmissionsTable activityId={activity.id} />
+        {activity && <SubmissionsTable activityId={activity.id} />}
       </div>
 
       {/* Heat Map */}
@@ -83,7 +85,7 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
           <GridIcon className="w-4 h-4 my-auto" />
           <p className="text-lg font-medium">Heat Map</p>
         </div>
-        <HeatMap activityId={activity.id} />
+        {activity && <HeatMap activityId={activity.id} />}
       </div>
     </main>
 

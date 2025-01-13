@@ -21,13 +21,22 @@ import { validateRequest } from "@/lib/auth/validate-request";
 import { Paths, Roles } from "../constants";
 import { env } from "@/env";
 import { eq } from "drizzle-orm";
+import { getClassroomIdFromPathname } from "../server-utils";
+import { usersToClassrooms } from "@/server/db/schema/classroom";
 
 export interface ActionResponse<T> {
   fieldError?: Partial<Record<keyof T, string | undefined>>;
   formError?: string;
 }
 
-export async function login(_: unknown, formData: FormData): Promise<ActionResponse<LoginInput>> {
+export async function login(
+  _: unknown,
+  formData: FormData,
+): Promise<ActionResponse<LoginInput>> {
+
+  const cookieStore = await cookies();
+  const returnPath = cookieStore.get("returnPath")?.value;
+
   const obj = Object.fromEntries(formData.entries());
 
   const parsed = loginSchema.safeParse(obj);
@@ -74,10 +83,18 @@ export async function login(_: unknown, formData: FormData): Promise<ActionRespo
     return redirect(Paths.Onboarding);
   }
 
+  if (returnPath) {
+    return redirect(returnPath);
+  }
+
   redirect(`${Paths.Classroom}${existingUser.defaultClassroomId}`); 
 }
 
 export async function signup(_: unknown, formData: FormData): Promise<ActionResponse<SignupInput>> {
+
+  const cookieStore = await cookies();
+  const returnPath = cookieStore.get("returnPath")?.value;
+  
   const obj = Object.fromEntries(formData.entries());
 
   const parsed = signupSchema.safeParse(obj);
@@ -104,6 +121,8 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
     };
   }
 
+  const classroomId = await getClassroomIdFromPathname(returnPath ?? "");
+
   const userId = generateId(21);
   const hashedPassword = await new Scrypt().hash(password);
   await db.insert(users).values({
@@ -111,7 +130,22 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
     name,
     email,
     hashedPassword,
+    role: returnPath ? Roles.Student : Roles.Teacher,
+    // If the user is a student, they are onboarded automatically
+    isOnboarded: returnPath ? true : false,
+    defaultClassroomId: classroomId,
   });
+  
+  if(returnPath) {
+    if(classroomId) {
+      await db.update(users).set({ defaultClassroomId: classroomId }).where(eq(users.id, userId));
+      await db.insert(usersToClassrooms).values({
+        userId,
+        classroomId,
+        role: Roles.Student,
+      });
+    }
+  }
 
   const verificationCode = await generateEmailVerificationCode(userId, email);
   await sendMail(email, EmailTemplate.EmailVerification, { code: verificationCode });
@@ -119,29 +153,41 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
   const session = await lucia.createSession(userId, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
+
+  if (obj.modal === "true") {
+    return {};
+  }
   return redirect(Paths.VerifyEmail);
 }
 
 export async function logout(): Promise<never> {
   const { session } = await validateRequest();
+
+  const cookieStore = await cookies();
+  const returnPath = cookieStore.get("returnPath")?.value;
+
   if (!session) {
-    redirect("/login");
+    redirect(returnPath ?? "/login");
   }
 
   await lucia.invalidateSession(session.id);
   const sessionCookie = lucia.createBlankSessionCookie();
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
   
-  redirect("/login");
+  redirect(returnPath ?? "/login");
 }
 
 export async function resendVerificationEmail(): Promise<{
   error?: string;
   success?: boolean;
 }> {
+
+  const cookieStore = await cookies();
+  const returnPath = cookieStore.get("returnPath")?.value;
+
   const { user } = await validateRequest();
   if (!user) {
-    return redirect(Paths.Login);
+    return redirect(returnPath ?? Paths.Login);
   }
   const lastSent = await db.query.emailVerificationCodes.findFirst({
     where: (table, { eq }) => eq(table.userId, user.id),
@@ -165,8 +211,12 @@ export async function verifyEmail(_: unknown, formData: FormData): Promise<{ err
     return { error: "Invalid code" };
   }
   const { user } = await validateRequest();
+
+  const cookieStore = await cookies();
+  const returnPath = cookieStore.get("returnPath")?.value;
+
   if (!user) {
-    return redirect(Paths.Login);
+    return redirect(returnPath ?? Paths.Login);
   }
 
   const dbCode = await db.transaction(async (tx) => {
@@ -185,24 +235,24 @@ export async function verifyEmail(_: unknown, formData: FormData): Promise<{ err
 
   if (dbCode.email !== user.email) return { error: "Email does not match" };
 
-
-
   await lucia.invalidateUserSessions(user.id);
   await db.update(users).set({ 
     emailVerified: true,
-    role: Roles.Teacher,
   }).where(eq(users.id, user.id));
+  
   const session = await lucia.createSession(user.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
 
-  redirect(Paths.Onboarding);
+  redirect(returnPath ?? Paths.Onboarding);
 }
 
 export async function sendPasswordResetLink(
   _: unknown,
   formData: FormData,
 ): Promise<{ error?: string; success?: boolean }> {
+
+  
   const email = formData.get("email");
   const parsed = z.string().trim().email().safeParse(email);
   if (!parsed.success) {
@@ -231,6 +281,10 @@ export async function resetPassword(
   _: unknown,
   formData: FormData,
 ): Promise<{ error?: string; success?: boolean }> {
+
+  const cookieStore = await cookies();
+  const returnPath = cookieStore.get("returnPath")?.value;
+  
   const obj = Object.fromEntries(formData.entries());
 
   const parsed = resetPasswordSchema.safeParse(obj);
@@ -267,8 +321,8 @@ export async function resetPassword(
   const user = await db.query.users.findFirst({
     where: (table, { eq }) => eq(table.id, dbToken.userId),
   });
-  if (user?.defaultClassroomId) redirect(`${Paths.Classroom}${user.defaultClassroomId}`); 
-  return redirect(Paths.Onboarding);
+  if (user?.defaultClassroomId) redirect(returnPath ?? `${Paths.Classroom}${user.defaultClassroomId}`); 
+  return redirect(returnPath ?? Paths.Onboarding);
 }
 
 const timeFromNow = (time: Date) => {

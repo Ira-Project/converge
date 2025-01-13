@@ -18,7 +18,7 @@ import OrderingQuestion from './ordering-question';
 
 interface KnowledgeZapAssignmentViewProps {
   assignmentAttemptId: string;
-  knowledgeZapAssignment: RouterOutputs["knowledgeZap"]["getKnowledgeZapActivity"];
+  knowledgeZapAssignment?: RouterOutputs["knowledgeZap"]["getKnowledgeZapActivity"];
   knowledgeZapAttemptId: string;
   activityId: string
   topic: string;
@@ -27,8 +27,6 @@ interface KnowledgeZapAssignmentViewProps {
   classroomId: string;
   role: Roles;
 }
-
-
 
 const renderQuestion = (
   question: KnowledgeZapQuestionObjects, 
@@ -104,7 +102,7 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
 }: KnowledgeZapAssignmentViewProps) => {
 
   const [questionStack, setQuestionStack] = useState<KnowledgeZapQuestionObjects[]>(
-    knowledgeZapAssignment.questions
+    knowledgeZapAssignment?.questions ?? []
   );
 
   const stackPush = () => {
@@ -148,9 +146,9 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
         <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
           { role !== Roles.Teacher ?
             <>
-              <AssignmentTutorialModal 
+              {knowledgeZapAttemptId.length > 0 && <AssignmentTutorialModal 
                 topic={topic}
-                classroomId={classroomId} />
+                classroomId={classroomId} />}
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
                 loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
@@ -158,9 +156,9 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
             </>
             : 
             <>
-              <AssignmentTutorialModal 
+              {knowledgeZapAttemptId.length > 0 && <AssignmentTutorialModal 
                 topic={topic}
-                classroomId={classroomId} />
+                classroomId={classroomId} />}
               <AssignmentShareModal 
                 activityId={activityId}
                 isLive={isLive} />

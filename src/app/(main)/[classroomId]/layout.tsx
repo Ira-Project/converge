@@ -12,19 +12,23 @@ export default async function MainLayout(props: { params: Promise<{ classroomId:
   const params = await props.params;
   const { user } = await validateRequest();
   
-  if (!user) redirect(Paths.Login);
-  if (!user.isOnboarded) redirect(Paths.Onboarding);
-
-  const classroom = await api.classroom.get.query({ id: params.classroomId, });
-  const activities = await api.activities.getActivities.query({ classroomId: params.classroomId });
-  const students = await api.classroom.students.query({ id: params.classroomId });
-
-  if(!classroom) redirect(Paths.Onboarding);
+  let classroom;
+  let activities;
+  let students;
+  if(user) {
+    classroom = await api.classroom.get.query({ id: params.classroomId, });
+    activities = await api.activities.getActivities.query({ classroomId: params.classroomId });
+    students = await api.classroom.students.query({ id: params.classroomId });
+    
+    if(!user.isOnboarded) {
+      redirect(Paths.Onboarding);
+    }
+  }
 
   return (
     <>
       <SidebarProvider>
-        <AppSidebar classroom={classroom} user={user} activities={activities} students={students} />
+        <AppSidebar classroom={classroom} user={user ?? undefined} activities={activities ?? []} students={students ?? []} />
         <main className="w-full">
           <SidebarTrigger className="text-white" />
           {props.children}
