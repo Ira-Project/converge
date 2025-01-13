@@ -17,17 +17,20 @@ const TopicSection: React.FC<TopicSectionProps> = ({ topic, role }) => {
   }
 
   return (
-    <div className="mb-8 px-4" id={slug}>
-      <h2 className="text-xl font-semibold mb-2">{name}</h2>
-      <p className="text-muted-foreground mb-6">{description}</p>
-      
-      <h3 className="text-lg font-medium mb-4">Activities</h3>
-      <div className="flex flex-row gap-4">
-        {filteredActivities.map((activity, index) => (
-          <ActivityCard key={index} activity={activity} role={role} />
-        ))}
-      </div>
-    </div>
+    <>
+      {filteredActivities.length > 0 && (
+        <div className="mb-8 px-4" id={slug}>
+          <h2 className="text-xl font-semibold mb-2">{name}</h2>
+          <p className="text-muted-foreground mb-6">{description}</p>
+          <h3 className="text-lg font-medium mb-4">Activities</h3>
+          <div className="flex flex-row gap-4">
+            {filteredActivities.map((activity, index) => (
+              <ActivityCard key={index} activity={activity} role={role} />
+            ))}
+          </div>
+        </div>
+      )}
+    </>
   );
 };
 
