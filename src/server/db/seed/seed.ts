@@ -390,47 +390,61 @@ async function uploadPreloadedUsers() {
 
 
 const activityIdsDev: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
-  {    
-    name: "Simple Harmonic Motion",
-    type: ActivityType.KnowledgeZap,
-    topicId: "QoUD52AFmibtZ7SGqIbmI",
-    assignmentId: "888dtusghs9q8nbb21fg0",
-    order: 0,
-    points: 100
-  },
-  {    
+  // {    
+  //   name: "Simple Harmonic Motion",
+  //   type: ActivityType.KnowledgeZap,
+  //   topicId: "QoUD52AFmibtZ7SGqIbmI",
+  //   assignmentId: "888dtusghs9q8nbb21fg0",
+  //   order: 0,
+  //   points: 100
+  // },
+  // {    
+  //   name: "Thermodynamics",
+  //   type: ActivityType.KnowledgeZap,
+  //   topicId: "6PPsDBZy9nMXjt6GeUcOp",
+  //   assignmentId: "63qd53u5u7pnh8mol99e2",
+  //   order: 0,
+  //   points: 100
+  // },
+  {
     name: "Thermodynamics",
-    type: ActivityType.KnowledgeZap,
+    type: ActivityType.StepSolve,
     topicId: "6PPsDBZy9nMXjt6GeUcOp",
-    assignmentId: "63qd53u5u7pnh8mol99e2",
+    assignmentId: "j0zffoobtgqnx80wvdgme",
     order: 0,
     points: 100
-  },
+  }
 ]
 
 const activityIdsProd: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
-  {    
-    name: "Simple Harmonic Motion",
-    type: ActivityType.KnowledgeZap,
-    topicId: "qY4JbQSoTts2eHzmUE9Gx",
-    assignmentId: "qu3rnkdk84nesmbrow0ib",
-    order: 0,
-    points: 100
-  },
-  {    
+  // {    
+  //   name: "Simple Harmonic Motion",
+  //   type: ActivityType.KnowledgeZap,
+  //   topicId: "qY4JbQSoTts2eHzmUE9Gx",
+  //   assignmentId: "qu3rnkdk84nesmbrow0ib",
+  //   order: 0,
+  //   points: 100
+  // },
+  // {    
+  //   name: "Thermodynamics",
+  //   type: ActivityType.KnowledgeZap,
+  //   topicId: "jA5iZ5cKkLy1GIvdT30HQ",
+  //   assignmentId: "o7yheiv6bl31sqm2dh726",
+  //   order: 0,
+  //   points: 100
+  // },
+  {
     name: "Thermodynamics",
-    type: ActivityType.KnowledgeZap,
+    type: ActivityType.StepSolve,
     topicId: "jA5iZ5cKkLy1GIvdT30HQ",
-    assignmentId: "o7yheiv6bl31sqm2dh726",
+    assignmentId: "hzuya7pkj79wi2lcaci6d",
     order: 0,
     points: 100
-  },
+  }
 ]
 
 
 async function addActivitiesClassrooms(classroomId: string) {
-
-
 
   const classes = await db.select().from(classrooms).where(eq(classrooms.id, classroomId));
 
@@ -476,9 +490,9 @@ const prodClassrooms = [
 
 const classroomsToAddActivities = process.env.ENVIRONMENT === "prod" ? prodClassrooms : devClassrooms;
 
-// for(const classroomId of classroomsToAddActivities) {
-//   await addActivitiesClassrooms(classroomId);
-// }
+for(const classroomId of classroomsToAddActivities) {
+  await addActivitiesClassrooms(classroomId);
+}
 
 // await createKnowledgeZapAssignment();
-//await createStepSolveAssignment();
+// await createStepSolveAssignment();
