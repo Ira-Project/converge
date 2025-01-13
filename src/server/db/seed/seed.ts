@@ -417,22 +417,30 @@ const activityIdsDev: { topicId: string, assignmentId: string, name: string, typ
 ]
 
 const activityIdsProd: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
-  {    
-    name: "Simple Harmonic Motion",
-    type: ActivityType.KnowledgeZap,
-    topicId: "qY4JbQSoTts2eHzmUE9Gx",
-    assignmentId: "qu3rnkdk84nesmbrow0ib",
-    order: 0,
-    points: 100
-  },
-  {    
+  // {    
+  //   name: "Simple Harmonic Motion",
+  //   type: ActivityType.KnowledgeZap,
+  //   topicId: "qY4JbQSoTts2eHzmUE9Gx",
+  //   assignmentId: "qu3rnkdk84nesmbrow0ib",
+  //   order: 0,
+  //   points: 100
+  // },
+  // {    
+  //   name: "Thermodynamics",
+  //   type: ActivityType.KnowledgeZap,
+  //   topicId: "jA5iZ5cKkLy1GIvdT30HQ",
+  //   assignmentId: "o7yheiv6bl31sqm2dh726",
+  //   order: 0,
+  //   points: 100
+  // },
+  {
     name: "Thermodynamics",
-    type: ActivityType.KnowledgeZap,
+    type: ActivityType.StepSolve,
     topicId: "jA5iZ5cKkLy1GIvdT30HQ",
-    assignmentId: "o7yheiv6bl31sqm2dh726",
+    assignmentId: "hzuya7pkj79wi2lcaci6d",
     order: 0,
     points: 100
-  },
+  }
 ]
 
 

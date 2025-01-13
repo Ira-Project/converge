@@ -39,6 +39,22 @@ const activityIdsDev: { topicId: string, assignmentId: string, name: string, typ
     assignmentId: "u1d6i0d60nsik7nkehwu5",
     order: 0,
     points: 100
+  },
+  {
+    name: "Thermodynamics",
+    type: ActivityType.KnowledgeZap,
+    topicId: "6PPsDBZy9nMXjt6GeUcOp",
+    assignmentId: "63qd53u5u7pnh8mol99e2",
+    order: 0,
+    points: 100
+  },
+  {
+    name: "Thermodynamics",
+    type: ActivityType.StepSolve,
+    topicId: "6PPsDBZy9nMXjt6GeUcOp",
+    assignmentId: "j0zffoobtgqnx80wvdgme",
+    order: 0,
+    points: 100
   }
 ]
 
@@ -75,6 +91,22 @@ const activityIdsProd: { topicId: string, assignmentId: string, name: string, ty
     order: 0,
     points: 100
   },
+  {
+    name: "Thermodynamics",
+    type: ActivityType.KnowledgeZap,
+    topicId: "jA5iZ5cKkLy1GIvdT30HQ",
+    assignmentId: "o7yheiv6bl31sqm2dh726",
+    order: 0,
+    points: 100
+  },
+  {
+    name: "Thermodynamics",
+    type: ActivityType.StepSolve,
+    topicId: "jA5iZ5cKkLy1GIvdT30HQ",
+    assignmentId: "hzuya7pkj79wi2lcaci6d",
+    order: 0,
+    points: 100
+  }
 ]
 
 const activityIds = process.env.ENVIRONMENT === 'dev' ? activityIdsDev : activityIdsProd;
