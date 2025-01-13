@@ -1,5 +1,5 @@
 import { validateRequest } from "@/lib/auth/validate-request";
-import { Paths } from "@/lib/constants";
+import { Paths, Roles } from "@/lib/constants";
 import { redirect } from "next/navigation";
 import { api } from "@/trpc/server";
 import ReasoningAssignmentView from "./_components/reasoning-assignment-view";
@@ -7,26 +7,32 @@ import ReasoningAssignmentView from "./_components/reasoning-assignment-view";
 export default async function ActivityPage(props: { params: Promise<{ activityId: string, classroomId: string }> }) {
   const params = await props.params;
   const { user } = await validateRequest();
-  if (!user) redirect(Paths.Login);
 
-  const activity = await api.activities.getActivity.query({ activityId: params.activityId });
+  let activity, userToClassroom, reasoningAssignment, reasoningAttemptId;
 
-  const reasoningAssignment = await api.reasonTrace.get.query({ activityId: params.activityId });
-  const reasoningAttemptId = await api.reasonTrace.createAttempt.mutate({ activityId: params.activityId });
+  if(user) {
+    activity = await api.activities.getActivity.query({ activityId: params.activityId });
+    if(activity?.classroomId) {
+      userToClassroom = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: activity?.classroomId });
+    }
 
-  if (!activity || !reasoningAssignment || !reasoningAttemptId) redirect(`${Paths.Classroom}${params.classroomId}`);
+    reasoningAssignment = await api.reasonTrace.get.query({ activityId: params.activityId });
+    reasoningAttemptId = await api.reasonTrace.createAttempt.mutate({ activityId: params.activityId });
+
+    if (!activity || !reasoningAssignment || !reasoningAttemptId) redirect(`${Paths.Classroom}${params.classroomId}`);
+  }
 
   return (
     <main>
       <ReasoningAssignmentView 
         activityId={params.activityId}
         topic={activity?.topic?.name ?? ""}
-        isLive={activity.isLive}
+        isLive={activity?.isLive ?? false}
         classroomId={params.classroomId}
-        role={user.role}
+        role={userToClassroom?.role ?? Roles.Student}
         reasoningAssignment={reasoningAssignment}
-        reasoningAttemptId={reasoningAttemptId} 
-        dueDate={activity.dueDate ?? undefined}
+        reasoningAttemptId={reasoningAttemptId ?? ""} 
+        dueDate={activity?.dueDate ?? undefined}
         />
     </main>
   );

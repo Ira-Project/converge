@@ -3,11 +3,9 @@ import { PasswordInput } from "@/components/password-input";
 import { login } from "@/lib/auth/actions";
 import { Label } from "@/components/ui/label";
 import { SubmitButton } from "@/components/submit-button";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { Input } from "@/components/ui/input";
-import { Paths } from "@/lib/constants";
 import { useActionState } from "react";
+
 
 export const LoginForm: React.FC = () => {
 
@@ -35,15 +33,6 @@ export const LoginForm: React.FC = () => {
             autoComplete="current-password"
             placeholder="********"
           />
-        </div>
-
-        <div className="flex flex-wrap justify-between">
-          <Button variant={"link"} size={"sm"} className="p-0" asChild>
-            <Link href={Paths.Signup}>Not signed up? Sign up now.</Link>
-          </Button>
-          <Button variant={"link"} size={"sm"} className="p-0" asChild>
-            <Link href={Paths.ResetPassword}>Forgot password?</Link>
-          </Button>
         </div>
 
         {state?.fieldError ? (

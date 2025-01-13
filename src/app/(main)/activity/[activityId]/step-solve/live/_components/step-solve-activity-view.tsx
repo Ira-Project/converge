@@ -133,9 +133,12 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
         <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
           { role !== Roles.Teacher ?
             <>
-              <AssignmentTutorialModal 
-                topic={topic}
-                classroomId={classroomId} />
+              {
+                stepSolveAttemptId.length > 0 &&
+                <AssignmentTutorialModal 
+                  topic={topic}
+                  classroomId={classroomId} />
+              }
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
                 loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
@@ -143,9 +146,12 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
             </>
             : 
             <>
-              <AssignmentTutorialModal 
-                topic={topic}
-                classroomId={classroomId} />
+              {
+                stepSolveAttemptId.length > 0 &&
+                <AssignmentTutorialModal 
+                  topic={topic}
+                  classroomId={classroomId} />
+              }
               <AssignmentShareModal 
                 activityId={activityId}
                 isLive={isLive} />

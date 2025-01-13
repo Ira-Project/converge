@@ -13,6 +13,7 @@ import {
 import { APP_TITLE } from "@/lib/constants";
 import { LoginForm } from "./login-form";
 import { GoogleSignIn } from "../../../components/google-signin";
+import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "Login",
@@ -39,6 +40,14 @@ export default async function LoginPage() {
           <div className="flex-grow border-t border-muted" />
         </div>
         <LoginForm />
+        <div className="flex flex-wrap justify-between">
+          <Button variant={"link"} size={"sm"} className="p-0" asChild>
+            <Link href={Paths.Signup}>Not signed up? Sign up now.</Link>
+          </Button>
+          <Button variant={"link"} size={"sm"} className="p-0" asChild>
+            <Link href={Paths.ResetPassword}>Forgot password?</Link>
+          </Button>
+        </div>  
       </CardContent>
     </Card>
   );

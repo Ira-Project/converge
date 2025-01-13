@@ -28,7 +28,6 @@ import AssignmentShareModal from "./explain-assignment-share-modal";
 
 const FormulaInput = dynamic(() => import('./formula-input'), { ssr: false });
 
-
 interface Props {
   activityId: string
   topic: string;
@@ -159,9 +158,11 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
         <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
           { role !== Roles.Teacher ?
             <>
-              <AssignmentTutorialModal 
-                topic={topic}
-                classroom={classroom} />
+              { testAttemptId.length > 0 && 
+                <AssignmentTutorialModal 
+                  topic={topic}
+                  classroom={classroom} />
+              }
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
                 loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
@@ -169,9 +170,11 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
             </>
             : 
             <>
-              <AssignmentTutorialModal 
-                topic={topic}
-                classroom={classroom} />
+              { testAttemptId.length > 0 && 
+                <AssignmentTutorialModal 
+                  topic={topic}
+                  classroom={classroom} />
+              }
               <AssignmentShareModal 
                 activityId={activityId}
                 isLive={isLive} />

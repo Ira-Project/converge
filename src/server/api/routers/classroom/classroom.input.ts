@@ -20,3 +20,8 @@ export const joinClassroomSchema = z.object({
   name: z.string(),
 });
 export type JoinClassroomInput = z.infer<typeof joinClassroomSchema>;
+
+export const getOrCreateUserToClassroomSchema = z.object({
+  classroomId: z.string(),
+});
+export type GetOrCreateUserToClassroomInput = z.infer<typeof getOrCreateUserToClassroomSchema>;

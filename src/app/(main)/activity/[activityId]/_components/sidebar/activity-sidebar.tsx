@@ -19,19 +19,16 @@ import { type ActivityType, Paths } from "@/lib/constants"
 import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils"
 import Link from "next/link"
 
-
-
 interface ActivitySidebarProps {
   activity: RouterOutputs["activities"]["getActivity"];
-  user: {
+  user?: {
     id: string;
     name: string | null;
     email: string;
-    role: string;
     isOnboarded: boolean;
     avatar: string | null;
     classroomId: string | null;
-  };
+  } | null;
 }
 
 export function ActivitySidebar({ activity, user }: ActivitySidebarProps) {
@@ -42,7 +39,7 @@ export function ActivitySidebar({ activity, user }: ActivitySidebarProps) {
   const navMain = [
     {
       title: "Back to Classroom",
-      url: `${Paths.Classroom}${activity?.classroomId ?? user.classroomId}`,
+      url: `${Paths.Classroom}${activity?.classroomId ?? user?.classroomId}`,
       icon: ArrowLeft,
       isActive: false,
     },
@@ -75,9 +72,9 @@ export function ActivitySidebar({ activity, user }: ActivitySidebarProps) {
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={{
-          name: user.name ?? "Unknown",
-          email: user.email,
-          avatar: user.avatar,
+          name: user?.name ?? "Unknown",
+          email: user?.email ?? "Unknown",
+          avatar: user?.avatar ?? null,
         }} />
       </SidebarFooter>
       <SidebarRail />

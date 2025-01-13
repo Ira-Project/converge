@@ -1,6 +1,6 @@
 import { and } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { GetClassroomInput, GetClassroomStudentsInput, GetClassroomTeachersInput, JoinClassroomInput } from "./classroom.input";
+import type { GetClassroomInput, GetClassroomStudentsInput, GetClassroomTeachersInput, GetOrCreateUserToClassroomInput, JoinClassroomInput } from "./classroom.input";
 import { usersToClassrooms } from "@/server/db/schema/classroom";
 import { Roles } from "@/lib/constants";
 import { TRPCClientError } from "@trpc/client";
@@ -157,3 +157,25 @@ export const joinClassroom = async (ctx: ProtectedTRPCContext, input: JoinClassr
   return classroom.id;
 
 };
+
+export const getOrCreateUserToClassroom = async (ctx: ProtectedTRPCContext, input: GetOrCreateUserToClassroomInput) => {
+  const userToClassroom = await ctx.db.query.usersToClassrooms.findFirst({
+    where: (table, { eq }) => and(eq(table.userId, ctx.user.id), eq(table.classroomId, input.classroomId)),
+    columns: {
+      role: true,
+    }
+  });
+
+  if(userToClassroom) return userToClassroom;
+  
+  const newUserToClassroom = await ctx.db.insert(usersToClassrooms).values({
+    userId: ctx.user.id,
+    classroomId: input.classroomId,
+    role: Roles.Student,
+  }).returning({
+    role: usersToClassrooms.role,
+  });
+
+  return newUserToClassroom[0];
+  
+}
