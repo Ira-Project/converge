@@ -11,6 +11,7 @@ import { Roles } from "@/lib/constants";
 import { Separator } from '@/components/ui/separator';
 import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationNext, PaginationLink } from "@/components/ui/pagination"
 import StepSolveStepComponent from './step-component';
+import FormattedText from '@/components/formatted-text';
 
 interface StepSolveActivityViewProps {
   stepSolveAssignment: RouterOutputs["stepSolve"]["getAssignment"];
@@ -162,11 +163,10 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
       <div className="w-full mx-auto bg-teal-50 min-h-[calc(100vh-48px)]">
         <Card className="m-16 px-12 py-8">
           <CardContent className="flex flex-col gap-8">
-            {/* Part 1 */}
             <>
-              <p className="text-center text-lg">
-                {currentQuestion?.q.questionText}
-              </p>
+              <div className="text-center text-lg">
+                <FormattedText text={currentQuestion?.q.questionText ?? ""} />
+              </div>
             </>
 
             {

@@ -390,22 +390,30 @@ async function uploadPreloadedUsers() {
 
 
 const activityIdsDev: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
-  {    
-    name: "Simple Harmonic Motion",
-    type: ActivityType.KnowledgeZap,
-    topicId: "QoUD52AFmibtZ7SGqIbmI",
-    assignmentId: "888dtusghs9q8nbb21fg0",
-    order: 0,
-    points: 100
-  },
-  {    
+  // {    
+  //   name: "Simple Harmonic Motion",
+  //   type: ActivityType.KnowledgeZap,
+  //   topicId: "QoUD52AFmibtZ7SGqIbmI",
+  //   assignmentId: "888dtusghs9q8nbb21fg0",
+  //   order: 0,
+  //   points: 100
+  // },
+  // {    
+  //   name: "Thermodynamics",
+  //   type: ActivityType.KnowledgeZap,
+  //   topicId: "6PPsDBZy9nMXjt6GeUcOp",
+  //   assignmentId: "63qd53u5u7pnh8mol99e2",
+  //   order: 0,
+  //   points: 100
+  // },
+  {
     name: "Thermodynamics",
-    type: ActivityType.KnowledgeZap,
+    type: ActivityType.StepSolve,
     topicId: "6PPsDBZy9nMXjt6GeUcOp",
-    assignmentId: "63qd53u5u7pnh8mol99e2",
+    assignmentId: "j0zffoobtgqnx80wvdgme",
     order: 0,
     points: 100
-  },
+  }
 ]
 
 const activityIdsProd: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
@@ -429,8 +437,6 @@ const activityIdsProd: { topicId: string, assignmentId: string, name: string, ty
 
 
 async function addActivitiesClassrooms(classroomId: string) {
-
-
 
   const classes = await db.select().from(classrooms).where(eq(classrooms.id, classroomId));
 
@@ -476,9 +482,9 @@ const prodClassrooms = [
 
 const classroomsToAddActivities = process.env.ENVIRONMENT === "prod" ? prodClassrooms : devClassrooms;
 
-// for(const classroomId of classroomsToAddActivities) {
-//   await addActivitiesClassrooms(classroomId);
-// }
+for(const classroomId of classroomsToAddActivities) {
+  await addActivitiesClassrooms(classroomId);
+}
 
 // await createKnowledgeZapAssignment();
-//await createStepSolveAssignment();
+// await createStepSolveAssignment();

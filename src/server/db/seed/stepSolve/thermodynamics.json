@@ -1,0 +1,125 @@
+{
+  "name": "Thermodynamics",
+  "topicIdDev": "1",
+  "topicIdProd": "",
+  "latexDelimiter": "$!$",
+  "questions": [
+    {
+      "id": "a56d8fe7a1034c1092e07", 
+      "questionText": "A Carnot heat engine operates using an ideal monatomic gas. In one complete cycle, the engine absorbs $!$3.42 MJ$!$ of heat from the hot reservoir at $!$650 \\degree C$!$ and releases $!$2.15 MJ$!$ of heat to the cold reservoir.",
+      "questionImage": "",
+      "steps": [
+        {
+          "id": "57fd0cf4c4b64d1eb9dec",
+          "stepText": "What is the formula for the efficiency of an engine?",
+          "stepText2": "Calculate the efficiency of the engine up to 2 decimal places.",
+          "stepImage": "",
+          "stepSolveAnswer": ["0.37", "0.37 MJ", "0.37MJ"],
+          "options": [
+            {
+              "optionText": "Efficiency ( $!$\\eta$!$ ) = $!$\\frac{Q_H - Q_C}{Q_H}$!$",
+              "optionImage": "",
+              "isCorrect": true
+            },
+            {
+              "optionText": "Efficiency ( $!$\\eta$!$ ) = $!$\\frac{Q_C}{Q_H}$!$",
+              "optionImage": "",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": "41431e6b0b6f455d81d9c",
+          "stepText": "What formula can be used to find the temperature of the cold reservoir?",
+          "stepText2": "Calculate the temperature of the cold reservoir up to 2 decimal places (in $!$\\degree C$!$).",
+          "stepImage": "",
+          "stepSolveAnswer": ["308.49", "308.49 C", "308.49C"],
+          "options": [
+            {
+              "optionText": "Use the formula $!$\\eta = 1 - \\frac{T_C}{T_H}$!$ to find $!$T_C$!$",
+              "optionImage": "",
+              "isCorrect": false
+            },
+            {
+              "optionText": "Convert temperatures to Kelvin and use the formula $!$\\eta = 1 - \\frac{T_C}{T_H}$!$ to find $!$T_C$!$",
+              "optionImage": "",
+              "isCorrect": false
+            },
+            {
+              "optionText": "Convert temperatures to Kelvin and use the formula $!$\\eta = 1 - \\frac{T_C}{T_H}$!$ to find $!$T_C$!$ and then convert back to $!$\\degree C$!$",
+              "optionImage": "",
+              "isCorrect": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "6af28ec7b0144efaa2344",
+      "questionText": "The diagram illustrates the cycle EFGHE of a fixed mass of monatomic ideal gas",
+      "questionImage": "q2_img_1.png",
+      "steps": [
+        {
+          "id": "f25005a97ed84299bf163",
+          "stepText": "Is the work done by the gas positive or negative in the process H to E?",
+          "stepImage": "",
+          "options": [
+            {
+              "optionText": "If the gas expands, the work done by the gas is positive",
+              "optionImage": "",
+              "isCorrect": true
+            },
+            {
+              "optionText": "If the gas expands, the work done by the gas is negative",
+              "optionImage": "",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": "90fb33a6880c48639023b",
+          "stepText": "Which is true for adiabatic processes?",
+          "stepText2": "Is H to E an adiabatic process? Answer 'yes' or 'no'.",
+          "stepImage": "",
+          "stepSolveAnswer": ["no", "no ", "No", "NO"],
+          "options": [
+            {
+              "optionText": "For adiabatic processes, $!$P V^{\\frac{5}{3}} = constant$!$",
+              "optionImage": "",
+              "isCorrect": true
+            },
+            {
+              "optionText": "For adiabatic processes, the temperature of the gas remains constant",
+              "optionImage": "",
+              "isCorrect": false
+            },
+            {
+              "optionText": "For adiabatic processes, $!$P V = constant$!$",
+              "optionImage": "",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "id": "4e4e320601fe47d0bf960",
+          "stepText": "In this question, how would you calculate the net work done by the gas?",
+          "stepText2": "Calculate an approximate value for the net work done by the gas in the cycle (in $!$kJ$!$).",
+          "stepImage": "",
+          "stepSolveAnswer": ["50", "50 kJ", "50KJ", "50kj", "50 KJ"],
+          "options": [
+            {
+              "optionText": "The net work, $!$W$!$, is $!$W = Q - \\Delta U$!$",
+              "optionImage": "",
+              "isCorrect": false
+            },
+            {
+              "optionText": "The net work, $!$W$!$, is the area of the rectangle $!$EFGH$!$",
+              "optionImage": "",
+              "isCorrect": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

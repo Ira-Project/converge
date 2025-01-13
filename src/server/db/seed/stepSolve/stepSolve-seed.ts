@@ -5,7 +5,7 @@ import { generateId } from "lucia";
 
 import { topics } from "../../schema/subject";
 
-import stepSolve from "./sample.json";
+import stepSolve from "./thermodynamics.json";
 import { stepSolveQuestions, stepSolveQuestionToAssignment, stepSolveStep, stepSolveStepOptions } from "../../schema/stepSolve/stepSolveQuestions";
 import { stepSolveAssignments } from "../../schema/stepSolve/stepSolveAssignment";
 
@@ -85,9 +85,10 @@ export async function createStepSolveAssignment() {
           id: step.id,
           questionId: questionId,
           stepText: step.stepText,
+          stepTextPart2: step.stepText2 ?? undefined,
           stepImage: step.stepImage,
           stepNumber: index + 1,
-          stepSolveAnswer: step.stepSolveAnswer,
+          stepSolveAnswer: step.stepSolveAnswer ?? undefined,
         })
       }
 
