@@ -43,9 +43,10 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
       </div>
 
       {/* Upload Lesson Plan */}
-      <div className="m-16 bg-gray-50 rounded-lg items-center w-4/5 mx-auto">
-        <div className="mx-auto flex gap-8 items-center p-8">
-          <div className="hidden lg:block w-64 opacity-50">
+      {userToClassroom?.role === Roles.Teacher && (
+        <div className="m-16 bg-gray-50 rounded-lg items-center w-4/5 mx-auto">
+          <div className="mx-auto flex gap-8 items-center p-8">
+            <div className="hidden lg:block w-64 opacity-50">
             <Image src="/images/logo.png" alt="Lesson Plan" width={256} height={256} />
           </div>
           <div className="flex-1">
@@ -54,9 +55,10 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
               Reach out to us and we'll create the content you need in 48 hours. Drop us an email at vignesh@project.com or simply enter the topic details in the form below.
             </p>
             <UploadLessonPlanForm />
+            </div>
           </div>
         </div>
-      </div>      
+      )}
     </>
   );
 }

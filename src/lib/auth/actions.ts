@@ -131,8 +131,6 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
     email,
     hashedPassword,
     role: returnPath ? Roles.Student : Roles.Teacher,
-    // If the user is a student, they are onboarded automatically
-    isOnboarded: returnPath ? true : false,
     defaultClassroomId: classroomId,
   });
   
@@ -238,6 +236,8 @@ export async function verifyEmail(_: unknown, formData: FormData): Promise<{ err
   await lucia.invalidateUserSessions(user.id);
   await db.update(users).set({ 
     emailVerified: true,
+    // If the user is a student, they are onboarded automatically
+    isOnboarded: returnPath ? true : false,
   }).where(eq(users.id, user.id));
   
   const session = await lucia.createSession(user.id, {});

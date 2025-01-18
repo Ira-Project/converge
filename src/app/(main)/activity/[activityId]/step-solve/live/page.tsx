@@ -13,7 +13,7 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
   let stepSolveAttemptId;
   let userToClassroom;
 
-  if(user) {
+  if(user?.isOnboarded) {
     [activity, stepSolveAssignment] = await Promise.all([
       api.activities.getActivity.query({ activityId: params.activityId }),
       api.stepSolve.getAssignment.query({ activityId: params.activityId })

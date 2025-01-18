@@ -9,7 +9,7 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
   const { user } = await validateRequest();
 
   let activity, userToClassroom, knowledgeZapAssignment, knowledgeZapAttemptId;
-  if(user) {
+  if(user?.isOnboarded) {
     activity = await api.activities.getActivity.query({ activityId: params.activityId });
     knowledgeZapAssignment = await api.knowledgeZap.getKnowledgeZapActivity.query({ activityId: params.activityId });
     knowledgeZapAttemptId = await api.knowledgeZap.createAssignmentAttempt.mutate({ activityId: params.activityId });
