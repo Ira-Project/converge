@@ -1,5 +1,4 @@
 import TopicSection from './_components/topic-section';
-import { Separator } from "@/components/ui/separator";
 import { api } from "@/trpc/server";
 import { UploadLessonPlanForm } from './_components/upload-lesson-plan-form';
 import Image from "next/image";
