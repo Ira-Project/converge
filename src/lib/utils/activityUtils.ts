@@ -14,7 +14,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
   switch(activityType) {
     case ActivityType.LearnByTeaching:
       return {
-        url: `${Paths.Activity}${id}/${Paths.LearnByTeaching}`,
+        url: `${Paths.Activity}${id}${Paths.LearnByTeaching}`,
         iconImage: "/images/learn-by-teaching.png",
         title: "Learn by Teaching",
         helpUrl: "",
@@ -34,7 +34,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         }
     case ActivityType.KnowledgeZap:
       return {
-        url: `${Paths.Activity}${id}/${Paths.KnowledgeZap}`,
+        url: `${Paths.Activity}${id}${Paths.KnowledgeZap}`,
         iconImage: "/images/knowledge-zap.png",
         title: "Knowledge Zap",
         helpUrl: "",
@@ -44,7 +44,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
       }
     case ActivityType.StepSolve:
       return {
-        url: `${Paths.Activity}${id}/${Paths.StepSolve}`,
+        url: `${Paths.Activity}${id}${Paths.StepSolve}`,
         iconImage: "/images/step-solve.png",
         title: "Step Solve",
         helpUrl: "",

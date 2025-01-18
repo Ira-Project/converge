@@ -10,7 +10,7 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
 
   let activity, userToClassroom, reasoningAssignment, reasoningAttemptId;
 
-  if(user) {
+  if(user?.isOnboarded) {
     activity = await api.activities.getActivity.query({ activityId: params.activityId });
     if(activity?.classroomId) {
       userToClassroom = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: activity?.classroomId });

@@ -16,7 +16,7 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
   const { user } = await validateRequest();
   let activity, userToClassroom;
 
-  if(user) {
+  if(user?.isOnboarded) {
     activity = await api.activities.getActivity.query({ activityId: params.activityId });
     if(activity?.classroomId) {
       userToClassroom = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: activity?.classroomId });

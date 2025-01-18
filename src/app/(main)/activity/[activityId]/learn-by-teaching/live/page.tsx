@@ -10,7 +10,7 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
 
   let activity, userToClassroom, assignment, testAttemptId;
 
-  if(user) {
+  if(user?.isOnboarded) {
     activity = await api.activities.getActivity.query({ activityId: params.activityId });
     assignment = await api.learnByTeaching.getLearnByTeachingActivity.query({ activityId: params.activityId });
     testAttemptId = await api.learnByTeaching.create.mutate({ activityId: params.activityId })
