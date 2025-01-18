@@ -18,7 +18,7 @@ export enum Paths {
   StepSolve = "/step-solve/",
   CreateAssignment = "/create-assignment/",
   Activity = "/activity/",
-  LiveActivity = "/live",
+  LiveActivity = "live",
 }
 
 export enum Roles {
