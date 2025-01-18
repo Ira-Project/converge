@@ -40,8 +40,8 @@ export default function AuthModal({ user, mode = 'login' }: {
   const [currentMode, setCurrentMode] = useState<AuthMode>(mode);
 
   useEffect(() => {
-    if (isOpen) {
-      document.cookie = `returnPath=${window.location.pathname}; path=/`;
+    if (isOpen && window.location.pathname !== '/') {
+      document.cookie = `returnPath=${window.location.pathname};`;
     }
   }, [isOpen]);
 

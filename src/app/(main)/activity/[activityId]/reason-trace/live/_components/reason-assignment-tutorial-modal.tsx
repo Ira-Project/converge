@@ -50,9 +50,9 @@ export default function AssignmentTutorialModal({ classroomId, topic }: Props) {
           How to do the activity?
         </DialogDescription>
         <div className="px-16">
-          <div className="relative pb-[57.02%] h-0 border-0">
+          <div className="relative pb-[56.19%] h-0 border-0">
             <iframe 
-              src="https://www.loom.com/embed/6a83ce6654894c0c914ba27e6082953e?sid=d3cb0c2c-089e-430d-8ce7-22af4233cef3" 
+              src="https://www.loom.com/embed/07854dffdd974dc3b4de0a2754fe1f56?sid=41fd0084-22cc-4e8d-9b17-675d99ebd8c8" 
               className="absolute w-full h-full"
               allowFullScreen
             />

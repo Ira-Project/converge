@@ -53,11 +53,10 @@ export default function AssignmentTutorialModal({ classroom, topic }: Props) {
           How to do the activity?
         </DialogDescription>
         <div className="px-16">
-          {/* <TutorialCarousel /> */}
-          <div className="relative pb-[57.02%] h-0 border-0">
+          <div className="relative pb-[56%] h-0 border-0">
             <iframe 
-              src="https://www.loom.com/embed/307a3d4d5b764eadb430e488aff50f7d?sid=bdbf8333-2c42-44d2-8bcf-210c9dea8d5e" 
-              className="absolute w-full h-full"
+              src="https://www.loom.com/embed/e07673e5101d48d9bd12ff88259e7de3?sid=f3cd2e10-1062-4bc1-bf1a-d31035554101" 
+              className="absolute w-full h-full" 
               allowFullScreen
             />
           </div>

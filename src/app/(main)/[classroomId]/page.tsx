@@ -1,5 +1,4 @@
 import TopicSection from './_components/topic-section';
-import { Separator } from "@/components/ui/separator";
 import { api } from "@/trpc/server";
 import { UploadLessonPlanForm } from './_components/upload-lesson-plan-form';
 import Image from "next/image";
@@ -39,7 +38,6 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
         {topics?.map((topic, index) => (
           <div key={index}>
             <TopicSection topic={topic} role={userToClassroom?.role ?? Roles.Student}/>
-            <Separator />
           </div>
         ))}
       </div>
