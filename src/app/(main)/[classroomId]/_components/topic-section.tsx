@@ -2,6 +2,7 @@ import React from 'react';
 import ActivityCard from './activity-card';
 import { type Topic } from '../types';
 import { Roles } from '@/lib/constants';
+import { Separator } from '@/components/ui/separator';
 
 interface TopicSectionProps {
   topic: Topic;
@@ -28,6 +29,7 @@ const TopicSection: React.FC<TopicSectionProps> = ({ topic, role }) => {
               <ActivityCard key={index} activity={activity} role={role} />
             ))}
           </div>
+          <Separator className="mt-16"/>
         </div>
       )}
     </>

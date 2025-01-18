@@ -50,10 +50,9 @@ export default function AssignmentTutorialModal({ classroomId, topic }: Props) {
           How to do the activity?
         </DialogDescription>
         <div className="px-16">
-          <div className="relative pb-[57.02%] h-0 border-0">
-            {/* TODO: Add the actual video */}
+          <div className="relative pb-[56.19%] h-0 border-0">
             <iframe 
-              src="https://www.loom.com/embed/6a83ce6654894c0c914ba27e6082953e?sid=d3cb0c2c-089e-430d-8ce7-22af4233cef3" 
+              src="https://www.loom.com/embed/01e2912f75044398babbab0cd9b59aae?sid=c8b00065-c416-4f5c-8823-933b93e42866" 
               className="absolute w-full h-full"
               allowFullScreen
             />
