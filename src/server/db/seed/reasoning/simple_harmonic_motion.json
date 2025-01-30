@@ -1,0 +1,157 @@
+{
+  "name": "Simple Harmonic Motion",
+  "topicIdDev": "QoUD52AFmibtZ7SGqIbmI",
+  "topicIdProd": "qY4JbQSoTts2eHzmUE9Gx",
+  "latexDelimiter": "$!$",
+  "reasoningQuestions": [
+    {
+      "questionText": "A simple pendulum with length $!$L$!$ performs simple harmonic motion on Earth, crossing its equilibrium position $!$60$!$ times in one minute. The same pendulum is then transported to Planet X where its time period is found to be $!$8.0$!$ seconds. Calculate the approximate value of gravitational acceleration on Planet X (up to 2 decimal place). Assume that the gravitational acceleration on Earth is $!$9.8 m/s^2$!$.",
+      "questionImage": "",
+      "answerText": "0.15 m/s^2",
+      "correctAnswers": [
+        "0.61",
+        "0.61 m/s^2",
+        "0.61m/s^2"
+      ],
+      "answerImage": "",
+      "numberOfSteps": 3,
+      "topicId": "",
+      "answerOptions": [
+        {
+          "id": "a59ebebb3d2147578c37f",
+          "optionText": "Time period of the pendulum on Earth is calculated using the formula $!$T = \\frac{total time (in seconds)}{number of oscillations}$!$, where 2 crossings of the equilibrium position is considered as 1 oscillation",
+          "optionImage": ""
+        },
+        {
+          "id": "b032c53b509d4f46bf844",
+          "optionText": "Time period of the pendulum on Earth is calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{L}{g}}, where T is the time period, L is the length of the pendulum and g is the gravitational acceleration$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "0402b5701e234598b4fc4",
+          "optionText": "Time period of the pendulum on Earth is calculated using the formula $!$T = \\frac{total time (in seconds)}{number of crossings of the equilibrium position}$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "8c4d43a50d064ff39e0f0",
+          "optionText": "Length of the pendulum on Earth is calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{L}{g}}, where T is the time period, L is the length of the pendulum and g is the gravitational acceleration$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "7cf1b3a3e44d4d90972f2",
+          "optionText": "Gravitational acceleration on Planet X is calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{L}{g}}, where $!$T = 8.0$!$ seconds, L is the length of the pendulum, and g is the gravitational acceleration$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "5c2c9a13bd934551b9f54",
+          "optionText": "Time period of the pendulum on Planet X is calculated using the formula $!$T = \\frac{total time (in seconds)}{number of oscillations}$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "07ce8f1b2f4b4745bd3a3",
+          "optionText": "Length of the pendulum on Planet X is calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{L}{g}}, where $!$T = 8.0$!$ seconds, L is the length of the pendulum, and g is the gravitational acceleration$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "fe46bead4ac24e9cacb0f",
+          "optionText": "Gravitational acceleration on Earth is calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{L}{g}}, where $!$T = 8.0$!$ seconds, L is the length of the pendulum, and g is the gravitational acceleration$!$",
+          "optionImage": ""
+        }
+      ],
+      "pathways": [
+        {
+          "steps": [
+            {
+              "stepNumber": 1,
+              "isCorrect": false,
+              "answerOptionId": "0402b5701e234598b4fc4",
+              "replacementOptionId": "a59ebebb3d2147578c37f"
+            },
+            {
+              "stepNumber": 2,
+              "isCorrect": true,
+              "answerOptionId": "8c4d43a50d064ff39e0f0"
+            },
+            {
+              "stepNumber": 3,
+              "isCorrect": true,
+              "answerOptionId": "7cf1b3a3e44d4d90972f2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionText": "A pendulum bob completes 100 full oscillations in 6 minutes. When the acceleration of the pendulum bob is at its maximum, the string makes an angle of $!$9^\\circ$!$ with the vertical. Find the maximum speed reached by the pendulum bob.",
+      "questionImage": "q2_img.png",
+      "answerText": "7.94 m/s",
+      "correctAnswers": [
+        "0.89",
+        "0.89 m/s",
+        "0.89m/s"
+      ],
+      "answerImage": "",
+      "numberOfSteps": 3,
+      "topicId": "",
+      "answerOptions": [
+        {
+          "id": "6721e7aea4c445929f17c",
+          "optionText": "The time period of the pendulum is calculated using the formula $!$T = \\frac{total time (in seconds)}{number of oscillations}$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "63271d71fbd44bef988d9",
+          "optionText": "The time period of the pendulum is calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{L}{g}}$!$, where $!$T$!$ is the time period, $!$L$!$ is the length of the pendulum and $!$g$!$ is the acceleration due to gravity",
+          "optionImage": ""
+        },
+        {
+          "id": "8d6057fda49b46489164c",
+          "optionText": "The length of the pendulum is calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{L}{g}}$!$, where $!$T$!$ is the time period, $!$L$!$ is the length of the pendulum and $!$g$!$ is the acceleration due to gravity",
+          "optionImage": ""
+        },
+        {
+          "id": "92de94fe02264d219ebfb",
+          "optionText": "The maximum speed of the pendulum bob is calculated using the formula $!$\\frac{1}{2}mv_{max}^2 = mgL(1 - \\cos\\theta)$!$, where $!$m$!$ is the mass of the pendulum bob, $!$v_{max}$!$ is the maximum speed, $!$g$!$ is the acceleration due to gravity and $!$\\theta$!$ is the angle made by the string with the vertical",
+          "optionImage": ""
+        },
+        {
+          "id": "6c2ec373f83f4b7281ab7",
+          "optionText": "The maximum speed of the pendulum bob is calculated using the formula $!$\\frac{1}{2}mv_{max}^2 = mgL$!$, where $!$m$!$ is the mass of the pendulum bob, $!$v_{max}$!$ is the maximum speed, $!$g$!$ is the acceleration due to gravity and $!$L$!$ is the length of the pendulum",
+          "optionImage": ""
+        },
+        {
+          "id": "e0680ffd7e4a403ebc747",
+          "optionText": "The maximum speed of the pendulum bob is calculated using the formula $!$v_{max} = \\omega A$!$, where $!\\omega$!$ is the angular frequency and $!$A$!$ is the amplitude of the motion",
+          "optionImage": ""
+        },
+        {
+          "id": "2830efd1b6ee439eb4215",
+          "optionText": "The maximum speed of the pendulum bob is calculated using the formula $!$\\frac{1}{2}mv_{max}^2 = mgL(1 - \\cos\\theta)$!$, where $!$m$!$ is the mass of the pendulum bob, $!$v_{max}$!$ is the maximum speed, $!$g$!$ is the acceleration due to gravity and $!$\\theta$!$ is the angle made by the string with the horizontal",
+          "optionImage": ""
+        }
+      ],
+      "pathways": [
+        {
+          "steps": [
+            {
+              "stepNumber": 1,
+              "isCorrect": true,
+              "answerOptionId": "6721e7aea4c445929f17c"
+            },
+            {
+              "stepNumber": 2,
+              "isCorrect": true,
+              "answerOptionId": "8d6057fda49b46489164c"
+            },
+            {
+              "stepNumber": 3,
+              "isCorrect": false,
+              "answerOptionId": "6c2ec373f83f4b7281ab7",
+              "replacementOptionId": "92de94fe02264d219ebfb"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

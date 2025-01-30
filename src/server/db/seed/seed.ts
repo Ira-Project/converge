@@ -12,6 +12,7 @@ import { activity } from "../schema/activity";
 
 import { createKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
 import { createStepSolveAssignment } from "./stepSolve/stepSolve-seed";
+import { createReasoningAssignment } from "./reasoning/reasoning-seed";
 
 async function createCoursesSubjectsAndTopics() {
   const list = [
@@ -406,14 +407,22 @@ const activityIdsDev: { topicId: string, assignmentId: string, name: string, typ
   //   order: 0,
   //   points: 100
   // },
-  {
-    name: "Thermodynamics",
-    type: ActivityType.StepSolve,
-    topicId: "6PPsDBZy9nMXjt6GeUcOp",
-    assignmentId: "j0zffoobtgqnx80wvdgme",
-    order: 0,
-    points: 100
-  }
+  // {
+  //   name: "Thermodynamics",
+  //   type: ActivityType.StepSolve,
+  //   topicId: "6PPsDBZy9nMXjt6GeUcOp",
+  //   assignmentId: "j0zffoobtgqnx80wvdgme",
+  //   order: 0,
+  //   points: 100
+  // }
+  // {    
+  //   name: "Simple Harmonic Motion",
+  //   type: ActivityType.StepSolve,
+  //   topicId: "QoUD52AFmibtZ7SGqIbmI",
+  //   assignmentId: "zht6mtsucv0uefplgetla",
+  //   order: 0,
+  //   points: 100
+  // },
 ]
 
 const activityIdsProd: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
@@ -433,14 +442,22 @@ const activityIdsProd: { topicId: string, assignmentId: string, name: string, ty
   //   order: 0,
   //   points: 100
   // },
-  {
-    name: "Thermodynamics",
-    type: ActivityType.StepSolve,
-    topicId: "jA5iZ5cKkLy1GIvdT30HQ",
-    assignmentId: "hzuya7pkj79wi2lcaci6d",
-    order: 0,
-    points: 100
-  }
+  // {
+  //   name: "Thermodynamics",
+  //   type: ActivityType.StepSolve,
+  //   topicId: "jA5iZ5cKkLy1GIvdT30HQ",
+  //   assignmentId: "hzuya7pkj79wi2lcaci6d",
+  //   order: 0,
+  //   points: 100
+  // }
+  // {    
+  //   name: "Simple Harmonic Motion",
+  //   type: ActivityType.StepSolve,
+  //   topicId: "qY4JbQSoTts2eHzmUE9Gx",
+  //   assignmentId: "ycsgq3nbq24s53vv3e2t7",
+  //   order: 0,
+  //   points: 100
+  // },
 ]
 
 
@@ -477,7 +494,8 @@ async function addActivitiesClassrooms(classroomId: string) {
 
 const devClassrooms = [
   "8pify78tp9sjnn9f55ls0",
-  "uldhld6cq0iqihr474cd4"
+  "uldhld6cq0iqihr474cd4",
+  "w1mn5uv1na85phrtcthyj",
 ]
 
 const prodClassrooms = [
@@ -485,6 +503,7 @@ const prodClassrooms = [
   "ijlzd5fim95uvrcq46qgr",
   "qskhg964cbzym6z30201b",
   "be98owll7hr706yw0686w",
+  "off258ymh74kyefsd5ois",
 ]
 
 
@@ -496,3 +515,4 @@ for(const classroomId of classroomsToAddActivities) {
 
 // await createKnowledgeZapAssignment();
 // await createStepSolveAssignment();
+//  await createReasoningAssignment();

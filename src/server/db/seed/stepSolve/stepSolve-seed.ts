@@ -85,7 +85,7 @@ export async function createStepSolveAssignment() {
           id: step.id,
           questionId: questionId,
           stepText: step.stepText,
-          stepTextPart2: step.stepText2 ?? undefined,
+          stepTextPart2: step?.stepText2 ?? undefined,
           stepImage: step.stepImage,
           stepNumber: index + 1,
           stepSolveAnswer: step.stepSolveAnswer ?? undefined,
