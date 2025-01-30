@@ -16,6 +16,7 @@ export enum Paths {
   ReasonTrace = "/reason-trace/",
   KnowledgeZap = "/knowledge-zap/",
   StepSolve = "/step-solve/",
+  ReadAndRelay = "/read-and-relay/",
   CreateAssignment = "/create-assignment/",
   Activity = "/activity/",
   LiveActivity = "live",
@@ -118,7 +119,7 @@ export enum ActivityType {
   ReadAndRelay = "Read and Relay",
   KnowledgeZap = "Knowledge Zap",
   StepSolve = "Step Solve",
-  HumanVsAI = "Human vs AI",
+  // HumanVsAI = "Human vs AI",
 }
 
 export const GradesOptions = [

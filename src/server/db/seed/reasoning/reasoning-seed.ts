@@ -6,13 +6,13 @@ import { generateId } from "lucia";
 import { topics } from "../../schema/subject";
 
 
-import reasoningJson from "./work_energy_power.json";
+import reasoningJson from "./simple_harmonic_motion.json";
 import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../../schema/reasoning/reasoningQuestions";
 import { reasoningAssignments } from "../../schema/reasoning/reasoningAssignment";
 
-
-async function createReasoningQuestionsFromJson() {
-  const topicId = "yyyah4hvk5r7188h7mgkk";
+export async function createReasoningAssignment() {
+  // Parameters for assignment creation
+  const topicId = process.env.ENVIRONMENT === "prod" ? reasoningJson.topicIdProd : reasoningJson.topicIdDev;
   const topic = await db.select().from(topics).where(
     eq(topics.id, topicId),
   )
@@ -21,6 +21,32 @@ async function createReasoningQuestionsFromJson() {
     console.log("Topic not found")
     return
   }
+  const assignmentName = reasoningJson.name;
+
+  // Check if assignment already exists
+  const existingAssignment = await db.select().from(reasoningAssignments).where(
+    and(
+      eq(reasoningAssignments.topicId, topicId),
+      eq(reasoningAssignments.name, assignmentName)
+    )
+  );
+
+  if (existingAssignment?.[0]?.id !== undefined) {
+    console.log(`Assignment "${assignmentName}" already exists`)
+    return
+  }
+
+  const assignmentId = generateId(21);
+
+  // Create the assignment
+  await db.insert(reasoningAssignments).values({
+    id: assignmentId,
+    topicId: topicId,
+    name: assignmentName, 
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  });
+
 
   for (const reasoningQuestion of reasoningJson.reasoningQuestions) {
     // Check if question already exists
@@ -30,7 +56,6 @@ async function createReasoningQuestionsFromJson() {
         eq(reasoningQuestions.topicId, topicId)
       )
     )
-
     let questionId: string;
     if (existingQuestion?.[0]?.id !== undefined) {
       console.log(`Question "${reasoningQuestion.questionText.substring(0, 30)}..." already exists`)
@@ -118,58 +143,15 @@ async function createReasoningQuestionsFromJson() {
         }
       }
     }
-  }
-}
 
-async function createReasoningAssignmentFromTopic() {
-  // Parameters for assignment creation
-  const topicId = "yyyah4hvk5r7188h7mgkk";
-  const assignmentName = "Work, Energy and Power Assignment";
-
-  // Check if assignment already exists
-  const existingAssignment = await db.select().from(reasoningAssignments).where(
-    and(
-      eq(reasoningAssignments.topicId, topicId),
-      eq(reasoningAssignments.name, assignmentName)
-    )
-  );
-
-  if (existingAssignment?.[0]?.id !== undefined) {
-    console.log(`Assignment "${assignmentName}" already exists`)
-    return
+    await db.insert(reasoningQuestionToAssignment).values({
+      id: generateId(21),
+      questionId: questionId,
+      assignmentId: assignmentId,
+      order: 0,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    });
   }
 
-  const assignmentId = generateId(21);
-
-  // Get all reasoning questions for this topic
-  const questionList = await db.select().from(reasoningQuestions).where(
-    and(
-      eq(reasoningQuestions.topicId, topicId),
-      eq(reasoningQuestions.isDeleted, false)
-    )
-  );
-
-  // Create the assignment
-  await db.insert(reasoningAssignments).values({
-    id: assignmentId,
-    topicId: topicId,
-    name: "Work, Energy and Power Assignment", 
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  });
-
-  // Add questions to the assignment
-  for (let i = 0; i < questionList.length; i++) {
-    const questionId = questionList[i]?.id;
-    if (questionId) {
-      await db.insert(reasoningQuestionToAssignment).values({
-        id: generateId(21),
-        questionId: questionId,
-        assignmentId: assignmentId,
-        order: i + 1,
-        createdAt: new Date(),
-        updatedAt: new Date()
-      });
-    }
-  }
 }

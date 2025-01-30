@@ -10,11 +10,12 @@ import { Paths, Roles } from '@/lib/constants';
 interface ActivityCardProps {
   activity: Activity;
   role: Roles;
+  classroomId: string;
 }
 
-const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role }) => {
+const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role, classroomId }) => {
   const { id, type, isLive, dueDate } = activity;
-  const { url, iconImage, title, helpUrl, tags, colour, description } = getMetaDataFromActivityType(type, id);
+  const { url, iconImage, title, tags, colour, description } = getMetaDataFromActivityType(type, id);
 
 
   return (
@@ -32,7 +33,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role }) => {
       </div>
       <h4 className="font-medium mb-2 flex items-center">
         {title}
-        <Link href={helpUrl}>
+        <Link href={`/${classroomId}/documentation/${id}`}>
           <InfoCircledIcon className="w-4 h-4 ml-2 text-gray-400" />
         </Link>
       </h4>

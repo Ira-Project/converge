@@ -37,7 +37,7 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
       <div className="px-4 mt-40 flex flex-col gap-8 w-full">
         {topics?.map((topic, index) => (
           <div key={index}>
-            <TopicSection topic={topic} role={userToClassroom?.role ?? Roles.Student}/>
+            <TopicSection topic={topic} role={userToClassroom?.role ?? Roles.Student} classroomId={params.classroomId}/>
           </div>
         ))}
       </div>
