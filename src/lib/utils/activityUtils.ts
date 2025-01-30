@@ -83,6 +83,19 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         descriptionLong: "",
         citations: [],
       }
+    case ActivityType.ReadAndRelay:
+      return {
+        id: "read-and-relay",
+        url: `${Paths.Activity}${id}${Paths.ReadAndRelay}`,
+        iconImage: "/images/read-and-relay.png",
+        title: "Read and Relay",
+        tutorialUrl: "",
+        tags: [],
+        colour: "blue",
+        description: "",
+        descriptionLong: "",
+        citations: [],
+      }
   default:
       return {
         id: "",
