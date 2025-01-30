@@ -12,6 +12,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
   descriptionLong: string;
   citations: string[];
   colour: string;
+  isActive: boolean;
 } {
 
   switch(activityType) {
@@ -33,6 +34,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
           "Kristiana Nathalia Wea, Yohanes Sudarmo Dua, and Agustina Elizabeth. An exploratory study to investigate the implementation of feynman learning method in a physics classroom setting. Journal of Innovative Science Education, 12(3):331–339, 2023.",
           "Brett Williams and Priya Reddy. Does peer-assisted learning improve academic performance? a scoping review. Nurse education today, 42:23–29, 2016.",
         ],
+        isActive: true,
       }
     case ActivityType.ReasonTrace:
         return {
@@ -50,6 +52,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
             "Mathias Benedek, Tanja Könen, and Aljoscha C Neubauer. Associative abilities underlying creativity. Psychology of Aesthetics, Creativity, and the Arts, 6(3):273, 2012.",
             "Sietske W Kleibeuker, Carsten KW De Dreu, and Eveline A Crone. Creativity development in adolescence: Insight from behavior, brain, and training studies. New directions for child and adolescent development, 2016(151):73–84, 2016.",
           ],
+          isActive: true,
         }
     case ActivityType.KnowledgeZap:
       return {
@@ -69,6 +72,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
           "Doug Rohrer. Interleaving helps students distinguish among similar concepts. Educational Psychology Review, 24:355–367, 2012.",
           "Gregory M Donoghue and John AC Hattie. A meta-analysis of ten learning techniques. In Frontiers in Education, volume 6, page 581216. Frontiers Media SA, 2021.",
         ],
+        isActive: true,
       }
     case ActivityType.StepSolve:
       return {
@@ -80,8 +84,26 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         tags: ["Reasoning", "Evaluation"],
         colour: "teal",
         description: "Learn how to problem solve by solving a question step by step.",
+        descriptionLong: "In this activity, students solve a given question by computing answers to intermediate steps. The steps are presented sequentially and students can only proceed to the next step after correctly completing the previous step. By demonstrating the step-by-step process of solving a problem, this activity leverages the worked example effect [1] which states that learning outcomes are improved when students are provided with worked examples. It also provides a scaffold for students, guiding them through the process and reducing the cognitive effort required. \n Breaking down a problem into smaller steps is also supported by the cognitive load theory [2]. This theory emphasizes that our working memory, where we process information, has limited capacity. Complex problems can easily overload this capacity, hindering learning. By breaking a problem into smaller, manageable steps, we reduce the cognitive load, thus allowing us to learn each part effectively",
+        citations: [
+          "John Sweller. The worked example effect and human cognition. Learning and instruction, 2006.",
+          "John Sweller. Cognitive load during problem solving: Effects on learning. Cognitive science, 12(2):257–285,1988."
+        ],
+        isActive: true,
+      }
+    case ActivityType.ReadAndRelay:
+      return {
+        id: "read-and-relay",
+        url: `${Paths.Activity}${id}${Paths.ReadAndRelay}`,
+        iconImage: "/images/read-and-relay.png",
+        title: "Read and Relay",
+        tutorialUrl: "",
+        tags: [],
+        colour: "blue",
+        description: "",
         descriptionLong: "",
         citations: [],
+        isActive: false,
       }
   default:
       return {
@@ -95,6 +117,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         descriptionLong: "",
         citations: [],
         colour: "gray",
+        isActive: false,
       }
   }
 

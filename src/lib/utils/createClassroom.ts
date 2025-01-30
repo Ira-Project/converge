@@ -55,7 +55,15 @@ const activityIdsDev: { topicId: string, assignmentId: string, name: string, typ
     assignmentId: "j0zffoobtgqnx80wvdgme",
     order: 0,
     points: 100
-  }
+  },
+  {    
+    name: "Simple Harmonic Motion",
+    type: ActivityType.StepSolve,
+    topicId: "QoUD52AFmibtZ7SGqIbmI",
+    assignmentId: "zht6mtsucv0uefplgetla",
+    order: 0,
+    points: 100
+  },
 ]
 
 const activityIdsProd: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
@@ -106,7 +114,15 @@ const activityIdsProd: { topicId: string, assignmentId: string, name: string, ty
     assignmentId: "hzuya7pkj79wi2lcaci6d",
     order: 0,
     points: 100
-  }
+  },
+  {    
+    name: "Simple Harmonic Motion",
+    type: ActivityType.StepSolve,
+    topicId: "qY4JbQSoTts2eHzmUE9Gx",
+    assignmentId: "ycsgq3nbq24s53vv3e2t7",
+    order: 0,
+    points: 100
+  },
 ]
 
 const activityIds = process.env.ENVIRONMENT === 'dev' ? activityIdsDev : activityIdsProd;

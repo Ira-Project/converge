@@ -33,7 +33,6 @@ const LearningActivitiesPage: React.FC = () => {
       {activities.map(activity => (
         <div key={activity.id}>
           <ActivityWikiCard type={activity.type} />
-          <hr className="my-8 border-t border-gray-200" />
         </div>
       ))}
     </div>
