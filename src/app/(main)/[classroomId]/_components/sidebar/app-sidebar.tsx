@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Layers} from "lucide-react"
+import { BookOpen, Layers} from "lucide-react"
 
 import { NavMain } from "./nav-main"
 import { NavStudents } from "./nav-students"
@@ -33,7 +33,7 @@ interface AppSidebarProps {
 
 export function AppSidebar({ classroom, user, activities, students }: AppSidebarProps) {
 
-  // TODO: Add documentation and Analysis
+  // TODO: Add Analytics
   const navMain = [
     {
       title: "Topics",
@@ -42,8 +42,14 @@ export function AppSidebar({ classroom, user, activities, students }: AppSidebar
       isActive: true,
       items: activities.map((topic) => ({
         title: topic.name,
-        url: `#${topic.slug}`,
+        url: `/${classroom?.id}#${topic.slug}`,
       })),
+    },
+    {
+      title: "Documentation",
+      url: `/${classroom?.id}/documentation`,
+      icon: BookOpen,
+      isActive: true,
     }
   ]
 

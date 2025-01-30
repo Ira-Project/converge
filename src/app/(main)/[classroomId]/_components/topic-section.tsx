@@ -7,9 +7,10 @@ import { Separator } from '@/components/ui/separator';
 interface TopicSectionProps {
   topic: Topic;
   role: Roles;
+  classroomId: string;
 }
 
-const TopicSection: React.FC<TopicSectionProps> = ({ topic, role }) => {
+const TopicSection: React.FC<TopicSectionProps> = ({ topic, role, classroomId }) => {
   const { name, description, activities, slug } = topic;
   let filteredActivities = activities ;
 
@@ -26,7 +27,7 @@ const TopicSection: React.FC<TopicSectionProps> = ({ topic, role }) => {
           <h3 className="text-lg font-medium mb-4">Activities</h3>
           <div className="flex flex-row gap-4">
             {filteredActivities.map((activity, index) => (
-              <ActivityCard key={index} activity={activity} role={role} />
+              <ActivityCard key={index} activity={activity} role={role} classroomId={classroomId} />
             ))}
           </div>
           <Separator className="mt-16"/>

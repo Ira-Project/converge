@@ -115,10 +115,10 @@ export enum ReasoningPathwayStepResult {
 export enum ActivityType {
   LearnByTeaching = "Learn By Teaching",
   ReasonTrace = "Reason Trace",
-  ReadAndRelay = "Read and Relay",
+  // ReadAndRelay = "Read and Relay",
   KnowledgeZap = "Knowledge Zap",
   StepSolve = "Step Solve",
-  HumanVsAI = "Human vs AI",
+  // HumanVsAI = "Human vs AI",
 }
 
 export const GradesOptions = [

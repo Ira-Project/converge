@@ -3,7 +3,8 @@ import { DialogClose, DialogContent, DialogDescription, DialogFooter, DialogTitl
 import { Button } from '@/components/ui/button';
 import dynamic from 'next/dynamic';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { Paths } from "@/lib/constants";
+import { ActivityType, Paths } from "@/lib/constants";
+import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils";
 
 const Dialog = dynamic(() => import('@/components/ui/dialog').then((mod) => mod.Dialog), { ssr: false });
 
@@ -16,6 +17,8 @@ interface Props {
 }
 
 export default function AssignmentTutorialModal({ classroom, topic }: Props) {  
+
+  const { tutorialUrl } = getMetaDataFromActivityType(ActivityType.LearnByTeaching, "");
 
   return (
     <Dialog defaultOpen>
@@ -55,7 +58,7 @@ export default function AssignmentTutorialModal({ classroom, topic }: Props) {
         <div className="px-16">
           <div className="relative pb-[56%] h-0 border-0">
             <iframe 
-              src="https://www.loom.com/embed/e07673e5101d48d9bd12ff88259e7de3?sid=f3cd2e10-1062-4bc1-bf1a-d31035554101" 
+              src={tutorialUrl} 
               className="absolute w-full h-full" 
               allowFullScreen
             />
