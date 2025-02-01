@@ -2,16 +2,17 @@
   "name": "Simple Harmonic Motion",
   "topicIdDev": "QoUD52AFmibtZ7SGqIbmI",
   "topicIdProd": "qY4JbQSoTts2eHzmUE9Gx",
+  "latexDelimiter": "$!$",
   "questions": [
     {
       "id": "ab1b8045f62543df938ad",
-      "questionText": "A simple pendulum with length $!$l$!$ makes $!$75$!$ complete oscillations over four minutes.",
+      "questionText": "A simple pendulum with length $!$l$!$ makes $!$75$!$ complete oscillations over four minutes. Find the length, $!$l$!$, of the pendulum.",
       "questionImage": "",
       "steps": [
         {
           "id": "dd18793c92c84af69c223",
-          "stepText": "What formula can be used to find the period of the pendulum?",
-          "stepText2": "Calculate the period of the pendulum up to 1 decimal place (in $!$s$!$).",
+          "stepText": "What formula can be used to find the time period of the pendulum?",
+          "stepText2": "Calculate the time period of the pendulum up to 1 decimal place (in $!$s$!$).",
           "stepImage": "",
           "stepSolveAnswer": [
             "3.2",
@@ -70,7 +71,7 @@
     },
     {
       "id": "6607d90cd31c479aada14",
-      "questionText": "A vertical, cylindrical buoy of mass $!$0.42 kg$!$ is floating in the ocean. At $!$t = 0$!$ ,the buoy is displaced vertically downwards by a distance of $!$28 cm$!$ and begins to oscillate with simple harmonic motion. When the buoy is $!$15 cm$!$ above the water surface, the restoring force that acts on the buoy is $!$1.7 N$!$.",
+      "questionText": "A vertical, cylindrical buoy of mass $!$0.42 kg$!$ is floating in the ocean. At $!$t = 0$!$ ,the buoy is displaced vertically downwards by a distance of $!$28 cm$!$ and begins to oscillate with simple harmonic motion. When the buoy is $!$15 cm$!$ above the water surface, the restoring force that acts on the buoy is $!$1.7 N$!$. What is the maximum acceleration of the buoy?",
       "questionImage": "https://converge-question-images.s3.us-west-1.amazonaws.com/shm_ss_q2.png",
       "steps": [
         {

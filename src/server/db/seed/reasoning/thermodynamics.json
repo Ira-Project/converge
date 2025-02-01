@@ -1,0 +1,170 @@
+{
+  "name": "Thermodynamics",
+  "topicIdDev": "6PPsDBZy9nMXjt6GeUcOp",
+  "topicIdProd": "jA5iZ5cKkLy1GIvdT30HQ",
+  "latexDelimiter": "$!$",
+  "reasoningQuestions": [
+    {
+      "questionText": "A $!$1.00 kg$!$ block of ice at $!$0^\\circ C$!$ is left outside where the air temperature is $!$25^\\circ C$!$. The specific latent heat of fusion of ice is $!$336 kJ/kg$!$. What is the change in entropy of the ice-air system when the ice block completely melts?",
+      "questionImage": "",
+      "answerText": "0 J/K",
+      "correctAnswers": [
+        "103.25",
+        "103.25 J/K",
+        "103.25J/K",
+        "103.25 j/k",
+        "103.25j/k"
+      ],
+      "answerImage": "",
+      "numberOfSteps": 4,
+      "topicId": "",
+      "answerOptions": [
+        {
+          "id": "8864460bf55d4601870b5",
+          "optionText": "Compute heat required to melt the ice using the formula $!$Q = mL$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "5219fba8dfd849f09e656",
+          "optionText": "Calculate entropy gain of the ice using the formula $!\\Delta S = \\frac{\\Delta Q}{T}$!$, where $!$T=273 K$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "45c59369657b4346be933",
+          "optionText": "Calculate entropy loss of air using the formula $!\\Delta S = \\frac{\\Delta Q}{T}$!$, where $!$T=298 K$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "d0347cc4390545c1aca52",
+          "optionText": "Calculate entropy change of the ice-air system using the formula $!\\Delta S = \\Delta S_{ice} + \\Delta S_{air}$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "5d478d1b2e584075b33b2",
+          "optionText": "Calculate entropy loss of ice using the formula $!\\Delta S = \\frac{\\Delta Q}{T}$!$, where $!$T=273 K$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "ff50b5bdbda147e496225",
+          "optionText": "Calculate entropy gain of air using the formula $!\\Delta S = \\frac{\\Delta Q}{T}$!$, where $!$T=298 K$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "d46c733425fb47df94a94",
+          "optionText": "Find entropy change of the ice-air system using the formula $!\\Delta S = \\Delta S_{ice} - \\Delta S_{air}$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "92fb7e4d62d74405920f2",
+          "optionText": "Calculate entropy loss of air using the formula $!\\Delta S = \\frac{\\Delta Q}{T}$!$, where $!$T=285.5 K$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "1daba6a87c47454d8a215",
+          "optionText": "Calculate entropy gain of ice using the formula $!\\Delta S = \\frac{\\Delta Q}{T}$!$, where $!$T=285.5 K$!$",
+          "optionImage": ""
+        }
+      ],
+      "pathways": [
+        {
+          "steps": [
+            {
+              "stepNumber": 1,
+              "isCorrect": true,
+              "answerOptionId": "8864460bf55d4601870b5"
+            },
+            {
+              "stepNumber": 2,
+              "isCorrect": false,
+              "answerOptionId": "5219fba8dfd849f09e656",
+              "replacementOptionId": "1daba6a87c47454d8a215"
+            },
+            {
+              "stepNumber": 3,
+              "isCorrect": false,
+              "answerOptionId": "45c59369657b4346be933",
+              "replacementOptionId": "92fb7e4d62d74405920f2"
+            },
+            {
+              "stepNumber": 4,
+              "isCorrect": true,
+              "answerOptionId": "d0347cc4390545c1aca52"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "questionText": "A Carnot engine operates using an ideal gas. In each cycle, the gas absorbs $!$20000J$!$ of energy from the hot reservoir and releases $!$12000J$!$ of energy to the cold reservoir. If the cold reservoir is maintained at $!$27^\\circ C$!$, what temperature $!$T^\\circ C$!$ must the hot reservoir be kept at?",
+      "questionImage": "",
+      "answerText": "$!477^\\circ C$!$",
+      "correctAnswers": [
+        "227",
+        "227 C",
+        "227C"
+      ],
+      "answerImage": "",
+      "numberOfSteps": 3,
+      "topicId": "",
+      "answerOptions": [
+        {
+          "id": "317a8bf467044c04b32f8",
+          "optionText": "Find efficiency of the engine using the formula $!$\\eta = 1 - \\frac{Q_c}{Q_h}$!$, where $!$Q_c=12000 J$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "f142219b86ee4afd88e8c",
+          "optionText": "Convert temperature to Kelvin",
+          "optionImage": ""
+        },
+        {
+          "id": "fde2ef5e113d477fa4b40",
+          "optionText": "Calculate temperature of hot reservoir using the formula $!$\\eta = 1 - \\frac{T_c}{T_h} and convert to degree Celsius$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "f8b25628c9344876a1a80",
+          "optionText": "Find efficiency of the engine using the formula $!$\\eta = \\frac{Q_c}{Q_h}$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "9bda039a15754e48a692f",
+          "optionText": "Calculate temperature of hot reservoir using the formula $!$\\eta = 1 - \\frac{T_c}{T_h} and convert to Kelvin$!$",
+          "optionImage": ""
+        },
+        {
+          "id": "b07da654dc2447d99dbcb",
+          "optionText": "Convert temperature to degree Celsius",
+          "optionImage": ""
+        },
+        {
+          "id": "d3a16ee29a1b4e2396c62",
+          "optionText": "Calculate temperature of hot reservoir using the formula $!$\\eta = 1 - \\frac{T_c}{T_h}",
+          "optionImage": ""
+        }
+      ],
+      "pathways": [
+        {
+          "steps": [
+            {
+              "stepNumber": 1,
+              "isCorrect": false,
+              "answerOptionId": "f8b25628c9344876a1a80",
+              "replacementOptionId": "317a8bf467044c04b32f8"
+            },
+            {
+              "stepNumber": 2,
+              "isCorrect": true,
+              "answerOptionId": "f142219b86ee4afd88e8c"
+            },
+            {
+              "stepNumber": 3,
+              "isCorrect": true,
+              "answerOptionId": "fde2ef5e113d477fa4b40"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

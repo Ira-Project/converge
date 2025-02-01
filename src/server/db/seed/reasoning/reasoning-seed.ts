@@ -6,7 +6,7 @@ import { generateId } from "lucia";
 import { topics } from "../../schema/subject";
 
 
-import reasoningJson from "./simple_harmonic_motion.json";
+import reasoningJson from "./thermodynamics.json";
 import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../../schema/reasoning/reasoningQuestions";
 import { reasoningAssignments } from "../../schema/reasoning/reasoningAssignment";
 
