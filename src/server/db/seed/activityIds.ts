@@ -41,22 +41,22 @@ export const activityIdsDev: { topicId: string, assignmentId: string, name: stri
     order: 0,
     points: 100
   },
-  // {
-  //   name: "Thermodynamics",
-  //   type: ActivityType.StepSolve,
-  //   topicId: "6PPsDBZy9nMXjt6GeUcOp",
-  //   assignmentId: "j0zffoobtgqnx80wvdgme",
-  //   order: 0,
-  //   points: 100
-  // },
-  // {    
-  //   name: "Simple Harmonic Motion",
-  //   type: ActivityType.StepSolve,
-  //   topicId: "QoUD52AFmibtZ7SGqIbmI",
-  //   assignmentId: "4d8qhyzs9t6fko8zq3cfo",
-  //   order: 0,
-  //   points: 100
-  // },
+  {
+    name: "Thermodynamics",
+    type: ActivityType.StepSolve,
+    topicId: "6PPsDBZy9nMXjt6GeUcOp",
+    assignmentId: "kp6a9rwaacwtkgufckl3y",
+    order: 0,
+    points: 100
+  },
+  {    
+    name: "Simple Harmonic Motion",
+    type: ActivityType.StepSolve,
+    topicId: "QoUD52AFmibtZ7SGqIbmI",
+    assignmentId: "nz0bcwnbyjvn748rl9kwn",
+    order: 0,
+    points: 100
+  }
   // {
   //   name: "Simple Harmonic Motion",
   //   type: ActivityType.ReasonTrace,
