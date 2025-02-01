@@ -5,10 +5,12 @@ import { generateId } from "lucia";
 
 import { topics } from "../../schema/subject";
 
-import stepSolve from "./thermodynamics.json";
+import stepSolve from "./simple_harmonic_motion.json";
 import { stepSolveQuestions, stepSolveQuestionToAssignment, stepSolveStep, stepSolveStepOptions } from "../../schema/stepSolve/stepSolveQuestions";
-import { stepSolveAssignments } from "../../schema/stepSolve/stepSolveAssignment";
-
+import { stepSolveAssignmentAttempts, stepSolveAssignments } from "../../schema/stepSolve/stepSolveAssignment";
+import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "../../schema/stepSolve/stepSolveQuestionAttempts";
+import { activity } from "../../schema/activity";
+import { ActivityType } from "@/lib/constants";
 
 export async function createStepSolveAssignment() {
   const topicId = process.env.ENVIRONMENT === "prod" ? stepSolve.topicIdProd : stepSolve.topicIdDev;
@@ -120,4 +122,85 @@ export async function createStepSolveAssignment() {
     })
 
   }
+}
+
+export async function deleteStepSolveAssignment(stepSolveAssignmentId: string) {
+  if (process.env.ENVIRONMENT === "prod") {
+    console.log("Deleting step solve assignment in prod is not allowed");
+    return;
+  }
+
+  //First get the step solve assignment
+  const stepSolveAssignment = await db.select().from(stepSolveAssignments).where(eq(stepSolveAssignments.id, stepSolveAssignmentId));
+  if (stepSolveAssignment.length === 0) {
+    console.log("Step solve assignment not found");
+    return;
+  }
+
+  const stepSolveQuestionsToAssignment = await db.select().from(stepSolveQuestionToAssignment).where(eq(stepSolveQuestionToAssignment.assignmentId, stepSolveAssignmentId));
+
+  for (const questionToAssignment of stepSolveQuestionsToAssignment) {
+    const question = await db.select().from(stepSolveQuestions).where(eq(stepSolveQuestions.id, questionToAssignment.questionId));
+
+    
+    console.log("Deleting question to assignment", questionToAssignment.id);
+    await db.delete(stepSolveQuestionToAssignment).where(eq(stepSolveQuestionToAssignment.id, questionToAssignment.id));
+
+    if (question[0]?.id) {
+      const steps = await db.select().from(stepSolveStep).where(eq(stepSolveStep.questionId, question[0].id));
+
+      //Delete the steps and options
+      for (const step of steps) {
+        
+        const stepAttempts = await db.select().from(stepSolveQuestionAttemptSteps).where(eq(stepSolveQuestionAttemptSteps.stepSolveStepId, step.id));
+
+        for (const attempt of stepAttempts) {
+          console.log("Deleting step attempt", attempt.id);
+          await db.delete(stepSolveQuestionAttemptSteps).where(eq(stepSolveQuestionAttemptSteps.id, attempt.id));
+        }
+
+        const stepOptions = await db.select().from(stepSolveStepOptions).where(eq(stepSolveStepOptions.stepId, step.id));
+        for (const option of stepOptions) {
+          console.log("Deleting step option", option.id, option.optionText);
+          await db.delete(stepSolveStepOptions).where(eq(stepSolveStepOptions.id, option.id));
+        }
+
+        console.log("Deleting step", step.id, step.stepText);
+        await db.delete(stepSolveStep).where(eq(stepSolveStep.id, step.id));
+
+      }
+
+      //Delete the question attempts
+      console.log("Deleting question attempts", question[0].id);
+      await db.delete(stepSolveQuestionAttempts).where(eq(stepSolveQuestionAttempts.questionId, question[0].id));
+      console.log("Deleting question", question[0].id, question[0].questionText);
+      await db.delete(stepSolveQuestions).where(eq(stepSolveQuestions.id, question[0].id));
+    }
+  }
+
+  // Delete the assignment
+  console.log("Deleting assignment", stepSolveAssignmentId);
+  await db.delete(stepSolveAssignments).where(eq(stepSolveAssignments.id, stepSolveAssignmentId));
+
+  const activities = await db.select().from(activity).where(eq(activity.assignmentId, stepSolveAssignmentId));
+  for (const act of activities) {
+    if(act.type !== ActivityType.StepSolve) {
+      console.log("Activity is not step solve, skipping");
+      continue;
+    }
+
+    if(!act.id) {
+      console.log("Activity id not found");
+      continue;
+    }
+
+    //Delete the step solve assignment attempts
+    console.log("Deleting step solve assignment attempts", act.id);
+    await db.delete(stepSolveAssignmentAttempts).where(eq(stepSolveAssignmentAttempts.activityId, act.id));
+
+    //Delete the activity
+    console.log("Deleting activity", act.id);
+    await db.delete(activity).where(eq(activity.id, act.id));
+  } 
+
 }

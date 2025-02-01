@@ -11,7 +11,7 @@ import { classrooms } from "../schema/classroom";
 import { activity } from "../schema/activity";
 
 import { createKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
-import { createStepSolveAssignment } from "./stepSolve/stepSolve-seed";
+import { createStepSolveAssignment, deleteStepSolveAssignment } from "./stepSolve/stepSolve-seed";
 import { createReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 import { activityIdsDev } from "./activityIds";
@@ -447,14 +447,16 @@ const prodClassrooms = [
 ]
 
 
-const classroomsToAddActivities = process.env.ENVIRONMENT === "prod" ? prodClassrooms : devClassrooms;
+// const classroomsToAddActivities = process.env.ENVIRONMENT === "prod" ? prodClassrooms : devClassrooms;
 
-for(const classroomId of classroomsToAddActivities) {
-  await addActivitiesClassrooms(classroomId);
-}
+// for(const classroomId of classroomsToAddActivities) {
+//   await addActivitiesClassrooms(classroomId);
+// }
 
 // await createKnowledgeZapAssignment();
 // await createStepSolveAssignment();
 // await createReasoningAssignment();
+
+await deleteStepSolveAssignment("4y3ivw51rzgxzcz42dezd");
 
 // await createReadAndRelayAssignment();
