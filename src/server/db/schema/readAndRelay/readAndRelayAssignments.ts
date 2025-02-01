@@ -14,7 +14,7 @@ export const readAndRelayAssignments = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name"),
     description: text("description"),
-    readingPassage: text("reading_passage"), // HTML for the text to be rendered
+    readingPassage: text("reading_passage"), // latex for the text to be rendered
     topicId: varchar("topic_id", { length: 21 }).notNull().references(() => topics.id),
     order: integer("order"),
     showAnswers: boolean("show_answers").default(true).notNull(),
