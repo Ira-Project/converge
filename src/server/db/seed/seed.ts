@@ -13,6 +13,9 @@ import { activity } from "../schema/activity";
 import { createKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
 import { createStepSolveAssignment } from "./stepSolve/stepSolve-seed";
 import { createReasoningAssignment } from "./reasoning/reasoning-seed";
+import { createReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
+import { activityIdsDev } from "./activityIds";
+import { activityIdsProd } from "./activityIds";
 
 async function createCoursesSubjectsAndTopics() {
   const list = [
@@ -390,77 +393,6 @@ async function uploadPreloadedUsers() {
 }
 
 
-const activityIdsDev: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
-  // {    
-  //   name: "Simple Harmonic Motion",
-  //   type: ActivityType.KnowledgeZap,
-  //   topicId: "QoUD52AFmibtZ7SGqIbmI",
-  //   assignmentId: "888dtusghs9q8nbb21fg0",
-  //   order: 0,
-  //   points: 100
-  // },
-  // {    
-  //   name: "Thermodynamics",
-  //   type: ActivityType.KnowledgeZap,
-  //   topicId: "6PPsDBZy9nMXjt6GeUcOp",
-  //   assignmentId: "63qd53u5u7pnh8mol99e2",
-  //   order: 0,
-  //   points: 100
-  // },
-  // {
-  //   name: "Thermodynamics",
-  //   type: ActivityType.StepSolve,
-  //   topicId: "6PPsDBZy9nMXjt6GeUcOp",
-  //   assignmentId: "j0zffoobtgqnx80wvdgme",
-  //   order: 0,
-  //   points: 100
-  // }
-  // {    
-  //   name: "Simple Harmonic Motion",
-  //   type: ActivityType.StepSolve,
-  //   topicId: "QoUD52AFmibtZ7SGqIbmI",
-  //   assignmentId: "zht6mtsucv0uefplgetla",
-  //   order: 0,
-  //   points: 100
-  // },
-]
-
-const activityIdsProd: { topicId: string, assignmentId: string, name: string, type: ActivityType, order: number, points: number }[] = [
-  // {    
-  //   name: "Simple Harmonic Motion",
-  //   type: ActivityType.KnowledgeZap,
-  //   topicId: "qY4JbQSoTts2eHzmUE9Gx",
-  //   assignmentId: "qu3rnkdk84nesmbrow0ib",
-  //   order: 0,
-  //   points: 100
-  // },
-  // {    
-  //   name: "Thermodynamics",
-  //   type: ActivityType.KnowledgeZap,
-  //   topicId: "jA5iZ5cKkLy1GIvdT30HQ",
-  //   assignmentId: "o7yheiv6bl31sqm2dh726",
-  //   order: 0,
-  //   points: 100
-  // },
-  // {
-  //   name: "Thermodynamics",
-  //   type: ActivityType.StepSolve,
-  //   topicId: "jA5iZ5cKkLy1GIvdT30HQ",
-  //   assignmentId: "hzuya7pkj79wi2lcaci6d",
-  //   order: 0,
-  //   points: 100
-  // }
-  // {    
-  //   name: "Simple Harmonic Motion",
-  //   type: ActivityType.StepSolve,
-  //   topicId: "qY4JbQSoTts2eHzmUE9Gx",
-  //   assignmentId: "ycsgq3nbq24s53vv3e2t7",
-  //   order: 0,
-  //   points: 100
-  // },
-]
-
-
 async function addActivitiesClassrooms(classroomId: string) {
 
   const classes = await db.select().from(classrooms).where(eq(classrooms.id, classroomId));
@@ -474,6 +406,14 @@ async function addActivitiesClassrooms(classroomId: string) {
   const activityIds = process.env.ENVIRONMENT === "prod" ? activityIdsProd : activityIdsDev;
 
   for(const activityId of activityIds) {
+    //Check if activity already exists
+    const existingActivity = await db.select().from(activity).where(and(
+      eq(activity.assignmentId, activityId.assignmentId),
+      eq(activity.classroomId, classroomId),
+    ));
+    if(existingActivity.length > 0) {
+      continue;
+    }
     await db.insert(activity).values({
       id: generateId(21),
       name: activityId.name,
@@ -515,4 +455,6 @@ for(const classroomId of classroomsToAddActivities) {
 
 // await createKnowledgeZapAssignment();
 // await createStepSolveAssignment();
-//  await createReasoningAssignment();
+// await createReasoningAssignment();
+
+// await createReadAndRelayAssignment();

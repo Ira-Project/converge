@@ -1,0 +1,26 @@
+{
+  "name": "Sample",
+  "topicIdDev": "1",
+  "topicIdProd": "",
+  "readingPassage": "\\section{Ira Project - A Suite of Learning Activities} The personalization of how each student learns involves exploring a variety of learning techniques and their effects. These techniques are rooted in learning sciences, revealing insights into how different students process information and acquire knowledge \\cite{rey2011expertise, jeffri2021review, goldstone2010education, kormos2014interaction, loyens2008self}. The Ira Project is an educational platform that provides a suite of learning activities, which are based on these learning techniques and their effects. Instead of just passively receiving information, we want students to engage actively and participate in the learning process \\cite{bonwell1991active}. Active learning has been shown to promote equity by narrowing the gaps in academic achievement for underrepresented students \\cite{theobald2020active}. Moreover, each activity has been designed to ensure students learn from their mistakes, encouraging productive failure, which has been shown to improve learning outcomes in lower-performing students \\cite{chowrira2019diy, kapur2012designing, henriksen2021role}.",
+  "questions": [
+      {
+          "question": "Question 1",
+          "answer": "Answer 1",
+          "lambda_url": "/physics/ap_physics_c_em/electric_charge/1",
+          "image": ""
+      },
+      {
+          "question": "Question 2",
+          "answer": "Answer 2",
+          "lambda_url": "/physics/ap_physics_c_em/electric_charge/2",
+          "image": ""
+      },
+      {
+          "question": "Question 3",
+          "answer": "Answer 3",
+          "lambda_url": "/physics/ap_physics_c_em/electric_charge/4",
+          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/AP-Physics-C-EM_Electric-Charge_Q4.svg"
+      }
+  ]
+}
