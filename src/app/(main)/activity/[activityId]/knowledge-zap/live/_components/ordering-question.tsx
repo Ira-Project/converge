@@ -12,13 +12,14 @@ interface OrderingQuestionProps {
   orderingQuestionId: string;
   questionId: string;
   question: string;
+  isDescending: boolean;
   options: MultipleChoiceOption[];
   stackPush: () => void;
   stackPop: () => void;
 }
 
 const OrderingQuestion: React.FC<OrderingQuestionProps> = ({ 
-  assignmentAttemptId, orderingQuestionId, questionId, question, options, stackPush, stackPop 
+  assignmentAttemptId, orderingQuestionId, questionId, question, isDescending, options, stackPush, stackPop 
 }) => {
   
   const [order, setOrder] = useState<MultipleChoiceOption[]>(options);
@@ -87,11 +88,18 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
           <div className="h-full flex items-center">
             <div className="w-1 h-full bg-lime-700 relative">
               {/* Arrow head */}
+              {isDescending ? 
               <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 
                 border-l-[8px] border-l-transparent
                 border-r-[8px] border-r-transparent
                 border-b-[12px] border-b-lime-700">
               </div>
+              : <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 
+                border-l-[8px] border-l-transparent
+                border-r-[8px] border-r-transparent
+                border-t-[12px] border-t-lime-700">
+              </div>
+              }
             </div>
           </div>
         </div>
