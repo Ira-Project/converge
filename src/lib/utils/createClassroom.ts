@@ -18,7 +18,7 @@ export async function createClassroom(
   // userGrades: string[],
 ): Promise<string> {
 
-  // For now we only have Physics content so we will hardcode it
+  // For now we only have Physics content so we will create a classroom with Physics content
   const description = "Demo Classroom";
   
   const classroom = await db.insert(classrooms).values({
@@ -42,6 +42,7 @@ export async function createClassroom(
     createdAt: new Date(),
   });
 
+  // Get all knowledge zap assignments
   const kza = await db.select().from(knowledgeZapAssignments).where(eq(knowledgeZapAssignments.isDeleted, false));
   for(const knowledgeZapAssignment of kza) {
     await db.insert(activity).values({
@@ -49,6 +50,7 @@ export async function createClassroom(
       assignmentId: knowledgeZapAssignment.id,
       classroomId: classroom[0]?.id,
       name: knowledgeZapAssignment.name ?? "",
+      topicId: knowledgeZapAssignment.topicId,
       type: ActivityType.KnowledgeZap,
       order: 0,
       points: 100,
@@ -64,6 +66,7 @@ export async function createClassroom(
       assignmentId: stepSolveAssignment.id,
       classroomId: classroom[0]?.id,
       name: stepSolveAssignment.name ?? "",
+      topicId: stepSolveAssignment.topicId,
       type: ActivityType.StepSolve,
       order: 0,
       points: 100,
@@ -78,6 +81,7 @@ export async function createClassroom(
       assignmentId: reasoningAssignment.id,
       classroomId: classroom[0]?.id,
       name: reasoningAssignment.name ?? "",
+      topicId: reasoningAssignment.topicId,
       type: ActivityType.ReasonTrace,
       order: 0,
       points: 100,
@@ -92,6 +96,7 @@ export async function createClassroom(
       assignmentId: learnByTeachingAssignment.id,
       classroomId: classroom[0]?.id,
       name: learnByTeachingAssignment.name ?? "",
+      topicId: learnByTeachingAssignment.topicId,
       type: ActivityType.LearnByTeaching,
       order: 0,
       points: 100,

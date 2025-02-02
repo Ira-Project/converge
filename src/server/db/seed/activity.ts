@@ -9,7 +9,7 @@ import { stepSolveAssignments } from "../schema/stepSolve/stepSolveAssignment";
 import { reasoningAssignments } from "../schema/reasoning/reasoningAssignment";
 import { explainAssignments } from "../schema/learnByTeaching/explainAssignment";
 
-async function addActivitiesClassrooms(classroomId: string) {
+export async function addActivitiesClassrooms() {
 
   const classes= await db.select().from(classrooms);
   for(const classroom of classes) {

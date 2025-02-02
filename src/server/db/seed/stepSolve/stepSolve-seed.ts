@@ -32,6 +32,7 @@ export async function createStepSolveAssignment() {
     console.log("Step Solve assignment already exists");
     stepSolveAssignment = existingAssignment[0];
   } else {
+    console.log("Creating step solve assignment");
     const ssa = await db.insert(stepSolveAssignments).values({
       id: generateId(21),
       name: stepSolve.name,
@@ -64,7 +65,8 @@ export async function createStepSolveAssignment() {
       console.log(`Question "${stepSolveQuestion.questionText.substring(0, 30)}..." already exists`)
       questionId = existingQuestion[0].id;
     } else {
-      // Create the reasoning question
+      // Create the step solve question
+      console.log("Creating step solve question", stepSolveQuestion.questionText.substring(0, 30));
       questionId = generateId(21)
       await db.insert(stepSolveQuestions).values({
         id: questionId,
@@ -84,11 +86,12 @@ export async function createStepSolveAssignment() {
       )
 
       if (existingStep?.[0]?.id === undefined) {
+        console.log("Creating step solve step", step.stepText.substring(0, 30));
         await db.insert(stepSolveStep).values({
           id: step.id,
           questionId: questionId,
           stepText: step.stepText,
-          // stepTextPart2: step?.stepText2 ?? undefined,
+          stepTextPart2: step?.stepText2 ?? undefined,
           stepImage: step.stepImage,
           stepNumber: index + 1,
           stepSolveAnswer: step.stepSolveAnswer ?? undefined,
@@ -97,6 +100,7 @@ export async function createStepSolveAssignment() {
 
       // Check and create options
       for (const option of step.options) {
+        console.log("Creating step solve step option", option.optionText.substring(0, 30));
         const existingOption = await db.select().from(stepSolveStepOptions).where(
           and(
             eq(stepSolveStepOptions.stepId, step.id),
@@ -116,6 +120,7 @@ export async function createStepSolveAssignment() {
       }
     }
 
+    console.log("Creating step solve question to assignment", questionId, stepSolveAssignment.id);
     await db.insert(stepSolveQuestionToAssignment).values({
       id: generateId(21),
       assignmentId: stepSolveAssignment.id,
@@ -136,17 +141,22 @@ export async function createStepSolveAssignment() {
 
     // If activity does not exist, create it
     if(existingActivity.length === 0) {
+      console.log("Adding assignment to classroom. Creating activity", stepSolveAssignment.id, classroom.id);
       await db.insert(activity).values({
         id: generateId(21),
         assignmentId: stepSolveAssignment.id,
         classroomId: classroom.id,
         name: stepSolve.name,
+        topicId: topicId,
         type: ActivityType.StepSolve,
         order: 0,
         points: 100,
       })
     }
   }
+
+  console.log("Step solve creation complete");
+  console.log("--------------------------------");
 }
 
 export async function deleteStepSolveAssignment(stepSolveAssignmentId: string) {
@@ -222,5 +232,8 @@ export async function deleteStepSolveAssignment(stepSolveAssignmentId: string) {
     console.log("Deleting activity", act.id);
     await db.delete(activity).where(eq(activity.id, act.id));
   } 
+
+  console.log("Step solve deletion complete");
+  console.log("--------------------------------");
 
 }
