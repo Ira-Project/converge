@@ -142,7 +142,7 @@ export async function createKnowledgeZapAssignment() {
       console.log(`Creating matching variant "${question.question.substring(0, 30)}"`);
       await db.insert(matchingQuestions).values({
         id: question.id,
-        imageUrl: question.image,
+        imageUrl: question?.image ?? null,
         question: question.question,
         questionId: questions.id,
         createdAt: new Date(),
