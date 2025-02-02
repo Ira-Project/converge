@@ -15,7 +15,7 @@ import { createStepSolveAssignment, deleteStepSolveAssignment } from "./stepSolv
 import { createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 
-if(process.env.NODE_ENV === "production") {
+if(process.env.ENVIRONMENT === "prod") {
   console.log("WARNING: Running in production");
   console.log("If you'd like to stop this, press CTRL+C in the next 10 seconds");
   for (let i = 0; i < 10; i++) {
