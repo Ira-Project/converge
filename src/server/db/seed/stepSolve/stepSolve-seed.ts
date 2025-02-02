@@ -4,6 +4,7 @@ import { and, eq } from "drizzle-orm";
 import { generateId } from "lucia";
 
 import { topics } from "../../schema/subject";
+import { classrooms } from "../../schema/classroom";
 
 import stepSolve from "./simple_harmonic_motion.json";
 import { stepSolveQuestions, stepSolveQuestionToAssignment, stepSolveStep, stepSolveStepOptions } from "../../schema/stepSolve/stepSolveQuestions";
@@ -87,7 +88,7 @@ export async function createStepSolveAssignment() {
           id: step.id,
           questionId: questionId,
           stepText: step.stepText,
-          stepTextPart2: step?.stepText2 ?? undefined,
+          // stepTextPart2: step?.stepText2 ?? undefined,
           stepImage: step.stepImage,
           stepNumber: index + 1,
           stepSolveAnswer: step.stepSolveAnswer ?? undefined,
@@ -122,14 +123,33 @@ export async function createStepSolveAssignment() {
     })
 
   }
+
+  const classes= await db.select().from(classrooms);
+  for(const classroom of classes) {
+    // Check if activity already exists in the classroom
+    const existingActivity = await db.select().from(activity).where(
+      and(
+        eq(activity.assignmentId, stepSolveAssignment.id),
+        eq(activity.classroomId, classroom.id)
+      )
+    )
+
+    // If activity does not exist, create it
+    if(existingActivity.length === 0) {
+      await db.insert(activity).values({
+        id: generateId(21),
+        assignmentId: stepSolveAssignment.id,
+        classroomId: classroom.id,
+        name: stepSolve.name,
+        type: ActivityType.StepSolve,
+        order: 0,
+        points: 100,
+      })
+    }
+  }
 }
 
 export async function deleteStepSolveAssignment(stepSolveAssignmentId: string) {
-  if (process.env.ENVIRONMENT === "prod") {
-    console.log("Deleting step solve assignment in prod is not allowed");
-    return;
-  }
-
   //First get the step solve assignment
   const stepSolveAssignment = await db.select().from(stepSolveAssignments).where(eq(stepSolveAssignments.id, stepSolveAssignmentId));
   if (stepSolveAssignment.length === 0) {
