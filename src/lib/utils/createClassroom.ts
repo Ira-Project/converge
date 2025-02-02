@@ -2,11 +2,14 @@ import { generateId } from "lucia/dist/crypto";
 
 import { classrooms, usersToClassrooms } from "@/server/db/schema/classroom";
 import { db } from "@/server/db";
-import { Roles } from "@/lib/constants";
+import { ActivityType, Roles } from "@/lib/constants";
 import { activity } from "@/server/db/schema/activity";
-import { activityIdsDev, activityIdsProd } from "@/server/db/seed/activityIds";
-
-const activityIds = process.env.ENVIRONMENT === 'dev' ? activityIdsDev : activityIdsProd;
+import { eq } from "drizzle-orm";
+import { knowledgeZapAssignments } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
+import { stepSolveAssignments } from "@/server/db/schema/stepSolve/stepSolveAssignment";
+import { reasoningAssignments } from "@/server/db/schema/reasoning/reasoningAssignment";
+import { explainAssignments } from "@/server/db/schema/learnByTeaching/explainAssignment";
+import { readAndRelayAssignments } from "@/server/db/schema/readAndRelay/readAndRelayAssignments";
 
 export async function createClassroom(
   userId: string,
@@ -16,7 +19,7 @@ export async function createClassroom(
   // userGrades: string[],
 ): Promise<string> {
 
-  // For now we only have Physics content so we will hardcode it
+  // For now we only have Physics content so we will create a classroom with Physics content
   const description = "Demo Classroom";
   
   const classroom = await db.insert(classrooms).values({
@@ -40,20 +43,80 @@ export async function createClassroom(
     createdAt: new Date(),
   });
 
-  for(const activityId of activityIds) {
+  // Get all knowledge zap assignments
+  const kza = await db.select().from(knowledgeZapAssignments).where(eq(knowledgeZapAssignments.isDeleted, false));
+  for(const knowledgeZapAssignment of kza) {
     await db.insert(activity).values({
       id: generateId(21),
-      name: activityId.name,
-      type: activityId.type,
-      assignmentId: activityId.assignmentId,
-      order: activityId.order,
-      points: activityId.points,
+      assignmentId: knowledgeZapAssignment.id,
       classroomId: classroom[0]?.id,
-      topicId: activityId.topicId,
-      createdBy: userId,
-      isLive: false,
-      isLocked: false,
-    });
+      name: knowledgeZapAssignment.name ?? "",
+      topicId: knowledgeZapAssignment.topicId,
+      type: ActivityType.KnowledgeZap,
+      order: 0,
+      points: 100,
+
+    })
+  }
+
+  // Get all step solve assignments
+  const ssa = await db.select().from(stepSolveAssignments).where(eq(stepSolveAssignments.isDeleted, false));
+  for(const stepSolveAssignment of ssa) {
+    await db.insert(activity).values({
+      id: generateId(21),
+      assignmentId: stepSolveAssignment.id,
+      classroomId: classroom[0]?.id,
+      name: stepSolveAssignment.name ?? "",
+      topicId: stepSolveAssignment.topicId,
+      type: ActivityType.StepSolve,
+      order: 0,
+      points: 100,
+    })
+  }
+
+  // Get all reasoning assignments
+  const ra = await db.select().from(reasoningAssignments).where(eq(reasoningAssignments.isDeleted, false));
+  for(const reasoningAssignment of ra) {
+    await db.insert(activity).values({
+      id: generateId(21),
+      assignmentId: reasoningAssignment.id,
+      classroomId: classroom[0]?.id,
+      name: reasoningAssignment.name ?? "",
+      topicId: reasoningAssignment.topicId,
+      type: ActivityType.ReasonTrace,
+      order: 0,
+      points: 100,
+    })
+  }
+
+  // Get all learn by teaching assignments
+  const lbt = await db.select().from(explainAssignments).where(eq(explainAssignments.isDeleted, false));
+  for(const learnByTeachingAssignment of lbt) {
+    await db.insert(activity).values({
+      id: generateId(21),
+      assignmentId: learnByTeachingAssignment.id,
+      classroomId: classroom[0]?.id,
+      name: learnByTeachingAssignment.name ?? "",
+      topicId: learnByTeachingAssignment.topicId,
+      type: ActivityType.LearnByTeaching,
+      order: 0,
+      points: 100,
+    })
+  }
+
+  // Get all read and relay assignments
+  const rra = await db.select().from(readAndRelayAssignments).where(eq(readAndRelayAssignments.isDeleted, false));
+  for(const readAndRelayAssignment of rra) {
+    await db.insert(activity).values({  
+      id: generateId(21),
+      assignmentId: readAndRelayAssignment.id,
+      classroomId: classroom[0]?.id,
+      name: readAndRelayAssignment.name ?? "",
+      topicId: readAndRelayAssignment.topicId,
+      type: ActivityType.ReadAndRelay,
+      order: 0,
+      points: 100,
+    })
   }
 
   return classroom[0]?.id

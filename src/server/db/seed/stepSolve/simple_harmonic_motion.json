@@ -6,12 +6,12 @@
   "questions": [
     {
       "id": "ab1b8045f62543df938ad",
-      "questionText": "A simple pendulum with length $!$l$!$ makes $!$75$!$ complete oscillations over four minutes. Find the length, $!$l$!$, of the pendulum.",
+      "questionText": "A simple pendulum with length $!$l$!$ makes 75 complete oscillations over four minutes. Find the length, $!$l$!$, of the pendulum.",
       "questionImage": "",
       "steps": [
         {
           "id": "dd18793c92c84af69c223",
-          "stepText": "What formula can be used to find the time period of the pendulum?",
+          "stepText": "First, let's find the time period of the pendulum. What formula can be used to find the time period?",
           "stepText2": "Calculate the time period of the pendulum up to 1 decimal place (in $!$s$!$).",
           "stepImage": "",
           "stepSolveAnswer": [
@@ -25,12 +25,12 @@
           ],
           "options": [
             {
-              "optionText": "Period ($!$T$!$) = $!$\\frac{time (in minutes)}{number of oscillations}$!$",
+              "optionText": "Period ($!$T$!$) = $!$\\frac{\\text{time (in minutes)}}{\\text{number of oscillations}}$!$",
               "optionImage": "",
               "isCorrect": false
             },
             {
-              "optionText": " Period ($!$T$!$) = $!$\\frac{time (in seconds)}{number of oscillations}$!$",
+              "optionText": " Period ($!$T$!$) = $!$\\frac{\\text{time (in seconds)}}{\\text{number of oscillations}}$!$",
               "optionImage": "",
               "isCorrect": true
             },
@@ -43,7 +43,7 @@
         },
         {
           "id": "97d212f94ba9494bbae8d",
-          "stepText": "How would you find the length, $!$l$!$, of the pendulum?",
+          "stepText": "Now, the time period is known to be $!$3.2 s$!$. Using this, how would you find the length, $!$l$!$, of the pendulum?",
           "stepText2": "Calculate the length of the pendulum up to 1 decimal places (in $!$m$!$).",
           "stepImage": "",
           "stepSolveAnswer": [
@@ -61,7 +61,7 @@
               "isCorrect": true
             },
             {
-              "optionText": "Use the formula $!$T = \\frac{time (in seconds)}{number of oscillations}$!$",
+              "optionText": "Use the formula $!$T = \\frac{\\text{time (in seconds)}}{\\text{number of oscillations}}$!$",
               "optionImage": "",
               "isCorrect": false
             }
@@ -76,7 +76,7 @@
       "steps": [
         {
           "id": "03125c7597f440a5a6747",
-          "stepText": "If the buoy is undergoing simple harmonic motion, which of the following is true?",
+          "stepText": "We know that the buoy is undergoing simple harmonic motion. Based on this information, which of the following is true?",
           "stepImage": "",
           "options": [
             {
@@ -126,7 +126,7 @@
         },
         {
           "id": "6a2f3efe64f44bcf909f4",
-          "stepText": "Calculate the maximum acceleration of the buoy up to 1 decimal place (in $!$m/s^2$!$).",
+          "stepText": "Now that we have the value of $!$k$!$, you can use it to calculate the maximum force on the buoy. And then, calculate the maximum acceleration of the buoy up to 1 decimal place (in $!$m/s^2$!$).",
           "stepImage": "",
           "stepSolveAnswer": [
             "7.5",
