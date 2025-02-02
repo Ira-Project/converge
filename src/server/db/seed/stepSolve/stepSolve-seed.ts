@@ -6,7 +6,7 @@ import { generateId } from "lucia";
 import { topics } from "../../schema/subject";
 import { classrooms } from "../../schema/classroom";
 
-import stepSolve from "./simple_harmonic_motion.json";
+import stepSolve from "./thermodynamics.json";
 import { stepSolveQuestions, stepSolveQuestionToAssignment, stepSolveStep, stepSolveStepOptions } from "../../schema/stepSolve/stepSolveQuestions";
 import { stepSolveAssignmentAttempts, stepSolveAssignments } from "../../schema/stepSolve/stepSolveAssignment";
 import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "../../schema/stepSolve/stepSolveQuestionAttempts";

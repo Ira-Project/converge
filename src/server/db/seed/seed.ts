@@ -436,6 +436,7 @@ const devClassrooms = [
   "8pify78tp9sjnn9f55ls0",
   "uldhld6cq0iqihr474cd4",
   "w1mn5uv1na85phrtcthyj",
+  "qtmd3mtcd45oe70hftvwz"
 ]
 
 const prodClassrooms = [
@@ -457,6 +458,6 @@ const prodClassrooms = [
 // await createStepSolveAssignment();
 // await createReasoningAssignment();
 
-await deleteStepSolveAssignment("4y3ivw51rzgxzcz42dezd");
+// await deleteStepSolveAssignment("siv11nhpuz8gpd8liol53");
 
 // await createReadAndRelayAssignment();
