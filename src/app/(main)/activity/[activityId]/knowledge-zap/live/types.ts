@@ -26,6 +26,8 @@ export interface OrderingVariant {
   question: string;
   options: MultipleChoiceOption[];
   isDescending: boolean;
+  topLabel: string;
+  bottomLabel: string;
 }
 
 export type KnowledgeZapQuestionObjects = {

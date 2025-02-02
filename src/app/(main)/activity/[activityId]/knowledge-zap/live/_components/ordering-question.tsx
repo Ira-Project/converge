@@ -13,13 +13,15 @@ interface OrderingQuestionProps {
   questionId: string;
   question: string;
   isDescending: boolean;
+  topLabel: string;
+  bottomLabel: string;
   options: MultipleChoiceOption[];
   stackPush: () => void;
   stackPop: () => void;
 }
 
 const OrderingQuestion: React.FC<OrderingQuestionProps> = ({ 
-  assignmentAttemptId, orderingQuestionId, questionId, question, isDescending, options, stackPush, stackPop 
+  assignmentAttemptId, orderingQuestionId, questionId, question, isDescending, topLabel, bottomLabel, options, stackPush, stackPop 
 }) => {
   
   const [order, setOrder] = useState<MultipleChoiceOption[]>(options);
@@ -38,9 +40,9 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
       assignmentAttemptId: assignmentAttemptId,
       orderingQuestionId: orderingQuestionId,
       questionId: questionId,
-      answer: answerReversed.map((option, index) => ({
+      answer: (order).map((option, index) => ({
         id: option.id,
-        order: index,
+        order: index + 1,
         option: option.option,
       })),
     });
@@ -77,6 +79,8 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
     }
   };
 
+  console.log(isDescending, topLabel, bottomLabel);
+
   return (
     <div className="flex flex-col gap-8">
       <p className="text-xl text-center mb-4 leading-8"> 
@@ -87,19 +91,36 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
         <div className="flex flex-col justify-center">
           <div className="h-full flex items-center">
             <div className="w-1 h-full bg-lime-700 relative">
-              {/* Arrow head */}
-              {isDescending ? 
-              <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 
-                border-l-[8px] border-l-transparent
-                border-r-[8px] border-r-transparent
-                border-b-[12px] border-b-lime-700">
-              </div>
-              : <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 
-                border-l-[8px] border-l-transparent
-                border-r-[8px] border-r-transparent
-                border-t-[12px] border-t-lime-700">
-              </div>
-              }
+              {/* Labels and Arrow head */}
+              {isDescending ? (
+                <>
+                  <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-muted-foreground">
+                    {topLabel}
+                  </span>
+                  <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 
+                    border-l-[8px] border-l-transparent
+                    border-r-[8px] border-r-transparent
+                    border-b-[12px] border-b-lime-700">
+                  </div>
+                  <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-muted-foreground">
+                    {bottomLabel}
+                  </span>
+                </>
+              ) : (
+                <>
+                  <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-muted-foreground">
+                    {topLabel}
+                  </span>
+                  <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 
+                    border-l-[8px] border-l-transparent
+                    border-r-[8px] border-r-transparent
+                    border-t-[12px] border-t-lime-700">
+                  </div>
+                  <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-muted-foreground">
+                    {bottomLabel}
+                  </span>
+                </>
+              )}
             </div>
           </div>
         </div>
