@@ -9,22 +9,27 @@
         {
           "id": "1",
           "question": "asdf",
+          "image": null,
           "options": [
             {
               "text": "A",
-              "isCorrect": true
+              "isCorrect": true,
+              "image": null
             },
             {
               "text": "B",
-              "isCorrect": false
+              "isCorrect": false,
+              "image": null
             },
             {
               "text": "C",
-              "isCorrect": false
+              "isCorrect": false,
+              "image": null
             },
             {
               "text": "D",
-              "isCorrect": false
+              "isCorrect": false,
+              "image": null
             }
           ]
         }
@@ -67,6 +72,9 @@
         {
           "id": "1",
           "question": "asdf",
+          "topLabel": "Smallest",
+          "bottomLabel": "Biggest",
+          "isDescending": false,
           "options": [
             {
               "text": "A",
