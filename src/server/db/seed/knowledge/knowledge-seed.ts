@@ -10,7 +10,7 @@ import { knowledgeZapQuestionAttempts, knowledgeZapQuestions, knowledgeZapQuesti
 import { matchingAnswerOptions, matchingAttempt, matchingAttemptSelection, matchingQuestions } from "../../schema/knowledgeZap/matchingQuestions";
 import { orderingAnswerOptions, orderingAttempt, orderingAttemptSelection, orderingQuestions } from "../../schema/knowledgeZap/orderingQuestions";
 
-import json from "./simple_harmonic_motion.json";
+import json from "./radioactive_decay.json";
 import { activity } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 

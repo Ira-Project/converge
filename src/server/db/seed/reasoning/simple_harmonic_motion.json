@@ -7,7 +7,7 @@
     {
       "questionText": "A simple pendulum with length $!$L$!$ and mass $!$m$!$ performs simple harmonic motion on Earth, crossing its equilibrium position $!$60$!$ times in one minute. The same pendulum is then transported to Planet X where its time period is found to be $!$8.0$!$ seconds. Calculate the approximate value of gravitational acceleration on Planet X (up to 2 decimal place). Assume that the gravitational acceleration on Earth is $!$9.8 m/s^2$!$.",
       "questionImage": "",
-      "answerText": "0.15 m/s^2",
+      "answerText": "$!$0.15 m/s^2$!$",
       "correctAnswers": [
         "0.61",
         "0.61 m/s^2",
@@ -19,7 +19,7 @@
       "answerOptions": [
         {
           "id": "a59ebebb3d2147578c37f",
-          "optionText": "Calculate time period using the formula $!$T = \\frac{total time (in seconds)}{number of oscillations}$!$",
+          "optionText": "Calculate time period using the formula $!$T = \\frac{\\text{total time (in seconds)}}{\\text{number of oscillations}}$!$",
           "optionImage": ""
         },
         {
@@ -29,7 +29,7 @@
         },
         {
           "id": "0402b5701e234598b4fc4",
-          "optionText": "Calculate time period using the formula $!$T = \\frac{total time (in seconds)}{number of crossings of the equilibrium position}$!$",
+          "optionText": "Calculate time period using the formula $!$T = \\frac{\\text{total time (in seconds)}}{\\text{number of crossings of the equilibrium position}}$!$",
           "optionImage": ""
         },
         {
@@ -44,7 +44,7 @@
         },
         {
           "id": "5c2c9a13bd934551b9f54",
-          "optionText": "Find number of oscillations using the formula $!$T = \\frac{total time (in seconds)}{number of oscillations}$!$",
+          "optionText": "Find number of oscillations using the formula $!$T = \\frac{\\text{total time (in seconds)}}{\\text{number of oscillations} }$!$",
           "optionImage": ""
         },
         {
@@ -83,8 +83,8 @@
     },
     {
       "questionText": "A pendulum bob completes 100 full oscillations in 6 minutes. When the acceleration of the pendulum bob is at its maximum, the string makes an angle of $!$9^\\circ$!$ with the vertical. Find the maximum speed reached by the pendulum bob.",
-      "questionImage": "q2_img.png",
-      "answerText": "7.94 m/s",
+      "questionImage": "https://converge-question-images.s3.us-west-1.amazonaws.com/shm_rt_q2.png",
+      "answerText": "$!$7.94 m/s$!$",
       "correctAnswers": [
         "0.89",
         "0.89 m/s",
@@ -96,7 +96,7 @@
       "answerOptions": [
         {
           "id": "6721e7aea4c445929f17c",
-          "optionText": "Calculate time period using the formula $!$T = \\frac{total time (in seconds)}{number of oscillations}$!$",
+          "optionText": "Calculate time period using the formula $!$T = \\frac{\\text{total time (in seconds)}}{\\text{number of oscillations}}$!$",
           "optionImage": ""
         },
         {

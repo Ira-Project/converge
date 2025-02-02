@@ -1,0 +1,254 @@
+{
+    "name": "Radioactive Decay",
+    "topicIdDev": "#aK#zs54ceyHHHdTpk7c%",
+    "topicIdProd": "8Y8zrkH2ZP!tAYHECp$ed",
+    "latexDelimiter": "$!$",
+    "questions": [
+      {
+        "id": "a596a27905a34f90b073f",
+        "questionText": "When a radium-226 nucleus undergoes alpha-decay at rest, it produces a radon-222 nucleus. The radon-222 nucleus has a total binding energy of $!$1708.179$!$ MeV, the alpha particle has a binding energy per nucleon of $!$7075.2$!$ keV, and the decay process releases $!$7.7991\\times10^{-13}$!$ J of energy. Calculate the mass of the radium-226 nucleus.",
+        "questionImage": "",
+        "steps": [
+          {
+            "id": "3bfffa26c1bf4c3a89ad0",
+            "stepText": "First, let's convert all units of energy to a common unit. We will use MeV as the common unit of energy. What is the binding energy of the alpha particle in MeV?",
+            "stepImage": "",
+            "stepSolveAnswer": [
+              "7.0752 MeV",
+              "7.0752",
+              "7.0752MeV"
+            ],
+            "options": []
+          },
+          {
+            "id": "8d4ea5bbce4e42c590eb3",
+            "stepText": "The energy released during the decay is in J. What is the relationship between J and eV?",
+            "stepText2": "What is the energy released during the decay in MeV?",
+            "stepImage": "",
+            "stepSolveAnswer": [
+              "4.8744MeV",
+              "4.8744",
+              "4.8744 MeV"
+            ],
+            "options": [
+              {
+                "optionText": "$!$1 \\text{eV} = 1.6\\times10^{-19} \\text{J}$!$",
+                "optionImage": "",
+                "isCorrect": true
+              },
+              {
+                "optionText": "$!$1 \\text{J} = 1.6\\times10^{-19} \\text{eV}$!$",
+                "optionImage": "",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "id": "d8b52ca7645040579c1fd",
+            "stepText": "Now, we have all the energies in MeV. Since we know that the radon-226 nucleus undergoes decay, which of the following is true?",
+            "stepImage": "",
+            "stepSolveAnswer": [],
+            "options": [
+              {
+                "optionText": "The radon-226 nucleus is less stable than the products of the decay.",
+                "optionImage": "",
+                "isCorrect": true
+              },
+              {
+                "optionText": "The radon-226 nucleus is more stable than the products of the decay.",
+                "optionImage": "",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "id": "c5d220dd00344d6297dfc",
+            "stepText": "We have determined that the radon-226 nucleus is less stable than the products of the decay. Based on this, what can we say about the binding energy of the radon-226 nucleus?",
+            "stepImage": "",
+            "stepSolveAnswer": [],
+            "options": [
+              {
+                "optionText": "The binding energy of the radon-226 nucleus is greater than the sum of the binding energies of the radium-222 nucleus and the alpha particle.",
+                "optionImage": "",
+                "isCorrect": false
+              },
+              {
+                "optionText": "The binding energy of the radon-226 nucleus is less than the sum of the binding energies of the radium-222 nucleus and the alpha particle.",
+                "optionImage": "",
+                "isCorrect": true
+              }
+            ]
+          },
+          {
+            "id": "08dcae9c03874ebea8dad",
+            "stepText": "To determine the mass of the radium-226 nucleus, we need to use the conservation of energy principle. Based on this principle, which of the following equations is correct?",
+            "stepImage": "",
+            "stepSolveAnswer": [],
+            "options": [
+              {
+                "optionText": "Energy released during decay = Binding energy of radium-222 + Binding energy of alpha particle - Binding energy of radon-226",
+                "optionImage": "",
+                "isCorrect": true
+              },
+              {
+                "optionText": "Binding energy of radon-226 = Binding energy of radium-222 + Binding energy of alpha particle + Energy released during decay",
+                "optionImage": "",
+                "isCorrect": false
+              },
+              {
+                "optionText": "Energy released during decay = Binding energy of radon-226 + Binding energy of radium-222 + Binding energy of alpha particle",
+                "optionImage": "",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "id": "0910776ccdc248ebb5da3",
+            "stepText": "We need to find the binding energy of the alpha particle. How do we determine that using the binding energy per nucleon of the alpha particle?",
+            "stepText2": "The binding energy per nucleon of the alpha particle is $!$7.0752$!$ MeV. What is the binding energy of the alpha particle?",
+            "stepImage": "",
+            "stepSolveAnswer": [
+              "28.3008 MeV",
+              "28.3008",
+              "28.3008MeV",
+              "28.3008 mev",
+              "28.3008 Mev"
+            ],
+            "options": [
+              {
+                "optionText": "Binding energy of alpha particle = Binding energy per nucleon of alpha particle * Number of nucleons in alpha particle",
+                "optionImage": "",
+                "isCorrect": true
+              },
+              {
+                "optionText": "Binding energy of alpha particle = Binding energy per nucleon of alpha particle * Number of protons in alpha particle",
+                "optionImage": "",
+                "isCorrect": false
+              },
+              {
+                "optionText": "Binding energy of alpha particle = Binding energy per nucleon of alpha particle * Number of neutrons in alpha particle",
+                "optionImage": "",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "id": "01bdc851039e4b639cdd1",
+            "stepText": "Now that we have all the components of the equation, we can solve for the mass of the radium-226 nucleus.",
+            "stepImage": "",
+            "stepSolveAnswer": [
+              "1731.6054 MeV",
+              "1731.6054",
+              "1731.6054MeV",
+              "1731.6054 mev",
+              "1731.6054 Mev"
+            ],
+            "options": []
+          }
+        ]
+      },
+      {
+        "id": "a8a759e3fa2f4ce3870e0",
+        "questionText": "A graph displays the ratio $!$n = \\frac{\\text{Number of nuclei of nuclide X}}{\\text{Number of nuclei of nuclide Y}}$!$ over time as a pure sample of nuclide X decays to nuclide Y. There is a third nuclide Z whose half-life is four times that of nuclide X. A pure sample of this nuclide Z has an activity of $!$15$!$ Bq after 2 hours of decay. Find the initial activity of the sample of nuclide Z.",
+        "questionImage": "https://converge-question-images.s3.us-west-1.amazonaws.com/radioactive_decay_ss_q2.png",
+        "steps": [
+          {
+            "id": "fe16c727e3344cb3b67e6",
+            "stepText": "First, let's use the graph to detremine the half-life of nuclide X. What will be the value of $!$n$!$ when the half-life of nuclide X is reached?",
+            "stepText2": "What is the half-life of nuclide X?",
+            "stepImage": "",
+            "stepSolveAnswer": [
+              "10 minutes",
+              "10",
+              "10 min",
+              "10min"
+            ],
+            "options": [
+              {
+                "optionText": "1/2",
+                "optionImage": "",
+                "isCorrect": false
+              },
+              {
+                "optionText": "1",
+                "optionImage": "",
+                "isCorrect": true
+              },
+              {
+                "optionText": "2",
+                "optionImage": "",
+                "isCorrect": false
+              },
+              {
+                "optionText": "0",
+                "optionImage": "",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "id": "dc41777f31bd406f9ea89",
+            "stepText": "We know that the half-life of nuclide Z is four times that of nuclide X. What is the half-life of nuclide Z?",
+            "stepImage": "",
+            "stepSolveAnswer": [
+              "40 minutes",
+              "40",
+              "40 min",
+              "40min"
+            ],
+            "options": []
+          },
+          {
+            "id": "5f296202ee9544138454f",
+            "stepText": "Now, based on the fact that the half-life of nuclide Z is 40 minutes, how many half-lives have passed in 2 hours?",
+            "stepImage": "",
+            "stepSolveAnswer": [
+              "3",
+              "three"
+            ],
+            "options": []
+          },
+          {
+            "id": "5a4f915700544b7c8e7ae",
+            "stepText": "Let's say that the initial activity of the sample of nuclide Z is $!$A_0$!$ and the activity of the sample of nuclide Z after 2 hours of decay is $!$A$!$. What is the relationship between $!$A_0$!$ and $!$A$!$ after 3 half-lives?",
+            "stepImage": "",
+            "stepSolveAnswer": [],
+            "options": [
+              {
+                "optionText": "$!$A = \\frac{A_0}{2^3}$!$",
+                "optionImage": "",
+                "isCorrect": true
+              },
+              {
+                "optionText": "$!$A_0 = \\frac{A}{2^3}$!$",
+                "optionImage": "",
+                "isCorrect": false
+              },
+              {
+                "optionText": "$!$A = \\frac{A_0}{3}$!$",
+                "optionImage": "",
+                "isCorrect": false
+              },
+              {
+                "optionText": "$!$A_0 = \\frac{A}{3}$!$",
+                "optionImage": "",
+                "isCorrect": false
+              }
+            ]
+          },
+          {
+            "id": "7c40575d9ade4370a53c7",
+            "stepText": "We know that $!$A = 15 \\text{Bq}$!$. What is $!$A_0$!$, the initial activity of the sample of nuclide Z?",
+            "stepImage": "",
+            "stepSolveAnswer": [
+              "120 Bq",
+              "120",
+              "120Bq",
+              "120 bq"
+            ],
+            "options": []
+          }
+        ]
+      }
+    ]
+  }
