@@ -110,7 +110,15 @@ export const checkOrderingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
     }
   });
 
-  const correct = answer.every((option) => option.order === orderingQuestion?.options.findIndex((o) => o.option === option.option));
+  let correct = true;
+  
+  for (const userAnswer of input.answer) {
+    const correctOption = orderingQuestion?.options.find(o => o.option === userAnswer?.option);
+
+    if (userAnswer.order !== correctOption?.order) {
+      correct = false;
+    }
+  }
 
   const questionAttemptId = generateId(21);
   await ctx.db.insert(knowledgeZapQuestionAttempts).values({

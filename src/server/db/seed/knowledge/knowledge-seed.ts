@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
 import { and, eq } from "drizzle-orm";
@@ -10,7 +11,7 @@ import { knowledgeZapQuestionAttempts, knowledgeZapQuestions, knowledgeZapQuesti
 import { matchingAnswerOptions, matchingAttempt, matchingAttemptSelection, matchingQuestions } from "../../schema/knowledgeZap/matchingQuestions";
 import { orderingAnswerOptions, orderingAttempt, orderingAttemptSelection, orderingQuestions } from "../../schema/knowledgeZap/orderingQuestions";
 
-import json from "./simple_harmonic_motion.json";
+import json from "./radioactive_decay.json";
 import { activity } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 
@@ -83,7 +84,7 @@ export async function createKnowledgeZapAssignment() {
         id: question.id,
         question: question.question,
         questionId: questions.id,
-        imageUrl: question.image,
+        imageUrl: question?.image ?? null,
         createdAt: new Date(),
         updatedAt: new Date(),
         isDeleted: false,
@@ -95,7 +96,7 @@ export async function createKnowledgeZapAssignment() {
         await db.insert(multipleChoiceAnswerOptions).values({
           id: generateId(21),
           questionId: question.id,
-          imageUrl: option.image,
+          imageUrl: option?.image ?? null,
           option: option.text ?? "",
           isCorrect: option.isCorrect,
           createdAt: new Date(),
@@ -141,7 +142,7 @@ export async function createKnowledgeZapAssignment() {
       console.log(`Creating matching variant "${question.question.substring(0, 30)}"`);
       await db.insert(matchingQuestions).values({
         id: question.id,
-        imageUrl: question.image,
+        imageUrl: question?.image ?? null,
         question: question.question,
         questionId: questions.id,
         createdAt: new Date(),
@@ -204,6 +205,9 @@ export async function createKnowledgeZapAssignment() {
         id: question.id,
         question: question.question,
         questionId: questions.id,
+        isDescending: question.isDescending ?? false,
+        topLabel: question.topLabel ?? "Smallest",
+        bottomLabel: question.bottomLabel ?? "Biggest",
         createdAt: new Date(),
         updatedAt: new Date(),
         isDeleted: false,
