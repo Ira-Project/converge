@@ -94,7 +94,7 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
               {/* Labels and Arrow head */}
               {isDescending ? (
                 <>
-                  <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-muted-foreground">
+                  <span className="absolute -top-12 left-1/2 -translate-x-1/2 text-xs text-muted-foreground text-center">
                     {topLabel}
                   </span>
                   <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-0 h-0 
@@ -102,13 +102,13 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
                     border-r-[8px] border-r-transparent
                     border-b-[12px] border-b-lime-700">
                   </div>
-                  <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-xs text-muted-foreground">
+                  <span className="absolute -bottom-12 left-1/2 -translate-x-1/2 text-xs text-muted-foreground text-center">
                     {bottomLabel}
                   </span>
                 </>
               ) : (
                 <>
-                  <span className="absolute -top-8 left-1/2 -translate-x-1/2 text-xs text-muted-foreground">
+                  <span className="absolute -top-12 left-1/2 -translate-x-1/2 text-xs text-muted-foreground text-center">
                     {topLabel}
                   </span>
                   <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 
@@ -116,7 +116,7 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
                     border-r-[8px] border-r-transparent
                     border-t-[12px] border-t-lime-700">
                   </div>
-                  <span className="absolute -bottom-8 left-1/2 -translate-x-1/2 text-xs text-muted-foreground">
+                  <span className="absolute -bottom-12 left-1/2 -translate-x-1/2 text-xs text-muted-foreground text-center">
                     {bottomLabel}
                   </span>
                 </>
