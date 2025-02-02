@@ -15,6 +15,15 @@ import { createStepSolveAssignment, deleteStepSolveAssignment } from "./stepSolv
 import { createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 
+if(process.env.NODE_ENV === "production") {
+  console.log("WARNING: Running in production");
+  console.log("If you'd like to stop this, press CTRL+C in the next 10 seconds");
+  for (let i = 0; i < 10; i++) {
+    console.log(10 - i, "seconds remaining");
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+}
+
 
 // ADD ACTIVITIES TO CLASSROOMS
 // THIS SHOULD NEVER BE NECESSARY. ONLY HERE FOR EMERGENCY PURPOSES
