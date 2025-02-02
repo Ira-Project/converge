@@ -367,7 +367,7 @@
                 "isCorrect": false
               },
               {
-                "text": "$!$^{14}_{7}N$!$ and $!$^{15}_{7}N$!$",
+                "text": "$!$^{14}_{7}N$!$ and $!$^{14}_{8}N$!$",
                 "image": null,
                 "isCorrect": false
               },
@@ -665,6 +665,9 @@
             "id": "5cd8175c1ce24205bbb88",
             "question": "Order the following types of radioactive decay in increasing order of their penetrating power",
             "image": null,
+            "isDescending": false,
+            "topLabel": "Least Penetrating",
+            "bottomLabel": "Most Penetrating",
             "options": [
               {
                 "text": "Alpha decay",
@@ -687,6 +690,9 @@
             "id": "bcf33e3b82464164bf31f",
             "question": "Order the following types of radioactive decay in decreasing order of their penetrating power",
             "image": null,
+            "isDescending": true,
+            "topLabel": "Most Penetrating",
+            "bottomLabel": "Least Penetrating",
             "options": [
               {
                 "text": "Alpha decay",
@@ -714,6 +720,9 @@
             "id": "d8ee1d918d304589bfd36",
             "question": "Order the following types of radioactive decay in increasing order of their ionizing power",
             "image": null,
+            "isDescending": false,
+            "topLabel": "Least Ionizing",
+            "bottomLabel": "Most Ionizing",
             "options": [
               {
                 "text": "Alpha decay",
@@ -736,6 +745,9 @@
             "id": "661485e6269c4ba4b7f46",
             "question": "Order the following types of radioactive decay in decreasing order of their ionizing power",
             "image": null,
+            "isDescending": true,
+            "topLabel": "Most Ionizing",
+            "bottomLabel": "Least Ionizing",
             "options": [
               {
                 "text": "Alpha decay",
