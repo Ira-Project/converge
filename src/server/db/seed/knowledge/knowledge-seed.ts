@@ -204,6 +204,7 @@ export async function createKnowledgeZapAssignment() {
         id: question.id,
         question: question.question,
         questionId: questions.id,
+        isDescending: question.isDescending ?? false,
         createdAt: new Date(),
         updatedAt: new Date(),
         isDeleted: false,

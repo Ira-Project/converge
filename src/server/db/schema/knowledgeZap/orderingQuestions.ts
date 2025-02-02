@@ -19,6 +19,7 @@ export const orderingQuestions = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     question: text("question").notNull(),
     questionId: varchar("question_id", { length: 21 }).notNull().references(() => knowledgeZapQuestions.id),
+    isDescending: boolean("is_descending").notNull().default(false),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
