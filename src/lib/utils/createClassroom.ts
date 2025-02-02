@@ -9,6 +9,7 @@ import { knowledgeZapAssignments } from "@/server/db/schema/knowledgeZap/knowled
 import { stepSolveAssignments } from "@/server/db/schema/stepSolve/stepSolveAssignment";
 import { reasoningAssignments } from "@/server/db/schema/reasoning/reasoningAssignment";
 import { explainAssignments } from "@/server/db/schema/learnByTeaching/explainAssignment";
+import { readAndRelayAssignments } from "@/server/db/schema/readAndRelay/readAndRelayAssignments";
 
 export async function createClassroom(
   userId: string,
@@ -98,6 +99,21 @@ export async function createClassroom(
       name: learnByTeachingAssignment.name ?? "",
       topicId: learnByTeachingAssignment.topicId,
       type: ActivityType.LearnByTeaching,
+      order: 0,
+      points: 100,
+    })
+  }
+
+  // Get all read and relay assignments
+  const rra = await db.select().from(readAndRelayAssignments).where(eq(readAndRelayAssignments.isDeleted, false));
+  for(const readAndRelayAssignment of rra) {
+    await db.insert(activity).values({  
+      id: generateId(21),
+      assignmentId: readAndRelayAssignment.id,
+      classroomId: classroom[0]?.id,
+      name: readAndRelayAssignment.name ?? "",
+      topicId: readAndRelayAssignment.topicId,
+      type: ActivityType.ReadAndRelay,
       order: 0,
       points: 100,
     })

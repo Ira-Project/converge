@@ -17,7 +17,7 @@ import { activityIdsProd } from "./activityIds";
 import { createKnowledgeZapAssignment, deleteKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
 import { createStepSolveAssignment, deleteStepSolveAssignment } from "./stepSolve/stepSolve-seed";
 import { createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
-import { createReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
+import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 
 
 // ADD ACTIVITIES TO CLASSROOMS
@@ -40,5 +40,6 @@ import { createReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 // await createStepSolveAssignment();
 
 // READ AND RELAY CREATION AND DELETION
-// await createReadAndRelayAssignment();
+// await deleteReadAndRelayAssignment();
+await createReadAndRelayAssignment();
 
