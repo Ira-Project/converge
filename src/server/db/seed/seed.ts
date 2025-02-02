@@ -10,10 +10,6 @@ import { ActivityType, Roles } from "@/lib/constants";
 import { classrooms } from "../schema/classroom";
 import { activity } from "../schema/activity";
 
-
-import { activityIdsDev } from "./activityIds";
-import { activityIdsProd } from "./activityIds";
-
 import { createKnowledgeZapAssignment, deleteKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
 import { createStepSolveAssignment, deleteStepSolveAssignment } from "./stepSolve/stepSolve-seed";
 import { createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
@@ -41,5 +37,5 @@ import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./re
 
 // READ AND RELAY CREATION AND DELETION
 // await deleteReadAndRelayAssignment();
-await createReadAndRelayAssignment();
+// await createReadAndRelayAssignment();
 
