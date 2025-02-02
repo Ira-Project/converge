@@ -14,7 +14,7 @@ import { activity } from "../schema/activity";
 import { activityIdsDev } from "./activityIds";
 import { activityIdsProd } from "./activityIds";
 
-import { createKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
+import { createKnowledgeZapAssignment, deleteKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
 import { createStepSolveAssignment, deleteStepSolveAssignment } from "./stepSolve/stepSolve-seed";
 import { createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
@@ -28,6 +28,7 @@ import { createReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 // await createLearnByTeachingAssignment();
 
 // KNOWLEDGE ZAP CREATION
+// await deleteKnowledgeZapAssignment();
 // await createKnowledgeZapAssignment();
 
 // REASONING CREATION

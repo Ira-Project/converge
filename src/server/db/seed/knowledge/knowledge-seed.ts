@@ -1,16 +1,18 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
-import { eq } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import { generateId } from "lucia";
 
-import { knowledgeZapAssignments } from "../../schema/knowledgeZap/knowledgeZapAssignment";
-import { multipleChoiceAnswerOptions, multipleChoiceQuestions } from "../../schema/knowledgeZap/multipleChoiceQuestions";
-import { KnowledgeZapQuestionType } from "@/lib/constants";
-import { knowledgeZapQuestions, knowledgeZapQuestionToAssignment } from "../../schema/knowledgeZap/knowledgeZapQuestions";
-import { matchingAnswerOptions, matchingQuestions } from "../../schema/knowledgeZap/matchingQuestions";
-import { orderingAnswerOptions, orderingQuestions } from "../../schema/knowledgeZap/orderingQuestions";
+import { knowledgeZapAssignmentAttempts, knowledgeZapAssignments } from "../../schema/knowledgeZap/knowledgeZapAssignment";
+import { multipleChoiceAnswerOptions, multipleChoiceAttempt, multipleChoiceQuestions } from "../../schema/knowledgeZap/multipleChoiceQuestions";
+import { ActivityType, KnowledgeZapQuestionType } from "@/lib/constants";
+import { knowledgeZapQuestionAttempts, knowledgeZapQuestions, knowledgeZapQuestionToAssignment } from "../../schema/knowledgeZap/knowledgeZapQuestions";
+import { matchingAnswerOptions, matchingAttempt, matchingAttemptSelection, matchingQuestions } from "../../schema/knowledgeZap/matchingQuestions";
+import { orderingAnswerOptions, orderingAttempt, orderingAttemptSelection, orderingQuestions } from "../../schema/knowledgeZap/orderingQuestions";
 
 import json from "./simple_harmonic_motion.json";
+import { activity } from "../../schema/activity";
+import { classrooms } from "../../schema/classroom";
 
 export async function createKnowledgeZapAssignment() {
 
@@ -24,6 +26,7 @@ export async function createKnowledgeZapAssignment() {
     console.log("Knowledge Zap assignment already exists");
     knowledgeZapAssignment = existingAssignment[0];
   } else {
+    console.log("Creating knowledge zap assignment", json.name);
     const kza = await db.insert(knowledgeZapAssignments).values({
       id: generateId(21),
       name: json.name,
@@ -52,6 +55,7 @@ export async function createKnowledgeZapAssignment() {
       continue;
     }
 
+    console.log(`Creating multiple choice question`, questions.id);
     await db.insert(knowledgeZapQuestions).values({
       id: questions.id,
       question: "Knowledge Zap Question",
@@ -74,6 +78,7 @@ export async function createKnowledgeZapAssignment() {
         continue;
       }
 
+      console.log(`Creating multiple choice variant "${question.question.substring(0, 30)}"`);
       await db.insert(multipleChoiceQuestions).values({
         id: question.id,
         question: question.question,
@@ -86,6 +91,7 @@ export async function createKnowledgeZapAssignment() {
       })
       multipleChoiceQuestionIds.push(question.id);
       for (const option of question.options) {
+        console.log(`Creating multiple choice option "${option.text.substring(0, 30)}"`);
         await db.insert(multipleChoiceAnswerOptions).values({
           id: generateId(21),
           questionId: question.id,
@@ -100,6 +106,7 @@ export async function createKnowledgeZapAssignment() {
       }
     }
 
+    console.log(`Updating knowledge zap question with mcq ${questions.id}`);
     await db.update(knowledgeZapQuestions).set({
       questionId: multipleChoiceQuestionIds,
     }).where(eq(knowledgeZapQuestions.id, questions.id));
@@ -116,6 +123,7 @@ export async function createKnowledgeZapAssignment() {
       continue;
     }
     
+    console.log(`Creating matching question ${questions.id}`);
     await db.insert(knowledgeZapQuestions).values({
       id: questions.id,
       question: "Knowledge Zap Question",
@@ -130,6 +138,7 @@ export async function createKnowledgeZapAssignment() {
 
     const matchingQuestionIds = []
     for (const question of questions.variants) {
+      console.log(`Creating matching variant "${question.question.substring(0, 30)}"`);
       await db.insert(matchingQuestions).values({
         id: question.id,
         imageUrl: question.image,
@@ -142,6 +151,7 @@ export async function createKnowledgeZapAssignment() {
       })
       matchingQuestionIds.push(question.id);
       
+      console.log(`Creating matching options for ${question.question.substring(0, 30)}`);
       await Promise.all(question.options.map(option => 
         db.insert(matchingAnswerOptions).values({
           id: generateId(21),
@@ -156,6 +166,7 @@ export async function createKnowledgeZapAssignment() {
       ));
     }
     
+    console.log(`Updating knowledge zap question with matching question id ${questions.id}`);
     await db.update(knowledgeZapQuestions).set({
       questionId: matchingQuestionIds,
     }).where(eq(knowledgeZapQuestions.id, questions.id));
@@ -173,6 +184,7 @@ export async function createKnowledgeZapAssignment() {
       continue;
     }
 
+    console.log(`Creating ordering question ${questions.id}`);
     await db.insert(knowledgeZapQuestions).values({
       id: questions.id,
       question: "Knowledge Zap Question",
@@ -184,10 +196,10 @@ export async function createKnowledgeZapAssignment() {
       isDeleted: false,
       deletedAt: null,
     })
-    
+
     const orderingQuestionIds = []
     for (const question of questions.variants) {
-
+      console.log(`Creating ordering variant "${question.question.substring(0, 30)}"`);
       await db.insert(orderingQuestions).values({
         id: question.id,
         question: question.question,
@@ -198,6 +210,7 @@ export async function createKnowledgeZapAssignment() {
         deletedAt: null,
       })
 
+      console.log(`Creating ordering options for ${question.question.substring(0, 30)}`);
       await Promise.all(question.options.map(option => 
         db.insert(orderingAnswerOptions).values({
           id: generateId(21),
@@ -214,6 +227,7 @@ export async function createKnowledgeZapAssignment() {
       orderingQuestionIds.push(question.id);
     }
 
+    console.log(`Updating knowledge zap question with ordering question id ${questions.id}`);
     await db.update(knowledgeZapQuestions).set({
       questionId: orderingQuestionIds,
     }).where(eq(knowledgeZapQuestions.id, questions.id));
@@ -223,7 +237,7 @@ export async function createKnowledgeZapAssignment() {
   }
 
   for (const questionId of questionsIds) {
-
+    console.log(`Creating knowledge zap question to assignment ${questionId}`);
     await db.insert(knowledgeZapQuestionToAssignment).values({
       id: generateId(21),
       questionId: questionId,
@@ -235,4 +249,145 @@ export async function createKnowledgeZapAssignment() {
     })
   }
 
+  const classes= await db.select().from(classrooms);
+  for(const classroom of classes) {
+    // Check if activity already exists in the classroom
+    const existingActivity = await db.select().from(activity).where(
+      and(
+        eq(activity.assignmentId, knowledgeZapAssignment.id),
+        eq(activity.classroomId, classroom.id)
+      )
+    )
+
+    // If activity does not exist, create it
+    if(existingActivity.length === 0) {
+      console.log("Adding assignment to classroom. Creating activity", knowledgeZapAssignment.id, classroom.id);
+      await db.insert(activity).values({
+        id: generateId(21),
+        assignmentId: knowledgeZapAssignment.id,
+        classroomId: classroom.id,
+        name: json.name,
+        topicId: topicId,
+        type: ActivityType.KnowledgeZap,
+        order: 0,
+        points: 100,
+      })
+    }
+  }
+
+  console.log("Knowledge Zap creation complete");
+  console.log("--------------------------------");
+}
+
+export async function deleteKnowledgeZapAssignment(assignmentId: string) {
+  const assignment = await db.select().from(knowledgeZapAssignments).where(eq(knowledgeZapAssignments.id, assignmentId));
+  if(assignment.length === 0) {
+    console.log("Knowledge Zap assignment not found");
+    return;
+  }
+
+  const questionsToAssignment = await db.select().from(knowledgeZapQuestionToAssignment).where(eq(knowledgeZapQuestionToAssignment.assignmentId, assignmentId));
+  for(const questionToAssignment of questionsToAssignment) {
+
+    const question = await db.select().from(knowledgeZapQuestions).where(eq(knowledgeZapQuestions.id, questionToAssignment.questionId));
+
+    if(!question[0]?.id) {
+      console.log("Question not found", questionToAssignment.questionId);
+      continue;
+    }
+
+    if(question[0].type === KnowledgeZapQuestionType.MULTIPLE_CHOICE && question[0].questionId) {
+
+      for(const mcqId of question[0].questionId) {
+        const mcq = await db.select().from(multipleChoiceQuestions).where(eq(multipleChoiceQuestions.id, mcqId));
+        if(!mcq[0]?.id) {
+          console.log("Multiple choice question not found", mcqId);
+          continue;
+        }
+
+        console.log("Deleting multiple choice question attempts", mcq[0].question.substring(0, 30));
+        await db.delete(multipleChoiceAttempt).where(eq(multipleChoiceAttempt.questionId, mcqId));
+
+        console.log("Deleting multiple choice options", mcq[0].question.substring(0, 30));
+        await db.delete(multipleChoiceAnswerOptions).where(eq(multipleChoiceAnswerOptions.questionId, mcq[0].id));
+
+        console.log("Deleting multiple choice question", mcq[0].question.substring(0, 30));
+        await db.delete(multipleChoiceQuestions).where(eq(multipleChoiceQuestions.id, mcqId));
+      }
+    }
+
+    if(question[0].type === KnowledgeZapQuestionType.MATCHING && question[0].questionId) {
+      
+      for(const mqId of question[0].questionId) {
+        const mq = await db.select().from(matchingQuestions).where(eq(matchingQuestions.id, mqId));
+        if(!mq[0]?.id) {
+          console.log("Matching question not found", mq[0]?.id);
+          continue;
+        }
+
+        const attempts = await db.select().from(matchingAttempt).where(eq(matchingAttempt.questionId, mqId));
+        for(const attempt of attempts) {
+
+          console.log("Deleting matching attempt selection", mq[0].question.substring(0, 30));
+          await db.delete(matchingAttemptSelection).where(eq(matchingAttemptSelection.attemptId, attempt.id));
+
+          console.log("Deleting matching question attempt", mq[0].question.substring(0, 30));
+          await db.delete(matchingAttempt).where(eq(matchingAttempt.id, attempt.id));
+        }
+
+        console.log("Deleting matching options", mq[0].question.substring(0, 30));
+        await db.delete(matchingAnswerOptions).where(eq(matchingAnswerOptions.questionId, mq[0].id));
+
+        console.log("Deleting matching question", mq[0].question.substring(0, 30));
+        await db.delete(matchingQuestions).where(eq(matchingQuestions.id, mqId));
+      }
+    }
+
+    if(question[0].type === KnowledgeZapQuestionType.ORDERING && question[0].questionId) {
+      
+      for(const ordId of question[0].questionId) {
+        const ord = await db.select().from(orderingQuestions).where(eq(orderingQuestions.id, ordId));
+        if(!ord[0]?.id) {
+          console.log("Ordering question not found", ord[0]?.id);
+          continue;
+        }
+
+        const attempts = await db.select().from(orderingAttempt).where(eq(orderingAttempt.questionId, ordId));
+        for(const attempt of attempts) {
+
+          console.log("Deleting ordering attempt selection", ord[0].question.substring(0, 30));
+          await db.delete(orderingAttemptSelection).where(eq(orderingAttemptSelection.attemptId, attempt.id));
+
+          console.log("Deleting ordering question attempt", ord[0].question.substring(0, 30));
+          await db.delete(orderingAttempt).where(eq(orderingAttempt.id, attempt.id));
+        }
+
+        console.log("Deleting ordering options", ord[0].question.substring(0, 30));
+        await db.delete(orderingAnswerOptions).where(eq(orderingAnswerOptions.questionId, ord[0].id));
+
+        console.log("Deleting ordering question", ord[0].question.substring(0, 30));
+        await db.delete(orderingQuestions).where(eq(orderingQuestions.id, ordId));
+      }
+    }
+    
+    console.log("Deleting knowledge zap question attempts", question[0].question);
+    await db.delete(knowledgeZapQuestionAttempts).where(eq(knowledgeZapQuestionAttempts.questionId, question[0].id));
+    
+    console.log("Deleting knowledge zap question to assignment", questionToAssignment.id);
+    await db.delete(knowledgeZapQuestionToAssignment).where(eq(knowledgeZapQuestionToAssignment.id, questionToAssignment.id));
+
+    console.log("Deleting knowledge zap question", question[0].question);
+    await db.delete(knowledgeZapQuestions).where(eq(knowledgeZapQuestions.id, question[0].id));
+  }
+
+  const activities = await db.select().from(activity).where(eq(activity.assignmentId, assignmentId));
+  for(const act of activities) {
+    console.log("Deleting knowledge zap assignment attempts", act.id);
+    await db.delete(knowledgeZapAssignmentAttempts).where(eq(knowledgeZapAssignmentAttempts.activityId, act.id));
+
+    console.log("Deleting activity", act.id);
+    await db.delete(activity).where(eq(activity.id, act.id));
+  }
+
+  await db.delete(knowledgeZapAssignments).where(eq(knowledgeZapAssignments.id, assignmentId));
 }
