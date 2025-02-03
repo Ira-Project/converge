@@ -161,26 +161,27 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
 
     if(question.type === KnowledgeZapQuestionType.MULTIPLE_CHOICE) {
 
-      const variants = [];
-
-      for(const questionId of questionIds) {
-        const multipleChoiceQuestion = await ctx.db.query.multipleChoiceQuestions.findFirst({
-          where: (multipleChoiceQuestion, { eq }) => eq(multipleChoiceQuestion.id, questionId),
-          with: {
-            options: {
-              columns: {
-                id: true,
-                option: true,
-                imageUrl: true,
-              }
+      const multipleChoiceQuestions = await ctx.db.query.multipleChoiceQuestions.findMany({
+        where: (multipleChoiceQuestion, { inArray }) => inArray(multipleChoiceQuestion.id, questionIds),
+        with: {
+          options: {
+            columns: {
+              id: true,
+              option: true,
+              imageUrl: true,
             }
           }
-        });
-        if(multipleChoiceQuestion) {
-          multipleChoiceQuestion.options.sort(() => Math.random() - 0.5);
-          variants.push(multipleChoiceQuestion);
         }
-      }
+      });
+
+      const variants = multipleChoiceQuestions.map((question) => {
+        return {
+          id: question.id,
+          question: question.question,
+          imageUrl: question.imageUrl,
+          options: question.options.sort(() => Math.random() - 0.5),
+        }
+      })
 
       if(variants.length > 0) {
         questions.push({
@@ -195,23 +196,23 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
 
       const variants = [];
 
-      for(const questionId of questionIds) {
-        const matchingQuestion = await ctx.db.query.matchingQuestions.findFirst({
-          where: (matchingQuestion, { eq }) => eq(matchingQuestion.id, questionId),
-          with: {
-            options: true,
-          }
-        });
+      const matchingQuestions = await ctx.db.query.matchingQuestions.findMany({
+        where: (matchingQuestion, { inArray }) => inArray(matchingQuestion.id, questionIds),
+        with: {
+          options: true,
+        }
+      });
 
+      for(const matchingQuestion of matchingQuestions) {
         const optionAs = [];
         const optionBs = [];
 
-        for(const option of matchingQuestion?.options ?? []) {
+        for(const option of matchingQuestion.options) {
           optionAs.push(option.optionA);
           optionBs.push(option.optionB);
         }
 
-        if(matchingQuestion) variants.push({
+        variants.push({
           id: matchingQuestion.id,
           question: matchingQuestion.question,
           imageUrl: matchingQuestion.imageUrl,
@@ -231,27 +232,24 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
 
     if(question.type === KnowledgeZapQuestionType.ORDERING) {
 
-      const variants = [];
-
-      for(const questionId of questionIds) {
-        const orderingQuestion = await ctx.db.query.orderingQuestions.findFirst({
-          where: (orderingQuestion, { eq }) => eq(orderingQuestion.id, questionId),
-          with: {
-            options: {
-              columns: {
-                id: true,
-                option: true,
-              }
+      const orderingQuestions = await ctx.db.query.orderingQuestions.findMany({
+        where: (orderingQuestion, { inArray }) => inArray(orderingQuestion.id, questionIds),
+        with: {
+          options: {
+            columns: {
+              id: true,
+              option: true,
             }
           }
-        });
-        
-        // Randomize the options        
-        if(orderingQuestion) {
-          orderingQuestion.options.sort(() => Math.random() - 0.5);
-          variants.push(orderingQuestion);
         }
-      }
+      });
+      
+      const variants = orderingQuestions.map((question) => {
+        return {
+          ...question,
+          options: question.options.sort(() => Math.random() - 0.5),
+        }
+      })
 
       if(variants.length > 0) {
         questions.push({
