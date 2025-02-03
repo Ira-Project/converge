@@ -21,7 +21,7 @@ const StepOption: React.FC<StepOptionProps> = ({ step, selected, completed, imag
         boxShadow: '4px 4px 8px rgba(225, 246, 242, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
       }}
     >
-      <div className="mx-auto text-center w-full leading-8">
+      <div className="mx-auto text-center w-full">
         <FormattedText text={step} />
         {image && <Image src={image} alt={step} width={100} height={100} />}
       </div>

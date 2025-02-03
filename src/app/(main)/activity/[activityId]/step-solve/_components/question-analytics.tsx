@@ -33,7 +33,7 @@ const QuestionAnalytics = async ({ activityId }: { activityId: string }) => {
         {data.map((questionData, index) => (
           <TabsContent key={`q${index + 1}`} value={`q${index + 1}`}>
             <div className="flex flex-col gap-3">
-              <p className="text-sm leading-8 line-clamp-2">
+              <p className="text-sm line-clamp-2">
                 <FormattedText text={questionData.questionText} />
               </p>
               {

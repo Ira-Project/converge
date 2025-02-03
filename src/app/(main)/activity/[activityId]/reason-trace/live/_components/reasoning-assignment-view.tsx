@@ -23,6 +23,7 @@ import { Input } from '@/components/ui/input';
 import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
 import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationNext, PaginationLink } from "@/components/ui/pagination"
+import { ImageModal } from '@/components/image-modal';
 
 interface ReasoningAssignmentViewProps {
   reasoningAssignment: RouterOutputs["reasonTrace"]["get"];
@@ -347,11 +348,19 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
               </p>
               <div className="grid grid-cols-3 gap-8">
                 {/* Question Section */}
-                <div className="space-y-4">
+                <div className="space-y-4 h-full">
                   <p className="font-semibold text-center">Question</p>
-                  <p className="text-center text-sm leading-8 h-full my-auto">
+                  <p className="text-center text-sm my-auto">
                     <FormattedText text={currentQuestion?.question.questionText ?? ''} />
                   </p>
+                  <div className="mx-auto text-center text-muted-foreground">
+                    {currentQuestion?.question.questionImage && (
+                      <ImageModal
+                        imageSrc={currentQuestion.question.questionImage}
+                        label="View Question Image"
+                      />
+                    )}
+                  </div>
                 </div>
 
                 {/* Reasoning Steps Section */}

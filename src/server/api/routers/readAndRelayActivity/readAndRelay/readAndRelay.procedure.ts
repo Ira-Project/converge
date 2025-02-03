@@ -2,12 +2,12 @@ import { createTRPCRouter, protectedProcedure } from "../../../trpc";
 import * as services from "./readAndRelay.service";
 import * as inputs from "./readAndRelay.input";
 
-export const learnByTeachingRouter = createTRPCRouter({
-  create: protectedProcedure
+export const readAndRelayRouter = createTRPCRouter({
+  createAttempt: protectedProcedure
     .input(inputs.createAttemptSchema)
     .mutation(({ ctx, input }) => services.createAttempt(ctx, input)),
 
-  submit: protectedProcedure
+  submitAttempt: protectedProcedure
     .input(inputs.submitAttemptSchema)  
     .mutation(({ ctx, input }) => services.submitAttempt(ctx, input)),
   

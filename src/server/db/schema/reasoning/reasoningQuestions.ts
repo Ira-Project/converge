@@ -125,6 +125,7 @@ export const reasoningPathwayStep = pgTable(
     pathwayId: varchar("pathway_id", { length: 21 }).references(() => reasoningPathway.id),
     answerOptionId: varchar("answer_option_id", { length: 21 }).notNull().references(() => reasoningAnswerOptions.id),
     stepNumber: integer("step_number").notNull(),
+    stepNumberList: integer("step_number_list").array(),
     isCorrect: boolean("is_correct").notNull(),
     replacementOptionId: varchar("replacement_option_id", { length: 21 }).references(() => reasoningAnswerOptions.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
