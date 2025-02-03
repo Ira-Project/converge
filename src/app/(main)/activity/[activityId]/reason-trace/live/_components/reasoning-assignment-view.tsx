@@ -351,7 +351,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                 {/* Question Section */}
                 <div className="space-y-4 h-full">
                   <p className="font-semibold text-center">Question</p>
-                  <p className="text-center text-sm my-auto">
+                  <p className="text-center my-auto">
                     <FormattedText text={currentQuestion?.question.questionText ?? ''} />
                   </p>
                   <div className="mx-auto text-center text-muted-foreground">
@@ -403,7 +403,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                 {/* Answer Section */}
                 <div className="space-y-4 h-full">
                   <h3 className="font-semibold text-center">Incorrectly Computed Answer</h3>
-                  <p className="text-lg text-center my-auto h-full">
+                  <p className="text-center my-auto h-full">
                     <FormattedText text={currentQuestion?.question.answerText ?? ''} />
                   </p>
                 </div>

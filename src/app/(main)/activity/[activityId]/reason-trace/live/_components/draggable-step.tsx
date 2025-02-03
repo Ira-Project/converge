@@ -9,7 +9,7 @@ interface DraggableStepProps {
 
 const DraggableStep: React.FC<DraggableStepProps> = ({ step, onDragStart }) => (
   <motion.div
-    className="bg-rose-50 px-4 py-2 my-auto rounded-3xl text-sm cursor-move min-h-[40px]"
+    className="bg-rose-50 px-4 py-2 my-auto rounded-3xl text-sm cursor-move min-h-[56px] flex items-center justify-center"
     whileHover={{ scale: 1.02 }}
     whileDrag={{ scale: 1.05, opacity: 0.8 }}
     style={{
