@@ -48,7 +48,7 @@ export default function ReadAndRelayTutorialModal({ classroom, topic }: Props) {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <div className="flex flex-row items-center text-xl font-semibold my-2 text-amber-700">
+          <div className="flex flex-row items-center text-xl font-semibold my-2 text-fuchsia-700">
             {topic}
           </div>
         </DialogTitle>
@@ -57,11 +57,11 @@ export default function ReadAndRelayTutorialModal({ classroom, topic }: Props) {
         </DialogDescription>
         <div className="px-16">
           <div className="relative pb-[56%] h-0 border-0">
-            <iframe 
+            {/* <iframe 
               src={tutorialUrl} 
               className="absolute w-full h-full" 
               allowFullScreen
-            />
+            /> */}
           </div>
         </div>
         <DialogFooter>

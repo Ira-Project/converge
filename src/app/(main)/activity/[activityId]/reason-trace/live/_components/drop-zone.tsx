@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import FormattedText from '@/components/formatted-text';
 import { ReasoningPathwayStepResult } from '@/lib/constants';
+import { Tooltip, TooltipTrigger } from '@/components/ui/tooltip';
+import { TooltipContent } from '@radix-ui/react-tooltip';
 
 export const getPathwayStepColor = (result: ReasoningPathwayStepResult, step: Step | null): string => {
   if (!step) {
@@ -51,16 +53,14 @@ const DropZone: React.FC<DropZoneProps> = ({
     initial="idle"
     animate={isDragging ? "hover" : "idle"}
     className={`
-      h-12
+      h-14
       px-3
       py-2
       rounded-3xl
       transition-all
       flex
       items-center
-      leading-6
       text-sm
-      line-clamp-1
       ${getPathwayStepColor(status, step)}
       ${isDragging ? 'border-gray-400 bg-gray-100' : 'border-gray-300'}
       hover:border-gray-400
@@ -87,9 +87,18 @@ const DropZone: React.FC<DropZoneProps> = ({
     draggable={!!step}
     onDragStartCapture={(e: React.DragEvent<HTMLDivElement>) => step && onDragStart(e, step, index)}
   >
-    <div className="mx-auto w-full text-center line-clamp-1">
-      <FormattedText  text={step?.text ??''} />
-    </div>
+    <Tooltip>
+      <TooltipTrigger>
+        <div className="mx-auto w-full text-center line-clamp-2">
+          <FormattedText text={step?.text ??''} />
+        </div>
+      </TooltipTrigger>
+      <TooltipContent className="bg-black bg-opacity-80 text-white text-xs p-2 rounded-md max-w-64">
+        <div>
+          <FormattedText text={step?.text ??''} />
+        </div>
+      </TooltipContent>
+    </Tooltip>
   </motion.div>
 );
 

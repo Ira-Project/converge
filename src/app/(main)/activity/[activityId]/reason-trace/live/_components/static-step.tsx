@@ -1,6 +1,8 @@
 import React from 'react';
 import FormattedText from '@/components/formatted-text';
 import { ReasoningPathwayStepResult } from '@/lib/constants';
+import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
+import { TooltipArrow } from '@radix-ui/react-tooltip';
 
 const getPathwayStepColor = (result: ReasoningPathwayStepResult): string => {
   switch (result) {
@@ -22,15 +24,24 @@ const StaticStep: React.FC<{ text: string; status: ReasoningPathwayStepResult }>
     flex
     items-center
     text-sm
-    line-clamp-1
     px-4 py-2 
     my-auto 
     rounded-3xl
     ${getPathwayStepColor(status)}
   `}>
-    <div className="mx-auto text-center w-full leading-8 line-clamp-1">
-      <FormattedText text={text ?? ''} />
-    </div>
+    <Tooltip>
+      <TooltipTrigger>
+        <div className="mx-auto w-full text-center line-clamp-2">
+          <FormattedText text={text ??''} />
+        </div>
+      </TooltipTrigger>
+      <TooltipArrow />
+      <TooltipContent className="bg-black bg-opacity-80 text-white text-xs p-2 rounded-md max-w-16">
+        <div>
+          <FormattedText text={text ??''} />
+        </div>
+      </TooltipContent>
+    </Tooltip>
   </div>
 );
 

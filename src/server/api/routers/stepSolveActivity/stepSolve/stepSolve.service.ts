@@ -18,7 +18,7 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
     throw new Error("Assignment not found");
   }
 
-  return await ctx.db.query.stepSolveAssignments.findFirst({
+  const assignment = await ctx.db.query.stepSolveAssignments.findFirst({
     where: (table, { eq }) => eq(table.id, assignmentId),
     columns: {
       id: true,
@@ -70,6 +70,17 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
     }
   });
 
+  if (!assignment) {
+    throw new Error("Assignment not found");
+  }
+
+  // Randomize the order of questions
+  const shuffledQuestions = [...assignment.stepSolveQuestions].sort(() => Math.random() - 0.5);
+  
+  return {
+    ...assignment,
+    stepSolveQuestions: shuffledQuestions
+  };
 }
 
 export const createStepSolveAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: CreateStepSolveAssignmentAttemptInput) => {

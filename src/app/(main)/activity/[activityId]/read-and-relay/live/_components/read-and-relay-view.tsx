@@ -169,7 +169,7 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
       </div>
       <div className="grid grid-cols-[0.9fr_1.1fr] h-[calc(100vh-48px)] overflow-y-hidden">
         <div className="flex flex-col gap-4 w-full px-8 py-8 overflow-y-hidden border-r-slate-200 border-r bg-amber-50">
-          <ReadingPassage readingPassage={readingPassage}/>
+          <ReadingPassage content={readingPassage}/>
         </div>
         <div className="flex flex-col gap-4 w-full px-8 py-8 h-full overflow-y-hidden">
           <div className="flex flex-col gap-2"> 
@@ -188,7 +188,7 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
                         id={question.id.toString()}
                         questionText={question.questionText}
                         questionImage={question.questionImage ?? undefined}
-                        //answerText={question.answerText} 
+                        // answerText={question.answerText} 
                         image={question.image}
                         imageHeight={question.imageHeight}
                         imageWidth={question.imageWidth}

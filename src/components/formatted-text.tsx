@@ -1,9 +1,7 @@
 "use client";
 
 import { LATEX_DELIMITER } from "@/lib/constants";
-import { addStyles, StaticMathField } from "react-mathquill";
-
-addStyles();
+import katex from "katex";
 
 export default function FormattedText({ text }: { text: string}) { 
 
@@ -14,11 +12,14 @@ export default function FormattedText({ text }: { text: string}) {
       {textList.map((text, index) => {
         if (index % 2 === 1) {
           return (
-            <StaticMathField 
+            <span
               key={index}
-              contentEditable={false}>
-              {text}
-            </StaticMathField>
+              dangerouslySetInnerHTML={{
+                __html: katex.renderToString(text, {
+                  throwOnError: false,
+                })
+              }}
+            />
           )
         }
         return <span key={index}>{text}</span>

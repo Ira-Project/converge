@@ -22,6 +22,8 @@ export const viewport: Viewport = {
   ],
 };
 
+import 'katex/dist/katex.min.css';
+
 export default function RootLayout({
   children,
 }: {

@@ -170,7 +170,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
 
   return (
     <div className="flex flex-col gap-8">
-      <p className="text-xl text-center leading-8"> 
+      <p className="text-xl text-center"> 
         <FormattedText text={question} />
       </p>
       {imageUrl && (

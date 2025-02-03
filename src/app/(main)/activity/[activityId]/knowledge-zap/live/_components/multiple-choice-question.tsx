@@ -69,7 +69,7 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
 
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-xl text-center leading-8"> 
+      <p className="text-xl text-center"> 
         <FormattedText text={question} />
       </p>
       {imageUrl && (
