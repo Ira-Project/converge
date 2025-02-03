@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
 import { and, eq } from "drizzle-orm";
@@ -145,7 +146,7 @@ export async function createReasoningAssignment() {
               pathwayId: pathwayId,
               answerOptionId: step.answerOptionId,
               stepNumber: step.stepNumber,
-              stepNumberList: step?.stepNumberList ?? [],
+              // stepNumberList: step?.stepNumberList ?? [],
               isCorrect: step.isCorrect,
               replacementOptionId: step.replacementOptionId,
             })
