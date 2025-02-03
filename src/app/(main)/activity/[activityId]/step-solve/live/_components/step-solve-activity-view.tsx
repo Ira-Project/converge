@@ -162,74 +162,90 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
         </div>
       </div>
       <div className="w-full mx-auto bg-teal-50 min-h-[calc(100vh-48px)]">
-        <Card className="m-16 px-12 py-8">
-          <CardContent className="flex flex-col gap-8">
-            <>
-              <div className="text-center text-lg">
-                <FormattedText text={currentQuestion?.q.questionText ?? ""} />
-                <div className="flex justify-center">
-                  {
-                    currentQuestion?.q.questionImage &&
-                    <Image
-                      src={currentQuestion.q.questionImage}
-                      alt="Question Image"
-                      width={500}
-                      height={500}
-                    />
-                  }
-                </div>
-              </div>
-            </>
-
-            {
-              currentQuestion?.q.steps.map((step) => 
-                step.stepNumber <= (currentState?.step ?? 0) && (
-                  <div key={step.id}>
-                    <StepSolveStepComponent
-                      id={step.id}
-                      stepNumber={step.stepNumber}
-                      stepText={step.stepText}
-                      stepTextPart2={step.stepTextPart2}
-                      stepImage={step.stepImage}
-                      attemptId={stepSolveAttemptId}
-                      options={step.opt}
-                      answer={step.stepSolveAnswer}
-                      handleSubmitAnswer={handleSubmitAnswer}
-                      isCompleted={(currentState?.step ?? 0) > step.stepNumber}
-                      isCorrect={currentState?.currentStepCorrect}
-                      isLoading={checkStepMutation.isLoading}
-                      isDisabled={checkStepMutation.isLoading}
-                      handleContinue={handleContinue}
-                      isLast={step.stepNumber === currentQuestion.q.steps.length}
-                    />
+        <div className="m-16">
+          {/* Question Progress Indicators */}
+          <div className="flex justify-center gap-4 mb-4">
+            {stepSolveAssignment?.stepSolveQuestions?.map((_, index) => (
+              <div
+                key={index}
+                className={`w-4 h-4 rounded-full flex items-center justify-center border-2 
+                  ${index === currentQuestionIndex 
+                    ? 'border-teal-600 bg-teal-600 text-white' 
+                    : 'border-teal-600 bg-white'
+                  }`}
+              />
+            ))}
+          </div>
+          <Card className="px-12 py-8">
+            <CardContent className="flex flex-col gap-8">
+              <>
+                <div className="text-center text-lg">
+                  <FormattedText text={currentQuestion?.q.questionText ?? ""} />
+                  <div className="flex justify-center">
                     {
-                      step.stepNumber < (currentState?.step ?? 0) && 
-                      step.stepNumber !== currentQuestion.q.steps.length &&
-                      <Separator className="my-4"/>
+                      currentQuestion?.q.questionImage &&
+                      <Image
+                        src={currentQuestion.q.questionImage}
+                        alt="Question Image"
+                        width={500}
+                        height={500}
+                      />
                     }
                   </div>
-                )
-              )
-            }
+                </div>
+              </>
 
-            <div className="flex justify-end mt-8">
+              {
+                currentQuestion?.q.steps.map((step) => 
+                  step.stepNumber <= (currentState?.step ?? 0) && (
+                    <div key={step.id}>
+                      <StepSolveStepComponent
+                        id={step.id}
+                        stepNumber={step.stepNumber}
+                        stepText={step.stepText}
+                        stepTextPart2={step.stepTextPart2}
+                        stepImage={step.stepImage}
+                        attemptId={stepSolveAttemptId}
+                        options={step.opt}
+                        answer={step.stepSolveAnswer}
+                        handleSubmitAnswer={handleSubmitAnswer}
+                        isCompleted={(currentState?.step ?? 0) > step.stepNumber}
+                        isCorrect={currentState?.currentStepCorrect}
+                        isLoading={checkStepMutation.isLoading}
+                        isDisabled={checkStepMutation.isLoading}
+                        handleContinue={handleContinue}
+                        isLast={step.stepNumber === currentQuestion.q.steps.length}
+                      />
+                      {
+                        step.stepNumber < (currentState?.step ?? 0) && 
+                        step.stepNumber !== currentQuestion.q.steps.length &&
+                        <Separator className="my-4"/>
+                      }
+                    </div>
+                  )
+                )
+              }
               {currentState && currentState.step > (currentQuestion?.q.steps.length ?? 0) && (
                 currentQuestionIndex < (stepSolveAssignment?.stepSolveQuestions?.length ?? 0) - 1 ? (
-                  <Button
-                    variant="link"
-                    onClick={() => setCurrentQuestionIndex(prev => prev + 1)}
-                  >
-                    Next Question
-                  </Button>
+                  <div className="flex justify-end mt-8">
+                    <Button
+                      variant="link"
+                      onClick={() => setCurrentQuestionIndex(prev => prev + 1)}
+                    >
+                      Next Question
+                    </Button>
+                  </div>
                 ) : (
-                  <p className="text-sm text-muted-foreground">
-                    You've completed all questions. Please submit your assignment.
-                  </p>
+                  <div className="flex justify-end mt-8">
+                    <p className="text-sm text-muted-foreground">
+                      You've completed all questions. Please submit your assignment.
+                    </p>
+                  </div>
                 )
               )}
-            </div>
-          </CardContent>
-        </Card>
+            </CardContent>
+          </Card>
+        </div>
       </div>
     </div>
   );

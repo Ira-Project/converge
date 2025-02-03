@@ -18,7 +18,7 @@ const DraggableStep: React.FC<DraggableStepProps> = ({ step, onDragStart }) => (
     draggable
     onDragStartCapture={(e: React.DragEvent<HTMLDivElement>) => onDragStart(e, step, null)}
   >
-    <div className="mx-auto text-center w-full leading-8">
+    <div className="mx-auto text-center w-full">
       <FormattedText text={step} />
     </div>
   </motion.div>

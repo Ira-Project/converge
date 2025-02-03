@@ -69,7 +69,6 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
       }
     }
   });
-
 }
 
 export const createStepSolveAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: CreateStepSolveAssignmentAttemptInput) => {

@@ -29,6 +29,7 @@ export const part1EvaluatePathway = async (ctx: ProtectedTRPCContext, input: Par
           id: true,
           answerOptionId: true,
           stepNumber: true,
+          stepNumberList: true,
           isCorrect: true,
         }
       }
@@ -46,24 +47,20 @@ export const part1EvaluatePathway = async (ctx: ProtectedTRPCContext, input: Par
     
     let result = ReasoningPathwayStepResult.WRONG;
     
-    // First check if the option exists in the correct position
+    // First check if the option exists in any of the correct positions
     for (const pathway of reasoningPathways) {
-      const step = pathway.steps.find((step) => step.stepNumber === index + 1);
-      if (step?.answerOptionId === optionId) {
-        result = ReasoningPathwayStepResult.CORRECT;
-        reasoningPathways = reasoningPathways.filter((p) => p.id === pathway.id);
-        pathwayId = pathway.id;
-        break;
-      }
-    }
-
-    // If not correct, check if it exists in a different position
-    if (result === ReasoningPathwayStepResult.WRONG) {
-      for (const pathway of reasoningPathways) {
-        const existsInDifferentPosition = pathway.steps.some(
-          (step) => step.answerOptionId === optionId && step.stepNumber !== index + 1
-        );
-        if (existsInDifferentPosition) {
+      const matchingStep = pathway.steps.find(step => step.answerOptionId === optionId);
+      if (matchingStep) {
+        // If the step exists, check if it's in the correct position
+        if(matchingStep.stepNumberList?.includes(index + 1)) {
+          result = ReasoningPathwayStepResult.CORRECT;
+          reasoningPathways = reasoningPathways.filter((p) => p.id === pathway.id);
+          pathwayId = pathway.id;
+        } else if (matchingStep.stepNumber === index + 1) {
+          result = ReasoningPathwayStepResult.CORRECT;
+          reasoningPathways = reasoningPathways.filter((p) => p.id === pathway.id);
+          pathwayId = pathway.id;
+        } else {
           result = ReasoningPathwayStepResult.WRONG_POSITION;
         }
       }
