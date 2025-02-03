@@ -46,18 +46,20 @@ export const checkMatchingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
     isCorrect: correct ?? false,
   });
 
-  for (const answerPair of answer) {
-    const option1Id = matchingQuestionOptions?.find((option) => option.optionA === answerPair.optionA)?.id;
-    const option2Id = matchingQuestionOptions?.find((option) => option.optionB === answerPair.optionB)?.id;
-    if (!option1Id || !option2Id) continue;
-    
-    await ctx.db.insert(matchingAttemptSelection).values({
-      id: generateId(21),
-      attemptId: matchingAttemptId,
-      option1Id: option1Id,
-      option2Id: option2Id,
-    });
-  }
+  await Promise.all(
+    answer.map(async (answerPair) => {
+      const option1Id = matchingQuestionOptions?.find((option) => option.optionA === answerPair.optionA)?.id;
+      const option2Id = matchingQuestionOptions?.find((option) => option.optionB === answerPair.optionB)?.id;
+      if (!option1Id || !option2Id) return;
+      
+      return ctx.db.insert(matchingAttemptSelection).values({
+        id: generateId(21),
+        attemptId: matchingAttemptId,
+        option1Id: option1Id,
+        option2Id: option2Id,
+      });
+    })
+  );
 
   return {
     correct: correct ?? false,
@@ -110,7 +112,15 @@ export const checkOrderingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
     }
   });
 
-  const correct = answer.every((option) => option.order === orderingQuestion?.options.findIndex((o) => o.option === option.option));
+  let correct = true;
+  
+  for (const userAnswer of input.answer) {
+    const correctOption = orderingQuestion?.options.find(o => o.option === userAnswer?.option);
+
+    if (userAnswer.order !== correctOption?.order) {
+      correct = false;
+    }
+  }
 
   const questionAttemptId = generateId(21);
   await ctx.db.insert(knowledgeZapQuestionAttempts).values({
@@ -128,19 +138,20 @@ export const checkOrderingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
     isCorrect: correct ?? false,
   });
 
-  for (const option of answer) {
+  await Promise.all(
+    answer.map(async (option) => {
+      const optionOrder = orderingQuestion?.options.find((o) => o.option === option.option)?.order;
+      const optionCorrect = optionOrder === option.order;
 
-    const optionOrder = orderingQuestion?.options.find((o) => o.option === option.option)?.order;
-    const optionCorrect = optionOrder === option.order;
-
-    await ctx.db.insert(orderingAttemptSelection).values({
-      id: generateId(21),
-      attemptId: orderingAttemptId,
-      optionId: option.id,
-      order: option.order,
-      isCorrect: optionCorrect,
-    });
-  }
+      return ctx.db.insert(orderingAttemptSelection).values({
+        id: generateId(21),
+        attemptId: orderingAttemptId,
+        optionId: option.id,
+        order: option.order,
+        isCorrect: optionCorrect,
+      });
+    })
+  );
 
   return {
     correct: correct ?? false,

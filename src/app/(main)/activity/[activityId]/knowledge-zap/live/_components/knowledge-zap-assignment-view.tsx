@@ -76,6 +76,9 @@ const renderQuestion = (
       const orderingVariant = randomVariant as OrderingVariant;
       return (
         <OrderingQuestion
+          topLabel={orderingVariant.topLabel}
+          bottomLabel={orderingVariant.bottomLabel}
+          isDescending={orderingVariant.isDescending}
           assignmentAttemptId={assignmentAttemptId}
           orderingQuestionId={orderingVariant.id}
           questionId={question.id}

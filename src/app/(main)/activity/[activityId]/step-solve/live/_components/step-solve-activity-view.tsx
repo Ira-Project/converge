@@ -9,10 +9,10 @@ import { type RouterOutputs } from '@/trpc/shared';
 import { api } from "@/trpc/react";
 import { Roles } from "@/lib/constants";
 import { Separator } from '@/components/ui/separator';
-import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationNext, PaginationLink } from "@/components/ui/pagination"
 import StepSolveStepComponent from './step-component';
 import FormattedText from '@/components/formatted-text';
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
 
 interface StepSolveActivityViewProps {
   stepSolveAssignment: RouterOutputs["stepSolve"]["getAssignment"];
@@ -212,42 +212,21 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
               )
             }
 
-            {/* Navigation Arrows */}
-            <div className="flex justify-between mt-8">
-              <Pagination>
-                <PaginationContent>
-                  {
-                    currentQuestionIndex > 0 && (
-                      <PaginationItem>
-                        <PaginationPrevious 
-                          onClick={() => setCurrentQuestionIndex(prev => prev - 1)}
-                        />
-                      </PaginationItem>
-                    )
-                  }
-                  {
-                    stepSolveAssignment?.stepSolveQuestions.map((question, index) => (
-                      <PaginationItem key={index}>
-                        <PaginationLink 
-                          onClick={() => setCurrentQuestionIndex(index)}
-                          isActive={currentQuestionIndex === index}
-                        >
-                          {index + 1}
-                        </PaginationLink>
-                      </PaginationItem>
-                    ))
-                  }
-                  {
-                    currentQuestionIndex < (stepSolveAssignment?.stepSolveQuestions?.length ?? 0) - 1 && (
-                      <PaginationItem>
-                        <PaginationNext 
-                          onClick={() => setCurrentQuestionIndex(prev => prev + 1)}
-                        />
-                      </PaginationItem>
-                    )
-                  }
-                </PaginationContent>
-              </Pagination>
+            <div className="flex justify-end mt-8">
+              {currentState && currentState.step > (currentQuestion?.q.steps.length ?? 0) && (
+                currentQuestionIndex < (stepSolveAssignment?.stepSolveQuestions?.length ?? 0) - 1 ? (
+                  <Button
+                    variant="link"
+                    onClick={() => setCurrentQuestionIndex(prev => prev + 1)}
+                  >
+                    Next Question
+                  </Button>
+                ) : (
+                  <p className="text-sm text-muted-foreground">
+                    You've completed all questions. Please submit your assignment.
+                  </p>
+                )
+              )}
             </div>
           </CardContent>
         </Card>
