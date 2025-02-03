@@ -29,19 +29,9 @@ const StaticStep: React.FC<{ text: string; status: ReasoningPathwayStepResult }>
     rounded-3xl
     ${getPathwayStepColor(status)}
   `}>
-    <Tooltip>
-      <TooltipTrigger>
-        <div className="mx-auto w-full text-center line-clamp-2">
-          <FormattedText text={text ??''} />
-        </div>
-      </TooltipTrigger>
-      <TooltipArrow />
-      <TooltipContent className="bg-black bg-opacity-80 text-white text-xs p-2 rounded-md max-w-16">
-        <div>
-          <FormattedText text={text ??''} />
-        </div>
-      </TooltipContent>
-    </Tooltip>
+    <div className="mx-auto w-full text-center line-clamp-2">
+      <FormattedText text={text ??''} />
+    </div>
   </div>
 );
 

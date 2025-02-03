@@ -87,18 +87,9 @@ const DropZone: React.FC<DropZoneProps> = ({
     draggable={!!step}
     onDragStartCapture={(e: React.DragEvent<HTMLDivElement>) => step && onDragStart(e, step, index)}
   >
-    <Tooltip>
-      <TooltipTrigger>
-        <div className="mx-auto w-full text-center line-clamp-2">
-          <FormattedText text={step?.text ??''} />
-        </div>
-      </TooltipTrigger>
-      <TooltipContent className="bg-black bg-opacity-80 text-white text-xs p-2 rounded-md max-w-64">
-        <div>
-          <FormattedText text={step?.text ??''} />
-        </div>
-      </TooltipContent>
-    </Tooltip>
+    <div className="mx-auto w-full text-center line-clamp-2">
+      <FormattedText text={step?.text ??''} />
+    </div>
   </motion.div>
 );
 
