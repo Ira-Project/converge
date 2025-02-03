@@ -123,9 +123,14 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
 }
 
 export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: GetKnowledgeZapActivityInput) => {
+
+  console.log("Start time: ", new Date().toISOString());
+  const startTime = new Date().getTime();
   const activity = await ctx.db.query.activity.findFirst({
     where: (activity, { eq }) => eq(activity.id, input.activityId),
   });
+
+  console.log("Activity found: ", new Date().toISOString(), "Time Taken: ", new Date().getTime() - startTime);
 
   const assignmentId = activity?.assignmentId;
 
@@ -144,23 +149,24 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
     }
   });
 
+  console.log("Assignment found: ", new Date().toISOString(), "Time Taken: ", new Date().getTime() - startTime);
+
   if(!assignment) {
     throw new Error("Assignment not found");
   }
 
-  const questions:KnowledgeZapQuestionObjects[] = []
+  const questions: KnowledgeZapQuestionObjects[] = [];
 
-  for(const questionToAssignment of assignment.questionToAssignment) {
-    
+  // Convert the loop to use Promise.all for parallel execution
+  await Promise.all(assignment.questionToAssignment.map(async (questionToAssignment) => {
     const question = questionToAssignment.question;
     const questionIds = question.questionId;
 
-    if(!questionIds) {
-      continue;
-    }
+    if (!questionIds) return;
 
-    if(question.type === KnowledgeZapQuestionType.MULTIPLE_CHOICE) {
+    let questionObject: KnowledgeZapQuestionObjects | null = null;
 
+    if (question.type === KnowledgeZapQuestionType.MULTIPLE_CHOICE) {
       const multipleChoiceQuestions = await ctx.db.query.multipleChoiceQuestions.findMany({
         where: (multipleChoiceQuestion, { inArray }) => inArray(multipleChoiceQuestion.id, questionIds),
         with: {
@@ -174,28 +180,21 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
         }
       });
 
-      const variants = multipleChoiceQuestions.map((question) => {
-        return {
-          id: question.id,
-          question: question.question,
-          imageUrl: question.imageUrl,
-          options: question.options.sort(() => Math.random() - 0.5),
-        }
-      })
-
-      if(variants.length > 0) {
-        questions.push({
+      if (multipleChoiceQuestions.length > 0) {
+        questionObject = {
           id: question.id,
           type: KnowledgeZapQuestionType.MULTIPLE_CHOICE,
-          variants: variants,
-        });
+          variants: multipleChoiceQuestions.map((q) => ({
+            id: q.id,
+            question: q.question,
+            imageUrl: q.imageUrl,
+            options: q.options.sort(() => Math.random() - 0.5),
+          })),
+        };
       }
     }
 
-    if(question.type === KnowledgeZapQuestionType.MATCHING) {
-
-      const variants = [];
-
+    if (question.type === KnowledgeZapQuestionType.MATCHING) {
       const matchingQuestions = await ctx.db.query.matchingQuestions.findMany({
         where: (matchingQuestion, { inArray }) => inArray(matchingQuestion.id, questionIds),
         with: {
@@ -203,35 +202,22 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
         }
       });
 
-      for(const matchingQuestion of matchingQuestions) {
-        const optionAs = [];
-        const optionBs = [];
-
-        for(const option of matchingQuestion.options) {
-          optionAs.push(option.optionA);
-          optionBs.push(option.optionB);
-        }
-
-        variants.push({
-          id: matchingQuestion.id,
-          question: matchingQuestion.question,
-          imageUrl: matchingQuestion.imageUrl,
-          optionAs: optionAs.sort(() => Math.random() - 0.5),
-          optionBs: optionBs.sort(() => Math.random() - 0.5),
-        });
-      }
-
-      if(variants.length > 0) {
-        questions.push({
+      if (matchingQuestions.length > 0) {
+        questionObject = {
           id: question.id,
           type: KnowledgeZapQuestionType.MATCHING,
-          variants: variants,
-        });
+          variants: matchingQuestions.map((matchingQuestion) => ({
+            id: matchingQuestion.id,
+            question: matchingQuestion.question,
+            imageUrl: matchingQuestion.imageUrl,
+            optionAs: matchingQuestion.options.map(o => o.optionA).sort(() => Math.random() - 0.5),
+            optionBs: matchingQuestion.options.map(o => o.optionB).sort(() => Math.random() - 0.5),
+          })),
+        };
       }
     }
 
-    if(question.type === KnowledgeZapQuestionType.ORDERING) {
-
+    if (question.type === KnowledgeZapQuestionType.ORDERING) {
       const orderingQuestions = await ctx.db.query.orderingQuestions.findMany({
         where: (orderingQuestion, { inArray }) => inArray(orderingQuestion.id, questionIds),
         with: {
@@ -243,33 +229,33 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
           }
         }
       });
-      
-      const variants = orderingQuestions.map((question) => {
-        return {
-          ...question,
-          options: question.options.sort(() => Math.random() - 0.5),
-        }
-      })
 
-      if(variants.length > 0) {
-        questions.push({
+      if (orderingQuestions.length > 0) {
+        questionObject = {
           id: question.id,
           type: KnowledgeZapQuestionType.ORDERING,
-          variants: variants,
-        });
+          variants: orderingQuestions.map((q) => ({
+            ...q,
+            options: q.options.sort(() => Math.random() - 0.5),
+          })),
+        };
       }
     }
 
-  }
+    if (questionObject) {
+      questions.push(questionObject);
+    }
+  }));
 
   // Randomly sort the questions array before returning
   questions.sort(() => Math.random() - 0.5);
+
+  console.log("Questions sorted: ", new Date().toISOString(), "Time Taken: ", new Date().getTime() - startTime);
 
   return {
     ...assignment,
     questions,
   };
-
 }
 
 export const getHeatMap = async (ctx: ProtectedTRPCContext, input: GetHeatMapInput) => {
