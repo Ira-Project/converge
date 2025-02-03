@@ -10,6 +10,7 @@ export type Part1EvaluatePathwayInput = z.infer<typeof part1EvaluatePathwaySchem
 export const part2CorrectPathwaySchema = z.object({
   attemptId: z.string(),
   questionId: z.string(),
+  originalOptionIds: z.array(z.string()),
   optionIds: z.array(z.string()),
   pathwayId: z.string(),
 });

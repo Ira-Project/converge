@@ -26,7 +26,7 @@
         },
         {
           "id": "5219fba8dfd849f09e656",
-          "optionText": "Calculate entropy gain of the ice using the formula $!$\\Delta S = \\frac{\\Delta Q}{T}$!$, where $!$T=273 K$!$",
+          "optionText": "Calculate entropy gain of ice using the formula $!$\\Delta S = \\frac{\\Delta Q}{T}$!$, where $!$T=273 K$!$",
           "optionImage": ""
         },
         {
@@ -76,14 +76,22 @@
             {
               "stepNumber": 2,
               "isCorrect": false,
-              "answerOptionId": "5219fba8dfd849f09e656",
-              "replacementOptionId": "1daba6a87c47454d8a215"
+              "answerOptionId": "1daba6a87c47454d8a215",
+              "stepNumberList": [
+                "2",
+                "3"
+              ],
+              "replacementOptionId": "5219fba8dfd849f09e656"
             },
             {
               "stepNumber": 3,
               "isCorrect": false,
-              "answerOptionId": "45c59369657b4346be933",
-              "replacementOptionId": "92fb7e4d62d74405920f2"
+              "answerOptionId": "92fb7e4d62d74405920f2",
+              "stepNumberList": [
+                "3",
+                "2"
+              ],
+              "replacementOptionId": "45c59369657b4346be933"
             },
             {
               "stepNumber": 4,

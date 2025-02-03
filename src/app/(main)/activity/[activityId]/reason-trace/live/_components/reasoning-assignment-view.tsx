@@ -214,6 +214,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
       const result = await part2Mutation.mutateAsync({
         attemptId: reasoningAttemptId,
         questionId: currentQuestion?.question.id ?? '',
+        originalOptionIds: currentState.reasoningPathwayOptions.map(option => option?.id ?? ''),
         optionIds: currentState.part2Steps.map(option => option?.id ?? ''),
         pathwayId: currentState.pathwayId ?? ''
       });
