@@ -19,6 +19,10 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
       api.classroom.getOrCreateUserToClassroom.query({ classroomId: params.classroomId })
     ]);
   }
+
+  if (userToClassroom?.role === Roles.Student) {
+    topics = topics?.filter((topic) => topic.activities.some((a) => a.isLive));
+  }
   
   return (
     <>

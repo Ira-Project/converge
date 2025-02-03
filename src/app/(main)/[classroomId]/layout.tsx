@@ -1,4 +1,4 @@
-import { Paths } from "@/lib/constants";
+import { Paths, Roles } from "@/lib/constants";
 import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
 
 import { validateRequest } from "@/lib/auth/validate-request";
@@ -15,10 +15,12 @@ export default async function MainLayout(props: { params: Promise<{ classroomId:
   let classroom;
   let activities;
   let students;
+  let usersToClassrooms;
   if(user) {
     classroom = await api.classroom.get.query({ id: params.classroomId, });
     activities = await api.activities.getActivities.query({ classroomId: params.classroomId });
     students = await api.classroom.students.query({ id: params.classroomId });
+    usersToClassrooms = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: params.classroomId });
     
     if(!user.isOnboarded) {
       redirect(Paths.Onboarding);
@@ -28,7 +30,7 @@ export default async function MainLayout(props: { params: Promise<{ classroomId:
   return (
     <>
       <SidebarProvider>
-        <AppSidebar classroom={classroom} user={user ?? undefined} activities={activities ?? []} students={students ?? []} />
+        <AppSidebar role={usersToClassrooms?.role ?? Roles.Student} classroom={classroom} user={user ?? undefined} activities={activities ?? []} students={students ?? []} />
         <main className="w-full">
           <SidebarTrigger className="text-white" />
           {props.children}

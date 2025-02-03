@@ -145,6 +145,7 @@ export async function createReasoningAssignment() {
               pathwayId: pathwayId,
               answerOptionId: step.answerOptionId,
               stepNumber: step.stepNumber,
+              stepNumberList: step?.stepNumberList ?? [],
               isCorrect: step.isCorrect,
               replacementOptionId: step.replacementOptionId,
             })

@@ -140,7 +140,7 @@ export const part2CorrectPathway = async (ctx: ProtectedTRPCContext, input: part
   for (const [index, optionId] of input.optionIds.entries()) {
     let result = ReasoningPathwayStepResult.WRONG;
     
-    const step = reasoningPathway?.steps.find((step) => step.stepNumber === index + 1);
+    const step = reasoningPathway?.steps.find((step) => step.answerOptionId === input.originalOptionIds[index]);
     const answerOptionId = step?.isCorrect ? step?.answerOptionId : step?.replacementOptionId;
 
     // Check if option is in correct position
