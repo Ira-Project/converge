@@ -14,6 +14,7 @@ import { createKnowledgeZapAssignment, deleteKnowledgeZapAssignment } from "./kn
 import { createStepSolveAssignment, deleteStepSolveAssignment } from "./stepSolve/stepSolve-seed";
 import { createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
+import { deleteUser } from "./user/userSeed";
 
 if(process.env.ENVIRONMENT === "prod") {
   console.log("WARNING: Running in production");
@@ -33,11 +34,11 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createLearnByTeachingAssignment();
 
 // KNOWLEDGE ZAP CREATION
-// await deleteKnowledgeZapAssignment("lklcwhocggc8sqv2hz0hi");
+// await deleteKnowledgeZapAssignment();
 // await createKnowledgeZapAssignment();
 
 // REASONING CREATION
-// await deleteReasoningAssignment();
+// await deleteReasoningAssignment("wi9l7z0sjy0vnahn8taul");
 // await createReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
@@ -47,4 +48,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // READ AND RELAY CREATION AND DELETION
 // await deleteReadAndRelayAssignment();
 // await createReadAndRelayAssignment();
+
+// USER DELETION
+// await deleteUser();
 

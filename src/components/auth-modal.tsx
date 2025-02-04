@@ -38,12 +38,15 @@ export default function AuthModal({ user, mode = 'login' }: {
 }) {
   const [isOpen, setIsOpen] = useState(user ? false : true);
   const [currentMode, setCurrentMode] = useState<AuthMode>(mode);
+  const [googleLoginPath, setGoogleLoginPath] = useState<string>(Paths.GoogleLogin);
 
   useEffect(() => {
     if (isOpen && window.location.pathname !== '/') {
       document.cookie = `returnPath=${window.location.pathname};`;
+      setGoogleLoginPath(`${Paths.GoogleLogin}?returnPath=${window.location.pathname}`);
     }
   }, [isOpen]);
+  
 
   const renderContent = () => {
     switch (currentMode) {
@@ -71,7 +74,7 @@ export default function AuthModal({ user, mode = 'login' }: {
       case 'signup':
         return (
           <>
-            <Link href={Paths.GoogleLogin}>
+            <Link href={googleLoginPath}>
               <GoogleSignIn text="Sign Up with Google"/>
             </Link>
             <div className="my-4 flex items-center">
@@ -90,7 +93,7 @@ export default function AuthModal({ user, mode = 'login' }: {
       default: // login
         return (
           <>
-            <Link href={Paths.GoogleLogin}>
+            <Link href={googleLoginPath}>
               <GoogleSignIn text="Login with Google"/>
             </Link>
             <div className="my-4 flex items-center">
