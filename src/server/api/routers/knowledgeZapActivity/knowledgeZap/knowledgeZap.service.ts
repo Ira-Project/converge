@@ -134,12 +134,16 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
   }
 
   const averageQuestionsCompleted = submissions.reduce((a, b) => a + (b.questionAttempts.filter((attempt) => attempt.isCorrect).length ?? 0), 0) / submissions.length;
-  const submissionCount = submissions.length;
+  
+  // Get unique user count instead of submission count
+  const uniqueUserIds = new Set(submissions.map(submission => submission.userId));
+  const uniqueUserCount = uniqueUserIds.size;
+  
   const averageAttemptsPerSubmission = submissions.reduce((a, b) => a + (b.questionAttempts.length ?? 0), 0) / submissions.length;
     
   return {    
     averageQuestionsCompleted,
-    submissionCount,
+    submissionCount: uniqueUserCount,
     averageAttemptsPerSubmission
   };
 }
