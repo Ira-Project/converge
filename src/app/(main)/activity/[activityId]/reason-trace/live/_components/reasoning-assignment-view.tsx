@@ -352,7 +352,9 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
               {
                 currentQuestion?.question.topText ?
                 <>
-                  <FormattedText text={currentQuestion.question.topText} />
+                  <div className="flex flex-row">
+                    <FormattedText text={currentQuestion.question.topText} />
+                  </div>
                   {
                     currentQuestion?.question.topImage && (
                       <ImageModal
