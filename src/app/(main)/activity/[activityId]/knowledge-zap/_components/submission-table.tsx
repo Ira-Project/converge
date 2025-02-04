@@ -19,31 +19,45 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
     <div>
       <Table>
         <TableHeader>
-          <TableRow className="grid grid-cols-[1fr_250px_200px]">
+          <TableRow className="grid grid-cols-[1fr_200px_250px_200px_200px]">
             <TableHead className="flex items-center">Student Name</TableHead>
             <TableHead className="flex items-center">Submitted At</TableHead>
-            <TableHead className="flex items-center">Score</TableHead>
+            <TableHead className="flex items-center">Questions Completed</TableHead>
+            <TableHead className="flex items-center">Attempts Taken</TableHead>
+            <TableHead className="flex items-center">Time (mins)</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
           {submissions.length === 0 ? (
             <TableRow>
-              <TableCell colSpan={3} className="text-center text-muted-foreground">
+              <TableCell colSpan={6} className="text-center text-muted-foreground">
                 No submissions yet
               </TableCell>
             </TableRow>
           ) : (
-            submissions.map((submission) => (
-              <TableRow className="grid grid-cols-[1fr_250px_200px]" key={submission.id}>
-                <TableCell>{submission.user?.name}</TableCell>
-                <TableCell>
-                  {submission.submittedAt ? 
-                    formatDateShort(submission.submittedAt) : ""
-                  }
-                </TableCell>
-                <TableCell>{submission.score ? `${(submission.score * 100).toFixed(2)}%` : "0%"}</TableCell>
-              </TableRow>
-            ))
+            submissions.map((submission) => {
+              const totalAttempts = submission.questionAttempts?.length ?? 0;
+              const completedQuestions = submission.questionAttempts?.filter(
+                (attempt) => attempt.isCorrect
+              ).length ?? 0;
+              const timeTaken = submission.submittedAt && submission.createdAt
+                ? Math.round((submission.submittedAt.getTime() - submission.createdAt.getTime()) / (1000 * 60))
+                : 0;
+
+              return (
+                <TableRow className="grid grid-cols-[1fr_200px_250px_200px_200px]" key={submission.id}>
+                  <TableCell>{submission.user?.name}</TableCell>
+                  <TableCell>
+                    {submission.submittedAt ? 
+                      formatDateShort(submission.submittedAt) : ""
+                    }
+                  </TableCell>
+                  <TableCell>{completedQuestions}</TableCell>
+                  <TableCell>{totalAttempts}</TableCell>
+                  <TableCell>{timeTaken} mins</TableCell>
+                </TableRow>
+              );
+            })
           )}
         </TableBody>
       </Table>
