@@ -76,7 +76,7 @@ export async function createReasoningAssignment() {
         questionText: reasoningQuestion.questionText,
         questionImage: reasoningQuestion.questionImage,
         topText: reasoningQuestion?.topText,
-        topImage: reasoningQuestion?.topImage,
+        // topImage: reasoningQuestion?.topImage,
         answerText: reasoningQuestion.answerText,
         correctAnswers: reasoningQuestion.correctAnswers,
         answerImage: reasoningQuestion.answerImage,

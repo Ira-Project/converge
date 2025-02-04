@@ -361,6 +361,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                       />
                     )
                   }
+                  <p>Can you select the line of reasoning Ira took to arrive at the answer?</p>
                 </>
 
                 : <p className="text-center h-full">
