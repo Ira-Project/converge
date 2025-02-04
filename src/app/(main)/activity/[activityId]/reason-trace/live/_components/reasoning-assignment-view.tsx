@@ -351,10 +351,10 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
             <>
               {
                 currentQuestion?.question.topText ?
-                <>
-                  <div className="flex flex-row">
+                <div>
+                  <p className="text-center my-auto">
                     <FormattedText text={currentQuestion.question.topText} />
-                  </div>
+                  </p>
                   {
                     currentQuestion?.question.topImage && (
                       <ImageModal
@@ -363,8 +363,8 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                       />
                     )
                   }
-                  <p>Can you select the line of reasoning Ira took to arrive at the answer?</p>
-                </>
+                  <p className="text-center my-auto">Can you select the line of reasoning Ira took to arrive at the answer?</p>
+                </div>
 
                 : <p className="text-center h-full">
                   Ira has computed an <strong className="underline">INCORRECT</strong> answer to a question as shown below. 
