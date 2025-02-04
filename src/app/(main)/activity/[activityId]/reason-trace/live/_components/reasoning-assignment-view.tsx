@@ -352,8 +352,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
               {
                 currentQuestion?.question.topText ?
                 <>
-                  <div className="text-center h-full"
-                  dangerouslySetInnerHTML={{ __html: currentQuestion?.question.topText ?? '' }} />
+                  <FormattedText text={currentQuestion.question.topText} />
                   {
                     currentQuestion?.question.topImage && (
                       <ImageModal
