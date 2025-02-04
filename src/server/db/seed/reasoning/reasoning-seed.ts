@@ -6,7 +6,7 @@ import { generateId } from "lucia";
 import { topics } from "../../schema/subject";
 
 
-import reasoningJson from "./thermodynamics.json";
+import reasoningJson from "./radioactive_decay.json";
 import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../../schema/reasoning/reasoningQuestions";
 import { reasoningAssignmentAttempts, reasoningAssignments,  } from "../../schema/reasoning/reasoningAssignment";
 import { activity } from "../../schema/activity";

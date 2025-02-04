@@ -5,7 +5,8 @@
     "latexDelimiter": "$!$",
     "reasoningQuestions": [
       {
-        "questionText": "Initially, a radioactive sample has a total measured activity of $!$288\\:Bq$!$. At the measurement location, there is background activity, $!$A_{B}$!$, which is equal to $!$20\\%$!$ of the sample's initial activity, $!$A_{0}$!$. If the radioactive nuclide has a half-life of 6 hours, what the total activity measured at this location after 18 hours?",
+        "topText": "Ira measures the initial activity of a radioactive sample $!$X$!$ to be $!$288\\:Bq$!$. At the measurement location, there is background activity, $!$A_{B}$!$, which is equal to $!$48\\:Bq$!$. Based on the fact that the half-life of $!$X$!$ is $!$6\\:hours$!$, Ira think thats the total activity measured at this location after 18 hours should be $!$128\\:Bq$!$. However, this turn out to be incorrect.",
+        "questionText": "",
         "questionImage": "",
         "answerText": "$!$128\\:Bq$!$",
         "correctAnswers": [
@@ -19,37 +20,32 @@
         "answerOptions": [
           {
             "id": "2127455c6ce841049c67a",
-            "optionText": "Find $!$A_{B} = 0.2 \\times A_{0}$!$, where $!$A_{0} = 288\\:Bq$!$",
+            "optionText": "Initial activity of $!$X$!$ ($!$A_{0}$!$) = $!$288\\:Bq$!$",
             "optionImage": ""
           },
           {
             "id": "9e5381ee83464abd9cf9f",
-            "optionText": "Find $!$A_{0}$!$ and $!$A_{B}$!$ using $!$A_{0} + A_{B} = 288$!$, where $!$A_{B} = 0.2 A_{0}$!$",
+            "optionText": "Initial activity of $!$X$!$ ($!$A_{0}$!$) = $!$288\\:Bq - A_{B}$!$",
             "optionImage": ""
           },
           {
             "id": "117870d1c9a84029b2b8a",
-            "optionText": "Find total measured activity = $!$A_{0} + A_{B}$!$",
+            "optionText": "Total measured activity = $!$A_{T}$!$",
             "optionImage": ""
           },
           {
             "id": "e998e6cbf5fb489695554",
-            "optionText": "Find total measured activity = $!$A_{T} + A_{B}$!$",
+            "optionText": "Total measured activity = $!$A_{T} + A_{B}$!$",
             "optionImage": ""
           },
           {
             "id": "e08cb039a0324b1fbeca4",
-            "optionText": "Find sample activity, $!$A_{T} = \\frac{A_{0}}{2^{3}}$!$",
+            "optionText": "Activity after 18 hours ($!$A_{T}$!$) = $!$\\frac{A_{0}}{2^{3}}$!$",
             "optionImage": ""
           },
           {
             "id": "9d17ed59ddc94209b7a2e",
-            "optionText": "Find sample activity, $!$A_{T} = \\frac{A_{0}}{3}$!$",
-            "optionImage": ""
-          },
-          {
-            "id": "afc94a5123784450b3e63",
-            "optionText": "Find sample activity, $!$A_{T} = \\frac{A_{0}}{2 \\times 3}$!$",
+            "optionText": "Activity after 18 hours ($!$A_{T}$!$) = $!$\\frac{A_{0}}{3}$!$",
             "optionImage": ""
           }
         ],
@@ -77,9 +73,10 @@
         ]
       },
       {
-        "questionText": "For an isotope $!$^{4}_{7}X$!$ with rest mass $!$5.6\\:u$!$, calculate the magnitude of the binding energy per nucleon (upto 1 decimal place). Assume that the rest mass of both protons and neutrons is $!$1\\:u$!$.",
+        "topText": "For an isotope $!$^{4}_{7}X$!$, which has a rest mass of $!$5.6\\:u$!$, Ira calculated the magnitude of the binding energy per nucleon to be $!$745.2\\:MeV$!$ (upto 1 decimal place). However, the actual value of binding energy per nucleon of $!$X$!$ was different from Ira's answer.",
+        "questionText": "",
         "questionImage": "",
-        "answerText": "$!$931.5\\:MeV$!$ per nucleon",
+        "answerText": "$!$745.2\\:MeV$!$ per nucleon",
         "correctAnswers": [
           "186.3 MeV",
           "186.3 MeV/nucleon",
@@ -98,12 +95,7 @@
           },
           {
             "id": "a75f56b3c7cf41eab6e1b",
-            "optionText": "Mass defect of $!$X$!$ = $!$11\\:u - 5.6\\:u$!$",
-            "optionImage": ""
-          },
-          {
-            "id": "5bbe692a52384362a121c",
-            "optionText": "Mass defect of $!$X$!$ = $!$5.6\\:u - 4\\:u$!$",
+            "optionText": "Mass per nucleon = $!$\\frac{5.6\\:u}{7}$!$",
             "optionImage": ""
           },
           {
@@ -113,27 +105,17 @@
           },
           {
             "id": "7a5cb77c435a417f93254",
-            "optionText": "Total binding energy = $!$\\text{nucleon mass} \\times 931.5\\:MeV/u$!$",
-            "optionImage": ""
-          },
-          {
-            "id": "52dbbd8d4b7840aeb36fb",
-            "optionText": "Total binding energy = $!$\\text{(nucleon mass - mass defect)} \\times 931.5\\:MeV/u$!$",
+            "optionText": "Energy per $!$u$!$ = $!$931.5\\:MeV$!$",
             "optionImage": ""
           },
           {
             "id": "a63852f79aee41948bab3",
-            "optionText": "Binding energy per nucleon = $!$\\frac{Total binding energy}{7}$!$",
-            "optionImage": ""
-          },
-          {
-            "id": "e12d462b709d46ed82cd9",
-            "optionText": "Binding energy per nucleon = $!$\\frac{Total binding energy}{11}$!$",
+            "optionText": "Binding energy per nucleon = $!$\\frac{\\text{Total binding energy}}{7}$!$",
             "optionImage": ""
           },
           {
             "id": "28818f60a52e479b8245a",
-            "optionText": "Binding energy per nucleon = $!$\\frac{Total binding energy}{4}$!$",
+            "optionText": "Binding energy per nucleon = $!$\\text{mass per nucleon} \\times 931.5\\:MeV/u$!$",
             "optionImage": ""
           }
         ],
@@ -142,8 +124,9 @@
             "steps": [
               {
                 "stepNumber": 1,
-                "isCorrect": true,
-                "answerOptionId": "0c5e9c068c384896b242a"
+                "isCorrect": false,
+                "answerOptionId": "a75f56b3c7cf41eab6e1b",
+                "replacementOptionId": "0c5e9c068c384896b242a"
               },
               {
                 "stepNumber": 2,
@@ -153,8 +136,9 @@
               },
               {
                 "stepNumber": 3,
-                "isCorrect": true,
-                "answerOptionId": "a63852f79aee41948bab3"
+                "isCorrect": false,
+                "answerOptionId": "28818f60a52e479b8245a",
+                "replacementOptionId": "a63852f79aee41948bab3"
               }
             ]
           }

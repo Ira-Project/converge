@@ -33,11 +33,11 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createLearnByTeachingAssignment();
 
 // KNOWLEDGE ZAP CREATION
-// await deleteKnowledgeZapAssignment("lklcwhocggc8sqv2hz0hi");
+// await deleteKnowledgeZapAssignment();
 // await createKnowledgeZapAssignment();
 
 // REASONING CREATION
-// await deleteReasoningAssignment();
+// await deleteReasoningAssignment("ymfc1ufup1fmyt1pfz4m6");
 // await createReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
