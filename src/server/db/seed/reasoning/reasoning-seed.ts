@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
 import { and, eq } from "drizzle-orm";
@@ -8,7 +9,7 @@ import { topics } from "../../schema/subject";
 
 import reasoningJson from "./radioactive_decay.json";
 import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../../schema/reasoning/reasoningQuestions";
-import { reasoningAssignmentAttempts, reasoningAssignments,  } from "../../schema/reasoning/reasoningAssignment";
+import { reasoningAssignmentAttempts, reasoningAssignments, } from "../../schema/reasoning/reasoningAssignment";
 import { activity } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 import { ActivityType } from "@/lib/constants";
@@ -21,7 +22,7 @@ export async function createReasoningAssignment() {
     eq(topics.id, topicId),
   )
 
-  if(topic?.[0] === undefined) {
+  if (topic?.[0] === undefined) {
     console.log("Topic not found")
     return
   }
@@ -47,7 +48,7 @@ export async function createReasoningAssignment() {
   await db.insert(reasoningAssignments).values({
     id: assignmentId,
     topicId: topicId,
-    name: assignmentName, 
+    name: assignmentName,
     createdAt: new Date(),
     updatedAt: new Date(),
   });
@@ -73,7 +74,9 @@ export async function createReasoningAssignment() {
         id: questionId,
         questionText: reasoningQuestion.questionText,
         questionImage: reasoningQuestion.questionImage,
-        answerText: reasoningQuestion.answerText, 
+        topText: reasoningQuestion?.topText,
+        topImage: reasoningQuestion?.topImage,
+        answerText: reasoningQuestion.answerText,
         correctAnswers: reasoningQuestion.correctAnswers,
         answerImage: reasoningQuestion.answerImage,
         numberOfSteps: reasoningQuestion.numberOfSteps,
@@ -136,7 +139,7 @@ export async function createReasoningAssignment() {
               eq(reasoningPathwayStep.pathwayId, pathwayId),
               eq(reasoningPathwayStep.answerOptionId, step.answerOptionId)
             )
-          ) 
+          )
 
           if (existingStep?.[0]?.id === undefined) {
             console.log("Creating reasoning pathway step", step.stepNumber);
@@ -145,6 +148,7 @@ export async function createReasoningAssignment() {
               pathwayId: pathwayId,
               answerOptionId: step.answerOptionId,
               stepNumber: step.stepNumber,
+              // stepNumberList: step?.stepNumberList ?? [],
               isCorrect: step.isCorrect,
               replacementOptionId: step.replacementOptionId,
             })
@@ -164,8 +168,8 @@ export async function createReasoningAssignment() {
     });
   }
 
-  const classes= await db.select().from(classrooms);
-  for(const classroom of classes) {
+  const classes = await db.select().from(classrooms);
+  for (const classroom of classes) {
     // Check if activity already exists in the classroom
     const existingActivity = await db.select().from(activity).where(
       and(
@@ -175,7 +179,7 @@ export async function createReasoningAssignment() {
     )
 
     // If activity does not exist, create it
-    if(existingActivity.length === 0) {
+    if (existingActivity.length === 0) {
       console.log("Adding assignment to classroom. Creating activity", assignmentId, classroom.id);
       await db.insert(activity).values({
         id: generateId(21),
@@ -199,26 +203,26 @@ export async function deleteReasoningAssignment(assignmentId: string) {
 
   // First get the reasoning assignment
   const reasoningAssignment = await db.select().from(reasoningAssignments).where(eq(reasoningAssignments.id, assignmentId));
-  if(reasoningAssignment.length === 0) {
+  if (reasoningAssignment.length === 0) {
     console.log("Reasoning assignment not found");
     return;
   }
 
   const questionsToAssignment = await db.select().from(reasoningQuestionToAssignment).where(eq(reasoningQuestionToAssignment.assignmentId, assignmentId));
-  for(const questionToAssignment of questionsToAssignment) {
+  for (const questionToAssignment of questionsToAssignment) {
 
     const question = await db.select().from(reasoningQuestions).where(eq(reasoningQuestions.id, questionToAssignment.questionId));
 
-    if(!question[0]?.id) {
+    if (!question[0]?.id) {
       console.log("Question not found", questionToAssignment.questionId);
       continue;
     }
 
     const answerOptions = await db.select().from(reasoningAnswerOptions).where(eq(reasoningAnswerOptions.questionId, question[0].id));
-    for(const answerOption of answerOptions) {
+    for (const answerOption of answerOptions) {
 
       const pathwaySteps = await db.select().from(reasoningPathwayStep).where(eq(reasoningPathwayStep.answerOptionId, answerOption.id));
-      for(const pathwayStep of pathwaySteps) {
+      for (const pathwayStep of pathwaySteps) {
         console.log("Deleting pathway step", pathwayStep.stepNumber);
         await db.delete(reasoningPathwayStep).where(eq(reasoningPathwayStep.id, pathwayStep.id));
       }
@@ -227,29 +231,29 @@ export async function deleteReasoningAssignment(assignmentId: string) {
       await db.delete(reasoningPathwayAttemptSteps).where(eq(reasoningPathwayAttemptSteps.reasoningOptionId, answerOption.id));
     }
 
-    for(const answerOption of answerOptions) {
+    for (const answerOption of answerOptions) {
       console.log("Deleting answer option", answerOption.optionText.substring(0, 30));
       await db.delete(reasoningAnswerOptions).where(eq(reasoningAnswerOptions.id, answerOption.id));
     }
 
-    console.log("Deleting reasoning pathway", question[0].questionText.substring(0, 30));
+    console.log("Deleting reasoning pathway", question[0].questionText?.substring(0, 30));
     await db.delete(reasoningPathway).where(eq(reasoningPathway.questionId, question[0].id));
 
-    console.log("Deleting final answers for", question[0].questionText.substring(0, 30));
+    console.log("Deleting final answers for", question[0].questionText?.substring(0, 30));
     await db.delete(reasoningAttemptFinalAnswer).where(eq(reasoningAttemptFinalAnswer.questionId, question[0].id));
 
-    console.log("Deleting question attempts for", question[0].questionText.substring(0, 30));
+    console.log("Deleting question attempts for", question[0].questionText?.substring(0, 30));
     await db.delete(reasoningPathwayAttempts).where(eq(reasoningPathwayAttempts.questionId, question[0].id));
 
     console.log("Deleting question to assignment", questionToAssignment.id);
     await db.delete(reasoningQuestionToAssignment).where(eq(reasoningQuestionToAssignment.id, questionToAssignment.id));
 
-    console.log("Deleting questions", question[0].questionText.substring(0, 30));
-    await db.delete(reasoningQuestions).where(eq(reasoningQuestions.id, question[0].id));    
+    console.log("Deleting questions", question[0].questionText?.substring(0, 30));
+    await db.delete(reasoningQuestions).where(eq(reasoningQuestions.id, question[0].id));
   }
 
   const activities = await db.select().from(activity).where(eq(activity.assignmentId, assignmentId));
-  for(const act of activities) {
+  for (const act of activities) {
 
     // Delete the reasoning assignment attempts
     console.log("Deleting reasoning assignment attempts", act.id);

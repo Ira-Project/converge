@@ -20,7 +20,7 @@ const getPathwayStepColor = (result: ReasoningPathwayStepResult): string => {
 
 const StaticStep: React.FC<{ text: string; status: ReasoningPathwayStepResult }> = ({ text, status }) => (
   <div className={`
-    min-h-[40px]
+    min-h-[56px]
     flex
     items-center
     text-sm

@@ -16,6 +16,7 @@ import {
 } from "@/components/ui/sidebar"
 import { type RouterOutputs } from "@/trpc/shared"
 import Image from "next/image"
+import { Roles } from "@/lib/constants"
 
 
 interface AppSidebarProps {
@@ -27,12 +28,18 @@ interface AppSidebarProps {
     isOnboarded: boolean;
     avatar: string | null;
   };
+  role: Roles;
   activities: RouterOutputs["activities"]["getActivities"];
   students: RouterOutputs["classroom"]["students"];
 }
 
-export function AppSidebar({ classroom, user, activities, students }: AppSidebarProps) {
+export function AppSidebar({ classroom, user, activities, students, role }: AppSidebarProps) {
 
+  let filteredActivities = activities;
+  if (role === Roles.Student) {
+    filteredActivities = activities.filter((activity) => activity.activities.some((a) => a.isLive));
+  }
+  
   // TODO: Add Analytics
   const navMain = [
     {
@@ -40,7 +47,7 @@ export function AppSidebar({ classroom, user, activities, students }: AppSidebar
       url: "/",
       icon: Layers,
       isActive: true,
-      items: activities.map((topic) => ({
+      items: filteredActivities.map((topic) => ({
         title: topic.name,
         url: `/${classroom?.id}#${topic.slug}`,
       })),

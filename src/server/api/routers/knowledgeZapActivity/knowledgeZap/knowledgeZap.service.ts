@@ -24,14 +24,23 @@ export const submitAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: 
     where: (questionAttempt, { eq }) => eq(questionAttempt.attemptId, input.assignmentAttemptId),
   });
 
-  // TODO: Check the scoring system once again
+  const assignment = await ctx.db.query.knowledgeZapAssignments.findFirst({
+    where: (assignment, { eq }) => eq(assignment.id, input.assignmentAttemptId),
+    with: {
+      questionToAssignment: true,
+    }
+  });
+
+  if(!assignment?.questionToAssignment) {
+    throw new Error("Assignment not found");
+  }
+
   const submissionTime = new Date();
-  const score = questionAttempts.filter((attempt) => attempt.isCorrect).length;
-  const totalQuestions = questionAttempts.length;
+  const score = questionAttempts.filter((attempt) => attempt.isCorrect).length;  
 
   await ctx.db.update(knowledgeZapAssignmentAttempts)
     .set({
-      score: score / totalQuestions,
+      score: (score * score) / (questionAttempts.length * assignment?.questionToAssignment.length),
       submittedAt: submissionTime,
     })
   .where(eq(knowledgeZapAssignmentAttempts.id, input.assignmentAttemptId))
@@ -54,6 +63,12 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
           columns: {
             name: true,
           }
+        },
+        questionAttempts: {
+          columns: {
+            id: true,
+            isCorrect: true,
+          }
         }
       }
     });
@@ -68,11 +83,16 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
           columns: {
             name: true,
           }
+        },
+        questionAttempts: {
+          columns: {
+            id: true,
+            isCorrect: true,
+          }
         }
       }
     });
   }
-
 }
 
 export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAnalyticsCardsInput) => {
@@ -90,6 +110,7 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
       with: {
         questionAttempts: {
           columns: {
+            isCorrect: true,
             id: true,
           }
         }
@@ -104,6 +125,7 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
       with: {
         questionAttempts: {
           columns: {
+            isCorrect: true,
             id: true,
           }
         }
@@ -111,12 +133,12 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
     });
   }
 
-  const averageScore = submissions.reduce((a, b) => a + (b.score ?? 0), 0) / submissions.length;
+  const averageQuestionsCompleted = submissions.reduce((a, b) => a + (b.questionAttempts.filter((attempt) => attempt.isCorrect).length ?? 0), 0) / submissions.length;
   const submissionCount = submissions.length;
   const averageAttemptsPerSubmission = submissions.reduce((a, b) => a + (b.questionAttempts.length ?? 0), 0) / submissions.length;
     
-  return {
-    averageScore,
+  return {    
+    averageQuestionsCompleted,
     submissionCount,
     averageAttemptsPerSubmission
   };

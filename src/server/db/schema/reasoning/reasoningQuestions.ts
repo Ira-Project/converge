@@ -21,9 +21,11 @@ export const reasoningQuestions = pgTable(
   "reasoning_questions",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
-    questionText: text("question").notNull(),
+    topText: text("top_text"),
+    topImage: text("top_image"),
+    questionText: text("question"),
     questionImage: text("image"),
-    answerText: text("answer").notNull(),
+    answerText: text("answer"),
     answerImage: text("answer_image"),
     numberOfSteps: integer("number_of_steps").notNull(),
     correctAnswers: text("correct_answers").array().notNull().default(sql`'{}'::text[]`),
