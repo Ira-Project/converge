@@ -59,7 +59,8 @@ export async function createReasoningAssignment() {
     const existingQuestion = await db.select().from(reasoningQuestions).where(
       and(
         eq(reasoningQuestions.questionText, reasoningQuestion.questionText),
-        eq(reasoningQuestions.topicId, topicId)
+        eq(reasoningQuestions.topicId, topicId),
+        eq(reasoningQuestions.topText, reasoningQuestion.topText)
       )
     )
     let questionId: string;

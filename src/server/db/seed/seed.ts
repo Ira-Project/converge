@@ -38,7 +38,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createKnowledgeZapAssignment();
 
 // REASONING CREATION
-// await deleteReasoningAssignment("ymfc1ufup1fmyt1pfz4m6");
+// await deleteReasoningAssignment("wi9l7z0sjy0vnahn8taul");
 // await createReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
