@@ -9,7 +9,7 @@ const AnalyticsCards = async ({ activityId }: { activityId: string }) => {
   return (
     <div className="grid grid-cols-3 gap-4 w-full">
       <div className="bg-lime-50 rounded-xl px-4 py-6">
-      <p className="text-center font-medium">{analytics.averageQuestionsCompleted.toFixed(2) ?? 0}%</p>
+      <p className="text-center font-medium">{analytics.averageQuestionsCompleted.toFixed(2) ?? 0}</p>
         <p className="text-center text-muted-foreground text-sm">
           Average Questions Completed
         </p>
@@ -17,7 +17,7 @@ const AnalyticsCards = async ({ activityId }: { activityId: string }) => {
       <div className="bg-lime-50 rounded-xl px-4 py-6">
         <p className="text-center font-medium">{analytics.submissionCount ?? 0}</p>
         <p className="text-center text-muted-foreground text-sm">
-          Submissions
+          No. of Students Submitted
         </p>
       </div>
       <div className="bg-lime-50 rounded-xl px-4 py-6">
