@@ -25,6 +25,13 @@ import Image from 'next/image';
 import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationNext, PaginationLink } from "@/components/ui/pagination"
 import { ImageModal } from '@/components/image-modal';
 
+const getColumns = (questionText?: string, answerText?: string) => {
+  let columns = 1;
+  if (questionText) columns+= 1
+  if (answerText) columns+= 1
+  return columns;
+}
+
 interface ReasoningAssignmentViewProps {
   reasoningAssignment: RouterOutputs["reasonTrace"]["get"];
   reasoningAttemptId: string;
@@ -342,27 +349,49 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
           <CardContent className="flex flex-col gap-8">
             {/* Part 1 */}
             <>
-              <p className="text-center h-full">
-                Ira has computed an <strong className="underline">INCORRECT</strong> answer to a question as shown below. 
-                <br />
-                Can you select the line of reasoning Ira took to arrive at the answer?
-              </p>
-              <div className="grid grid-cols-3 gap-8">
-                {/* Question Section */}
-                <div className="space-y-4 h-full">
-                  <p className="font-semibold text-center">Question</p>
-                  <p className="text-center my-auto">
-                    <FormattedText text={currentQuestion?.question.questionText ?? ''} />
-                  </p>
-                  <div className="mx-auto text-center text-muted-foreground">
-                    {currentQuestion?.question.questionImage && (
+              {
+                currentQuestion?.question.topText ?
+                <>
+                  <div className="text-center h-full"
+                  dangerouslySetInnerHTML={{ __html: currentQuestion?.question.topText ?? '' }} />
+                  {
+                    currentQuestion?.question.topImage && (
                       <ImageModal
-                        imageSrc={currentQuestion.question.questionImage}
+                        imageSrc={currentQuestion.question.topImage}
                         label="View Question Image"
                       />
-                    )}
+                    )
+                  }
+                </>
+
+                : <p className="text-center h-full">
+                  Ira has computed an <strong className="underline">INCORRECT</strong> answer to a question as shown below. 
+                  <br />
+                  Can you select the line of reasoning Ira took to arrive at the answer?
+                </p>
+              }
+              <div className={`
+                grid 
+                grid-cols-${getColumns(currentQuestion?.question.questionText ?? '', currentQuestion?.question.answerText ?? '')} 
+                gap-8`}>
+                {/* Question Section */}
+                {
+                  currentQuestion?.question.questionText &&
+                  <div className="space-y-4 h-full">
+                    <p className="font-semibold text-center">Question</p>
+                    <p className="text-center my-auto">
+                      <FormattedText text={currentQuestion?.question.questionText ?? ''} />
+                    </p>
+                    <div className="mx-auto text-center text-muted-foreground">
+                      {currentQuestion?.question.questionImage && (
+                        <ImageModal
+                          imageSrc={currentQuestion.question.questionImage}
+                          label="View Question Image"
+                        />
+                      )}
+                    </div>
                   </div>
-                </div>
+                }
 
                 {/* Reasoning Steps Section */}
                 <div className="flex flex-col gap-4">
@@ -401,12 +430,15 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                 </div>
 
                 {/* Answer Section */}
-                <div className="space-y-4 h-full">
-                  <h3 className="font-semibold text-center">Incorrectly Computed Answer</h3>
-                  <p className="text-center my-auto h-full">
-                    <FormattedText text={currentQuestion?.question.answerText ?? ''} />
-                  </p>
-                </div>
+                {
+                  currentQuestion?.question.answerText &&
+                  <div className="space-y-4 h-full">
+                    <h3 className="font-semibold text-center">Incorrectly Computed Answer</h3>
+                    <p className="text-center my-auto h-full">
+                      <FormattedText text={currentQuestion?.question.answerText ?? ''} />
+                    </p>
+                  </div>
+                }
               </div>
 
               {/* Available Steps */}

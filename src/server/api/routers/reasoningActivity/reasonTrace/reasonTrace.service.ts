@@ -38,6 +38,8 @@ export const getReasoningAssignment = async (ctx: ProtectedTRPCContext, input: G
           question: {  
             columns: {
               id: true,
+              topText: true,
+              topImage: true,
               questionText: true,
               questionImage: true,
               answerText: true,
@@ -221,6 +223,7 @@ export const getReasoningAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
             question: {
               columns: {
                 questionText: true,
+                topText: true,
               }
             }
           }
@@ -235,6 +238,7 @@ export const getReasoningAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
             question: {
               columns: {
                 questionText: true,
+                topText: true,
               }
             }
           }
@@ -259,6 +263,7 @@ export const getReasoningAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
             question: {
               columns: {
                 questionText: true,
+                topText: true,
               }
             }
           }
@@ -273,6 +278,7 @@ export const getReasoningAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
             question: {
               columns: {
                 questionText: true,
+                topText: true,
               }
             }
           }
@@ -308,7 +314,7 @@ export const getReasoningAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
       const { questionId, part, correct, question } = pathwayAttempt;
       if (!questionId || !question) continue;
 
-      const result = getOrCreateResult(questionId, question.questionText);
+      const result = getOrCreateResult(questionId, question.topText ?? question.questionText ?? '');
       
       if (part === 1) {
         result.step1.total++;
@@ -324,7 +330,7 @@ export const getReasoningAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
       const { questionId, isCorrect, question } = finalAnswer;
       if (!questionId || !question) continue;
 
-      const result = getOrCreateResult(questionId, question.questionText);
+      const result = getOrCreateResult(questionId, question.topText ?? question.questionText ?? '');
       result.step3.total++;
       if (isCorrect) result.step3.correct++;
     }
