@@ -48,7 +48,7 @@ export default function ReadAndRelayTutorialModal({ classroom, topic }: Props) {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <div className="flex flex-row items-center text-xl font-semibold my-2 text-fuchsia-700">
+          <div className="flex flex-row items-center text-xl font-semibold my-2 text-blue-700">
             {topic}
           </div>
         </DialogTitle>
@@ -66,7 +66,7 @@ export default function ReadAndRelayTutorialModal({ classroom, topic }: Props) {
         </div>
         <DialogFooter>
           <DialogClose asChild>
-            <Button className="bg-fuchsia-700 text-white hover:bg-fuchsia-900">
+            <Button className="bg-blue-700 text-white hover:bg-blue-900">
               Start Activity
             </Button>
           </DialogClose>

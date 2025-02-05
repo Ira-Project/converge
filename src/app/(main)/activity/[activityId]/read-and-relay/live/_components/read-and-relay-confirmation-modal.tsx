@@ -12,7 +12,7 @@ export default function ReadAndRelayConfirmationModal({
       <DialogTrigger asChild>
         <Button 
           size="sm"
-          className="bg-fuchsia-700 text-white hover:bg-fuchsia-900">
+          className="bg-blue-700 text-white hover:bg-blue-900">
           Submit Activity
         </Button>
       </DialogTrigger>
@@ -28,7 +28,7 @@ export default function ReadAndRelayConfirmationModal({
             <Button variant="outline">Cancel</Button>
           </DialogClose>
           <LoadingButton 
-            className="bg-fuchsia-700 text-white hover:bg-fuchsia-900"
+            className="bg-blue-700 text-white hover:bg-blue-900"
             loading={loading}
             disabled={loading}
             onClick={onSubmit}>

@@ -3,7 +3,7 @@
 import { LATEX_DELIMITER } from "@/lib/constants";
 import katex from "katex";
 
-export default function FormattedText({ text }: { text: string}) { 
+export default function FormattedText({ text, padding }: { text: string, padding?: boolean}) { 
 
   const textList = text.split(LATEX_DELIMITER);
 
@@ -13,6 +13,7 @@ export default function FormattedText({ text }: { text: string}) {
         if (index % 2 === 1) {
           return (
             <span
+              className={padding ? "px-2" : ""}
               key={index}
               dangerouslySetInnerHTML={{
                 __html: katex.renderToString(text, {

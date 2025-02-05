@@ -10,7 +10,7 @@ import { api } from "@/trpc/react";
 import { Roles } from "@/lib/constants";
 import { Separator } from '@/components/ui/separator';
 import StepSolveStepComponent from './step-component';
-import FormattedText from '@/components/formatted-text';
+import TextWithHighlights from '@/components/text-with-highlights';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
@@ -180,17 +180,19 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
             <CardContent className="flex flex-col gap-8">
               <>
                 <div className="text-center text-lg">
-                  <FormattedText text={currentQuestion?.q.questionText ?? ""} />
+                  <TextWithHighlights 
+                    text={currentQuestion?.q.questionText ?? ""}
+                    type="p"
+                  />
                   <div className="flex justify-center">
-                    {
-                      currentQuestion?.q.questionImage &&
+                    {currentQuestion?.q.questionImage && (
                       <Image
                         src={currentQuestion.q.questionImage}
                         alt="Question Image"
                         width={500}
                         height={500}
                       />
-                    }
+                    )}
                   </div>
                 </div>
               </>

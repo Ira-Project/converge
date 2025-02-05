@@ -40,7 +40,7 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
           <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
             { userToClassroom?.role !== Roles.Teacher ?
               <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
-                <Button className="bg-fuchsia-700 text-white">
+                <Button className="bg-blue-700 text-white">
                   Start
                 </Button>
               </Link>
