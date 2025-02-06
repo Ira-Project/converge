@@ -82,6 +82,7 @@ export const evaluateReading = async (ctx: ProtectedTRPCContext, input: Evaluate
       return response.json()
     })
     .then(async (data) => {
+      console.log(index, "Reasoning Data", data, question.lambdaUrl)
       console.log(index, "Reasoning JSON Conversion", Date.now())
       const responseJson = data as ResponseType;
       const body = responseJson.body;

@@ -27,6 +27,10 @@ interface Props {
   content: string;
   highlights: {id: string, text: string}[];
   formulas: {id: string, text: string}[];
+  maxNumberOfHighlights: number;
+  maxNumberOfFormulas: number;
+  maxHighlightLength: number;
+  maxFormulaLength: number;
   setHighlights: (highlights: {id: string, text: string}[]) => void;
   setFormulas: (formulas: {id: string, text: string}[]) => void;
 }
@@ -35,6 +39,10 @@ const ReadingPassage: React.FC<Props> = ({
   content,
   highlights,
   formulas,
+  maxNumberOfHighlights,
+  maxNumberOfFormulas,
+  maxHighlightLength,
+  maxFormulaLength,
   setHighlights,
   setFormulas
 }) => {
@@ -72,8 +80,27 @@ const ReadingPassage: React.FC<Props> = ({
   }, [highlights, formulas]);
 
   const handleLatexClick = (segment: ContentSegment) => {
-    
     const existingSegmentHighlights = segmentHighlights[segment.id] ?? [];
+
+    // Check max number of highlights/formulas
+    if (currentColor === 'yellow' && highlights.length >= maxNumberOfHighlights) {
+      toast.error(`Cannot add more than ${maxNumberOfHighlights} concept highlights`);
+      return;
+    }
+    if (currentColor === 'green' && formulas.length >= maxNumberOfFormulas) {
+      toast.error(`Cannot add more than ${maxNumberOfFormulas} formula highlights`);
+      return;
+    }
+
+    // Check length
+    if (currentColor === 'yellow' && segment.content.length > maxHighlightLength) {
+      toast.error(`Highlight cannot be longer than ${maxHighlightLength} characters`);
+      return;
+    }
+    if (currentColor === 'green' && segment.content.length > maxFormulaLength) {
+      toast.error(`Formula highlight cannot be longer than ${maxFormulaLength} characters`);
+      return;
+    }
 
     const highlightId = `highlight-${Date.now()}`;
     
@@ -102,6 +129,30 @@ const ReadingPassage: React.FC<Props> = ({
   const handleTextSelection = () => {
     const selection = window.getSelection();
     if (!selection?.toString()) return;
+
+    // Check max number of highlights/formulas
+    if (currentColor === 'yellow' && highlights.length >= maxNumberOfHighlights) {
+      toast.error(`Cannot add more than ${maxNumberOfHighlights} concept highlights`);
+      selection.removeAllRanges();
+      return;
+    }
+    if (currentColor === 'green' && formulas.length >= maxNumberOfFormulas) {
+      toast.error(`Cannot add more than ${maxNumberOfFormulas} formula highlights`);
+      selection.removeAllRanges();
+      return;
+    }
+
+    // Check length
+    if (currentColor === 'yellow' && selection.toString().length > maxHighlightLength) {
+      toast.error(`Highlight cannot be longer than ${maxHighlightLength} characters`);
+      selection.removeAllRanges();
+      return;
+    }
+    if (currentColor === 'green' && selection.toString().length > maxFormulaLength) {
+      toast.error(`Formula highlight cannot be longer than ${maxFormulaLength} characters`);
+      selection.removeAllRanges();
+      return;
+    }
 
     const range = selection.getRangeAt(0);
     const startContainer = getStartContainer(range.startContainer.parentElement);

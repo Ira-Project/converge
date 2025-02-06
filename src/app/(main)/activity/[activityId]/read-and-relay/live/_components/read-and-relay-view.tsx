@@ -27,6 +27,10 @@ interface Props {
   activityId: string
   topic: string;
   readingPassage: string;
+  maxNumberOfHighlights: number;
+  maxNumberOfFormulas: number;
+  maxHighlightLength: number;
+  maxFormulaLength: number;
   questions: {
     id: string,
     question: string,
@@ -44,7 +48,7 @@ interface Props {
   role: Roles;
 }
 
-export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, questions, attemptId, assignmentId, classroom, isLive, dueDate, role }: Props) => {
+export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, questions, attemptId, assignmentId, classroom, isLive, dueDate, role, maxNumberOfHighlights, maxNumberOfFormulas, maxHighlightLength, maxFormulaLength }: Props) => {
   const evaluateReadingMutation = api.evaluateReading.evaluateReading.useMutation();
   const submissionMutation = api.readAndRelay.submitAttempt.useMutation();
 
@@ -182,6 +186,10 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
         <div className="flex flex-col gap-4 w-full px-6 py-6 overflow-y-hidden border-r-slate-200 border-r bg-blue-50">
           <div className="h-full overflow-y-auto">
             <ReadingPassage 
+              maxNumberOfHighlights={maxNumberOfHighlights}
+              maxNumberOfFormulas={maxNumberOfFormulas}
+              maxHighlightLength={maxHighlightLength}
+              maxFormulaLength={maxFormulaLength}
               content={readingPassage}
               highlights={highlights}
               formulas={formulas}
@@ -193,9 +201,10 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
             <LoadingButton 
               variant="link"
               dontShowChildrenWhileLoading
-              disabled={evaluateReadingMutation.isLoading || !isSubscribed} 
+              disabled={evaluateReadingMutation.isLoading || !isSubscribed || (highlights.length === 0 && formulas.length === 0)} 
               loading={evaluateReadingMutation.isLoading || !isSubscribed}
               className="p-2 bottom-0 right-0 mt-auto ml-auto hover:no-underline"
+              onClick={onSubmit}
               type="submit">
                 <div className="flex flex-row gap-2">
                 <span className="my-auto font-semibold">
