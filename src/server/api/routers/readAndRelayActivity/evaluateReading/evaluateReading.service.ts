@@ -2,7 +2,7 @@ import type { ProtectedTRPCContext } from "../../../trpc";
 import { type EvaluateReadingInput } from "./evaluateReading.input";
 import { generateId } from "lucia";
 import { actions } from "@/server/realtime_db/schema/actions";
-import { AssignmentUpdateActionType, type ConceptStatus, QuestionStatus } from "@/lib/constants";
+import { AssignmentUpdateActionType, QuestionStatus } from "@/lib/constants";
 import { readAndRelayCheatSheets, readAndRelayComputedAnswers } from "@/server/db/schema/readAndRelay/readAndRelayAttempts";
 
 type ResponseType = {
@@ -13,10 +13,6 @@ type ResponseType = {
     image?: string;
     imageHeight?: number;
     imageWidth?: number;
-    concepts?: {
-      text: string;
-      status: ConceptStatus
-    }[];
   }
 }
 
