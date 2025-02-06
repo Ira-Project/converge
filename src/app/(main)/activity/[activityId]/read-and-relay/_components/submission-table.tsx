@@ -13,7 +13,7 @@ import { formatDateShort } from '@/lib/utils';
 
 const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
 
-  const submissions = await api.learnByTeaching.getSubmissions.query({ activityId });
+  const submissions = await api.readAndRelay.getSubmissions.query({ activityId });
 
   return (
     <div>
@@ -41,7 +41,7 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
                     formatDateShort(submission.submittedAt) : ""
                   }
                 </TableCell>
-                <TableCell>{submission.score2 ? `${(submission.score2 * 100).toFixed(2)}%` : "0%"}</TableCell>
+                <TableCell>{submission.score ? `${(submission.score * 100).toFixed(2)}%` : "0%"}</TableCell>
               </TableRow>
             ))
           )}

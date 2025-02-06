@@ -16,42 +16,42 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
   const { user } = await validateRequest();
   let activity, userToClassroom;
 
-  if(user?.isOnboarded) {
+  if (user?.isOnboarded) {
     activity = await api.activities.getActivity.query({ activityId: params.activityId });
-    if(activity?.classroomId) {
+    if (activity?.classroomId) {
       userToClassroom = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: activity?.classroomId });
     }
   }
 
-  const activityMetaData = getMetaDataFromActivityType(ActivityType.LearnByTeaching, activity?.id);
+  const activityMetaData = getMetaDataFromActivityType(ActivityType.ReadAndRelay, activity?.id);
 
   return (
     <main className="flex flex-col">
       {/* Header */}
-      <div className="mb-8 p-8 bg-amber-100">
+      <div className="mb-8 p-8 bg-blue-100">
         <div className="flex items-center gap-4 mb-4">
           <div className="flex flex-row gap-4">
             <Image src={activityMetaData.iconImage} alt={activityMetaData.title} width={60} height={60} />
             <div className="flex flex-col my-auto">
-              <h1 className="text-2xl font-bold text-amber-700">{activityMetaData.title}</h1>
-              <p className="text-amber-700">{activity?.topic?.name}</p>
+              <h1 className="text-2xl font-bold text-blue-700">{activityMetaData.title}</h1>
+              <p className="text-blue-700">{activity?.topic?.name}</p>
             </div>
           </div>
           <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-            { userToClassroom?.role !== Roles.Teacher ?
+            {userToClassroom?.role !== Roles.Teacher ?
               <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
                 <Button className="bg-blue-700 text-white">
                   Start
                 </Button>
               </Link>
-              : 
+              :
               <div className="flex flex-row gap-2 my-auto">
                 <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
                   <Button variant="link">
                     Preview
                   </Button>
                 </Link>
-                {activity && <AssignmentShareModal 
+                {activity && <AssignmentShareModal
                   activityId={activity.id}
                   isLive={activity.isLive} />
                 }
