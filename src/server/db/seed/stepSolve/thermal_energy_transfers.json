@@ -6,107 +6,85 @@
     "questions": [
       {
         "id": "455143efb06241bb94ff9",
-        "questionText": "A 2000 W heater is used to heat up 250 grams of a substance as it turns from solid to gas. The graph below depicts how the temperature of the substance varies with time, with the gradients of the non-horizontal segments shown. Estimate the specific heat capacity of the substance in the gaseous phase.",
-        "questionImage": "q1_img.png",
+        "questionText": "A container, with $!$3.5\\:kg$!$ of a liquid at $!$40^{\\circ}C$!$, is placed in a freezer. The freezing point of the liquid is $!$10^{\\circ}C$!$ and every minute, $!$8\\:kJ$!$ of energy is removed from the liquid. After $!$2\\:hours$!$, the container has both liquid and solid phases of the substance, with the ratio of liquid mass to solid mass being $!$2:3$!$. Given that the specific heat capacity of the liquid is $!$5\\:kJ/kg/K$!$, calculate the specific latent heat of fusion of this substance.",
+        "questionImage": "",
         "steps": [
           {
             "id": "f88fea338b6a4a4686723",
-            "stepText": "First, let's try to identify the different segments of the graph. As the substance recieves thermal energy, its phase changes from solid to liquid and then from liquid to gas. How do we know which segments correspond to these phase changes?",
+            "stepText": "In the first step, let's find the total energy removed from the liquid in $!$2\\:hours$!$. The freezer removes $!$8\\:kJ$!$ of energy per minute. So how much energy will be removed in $!$2\\:hours$!$ (in $!$kJ$!$)?",
             "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "Temperature remains constant during the phase changeso we can identify them by looking for horizontal segments.",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "Temperature increases steadily during the phase changes, so we can identify them by looking for non-horizontal segments.",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "Gradient is maximum during the phase changes so we can identify them by looking for the steepest segments.",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "Gradient is minimum during the phase changes so we can identify them by looking for the shallowest segments.",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "c51e8586d87a4687af609",
-            "stepText": "We now know that the horizontal segments correspond to the phase changes and the non-horizontal segments correspond to an increase in temperature of the substance in a particular phase. In the next step, let's identify which exact segments correspond to the solid to liquid phase change and the liquid to gas phase change.",
-            "stepImage": "",
-            "stepSolveAnswer": [],
+            "stepSolveAnswer": [
+                "960"
+            ],
+            "stepSolveAnswerUnit": "$!$kJ$!$",
             "options": []
           },
           {
-            "id": "5cb40a03df8c49b6bd13e",
-            "stepText": "",
+            "id": "c51e8586d87a4687af609",
+            "stepText": "Out of 960 kJ of energy removed, some of it must have been used to lower the temperature of the liquid from $!$40^{\\circ}C$!$ to $!$10^{\\circ}C$!$. What formula can we use to find this energy $!$Q_c$!$?",
             "stepImage": "",
+            "stepSolveAnswer": [],
             "options": [
-              {
-                "optionText": "Segment BC - solid to liquid phase change \n Segment DE - liquid to gas phase change",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "Segment DE - solid to liquid phase change \n Segment BC - liquid to gas phase change",
-                "optionImage": "",
-                "isCorrect": false
-              }
+                {
+                    "optionText": "$!$Q_c = mc\\Delta T$!$",
+                    "optionImage": "",
+                    "isCorrect": true
+                },
+                {
+                    "optionText": "$!$Q_c = c\\Delta T$!$",
+                    "optionImage": "",
+                    "isCorrect": false
+                },
+                {
+                    "optionText": "$!$Q_c = \\frac{\\Delta T}{mc}$!$",
+                    "optionImage": "",
+                    "isCorrect": false
+                },
+                {
+                    "optionText": "$!$Q_c = \\frac{mc\\Delta T}{t}$!$",
+                    "optionImage": "",
+                    "isCorrect": false
+                }
             ]
+          },
+          {
+            "id": "5cb40a03df8c49b6bd13e",
+            "stepText": "Now, let's apply the formula $!$Q_c = mc\\Delta T$!$ to find the energy required to lower the temperature of $!$3.5\\:kg$!$ of liquid, with a specific heat capacity of $!$5\\:kJ/kg/K$!$, from $!$40^{\\circ}C$!$ to $!$10^{\\circ}C$!$.",
+            "stepImage": "",
+            "stepSolveAnswer": [
+                "525"
+            ],
+            "stepSolveAnswerUnit": "$!$kJ$!$",
+            "options": []
           },
           {
             "id": "0d39138bff5e4f37b941a",
-            "stepText": "We have identified that segment DE corresponds to the liquid to gas phase change. Using this information, find out which segment of the graph corresponds to a temperature increase of the substance in the gaseous phase.",
+            "stepText": "We have now found that out of the $!$960\\:kJ$!$ of energy removed, $!$525\\:kJ$!$ was removed to lower the temperature of the liquid to the freezing point. So, the remaining energy must have been removed to convert the liquid to solid at the freezing point. Find this energy, $!$Q_L$!$.",
             "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "Segment DE",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "Segment EF",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "Segment CD",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
+            "stepSolveAnswer": [
+                "435"
+            ],
+            "stepSolveAnswerUnit": "$!$kJ$!$",
+            "options": []
           },
           {
             "id": "c588309e381f45cca290e",
-            "stepText": "So, segment EF corresponds to a temperature increase of the substance in the gaseous phase. In this segment, what formula can we use to describe the thermal energy, $!$Q$!$, supplied to the substance?",
+            "stepText": "$!$435\\:kJ$!$ of energy was removed to freeze the liquid. However, the energy removed was not enough to freeze the entire mass of the liquid in $!$2\\:hours$!$. What formula can be used to describe the energy, $!$Q_L$!$, that needs to be removed to freeze a specific mass, $!$m_l$!$, of a liquid?",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
               {
-                "optionText": "$!$Q$!$ = $!$mc\\Delta T$!$",
+                "optionText": "$!$Q_L = m_l L$!$, where $!$L$!$ is the specific latent heat of fusion of the substance",
                 "optionImage": "",
                 "isCorrect": true
               },
               {
-                "optionText": "$!$Q$!$ = $!$mL\\Delta T$!$",
+                "optionText": "$!$Q_L = m_l c$!$, where $!$c$!$ is the specific heat capacity of the substance in the solid phase",
                 "optionImage": "",
                 "isCorrect": false
               },
               {
-                "optionText": "$!$Q$!$ = $!$mc$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$Q$!$ = $!$mL$!$",
+                "optionText": "$!$Q_L = m_l L \\Delta T$!$, where $!$L$!$ is the specific latent heat of fusion of the substance",
                 "optionImage": "",
                 "isCorrect": false
               }
@@ -114,82 +92,49 @@
           },
           {
             "id": "e25d01add9e148818dc54",
-            "stepText": "We know the mass of the substance $!$m = 250\\:g$!$ and we can find the increase in temperature, $!$\\Delta T$!$, from the graph. But we haven't been given $!$Q$!$, the energy supplied to the substance. So the formula $!$Q = mc\\Delta T$!$ cannot be used directly to find $!$c$!$, the specific heat capacity of the substance in the gaseous phase. However, we know the power of the heater $!$P = 2000\\:W$!$. What formula can we use to relate $!$P$!$ and $!$c$!$?",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "$!$P = \\frac{Q}{t} = \\frac{mc\\Delta T}{t}$!$",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "$!$P = \\frac{W}{t} = \\frac{ma}{t}$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$P = Qt = mc\\Delta T \\times t$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$P = Wt = ma \\times t$!$",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "ef6f05e4ee5b4d4f90357",
-            "stepText": "When applying the formula $!$P = \\frac{mc\\Delta T}{t}$!$ to the segment EF, we can use the graph to find the value of $!$\\frac{\\Delta T}{t}$!$. What is this value (in $!$K/s$!$)?",
+            "stepText": "Now, we have $!$Q_L = m_l L = 435\\:kJ$!$. Let's try to find $!$m_l$!$, the mass of the liquid that was converted to solid after removing $!$435\\:kJ$!$ of energy. The initial mass of the liquid was $!$3.5\\:kg$!$ and after $!$2\\:hours$!$, the ratio of liquid mass to solid mass is $!$2:3$!$. Since total mass is conserved, what is mass of the solid after $!$2\\:hours$!$?",
             "stepImage": "",
             "stepSolveAnswer": [
-              "4.0",
-              "4",
-              "4 K/s",
-              "4.0 K/s"
+                "2.1"
             ],
-            "stepSolveAnswerUnit": "$!$K/s$!$",
+            "stepSolveAnswerUnit": "$!$kg$!$",
             "options": []
           },
           {
-            "id": "5f43669489e446409584f",
-            "stepText": "Finally, we have all the required information to find the specific heat capacity, $!$c$!$, of the substance in the gaseous phase using the formula $!$P = \\frac{mc\\Delta T}{t}$!$. Make sure to convert all values to the correct units and find $!$c$!$ (in $!$J/kg/K$!$).",
+            "id": "ef6f05e4ee5b4d4f90357",
+            "stepText": "In the final step, let's find the specific latent heat of fusion, $!$L$!$, by using the formula $!$Q_L = m_l L$!$. Give your answer upto 1 decimal place.",
             "stepImage": "",
             "stepSolveAnswer": [
-              "2000",
-              "2000 J/kg/K",
-              "2000J/kg/K"
+                "207.1"
             ],
-            "stepSolveAnswerUnit": "$!$J/kg/K$!$",
+            "stepSolveAnswerUnit": "$!$kJ/kg$!$",
             "options": []
           }
         ]
       },
       {
         "id": "11174faeb8ce45e182520",
-        "questionText": "Two blocks of the same cross-sectional area, $!$A$!$, are joined as shown in the diagram below. The left end of the first block is held at a constant temperature of $!$200\\:K$!$ and the right end of the second block is held at a constant temperature of $!$750\\:K$!$. The first block has a length of $!$2l$!$ and a conductivity of $!$3k$!$ and the second block has a length of $!$l$!$ and a conductivity of $!$k$!$. At steady state, what will be the temperature of the point where the blocks are joined?",
-        "questionImage": "q2_img.png",
+        "questionText": "The black-body spectrum emitted from a star has a peak wavelength of $!$450\\:nm$!$. If the radius of the star is $!$3 \\times 10^{6}\\:km$!$ and it's apparent brightness is measured to be $!$1.5 \\times 10^{-10}\\:W/m^2$!$ on Earth, what is the distance of the star from the earth?",
+        "questionImage": "",
         "steps": [
           {
             "id": "f4b302714cef43829c675",
-            "stepText": "As we can see in the diagram, the two blocks are in contact with each other. What is the type of thermal energy transfer taking place in this system?",
+            "stepText": "The amount of power radiated by the star that is recieved per unit area on Earth is measured as the apparent brightness. So, in the first step, let's find the total power radiated by the star. What is this quantity called?",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
               {
-                "optionText": "Conduction",
+                "optionText": "Luminosity",
                 "optionImage": "",
                 "isCorrect": true
               },
               {
-                "optionText": "Convection",
+                "optionText": "Actual brightness",
                 "optionImage": "",
                 "isCorrect": false
               },
               {
-                "optionText": "Radiation",
+                "optionText": "Apparent brightness",
                 "optionImage": "",
                 "isCorrect": false
               }
@@ -197,27 +142,27 @@
           },
           {
             "id": "4cf87ab946b4453eb35a5",
-            "stepText": "Now that we have identified that the thermal energy transfer is taking place by conduction, what will be the direction of this energy transfer? Remember that heat flow always occurs from a higher temperature to a lower temperature.",
+            "stepText": "If we assume that the star is a black body, then we can use the Stefan-Boltzmann law to find the total power radiated by the star (it's luminosity). What does the Stefan-Boltzmann law state?",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
               {
-                "optionText": "Towards the right in both the blocks",
+                "optionText": "Total power radiated by a black body is proportional to $!$AT^4$!$, where $!$A$!$ is the surface area of the black body and $!$T$!$ is it's temperature.",
                 "optionImage": "",
                 "isCorrect": true
               },
               {
-                "optionText": "Towards the left in both the blocks",
+                "optionText": "Total power radiated by a black body is proportional to $!$AT^2$!$, where $!$A$!$ is the surface area of the black body and $!$T$!$ is it's temperature.",
                 "optionImage": "",
                 "isCorrect": false
               },
               {
-                "optionText": "Towards the right in the first block and towards the left in the second block",
+                "optionText": "Total power radiated by a black body is proportional to $!$A^4T$!$, where $!$A$!$ is the surface area of the black body and $!$T$!$ is it's temperature.",
                 "optionImage": "",
                 "isCorrect": false
               },
               {
-                "optionText": "Towards the left in the first block and towards the right in the second block",
+                "optionText": "Total power radiated by a black body is proportional to $!$A^2T$!$, where $!$A$!$ is the surface area of the black body and $!$T$!$ is it's temperature.",
                 "optionImage": "",
                 "isCorrect": false
               }
@@ -225,27 +170,22 @@
           },
           {
             "id": "dd76585682174622b9191",
-            "stepText": "The thermal energy will flow via conduction from the left end of the first block to the right end of the second block. Next, what formula can we use to find the rate of thermal energy transfer, $!$\\frac{\\Delta Q}{\\Delta t}$!$, through a block of length $!$l$!$, cross-sectional area $!$A$!$ and conductivity $!$k$!$?",
+            "stepText": "According to the Stefan-Boltzmann law, the luminosity of the star, $!$L$!$, is given by $!$L = \\sigma A T^4$!$, where $!$\\sigma$!$ is the Stefan-Boltzmann constant. Since we know the radius of the star, we can find its surface area. But we don't know the temperature of the star. Based on the infromation given in the question, which formula can we use to find the temperature of the star?",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
               {
-                "optionText": "$!$\\frac{\\Delta Q}{\\Delta t} = \\frac{kA\\Delta T}{l}$!$",
+                "optionText": "$!$P = \\sigma A T^4$!$",
+                "optionImage": "",
+                "isCorrect": false
+              },
+              {
+                "optionText": "$!$\\lambda_{peak} T = constant$!$",
                 "optionImage": "",
                 "isCorrect": true
               },
               {
-                "optionText": "$!$\\frac{\\Delta Q}{\\Delta t} = \\frac{k\\Delta T}{Al}$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$\\frac{\\Delta Q}{\\Delta t} = \\frac{kl\\Delta T}{A}$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$\\frac{\\Delta Q}{\\Delta t} = \\frac{A\\Delta T}{kl}$!$",
+                "optionText": "$!$P = \\frac{Q}{t}$!$",
                 "optionImage": "",
                 "isCorrect": false
               }
@@ -253,81 +193,68 @@
           },
           {
             "id": "167023bc077f42aeb3cc0",
-            "stepText": "Now, let's apply this formula to the first block. We know the conductivity of the block is $!$3k$!$, the cross-sectional area is $!$A$!$, the length is $!$2l$!$. The temperature at the left end of the block is $!$200\\:K$!$ and let's assume the temperature at the right end to be $!$T$!$. What is the rate of thermal energy transfer, $!$\\frac{\\Delta Q_1}{\\Delta t}$!$, through this block? Assume that the positive direction of the thermal energy transfer is towards the right.",
+            "stepText": "The peak wavelength of a black-body spectrum depends on the temperature of the black body and is given by $!$\\lambda_{peak} T = b$!$. This is called Wien's displacement law and $!$b$!$ is a constant with a value of $!$2.9 \\times 10^{-3}\\:m\\:K$!$. Apply this law to find the temperature of the star, $!$T$!$, given that $!$\\lambda_{peak} = 450\\:nm$!$. Give your answer upto 3 decimal places.",
+            "stepImage": "",
+            "stepSolveAnswer": [
+              "6.444"
+            ],
+            "stepSolveAnswerUnit": "$!$\\times 10^3\\:K$!$",
+            "options": []
+          },
+          {
+            "id": "855334d8f2c04597834c8",
+            "stepText": "Now we have all the information needed to find the luminosity of the star using $!$L = \\sigma A T^4$!$. But how is this luminosity related to the apparent brightness, $!$B$!$, of the star?",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
               {
-                "optionText": "$!$\\frac{\\Delta Q_1}{\\Delta t} = \\frac{3kA(200 - T)}{2l}$!$",
+                "optionText": "$!$B = \\frac{L}{4\\pi d^2}$!$, where $!$d$!$ is the distance of the star from the Earth.",
+                "optionImage": "",
+                "isCorrect": true
+              },
+              {
+                "optionText": "$!$B = \\frac{L}{d^2}$!$, where $!$d$!$ is the distance of the star from the Earth.",
                 "optionImage": "",
                 "isCorrect": false
               },
               {
-                "optionText": "$!$\\frac{\\Delta Q_1}{\\Delta t} = \\frac{3kA(T - 200)}{2l}$!$",
+                "optionText": "$!$B = \\frac{L}{d}$!$, where $!$d$!$ is the distance of the star from the Earth.",
                 "optionImage": "",
-                "isCorrect": true
+                "isCorrect": false
               }
             ]
           },
           {
-            "id": "855334d8f2c04597834c8",
-            "stepText": "Similarly, let's apply this formula to the second block. As the second block is in full contact with the first block, what will be the temperature at the left end of the second block?",
-            "stepImage": "",
-            "stepSolveAnswer": [
-              "T"
-            ],
-            "stepSolveAnswerUnit": "$!$K$!$",
-            "options": []
-          },
-          {
             "id": "c182f59ab4e44c2cbc43a",
-            "stepText": "Now, what will be the rate of thermal energy transfer, $!$\\frac{\\Delta Q_2}{\\Delta t}$!$, through the second block? The conductivity of the second block is $!$k$!$, the cross-sectional area is $!$A$!$, the length is $!$l$!$. The temperature at the right end is $!$750\\:K$!$ and the direction of heat flow is towards the right.",
+            "stepText": "We assume that the star is spherical and it is radiating energy uniformly in all directions. So, at any given distance $!$d$!$, the apparent brightness of the star is $!$B = \\frac{L}{4\\pi d^2}$!$. On Earth, the apparent brightness of the star was measured to be $!$1.5 \\times 10^{-10}\\:W/m^2$!$, and the luminosity of the star is $!$L = \\sigma A T^4$!$. What simplified equation can we use to find the distance of the star from the Earth?",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
               {
-                "optionText": "$!$\\frac{\\Delta Q_2}{\\Delta t} = \\frac{kA(T - 750)}{l}$!$",
+                "optionText": "$!$B = \\frac{\\sigma 4 \\pi r^2 T^4}{4\\pi d^2}$!$, where $!$r$!$ is the radius of the star.",
+                "optionImage": "",
+                "isCorrect": true
+              },
+              {
+                "optionText": "$!$B = \\frac{\\sigma \\pi r^2 T^4}{4\\pi d^2}$!$, where $!$r$!$ is the radius of the star.",
                 "optionImage": "",
                 "isCorrect": false
               },
               {
-                "optionText": "$!$\\frac{\\Delta Q_2}{\\Delta t} = \\frac{kA(750 - T)}{l}$!$",
+                "optionText": "$!$B = \\frac{\\sigma r^2 T^4}{4\\pi d^2}$!$, where $!$r$!$ is the radius of the star.",
                 "optionImage": "",
-                "isCorrect": true
+                "isCorrect": false
               }
             ]
           },
           {
             "id": "2e030e5d7bf84da4a710d",
-            "stepText": "We have now found the rates of thermal energy transfer through both the blocks and we know that this energy flows in a single direction - from left to right. We also know that the total energy of the system will be conserved. Based on this information, which of the following statements can be considered to be true?",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "All the energy flowing out of the first block will flow into the second block at the same rate.",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "The energy flowing out of the first block will flow into the second block but the rate of flow will be thrice the rate of the energy flowing out of the first block.",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "The energy flowing out of the first block will flow into the second block but the rate of flow will be one-third the rate of the energy flowing out of the first block.",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "5f772314390a48f8b9d86",
-            "stepText": "If the rate of flow was not equal, heat would either 'pile up' or 'flow out' at the point where the blocks are joined. This would mean that the temperature of that point would not be constant and the system would not be in steady state. But since we know that the system is already in steady state, the rate of heat flow must be equal. So, let's set $!$\\frac{\\Delta Q_1}{\\Delta t} = \\frac{\\Delta Q_2}{\\Delta t}$!$ and find the value of $!$T$!$.",
+            "stepText": "The surface area of the star is given by $!$A = 4\\pi r^2$!$. So, we can find the distance of the star from the Earth by using the equation $!$B = \\frac{\\sigma 4 \\pi r^2 T^4}{4\\pi d^2}$!$. Estimate this distance upto 2 decimal places (in units of $!$10^{18}\\:m$!$).",
             "stepImage": "",
             "stepSolveAnswer": [
-              "420"
+              "2.41"   
             ],
-            "stepSolveAnswerUnit": "$!$K$!$",
+            "stepSolveAnswerUnit": "$!$10^{18}\\:m$!$",
             "options": []
           }
         ]
