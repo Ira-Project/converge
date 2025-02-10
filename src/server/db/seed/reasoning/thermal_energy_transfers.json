@@ -1,49 +1,60 @@
-[
-  {
+{
     "name": "Thermal Energy Transfers",
     "topicIdDev": "",
     "topicIdProd": "",
     "latexDelimiter": "$!$",
     "reasoningQuestions": [
       {
-        "topText": "",
+        "topText": "Ira uses a heater with unknown power, $!$P$!$, to heat up an open container with 2 kg of water. The initial temperature of the container is $!$60^{\\circ}C$!$ and the heater is kept on till the temperature reaches $!$120^{\\circ}C$!$. The total time taken is $!$10\\:min$!$. The specific heat capacity of water, $!$c_w$!$, is $!$4200\\:J/kg/K$!$, the specific heat capacity of steam, $!$c_s$!$, is $!$2000\\:J/kg/K$!$, and the latent heat of vaporisation of water, $!$L$!$, is $!$2.26\\times10^6\\:J/kg$!$. Assuming that the container is insulated, Ira calculates the power of the heater to be $!$693.33\\:W$!$ (upto 2 decimal places) which does not match it's actual power rating.",
         "questionText": "",
         "questionImage": "",
-        "answerText": "",
-        "correctAnswers": [],
-        "correctAnswersUnit": "",
+        "answerText": "$!$693.33\\:W$!$",
+        "correctAnswers": [
+          "8226.67"
+        ],
+        "correctAnswersUnit": "$!$W$!$",
         "answerImage": "",
-        "numberOfSteps": 3,
+        "numberOfSteps": 4,
         "topicId": "",
         "answerOptions": [
           {
-            "id": "",
-            "optionText": "",
+            "id": "bcc3bf3809694b36b8ae1",
+            "optionText": "Temperature change of water ($!$\\Delta T_1$!$) = $!$100^{\\circ}C - 60^{\\circ}C$!$",
             "optionImage": ""
           },
           {
-            "id": "",
-            "optionText": "",
+            "id": "cebb1d61afd84d1a8cff4",
+            "optionText": "Temperature change of steam ($!$\\Delta T_2$!$) = $!$120^{\\circ}C - 100^{\\circ}C$!$",
             "optionImage": ""
           },
           {
-            "id": "",
-            "optionText": "",
+            "id": "28a42b39c64a4dfaacce4",
+            "optionText": "Energy supplied by heater ($!$Q$!$) = $!$mc\\Delta T_1 + mc\\Delta T_2$!$",
             "optionImage": ""
           },
           {
-            "id": "",
-            "optionText": "",
+            "id": "04e251d2d41e4776bc923",
+            "optionText": "Power of heater ($!$P$!$) = $!$\\frac{Q}{t}$!$",
             "optionImage": ""
           },
           {
-            "id": "",
-            "optionText": "",
+            "id": "371c908aac7d47ec8165b",
+            "optionText": "Temperature change of water ($!$\\Delta T_1$!$) = $!$120^{\\circ}C - 60^{\\circ}C$!$",
             "optionImage": ""
           },
           {
-            "id": "",
-            "optionText": "",
+            "id": "bf4f0d56445e473885c0a",
+            "optionText": "Temperature change of steam ($!$\\Delta T_2$!$) = $!$120^{\\circ}C - 60^{\\circ}C$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "1a354e8714b6400bad5c7",
+            "optionText": "Energy supplied by heater ($!$Q$!$) = $!$mc\\Delta T_1 + mc\\Delta T_2 + mL$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "32c3d971310041a9ba99e",
+            "optionText": "Power of heater ($!$P$!$) = $!$\\sigma A T^4$!$",
             "optionImage": ""
           }
         ],
@@ -53,428 +64,100 @@
               {
                 "stepNumber": 1,
                 "isCorrect": true,
-                "answerOptionId": "",
-                "replacementOptionId": ""
+                "answerOptionId": "bcc3bf3809694b36b8ae1",
+                "stepNumberList": [
+                  "1",
+                  "2"
+                ]
               },
               {
                 "stepNumber": 2,
-                "isCorrect": false,
-                "answerOptionId": "",
-                "replacementOptionId": ""
-              },
-              {
-                "stepNumber": 3,
                 "isCorrect": true,
-                "answerOptionId": "",
-                "replacementOptionId": ""
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "topText": "",
-        "questionText": "",
-        "questionImage": "",
-        "answerText": "",
-        "correctAnswers": [],
-        "correctAnswersUnit": "",
-        "answerImage": "",
-        "numberOfSteps": 3,
-        "topicId": "",
-        "answerOptions": [
-          {
-            "id": "",
-            "optionText": "",
-            "optionImage": ""
-          },
-          {
-            "id": "",
-            "optionText": "",
-            "optionImage": ""
-          },
-          {
-            "id": "",
-            "optionText": "",
-            "optionImage": ""
-          },
-          {
-            "id": "",
-            "optionText": "",
-            "optionImage": ""
-          },
-          {
-            "id": "",
-            "optionText": "",
-            "optionImage": ""
-          },
-          {
-            "id": "",
-            "optionText": "",
-            "optionImage": ""
-          }
-        ],
-        "pathways": [
-          {
-            "steps": [
-              {
-                "stepNumber": 1,
-                "isCorrect": false,
-                "answerOptionId": "",
-                "replacementOptionId": ""
-              },
-              {
-                "stepNumber": 2,
-                "isCorrect": false,
-                "answerOptionId": "",
-                "replacementOptionId": ""
+                "answerOptionId": "cebb1d61afd84d1a8cff4",
+                "stepNumberList": [
+                  "1",
+                  "2"
+                ]
               },
               {
                 "stepNumber": 3,
                 "isCorrect": false,
-                "answerOptionId": "",
-                "replacementOptionId": ""
+                "answerOptionId": "28a42b39c64a4dfaacce4",
+                "replacementOptionId": "1a354e8714b6400bad5c7"
+              },
+              {
+                "stepNumber": 4,
+                "isCorrect": true,
+                "answerOptionId": "04e251d2d41e4776bc923"
               }
             ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Thermal Energy Transfers",
-    "topicIdDev": "",
-    "topicIdProd": "",
-    "latexDelimiter": "$!$",
-    "questions": [
-      {
-        "id": "455143efb06241bb94ff9",
-        "questionText": "A 2000 W heater is used to heat up 250 grams of a substance as it turns from solid to gas. The graph below depicts how the temperature of the substance varies with time, with the gradients of the non-horizontal segments shown. Estimate the specific heat capacity of the substance in the gaseous phase.",
-        "questionImage": "q1_img.png",
-        "steps": [
-          {
-            "id": "f88fea338b6a4a4686723",
-            "stepText": "First, let's try to identify the different segments of the graph. As the substance recieves thermal energy, its phase changes from solid to liquid and then from liquid to gas. How do we know which segments correspond to these phase changes?",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "Temperature remains constant during the phase changeso we can identify them by looking for horizontal segments.",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "Temperature increases steadily during the phase changes, so we can identify them by looking for non-horizontal segments.",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "Gradient is maximum during the phase changes so we can identify them by looking for the steepest segments.",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "Gradient is minimum during the phase changes so we can identify them by looking for the shallowest segments.",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "c51e8586d87a4687af609",
-            "stepText": "We now know that the horizontal segments correspond to the phase changes and the non-horizontal segments correspond to an increase in temperature of the substance in a particular phase. In the next step, let's identify which exact segments correspond to the solid to liquid phase change and the liquid to gas phase change.",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": []
-          },
-          {
-            "id": "5cb40a03df8c49b6bd13e",
-            "stepText": "",
-            "stepImage": "",
-            "options": [
-              {
-                "optionText": "Segment BC - solid to liquid phase change \n Segment DE - liquid to gas phase change",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "Segment DE - solid to liquid phase change \n Segment BC - liquid to gas phase change",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "0d39138bff5e4f37b941a",
-            "stepText": "We have identified that segment DE corresponds to the liquid to gas phase change. Using this information, find out which segment of the graph corresponds to a temperature increase of the substance in the gaseous phase.",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "Segment DE",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "Segment EF",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "Segment CD",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "c588309e381f45cca290e",
-            "stepText": "So, segment EF corresponds to a temperature increase of the substance in the gaseous phase. In this segment, what formula can we use to describe the thermal energy, $!$Q$!$, supplied to the substance?",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "$!$Q$!$ = $!$mc\\Delta T$!$",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "$!$Q$!$ = $!$mL\\Delta T$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$Q$!$ = $!$mc$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$Q$!$ = $!$mL$!$",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "e25d01add9e148818dc54",
-            "stepText": "We know the mass of the substance $!$m = 250\\:g$!$ and we can find the increase in temperature, $!$\\Delta T$!$, from the graph. But we haven't been given $!$Q$!$, the energy supplied to the substance. So the formula $!$Q = mc\\Delta T$!$ cannot be used directly to find $!$c$!$, the specific heat capacity of the substance in the gaseous phase. However, we know the power of the heater $!$P = 2000\\:W$!$. What formula can we use to relate $!$P$!$ and $!$c$!$?",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "$!$P = \\frac{Q}{t} = \\frac{mc\\Delta T}{t}$!$",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "$!$P = \\frac{W}{t} = \\frac{ma}{t}$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$P = Qt = mc\\Delta T \\times t$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$P = Wt = ma \\times t$!$",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "ef6f05e4ee5b4d4f90357",
-            "stepText": "When applying the formula $!$P = \\frac{mc\\Delta T}{t}$!$ to the segment EF, we can use the graph to find the value of $!$\\frac{\\Delta T}{t}$!$. What is this value (in $!$K/s$!$)?",
-            "stepImage": "",
-            "stepSolveAnswer": [
-              "4.0",
-              "4",
-              "4 K/s",
-              "4.0 K/s"
-            ],
-            "stepSolveAnswerUnit": "$!$K/s$!$",
-            "options": []
-          },
-          {
-            "id": "5f43669489e446409584f",
-            "stepText": "Finally, we have all the required information to find the specific heat capacity, $!$c$!$, of the substance in the gaseous phase using the formula $!$P = \\frac{mc\\Delta T}{t}$!$. Make sure to convert all values to the correct units and find $!$c$!$ (in $!$J/kg/K$!$).",
-            "stepImage": "",
-            "stepSolveAnswer": [
-              "2000",
-              "2000 J/kg/K",
-              "2000J/kg/K"
-            ],
-            "stepSolveAnswerUnit": "$!$J/kg/K$!$",
-            "options": []
           }
         ]
       },
       {
-        "id": "11174faeb8ce45e182520",
-        "questionText": "Two blocks of the same cross-sectional area, $!$A$!$, are joined as shown in the diagram below. The left end of the first block is held at a constant temperature of $!$200\\:K$!$ and the right end of the second block is held at a constant temperature of $!$750\\:K$!$. The first block has a length of $!$2l$!$ and a conductivity of $!$3k$!$ and the second block has a length of $!$l$!$ and a conductivity of $!$k$!$. At steady state, what will be the temperature of the point where the blocks are joined?",
+        "topText": "Two blocks of the same cross-sectional area, $!$A$!$, are joined together. The left end of the first block is held at a constant temperature of $!$200\\:K$!$ and the right end of the second block is held at a constant temperature of $!$750\\:K$!$. The first block has a length of $!$2l$!$ and a conductivity of $!$3k$!$ and the second block has a length of $!$l$!$ and a conductivity of $!$k$!$. At steady state, Ira calculates the temperature, $!$T$!$, of the point where the blocks are joined to be $!$567\\:K$!$. However, this turns out to be incorrect.",
+        "questionText": "",
         "questionImage": "q2_img.png",
-        "steps": [
+        "answerText": "$!$567\\:K$!$",
+        "correctAnswers": [],
+        "correctAnswersUnit": "",
+        "answerImage": "",
+        "numberOfSteps": 3,
+        "topicId": "",
+        "answerOptions": [
           {
-            "id": "f4b302714cef43829c675",
-            "stepText": "As we can see in the diagram, the two blocks are in contact with each other. What is the type of thermal energy transfer taking place in this system?",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
+            "id": "33861bf1742142289e155",
+            "optionText": "Heat flow through the first block ($!$\\frac{\\Delta Q_1}{\\Delta t}$!$) = $!$\\frac{3kA(T - 200)}{2l}$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "ea1c3360b5c049bca180a",
+            "optionText": "Heat flow through the second block ($!$\\frac{\\Delta Q_2}{\\Delta t}$!$) = $!$\\frac{kA(750 - T)}{l}$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "d9927f369f90439cbe932",
+            "optionText": "$!$T$!$ is found using heat flow through the first block ($!$\\frac{\\Delta Q_1}{\\Delta t}$!$) = $!$3 \\times$!$ heat flow through the second block ($!$\\frac{\\Delta Q_2}{\\Delta t}$!$)",
+            "optionImage": ""
+          },
+          {
+            "id": "295aef9839234ca2b7fae",
+            "optionText": "Heat flow through the first block ($!$\\frac{\\Delta Q_1}{\\Delta t}$!$) = $!$\\frac{m \\cdot 3k \\cdot (T - 200)}{\\Delta t}$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "70b755f36b8340d5a7fff",
+            "optionText": "Heat flow through the second block ($!$\\frac{\\Delta Q_2}{\\Delta t}$!$) = $!$\\frac{m \\cdot k \\cdot (750 - T)}{\\Delta t}$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "1f2a0cb20d834b17b91e0",
+            "optionText": "$!$T$!$ is found using heat flow through the first block ($!$\\frac{\\Delta Q_1}{\\Delta t}$!$) = heat flow through the second block ($!$\\frac{\\Delta Q_2}{\\Delta t}$!$)",
+            "optionImage": ""
+          }
+        ],
+        "pathways": [
+          {
+            "steps": [
               {
-                "optionText": "Conduction",
-                "optionImage": "",
-                "isCorrect": true
+                "stepNumber": 1,
+                "isCorrect": true,
+                "answerOptionId": "33861bf1742142289e155"
               },
               {
-                "optionText": "Convection",
-                "optionImage": "",
-                "isCorrect": false
+                "stepNumber": 2,
+                "isCorrect": true,
+                "answerOptionId": "ea1c3360b5c049bca180a"
               },
               {
-                "optionText": "Radiation",
-                "optionImage": "",
-                "isCorrect": false
+                "stepNumber": 3,
+                "isCorrect": false,
+                "answerOptionId": "d9927f369f90439cbe932",
+                "replacementOptionId": "1f2a0cb20d834b17b91e0"
               }
             ]
-          },
-          {
-            "id": "4cf87ab946b4453eb35a5",
-            "stepText": "Now that we have identified that the thermal energy transfer is taking place by conduction, what will be the direction of this energy transfer? Remember that heat flow always occurs from a higher temperature to a lower temperature.",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "Towards the right in both the blocks",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "Towards the left in both the blocks",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "Towards the right in the first block and towards the left in the second block",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "Towards the left in the first block and towards the right in the second block",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "dd76585682174622b9191",
-            "stepText": "The thermal energy will flow via conduction from the left end of the first block to the right end of the second block. Next, what formula can we use to find the rate of thermal energy transfer, $!$\\frac{\\Delta Q}{\\Delta t}$!$, through a block of length $!$l$!$, cross-sectional area $!$A$!$ and conductivity $!$k$!$?",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "$!$\\frac{\\Delta Q}{\\Delta t} = \\frac{kA\\Delta T}{l}$!$",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "$!$\\frac{\\Delta Q}{\\Delta t} = \\frac{k\\Delta T}{Al}$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$\\frac{\\Delta Q}{\\Delta t} = \\frac{kl\\Delta T}{A}$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$\\frac{\\Delta Q}{\\Delta t} = \\frac{A\\Delta T}{kl}$!$",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "167023bc077f42aeb3cc0",
-            "stepText": "Now, let's apply this formula to the first block. We know the conductivity of the block is $!$3k$!$, the cross-sectional area is $!$A$!$, the length is $!$2l$!$. The temperature at the left end of the block is $!$200\\:K$!$ and let's assume the temperature at the right end to be $!$T$!$. What is the rate of thermal energy transfer, $!$\\frac{\\Delta Q_1}{\\Delta t}$!$, through this block? Assume that the positive direction of the thermal energy transfer is towards the right.",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "$!$\\frac{\\Delta Q_1}{\\Delta t} = \\frac{3kA(200 - T)}{2l}$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$\\frac{\\Delta Q_1}{\\Delta t} = \\frac{3kA(T - 200)}{2l}$!$",
-                "optionImage": "",
-                "isCorrect": true
-              }
-            ]
-          },
-          {
-            "id": "855334d8f2c04597834c8",
-            "stepText": "Similarly, let's apply this formula to the second block. As the second block is in full contact with the first block, what will be the temperature at the left end of the second block?",
-            "stepImage": "",
-            "stepSolveAnswer": [
-              "T"
-            ],
-            "stepSolveAnswerUnit": "$!$K$!$",
-            "options": []
-          },
-          {
-            "id": "c182f59ab4e44c2cbc43a",
-            "stepText": "Now, what will be the rate of thermal energy transfer, $!$\\frac{\\Delta Q_2}{\\Delta t}$!$, through the second block? The conductivity of the second block is $!$k$!$, the cross-sectional area is $!$A$!$, the length is $!$l$!$. The temperature at the right end is $!$750\\:K$!$ and the direction of heat flow is towards the right.",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "$!$\\frac{\\Delta Q_2}{\\Delta t} = \\frac{kA(T - 750)}{l}$!$",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "$!$\\frac{\\Delta Q_2}{\\Delta t} = \\frac{kA(750 - T)}{l}$!$",
-                "optionImage": "",
-                "isCorrect": true
-              }
-            ]
-          },
-          {
-            "id": "2e030e5d7bf84da4a710d",
-            "stepText": "We have now found the rates of thermal energy transfer through both the blocks and we know that this energy flows in a single direction - from left to right. We also know that the total energy of the system will be conserved. Based on this information, which of the following statements can be considered to be true?",
-            "stepImage": "",
-            "stepSolveAnswer": [],
-            "options": [
-              {
-                "optionText": "All the energy flowing out of the first block will flow into the second block at the same rate.",
-                "optionImage": "",
-                "isCorrect": true
-              },
-              {
-                "optionText": "The energy flowing out of the first block will flow into the second block but the rate of flow will be thrice the rate of the energy flowing out of the first block.",
-                "optionImage": "",
-                "isCorrect": false
-              },
-              {
-                "optionText": "The energy flowing out of the first block will flow into the second block but the rate of flow will be one-third the rate of the energy flowing out of the first block.",
-                "optionImage": "",
-                "isCorrect": false
-              }
-            ]
-          },
-          {
-            "id": "5f772314390a48f8b9d86",
-            "stepText": "If the rate of flow was not equal, heat would either 'pile up' or 'flow out' at the point where the blocks are joined. This would mean that the temperature of that point would not be constant and the system would not be in steady state. But since we know that the system is already in steady state, the rate of heat flow must be equal. So, let's set $!$\\frac{\\Delta Q_1}{\\Delta t} = \\frac{\\Delta Q_2}{\\Delta t}$!$ and find the value of $!$T$!$.",
-            "stepImage": "",
-            "stepSolveAnswer": [
-              "420"
-            ],
-            "stepSolveAnswerUnit": "$!$K$!$",
-            "options": []
           }
         ]
       }
     ]
   }
-]
