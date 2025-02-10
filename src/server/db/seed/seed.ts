@@ -46,8 +46,8 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createStepSolveAssignment();
 
 // READ AND RELAY CREATION AND DELETION
-// await deleteReadAndRelayAssignment();
-// await createReadAndRelayAssignment();
+await deleteReadAndRelayAssignment("pr1trj9v32imu7n1k3v7l");
+await createReadAndRelayAssignment();
 
 // USER DELETION
 // await deleteUser();

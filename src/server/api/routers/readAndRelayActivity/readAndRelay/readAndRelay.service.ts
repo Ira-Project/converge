@@ -169,7 +169,8 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
     const lastCheatsheet = submission.cheatsheets
       .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())[0];
     const highlightCount = lastCheatsheet?.highlights?.length ?? 0;
-    return sum + highlightCount;
+    const formulasCount = lastCheatsheet?.formulas?.length ?? 0;
+    return sum + highlightCount + formulasCount;
   }, 0) / submissionCount;
     
   return {

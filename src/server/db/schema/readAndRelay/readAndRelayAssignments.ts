@@ -15,6 +15,10 @@ export const readAndRelayAssignments = pgTable(
     name: text("name"),
     description: text("description"),
     readingPassage: text("reading_passage"), // latex for the text to be rendered
+    maxNumberOfHighlights: integer("max_number_of_highlights").notNull().default(5),
+    maxNumberOfFormulas: integer("max_number_of_formulas").notNull().default(3),
+    maxHighlightLength: integer("max_highlight_length").notNull().default(200),
+    maxFormulaLength: integer("max_formula_length").notNull().default(200),
     topicId: varchar("topic_id", { length: 21 }).notNull().references(() => topics.id),
     order: integer("order"),
     showAnswers: boolean("show_answers").default(true).notNull(),

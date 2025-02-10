@@ -1,8 +1,6 @@
 import React from 'react';
 import FormattedText from '@/components/formatted-text';
 import { ReasoningPathwayStepResult } from '@/lib/constants';
-import { Tooltip, TooltipTrigger, TooltipContent } from '@/components/ui/tooltip';
-import { TooltipArrow } from '@radix-ui/react-tooltip';
 
 const getPathwayStepColor = (result: ReasoningPathwayStepResult): string => {
   switch (result) {

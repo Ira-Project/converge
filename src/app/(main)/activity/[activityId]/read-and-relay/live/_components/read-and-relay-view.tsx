@@ -18,12 +18,19 @@ import ReadAndRelayTutorialModal from "./read-and-relay-tutorial-modal";
 import ReadAndRelayShareModal from "./read-and-relay-share-modal";
 import ReadAndRelayConfirmationModal from "./read-and-relay-confirmation-modal";
 import ReadingPassage from "./reading-passage";
-
-
+import FormattedText from "@/components/formatted-text";
+import { Button } from "@/components/ui/button";
+import { TrashIcon } from "@/components/icons";
+import { LoadingButton } from "@/components/loading-button";
+import Image from "next/image";
 interface Props {
   activityId: string
   topic: string;
   readingPassage: string;
+  maxNumberOfHighlights: number;
+  maxNumberOfFormulas: number;
+  maxHighlightLength: number;
+  maxFormulaLength: number;
   questions: {
     id: string,
     question: string,
@@ -41,7 +48,7 @@ interface Props {
   role: Roles;
 }
 
-export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, questions, attemptId, assignmentId, classroom, isLive, dueDate, role }: Props) => {
+export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, questions, attemptId, assignmentId, classroom, isLive, dueDate, role, maxNumberOfHighlights, maxNumberOfFormulas, maxHighlightLength, maxFormulaLength }: Props) => {
   const evaluateReadingMutation = api.evaluateReading.evaluateReading.useMutation();
   const submissionMutation = api.readAndRelay.submitAttempt.useMutation();
 
@@ -101,8 +108,16 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
     }
   }, [supabaseClient, channelName]);
   
-  const [highlights, setHighlights] = useState<string[]>([]);
-  const [formulas, setFormulas] = useState<string[]>([]);
+  interface Highlight {
+    id: string;
+    text: string;
+  }
+  interface Formula {
+    id: string;
+    text: string;
+  }
+  const [highlights, setHighlights] = useState<Highlight[]>([]);
+  const [formulas, setFormulas] = useState<Formula[]>([]);
 
   const onSubmit = (async () => {
     questionsStateDispatch({
@@ -110,8 +125,8 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
     })
 
     await evaluateReadingMutation.mutateAsync({
-      highlights: highlights,
-      formulas: formulas,
+      highlights: highlights.map(h => h.text),
+      formulas: formulas.map(f => f.text),
       channelName: channelName,
       assignmentId: assignmentId,
       attemptId: attemptId,
@@ -131,7 +146,7 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
     <div className="flex flex-col">
       <div className="grid grid-cols-2 w-full h-12 border-b-slate-200 border-b pl-8 pr-4">
         <div className="flex flex-row gap-4 flex-start mr-auto h-8 my-auto">
-          <p className="text-lg font-semibold my-auto text-fuchsia-700">
+          <p className="text-lg font-semibold my-auto text-blue-700">
             Read and Relay
           </p>
           <Separator orientation="vertical" className="h-6 w-px my-auto" />
@@ -167,42 +182,135 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
           }
         </div>
       </div>
-      <div className="grid grid-cols-[0.9fr_1.1fr] h-[calc(100vh-48px)] overflow-y-hidden">
-        <div className="flex flex-col gap-4 w-full px-8 py-8 overflow-y-hidden border-r-slate-200 border-r bg-amber-50">
-          <ReadingPassage readingPassage={readingPassage}/>
-        </div>
-        <div className="flex flex-col gap-4 w-full px-8 py-8 h-full overflow-y-hidden">
-          <div className="flex flex-col gap-2"> 
-            <p className="font-medium text-sm"> Questions </p>
-            <p className="text-sm text-muted-foreground"> Ira will answer these questions based on your explanation </p>
+      <div className="grid grid-cols-[1fr_1fr] h-[calc(100vh-48px)] overflow-y-hidden">
+        <div className="flex flex-col gap-4 w-full px-6 py-6 overflow-y-hidden border-r-slate-200 border-r bg-blue-50">
+          <div className="h-full overflow-y-auto">
+            <ReadingPassage 
+              maxNumberOfHighlights={maxNumberOfHighlights}
+              maxNumberOfFormulas={maxNumberOfFormulas}
+              maxHighlightLength={maxHighlightLength}
+              maxFormulaLength={maxFormulaLength}
+              content={readingPassage}
+              highlights={highlights}
+              formulas={formulas}
+              setHighlights={setHighlights}
+              setFormulas={setFormulas}
+            />
           </div>
-          <ScrollArea className="grid overflow-y-auto max-h-full">
-            <div className="flex flex-col gap-4">
-              <Accordion type="single" collapsible className="w-full">
-                <Suspense fallback={<Skeleton className="w-full h-16"/>}>
-                  {
-                    assignmentState.questions.map((question) => (
+          <div className="ml-auto flex flex-row justify-end h-8">
+            <LoadingButton 
+              variant="link"
+              dontShowChildrenWhileLoading
+              disabled={evaluateReadingMutation.isLoading || !isSubscribed || (highlights.length === 0 && formulas.length === 0)} 
+              loading={evaluateReadingMutation.isLoading || !isSubscribed}
+              className="p-2 bottom-0 right-0 mt-auto ml-auto hover:no-underline"
+              onClick={onSubmit}
+              type="submit">
+                <div className="flex flex-row gap-2">
+                <span className="my-auto font-semibold">
+                  Share Cheatsheet with Ira
+                </span>
+                <Image 
+                  className="my-auto" 
+                  src="/images/read-and-relay.png" 
+                  alt="Read and Relay" 
+                  width={32} 
+                  height={32} />
+                </div>
+            </LoadingButton>
+          </div>
+        </div>
+        <div className="flex flex-col w-full h-full overflow-y-hidden">
+          <div className="h-2/5 px-6 py-6 border-b flex flex-col gap-2">
+            <p className="font-medium text-sm"> Cheatsheet for Ira </p>
+            <ScrollArea className="h-full overflow-scroll rounded-lg border p-4">
+              <div className="flex flex-col gap-4 my-auto">
+                <div>
+                  <p className="font-medium text-sm mb-2">Highlighted Concepts</p>
+                  {highlights.length === 0 ? (
+                    <p className="text-sm text-muted-foreground mb-8">No concepts highlighted yet. Highlight text in yellow to add concepts.</p>
+                  ) : (
+                    highlights.map((highlight) => (
+                      <div key={highlight.id} className="grid grid-cols-[1fr_auto] gap-2 mb-2">
+                        <div
+                          className="text-sm bg-yellow-200 px-1 py-1 my-auto rounded"
+                        > 
+                          <FormattedText
+                            text={highlight.text}
+                            padding={true}
+                          />
+                        </div>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => setHighlights(highlights.filter(h => h.id !== highlight.id))}
+                          className="my-auto"
+                        >
+                          <TrashIcon />
+                        </Button>
+                      </div>
+                    ))
+                  )}
+                </div>
+                <div>
+                  <p className="font-medium text-sm mb-2">Highlighted Formula</p>
+                  {formulas.length === 0 ? (
+                    <p className="text-sm text-muted-foreground">No formulas highlighted yet. Highlight text in green to add formulas.</p>
+                  ) : (
+                    formulas.map((formula) => (
+                      <div key={formula.id} className="grid grid-cols-[1fr_auto] gap-2 mb-2">
+                        <div
+                          className="text-sm bg-green-200 px-1 py-1 my-auto rounded"
+                        > 
+                        <FormattedText
+                          text={formula.text}
+                          padding={true}
+                          />
+                        </div>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={() => setFormulas(formulas.filter(f => f.id !== formula.id))}
+                          className="my-auto"
+                        >
+                          <TrashIcon />
+                        </Button>
+                      </div>
+                    ))
+                  )}
+                </div>
+              </div>
+              <ScrollBar orientation="vertical" />
+            </ScrollArea>
+          </div>
+          <div className="h-3/5 px-6 py-6">
+            <div className="flex flex-col gap-2 h-full"> 
+              <p className="font-medium text-sm"> Questions </p>
+              <p className="text-sm text-muted-foreground"> Ira will answer these questions based on your explanation </p>
+              <ScrollArea className="flex flex-col gap-4 h-full overflow-scroll">
+                <Accordion type="single" collapsible className="w-full pr-4">
+                  <Suspense fallback={<Skeleton className="w-full h-16"/>}>
+                    {assignmentState.questions.map((question) => (
                       <QuestionAccordionItem 
                         status={question.status}
                         key={question.id}
                         id={question.id.toString()}
                         questionText={question.questionText}
                         questionImage={question.questionImage ?? undefined}
-                        // answerText={question.answerText} 
                         image={question.image}
                         imageHeight={question.imageHeight}
                         imageWidth={question.imageWidth}
                         workingText={question.working !== "" ? question.working : undefined}
                         workingComplete={question.workingComplete}
                         computedAnswerText={question.computedAnswerText}
-                        />
-                    ))
-                  }
-                </Suspense>
-              </Accordion>
+                      />
+                    ))}
+                  </Suspense>
+                </Accordion>
+                <ScrollBar orientation="vertical" />
+              </ScrollArea>
             </div>
-            <ScrollBar orientation="vertical" />
-          </ScrollArea>
+          </div>
         </div>
       </div>
     </div>

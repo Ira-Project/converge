@@ -35,7 +35,6 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
 
 
   const handleSubmit = async () => {
-    const answerReversed = [...order].reverse();
     const result = await checkOrderingAnswer.mutateAsync({
       assignmentAttemptId: assignmentAttemptId,
       orderingQuestionId: orderingQuestionId,

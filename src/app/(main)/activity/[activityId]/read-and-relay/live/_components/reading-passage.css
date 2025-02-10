@@ -1,0 +1,75 @@
+/* Base text styles */
+#reading-passage p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+#reading-passage h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+#reading-passage h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+#reading-passage h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #1a1a1a;
+}
+
+/* List styles */
+#reading-passage ul,
+#reading-passage ol {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+#reading-passage li {
+  margin-bottom: 0.5rem;
+}
+
+/* Inline text elements */
+#reading-passage em {
+  font-style: italic;
+}
+
+#reading-passage strong {
+  font-weight: 600;
+}
+
+/* Links */
+#reading-passage a {
+  color: #2563eb;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+#reading-passage a:hover {
+  color: #1d4ed8;
+}
+
+/* Block quotes */
+#reading-passage blockquote {
+  border-left: 4px solid #e5e7eb;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  font-style: italic;
+  color: #4b5563;
+}
+
+/* Code blocks */
+#reading-passage code {
+  font-family: monospace;
+  background-color: #f3f4f6;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}

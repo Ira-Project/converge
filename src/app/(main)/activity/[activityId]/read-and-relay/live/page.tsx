@@ -26,6 +26,10 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
   return (
     <main>
       <ReadAndRelayAssignmentView 
+        maxNumberOfHighlights={assignment?.maxNumberOfHighlights ?? 5}
+        maxNumberOfFormulas={assignment?.maxNumberOfFormulas ?? 3}
+        maxHighlightLength={assignment?.maxHighlightLength ?? 200}
+        maxFormulaLength={assignment?.maxFormulaLength ?? 200}
         activityId={params.activityId}
         readingPassage={assignment?.readingPassage ?? ""}
         role={userToClassroom?.role ?? Roles.Student}

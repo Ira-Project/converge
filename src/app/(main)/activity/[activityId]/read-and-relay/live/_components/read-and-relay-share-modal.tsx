@@ -61,7 +61,7 @@ import { Paths } from "@/lib/constants";
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button size="sm" className="bg-fuchsia-700 hover:bg-fuchisa-900">
+        <Button size="sm" className="bg-blue-700 hover:bg-blue-900">
           Share
           <Share1Icon />
         </Button>
@@ -146,7 +146,7 @@ import { Paths } from "@/lib/constants";
                 <Button variant="outline">Cancel</Button>
               </DialogClose>
               <LoadingButton 
-                  className="bg-fuchsia-700 hover:bg-fuchsia-900"
+                  className="bg-blue-700 hover:bg-blue-900"
                   onClick={onSubmit}
                   loading={makeAssignmentLive.isLoading}
                   type="submit">

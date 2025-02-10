@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import katex from 'katex';
 
+import './reading-passage.css';
+import TextWithHighlights from '@/components/text-with-highlights';
+import { getStartContainer, parseContent } from '../utils';
+import { toast } from 'sonner';
 
-type ContentSegment = {
+export type ContentSegment = {
   id: string;
   type: 'text' | 'latex';
   content: string;
-};
-
-type Highlight = {
-  id: string;
-  segmentId: string;
-  color: HighlightColor;
-  content: string;
+  tag?: 'h1' | 'h2' | 'h3' | 'p';
 };
 
 type SegmentHighlight = {
@@ -26,90 +24,137 @@ type SegmentHighlight = {
 type HighlightColor = 'yellow' | 'green';
 
 interface Props {
-  /** Content with LaTeX delimited by $!$ */
-  // content: string;
-  readingPassage: string;
-  /** Initial highlights */
-  /** Callback when highlights change */
-  onHighlightsChange?: (highlights: Highlight[]) => void;
+  content: string;
+  highlights: {id: string, text: string}[];
+  formulas: {id: string, text: string}[];
+  maxNumberOfHighlights: number;
+  maxNumberOfFormulas: number;
+  maxHighlightLength: number;
+  maxFormulaLength: number;
+  setHighlights: (highlights: {id: string, text: string}[]) => void;
+  setFormulas: (formulas: {id: string, text: string}[]) => void;
 }
 
-const parseContent = (content: string): ContentSegment[] => {
-  const segments = content.split('$!$');
-  return segments.map((segment, index) => ({
-    id: `segment-${index}`,
-    type: index % 2 === 0 ? 'text' : 'latex',
-    content: segment.trim()
-  }));
-};
-
-const getStartContainer = (element: Element | null) => {
-  if (!element) return null;
-  if (element.id?.includes('segment')) {
-    return element;
-  }
-  return getStartContainer(element.parentElement);
-};
-
 const ReadingPassage: React.FC<Props> = ({
-  readingPassage,
-  onHighlightsChange
+  content,
+  highlights,
+  formulas,
+  maxNumberOfHighlights,
+  maxNumberOfFormulas,
+  maxHighlightLength,
+  maxFormulaLength,
+  setHighlights,
+  setFormulas
 }) => {
 
-  const content = "<strong>This is</strong> regular<br/> text $!$ \\frac{1}{2} $!$ <strong>and more text</strong> $!$ x^2 + x^3 $!$ at the end."
   const [segments, setSegments] = useState<ContentSegment[]>([]);
-  const [highlights, setHighlights] = useState<Highlight[]>([]);
-  const [segmentHighlights, setSegmentHighlights] = useState<{
-    segmentId: string;
-    highlights: SegmentHighlight[];
-  }[]>([]);
+  const [segmentHighlights, setSegmentHighlights] = useState<Record<string, SegmentHighlight[]>>({});
   const [currentColor, setCurrentColor] = useState<HighlightColor>('yellow');
 
   useEffect(() => {
     setSegments(parseContent(content));
     console.log("SEGMENTS: ", segments);
-    for (const segment of segments) {
-      setSegmentHighlights(prev => [...prev, {
-        segmentId: segment.id,
-        highlights: []
-      }]);
-    }
+    const initialHighlights: Record<string, SegmentHighlight[]> = {};
+    segments.forEach(segment => {
+      initialHighlights[segment.id] = [];
+    });
+    setSegmentHighlights(initialHighlights);
   }, [content]);
 
   useEffect(() => {
-    onHighlightsChange?.(highlights);
-  }, [highlights, onHighlightsChange]);
+    // Create a set of valid highlight IDs from both highlights and formulas
+    const validHighlightIds = new Set([
+      ...highlights.map(h => h.id),
+      ...formulas.map(f => f.id)
+    ]);
+
+    // Create new segmentHighlights object with filtered highlights
+    const updatedSegmentHighlights = Object.fromEntries(
+      Object.entries(segmentHighlights).map(([segmentId, highlights]) => [
+        segmentId,
+        highlights.filter(h => validHighlightIds.has(h.highlightId))
+      ])
+    );
+
+    setSegmentHighlights(updatedSegmentHighlights);
+  }, [highlights, formulas]);
 
   const handleLatexClick = (segment: ContentSegment) => {
-    // Check if this segment is already highlighted
-    const existingHighlight = highlights.find(h => h.segmentId === segment.id);
+    const existingSegmentHighlights = segmentHighlights[segment.id] ?? [];
+
+    // Check max number of highlights/formulas
+    if (currentColor === 'yellow' && highlights.length >= maxNumberOfHighlights) {
+      toast.error(`Cannot add more than ${maxNumberOfHighlights} concept highlights`);
+      return;
+    }
+    if (currentColor === 'green' && formulas.length >= maxNumberOfFormulas) {
+      toast.error(`Cannot add more than ${maxNumberOfFormulas} formula highlights`);
+      return;
+    }
+
+    // Check length
+    if (currentColor === 'yellow' && segment.content.length > maxHighlightLength) {
+      toast.error(`Highlight cannot be longer than ${maxHighlightLength} characters`);
+      return;
+    }
+    if (currentColor === 'green' && segment.content.length > maxFormulaLength) {
+      toast.error(`Formula highlight cannot be longer than ${maxFormulaLength} characters`);
+      return;
+    }
+
+    const highlightId = `highlight-${Date.now()}`;
     
-    if (existingHighlight) {
-      // Remove highlight if it exists
-      setHighlights(prev => prev.filter(h => h.id !== existingHighlight.id));
-    } else {
-      // Add new highlight
-      const newHighlight: Highlight = {
-        id: `highlight-${Date.now()}`,
+    if (existingSegmentHighlights.length === 0) {
+      // Add new highlight based on color
+      if (currentColor === 'yellow') {
+        setHighlights([...highlights, { id: highlightId, text: `$!$${segment.content}$!$` }]);
+      } else {
+        setFormulas([...formulas, { id: highlightId, text: `$!$${segment.content}$!$` }]);
+      }
+
+      const segmentHighlight: SegmentHighlight = {
         segmentId: segment.id,
-        color: currentColor,
-        content: segment.content,
-      };
-      setHighlights(prev => [...prev, newHighlight]);
+        startIndex: 0,
+        endIndex: segment.content.length,
+        highlightId: highlightId,
+        color: currentColor
+      }
+      setSegmentHighlights({
+        ...segmentHighlights,
+        [segment.id]: [...(segmentHighlights[segment.id] ?? []), segmentHighlight]
+      });
     }
   };
 
-  const handleTextSelection = (segmentId: string) => {
+  const handleTextSelection = () => {
     const selection = window.getSelection();
-    console.log("SELECTION: ", selection);
     if (!selection?.toString()) return;
 
-    console.log(selection.toString());
+    // Check max number of highlights/formulas
+    if (currentColor === 'yellow' && highlights.length >= maxNumberOfHighlights) {
+      toast.error(`Cannot add more than ${maxNumberOfHighlights} concept highlights`);
+      selection.removeAllRanges();
+      return;
+    }
+    if (currentColor === 'green' && formulas.length >= maxNumberOfFormulas) {
+      toast.error(`Cannot add more than ${maxNumberOfFormulas} formula highlights`);
+      selection.removeAllRanges();
+      return;
+    }
+
+    // Check length
+    if (currentColor === 'yellow' && selection.toString().length > maxHighlightLength) {
+      toast.error(`Highlight cannot be longer than ${maxHighlightLength} characters`);
+      selection.removeAllRanges();
+      return;
+    }
+    if (currentColor === 'green' && selection.toString().length > maxFormulaLength) {
+      toast.error(`Formula highlight cannot be longer than ${maxFormulaLength} characters`);
+      selection.removeAllRanges();
+      return;
+    }
 
     const range = selection.getRangeAt(0);
-    console.log("RANGE: ", range);
-    const segmentHighlights: SegmentHighlight[] = [];
-
     const startContainer = getStartContainer(range.startContainer.parentElement);
     const endContainer = getStartContainer(range.endContainer.parentElement);
 
@@ -120,14 +165,63 @@ const ReadingPassage: React.FC<Props> = ({
 
     const startSegmentId = startContainer.id;
     const endSegmentId = endContainer.id;
-    let currentSegmentId = endSegmentId;
 
-    console.log("START SEGMENT ID: ", startSegmentId);
-    console.log("END SEGMENT ID: ", endSegmentId);
-    console.log("CURRENT SEGMENT ID: ", currentSegmentId);
+    // When start and end containers are the same, we can simplify the logic
+    if(startContainer.id === endContainer.id) {
+      const highlightId = `highlight-${Date.now()}`;
+      
+      // Get existing highlights for this segment
+      const existingHighlights = segmentHighlights[startSegmentId] ?? [];
+      
+      // Find the closest previous highlight's end index
+      let offsetAdjustment = 0;
+      for (const highlight of existingHighlights) {
+        if (highlight.startIndex < range.startOffset) {
+          offsetAdjustment = highlight.endIndex;
+        }
+      }
+
+      // Adjust start and end based on the closest previous highlight
+      const adjustedStart = range.startOffset + offsetAdjustment;
+      const adjustedEnd = Math.min(range.endOffset + offsetAdjustment, segments.find(s => s.id === startSegmentId)?.content.length ?? 0);
+      
+      const highlightContent = startContainer.textContent?.substring(adjustedStart, adjustedEnd) ?? '';
+
+      const segmentHighlight: SegmentHighlight = {
+        segmentId: startSegmentId,
+        startIndex: adjustedStart,
+        endIndex: adjustedEnd,
+        highlightId: highlightId,
+        color: currentColor
+      };
+
+      // Sort highlights by startIndex to maintain order
+      const updatedHighlights = [...existingHighlights, segmentHighlight]
+        .sort((a, b) => a.startIndex - b.startIndex);
+
+      setSegmentHighlights({
+        ...segmentHighlights,
+        [startSegmentId]: updatedHighlights
+      });
+
+      // Add highlight based on color
+      if (currentColor === 'yellow') {
+        setHighlights([...highlights, { id: highlightId, text: highlightContent }]);
+      } else {
+        setFormulas([...formulas, { id: highlightId, text: highlightContent }]);
+      }
+
+      selection.removeAllRanges();
+      return;
+    }
+
+    let currentSegmentId = endSegmentId;
 
     const highlightId = `highlight-${Date.now()}`;
     let highlightContent = "";
+    
+    // Create a copy of the current segmentHighlights
+    const updatedSegmentHighlights = { ...segmentHighlights };
     
     while (currentSegmentId !== startSegmentId) {
       const segment = segments.find(s => s.id === currentSegmentId);
@@ -135,6 +229,16 @@ const ReadingPassage: React.FC<Props> = ({
       if(!segment) {
         console.log("Something went horribly wrong");
         break;
+      }
+
+      const existingHighlights = updatedSegmentHighlights[segment.id] ?? [];
+      let offsetAdjustment = 0;
+      
+      // Calculate offset adjustment based on existing highlights
+      for (const highlight of existingHighlights) {
+        if (highlight.startIndex < (currentSegmentId === endSegmentId ? range.endOffset : segment.content.length)) {
+          offsetAdjustment = highlight.endIndex;
+        }
       }
 
       if(segment.type === "latex") {
@@ -146,19 +250,23 @@ const ReadingPassage: React.FC<Props> = ({
           highlightId: highlightId,
           color: currentColor
         }
-        segmentHighlights.push(segmentHighlight);
+        updatedSegmentHighlights[segment.id] = [
+          ...(updatedSegmentHighlights[segment.id] ?? []),
+          segmentHighlight
+        ].sort((a, b) => a.startIndex - b.startIndex);
       } else { 
         let endOffset = segment.content.length;
         if(currentSegmentId === endSegmentId) {
-          endOffset = range.endOffset;
-          highlightContent = endContainer.textContent?.substring(0, endOffset) + highlightContent;
+          endOffset = Math.min(range.endOffset + offsetAdjustment, segment.content.length);
+          highlightContent = endContainer.textContent?.substring(0, endOffset) + " " + highlightContent;
         } else { 
           const segmentElement = document.getElementById(segment.id);
           if(!segmentElement) {
             console.log("Something went horribly wrong");
             break;
           }
-          highlightContent = segmentElement.textContent?.substring(0, endOffset) + highlightContent;
+          endOffset = Math.min(segment.content.length + offsetAdjustment, segmentElement.textContent?.length ?? 0);
+          highlightContent = segmentElement.textContent?.substring(0, endOffset) + " " + highlightContent;
         }
         const segmentHighlight: SegmentHighlight = {
           segmentId: segment.id,
@@ -167,7 +275,10 @@ const ReadingPassage: React.FC<Props> = ({
           highlightId: highlightId,
           color: currentColor
         }
-        segmentHighlights.push(segmentHighlight);
+        updatedSegmentHighlights[segment.id] = [
+          ...(updatedSegmentHighlights[segment.id] ?? []),
+          segmentHighlight
+        ].sort((a, b) => a.startIndex - b.startIndex);
       }
 
       const currentSegmentIndex = segments.findIndex(s => s.id === currentSegmentId);
@@ -179,40 +290,46 @@ const ReadingPassage: React.FC<Props> = ({
       currentSegmentId = prevSegmentId;
     }
 
+    // Handle the start segment
     const startSegment = segments.find(s => s.id === startSegmentId);
+    const existingStartHighlights = updatedSegmentHighlights[startSegment?.id ?? ""] ?? [];
+    let startOffsetAdjustment = 0;
+    
+    // Find the closest previous highlight's end index
+    for (const highlight of existingStartHighlights) {
+      if (highlight.startIndex < range.startOffset) {
+        startOffsetAdjustment = highlight.endIndex;
+      }
+    }
 
-    segmentHighlights.push({
+    const finalSegmentHighlight: SegmentHighlight = {
       segmentId: startSegment?.id ?? "",
-      startIndex: range.startOffset,
+      startIndex: range.startOffset + startOffsetAdjustment,
       endIndex: startSegment?.content.length ?? 0,
       highlightId: highlightId,
       color: currentColor
-    });
+    };
+    
+    updatedSegmentHighlights[startSegment?.id ?? ""] = [
+      ...(updatedSegmentHighlights[startSegment?.id ?? ""] ?? []),
+      finalSegmentHighlight
+    ];
 
-    console.log("RANGE START CONTAINER: ", startContainer);
-    console.log("START CONTAINER TEXT CONTENT: ", startContainer.textContent);
-    highlightContent = startContainer.textContent?.substring(range.startOffset) + highlightContent;
+    // Update the segmentHighlights state
+    setSegmentHighlights(updatedSegmentHighlights);
+    
+    // Add space after the start container content
+    const adjustedStart = range.startOffset + startOffsetAdjustment;
+    highlightContent = startContainer.textContent?.substring(adjustedStart) + " " + highlightContent;
 
-    console.log("CONTENT: ", highlightContent);
-    console.log("SEGMENT HIGHLIGHTS: ", segmentHighlights);
-
-    const newHighlight: Highlight = {
-      id: highlightId,
-      segmentId: startSegment?.id ?? "",
-      color: currentColor,
-      content: highlightContent
+    // Add highlight based on color
+    if (currentColor === 'yellow') {
+      setHighlights([...highlights, { id: highlightId, text: highlightContent }]);
+    } else {
+      setFormulas([...formulas, { id: highlightId, text: highlightContent }]);
     }
-  
-    setHighlights(prev => [...prev, newHighlight]);
+
     selection.removeAllRanges();
-  };
-
-  const removeHighlight = (id: string) => {
-    setHighlights(prev => prev.filter(h => h.id !== id));
-  };
-
-  const toggleColor = () => {
-    setCurrentColor(prev => prev === 'yellow' ? 'green' : 'yellow');
   };
 
   const renderSegment = (segment: ContentSegment) => {
@@ -223,11 +340,24 @@ const ReadingPassage: React.FC<Props> = ({
           output: 'html'
         });
         
+        // Get highlights for this segment
+        const currentSegmentHighlights = segmentHighlights[segment.id] ?? [];
+        const hasHighlight = currentSegmentHighlights.length > 0;
+        
         return (
           <span
             id={segment.id}
             key={segment.id}
-            className={`inline-block cursor-pointer mx-1 px-1 rounded`}
+            className={`inline-block cursor-pointer mx-1 px-1 rounded ${
+              hasHighlight ? 
+              currentSegmentHighlights[0]?.color === 'yellow' ? 'bg-yellow-200' : 'bg-green-200' : ''
+            }`}
+            onMouseUp={() => {
+              const selection = window.getSelection();
+              if(selection?.toString()) {
+                toast.error("Partial highlight not supported for LaTeX")
+              }
+            }}
             onClick={() => handleLatexClick(segment)}
             dangerouslySetInnerHTML={{ __html: html }}
           />
@@ -238,59 +368,15 @@ const ReadingPassage: React.FC<Props> = ({
       }
     }
 
-    // Get highlights for this segment from segmentHighlights
-    const currentSegmentHighlights = segmentHighlights
-      .find(sh => sh.segmentId === segment.id)?.highlights ?? [];
+    // Get highlights for this segment
+    const currentSegmentHighlights = segmentHighlights[segment.id] ?? [];
     
-    // Sort highlights by start index
-    const sortedHighlights = currentSegmentHighlights
-      .sort((a, b) => a.startIndex - b.startIndex);
-
-    // Split the text content into parts based on highlights
-    let lastIndex = 0;
-    const parts: JSX.Element[] = [];
-
-    sortedHighlights.forEach((highlight, index) => {
-      // Add unhighlighted text before this highlight
-      if (highlight.startIndex > lastIndex) {
-        parts.push(
-          <span 
-            id={segment.id}
-            key={`text-${index}`}
-            dangerouslySetInnerHTML={{ 
-              __html: segment.content.slice(lastIndex, highlight.startIndex) 
-            }}
-          />
-        );
-      }
-
-      // Add highlighted text
-      parts.push(
-        <span
-          id={segment.id}
-          key={`highlight-${index}`}
-          className={`${highlight.color === 'yellow' ? 'bg-yellow-200' : 'bg-green-200'}`}
-          dangerouslySetInnerHTML={{ 
-            __html: segment.content.slice(highlight.startIndex, highlight.endIndex) 
-          }}
-        />
-      );
-
-      lastIndex = highlight.endIndex;
-    });
-
-    // Add any remaining unhighlighted text
-    if (lastIndex < segment.content.length) {
-      parts.push(
-        <span 
-          id={segment.id}
-          key={`text-last`}
-          dangerouslySetInnerHTML={{ 
-            __html: segment.content.slice(lastIndex) 
-          }}
-        />
-      );
-    }
+    // Convert SegmentHighlight[] to format expected by TextWithHighlights
+    const convertedHighlights = currentSegmentHighlights.map(highlight => ({
+      start: highlight.startIndex,
+      end: highlight.endIndex,
+      color: highlight.color,
+    }));
 
     return (
       <span
@@ -298,71 +384,62 @@ const ReadingPassage: React.FC<Props> = ({
         key={segment.id}
         data-segment-id={segment.id}
         className="inline"
-        onMouseUp={() => handleTextSelection(segment.id)}
+        onMouseUp={() => handleTextSelection()}
       >
-        {parts}
+        <TextWithHighlights
+          text={segment.content}
+          type={segment.tag ?? 'p'}
+          highlights={convertedHighlights}
+        />
       </span>
     );
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-6">
-      <div className="mb-4 flex items-center space-x-4">
-        <button
-          onClick={toggleColor}
-          className={`px-4 py-2 rounded-lg font-medium ${
-            currentColor === 'yellow' ? 'bg-yellow-200' : 'bg-green-200'
-          }`}
-          type="button"
-        >
-          Current Color: {currentColor}
-        </button>
-      </div>
-
-      <div className="mb-6 bg-white rounded-lg shadow-md p-4">
-        <div className="text-xl">
+    <div className="mx-auto relative h-full">
+      <div className="mb-6 bg-white rounded-lg shadow-md p-4 h-full">
+        <div className="h-full overflow-y-auto" id="reading-passage">
           {segments.map(segment => renderSegment(segment))}
         </div>
       </div>
 
-      {highlights.length > 0 && (
-        <div className="mt-4 p-4 bg-gray-50 rounded-lg">
-          <h3 className="text-lg font-semibold mb-2">Highlights:</h3>
-          <div className="space-y-2">
-            {highlights.map(highlight => {
-              const segment = segments.find(s => s.id === highlight.segmentId);
-              return (
-                <div 
-                  key={highlight.id} 
-                  className={`p-2 rounded flex justify-between items-center ${
-                    highlight.color === 'yellow' ? 'bg-yellow-200' : 'bg-green-200'
-                  }`}
-                >
-                  <span className="font-mono">
-                    {segment?.type === 'latex' ? (
-                      <span dangerouslySetInnerHTML={{
-                        __html: katex.renderToString(highlight.content, {
-                          throwOnError: false,
-                          output: 'html'
-                        })
-                      }} />
-                    ) : (
-                      highlight.content
-                    )}
-                  </span>
-                  <button
-                    onClick={() => removeHighlight(highlight.id)}
-                    className="text-red-500 hover:text-red-700"
-                    type="button"
-                  >
-                    Remove
-                  </button>
-                </div>
-              )}
-            )}
+      {/* Floating Action Buttons */}
+      <div className="absolute bottom-4 right-4 flex flex-col gap-2">
+        <div className="group relative flex items-center">
+          <div className="absolute right-full mr-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            Concept Highlighter
           </div>
+          <button
+            onClick={() => setCurrentColor('yellow')}
+            className={`w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all ${
+              currentColor === 'yellow' 
+                ? 'bg-yellow-200 ring-2 ring-yellow-400' 
+                : 'bg-yellow-100 hover:bg-yellow-200'
+            }`}
+            type="button"
+            title="Concept Highlighter"
+          >
+            <span className="w-6 h-6 bg-yellow-400 rounded-full"></span>
+          </button>
         </div>
-      )}
+        <div className="group relative flex items-center">
+          <div className="absolute right-full mr-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            Formula Highlighter
+          </div>
+          <button
+            onClick={() => setCurrentColor('green')}
+            className={`w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all ${
+              currentColor === 'green' 
+                ? 'bg-green-200 ring-2 ring-green-400' 
+                : 'bg-green-100 hover:bg-green-200'
+            }`}
+            type="button"
+            title="Formula Highlighter"
+          >
+            <span className="w-6 h-6 bg-green-400 rounded-full"></span>
+          </button>
+        </div>
+      </div> 
     </div>
   );
 };
