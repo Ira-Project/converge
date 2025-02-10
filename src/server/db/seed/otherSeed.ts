@@ -8,7 +8,7 @@ import { emailsToPreload } from "./emailsToPreload";
 import { preloadedUsers } from "../schema/user";
 import { Roles } from "@/lib/constants";
 
-async function createCoursesSubjectsAndTopics() {
+export async function createCoursesSubjectsAndTopics() {
   const list = [
     {
       name: "Mathematics",
@@ -373,7 +373,7 @@ async function createCoursesSubjectsAndTopics() {
   }
 }
 
-async function uploadPreloadedUsers() {
+export async function uploadPreloadedUsers() {
   for(const email of emailsToPreload) {
     await db.insert(preloadedUsers).values({
       id: generateId(21),

@@ -36,7 +36,7 @@ export default function AuthModal({ user, mode = 'login' }: {
   user?: User | null;
   mode?: AuthMode;
 }) {
-  const [isOpen, setIsOpen] = useState(user ? false : true);
+  const [isOpen] = useState(user ? false : true); 
   const [currentMode, setCurrentMode] = useState<AuthMode>(mode);
   const [googleLoginPath, setGoogleLoginPath] = useState<string>(Paths.GoogleLogin);
 
