@@ -1,0 +1,163 @@
+{
+    "name": "Thermal Energy Transfers",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "reasoningQuestions": [
+      {
+        "topText": "Ira uses a heater with unknown power, $!$P$!$, to heat up an open container with 2 kg of water. The initial temperature of the container is $!$60^{\\circ}C$!$ and the heater is kept on till the temperature reaches $!$120^{\\circ}C$!$. The total time taken is $!$10\\:min$!$. The specific heat capacity of water, $!$c_w$!$, is $!$4200\\:J/kg/K$!$, the specific heat capacity of steam, $!$c_s$!$, is $!$2000\\:J/kg/K$!$, and the latent heat of vaporisation of water, $!$L$!$, is $!$2.26\\times10^6\\:J/kg$!$. Assuming that the container is insulated, Ira calculates the power of the heater to be $!$693.33\\:W$!$ (upto 2 decimal places) which does not match it's actual power rating.",
+        "questionText": "",
+        "questionImage": "",
+        "answerText": "$!$693.33\\:W$!$",
+        "correctAnswers": [
+          "8226.67"
+        ],
+        "correctAnswersUnit": "$!$W$!$",
+        "answerImage": "",
+        "numberOfSteps": 4,
+        "topicId": "",
+        "answerOptions": [
+          {
+            "id": "bcc3bf3809694b36b8ae1",
+            "optionText": "Temperature change of water ($!$\\Delta T_1$!$) = $!$100^{\\circ}C - 60^{\\circ}C$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "cebb1d61afd84d1a8cff4",
+            "optionText": "Temperature change of steam ($!$\\Delta T_2$!$) = $!$120^{\\circ}C - 100^{\\circ}C$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "28a42b39c64a4dfaacce4",
+            "optionText": "Energy supplied by heater ($!$Q$!$) = $!$mc\\Delta T_1 + mc\\Delta T_2$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "04e251d2d41e4776bc923",
+            "optionText": "Power of heater ($!$P$!$) = $!$\\frac{Q}{t}$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "371c908aac7d47ec8165b",
+            "optionText": "Temperature change of water ($!$\\Delta T_1$!$) = $!$120^{\\circ}C - 60^{\\circ}C$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "bf4f0d56445e473885c0a",
+            "optionText": "Temperature change of steam ($!$\\Delta T_2$!$) = $!$120^{\\circ}C - 60^{\\circ}C$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "1a354e8714b6400bad5c7",
+            "optionText": "Energy supplied by heater ($!$Q$!$) = $!$mc\\Delta T_1 + mc\\Delta T_2 + mL$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "32c3d971310041a9ba99e",
+            "optionText": "Power of heater ($!$P$!$) = $!$\\sigma A T^4$!$",
+            "optionImage": ""
+          }
+        ],
+        "pathways": [
+          {
+            "steps": [
+              {
+                "stepNumber": 1,
+                "isCorrect": true,
+                "answerOptionId": "bcc3bf3809694b36b8ae1",
+                "stepNumberList": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "stepNumber": 2,
+                "isCorrect": true,
+                "answerOptionId": "cebb1d61afd84d1a8cff4",
+                "stepNumberList": [
+                  "1",
+                  "2"
+                ]
+              },
+              {
+                "stepNumber": 3,
+                "isCorrect": false,
+                "answerOptionId": "28a42b39c64a4dfaacce4",
+                "replacementOptionId": "1a354e8714b6400bad5c7"
+              },
+              {
+                "stepNumber": 4,
+                "isCorrect": true,
+                "answerOptionId": "04e251d2d41e4776bc923"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "topText": "Two blocks of the same cross-sectional area, $!$A$!$, are joined together. The left end of the first block is held at a constant temperature of $!$200\\:K$!$ and the right end of the second block is held at a constant temperature of $!$750\\:K$!$. The first block has a length of $!$2l$!$ and a conductivity of $!$3k$!$ and the second block has a length of $!$l$!$ and a conductivity of $!$k$!$. At steady state, Ira calculates the temperature, $!$T$!$, of the point where the blocks are joined to be $!$567\\:K$!$. However, this turns out to be incorrect.",
+        "questionText": "",
+        "questionImage": "q2_img.png",
+        "answerText": "$!$567\\:K$!$",
+        "correctAnswers": [],
+        "correctAnswersUnit": "",
+        "answerImage": "",
+        "numberOfSteps": 3,
+        "topicId": "",
+        "answerOptions": [
+          {
+            "id": "33861bf1742142289e155",
+            "optionText": "Heat flow through the first block ($!$\\frac{\\Delta Q_1}{\\Delta t}$!$) = $!$\\frac{3kA(T - 200)}{2l}$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "ea1c3360b5c049bca180a",
+            "optionText": "Heat flow through the second block ($!$\\frac{\\Delta Q_2}{\\Delta t}$!$) = $!$\\frac{kA(750 - T)}{l}$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "d9927f369f90439cbe932",
+            "optionText": "$!$T$!$ is found using heat flow through the first block ($!$\\frac{\\Delta Q_1}{\\Delta t}$!$) = $!$3 \\times$!$ heat flow through the second block ($!$\\frac{\\Delta Q_2}{\\Delta t}$!$)",
+            "optionImage": ""
+          },
+          {
+            "id": "295aef9839234ca2b7fae",
+            "optionText": "Heat flow through the first block ($!$\\frac{\\Delta Q_1}{\\Delta t}$!$) = $!$\\frac{m \\cdot 3k \\cdot (T - 200)}{\\Delta t}$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "70b755f36b8340d5a7fff",
+            "optionText": "Heat flow through the second block ($!$\\frac{\\Delta Q_2}{\\Delta t}$!$) = $!$\\frac{m \\cdot k \\cdot (750 - T)}{\\Delta t}$!$",
+            "optionImage": ""
+          },
+          {
+            "id": "1f2a0cb20d834b17b91e0",
+            "optionText": "$!$T$!$ is found using heat flow through the first block ($!$\\frac{\\Delta Q_1}{\\Delta t}$!$) = heat flow through the second block ($!$\\frac{\\Delta Q_2}{\\Delta t}$!$)",
+            "optionImage": ""
+          }
+        ],
+        "pathways": [
+          {
+            "steps": [
+              {
+                "stepNumber": 1,
+                "isCorrect": true,
+                "answerOptionId": "33861bf1742142289e155"
+              },
+              {
+                "stepNumber": 2,
+                "isCorrect": true,
+                "answerOptionId": "ea1c3360b5c049bca180a"
+              },
+              {
+                "stepNumber": 3,
+                "isCorrect": false,
+                "answerOptionId": "d9927f369f90439cbe932",
+                "replacementOptionId": "1f2a0cb20d834b17b91e0"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
