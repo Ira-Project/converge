@@ -59,7 +59,7 @@
           },
           {
             "id": "0d39138bff5e4f37b941a",
-            "stepText": "We have now found that out of the $!$960\\:kJ$!$ of energy removed, $!$525\\:kJ$!$ was removed to lower the temperature of the liquid to the freezing point. So, the remaining energy must have been removed to convert the liquid to solid at the freezing point. Find this energy, $!$Q_L$!$.",
+            "stepText": "We have now found that out of the $!$960\\:kJ$!$, $!$525\\:kJ$!$ was removed to lower the temperature of the liquid till it reached the freezing point. The remaining energy must have then been removed when the liquid was converted to solid at the freezing point. How much is this remainingenergy, $!$Q_L$!$?",
             "stepImage": "",
             "stepSolveAnswer": [
                 "435"
@@ -69,7 +69,7 @@
           },
           {
             "id": "c588309e381f45cca290e",
-            "stepText": "$!$435\\:kJ$!$ of energy was removed to freeze the liquid. However, the energy removed was not enough to freeze the entire mass of the liquid in $!$2\\:hours$!$. What formula can be used to describe the energy, $!$Q_L$!$, that needs to be removed to freeze a specific mass, $!$m_l$!$, of a liquid?",
+            "stepText": "$!$435\\:kJ$!$ of energy was removed while trying to freeze the liquid. However, this was not enough to freeze the entire mass of the liquid in $!$2\\:hours$!$. What formula can we use to describe how much energy, $!$Q_L$!$, needs to be removed to freeze a specific mass, $!$m_l$!$, of a liquid?",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
@@ -92,7 +92,7 @@
           },
           {
             "id": "e25d01add9e148818dc54",
-            "stepText": "Now, we have $!$Q_L = m_l L = 435\\:kJ$!$. Let's try to find $!$m_l$!$, the mass of the liquid that was converted to solid after removing $!$435\\:kJ$!$ of energy. The initial mass of the liquid was $!$3.5\\:kg$!$ and after $!$2\\:hours$!$, the ratio of liquid mass to solid mass is $!$2:3$!$. Since total mass is conserved, what is mass of the solid after $!$2\\:hours$!$?",
+            "stepText": "Now, we have $!$Q_L = m_l L = 435\\:kJ$!$. In the next step, let's try to find $!$m_l$!$, the mass of the liquid that was frozen to solid after removing $!$435\\:kJ$!$ of energy. The initial mass of the liquid was $!$3.5\\:kg$!$ and after $!$2\\:hours$!$, the ratio of liquid mass to solid mass is $!$2:3$!$. Since total mass is conserved, what was the mass of the solid after $!$2\\:hours$!$?",
             "stepImage": "",
             "stepSolveAnswer": [
                 "2.1"
@@ -142,27 +142,27 @@
           },
           {
             "id": "4cf87ab946b4453eb35a5",
-            "stepText": "If we assume that the star is a black body, then we can use the Stefan-Boltzmann law to find the total power radiated by the star (it's luminosity). What does the Stefan-Boltzmann law state?",
+            "stepText": "If we assume that the star is a black body, then we can use the Stefan-Boltzmann law to find the total power radiated by the star (it's luminosity). What does the Stefan-Boltzmann law state? (Assume that $!$A$!$ represents surface area and $!$T$!$ represents temperature)",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
               {
-                "optionText": "Total power radiated by a black body is proportional to $!$AT^4$!$, where $!$A$!$ is the surface area of the black body and $!$T$!$ is it's temperature.",
+                "optionText": "Total power radiated by a black body is proportional to $!$AT^4$!$",
                 "optionImage": "",
                 "isCorrect": true
               },
               {
-                "optionText": "Total power radiated by a black body is proportional to $!$AT^2$!$, where $!$A$!$ is the surface area of the black body and $!$T$!$ is it's temperature.",
+                "optionText": "Total power radiated by a black body is proportional to $!$AT^2$!$",
                 "optionImage": "",
                 "isCorrect": false
               },
               {
-                "optionText": "Total power radiated by a black body is proportional to $!$A^4T$!$, where $!$A$!$ is the surface area of the black body and $!$T$!$ is it's temperature.",
+                "optionText": "Total power radiated by a black body is proportional to $!$A^4T$!$",
                 "optionImage": "",
                 "isCorrect": false
               },
               {
-                "optionText": "Total power radiated by a black body is proportional to $!$A^2T$!$, where $!$A$!$ is the surface area of the black body and $!$T$!$ is it's temperature.",
+                "optionText": "Total power radiated by a black body is proportional to $!$A^2T$!$",
                 "optionImage": "",
                 "isCorrect": false
               }
@@ -170,7 +170,7 @@
           },
           {
             "id": "dd76585682174622b9191",
-            "stepText": "According to the Stefan-Boltzmann law, the luminosity of the star, $!$L$!$, is given by $!$L = \\sigma A T^4$!$, where $!$\\sigma$!$ is the Stefan-Boltzmann constant. Since we know the radius of the star, we can find its surface area. But we don't know the temperature of the star. Based on the infromation given in the question, which formula can we use to find the temperature of the star?",
+            "stepText": "According to the Stefan-Boltzmann law, the total power radiated by the star or in other words, its luminosity, $!$L$!$, is given by $!$L = \\sigma A T^4$!$, where $!$\\sigma$!$ is the Stefan-Boltzmann constant. Since we know the radius of the star, we can find its surface area. But we don't know the temperature of the star. Based on the infromation given in the question, which formula can we use to find the temperature of the star?",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
@@ -203,7 +203,7 @@
           },
           {
             "id": "855334d8f2c04597834c8",
-            "stepText": "Now we have all the information needed to find the luminosity of the star using $!$L = \\sigma A T^4$!$. But how is this luminosity related to the apparent brightness, $!$B$!$, of the star?",
+            "stepText": "Now we have all the information needed to find the luminosity, $!$L$!$, of the star using $!$L = \\sigma A T^4$!$. But how is luminosity related to the apparent brightness, $!$B$!$, of the star?",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
@@ -249,7 +249,7 @@
           },
           {
             "id": "2e030e5d7bf84da4a710d",
-            "stepText": "The surface area of the star is given by $!$A = 4\\pi r^2$!$. So, we can find the distance of the star from the Earth by using the equation $!$B = \\frac{\\sigma 4 \\pi r^2 T^4}{4\\pi d^2}$!$. Estimate this distance upto 2 decimal places (in units of $!$10^{18}\\:m$!$).",
+            "stepText": "In the equation $!$B = \\frac{\\sigma 4 \\pi r^2 T^4}{4\\pi d^2}$!$, the surface area of the star is given by $!$4\\pi r^2$!$. In the final step, let's find the distance of the star from the Earth by using this equation. Estimate the distance upto 2 decimal places (in units of $!$10^{18}\\:m$!$).",
             "stepImage": "",
             "stepSolveAnswer": [
               "2.41"   

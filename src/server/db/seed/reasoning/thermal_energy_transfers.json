@@ -99,8 +99,10 @@
         "questionText": "",
         "questionImage": "https://converge-question-images.s3.us-west-1.amazonaws.com/thermal_energy_transfer_rt_q2_img.png",
         "answerText": "$!$567\\:K$!$",
-        "correctAnswers": [],
-        "correctAnswersUnit": "",
+        "correctAnswers": [
+            "420"
+        ],
+        "correctAnswersUnit": "$!$K$!$",
         "answerImage": "",
         "numberOfSteps": 3,
         "topicId": "",
@@ -142,12 +144,20 @@
               {
                 "stepNumber": 1,
                 "isCorrect": true,
-                "answerOptionId": "33861bf1742142289e155"
+                "answerOptionId": "33861bf1742142289e155",
+                "stepNumberList": [
+                  "1",
+                  "2"
+                ]
               },
               {
                 "stepNumber": 2,
                 "isCorrect": true,
-                "answerOptionId": "ea1c3360b5c049bca180a"
+                "answerOptionId": "ea1c3360b5c049bca180a",
+                "stepNumberList": [
+                  "1",
+                  "2"
+                ]
               },
               {
                 "stepNumber": 3,

@@ -38,11 +38,11 @@ await deleteKnowledgeZapAssignment("zf5w5pkx1bpjtp827uewh");
 await createKnowledgeZapAssignment();
 
 // REASONING CREATION
-// await deleteReasoningAssignment("h9cj7tswcvo0u3tf0i7kd");
+await deleteReasoningAssignment("h9cj7tswcvo0u3tf0i7kd");
 await createReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
-// await deleteStepSolveAssignment("jrvuls1s18nnd11b9u09x");
+await deleteStepSolveAssignment("jrvuls1s18nnd11b9u09x");
 await createStepSolveAssignment();
 
 // READ AND RELAY CREATION AND DELETION
