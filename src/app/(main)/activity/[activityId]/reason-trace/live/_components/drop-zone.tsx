@@ -2,8 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import FormattedText from '@/components/formatted-text';
 import { ReasoningPathwayStepResult } from '@/lib/constants';
-import { Tooltip, TooltipTrigger } from '@/components/ui/tooltip';
-import { TooltipContent } from '@radix-ui/react-tooltip';
 
 export const getPathwayStepColor = (result: ReasoningPathwayStepResult, step: Step | null): string => {
   if (!step) {
