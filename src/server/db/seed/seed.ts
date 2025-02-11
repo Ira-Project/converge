@@ -42,8 +42,8 @@ await deleteReasoningAssignment("3jzx5j0e5flbqn3gzclo7");
 await createReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
-await deleteStepSolveAssignment("9bec9vz7cy115oso3pmlz");
-await createStepSolveAssignment();
+// await deleteStepSolveAssignment("9bec9vz7cy115oso3pmlz");
+// await createStepSolveAssignment();
 
 // READ AND RELAY CREATION AND DELETION
 // await deleteReadAndRelayAssignment("pr1trj9v32imu7n1k3v7l");
