@@ -13,6 +13,7 @@ import StepSolveStepComponent from './step-component';
 import TextWithHighlights from '@/components/text-with-highlights';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import FormattedText from '@/components/formatted-text';
 
 interface StepSolveActivityViewProps {
   stepSolveAssignment: RouterOutputs["stepSolve"]["getAssignment"];
@@ -180,9 +181,8 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
             <CardContent className="flex flex-col gap-8">
               <>
                 <div className="text-center text-lg">
-                  <TextWithHighlights 
+                  <FormattedText 
                     text={currentQuestion?.q.questionText ?? ""}
-                    type="p"
                   />
                   <div className="flex justify-center">
                     {currentQuestion?.q.questionImage && (
