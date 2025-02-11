@@ -34,15 +34,15 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createLearnByTeachingAssignment();
 
 // KNOWLEDGE ZAP CREATION
-await deleteKnowledgeZapAssignment("zf5w5pkx1bpjtp827uewh");
-await createKnowledgeZapAssignment();
+// await deleteKnowledgeZapAssignment("zf5w5pkx1bpjtp827uewh");
+// await createKnowledgeZapAssignment();
 
 // REASONING CREATION
-await deleteReasoningAssignment("h9cj7tswcvo0u3tf0i7kd");
+await deleteReasoningAssignment("3jzx5j0e5flbqn3gzclo7");
 await createReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
-await deleteStepSolveAssignment("jrvuls1s18nnd11b9u09x");
+await deleteStepSolveAssignment("9bec9vz7cy115oso3pmlz");
 await createStepSolveAssignment();
 
 // READ AND RELAY CREATION AND DELETION
