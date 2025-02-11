@@ -20,6 +20,7 @@ interface StepSolveStepComponentProps {
     optionImage?: string | null;
     id: string;
   }[];
+  stepSolveAnswerUnits?: string;
   isCompleted: boolean;
   answer?: string[] | null;
   handleSubmitAnswer: (input: {
@@ -40,7 +41,7 @@ interface submitAnswerInput {
 }
 
 const StepSolveStepComponent = ({ 
-  id, stepNumber, stepText, stepTextPart2, stepImage, options, answer, handleSubmitAnswer, isCompleted, isCorrect, isLoading, isDisabled, handleContinue, isLast
+  id, stepNumber, stepText, stepTextPart2, stepImage, options, answer, handleSubmitAnswer, isCompleted, isCorrect, isLoading, isDisabled, handleContinue, isLast, stepSolveAnswerUnits
 }: StepSolveStepComponentProps) => {
 
   const handleSubmit = async (input: submitAnswerInput) => {
@@ -122,7 +123,7 @@ const StepSolveStepComponent = ({
 
           {!isCompleted ? (
             answer && answer?.length > 0 && (        
-              <div className="flex flex-row gap-4 items-center justify-center">
+              <div className="flex flex-row gap-2 items-center justify-center">
                 <FormField
                   control={form.control}
                   name="userAnswer"
@@ -136,10 +137,15 @@ const StepSolveStepComponent = ({
                           placeholder="Enter your answer..."
                           className="w-full"
                         />
-                      </FormControl>
+                      </FormControl>                      
                     </FormItem>
                   )}
                 />
+                { stepSolveAnswerUnits && (
+                  <div className="text-sm">
+                    <FormattedText text={stepSolveAnswerUnits} />
+                  </div>
+                )}
               </div>
             )
           ) : 

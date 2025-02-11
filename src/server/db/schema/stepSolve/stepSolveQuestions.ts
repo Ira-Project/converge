@@ -72,6 +72,7 @@ export const stepSolveStep = pgTable(
     stepImage: text("step_image"),
     stepNumber: integer("step_number").notNull(),
     stepSolveAnswer: text("step_solve_answer").array(),
+    stepSolveAnswerUnits: text("step_solve_answer_units"),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),

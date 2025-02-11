@@ -1,7 +1,7 @@
 {
     "name": "Thermal Energy Transfers",
-    "topicIdDev": "",
-    "topicIdProd": "",
+    "topicIdDev": "xB&U#q1&0Qaov3zUldfUv",
+    "topicIdProd": "d#i79@qqpjlXNH3mHF0zL",
     "latexDelimiter": "$!$",
     "reasoningQuestions": [
       {
@@ -15,7 +15,7 @@
         "correctAnswersUnit": "$!$W$!$",
         "answerImage": "",
         "numberOfSteps": 4,
-        "topicId": "",
+        "topImage": "",
         "answerOptions": [
           {
             "id": "bcc3bf3809694b36b8ae1",
@@ -66,8 +66,8 @@
                 "isCorrect": true,
                 "answerOptionId": "bcc3bf3809694b36b8ae1",
                 "stepNumberList": [
-                  "1",
-                  "2"
+                  1,
+                  2
                 ]
               },
               {
@@ -75,8 +75,8 @@
                 "isCorrect": true,
                 "answerOptionId": "cebb1d61afd84d1a8cff4",
                 "stepNumberList": [
-                  "1",
-                  "2"
+                  1,
+                  2
                 ]
               },
               {
@@ -97,13 +97,15 @@
       {
         "topText": "Two blocks of the same cross-sectional area, $!$A$!$, are joined together. The left end of the first block is held at a constant temperature of $!$200\\:K$!$ and the right end of the second block is held at a constant temperature of $!$750\\:K$!$. The first block has a length of $!$2l$!$ and a conductivity of $!$3k$!$ and the second block has a length of $!$l$!$ and a conductivity of $!$k$!$. At steady state, Ira calculates the temperature, $!$T$!$, of the point where the blocks are joined to be $!$567\\:K$!$. However, this turns out to be incorrect.",
         "questionText": "",
-        "questionImage": "q2_img.png",
+        "questionImage": "https://converge-question-images.s3.us-west-1.amazonaws.com/thermal_energy_transfer_rt_q2_img.png",
         "answerText": "$!$567\\:K$!$",
-        "correctAnswers": [],
-        "correctAnswersUnit": "",
+        "correctAnswers": [
+            "420"
+        ],
+        "correctAnswersUnit": "$!$K$!$",
+        "topImage": "",
         "answerImage": "",
         "numberOfSteps": 3,
-        "topicId": "",
         "answerOptions": [
           {
             "id": "33861bf1742142289e155",
@@ -142,12 +144,20 @@
               {
                 "stepNumber": 1,
                 "isCorrect": true,
-                "answerOptionId": "33861bf1742142289e155"
+                "answerOptionId": "33861bf1742142289e155",
+                "stepNumberList": [
+                  1,
+                  2
+                ]
               },
               {
                 "stepNumber": 2,
                 "isCorrect": true,
-                "answerOptionId": "ea1c3360b5c049bca180a"
+                "answerOptionId": "ea1c3360b5c049bca180a",
+                "stepNumberList": [
+                  1,
+                  2
+                ]
               },
               {
                 "stepNumber": 3,

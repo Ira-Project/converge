@@ -10,7 +10,6 @@ import { api } from "@/trpc/react";
 import { Roles } from "@/lib/constants";
 import { Separator } from '@/components/ui/separator';
 import StepSolveStepComponent from './step-component';
-import TextWithHighlights from '@/components/text-with-highlights';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import FormattedText from '@/components/formatted-text';
@@ -217,7 +216,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
                         isDisabled={checkStepMutation.isLoading}
                         handleContinue={handleContinue}
                         isLast={step.stepNumber === currentQuestion.q.steps.length}
-                      />
+                        stepSolveAnswerUnits={step.stepSolveAnswerUnits ?? undefined} />
                       {
                         step.stepNumber < (currentState?.step ?? 0) && 
                         step.stepNumber !== currentQuestion.q.steps.length &&

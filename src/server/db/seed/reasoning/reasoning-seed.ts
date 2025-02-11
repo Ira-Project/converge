@@ -7,7 +7,7 @@ import { generateId } from "lucia";
 import { topics } from "../../schema/subject";
 
 
-import reasoningJson from "./radioactive_decay.json";
+import reasoningJson from "./thermal_energy_transfers.json";
 import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../../schema/reasoning/reasoningQuestions";
 import { reasoningAssignmentAttempts, reasoningAssignments, } from "../../schema/reasoning/reasoningAssignment";
 import { activity } from "../../schema/activity";
@@ -76,9 +76,10 @@ export async function createReasoningAssignment() {
         questionText: reasoningQuestion.questionText,
         questionImage: reasoningQuestion.questionImage,
         topText: reasoningQuestion?.topText,
-        // topImage: reasoningQuestion?.topImage,
+        topImage: reasoningQuestion?.topImage ?? undefined,
         answerText: reasoningQuestion.answerText,
         correctAnswers: reasoningQuestion.correctAnswers,
+        correctAnswersUnit: reasoningQuestion.correctAnswersUnit,
         answerImage: reasoningQuestion.answerImage,
         numberOfSteps: reasoningQuestion.numberOfSteps,
         topicId: topicId,
@@ -149,7 +150,7 @@ export async function createReasoningAssignment() {
               pathwayId: pathwayId,
               answerOptionId: step.answerOptionId,
               stepNumber: step.stepNumber,
-              // stepNumberList: step?.stepNumberList ?? [],
+              stepNumberList: step?.stepNumberList ?? [],
               isCorrect: step.isCorrect,
               replacementOptionId: step.replacementOptionId,
             })

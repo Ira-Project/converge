@@ -635,7 +635,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                             onSubmit={form.handleSubmit(handlePart3Submit)}
                             className="flex flex-col gap-4 items-center justify-center"
                           >
-                            <div className="flex flex-row gap-4 items-center justify-center">
+                            <div className="flex flex-row items-center justify-center">
                               <FormField
                                 control={form.control}
                                 name="answer"
@@ -653,6 +653,11 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                                   </FormItem>
                                 )}
                               />
+                              { currentQuestion?.question.correctAnswersUnit && (
+                                <div className="text-sm mr-2">
+                                  <FormattedText text={currentQuestion?.question.correctAnswersUnit} />
+                                </div>
+                              )}
                               <LoadingButton 
                                 disabled={part3Mutation.isLoading} 
                                 loading={part3Mutation.isLoading}

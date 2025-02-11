@@ -44,6 +44,7 @@ export const getReasoningAssignment = async (ctx: ProtectedTRPCContext, input: G
               questionImage: true,
               answerText: true,
               answerImage: true,
+              correctAnswersUnit: true,
               numberOfSteps: true,
             },
             with: {
