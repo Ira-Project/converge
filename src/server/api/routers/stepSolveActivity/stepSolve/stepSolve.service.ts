@@ -52,6 +52,7 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
                   stepImage: true,
                   stepNumber: true,
                   stepSolveAnswer: true,
+                  stepSolveAnswerUnits: true,
                 },
                 with: {
                   opt: {

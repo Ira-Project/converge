@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
 import { and, eq } from "drizzle-orm";
@@ -95,6 +96,7 @@ export async function createStepSolveAssignment() {
           stepImage: step.stepImage,
           stepNumber: index + 1,
           stepSolveAnswer: step.stepSolveAnswer ?? undefined,
+          stepSolveAnswerUnits: step.stepSolveAnswerUnit ?? undefined,
         })
       }
 
