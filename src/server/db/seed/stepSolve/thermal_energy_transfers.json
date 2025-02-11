@@ -17,11 +17,14 @@
                 "960"
             ],
             "stepSolveAnswerUnit": "$!$kJ$!$",
+            "stepText2": "",
             "options": []
           },
           {
             "id": "c51e8586d87a4687af609",
             "stepText": "Out of 960 kJ of energy removed, some of it must have been used to lower the temperature of the liquid from $!$40^{\\circ}C$!$ to $!$10^{\\circ}C$!$. What formula can we use to find this energy $!$Q_c$!$?",
+            "stepText2": "",
+            "stepSolveAnswerUnit": "",
             "stepImage": "",
             "stepSolveAnswer": [],
             "options": [
@@ -55,6 +58,7 @@
                 "525"
             ],
             "stepSolveAnswerUnit": "$!$kJ$!$",
+            "stepText2": "",
             "options": []
           },
           {
@@ -65,6 +69,7 @@
                 "435"
             ],
             "stepSolveAnswerUnit": "$!$kJ$!$",
+            "stepText2": "",
             "options": []
           },
           {
@@ -72,6 +77,8 @@
             "stepText": "$!$435\\:kJ$!$ of energy was removed to freeze the liquid. However, the energy removed was not enough to freeze the entire mass of the liquid in $!$2\\:hours$!$. What formula can be used to describe the energy, $!$Q_L$!$, that needs to be removed to freeze a specific mass, $!$m_l$!$, of a liquid?",
             "stepImage": "",
             "stepSolveAnswer": [],
+            "stepText2": "",
+            "stepSolveAnswerUnit": "",
             "options": [
               {
                 "optionText": "$!$Q_L = m_l L$!$, where $!$L$!$ is the specific latent heat of fusion of the substance",
@@ -94,6 +101,7 @@
             "id": "e25d01add9e148818dc54",
             "stepText": "Now, we have $!$Q_L = m_l L = 435\\:kJ$!$. Let's try to find $!$m_l$!$, the mass of the liquid that was converted to solid after removing $!$435\\:kJ$!$ of energy. The initial mass of the liquid was $!$3.5\\:kg$!$ and after $!$2\\:hours$!$, the ratio of liquid mass to solid mass is $!$2:3$!$. Since total mass is conserved, what is mass of the solid after $!$2\\:hours$!$?",
             "stepImage": "",
+            "stepText2": "",
             "stepSolveAnswer": [
                 "2.1"
             ],
@@ -104,6 +112,7 @@
             "id": "ef6f05e4ee5b4d4f90357",
             "stepText": "In the final step, let's find the specific latent heat of fusion, $!$L$!$, by using the formula $!$Q_L = m_l L$!$. Give your answer upto 1 decimal place.",
             "stepImage": "",
+            "stepText2": "",
             "stepSolveAnswer": [
                 "207.1"
             ],
@@ -121,6 +130,8 @@
             "id": "f4b302714cef43829c675",
             "stepText": "The amount of power radiated by the star that is recieved per unit area on Earth is measured as the apparent brightness. So, in the first step, let's find the total power radiated by the star. What is this quantity called?",
             "stepImage": "",
+            "stepText2": "",
+            "stepSolveAnswerUnit": "",
             "stepSolveAnswer": [],
             "options": [
               {
@@ -144,6 +155,8 @@
             "id": "4cf87ab946b4453eb35a5",
             "stepText": "If we assume that the star is a black body, then we can use the Stefan-Boltzmann law to find the total power radiated by the star (it's luminosity). What does the Stefan-Boltzmann law state?",
             "stepImage": "",
+            "stepText2": "",
+            "stepSolveAnswerUnit": "",
             "stepSolveAnswer": [],
             "options": [
               {
@@ -172,6 +185,8 @@
             "id": "dd76585682174622b9191",
             "stepText": "According to the Stefan-Boltzmann law, the luminosity of the star, $!$L$!$, is given by $!$L = \\sigma A T^4$!$, where $!$\\sigma$!$ is the Stefan-Boltzmann constant. Since we know the radius of the star, we can find its surface area. But we don't know the temperature of the star. Based on the infromation given in the question, which formula can we use to find the temperature of the star?",
             "stepImage": "",
+            "stepText2": "",
+            "stepSolveAnswerUnit": "",
             "stepSolveAnswer": [],
             "options": [
               {
@@ -195,6 +210,7 @@
             "id": "167023bc077f42aeb3cc0",
             "stepText": "The peak wavelength of a black-body spectrum depends on the temperature of the black body and is given by $!$\\lambda_{peak} T = b$!$. This is called Wien's displacement law and $!$b$!$ is a constant with a value of $!$2.9 \\times 10^{-3}\\:m\\:K$!$. Apply this law to find the temperature of the star, $!$T$!$, given that $!$\\lambda_{peak} = 450\\:nm$!$. Give your answer upto 3 decimal places.",
             "stepImage": "",
+            "stepText2": "",
             "stepSolveAnswer": [
               "6.444"
             ],
@@ -205,6 +221,8 @@
             "id": "855334d8f2c04597834c8",
             "stepText": "Now we have all the information needed to find the luminosity of the star using $!$L = \\sigma A T^4$!$. But how is this luminosity related to the apparent brightness, $!$B$!$, of the star?",
             "stepImage": "",
+            "stepText2": "",
+            "stepSolveAnswerUnit": "",
             "stepSolveAnswer": [],
             "options": [
               {
@@ -228,6 +246,8 @@
             "id": "c182f59ab4e44c2cbc43a",
             "stepText": "We assume that the star is spherical and it is radiating energy uniformly in all directions. So, at any given distance $!$d$!$, the apparent brightness of the star is $!$B = \\frac{L}{4\\pi d^2}$!$. On Earth, the apparent brightness of the star was measured to be $!$1.5 \\times 10^{-10}\\:W/m^2$!$, and the luminosity of the star is $!$L = \\sigma A T^4$!$. What simplified equation can we use to find the distance of the star from the Earth?",
             "stepImage": "",
+            "stepText2": "",
+            "stepSolveAnswerUnit": "",
             "stepSolveAnswer": [],
             "options": [
               {
@@ -251,6 +271,7 @@
             "id": "2e030e5d7bf84da4a710d",
             "stepText": "The surface area of the star is given by $!$A = 4\\pi r^2$!$. So, we can find the distance of the star from the Earth by using the equation $!$B = \\frac{\\sigma 4 \\pi r^2 T^4}{4\\pi d^2}$!$. Estimate this distance upto 2 decimal places (in units of $!$10^{18}\\:m$!$).",
             "stepImage": "",
+            "stepText2": "",
             "stepSolveAnswer": [
               "2.41"   
             ],
