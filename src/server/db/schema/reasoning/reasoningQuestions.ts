@@ -29,6 +29,7 @@ export const reasoningQuestions = pgTable(
     answerImage: text("answer_image"),
     numberOfSteps: integer("number_of_steps").notNull(),
     correctAnswers: text("correct_answers").array().notNull().default(sql`'{}'::text[]`),
+    correctAnswersUnit: text("correct_answers_unit"),
     topicId: varchar("topic_id", { length: 21 }).references(() => topics.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
