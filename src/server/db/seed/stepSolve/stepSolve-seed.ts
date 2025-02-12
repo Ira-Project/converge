@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
 import { and, eq } from "drizzle-orm";
@@ -6,7 +7,7 @@ import { generateId } from "lucia";
 import { topics } from "../../schema/subject";
 import { classrooms } from "../../schema/classroom";
 
-import stepSolve from "./radioactive_decay.json";
+import stepSolve from "./thermal_energy_transfers.json";
 import { stepSolveQuestions, stepSolveQuestionToAssignment, stepSolveStep, stepSolveStepOptions } from "../../schema/stepSolve/stepSolveQuestions";
 import { stepSolveAssignmentAttempts, stepSolveAssignments } from "../../schema/stepSolve/stepSolveAssignment";
 import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "../../schema/stepSolve/stepSolveQuestionAttempts";
@@ -95,6 +96,7 @@ export async function createStepSolveAssignment() {
           stepImage: step.stepImage,
           stepNumber: index + 1,
           stepSolveAnswer: step.stepSolveAnswer ?? undefined,
+          stepSolveAnswerUnits: step.stepSolveAnswerUnit ?? undefined,
         })
       }
 

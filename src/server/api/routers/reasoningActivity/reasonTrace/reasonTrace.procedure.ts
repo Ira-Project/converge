@@ -18,7 +18,6 @@ export const reasonTraceRouter = createTRPCRouter({
   getSubmissions: protectedProcedure
     .input(inputs.getReasoningAssignmentSubmissionsSchema)
     .query(({ ctx, input }) => services.getReasoningAssignmentSubmissions(ctx, input)),
-
   getQuestionAnalytics: protectedProcedure
     .input(inputs.getReasoningAssignmentQuestionAnalyticsSchema)
     .query(({ ctx, input }) => services.getReasoningAssignmentQuestionAnalytics(ctx, input)),
