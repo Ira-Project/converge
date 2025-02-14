@@ -10,6 +10,7 @@ import { stepSolveAssignments } from "@/server/db/schema/stepSolve/stepSolveAssi
 import { reasoningAssignments } from "@/server/db/schema/reasoning/reasoningAssignment";
 import { explainAssignments } from "@/server/db/schema/learnByTeaching/explainAssignment";
 import { readAndRelayAssignments } from "@/server/db/schema/readAndRelay/readAndRelayAssignments";
+import { conceptMappingAssignments } from "@/server/db/schema/conceptMapping/conceptMappingAssignments";
 
 export async function createClassroom(
   userId: string,
@@ -119,6 +120,22 @@ export async function createClassroom(
       topicId: readAndRelayAssignment.topicId,
       type: ActivityType.ReadAndRelay,
       typeText: ActivityType.ReadAndRelay,
+      order: 0,
+      points: 100,
+    })
+  }
+
+  // Get all concept mapping assignments
+  const cma = await db.select().from(conceptMappingAssignments).where(eq(conceptMappingAssignments.isDeleted, false));
+  for(const conceptMappingAssignment of cma) {
+    await db.insert(activity).values({
+      id: generateId(21),
+      assignmentId: conceptMappingAssignment.id,
+      classroomId: classroom[0]?.id,
+      name: conceptMappingAssignment.name ?? "",
+      topicId: conceptMappingAssignment.topicId,
+      type: ActivityType.KnowledgeZap,
+      typeText: ActivityType.ConceptMapping,
       order: 0,
       points: 100,
     })
