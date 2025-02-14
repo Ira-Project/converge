@@ -228,7 +228,7 @@ export const getLearnByTeachingActivity = async (ctx: ProtectedTRPCContext, inpu
 
   const assignmentId = activity?.assignmentId;
 
-  if(!assignmentId || activity?.type !== ActivityType.LearnByTeaching) {
+  if(!assignmentId || activity?.typeText !== ActivityType.LearnByTeaching as string) {
     throw new Error("Assignment not found");  
   }
 

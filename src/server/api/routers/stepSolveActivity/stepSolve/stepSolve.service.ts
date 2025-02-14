@@ -14,7 +14,7 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
 
   const assignmentId = activity?.assignmentId;
 
-  if (!assignmentId || activity?.type !== ActivityType.StepSolve ) {
+  if (!assignmentId || activity?.typeText !== ActivityType.StepSolve as string) {
     throw new Error("Assignment not found");
   }
 
@@ -90,7 +90,7 @@ export const submitStepSolveAssignmentAttempt = async (ctx: ProtectedTRPCContext
 
   const assignmentId = activity?.assignmentId;
 
-  if (!assignmentId || activity?.type !== ActivityType.StepSolve ) {
+  if (!assignmentId || activity?.typeText !== ActivityType.StepSolve as string) {
     throw new Error("Assignment not found");
   }
 
@@ -319,7 +319,7 @@ export const getStepSolveAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
 
   const assignmentId = activity?.assignmentId;
   
-  if (!assignmentId || activity?.type !== ActivityType.StepSolve) {
+  if (!assignmentId || activity?.typeText !== ActivityType.StepSolve as string) {
     throw new Error("Assignment not found");
   }
 

@@ -190,6 +190,7 @@ export async function createReasoningAssignment() {
         name: assignmentName,
         topicId: topicId,
         type: ActivityType.ReasonTrace,
+        typeText: ActivityType.ReasonTrace,
         order: 0,
         points: 100,
       })

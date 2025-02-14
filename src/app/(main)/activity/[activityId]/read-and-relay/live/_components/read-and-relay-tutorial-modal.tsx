@@ -3,8 +3,8 @@ import { DialogClose, DialogContent, DialogDescription, DialogFooter, DialogTitl
 import { Button } from '@/components/ui/button';
 import dynamic from 'next/dynamic';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
-import { ActivityType, Paths } from "@/lib/constants";
-import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils";
+import { Paths } from "@/lib/constants";
+// import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils";
 
 const Dialog = dynamic(() => import('@/components/ui/dialog').then((mod) => mod.Dialog), { ssr: false });
 
@@ -18,7 +18,7 @@ interface Props {
 
 export default function ReadAndRelayTutorialModal({ classroom, topic }: Props) {  
 
-  const { tutorialUrl } = getMetaDataFromActivityType(ActivityType.ReadAndRelay, "");
+  // const { tutorialUrl } = getMetaDataFromActivityType(ActivityType.ReadAndRelay, "");
 
   return (
     <Dialog defaultOpen>

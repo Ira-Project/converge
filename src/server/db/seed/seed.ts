@@ -15,6 +15,9 @@ import { createStepSolveAssignment, deleteStepSolveAssignment } from "./stepSolv
 import { createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 import { deleteUser } from "./user/userSeed";
+import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
+import { migrateActivityTypeToText } from "./otherSeed";
+import { createLearnByTeachingAssignment } from "./learnByTeaching/learnByTeaching-seed";
 
 if(process.env.ENVIRONMENT === "prod") {
   console.log("WARNING: Running in production");
@@ -38,7 +41,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createKnowledgeZapAssignment();
 
 // REASONING CREATION
-// await deleteReasoningAssignment("yg0d6drzfk0dmdmv5thiv");
+// await deleteReasoningAssignment("v2f7ppwtin0zt6pkobuun");
 // await createReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
@@ -49,5 +52,12 @@ if(process.env.ENVIRONMENT === "prod") {
 // await deleteReadAndRelayAssignment("pr1trj9v32imu7n1k3v7l");
 // await createReadAndRelayAssignment();
 
+// CONCEPT MAPPING CREATION AND DELETION
+// await deleteConceptMappingAssignment("lwycgx4fs6lyx1ug3h94w");
+// await createConceptMappingAssignment();
+
 // USER DELETION
-// await deleteUser("likhit+1@iraproject.com");
+// await deleteUser();
+
+// MIGRATE ACTIVITY TYPE TO TEXT
+// await migrateActivityTypeToText();

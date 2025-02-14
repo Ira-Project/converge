@@ -160,7 +160,7 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
 
   const assignmentId = activity?.assignmentId;
 
-  if(!assignmentId || activity?.type !== ActivityType.KnowledgeZap) {
+  if(!assignmentId || activity?.typeText !== ActivityType.KnowledgeZap as string) {
     throw new Error("Assignment not found");  
   }
 

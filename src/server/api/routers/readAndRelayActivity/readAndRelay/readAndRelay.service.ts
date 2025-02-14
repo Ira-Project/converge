@@ -187,7 +187,7 @@ export const getReadAndRelayActivity = async (ctx: ProtectedTRPCContext, input: 
 
   const assignmentId = activity?.assignmentId;
 
-  if(!assignmentId || activity?.type !== ActivityType.ReadAndRelay) {
+  if(!assignmentId || activity?.typeText !== ActivityType.ReadAndRelay as string) {
     throw new Error("Assignment not found");  
   }
 
