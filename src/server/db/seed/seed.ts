@@ -38,8 +38,8 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createKnowledgeZapAssignment();
 
 // REASONING CREATION
-await deleteReasoningAssignment("3jzx5j0e5flbqn3gzclo7");
-await createReasoningAssignment();
+// await deleteReasoningAssignment("yg0d6drzfk0dmdmv5thiv");
+// await createReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
 // await deleteStepSolveAssignment("9bec9vz7cy115oso3pmlz");
@@ -50,5 +50,4 @@ await createReasoningAssignment();
 // await createReadAndRelayAssignment();
 
 // USER DELETION
-// await deleteUser();
-
+// await deleteUser("likhit+1@iraproject.com");
