@@ -136,7 +136,6 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
   
   if(returnPath) {
     if(classroomId) {
-      await db.update(users).set({ defaultClassroomId: classroomId }).where(eq(users.id, userId));
       await db.insert(usersToClassrooms).values({
         userId,
         classroomId,

@@ -19,7 +19,6 @@ export const evaluateMap = async (ctx: ProtectedTRPCContext, input: EvaluateMapI
     }
   });
 
-  console.log("Assignment Edges: ", assignment?.conceptEdges);
 
   const mapAttemptId = generateId(21);
   await ctx.db.insert(conceptMappingMapAttempt).values({
@@ -93,6 +92,7 @@ export const evaluateMap = async (ctx: ProtectedTRPCContext, input: EvaluateMapI
       mapAttemptId: mapAttemptId,
       sourceNodeId: edge.sourceNodeId,
       targetNodeId: edge.targetNodeId,
+      label: edge.label,
       isCorrect: edgeIsCorrect,
     });
 

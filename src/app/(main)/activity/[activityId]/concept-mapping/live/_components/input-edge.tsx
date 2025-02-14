@@ -60,7 +60,6 @@ export default function InputEdge({
     onEdgeRemove(id);
   };
   const getArrowColor = () => {
-    console.log("Edge MY DUDE: ", data)
     if (!data?.label) return '#d9d9d9';
     switch (data.status) {
       case 'correct':

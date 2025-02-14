@@ -41,15 +41,11 @@ const ConceptMappingAssignmentView: React.FC<ConceptMappingAssignmentViewProps> 
   const [submissionModalOpen, setSubmissionmodalOpen] = useState(false);
 
   const submitAssignment = async () => {
-    // const statuses = questionStates.map(state => state.part);
-    // await submissionMutation.mutateAsync({
-    //   attemptId: reasoningAttemptId,
-    //   statuses: statuses
-    // });
+    await submissionMutation.mutateAsync({
+      attemptId: attemptId ?? "",
+    });
     setSubmissionmodalOpen(true);
   }
-
-  console.log("Assignment", assignment)
 
   return (
     <div className="flex flex-col">

@@ -13,7 +13,7 @@ import { formatDateShort } from '@/lib/utils';
 
 const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
 
-  const submissions = await api.reasonTrace.getSubmissions.query({ activityId });
+  const submissions = await api.conceptMapping.getSubmissions.query({ activityId });
 
   return (
     <div>

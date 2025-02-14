@@ -169,9 +169,9 @@ export async function createConceptMappingAssignment() {
       assignmentId: assignmentId,
       label: edge.label,
       sourceNodeId: edge.source,
-      sourceHandleId: sourceHandle?.[0]?.id,
+      sourceHandleId: sourceHandle?.[0]?.id ?? null,
       targetNodeId: edge.target,
-      targetHandleId: targetHandle?.[0]?.id,
+      targetHandleId: targetHandle?.[0]?.id ?? null,
       alwaysVisible: edge.alwaysVisible,
     });
   }
@@ -197,7 +197,7 @@ export async function createConceptMappingAssignment() {
         classroomId: classroom.id,
         name: assignmentName,
         topicId: topicId,
-        type: ActivityType.ConceptMapping,
+        type: ActivityType.KnowledgeZap,
         typeText: ActivityType.ConceptMapping,
         order: 0,
         points: 100,

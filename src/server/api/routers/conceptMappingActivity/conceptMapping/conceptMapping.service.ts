@@ -29,11 +29,36 @@ export const submitAttempt = async (ctx: ProtectedTRPCContext, input: SubmitAtte
 
   const submissionTime = new Date();
 
-  // TODO: Evaluate the Score
+  const attempt = await ctx.db.query.conceptMappingAttempts.findFirst({
+    where: (attempts, { eq }) => eq(attempts.id, input.attemptId),
+    with: {
+      mapAttempts: {
+        orderBy: (mapAttempts, { asc }) => asc(mapAttempts.createdAt),
+        with: {
+          nodes: true,
+          edges: true,
+        }
+      },
+    }
+  });
 
+  if(!attempt) {
+    throw new Error("Attempt not found");
+  }
+
+  const mapAttempt = attempt.mapAttempts[attempt.mapAttempts.length - 1];
+  if(!mapAttempt) {
+    throw new Error("Map attempt not found");
+  }
+
+  const nodeScore = mapAttempt?.nodes.filter(node => node.isCorrect).length;
+  const edgeScore = mapAttempt?.edges.filter(edge => edge.isCorrect).length;
+
+  const score = (nodeScore + edgeScore) / (mapAttempt?.nodes.length + mapAttempt?.edges.length);
 
   await ctx.db.update(conceptMappingAttempts).set({
     submittedAt: submissionTime,
+    score: score,
   }).where(eq(conceptMappingAttempts.id, input.attemptId));
   
 };
@@ -86,6 +111,14 @@ export const getMostCommonMistakes = async (ctx: ProtectedTRPCContext, input: Ge
         eq(attempts.activityId, input.activityId),
         isNotNull(attempts.submittedAt)
       ),
+      with: {
+        mapAttempts: {
+          with: {
+            nodes: true,
+            edges: true,
+          }
+        }
+      }
     });
   } else {
     submissions = await ctx.db.query.conceptMappingAttempts.findMany({
@@ -93,10 +126,45 @@ export const getMostCommonMistakes = async (ctx: ProtectedTRPCContext, input: Ge
         eq(attempts.activityId, input.activityId),
         isNotNull(attempts.submittedAt)
       ),
+      with: {
+        mapAttempts: {
+          with: {
+            nodes: true,
+            edges: true,
+          }
+        }
+      }
     });
   }
 
-  return [];
+  // Create a single map to store frequency of incorrect labels
+  const mistakeFrequency = new Map<string, { count: number, type: 'node' | 'edge' }>();
+
+  // Process each submission's map attempts
+  submissions.forEach(submission => {
+    submission.mapAttempts.forEach(mapAttempt => {
+      // Count incorrect node labels
+      mapAttempt.nodes
+        .filter(node => !node.isCorrect)
+        .forEach(node => {
+          const current = mistakeFrequency.get(node.label ?? '') ?? { count: 0, type: 'node' };
+          mistakeFrequency.set(node.label ?? '', { count: current.count + 1, type: 'node' });
+        });
+
+      // Count incorrect edge labels
+      mapAttempt.edges
+        .filter(edge => !edge.isCorrect)
+        .forEach(edge => {
+          const current = mistakeFrequency.get(edge.label ?? '') ?? { count: 0, type: 'edge' };
+          mistakeFrequency.set(edge.label ?? '', { count: current.count + 1, type: 'edge' });
+        });
+    });
+  });
+
+  // Convert map to array and sort by frequency
+  return Array.from(mistakeFrequency.entries())
+    .map(([label, { count, type }]) => ({ label, count, type }))
+    .sort((a, b) => b.count - a.count);
 }
 
 export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAnalyticsCardsInput) => {

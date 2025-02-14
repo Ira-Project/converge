@@ -4,12 +4,12 @@ import {
   timestamp,
   varchar,
   text,
-  pgEnum
+  pgEnum,
+  doublePrecision
 } from "drizzle-orm/pg-core";
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm/relations";
 import { conceptMappingAssignments } from "./conceptMappingAssignments";
-import { decimal } from "drizzle-orm/pg-core";
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
 export const positionEnum = pgEnum("position", ["top", "right", "bottom", "left"]);
@@ -20,8 +20,8 @@ export const conceptMappingNodes = pgTable(
   "cm_nodes",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
-    x: decimal("x", { precision: 10, scale: 2 }).notNull(),
-    y: decimal("y", { precision: 10, scale: 2 }).notNull(),
+    x: doublePrecision("x").notNull(),
+    y: doublePrecision("y").notNull(),
     assignmentId: varchar("assignment_id", { length: 21 }).notNull().references(() => conceptMappingAssignments.id),
     alwaysVisible: boolean("always_visible").default(false).notNull(),
     label: text("label").notNull(),

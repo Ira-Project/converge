@@ -52,12 +52,11 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createReadAndRelayAssignment();
 
 // CONCEPT MAPPING CREATION AND DELETION
-// await deleteConceptMappingAssignment("mh291hyz93ciu9iry74rb");
-await createConceptMappingAssignment();
+// await deleteConceptMappingAssignment("lwycgx4fs6lyx1ug3h94w");
+// await createConceptMappingAssignment();
 
 // USER DELETION
 // await deleteUser();
-
 
 // MIGRATE ACTIVITY TYPE TO TEXT
 // await migrateActivityTypeToText();

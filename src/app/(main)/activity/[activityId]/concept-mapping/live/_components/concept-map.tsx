@@ -47,8 +47,6 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
 
   const [success, setSuccess] = useState<boolean>(false);
 
-  console.log("Edges: ", edges)
-
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [draggedItem, setDraggedItem] = useState<{ id: string; text: string } | null>(null);
   const [draggedIdx, setDraggedIdx] = useState<number | null>(null);
@@ -57,8 +55,6 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
   // Add new state for evaluation results
   const [nodeStatuses, setNodeStatuses] = useState<Record<string, 'correct' | 'incorrect' | null>>({});
   const [edgeStatuses, setEdgeStatuses] = useState<Record<string, 'correct' | 'incorrect' | null>>({});
-
-  console.log("Edge Statuses: ", edgeStatuses)
 
   const handleDragStart = (e: React.DragEvent, option: { id: string; text: string }, index: number | null): void => {
     setIsDragging(true);
