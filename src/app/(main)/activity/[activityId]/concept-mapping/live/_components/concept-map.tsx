@@ -286,7 +286,7 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
           fitView
           proOptions={{ hideAttribution: true }}
         >
-          <Controls />
+          <Controls showInteractive={false} />
           <Background variant={BackgroundVariant.Dots} gap={12} size={1} />
         </ReactFlow>
       </div>
@@ -295,23 +295,23 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
           {/* Available Headings */}
           <div className="grid grid-cols-2 gap-8">
             <div className="flex flex-col">
-              <p className="font-semibold text-sm text-center">
-                Available Steps
+              <p className="font-semibold text-center my-auto">
+                Concepts
               </p>
             </div>
             <div className="flex flex-col">
-              <p className="font-semibold text-sm text-center">
-                Available Edges
+              <p className="font-semibold text-center">
+                Concept Relationships
               </p>
               <p className="text-xs text-muted-foreground text-center max-w-[300px] mx-auto">
-                (Connect concepts to create relationships, drag the labels on the edges after connecting)
+                (Create relationships by connecting concepts. You can click on the black circles to connect them. Drag the labels after connecting.)
               </p>
             </div>
           </div>
           {/* Available Steps Section */}
           <div className="grid grid-cols-2 gap-8">
             <div className="flex flex-col gap-4">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center text-sm">
+              <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center">
                 {availableNodeLabels
                   .filter(option => !usedSteps.includes(option.label))
                   .map((option) => (
@@ -324,7 +324,7 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
               </div>
             </div>
             <div className="flex flex-col">          
-              <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center text-xs">
+              <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center">
                 {availableEdgeLabels
                   .filter(option => !usedSteps.includes(option.label))
                   .map((option) => (

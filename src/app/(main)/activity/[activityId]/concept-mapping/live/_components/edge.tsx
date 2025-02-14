@@ -18,7 +18,7 @@ export default function CustomEdge({ id, sourceX, sourceY, targetX, targetY, dat
       />
       <EdgeLabelRenderer>
         <p 
-          className="text-xs text-muted-foreground max-w-24 text-center bg-white" 
+          className="text-muted-foreground max-w-24 text-center bg-white" 
           style={{
             position: 'absolute',
             transform: `translate(-50%, -50%) translate(${labelX}px, ${labelY}px)`,

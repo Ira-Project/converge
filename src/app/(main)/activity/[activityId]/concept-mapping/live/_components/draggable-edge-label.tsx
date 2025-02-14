@@ -9,7 +9,7 @@ interface DraggableEdgeLabelProps {
 
 const DraggableEdgeLabel: React.FC<DraggableEdgeLabelProps> = ({ label, onDragStart }) => (
   <motion.div
-    className="px-4 py-2 my-auto text-xs text-muted-foreground cursor-move min-h-8 flex items-center justify-center"
+    className="px-4 py-2 my-auto text-muted-foreground cursor-move min-h-8 flex items-center justify-center"
     whileHover={{ scale: 1.02 }}
     whileDrag={{ scale: 1.05, opacity: 0.8 }}
     draggable

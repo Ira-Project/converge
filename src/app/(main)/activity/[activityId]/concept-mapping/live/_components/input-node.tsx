@@ -55,12 +55,11 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
           py-2 
           my-auto 
           rounded-3xl 
-          text-sm
-          min-h-8 
+          h-10 
           flex 
           items-center 
           justify-center
-          ${data.label ? 'cursor-move' : 'cursor-pointer'}
+          w-48
           ${getStatusStyles()}
         `}
         style={{
@@ -68,7 +67,6 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
             ? '4px 4px 8px rgba(247, 232, 233, 100), -4px -4px 8px rgba(255, 255, 255, 100)'
             : '0px 2px 4px rgba(0, 0, 0, 25%) inset',
           border: data.label ? 'none' : '1px solid #d9d9d9',
-          width: '200px',
         }}
         onDrop={handleDrop}
         onDragOver={handleDragOver}
@@ -87,9 +85,6 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
         )}
         {data.handles.map((handle) => (
           <Handle
-            style={{
-              "background": "#e879f9"
-            }}
             key={handle.id}
             type={handle.type as HandleType}
             position={handle.position}
