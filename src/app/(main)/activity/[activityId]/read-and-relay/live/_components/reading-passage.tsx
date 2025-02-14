@@ -53,7 +53,6 @@ const ReadingPassage: React.FC<Props> = ({
 
   useEffect(() => {
     setSegments(parseContent(content));
-    console.log("SEGMENTS: ", segments);
     const initialHighlights: Record<string, SegmentHighlight[]> = {};
     segments.forEach(segment => {
       initialHighlights[segment.id] = [];

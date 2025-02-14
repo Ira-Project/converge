@@ -22,7 +22,7 @@ export default async function MainLayout(props: { params: Promise<{ classroomId:
     students = await api.classroom.students.query({ id: params.classroomId });
     usersToClassrooms = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: params.classroomId });
     
-    if(!user.isOnboarded) {
+    if(!user.isOnboarded && user.role === Roles.Teacher) {
       redirect(Paths.Onboarding);
     }
   }

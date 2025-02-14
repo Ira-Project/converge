@@ -26,6 +26,9 @@ import * as stepSolveQuestionAttempts from "./schema/stepSolve/stepSolveQuestion
 import * as readAndRelayQuestions from "./schema/readAndRelay/readAndRelayQuestions";
 import * as readAndRelayAttempts from "./schema/readAndRelay/readAndRelayAttempts";
 import * as readAndRelayAssignments from "./schema/readAndRelay/readAndRelayAssignments";
+import * as conceptMappingAttempts from "./schema/conceptMapping/conceptMappingAttempts";
+import * as conceptMappingAssignments from "./schema/conceptMapping/conceptMappingAssignments";
+import * as conceptMappingQuestions from "./schema/conceptMapping/conceptMappingQuestions";
 
 export const client = postgres(env.DATABASE_URL, {
   max_lifetime: 10, 
@@ -58,5 +61,7 @@ export const db = drizzle(client, { schema: {
   ...readAndRelayAttempts,
   ...readAndRelayQuestions,
   ...readAndRelayAssignments,
-
+  ...conceptMappingAttempts,
+  ...conceptMappingAssignments,
+  ...conceptMappingQuestions,
 }});
