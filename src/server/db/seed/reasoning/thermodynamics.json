@@ -5,6 +5,9 @@
   "latexDelimiter": "$!$",
   "reasoningQuestions": [
     {
+      "topText": "",
+      "topImage": "",
+      "correctAnswersUnit": "",
       "questionText": "A $!$1.00 kg$!$ block of ice at $!$0^\\circ C$!$ is left outside where the air temperature is $!$25^\\circ C$!$. The specific latent heat of fusion of ice is $!$336 kJ/kg$!$. What is the change in entropy of the ice-air system when the ice block completely melts?",
       "questionImage": "",
       "answerText": "0 J/K",
@@ -70,6 +73,7 @@
           "steps": [
             {
               "stepNumber": 1,
+              "stepNumberList": [],
               "isCorrect": true,
               "answerOptionId": "8864460bf55d4601870b5"
             },
@@ -78,8 +82,8 @@
               "isCorrect": false,
               "answerOptionId": "1daba6a87c47454d8a215",
               "stepNumberList": [
-                "2",
-                "3"
+                2,
+                3
               ],
               "replacementOptionId": "5219fba8dfd849f09e656"
             },
@@ -88,13 +92,14 @@
               "isCorrect": false,
               "answerOptionId": "92fb7e4d62d74405920f2",
               "stepNumberList": [
-                "3",
-                "2"
+                3,
+                2
               ],
               "replacementOptionId": "45c59369657b4346be933"
             },
             {
               "stepNumber": 4,
+              "stepNumberList": [],
               "isCorrect": true,
               "answerOptionId": "d0347cc4390545c1aca52"
             }
@@ -103,6 +108,9 @@
       ]
     },
     {
+      "topText": "",
+      "topImage": "",
+      "correctAnswersUnit": "",
       "questionText": "A Carnot engine operates using an ideal gas. In each cycle, the gas absorbs $!$20000J$!$ of energy from the hot reservoir and releases $!$12000J$!$ of energy to the cold reservoir. If the cold reservoir is maintained at $!$27^\\circ C$!$, what temperature $!$T^\\circ C$!$ must the hot reservoir be kept at?",
       "questionImage": "",
       "answerText": "$!$477^\\circ C$!$",
@@ -156,17 +164,20 @@
           "steps": [
             {
               "stepNumber": 1,
+              "stepNumberList": [],
               "isCorrect": false,
               "answerOptionId": "f8b25628c9344876a1a80",
               "replacementOptionId": "317a8bf467044c04b32f8"
             },
             {
               "stepNumber": 2,
+              "stepNumberList": [],
               "isCorrect": true,
               "answerOptionId": "f142219b86ee4afd88e8c"
             },
             {
               "stepNumber": 3,
+              "stepNumberList": [],
               "isCorrect": true,
               "answerOptionId": "fde2ef5e113d477fa4b40"
             }

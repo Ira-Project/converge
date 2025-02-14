@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 import { generateId } from "lucia";
 import { explainAnswers, explainQuestions, explainQuestionToAssignment } from "../../schema/learnByTeaching/explainQuestions";
 
@@ -15,18 +15,39 @@ type QuestionType = {
 } 
 
 import json from "./work_energy_power.json";
+import { explainAssignments } from "../../schema/learnByTeaching/explainAssignment";
+import { ActivityType } from "@/lib/constants";
+import { activity } from "../../schema/activity";
+import { classrooms } from "../../schema/classroom";
 
-async function createQuestionsAndConceptListFromJson() {
+export async function createLearnByTeachingAssignment() {
 
-  const topicId = "yyyah4hvk5r7188h7mgkk";
+  const topicId = process.env.ENVIRONMENT === "prod" ? json.topicIdProd : json.topicIdDev;
 
   const topic = await db.select().from(topics).where(
     eq(topics.id, topicId),
   )
+
+  if (topic?.[0] === undefined) {
+    console.log("Topic not found")
+    return
+  }
+
+  const assignmentId = generateId(21);
+  await db.insert(explainAssignments).values({
+    id: assignmentId,
+    name: json.name,
+    topicId: topicId,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  })
+  console.log("Created explain assignment");
   
   // Create the questions object
+  console.log("Starting question creation for", json.questions.length, "questions");
   for (const question of json.questions) {
     const questionId = generateId(21)
+    
     const questionObject:QuestionType = {
       id: questionId,
       question: question.question,
@@ -35,41 +56,55 @@ async function createQuestionsAndConceptListFromJson() {
       image: question.image,
     }
     await db.insert(explainQuestions).values(questionObject)
+    console.log("Created question:", questionId);
+
     const answerObject = {
       id: generateId(21),
       questionId: questionId,
       answer: question.answer,
     }
     await db.insert(explainAnswers).values(answerObject)
-  }
-}
+    console.log("Created answer for question:", questionId);
 
-async function addQuestionsToAssignmentFromTopic() {
-
-  // Parameters for assignment creation
-  const topicId = "yyyah4hvk5r7188h7mgkk";
-  const assignmentId = "9pcpaym65ccyj9rtlz6xd";
-
-  const existingQuestions = await db.select().from(explainQuestionToAssignment).where(
-    eq(explainQuestionToAssignment.assignmentId, assignmentId),
-  )
-  if(existingQuestions.length > 0) {
-    console.log("Assignment already has questions")
-    return
-  }
-
-  const questionList = await db.select().from(explainQuestions).where(
-    eq(explainQuestions.topicId, topicId),
-  )
-
-  for (const question of questionList) {
     await db.insert(explainQuestionToAssignment).values({
       id: generateId(21),
-      questionId: question.id,
+      questionId: questionId,
       assignmentId: assignmentId,
       createdAt: new Date(),
       updatedAt: new Date(),
     })
+    console.log("Linked question to assignment:", questionId, "->", assignmentId);
   }
 
+  console.log("Adding assignment to all classrooms");
+  const classes= await db.select().from(classrooms);
+  for(const classroom of classes) {
+    // Check if activity already exists in the classroom
+    const existingActivity = await db.select().from(activity).where(
+      and(
+        eq(activity.assignmentId, assignmentId),
+        eq(activity.classroomId, classroom.id)
+      )
+    )
+    console.log("Existing activity check for classroom", classroom.id, ":", existingActivity.length > 0 ? "exists" : "does not exist");
+
+    // If activity does not exist, create it
+    if(existingActivity.length === 0) {
+      console.log("Adding assignment to classroom. Creating activity", assignmentId, classroom.id);
+      await db.insert(activity).values({
+        id: generateId(21),
+        assignmentId: assignmentId,
+        classroomId: classroom.id,
+        name: json.name,
+        topicId: topicId,
+        type: ActivityType.LearnByTeaching,
+        typeText: ActivityType.LearnByTeaching,
+        order: 0,
+        points: 100,
+      })
+      console.log("Created activity for classroom:", classroom.id);
+    }
+  }
+  console.log("Learn By Teaching assignment creation completed");
+  console.log("-------------------------");
 }

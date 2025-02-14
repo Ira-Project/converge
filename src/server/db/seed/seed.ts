@@ -17,6 +17,7 @@ import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./re
 import { deleteUser } from "./user/userSeed";
 import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
 import { migrateActivityTypeToText } from "./otherSeed";
+import { createLearnByTeachingAssignment } from "./learnByTeaching/learnByTeaching-seed";
 
 if(process.env.ENVIRONMENT === "prod") {
   console.log("WARNING: Running in production");
@@ -40,7 +41,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createKnowledgeZapAssignment();
 
 // REASONING CREATION
-// await deleteReasoningAssignment("3jzx5j0e5flbqn3gzclo7");
+// await deleteReasoningAssignment("v2f7ppwtin0zt6pkobuun");
 // await createReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
