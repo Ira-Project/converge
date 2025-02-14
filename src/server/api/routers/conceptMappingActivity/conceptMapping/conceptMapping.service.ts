@@ -217,7 +217,7 @@ export const getConceptMappingActivity = async (ctx: ProtectedTRPCContext, input
 
   const assignmentId = activity?.assignmentId;
 
-  if(!assignmentId || activity?.typeText !== ActivityType.ConceptMapping) {
+  if(!assignmentId || activity?.typeText !== ActivityType.ConceptMapping as string) {
     throw new Error("Assignment not found");  
   }
 

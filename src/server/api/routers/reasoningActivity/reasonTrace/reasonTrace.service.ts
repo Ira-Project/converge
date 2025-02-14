@@ -13,7 +13,7 @@ export const getReasoningAssignment = async (ctx: ProtectedTRPCContext, input: G
 
   const assignmentId = activity?.assignmentId;
 
-  if (!assignmentId || activity?.typeText !== ActivityType.ReasonTrace ) {
+  if (!assignmentId || activity?.typeText !== ActivityType.ReasonTrace as string) {
     throw new Error("Assignment not found");
   }
 
