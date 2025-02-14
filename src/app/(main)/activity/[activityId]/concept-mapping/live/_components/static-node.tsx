@@ -9,7 +9,7 @@ export default function StaticNode({ data }: { data: { label: string, handles: {
   return (
     <>
       <motion.div
-      className="bg-fuchsia-50 px-4 py-2 my-auto rounded-3xl text-sm cursor-move min-h-8 flex items-center justify-center"
+      className="bg-fuchsia-50 px-4 py-2 my-auto rounded-3xl h-10 flex items-center justify-center w-48"
       style={{
         boxShadow: '4px 4px 8px rgba(247, 232, 233, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
       }}
@@ -20,9 +20,6 @@ export default function StaticNode({ data }: { data: { label: string, handles: {
       </div>
       {data.handles.map((handle) => (
         <Handle
-          style={{
-            "background": "#e879f9"
-          }}
           key={handle.id}
           type={handle.type as HandleType}
           position={handle.position}

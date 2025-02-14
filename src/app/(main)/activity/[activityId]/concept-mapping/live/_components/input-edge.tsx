@@ -87,7 +87,6 @@ export default function InputEdge({
           onDragOver={handleDragOver}
           className={`
             relative
-            text-xs
             text-center
             max-w-24
             pr-4
@@ -103,7 +102,7 @@ export default function InputEdge({
             border: data?.label ? 'none' : '1px solid #d9d9d9',
           }}
         >
-          <p className="text-xs text-muted-foreground max-w-24 text-center bg-white">
+          <p className="text text-muted-foreground max-w-24 text-center bg-white">
             {data?.label}
           </p>
           <Button
