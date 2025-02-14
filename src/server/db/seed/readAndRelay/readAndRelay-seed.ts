@@ -111,6 +111,7 @@ export async function createReadAndRelayAssignment() {
         name: json.name,
         topicId: topicId,
         type: ActivityType.ReadAndRelay,
+        typeText: ActivityType.ReadAndRelay,
         order: 0,
         points: 100,
       })

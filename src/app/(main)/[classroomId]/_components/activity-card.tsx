@@ -14,8 +14,8 @@ interface ActivityCardProps {
 }
 
 const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role, classroomId }) => {
-  const { id, type, isLive, dueDate } = activity;
-  const { url, iconImage, title, tags, colour, description } = getMetaDataFromActivityType(type, id);
+  const { id, typeText, isLive, dueDate } = activity;
+  const { url, iconImage, title, tags, colour, description } = getMetaDataFromActivityType(typeText, id);
 
 
   return (
@@ -44,6 +44,8 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role, classroomId
           "text-rose-700": colour === "rose",
           "text-lime-700": colour === "lime",
           "text-teal-700": colour === "teal",
+          "text-fuchsia-700": colour === "fuchsia",
+          "text-blue-700": colour === "blue",
         }
       )}> 
         {tags.map((tag, index) => (

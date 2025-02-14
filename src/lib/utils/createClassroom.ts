@@ -53,6 +53,7 @@ export async function createClassroom(
       name: knowledgeZapAssignment.name ?? "",
       topicId: knowledgeZapAssignment.topicId,
       type: ActivityType.KnowledgeZap,
+      typeText: ActivityType.KnowledgeZap,
       order: 0,
       points: 100,
 
@@ -69,6 +70,7 @@ export async function createClassroom(
       name: stepSolveAssignment.name ?? "",
       topicId: stepSolveAssignment.topicId,
       type: ActivityType.StepSolve,
+      typeText: ActivityType.StepSolve,
       order: 0,
       points: 100,
     })
@@ -84,6 +86,7 @@ export async function createClassroom(
       name: reasoningAssignment.name ?? "",
       topicId: reasoningAssignment.topicId,
       type: ActivityType.ReasonTrace,
+      typeText: ActivityType.ReasonTrace,
       order: 0,
       points: 100,
     })
@@ -99,6 +102,7 @@ export async function createClassroom(
       name: learnByTeachingAssignment.name ?? "",
       topicId: learnByTeachingAssignment.topicId,
       type: ActivityType.LearnByTeaching,
+      typeText: ActivityType.LearnByTeaching,
       order: 0,
       points: 100,
     })
@@ -114,6 +118,7 @@ export async function createClassroom(
       name: readAndRelayAssignment.name ?? "",
       topicId: readAndRelayAssignment.topicId,
       type: ActivityType.ReadAndRelay,
+      typeText: ActivityType.ReadAndRelay,
       order: 0,
       points: 100,
     })

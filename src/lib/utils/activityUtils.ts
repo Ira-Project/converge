@@ -25,7 +25,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         tutorialUrl: "https://www.loom.com/embed/e07673e5101d48d9bd12ff88259e7de3?sid=f3cd2e10-1062-4bc1-bf1a-d31035554101",
         tags: ["Memory", "Understanding"],
         colour: "amber",
-        description: "Learn by teaching ira, iterating on your explanation until Ira is able to answer a set of questions correctly. This assignment is designed to help you understand concepts and improve your communication skills.",
+        description: "Learn by teaching Ira, iterating on your explanation until Ira is able to answer a set of questions correctly. This assignment is designed to help you understand concepts and improve your communication skills.",
         descriptionLong: "In this innovative learning activity, students have to teach an AI instead of solving a set of questions. For a given topic, they have to explain concepts and provide corresponding formulas (if required) to the AI. The AI then uses this explanation to attempt a set of questions and responds with it’s solution and working. The students have to iterate on their explanations till the AI is able to solve all the given questions. We ensure that the AI's response serves as scaffolding to guide the learners to the correct explanation rather than providing it directly. \nThis activity leverages the Feynman method of learning, which posits that teaching others is one of the most effective ways to learn [1, 2, 3, 4, 5]. There is no penalization for incorrect explanations and the students are encouraged to iteratively improve their understanding of the topic, develop communication skills, build metacognition, and hone their organizational abilities.",
         citations: [
           "Ronnel Ian A Ambion, Rainier Santi C De Leon, Alfonso Pio Angelo R Mendoza, and Reinier M Navarro. The utilization of the feynman technique in paired team teaching towards enhancing grade 10 anhs students’ academic achievement in science. In 2020 IEEE Integrated STEM Education Conference (ISEC), pages 1–3. IEEE, 2020.",
@@ -98,14 +98,28 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         iconImage: "/images/read-and-relay.png",
         title: "Read and Relay",
         tutorialUrl: "",
-        tags: [],
+        tags: ["Comprehension", "Reading"],
         colour: "blue",
         description: "",
         descriptionLong: "",
         citations: [],
         isActive: false,
       }
-  default:
+    case ActivityType.ConceptMapping:
+      return {
+        id: "concept-mapping",
+        url: `${Paths.Activity}${id}${Paths.ConceptMapping}`,
+        iconImage: "/images/concept-mapping.png",
+        title: "Concept Mapping",
+        tutorialUrl: "",
+        tags: ["Creativity", "Understanding"],
+        colour: "fuchsia",
+        description: "A mindmapping activity to help you make relevant connections between concepts and develop your understanding.",
+        descriptionLong: "",
+        citations: [],
+        isActive: false,
+      }
+    default:
       return {
         id: "",
         url: "",

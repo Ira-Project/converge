@@ -151,6 +151,7 @@ export async function createStepSolveAssignment() {
         name: stepSolve.name,
         topicId: topicId,
         type: ActivityType.StepSolve,
+        typeText: ActivityType.StepSolve,
         order: 0,
         points: 100,
       })

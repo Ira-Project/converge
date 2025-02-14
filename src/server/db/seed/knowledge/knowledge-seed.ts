@@ -273,6 +273,7 @@ export async function createKnowledgeZapAssignment() {
         name: json.name,
         topicId: topicId,
         type: ActivityType.KnowledgeZap,
+        typeText: ActivityType.KnowledgeZap,
         order: 0,
         points: 100,
       })
