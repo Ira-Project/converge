@@ -1,0 +1,31 @@
+
+{
+  "name": "Work, Energy, and Power",
+  "topicIdDev": "ll3dh4ahr5eseomk70lun",
+  "topicIdProd": "",
+  "topText": "Complete the concept map by dragging the options and relationships from below",
+  "conceptMapWidthToHeightRatio": "2",
+  "percentageEdgesToHide": 0.5,
+  "percentageNodesToHide": 0.5,
+  "nodes": [
+    { "id": "qtrmoNWvMQj9hnLPxQgZ4", "position": { "x": 703, "y": 10 }, "label": "Power", "alwaysVisible": false },
+    { "id": "65lPAdXUpKA92bQ8OucX7", "position": { "x": 380, "y": 50 }, "label": "Work", "alwaysVisible": false },
+    { "id": "jq98MJ81NDa05v75H4F9D", "position": { "x": 7, "y": 162 }, "label": "Joules", "alwaysVisible": false },
+    { "id": "5w4WdHRvH8rNBAaAw7VrY", "position": { "x": 370, "y": 200 }, "label": "Energy", "alwaysVisible": false },
+    { "id": "sJp9wiZJnK5vT5SOWE9fY", "position": { "x": 715, "y": 180 }, "label": "Force", "alwaysVisible": false },
+    { "id": "DolIFB9Si8U8e6k0gOBhq", "position": { "x": 50, "y": 296 }, "label": "Kinetic Energy", "alwaysVisible": false },
+    { "id": "6bPCYUEakFu0yAy9bQAKO", "position": { "x": 461, "y": 386 }, "label": "Potential Energy", "alwaysVisible": false },
+    { "id": "yLYiBCsmSXthJzh05IwSg", "position": { "x": 88, "y": 415 }, "label": "= mgΔh", "alwaysVisible": false }
+  ],
+  "edges": [
+    { "id": "WeAuflCzjEzl9i8FrAdMM", "source": "65lPAdXUpKA92bQ8OucX7", "target": "jq98MJ81NDa05v75H4F9D", "label": "SI Unit is", "sourceHandlePosition": "left", "targetHandlePosition": "right", "alwaysVisible": false },
+    { "id": "rj22nd92FTrrvVxMaENso", "source": "5w4WdHRvH8rNBAaAw7VrY", "target": "65lPAdXUpKA92bQ8OucX7", "label": "the ability to do", "sourceHandlePosition": "top", "targetHandlePosition": "bottom", "alwaysVisible": false },
+    { "id": "hofWVP40YQn5gJzVuSHVh", "source": "65lPAdXUpKA92bQ8OucX7", "target": "sJp9wiZJnK5vT5SOWE9fY", "label": "is done when a ____ acts through displacement", "sourceHandlePosition": "right", "targetHandlePosition": "left", "alwaysVisible": false },
+    { "id": "nFB4Azs1MMDsub6bRlzhz", "source": "sJp9wiZJnK5vT5SOWE9fY", "target": "qtrmoNWvMQj9hnLPxQgZ4", "label": "x Constant Velocity =", "sourceHandlePosition": "top", "targetHandlePosition": "bottom", "alwaysVisible": false },
+    { "id": "z1GDvCRlr6xMetsUQf9ye", "source": "5w4WdHRvH8rNBAaAw7VrY", "target": "DolIFB9Si8U8e6k0gOBhq", "label": "can be of type", "sourceHandlePosition": "left", "targetHandlePosition": "right", "alwaysVisible": false },
+    { "id": "ce0PxVgyCU6DhvZpw2FFr", "source": "5w4WdHRvH8rNBAaAw7VrY", "target": "6bPCYUEakFu0yAy9bQAKO", "label": "can be of type", "sourceHandlePosition": "bottom", "targetHandlePosition": "top", "alwaysVisible": false },
+    { "id": "qSm3jRD0IEqjAUPRNOz6Q", "source": "65lPAdXUpKA92bQ8OucX7", "target": "qtrmoNWvMQj9hnLPxQgZ4", "label": "per unit time", "sourceHandlePosition": "right", "targetHandlePosition": "left", "alwaysVisible": false },
+    { "id": "aE2GXznZPMl142pRz1HhT", "source": "5w4WdHRvH8rNBAaAw7VrY", "target": "jq98MJ81NDa05v75H4F9D", "label": "SI unit is", "sourceHandlePosition": "left", "targetHandlePosition": "right", "alwaysVisible": false },
+    { "id": "gpQhS9BSrTEpy3s6bVvId", "source": "6bPCYUEakFu0yAy9bQAKO", "target": "yLYiBCsmSXthJzh05IwSg", "label": "calculated using the formula", "sourceHandlePosition": "left", "targetHandlePosition": "right", "alwaysVisible": false }
+  ]
+}

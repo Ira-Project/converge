@@ -33,7 +33,7 @@ interface ActivitySidebarProps {
 
 export function ActivitySidebar({ activity, user }: ActivitySidebarProps) {
 
-  const activityMetaData = getMetaDataFromActivityType(activity?.type as ActivityType, activity?.id);
+  const activityMetaData = getMetaDataFromActivityType(activity?.typeText as ActivityType, activity?.id);
 
   // TODO: Add documentation and Analysis
   const navMain = [

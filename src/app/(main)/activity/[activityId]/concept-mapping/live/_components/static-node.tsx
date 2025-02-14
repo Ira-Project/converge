@@ -20,6 +20,9 @@ export default function StaticNode({ data }: { data: { label: string, handles: {
       </div>
       {data.handles.map((handle) => (
         <Handle
+          style={{
+            "background": "#e879f9"
+          }}
           key={handle.id}
           type={handle.type as HandleType}
           position={handle.position}

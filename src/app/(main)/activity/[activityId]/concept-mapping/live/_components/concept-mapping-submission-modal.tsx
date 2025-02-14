@@ -18,8 +18,7 @@ export default function SubmissionModal({ open } : { open: boolean }) {
         <DialogHeader>
           <DialogTitle className="mb-4 text-2xl">Assignment Submitted!</DialogTitle>
           <DialogDescription>
-            Thank you for helping me fix the mistakes I made. I sure learnt a lot from you.
-            Wishing you a day as awesome as you are!
+            Congratulations! You have successfully submitted your assignment.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>

@@ -32,6 +32,7 @@ export const activity = pgTable("activity", {
   name: text("name").notNull(),
   description: text("description"),
   type: activityTypeEnum("type").notNull(),
+  typeText: text("type_text"),
   assignmentId: varchar("assignment_id", { length: 21 }),
   classroomId: varchar("classroom_id", { length: 21 }).references(() => classrooms.id),
   isLive: boolean("is_live").default(false).notNull(),

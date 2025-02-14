@@ -15,7 +15,7 @@ interface Props {
 
 export default function AssignmentTutorialModal({ classroomId, topic }: Props) {  
 
-  const { tutorialUrl } = getMetaDataFromActivityType(ActivityType.ReasonTrace, "");
+  const { tutorialUrl } = getMetaDataFromActivityType(ActivityType.ConceptMapping, "");
 
   return (
     <Dialog defaultOpen>
@@ -45,7 +45,7 @@ export default function AssignmentTutorialModal({ classroomId, topic }: Props) {
               </BreadcrumbItem>
             </BreadcrumbList>
           </Breadcrumb>
-          <div className="flex flex-row items-center text-xl font-semibold my-2 text-rose-700">
+          <div className="flex flex-row items-center text-xl font-semibold my-2 text-fuchsia-700">
             {topic}
           </div>
         </DialogTitle>
@@ -63,7 +63,7 @@ export default function AssignmentTutorialModal({ classroomId, topic }: Props) {
         </div>
         <DialogFooter>
           <DialogClose asChild>
-            <Button className="bg-rose-700 text-white hover:bg-rose-900">
+            <Button className="bg-fuchsia-700 text-white hover:bg-fuchsia-900">
               Start Activity
             </Button>
           </DialogClose>

@@ -17,6 +17,7 @@ export enum Paths {
   KnowledgeZap = "/knowledge-zap/",
   StepSolve = "/step-solve/",
   ReadAndRelay = "/read-and-relay/",
+  ConceptMapping = "/concept-mapping/",
   CreateAssignment = "/create-assignment/",
   Activity = "/activity/",
   LiveActivity = "live",
@@ -119,6 +120,7 @@ export enum ActivityType {
   ReadAndRelay = "Read and Relay",
   KnowledgeZap = "Knowledge Zap",
   StepSolve = "Step Solve",
+  ConceptMapping = "Concept Mapping",
   // HumanVsAI = "Human vs AI",
 }
 

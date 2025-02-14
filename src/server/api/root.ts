@@ -19,6 +19,8 @@ import { stepSolveRouter } from "./routers/stepSolveActivity/stepSolve/stepSolve
 import { stepSolveCheckStepRouter } from "./routers/stepSolveActivity/checkStep/checkStep.procedure";
 import { readAndRelayRouter } from "./routers/readAndRelayActivity/readAndRelay/readAndRelay.procedure";
 import { evaluateReadingRouter } from "./routers/readAndRelayActivity/evaluateReading/evaluateReading.procedure";
+import { conceptMappingRouter } from "./routers/conceptMappingActivity/conceptMapping/conceptMapping.procedure";
+import { evaluateMapRouter } from "./routers/conceptMappingActivity/evaluateMap/evaluateMap.procedure";
 
 export const appRouter = createTRPCRouter({
   classroom: classroomRouter,
@@ -41,6 +43,9 @@ export const appRouter = createTRPCRouter({
 
   readAndRelay: readAndRelayRouter,
   evaluateReading: evaluateReadingRouter,
+
+  conceptMapping: conceptMappingRouter,
+  evaluateMap: evaluateMapRouter,
 });
 
 export type AppRouter = typeof appRouter;

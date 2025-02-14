@@ -7,6 +7,7 @@ import { subjects } from "../schema/subject";
 import { emailsToPreload } from "./emailsToPreload";
 import { preloadedUsers } from "../schema/user";
 import { Roles } from "@/lib/constants";
+import { activity } from "../schema/activity";
 
 export async function createCoursesSubjectsAndTopics() {
   const list = [
@@ -380,5 +381,15 @@ export async function uploadPreloadedUsers() {
       email: email,
       role: Roles.Student,
     }).onConflictDoNothing({ target: preloadedUsers.email })
+  }
+}
+
+export async function migrateActivityTypeToText() {
+  const activities = await db.select().from(activity);
+
+  for (const act of activities) {
+    await db.update(activity).set({
+      typeText: act.type,
+    }).where(eq(activity.id, act.id))
   }
 }

@@ -1,16 +1,21 @@
 'use client'
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import SubmissionModal from './reasoning-submission-modal';
-import AssignmentTutorialModal from './reason-assignment-tutorial-modal';
-import AssignmentShareModal from './reason-assignment-share-modal'
+import SubmissionModal from './concept-mapping-submission-modal';
+import AssignmentTutorialModal from './concept-mapping-tutorial-modal';
+import AssignmentShareModal from './concept-mapping-share-modal'
 import { Roles } from "@/lib/constants";
 import { Separator } from '@/components/ui/separator';
 import ConceptMap from './concept-map';
-import DraggableStep from './draggable-step';
-import DraggableEdgeLabel from './draggable-edge-label';
+import { type RouterOutputs } from '@/trpc/shared';
+import { type Edge, type Node } from '@xyflow/react';
+import FormattedText from '@/components/formatted-text';
+import ConfirmationModal from './concept-mapping-confirmation-modal';
+import { api } from '@/trpc/react';
 
-interface ReasoningAssignmentViewProps {
+interface ConceptMappingAssignmentViewProps {
+  assignment?: RouterOutputs['conceptMapping']['getConceptMappingActivity'];
+  attemptId?: string;
   activityId: string
   topic: string;
   dueDate?: Date;
@@ -19,32 +24,18 @@ interface ReasoningAssignmentViewProps {
   role: Roles;
 }
 
-const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({ 
+const ConceptMappingAssignmentView: React.FC<ConceptMappingAssignmentViewProps> = ({ 
+  assignment,
+  attemptId,
   activityId,
   topic,
   isLive,
   classroomId,
   role,
+  dueDate
 }) => {
-  const [isDragging, setIsDragging] = useState<boolean>(false);
-  const [draggedItem, setDraggedItem] = useState<{ id: string; text: string } | null>(null);
-  const [draggedIdx, setDraggedIdx] = useState<number | null>(null);
-  const [usedSteps, setUsedSteps] = useState<string[]>([]);
 
-  const handleDragStart = (e: React.DragEvent, option: { id: string; text: string }, index: number | null): void => {
-    setIsDragging(true);
-    setDraggedItem(option);
-    setDraggedIdx(index);
-    e.dataTransfer.setData('text/plain', JSON.stringify(option));
-  };
-
-  const handleStepUse = (step: string) => {
-    setUsedSteps(prev => [...prev, step]);
-  };
-
-  const handleStepReturn = (step: string) => {
-    setUsedSteps(prev => prev.filter(s => s !== step));
-  };
+  const submissionMutation = api.conceptMapping.submitAttempt.useMutation();
 
   // Submission Functions
   const [submissionModalOpen, setSubmissionmodalOpen] = useState(false);
@@ -58,19 +49,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
     setSubmissionmodalOpen(true);
   }
 
-  const availableSteps = [
-    { id: '12', optionText: 'Work' },
-    { id: '13', optionText: 'Calorie' },
-    { id: '14', optionText: 'Displacement' },
-    { id: '15', optionText: 'Gravitational Potential Energy' },
-  ];
-
-  const availableEdgeLabels = [
-    { id: 'e1', optionText: 'converts to' },
-    { id: 'e2', optionText: 'is measured in' },
-    { id: 'e3', optionText: 'requires' },
-    { id: 'e4', optionText: 'produces' },
-  ];
+  console.log("Assignment", assignment)
 
   return (
     <div className="flex flex-col">
@@ -94,66 +73,39 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                   topic={topic}
                   classroomId={classroomId} />
               }
-              {/* <ConfirmationModal 
+              <ConfirmationModal 
                 onSubmit={submitAssignment} 
                 loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
-                /> */}
+                />
             </>
             : 
             <>
-              {/* {reasoningAttemptId.length > 0 &&
+              {attemptId &&
                 <AssignmentTutorialModal 
                   topic={topic}
                   classroomId={classroomId} />
-              } */}
+              }
               <AssignmentShareModal 
-                activityId={activityId}
+                activityId={activityId ?? ""}
                 isLive={isLive} />
             </>
           }
         </div>
       </div>
-      <div className="w-full mx-auto bg-fuchsia-50">
-        <Card className="m-16 px-12 py-8">
+      <div className="w-full mx-auto bg-fuchsia-50 min-h-[calc(100vh-48px)]">
+        <Card className="m-8 px-12 py-8">
           <CardContent className="flex flex-col gap-8">
-            <ConceptMap 
-              onStepUse={handleStepUse}
-              onStepReturn={handleStepReturn}
-            />
-            <div className="grid grid-cols-2 gap-8">
-              <div className="flex flex-col gap-4">
-                <p className="font-semibold text-center">
-                  Available Concepts
-                </p>
-                <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center text-sm">
-                  {availableSteps
-                    .filter(option => !usedSteps.includes(option.optionText))
-                    .map((option) => (
-                      <DraggableStep
-                        key={option.id}
-                        step={option.optionText}
-                        onDragStart={(e) => handleDragStart(e, { id: option.id, text: option.optionText }, null)}
-                      />
-                    ))}
-                </div>
-              </div>
-              <div className="flex flex-col gap-4">
-                <p className="font-semibold text-center">
-                  Available Relationships
-                </p>
-                <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center text-sm">
-                  {availableEdgeLabels
-                    .filter(option => !usedSteps.includes(option.optionText))
-                    .map((option) => (
-                      <DraggableEdgeLabel
-                        key={option.id}
-                        label={option.optionText}
-                        onDragStart={(e) => handleDragStart(e, { id: option.id, text: option.optionText }, null)}
-                      />  
-                    ))}
-                </div>
-              </div>
+            <div className="text-lg text-center">
+              <FormattedText text={assignment?.topText ?? ""} />
             </div>
+            <ConceptMap 
+              attemptId={attemptId ?? ""}
+              assignmentId={assignment?.id ?? ""}
+              initialNodes={assignment?.nodes as unknown as Node[] ?? []}
+              initialEdges={assignment?.edges as unknown as Edge[] ?? []}
+              availableNodeLabels={assignment?.nodeLabels ?? []}
+              availableEdgeLabels={assignment?.edgeLabels ?? []}
+            />
           </CardContent>
         </Card>
       </div>
@@ -161,4 +113,4 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   );
 };
 
-export default ReasoningStepsAssignment;
+export default ConceptMappingAssignmentView;

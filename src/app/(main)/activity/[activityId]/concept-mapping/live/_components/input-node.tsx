@@ -9,6 +9,7 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
   data: { 
     label: string, 
     handles: { type: string, id: string, position: Position }[], 
+    status: 'correct' | 'incorrect' | null
   },
   onDrop?: (id: string, text: string) => void,
   onReturn?: (id: string, text: string) => void,
@@ -32,6 +33,18 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
     }
   };
   
+  const getStatusStyles = () => {
+    if (!data.label) return 'bg-fuchsia-100';
+    switch (data.status) {
+      case 'correct':
+        return 'bg-green-50 border-green-200';
+      case 'incorrect':
+        return 'bg-red-50 border-red-200';
+      default:
+        return 'bg-fuchsia-50';
+    }
+  };
+
   return (
     <>
       <motion.div
@@ -47,7 +60,8 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
           flex 
           items-center 
           justify-center
-          ${data.label ? 'bg-fuchsia-50 cursor-move' : 'bg-fuchsia-100 cursor-pointer'}
+          ${data.label ? 'cursor-move' : 'cursor-pointer'}
+          ${getStatusStyles()}
         `}
         style={{
           boxShadow: data.label 
@@ -73,6 +87,9 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
         )}
         {data.handles.map((handle) => (
           <Handle
+            style={{
+              "background": "#e879f9"
+            }}
             key={handle.id}
             type={handle.type as HandleType}
             position={handle.position}

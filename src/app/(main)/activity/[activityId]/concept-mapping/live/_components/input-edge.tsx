@@ -10,11 +10,13 @@ interface InputEdgeProps {
   targetX: number;
   targetY: number;
   data?: {
+    idForStatus: string;
     label: string;
-    onLabelDrop?: (edgeId: string, label: string) => void;
-    onLabelReturn?: (edgeId: string, label: string) => void;
-    onEdgeRemove?: (edgeId: string) => void;
+    status: 'correct' | 'incorrect' | null;
   };
+  onLabelDrop: (edgeId: string, label: string) => void;
+  onLabelReturn: (edgeId: string, label: string) => void;
+  onEdgeRemove: (edgeId: string) => void;
 }
 
 export default function InputEdge({
@@ -24,6 +26,9 @@ export default function InputEdge({
   targetX,
   targetY,
   data,
+  onLabelDrop,
+  onLabelReturn,
+  onEdgeRemove,
 }: InputEdgeProps) {
   const [edgePath, labelX, labelY] = getStraightPath({
     sourceX,
@@ -35,7 +40,7 @@ export default function InputEdge({
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
     const droppedItem = JSON.parse(e.dataTransfer.getData('text/plain')) as { id: string; text: string };
-    data?.onLabelDrop?.(id, droppedItem.text);
+    onLabelDrop(id, droppedItem.text);
   };
 
   const handleDragOver = (e: React.DragEvent) => {
@@ -43,8 +48,8 @@ export default function InputEdge({
   };
 
   const handleReturn = () => {
-    if(data?.label && data.onLabelReturn) {
-      data.onLabelReturn(id, data.label);
+    if(data?.label && onLabelReturn) {
+      onLabelReturn(id, data.label);
     }
   };
 
@@ -52,27 +57,31 @@ export default function InputEdge({
     if(data?.label) {
       handleReturn();
     }
-    data?.onEdgeRemove?.(id);
+    onEdgeRemove(id);
+  };
+  const getArrowColor = () => {
+    console.log("Edge MY DUDE: ", data)
+    if (!data?.label) return '#d9d9d9';
+    switch (data.status) {
+      case 'correct':
+        return "green"
+      case 'incorrect':
+        return "red"
+      default:
+        return "#d9d9d9"
+    }
   };
 
   return (
     <>
-      <BaseEdge id={id} path={edgePath} markerEnd={`url(#${id}-arrow)`} />
-      <defs> 
-        <marker
-          id={`${id}-arrow`}
-          viewBox="0 0 10 10"
-          refX="9"
-          refY="5"
-          markerUnits="strokeWidth"
-          markerWidth="8"
-          markerHeight="8"
-          orient="auto-start-reverse"
-          className="fill-black"
-        >
-          <path d="M 0 0 L 10 5 L 0 10 z" />
-        </marker>
-      </defs>
+      <BaseEdge 
+        id={id} 
+        path={edgePath} 
+        markerEnd={`url(#${id}-arrow)`} 
+        style={{
+          stroke: getArrowColor()
+        }}
+      />
       <EdgeLabelRenderer>
         <motion.div
           onDrop={handleDrop}
@@ -83,8 +92,8 @@ export default function InputEdge({
             text-center
             max-w-24
             pr-4
+            bg-white
             ${data?.label ? '' : 'w-24 h-4' }
-            ${data?.label ? 'bg-white' : 'bg-gray-100'}
             rounded-md
           `}
           style={{

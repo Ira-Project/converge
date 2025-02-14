@@ -6,6 +6,7 @@ export interface Activity {
   name: string;
   description: string;
   type: ActivityType;
+  typeText: ActivityType;
   assignmentId: string;
   classroomId: string | null;
   isLive: boolean;
