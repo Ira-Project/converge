@@ -103,8 +103,10 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   
   const questionList = assignment?.questionToAssignment.map(({ question }) => question) ?? [];
 
-
   for(const [index, question] of questionList.entries()) {
+    if(index !== 0) {
+      continue;
+    }
     const fetchUrl = `${process.env.BASE_REASONING_ENGINE_URL}${question.lambdaUrl}`;
     const response = fetch(fetchUrl, {
       method: "POST",
@@ -172,14 +174,5 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   }
 
   await Promise.all(questionPromises)
-  for (const concept of concepts) {
-    console.log("Concept: ", concept)
-    await ctx.db.insert(explainConceptStatus).values({
-      id: generateId(21),
-      explanationId: explanationId,
-      conceptId: concept.id,
-      status: concept.status,
-    })
-  }
   return concepts;
 }
