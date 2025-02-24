@@ -22,10 +22,6 @@ const COULD_NOT_COMPUTE_ANSWER_TEXT = "Could not compute"
 
 function getComputedAnswerText(computedAnswer:string, status: QuestionStatus) {
   if(computedAnswer !== "") {
-    const computedAnswerNumber = parseFloat(computedAnswer)
-    if(!isNaN(computedAnswerNumber)) {
-      return parseFloat(computedAnswerNumber.toFixed(4))
-    }
     return computedAnswer
   }
 
@@ -61,9 +57,8 @@ export function QuestionCard({ status, questionText, computedAnswer, questionIma
             src={questionImage} />
         }
         <div className="flex flex-row w-full text-muted-foreground text-sm">
-          <p className=""> 
-            Ira's Answer: {getComputedAnswerText(computedAnswer, status)} 
-          </p>
+          <FormattedText 
+            text={`Ira's Answer: ${getComputedAnswerText(computedAnswer, status)}`} />
         </div>
       </div>
     </div>

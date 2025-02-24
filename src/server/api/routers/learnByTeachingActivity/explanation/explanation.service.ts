@@ -1,7 +1,7 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { type ExplainInput } from "./explanation.input";
 import { generateId } from "lucia";
-import { explainComputedAnswers, explainConceptStatus, explanations } from "@/server/db/schema/learnByTeaching/explanations";
+import { explainComputedAnswers, explanations } from "@/server/db/schema/learnByTeaching/explanations";
 import { actions } from "@/server/realtime_db/schema/actions";
 import { AssignmentUpdateActionType, ConceptStatus, QuestionStatus } from "@/lib/constants";
 
@@ -22,7 +22,6 @@ type ResponseType = {
 
 export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) => {
 
-  
   // -----------
   // Create the explanation object
   // -----------
@@ -103,8 +102,8 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   
   const questionList = assignment?.questionToAssignment.map(({ question }) => question) ?? [];
 
-
   for(const [index, question] of questionList.entries()) {
+
     const fetchUrl = `${process.env.BASE_REASONING_ENGINE_URL}${question.lambdaUrl}`;
     const response = fetch(fetchUrl, {
       method: "POST",
@@ -172,14 +171,5 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   }
 
   await Promise.all(questionPromises)
-  for (const concept of concepts) {
-    console.log("Concept: ", concept)
-    await ctx.db.insert(explainConceptStatus).values({
-      id: generateId(21),
-      explanationId: explanationId,
-      conceptId: concept.id,
-      status: concept.status,
-    })
-  }
   return concepts;
 }
