@@ -22,10 +22,6 @@ const COULD_NOT_COMPUTE_ANSWER_TEXT = "Could not compute"
 
 function getComputedAnswerText(computedAnswer:string, status: QuestionStatus) {
   if(computedAnswer !== "") {
-    const computedAnswerNumber = parseFloat(computedAnswer)
-    if(!isNaN(computedAnswerNumber)) {
-      return parseFloat(computedAnswerNumber.toFixed(4))
-    }
     return computedAnswer
   }
 
