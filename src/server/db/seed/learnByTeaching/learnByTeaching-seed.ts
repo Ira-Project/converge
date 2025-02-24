@@ -14,7 +14,7 @@ type QuestionType = {
   image: string,
 } 
 
-import json from "./work_energy_power.json";
+import json from "./radioactive_decay.json";
 import { explainAssignments } from "../../schema/learnByTeaching/explainAssignment";
 import { ActivityType } from "@/lib/constants";
 import { activity } from "../../schema/activity";
