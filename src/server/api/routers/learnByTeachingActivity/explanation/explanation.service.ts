@@ -1,7 +1,7 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { type ExplainInput } from "./explanation.input";
 import { generateId } from "lucia";
-import { explainComputedAnswers, explainConceptStatus, explanations } from "@/server/db/schema/learnByTeaching/explanations";
+import { explainComputedAnswers, explanations } from "@/server/db/schema/learnByTeaching/explanations";
 import { actions } from "@/server/realtime_db/schema/actions";
 import { AssignmentUpdateActionType, ConceptStatus, QuestionStatus } from "@/lib/constants";
 
@@ -103,9 +103,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   const questionList = assignment?.questionToAssignment.map(({ question }) => question) ?? [];
 
   for(const [index, question] of questionList.entries()) {
-    // if (index !== 0) {
-    //   continue;
-    // }
+
     const fetchUrl = `${process.env.BASE_REASONING_ENGINE_URL}${question.lambdaUrl}`;
     const response = fetch(fetchUrl, {
       method: "POST",
