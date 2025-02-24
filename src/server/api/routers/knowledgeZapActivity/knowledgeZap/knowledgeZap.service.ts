@@ -25,12 +25,11 @@ export const submitAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: 
   });
 
   const assignment = await ctx.db.query.knowledgeZapAssignments.findFirst({
-    where: (assignment, { eq }) => eq(assignment.id, input.assignmentAttemptId),
+    where: (assignment, { eq }) => eq(assignment.id, input.assignmentId),
     with: {
       questionToAssignment: true,
     }
   });
-
   if(!assignment?.questionToAssignment) {
     throw new Error("Assignment not found");
   }
@@ -150,13 +149,10 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
 
 export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: GetKnowledgeZapActivityInput) => {
 
-  console.log("Start time: ", new Date().toISOString());
   const startTime = new Date().getTime();
   const activity = await ctx.db.query.activity.findFirst({
     where: (activity, { eq }) => eq(activity.id, input.activityId),
   });
-
-  console.log("Activity found: ", new Date().toISOString(), "Time Taken: ", new Date().getTime() - startTime);
 
   const assignmentId = activity?.assignmentId;
 
@@ -174,8 +170,6 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
       }
     }
   });
-
-  console.log("Assignment found: ", new Date().toISOString(), "Time Taken: ", new Date().getTime() - startTime);
 
   if(!assignment) {
     throw new Error("Assignment not found");
@@ -275,8 +269,6 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
 
   // Randomly sort the questions array before returning
   questions.sort(() => Math.random() - 0.5);
-
-  console.log("Questions sorted: ", new Date().toISOString(), "Time Taken: ", new Date().getTime() - startTime);
 
   return {
     ...assignment,
