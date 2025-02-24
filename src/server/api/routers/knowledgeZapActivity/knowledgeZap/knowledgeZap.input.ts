@@ -7,6 +7,7 @@ export type CreateAssignmentAttemptInput = z.infer<typeof createAssignmentAttemp
 
 export const submitAssignmentAttemptSchema = z.object({
   assignmentAttemptId: z.string(),
+  assignmentId: z.string(),
 });
 export type SubmitAssignmentAttemptSchema = z.infer<typeof submitAssignmentAttemptSchema>;
 
