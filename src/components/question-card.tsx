@@ -61,9 +61,8 @@ export function QuestionCard({ status, questionText, computedAnswer, questionIma
             src={questionImage} />
         }
         <div className="flex flex-row w-full text-muted-foreground text-sm">
-          <p className=""> 
-            Ira's Answer: {getComputedAnswerText(computedAnswer, status)} 
-          </p>
+          <FormattedText 
+            text={`Ira's Answer: ${getComputedAnswerText(computedAnswer, status)}`} />
         </div>
       </div>
     </div>
