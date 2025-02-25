@@ -111,7 +111,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         url: `${Paths.Activity}${id}${Paths.ConceptMapping}`,
         iconImage: "/images/concept-mapping.png",
         title: "Concept Mapping",
-        tutorialUrl: "https://www.loom.com/share/30a109cfe50944f69230037fad476767?sid=d58f97a4-fa92-47c7-8338-e945a53cb28e",
+        tutorialUrl: "https://www.loom.com/embed/30a109cfe50944f69230037fad476767?sid=47c0846f-775a-49af-b8a9-e72f2fbd01cd",
         tags: ["Creativity", "Understanding"],
         colour: "fuchsia",
         description: "A mindmapping activity to help you make relevant connections between concepts and develop your understanding.",
