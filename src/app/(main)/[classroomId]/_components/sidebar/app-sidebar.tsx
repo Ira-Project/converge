@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { BookOpen, Layers} from "lucide-react"
+import { BookOpen, Layers, Plus} from "lucide-react"
 
 import { NavMain } from "./nav-main"
 import { NavStudents } from "./nav-students"
@@ -56,6 +56,12 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
       title: "Documentation",
       url: `/${classroom?.id}/documentation`,
       icon: BookOpen,
+      isActive: true,
+    },
+    {
+      title: "Create Activity",
+      url: `/${classroom?.id}#create-activity`,
+      icon: Plus,
       isActive: true,
     }
   ]

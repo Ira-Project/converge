@@ -7,12 +7,13 @@ export enum FileUploadType {
 }
 
 export interface FileUploadedEmailTemplateProps {
-  fileName: string
+  fileName?: string
   type: FileUploadType
   userEmail: string
+  topicName: string
 }
 
-export const FileUploadedTemplate = ({ fileName, type, userEmail }: FileUploadedEmailTemplateProps) => {
+export const FileUploadedTemplate = ({ fileName, userEmail, topicName }: FileUploadedEmailTemplateProps) => {
   return (
     <Html>
       <Head />
@@ -23,8 +24,15 @@ export const FileUploadedTemplate = ({ fileName, type, userEmail }: FileUploaded
             <Text style={title}>{APP_TITLE}</Text>
             <Text style={text}>Hi,</Text>
             <Text style={text}>
-              A new file has been uploaded on Ira Project by {userEmail}. The file is of type {type} and the name of the file is: {fileName}. 
+              A new activity request has been made by {userEmail}. The topic name is: {topicName}.
             </Text>
+            {
+              fileName && (
+                <Text style={text}>
+                  A file has been uploaded. The file name is: {fileName}.
+                </Text>
+              )
+            }
             <Text style={text}>Better process it as soon as possible!</Text>
           </Section>
         </Container>

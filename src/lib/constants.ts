@@ -152,3 +152,12 @@ export enum KnowledgeZapQuestionType {
   MATCHING = "matching",
   ORDERING = "ordering",
 }
+
+export enum SkillType {
+  REMEMBERING = "Remembering",
+  UNDERSTANDING = "Understanding",
+  APPLYING = "Applying",
+  ANALYZING = "Analyzing",
+  EVALUATING = "Evaluating",
+  CREATING = "Creating",
+}

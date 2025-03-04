@@ -21,7 +21,7 @@ const TopicSection: React.FC<TopicSectionProps> = ({ topic, role, classroomId })
   return (
     <>
       {filteredActivities.length > 0 && (
-        <div className="mb-8 px-4 w-full" id={slug}>
+        <div className="mb-8 px-4 w-full max-w-screen-lg mx-auto" id={slug}>
           <h2 className="text-xl font-semibold mb-2">{name}</h2>
           <p className="text-muted-foreground mb-6">{description}</p>
           <h3 className="text-lg font-medium mb-4">Activities</h3>
