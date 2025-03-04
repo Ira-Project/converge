@@ -10,11 +10,18 @@ import { api } from "@/trpc/react";
 import { preSignedUrlSchema } from "@/server/api/routers/fileUpload/fileUpload.input";
 import { useState } from "react";
 import { toast } from "sonner";
+import { SkillType } from "@/lib/constants";
+import { MultiSelect } from "@/components/ui/multi-select";
+
+const skillOptions = Object.values(SkillType).map((skill) => ({
+  label: skill,
+  value: skill,
+}));
 
 
 export const UploadLessonPlanForm = () => {
 
-const getPresignedUrl = api.fileUpload.getPreSignedUrl.useMutation();
+  const getPresignedUrl = api.fileUpload.getPreSignedUrl.useMutation();
   const uploadLessonPlan = api.fileUpload.uploadLessonPlan.useMutation();
 
   const form = useForm({
@@ -22,6 +29,7 @@ const getPresignedUrl = api.fileUpload.getPreSignedUrl.useMutation();
       fileName: "",
       file: null,
       topicName: "",
+      skills: new Array<string>(),
     },
     resolver: zodResolver(preSignedUrlSchema),
   })
@@ -31,12 +39,12 @@ const getPresignedUrl = api.fileUpload.getPreSignedUrl.useMutation();
 
   const onSubmit = form.handleSubmit(async (values) => {
     setLoading(true);
-
     if (values.file) {
       const presignedUrl = await getPresignedUrl.mutateAsync({
         topicName: values.topicName,
         fileName: fileName,
-        file: values.file
+        file: values.file,
+        skills: values.skills,
       });
 
       const result = await fetch(presignedUrl, {
@@ -53,21 +61,23 @@ const getPresignedUrl = api.fileUpload.getPreSignedUrl.useMutation();
       await uploadLessonPlan.mutateAsync({
         url: result.url, 
         fileName: fileName,
-        topicName: values.topicName
+        topicName: values.topicName,
+        skills: values.skills,
       });
 
     } else {
       await uploadLessonPlan.mutateAsync({
         topicName: values.topicName,
         fileName: fileName,
+        skills: values.skills,
       });
     }
     setLoading(false);
-    toast("Your lesson plan has been uploaded successfully. We will get back to you in 48 hours with assignments.");
+    toast("Your requested has been sent. Check back in 48 hours for activities.");
   });
 
   return (
-    <Form {...form}>
+    <Form {...form} >
       <form onSubmit={onSubmit} className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <FormField
@@ -83,13 +93,32 @@ const getPresignedUrl = api.fileUpload.getPreSignedUrl.useMutation();
               </FormItem>
             )}
           />
+
+          <FormField
+            control={form.control}
+            name="skills"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>What skills do you want to target?</FormLabel>
+                <FormControl>
+                  <MultiSelect
+                    onValueChange={(value) => {
+                      form.setValue("skills", value);
+                    }}
+                    options={skillOptions}
+                    {...field}                />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )} 
+          />
           
           <FormField
             control={form.control}
             name="file"
             render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>File (Optional)</FormLabel>
+                <FormLabel>Lesson Plan or Curriculum (Optional)</FormLabel>
                 <FormControl>
                   <Input 
                     {...field} 
