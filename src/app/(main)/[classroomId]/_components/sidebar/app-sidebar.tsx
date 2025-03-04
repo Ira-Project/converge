@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { BookOpen, Layers} from "lucide-react"
+import { BookOpen, Layers, Plus} from "lucide-react"
 
 import { NavMain } from "./nav-main"
 import { NavStudents } from "./nav-students"
@@ -57,9 +57,17 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
       url: `/${classroom?.id}/documentation`,
       icon: BookOpen,
       isActive: true,
-    }
+    },
   ]
 
+  if(role === Roles.Teacher) {
+    navMain.push({
+      title: "Create Activity",
+      url: `/${classroom?.id}#create-activity`,
+      icon: Plus,
+      isActive: true,
+    })
+  }
 
   return (
     <Sidebar collapsible="icon">

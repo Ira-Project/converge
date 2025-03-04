@@ -44,6 +44,7 @@ export const uploadLessonPlan = async (ctx: ProtectedTRPCContext, input: UploadF
     name: input.topicName,
     url: input.url,
     createdBy: ctx.user.id,
+    skills: input.skills,
   });
 
   await sendMail(
@@ -51,7 +52,8 @@ export const uploadLessonPlan = async (ctx: ProtectedTRPCContext, input: UploadF
     EmailTemplate.FileUploaded, 
     { 
       userEmail: ctx.user.email, 
-      fileName: input.fileName, 
+      fileName: input.fileName,
+      topicName: input.topicName,
       type: FileUploadType.LESSON_PLAN 
     }
   );

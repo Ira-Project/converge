@@ -1,4 +1,4 @@
-import { ActivityType, Paths } from "@/lib/constants"
+import { ActivityType, Paths, SkillType } from "@/lib/constants"
 
 export function getMetaDataFromActivityType(activityType?: ActivityType, id?: string): 
 {
@@ -23,7 +23,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         iconImage: "/images/learn-by-teaching.png",
         title: "Learn by Teaching",
         tutorialUrl: "https://www.loom.com/embed/e07673e5101d48d9bd12ff88259e7de3?sid=f3cd2e10-1062-4bc1-bf1a-d31035554101",
-        tags: ["Memory", "Understanding"],
+        tags: [SkillType.APPLYING, SkillType.UNDERSTANDING],
         colour: "amber",
         description: "Learn by teaching Ira, iterating on your explanation until Ira is able to answer a set of questions correctly. This assignment is designed to help you understand concepts and improve your communication skills.",
         descriptionLong: "In this innovative learning activity, students have to teach an AI instead of solving a set of questions. For a given topic, they have to explain concepts and provide corresponding formulas (if required) to the AI. The AI then uses this explanation to attempt a set of questions and responds with it’s solution and working. The students have to iterate on their explanations till the AI is able to solve all the given questions. We ensure that the AI's response serves as scaffolding to guide the learners to the correct explanation rather than providing it directly. \nThis activity leverages the Feynman method of learning, which posits that teaching others is one of the most effective ways to learn [1, 2, 3, 4, 5]. There is no penalization for incorrect explanations and the students are encouraged to iteratively improve their understanding of the topic, develop communication skills, build metacognition, and hone their organizational abilities.",
@@ -43,7 +43,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
           iconImage: "/images/reason-trace.png",
           title: "Reason Trace",
           tutorialUrl: "https://www.loom.com/embed/07854dffdd974dc3b4de0a2754fe1f56?sid=41fd0084-22cc-4e8d-9b17-675d99ebd8c8",
-          tags: ["Reasoning", "Evaluation"],
+          tags: [SkillType.EVALUATING, SkillType.CREATING],
           colour: "rose",
           description: "A spin on the popular 'Wordle' game. Spot the flaw in Ira's reasoning and correct it.",
           descriptionLong: "This is a 2-step activity that starts by presenting the students with a question and it’s answer which has been computed incorrectly by an AI. The AI is designed to avoid any numerical mistakes while computing an answer to ensure that the incorrect answer is a result of an error in reasoning rather than an error in calculation. In the first step, the students have to identify the exact order of reasoning that the AI used to arrive at that incorrect answer. In the second step, they have to correct the reasoning of the AI so that it is able to solve the question.\nTo complete this activity, students have to use divergent thinking [1] to generate and explore multiple different reasoning pathways for a single question. This method of thinking is often contrasted with convergent thinking, which focuses solely on arriving at a single, correct solution to a problem. As divergent thinking has been shown to be a valid indicator for creative thought [2, 3], this activity allows the students to build creativity.",
@@ -61,7 +61,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         iconImage: "/images/knowledge-zap.png",
         title: "Knowledge Zap",
         tutorialUrl: "https://www.loom.com/embed/01e2912f75044398babbab0cd9b59aae?sid=c8b00065-c416-4f5c-8823-933b93e42866",
-        tags: ["Memory"],
+        tags: [SkillType.REMEMBERING, SkillType.UNDERSTANDING],
         colour: "lime",
         description: "Test your knowledge on a topic by answering questions.",
         descriptionLong: "This activity is a derivative of standard assessments involving multiple-choice questions (MCQs). For any given topic, students have to correctly answer a set of questions that span three possible formats - MCQs, match-the-following questions, and arrange-in-order questions. If the student provides an incorrect answer, the corresponding question (along with it’s options) is automatically rephrased and added to the end of set. The activity is completed when the student answers the entire set of questions correctly.\nThis activity aims to leverage the concept of spaced repetition and interleaving. Spaced repetition is a learning technique that involves increasing the time intervals between reviewing the same piece of information and has been shown to significantly enhance retention and recall of information [1, 2, 3]. Interleaving involves mixing different types of problems or sub-topics during a learning session and has been shown to enhance long-term retention and understanding of material and promote better discernment between concepts [4, 3, 5].",
@@ -81,7 +81,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         iconImage: "/images/step-solve.png",
         title: "Step Solve",
         tutorialUrl: "https://www.loom.com/embed/990069f4e68e4e8eabece6a7a6a7be2d?sid=4884f49b-7e78-4387-b766-9bcd529a7694",
-        tags: ["Reasoning", "Evaluation"],
+        tags: [SkillType.APPLYING, SkillType.EVALUATING],
         colour: "teal",
         description: "Learn how to problem solve by solving a question step by step.",
         descriptionLong: "In this activity, students solve a given question by computing answers to intermediate steps. The steps are presented sequentially and students can only proceed to the next step after correctly completing the previous step. By demonstrating the step-by-step process of solving a problem, this activity leverages the worked example effect [1] which states that learning outcomes are improved when students are provided with worked examples. It also provides a scaffold for students, guiding them through the process and reducing the cognitive effort required. \n Breaking down a problem into smaller steps is also supported by the cognitive load theory [2]. This theory emphasizes that our working memory, where we process information, has limited capacity. Complex problems can easily overload this capacity, hindering learning. By breaking a problem into smaller, manageable steps, we reduce the cognitive load, thus allowing us to learn each part effectively",
@@ -98,7 +98,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         iconImage: "/images/read-and-relay.png",
         title: "Read and Relay",
         tutorialUrl: "",
-        tags: ["Comprehension", "Reading"],
+        tags: [SkillType.ANALYZING, SkillType.UNDERSTANDING],
         colour: "blue",
         description: "",
         descriptionLong: "",
@@ -111,8 +111,8 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         url: `${Paths.Activity}${id}${Paths.ConceptMapping}`,
         iconImage: "/images/concept-mapping.png",
         title: "Concept Mapping",
-        tutorialUrl: "",
-        tags: ["Creativity", "Understanding"],
+        tutorialUrl: "https://www.loom.com/embed/30a109cfe50944f69230037fad476767?sid=47c0846f-775a-49af-b8a9-e72f2fbd01cd",
+        tags: [SkillType.ANALYZING, SkillType.REMEMBERING],
         colour: "fuchsia",
         description: "A mindmapping activity to help you make relevant connections between concepts and develop your understanding.",
         descriptionLong: "",

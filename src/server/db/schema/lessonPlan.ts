@@ -10,6 +10,7 @@ export const lessonPlanFiles = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name").notNull(),
+    skills: text("skills").array().notNull().default([]),
     url: text("url"),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),

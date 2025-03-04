@@ -64,7 +64,7 @@ const ConceptMappingAssignmentView: React.FC<ConceptMappingAssignmentViewProps> 
         <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
           { role !== Roles.Teacher ?
             <>
-              {0 > 0 &&
+              {attemptId &&
                 <AssignmentTutorialModal 
                   topic={topic}
                   classroomId={classroomId} />
