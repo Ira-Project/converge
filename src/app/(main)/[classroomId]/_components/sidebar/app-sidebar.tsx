@@ -58,14 +58,16 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
       icon: BookOpen,
       isActive: true,
     },
-    {
+  ]
+
+  if(role === Roles.Teacher) {
+    navMain.push({
       title: "Create Activity",
       url: `/${classroom?.id}#create-activity`,
       icon: Plus,
       isActive: true,
-    }
-  ]
-
+    })
+  }
 
   return (
     <Sidebar collapsible="icon">
