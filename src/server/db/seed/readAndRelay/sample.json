@@ -26,5 +26,6 @@
           "lambda_url": "/physics/ap_physics_c_em/electric_charge/4",
           "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/AP-Physics-C-EM_Electric-Charge_Q4.svg"
       }
-  ]
+  ],
+  "gpt-o3-mini-prompt": "Generate a concise text passage describing ALL the main concepts provided in the passage. Do not leave any concept. Use HTML to describe the headers and paragraphs. Use LaTex code for any formulas. All Latex should be within '$!$ ' delimiters. The number of characters in the passage should be less than 3000."
 }

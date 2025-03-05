@@ -1,0 +1,30 @@
+{
+    "name": "Current and Circuits",
+    "topicIdDev": "eJFLmJpdjyW495c7j9Fon",
+    "topicIdProd": "HVUAVdPYxs08yExPRVE6E",
+    "readingPassage": "<h1>Currents & Circuits</h1><p>Electric circuits involve several interconnected concepts that describe how charges move and interact in conductors.</p><h2>Potential Difference</h2><p>The potential difference between two points is the work done per unit charge to move a charge from one point to another. It is measured in volts (V) and defined by </p>$!$ V = \\frac{W}{q} $!$<p>Releasing a charge at a point with high potential energy results in kinetic energy gain equal to</p>$!$ qV $!$<h2>Electric Current</h2><p>Electric current is the rate at which charge flows through a conductor. It is given by </p>$!$ I = \\frac{\\Delta q}{\\Delta t} $!$<p> and measured in amperes (A), where 1 A equals 1 coulomb per second.</p><h2>Electric Resistance and Resistivity</h2><p>Resistance is the opposition a conductor offers to the flow of charge and is expressed by </p>$!$ R = \\frac{V}{I} $!$<p>According to Ohm's law, at constant temperature, the current through a conductor is proportional to the potential difference, or </p>$!$ I \\propto V $!$<p> Experiments show that a conductor's resistance depends on its physical properties: length, cross-sectional area, and the nature of its material. This relationship is captured by the resistivity formula:</p> $!$ R = \\frac{\\rho L}{A} $!$,<p> where ρ is the resistivity.</p><h2>Microscopic View of Resistance</h2><p>On a microscopic level, resistance occurs because free electrons in a conductor, which move randomly at high speeds, suffer collisions with atoms. These inelastic collisions transfer energy to the atoms, causing vibrations (i.e., increased temperature), which in turn increases resistance.</p><h2>Resistors in Circuits</h2><p>Resistors can be combined in series or parallel to control the overall resistance. In series, resistances add directly: </p>$!$ R_{\\text{total}} = R_1 + R_2 + \\dots $!$<p>In parallel, they combine as </p>$!$ \\frac{1}{R_{\\text{total}}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\dots $!$<p> resulting in a total resistance smaller than any individual resistance.</p><h2>Electric Power</h2><p>Electric power is the rate of energy conversion or work done. In a circuit component like a resistor, power is given by </p>$!$ P = VI $!$<p> which is dissipated as heat or used to perform work.</p><h2>Measuring Instruments</h2><p>An ammeter is used to measure current and is connected in series, ideally having zero resistance to not affect the circuit. A voltmeter measures potential difference and is connected in parallel with the component, ideally exhibiting infinite resistance.</p><h2>Electromotive Force (emf) and Internal Resistance</h2><p>A cell or battery supplies an electromotive force (emf), the work done per unit charge as it moves charge from one terminal to the other, defined by </p>$!$ \\varepsilon = \\frac{W}{q} $!$<p>Due to internal chemical processes, real cells have an internal resistance r. Thus, with current I flowing, the terminal voltage is reduced to </p>$!$ V = \\varepsilon - Ir $!$<h2>Potential Dividers</h2><p>A potential divider (or potentiometer) uses a continuous resistor (or a wire) with a movable contact (slider) to generate a variable output voltage. By adjusting the connection point along the resistor, a user can obtain a voltage ranging from 0 V to the full emf of the battery, making it useful for calibrating and testing other devices.</p><p>This overview integrates the key concepts of electric potential, current, resistance (including resistivity), circuit configurations, power, measurement techniques, and the practical aspects of real batteries.</p>",
+    "maxNumberOfHighlights": 5,
+    "maxNumberOfFormulas": 3,
+    "maxHighlightLength": 200,
+    "maxFormulaLength": 200,
+    "questions": [
+        {
+            "question": "A resistor of resistance $!$ 5.0\\,\\Omega $!$ is connected directly to a $!$ 20\\,V $!$ battery. Determine the current flowing through this resistor.",
+            "answer": "$!$ 4\\,A $!$",
+            "lambda_url": "",
+            "image": ""
+        },
+        {
+            "question": "A resistor of resistance $!$ 10\\,\\Omega $!$ has a current of $!$ 2\\,A $!$ flowing through it. Calculate the power dissipated by this resistor.",
+            "answer": "$!$ 40\\,W $!$",
+            "lambda_url": "",
+            "image": ""
+        },
+        {
+            "question": "A copper wire of length $!$ L $!$ dissipates power $!$ P $!$ when a potential difference $!$ V $!$ is applied across it. Another identical copper wire is connected to a potential difference $!$ 9V $!$, causing the wire to dissipate power $!$ 3P $!$. What is the length of this second copper wire?",
+            "answer": "$!$ 27L $!$",
+            "lambda_url": "",
+            "image": ""
+        }
+    ]
+  }
