@@ -3,7 +3,8 @@ import { type ExplainInput } from "./explanation.input";
 import { generateId } from "lucia";
 import { explainComputedAnswers, explanations } from "@/server/db/schema/learnByTeaching/explanations";
 import { actions } from "@/server/realtime_db/schema/actions";
-import { AssignmentUpdateActionType, ConceptStatus, QuestionStatus } from "@/lib/constants";
+import { AssignmentUpdateActionType, QuestionStatus } from "@/lib/constants";
+import { ConsoleLogWriter } from "drizzle-orm";
 
 type ResponseType = {
   body: {
@@ -13,10 +14,6 @@ type ResponseType = {
     image?: string;
     imageHeight?: number;
     imageWidth?: number;
-    concepts?: {
-      text: string;
-      status: ConceptStatus
-    }[];
   }
 }
 
@@ -45,7 +42,6 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
     where: (table, { eq }) => eq(table.id, input.assignmentId),
     columns: {
       id: true,
-      conceptListId: true,
     },
     with: {
       questionToAssignment: {
@@ -64,41 +60,7 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
 
   const questionPromises = []
 
-  const conceptListId = assignment?.conceptListId;
   console.log("Assignment Found", Date.now())
-
-  let concepts: {
-    text: string
-    id: string
-    status: ConceptStatus
-  }[] = []
-  
-  if(conceptListId) {
-    console.log("ConceptList Found", Date.now())
-    let conceptListConcepts = await ctx.db.query.conceptListConcepts.findMany({
-      where: (table, { eq }) => eq(table.conceptListId, conceptListId),
-      with: {
-        concept: {
-          columns: {
-            id: true,
-            text: true,
-          }
-        }
-      },
-    })
-    console.log("Concepts Found", Date.now())
-  
-    if(!conceptListConcepts) {
-      conceptListConcepts = []
-    }
-  
-    concepts = conceptListConcepts.map(({ concept }) => ({
-      text: concept.text,
-      id: concept.id,
-      status: ConceptStatus.NOT_PRESENT,
-    }))
-  } 
-
   
   const questionList = assignment?.questionToAssignment.map(({ question }) => question) ?? [];
 
@@ -124,20 +86,8 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
       console.log(index, "Reasoning JSON Conversion", Date.now())
       const responseJson = data as ResponseType;
       const body = responseJson.body;
-      
-      if(body.concepts) {
-        for(const concept of body.concepts) {
-          concepts = concepts.map((c) => {
-            if(c.text === concept.text) {
-              return {
-                ...c,
-                status: concept.status,
-              }
-            }
-            return c
-          })
-        }
-      }
+
+      console.log("Realtime DB Object Insertion", explanationId)
 
       await ctx.realtimeDb.insert(actions).values({
         id: generateId(21),
@@ -146,13 +96,15 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
         payload: {
           questionId: question.id,
           newStatus: body.isCorrect ? QuestionStatus.CORRECT : QuestionStatus.INCORRECT,
-          explanation: body.working,
+          working: body.working,
           computedAnswer: body.answer,
           image: body.image ? body.image : undefined,
           imageHeight: body.imageHeight ? body.imageHeight : undefined,
           imageWidth: body.imageWidth ? body.imageWidth : undefined,
-          explanationId: explanationId,
-        }
+        },
+        explanationId: explanationId,
+        explanation: input.explanation,
+        working: body.working,
       })
       .then(async () => {
           console.log(index, "Created RealtimeDB Object", Date.now())
@@ -171,5 +123,5 @@ export const explain = async (ctx: ProtectedTRPCContext, input: ExplainInput) =>
   }
 
   await Promise.all(questionPromises)
-  return concepts;
+  return;
 }

@@ -1,6 +1,7 @@
 import {
   json,
   pgTableCreator,
+  text,
   timestamp,
   varchar,
 } from "drizzle-orm/pg-core";
@@ -16,5 +17,8 @@ export const actions = pgTable(
     actionType: varchar("actionType").notNull(),
     payload: json("payload"),
     createdAt: timestamp("created_at").defaultNow().notNull(),
+    explanationId: text("explanation_id"),
+    explanation: text("explanation"),
+    working: text("working"),
   }
 );
