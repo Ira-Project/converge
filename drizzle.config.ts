@@ -1,7 +1,6 @@
 import { defineConfig } from "drizzle-kit";
 
 // MAIN DB
-
 export default defineConfig({
   schema: "./src/server/db/schema/*",
   out: "./drizzle",
