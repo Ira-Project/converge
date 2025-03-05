@@ -49,6 +49,7 @@ export const evaluateReading = async (ctx: ProtectedTRPCContext, input: Evaluate
           question: {
             columns: {
               id: true,
+              question: true,
               lambdaUrl: true,
             }
           }
@@ -67,6 +68,7 @@ export const evaluateReading = async (ctx: ProtectedTRPCContext, input: Evaluate
       body: JSON.stringify({
         highlights: input.highlights,
         formulas: input.formulas,
+        question: question.question,
       }),
       headers: {
         "content-type": "application/json",
