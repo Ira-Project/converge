@@ -2,9 +2,7 @@
 import { db } from "../..";
 import { and, eq } from "drizzle-orm";
 import { generateId } from "lucia";
-import { explainAnswers, explainQuestions, explainQuestionToAssignment } from "../../schema/learnByTeaching/explainQuestions";
 
-import { topics } from "../../schema/subject";
 
 type QuestionType = {
   id: string,
@@ -14,7 +12,7 @@ type QuestionType = {
   image: string,
 } 
 
-import json from "./sample.json";
+import json from "./current_and_circuits.json";
 import { readAndRelayAssignments } from "../../schema/readAndRelay/readAndRelayAssignments";
 import { readAndRelayAnswers, readAndRelayQuestions, readAndRelayQuestionToAssignment } from "../../schema/readAndRelay/readAndRelayQuestions";
 import { activity } from "../../schema/activity";
