@@ -88,11 +88,37 @@ export const submitReasoningAssignmentAttempt = async (ctx: ProtectedTRPCContext
     }
   }
 
-  score = score / input.statuses.length;
+  const attempt = await ctx.db.query.reasoningAssignmentAttempts.findFirst({
+    where: (table, { eq }) => eq(table.id, input.attemptId),
+    with: {
+      reasoningPathwayAttempts: {
+        columns: {
+          id: true,
+          correct: true,
+        }
+      }, 
+      reasoningAttemptFinalAnswer: {
+        columns: {
+          id: true,
+          isCorrect: true,
+        }
+      }
+    }
+  });
 
+  let accuracy = 0;
+  if (attempt) {
+    const totalAttempts = attempt.reasoningPathwayAttempts.length + attempt.reasoningAttemptFinalAnswer.length;
+    const correctAttempts = attempt.reasoningPathwayAttempts.filter(step => step.correct).length + attempt.reasoningAttemptFinalAnswer.filter(final => final.isCorrect).length;
+    accuracy = correctAttempts / totalAttempts;
+  }
+  
+  score = score / input.statuses.length;
+  
   await ctx.db.update(reasoningAssignmentAttempts)
     .set({
       score: sql`${score}`,
+      accuracy: accuracy,
       submittedAt: new Date(),
     })
     .where(eq(reasoningAssignmentAttempts.id, input.attemptId))

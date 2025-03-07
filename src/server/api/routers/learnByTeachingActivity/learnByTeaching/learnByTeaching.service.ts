@@ -19,20 +19,32 @@ export const createTestAttempt = async (ctx: ProtectedTRPCContext, input: Create
 export const submitTestAttempt = async (ctx: ProtectedTRPCContext, input: SubmitTestAttemptSchema) => {
 
   const submissionTime = new Date();
-  const finalExplanation = await ctx.db.query.explanations.findFirst({
+  const explanations = await ctx.db.query.explanations.findMany({
     where: (explanation, { eq }) => eq(explanation.testAttemptId, input.testAttemptId),
     orderBy: (explanation, { desc }) => [desc(explanation.createdAt)],
     with: {
       explainComputedAnswers: true,
     }
   })
-  
-  const score = finalExplanation?.explainComputedAnswers?.filter((answer) => answer.isCorrect).length;
-  const totalQuestions = finalExplanation?.explainComputedAnswers?.length;
+
+  let maxScore = 0;
+  let scoreSum = 0;
+  const totalQuestions = explanations[0]?.explainComputedAnswers?.length;
+
+  for (const explanation of explanations) {
+    const score = explanation.explainComputedAnswers?.filter((answer) => answer.isCorrect).length;
+    if(score && score > maxScore) {
+      maxScore = score;
+    }
+    scoreSum += score;
+  }
+
+  const averageScore = scoreSum / (explanations.length * (totalQuestions ?? 1));
   
   await ctx.db.update(explainTestAttempts)
     .set({
-      score2: score && totalQuestions ? score / totalQuestions : 0.0,
+      score2: maxScore && totalQuestions ? maxScore / totalQuestions : 0.0,
+      averageScore,
       submittedAt: submissionTime,
     })
     .where(eq(explainTestAttempts.id, input.testAttemptId))
@@ -79,6 +91,14 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
   const user = ctx.user.role;
   let submissions = [];
 
+  const activity = await ctx.db.query.activity.findFirst({
+    where: (activity, { eq }) => eq(activity.id, input.activityId),
+  });
+
+  if(!activity) {
+    throw new Error("Activity not found");
+  }
+
   // Get submissions
   if (user === Roles.Student) {
     submissions = await ctx.db.query.explainTestAttempts.findMany({
@@ -93,11 +113,15 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
             id: true,
           },
           with: {
-            explainConceptStatus: {
+            explainComputedAnswers: {
               with: {
-                concept: {
-                  columns: {
-                    text: true,
+                question: {
+                  with: {
+                    explainQuestionConcepts: {
+                      with: {
+                        concept: true,
+                      }
+                    }
                   }
                 }
               }
@@ -117,14 +141,11 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
           columns: {
             id: true,
           },
-          with: {
-            explainConceptStatus: {
+          orderBy: (explanation, { desc }) => [desc(explanation.createdAt)],
+          with: { 
+            explainComputedAnswers: {
               with: {
-                concept: {
-                  columns: {
-                    text: true,
-                  }
-                }
+                question: true
               }
             }
           }
@@ -133,32 +154,72 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
     });
   }
 
+  const questions = await ctx.db.query.explainQuestionToAssignment.findMany({
+    where: (question, { eq }) => eq(question.assignmentId, activity.assignmentId ?? ""),
+  });
+
+  const questionConceptsMap = new Map<string, string[]>();
+
+  for (const question of questions) {
+    const questionConcept = await ctx.db.query.explainQuestionConcepts.findMany({
+      where: (questionConcept, { eq }) => eq(questionConcept.questionId, question.questionId),
+      with: {
+        concept: true,
+      }
+    });
+    if(!questionConcept) continue;
+    for (const concept of questionConcept) {
+      const conceptName = concept.concept?.text ?? "";
+      if(questionConceptsMap.has(question.questionId)) {
+        questionConceptsMap.set(question.questionId, [...questionConceptsMap.get(question.questionId) ?? [], conceptName]);
+      } else {  
+        questionConceptsMap.set(question.questionId, [conceptName]);
+      }
+    }
+  }
+
   // Calculate concept scores
   const conceptScores = new Map<string, { score: number; total: number; conceptName: string }>();
 
-  submissions.forEach(submission => {
-    submission.explanations.forEach(explanation => {
-      explanation.explainConceptStatus.forEach(conceptStatus => {
-        if(conceptScores.has(conceptStatus.conceptId)) {
-          const scoreData = conceptScores.get(conceptStatus.conceptId)!;
-          scoreData.total += 1;
-          if(conceptStatus.status === ConceptStatus.CORRECT) {
-            scoreData.score += 1;
-          } else if(conceptStatus.status === ConceptStatus.INCORRECT) {
-            scoreData.score -= 0.5;
-          }
-          conceptScores.set(conceptStatus.conceptId, scoreData);
-        } else {
-          conceptScores.set(conceptStatus.conceptId, {
-            score: 0,
-            total: 0,
-            conceptName: conceptStatus.concept.text
-          });
-        }
-      });
-    });
-  });
+  for (const submission of submissions) {
+    // Find the explanation with the highest score
+    let bestExplanation = null;
+    let bestScore = -1;
 
+    for (const explanation of submission.explanations) {
+      const correctAnswers = explanation.explainComputedAnswers.filter(answer => answer.isCorrect).length;
+      const totalAnswers = explanation.explainComputedAnswers.length;
+      const score = totalAnswers > 0 ? correctAnswers / totalAnswers : 0;
+
+      if (score > bestScore) {
+        bestScore = score;
+        bestExplanation = explanation;
+      }
+    }
+
+    if (!bestExplanation) continue;
+    
+    for (const computedAnswer of bestExplanation.explainComputedAnswers) {
+      const question = computedAnswer.question;
+      if (!question) continue;
+      const questionConcepts = questionConceptsMap.get(question.id);
+      if(!questionConcepts) continue;
+      for (const questionConcept of questionConcepts) {
+        const score = computedAnswer.isCorrect ? 1 : 0;
+        const total = 1;
+        if(conceptScores.has(questionConcept)) {
+          const existingData = conceptScores.get(questionConcept);
+          if(existingData) {
+            existingData.score += score;
+            existingData.total += total;
+            conceptScores.set(questionConcept, existingData);
+          }
+        } else {
+          conceptScores.set(questionConcept, { score, total, conceptName: questionConcept });
+        }
+      }
+    }
+  }
 
   // Convert to array and calculate percentages
   const conceptUnderstanding = Array.from(conceptScores.entries()).map(([conceptId, data]) => ({

@@ -48,6 +48,7 @@ export const reasoningAssignmentAttempts = pgTable(
     assignmentId: varchar("assignment_id", { length: 21 }).references(() => reasoningAssignments.id),
     activityId: varchar("activity_id", { length: 21 }).references(() => activity.id),
     score: doublePrecision("score"),
+    accuracy: doublePrecision("accuracy"),
     submittedAt: timestamp("submitted_at", { mode: "date" }),
     userId: varchar("user_id", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
