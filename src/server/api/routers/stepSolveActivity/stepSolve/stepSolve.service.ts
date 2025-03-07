@@ -264,7 +264,7 @@ export const getStepSolveAssignmentAnalytics = async (ctx: ProtectedTRPCContext,
 
   
   const averageScore = submissions.length > 0 
-    ? submissions.reduce((a, b) => a + (b.score ?? 0), 0) / submissions.length 
+    ? submissions.reduce((a, b) => a + (b.completionRate ?? 0), 0) / submissions.length 
     : 0;
   
   const averageReasoningScore = submissions.length > 0 
