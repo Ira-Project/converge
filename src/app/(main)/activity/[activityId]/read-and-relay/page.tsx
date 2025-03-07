@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Link } from "@react-email/components";
 import AssignmentShareModal from "./live/_components/read-and-relay-share-modal";
 import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils";
-import UnderstandingGaps from "./_components/understanding-gaps";
 import AnalyticsCards from "./_components/analytics-cards";
 import { BarChartIcon, FileTextIcon } from "@/components/icons";
 import SubmissionsTable from "./_components/submission-table";
+import Highlights from "./_components/highlights";
 
 export default async function AssignmentPage(props: { params: Promise<{ activityId: string }> }) {
   const params = await props.params;
@@ -70,7 +70,7 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
         </div>
         <div className="grid grid-cols-[300px_1fr] gap-4">
           {activity && <AnalyticsCards activityId={activity.id} />}
-          {activity && <UnderstandingGaps activityId={activity.id} />}
+          {activity && <Highlights activityId={activity.id} />}
         </div>
       </div>
 

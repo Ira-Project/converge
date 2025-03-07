@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
-import { and, eq } from "drizzle-orm";
+import { and, eq, not, isNull } from "drizzle-orm";
 import { generateId } from "lucia";
 
 import { knowledgeZapAssignmentAttempts, knowledgeZapAssignments } from "../../schema/knowledgeZap/knowledgeZapAssignment";
@@ -395,4 +395,18 @@ export async function deleteKnowledgeZapAssignment(assignmentId: string) {
   }
 
   await db.delete(knowledgeZapAssignments).where(eq(knowledgeZapAssignments.id, assignmentId));
+}
+
+export async function computeQuestionsCompleted() {
+  const kza = await db.select().from(knowledgeZapAssignmentAttempts).where(not(isNull(knowledgeZapAssignmentAttempts.submittedAt)));
+
+  for(const attempt of kza) {
+    const questionAttempts = await db.select().from(knowledgeZapQuestionAttempts).where(eq(knowledgeZapQuestionAttempts.attemptId, attempt.id));
+    const totalAttempts = questionAttempts.length;
+    const questionsCompleted = questionAttempts.filter(q => q.isCorrect).length;
+    await db.update(knowledgeZapAssignmentAttempts).set({
+      totalAttempts: totalAttempts,
+      questionsCompleted: questionsCompleted,
+    }).where(eq(knowledgeZapAssignmentAttempts.id, attempt.id));
+  }
 }

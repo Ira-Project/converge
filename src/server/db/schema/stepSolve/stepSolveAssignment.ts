@@ -50,6 +50,9 @@ export const stepSolveAssignmentAttempts = pgTable(
     // The reasoning and evaluation scores here are rates of success and only a percentage
     reasoningScore: doublePrecision("reasoning_score"),
     evaluationScore: doublePrecision("evaluation_score"),
+    stepsCompleted: integer("steps_completed"),
+    stepsTotal: integer("steps_total"),
+    completionRate: doublePrecision("completion_rate"),
     submittedAt: timestamp("submitted_at", { mode: "date" }),
     userId: varchar("user_id", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),

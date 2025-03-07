@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
-import { and, eq } from "drizzle-orm";
+import { and, eq, isNull, not } from "drizzle-orm";
 import { generateId } from "lucia";
 
 import { topics } from "../../schema/subject";
@@ -14,6 +14,7 @@ import { activity } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 import { ActivityType } from "@/lib/constants";
 import { reasoningPathwayAttempts, reasoningAttemptFinalAnswer, reasoningPathwayAttemptSteps } from "../../schema/reasoning/reasoningQuestionAttempts";
+import { knowledgeZapAssignmentAttempts } from "../../schema/knowledgeZap/knowledgeZapAssignment";
 
 export async function createReasoningAssignment() {
   // Parameters for assignment creation
@@ -273,4 +274,20 @@ export async function deleteReasoningAssignment(assignmentId: string) {
 
   console.log("Reasoning assignment deletion complete");
   console.log("--------------------------------");
+}
+
+export async function computeAccuracyForReasoningAssignment() {
+  const ra = await db.select().from(reasoningAssignmentAttempts).where(not(isNull(reasoningAssignmentAttempts.submittedAt)));
+
+  for(const attempt of ra) {
+    const stepAttempts = await db.select().from(reasoningPathwayAttempts).where(eq(reasoningPathwayAttempts.attemptId, attempt.id));
+    const finalAnswerAttempts = await db.select().from(reasoningAttemptFinalAnswer).where(eq(reasoningAttemptFinalAnswer.attemptId, attempt.id));
+
+    const totalAttempts = stepAttempts.length + finalAnswerAttempts.length;
+    const correctAttempts = stepAttempts.filter(step => step.correct).length + finalAnswerAttempts.filter(final => final.isCorrect).length;
+
+    await db.update(reasoningAssignmentAttempts).set({
+      accuracy: correctAttempts / totalAttempts,
+    }).where(eq(reasoningAssignmentAttempts.id, attempt.id));
+  }
 }

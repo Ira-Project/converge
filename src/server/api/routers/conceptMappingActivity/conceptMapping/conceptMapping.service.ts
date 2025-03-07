@@ -26,9 +26,7 @@ export const createAttempt = async (ctx: ProtectedTRPCContext, input: CreateAtte
 };
 
 export const submitAttempt = async (ctx: ProtectedTRPCContext, input: SubmitAttemptSchema) => {
-
   const submissionTime = new Date();
-
   const attempt = await ctx.db.query.conceptMappingAttempts.findFirst({
     where: (attempts, { eq }) => eq(attempts.id, input.attemptId),
     with: {
@@ -46,21 +44,37 @@ export const submitAttempt = async (ctx: ProtectedTRPCContext, input: SubmitAtte
     throw new Error("Attempt not found");
   }
 
+  // Get the final map attempt for the score
   const mapAttempt = attempt.mapAttempts[attempt.mapAttempts.length - 1];
   if(!mapAttempt) {
     throw new Error("Map attempt not found");
   }
 
+  // Calculate final score based on last attempt
   const nodeScore = mapAttempt?.nodes.filter(node => node.isCorrect).length;
   const edgeScore = mapAttempt?.edges.filter(edge => edge.isCorrect).length;
-
   const score = (nodeScore + edgeScore) / (mapAttempt?.nodes.length + mapAttempt?.edges.length);
+
+  // Calculate accuracy across all attempts
+  let totalCorrectNodes = 0;
+  let totalCorrectEdges = 0;
+  let totalNodes = 0;
+  let totalEdges = 0;
+
+  attempt.mapAttempts.forEach(mapAttempt => {
+    totalCorrectNodes += mapAttempt.nodes.filter(node => node.isCorrect).length;
+    totalCorrectEdges += mapAttempt.edges.filter(edge => edge.isCorrect).length;
+    totalNodes += mapAttempt.nodes.length;
+    totalEdges += mapAttempt.edges.length;
+  });
+
+  const accuracy = (totalCorrectNodes + totalCorrectEdges) / (totalNodes + totalEdges);
 
   await ctx.db.update(conceptMappingAttempts).set({
     submittedAt: submissionTime,
     score: score,
+    accuracy: accuracy,
   }).where(eq(conceptMappingAttempts.id, input.attemptId));
-  
 };
 
 export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmissionsInput) => {
@@ -164,7 +178,7 @@ export const getMostCommonMistakes = async (ctx: ProtectedTRPCContext, input: Ge
   // Convert map to array and sort by frequency
   return Array.from(mistakeFrequency.entries())
     .map(([label, { count, type }]) => ({ label, count, type }))
-    .sort((a, b) => b.count - a.count);
+    .sort((a, b) => b.count - a.count).slice(0, 5);
 }
 
 export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAnalyticsCardsInput) => {

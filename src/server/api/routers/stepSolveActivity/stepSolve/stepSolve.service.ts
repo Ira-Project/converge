@@ -144,11 +144,18 @@ export const submitStepSolveAssignmentAttempt = async (ctx: ProtectedTRPCContext
   }
 
   let totalScore = 0;
+  let totalStepsCompleted = 0;
+  let totalSteps = 0;
+  const completion = [];
+  
   for (const questionAttempt of attempt.qas) {
 
     const questionScore = (questionAttempt.score ?? 0) * (questionAttempt.stepsCompleted ?? 0);
     const questionScoreNormalised = questionScore / questionAttempt.question.steps.length;
     totalScore += questionScoreNormalised;
+    totalStepsCompleted += questionAttempt.stepsCompleted ?? 0;
+    totalSteps += questionAttempt.question.steps.length;
+    completion.push(totalStepsCompleted / totalSteps);
   }
 
   const score = totalScore / assignment.stepSolveQuestions.length;
@@ -156,16 +163,17 @@ export const submitStepSolveAssignmentAttempt = async (ctx: ProtectedTRPCContext
   let reasoningScore = attempt.qas.reduce((acc, curr) => acc + (curr.reasoningScore ?? 0), 0);
   reasoningScore = reasoningScore / attempt.qas.length;
 
-
   let evaluationScore = attempt.qas.reduce((acc, curr) => acc + (curr.evaluationScore ?? 0), 0);
   evaluationScore = evaluationScore / attempt.qas.length;
-
 
   await ctx.db.update(stepSolveAssignmentAttempts)
     .set({
       score: sql`${score}`,
       reasoningScore: sql`${reasoningScore}`,
       evaluationScore: sql`${evaluationScore}`,
+      completionRate: sql`${completion.reduce((acc, curr) => acc + curr, 0) / assignment.stepSolveQuestions.length}`,
+      stepsCompleted: totalStepsCompleted,
+      stepsTotal: totalSteps,
       submittedAt: new Date(),
     })
     .where(eq(stepSolveAssignmentAttempts.id, input.attemptId))

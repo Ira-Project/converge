@@ -17,7 +17,7 @@ const UnderstandingGaps = async ({ activityId }: { activityId: string }) => {
           <div key={gap.conceptId} className="flex flex-col gap-2">
             <div className="flex justify-between">
               <span className="text-sm text-muted-foreground">{gap.conceptName}</span>
-              <span className="text-sm text-muted-foreground">{gap.score}%</span>
+              <span className="text-sm text-muted-foreground">{gap.score.toFixed(2)}%</span>
             </div>
             <Progress value={gap.score} className="h-2" color="amber" />
           </div>

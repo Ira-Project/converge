@@ -17,7 +17,7 @@ import { orderingAttemptSelection } from "../../schema/knowledgeZap/orderingQues
 import { orderingAttempt } from "../../schema/knowledgeZap/orderingQuestions";
 import { knowledgeZapAssignmentAttempts } from "../../schema/knowledgeZap/knowledgeZapAssignment";
 import { explainTestAttempts } from "../../schema/learnByTeaching/explainTestAttempt";
-import { explainComputedAnswers, explainConceptStatus, explanations } from "../../schema/learnByTeaching/explanations";
+import { explainComputedAnswers, explanations } from "../../schema/learnByTeaching/explanations";
 
 
 async function deleteStepSolveAttempt(attemptId: string) {
@@ -140,9 +140,6 @@ async function deleteExplainTestAttempt(attemptId: string) {
     await db.delete(explainComputedAnswers)
       .where(eq(explainComputedAnswers.explanationId, explanation.id));
     
-    // Delete concept status
-    await db.delete(explainConceptStatus)
-      .where(eq(explainConceptStatus.explanationId, explanation.id));
   }
 
   // Delete all explanations

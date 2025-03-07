@@ -2,7 +2,7 @@
 import { db } from "../..";
 import { eq, and } from "drizzle-orm";
 import { generateId } from "lucia";
-import { explainAnswers, explainQuestions, explainQuestionToAssignment } from "../../schema/learnByTeaching/explainQuestions";
+import { explainAnswers, explainQuestionConcepts, explainQuestions, explainQuestionToAssignment } from "../../schema/learnByTeaching/explainQuestions";
 
 import { topics } from "../../schema/subject";
 
@@ -14,11 +14,12 @@ type QuestionType = {
   image: string,
 } 
 
-import json from "./radioactive_decay.json";
+import json from "./electric_charge.json";
 import { explainAssignments } from "../../schema/learnByTeaching/explainAssignment";
 import { ActivityType } from "@/lib/constants";
 import { activity } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
+import { concepts } from "../../schema/learnByTeaching/concept";
 
 export async function createLearnByTeachingAssignment() {
 
@@ -107,4 +108,54 @@ export async function createLearnByTeachingAssignment() {
   }
   console.log("Learn By Teaching assignment creation completed");
   console.log("-------------------------");
+}
+
+export async function addConceptsToQuestions() {
+  const questions = await db.select().from(explainQuestions);
+  for(const question of json.questions) {
+    const questionObject = questions.find((q) => q.lambdaUrl === question.lambda_url);
+    if(questionObject) {
+      console.log("Question:", questionObject.id, "->", question.concepts);
+      for(const concept of question.concepts) {
+        const conceptObject = await db.select().from(concepts).where(eq(concepts.text, concept));
+        if(conceptObject?.[0]) {
+          console.log("Concept:", conceptObject[0].id, "->", concept);
+          const existingConcept = await db.select().from(explainQuestionConcepts).where(
+            and(
+              eq(explainQuestionConcepts.questionId, questionObject.id),
+              eq(explainQuestionConcepts.conceptId, conceptObject[0].id)
+            )
+          )
+          if(existingConcept.length === 0) {
+            await db.insert(explainQuestionConcepts).values({
+              id: generateId(21),
+              questionId: questionObject.id,
+              conceptId: conceptObject[0].id,
+              createdAt: new Date(),
+              updatedAt: new Date(),
+            })
+          } else {
+            console.log("Concept already exists:", conceptObject[0].id, "->", concept);
+          }
+        } else {
+          console.log("Concept not found, creating concept:", concept);
+          const conceptId = generateId(21);
+          await db.insert(concepts).values({
+            id: conceptId,
+            text: concept,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+          })
+          console.log("Created concept:", concept);
+          await db.insert(explainQuestionConcepts).values({
+            id: generateId(21),
+            questionId: questionObject.id,
+            conceptId: conceptId,
+            createdAt: new Date(),
+            updatedAt: new Date(),
+          })
+        }
+      }
+    }
+  }
 }

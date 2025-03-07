@@ -10,6 +10,7 @@ import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm/relations";
 import { explainAssignments } from "./explainAssignment";
 import { topics } from "../subject";
+import { concepts } from "./concept";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -34,7 +35,9 @@ export const questionRelations = relations(explainQuestions, ({ one, many }) => 
     fields: [explainQuestions.topicId],
     references: [topics.id],
   }),
+  explainQuestionConcepts: many(explainQuestionConcepts),
 }));
+
 
 export const explainQuestionToAssignment = pgTable(
   "explain_question_to_assignment",
@@ -80,3 +83,26 @@ export const explainAnswerRelations = relations(explainAnswers, ({ one }) => ({
   }),
 }));
 
+
+export const explainQuestionConcepts = pgTable(
+  "explain_question_concepts",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    questionId: varchar("question_id", { length: 21 }).references(() => explainQuestions.id), 
+    conceptId: varchar("concept_id", { length: 21 }).references(() => concepts.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+)
+export const explainQuestionConceptRelations = relations(explainQuestionConcepts, ({ one }) => ({
+  question: one(explainQuestions, {
+    fields: [explainQuestionConcepts.questionId],
+    references: [explainQuestions.id],
+  }),
+  concept: one(concepts, {
+    fields: [explainQuestionConcepts.conceptId],
+    references: [concepts.id],
+  }),
+}));

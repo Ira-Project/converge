@@ -11,8 +11,8 @@ const HeatMap = async ({ activityId }: { activityId: string }) => {
   });
 
 
-  const getCellColor = (attempts: number) => {
-    if (attempts === 0) return "bg-red-100";
+  const getCellColor = (attempts: number, isCorrect: boolean) => {
+    if (attempts === 0 || !isCorrect) return "bg-red-100";
     if (attempts > 1) return "bg-yellow-100";
     return "bg-green-100";
   };
@@ -42,7 +42,7 @@ const HeatMap = async ({ activityId }: { activityId: string }) => {
                 {submission.questionAttempts.map((questionAttempt) => (
                   <TableCell 
                     key={questionAttempt.id} 
-                    className={`border border-gray-200 ${getCellColor(questionAttempt.attempts)}`}
+                    className={`border border-gray-200 ${getCellColor(questionAttempt.attempts, questionAttempt.isCorrect)}`}
                   >
                     {questionAttempt.attempts > 1 ? `${questionAttempt.attempts} attempts` : ''}
                   </TableCell>

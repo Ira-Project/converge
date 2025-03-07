@@ -25,29 +25,39 @@ export const createAttempt = async (ctx: ProtectedTRPCContext, input: CreateAtte
 };
 
 export const submitAttempt = async (ctx: ProtectedTRPCContext, input: SubmitAttemptSchema) => {
-
   const submissionTime = new Date();
 
-  const finalCheatSheet = await ctx.db.query.readAndRelayCheatSheets.findFirst({
+  // Get all cheatsheets for this attempt
+  const cheatSheets = await ctx.db.query.readAndRelayCheatSheets.findMany({
     where: (cheatSheet, { eq }) => eq(cheatSheet.attemptId, input.attemptId),
-    orderBy: (cheatSheet, { desc }) => [desc(cheatSheet.createdAt)],
     with: {
       computedAnswers: true,
     }
   });
 
-  let score = 0;
-  if(finalCheatSheet) {
-    const correctAnswers = finalCheatSheet?.computedAnswers.reduce((a, b) => a + (b.isCorrect ? 1 : 0), 0) ?? 0;
-    const totalAnswers = finalCheatSheet?.computedAnswers.length ?? 0;
-    score = correctAnswers / totalAnswers;
-  }
+  // Calculate total accuracy across all cheatsheets
+  let totalCorrect = 0;
+  let totalAnswers = 0;
+  let bestScore = 0;
 
+  cheatSheets.forEach(cheatSheet => {
+    const correctAnswers = cheatSheet.computedAnswers.reduce((a, b) => a + (b.isCorrect ? 1 : 0), 0);
+    const answers = cheatSheet.computedAnswers.length;
+    totalCorrect += correctAnswers;
+    totalAnswers += answers;
+
+    // Calculate this cheatsheet's score
+    const cheatSheetScore = answers > 0 ? correctAnswers / answers : 0;
+    bestScore = Math.max(bestScore, cheatSheetScore);
+  });
+
+  const score = bestScore;
+  
   await ctx.db.update(readAndRelayAttempts).set({
     score,
+    accuracy: totalCorrect / totalAnswers,
     submittedAt: submissionTime,
   }).where(eq(readAndRelayAttempts.id, input.attemptId));
-  
 };
 
 export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmissionsInput) => {
@@ -146,7 +156,11 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
         isNotNull(attempts.submittedAt)
       ),
       with: {
-        cheatsheets: true,
+        cheatsheets: {
+          with: {
+            computedAnswers: true,
+          }
+        }
       }
     });
   } else {
@@ -156,7 +170,11 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
         isNotNull(attempts.submittedAt)
       ),
       with: {
-        cheatsheets: true,
+        cheatsheets: {
+          with: {
+            computedAnswers: true,
+          }
+        }
       }
     });
   }
@@ -164,13 +182,19 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
   const averageScore = submissions.reduce((a, b) => a + (b.score ?? 0), 0) / submissions.length;
   const submissionCount = submissions.length;
   
-  // Calculate average highlights per submission using only the last cheatsheet
+  // Calculate average highlights per submission using the cheatsheet with most correct answers
   const averageHighlightsPerSubmission = submissions.reduce((sum, submission) => {
-    const lastCheatsheet = submission.cheatsheets
-      .sort((a, b) => b.createdAt.getTime() - a.createdAt.getTime())[0];
-    const highlightCount = lastCheatsheet?.highlights?.length ?? 0;
-    const formulasCount = lastCheatsheet?.formulas?.length ?? 0;
-    return sum + highlightCount + formulasCount;
+    const bestCheatsheet = submission.cheatsheets
+      .reduce((best, current) => {
+        const currentCorrect = current.computedAnswers?.reduce((acc, answer) => 
+          acc + (answer.isCorrect ? 1 : 0), 0) ?? 0;
+        const bestCorrect = best?.computedAnswers?.reduce((acc, answer) => 
+          acc + (answer.isCorrect ? 1 : 0), 0) ?? -1;
+        return currentCorrect > bestCorrect ? current : best;
+      }, submission.cheatsheets[0]);
+
+    const highlightCount = bestCheatsheet?.highlights?.length ?? 0;
+    return sum + highlightCount;
   }, 0) / submissionCount;
     
   return {

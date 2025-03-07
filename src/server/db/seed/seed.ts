@@ -10,14 +10,14 @@ import { ActivityType, Roles } from "@/lib/constants";
 import { classrooms } from "../schema/classroom";
 import { activity } from "../schema/activity";
 
-import { createKnowledgeZapAssignment, deleteKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
-import { createStepSolveAssignment, deleteStepSolveAssignment } from "./stepSolve/stepSolve-seed";
-import { createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
+import { computeQuestionsCompleted, createKnowledgeZapAssignment, deleteKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
+import { createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts } from "./stepSolve/stepSolve-seed";
+import { computeAccuracyForReasoningAssignment, createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 import { deleteUser } from "./user/userSeed";
 import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
 import { migrateActivityTypeToText } from "./otherSeed";
-import { createLearnByTeachingAssignment } from "./learnByTeaching/learnByTeaching-seed";
+import { addConceptsToQuestions, createLearnByTeachingAssignment } from "./learnByTeaching/learnByTeaching-seed";
 
 if(process.env.ENVIRONMENT === "prod") {
   console.log("WARNING: Running in production");
@@ -35,21 +35,24 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // LEARN BY TEACHING CREATION
 // await createLearnByTeachingAssignment();
+// await addConceptsToQuestions();
 
 // KNOWLEDGE ZAP CREATION
 // await deleteKnowledgeZapAssignment("zf5w5pkx1bpjtp827uewh");
 // await createKnowledgeZapAssignment();
+// await computeQuestionsCompleted();
 
 // REASONING CREATION
 // await deleteReasoningAssignment("v2f7ppwtin0zt6pkobuun");
 // await createReasoningAssignment();
+// await computeAccuracyForReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
 // await deleteStepSolveAssignment("9bec9vz7cy115oso3pmlz");
 // await createStepSolveAssignment();
+// await updateStepSolveAssignmentAttempts();
 
 // READ AND RELAY CREATION AND DELETION
-// await deleteReadAndRelayAssignment("pr1trj9v32imu7n1k3v7l");
 // await createReadAndRelayAssignment();
 
 // CONCEPT MAPPING CREATION AND DELETION
