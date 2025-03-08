@@ -21,6 +21,7 @@ import { readAndRelayRouter } from "./routers/readAndRelayActivity/readAndRelay/
 import { evaluateReadingRouter } from "./routers/readAndRelayActivity/evaluateReading/evaluateReading.procedure";
 import { conceptMappingRouter } from "./routers/conceptMappingActivity/conceptMapping/conceptMapping.procedure";
 import { evaluateMapRouter } from "./routers/conceptMappingActivity/evaluateMap/evaluateMap.procedure";
+import { leaderboardRouter } from "./routers/leaderboard/leaderboard.procedure";
 
 export const appRouter = createTRPCRouter({
   classroom: classroomRouter,
@@ -28,6 +29,7 @@ export const appRouter = createTRPCRouter({
   fileUpload: fileUploadRouter,
   userOnboardingRouter: userOnboardingRouter,
   activities: activitiesRouter,
+  leaderboard: leaderboardRouter,
   
   learnByTeaching: learnByTeachingRouter,
   explanation: explanationRouter,
