@@ -27,6 +27,8 @@ export const classrooms = pgTable(
     description: text("description"),
     courseId: varchar("course_id", { length: 21 }).references(() => courses.id),
     grade: integer("grade"),
+    showLeaderboardStudents: boolean("show_leaderboard_students").default(false).notNull(),
+    showLeaderboardTeachers: boolean("show_leaderboard_teachers").default(false).notNull(),
     code: varchar("code", { length: 8 }).unique().notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),

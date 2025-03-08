@@ -346,7 +346,6 @@ export const getHeatMap = async (ctx: ProtectedTRPCContext, input: GetHeatMapInp
   }[] = [];
 
   for(const submission of submissions) {
-    console.log(submission.submittedAt);
     const attemptId = submission.id;
     const name = submission.user?.name ?? 'Anonymous';
     
