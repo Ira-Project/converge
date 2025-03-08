@@ -115,15 +115,7 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
           with: {
             explainComputedAnswers: {
               with: {
-                question: {
-                  with: {
-                    explainQuestionConcepts: {
-                      with: {
-                        concept: true,
-                      }
-                    }
-                  }
-                }
+                question: true
               }
             }
           }
@@ -161,12 +153,14 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
   const questionConceptsMap = new Map<string, string[]>();
 
   for (const question of questions) {
+    console.log("QUESTION", question);
     const questionConcept = await ctx.db.query.explainQuestionConcepts.findMany({
       where: (questionConcept, { eq }) => eq(questionConcept.questionId, question.questionId),
       with: {
         concept: true,
       }
     });
+    console.log("QUESTION CONCEPTS", questionConcept);
     if(!questionConcept) continue;
     for (const concept of questionConcept) {
       const conceptName = concept.concept?.text ?? "";
@@ -177,6 +171,8 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
       }
     }
   }
+
+  console.log(questionConceptsMap);
 
   // Calculate concept scores
   const conceptScores = new Map<string, { score: number; total: number; conceptName: string }>();
