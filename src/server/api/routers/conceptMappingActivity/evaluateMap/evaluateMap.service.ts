@@ -74,8 +74,6 @@ export const evaluateMap = async (ctx: ProtectedTRPCContext, input: EvaluateMapI
          correctEdge.targetNodeId === edge.sourceNodeId)
     );
 
-    console.log("Correct Edge: ", correctEdge);
-
     let edgeIsCorrect = true;
 
     if (!correctEdge) {

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { BookOpen, Layers, Plus} from "lucide-react"
+import { BookOpen, Layers, Plus, ChartNoAxesColumn } from "lucide-react"
 
 import { NavMain } from "./nav-main"
 import { NavStudents } from "./nav-students"
@@ -58,15 +58,33 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
       icon: BookOpen,
       isActive: true,
     },
+
   ]
 
   if(role === Roles.Teacher) {
+    if(classroom?.showLeaderboardTeachers) {
+      navMain.push({
+        title: "Leaderboard",
+        url: `/${classroom?.id}/leaderboard`,
+        icon: ChartNoAxesColumn,
+        isActive: true,
+      })
+    }
     navMain.push({
       title: "Create Activity",
       url: `/${classroom?.id}#create-activity`,
       icon: Plus,
       isActive: true,
     })
+  } else if(role === Roles.Student) {
+    if(classroom?.showLeaderboardStudents) {
+      navMain.push({
+        title: "Leaderboard",
+        url: `/${classroom?.id}/leaderboard`,
+        icon: ChartNoAxesColumn,
+        isActive: true,
+      })
+    }
   }
 
   return (

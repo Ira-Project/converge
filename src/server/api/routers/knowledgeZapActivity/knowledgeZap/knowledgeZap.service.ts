@@ -41,6 +41,8 @@ export const submitAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: 
     .set({
       score: (score * score) / (questionAttempts.length * assignment?.questionToAssignment.length),
       submittedAt: submissionTime,
+      questionsCompleted: questionAttempts.filter((attempt) => attempt.isCorrect).length,
+      totalAttempts: questionAttempts.length,
     })
   .where(eq(knowledgeZapAssignmentAttempts.id, input.assignmentAttemptId))
   
@@ -63,12 +65,6 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
             name: true,
           }
         },
-        questionAttempts: {
-          columns: {
-            id: true,
-            isCorrect: true,
-          }
-        }
       }
     });
   } else {
@@ -83,12 +79,6 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
             name: true,
           }
         },
-        questionAttempts: {
-          columns: {
-            id: true,
-            isCorrect: true,
-          }
-        }
       }
     });
   }
@@ -297,6 +287,7 @@ export const getHeatMap = async (ctx: ProtectedTRPCContext, input: GetHeatMapInp
           columns: {
             id: true,
             questionId: true,
+            isCorrect: true,
           }
         }
       }
@@ -317,6 +308,7 @@ export const getHeatMap = async (ctx: ProtectedTRPCContext, input: GetHeatMapInp
           columns: {
             id: true,
             questionId: true,
+            isCorrect: true,
           }
         }
       }
@@ -349,6 +341,7 @@ export const getHeatMap = async (ctx: ProtectedTRPCContext, input: GetHeatMapInp
     questionAttempts: {
       id: string;
       attempts: number;
+      isCorrect: boolean;
     }[]
   }[] = [];
 
@@ -358,9 +351,8 @@ export const getHeatMap = async (ctx: ProtectedTRPCContext, input: GetHeatMapInp
     
     // Create initial map of questions with 0 attempts
     const questionAttemptsMap = new Map(
-      assignment.questionToAssignment.map(q => [q.questionId, { id: q.id, attempts: 0 }])
+      assignment.questionToAssignment.map(q => [q.questionId, { id: q.id, attempts: 0, isCorrect: false }])
     );
-
 
     // Update attempts count for each question attempt in submission
     for(const questionAttempt of submission.questionAttempts) {
@@ -371,6 +363,9 @@ export const getHeatMap = async (ctx: ProtectedTRPCContext, input: GetHeatMapInp
         const currentAttempts = questionAttemptsMap.get(questionId);
         if (currentAttempts) {
           currentAttempts.attempts += 1;
+          if (questionAttempt.isCorrect) {
+            currentAttempts.isCorrect = true;
+          }
           questionAttemptsMap.set(questionId, currentAttempts);
         }
       }

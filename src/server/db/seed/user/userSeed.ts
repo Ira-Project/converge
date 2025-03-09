@@ -17,7 +17,8 @@ import { orderingAttemptSelection } from "../../schema/knowledgeZap/orderingQues
 import { orderingAttempt } from "../../schema/knowledgeZap/orderingQuestions";
 import { knowledgeZapAssignmentAttempts } from "../../schema/knowledgeZap/knowledgeZapAssignment";
 import { explainTestAttempts } from "../../schema/learnByTeaching/explainTestAttempt";
-import { explainComputedAnswers, explainConceptStatus, explanations } from "../../schema/learnByTeaching/explanations";
+import { explainComputedAnswers, explanations } from "../../schema/learnByTeaching/explanations";
+import { conceptMappingAttemptEdges, conceptMappingAttemptNodes, conceptMappingAttempts, conceptMappingMapAttempt } from "../../schema/conceptMapping/conceptMappingAttempts";
 
 
 async function deleteStepSolveAttempt(attemptId: string) {
@@ -140,9 +141,6 @@ async function deleteExplainTestAttempt(attemptId: string) {
     await db.delete(explainComputedAnswers)
       .where(eq(explainComputedAnswers.explanationId, explanation.id));
     
-    // Delete concept status
-    await db.delete(explainConceptStatus)
-      .where(eq(explainConceptStatus.explanationId, explanation.id));
   }
 
   // Delete all explanations
@@ -152,6 +150,26 @@ async function deleteExplainTestAttempt(attemptId: string) {
   // Finally delete the test attempt itself
   await db.delete(explainTestAttempts)
     .where(eq(explainTestAttempts.id, attemptId));
+}
+
+async function deleteConceptMappingAttempt(attemptId: string) {
+  console.log(`Deleting Concept Mapping attempt ${attemptId}`);
+  const mapAttempts = await db.select().from(conceptMappingMapAttempt)
+    .where(eq(conceptMappingMapAttempt.attemptId, attemptId));
+  console.log(`Found ${mapAttempts.length} Concept Mapping map attempts to delete`);
+
+  for(const mapAttempt of mapAttempts) {
+    if(!mapAttempt.id) continue;
+    await db.delete(conceptMappingAttemptNodes)
+      .where(eq(conceptMappingAttemptNodes.mapAttemptId, mapAttempt.id));
+    await db.delete(conceptMappingAttemptEdges)
+      .where(eq(conceptMappingAttemptEdges.mapAttemptId, mapAttempt.id));
+    await db.delete(conceptMappingMapAttempt)
+      .where(eq(conceptMappingMapAttempt.id, mapAttempt.id));
+  }
+
+  await db.delete(conceptMappingAttempts)
+    .where(eq(conceptMappingAttempts.id, attemptId));
 }
 
 export async function deleteUser(email: string) {
@@ -208,6 +226,14 @@ export async function deleteUser(email: string) {
     await deleteExplainTestAttempt(attempt.id);
   }
 
+  const mapAttempts = await db.select().from(conceptMappingAttempts)
+    .where(eq(conceptMappingAttempts.userId, userId));
+  console.log(`Found ${mapAttempts.length} Concept Mapping attempts to delete`);
+  for (const attempt of mapAttempts) {
+    if (!attempt.id) continue;
+    await deleteConceptMappingAttempt(attempt.id);
+  }
+
   // Delete all classrooms created by the user
   const classes = await db.select().from(classrooms).where(eq(classrooms.createdBy, userId));
   console.log(`Found ${classes.length} classrooms to delete`);
@@ -223,7 +249,7 @@ export async function deleteUser(email: string) {
         continue;
       }
 
-      if(act.type === ActivityType.StepSolve) {
+      if(act.typeText === ActivityType.StepSolve) {
         const ssAttempts = await db.select().from(stepSolveAssignmentAttempts).where(eq(stepSolveAssignmentAttempts.activityId, act.id));
 
         console.log(`Found ${ssAttempts.length} Step Solve attempts to delete`);
@@ -234,7 +260,7 @@ export async function deleteUser(email: string) {
         }
       }
 
-      if(act.type === ActivityType.ReadAndRelay) {
+      if(act.typeText === ActivityType.ReadAndRelay) {
         const rrAttempts = await db.select().from(readAndRelayAttempts).where(eq(readAndRelayAttempts.activityId, act.id));
 
         console.log(`Found ${rrAttempts.length} Read and Relay attempts to delete`);
@@ -245,7 +271,7 @@ export async function deleteUser(email: string) {
         }
       }
 
-      if(act.type === ActivityType.ReasonTrace) {
+      if(act.typeText === ActivityType.ReasonTrace) {
         const rtAttempts = await db.select().from(reasoningAssignmentAttempts).where(eq(reasoningAssignmentAttempts.activityId, act.id));
 
         console.log(`Found ${rtAttempts.length} Reasoning attempts to delete`);
@@ -256,7 +282,7 @@ export async function deleteUser(email: string) {
         }
       }
 
-      if(act.type === ActivityType.KnowledgeZap) {
+      if(act.typeText === ActivityType.KnowledgeZap) {
         const kzAttempts = await db.select().from(knowledgeZapAssignmentAttempts)
           .where(eq(knowledgeZapAssignmentAttempts.activityId, act.id));
 
@@ -268,7 +294,7 @@ export async function deleteUser(email: string) {
         }
       }
 
-      if(act.type === ActivityType.LearnByTeaching) {
+      if(act.typeText === ActivityType.LearnByTeaching) {
         const explainAttempts = await db.select().from(explainTestAttempts)
           .where(eq(explainTestAttempts.activityId, act.id));
 
@@ -277,6 +303,18 @@ export async function deleteUser(email: string) {
         for(const attempt of explainAttempts) {
           if(!attempt.id) continue;
           await deleteExplainTestAttempt(attempt.id);
+        }
+      }
+
+      if(act.typeText === ActivityType.ConceptMapping) {
+        const mapAttempts = await db.select().from(conceptMappingAttempts)
+          .where(eq(conceptMappingAttempts.activityId, act.id));
+
+        console.log(`Found ${mapAttempts.length} Concept Mapping attempts to delete`);
+
+        for(const attempt of mapAttempts) {
+          if(!attempt.id) continue;
+          await deleteConceptMappingAttempt(attempt.id);
         }
       }
 

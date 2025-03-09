@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
-import { and, eq } from "drizzle-orm";
+import { and, eq, not, isNull, inArray } from "drizzle-orm";
 import { generateId } from "lucia";
 
 import { topics } from "../../schema/subject";
@@ -239,4 +239,54 @@ export async function deleteStepSolveAssignment(stepSolveAssignmentId: string) {
   console.log("Step solve deletion complete");
   console.log("--------------------------------");
 
+}
+
+export async function updateStepSolveAssignmentAttempts() {
+  const ssa = await db.select().from(stepSolveAssignmentAttempts).where(not(isNull(stepSolveAssignmentAttempts.submittedAt)));
+
+  for (const attempt of ssa) {
+    if(!attempt.activityId) {
+      console.log("Activity id not found for step solve assignment attempt", attempt.id);
+      continue;
+    }
+
+    const act = await db.select().from(activity).where(eq(activity.id, attempt.activityId));
+    if(!act[0]?.assignmentId) {
+      console.log("Activity not found for step solve assignment attempt", attempt.id);
+      continue;
+    }
+
+    const assignmentQuestions = await db.select().from(stepSolveQuestionToAssignment).where(eq(stepSolveQuestionToAssignment.assignmentId, act[0].assignmentId));
+
+    const questions = await db.select().from(stepSolveQuestions).where(inArray(stepSolveQuestions.id, assignmentQuestions.map(q => q.questionId)));
+    const steps = await db.select().from(stepSolveStep).where(inArray(stepSolveStep.questionId, questions.map(q => q.id)));
+    const stepsTotal = steps.length;
+
+    console.log("Updating step solve assignment attempt", attempt.id);
+    const qa = await db.select().from(stepSolveQuestionAttempts).where(eq(stepSolveQuestionAttempts.attemptId, attempt.id));
+    if(!qa[0]) {
+      console.log("No question attempts found for step solve assignment attempt", attempt.id);
+      continue;
+    }
+    let totalStepsCompleted = 0;
+    const completion = [];
+  
+    for (const q of qa) {
+      const question = await db.select().from(stepSolveQuestions).where(eq(stepSolveQuestions.id, q.questionId)); 
+      if(!question[0]) {
+        console.log("No question found for step solve assignment attempt", attempt.id);
+        continue;
+      }
+      const steps = await db.select().from(stepSolveStep).where(eq(stepSolveStep.questionId, question[0].id));
+      totalStepsCompleted += q.stepsCompleted ?? 0;
+      const completionRate = (q.stepsCompleted ?? 0) / steps.length;
+      completion.push(completionRate);
+    }
+    const completionRate = completion.reduce((acc, curr) => acc + curr, 0) / questions.length;
+    await db.update(stepSolveAssignmentAttempts).set({
+      stepsCompleted: totalStepsCompleted,
+      stepsTotal: stepsTotal,
+      completionRate: completionRate,
+    }).where(eq(stepSolveAssignmentAttempts.id, attempt.id));
+  }
 }

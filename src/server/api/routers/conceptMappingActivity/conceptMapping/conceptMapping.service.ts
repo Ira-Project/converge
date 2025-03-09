@@ -26,7 +26,6 @@ export const createAttempt = async (ctx: ProtectedTRPCContext, input: CreateAtte
 };
 
 export const submitAttempt = async (ctx: ProtectedTRPCContext, input: SubmitAttemptSchema) => {
-
   const submissionTime = new Date();
 
   const attempt = await ctx.db.query.conceptMappingAttempts.findFirst({
@@ -42,25 +41,64 @@ export const submitAttempt = async (ctx: ProtectedTRPCContext, input: SubmitAtte
     }
   });
 
-  if(!attempt) {
+  if(!attempt?.activityId) {
     throw new Error("Attempt not found");
   }
 
+  const activity = await ctx.db.query.activity.findFirst({
+    where: (activity, { eq }) => eq(activity.id, attempt.activityId ?? ''),
+  });
+
+  if(!activity?.assignmentId) {
+    throw new Error("Activity not found");
+  }
+
+  const assignment = await ctx.db.query.conceptMappingAssignments.findFirst({
+    where: (assignment, { eq }) => eq(assignment.id, activity.assignmentId ?? ''),
+    with: {
+      conceptNodes: true,
+      conceptEdges: true,
+    }
+  });
+
+  if(!assignment) {
+    throw new Error("Assignment not found");
+  }
+
+  // Get the final map attempt for the score
   const mapAttempt = attempt.mapAttempts[attempt.mapAttempts.length - 1];
   if(!mapAttempt) {
     throw new Error("Map attempt not found");
   }
 
-  const nodeScore = mapAttempt?.nodes.filter(node => node.isCorrect).length;
-  const edgeScore = mapAttempt?.edges.filter(edge => edge.isCorrect).length;
+  const nodeToHideLength = Math.floor(assignment.conceptNodes.length * assignment.percentageNodesToHide);
+  const edgeToHideLength = Math.floor(assignment.conceptEdges.length * assignment.percentageEdgesToHide);
 
-  const score = (nodeScore + edgeScore) / (mapAttempt?.nodes.length + mapAttempt?.edges.length);
+  // Calculate final score based on last attempt
+  const incorrectNodes = mapAttempt?.nodes.filter(node => !node.isCorrect).length;
+  const incorrectEdges = mapAttempt?.edges.filter(edge => !edge.isCorrect).length;
+  const score = 1 - ((incorrectNodes + incorrectEdges) / (nodeToHideLength + edgeToHideLength));
+
+  // Calculate accuracy across all attempts
+  let incorrectNodeSum = 0;
+  let incorrectEdgeSum = 0;
+  let totalNodes = 0;
+  let totalEdges = 0;
+
+  attempt.mapAttempts.forEach(mapAttempt => {
+    incorrectNodeSum += mapAttempt.nodes.filter(node => !node.isCorrect).length;
+    incorrectEdgeSum += mapAttempt.edges.filter(edge => !edge.isCorrect).length;
+    totalNodes += nodeToHideLength;
+    totalEdges += edgeToHideLength;
+  });
+
+  const accuracy = 1 - ((incorrectNodeSum + incorrectEdgeSum) / (totalNodes + totalEdges));
 
   await ctx.db.update(conceptMappingAttempts).set({
     submittedAt: submissionTime,
     score: score,
+    accuracy: accuracy,
   }).where(eq(conceptMappingAttempts.id, input.attemptId));
-  
 };
 
 export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmissionsInput) => {
@@ -164,7 +202,7 @@ export const getMostCommonMistakes = async (ctx: ProtectedTRPCContext, input: Ge
   // Convert map to array and sort by frequency
   return Array.from(mistakeFrequency.entries())
     .map(([label, { count, type }]) => ({ label, count, type }))
-    .sort((a, b) => b.count - a.count);
+    .sort((a, b) => b.count - a.count).slice(0, 5);
 }
 
 export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAnalyticsCardsInput) => {

@@ -36,10 +36,6 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
             </TableRow>
           ) : (
             submissions.map((submission) => {
-              const totalAttempts = submission.questionAttempts?.length ?? 0;
-              const completedQuestions = submission.questionAttempts?.filter(
-                (attempt) => attempt.isCorrect
-              ).length ?? 0;
               const timeTaken = submission.submittedAt && submission.createdAt
                 ? Math.round((submission.submittedAt.getTime() - submission.createdAt.getTime()) / (1000 * 60))
                 : 0;
@@ -52,8 +48,8 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
                       formatDateShort(submission.submittedAt) : ""
                     }
                   </TableCell>
-                  <TableCell>{completedQuestions}</TableCell>
-                  <TableCell>{totalAttempts}</TableCell>
+                  <TableCell>{submission.questionsCompleted}</TableCell>
+                  <TableCell>{submission.totalAttempts}</TableCell>
                   <TableCell>{timeTaken} mins</TableCell>
                 </TableRow>
               );

@@ -22,6 +22,7 @@ export const conceptMappingAttempts = pgTable(
     activityId: varchar("activity_id", { length: 21 }).references(() => activity.id),
     assignmentId: varchar("assignment_id", { length: 21 }).references(() => conceptMappingAssignments.id),
     score: doublePrecision("score"),
+    accuracy: doublePrecision("accuracy"),
     submittedAt: timestamp("submitted_at", { mode: "date" }),
     userId: varchar("user_id", { length: 21 }).notNull().references(() => users.id).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),

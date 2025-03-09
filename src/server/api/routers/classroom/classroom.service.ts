@@ -14,6 +14,8 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
       code: true,
       description: true,
       grade: true,
+      showLeaderboardStudents: true,
+      showLeaderboardTeachers: true,
     },
     with: {
       course: {

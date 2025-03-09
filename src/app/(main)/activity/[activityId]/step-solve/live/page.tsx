@@ -23,7 +23,6 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
       userToClassroom = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: activity?.classroomId });
     }
 
-    // Create attempt only if we don't have one in the session storage
     stepSolveAttemptId = await api.stepSolve.createAttempt.mutate({ 
       activityId: params.activityId 
     });

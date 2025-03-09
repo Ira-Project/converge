@@ -23,6 +23,7 @@ export const explainTestAttempts = pgTable(
     assignmentId: varchar("assignment_id", { length: 21 }).references(() => explainAssignments.id),
     score: integer("score"),
     score2: doublePrecision("score2"),
+    averageScore: doublePrecision("average_score"),
     submittedAt: timestamp("submitted_at", { mode: "date" }),
     userId: varchar("user_id", { length: 21 }).notNull().references(() => users.id).notNull(),
     createdAt: timestamp("created_at").defaultNow().notNull(),

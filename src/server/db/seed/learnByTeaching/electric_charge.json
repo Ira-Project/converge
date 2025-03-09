@@ -8,31 +8,36 @@
           "question": "A woollen ball and a metal ball have a negative charge on them. Where do the charges reside?",
           "answer": "On the surface of the metal ball and across the volume of the woollen ball",
           "lambda_url": "/physics/ap_physics_c_em/electric_charge/1",
-          "image": ""
+          "image": "",
+          "concepts": ["Do similar charges repel each other?", "Do conductors allow charges to flow freely within them?", "Do insulators prevent charges from freely flowing within them?" ]
       },
       {
           "question": "Two metal spheres attract each other when brought close. What is the nature of charges on the spheres?",
           "answer": "One has a postive charge and the other has a negative charge",
           "lambda_url": "/physics/ap_physics_c_em/electric_charge/2",
-          "image": ""
+          "image": "",
+          "concepts": ["Are positive and negative types of charges?", "Do opposite charges attract each other?"]
       },
       {
           "question": "A neutral metal sphere is placed between two charged parallel metal plates. One plate has a positive charge and the other has a negative charge. What will be the charge on the sphere after equilibrium? Draw the charges on the sphere.",
           "answer": "The sphere will have a negative charge on the side closer to the positive plate and a positive charge on the side closer to the negative plate",
           "lambda_url": "/physics/ap_physics_c_em/electric_charge/3",
-          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/AP-Physics-C-EM_Electric-Charge_Q3.svg"
+          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/AP-Physics-C-EM_Electric-Charge_Q3.svg",
+          "concepts": ["Are charges conserved, i.e., they cannot be created or destroyed?", "Do insulators prevent charges from freely flowing within them?", "Do opposite charges attract each other?", "Do conductors allow charges to flow freely within them?"]
       },
       {
           "question": "Two identical, neutral conducting spheres are mounted on plastic handles and kept close to each other. A positively charged rod is brought close to the first sphere without touching it while the second sphere is grounded. Draw the charges on the spheres. After the grounding is removed, draw the charges on the spheres. Finally, the positively charged rod is also removed. Draw the resulting charges on the sphere.",
           "answer": "The side of the first sphere close to the positively charged rod has a negative charge and the other side has a positive charge. The side of the second sphere close to the positive side of the first sphere develops a negative charge and the other side of the second sphere, which is grounded, has no charge",
           "lambda_url": "/physics/ap_physics_c_em/electric_charge/4",
-          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/AP-Physics-C-EM_Electric-Charge_Q4.svg"
+          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/AP-Physics-C-EM_Electric-Charge_Q4.svg",
+          "concepts": ["Are charges conserved, i.e., they cannot be created or destroyed?", "Do insulators prevent charges from freely flowing within them?", "Do opposite charges attract each other?", "Do conductors allow charges to flow freely within them?", "Does grounding allow excess charge to be transferred out?" ]
       },
       {
           "question": "A metal rod with a positive charge is brought into contact with a neutral metal ruler. What will be the charge on the ruler?",
           "answer": "Positive charge",
           "lambda_url": "/physics/ap_physics_c_em/electric_charge/5",
-          "image": ""
+          "image": "",
+          "concepts": ["Are charges conserved, i.e., they cannot be created or destroyed?", "Do similar charges repel each other?", "Do conductors allow charges to flow freely within them?" ]
       }
   ]
 }
