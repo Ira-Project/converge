@@ -60,6 +60,7 @@ export const evaluateReading = async (ctx: ProtectedTRPCContext, input: Evaluate
 
   const questionPromises = []
   const questionList = assignment?.questionsToAssignment.map(({ question }) => question) ?? [];
+  console.log("FORMULAS", input.formulas)
 
   for(const [index, question] of questionList.entries()) {
     const fetchUrl = `${process.env.BASE_REASONING_ENGINE_URL}${question.lambdaUrl}`;

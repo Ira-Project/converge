@@ -40,7 +40,7 @@ export default async function LeaderboardPage(props: { params: Promise<{ classro
           <ChartNoAxesColumn className="w-4 h-4 my-auto" />
           <p className="text-lg font-medium">Leaderboard</p>
         </div>
-        <Leaderboard data={leaderboard ?? []} />
+        <Leaderboard data={leaderboard?.rankings ?? []} activityInfo={leaderboard?.activityInfo ?? []} />
       </div>
     </div>
   );

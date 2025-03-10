@@ -1,0 +1,964 @@
+{
+    "name": "Current and Circuits",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "98c2f9c122af466683982124ca619df0",
+            "concepts": [
+                "9a1deb6b-0cea-404d-9517-bf10201cb9a0",
+                "2269d264-af55-418f-9fc9-db4fef432274"
+            ],
+            "variants": [
+                {
+                    "id": "49ad57537c04457aa5820082506ccd7c",
+                    "question": "Which pair of definitions correctly describe potential difference and electric current?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Potential difference is the work done per unit charge; electric current is the rate of flow of charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Potential difference is the rate of flow of charge; electric current is work done per unit charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both potential difference and electric current represent energy per unit charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Potential difference is measured in amperes while electric current is measured in volts.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8e5551abd32448a7bc7aba43f13928a2",
+                    "question": "Which of the following statements correctly defines \\(\\,\\text{potential difference}\\,\\) and \\(\\,\\text{electric current}\\,\\)?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Potential difference is the work done per unit charge; electric current is the rate of flow of charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Potential difference is the rate of flow of charge; electric current is the work done per unit charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both potential difference and electric current represent energy per unit charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Potential difference is measured in $!$\\mathrm{A}$!$ while electric current is measured in $!$V$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6a22ca4d4b8743fd9b4dba31e2f849e7",
+                    "question": "Select all the statements below that do NOT correctly define \\(\\,\\text{potential difference}\\,\\) or \\(\\,\\text{electric current}\\,\\).",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Potential difference is the work done per unit charge; electric current is the rate of flow of charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Potential difference is the rate of flow of charge; electric current is the work done per unit charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Both potential difference and electric current represent energy per unit charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Potential difference is measured in $!$\\mathrm{A}$!$ while electric current is measured in $!$V$!$.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "7018e2d750ca496689779303778e2085",
+            "concepts": [
+                "8ee6e4d2-dcf0-4878-91c7-ac37dfd5f0cf",
+                "3cf9740e-af59-4c80-81cc-ba3861f7f84b",
+                "9a1deb6b-0cea-404d-9517-bf10201cb9a0",
+                "2269d264-af55-418f-9fc9-db4fef432274"
+            ],
+            "variants": [
+                {
+                    "id": "9145f002751041668c4cdc6cf6fb37bf",
+                    "question": "Which statement accurately describes electric resistance and Ohm's law?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Electric resistance is the ratio of potential difference to current, and Ohm's law states that $!$I \\propto V$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electric resistance is the product of potential difference and current, and Ohm's law indicates inverse proportionality.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Resistance is defined as current per unit voltage; Ohm's law states $!$V \\propto I$!$, applicable only for superconductors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ohm's law claims that resistance remains constant regardless of voltage, which is unrelated to potential difference.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "dd090707d19b41c79cb66c54617c56b0",
+                    "question": "Which of the following statements most accurately describes electric resistance and Ohm's law?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Electric resistance is the ratio of the potential difference to the current, and Ohm's law states that $!$I \\propto V$$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electric resistance is the product of potential difference and current, and Ohm's law indicates an inverse proportionality.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Resistance is defined as current per unit voltage; Ohm's law states that $!$V \\propto I$$!$, applicable only for superconductors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ohm's law claims that resistance remains constant regardless of voltage, which is unrelated to the potential difference.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ebf57c409056434eae1d5a0128c43d5f",
+                    "question": "Select all statements below that correctly describe the concepts of electric resistance and Ohm's law.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Electric resistance is defined as the ratio of the potential difference to the current, implying that with constant resistance $!$I \\propto V$$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ohm's law expresses that the voltage across a conductor is directly proportional to the current through it, formulated as $!$V = IR$$!$ which signifies $!$I \\propto V$$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electric resistance equals the product of the potential difference and the current, which contradicts Ohm's law.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ohm's law suggests that resistance is independent of voltage or current changes, a misconception of the law.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "55e901c25f56476790b49487ab36af91",
+            "concepts": [
+                "6a694aa8-1394-43cf-80d4-0515ef832608",
+                "8ee6e4d2-dcf0-4878-91c7-ac37dfd5f0cf",
+                "9a1deb6b-0cea-404d-9517-bf10201cb9a0",
+                "2269d264-af55-418f-9fc9-db4fef432274"
+            ],
+            "variants": [
+                {
+                    "id": "6208d7bd80ca4d01ae0b6815db9c23e2",
+                    "question": "Which formula correctly relates resistance $!$R$!$, resistivity $!$\\rho$!$, length $!$L$!$, and cross-sectional area $!$A$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$R = \\rho\\frac{L}{A}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$R = \\frac{\\rho A}{L}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R = \\frac{L}{\\rho A}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R = \\frac{A}{\\rho L}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "64ea572aba5b4d83b103c1ee73111965",
+                    "question": "If the cross-sectional area $!$A$!$ of a wire is doubled while its resistivity $!$\\rho$!$ and length $!$L$!$ remain constant, what happens to the resistance $!$R$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$R \\text{ becomes halved.}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$R \\text{ becomes doubled.}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R \\text{ remains the same.}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R \\text{ becomes quadrupled.}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9a7f31dca13f418dbf9b80eb229de530",
+                    "question": "A wire with resistivity $!$\\rho = 1.68 \\times 10^{-8} \\ \\Omega\\,m$!$, length $!$L = 5 \\ m$!$, and cross-sectional area $!$A = 2 \\times 10^{-6} \\ m^2$!$ is used. What is its resistance $!$R$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$0.042 \\ \\Omega$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$0.210 \\ \\Omega$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.0034 \\ \\Omega$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.014 \\ \\Omega$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "2652e668e3ff4c098a5e284a2db60158",
+            "concepts": [
+                "4aa35254-22f1-4827-8840-f8b08e36d3b3",
+                "2269d264-af55-418f-9fc9-db4fef432274",
+                "8ee6e4d2-dcf0-4878-91c7-ac37dfd5f0cf"
+            ],
+            "variants": [
+                {
+                    "id": "baa62de02fab4b96bd877ac7a8aab210",
+                    "question": "What is the microscopic reason for increased resistance in metals at higher temperatures?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Higher temperatures cause increased atomic vibrations, resulting in more electron collisions.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increased temperature reduces the number of free electrons available for conduction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "At higher temperatures, electrons gain energy which makes collisions less likely.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Thermal agitation in metals decreases, thereby reducing electron scattering.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f0a8128dcd08407b98e13a66233b3d60",
+                    "question": "Which of the following statements correctly explains why metals exhibit increased resistance at higher temperatures?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Higher temperatures cause increased atomic vibrations, resulting in more electron collisions.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increased temperature reduces the number of free electrons available for conduction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "At higher temperatures, electrons gain energy which makes collisions less likely.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Thermal agitation in metals decreases, thereby reducing electron scattering.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f2794a05247a4257a699482406643966",
+                    "question": "Which term best describes the process where increased atomic vibrations at higher temperatures lead to more frequent electron collisions in metals?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$Electron-phonon scattering$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$Electron-electron repulsion$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$Impurity scattering$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$Band gap widening$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "2beb94a991854b70b1483d310fed3ba6",
+            "concepts": [
+                "90ac7312-8993-45e5-837c-e9ee458fb26a",
+                "1ad6881a-094b-438f-8122-a32679234b98",
+                "9a1deb6b-0cea-404d-9517-bf10201cb9a0",
+                "2269d264-af55-418f-9fc9-db4fef432274",
+                "8ee6e4d2-dcf0-4878-91c7-ac37dfd5f0cf"
+            ],
+            "variants": [
+                {
+                    "id": "2ccfa695ba4244888caee2c486b0417d",
+                    "question": "Which of the following formulas are used to calculate electric power?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$P = IV$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$P = I^2R$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$P = \\frac{V^2}{R}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "There is only one formula for electric power.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "d51f632c3c494e4899c863ac3dc8f4f3",
+                    "question": "Which of the following statements regarding electric power formulas is incorrect?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$P = IV$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$P = I^2R$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$P = \\frac{V^2}{R}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "There is only one formula for electric power.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e62c5041be544fa9ac7189e82308200e",
+                    "question": "Select all of the formulas below that are used to calculate electric power.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$P = IV$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$P = I^2R$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$P = \\frac{V^2}{R}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "There is only one formula for electric power.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "41c5bf5b27f54d94b11588d28ae25580",
+            "concepts": [
+                "6b433ff8-ca4b-43c0-8118-09f1de724c0f",
+                "9a1deb6b-0cea-404d-9517-bf10201cb9a0",
+                "2269d264-af55-418f-9fc9-db4fef432274",
+                "90ac7312-8993-45e5-837c-e9ee458fb26a",
+                "1ad6881a-094b-438f-8122-a32679234b98"
+            ],
+            "variants": [
+                {
+                    "id": "af18addbe93043e69b8f8e7afe3b50ea",
+                    "question": "Which statements correctly describe electromotive force ($!$\\varepsilon$!$)?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is the work done per unit charge to move a charge between cell terminals.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is generated by chemical reactions in a cell.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It equals the product of current and resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is measured in amperes.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "4ac0a563ab20408e88a44954495da124",
+                    "question": "A parameter defined as the work done per unit charge in moving a charge between battery terminals, largely driven by chemical reactions, is referred to as which of the following?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Electromotive force ($!$\\varepsilon$!$)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electric current ($!$I$!$)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Resistance ($!$R$!$)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Voltage drop",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6cfb26d6f297429993b40e58ef18bc30",
+                    "question": "Select all the statements that correctly describe electromotive force ($!$\\varepsilon$!$).",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is the work done per unit charge to move a charge between cell terminals.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is generated by chemical reactions in a cell.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It equals the product of current and resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is measured in amperes.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "1410e20177a3441dadde5bdd1fb3d02a",
+            "concepts": [
+                "a3b7a8f2-47d4-4773-9a52-e6606a4b3121",
+                "6b433ff8-ca4b-43c0-8118-09f1de724c0f",
+                "8ee6e4d2-dcf0-4878-91c7-ac37dfd5f0cf",
+                "2269d264-af55-418f-9fc9-db4fef432274"
+            ],
+            "variants": [
+                {
+                    "id": "6c026e4a6e0b4da8a22b66e8a96becdf",
+                    "question": "In a simple circuit with a cell and a resistor, how is the current $!$I$!$ determined?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$I = \\frac{\\varepsilon}{R}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$I = \\frac{V}{R}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$I = \\frac{R}{\\varepsilon}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$I = \\varepsilon R$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0c065a3ae0ee4bfab5fb1595015a1ca3",
+                    "question": "In a simple circuit with a cell and a resistor, what happens to the current $!$I$!$ when the resistance $!$R$!$ is doubled, with the cell's electromotive force unchanged?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The current becomes halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The current becomes doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The current remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The current becomes quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2f2d60849eb84d34b1bbce489cf8ce32",
+                    "question": "In a simple circuit, if a cell provides an electromotive force of $!$\\varepsilon = 12\\,\\text{V}$!$ and is connected to a resistor of $!$R = 6\\,\\Omega$!$, what is the current $!$I$!$ flowing in the circuit?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$I = 2\\,\\text{A}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$I = 6\\,\\text{A}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$I = 0.5\\,\\text{A}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$I = 8\\,\\text{A}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ebd20160800d4689ac281cbd407018d7",
+            "concepts": [
+                "07f81acc-c6f0-4382-b231-2f951953a506",
+                "959710a8-4f6d-470b-9c60-c6dfce3d3daf",
+                "8ee6e4d2-dcf0-4878-91c7-ac37dfd5f0cf",
+                "2269d264-af55-418f-9fc9-db4fef432274"
+            ],
+            "variants": [
+                {
+                    "id": "3fbde076c7454e1880ac31022d316e3c",
+                    "question": "Which of the following statements are true for a series circuit?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The equivalent resistance is the sum: $!$R_{total} = R_1 + R_2 + \\ldots$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The voltage drop across each resistor is proportional to its resistance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The current remains constant throughout the circuit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "All resistors have equal resistance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "953774b5cb1f4376a0e6388bbae86a92",
+                    "question": "Which option best summarizes the behavior of a series circuit?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "In a series circuit, the equivalent resistance is given by $!$R_{total} = R_1 + R_2 + \\ldots!$, the voltage drop across each resistor is proportional to its resistance, and the current is constant throughout, even though resistors can have different resistance values.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "In a series circuit, each resistor experiences the same voltage drop and the total resistance is the reciprocal of the sum of reciprocals, which is typical for parallel circuits.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A series circuit requires all resistors to have identical resistance for proper operation, leading to equal voltage drops across each.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In a series circuit, the current changes as it flows through different resistors, while the voltage drop remains constant across each resistor.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f7d6687d637a4ac58b15e4322e3990b3",
+                    "question": "Select all the statements that accurately characterize a series circuit.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The equivalent resistance is the sum: $!$R_{total} = R_1 + R_2 + \\ldots!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The voltage drop across each resistor is proportional to its resistance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The current remains constant throughout the circuit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "All resistors have equal resistance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "6a631d8d85ec4c37b2fa51ca8ca48efa",
+            "concepts": [
+                "7d599160-6315-4990-be64-ef940f7750be",
+                "8ee6e4d2-dcf0-4878-91c7-ac37dfd5f0cf",
+                "2269d264-af55-418f-9fc9-db4fef432274"
+            ],
+            "variants": [
+                {
+                    "id": "6145460ef7094713a518ab42acd67e9e",
+                    "question": "Which expressions correctly describe the equivalent resistance in a parallel circuit?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{1}{R_{total}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\ldots$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$R_{total} = R_1 + R_2 + \\ldots$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R_{total} = \\frac{R_1 R_2}{R_1+R_2}$!$ for two resistors.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The equivalent resistance is the arithmetic mean of the resistors.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "57b687e3a1b74d599f0493c72e60579c",
+                    "question": "Which one of the following expressions correctly represents the equivalent resistance in a parallel circuit?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{1}{R_{total}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\ldots$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$R_{total} = R_1 + R_2 + \\ldots$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R_{total} = \\frac{R_1 R_2}{R_1 + R_2}$!$ for two resistors",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The equivalent resistance is the arithmetic mean of the resistors.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "116df7960a2443ea89fb17b8248e962a",
+                    "question": "Select all expressions that correctly describe the equivalent resistance in a parallel circuit.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{1}{R_{total}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\ldots$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$R_{total} = R_1 + R_2 + \\ldots$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R_{total} = \\frac{R_1 R_2}{R_1 + R_2}$!$ for two resistors",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The equivalent resistance is the arithmetic mean of the resistors.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c61fcf285c6545c4b2d4e58ac0b6aadd",
+            "concepts": [
+                "9f412b5b-5838-47ea-a11b-8ec2e7795f9c",
+                "4eb00978-73b5-4bd9-8fc7-c4a62651c5d9",
+                "4851af51-1396-472a-aaff-9cb993d1a5f2",
+                "d0975b9c-a92a-44bf-8160-f1f5f696ff90",
+                "eb76a700-2d26-4cca-95c9-13bfeb02e2b4",
+                "b350f3cd-1a51-485c-af4f-1061e894b8eb",
+                "f370ac28-030a-45c1-86af-b010439ebc27"
+            ],
+            "variants": [
+                {
+                    "id": "b5f14891e18549839959bc1a53dfb29f",
+                    "question": "Which of the following statements about circuit laws and measuring instruments is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "At a junction, the total current entering equals the total current leaving.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "In any closed loop, the sum of potential differences is zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An ammeter is connected in series with negligible internal resistance and a voltmeter in parallel with high internal resistance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A battery\u2019s terminal potential difference always equals its emf.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "9c8adb1e159c439ca0421c760633080a",
+                    "question": "Which of the following circuit laws or measuring instrument behaviors is incorrectly described?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "At a junction, the total $!$I_{in} = I_{out}$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In any closed loop, the sum of the potential differences is $!$\\sum V = 0$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An ammeter is connected in series with negligible internal resistance and a voltmeter in parallel with high internal resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A battery's terminal potential difference always equals its $!$\\mathcal{E}$!$.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f4319443b1b2488f8e8b59d9437060ef",
+                    "question": "Select all statements that accurately describe the circuit laws and the proper connection of measuring instruments.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "At a junction, the total $!$I_{in} = I_{out}$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "In any closed loop, the sum of the potential differences is $!$\\sum V = 0$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An ammeter is connected in series with negligible internal resistance and a voltmeter in parallel with high internal resistance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A battery's terminal potential difference always equals its $!$\\mathcal{E}$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "af4672780aa14974ad0b990d5faeb57a",
+            "concepts": [
+                "7c5ee109-c5ca-4854-98a9-fb27f648d519",
+                "1d7330ec-f5f7-4bef-8fa3-da7136b1f958",
+                "07f81acc-c6f0-4382-b231-2f951953a506",
+                "959710a8-4f6d-470b-9c60-c6dfce3d3daf",
+                "6b433ff8-ca4b-43c0-8118-09f1de724c0f",
+                "2269d264-af55-418f-9fc9-db4fef432274"
+            ],
+            "variants": [
+                {
+                    "id": "32da709b10e5429591f62df53d4f6c4c",
+                    "question": "Which statements are true regarding a potential divider circuit and its output voltage?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A potential divider is a series resistor circuit that yields a fraction of the input voltage.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The output voltage is determined by $!$V_1 = \\frac{R_1}{R_1 + R_2}\\varepsilon$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A potential divider always provides equal voltage across its resistors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The output voltage is independent of the resistor values in the divider.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a0ed70cda1dc475881dfdc996a2d0da7",
+                    "question": "Which of the following statements correctly describes the operation of a potential divider circuit?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A potential divider is a series resistor circuit that yields a fraction of the input voltage.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A potential divider always provides equal voltage across its resistors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The output voltage is independent of the resistor values in the divider.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The output voltage is determined by $!$V_1 = \\frac{R_1}{R_1+R_2}\\varepsilon$!$, typically giving the full input voltage.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "dd594a59620c4ad2b410216082d1d353",
+                    "question": "Select all that apply: Which statements are true regarding a potential divider circuit and its output voltage?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A potential divider is a series resistor circuit that yields a fraction of the input voltage.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The output voltage is determined by $!$V_1 = \\frac{R_1}{R_1+R_2}\\varepsilon$!$. ",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A potential divider always provides equal voltage across its resistors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The output voltage is independent of the resistor values in the divider.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        [
+            {
+                "id": "08a12a428c93426b8d20f8ed1807fe0c",
+                "concepts": [
+                    "4851af51-1396-472a-aaff-9cb993d1a5f2",
+                    "d0975b9c-a92a-44bf-8160-f1f5f696ff90",
+                    "eb76a700-2d26-4cca-95c9-13bfeb02e2b4",
+                    "b350f3cd-1a51-485c-af4f-1061e894b8eb",
+                    "7c5ee109-c5ca-4854-98a9-fb27f648d519",
+                    "f370ac28-030a-45c1-86af-b010439ebc27"
+                ],
+                "variants": [
+                    {
+                        "id": "d09e8a76c48c47a0bda992a5ad686e0f",
+                        "question": "Match the following electrical devices and circuit elements with their correct descriptions.",
+                        "image": null,
+                        "options": [
+                            {
+                                "optionA": "Ammeter",
+                                "optionB": "Connected in series with negligible resistance."
+                            },
+                            {
+                                "optionA": "Voltmeter",
+                                "optionB": "Connected in parallel with very high resistance."
+                            },
+                            {
+                                "optionA": "Potential Divider",
+                                "optionB": "Produces an output voltage that is a fraction of the input voltage."
+                            },
+                            {
+                                "optionA": "Terminal Potential Difference",
+                                "optionB": "Voltage output of a battery decreased by internal resistance: $!$V = \\varepsilon - I r$!$."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    ],
+    "orderingQuestions": []
+}
