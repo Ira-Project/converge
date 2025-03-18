@@ -87,7 +87,7 @@ export type AssignmentUpdateActions =
       payload: { 
         questionId: string, 
         newStatus: QuestionStatus, 
-        explanation: string,
+        working: string,
         computedAnswer?: string,
         image?: string,
         imageWidth?: number,

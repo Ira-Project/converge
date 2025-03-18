@@ -63,7 +63,7 @@ export const questionReducer = (
             return {
               ...question,
               status: action.payload.newStatus,
-              working: question.working + action.payload.explanation,
+              working: question.working + action.payload.working,
               computedAnswerText: action.payload.computedAnswer ?? "",
               image: action.payload.image ?? "",
               imageWidth: action.payload.imageWidth ?? undefined,
