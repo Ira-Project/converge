@@ -34,16 +34,23 @@ const renderQuestion = (
   stackPush: () => void, 
   stackPop: () => void
 ) => {
-  // Get a random variant from the variants array
-  const randomVariant = question.variants[Math.floor(Math.random() * question.variants.length)];
 
-  if (!randomVariant) {
+  const randomVariants = []
+  // Get a random variant from the variants array
+  if(process.env.ENV === "dev") {
+    randomVariants.push(...question.variants);
+  } else {
+    randomVariants.push(question.variants[Math.floor(Math.random() * question.variants.length)]);
+  }
+
+  if (!randomVariants.length) {
     return
   }
 
-  switch (question.type) {
+  for(const randomVariant of randomVariants) {
+    switch (question.type) {
 
-    case KnowledgeZapQuestionType.MATCHING:
+      case KnowledgeZapQuestionType.MATCHING:
       const matchingVariant = randomVariant as MatchingVariant;
       return (
         <MatchingQuestion
@@ -88,6 +95,7 @@ const renderQuestion = (
           stackPop={stackPop}
         />
       );
+    }
   }
 };
 
