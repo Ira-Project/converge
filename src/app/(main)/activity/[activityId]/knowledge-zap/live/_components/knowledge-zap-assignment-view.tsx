@@ -37,7 +37,7 @@ const renderQuestion = (
 
   const randomVariants = []
   // Get a random variant from the variants array
-  if(process.env.ENV === "dev") {
+  if(process.env.NEXT_PUBLIC_ENVIRONMENT === "dev") {
     randomVariants.push(...question.variants);
   } else {
     randomVariants.push(question.variants[Math.floor(Math.random() * question.variants.length)]);
@@ -47,56 +47,80 @@ const renderQuestion = (
     return
   }
 
-  for(const randomVariant of randomVariants) {
-    switch (question.type) {
-
+    switch (question.type) {    
       case KnowledgeZapQuestionType.MATCHING:
-      const matchingVariant = randomVariant as MatchingVariant;
       return (
-        <MatchingQuestion
-          assignmentAttemptId={assignmentAttemptId}
-          matchingQuestionId={matchingVariant.id}
-          questionId={question.id}
-          question={matchingVariant.question}
-          optionsA={matchingVariant.optionAs}
-          optionsB={matchingVariant.optionBs}
-          imageUrl={matchingVariant.imageUrl}
-          stackPush={stackPush}
-          stackPop={stackPop}
-        />
+        <div className="flex flex-col gap-4">
+          {
+            randomVariants.map((randomVariant) => {
+              const matchingVariant = randomVariant as MatchingVariant;
+              return (
+                <MatchingQuestion
+                  key={matchingVariant.id}
+                  assignmentAttemptId={assignmentAttemptId}
+                  matchingQuestionId={matchingVariant.id}
+                  questionId={question.id}
+                  question={matchingVariant.question}
+                  optionsA={matchingVariant.optionAs}
+                  optionsB={matchingVariant.optionBs}
+                  imageUrl={matchingVariant.imageUrl}
+                  stackPush={stackPush}
+                  stackPop={stackPop}
+                />
+              );
+            })
+          }
+        </div>
       );
     case KnowledgeZapQuestionType.MULTIPLE_CHOICE:
-      const multipleChoiceVariant = randomVariant as MultipleChoiceVariant;
       return (
-        <MultipleChoiceQuestion
-          assignmentAttemptId={assignmentAttemptId}
-          multipleChoiceQuestionId={multipleChoiceVariant.id}
-          questionId={question.id}
-          question={multipleChoiceVariant.question}
-          options={multipleChoiceVariant.options}
-          imageUrl={multipleChoiceVariant.imageUrl}
-          stackPush={stackPush}
-          stackPop={stackPop}
-        />
+        <div className="flex flex-col gap-4">
+          {
+            randomVariants.map((randomVariant) => {
+              const multipleChoiceVariant = randomVariant as MultipleChoiceVariant;
+              return (
+                <MultipleChoiceQuestion
+                  key={multipleChoiceVariant.id}
+                  assignmentAttemptId={assignmentAttemptId}
+                  multipleChoiceQuestionId={multipleChoiceVariant.id}
+                  questionId={question.id}
+                  question={multipleChoiceVariant.question}
+                  options={multipleChoiceVariant.options}
+                  imageUrl={multipleChoiceVariant.imageUrl}
+                  stackPush={stackPush}
+                  stackPop={stackPop}
+                />
+              );
+            })
+          }
+        </div>
       );
     case KnowledgeZapQuestionType.ORDERING:
-      const orderingVariant = randomVariant as OrderingVariant;
       return (
-        <OrderingQuestion
-          topLabel={orderingVariant.topLabel}
-          bottomLabel={orderingVariant.bottomLabel}
-          isDescending={orderingVariant.isDescending}
-          assignmentAttemptId={assignmentAttemptId}
-          orderingQuestionId={orderingVariant.id}
-          questionId={question.id}
-          question={orderingVariant.question}
-          options={orderingVariant.options}
-          stackPush={stackPush}
-          stackPop={stackPop}
-        />
+        <div className="flex flex-col gap-4">
+          {
+            randomVariants.map((randomVariant) => {
+              const orderingVariant = randomVariant as OrderingVariant;
+              return (
+                <OrderingQuestion
+                  key={orderingVariant.id}
+                  topLabel={orderingVariant.topLabel}
+                  bottomLabel={orderingVariant.bottomLabel}
+                  isDescending={orderingVariant.isDescending}
+                  assignmentAttemptId={assignmentAttemptId}
+                  orderingQuestionId={orderingVariant.id}
+                  questionId={question.id}
+                  question={orderingVariant.question}
+                  options={orderingVariant.options}
+                  stackPush={stackPush}
+                  stackPop={stackPop}
+                />
+              );
+            })
+          }
+        </div>
       );
     }
-  }
 };
 
 
