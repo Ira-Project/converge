@@ -18,6 +18,7 @@ import { deleteUser } from "./user/userSeed";
 import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
 import { migrateActivityTypeToText } from "./otherSeed";
 import { addConceptsToQuestions, createLearnByTeachingAssignment } from "./learnByTeaching/learnByTeaching-seed";
+import { createTopics } from "./topics/topic-seed";
 
 if(process.env.ENVIRONMENT === "prod") {
   console.log("WARNING: Running in production");
@@ -64,3 +65,6 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // MIGRATE ACTIVITY TYPE TO TEXT
 // await migrateActivityTypeToText();
+
+// TOPIC CREATION
+// await createTopics();
