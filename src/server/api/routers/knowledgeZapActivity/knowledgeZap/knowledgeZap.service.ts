@@ -139,7 +139,6 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
 
 export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: GetKnowledgeZapActivityInput) => {
 
-  const startTime = new Date().getTime();
   const activity = await ctx.db.query.activity.findFirst({
     where: (activity, { eq }) => eq(activity.id, input.activityId),
   });

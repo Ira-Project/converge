@@ -3,6 +3,7 @@ import type { ProtectedTRPCContext } from "../../trpc";
 import type { GetLeaderboardInput } from "./leaderboard.input";
 import { ActivityType } from "@/lib/constants";
 
+const KNOWLEDGE_ZAP_ASSIGNMENT_SCORE = 10
 const REASONING_ASSIGNMENT_SCORE = 10
 const LEARN_BY_TEACHING_ASSIGNMENT_SCORE = 10
 const CONCEPT_MAPPING_ASSIGNMENT_SCORE = 10
@@ -61,7 +62,7 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
         });
         submissions.push(...kza.map(s => ({
           userId: s.userId,
-          score: (s.questionsCompleted ?? 0),
+          score: (s.questionsCompleted ?? 0) / (s.totalAttempts ?? 1) * KNOWLEDGE_ZAP_ASSIGNMENT_SCORE,
           accuracy: s.totalAttempts ? (s.questionsCompleted ?? 0) / (s.totalAttempts ?? 1) : 0,
           submittedAt: s.submittedAt,
           createdAt: s.createdAt,
@@ -241,6 +242,12 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
     }
   }
 
+  const activitySet = new Set<{
+    id: string;
+    name: string;
+    type: string;
+  }>();
+
   // Convert the Map to an array of student scores
   const leaderboardData = Array.from(studentScores.entries()).map(([userId, data]) => {
     const totalScore = Array.from(data.scoresByActivity.values())
@@ -255,8 +262,18 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
     const totalTimeSpent = Array.from(data.scoresByActivity.values())
       .reduce((sum, activity) => sum + (Number.isFinite(activity.timeSpent) ? activity.timeSpent : 0), 0);
 
-    // Get the user info from the first activity (all activities have same user info)
+    // Get the user info from the first activity
     const userInfo = Array.from(data.scoresByActivity.values())[0];
+
+    // Create a score breakdown object
+    const scoreBreakdown: Record<string, { score: number; accuracy: number; timeSpent: number }> = {};
+    data.scoresByActivity.forEach((activityData, activityId) => {
+      scoreBreakdown[activityId] = {
+        score: activityData.score,
+        accuracy: activityData.accuracy,
+        timeSpent: activityData.timeSpent
+      };
+    });
 
     return {
       userId,
@@ -266,13 +283,26 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
       averageAccuracy,
       numberOfActivities: data.scoresByActivity.size,
       totalTimeSpent,
+      scoreBreakdown
     };
   });
+
+  // Add activities to the set
+  for (const activity of activities) {
+    if (activity.typeText) {
+      activitySet.add({
+        id: activity.id,
+        name: activity.name.replaceAll(",", " "),
+        type: activity.typeText
+      });
+    }
+  }
 
   // Sort by total score in descending order
   leaderboardData.sort((a, b) => b.totalScore - a.totalScore);
 
-  console.log("LEADERBOARD DATA", leaderboardData);
-
-  return leaderboardData;
+  return {
+    rankings: leaderboardData,
+    activityInfo: Array.from(activitySet)
+  };
 }

@@ -20,9 +20,6 @@ import {
   DropdownMenu,
   DropdownMenuCheckboxItem,
   DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
@@ -42,6 +39,7 @@ export type LeaderboardEntry = {
   totalScore: number
   averageAccuracy: number
   totalTimeSpent: number
+  scoreBreakdown: Record<string, { score: number; accuracy: number; timeSpent: number }>
 }
 
 export const columns: ColumnDef<LeaderboardEntry>[] = [
@@ -135,8 +133,11 @@ export const columns: ColumnDef<LeaderboardEntry>[] = [
 
 export function Leaderboard(props: {
   data: LeaderboardEntry[]
+  activityInfo: { id: string; name: string; type: string }[]
 }) {
   const data = props.data
+  const activityInfo = props.activityInfo
+  console.log("ACTIVITY INFO", activityInfo);
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
@@ -166,7 +167,11 @@ export function Leaderboard(props: {
 
   const downloadCSV = () => {
     // Create CSV header
-    const headers = ['Rank', 'Name', 'Total Score', 'Accuracy (%)', 'Time Spent (mins)']
+    const headers = ['Rank', 'Name'];
+    const activityHeaders = props.activityInfo.map(activity => (activity.name + " (" + activity.type + ")"));
+    headers.push('Total Scores', 'Accuracy (%)', 'Time Spent (mins)');
+    headers.push(...activityHeaders);
+
     
     // Format data rows
     const csvData = data.map((entry, index) => [
@@ -174,7 +179,10 @@ export function Leaderboard(props: {
       entry.name,
       entry.totalScore.toFixed(2),
       (entry.averageAccuracy * 100).toFixed(2),
-      (entry.totalTimeSpent / 60).toFixed(2)
+      (entry.totalTimeSpent / 60).toFixed(2),
+      ...props.activityInfo.map(activity => 
+        (entry.scoreBreakdown[activity.id]?.score ?? 0).toFixed(2)
+      ),
     ])
     
     // Combine headers and data
