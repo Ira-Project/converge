@@ -1,0 +1,842 @@
+{
+    "name": "Electromagnetic Induction",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "b6efac6b9ece4641b5564a0ada49ea7e",
+            "concepts": [
+                "01f9d96a-7639-4028-8921-a8d295d26596",
+                "43ab751d-5780-4129-9908-e52dacbdf1d8"
+            ],
+            "variants": [
+                {
+                    "id": "ee9b110af1104fe3a6818f5bdf4b06b6",
+                    "question": "A coil of wire with 100 turns has a magnetic flux of $!$\\Phi = 0.5 \\text{ Wb}$!$ passing through it. If the flux changes to $!$\\Phi = 1.0 \\text{ Wb}$!$ in 0.1 seconds, what is the magnitude of the induced EMF?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\epsilon = 500 \\text{ V}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\epsilon = 100 \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\epsilon = 50 \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\epsilon = 10 \\text{ V}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "97b4be1a70e34767a8cd9bd8f5df7c58",
+                    "question": "A coil of wire has a magnetic flux of $!$\\Phi$!$. If the number of turns in the coil is doubled, the cross-sectional area of the coil is halved, and the magnetic field strength is tripled, what happens to the magnetic flux $!$\\Phi$!$?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The magnetic flux $!$\\Phi$!$ is tripled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnetic flux $!$\\Phi$!$ remains unchanged.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic flux $!$\\Phi$!$ is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic flux $!$\\Phi$!$ is halved.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e431c11f387b4959a894ee1b0867e4f7",
+                    "question": "A coil of wire with 100 turns has a magnetic flux of $!$\\Phi = 0.5 \\text{ Wb}$!$ passing through it. If the flux changes to $!$\\Phi = 1.0 \\text{ Wb}$!$ in 0.2 seconds, what is the magnitude of the induced EMF?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\epsilon = 250 \\text{ V}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\epsilon = 100 \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\epsilon = 50 \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\epsilon = 10 \\text{ V}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "491d24c8ce864197a0ad7f918000a960",
+            "concepts": [
+                "70734415-23ea-4f42-9d80-7b51cd1cf9e6"
+            ],
+            "variants": [
+                {
+                    "id": "003f17c942364f49be040baecb2fc960",
+                    "question": "A conductor of length $!$\\mathrm{L} = 0.5 \\text{ m}$!$ moves through a magnetic field of strength $!$\\mathrm{B} = 2.0 \\text{ T}$!$ with a velocity $!$\\mathrm{v} = 10 \\text{ m/s}$!$ perpendicular to the field. What is the induced EMF?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\epsilon = 10 \\text{ V}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\epsilon = 5 \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\epsilon = 2 \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\epsilon = 1 \\text{ V}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ccb1cd55a1f14f68b10eb3bf283146ce",
+                    "question": "A conducting rod of length $!$\\mathrm{L}$!$ moves with a constant velocity $!$\\mathrm{v}$!$ perpendicular to a uniform magnetic field $!$\\mathrm{B}$!$. Which of the following changes will increase the induced EMF?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Increasing the length $!$\\mathrm{L}$!$ of the rod",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increasing the velocity $!$\\mathrm{v}$!$ of the rod",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increasing the magnetic field strength $!$\\mathrm{B}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Decreasing the angle between $!$\\mathrm{v}$!$ and $!$\\mathrm{B}$!$ from $!$\\frac{\\pi}{2}$!$ radians",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "6b1b6c384c1d4ca1a10f4feefe86b45e",
+                    "question": "A conductor of length $!$\\mathrm{L} = 0.4 \\text{ m}$!$ moves through a magnetic field of strength $!$\\mathrm{B}$!$ with a velocity $!$\\mathrm{v} = 5 \\text{ m/s}$!$ perpendicular to the field. If the induced EMF is $!$\\epsilon = 1.6 \\text{ V}$!$, what is the strength of the magnetic field?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\mathrm{B} = 0.8 \\text{ T}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\mathrm{B} = 1.6 \\text{ T}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\mathrm{B} = 3.2 \\text{ T}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\mathrm{B} = 6.4 \\text{ T}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "fe5f105fe51a4f249174ae641d7c1035",
+            "concepts": [
+                "7073ea45-4d03-4030-a8b5-3d49cd6413fe"
+            ],
+            "variants": [
+                {
+                    "id": "90f2af1bd93e4d83938035647a819aaa",
+                    "question": "A coil with $!$\\mathrm{N} = 500$!$ turns and area $!$\\mathrm{A} = 0.1 \\text{ m}^2$!$ rotates in a magnetic field $!$\\mathrm{B} = 0.2 \\text{ T}$!$ at a frequency $!$\\mathrm{f} = 60 \\text{ Hz}$!$. What is the peak voltage generated?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\mathrm{V} = 3769.9 \\text{ V}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\mathrm{V} = 6000 \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\mathrm{V} = 1884.9 \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\mathrm{V} = 1000 \\text{ V}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6f3e6432c9b546aea03cadf3ba85fdd1",
+                    "question": "A coil with $!$\\mathrm{N} = 500$!$ turns and area $!$\\mathrm{A} = 0.1 \\text{ m}^2$!$ rotates in a magnetic field $!$\\mathrm{B} = 0.2 \\text{ T}$!$. If the frequency of rotation is doubled, what happens to the peak voltage generated?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The peak voltage doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The peak voltage quadruples.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The peak voltage is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The peak voltage remains the same.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0e9cc27ae8524d92a2a1dbd93314fc9f",
+                    "question": "A coil rotates in a magnetic field, generating a peak voltage. Which of the following factors affect the peak voltage generated? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The number of turns in the coil.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The area of the coil.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The strength of the magnetic field.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The material of the coil.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "2a3995d042aa48cbba6d539a8bb3e665",
+            "concepts": [
+                "3acc1ba7-ccc9-4760-958e-e67639d3f739"
+            ],
+            "variants": [
+                {
+                    "id": "682bfef20e0847d781cc6bd41a92d2d7",
+                    "question": "Which of the following describes self-induction?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A coil inducing an EMF in itself due to its changing magnetic field.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A coil inducing an EMF in another coil due to changing magnetic field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Change in magnetic flux inducing an EMF in a conductor moving in magnetic field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Change in electric field inducing magnetic field.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "38a977514aef469797f4e792e27d26e2",
+                    "question": "Which of the following phenomena is/are related to self-induction? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A coil experiencing a back EMF when the current through it changes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnetic field produced by a coil inducing a current in itself.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A transformer stepping up or down voltage.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A generator converting mechanical energy into electrical energy.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "6f2c4176362949cc85d3ab6788aee501",
+                    "question": "A coil has a self-inductance $!$L$!$. If the rate of change of current in the coil is doubled, what happens to the magnitude of the induced EMF?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "0de3ff50ac6f457c89f6124f1dc11ddf",
+            "concepts": [
+                "a42ad859-ed49-4773-b675-15519dcc2b70"
+            ],
+            "variants": [
+                {
+                    "id": "8feae98a146842dfac4c5491ff6c110c",
+                    "question": "What does Lenz's Law state about induced current?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It flows in a direction that opposes the change in magnetic flux.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It flows in a direction that enhances the change in magnetic flux.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It always flows in the same direction as the change in magnetic flux.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is independent of the change in magnetic flux.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b9c1d45a500f4b1dab5e7c0f552d78c2",
+                    "question": "Which of the following statements regarding Lenz's Law is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Induced current opposes the change in magnetic flux.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Induced current enhances the change in magnetic flux.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Induced current is independent of the change in magnetic flux.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Induced current always flows in the same direction as the magnetic field.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6a4de7236ad44ab39664bb3d46456efb",
+                    "question": "A coil is placed in a time-varying magnetic field. According to Lenz's Law, what is the direction of the induced current in the coil?",
+                    "image": "A coil connected to a galvanometer is placed next to a bar magnet. Initially, the magnet and the coil are stationary. Then, the magnet is suddenly moved into the coil.",
+                    "options": [
+                        {
+                            "option_text": "Such that it enhances the change in magnetic flux.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Such that it opposes the change in magnetic flux.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The direction of the induced current is independent of the motion of the magnet.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The direction of the induced current cannot be determined without knowing the number of turns in the coil.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "609a76476e884abb9d0e12448e9aba18",
+            "concepts": [
+                "2c8db49d-d070-4309-bd87-d767741c7681"
+            ],
+            "variants": [
+                {
+                    "id": "9dcf772d37504f48b7cd1ba109370342",
+                    "question": "Alternating current is characterized by:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Periodic reversal of the direction of current flow.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Constant magnitude and direction of current flow.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Random fluctuations in both magnitude and direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Zero current flow.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "73639e8d70404965a42b3f66bfa5f0c5",
+                    "question": "Which of the following statements about alternating current (AC) are correct? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "AC periodically reverses its direction of flow.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "AC has a constant magnitude.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "AC involves random fluctuations in both magnitude and direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average value of AC over a complete cycle is zero.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "6ef432ac229249a180a02ee50579efbc",
+                    "question": "An alternating current source provides a voltage described by the equation $!$V(t) = V_0 \\sin(\\omega t)$!$, where $!$V_0 = 120 \\text{ V}$!$ and $!$\\omega = 2\\pi(60 \\text{ Hz})$!$. What is the instantaneous voltage at time $!$t = \\frac{1}{240} \\text{ s}$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$60 \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$85 \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$120 \\text{ V}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$0 \\text{ V}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "21aa13179f9543d4ae88fd3063ee6fe4",
+            "concepts": [
+                "3ff7dc34-3780-4157-901d-527e6f757fc8"
+            ],
+            "variants": [
+                {
+                    "id": "0cae60e56a254359aeb7fb453b6bac44",
+                    "question": "An AC generator converts:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Mechanical energy to electrical energy.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electrical energy to mechanical energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "AC current to DC current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "DC current to AC current.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "80c4a05e1daa407a918d4fb2b2df66ac",
+                    "question": "Which of the following devices convert mechanical energy into electrical energy? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "AC generator",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "DC generator",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Motor",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Transformer",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "4700769fb5de4d7a8f1b1dff68bcd2fc",
+                    "question": "An AC generator, with a coil of area $!$100 \\text{ cm}^2$!$ and 100 turns, rotates at 60 revolutions per second in a uniform magnetic field of $!$0.1 \\text{ T}$!$. What is the maximum voltage generated?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$240\\pi \\text{ V}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$120\\pi \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$60\\pi \\text{ V}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$30\\pi \\text{ V}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "03d80313427046b59bc61897cee90602",
+            "concepts": [
+                "a36f52e3-bc9a-40d7-86cc-f5525829e75d"
+            ],
+            "variants": [
+                {
+                    "id": "6bc70b71005d4e48a7dc0b11c3a8ff8e",
+                    "question": "Magnetic flux through a surface is maximum when the angle between the magnetic field and the surface normal is:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\0^\\circ$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\30^\\circ$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\60^\\circ$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\90^\\circ$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "464833514a1b4d119b096f6b953c12fc",
+                    "question": "A coil of area $!$100 \\text{ cm}^2$!$ is placed in a uniform magnetic field of $!$0.5 \\text{ T}$!$ such that the plane of the coil makes an angle of $!$30^\\circ$!$ with the magnetic field. The magnetic flux through the coil is:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$43.3 \\text{ Wb}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$25 \\text{ Wb}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$50 \\text{ Wb}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$86.6 \\text{ Wb}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c9c71ef38b5f48e392bd8f02a660651b",
+                    "question": "Select all the statements that correctly describe the relationship between magnetic flux, magnetic field, and surface area.\n",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Magnetic flux is maximum when the magnetic field is parallel to the surface.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Magnetic flux is zero when the magnetic field is perpendicular to the surface.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Magnetic flux is the product of the magnetic field strength and the area of the surface projected perpendicular to the field.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Magnetic flux is a scalar quantity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "f19c7a8e6dd345bf9256ffe068db6d97",
+            "concepts": [
+                "a36f52e3-bc9a-40d7-86cc-f5525829e75d",
+                "01f9d96a-7639-4028-8921-a8d295d26596",
+                "32637696-1c34-41d1-9954-855d398bba5c"
+            ],
+            "variants": [
+                {
+                    "id": "aea10345fcea43b6ba29938bd4b0f54c",
+                    "question": "Which concept is a prerequisite for understanding both Faraday's law and the flux linkage-angle relationship?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Magnetic Flux",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Alternating current",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Self Induction",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "AC Generator",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "75fef664bac24920bcde4f5cdb2a2ce1",
+                    "question": "Which of the following statements about magnetic flux and its relationship with Faraday's Law and the flux linkage-angle relationship is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Magnetic flux is a scalar quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Faraday's law states that the induced EMF in a coil is proportional to the rate of change of magnetic flux.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The flux linkage-angle relationship describes how the flux linked with a coil changes as the angle between the coil's plane and the magnetic field changes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Understanding magnetic flux is crucial for comprehending both Faraday's law and the flux linkage-angle relationship.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f77efaf5ec6f40ba9f9fdd0fdd1d04e2",
+                    "question": "A coil of wire is placed in a uniform magnetic field. What happens to the magnetic flux through the coil if the area of the coil is doubled, keeping the magnetic field strength and the orientation of the coil relative to the field constant?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The magnetic flux remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic flux is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic flux is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnetic flux is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "e54749f5250f4cf4807e4069590ede72",
+            "concepts": [
+                "43ab751d-5780-4129-9908-e52dacbdf1d8"
+            ],
+            "variants": [
+                {
+                    "id": "3647e579f60246a9bf02e5c048cda540",
+                    "question": "What is the formula for flux linkage if a coil has N turns?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\text{Flux Linkage} = N\\Phi$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\text{Flux Linkage} = \\Phi/N$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\text{Flux Linkage} = N/\\Phi$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\text{Flux Linkage} = 2\\pi N\\Phi $!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7e9a5f9312f94f618aa80464fc3291e5",
+                    "question": "A coil has 500 turns and is linked with a flux of 5 mWb. What is the flux linkage?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2.5$!$ Wb",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$0.01$!$ Wb",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$100$!$ Wb",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$505$!$ Wb",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4419ace54bb84e2c9f2c8d3e19cecdbc",
+                    "question": "Which of the following is/are a valid expression(s) for calculating flux linkage? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$N\\Phi$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$L\\frac{di}{dt}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$NBA\\cos(\\theta)$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$2N\\Phi$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "10f0f9dc863848fa88ef907630839b02",
+            "concepts": [
+                "70734415-23ea-4f42-9d80-7b51cd1cf9e6",
+                "01f9d96a-7639-4028-8921-a8d295d26596",
+                "a42ad859-ed49-4773-b675-15519dcc2b70"
+            ],
+            "variants": [
+                {
+                    "id": "8417a1ed7fb4499990c30fa0409b1de1",
+                    "question": "Match the law/principle with its corresponding description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Faraday's Law",
+                            "optionB": "The induced electromotive force equals the rate of change of magnetic flux linkage."
+                        },
+                        {
+                            "optionA": "Lenz's Law",
+                            "optionB": "The induced EMF opposes the change in magnetic flux that produces it."
+                        },
+                        {
+                            "optionA": "Motional EMF",
+                            "optionB": "Induced electromotive force in a conductor moving through a magnetic field."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

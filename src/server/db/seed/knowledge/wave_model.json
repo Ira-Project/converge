@@ -1,0 +1,850 @@
+{
+    "name": "Wave Model",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "a42febdd0e4a46b88b0f6f0065d0635b",
+            "concepts": [
+                "ee8bb1a6-fd07-4f51-81ae-e388a2828537",
+                "bd073401-b31e-4815-bc8d-e487e7e82a71"
+            ],
+            "variants": [
+                {
+                    "id": "1451609dc78b429e8845c1d812f64029",
+                    "question": "Which of the following is the correct formula for frequency?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$f = \\frac{1}{T}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$f = T$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$f = \\frac{\\lambda}{v}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$f = \\lambda v$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d53f8ec293b44a7884643b6a5997c8f7",
+                    "question": "If the time period is doubled, what happens to the frequency?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "026a7899f3f74b4db73d0185b2bc1aba",
+                    "question": "Which of the following are correct relationships between frequency ($!$f$!$), time period ($!$T$!$), wavelength ($!$\\lambda$!$) and wave speed ($!$v$!$)? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$f = \\frac{1}{T}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$f = \\frac{v}{\\lambda}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\lambda = vT$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$f = \\frac{\\lambda}{v}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "2f92daa457b34ad6a6c4b22222a04d2b",
+            "concepts": [
+                "f52df379-456d-4791-8700-5e63faa3a146"
+            ],
+            "variants": [
+                {
+                    "id": "9c0898f4900e40e98d6fc86df3b494bf",
+                    "question": "What is the speed of light in vacuum, approximately?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$3.00 \\times 10^8 \\ m/s$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$3.00 \\times 10^6 \\ m/s$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$3.00 \\times 10^{10} \\ m/s$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$3.00 \\times 10^5 \\ m/s$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "55c9eb916ea74480b9a85d45d7509136",
+                    "question": "Which of the following statements about the speed of light is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The speed of light in vacuum is approximately $!$3.00 \\times 10^8 \\ m/s$!$$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of light in vacuum is approximately $!$3.00 \\times 10^6 \\ m/s$!$$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of light in vacuum is always constant and is independent of the observer's motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of light in a medium is always greater than the speed of light in vacuum.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "56f7bd9b430148258545027704bf5c14",
+                    "question": "Given that the distance from the Earth to the Sun is approximately $!$1.50 \\times 10^{11} \\ m$!$$. If sunlight takes about 8.3 minutes to reach the Earth. What is the approximate speed of light?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$3.00 \\times 10^8 \\ m/s$!$$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$1.50 \\times 10^8 \\ m/s$!$$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4.50 \\times 10^8 \\ m/s$!$$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$6.00 \\times 10^8 \\ m/s$!$$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ee1234a9061d4d43969108ad51f23d92",
+            "concepts": [
+                "f9f41128-58ba-45e6-a212-518e77aaed70",
+                "7752ae57-b1b6-4578-ad24-24aa9ce8e40e"
+            ],
+            "variants": [
+                {
+                    "id": "d64c27f9509d486bbc4a6960870bba1f",
+                    "question": "What are sound waves characterized by?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Compressions and Rarefactions",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Crests and Troughs",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electric and Magnetic Fields",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Spacetime ripples",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "dc9193231d44450cb1fff60e3e490c2c",
+                    "question": "Which of the following statements is CORRECT regarding sound waves?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Sound waves are longitudinal waves characterized by compressions and rarefactions.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Sound waves are transverse waves characterized by crests and troughs.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Sound waves are electromagnetic waves characterized by electric and magnetic fields.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Sound waves are gravitational waves characterized by spacetime ripples.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "93e3a9509c0e42f694b1cfaa1f5b5cef",
+                    "question": "A sound wave is travelling in a medium. If the frequency of the sound wave is doubled, what happens to the wavelength?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The wavelength is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wavelength is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The wavelength remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wavelength is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "c5e9d4265b774b02952f83fe6c3b8b23",
+            "concepts": [
+                "a14fe952-f114-43d2-885d-88b0a28e5b20",
+                "f9f41128-58ba-45e6-a212-518e77aaed70"
+            ],
+            "variants": [
+                {
+                    "id": "0f6ccd737b2d42ff887cc96a9071b74a",
+                    "question": "Which of the following can transmit sound waves?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Solids",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Liquids",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gases",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Vacuum",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "306ad62ea3834e99b36a99561589046e",
+                    "question": "Which of the following statements is INCORRECT regarding sound waves?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Sound waves are longitudinal waves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Sound waves can travel through vacuum.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of sound depends on the medium.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Sound waves can be reflected and refracted.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d5818c32f04c4c759a0033d425f35a07",
+                    "question": "A sound wave travels from air into water. Which of the following properties of the sound wave will change?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Frequency",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Wavelength",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Amplitude",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "a4ad84973ea94684abc4e8bb3d20ed20",
+            "concepts": [
+                "92769cc9-a6d9-4e04-9691-5e55c787c56d"
+            ],
+            "variants": [
+                {
+                    "id": "8801cbfefc324957abcafa2cc84894d1",
+                    "question": "What kind of waves are produced by accelerating electric charges?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Electromagnetic Waves",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Sound Waves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravitational Waves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Matter Waves",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7e5c25d5a60d4d95803623a2cda797c5",
+                    "question": "If the acceleration of an electric charge is doubled, what happens to the amplitude of the electromagnetic waves produced?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It quadruples",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9ad626ea6b544ca3ac1aa779e389bf35",
+                    "question": "Which of the following statements are true regarding electromagnetic waves produced by accelerating electric charges? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "They are transverse waves.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They can travel through vacuum.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Their speed in vacuum is equal to the speed of light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They require a medium to propagate.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "609ea17c9f0f4495ac4b58bd6513b304",
+            "concepts": [
+                "0ab1c520-157e-46c4-a614-4c01e7bf8226"
+            ],
+            "variants": [
+                {
+                    "id": "c10e1d05c0ce4d31b5595d84973c44ca",
+                    "question": "Which phenomenon describes the wave-like behavior of particles?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Matter Waves",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electromagnetic Waves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Sound Waves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravitational Waves",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fee46e9d9bde40c4a7fba7e5493a5f29",
+                    "question": "Which of the following statements is INCORRECT regarding the wave-like behavior of particles?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It was first proposed by Louis de Broglie.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is only observed in macroscopic objects.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is a fundamental concept in quantum mechanics.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is described by the de Broglie wavelength equation: $!$\\lambda = \\frac{h}{p}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e5985025f4954eafae0da163eb7448a5",
+                    "question": "A particle's momentum is doubled. What happens to its de Broglie wavelength?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "82fd4f25d0d249e9b162a169e4affaf9",
+            "concepts": [
+                "8c3c678e-4770-43b7-860f-dd91563878f1",
+                "526749e0-c756-4a74-a7fd-4ada5b1443e8"
+            ],
+            "variants": [
+                {
+                    "id": "d02724aa6dd34012a290f04c52ad98c9",
+                    "question": "What kind of waves are gravitational waves?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Transverse waves",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Longitudinal waves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Surface waves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Mechanical waves",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "366d874fd77c4d5299bc81ed765bd6e6",
+                    "question": "Which of the following statements regarding gravitational waves is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "They are ripples in spacetime caused by accelerating massive objects.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They are transverse waves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They can travel through vacuum.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They are a type of electromagnetic radiation.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b185d22decb841d1bd90e61d182fba8b",
+                    "question": "A gravitational wave detector registered a frequency of 100 Hz. The speed of gravitational waves is $!$3 \\times 10^8 \\text{ m/s}$!$. What is the wavelength of this gravitational wave?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$3 \\times 10^6 \\text{ m}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$3 \\times 10^3 \\text{ m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$100 \\text{ m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$300 \\text{ m}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "90baa20e67134e7bba383328cd0e989e",
+            "concepts": [
+                "e0895152-4252-461e-a416-6c7cf6bf732b",
+                "ee8bb1a6-fd07-4f51-81ae-e388a2828537",
+                "0a7186da-b22d-4135-a6f5-d6628de8e47d"
+            ],
+            "variants": [
+                {
+                    "id": "24c7ff7abbd34ab39dc6d1c11c700da9",
+                    "question": "What is the relationship between wave speed ($!$v$!$), frequency ($!$f$!$), and wavelength ($!$\\lambda$!$) for a wave?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$v = f \\lambda$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$v = \\frac{f}{\\lambda}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = \\frac{\\lambda}{f}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = f + \\lambda$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "60ebb0ed0135456daf4ae7888c82835c",
+                    "question": "A wave has a speed of $!$300 \\text{ m/s}$!$ and a frequency of $!$50 \\text{ Hz}$!$. What is its wavelength?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$6 \\text{ m}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$15000 \\text{ m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.167 \\text{ m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$350 \\text{ m}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e8e2050dd38d4acaad9cade936de8b8f",
+                    "question": "Which of the following correctly describes the relationship between wave speed ($!$v$!$), frequency ($!$f$!$), and wavelength ($!$\\lambda$!$) for a wave? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The wave speed is directly proportional to both frequency and wavelength.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the frequency increases and the wavelength remains constant, the wave speed increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the wavelength increases and the frequency remains constant, the wave speed increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The product of frequency and wavelength equals the wave speed.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "778d3b24e80c4b39b2f5abed0d66a17f",
+            "concepts": [
+                "c2bdb6bd-8ddb-4d7e-a7f2-67248f69fb1d"
+            ],
+            "variants": [
+                {
+                    "id": "d8ab6fe51c2443988e9c83ea1216d346",
+                    "question": "What does amplitude represent in a wave?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Maximum displacement from equilibrium",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Distance between two consecutive crests",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Time taken for one complete oscillation",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Number of oscillations per unit time",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "29d84824396e41bcbc011784760ef6b0",
+                    "question": "Which of the following statements regarding amplitude is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Amplitude represents the maximum displacement from the equilibrium position.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Amplitude is always a positive quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The amplitude of a wave is related to its energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Amplitude represents the distance between two consecutive crests.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c11853555d0f430284fba823d11bcf93",
+                    "question": "A wave has an amplitude of 5 cm and a wavelength of 10 cm. What is the distance between a crest and a trough of the wave?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "5 cm",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "10 cm",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "15 cm",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "20 cm",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6bde1ff9b39541d59892c9092039067b",
+            "concepts": [
+                "0c3ff372-9bd8-4961-9294-ab325dbdc20e"
+            ],
+            "variants": [
+                {
+                    "id": "3e6f0d3cecad40089f129a1aa0a6d293",
+                    "question": "Which of the following correctly describes phase difference?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Measures the relative displacement between two points or waves.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Is the maximum displacement of a wave from its equilibrium position.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Is the distance between two consecutive points in phase.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Is the time taken for one complete wave cycle.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "64cece84955e4b6a8521dff3acb22b63",
+                    "question": "Which of the following statements about phase difference are correct? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It measures the relative displacement between two points or waves.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is measured in degrees or radians.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A phase difference of 180 degrees indicates that the two waves are completely out of phase.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A phase difference of 0 degrees indicates that the two waves are exactly in phase.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "691a457ae23f4b03acab59ae4e609528",
+                    "question": "Two waves are initially in phase. If the wavelength of one wave is doubled, what happens to the phase difference between the two waves?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The phase difference remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The phase difference doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The phase difference is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The phase difference becomes zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "d3b6a6c2a83848969cf6a01e4a35a5a7",
+            "concepts": [
+                "bf25db88-48a7-4517-a149-1a61b06aac8b",
+                "526749e0-c756-4a74-a7fd-4ada5b1443e8",
+                "7752ae57-b1b6-4578-ad24-24aa9ce8e40e",
+                "088cd777-d696-457e-b164-efe811a3c871"
+            ],
+            "variants": [
+                {
+                    "id": "f64dfd706b0144dea46e051fc848f4db",
+                    "question": "Match the wave type with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Mechanical Waves",
+                            "optionB": "Require a medium for propagation."
+                        },
+                        {
+                            "optionA": "Electromagnetic Waves",
+                            "optionB": "Can travel through vacuum."
+                        },
+                        {
+                            "optionA": "Transverse Waves",
+                            "optionB": "Particle displacement is perpendicular to wave propagation."
+                        },
+                        {
+                            "optionA": "Longitudinal Waves",
+                            "optionB": "Particle displacement is parallel to wave propagation."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

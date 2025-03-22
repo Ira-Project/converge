@@ -1,0 +1,844 @@
+{
+    "name": "Greenhouse Effect",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "7ec2eeefc2ed410397608c91b3dbf75f",
+            "concepts": [
+                "adcc2680-ace0-48fc-a717-77d13f0c5743"
+            ],
+            "variants": [
+                {
+                    "id": "dccd8e5d297f42f695a03f210842d4ac",
+                    "question": "Which of the following best describes intensity from real bodies?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is the total power radiated by a body.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the power radiated per unit area from a body.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the total energy absorbed by a body.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the energy absorbed per unit area by a body.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e50a120bb1634bfb9385b66a46db7ae6",
+                    "question": "If the surface area of a radiating body is halved, what happens to the intensity of radiation?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It becomes one-fourth.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e4976b09fc0744b8b9a00483857fa56b",
+                    "question": "Which of the following statements related to intensity are correct? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Intensity is the power radiated per unit area.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Intensity is proportional to the fourth power of temperature in Kelvin.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Intensity is inversely proportional to the distance from the source.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Intensity is independent of the nature of the radiating surface.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "b9656d2ab95b4bfbacd39197d8a6d206",
+            "concepts": [
+                "f2ae270b-19b5-46d8-b861-ab26bf76266d"
+            ],
+            "variants": [
+                {
+                    "id": "1168881ea3f642138d54fa4f4fc295c7",
+                    "question": "If a body absorbs all incident radiation, what are its emissivity and albedo?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\epsilon=0, \\alpha=1$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\epsilon=1, \\alpha=0$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\epsilon=0.5, \\alpha=0.5$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\epsilon=1, \\alpha=1$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "997dffe335784351a831a69f778bc9e1",
+                    "question": "A body absorbs all incident radiation. Which of the following statements are correct regarding its emissivity ($!$\\epsilon$!$) and albedo ($!$\\alpha$!$) values? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\epsilon=1$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\alpha=0$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\epsilon=0$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\alpha=1$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "34a6b6ace4374f228b7579ae59363688",
+                    "question": "If the albedo of a body is halved, what happens to its emissivity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It becomes zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "a24edd3d2c7f49c09fb2ddc892d8961d",
+            "concepts": [
+                "e8d4c5ce-4c7a-4d7c-961e-4d854e7f5cda"
+            ],
+            "variants": [
+                {
+                    "id": "300a551b864e4d78bfc7d7625267fa81",
+                    "question": "What is the approximate value of the solar constant?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$100 \\text{ W m}^{-2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1400 \\text{ W m}^{-2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$10000 \\text{ W m}^{-2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1 \\text{ W m}^{-2}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2d8947abd6234b838b5d15ac193904be",
+                    "question": "Which of the following statements about the solar constant is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is the average amount of solar radiation received per unit area at the top of Earth's atmosphere.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is approximately equal to $!$1361 \\text{ W m}^{-2}$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is measured perpendicular to the incoming sunlight.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its value is significantly higher on planets closer to the Sun.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8d019b9581df43a49ecbab9c5036cc1a",
+                    "question": "If the Earth's distance from the Sun were doubled, the solar constant would be approximately:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Doubled",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Halved",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "One-fourth",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "One-eighth",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "cddea684dbf84ceb91a9cd2d40f73897",
+            "concepts": [
+                "cb2ae0e5-1e89-4f8d-8848-9873f4991312"
+            ],
+            "variants": [
+                {
+                    "id": "0894ca1b0a0b4ab498babfd29f699c52",
+                    "question": "Given Earth's average albedo is 0.3. Using the Solar Constant, what is the Earth's average intensity?  ",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$350 \\text{ W m}^{-2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1000 \\text{ W m}^{-2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1360 \\text{ W m}^{-2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$245 \\text{ W m}^{-2}$!$",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d99f70cfc41e4f5baa49d1909a6db568",
+                    "question": "If the Earth's albedo were to increase to 0.4, what would happen to the Earth's average temperature?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Increase",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Decrease",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Stay the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Not enough information to determine",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bcdc7763b9a543f8a08964fb416079ee",
+                    "question": "Which of the following factors influence the Earth's average albedo? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Cloud cover",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Surface type (e.g., ice, ocean, land)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Angle of incoming solar radiation",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Amount of greenhouse gases in the atmosphere",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "178c4fdfa34b4095ba97b308fec64eee",
+            "concepts": [
+                "b51ed1b6-771b-45fa-9760-5d85e7688f2a"
+            ],
+            "variants": [
+                {
+                    "id": "100398d767b848df92a924901b1e1053",
+                    "question": "Which equation represents Earth's energy balance at equilibrium?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$P_{in} = P_{out} + \\Delta E$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$(1-\\alpha)S = \\sigma T^4$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$(1-\\alpha)\\frac{S}{4} = \\sigma T^4$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\epsilon \\sigma A T^4 = S$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ed6e5034df904b429e326d6c29ff6f6b",
+                    "question": "Which of the following statements regarding Earth's energy balance are correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "At equilibrium, the incoming solar radiation equals the outgoing terrestrial radiation.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Earth's albedo represents the fraction of solar radiation absorbed by the Earth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Stefan-Boltzmann Law describes the rate of energy emitted by a black body but is not applicable to Earth's energy balance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Greenhouse gases increase Earth's albedo, leading to a cooler planet.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "651fa544141d4d6b903292883c167c67",
+                    "question": "If the Earth's albedo is 0.3 and the solar constant is 1361 $!$W/m^2!$!$, what is the average temperature of the Earth in Kelvin? (Assume Earth is a black body and use Stefan-Boltzmann constant $!$\\sigma = 5.67 \\times 10^{-8} W/m^2K^4!$!$)",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "255 K",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "273 K",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "288 K",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "303 K",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "38386e68e7884be5b9bbfd47b2676726",
+            "concepts": [
+                "078c7ed4-388f-4f65-8f70-278e4dab5ed7"
+            ],
+            "variants": [
+                {
+                    "id": "720b1785a36c4818af240f906f317811",
+                    "question": "Which of the following is NOT a greenhouse gas?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Carbon Dioxide",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Methane",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Nitrogen",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Water Vapor",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8db422940d0b47ec813c39b906892152",
+                    "question": "Which of the following are greenhouse gases? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Carbon Dioxide",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Methane",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Nitrogen",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Water Vapor",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "466db4206478459cb80fdbcff38b543a",
+                    "question": "The concentration of a greenhouse gas in the atmosphere is measured to be 415 ppm. If the total atmospheric pressure is 101.3 kPa, what is the partial pressure of this greenhouse gas in Pascals? Assume ideal gas behavior.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "41.5 Pa",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "42049.5 Pa",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "42.0 Pa",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "41500 Pa",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "3b32c649db8943b7880bb34561878427",
+            "concepts": [
+                "4a507d87-a6a7-46ff-a92d-b13e8f820443"
+            ],
+            "variants": [
+                {
+                    "id": "c58e52f4f8ed4896990ab778bb6f59a9",
+                    "question": "What happens during resonance in absorption?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A photon's frequency matches a molecule's natural oscillation frequency.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A photon's wavelength is greater than the molecule's size.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A photon's energy is less than the molecule's ionization energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A photon is scattered by the molecule.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9440d21e54a44bdab8a656ce2ba548b2",
+                    "question": "Which of the following statements regarding resonance in absorption is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Resonance occurs when a photon's frequency matches a molecule's natural oscillation frequency.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "During resonance, the molecule absorbs the photon's energy and transitions to a higher energy state.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Resonance absorption is a highly specific process, dependent on the match between photon energy and molecular vibrational modes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Resonance can only occur when a photon's wavelength is significantly larger than the molecule's size.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1c854bafa96c4351adeb96515c4bae62",
+                    "question": "Imagine a molecule absorbing a photon due to resonance. Now, if the frequency of the incident light is doubled, what happens to the probability of absorption due to resonance?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The probability of absorption doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The probability of absorption significantly decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The probability of absorption remains unchanged.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The probability of absorption becomes zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "fc16f7e9456c46929c8eb74f4d114da1",
+            "concepts": [
+                "fd84644e-3638-4633-bbdf-82a4c0e80bd5"
+            ],
+            "variants": [
+                {
+                    "id": "ffbb4aff35f64a0db128ce7121131878",
+                    "question": "What does the enhanced greenhouse effect refer to?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Cooling due to decreased greenhouse gas concentrations.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Warming due to increased greenhouse gas concentrations.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Changes in solar radiation reaching Earth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Natural fluctuations in Earth's temperature.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "dba8ab506764406aaf0ede4e04d6cde3",
+                    "question": "Which of the following statements regarding the enhanced greenhouse effect is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It leads to a decrease in global average temperatures.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is caused by human activities that release greenhouse gases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It results in more heat being trapped in the Earth's atmosphere.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It can contribute to changes in weather patterns and sea levels.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ad1191e3ae4c499db9d82723fabca53e",
+                    "question": "A scientist measures an increase in carbon dioxide concentration in the atmosphere over a period of 50 years. Assuming this increase is primarily due to human activity, which of the following effects is MOST likely to be observed as a direct consequence?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A decrease in average global temperatures",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An increase in the frequency and intensity of volcanic eruptions",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A decrease in the amount of solar radiation reaching the Earth's surface",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An increase in the Earth's average surface temperature, contributing to the enhanced greenhouse effect",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "5781fd52a09642959f29c031fe8bf0f2",
+            "concepts": [
+                "e3a5ec68-44b5-4731-ba26-1e6d6d1e4970"
+            ],
+            "variants": [
+                {
+                    "id": "1f4889efb89e4677baafe20ebfc8e6f1",
+                    "question": "What is the net power radiated by a body with $!$\\epsilon=0.8$!$, $!$A=1 \\text{ m}^2$!$, $!$T=300 \\text{ K}$!$, and $!$T_s=280 \\text{ K}$!$? Assume $!$\\sigma=5.67 \\times 10^{-8} \\text{ W m}^{-2} \\text{ K}^{-4}$!$",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Approximately $!$60 \\text{ W}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Approximately $!$100 \\text{ W}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Approximately $!$200 \\text{ W}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Approximately $!$0 \\text{ W}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "35bef5fa8f3046b4a213d9d1e17bccf9",
+                    "question": "A body with $!$\\epsilon=0.9$!$, $!$A=2 \\text{ m}^2$!$, and $!$T=320 \\text{ K}$!$ is placed in an environment with temperature $!$T_s=290 \\text{ K}$!$. Assume $!$\\sigma=5.67 \\times 10^{-8} \\text{ W m}^{-2} \\text{ K}^{-4}$!$. What is the net power radiated by the body?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Approximately $!$171 \\text{ W}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Approximately $!$342 \\text{ W}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Approximately $!$684 \\text{ W}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Approximately $!$85.5 \\text{ W}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2f3730dbe2f74d729e9a09ca06e2e36d",
+                    "question": "Which of the following statements are correct regarding the Stefan-Boltzmann law? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The Stefan-Boltzmann law describes the power radiated from a black body in terms of its temperature.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The emissivity $!$\\epsilon$!$ of a body is always equal to 1.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The net power radiated by a body depends on the difference between the fourth power of its temperature and the fourth power of the surrounding temperature.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Stefan-Boltzmann constant $!$\\sigma$!$ has a value of approximately $!$5.67 \\times 10^8 \\text{ W m}^{-2} \\text{ K}^{-4}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "780ae071b97e40b1aa046c0de65d1247",
+            "concepts": [
+                "36d01e80-5406-44df-8bc5-5b9a6caaca1f"
+            ],
+            "variants": [
+                {
+                    "id": "162084f6889449958952cbc9e1f32721",
+                    "question": "What does general intensity in radiation refer to?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Power radiated in a specific direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Power per unit area calculated by dividing total power by the surface area of a sphere.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Total power radiated by a body.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Power per unit area received by a surface.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "de7e24a77bbe4a619bde9e9336cd910e",
+                    "question": "Which of the following statements is TRUE regarding general intensity in radiation?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is the power radiated per unit solid angle.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It refers to the total power radiated by a black body.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is calculated by dividing the total power by the surface area of a sphere.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is synonymous with specific intensity in radiation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "884c2a042589400b85be3beb54285dfa",
+                    "question": "A spherical source emits radiation with a total power of $!$100 W$!$. What is the general intensity of the radiation?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$25 W/m^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$100 W$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!${100 \n\nover 4\n\npi} W/m^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Cannot be determined without knowing the radius.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "d8b2862438e64cf5bca52f4da88c326a",
+            "concepts": [
+                "a83c5f2e-c2d2-4381-9ccd-58212da2172b",
+                "d92482b7-8562-4293-b4e3-92db7d81228c",
+                "e8d4c5ce-4c7a-4d7c-961e-4d854e7f5cda",
+                "e8a3932d-7344-49da-a0ac-7b8d6fb9e699"
+            ],
+            "variants": [
+                {
+                    "id": "af944d40d3d148b6a85fca13bf917a03",
+                    "question": "Match the following concepts with their definitions:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Emissivity",
+                            "optionB": "Measures how efficiently a body radiates compared to a black body."
+                        },
+                        {
+                            "optionA": "Albedo",
+                            "optionB": "Ratio of reflected to incident radiation intensity."
+                        },
+                        {
+                            "optionA": "Solar constant",
+                            "optionB": "Intensity of solar radiation at the top of Earth's atmosphere."
+                        },
+                        {
+                            "optionA": "Greenhouse effect",
+                            "optionB": "Earth's warming due to infrared absorption by atmospheric gases."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}
