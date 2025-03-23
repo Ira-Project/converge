@@ -11,6 +11,7 @@ import { KnowledgeZapQuestionType, DATABASE_PREFIX as prefix } from "@/lib/const
 import { relations } from "drizzle-orm/relations";
 import { knowledgeZapAssignmentAttempts, knowledgeZapAssignments } from "./knowledgeZapAssignment";
 import { topics } from "../subject";
+import { concepts } from "../concept";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -36,6 +37,7 @@ export const knowledgeZapQuestionRelations = relations(knowledgeZapQuestions, ({
     fields: [knowledgeZapQuestions.topicId],
     references: [topics.id],
   }),
+  knowledgeZapQuestionsToConcepts: many(knowledgeZapQuestionsToConcepts),
 }));
 
 
@@ -62,6 +64,7 @@ export const knowledgeZapQuestionToAssignmentRelations = relations(knowledgeZapQ
     references: [knowledgeZapAssignments.id],
   }),
 }));
+
 
 /**
  * Tracks student attempts at completing knowledge zap questions
@@ -91,5 +94,31 @@ export const knowledgeZapQuestionAttemptRelations = relations(knowledgeZapQuesti
   }),
 }));
 
+
+/**
+ * Tracks the concepts associated with a knowledge zap question
+ */
+export const knowledgeZapQuestionsToConcepts = pgTable(
+  "knowledge_zap_questions_to_concepts",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    questionId: varchar("question_id", { length: 21 }).notNull().references(() => knowledgeZapQuestions.id),
+    conceptId: varchar("concept_id", { length: 21 }).notNull().references(() => concepts.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+)
+export const knowledgeZapQuestionsToConceptsRelations = relations(knowledgeZapQuestionsToConcepts, ({ one }) => ({
+  question: one(knowledgeZapQuestions, {
+    fields: [knowledgeZapQuestionsToConcepts.questionId],
+    references: [knowledgeZapQuestions.id],
+  }),
+  concept: one(concepts, {
+    fields: [knowledgeZapQuestionsToConcepts.conceptId],
+    references: [concepts.id],
+  }),
+}));
 
 

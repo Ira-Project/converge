@@ -1,0 +1,131 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "kCS7IbiJeXW452MaMaFoC",
+    "topicIdProd": "yznf1clbdvejdupqcnmna",
+    "chapter_text": "Here's a concise summary of the concepts covered in the document, organized by section, with associated formulas.\n\n**17.1 Newton's Law of Gravitation**\n\n*   Newton's Law of Gravitation: Attractive force between two point masses.\n    *   Formula:  `F = G\\frac{M_1M_2}{r^2}`\n*   Gravitational Field Strength: Gravitational force per unit mass.\n    *   Formula: `g = \\frac{F}{m}`\n    *   Formula: `g = \\frac{GM}{r^2}`\n\n**Kepler's Laws and Orbital Motion**\n* Kepler's Laws of Planetary Motion\n    * Planets move in ellipses with the Sun at one focus\n    * A line joining a planet and the Sun sweeps out equal areas during equal intervals of time\n    * The square of the orbital period of a planet is directly proportional to the cube of the semi-major axis of its orbit\n*   Orbital Motion: Speed of a particle orbiting a larger body.\n    *   Formula:  `v = \\sqrt{\\frac{GM}{r}}`\n    *   Formula:  `T^2 = \\frac{4\\pi^2r^3}{GM}`\n\n**17.2 Gravitational Potential and Energy**\n\n*   Gravitational Potential Energy: Energy shared by two masses due to their gravitational field.\n    *   Formula:  `E_p = -\\frac{GMm}{r}`\n*   Gravitational Potential: Work done per unit mass in bringing a small point mass from infinity.\n    *   Formula:  `V_g = \\frac{W}{m}`\n    *   Formula:  `V_g = -\\frac{GM}{r}`\n*   Formula: `W=mV_{gB}-mV_{gA}`\n*   Equipotential Surfaces: Points with the same gravitational potential.\n\n**17.3 Motion in a Gravitational Field**\n\n*   Total Energy of an Orbiting Satellite: Sum of kinetic and potential energy.\n    *   Formula: `E_T = \\frac{1}{2}mv^2 - \\frac{GMm}{r}`\n    *   Formula: `E_T = - \\frac{GMm}{2r}`\n*   Escape Speed: Minimum speed to escape a gravitational field.\n    *   Formula:  `v_{esc} = \\sqrt{\\frac{2GM}{r}}`",
+    "chapter_concepts": [
+        {
+            "concept_id": "913f94ce-32fd-4e0b-81d1-2d6512bc5085",
+            "concept_question": "What is Newton's law of gravitation?",
+            "concept_answer": "It describes the attractive gravitational force between two point masses based on their masses and separation.",
+            "concept_formula": [
+                "$!$F = G\\frac{M_1M_2}{r^2}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "0426771a-a8e3-4a0d-aca0-c3f723e53367",
+            "concept_question": "What is gravitational field strength?",
+            "concept_answer": "It is the gravitational force experienced per unit mass at a point in a field.",
+            "concept_formula": [
+                "$!$g = \\frac{F}{m}$!$",
+                "$!$g = \\frac{GM}{r^2}$!$"
+            ],
+            "pre-requisites": [
+                "913f94ce-32fd-4e0b-81d1-2d6512bc5085"
+            ]
+        },
+        {
+            "concept_id": "c1358bdf-8b0d-431f-b9b1-3a05b8e0581e",
+            "concept_question": "What is Kepler's first law?",
+            "concept_answer": "It states that planets move in elliptical orbits with the Sun at one focus.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "7a6c4ba7-fdbf-4768-a295-c1f80405cc97",
+            "concept_question": "What is Kepler's second law?",
+            "concept_answer": "It states that a line from a planet to the Sun sweeps equal areas in equal times.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "743c1657-ccbf-4c07-9271-689fe01f8ba9",
+            "concept_question": "What is Kepler's third law?",
+            "concept_answer": "It states that the square of a planet's orbital period is proportional to the cube of its orbit's semi-major axis.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "fbd8edf3-8814-4fd4-a0d3-e99cc717d126",
+            "concept_question": "What defines orbital motion?",
+            "concept_answer": "It describes the motion of a particle orbiting a larger body, characterized by its speed and period.",
+            "concept_formula": [
+                "$!$v = \\sqrt{\\frac{GM}{r}}$!$",
+                "$!$T^2 = \\frac{4\\pi^2r^3}{GM}$!$"
+            ],
+            "pre-requisites": [
+                "913f94ce-32fd-4e0b-81d1-2d6512bc5085",
+                "743c1657-ccbf-4c07-9271-689fe01f8ba9"
+            ]
+        },
+        {
+            "concept_id": "ba8a45fb-f342-4482-89ac-8d8dbc50f532",
+            "concept_question": "What is gravitational potential energy?",
+            "concept_answer": "It is the energy two masses possess due to their gravitational interaction.",
+            "concept_formula": [
+                "$!$E_p = -\\frac{GMm}{r}$!$"
+            ],
+            "pre-requisites": [
+                "913f94ce-32fd-4e0b-81d1-2d6512bc5085"
+            ]
+        },
+        {
+            "concept_id": "3e125180-5cf1-4f7b-a223-cc1bda7f1317",
+            "concept_question": "What is gravitational potential?",
+            "concept_answer": "It represents the work done per unit mass to bring a mass from infinity to a point.",
+            "concept_formula": [
+                "$!$V_g = \\frac{W}{m}$!$",
+                "$!$V_g = -\\frac{GM}{r}$!$"
+            ],
+            "pre-requisites": [
+                "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+            ]
+        },
+        {
+            "concept_id": "6ef79646-7259-4c9c-a7cd-80a451d36360",
+            "concept_question": "What is gravitational work between potentials?",
+            "concept_answer": "It is the work required to move a mass between two points with different gravitational potentials.",
+            "concept_formula": [
+                "$!$W = mV_{gB}-mV_{gA}$!$"
+            ],
+            "pre-requisites": [
+                "3e125180-5cf1-4f7b-a223-cc1bda7f1317"
+            ]
+        },
+        {
+            "concept_id": "6596a162-fb14-45d2-96ea-3eb0b84b3230",
+            "concept_question": "What are equipotential surfaces?",
+            "concept_answer": "They are surfaces on which the gravitational potential remains constant.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3e125180-5cf1-4f7b-a223-cc1bda7f1317"
+            ]
+        },
+        {
+            "concept_id": "ea1e89e6-51eb-4c26-9db9-4af747efca26",
+            "concept_question": "What is total energy of a satellite?",
+            "concept_answer": "It is the sum of a satellite's kinetic energy and gravitational potential energy.",
+            "concept_formula": [
+                "$!$E_T = \\frac{1}{2}mv^2 - \\frac{GMm}{r}$!$",
+                "$!$E_T = - \\frac{GMm}{2r}$!$"
+            ],
+            "pre-requisites": [
+                "ba8a45fb-f342-4482-89ac-8d8dbc50f532",
+                "fbd8edf3-8814-4fd4-a0d3-e99cc717d126"
+            ]
+        },
+        {
+            "concept_id": "46604101-3be5-4092-ac9f-5c58ea2f77f3",
+            "concept_question": "What is escape speed?",
+            "concept_answer": "It is the minimum speed required for an object to overcome a gravitational field.",
+            "concept_formula": [
+                "$!$v_{esc} = \\sqrt{\\frac{2GM}{r}}$!$"
+            ],
+            "pre-requisites": [
+                "913f94ce-32fd-4e0b-81d1-2d6512bc5085",
+                "fbd8edf3-8814-4fd4-a0d3-e99cc717d126"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,416 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "ukAGMGYnpFsBN5UjVzp7A",
+    "topicIdProd": "1p2f065zzpf1h1bw63mo4",
+    "chapter_text": "Here's a summary of the concepts discussed, structured into sections with bullet points and relevant formulas:\n\n**1. Wavefronts and Rays**\n\n*   **Wavefronts:** Planes normal to the direction of wave propagation representing crests of waves.\n*   **Rays:** Lines at right angles to wavefronts indicating the direction of energy transfer.\n\n**2. Reflection**\n\n*   **Law of Reflection:** The angle of incidence equals the angle of reflection.\n\n**3. Refraction**\n\n*   Refraction occurs when a wave passes from one medium to another where its speed changes, altering its direction.\n*   Frequency remains constant during refraction, but wavelength changes.\n*   **Snell's Law:** \\[\\frac{\\sin \\theta_1}{c_1} = \\frac{\\sin \\theta_2}{c_2}\\]\n*   **Refractive Index:**  \\(n = \\frac{c}{v}\\), where \\(c\\) is the speed of light in vacuum and \\(v\\) is the speed in the medium.\n*   Snell's Law with Refractive Indices: \\[n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2\\]\n*   **Total Internal Reflection:** Occurs when a wave in a denser medium hits a boundary with a less dense medium at an angle greater than the critical angle.\n\n**4. Principle of Superposition**\n\n*   The displacement of a medium at a point where two or more waves overlap is the algebraic sum of the individual displacements.\n\n**5. Diffraction**\n\n*   Diffraction is the spreading of a wave as it passes an obstacle or through an aperture.\n*   Diffraction is more significant when the wavelength is comparable to the size of the aperture.\n\n**6. Double-Source Interference**\n\n*   **Constructive Interference:** Occurs when the path difference is an integer multiple of the wavelength.\n    \\[|S_1P - S_2P| = n\\lambda,  n = 0,1,2,3,...\\]\n*   **Destructive Interference:** Occurs when the path difference is a half-integer multiple of the wavelength.\n    \\[|S_1P - S_2P| = (n + \\frac{1}{2})\\lambda, n = 0,1,2,3,...\\]\n\n**7. Young's Two-Slit Experiment**\n\n*   Plane wavefronts of light approach two thin, parallel slits, resulting in an interference pattern on a screen.\n*   Condition for constructive interference: \\(d \\sin \\theta = n\\lambda, n=0, \\pm1, \\pm2, ...\\)\n*   Condition for destructive interference: \\(d \\sin \\theta = (n + \\frac{1}{2})\\lambda, n = 0, \\pm1, \\pm2,...\\)\n* Small angle approximation: \\(\\sin \\theta \\approx \\tan \\theta \\approx \\theta\\).\n*   Position of maxima from the center of the screen: \\(s = \\frac{n \\lambda D}{d}\\)\n*   Fringe separation: \\(s = \\frac{\\lambda D}{d}\\), where \\(D\\) is the distance to the screen and \\(d\\) is the slit separation.\n\n**8. Single-Slit Diffraction**\n\n* When a wave passes through a single slit of width \\(b\\), diffraction occurs.\n* Condition for the first minimum:  \\(b\\sin \\theta = \\lambda\\)\n* Angle of the first diffraction minimum: \\(\\theta = \\frac{\\lambda}{b}\\)\n\n**9. Multiple Slits**\n\n*   As the number of slits increases, the interference pattern becomes more complex.\n\n**10. Diffraction Grating**\n\n*   Consists of a large number of parallel slits.\n* Condition for constructive interference: \\(d \\sin \\theta = n\\lambda, n=0, \\pm1, \\pm2, ...\\), where \\(d\\) is the slit separation and \\(n\\) is the order of the maximum.\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "adfa544c-ea43-425c-8428-9690ef749268",
+            "concept_question": "What are wavefronts? (Part A)",
+            "concept_answer": "Definition: Wavefronts are planes perpendicular to the direction of wave propagation representing crests of waves.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "efc76336-83e5-4691-bd7d-508de622e964",
+            "concept_question": "What are wavefronts? (Part B)",
+            "concept_answer": "Additional details: Wavefronts are planes perpendicular to the direction of wave propagation representing crests of waves.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "3e1698e4-8c93-4ded-9001-7fc63338226c",
+            "concept_question": "What are rays? (Part A)",
+            "concept_answer": "Definition: Rays are lines at right angles to wavefronts indicating the direction of energy transfer.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "adfa544c-ea43-425c-8428-9690ef749268",
+                "efc76336-83e5-4691-bd7d-508de622e964"
+            ]
+        },
+        {
+            "concept_id": "5370751f-a17a-47ff-9226-44edf450c53c",
+            "concept_question": "What are rays? (Part B)",
+            "concept_answer": "Additional details: Rays are lines at right angles to wavefronts indicating the direction of energy transfer.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "adfa544c-ea43-425c-8428-9690ef749268",
+                "efc76336-83e5-4691-bd7d-508de622e964"
+            ]
+        },
+        {
+            "concept_id": "55007d03-c31e-4e6a-83ce-1b2ba6b297a1",
+            "concept_question": "What is the law of reflection? (Part A)",
+            "concept_answer": "Definition: It states that the angle of incidence equals the angle of reflection.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e27c2e9f-b471-47d5-9b85-b9ded51bd50f",
+            "concept_question": "What is the law of reflection? (Part B)",
+            "concept_answer": "Additional details: It states that the angle of incidence equals the angle of reflection.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b9b5f931-f3b7-4d3b-9fb4-5192aad643ee",
+            "concept_question": "What is refraction? (Part A)",
+            "concept_answer": "Definition: Refraction is the bending of a wave when it passes into a different medium; its speed and wavelength change while frequency remains constant.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b026fa54-ee84-4a2b-b829-fb9c65b1acaf",
+            "concept_question": "What is refraction? (Part B)",
+            "concept_answer": "Additional details: Refraction is the bending of a wave when it passes into a different medium; its speed and wavelength change while frequency remains constant.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "bdc8996a-dbfe-4d58-aa62-d9116b42f7a4",
+            "concept_question": "What is Snell's Law? (Part A)",
+            "concept_answer": "Definition: Snell's Law relates the incident and refracted angles to the speeds of the wave in two media.",
+            "concept_formula": [
+                "$!$\\frac{\\sin \\theta_1}{c_1} = \\frac{\\sin \\theta_2}{c_2}$!$"
+            ],
+            "pre-requisites": [
+                "b9b5f931-f3b7-4d3b-9fb4-5192aad643ee",
+                "b026fa54-ee84-4a2b-b829-fb9c65b1acaf"
+            ]
+        },
+        {
+            "concept_id": "3aa3131e-3402-4e9f-b152-e2a711b90381",
+            "concept_question": "What is Snell's Law? (Part B)",
+            "concept_answer": "Additional details: Snell's Law relates the incident and refracted angles to the speeds of the wave in two media.",
+            "concept_formula": [
+                "$!$\\frac{\\sin \\theta_1}{c_1} = \\frac{\\sin \\theta_2}{c_2}$!$"
+            ],
+            "pre-requisites": [
+                "b9b5f931-f3b7-4d3b-9fb4-5192aad643ee",
+                "b026fa54-ee84-4a2b-b829-fb9c65b1acaf"
+            ]
+        },
+        {
+            "concept_id": "775699d0-3d10-42ba-a511-d9e30b360a8f",
+            "concept_question": "What is the refractive index? (Part A)",
+            "concept_answer": "Definition: The refractive index is the ratio of the speed of light in vacuum to that in a medium.",
+            "concept_formula": [
+                "$!$n = \\frac{c}{v}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "dca44e35-5d0c-47e5-b2f6-0a04273fd319",
+            "concept_question": "What is the refractive index? (Part B)",
+            "concept_answer": "Additional details: The refractive index is the ratio of the speed of light in vacuum to that in a medium.",
+            "concept_formula": [
+                "$!$n = \\frac{c}{v}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "65caed59-8ac0-4612-802e-11e5d1253ab6",
+            "concept_question": "How is Snell's Law expressed with refractive indices? (Part A)",
+            "concept_answer": "Definition: It is expressed as the product of refractive index and sine of the angle being equal in both media.",
+            "concept_formula": [
+                "$!$n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2$!$"
+            ],
+            "pre-requisites": [
+                "bdc8996a-dbfe-4d58-aa62-d9116b42f7a4",
+                "3aa3131e-3402-4e9f-b152-e2a711b90381",
+                "775699d0-3d10-42ba-a511-d9e30b360a8f",
+                "dca44e35-5d0c-47e5-b2f6-0a04273fd319"
+            ]
+        },
+        {
+            "concept_id": "a83a68bf-72f0-481e-bb3b-e61b83011c23",
+            "concept_question": "How is Snell's Law expressed with refractive indices? (Part B)",
+            "concept_answer": "Additional details: It is expressed as the product of refractive index and sine of the angle being equal in both media.",
+            "concept_formula": [
+                "$!$n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2$!$"
+            ],
+            "pre-requisites": [
+                "bdc8996a-dbfe-4d58-aa62-d9116b42f7a4",
+                "3aa3131e-3402-4e9f-b152-e2a711b90381",
+                "775699d0-3d10-42ba-a511-d9e30b360a8f",
+                "dca44e35-5d0c-47e5-b2f6-0a04273fd319"
+            ]
+        },
+        {
+            "concept_id": "20e890de-4959-433b-9daf-8578a8797bde",
+            "concept_question": "What is total internal reflection? (Part A)",
+            "concept_answer": "Definition: Total internal reflection is the phenomenon where a wave reflects entirely when incident beyond the critical angle in a denser medium.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b9b5f931-f3b7-4d3b-9fb4-5192aad643ee",
+                "b026fa54-ee84-4a2b-b829-fb9c65b1acaf",
+                "65caed59-8ac0-4612-802e-11e5d1253ab6",
+                "a83a68bf-72f0-481e-bb3b-e61b83011c23"
+            ]
+        },
+        {
+            "concept_id": "e8f34cbc-12af-482f-90c6-1a3e5584a670",
+            "concept_question": "What is total internal reflection? (Part B)",
+            "concept_answer": "Additional details: Total internal reflection is the phenomenon where a wave reflects entirely when incident beyond the critical angle in a denser medium.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b9b5f931-f3b7-4d3b-9fb4-5192aad643ee",
+                "b026fa54-ee84-4a2b-b829-fb9c65b1acaf",
+                "65caed59-8ac0-4612-802e-11e5d1253ab6",
+                "a83a68bf-72f0-481e-bb3b-e61b83011c23"
+            ]
+        },
+        {
+            "concept_id": "91f3c44f-05b7-4f92-8a1b-05e9d7d0a4c3",
+            "concept_question": "What is the principle of superposition? (Part A)",
+            "concept_answer": "Definition: The principle of superposition states that the displacement from overlapping waves is the algebraic sum of the individual displacements.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "2fa62af7-8bd5-406f-8cc7-9a657ec25237",
+            "concept_question": "What is the principle of superposition? (Part B)",
+            "concept_answer": "Additional details: The principle of superposition states that the displacement from overlapping waves is the algebraic sum of the individual displacements.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "d530a408-b565-4025-927e-4f6db9973395",
+            "concept_question": "What is diffraction? (Part A)",
+            "concept_answer": "Definition: Diffraction is the spreading of a wave as it passes through an obstacle or aperture.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "c900c966-f4d9-4d00-a385-e2cc97eec532",
+            "concept_question": "What is diffraction? (Part B)",
+            "concept_answer": "Additional details: Diffraction is the spreading of a wave as it passes through an obstacle or aperture.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "0385489a-6c6b-46fb-974a-29b815bc23e2",
+            "concept_question": "What is constructive interference? (Part A)",
+            "concept_answer": "Definition: Constructive interference occurs when the path difference between two waves is an integer multiple of the wavelength.",
+            "concept_formula": [
+                "$!$|S_1P - S_2P| = n\\lambda,\\; n = 0,1,2,3,...$!$"
+            ],
+            "pre-requisites": [
+                "91f3c44f-05b7-4f92-8a1b-05e9d7d0a4c3",
+                "2fa62af7-8bd5-406f-8cc7-9a657ec25237"
+            ]
+        },
+        {
+            "concept_id": "32eeb327-db7d-40d5-ae0c-9c9e6c507637",
+            "concept_question": "What is constructive interference? (Part B)",
+            "concept_answer": "Additional details: Constructive interference occurs when the path difference between two waves is an integer multiple of the wavelength.",
+            "concept_formula": [
+                "$!$|S_1P - S_2P| = n\\lambda,\\; n = 0,1,2,3,...$!$"
+            ],
+            "pre-requisites": [
+                "91f3c44f-05b7-4f92-8a1b-05e9d7d0a4c3",
+                "2fa62af7-8bd5-406f-8cc7-9a657ec25237"
+            ]
+        },
+        {
+            "concept_id": "99956872-8ce8-421b-847e-839a655a1cd6",
+            "concept_question": "What is destructive interference? (Part A)",
+            "concept_answer": "Definition: Destructive interference occurs when the path difference between two waves is a half-integer multiple of the wavelength.",
+            "concept_formula": [
+                "$!$|S_1P - S_2P| = \\left(n + \\frac{1}{2}\\right)\\lambda,\\; n = 0,1,2,3,...$!$"
+            ],
+            "pre-requisites": [
+                "91f3c44f-05b7-4f92-8a1b-05e9d7d0a4c3",
+                "2fa62af7-8bd5-406f-8cc7-9a657ec25237"
+            ]
+        },
+        {
+            "concept_id": "75e3697a-c749-4117-b46c-d91b461dec79",
+            "concept_question": "What is destructive interference? (Part B)",
+            "concept_answer": "Additional details: Destructive interference occurs when the path difference between two waves is a half-integer multiple of the wavelength.",
+            "concept_formula": [
+                "$!$|S_1P - S_2P| = \\left(n + \\frac{1}{2}\\right)\\lambda,\\; n = 0,1,2,3,...$!$"
+            ],
+            "pre-requisites": [
+                "91f3c44f-05b7-4f92-8a1b-05e9d7d0a4c3",
+                "2fa62af7-8bd5-406f-8cc7-9a657ec25237"
+            ]
+        },
+        {
+            "concept_id": "59b20114-c60a-4c3a-bb8e-ad5f2ac47ddd",
+            "concept_question": "What is the two-slit constructive interference condition? (Part A)",
+            "concept_answer": "Definition: Constructive interference occurs when the product of slit separation and sine of the angle equals an integer multiple of the wavelength.",
+            "concept_formula": [
+                "$!$d \\sin \\theta = n\\lambda,\\; n=0,\\pm1,\\pm2,...$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "d26d7483-461a-4e37-81c8-14e313f5d74d",
+            "concept_question": "What is the two-slit constructive interference condition? (Part B)",
+            "concept_answer": "Additional details: Constructive interference occurs when the product of slit separation and sine of the angle equals an integer multiple of the wavelength.",
+            "concept_formula": [
+                "$!$d \\sin \\theta = n\\lambda,\\; n=0,\\pm1,\\pm2,...$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "56fd7c6c-b4b9-4942-8cf1-a353c05b08bd",
+            "concept_question": "What is the two-slit destructive interference condition? (Part A)",
+            "concept_answer": "Definition: Destructive interference occurs when the product of slit separation and sine of the angle equals a half-integer multiple of the wavelength.",
+            "concept_formula": [
+                "$!$d \\sin \\theta = \\left(n + \\frac{1}{2}\\right)\\lambda,\\; n=0,\\pm1,\\pm2,...$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "7216e2b9-3c07-4887-b73d-42de5870cfe0",
+            "concept_question": "What is the two-slit destructive interference condition? (Part B)",
+            "concept_answer": "Additional details: Destructive interference occurs when the product of slit separation and sine of the angle equals a half-integer multiple of the wavelength.",
+            "concept_formula": [
+                "$!$d \\sin \\theta = \\left(n + \\frac{1}{2}\\right)\\lambda,\\; n=0,\\pm1,\\pm2,...$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "fccc17be-fcc2-4075-82c4-e570a95384e9",
+            "concept_question": "What is the small angle approximation? (Part A)",
+            "concept_answer": "Definition: It approximates sine, tangent, and the angle itself as equal when the angle is small.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "2296da69-ee23-4062-893c-923d59464fe0",
+            "concept_question": "What is the small angle approximation? (Part B)",
+            "concept_answer": "Additional details: It approximates sine, tangent, and the angle itself as equal when the angle is small.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "a4304044-8d79-4983-a6c4-1fc06a60398b",
+            "concept_question": "What is the position of maxima in Young's experiment? (Part A)",
+            "concept_answer": "Definition: The position of the maxima from the center is proportional to the order, wavelength, and distance, and inversely proportional to the slit separation.",
+            "concept_formula": [
+                "$!$s = \\frac{n \\lambda D}{d}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "63d3847c-57c8-4ae5-8eb1-08c5f5a0078d",
+            "concept_question": "What is the position of maxima in Young's experiment? (Part B)",
+            "concept_answer": "Additional details: The position of the maxima from the center is proportional to the order, wavelength, and distance, and inversely proportional to the slit separation.",
+            "concept_formula": [
+                "$!$s = \\frac{n \\lambda D}{d}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f2d204d6-73fa-42f2-b26e-a6c4fa7a8815",
+            "concept_question": "What is fringe separation in Young's experiment? (Part A)",
+            "concept_answer": "Definition: Fringe separation is the distance between adjacent bright fringes, determined by the wavelength, distance to the screen, and slit separation.",
+            "concept_formula": [
+                "$!$s = \\frac{\\lambda D}{d}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "6fcd9e05-3bb7-404e-a6b3-2be71c7d30c1",
+            "concept_question": "What is fringe separation in Young's experiment? (Part B)",
+            "concept_answer": "Additional details: Fringe separation is the distance between adjacent bright fringes, determined by the wavelength, distance to the screen, and slit separation.",
+            "concept_formula": [
+                "$!$s = \\frac{\\lambda D}{d}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "009c969c-ef7d-4c80-af5b-042c119b6787",
+            "concept_question": "What is single-slit diffraction? (Part A)",
+            "concept_answer": "Definition: Single-slit diffraction is the spreading of waves when they pass through a narrow slit.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d530a408-b565-4025-927e-4f6db9973395",
+                "c900c966-f4d9-4d00-a385-e2cc97eec532"
+            ]
+        },
+        {
+            "concept_id": "a02e3c89-3c55-46aa-a56e-4a4ee55f00fa",
+            "concept_question": "What is single-slit diffraction? (Part B)",
+            "concept_answer": "Additional details: Single-slit diffraction is the spreading of waves when they pass through a narrow slit.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d530a408-b565-4025-927e-4f6db9973395",
+                "c900c966-f4d9-4d00-a385-e2cc97eec532"
+            ]
+        },
+        {
+            "concept_id": "07acd739-4a1b-492f-825f-4174d469820a",
+            "concept_question": "What is the single-slit diffraction minimum condition? (Part A)",
+            "concept_answer": "Definition: The first minimum occurs when the slit width times the sine of the angle equals the wavelength, with the angle approximately given by the wavelength divided by the slit width.",
+            "concept_formula": [
+                "$!$b \\sin \\theta = \\lambda$!$",
+                "$!$\\theta = \\frac{\\lambda}{b}$!$"
+            ],
+            "pre-requisites": [
+                "009c969c-ef7d-4c80-af5b-042c119b6787",
+                "a02e3c89-3c55-46aa-a56e-4a4ee55f00fa"
+            ]
+        },
+        {
+            "concept_id": "3433e84b-c2bc-4d82-98a3-b07fac86b9db",
+            "concept_question": "What is the single-slit diffraction minimum condition? (Part B)",
+            "concept_answer": "Additional details: The first minimum occurs when the slit width times the sine of the angle equals the wavelength, with the angle approximately given by the wavelength divided by the slit width.",
+            "concept_formula": [
+                "$!$b \\sin \\theta = \\lambda$!$",
+                "$!$\\theta = \\frac{\\lambda}{b}$!$"
+            ],
+            "pre-requisites": [
+                "009c969c-ef7d-4c80-af5b-042c119b6787",
+                "a02e3c89-3c55-46aa-a56e-4a4ee55f00fa"
+            ]
+        },
+        {
+            "concept_id": "8581db98-9419-4326-acfb-a267a4e164bd",
+            "concept_question": "What is the effect of multiple slits? (Part A)",
+            "concept_answer": "Definition: Increasing the number of slits results in a more complex interference pattern.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "91f3c44f-05b7-4f92-8a1b-05e9d7d0a4c3",
+                "2fa62af7-8bd5-406f-8cc7-9a657ec25237"
+            ]
+        },
+        {
+            "concept_id": "09d7f117-cbdf-4a32-8058-07e95e671052",
+            "concept_question": "What is the effect of multiple slits? (Part B)",
+            "concept_answer": "Additional details: Increasing the number of slits results in a more complex interference pattern.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "91f3c44f-05b7-4f92-8a1b-05e9d7d0a4c3",
+                "2fa62af7-8bd5-406f-8cc7-9a657ec25237"
+            ]
+        },
+        {
+            "concept_id": "15cf7c79-9158-42b2-b21a-603d53e13a58",
+            "concept_question": "What is a diffraction grating? (Part A)",
+            "concept_answer": "Definition: A diffraction grating is an optical component with many parallel slits that produces sharp interference maxima.",
+            "concept_formula": [
+                "$!$d \\sin \\theta = n\\lambda,\\; n=0,\\pm1,\\pm2,...$!$"
+            ],
+            "pre-requisites": [
+                "8581db98-9419-4326-acfb-a267a4e164bd",
+                "09d7f117-cbdf-4a32-8058-07e95e671052"
+            ]
+        },
+        {
+            "concept_id": "ef1a99c2-3e20-4e74-a4eb-fb592aa9adc6",
+            "concept_question": "What is a diffraction grating? (Part B)",
+            "concept_answer": "Additional details: A diffraction grating is an optical component with many parallel slits that produces sharp interference maxima.",
+            "concept_formula": [
+                "$!$d \\sin \\theta = n\\lambda,\\; n=0,\\pm1,\\pm2,...$!$"
+            ],
+            "pre-requisites": [
+                "8581db98-9419-4326-acfb-a267a4e164bd",
+                "09d7f117-cbdf-4a32-8058-07e95e671052"
+            ]
+        }
+    ]
+}

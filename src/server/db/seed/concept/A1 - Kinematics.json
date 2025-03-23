@@ -1,0 +1,266 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "zgOcCUWkbpi5gpsnKuUkc",
+    "topicIdProd": "ite2igyauf7bs9lpzivi0",
+    "chapter_text": "Here's a concise summary of the concepts covered in the document, organized into sections with bullet points and associated formulas where applicable:\n\n**1. Kinematics Basics**\n\n*   **Position:**  A vector quantity defining the location of an object.\n*   **Displacement:** Change in position $\\Delta s = s_{final} - s_{initial}$.\n*   **Distance:**  The total length of the path traveled.\n*   **Velocity:** Rate of change of displacement.  In uniform motion, $v = \\frac{\\Delta s}{\\Delta t}$.\n*   **Average Speed:** Total distance traveled divided by the time taken.\n*   **Uniform Motion:**  Motion with constant velocity. Position is given by $s = s_0 + vt$.\n\n**2. Non-Uniform Motion**\n\n*   **Average Velocity:**  $v = \\frac{\\Delta s}{\\Delta t}$.\n*   **Instantaneous Velocity:**  $v = \\lim_{\\Delta t \\to 0} \\frac{\\Delta s}{\\Delta t}$.  (Gradient of position-time graph).\n*   **Acceleration:** Rate of change of velocity, $a = \\frac{\\Delta v}{\\Delta t}$.  (Gradient of velocity-time graph).\n\n**3. Uniformly Accelerated Motion**\n\n*   **Constant Acceleration:**\n*   $v = u + at$\n*   $\\Delta s = (\\frac{u+v}{2})t$\n*   $\\Delta s = ut + \\frac{1}{2}at^2$\n*   $v^2 = u^2 + 2a\\Delta s$\n\n**4. Graphical Analysis of Motion**\n\n*   **Position-Time Graph:** Gradient represents velocity.\n*   **Velocity-Time Graph:** Gradient represents acceleration; Area under the curve represents displacement.\n*   **Acceleration-Time Graph:** Area under the curve represents change in velocity.\n\n**5. Projectile Motion**\n\n*   **Independent Horizontal and Vertical Motion:** Analyze motion in each direction separately.\n*   **Horizontal Motion:**  Constant velocity (no acceleration).  $x = u_x t$.\n*   **Vertical Motion:** Uniform acceleration due to gravity. $v_y = u_y - gt$, $y = u_y t - \\frac{1}{2}gt^2$.\n*   **Initial Velocity Components:** $u_x = u \\cos{\\theta}$,  $u_y = u \\sin{\\theta}$\n*   **Maximum Height:** $y_{max} = \\frac{u^2 \\sin^2{\\theta}}{2g}$\n*   **Range:** $x = \\frac{u^2 \\sin{2\\theta}}{g}$\n\n**6. Fluid Resistance (Air Resistance)**\n\n*   **Fluid Resistance Force:**  Opposes motion through a fluid (gas or liquid). Typically $F = kv$ (low speeds) or $F=kv^2$ (high speeds).\n*   **Terminal Speed:**  The constant speed reached when fluid resistance equals weight. $v_T = \\frac{mg}{k}$.\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "e3fddcf7-988e-4165-9433-91670464bef8",
+            "concept_question": "What is position?",
+            "concept_answer": "Position is a vector that defines an object's location.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "42f9486d-bb12-41c1-a177-31ddbff30efd",
+            "concept_question": "What is displacement?",
+            "concept_answer": "Displacement is the change in position between two points.",
+            "concept_formula": [
+                "$!$\\Delta s = s_{final} - s_{initial}$!$"
+            ],
+            "pre-requisites": [
+                "e3fddcf7-988e-4165-9433-91670464bef8"
+            ]
+        },
+        {
+            "concept_id": "e36724ff-c9a8-42ac-9b06-e20dc0863e14",
+            "concept_question": "What is distance?",
+            "concept_answer": "Distance is the total path length traveled by an object.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "0e8a6662-eb83-48e0-a158-6f8a1acf9f25",
+            "concept_question": "What is velocity?",
+            "concept_answer": "Velocity is the rate of change of displacement over time.",
+            "concept_formula": [
+                "$!$v = \\frac{\\Delta s}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "42f9486d-bb12-41c1-a177-31ddbff30efd"
+            ]
+        },
+        {
+            "concept_id": "e11fd62c-618e-4d81-9b57-bda0797f7921",
+            "concept_question": "What is average speed?",
+            "concept_answer": "Average speed is the total distance traveled divided by time taken.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e36724ff-c9a8-42ac-9b06-e20dc0863e14"
+            ]
+        },
+        {
+            "concept_id": "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb",
+            "concept_question": "What is uniform motion?",
+            "concept_answer": "Uniform motion is movement at a constant velocity.",
+            "concept_formula": [
+                "$!$s = s_0 + vt$!$"
+            ],
+            "pre-requisites": [
+                "e3fddcf7-988e-4165-9433-91670464bef8",
+                "0e8a6662-eb83-48e0-a158-6f8a1acf9f25"
+            ]
+        },
+        {
+            "concept_id": "c1170020-784b-45f6-9ec5-8dfe77a1f9d0",
+            "concept_question": "What is average velocity?",
+            "concept_answer": "Average velocity is displacement divided by the time interval.",
+            "concept_formula": [
+                "$!$v = \\frac{\\Delta s}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "42f9486d-bb12-41c1-a177-31ddbff30efd"
+            ]
+        },
+        {
+            "concept_id": "fbef51e8-8488-4603-af72-f6265e1b5ee9",
+            "concept_question": "What is instantaneous velocity?",
+            "concept_answer": "Instantaneous velocity is the derivative of displacement with respect to time.",
+            "concept_formula": [
+                "$!$v = \\lim_{\\Delta t \\to 0} \\frac{\\Delta s}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                "c1170020-784b-45f6-9ec5-8dfe77a1f9d0"
+            ]
+        },
+        {
+            "concept_id": "07cf984a-d8bd-4836-a2c2-e4b66ded7563",
+            "concept_question": "What is acceleration?",
+            "concept_answer": "Acceleration is the rate of change of velocity per unit time.",
+            "concept_formula": [
+                "$!$a = \\frac{\\Delta v}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "0e8a6662-eb83-48e0-a158-6f8a1acf9f25"
+            ]
+        },
+        {
+            "concept_id": "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a",
+            "concept_question": "What is uniformly accelerated motion?",
+            "concept_answer": "Uniformly accelerated motion is described by constant acceleration equations relating velocity, displacement, and time.",
+            "concept_formula": [
+                "$!$v = u + at$!$",
+                "$!$\\Delta s = \\frac{(u+v)}{2} t$!$",
+                "$!$\\Delta s = ut + \\frac{1}{2}at^2$!$",
+                "$!$v^2 = u^2 + 2a\\Delta s$!$"
+            ],
+            "pre-requisites": [
+                "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                "0e8a6662-eb83-48e0-a158-6f8a1acf9f25",
+                "07cf984a-d8bd-4836-a2c2-e4b66ded7563"
+            ]
+        },
+        {
+            "concept_id": "7324cb66-eb46-4113-b3d5-83cf146d1a66",
+            "concept_question": "What does a position-time graph show?",
+            "concept_answer": "A position-time graph shows an object's position over time with its gradient representing velocity.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e3fddcf7-988e-4165-9433-91670464bef8",
+                "0e8a6662-eb83-48e0-a158-6f8a1acf9f25"
+            ]
+        },
+        {
+            "concept_id": "c8719026-decb-412a-83fa-e2864025491a",
+            "concept_question": "What does a velocity-time graph show about acceleration?",
+            "concept_answer": "A velocity-time graph displays velocity changes where the slope indicates acceleration.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "0e8a6662-eb83-48e0-a158-6f8a1acf9f25",
+                "07cf984a-d8bd-4836-a2c2-e4b66ded7563",
+                "42f9486d-bb12-41c1-a177-31ddbff30efd"
+            ]
+        },
+        {
+            "concept_id": "aefc9bba-b343-428a-b4fd-99b26e37f8d2",
+            "concept_question": "What does a velocity-time graph show about displacement?",
+            "concept_answer": "A velocity-time graph shows that the area under the curve represents displacement.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "0e8a6662-eb83-48e0-a158-6f8a1acf9f25",
+                "07cf984a-d8bd-4836-a2c2-e4b66ded7563",
+                "42f9486d-bb12-41c1-a177-31ddbff30efd"
+            ]
+        },
+        {
+            "concept_id": "29377d63-526d-40d4-b5e4-ca61bae74566",
+            "concept_question": "What does an acceleration-time graph show?",
+            "concept_answer": "An acceleration-time graph shows acceleration over time with the area representing change in velocity.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "07cf984a-d8bd-4836-a2c2-e4b66ded7563"
+            ]
+        },
+        {
+            "concept_id": "42c7d107-9324-4e8c-a6b6-bd2324a95140",
+            "concept_question": "What is independent horizontal motion in projectiles?",
+            "concept_answer": "Independent horizontal motion in projectiles occurs at a constant velocity, unaffected by vertical acceleration.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "79a68cd7-6ffc-49c0-9688-31a9103cb68c",
+            "concept_question": "What is independent vertical motion in projectiles?",
+            "concept_answer": "Independent vertical motion in projectiles is governed by constant acceleration due to gravity.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "4dfd857b-d6d7-4d02-927d-822401187e9f",
+            "concept_question": "What is horizontal motion in projectile?",
+            "concept_answer": "Horizontal motion in projectile occurs at constant velocity with no acceleration.",
+            "concept_formula": [
+                "$!$x = u_x t$!$"
+            ],
+            "pre-requisites": [
+                "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb"
+            ]
+        },
+        {
+            "concept_id": "377eb13a-aa52-4d38-8d8f-5df93a80f025",
+            "concept_question": "What is vertical motion in projectile?",
+            "concept_answer": "Vertical motion in projectile has constant acceleration due to gravity.",
+            "concept_formula": [
+                "$!$v_y = u_y - gt$!$",
+                "$!$y = u_y t - \\frac{1}{2}gt^2$!$"
+            ],
+            "pre-requisites": [
+                "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
+            ]
+        },
+        {
+            "concept_id": "6549c13e-d336-4760-899a-1964b1b38828",
+            "concept_question": "What is the horizontal component of initial velocity?",
+            "concept_answer": "The horizontal component of initial velocity is derived using the cosine of the launch angle multiplied by the total initial velocity.",
+            "concept_formula": [
+                "$!$u_x = u \\cos{\\theta}$!$"
+            ],
+            "pre-requisites": [
+                "42c7d107-9324-4e8c-a6b6-bd2324a95140",
+                "79a68cd7-6ffc-49c0-9688-31a9103cb68c"
+            ]
+        },
+        {
+            "concept_id": "b0d5027f-abc0-4033-bb04-8e368b7d0d22",
+            "concept_question": "What is the vertical component of initial velocity?",
+            "concept_answer": "The vertical component of initial velocity is derived using the sine of the launch angle multiplied by the total initial velocity.",
+            "concept_formula": [
+                "$!$u_y = u \\sin{\\theta}$!$"
+            ],
+            "pre-requisites": [
+                "42c7d107-9324-4e8c-a6b6-bd2324a95140",
+                "79a68cd7-6ffc-49c0-9688-31a9103cb68c"
+            ]
+        },
+        {
+            "concept_id": "db4469d3-56b0-4923-9df8-aa1377bb9e6b",
+            "concept_question": "What is maximum height in projectile?",
+            "concept_answer": "Maximum height is the peak elevation reached, determined by the vertical velocity component and gravity.",
+            "concept_formula": [
+                "$!$y_{max} = \\frac{u^2 \\sin^2{\\theta}}{2g}$!$"
+            ],
+            "pre-requisites": [
+                "6549c13e-d336-4760-899a-1964b1b38828",
+                "b0d5027f-abc0-4033-bb04-8e368b7d0d22",
+                "377eb13a-aa52-4d38-8d8f-5df93a80f025"
+            ]
+        },
+        {
+            "concept_id": "6f9d1452-fd20-4d7a-9d3c-72435dc763a5",
+            "concept_question": "What is the range of a projectile?",
+            "concept_answer": "The range is the total horizontal distance traveled by a projectile.",
+            "concept_formula": [
+                "$!$x = \\frac{u^2 \\sin{2\\theta}}{g}$!$"
+            ],
+            "pre-requisites": [
+                "6549c13e-d336-4760-899a-1964b1b38828",
+                "b0d5027f-abc0-4033-bb04-8e368b7d0d22",
+                "4dfd857b-d6d7-4d02-927d-822401187e9f"
+            ]
+        },
+        {
+            "concept_id": "5767da91-a3a1-4028-941e-1d952425ebae",
+            "concept_question": "What is fluid resistance force?",
+            "concept_answer": "Fluid resistance force is the drag that opposes an object's motion through a fluid.",
+            "concept_formula": [
+                "$!$F = kv$!$",
+                "$!$F = kv^2$!$"
+            ],
+            "pre-requisites": [
+                "0e8a6662-eb83-48e0-a158-6f8a1acf9f25"
+            ]
+        },
+        {
+            "concept_id": "f108fcea-6443-4429-ac16-0bcdcfaf165e",
+            "concept_question": "What is terminal speed?",
+            "concept_answer": "Terminal speed is reached when fluid resistance balances an object's weight.",
+            "concept_formula": [
+                "$!$v_T = \\frac{mg}{k}$!$"
+            ],
+            "pre-requisites": [
+                "5767da91-a3a1-4028-941e-1d952425ebae"
+            ]
+        }
+    ]
+}

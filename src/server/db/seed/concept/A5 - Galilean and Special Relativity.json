@@ -1,0 +1,201 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "KKsgOpHwpMC2dYEYHAwaW",
+    "topicIdProd": "73860r4diupa8x9290sxu",
+    "chapter_text": "Here's a summary of the concepts covered in the file, organized into sections with bullet points and associated formulas where applicable:\n\n**6.1 Reference Frames and Lorentz Transformations**\n\n*   **Reference Frame:** A set of coordinate axes and a set of clocks at every point in space.\n*   **Inertial Reference Frame:** A reference frame that is not accelerating.\n*   **Galilean Transformation Equations:** Relate the coordinates of an event as measured in two inertial frames.\n    *   Space transformation: $x' = x - vt$\n    *   Time transformation: $t' = t$\n*   **Galilean Velocity Addition:** $u = u' + v$ (where *u* is the velocity in ground frame, *u'* is the velocity in moving frame, and *v* is the velocity of the moving frame relative to the ground)\n*   **Postulates of Special Relativity:**\n    *   The laws of physics are the same in all inertial frames.\n    *   The speed of light in vacuum is the same for all inertial observers.\n*   **Lorentz Transformations:** Relate the coordinates of an event as measured in two inertial frames, accounting for relativistic effects.\n    *   $x' = \\gamma(x - vt)$\n    *   $t' = \\gamma(t - \\frac{vx}{c^2})$\n    *   $x = \\gamma(x' + vt')$\n    *   $t = \\gamma(t' + \\frac{vx'}{c^2})$\n*   **Gamma Factor:**  $\\gamma = \\frac{1}{\\sqrt{1 - \\frac{v^2}{c^2}}}$\n\n**6.2 Effects of Relativity**\n\n*   **Time Dilation:** The effect where time passes slower for a moving observer relative to a stationary observer.\n    *   $At = \\gamma \\Delta t'$\n*   **Proper Time Interval:** The time interval between two events that occur at the same point in space in a given reference frame.\n*   **Length Contraction:** The effect where the length of an object appears shorter when measured by an observer who is in motion relative to the object.\n    *   $L = \\frac{L_0}{\\gamma}$\n*   **Proper Length:** The length of an object as measured in its rest frame.\n*   **Relativistic Velocity Addition:** $u = \\frac{u' + v}{1 + \\frac{u'v}{c^2}}$\n*   **Simultaneity:** Events that are simultaneous in one reference frame may not be simultaneous in another.\n\n**6.3 Spacetime Diagrams**\n\n*   **Spacetime Diagram (Minkowski Diagram):** A graphical representation of events in spacetime, with time plotted on one axis and space on another.\n*   **Worldline:** The path of an object through spacetime.\n*   Spacetime interval: $(\\Delta s)^2 = (c \\Delta t)^2 - (\\Delta x)^2$\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "132daf0d-8cac-47f0-8249-0868803f12ef",
+            "concept_question": "What is a reference frame?",
+            "concept_answer": "A reference frame is a system of coordinate axes and clocks distributed throughout space.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f68ed561-000a-41ba-a2cb-1256709ba82e",
+            "concept_question": "What is an inertial reference frame? (Definition)",
+            "concept_answer": "An inertial reference frame is defined as one that does not experience acceleration.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "132daf0d-8cac-47f0-8249-0868803f12ef"
+            ]
+        },
+        {
+            "concept_id": "af99d217-2569-4adb-aea1-e7a319f682ac",
+            "concept_question": "What characterizes motion in an inertial reference frame?",
+            "concept_answer": "In an inertial reference frame, objects move with uniform motion (constant velocity) when no external forces act on them.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "132daf0d-8cac-47f0-8249-0868803f12ef"
+            ]
+        },
+        {
+            "concept_id": "15b83cdd-f54a-4f0b-b7ba-f57223c7d3c4",
+            "concept_question": "What are Galilean transformation equations?",
+            "concept_answer": "Galilean transformation equations relate spatial and temporal coordinates between inertial frames.",
+            "concept_formula": [
+                "$!$x' = x - vt$!$",
+                "$!$t' = t$!$"
+            ],
+            "pre-requisites": [
+                "132daf0d-8cac-47f0-8249-0868803f12ef",
+                "f68ed561-000a-41ba-a2cb-1256709ba82e",
+                "af99d217-2569-4adb-aea1-e7a319f682ac"
+            ]
+        },
+        {
+            "concept_id": "af08fd9a-f90b-4b6c-bc4c-39068a5e1fda",
+            "concept_question": "What is Galilean velocity addition?",
+            "concept_answer": "Galilean velocity addition states that velocities add linearly in non-relativistic contexts.",
+            "concept_formula": [
+                "$!$u = u' + v$!$"
+            ],
+            "pre-requisites": [
+                "132daf0d-8cac-47f0-8249-0868803f12ef",
+                "f68ed561-000a-41ba-a2cb-1256709ba82e",
+                "af99d217-2569-4adb-aea1-e7a319f682ac"
+            ]
+        },
+        {
+            "concept_id": "8780e1cb-7061-47a2-b838-f4bf3780fd2a",
+            "concept_question": "What is the principle of relativity?",
+            "concept_answer": "The principle of relativity asserts that the laws of physics are identical in all inertial frames.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f68ed561-000a-41ba-a2cb-1256709ba82e",
+                "af99d217-2569-4adb-aea1-e7a319f682ac"
+            ]
+        },
+        {
+            "concept_id": "1d64c795-06d8-4470-ba11-c2f8c16c22a5",
+            "concept_question": "What is the constancy of the speed of light?",
+            "concept_answer": "It states that the speed of light in a vacuum is constant for all observers, regardless of their relative motion.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f68ed561-000a-41ba-a2cb-1256709ba82e",
+                "af99d217-2569-4adb-aea1-e7a319f682ac"
+            ]
+        },
+        {
+            "concept_id": "79df688b-df1e-4c20-b8cc-247370a90937",
+            "concept_question": "What are Lorentz transformations?",
+            "concept_answer": "Lorentz transformations relate spacetime coordinates between inertial frames while incorporating relativistic effects.",
+            "concept_formula": [
+                "$!$x' = \\gamma(x - vt)$!$",
+                "$!$t' = \\gamma(t - \\frac{vx}{c^2})$!$",
+                "$!$x = \\gamma(x' + vt')$!$",
+                "$!$t = \\gamma(t' + \\frac{vx'}{c^2})$!$"
+            ],
+            "pre-requisites": [
+                "f68ed561-000a-41ba-a2cb-1256709ba82e",
+                "af99d217-2569-4adb-aea1-e7a319f682ac",
+                "8780e1cb-7061-47a2-b838-f4bf3780fd2a",
+                "1d64c795-06d8-4470-ba11-c2f8c16c22a5"
+            ]
+        },
+        {
+            "concept_id": "a0d65d2b-9a39-4a41-bda5-09be98a1c66a",
+            "concept_question": "What is the gamma factor?",
+            "concept_answer": "The gamma factor quantifies how time and length are affected by relative motion in special relativity.",
+            "concept_formula": [
+                "$!$\\gamma = \\frac{1}{\\sqrt{1 - \\frac{v^2}{c^2}}}$!$"
+            ],
+            "pre-requisites": [
+                "8780e1cb-7061-47a2-b838-f4bf3780fd2a",
+                "1d64c795-06d8-4470-ba11-c2f8c16c22a5"
+            ]
+        },
+        {
+            "concept_id": "0b935911-e793-4b1e-99f1-b6338367d9d5",
+            "concept_question": "What is time dilation?",
+            "concept_answer": "Time dilation is the phenomenon where moving clocks run slower compared to stationary ones.",
+            "concept_formula": [
+                "$!$At = \\gamma \\Delta t'$!$"
+            ],
+            "pre-requisites": [
+                "a0d65d2b-9a39-4a41-bda5-09be98a1c66a"
+            ]
+        },
+        {
+            "concept_id": "bb0b6d22-6ec2-4604-812f-a427b7b70055",
+            "concept_question": "What is the proper time interval?",
+            "concept_answer": "The proper time interval is the elapsed time between two events occurring at the same spatial location.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "132daf0d-8cac-47f0-8249-0868803f12ef"
+            ]
+        },
+        {
+            "concept_id": "a2cc780f-e223-46ae-8ac0-d8b76d0c5385",
+            "concept_question": "What is length contraction?",
+            "concept_answer": "Length contraction is the observed shortening of an object's length when it is in motion relative to its rest frame.",
+            "concept_formula": [
+                "$!$L = \\frac{L_0}{\\gamma}$!$"
+            ],
+            "pre-requisites": [
+                "a0d65d2b-9a39-4a41-bda5-09be98a1c66a",
+                "79df688b-df1e-4c20-b8cc-247370a90937"
+            ]
+        },
+        {
+            "concept_id": "8f95aa1b-0eb7-42ba-bd59-8b8b8322f61a",
+            "concept_question": "What is proper length?",
+            "concept_answer": "Proper length is the length of an object measured in its own rest frame.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "132daf0d-8cac-47f0-8249-0868803f12ef"
+            ]
+        },
+        {
+            "concept_id": "bd343d72-034d-49e8-a9e1-878729f47b2e",
+            "concept_question": "What is relativistic velocity addition?",
+            "concept_answer": "Relativistic velocity addition combines velocities with a formula that accounts for high-speed effects.",
+            "concept_formula": [
+                "$!$u = \\frac{u' + v}{1 + \\frac{u'v}{c^2}}$!$"
+            ],
+            "pre-requisites": [
+                "79df688b-df1e-4c20-b8cc-247370a90937"
+            ]
+        },
+        {
+            "concept_id": "e4bc0989-a425-403f-a8c6-0691754c02ce",
+            "concept_question": "What is simultaneity in relativity?",
+            "concept_answer": "Simultaneity in relativity refers to the idea that events simultaneous in one frame may not be in another.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "79df688b-df1e-4c20-b8cc-247370a90937",
+                "132daf0d-8cac-47f0-8249-0868803f12ef"
+            ]
+        },
+        {
+            "concept_id": "f04fa87d-9fde-4806-88f2-0b5188e54224",
+            "concept_question": "What is a spacetime diagram?",
+            "concept_answer": "A spacetime diagram graphically represents events with time plotted on one axis and space on another.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "132daf0d-8cac-47f0-8249-0868803f12ef"
+            ]
+        },
+        {
+            "concept_id": "0ac346c6-6a1e-4313-83cf-05c4f3d570be",
+            "concept_question": "What is a worldline?",
+            "concept_answer": "A worldline is the trajectory that an object follows through spacetime.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f04fa87d-9fde-4806-88f2-0b5188e54224"
+            ]
+        },
+        {
+            "concept_id": "04424f1c-68c2-4968-8070-6a63a6588386",
+            "concept_question": "What is the spacetime interval?",
+            "concept_answer": "The spacetime interval is an invariant measure that quantifies the separation between events.",
+            "concept_formula": [
+                "$!$(\\Delta s)^2 = (c \\Delta t)^2 - (\\Delta x)^2$!$"
+            ],
+            "pre-requisites": [
+                "f04fa87d-9fde-4806-88f2-0b5188e54224",
+                "79df688b-df1e-4c20-b8cc-247370a90937"
+            ]
+        }
+    ]
+}

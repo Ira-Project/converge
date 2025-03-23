@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
@@ -7,17 +9,26 @@ import { generateId } from "lucia";
 import { knowledgeZapAssignmentAttempts, knowledgeZapAssignments } from "../../schema/knowledgeZap/knowledgeZapAssignment";
 import { multipleChoiceAnswerOptions, multipleChoiceAttempt, multipleChoiceQuestions } from "../../schema/knowledgeZap/multipleChoiceQuestions";
 import { ActivityType, KnowledgeZapQuestionType } from "@/lib/constants";
-import { knowledgeZapQuestionAttempts, knowledgeZapQuestions, knowledgeZapQuestionToAssignment } from "../../schema/knowledgeZap/knowledgeZapQuestions";
+import { knowledgeZapQuestionAttempts, knowledgeZapQuestions, knowledgeZapQuestionsToConcepts, knowledgeZapQuestionToAssignment } from "../../schema/knowledgeZap/knowledgeZapQuestions";
 import { matchingAnswerOptions, matchingAttempt, matchingAttemptSelection, matchingQuestions } from "../../schema/knowledgeZap/matchingQuestions";
 import { orderingAnswerOptions, orderingAttempt, orderingAttemptSelection, orderingQuestions } from "../../schema/knowledgeZap/orderingQuestions";
 
-import json from "./thermal_energy_transfers.json";
 import { activity } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 
-export async function createKnowledgeZapAssignment() {
+import { topics } from "../../schema/subject";
 
-  const topicId = process.env.ENVIRONMENT === "prod" ? json.topicIdProd : json.topicIdDev;
+export async function createKnowledgeZapAssignment(topicName: string) {
+  const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
+
+  const topic = await db.select().from(topics).where(eq(topics.name, json.name as string))
+
+  if(!topic[0]?.id) {
+    console.log("Topic not found", json.name)
+    return
+  }
+  
+  const topicId = topic[0].id
   // Check if assignment already exists
   const existingAssignment = await db.select().from(knowledgeZapAssignments).where(eq(knowledgeZapAssignments.topicId, topicId));
 
@@ -49,7 +60,7 @@ export async function createKnowledgeZapAssignment() {
 
   for (const questions of json.multipleChoiceQuestions) {
     // Check if question already exists
-    const existingQuestions = await db.select().from(knowledgeZapQuestions).where(eq(knowledgeZapQuestions.id, questions.id));
+    const existingQuestions = await db.select().from(knowledgeZapQuestions).where(eq(knowledgeZapQuestions.id, questions.id as string));
     
     if (existingQuestions.length > 0) {
       console.log(`Multiple choice question already exists`, questions.id);
@@ -58,7 +69,7 @@ export async function createKnowledgeZapAssignment() {
 
     console.log(`Creating multiple choice question`, questions.id);
     await db.insert(knowledgeZapQuestions).values({
-      id: questions.id,
+      id: questions.id.substring(0, 21),
       question: "Knowledge Zap Question",
       type: KnowledgeZapQuestionType.MULTIPLE_CHOICE, 
       topicId: topicId,
@@ -69,36 +80,48 @@ export async function createKnowledgeZapAssignment() {
       deletedAt: null,
     })
 
+    console.log(`Creating concepts for question`, questions.id);
+    for (const concept of questions.concepts) {
+      console.log(`Creating concept`, concept);
+      await db.insert(knowledgeZapQuestionsToConcepts).values({
+        id: generateId(21),
+        questionId: questions.id.substring(0, 21),
+        conceptId: concept,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      })
+    }
+
     const multipleChoiceQuestionIds = []
 
     for (const question of questions.variants) {
-      const existingMCQuestion = await db.select().from(multipleChoiceQuestions).where(eq(multipleChoiceQuestions.id, question.id));
+      const existingMCQuestion = await db.select().from(multipleChoiceQuestions).where(eq(multipleChoiceQuestions.id, question.id as string));
 
       if (existingMCQuestion.length > 0) {
         console.log(`Multiple choice sub-question "${question.question}" already exists`);
         continue;
       }
 
-      console.log(`Creating multiple choice variant "${question.question.substring(0, 30)}"`);
+      console.log(`Creating multiple choice variant "${(question.question as string).substring(0, 30)}"`);
       await db.insert(multipleChoiceQuestions).values({
-        id: question.id,
+        id: question.id.substring(0, 21),
         question: question.question,
-        questionId: questions.id,
+        questionId: questions.id.substring(0, 21),
         imageUrl: question?.image ?? null,
         createdAt: new Date(),
         updatedAt: new Date(),
         isDeleted: false,
         deletedAt: null,
       })
-      multipleChoiceQuestionIds.push(question.id);
+      multipleChoiceQuestionIds.push(question.id.substring(0, 21));
       for (const option of question.options) {
-        console.log(`Creating multiple choice option "${option.text.substring(0, 30)}"`);
+        console.log(`Creating multiple choice option "${(option.option_text as string).substring(0, 30)}"`);
         await db.insert(multipleChoiceAnswerOptions).values({
-          id: generateId(21),
-          questionId: question.id,
+          id: generateId(21).substring(0, 21),
+          questionId: question.id.substring(0, 21),
           imageUrl: option?.image ?? null,
-          option: option.text ?? "",
-          isCorrect: option.isCorrect,
+          option: option.option_text ?? "",
+          isCorrect: option.is_correct,
           createdAt: new Date(),
           updatedAt: new Date(),
           isDeleted: false,
@@ -107,17 +130,17 @@ export async function createKnowledgeZapAssignment() {
       }
     }
 
-    console.log(`Updating knowledge zap question with mcq ${questions.id}`);
+    console.log(`Updating knowledge zap question with mcq ${questions.id} - ${multipleChoiceQuestionIds.length}`);
     await db.update(knowledgeZapQuestions).set({
       questionId: multipleChoiceQuestionIds,
-    }).where(eq(knowledgeZapQuestions.id, questions.id));
+    }).where(eq(knowledgeZapQuestions.id, (questions.id as string).substring(0, 21)));
 
-    questionsIds.push(questions.id);
+    questionsIds.push(questions.id.substring(0, 21));
 
   }
 
   for(const questions of json.matchingQuestions) {
-    const existingQuestion = await db.select().from(knowledgeZapQuestions).where(eq(knowledgeZapQuestions.id, questions.id));
+    const existingQuestion = await db.select().from(knowledgeZapQuestions).where(eq(knowledgeZapQuestions.id, questions.id as string));
 
     if (existingQuestion.length > 0) {
       console.log(`Matching question ${questions.id} already exists`);
@@ -126,7 +149,7 @@ export async function createKnowledgeZapAssignment() {
     
     console.log(`Creating matching question ${questions.id}`);
     await db.insert(knowledgeZapQuestions).values({
-      id: questions.id,
+      id: questions.id.substring(0, 21),
       question: "Knowledge Zap Question",
       type: KnowledgeZapQuestionType.MATCHING, 
       topicId: topicId,
@@ -137,28 +160,40 @@ export async function createKnowledgeZapAssignment() {
       deletedAt: null,
     })
 
+    console.log(`Creating concepts for question`, questions.id);
+    for (const concept of questions.concepts) {
+      console.log(`Creating concept`, concept);
+      await db.insert(knowledgeZapQuestionsToConcepts).values({
+        id: generateId(21),
+        questionId: questions.id.substring(0, 21),
+        conceptId: concept,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      })
+    }
+
     const matchingQuestionIds = []
     for (const question of questions.variants) {
-      console.log(`Creating matching variant "${question.question.substring(0, 30)}"`);
+      console.log(`Creating matching variant "${(question.question as string).substring(0, 30)}"`);
       await db.insert(matchingQuestions).values({
-        id: question.id,
+        id: question.id.substring(0, 21),
         imageUrl: question?.image ?? null,
         question: question.question,
-        questionId: questions.id,
+        questionId: questions.id.substring(0, 21),
         createdAt: new Date(),
         updatedAt: new Date(),
         isDeleted: false,
         deletedAt: null,
       })
-      matchingQuestionIds.push(question.id);
+      matchingQuestionIds.push(question.id.substring(0, 21));
       
-      console.log(`Creating matching options for ${question.question.substring(0, 30)}`);
-      await Promise.all(question.options.map(option => 
+      console.log(`Creating matching options for ${(question.question as string).substring(0, 30)}`);
+      await Promise.all(question.options.map((option: unknown) => 
         db.insert(matchingAnswerOptions).values({
           id: generateId(21),
-          questionId: question.id,
-          optionA: option.optionA,
-          optionB: option.optionB,
+          questionId: question.id.substring(0, 21),
+          optionA: (option as { optionA: string }).optionA,
+          optionB: (option as { optionB: string }).optionB,
           createdAt: new Date(),
           updatedAt: new Date(),
           isDeleted: false,
@@ -170,15 +205,15 @@ export async function createKnowledgeZapAssignment() {
     console.log(`Updating knowledge zap question with matching question id ${questions.id}`);
     await db.update(knowledgeZapQuestions).set({
       questionId: matchingQuestionIds,
-    }).where(eq(knowledgeZapQuestions.id, questions.id));
+    }).where(eq(knowledgeZapQuestions.id, (questions.id as string).substring(0, 21)));
 
-    questionsIds.push(questions.id);
+    questionsIds.push(questions.id.substring(0, 21));
 
   }
 
   for(const questions of json.orderingQuestions) {
 
-    const existingQuestion = await db.select().from(knowledgeZapQuestions).where(eq(knowledgeZapQuestions.id, questions.id));
+    const existingQuestion = await db.select().from(knowledgeZapQuestions).where(eq(knowledgeZapQuestions.id, questions.id as string));
 
     if (existingQuestion.length > 0) {
       console.log(`Ordering question ${questions.id} already exists`);
@@ -198,13 +233,25 @@ export async function createKnowledgeZapAssignment() {
       deletedAt: null,
     })
 
+    console.log(`Creating concepts for question`, questions.id);
+    for (const concept of questions.concepts) {
+      console.log(`Creating concept`, concept);
+      await db.insert(knowledgeZapQuestionsToConcepts).values({
+        id: generateId(21),
+        questionId: questions.id.substring(0, 21),
+        conceptId: concept,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      })
+    }
+
     const orderingQuestionIds = []
     for (const question of questions.variants) {
       console.log(`Creating ordering variant "${question.question.substring(0, 30)}"`);
       await db.insert(orderingQuestions).values({
-        id: question.id,
+        id: question.id.substring(0, 21),
         question: question.question,
-        questionId: questions.id,
+        questionId: questions.id.substring(0, 21),
         isDescending: question.isDescending ?? false,
         topLabel: question.topLabel ?? "Smallest",
         bottomLabel: question.bottomLabel ?? "Biggest",
@@ -215,28 +262,28 @@ export async function createKnowledgeZapAssignment() {
       })
 
       console.log(`Creating ordering options for ${question.question.substring(0, 30)}`);
-      await Promise.all(question.options.map(option => 
+      await Promise.all(question.options.map((option: unknown) => 
         db.insert(orderingAnswerOptions).values({
           id: generateId(21),
-          questionId: question.id,
-          order: option.order,
-          option: option.text,
+          questionId: question.id.substring(0, 21),
+          order: (option as { order: number }).order,
+          option: (option as { text: string }).text,
           createdAt: new Date(),
-          updatedAt: new Date(),  
+          updatedAt: new Date(),
           isDeleted: false, 
           deletedAt: null,
         })
       ));
 
-      orderingQuestionIds.push(question.id);
+      orderingQuestionIds.push(question.id.substring(0, 21));
     }
 
     console.log(`Updating knowledge zap question with ordering question id ${questions.id}`);
     await db.update(knowledgeZapQuestions).set({
       questionId: orderingQuestionIds,
-    }).where(eq(knowledgeZapQuestions.id, questions.id));
+    }).where(eq(knowledgeZapQuestions.id, (questions.id as string).substring(0, 21)));
 
-    questionsIds.push(questions.id);
+    questionsIds.push(questions.id.substring(0, 21));
 
   }
 
@@ -244,7 +291,7 @@ export async function createKnowledgeZapAssignment() {
     console.log(`Creating knowledge zap question to assignment ${questionId}`);
     await db.insert(knowledgeZapQuestionToAssignment).values({
       id: generateId(21),
-      questionId: questionId,
+      questionId: questionId.substring(0, 21),
       assignmentId: knowledgeZapAssignment.id,
       createdAt: new Date(),
       updatedAt: new Date(),
@@ -374,7 +421,10 @@ export async function deleteKnowledgeZapAssignment(assignmentId: string) {
         await db.delete(orderingQuestions).where(eq(orderingQuestions.id, ordId));
       }
     }
-    
+
+    console.log("Deleting concepts for question", question[0].question);
+    await db.delete(knowledgeZapQuestionsToConcepts).where(eq(knowledgeZapQuestionsToConcepts.questionId, question[0].id));
+
     console.log("Deleting knowledge zap question attempts", question[0].question);
     await db.delete(knowledgeZapQuestionAttempts).where(eq(knowledgeZapQuestionAttempts.questionId, question[0].id));
     

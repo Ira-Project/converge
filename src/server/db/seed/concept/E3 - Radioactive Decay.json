@@ -1,0 +1,281 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "#aK#zs54ceyHHHdTpk7c%",
+    "topicIdProd": "8Y8zrkH2ZP!tAYHECp$ed",
+    "chapter_text": "Here's a summary of the nuclear physics concepts covered, organized into sections with bullet points and LaTeX formatting for formulas:\n\n**1. Nuclear Properties and Notation**\n\n*   **Nucleon:** A proton or neutron.\n*   **Proton Number (Z):** Number of protons in a nucleus.\n*   **Neutron Number (N):** Number of neutrons in a nucleus.\n*   **Nucleon Number (A):** Total number of nucleons (A = Z + N).\n*   **Nuclide:** A nucleus with a specific Z and N.\n*   **Isotopes:** Nuclei of the same element (same Z) but with different N.\n*   **Nuclear Radius:** $R = R_0 A^{1/3}$, where $R_0 = 1.2 \\times 10^{-15}$ m.\n\n**2. Mass Defect and Binding Energy**\n\n*   **Atomic Mass Unit (u):** Defined as 1/12 the mass of a Carbon-12 atom. 1 u = 1.6605402 \u00d7 10<sup>-27</sup> kg.\n*   **Mass Defect (\u00b5):**  The difference between the total mass of individual nucleons and the actual mass of the nucleus: $\\mu = Zm_p + Nm_n - M_{nucleus}$\n*   **Binding Energy (E<sub>b</sub>):** The energy equivalent to the mass defect; the energy required to separate a nucleus into its constituent nucleons: $E_b = \\mu c^2$\n*   **Binding Energy per Nucleon:** A measure of nuclear stability: $b = \\frac{E_b}{A}$.\n\n**3. Nuclear Reactions**\n\n*   **Nuclear Reaction:** A process involving changes in the composition of atomic nuclei.\n*   **Q-value:** The energy released or absorbed in a nuclear reaction: Q = (Total mass of reactants - Total mass of products) \\* c<sup>2</sup>\n*   **Conservation Laws:** Electric charge and nucleon number are conserved in nuclear reactions.\n*   **Distance of Closest Approach:**  $d = \\frac{2kZe^2}{E_k}$\n\n**4. Radioactivity and Radioactive Decay**\n\n*   **Radioactivity:** The spontaneous emission of particles or energy from unstable nuclei.\n*   **Alpha Decay:** Emission of an alpha particle (Helium-4 nucleus).\n*   **Beta Minus Decay:** Emission of an electron and an antineutrino.  A neutron converts to a proton.\n*   **Beta Plus Decay:** Emission of a positron and a neutrino.  A proton converts to a neutron.\n*   **Gamma Decay:** Emission of a gamma ray photon; the nucleus transitions to a lower energy state.\n*   **Decay Series:** A sequence of radioactive decays until a stable nucleus is reached.\n*   **Random and Spontaneous:** Radioactive decay is random (unpredictable) and spontaneous (unaffected by external conditions).\n*   **Half-Life (T<sub>1/2</sub>):** The time required for half of the radioactive nuclei in a sample to decay.\n*   **Decay Constant (\u03bb):** The probability of decay per unit time. $\\lambda = \\frac{0.693}{T_{1/2}}$\n*   **Activity (A):** The rate of decay, measured in Becquerels (Bq): $A = \\lambda N$.  $A = A_0 e^{-\\lambda t}$.\n\n**5. Fundamental Forces**\n\n*   **Electromagnetic Interaction:** Acts on charged particles; infinite range; given by Coulomb's law.\n*   **Strong Nuclear Interaction:** Acts on protons and neutrons, holding them together in the nucleus; short range (\u2248 10<sup>-15</sup> m).\n*   **Weak Nuclear Interaction:** Involved in beta decay; very short range.\n*   **Gravitational Interaction:** Acts on particles with mass; infinite range (but negligible in nuclear physics).\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "924f224f-1020-443f-8306-e4c3edd48efc",
+            "concept_question": "What is a nucleon?",
+            "concept_answer": "A nucleon is either a proton or a neutron.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "968fd018-475d-42ac-9a2b-2f60044994b3",
+            "concept_question": "What is the proton number (Z)?",
+            "concept_answer": "Proton number denotes the count of protons in a nucleus.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "6b6f877d-fe59-4fd3-a5cf-c5e28e7ec501",
+            "concept_question": "What is the neutron number (N)?",
+            "concept_answer": "Neutron number represents the count of neutrons in a nucleus.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "698c325e-68cb-4fd2-bf68-1d538bf4aa32",
+            "concept_question": "What is nucleon number (A)?",
+            "concept_answer": "Nucleon number is the total count of protons and neutrons in a nucleus.",
+            "concept_formula": [
+                "$!$A = Z + N$!$"
+            ],
+            "pre-requisites": [
+                "968fd018-475d-42ac-9a2b-2f60044994b3",
+                "6b6f877d-fe59-4fd3-a5cf-c5e28e7ec501"
+            ]
+        },
+        {
+            "concept_id": "d9a95a29-2c26-4523-b19a-c8af23127ef2",
+            "concept_question": "What is a nuclide?",
+            "concept_answer": "A nuclide denotes a nucleus with specific proton and neutron counts.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "968fd018-475d-42ac-9a2b-2f60044994b3",
+                "6b6f877d-fe59-4fd3-a5cf-c5e28e7ec501"
+            ]
+        },
+        {
+            "concept_id": "b2e9661c-1256-4edf-b012-488471cd2649",
+            "concept_question": "What are isotopes?",
+            "concept_answer": "Isotopes are nuclei of the same element with varied neutron counts.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "968fd018-475d-42ac-9a2b-2f60044994b3",
+                "6b6f877d-fe59-4fd3-a5cf-c5e28e7ec501"
+            ]
+        },
+        {
+            "concept_id": "dce95206-ebda-4e0b-9e1b-f38f70d84ba9",
+            "concept_question": "What is the nuclear radius?",
+            "concept_answer": "Nuclear radius is the effective size of a nucleus derived from its nucleon number.",
+            "concept_formula": [
+                "$!$R = R_0 A^{1/3}$!$",
+                "$!$R_0 = 1.2 \\times 10^{-15} \\text{ m}$!$"
+            ],
+            "pre-requisites": [
+                "698c325e-68cb-4fd2-bf68-1d538bf4aa32"
+            ]
+        },
+        {
+            "concept_id": "a08c69fb-78a5-4e79-9233-d7d261a7a195",
+            "concept_question": "What is an atomic mass unit (u)?",
+            "concept_answer": "An atomic mass unit is defined as one-twelfth the mass of a Carbon-12 atom.",
+            "concept_formula": [
+                "$!$1 u = 1.6605402 \\times 10^{-27} \\text{ kg}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "cb45786b-a5d5-47b1-a902-4291d30aaf7b",
+            "concept_question": "What is mass defect?",
+            "concept_answer": "Mass defect is the difference between the summed nucleon masses and the nucleus mass.",
+            "concept_formula": [
+                "$!$\\mu = Zm_p + Nm_n - M_{nucleus}$!$"
+            ],
+            "pre-requisites": [
+                "968fd018-475d-42ac-9a2b-2f60044994b3",
+                "6b6f877d-fe59-4fd3-a5cf-c5e28e7ec501"
+            ]
+        },
+        {
+            "concept_id": "a17f1813-7759-4295-b484-cac6291dabf9",
+            "concept_question": "What is binding energy?",
+            "concept_answer": "Binding energy is the energy required to disassemble a nucleus into its nucleons.",
+            "concept_formula": [
+                "$!$E_b = \\mu c^2$!$"
+            ],
+            "pre-requisites": [
+                "cb45786b-a5d5-47b1-a902-4291d30aaf7b"
+            ]
+        },
+        {
+            "concept_id": "eb056091-edaf-4802-937e-ac6ef57b640e",
+            "concept_question": "What is binding energy per nucleon?",
+            "concept_answer": "Binding energy per nucleon measures the average energy binding each nucleon in the nucleus.",
+            "concept_formula": [
+                "$!$b = \\frac{E_b}{A}$!$"
+            ],
+            "pre-requisites": [
+                "a17f1813-7759-4295-b484-cac6291dabf9",
+                "698c325e-68cb-4fd2-bf68-1d538bf4aa32"
+            ]
+        },
+        {
+            "concept_id": "eddd3b99-814f-4df2-9061-2a24f3a523a1",
+            "concept_question": "What is the Q-value?",
+            "concept_answer": "Q-value represents the energy released or absorbed in a nuclear reaction.",
+            "concept_formula": [
+                "$!$Q = (M_{reactants} - M_{products}) c^2$!$"
+            ],
+            "pre-requisites": [
+                "cb45786b-a5d5-47b1-a902-4291d30aaf7b"
+            ]
+        },
+        {
+            "concept_id": "3a397913-f491-48fc-b67e-9f46d9e76d13",
+            "concept_question": "What is electric charge conservation in nuclear reactions?",
+            "concept_answer": "Electric charge conservation ensures that the total electric charge remains constant during nuclear reactions.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "968fd018-475d-42ac-9a2b-2f60044994b3",
+                "698c325e-68cb-4fd2-bf68-1d538bf4aa32"
+            ]
+        },
+        {
+            "concept_id": "433924a6-b328-430d-89d5-501601c7dfda",
+            "concept_question": "What is nucleon number conservation in nuclear reactions?",
+            "concept_answer": "Nucleon number conservation ensures that the total number of nucleons (protons and neutrons) remains constant in nuclear reactions.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "968fd018-475d-42ac-9a2b-2f60044994b3",
+                "698c325e-68cb-4fd2-bf68-1d538bf4aa32"
+            ]
+        },
+        {
+            "concept_id": "756ce85c-0489-4c31-ab5e-815190ed432d",
+            "concept_question": "What is the distance of closest approach?",
+            "concept_answer": "It quantifies the minimum separation between colliding charged nuclei.",
+            "concept_formula": [
+                "$!$d = \\frac{2kZe^2}{E_k}$!$"
+            ],
+            "pre-requisites": [
+                "968fd018-475d-42ac-9a2b-2f60044994b3"
+            ]
+        },
+        {
+            "concept_id": "20858360-083f-4e41-9600-cc0be9bb2194",
+            "concept_question": "What is radioactivity?",
+            "concept_answer": "Radioactivity is the spontaneous emission of particles or energy from unstable nuclei.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "954bb862-7130-4187-aa70-d8235e49a204",
+            "concept_question": "What is alpha decay?",
+            "concept_answer": "Alpha decay is the emission of a Helium-4 nucleus from an unstable atom.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "20858360-083f-4e41-9600-cc0be9bb2194"
+            ]
+        },
+        {
+            "concept_id": "85820ba4-a3f1-42ca-85dc-d391479457c4",
+            "concept_question": "What is gamma decay?",
+            "concept_answer": "Gamma decay is the emission of high-energy photons from a nucleus.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "20858360-083f-4e41-9600-cc0be9bb2194"
+            ]
+        },
+        {
+            "concept_id": "55b106e9-eadb-4bc8-b251-fb427e533dbf",
+            "concept_question": "What is a decay series?",
+            "concept_answer": "A decay series is a sequence of decays leading to a stable nucleus.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "20858360-083f-4e41-9600-cc0be9bb2194"
+            ]
+        },
+        {
+            "concept_id": "36a5bc4f-0393-4681-a488-f093610cdd33",
+            "concept_question": "What is random decay in radioactive disintegration?",
+            "concept_answer": "Random decay refers to the unpredictable timing of individual radioactive decay events.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "20858360-083f-4e41-9600-cc0be9bb2194"
+            ]
+        },
+        {
+            "concept_id": "da44696f-b1c4-41a2-8c22-6f85eca8f880",
+            "concept_question": "What is spontaneous decay in radioactive disintegration?",
+            "concept_answer": "Spontaneous decay denotes that radioactive disintegration occurs without external triggers.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "20858360-083f-4e41-9600-cc0be9bb2194"
+            ]
+        },
+        {
+            "concept_id": "ee32cb2b-386d-44a5-967d-83065fc7128a",
+            "concept_question": "What is half-life (T_{1/2})?",
+            "concept_answer": "Half-life is the period in which half of the radioactive nuclei decay.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "20858360-083f-4e41-9600-cc0be9bb2194"
+            ]
+        },
+        {
+            "concept_id": "4a96e678-9acd-4cc8-8563-b2cf4e679b6d",
+            "concept_question": "What is the decay constant (\\lambda)?",
+            "concept_answer": "Decay constant quantifies the probability of decay per unit time.",
+            "concept_formula": [
+                "$!$\\lambda = \\frac{0.693}{T_{1/2}}$!$"
+            ],
+            "pre-requisites": [
+                "ee32cb2b-386d-44a5-967d-83065fc7128a"
+            ]
+        },
+        {
+            "concept_id": "25c877b8-9a98-41c4-9844-addf85fe40a5",
+            "concept_question": "What is activity in radioactivity?",
+            "concept_answer": "Activity is the measure of decay rate of radioactive nuclei in a sample.",
+            "concept_formula": [
+                "$!$A = \\lambda N$!$",
+                "$!$A = A_0 e^{-\\lambda t}$!$"
+            ],
+            "pre-requisites": [
+                "4a96e678-9acd-4cc8-8563-b2cf4e679b6d",
+                "20858360-083f-4e41-9600-cc0be9bb2194"
+            ]
+        },
+        {
+            "concept_id": "3f41bd4d-0e4f-41f8-9e73-4cf7f2352b75",
+            "concept_question": "What is the electromagnetic interaction?",
+            "concept_answer": "Electromagnetic interaction acts on charged particles over an infinite range via Coulomb's law.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "11de036c-26e9-4d80-a3e2-6adac1134ffe",
+            "concept_question": "What is strong nuclear interaction?",
+            "concept_answer": "Strong nuclear interaction binds protons and neutrons in the nucleus at short range.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "924f224f-1020-443f-8306-e4c3edd48efc"
+            ]
+        },
+        {
+            "concept_id": "c08025d2-5dff-491c-b2cf-ca9902dcb3df",
+            "concept_question": "What is weak nuclear interaction (part 1)?",
+            "concept_answer": "Weak nuclear interaction is one of the four fundamental forces and is responsible for mediating beta decay.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "939c2534-cb88-4f85-99e4-d08fab370138",
+            "concept_question": "What is weak nuclear interaction (part 2)?",
+            "concept_answer": "It operates at a very short range and plays a crucial role in the transformation of nucleons.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "c7f6b073-2d16-4c01-b254-3d6b0da68e1a",
+            "concept_question": "What is gravitational interaction?",
+            "concept_answer": "Gravitational interaction acts on mass over an infinite range, though it is negligible in nuclear physics.",
+            "concept_formula": [],
+            "pre-requisites": []
+        }
+    ]
+}

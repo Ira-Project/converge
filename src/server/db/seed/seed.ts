@@ -19,6 +19,7 @@ import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "
 import { migrateActivityTypeToText } from "./otherSeed";
 import { addConceptsToQuestions, createLearnByTeachingAssignment } from "./learnByTeaching/learnByTeaching-seed";
 import { createTopics } from "./topics/topic-seed";
+import { createConcepts } from "./concept/concept-seed";
 
 if(process.env.ENVIRONMENT === "prod") {
   console.log("WARNING: Running in production");
@@ -29,18 +30,47 @@ if(process.env.ENVIRONMENT === "prod") {
   }
 }
 
-
 // ADD ACTIVITIES TO CLASSROOMS
 // THIS SHOULD NEVER BE NECESSARY. ONLY HERE FOR EMERGENCY PURPOSES
 // await addActivitiesClassrooms();
+
+// TOPIC CREATION
+// await createTopics();
+
+// CONCEPT CREATION
+// await createConcepts("A1 - Kinematics");
+await createConcepts("A2 - Forces and Momentum");
+await createConcepts("A3 - Work, Energy and Power");
+await createConcepts("A4 - Rigid Body Mechanics");
+await createConcepts("A5 - Galilean and Special Relativity");
+await createConcepts("B1 - Thermal Energy Transfers");
+await createConcepts("B2 - Greenhouse Effect");
+await createConcepts("B3 - Gas Laws");
+await createConcepts("B4 - Thermodynamics");
+await createConcepts("B5 - Current and Circuits");
+await createConcepts("C1 - Simple Harmonic Motion");
+await createConcepts("C2 - Wave Model");
+await createConcepts("C3 - Wave Phenomena");
+await createConcepts("C4 - Standing Waves and Resonance");
+await createConcepts("C5 - Doppler Effect");
+await createConcepts("D1 - Gravitational Fields");
+await createConcepts("D2 - Electric and Magnetic Fields");
+await createConcepts("D3 - Motion in Electric and Magnetic Fields");
+await createConcepts("D4 - Electromagnetic Induction");
+await createConcepts("E1 - Structure of the Atom");
+await createConcepts("E2 - Quantum Physics");
+await createConcepts("E3 - Radioactive Decay");
+await createConcepts("E4 - Fission");
+await createConcepts("E5 - Fusion and Stars");
+
 
 // LEARN BY TEACHING CREATION
 // await createLearnByTeachingAssignment();
 // await addConceptsToQuestions();
 
 // KNOWLEDGE ZAP CREATION
-// await deleteKnowledgeZapAssignment("zf5w5pkx1bpjtp827uewh");
-// await createKnowledgeZapAssignment();
+// await deleteKnowledgeZapAssignment("6oiy9qk31wjmx0eejo6hs");
+// await createKnowledgeZapAssignment("kinematics");
 // await computeQuestionsCompleted();
 
 // REASONING CREATION
@@ -65,6 +95,3 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // MIGRATE ACTIVITY TYPE TO TEXT
 // await migrateActivityTypeToText();
-
-// TOPIC CREATION
-// await createTopics();

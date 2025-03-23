@@ -1,0 +1,554 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "xB&U#q1&0Qaov3zUldfUv",
+    "topicIdProd": "d#i79@qqpjlXNH3mHF0zL",
+    "chapter_text": "Here's a breakdown of the concepts and formulas from the document, organized for clarity:\n\n**7.  Thermal Energy Transfers**\n\n*   Thermal energy (heat) transfer: the process by which thermal energy moves from one place to another.\n\n**7.1 Particles, Temperature, and Energy**\n\n*   States of matter: solid, liquid, and gas.\n*   Density: Mass per unit volume.\n\n    *   Formula:  `\u03c1 = m/V`\n*   Temperature:  Related to the average random kinetic energy of molecules.\n*   Absolute Temperature Scale (Kelvin): Temperature scale where zero is the lowest possible temperature.\n*   Celsius-Kelvin Conversion:\n\n    *   Formula: `T (in kelvin) = T (in degrees Celsius) + 273`\n*   Average Kinetic Energy:\n\n    *   Formula: `E_k = (3/2) kT` (where k is the Boltzmann constant)\n*   Boltzmann constant: A constant that shows the relationship between temperature and kinetic energy.\n*   Thermal energy (heat): The energy that gets transferred from one body to another as a result of a temperature difference.\n*   Internal energy:  The total random kinetic energy of the particles of a substance plus the total intermolecular potential energy of the particles.\n\n    *   Formula: `U = total random kinetic energy + total intermolecular potential energy`\n\n**7.2 Specific Heat Capacity and Change of Phase**\n\n*   Specific heat capacity: Energy required to increase the temperature of a unit mass of the body by one Kelvin.\n*   Heat Transfer Formula:\n\n    *   Formula: `Q = mc\u0394T`\n*   Latent heat:  The energy supplied or removed during a phase change.\n*   Specific latent heat:  The energy required to change the phase of 1 kg of a substance at constant temperature and pressure.\n*   Formula for Heat Transfer during Phase Change:\n\n    *   Formula: `Q = mL` (where L is the specific latent heat)\n    *   Specific Latent heat of fusion: `L_F` (melting or freezing)\n    *   Specific Latent heat of vaporisation: `L_V` (vaporisation or condensation)\n*   Change of Phase: Melting, Freezing, Vaporisation (Boiling), Condensation, Evaporation.\n*   Calorimetry: The method of mixture uses the concept of heat gained being equivalent to the heat lost by the bodies involved.\n\n**7.3 Thermal Energy Transfer**\n\n*   Methods of thermal energy transfer: Conduction, Convection, Radiation.\n*   Conduction: The transfer of energy through a material due to a temperature difference.\n\n    *   Formula: `\u0394Q/\u0394t = k A (\u0394T/\u0394x)`\n*   Convection: Energy transfer due to the movement of fluids (liquids or gases).\n*   Radiation: Energy transfer through electromagnetic waves.\n*   Stefan-Boltzmann Law: Describes the power radiated by a black body.\n\n    *   Formula: `P = \u03c3AT^4`\n*   Stefan-Boltzmann constant: `\u03c3 = 5.67 x 10^{-8} W m^{-2} K^{-4}`.\n*   Radiated intensity: `I = P/A = \u03c3T^4`.\n*   Wien's Law: Relates the peak wavelength of emitted radiation to the temperature.\n\n    *   Formula: `\u03bb_{max} T = 2.90 \u00d7 10^{-3} K m`\n\n**Luminosity and Apparent Brightness**\n\n*   Apparent brightness:\n\n    *   Formula: `b = L / (4\u03c0 d^2)`\n*   Luminosity:\n\n    *   Formula: `L = \u03c3 A T^4`\n\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "8060aa05-e567-41e1-8edd-da22c8668931",
+            "concept_question": "What are the states of matter? (Overview)",
+            "concept_answer": "States of matter include solids, liquids, and gases. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "8ff89171-011b-4ea7-9369-f11f13336370",
+            "concept_question": "What are the states of matter? (Details)",
+            "concept_answer": "States of matter include solids, liquids, and gases. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "6aec407c-4a58-468f-b028-3864f34ec7c9",
+            "concept_question": "What is density? (Overview)",
+            "concept_answer": "Density is defined as mass per unit volume. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "5211f263-61a4-4200-a1a4-df0e1d5f78bc",
+            "concept_question": "What is density? (Details)",
+            "concept_answer": "Density is defined as mass per unit volume. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$\\u03c1 = \\frac{m}{V}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+            "concept_question": "What is temperature? (Overview)",
+            "concept_answer": "Temperature measures the average random kinetic energy of molecules. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b",
+            "concept_question": "What is temperature? (Details)",
+            "concept_answer": "Temperature measures the average random kinetic energy of molecules. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e977e44f-cd21-4675-92d6-5786ba77265c",
+            "concept_question": "What is the Kelvin scale? (Overview)",
+            "concept_answer": "The Kelvin scale is an absolute temperature scale with zero as the minimum temperature. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+                "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b"
+            ]
+        },
+        {
+            "concept_id": "f8b47627-f15d-4a90-aaa8-8455a930f579",
+            "concept_question": "What is the Kelvin scale? (Details)",
+            "concept_answer": "The Kelvin scale is an absolute temperature scale with zero as the minimum temperature. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+                "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b"
+            ]
+        },
+        {
+            "concept_id": "c6bf6d0a-28fa-49be-b9a9-78e246403dae",
+            "concept_question": "What is Celsius-Kelvin conversion? (Overview)",
+            "concept_answer": "Celsius-Kelvin conversion adds 273 to the Celsius temperature to obtain the Kelvin temperature. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e977e44f-cd21-4675-92d6-5786ba77265c",
+                "f8b47627-f15d-4a90-aaa8-8455a930f579"
+            ]
+        },
+        {
+            "concept_id": "9c067b29-5b92-4476-b2d5-d21d8461c543",
+            "concept_question": "What is Celsius-Kelvin conversion? (Details)",
+            "concept_answer": "Celsius-Kelvin conversion adds 273 to the Celsius temperature to obtain the Kelvin temperature. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$T_{K} = T_{C} + 273$!$"
+            ],
+            "pre-requisites": [
+                "e977e44f-cd21-4675-92d6-5786ba77265c",
+                "f8b47627-f15d-4a90-aaa8-8455a930f579"
+            ]
+        },
+        {
+            "concept_id": "f857b477-089b-49c4-9799-2ddfedff841b",
+            "concept_question": "What is average kinetic energy? (Overview)",
+            "concept_answer": "Average kinetic energy is directly proportional to temperature when scaled by the Boltzmann constant. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+                "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b",
+                "93533c58-3c32-44f2-8382-e9d53dab5d1e",
+                "16dba40a-fac8-457f-a4af-f634cd7348ca"
+            ]
+        },
+        {
+            "concept_id": "a852a496-e4e5-447f-a0de-1eb60c3de179",
+            "concept_question": "What is average kinetic energy? (Details)",
+            "concept_answer": "Average kinetic energy is directly proportional to temperature when scaled by the Boltzmann constant. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$E_k = \\frac{3}{2} kT$!$"
+            ],
+            "pre-requisites": [
+                "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+                "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b",
+                "93533c58-3c32-44f2-8382-e9d53dab5d1e",
+                "16dba40a-fac8-457f-a4af-f634cd7348ca"
+            ]
+        },
+        {
+            "concept_id": "93533c58-3c32-44f2-8382-e9d53dab5d1e",
+            "concept_question": "What is the Boltzmann constant? (Overview)",
+            "concept_answer": "The Boltzmann constant relates temperature to the average kinetic energy of particles. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "16dba40a-fac8-457f-a4af-f634cd7348ca",
+            "concept_question": "What is the Boltzmann constant? (Details)",
+            "concept_answer": "The Boltzmann constant relates temperature to the average kinetic energy of particles. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+            "concept_question": "What is thermal energy? (Overview)",
+            "concept_answer": "Thermal energy is the energy exchanged between bodies due to temperature differences. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+                "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b"
+            ]
+        },
+        {
+            "concept_id": "c867bd45-8808-4e66-b140-f9357a9af1ea",
+            "concept_question": "What is thermal energy? (Details)",
+            "concept_answer": "Thermal energy is the energy exchanged between bodies due to temperature differences. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+                "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b"
+            ]
+        },
+        {
+            "concept_id": "edd1c70d-ee41-4cd1-986d-fcab541e17c1",
+            "concept_question": "What is internal energy? (Overview)",
+            "concept_answer": "Internal energy is the sum of a substance's random kinetic energy and intermolecular potential energy. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f857b477-089b-49c4-9799-2ddfedff841b",
+                "a852a496-e4e5-447f-a0de-1eb60c3de179"
+            ]
+        },
+        {
+            "concept_id": "6505b95e-3f81-4f98-b371-6ea8d78d84c6",
+            "concept_question": "What is internal energy? (Details)",
+            "concept_answer": "Internal energy is the sum of a substance's random kinetic energy and intermolecular potential energy. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$U = \\text{total random kinetic energy} + \\text{total intermolecular potential energy}$!$"
+            ],
+            "pre-requisites": [
+                "f857b477-089b-49c4-9799-2ddfedff841b",
+                "a852a496-e4e5-447f-a0de-1eb60c3de179"
+            ]
+        },
+        {
+            "concept_id": "9414abbf-4451-4fb2-8108-34d36766c93b",
+            "concept_question": "What is specific heat capacity? (Overview)",
+            "concept_answer": "Specific heat capacity is the energy required to raise the temperature of a unit mass by one Kelvin. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "41c41e12-90ac-4147-8422-ecac5667f6f1",
+            "concept_question": "What is specific heat capacity? (Details)",
+            "concept_answer": "Specific heat capacity is the energy required to raise the temperature of a unit mass by one Kelvin. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "37311d71-ac69-4671-b3fb-d1cd599ada1e",
+            "concept_question": "What is the heat transfer formula? (Overview)",
+            "concept_answer": "The heat transfer formula expresses that heat energy equals mass times specific heat capacity times temperature change. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "9414abbf-4451-4fb2-8108-34d36766c93b",
+                "41c41e12-90ac-4147-8422-ecac5667f6f1"
+            ]
+        },
+        {
+            "concept_id": "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9",
+            "concept_question": "What is the heat transfer formula? (Details)",
+            "concept_answer": "The heat transfer formula expresses that heat energy equals mass times specific heat capacity times temperature change. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$Q = mc\\Delta T$!$"
+            ],
+            "pre-requisites": [
+                "9414abbf-4451-4fb2-8108-34d36766c93b",
+                "41c41e12-90ac-4147-8422-ecac5667f6f1"
+            ]
+        },
+        {
+            "concept_id": "6ae055e6-98bd-4941-b023-af0ebcf1e22a",
+            "concept_question": "What is latent heat? (Overview)",
+            "concept_answer": "Latent heat is the energy absorbed or released during a phase change without a temperature change. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "89123920-4cc8-4ad5-a117-fc6d04ad3391",
+            "concept_question": "What is latent heat? (Details)",
+            "concept_answer": "Latent heat is the energy absorbed or released during a phase change without a temperature change. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "25de110a-158d-49f4-a3c5-0de197577985",
+            "concept_question": "What is specific latent heat? (Overview)",
+            "concept_answer": "Specific latent heat is the energy needed to change the phase of one kilogram of a substance at constant temperature and pressure. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6ae055e6-98bd-4941-b023-af0ebcf1e22a",
+                "89123920-4cc8-4ad5-a117-fc6d04ad3391"
+            ]
+        },
+        {
+            "concept_id": "ff540f33-ab3a-4a6d-9110-c110b3b4ca81",
+            "concept_question": "What is specific latent heat? (Details)",
+            "concept_answer": "Specific latent heat is the energy needed to change the phase of one kilogram of a substance at constant temperature and pressure. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6ae055e6-98bd-4941-b023-af0ebcf1e22a",
+                "89123920-4cc8-4ad5-a117-fc6d04ad3391"
+            ]
+        },
+        {
+            "concept_id": "541f6794-20f4-4434-9401-d7c197ac3d5f",
+            "concept_question": "What is the phase change heat transfer formula? (Overview)",
+            "concept_answer": "The phase change heat transfer formula shows that heat transferred equals mass multiplied by specific latent heat. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "25de110a-158d-49f4-a3c5-0de197577985",
+                "ff540f33-ab3a-4a6d-9110-c110b3b4ca81"
+            ]
+        },
+        {
+            "concept_id": "17837b86-984f-4bc9-9bdc-22a99995ea2b",
+            "concept_question": "What is the phase change heat transfer formula? (Details)",
+            "concept_answer": "The phase change heat transfer formula shows that heat transferred equals mass multiplied by specific latent heat. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$Q = mL$!$"
+            ],
+            "pre-requisites": [
+                "25de110a-158d-49f4-a3c5-0de197577985",
+                "ff540f33-ab3a-4a6d-9110-c110b3b4ca81"
+            ]
+        },
+        {
+            "concept_id": "0ebadb69-7956-4b19-8653-2397f3b32929",
+            "concept_question": "What is specific latent heat of fusion? (Overview)",
+            "concept_answer": "Specific latent heat of fusion is the energy required per kilogram for melting or freezing a substance. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "25de110a-158d-49f4-a3c5-0de197577985",
+                "ff540f33-ab3a-4a6d-9110-c110b3b4ca81"
+            ]
+        },
+        {
+            "concept_id": "92191722-515b-4dd6-a10e-2eabada8e32c",
+            "concept_question": "What is specific latent heat of fusion? (Details)",
+            "concept_answer": "Specific latent heat of fusion is the energy required per kilogram for melting or freezing a substance. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "25de110a-158d-49f4-a3c5-0de197577985",
+                "ff540f33-ab3a-4a6d-9110-c110b3b4ca81"
+            ]
+        },
+        {
+            "concept_id": "91a55154-ea96-4920-a50a-3db9a6b41026",
+            "concept_question": "What is specific latent heat of vaporisation? (Overview)",
+            "concept_answer": "Specific latent heat of vaporisation is the energy required per kilogram for vaporising or condensing a substance. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "25de110a-158d-49f4-a3c5-0de197577985",
+                "ff540f33-ab3a-4a6d-9110-c110b3b4ca81"
+            ]
+        },
+        {
+            "concept_id": "853143a5-9718-4600-adae-73ab3212a830",
+            "concept_question": "What is specific latent heat of vaporisation? (Details)",
+            "concept_answer": "Specific latent heat of vaporisation is the energy required per kilogram for vaporising or condensing a substance. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "25de110a-158d-49f4-a3c5-0de197577985",
+                "ff540f33-ab3a-4a6d-9110-c110b3b4ca81"
+            ]
+        },
+        {
+            "concept_id": "e47ccd3a-7157-4ee3-83e7-67c329486e3f",
+            "concept_question": "What is calorimetry? (Overview)",
+            "concept_answer": "Calorimetry is the measurement of heat transfer based on the principle that heat lost equals heat gained. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+                "c867bd45-8808-4e66-b140-f9357a9af1ea"
+            ]
+        },
+        {
+            "concept_id": "84327880-f215-4bf0-92b9-4d10a0189c1a",
+            "concept_question": "What is calorimetry? (Details)",
+            "concept_answer": "Calorimetry is the measurement of heat transfer based on the principle that heat lost equals heat gained. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+                "c867bd45-8808-4e66-b140-f9357a9af1ea"
+            ]
+        },
+        {
+            "concept_id": "2f9b0c6b-d335-474b-ba49-9078cb7aad3d",
+            "concept_question": "What are thermal energy transfer methods? (Overview)",
+            "concept_answer": "Thermal energy can be transferred via conduction, convection, or radiation. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+                "c867bd45-8808-4e66-b140-f9357a9af1ea"
+            ]
+        },
+        {
+            "concept_id": "07190bc0-6463-4426-ab9d-93bc6c840256",
+            "concept_question": "What are thermal energy transfer methods? (Details)",
+            "concept_answer": "Thermal energy can be transferred via conduction, convection, or radiation. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+                "c867bd45-8808-4e66-b140-f9357a9af1ea"
+            ]
+        },
+        {
+            "concept_id": "7e25342a-7d29-44ff-91f7-dda4767e1e53",
+            "concept_question": "What is conduction? (Overview)",
+            "concept_answer": "Conduction is the transfer of thermal energy through a material due to a temperature difference. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+                "c867bd45-8808-4e66-b140-f9357a9af1ea"
+            ]
+        },
+        {
+            "concept_id": "e075d8d7-9476-4a4e-a2d6-d0d08daf9484",
+            "concept_question": "What is conduction? (Details)",
+            "concept_answer": "Conduction is the transfer of thermal energy through a material due to a temperature difference. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$\\frac{\\Delta Q}{\\Delta t} = kA\\frac{\\Delta T}{\\Delta x}$!$"
+            ],
+            "pre-requisites": [
+                "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+                "c867bd45-8808-4e66-b140-f9357a9af1ea"
+            ]
+        },
+        {
+            "concept_id": "2c2384ad-7dcc-45c1-9ec7-371ddc9f7f63",
+            "concept_question": "What is convection? (Overview)",
+            "concept_answer": "Convection is the transfer of thermal energy due to the movement of fluids. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+                "c867bd45-8808-4e66-b140-f9357a9af1ea"
+            ]
+        },
+        {
+            "concept_id": "a771f330-9358-4a6b-8b37-2e1921ed041c",
+            "concept_question": "What is convection? (Details)",
+            "concept_answer": "Convection is the transfer of thermal energy due to the movement of fluids. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+                "c867bd45-8808-4e66-b140-f9357a9af1ea"
+            ]
+        },
+        {
+            "concept_id": "bd8eb247-88f4-4838-8d30-63b099c89af5",
+            "concept_question": "What is radiation? (Overview)",
+            "concept_answer": "Radiation is the transfer of thermal energy through electromagnetic waves. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+                "c867bd45-8808-4e66-b140-f9357a9af1ea"
+            ]
+        },
+        {
+            "concept_id": "45f635fb-9f48-40fd-b3d4-b8d35f05abc0",
+            "concept_question": "What is radiation? (Details)",
+            "concept_answer": "Radiation is the transfer of thermal energy through electromagnetic waves. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb3efcb3-cb51-4ae5-9e44-b8ac34fc899a",
+                "c867bd45-8808-4e66-b140-f9357a9af1ea"
+            ]
+        },
+        {
+            "concept_id": "5acfffeb-fd01-4402-a3a7-3abc5766789a",
+            "concept_question": "What is the Stefan-Boltzmann Law? (Overview)",
+            "concept_answer": "The Stefan-Boltzmann Law states that a black body's radiated power is proportional to its area and temperature raised to the fourth power. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bd8eb247-88f4-4838-8d30-63b099c89af5",
+                "45f635fb-9f48-40fd-b3d4-b8d35f05abc0",
+                "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+                "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b"
+            ]
+        },
+        {
+            "concept_id": "24ae2b53-8791-43f2-912d-9283b7a97b08",
+            "concept_question": "What is the Stefan-Boltzmann Law? (Details)",
+            "concept_answer": "The Stefan-Boltzmann Law states that a black body's radiated power is proportional to its area and temperature raised to the fourth power. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$P = \\sigma A T^4$!$"
+            ],
+            "pre-requisites": [
+                "bd8eb247-88f4-4838-8d30-63b099c89af5",
+                "45f635fb-9f48-40fd-b3d4-b8d35f05abc0",
+                "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+                "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b"
+            ]
+        },
+        {
+            "concept_id": "831866b7-e71e-4652-bf1c-801b9af94da3",
+            "concept_question": "What is the Stefan-Boltzmann constant? (Overview)",
+            "concept_answer": "The Stefan-Boltzmann constant is the proportionality factor in the Stefan-Boltzmann Law. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5acfffeb-fd01-4402-a3a7-3abc5766789a",
+                "24ae2b53-8791-43f2-912d-9283b7a97b08"
+            ]
+        },
+        {
+            "concept_id": "d04b93cd-98be-4620-8d05-f832c30fb249",
+            "concept_question": "What is the Stefan-Boltzmann constant? (Details)",
+            "concept_answer": "The Stefan-Boltzmann constant is the proportionality factor in the Stefan-Boltzmann Law. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$\\sigma = 5.67 \\times 10^{-8} \\;W\\,m^{-2}\\,K^{-4}$!$"
+            ],
+            "pre-requisites": [
+                "5acfffeb-fd01-4402-a3a7-3abc5766789a",
+                "24ae2b53-8791-43f2-912d-9283b7a97b08"
+            ]
+        },
+        {
+            "concept_id": "e6c13bd4-1dbd-4975-90a3-064cb4f6b4af",
+            "concept_question": "What is radiated intensity? (Overview)",
+            "concept_answer": "Radiated intensity is the power radiated per unit area of a surface. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5acfffeb-fd01-4402-a3a7-3abc5766789a",
+                "24ae2b53-8791-43f2-912d-9283b7a97b08",
+                "bd8eb247-88f4-4838-8d30-63b099c89af5",
+                "45f635fb-9f48-40fd-b3d4-b8d35f05abc0"
+            ]
+        },
+        {
+            "concept_id": "b0ad1633-e25d-4572-ae32-9ff8680691a6",
+            "concept_question": "What is radiated intensity? (Details)",
+            "concept_answer": "Radiated intensity is the power radiated per unit area of a surface. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$I = \\frac{P}{A} = \\sigma T^4$!$"
+            ],
+            "pre-requisites": [
+                "5acfffeb-fd01-4402-a3a7-3abc5766789a",
+                "24ae2b53-8791-43f2-912d-9283b7a97b08",
+                "bd8eb247-88f4-4838-8d30-63b099c89af5",
+                "45f635fb-9f48-40fd-b3d4-b8d35f05abc0"
+            ]
+        },
+        {
+            "concept_id": "9cf0d6bf-10d4-41c6-9e08-198a5cd6b517",
+            "concept_question": "What is Wien's Law? (Overview)",
+            "concept_answer": "Wien's Law states that the product of the peak wavelength and temperature of radiation is constant. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+                "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b",
+                "bd8eb247-88f4-4838-8d30-63b099c89af5",
+                "45f635fb-9f48-40fd-b3d4-b8d35f05abc0"
+            ]
+        },
+        {
+            "concept_id": "f1c4066c-4c32-46d1-bb09-f3b36a2b6e1f",
+            "concept_question": "What is Wien's Law? (Details)",
+            "concept_answer": "Wien's Law states that the product of the peak wavelength and temperature of radiation is constant. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$\\lambda_{max} T = 2.90 \\times 10^{-3} \\;K\\,m$!$"
+            ],
+            "pre-requisites": [
+                "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00",
+                "aaaa66ff-88bd-4e46-97ba-b1dfa37cee7b",
+                "bd8eb247-88f4-4838-8d30-63b099c89af5",
+                "45f635fb-9f48-40fd-b3d4-b8d35f05abc0"
+            ]
+        },
+        {
+            "concept_id": "3a7c0617-9b8f-4746-8fa9-395c3cab2f06",
+            "concept_question": "What is apparent brightness? (Overview)",
+            "concept_answer": "Apparent brightness is the observed brightness of an object which decreases with the square of the distance. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3973d4bd-2321-4508-855e-0d5dc5fbadeb",
+                "6ea3238f-0ad7-40ca-a7d4-56d8d3cf4714"
+            ]
+        },
+        {
+            "concept_id": "4f7844a5-e4ba-4cbb-b22e-fd96c13515c8",
+            "concept_question": "What is apparent brightness? (Details)",
+            "concept_answer": "Apparent brightness is the observed brightness of an object which decreases with the square of the distance. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$b = \\frac{L}{4\\pi d^2}$!$"
+            ],
+            "pre-requisites": [
+                "3973d4bd-2321-4508-855e-0d5dc5fbadeb",
+                "6ea3238f-0ad7-40ca-a7d4-56d8d3cf4714"
+            ]
+        },
+        {
+            "concept_id": "3973d4bd-2321-4508-855e-0d5dc5fbadeb",
+            "concept_question": "What is luminosity? (Overview)",
+            "concept_answer": "Luminosity is the total power radiated by an object. (Basic explanation)",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5acfffeb-fd01-4402-a3a7-3abc5766789a",
+                "24ae2b53-8791-43f2-912d-9283b7a97b08"
+            ]
+        },
+        {
+            "concept_id": "6ea3238f-0ad7-40ca-a7d4-56d8d3cf4714",
+            "concept_question": "What is luminosity? (Details)",
+            "concept_answer": "Luminosity is the total power radiated by an object. (Detailed discussion including formulas and further insights)",
+            "concept_formula": [
+                "$!$L = \\sigma A T^4$!$"
+            ],
+            "pre-requisites": [
+                "5acfffeb-fd01-4402-a3a7-3abc5766789a",
+                "24ae2b53-8791-43f2-912d-9283b7a97b08"
+            ]
+        }
+    ]
+}

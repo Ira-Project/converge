@@ -1,0 +1,135 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "jGq2pLck5WZenzqtNaKpi",
+    "topicIdProd": "0mtgwrql1g9cb4mxjoo3l",
+    "chapter_text": "Here are the concepts covered in the text, organized into sections:\n\n**1. Radiation from Real Bodies**\n\n*   **Emissivity (e):** A measure of how well a real body radiates compared to a black body at the same temperature. It's a value between 0 and 1.\n\n*   **Intensity (I):** The power radiated per unit area.  Formula: \\(I = \\epsilon \\sigma T^4\\)\n\n*   **Albedo (\u03b1):** The ratio of the reflected intensity (or power) to the incident intensity (or power). It's a measure of how reflective a body is.\n\n    *   Relationship between emissivity and albedo: \\(\\epsilon + \\alpha = 1\\) (for bodies that only absorb or reflect)\n    \n*   **Net Power Radiated (Pnet):**  The rate at which energy leaves the body, considering both emission and absorption from surroundings at temperature \\(T_s\\). Formula: \\(P_{net} = \\epsilon \\sigma A(T^4 - T_s^4)\\)\n\n**2. Solar Constant and Earth's Energy Balance**\n\n*   **Solar Constant (S):** The intensity of solar radiation at the top of the earth's atmosphere, approximately 1400 W m\u207b\u00b2.\n\n*   **Intensity (I):** General definition as power per unit area: \\(I = \\frac{P}{4 \\pi d^2}\\)\n\n*   **Average Intensity Received by Earth (\\(I_{av}\\)):** Accounting for the Earth's spherical shape, it's one-fourth of the solar constant. Formula:  \\(I_{av} = (1 - \\alpha)\\frac{S}{4}\\)\n\n*   **Energy Balance Equation:** At equilibrium, the intensity received by the earth equals the intensity radiated by the earth.\n    * The intensity radiated = \\(\\sigma T^4\\)\n* **Equilibrium Temperature of the earth:** The temperature attained when energy input equals energy output.\n\n**3. Greenhouse Effect**\n\n*   **Greenhouse Effect:** Warming of the earth due to the absorption and re-radiation of infrared radiation by greenhouse gases in the atmosphere.\n\n*   **Greenhouse Gases:** Gases in the atmosphere that absorb infrared radiation (e.g., water vapor, carbon dioxide, methane, nitrous oxide).\n\n*   **Enhanced Greenhouse Effect:** Additional warming due to increased concentrations of greenhouse gases from human activities.\n\n*   **Mechanism of Photon Absorption:** Greenhouse gases absorb infrared photons, become excited, and then re-emit photons in all directions, including back towards the earth.\n\n    *   **Resonance:**  Photons are absorbed when their frequency matches the natural frequency of oscillation of the greenhouse gas molecules.",
+    "chapter_concepts": [
+        {
+            "concept_id": "a83c5f2e-c2d2-4381-9ccd-58212da2172b",
+            "concept_question": "What is emissivity?",
+            "concept_answer": "It measures how efficiently a body radiates compared to a black body and ranges from 0 to 1.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "adcc2680-ace0-48fc-a717-77d13f0c5743",
+            "concept_question": "What is intensity from real bodies?",
+            "concept_answer": "It is the power radiated per unit area from a body.",
+            "concept_formula": [
+                "$!$I = \\epsilon \\sigma T^4$!$"
+            ],
+            "pre-requisites": [
+                "a83c5f2e-c2d2-4381-9ccd-58212da2172b"
+            ]
+        },
+        {
+            "concept_id": "d92482b7-8562-4293-b4e3-92db7d81228c",
+            "concept_question": "What is albedo?",
+            "concept_answer": "It is the ratio of reflected to incident radiation intensity.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f2ae270b-19b5-46d8-b861-ab26bf76266d",
+            "concept_question": "What is the emissivity-albedo relationship?",
+            "concept_answer": "For bodies that only absorb or reflect, emissivity and albedo sum to one.",
+            "concept_formula": [
+                "$!$\\epsilon + \\alpha = 1$!$"
+            ],
+            "pre-requisites": [
+                "a83c5f2e-c2d2-4381-9ccd-58212da2172b",
+                "d92482b7-8562-4293-b4e3-92db7d81228c"
+            ]
+        },
+        {
+            "concept_id": "e3a5ec68-44b5-4731-ba26-1e6d6d1e4970",
+            "concept_question": "What is net power radiated?",
+            "concept_answer": "It is the rate at which energy leaves a body considering emission and absorption.",
+            "concept_formula": [
+                "$!$P_{net} = \\epsilon \\sigma A (T^4 - T_s^4)$!$"
+            ],
+            "pre-requisites": [
+                "a83c5f2e-c2d2-4381-9ccd-58212da2172b",
+                "adcc2680-ace0-48fc-a717-77d13f0c5743"
+            ]
+        },
+        {
+            "concept_id": "e8d4c5ce-4c7a-4d7c-961e-4d854e7f5cda",
+            "concept_question": "What is the solar constant?",
+            "concept_answer": "It is the intensity of solar radiation at the top of Earth's atmosphere, approximately 1400 W m\u207b\u00b2.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "36d01e80-5406-44df-8bc5-5b9a6caaca1f",
+            "concept_question": "What is general intensity?",
+            "concept_answer": "It is the power per unit area calculated by dividing total power by the surface area of a sphere.",
+            "concept_formula": [
+                "$!$I = \\frac{P}{4 \\pi d^2}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "cb2ae0e5-1e89-4f8d-8848-9873f4991312",
+            "concept_question": "What is Earth's average intensity?",
+            "concept_answer": "It is the absorbed solar intensity averaged over Earth's surface accounting for albedo.",
+            "concept_formula": [
+                "$!$I_{av} = (1-\\alpha)\\frac{S}{4}$!$"
+            ],
+            "pre-requisites": [
+                "e8d4c5ce-4c7a-4d7c-961e-4d854e7f5cda",
+                "d92482b7-8562-4293-b4e3-92db7d81228c"
+            ]
+        },
+        {
+            "concept_id": "b51ed1b6-771b-45fa-9760-5d85e7688f2a",
+            "concept_question": "What is the energy balance equation?",
+            "concept_answer": "At equilibrium, Earth's absorbed solar radiation equals its emitted radiation.",
+            "concept_formula": [
+                "$!$(1-\\alpha)\\frac{S}{4} = \\sigma T^4$!$"
+            ],
+            "pre-requisites": [
+                "cb2ae0e5-1e89-4f8d-8848-9873f4991312"
+            ]
+        },
+        {
+            "concept_id": "4423e9c4-c105-4183-9ce7-c7d4352e4ec0",
+            "concept_question": "What is Earth's equilibrium temperature?",
+            "concept_answer": "It is the temperature when energy input equals energy output on Earth.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b51ed1b6-771b-45fa-9760-5d85e7688f2a"
+            ]
+        },
+        {
+            "concept_id": "e8a3932d-7344-49da-a0ac-7b8d6fb9e699",
+            "concept_question": "What is the greenhouse effect?",
+            "concept_answer": "It is Earth's warming due to infrared absorption and re-emission by atmospheric gases.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "078c7ed4-388f-4f65-8f70-278e4dab5ed7",
+            "concept_question": "What are greenhouse gases?",
+            "concept_answer": "They are gases that absorb infrared radiation and contribute to warming.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "fd84644e-3638-4633-bbdf-82a4c0e80bd5",
+            "concept_question": "What is the enhanced greenhouse effect?",
+            "concept_answer": "It is additional warming from increased atmospheric greenhouse gas concentrations.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e8a3932d-7344-49da-a0ac-7b8d6fb9e699"
+            ]
+        },
+        {
+            "concept_id": "4a507d87-a6a7-46ff-a92d-b13e8f820443",
+            "concept_question": "What is resonance in absorption?",
+            "concept_answer": "It is when a photon's frequency matches a molecule's natural oscillation frequency.",
+            "concept_formula": [],
+            "pre-requisites": []
+        }
+    ]
+}

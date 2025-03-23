@@ -1,0 +1,113 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "zJvT52Dbc0GpPSExhCKmj",
+    "topicIdProd": "4bfpgh60m3m3kxmpx345r",
+    "chapter_text": "Here's a concise summary of the concepts covered in the document, organized into sections with bullet points and associated formulas:\n\n**20.1 Electromagnetic Induction**\n\n*   **Motional EMF:** The electromotive force induced in a conductor moving in a magnetic field.\n    *   \u03b5 = BvL\n\n*   **Faraday's Law:** The induced EMF in a circuit is equal to the rate of change of the magnetic flux linkage through the circuit.\n    *  \u03b5 = -N \u0394\u03a6/ \u0394t\n\n* **Lenz's Law:** The direction of the induced EMF (and hence the induced current) is such as to oppose the change in magnetic flux that produces it.\n\n*   **Magnetic Flux:** A measure of the amount of magnetic field passing through a given area.\n    *   \u03a6 = BA cos \u03b8\n\n*   **Flux Linkage:** The product of the number of turns in a coil and the magnetic flux through it.\n\n* **Self Induction:** Phenomenon of an EMF being induced in a coil due to changes in current in the same coil.\n\n**20.2 Generators and Alternating Current**\n\n*   **AC Generator:**  A device that converts mechanical energy into electrical energy in the form of alternating current.\n\n* **Alternating Voltage and Current:** The voltage and current periodically changes direction.\n\n* **Relationship between flux linkage and angle**\n   *  \u03a6 = NBA cos \u03b8\n\n* Peak Voltage in a Generator:\n   * $V = 2 \\pi fNBA$",
+    "chapter_concepts": [
+        {
+            "concept_id": "70734415-23ea-4f42-9d80-7b51cd1cf9e6",
+            "concept_question": "What is Motional EMF?",
+            "concept_answer": "It is the induced electromotive force in a conductor moving through a magnetic field.",
+            "concept_formula": [
+                "$!$\\epsilon = BvL$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "01f9d96a-7639-4028-8921-a8d295d26596",
+            "concept_question": "What is Faraday's Law?",
+            "concept_answer": "It states that the induced electromotive force equals the rate of change of magnetic flux linkage in a circuit.",
+            "concept_formula": [
+                "$!$\\epsilon = -N \\frac{\\Delta\\Phi}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "a36f52e3-bc9a-40d7-86cc-f5525829e75d",
+                "43ab751d-5780-4129-9908-e52dacbdf1d8"
+            ]
+        },
+        {
+            "concept_id": "a42ad859-ed49-4773-b675-15519dcc2b70",
+            "concept_question": "What is Lenz's Law?",
+            "concept_answer": "It states that the induced EMF opposes the change in magnetic flux that produces it.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "01f9d96a-7639-4028-8921-a8d295d26596"
+            ]
+        },
+        {
+            "concept_id": "a36f52e3-bc9a-40d7-86cc-f5525829e75d",
+            "concept_question": "What is Magnetic Flux?",
+            "concept_answer": "It is a measure of the magnetic field passing through a given area.",
+            "concept_formula": [
+                "$!$\\Phi = BA\\cos\\theta$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "43ab751d-5780-4129-9908-e52dacbdf1d8",
+            "concept_question": "What is Flux Linkage?",
+            "concept_answer": "It is the product of the number of coil turns and the magnetic flux through the coil.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a36f52e3-bc9a-40d7-86cc-f5525829e75d"
+            ]
+        },
+        {
+            "concept_id": "3acc1ba7-ccc9-4760-958e-e67639d3f739",
+            "concept_question": "What is Self Induction?",
+            "concept_answer": "It is the phenomenon in which an EMF is induced in a coil by its own changing current.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "01f9d96a-7639-4028-8921-a8d295d26596"
+            ]
+        },
+        {
+            "concept_id": "3ff7dc34-3780-4157-901d-527e6f757fc8",
+            "concept_question": "What is an AC Generator?",
+            "concept_answer": "It is a device that converts mechanical energy into electrical energy as alternating current.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "70734415-23ea-4f42-9d80-7b51cd1cf9e6",
+                "01f9d96a-7639-4028-8921-a8d295d26596"
+            ]
+        },
+        {
+            "concept_id": "380eee22-87de-4201-9a9f-1f51d0424edb",
+            "concept_question": "What is Alternating Voltage?",
+            "concept_answer": "It is an electrical potential difference that periodically changes in magnitude and direction.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "2c8db49d-d070-4309-bd87-d767741c7681",
+            "concept_question": "What is Alternating Current?",
+            "concept_answer": "It is an electric current in which the direction of the flow of charge periodically reverses.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "32637696-1c34-41d1-9954-855d398bba5c",
+            "concept_question": "What is the flux linkage-angle relationship?",
+            "concept_answer": "It expresses magnetic flux as a function of coil turns, magnetic field, and orientation angle.",
+            "concept_formula": [
+                "$!$\\Phi = NBA\\cos\\theta$!$"
+            ],
+            "pre-requisites": [
+                "a36f52e3-bc9a-40d7-86cc-f5525829e75d",
+                "43ab751d-5780-4129-9908-e52dacbdf1d8"
+            ]
+        },
+        {
+            "concept_id": "7073ea45-4d03-4030-a8b5-3d49cd6413fe",
+            "concept_question": "What is the generator peak voltage formula?",
+            "concept_answer": "It gives the maximum voltage produced by an AC generator.",
+            "concept_formula": [
+                "$!$\\mathrm{V} = 2\\pi fNBA$!$"
+            ],
+            "pre-requisites": [
+                "3ff7dc34-3780-4157-901d-527e6f757fc8",
+                "32637696-1c34-41d1-9954-855d398bba5c"
+            ]
+        }
+    ]
+}

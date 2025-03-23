@@ -1,0 +1,186 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "Nt2MbUXLxO3OV1IcF33UU",
+    "topicIdProd": "mfcabz51k704n4e0kibmh",
+    "chapter_text": "Here's a concise overview of the concepts covered in the provided text, organized into sections:\n\n**1. Moles, Molar Mass, and Avogadro's Constant:**\n\n*   **Mole:** The amount of a substance containing as many particles as there are atoms in 12 g of carbon-12.\n*   **Avogadro Constant (N\u1d00):** 6.02214076 \u00d7 10\u00b2\u00b3, the number of particles in one mole.\n*   **Molar Mass (\u00b5):** The mass in grams of one mole of a substance.\n*   **Number of Moles (n) Formula:**  \n    $n = \\frac{N}{N_A}$ , where N is the number of particles.\n*   **Number of Moles (n) from Mass Formula:**\n    $n = \\frac{m}{\\mu}$, where m is the mass of the substance.\n\n**2. Ideal Gases and Pressure:**\n\n*   **Pressure (P):** Normal force per unit area.\n*   **Pressure Formula:**\n    $P = \\frac{F}{A}$, where F is the force and A is the area.\n*   **Pascal (Pa):** The SI unit of pressure (N/m\u00b2).\n*   **Atmosphere (atm):** A non-SI unit of pressure equal to 1.013 \u00d7 10\u2075 Pa.\n*   **Ideal Gas Assumptions:**\n    *   Point particles with negligible volume.\n    *   Obey the laws of mechanics.\n    *   No forces between molecules except during collisions.\n    *   Negligible collision duration.\n    *   Elastic collisions.\n    *   Random molecular speeds.\n\n**3. Gas Laws:**\n\n*   **Boyle-Mariotte Law (Constant Temperature):** Pressure is inversely proportional to volume.\n    *   $PV = constant$  or  $P_1V_1 = P_2V_2$\n*   **Charles' Law (Constant Pressure):** Volume is directly proportional to absolute temperature.\n    *   $\\frac{V}{T} = constant$ or $\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$\n*   **Gay-Lussac's Law (Constant Volume):** Pressure is directly proportional to absolute temperature.\n    *   $\\frac{P}{T} = constant$ or $\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$\n*   **Ideal Gas Law (Equation of State):**  \n    $PV = nRT$\n    where R is the gas constant (8.31 J K\u207b\u00b9 mol\u207b\u00b9).\n\n**4. Kinetic Theory and Internal Energy:**\n\n*   **Root Mean Square (rms) Speed (c):** The square root of the average of the squares of the molecular speeds.\n*   **Relationship between Pressure, Density, and rms Speed:**\n    $P = \\frac{1}{3}\\rho c^2$ , where \u03c1 is the density.\n*   **Average Kinetic Energy of a Molecule:**  \n    $E_k = \\frac{3}{2}kT$ , where k is the Boltzmann constant.\n*   **Boltzmann Constant (k):**\n    $k = \\frac{R}{N_A} \\approx 1.38 \\times 10^{-23} J/K$\n*   **Internal Energy (U) of an Ideal Gas:** The sum of the random kinetic energies of its molecules.\n    *   $U = \\frac{3}{2}NkT$\n    *   $U = \\frac{3}{2}nRT$\n    *   $U = \\frac{3}{2}PV$",
+    "chapter_concepts": [
+        {
+            "concept_id": "824feb51-89b5-4802-8380-8b79ffe7c300",
+            "concept_question": "What is a mole?",
+            "concept_answer": "A mole is defined as the amount of substance containing the same number of particles as atoms in 12 grams of carbon-12.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f116441e-7622-4427-b0b9-c741aca1524f",
+            "concept_question": "What is Avogadro's constant?",
+            "concept_answer": "Avogadro's constant is the number of particles in one mole.",
+            "concept_formula": [
+                "$!$6.02214076 \\times 10^{23}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f8f22c5a-3f5e-4a6c-989b-1954ad6f36f1",
+            "concept_question": "What is molar mass?",
+            "concept_answer": "Molar mass is the mass in grams of one mole of a substance.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "d78c7fc8-dede-42b2-85d5-2c690b1685df",
+            "concept_question": "What is number of moles from particle count?",
+            "concept_answer": "The number of moles is obtained by dividing the particle count by Avogadro's constant.",
+            "concept_formula": [
+                "$!$n = \\frac{N}{N_A}$!$"
+            ],
+            "pre-requisites": [
+                "f116441e-7622-4427-b0b9-c741aca1524f"
+            ]
+        },
+        {
+            "concept_id": "cea261f3-185d-4b25-a018-242587beafe2",
+            "concept_question": "What is number of moles from mass?",
+            "concept_answer": "The number of moles is calculated by dividing the substance's mass by its molar mass.",
+            "concept_formula": [
+                "$!$n = \\frac{m}{\\mu}$!$"
+            ],
+            "pre-requisites": [
+                "f8f22c5a-3f5e-4a6c-989b-1954ad6f36f1"
+            ]
+        },
+        {
+            "concept_id": "32380075-16b5-495f-8782-f16e86b9f750",
+            "concept_question": "What is pressure?",
+            "concept_answer": "Pressure is the force applied per unit area.",
+            "concept_formula": [
+                "$!$P = \\frac{F}{A}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "c7e0f404-9572-42ea-a802-87fba0d3d31c",
+            "concept_question": "What is a pascal?",
+            "concept_answer": "A pascal is the SI unit of pressure equal to one newton per square meter.",
+            "concept_formula": [
+                "$!$1 \\text{ Pa} = 1 \\frac{N}{m^2}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "86a57088-565f-474c-9102-9732ab3553d0",
+            "concept_question": "What is an atmosphere?",
+            "concept_answer": "An atmosphere is a pressure unit approximately equal to 1.013 \u00d7 10^5 pascals.",
+            "concept_formula": [
+                "$!$1 atm = 1.013 \\times 10^{5} \\text{ Pa}$!$"
+            ],
+            "pre-requisites": [
+                "c7e0f404-9572-42ea-a802-87fba0d3d31c"
+            ]
+        },
+        {
+            "concept_id": "888b34d4-afe3-4be0-bca5-ccafddad7fb6",
+            "concept_question": "What are ideal gas assumptions?",
+            "concept_answer": "Ideal gas assumptions include point particles with negligible volume, no intermolecular forces except during collisions, negligible collision duration, elastic collisions, and random molecular speeds.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "dbc93c96-257a-41a7-b14c-a8738eacfdc2",
+            "concept_question": "What is Boyle-Mariotte law?",
+            "concept_answer": "Boyle-Mariotte law states that at constant temperature, the product of pressure and volume remains constant.",
+            "concept_formula": [
+                "$!$PV = constant$!$",
+                "$!$P_1V_1 = P_2V_2$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "9dabe29f-26f1-4da2-8e3b-f2d96f843b65",
+            "concept_question": "What is Charles' law?",
+            "concept_answer": "Charles' law states that at constant pressure, a gas's volume is directly proportional to its absolute temperature.",
+            "concept_formula": [
+                "$!$\\frac{V}{T} = constant$!$",
+                "$!$\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "270d4413-84b9-4f8c-86af-bf08f1dd3195",
+            "concept_question": "What is Gay-Lussac's law?",
+            "concept_answer": "Gay-Lussac's law states that at constant volume, a gas's pressure is directly proportional to its absolute temperature.",
+            "concept_formula": [
+                "$!$\\frac{P}{T} = constant$!$",
+                "$!$\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "0d435e5c-9b10-457d-a7e6-d3de648690e5",
+            "concept_question": "What is the ideal gas law?",
+            "concept_answer": "The ideal gas law relates pressure, volume, number of moles, and temperature via the gas constant R.",
+            "concept_formula": [
+                "$!$PV = nRT$!$"
+            ],
+            "pre-requisites": [
+                "824feb51-89b5-4802-8380-8b79ffe7c300",
+                "32380075-16b5-495f-8782-f16e86b9f750"
+            ]
+        },
+        {
+            "concept_id": "23438b89-c8d4-4f20-82fa-3f26975d6f09",
+            "concept_question": "What is rms speed?",
+            "concept_answer": "The rms speed is the square root of the average of the squared speeds of molecules.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "8627caa7-d89b-4464-b2a8-455948b6a578",
+            "concept_question": "What is the relationship among pressure, density, and rms speed?",
+            "concept_answer": "Pressure equals one third of the product of density and the square of the rms speed.",
+            "concept_formula": [
+                "$!$P = \\frac{1}{3}\\rho c^2$!$"
+            ],
+            "pre-requisites": [
+                "32380075-16b5-495f-8782-f16e86b9f750",
+                "23438b89-c8d4-4f20-82fa-3f26975d6f09"
+            ]
+        },
+        {
+            "concept_id": "19b74ece-cc81-4af6-a74b-78c4fd930f62",
+            "concept_question": "What is the average kinetic energy of a molecule?",
+            "concept_answer": "The average kinetic energy of a molecule is three halves times the Boltzmann constant multiplied by temperature.",
+            "concept_formula": [
+                "$!$E_k = \\frac{3}{2}kT$!$"
+            ],
+            "pre-requisites": [
+                "bf88b9f6-c659-4307-991a-d9fd31bba8fe"
+            ]
+        },
+        {
+            "concept_id": "bf88b9f6-c659-4307-991a-d9fd31bba8fe",
+            "concept_question": "What is the Boltzmann constant?",
+            "concept_answer": "Boltzmann's constant relates the gas constant to Avogadro's number and is approximately 1.38 \u00d7 10^(-23) joules per kelvin.",
+            "concept_formula": [
+                "$!$k = \\frac{R}{N_A}$!$",
+                "$!$k \\approx 1.38 \\times 10^{-23} \\text{ J/K}$!$"
+            ],
+            "pre-requisites": [
+                "f116441e-7622-4427-b0b9-c741aca1524f"
+            ]
+        },
+        {
+            "concept_id": "1ee9b2cb-3884-442f-83e1-a5f64a7559e2",
+            "concept_question": "What is the internal energy of an ideal gas?",
+            "concept_answer": "The internal energy of an ideal gas is the total random kinetic energy of its molecules.",
+            "concept_formula": [
+                "$!$U = \\frac{3}{2}NkT$!$",
+                "$!$U = \\frac{3}{2}nRT$!$",
+                "$!$U = \\frac{3}{2}PV$!$"
+            ],
+            "pre-requisites": [
+                "19b74ece-cc81-4af6-a74b-78c4fd930f62"
+            ]
+        }
+    ]
+}
