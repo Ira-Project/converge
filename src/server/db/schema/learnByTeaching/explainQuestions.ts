@@ -10,7 +10,7 @@ import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm/relations";
 import { explainAssignments } from "./explainAssignment";
 import { topics } from "../subject";
-import { concepts } from "./concept";
+import { concepts } from "../concept";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -89,7 +89,7 @@ export const explainQuestionConcepts = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     questionId: varchar("question_id", { length: 21 }).references(() => explainQuestions.id), 
-    conceptId: varchar("concept_id", { length: 21 }).references(() => concepts.id),
+    conceptId: varchar("concept_id", { length: 36 }).references(() => concepts.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),

@@ -1,0 +1,250 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "WPDIBiV6WmmSkxoxEwpZe",
+    "topicIdProd": "zv7g2rtbmbj3j2gogi5x3",
+    "chapter_text": "Here's a summary of the concepts covered in the text, organized by topic and including formulas where applicable:\n\n**Nuclear Fission Basics**\n\n*   Nuclear fission: Splitting a heavy nucleus into smaller ones, releasing energy and neutrons.\n*   Induced fission: Fission caused by bombarding a nucleus with a neutron.\n*   Spontaneous fission: Fission without neutron absorption.\n\n**Fission Reaction Energetics**\n\n*   Energy released in a fission reaction (Q-value): Calculated from mass difference between reactants and products.\n*   Mass difference formula:  $Q = \\Delta mc^2$\n*   Relationship between Binding Energy per Nucleon and Energy Release:\n    Energy released can be calculated by subtracting the total binding energy on the left of the reaction from the total binding energy on the right of the reaction.\n\n**Nuclear Reactors**\n\n*   Chain reaction: Self-sustaining reaction where neutrons from one fission initiate further fissions.\n*   Critical mass: Minimum mass of fissile material needed for a chain reaction.\n*   Moderator: Material used to slow down neutrons to increase the probability of capture by fissile nuclei (e.g., graphite, water).\n*   Control rods: Materials that absorb neutrons to control the rate of reaction.\n*   Heat exchanger: Extracts heat from the moderator.\n\n**Risks and Advantages of Nuclear Power**\n\n*   Transmutation of uranium-238 into plutonium-239:  $n + ^{238}_{92}U \\rightarrow ^{239}_{92}U$\n*   Radioactive waste: Higher level waste (e.g., spent fuel) and low-level waste (contaminated materials).\n*   Waste storage: Requires cooling, shielding, and long-term disposal solutions.\n*   Accidents: Risk of uncontrolled heating, fires, or explosions leading to release of radioactive material.\n*   Advantages: High power output, large fuel reserves, no greenhouse gas emissions during operation.\n*   Disadvantages: Radioactive waste disposal, public health hazards, uranium mining issues, potential for weapons production.\n\n**Quantitative Calculations**\n\n* Calculating the energy released in a fission reaction using Q = \\Delta mc^2.\n* Calculation of total energy produced from a certain amount of Uranium.\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "d28b5c5e-7617-4d12-93c5-491614507352",
+            "concept_question": "What is nuclear fission? (Part 1: Definition)",
+            "concept_answer": "Basic definition: It is the splitting of a heavy nucleus into smaller ones.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65",
+            "concept_question": "What is nuclear fission? (Part 2: Details)",
+            "concept_answer": "Additional detail: This process releases energy and neutrons.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "3b2ffe63-ceed-4fae-a4a1-e42a9f6c3475",
+            "concept_question": "What is induced fission? (Part 1: Concept)",
+            "concept_answer": "Basic explanation: It is a fission process initiated by neutron bombardment.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "b233895c-2a48-4a8d-860c-081ac0889555",
+            "concept_question": "What is induced fission? (Part 2: Neutron Bombardment)",
+            "concept_answer": "Further detail: A neutron collides with a nucleus to trigger fission.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "cdec40c7-d21c-475b-b59f-dfb4c42791b4",
+            "concept_question": "What is spontaneous fission? (Part 1: Concept)",
+            "concept_answer": "Basic explanation: It is fission that occurs without external neutron absorption.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "2b3e8bcd-7858-43df-b0d4-3f875c65bfa6",
+            "concept_question": "What is spontaneous fission? (Part 2: Occurrence)",
+            "concept_answer": "Additional detail: The process happens naturally without external triggers.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "83eee34e-89b7-43eb-aab8-ebe55fad6b86",
+            "concept_question": "What is fission Q-value? (Part 1: Concept)",
+            "concept_answer": "Basic explanation: It represents the energy released during a nuclear fission reaction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65",
+                "05608edd-814d-4512-8e8c-1d46241af01d",
+                "e0073bfa-4354-4574-81fe-37c2676f570b"
+            ]
+        },
+        {
+            "concept_id": "35d54b23-8c3e-414f-855e-429319c72d63",
+            "concept_question": "What is fission Q-value? (Part 2: Calculation)",
+            "concept_answer": "Further detail: It is calculated from the mass difference between reactants and products.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65",
+                "05608edd-814d-4512-8e8c-1d46241af01d",
+                "e0073bfa-4354-4574-81fe-37c2676f570b"
+            ]
+        },
+        {
+            "concept_id": "05608edd-814d-4512-8e8c-1d46241af01d",
+            "concept_question": "What is the mass difference formula? (Part 1: Concept)",
+            "concept_answer": "This part introduces the concept of mass difference in nuclear reactions.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e0073bfa-4354-4574-81fe-37c2676f570b",
+            "concept_question": "What is the mass difference formula? (Part 2: Formula)",
+            "concept_answer": "The energy released is given by the mass difference multiplied by the square of the speed of light.",
+            "concept_formula": [
+                "$!$Q = \\Delta mc^2$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b4cc2d1a-f724-4aa8-ae80-2b2e74431f34",
+            "concept_question": "What is critical mass? (Part 1: Definition)",
+            "concept_answer": "It is defined as the minimum amount of fissile material required to sustain a nuclear chain reaction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "f8c81711-1ea3-4fd3-83ee-a41c66e561c8",
+            "concept_question": "What is critical mass? (Part 2: Implications)",
+            "concept_answer": "Further explanation: The concept is key to initiating and sustaining chain reactions in nuclear reactors.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "77b221bc-2e1e-4714-b4c4-f67cdba21d28",
+            "concept_question": "What is a moderator? (Part 1: Role)",
+            "concept_answer": "It is a material that slows down neutrons.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "1508b8ef-120f-4a20-96a4-688f96b211a3",
+            "concept_question": "What is a moderator? (Part 2: Function)",
+            "concept_answer": "By slowing neutrons, it increases the probability that fission will occur.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "2a2af333-a4aa-4f6e-8612-1e25474215a0",
+            "concept_question": "What are control rods? (Part 1: Concept)",
+            "concept_answer": "They are materials that absorb neutrons.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "f6788c46-b844-4278-8c85-994c5a035e4e",
+            "concept_question": "What are control rods? (Part 2: Regulation)",
+            "concept_answer": "They help regulate the nuclear chain reaction by controlling neutron flow.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "d3aafbfd-75b5-492f-941b-b6c253ac9975",
+            "concept_question": "What is a heat exchanger? (Part 1: Function)",
+            "concept_answer": "It is a device designed to extract heat from the moderator in a nuclear reactor.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "77b221bc-2e1e-4714-b4c4-f67cdba21d28",
+                "1508b8ef-120f-4a20-96a4-688f96b211a3"
+            ]
+        },
+        {
+            "concept_id": "6634de28-b153-41c1-8602-0dc2388a429c",
+            "concept_question": "What is a heat exchanger? (Part 2: Design)",
+            "concept_answer": "Further detail: It efficiently transfers and removes heat from the reactor system.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "77b221bc-2e1e-4714-b4c4-f67cdba21d28",
+                "1508b8ef-120f-4a20-96a4-688f96b211a3"
+            ]
+        },
+        {
+            "concept_id": "03bb18ff-5036-4b2d-ad4e-b5b63c5d0192",
+            "concept_question": "What is radioactive waste? (Part 1: Definition)",
+            "concept_answer": "It is the by-product of nuclear reactions.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "351835a2-49da-478a-8bb7-c47ee2145cf8",
+            "concept_question": "What is radioactive waste? (Part 2: Types)",
+            "concept_answer": "This waste includes spent fuel and contaminated materials.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "205572b7-e3f5-45d3-b0ae-0a71e9552dd6",
+            "concept_question": "What are nuclear accidents? (Part 1: Overview)",
+            "concept_answer": "They are incidents of uncontrolled events in nuclear reactors.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "bc51abe5-6e3d-4e5d-8c65-ab1216733ce3",
+            "concept_question": "What are nuclear accidents? (Part 2: Consequences)",
+            "concept_answer": "They involve uncontrolled heating, fires, or explosions that release radioactive material.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+            ]
+        },
+        {
+            "concept_id": "96d7c92a-2d98-41b4-85c5-01151f5af3ad",
+            "concept_question": "What are advantages of nuclear power? (Part 1: Technical)",
+            "concept_answer": "Key technical advantages include high power output and abundant fuel reserves.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "91e34918-2969-4e0d-b3a5-bb766bc5d13a",
+            "concept_question": "What are advantages of nuclear power? (Part 2: Environmental)",
+            "concept_answer": "It also offers environmental benefits like low greenhouse gas emissions.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b91ba636-d64e-4169-af32-12b0f8b68495",
+            "concept_question": "What are disadvantages of nuclear power? (Part 1: Challenges)",
+            "concept_answer": "Challenges include radioactive waste disposal and public health hazards.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "8132a0f8-fde9-453f-a3b1-f79c20fca37e",
+            "concept_question": "What are disadvantages of nuclear power? (Part 2: Risks)",
+            "concept_answer": "There are additional concerns such as mining issues and nuclear proliferation risks.",
+            "concept_formula": [],
+            "pre-requisites": []
+        }
+    ]
+}

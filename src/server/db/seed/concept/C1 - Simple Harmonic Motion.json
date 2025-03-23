@@ -1,0 +1,202 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "QoUD52AFmibtZ7SGqIbmI",
+    "topicIdProd": "qY4JbQSoTts2eHzmUE9Gx",
+    "chapter_text": "Here are the key concepts from the chapter on simple harmonic motion:\n\n**Chapter 12: Simple Harmonic Motion**\n\n**12.1 Simple Harmonic Oscillations**\n\n*   **Oscillations:** Back and forth motion that repeats.\n*   **Equilibrium Position:**  The point around which the body moves back and forth in an oscillation.\n*   **Period (T):** The time taken to complete one full oscillation.\n*   **Frequency (f):** The number of oscillations per second; measured in Hertz (Hz).\n\n    *   Formula:  $f = \\frac{1}{T}$\n*   **Restoring Force:** A force that tends to bring the system back to its equilibrium position.\n*   **Simple Harmonic Motion (SHM):**  Acceleration is proportional to and opposite the displacement.\n    *   Equation: $a \\propto -x$ or $a = -\\omega^2x$\n\n    *   Angular Frequency ($\\omega$) is related to the period by: $\\omega = \\frac{2\\pi}{T}$\n    *   Relationship to Frequency: $\\omega = 2\\pi f$\n    *   For a mass-spring system: $T = 2\\pi \\sqrt{\\frac{m}{k}}$ (m = mass, k = spring constant)\n\n**12.2 Details of Simple Harmonic Motion**\n\n*   Displacement as a function of time: $x = x_o \\sin(\\omega t + \\phi)$\n    *   Where:\n        *   $x_o$ is the amplitude.\n        *   $\\phi$ is the phase angle.\n*   Velocity as a function of time: $v = \\omega x_o \\cos(\\omega t + \\phi)$\n*   Acceleration as a function of time: $a = -\\omega^2 x_o \\sin(\\omega t + \\phi)$\n*   Maximum Velocity: $v_{max} = \\omega x_o$\n*   Maximum Acceleration: $a_{max} = \\omega^2 x_o$\n\n**12.3 Energy in Simple Harmonic Motion**\n\n*   **Total Energy ($E_T$):** The sum of potential energy and kinetic energy; conserved in the absence of resistance forces. $E_T = E_p + E_k$\n\n**12.4 More About Energy in SHM**\n*  In SHM: $E_k = \\frac{1}{2} m \\omega^2 (x_o^2 - x^2) $ and $ E_p = \\frac{1}{2} m \\omega^2 x^2 $\n*   **Velocity in terms of displacement:** $v = \\pm \\omega \\sqrt{x_o^2 - x^2}$",
+    "chapter_concepts": [
+        {
+            "concept_id": "42360656-7edd-45e1-9018-41817f8bc0d5",
+            "concept_question": "What are oscillations?",
+            "concept_answer": "Oscillations are back and forth motions that repeat.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "2b5366cb-7334-4e65-8b08-6b28e411954b",
+            "concept_question": "What is the equilibrium position?",
+            "concept_answer": "It is the reference point about which a body oscillates.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "42360656-7edd-45e1-9018-41817f8bc0d5"
+            ]
+        },
+        {
+            "concept_id": "2ad8c228-6aae-422b-8b9f-6c6e4d83a2f2",
+            "concept_question": "What is period?",
+            "concept_answer": "The period is the time required for one complete oscillation.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "42360656-7edd-45e1-9018-41817f8bc0d5"
+            ]
+        },
+        {
+            "concept_id": "b3a78db8-c252-4c08-bae7-7f56ac418a1e",
+            "concept_question": "What is frequency?",
+            "concept_answer": "Frequency is the count of oscillations per second measured in Hertz.",
+            "concept_formula": [
+                "$!$f = \\frac{1}{T}$!$"
+            ],
+            "pre-requisites": [
+                "2ad8c228-6aae-422b-8b9f-6c6e4d83a2f2"
+            ]
+        },
+        {
+            "concept_id": "95872c1e-24cf-47b0-996a-114214857435",
+            "concept_question": "What is restoring force?",
+            "concept_answer": "Restoring force is the force that returns a system to its equilibrium state.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2b5366cb-7334-4e65-8b08-6b28e411954b"
+            ]
+        },
+        {
+            "concept_id": "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+            "concept_question": "What is simple harmonic motion?",
+            "concept_answer": "Simple harmonic motion is defined by acceleration proportional and opposite to displacement.",
+            "concept_formula": [
+                "$!$a \\propto -x$!$",
+                "$!$a = -\\omega^2 x$!$"
+            ],
+            "pre-requisites": [
+                "42360656-7edd-45e1-9018-41817f8bc0d5",
+                "95872c1e-24cf-47b0-996a-114214857435"
+            ]
+        },
+        {
+            "concept_id": "955cb1c1-1e3b-4380-8ab8-c9ad9724a769",
+            "concept_question": "What is angular frequency from period?",
+            "concept_answer": "Angular frequency equals 2\u03c0 divided by the period.",
+            "concept_formula": [
+                "$!$\\omega = \\frac{2\\pi}{T}$!$"
+            ],
+            "pre-requisites": [
+                "2ad8c228-6aae-422b-8b9f-6c6e4d83a2f2"
+            ]
+        },
+        {
+            "concept_id": "749a4b91-5344-4ca1-b7de-fcc787304a68",
+            "concept_question": "What is angular frequency from frequency?",
+            "concept_answer": "Angular frequency is 2\u03c0 times the frequency.",
+            "concept_formula": [
+                "$!$\\omega = 2\\pi f$!$"
+            ],
+            "pre-requisites": [
+                "b3a78db8-c252-4c08-bae7-7f56ac418a1e"
+            ]
+        },
+        {
+            "concept_id": "eac352c8-92f0-4606-84ae-c8dc382203f6",
+            "concept_question": "What is the mass-spring period?",
+            "concept_answer": "The mass-spring period is proportional to the square root of mass over spring constant.",
+            "concept_formula": [
+                "$!$T = 2\\pi \\sqrt{\\frac{m}{k}}$!$"
+            ],
+            "pre-requisites": [
+                "2ad8c228-6aae-422b-8b9f-6c6e4d83a2f2",
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab"
+            ]
+        },
+        {
+            "concept_id": "5eedb7cd-ef30-4e6d-8f36-62c5ea5a59c4",
+            "concept_question": "What is the displacement in SHM?",
+            "concept_answer": "Displacement in SHM varies sinusoidally with time.",
+            "concept_formula": [
+                "$!$x = x_o \\sin(\\omega t + \\phi)$!$"
+            ],
+            "pre-requisites": [
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab"
+            ]
+        },
+        {
+            "concept_id": "fc99e39a-659f-4746-8117-b063accd98e7",
+            "concept_question": "What is the velocity in SHM?",
+            "concept_answer": "Velocity in SHM varies cosinusoidally, scaled by amplitude and angular frequency.",
+            "concept_formula": [
+                "$!$v = \\omega x_o \\cos(\\omega t + \\phi)$!$"
+            ],
+            "pre-requisites": [
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                "5eedb7cd-ef30-4e6d-8f36-62c5ea5a59c4"
+            ]
+        },
+        {
+            "concept_id": "d78371e9-ca79-4775-a401-313887dd8cc2",
+            "concept_question": "What is the acceleration in SHM?",
+            "concept_answer": "Acceleration in SHM is a negative sinusoidal function scaled by squared angular frequency and amplitude.",
+            "concept_formula": [
+                "$!$a = -\\omega^2 x_o \\sin(\\omega t + \\phi)$!$"
+            ],
+            "pre-requisites": [
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                "5eedb7cd-ef30-4e6d-8f36-62c5ea5a59c4"
+            ]
+        },
+        {
+            "concept_id": "bfe73a51-56e1-42c2-b400-35e2aa8f4737",
+            "concept_question": "What is maximum velocity?",
+            "concept_answer": "Maximum velocity is the product of amplitude and angular frequency.",
+            "concept_formula": [
+                "$!$v_{max} = \\omega x_o$!$"
+            ],
+            "pre-requisites": [
+                "fc99e39a-659f-4746-8117-b063accd98e7"
+            ]
+        },
+        {
+            "concept_id": "3ec5c7a4-6a70-4299-bd95-2a6d9e2e15e6",
+            "concept_question": "What is maximum acceleration?",
+            "concept_answer": "Maximum acceleration is the product of amplitude and squared angular frequency.",
+            "concept_formula": [
+                "$!$a_{max} = \\omega^2 x_o$!$"
+            ],
+            "pre-requisites": [
+                "d78371e9-ca79-4775-a401-313887dd8cc2"
+            ]
+        },
+        {
+            "concept_id": "e6cbee8e-24f0-49b0-acff-dee433badd26",
+            "concept_question": "What is total energy in SHM?",
+            "concept_answer": "Total energy in SHM is the sum of kinetic and potential energy and remains constant without damping.",
+            "concept_formula": [
+                "$!$E_T = E_p + E_k$!$"
+            ],
+            "pre-requisites": [
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab"
+            ]
+        },
+        {
+            "concept_id": "b21fef8f-6dd5-4a7c-a193-e4b0c33e6964",
+            "concept_question": "What is kinetic energy in SHM?",
+            "concept_answer": "Kinetic energy in SHM is half the mass times squared angular frequency times the difference of squared amplitude and displacement.",
+            "concept_formula": [
+                "$!$E_k = \\frac{1}{2} m \\omega^2 (x_o^2 - x^2)$!$"
+            ],
+            "pre-requisites": [
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab"
+            ]
+        },
+        {
+            "concept_id": "84a3b53f-8ab2-410b-bd21-e37b77d0734b",
+            "concept_question": "What is potential energy in SHM?",
+            "concept_answer": "Potential energy in SHM is half the mass times squared angular frequency times the square of displacement.",
+            "concept_formula": [
+                "$!$E_p = \\frac{1}{2} m \\omega^2 x^2$!$"
+            ],
+            "pre-requisites": [
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab"
+            ]
+        },
+        {
+            "concept_id": "cc2f2c1f-d27b-4fb2-afe3-0628f191cf12",
+            "concept_question": "What is velocity in terms of displacement?",
+            "concept_answer": "In SHM, velocity equals angular frequency times the square root of the difference between squared amplitude and squared displacement.",
+            "concept_formula": [
+                "$!$v = \\pm \\omega \\sqrt{x_o^2 - x^2}$!$"
+            ],
+            "pre-requisites": [
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                "5eedb7cd-ef30-4e6d-8f36-62c5ea5a59c4"
+            ]
+        }
+    ]
+}

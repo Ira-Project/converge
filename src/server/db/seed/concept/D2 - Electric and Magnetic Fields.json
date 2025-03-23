@@ -1,0 +1,277 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "PPi3QbhxtNzdu34HbMpdE",
+    "topicIdProd": "naftx4hi16egfmw4lk5vv",
+    "chapter_text": "Here's a concise summary of the concepts covered in the document, organized into sections with bullet points:\n\n**1. Electric Charge, Force, and Field**\n\n*   **Electric Charge:** A fundamental property of matter, can be positive or negative, and is conserved and quantized.\n*   **Conductors:** Materials with many free electrons.\n*   **Insulators:** Materials with very few free electrons.\n*   **Electrostatic Induction:** Charging a body without direct contact.\n*   **Coulomb's Law:** The electric force between two point charges is given by:\n\n    $\\qquad F = k \\frac{q_1 q_2}{r^2}$\n\n    where $k$ is Coulomb's constant.\n*   **Permittivity:** $k = \\frac{1}{4 \\pi \\epsilon}$, $\\epsilon$ represents permittivity.\n*   **Electric Field Strength:** Electric force per unit charge:\n\n    $\\qquad E = \\frac{F}{q}$\n*   **Electric Field Lines:** Visual representation of electric fields.  Density indicates magnitude, and tangent indicates direction.\n*   **Uniform Electric Field:** Electric field strength in between two parallel plates:\n\n    $\\qquad E = \\frac{V}{d}$\n\n    where $V$ is potential difference and $d$ is separation.\n*   **Force on a charge in electric field:**\n    $\\qquad F = qE$\n*   **Change in Kinetic Energy in an Electric Field:** $\\Delta E_k = qV$\n\n**2. Magnetic Field and Force**\n\n*   **Magnetic Field:** A field created by magnets and electric currents.\n*   **Magnetic Flux Density (B):** Vector representing magnetic field.\n*   **Magnetic Field Lines:** Visual representation of magnetic fields.\n*   **Right-Hand Grip Rule:** Used to determine the direction of the magnetic field around a current-carrying wire or solenoid.\n*   **Magnetic Force on a Moving Charge:**\n\n    $\\qquad F = qvB \\sin \\theta$\n\n    where $\\theta$ is the angle between velocity and magnetic field.\n*   **Tesla (T):** The unit of magnetic flux density\n*   **Magnetic Force on a Current-Carrying Wire:**\n\n    $\\qquad F = BIL \\sin \\theta$\n\n    where $\\theta$ is the angle between current and magnetic field.\n*   **Force per unit length between two parallel wires**\n\n    $\\qquad \\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi r}$\n\n**3. Electric Potential and Electric Potential Energy**\n\n*   **Electric Potential (V):** Work done per unit charge to move a small positive test charge from infinity to a point:\n\n    $\\qquad V = \\frac{W}{q}$\n*   **Electric Potential due to point charge:**\n\n    $\\qquad V = k\\frac{Q}{r}$\n*   **Electric Potential Energy (E_p):**\n\n    $\\qquad E_p = qV$\n*   **Potential Difference:**\n\n    $\\qquad \\Delta V = V_B - V_A$\n*   **Work Done in Electric Potential**\n\n    $\\qquad W=q\\Delta V$\n*   **Relationship Between Electric Field and Electric Potential:**\n\n    $\\qquad E = - \\frac{dV}{dr} \\approx \\frac{\\Delta V}{\\Delta r}$\n*   **Equipotential Surfaces:** Surfaces with the same electric potential. Field lines are perpendicular to equipotential surfaces.",
+    "chapter_concepts": [
+        {
+            "concept_id": "9c5b8ec7-b572-487d-b828-366d4ee98c6e",
+            "concept_question": "What is electric charge?",
+            "concept_answer": "Electric charge is a conserved, quantized property of matter that can be positive or negative.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "553af6ab-c859-4e28-bed0-b8a440bb125e",
+            "concept_question": "What are conductors?",
+            "concept_answer": "Conductors are materials with many free electrons that allow electric current to flow.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "722abff1-ebfd-42e0-b749-d1fcfe7668bf",
+            "concept_question": "What are insulators?",
+            "concept_answer": "Insulators are materials with very few free electrons that hinder electric current flow.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "d1e219ca-c756-457c-be53-44d61c4e2605",
+            "concept_question": "What is electrostatic induction?",
+            "concept_answer": "Electrostatic induction is charging a body without direct physical contact.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e"
+            ]
+        },
+        {
+            "concept_id": "7ba1c824-07f7-4aae-9165-df48d3403f2d",
+            "concept_question": "What is Coulomb's law?",
+            "concept_answer": "Coulomb's law calculates the electric force between two point charges based on their magnitudes and separation.",
+            "concept_formula": [
+                "$!$F = k \\frac{q_1 q_2}{r^2}$!$"
+            ],
+            "pre-requisites": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e"
+            ]
+        },
+        {
+            "concept_id": "954c6ead-f80e-43e0-a478-631add508bb6",
+            "concept_question": "What is permittivity?",
+            "concept_answer": "Permittivity is a material property that relates to Coulomb's constant as an inverse proportional factor.",
+            "concept_formula": [
+                "$!$k = \\frac{1}{4 \\pi \\epsilon}$!$"
+            ],
+            "pre-requisites": [
+                "7ba1c824-07f7-4aae-9165-df48d3403f2d"
+            ]
+        },
+        {
+            "concept_id": "d220f03d-05bf-4cc4-9dda-dbebcb22531c",
+            "concept_question": "What is electric field strength?",
+            "concept_answer": "Electric field strength is the force per unit positive charge experienced within an electric field.",
+            "concept_formula": [
+                "$!$E = \\frac{F}{q}$!$"
+            ],
+            "pre-requisites": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e",
+                "7ba1c824-07f7-4aae-9165-df48d3403f2d"
+            ]
+        },
+        {
+            "concept_id": "47013c93-ab33-40a7-bf69-088a22ed3be4",
+            "concept_question": "What are electric field lines?",
+            "concept_answer": "Electric field lines visually depict the direction and relative magnitude of an electric field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d220f03d-05bf-4cc4-9dda-dbebcb22531c"
+            ]
+        },
+        {
+            "concept_id": "c0b53321-be82-4f86-9262-ba7a1549c203",
+            "concept_question": "What is a uniform electric field?",
+            "concept_answer": "A uniform electric field has constant magnitude and direction, typically found between parallel plates.",
+            "concept_formula": [
+                "$!$E = \\frac{V}{d}$!$"
+            ],
+            "pre-requisites": [
+                "d220f03d-05bf-4cc4-9dda-dbebcb22531c",
+                "9e281632-025c-4d3e-a69d-314618d05994"
+            ]
+        },
+        {
+            "concept_id": "f6b91845-83d0-4fe7-b473-1def300177af",
+            "concept_question": "What is the force on a charge in an electric field?",
+            "concept_answer": "The force on a charge in an electric field equals the product of the charge and the field strength.",
+            "concept_formula": [
+                "$!$F = qE$!$"
+            ],
+            "pre-requisites": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e",
+                "d220f03d-05bf-4cc4-9dda-dbebcb22531c"
+            ]
+        },
+        {
+            "concept_id": "2e3345f3-50bf-494f-af69-22c660edffd3",
+            "concept_question": "What is the change in kinetic energy in an electric field?",
+            "concept_answer": "The change in kinetic energy of a charge in an electric field equals the product of the charge and the potential difference.",
+            "concept_formula": [
+                "$!$\\Delta E_k = qV$!$"
+            ],
+            "pre-requisites": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e",
+                "2ea34cb0-b608-4374-9d6c-63725f3e0956"
+            ]
+        },
+        {
+            "concept_id": "171bf2e4-63cb-420f-b07b-9effc19d04f6",
+            "concept_question": "What is a magnetic field?",
+            "concept_answer": "A magnetic field is produced by magnets or moving electric currents.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "887535b1-add3-447b-b6ba-75c0885bfd04",
+            "concept_question": "What is magnetic flux density?",
+            "concept_answer": "Magnetic flux density is a vector that quantifies the strength and direction of a magnetic field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "171bf2e4-63cb-420f-b07b-9effc19d04f6"
+            ]
+        },
+        {
+            "concept_id": "f3f0cb6a-2210-40b3-a522-45974bd9850a",
+            "concept_question": "What are magnetic field lines?",
+            "concept_answer": "Magnetic field lines are visual representations that outline the structure of a magnetic field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "171bf2e4-63cb-420f-b07b-9effc19d04f6"
+            ]
+        },
+        {
+            "concept_id": "8679ffe6-6265-460d-8284-0cd29f2666ed",
+            "concept_question": "What is the right-hand grip rule?",
+            "concept_answer": "The right-hand grip rule determines the direction of the magnetic field around a current-carrying conductor.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "171bf2e4-63cb-420f-b07b-9effc19d04f6"
+            ]
+        },
+        {
+            "concept_id": "522866e5-3c70-4a23-87f0-6b202495073f",
+            "concept_question": "What is the magnetic force on a moving charge?",
+            "concept_answer": "The magnetic force on a moving charge depends on its charge, speed, magnetic field, and the sine of the angle between velocity and the field.",
+            "concept_formula": [
+                "$!$F = q v B \\sin \\theta$!$"
+            ],
+            "pre-requisites": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e",
+                "171bf2e4-63cb-420f-b07b-9effc19d04f6"
+            ]
+        },
+        {
+            "concept_id": "8177e369-a250-4f98-8ef7-9944007e3d93",
+            "concept_question": "What is a Tesla?",
+            "concept_answer": "A Tesla is the unit of measurement for magnetic flux density.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "887535b1-add3-447b-b6ba-75c0885bfd04"
+            ]
+        },
+        {
+            "concept_id": "f811e506-c07a-4cc9-8b32-e4a587510caf",
+            "concept_question": "What is the magnetic force on a current-carrying wire?",
+            "concept_answer": "The magnetic force on a current-carrying wire is determined by the magnetic field, current, wire length, and the sine of the angle between the current and the field.",
+            "concept_formula": [
+                "$!$F = B I L \\sin \\theta$!$"
+            ],
+            "pre-requisites": [
+                "171bf2e4-63cb-420f-b07b-9effc19d04f6",
+                "887535b1-add3-447b-b6ba-75c0885bfd04"
+            ]
+        },
+        {
+            "concept_id": "ac74a17b-73bf-4f45-8bc1-41c2338b9863",
+            "concept_question": "What is the force per unit length between parallel wires?",
+            "concept_answer": "The force per unit length between parallel wires is proportional to the product of their currents and inversely proportional to their separation.",
+            "concept_formula": [
+                "$!$\\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi r}$!$"
+            ],
+            "pre-requisites": [
+                "171bf2e4-63cb-420f-b07b-9effc19d04f6",
+                "f811e506-c07a-4cc9-8b32-e4a587510caf"
+            ]
+        },
+        {
+            "concept_id": "2ea34cb0-b608-4374-9d6c-63725f3e0956",
+            "concept_question": "What is electric potential?",
+            "concept_answer": "Electric potential is the work done per unit charge to move a test charge from infinity to a point.",
+            "concept_formula": [
+                "$!$V = \\frac{W}{q}$!$"
+            ],
+            "pre-requisites": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e"
+            ]
+        },
+        {
+            "concept_id": "cd492bce-7ab6-43ea-aa53-78ec3083e033",
+            "concept_question": "What is the potential due to a point charge?",
+            "concept_answer": "The electric potential due to a point charge is directly proportional to the charge and inversely proportional to the distance.",
+            "concept_formula": [
+                "$!$V = k\\frac{Q}{r}$!$"
+            ],
+            "pre-requisites": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e",
+                "7ba1c824-07f7-4aae-9165-df48d3403f2d"
+            ]
+        },
+        {
+            "concept_id": "e5888dcb-4bc0-4c40-8775-34a2ee76ab02",
+            "concept_question": "What is electric potential energy?",
+            "concept_answer": "Electric potential energy is the energy a charge possesses due to its position in an electric potential.",
+            "concept_formula": [
+                "$!$E_p = qV$!$"
+            ],
+            "pre-requisites": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e",
+                "2ea34cb0-b608-4374-9d6c-63725f3e0956"
+            ]
+        },
+        {
+            "concept_id": "9e281632-025c-4d3e-a69d-314618d05994",
+            "concept_question": "What is potential difference?",
+            "concept_answer": "Potential difference is the difference in electric potential between two points.",
+            "concept_formula": [
+                "$!$\\Delta V = V_B - V_A$!$"
+            ],
+            "pre-requisites": [
+                "2ea34cb0-b608-4374-9d6c-63725f3e0956"
+            ]
+        },
+        {
+            "concept_id": "306b3cf8-0e61-4b6b-b694-4907440c3f02",
+            "concept_question": "What is work done in an electric potential?",
+            "concept_answer": "Work done in an electric potential is the product of a charge and the potential difference it experiences.",
+            "concept_formula": [
+                "$!$W = q\\Delta V$!$"
+            ],
+            "pre-requisites": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e",
+                "9e281632-025c-4d3e-a69d-314618d05994"
+            ]
+        },
+        {
+            "concept_id": "431a64a0-6ba5-4ab1-a2b4-db427e5b0d82",
+            "concept_question": "What is the relationship between electric field and potential?",
+            "concept_answer": "The electric field is the negative rate of change of electric potential with distance.",
+            "concept_formula": [
+                "$!$E = - \\frac{dV}{dr}$!$",
+                "$!$E \\approx \\frac{\\Delta V}{\\Delta r}$!$"
+            ],
+            "pre-requisites": [
+                "d220f03d-05bf-4cc4-9dda-dbebcb22531c",
+                "2ea34cb0-b608-4374-9d6c-63725f3e0956"
+            ]
+        },
+        {
+            "concept_id": "45a4fd1e-f87e-44bf-a721-a088e1c4f19c",
+            "concept_question": "What are equipotential surfaces?",
+            "concept_answer": "Equipotential surfaces are regions where every point has the same electric potential and are perpendicular to electric field lines.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2ea34cb0-b608-4374-9d6c-63725f3e0956",
+                "47013c93-ab33-40a7-bf69-088a22ed3be4"
+            ]
+        }
+    ]
+}
