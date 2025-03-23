@@ -177,7 +177,10 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
 
     if (question.type === KnowledgeZapQuestionType.MULTIPLE_CHOICE) {
       const multipleChoiceQuestions = await ctx.db.query.multipleChoiceQuestions.findMany({
-        where: (multipleChoiceQuestion, { inArray }) => inArray(multipleChoiceQuestion.id, questionIds),
+        where: (multipleChoiceQuestion, { inArray, and }) => and(
+          inArray(multipleChoiceQuestion.id, questionIds),
+          eq(multipleChoiceQuestion.multipleCorrect, false)
+        ),
         with: {
           options: {
             columns: {

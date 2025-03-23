@@ -69,8 +69,35 @@ await createConcepts("E5 - Fusion and Stars");
 // await addConceptsToQuestions();
 
 // KNOWLEDGE ZAP CREATION
-// await deleteKnowledgeZapAssignment("6oiy9qk31wjmx0eejo6hs");
-// await createKnowledgeZapAssignment("kinematics");
+await deleteKnowledgeZapAssignment("d66eswsryhsgsfh2c5ua5");
+await createKnowledgeZapAssignment("kinematics");
+// await createKnowledgeZapAssignment("forces_and_momentum");
+// await createKnowledgeZapAssignment("work_energy_and_power");
+// await createKnowledgeZapAssignment("rigid_body_mechanics");
+// await createKnowledgeZapAssignment("galilean_and_special_relativity");
+// // await createKnowledgeZapAssignment("thermal_energy_transfers");
+// await createKnowledgeZapAssignment("greenhouse_effect");
+// await createKnowledgeZapAssignment("gas_laws");
+// // await createKnowledgeZapAssignment("thermodynamics");
+// await createKnowledgeZapAssignment("current_and_circuits");
+// // await createKnowledgeZapAssignment("simple_harmonic_motion");
+// await createKnowledgeZapAssignment("wave_model");
+// await createKnowledgeZapAssignment("wave_phenomena");
+// await createKnowledgeZapAssignment("standing_waves_and_resonance");
+// await createKnowledgeZapAssignment("doppler_effect");
+// await createKnowledgeZapAssignment("gravitational_fields");
+// await createKnowledgeZapAssignment("electric_and_magnetic_fields");
+// await createKnowledgeZapAssignment("motion_in_electric_and_magnetic_fields");
+// await createKnowledgeZapAssignment("electromagnetic_induction");
+// await createKnowledgeZapAssignment("structure_of_the_atom");
+// await createKnowledgeZapAssignment("quantum_physics");
+// // await createKnowledgeZapAssignment("radioactive_decay");
+// await createKnowledgeZapAssignment("fission");
+// await createKnowledgeZapAssignment("fusion_and_stars");
+
+
+
+
 // await computeQuestionsCompleted();
 
 // REASONING CREATION

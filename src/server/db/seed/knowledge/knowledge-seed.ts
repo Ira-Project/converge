@@ -107,6 +107,7 @@ export async function createKnowledgeZapAssignment(topicName: string) {
         id: question.id.substring(0, 21),
         question: question.question,
         questionId: questions.id.substring(0, 21),
+        multipleCorrect: !question.single_correct,
         imageUrl: question?.image ?? null,
         createdAt: new Date(),
         updatedAt: new Date(),

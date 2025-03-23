@@ -18,6 +18,7 @@ export const multipleChoiceQuestions = pgTable(
     question: text("question").notNull(),
     imageUrl: text("image_url"),
     questionId: varchar("question_id", { length: 21 }).notNull().references(() => knowledgeZapQuestions.id),
+    multipleCorrect: boolean("multiple_correct").notNull().default(false),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
