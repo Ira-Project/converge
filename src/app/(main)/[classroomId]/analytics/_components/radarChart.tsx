@@ -5,7 +5,8 @@ import {
   RadarChart,
   PolarGrid,
   PolarAngleAxis,
-  ResponsiveContainer
+  ResponsiveContainer,
+  PolarRadiusAxis
 } from 'recharts';
 import { type RouterOutputs } from '@/trpc/shared';
 import { ActivityType } from '@/lib/constants';
@@ -93,7 +94,6 @@ export function SkillsRadarCard(props: {
   const chartData = skillsData.map(skill => ({
     subject: skill.name,
     A: skill.value,
-    fullMark: 10,
   }));
 
   return (
@@ -101,9 +101,14 @@ export function SkillsRadarCard(props: {
       {/* Left section with radar chart */}
       <div className="w-full md:w-3/5 p-4 flex items-center justify-center text-xs">
         <ResponsiveContainer height={"100%"}>
-          <RadarChart cx="50%" cy="50%" outerRadius="80%" data={chartData}>
+          <RadarChart outerRadius="70%" data={chartData}>
             <PolarGrid />
-            <PolarAngleAxis dataKey="subject" />
+            <PolarAngleAxis dataKey="subject"/>
+            <PolarRadiusAxis 
+              domain={[0, 10]} 
+              tickCount={6}
+              style={{ display: 'none' }}
+            />
             <Radar
               name="Skills"
               dataKey="A"

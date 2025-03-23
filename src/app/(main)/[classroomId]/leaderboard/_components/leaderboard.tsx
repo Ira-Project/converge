@@ -136,8 +136,6 @@ export function Leaderboard(props: {
   activityInfo: { id: string; name: string; type: string }[]
 }) {
   const data = props.data
-  const activityInfo = props.activityInfo
-  console.log("ACTIVITY INFO", activityInfo);
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []

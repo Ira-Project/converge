@@ -23,7 +23,7 @@ export default function RecentSubmissionsList(props: {
   const totalSubmissions = props.submissions.filter(sub => sub.submittedAt && new Date(sub.submittedAt).getMonth() === new Date().getMonth()).length;
 
   return (
-    <div className="bg-white rounded-lg mx-auto border border-muted h-full my-auto">
+    <div className="bg-white rounded-lg mx-auto border border-muted h-full my-auto overflow-y-scroll">
       <div className="p-4 pb-2">
         <h2 className="text-md font-medium text-gray-900">Recent Submissions</h2>
         <p className="text-sm text-muted-foreground">You had {totalSubmissions} submissions this month</p>
