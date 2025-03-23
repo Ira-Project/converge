@@ -1,0 +1,924 @@
+{
+    "name": "Electric and Magnetic Fields",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "7a185fdd1d5d4254b60cf5f795cfd87a",
+            "concepts": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e"
+            ],
+            "variants": [
+                {
+                    "id": "0e6a91749c4c479eb674cc370198ae76",
+                    "question": "Which of the following best describes electric charge?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A continuous property of matter.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A quantized property of matter that can be positive or negative.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A property of matter that is not conserved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Only positive.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3eca6b4763cc4c84ac29a843648ad538",
+                    "question": "Which of the following statements regarding electric charge is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Electric charge is a fundamental property of matter.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electric charge can be either positive or negative.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electric charge is quantized, meaning it exists in discrete units.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electric charge is a continuous property of matter, similar to mass.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f37a4fe3b57b41529c98655537cb36ed",
+                    "question": "Two charged particles initially separated by a distance 'r' experience a force 'F'. If the distance between the particles is doubled, what happens to the force between them?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The force increases by a factor of 4.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force decreases by a factor of 4.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force decreases by a factor of 2.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "14c55cf5088a4c8d8421d1f476a75dc0",
+            "concepts": [
+                "7ba1c824-07f7-4aae-9165-df48d3403f2d"
+            ],
+            "variants": [
+                {
+                    "id": "40ffd728d6df48eeae8ec976465e472b",
+                    "question": "What is the force between two charges $!$q_1 = 2 \\mu C$!$ and $!$q_2 = 3 \\mu C$!$ separated by a distance of $!$0.1 \\text{ m}$!$ in a vacuum? (Coulomb's constant, $!$k = 9 \\times 10^9 \\text{ N m}^2 \\text{C}^{-2}$!$)",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$5.4 \\text{ N}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$2.7 \\text{ N}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1.8 \\text{ N}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.9 \\text{ N}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "efd75b644ee744e7967eecf507d60882",
+                    "question": "Two charges $!$q_1$!$ and $!$q_2$!$ are separated by a distance $!$r$!$ in a vacuum. The force between them is measured to be $!$F$!$. Which of the following statements is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "If $!$q_1$!$ is doubled and $!$r$!$ is halved, the force becomes $!$8F$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If $!$q_2$!$ is tripled and $!$r$!$ is doubled, the force becomes $!$0.75F$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If both charges are doubled and $!$r$!$ remains the same, the force becomes $!$2F$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If $!$q_1$!$ is halved, $!$q_2$!$ is doubled, and $!$r$!$ is tripled, the force becomes $!$2F/9$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bca201a18bfb41479a27af5a3bf505e6",
+                    "question": "The force between two charges is $!$2.4 \\text{ N}$!$ when they are $!$0.2 \\text{ m}$!$ apart. If the distance between them is increased to $!$0.4 \\text{ m}$!$, keeping the charges constant, what is the new force between them in Newtons?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$0.6$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$1.2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4.8$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$9.6$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "dc9eb743360a469e80319a0a66e466ee",
+            "concepts": [
+                "722abff1-ebfd-42e0-b749-d1fcfe7668bf"
+            ],
+            "variants": [
+                {
+                    "id": "04309c8c5c1f440b85a989ed4bf065a4",
+                    "question": "A material with very few free electrons is called a:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Conductor",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Insulator",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Semiconductor",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Superconductor",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "82c09c7ef0c54df48258d08f94387798",
+                    "question": "Which of the following statements is correct regarding materials and their electrical conductivity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Materials with many free electrons are called insulators.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Materials with very few free electrons are called conductors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Superconductors have extremely high resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Materials with very few free electrons are called insulators.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "eceb5fbaa463440780c55c8b56740247",
+                    "question": "Based on the resistivity of different materials at room temperature given below, identify which material is most likely to be an insulator.\n\nMaterial | Resistivity (! \\Omega m !) \n------- | --------\nA | !1.68 \\times 10^{-8}! \nB | !2.44 \\times 10^{-8}! \nC | !2.65 \\times 10^{2}! \nD | !1.00 \\times 10^{-3}! ",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "B",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "C",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "D",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "c2f918b3589946079daf93235a098129",
+            "concepts": [
+                "8177e369-a250-4f98-8ef7-9944007e3d93"
+            ],
+            "variants": [
+                {
+                    "id": "47acde66822b4883af6013bebbad02fd",
+                    "question": "What is the SI unit for magnetic flux density?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Weber",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Tesla",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Henry",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Farad",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7c46183fe7854b2bb0ad70cc4ee6dd6f",
+                    "question": "Which of the following statements is correct regarding magnetic flux density?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is a scalar quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its SI unit is Tesla.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the same as magnetic flux.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is measured in Weber.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "237651e8fe9e45939300e9a676e9542b",
+                    "question": "A magnetic field has a flux density of $!$2.5 \\ T$!$$. If the area perpendicular to the field is $!$0.5 \\ m^2$!$$. What is the magnetic flux through the area in Webers?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$1.25$!$$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$5$!$$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2$!$$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.5$!$$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "a7c62bc7c91f415dba8b7ff81b7ef899",
+            "concepts": [
+                "2ea34cb0-b608-4374-9d6c-63725f3e0956"
+            ],
+            "variants": [
+                {
+                    "id": "b6fb1db05e8d4b35bd7334aa7c20d231",
+                    "question": "Electric potential is measured in:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Coulombs",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Amperes",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Volts",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Joules",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0c731d3c06c540378fc4afadf6607c14",
+                    "question": "Which of the following units is used to measure electric potential difference?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Coulombs",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Amperes",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Volts",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Joules",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "194cc992da7c4a788d2410c31cff3f8e",
+                    "question": "Two charged parallel plates are separated by a distance $!$d$!$ and the potential difference between them is $!$V$!$. If the distance between the plates is reduced to $!$ \\frac{d}{2} $!$, what happens to the electric potential difference between the plates?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It halves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It quadruples",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "e55e357d16c04e2db8eecd22cc449031",
+            "concepts": [
+                "c0b53321-be82-4f86-9262-ba7a1549c203"
+            ],
+            "variants": [
+                {
+                    "id": "e3afb3d25704412fb55f7969c5c4ba63",
+                    "question": "The electric field strength between two parallel plates with a potential difference of $!$10 \\text{ V}$!$ and separated by $!$0.02 \\text{ m}$!$ is:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$200 \\text{ V/m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$500 \\text{ V/m}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$0.2 \\text{ V/m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$5 \\text{ V/m}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0596ff7f39e947c6868ac00b3b4aa2b4",
+                    "question": "Which of the following statements is correct regarding the electric field strength between two parallel plates?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "If the potential difference is doubled and the distance is halved, the field strength is quadrupled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the potential difference is halved and the distance is doubled, the field strength remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If both the potential difference and the distance are doubled, the field strength is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If both the potential difference and the distance are halved, the field strength is doubled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6ab9b5d4e13c443c955793fe70ecb459",
+                    "question": "Two parallel plates are separated by a distance $!$d$!$ and have a potential difference of $!$V$!$ across them. If the distance between the plates is reduced to $!$\\frac{d}{4}$!$ while keeping the potential difference constant, what is the new electric field strength?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "855090843da4402d8b4423077b0ac702",
+            "concepts": [
+                "cd492bce-7ab6-43ea-aa53-78ec3083e033"
+            ],
+            "variants": [
+                {
+                    "id": "28ccf96e9354427384c0920568fbfa34",
+                    "question": "Which of the following represents the formula for electric potential due to a point charge?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$V = k\\frac{q}{r^2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$V = \\frac{1}{4\\pi \\epsilon_0} \\frac{q}{r}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$V = \\frac{q}{r}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$V = kqr$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e1bed0add741410b9c82d97d7b689f7e",
+                    "question": "If the distance from a point charge is doubled, how does the electric potential due to the charge change?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "62c0f4d875e94c399ab9f1b2a713fa8f",
+                    "question": "Which of the following statements correctly describe the electric potential due to a point charge? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is directly proportional to the magnitude of the charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is inversely proportional to the distance from the charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is a vector quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is measured in Joules.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "7cef393810bd47f39aa843cc81eec2a5",
+            "concepts": [
+                "8679ffe6-6265-460d-8284-0cd29f2666ed"
+            ],
+            "variants": [
+                {
+                    "id": "0667fc9cabe249e49ff04de9455644f8",
+                    "question": "The right-hand grip rule helps determine the direction of:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Electric field around a charge",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Magnetic field around a current-carrying conductor",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Force on a charge in an electric field",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravitational field around a mass",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d2a326264d184c8a97713c91a3270b28",
+                    "question": "Which of the following statements about the right-hand grip rule is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It helps determine the direction of the electric field around a charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It helps determine the direction of the magnetic field around a current-carrying conductor.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It helps determine the direction of the force on a charge in a magnetic field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It helps determine the direction of the gravitational field around a mass.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "41437f515d9e4602b7488d0e47f5fda0",
+                    "question": "A wire carries a current $!$I$!$ out of the page as shown below.  What is the direction of the magnetic field at point $!$P$!$?  Use the right-hand grip rule.",
+                    "image": "A dot labeled I and a point labeled P to the right of the dot.",
+                    "options": [
+                        {
+                            "option_text": "Upwards",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Downwards",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Into the page",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Counterclockwise around the wire",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "fa8def76bb204d2a8b9d65c5c7e0af24",
+            "concepts": [
+                "954c6ead-f80e-43e0-a478-631add508bb6"
+            ],
+            "variants": [
+                {
+                    "id": "5778823e3c3c470a83d917b916a10618",
+                    "question": "What does permittivity measure?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The ability of a material to store magnetic energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The ability of a material to store electric energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Resistance to electric current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "How a material affects the electric field.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5c910a9299a841ccb3198c502fdb7c72",
+                    "question": "A parallel plate capacitor with plates of area $!$\\text{10 cm}^2$!$ separated by a distance of $!$\\text{2 mm}$!$ has a capacitance of $!$\\text{1 nF}$!$. What is the permittivity of the dielectric material between the plates?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$8.85 \\times 10^{-10} \\text{ F/m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1.77 \\times 10^{-10} \\text{ F/m}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$4.42 \\times 10^{-11} \\text{ F/m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2.21 \\times 10^{-11} \\text{ F/m}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "96ca16e6152045729ebe5b9a179b73d2",
+                    "question": "Which of the following statements correctly describe how permittivity affects the electric field?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Permittivity increases the electric field strength.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Permittivity determines the electric flux density for a given electric field strength.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A higher permittivity means a material can store more electric energy.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Permittivity affects the speed of light in a material.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3e6db3f2cd7e4122a9b7099c5a2fade7",
+            "concepts": [
+                "522866e5-3c70-4a23-87f0-6b202495073f"
+            ],
+            "variants": [
+                {
+                    "id": "52ca4fc885154abca1093e98944b111a",
+                    "question": "What is the formula for the force on a charge moving in a magnetic field?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$F = qvB$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = qvB \\sin\\theta$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F = \\frac{qv}{B}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = qE$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fd824486c5fd4d889c7a62fab6390590",
+                    "question": "A proton with a charge of '$!$1.6 \\times 10^{-19} C$!$' moves through a magnetic field of 2.0 T at a speed of '$!$5.0 \\times 10^6 m/s$!$'. If the angle between the proton's velocity and the magnetic field is 30 degrees, what is the magnitude of the magnetic force acting on the proton?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$8.0 \\times 10^{-13} N$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$8.0 \\times 10^{-12} N$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1.6 \\times 10^{-12} N$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$4.0 \\times 10^{-12} N$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e7734685642446b397007d59663e3fcf",
+                    "question": "Which of the following equations correctly represents the relationship between the magnetic force '$!$F$!$' on a moving charge '$!$q$!$', its velocity '$!$v$!$', the magnetic field '$!$B$!$', and the angle '$!$\\theta$!$' between '$!$v$!$' and '$!$B$!$'? The image shows the direction of the magnetic force on a positive charge moving in a magnetic field.",
+                    "image": "Right hand rule with forefinger pointing right, middle finger into the page, and thumb pointing up.",
+                    "options": [
+                        {
+                            "option_text": "$!$F = qvB \\cos \\theta$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = \\frac{qv}{B} \\sin \\theta$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = qvB \\sin \\theta$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F = qvB \\tan \\theta$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "bee5a741c7d340c6ba305cece37e0f5a",
+            "concepts": [
+                "45a4fd1e-f87e-44bf-a721-a088e1c4f19c"
+            ],
+            "variants": [
+                {
+                    "id": "8ed732f678e44f6698d4b3259461db6d",
+                    "question": "Equipotential surfaces are always _______ to electric field lines.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "parallel",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "perpendicular",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "at 45 degrees",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "at any angle",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2e9e3b2367f649449ac1abf82a69fb7a",
+                    "question": "If the charge creating the electric field is doubled, how does the orientation of the equipotential surfaces with respect to the electric field lines change?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "They become parallel.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They remain perpendicular.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The angle between them increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The angle between them decreases.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4a5df140a8014c659c9e99a01ee87d20",
+                    "question": "Which of the following statements regarding equipotential surfaces is/are ALWAYS true?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Equipotential surfaces are perpendicular to electric field lines.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The work done in moving a charge along an equipotential surface is zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Two equipotential surfaces can intersect each other.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The electric field strength is constant at all points on an equipotential surface.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "8888d0b32c584b0bbc94141ca9444234",
+            "concepts": [
+                "9c5b8ec7-b572-487d-b828-366d4ee98c6e",
+                "553af6ab-c859-4e28-bed0-b8a440bb125e",
+                "722abff1-ebfd-42e0-b749-d1fcfe7668bf",
+                "d1e219ca-c756-457c-be53-44d61c4e2605"
+            ],
+            "variants": [
+                {
+                    "id": "18db2ba6abd0445e8a9674c7bdccdf6c",
+                    "question": "Match the following concepts with their definitions:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Electric Charge",
+                            "optionB": "A fundamental property of matter that can be positive or negative."
+                        },
+                        {
+                            "optionA": "Conductors",
+                            "optionB": "Materials that allow electric current to flow easily."
+                        },
+                        {
+                            "optionA": "Insulators",
+                            "optionB": "Materials that hinder electric current flow."
+                        },
+                        {
+                            "optionA": "Electrostatic Induction",
+                            "optionB": "Charging a body without physical contact."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

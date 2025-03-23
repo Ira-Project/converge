@@ -1,0 +1,850 @@
+{
+    "name": "Rigid Body Mechanics",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "93adff6430114324b12f8870680eef5e",
+            "concepts": [
+                "842cde9c-b009-413b-91ff-e2983d8ed77f"
+            ],
+            "variants": [
+                {
+                    "id": "ecceb0cc815f453bafae6c639b50f5d0",
+                    "question": "Which of the following best describes angular displacement?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The rate at which an object rotates around an axis.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total distance traveled by an object in a circular path.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The change in an object's angular position.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed at which an object rotates around an axis.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "63936b98491b4513a9f83221d2884d6d",
+                    "question": "Which of the following statements are true regarding angular displacement? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is a vector quantity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is measured in radians.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It can be positive or negative.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is always equal to the arc length.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "89c914b7292e41f0895c6022de2a8298",
+                    "question": "A ball attached to a string is rotating in a circular path. If the length of the string is doubled, what happens to the angular displacement of the ball for the same number of rotations?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "f8fd49b2dec14457a34ffef4dcc82b47",
+            "concepts": [
+                "125e9c94-6095-4937-870d-751b39d3cb55"
+            ],
+            "variants": [
+                {
+                    "id": "a74c0562a3994bf794f0b2031a38f854",
+                    "question": "A wheel rotates with a constant angular acceleration of $!$2 \\text{ rad/s}^2$!$$. If it starts from rest, what is its angular velocity after 3 seconds?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2 \\text{ rad/s}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4 \\text{ rad/s}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$6 \\text{ rad/s}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$8 \\text{ rad/s}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e95aa52a73604877a0ef130ca2778380",
+                    "question": "A wheel starts from rest and rotates with a constant angular acceleration. If its angular velocity after 4 seconds is $!$8 \\text{ rad/s}$!$, what is its angular acceleration?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$1 \\text{ rad/s}^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2 \\text{ rad/s}^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$3 \\text{ rad/s}^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4 \\text{ rad/s}^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6b6e70d9781f46d58f2a9b5a189c5265",
+                    "question": "A wheel rotates with a constant angular acceleration of $!$3 \\text{ rad/s}^2$!$. Which of the following statements are true regarding its motion? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Its angular velocity increases linearly with time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Its angular displacement increases linearly with time.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its angular velocity remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its angular displacement increases quadratically with time.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "9ac5c8d0ded14c908c40b8d825db2e74",
+            "concepts": [
+                "f6586b7d-c0fe-4287-91e9-f20de7e236bd"
+            ],
+            "variants": [
+                {
+                    "id": "fe8c530995be4725ab18545eabd121c6",
+                    "question": "What is the moment of inertia of a solid sphere of mass $!$M$!$ and radius $!$R$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{1}{2}MR^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{2}{5}MR^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\frac{1}{12}ML^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$MR^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9af23109bfdf43de963adb3d7e1e173c",
+                    "question": "Which of the following statements about the moment of inertia of a solid sphere is **INCORRECT**?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It depends on the mass of the sphere.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It depends on the radius of the sphere.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is proportional to $!$\\frac{2}{5}MR^2$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is always equal to $!$\\frac{1}{2}MR^2$!$ regardless of mass and radius.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0d490557a8034ccd9f3b7bc387ed3d40",
+                    "question": "If the mass of a solid sphere is doubled, what happens to its moment of inertia?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "02a7f991849d480d9472e051dc5dafd9",
+            "concepts": [
+                "daaa4850-76fd-458c-99ae-480cec59b41f"
+            ],
+            "variants": [
+                {
+                    "id": "088a2feef2e646549db6bc61ace0ef1a",
+                    "question": "A disk is rolling without slipping. Which of the following relations is true?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$v = \\omega R$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$v = \\frac{\\omega}{R}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$a = \\alpha R^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$a = \\frac{\\alpha}{R}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "89b82e74c2a543e89dfc1c813d16bd39",
+                    "question": "A disk of radius R is rolling without slipping with angular velocity $!$\\omega$!$ and angular acceleration $!$\\alpha!$!$. Which of the following relations are true? (Select all that apply)",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$v = \\omega R!$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$a = \\alpha R!$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$v = \\frac{\\omega}{R}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$a = \\frac{\\alpha}{R}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "336a39a08dc64e28a47f61b291acdbc3",
+                    "question": "A disk is rolling without slipping. If the radius of the disk is doubled, what happens to the linear velocity of the disk?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ef063141fcf346ba98eac92e6c518081",
+            "concepts": [
+                "17d26f54-4ee0-443a-bbdc-27314f8ac8f8"
+            ],
+            "variants": [
+                {
+                    "id": "9e80e65634ee4390b05580a992b96c6a",
+                    "question": "If the net torque on an object is zero, which quantity remains constant?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Angular velocity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Angular acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Angular momentum",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Rotational kinetic energy",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b74d6c32c0a14615b7085349f0b80f25",
+                    "question": "Which of the following statements is correct regarding the relationship between net torque and angular momentum?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "If the net torque is zero, the angular momentum changes at a constant rate.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If the net torque is non-zero, the angular momentum remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If the net torque is zero, the angular momentum remains constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "There is no relationship between net torque and angular momentum.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5fdcc27910ac403c9b5ef4c9562589c9",
+                    "question": "A rigid body is rotating with an angular velocity of $!$\\omega$!$ rad/s. If a net torque of $!$\\tau$!$ Nm is applied to the body for a time interval of $!$\\Delta t$!$ seconds, what is the change in angular momentum of the body?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\tau \\Delta t$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\frac{\\tau}{\\Delta t}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\tau \\omega$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{\\omega}{\\Delta t}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "5703f7651e774cc99ee468aabdd6e761",
+            "concepts": [
+                "da2bab81-01d0-4015-a959-63b96cc1eb6e"
+            ],
+            "variants": [
+                {
+                    "id": "ddbbccd2b0614f1e905dfac22a13cf51",
+                    "question": "Which equation represents work done in rotational motion?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$W = Fd$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$W = \\frac{1}{2}mv^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$W = \\tau \\Delta \\theta$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$W = P t$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b563719f9b174b0a9666fdc02ba55fc1",
+                    "question": "Which of the following equations correctly represent the work done? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$W = Fd\\cos(\\theta)$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$W = \\frac{1}{2}mv^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$W = \\tau \\Delta \\theta$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$W = P t$!$",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "f07b497a5ced4194be2ed2cffe2074f3",
+                    "question": "A rotating wheel does a work $!$W$!$ when rotated by an angle $!$\\theta!$!$. If the wheel is rotated by an angle of $!$2\\theta!$!$, what will be the new work done?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$W$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2W$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$3W$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4W$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "009c289c258a4ca0baa44674443b264a",
+            "concepts": [
+                "a0a53c72-e207-4c14-b8fe-df6e3ea91501"
+            ],
+            "variants": [
+                {
+                    "id": "a4eb6ef4be05411bb259d1c596e1b8a1",
+                    "question": "What is the formula for power in rotational motion?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$P = Fv$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$P = \\tau \\omega$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$P = \\frac{W}{t}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$P = \\frac{1}{2} I \\omega^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b3279e3337204fa89554f27da9d56508",
+                    "question": "Which of the following equations is the correct formula for power in rotational motion?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$P = \\tau \\omega$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$P = Fv$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$P = \\frac{W}{t} \\omega$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$P = ma$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e6cb0b262901476c9f805eeee494b385",
+                    "question": "If the angular velocity ($!$\\omega$!$) of a rotating object is doubled and the torque ($!$\\tau$!$) remains constant, what happens to the power ($!$P$!$)?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It quadruples.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "91f8bfdcd1fd4f63b68ff845dcc18ea0",
+            "concepts": [
+                "e7c0b9dd-4995-4142-ba78-a54339d150c3"
+            ],
+            "variants": [
+                {
+                    "id": "4b0e1a9795524083af33acb0ed018ad0",
+                    "question": "A rod of length $!$L$!$ and mass $!$M$!$ is rotated about its center. What is its moment of inertia?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{1}{2}ML^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{1}{12}ML^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$ML^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{2}{5}ML^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c76cda4cb2c84eb699ec2673112f0e28",
+                    "question": "Which of the following statements is correct regarding the moment of inertia of objects rotating about their center?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A solid sphere has a moment of inertia of $!$\\frac{2}{5}MR^2$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A thin rod has a moment of inertia of $!$\\frac{1}{2}ML^2$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A hollow cylinder has a moment of inertia of $!$\\frac{1}{2}MR^2$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A solid cylinder has a moment of inertia of $!$MR^2$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "67f784db3e7f4b7db2973089d2b64619",
+                    "question": "A rod of length $!$L$!$ and mass $!$M$!$ is rotated about its center. If the length of the rod is doubled, what happens to its moment of inertia?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "8de6a5dd19234179a9b4130769b198d5",
+            "concepts": [
+                "748f92c0-84cc-4948-a0d7-592f16f74304",
+                "4dc399e4-080e-4bea-af55-7cdc797c028f"
+            ],
+            "variants": [
+                {
+                    "id": "294a8b998c9f4e24b23b319160cb198d",
+                    "question": "What are the conditions for an object to be in both translational and rotational equilibrium?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Net force and net torque must be zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Net force must be zero, but net torque can be non-zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Net torque must be zero, but net force can be non-zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Neither net force nor net torque needs to be zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b70c2156bd654f919dee8611facc2dd4",
+                    "question": "Which of the following statements regarding translational and rotational equilibrium is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "An object in equilibrium experiences neither linear acceleration nor angular acceleration.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "For an object to be in translational equilibrium, the vector sum of all external forces acting on it must be zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "For an object to be in rotational equilibrium, the vector sum of all external torques acting on it must be zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An object can be in translational equilibrium but not in rotational equilibrium, and vice versa.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "424b35d8674e466fa968682684d7b9a9",
+                    "question": "A uniform rod is pivoted at its center and is in equilibrium. A force $!$F$!$ is applied at a distance $!$x$!$ from the pivot. If the force is doubled and the distance is halved, what happens to the torque on the rod?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The torque remains the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The torque is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The torque is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The torque is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "a6f7e8f02cce4318b3faaaa6f06a6464",
+            "concepts": [
+                "d18d31de-80dd-481b-ac97-84532b8daf71"
+            ],
+            "variants": [
+                {
+                    "id": "7a1acc71efa04325873bae304da7d31e",
+                    "question": "What does the equation $!$\\omega^2 = \\omega_i^2 + 2 \\alpha \\Delta \\theta$!$ represent in rotational motion?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Average angular velocity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Instantaneous angular velocity as a function of displacement",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Angular acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Angular displacement",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "50ea7724215c40079d3839df53458de7",
+                    "question": "Which of the following equations are related to rotational motion? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\omega^2 = \\omega_i^2 + 2 \\alpha \\Delta \\theta$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\alpha = \\frac{\\Delta \\omega}{\\Delta t}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\omega = \\omega_i + \\alpha t$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$v = u + at$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "d24b81ef0b064c9886858aa1f8bd06f7",
+                    "question": "A wheel starts from rest and accelerates with a constant angular acceleration of $!$5\\,rad/s^2$!$. What is its angular velocity after it has rotated through an angle of $!$10\\,rad$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$10\\,rad/s$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$20\\,rad/s$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$50\\,rad/s$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$100\\,rad/s$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "3888d0ed89e34c0a9b94081c575eb6c9",
+            "concepts": [
+                "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102",
+                "80468cbc-346f-41f6-9019-e014542d3e32",
+                "6352f0ee-0f0b-4829-ad63-9c74e3c1288d",
+                "3b2a38ec-ad3c-4fda-9fed-c1f652dea80e",
+                "2b9428ca-8d6d-4190-afd1-29f6d9298536"
+            ],
+            "variants": [
+                {
+                    "id": "8a9f553415d54cd887b02b9b87a10e9b",
+                    "question": "Match the concept with its formula:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Average angular velocity",
+                            "optionB": "$!$\\omega = \\frac{\\Delta \\theta}{\\Delta t}$!$"
+                        },
+                        {
+                            "optionA": "Instantaneous angular acceleration",
+                            "optionB": "$!$\\alpha = \\lim_{\\Delta t \\to 0} \\frac{\\Delta \\omega}{\\Delta t}$!$"
+                        },
+                        {
+                            "optionA": "Rotational kinetic energy",
+                            "optionB": "$!$E_k = \\frac{1}{2} I \\omega^2$!$"
+                        },
+                        {
+                            "optionA": "Newton's second law for rotation",
+                            "optionB": "$!$\\tau_{net} = I \\alpha$!$"
+                        },
+                        {
+                            "optionA": "Angular momentum",
+                            "optionB": "$!$L = I \\omega$!$"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

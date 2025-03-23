@@ -1,0 +1,850 @@
+{
+    "name": "Standing Waves and Resonance",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "ec3ca435ab9540b5a7a45a6c18fff3b2",
+            "concepts": [
+                "4c5b0acc-3362-4fcc-b8b9-4b4ffba866c0",
+                "2cd535a8-0dc0-4553-a558-05a880670546",
+                "a20c72be-8e33-45ae-8c8f-f9e78a1fdb17",
+                "5e378e0f-48cf-407a-a0e2-ae8912ca9a53",
+                "667a6e99-a6e9-4086-8c07-6db4d8432f09"
+            ],
+            "variants": [
+                {
+                    "id": "8e3e3f4a4a25439cac72d0f19b9ef4e2",
+                    "question": "Which of the following is true about standing waves?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "They transfer energy along the medium.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They are formed by the superposition of two waves traveling in the same direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They have points of zero displacement called nodes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They have points of maximum displacement called antinodes.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "73905fb110aa49f39f06016558a72feb",
+                    "question": "Select all that apply. Which of the following are characteristics of standing waves?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "They are formed by the superposition of two waves of the same frequency traveling in opposite directions.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They have fixed points of zero amplitude called nodes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They have fixed points of maximum amplitude called antinodes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The distance between adjacent nodes is equal to one wavelength.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "fb58123b4e694628b3f2d4db8bf9281f",
+                    "question": "In a standing wave formed on a string fixed at both ends, if the tension in the string is quadrupled, what happens to the frequency of the fundamental mode?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "b194430e146147e5bb4c59f86ed6e3d9",
+            "concepts": [
+                "6efad7ba-9922-43c6-86b6-ad0cd8b75bd2",
+                "675c0c76-e5a0-48e5-b592-4f77f5c0bcc2"
+            ],
+            "variants": [
+                {
+                    "id": "aa22888bb5904b9b9ace64f4316f9675",
+                    "question": "A standing wave is formed on a string fixed at both ends. If the length of the string is $!$L$!$ and the frequency of the wave is $!$f!$!$, what is the wavelength of the first harmonic?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{L}{2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$L$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2L$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$4L$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "805f3bca074d4b039eb33309d6e82e39",
+                    "question": "A standing wave is formed on a string fixed at both ends. If the length of the string is doubled, what happens to the wavelength of the first harmonic?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "57fe463a4a29439490c691fd65ceb890",
+                    "question": "A standing wave pattern is formed on a string fixed at both ends. Which of the following statements regarding the wavelength of the standing wave are correct? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The wavelength of the first harmonic is twice the length of the string.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The wavelength of the second harmonic is equal to the length of the string.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The wavelength of the third harmonic is two-thirds the length of the string.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The wavelength of the $!$n$!$-th harmonic is given by $!$\\frac{2L}{n}$!$ where $!$L$!$ is the length of the string.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "855d8c1e5da7411cafe1b8d6c1bf0647",
+            "concepts": [
+                "0deb0cf3-4f02-472f-9b66-a770ccf171bc"
+            ],
+            "variants": [
+                {
+                    "id": "09bf5536ec3b49e3b978320959979dcd",
+                    "question": "In a closed pipe, the first harmonic has a wavelength of $!$4L!$!$. What is the wavelength of the third harmonic?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{4L}{3}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$4L$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$8L$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$12L$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7afbdff6a87f4a37af17a51728509999",
+                    "question": "A closed pipe has a fundamental frequency of 100 Hz. Which of the following frequencies CANNOT be produced by the pipe? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$200 \\text{ Hz}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$300 \\text{ Hz}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$400 \\text{ Hz}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$500 \\text{ Hz}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a793610b61f54c18b1f3c9cd1323abdf",
+                    "question": "A closed pipe has a length of $!$L!$!$. If the speed of sound in air is $!$v!$!$, what is the frequency of the fifth harmonic?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{v}{4L}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{3v}{4L}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{5v}{4L}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\frac{7v}{4L}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "bdf56f54deda4db29341e160a3cf24e3",
+            "concepts": [
+                "b3a7838d-1251-4a30-9fd8-7add8add3144"
+            ],
+            "variants": [
+                {
+                    "id": "83821e25f35b4138b01c150b2a40fc45",
+                    "question": "Which of the following phenomena is responsible for the increase in amplitude of a forced oscillation when the driving frequency approaches the natural frequency?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Damping",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Resonance",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Interference",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Diffraction",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e9f4e0f6f93c499cbac9f2e12a5d65fa",
+                    "question": "A swing has a natural frequency of $!$0.5 \newline Hz$!$. If a person pushes the swing with a frequency of $!$0.48 \newline Hz$!$, which of the following will happen?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The swing's amplitude will decrease significantly.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The swing's amplitude will increase significantly.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The swing's amplitude will increase slightly.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The swing will exhibit chaotic motion.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "59a756bceebe42be840e2a93f5d0e609",
+                    "question": "Identify the INCORRECT statement regarding resonance:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Resonance occurs when the driving frequency matches the natural frequency.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Resonance can cause catastrophic failure in structures.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Resonance is always a desirable phenomenon.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Resonance leads to a significant increase in amplitude.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "be5e2cb376d74c189326f3ae754bfef4",
+            "concepts": [
+                "8d2d52c4-8f83-4410-b91a-6a0b020b0bb4"
+            ],
+            "variants": [
+                {
+                    "id": "b529b61379eb43de85666be23e153010",
+                    "question": "Which type of damping returns an oscillating system to equilibrium most quickly without overshooting?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Underdamping",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Overdamping",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Critical damping",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Resonance",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e91492a204034d27bb9ae04e3b84377b",
+                    "question": "For each type of damping, identify whether it causes the system to return to equilibrium faster than critical damping. Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Underdamping",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Overdamping",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Critical damping",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "No damping",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "fe8242d347f24690b05b107b3b6e9ecf",
+                    "question": "A spring-mass system is critically damped. The mass is then doubled. Which of the following damping behavior is observed in the new system?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Underdamped",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Overdamped",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Critically damped",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "No damping",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "994dd9aca1804c2486b6f7fb24e20b17",
+            "concepts": [
+                "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+            ],
+            "variants": [
+                {
+                    "id": "f332f80432cd42d7b7dd478e4c4f4e66",
+                    "question": "What happens to the energy of a damped oscillator over time?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It increases exponentially.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It decreases exponentially.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It oscillates between maximum and minimum values.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "67cf54537301499ca82ae31343648fc0",
+                    "question": "Which of the following statements is true regarding the energy of a damped simple harmonic oscillator?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The energy remains constant over time.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The energy increases linearly with time.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The energy decreases exponentially with time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The energy decreases linearly with time.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6e277637fad141dc93d05c8aadaaf00d",
+                    "question": "A damped oscillator has an initial amplitude of $!$10$!$ cm and a damping constant of $!$0.1$!$ $!$s^{-1}$!$. What is the amplitude of the oscillator after $!$5$!$ seconds?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$6.07$!$ cm",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$3.68$!$ cm",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$10.0$!$ cm",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$5.0$!$ cm",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6053214dffd0424b86c20d3be6d0e74e",
+            "concepts": [
+                "3ba1db2f-4108-4630-b01b-15cd2f20aea6"
+            ],
+            "variants": [
+                {
+                    "id": "7cef4d3aa3b24c6d9268cdaf04bffa69",
+                    "question": "A simple pendulum is an example of which type of oscillation?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Forced oscillation",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Damped oscillation",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Free oscillation",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Resonant oscillation",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "abb24d97d4234be8a664697619e2cb7a",
+                    "question": "Which of the following factors can affect the period of a simple pendulum? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Length of the pendulum",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mass of the bob",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Amplitude of the oscillation",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Acceleration due to gravity",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "0df56781853e4ce8a60e9925b09edf9c",
+                    "question": "A simple pendulum oscillates with a time period '$!$T!$!$'. If the length of the pendulum is quadrupled, what will be the new time period?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "'$!$T!$!$'",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "'$!$2T!$!$'",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "'$!$4T!$!$'",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "'$!$T/2!$!$'",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "7b268e0019b448f9a87b32ae939bc0fa",
+            "concepts": [
+                "e9603b49-b438-4024-a0f2-1f8da3c929e7"
+            ],
+            "variants": [
+                {
+                    "id": "d67d1ba0d1064aa4909c64b9c7e3aa63",
+                    "question": "In standing waves in open pipes, what exists at both ends of the pipe?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Nodes",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Antinodes",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "One node and one antinode",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Neither nodes nor antinodes",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8c5f5066d66c467bb559a89df3167bf3",
+                    "question": "Which of the following statements is CORRECT regarding standing waves in open pipes?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Nodes exist at both ends of the pipe.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Antinodes exist at both ends of the pipe.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A node exists at one end and an antinode at the other.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Neither nodes nor antinodes exist at the ends of the pipe.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a11e43b8713c4237a70d6bbc3fe77782",
+                    "question": "Consider a standing wave in an open pipe. If the length of the pipe is halved, what happens to the wavelength of the fundamental frequency?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "27bdc192b1fb4169ab50e61f7df8d675",
+            "concepts": [
+                "fcd2329a-18ea-491a-8d1a-cc8ef455e98a"
+            ],
+            "variants": [
+                {
+                    "id": "3be9d587266541209a763a540ce615bd",
+                    "question": "What distinguishes higher harmonics from the fundamental frequency in a standing wave?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Higher harmonics have lower frequencies.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Higher harmonics have longer wavelengths.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Higher harmonics have more nodes and antinodes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Higher harmonics have greater amplitude.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4dffeb314ac0488488beed4d3d79a3ca",
+                    "question": "Which of the following statements regarding harmonics in a standing wave is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The fundamental frequency is the lowest frequency harmonic.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Higher harmonics are integer multiples of the fundamental frequency.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Harmonics have wavelengths that are integer fractions of the fundamental wavelength.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Higher harmonics have fewer nodes than the fundamental frequency.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e4b8cd08eed54e8784e329b6fa473536",
+                    "question": "A standing wave on a string has a fundamental frequency of 100 Hz. What is the frequency of the third harmonic?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "33.3 Hz",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "200 Hz",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "300 Hz",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "400 Hz",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "64cf01e4331e4d0e85129ec60b4f30cd",
+            "concepts": [
+                "6efad7ba-9922-43c6-86b6-ad0cd8b75bd2",
+                "e9603b49-b438-4024-a0f2-1f8da3c929e7"
+            ],
+            "variants": [
+                {
+                    "id": "e0120ea406bf48b08ec06c52f8907046",
+                    "question": "The formula $!$\\lambda_n = \\frac{2L}{n}$!$ applies to which of the following?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Standing waves in closed pipes only",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Standing waves in open pipes only",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Standing waves on fixed strings only",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both standing waves on fixed strings and in open pipes",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "20f78c6243244b5e8a3a6cb735765e06",
+                    "question": "Which of the following statements is/are true about the formula $!$\\lambda_n = \\frac{2L}{n}$!$ ?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It applies to standing waves in closed pipes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It applies to standing waves in open pipes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It applies to standing waves on fixed strings.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "In this formula, $!$n$!$ represents the harmonic number, which is a positive integer.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "6971d38ed4fa49709cb03324094b1a9c",
+                    "question": "A standing wave is established on a string of length 1.2 m fixed at both ends. If the speed of the wave on the string is 400 m/s, what is the frequency of the second harmonic?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "267 Hz",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "333 Hz",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "667 Hz",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "133 Hz",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "ca322edaf8234accbf56ed2965e706e2",
+            "concepts": [
+                "4c5b0acc-3362-4fcc-b8b9-4b4ffba866c0",
+                "2cd535a8-0dc0-4553-a558-05a880670546",
+                "a20c72be-8e33-45ae-8c8f-f9e78a1fdb17",
+                "001c90f1-aa84-454f-b15c-1c8c7c11db88"
+            ],
+            "variants": [
+                {
+                    "id": "7ea6ced058634baeb1ca0ac3b8838800",
+                    "question": "Match the following terms related to standing waves with their definitions.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Node",
+                            "optionB": "Point of zero displacement in a standing wave"
+                        },
+                        {
+                            "optionA": "Antinode",
+                            "optionB": "Point of maximum displacement in a standing wave"
+                        },
+                        {
+                            "optionA": "Fundamental frequency",
+                            "optionB": "Lowest frequency of a standing wave"
+                        },
+                        {
+                            "optionA": "Harmonic",
+                            "optionB": "A multiple of the fundamental frequency"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

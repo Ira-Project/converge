@@ -1,0 +1,929 @@
+{
+    "name": "Motion in Electric and Magnetic Fields",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "ea0c2554bcad45a982ac2684135ddead",
+            "concepts": [
+                "2b9aa9a0-ea17-4bb8-95b8-eda10b340504"
+            ],
+            "variants": [
+                {
+                    "id": "0aaa7c8c09ec4f9b9d2dde4b1a5d6a8c",
+                    "question": "A charged particle enters a uniform electric field. Which of the following best describes its path?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Always parabolic",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Always straight",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Straight or parabolic depending on initial velocity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Circular",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9be9b4a355ba46e3b7c12149683d497b",
+                    "question": "Which of the following statements is correct regarding the trajectory of a charged particle in a uniform electric field?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The path is always parabolic, irrespective of the initial velocity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The path is always straight, irrespective of the initial velocity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The path can be either straight or parabolic, depending on the initial velocity of the particle and its orientation with respect to the field.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The path is always circular.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7e4712decbcf407891d3d6ef6a8d837c",
+                    "question": "A charged particle enters a uniform electric field with an initial velocity perpendicular to the field. If the initial velocity of the particle is doubled, what happens to the radius of curvature of its path?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The radius of curvature is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The radius of curvature remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The radius of curvature is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The radius of curvature is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ba433f8d62484e33a5fb59a7c4ec011e",
+            "concepts": [
+                "f69857d1-d285-419d-8458-a425ac5cf3d5"
+            ],
+            "variants": [
+                {
+                    "id": "b2d885aa0ee64f07bb08c1ea875484a6",
+                    "question": "What is the force on a charge '$!$q$!$' in an electric field '$!$E$!$'?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$F = q/E$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = E/q$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = qE$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F = qE^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "28a399d7d7b44b14adbf252f4137fb21",
+                    "question": "A charge '$!$q = 2 \\mu C$!$' is placed in an electric field '$!$E = 5 \\times 10^3 N/C$!$'. What is the magnitude of the force on the charge?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$10$!$ N",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$10 \\times 10^{-3}$!$ N",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2.5 \\times 10^{-2}$!$ N",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4 \\times 10^3$!$ N",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c55a109fd039402b850aa5ff77099291",
+                    "question": "Which of the following equations correctly represents the relationship between force '$!$F$!$', charge '$!$q$!$' and electric field '$!$E$!$'? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$F = qE$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F = \\frac{q}{E}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$q = FE$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E = \\frac{F}{q}$!$",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "1db18e23fedb4435af9879713f46d894",
+            "concepts": [
+                "5c33bb63-3c6d-413f-a1af-25385ab95845"
+            ],
+            "variants": [
+                {
+                    "id": "3d31439daa2c4b60b2b6649b3bfe65e9",
+                    "question": "How does the acceleration of a charged particle in an electric field relate to its charge and mass?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Directly proportional to mass, inversely to charge",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Directly proportional to charge, inversely to mass",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Directly proportional to both charge and mass",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Inversely proportional to both charge and mass",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "163067debd094bcd9f4a5686c3012f65",
+                    "question": "A proton and an electron are placed in the same electric field. Which of the following statements is CORRECT regarding their acceleration?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The proton experiences greater acceleration because it has a larger mass.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The electron experiences greater acceleration because it has a smaller mass.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Both experience the same acceleration because the electric field is the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both experience zero acceleration because their charges are opposite.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ef4c8ba263c74243866a40de7072b7b9",
+                    "question": "An alpha particle (charge $!$2e$!$ and mass $!$4m$!$ where 'e' is the elementary charge and 'm' is the mass of a proton) is placed in an electric field of strength E.  A proton (charge $!$e$!$ and mass $!$m$!$) is placed in a separate electric field of strength 2E. What is the ratio of the acceleration of the alpha particle to the acceleration of the proton?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$1:4$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1:2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$1:1$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2:1$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "1e4e2039bb16475cab445a7a9a1024d4",
+            "concepts": [
+                "2528a69f-0369-4021-ac12-870b5423cd8a"
+            ],
+            "variants": [
+                {
+                    "id": "8c6df7926c6e4bae802ddf2948dab74a",
+                    "question": "What is the kinetic energy gained by a charge '$!$q$!$' accelerated through a potential difference '$!$V$!$'?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$q/V$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$V/q$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$qV$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$qV^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "21830f8e56db48ad9f8f336dc7dc0d30",
+                    "question": "Which of the following statements is correct regarding the kinetic energy gained by a charge accelerated through a potential difference?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The kinetic energy gained is directly proportional to the charge and inversely proportional to the potential difference.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The kinetic energy gained is inversely proportional to the charge and directly proportional to the potential difference.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The kinetic energy gained is directly proportional to both the charge and the potential difference.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The kinetic energy gained is inversely proportional to both the charge and the potential difference.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ff6409b3256b45a595d74fd084048afd",
+                    "question": "A proton is accelerated through a potential difference of '$!$10$!$' V. What is the kinetic energy gained by the proton in electron volts (eV)?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "1 eV",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "5 eV",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "10 eV",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "20 eV",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "d714bfe723194e619dd75d0b2e08651c",
+            "concepts": [
+                "9608ce91-85fd-4769-948b-5b32a202a3d0"
+            ],
+            "variants": [
+                {
+                    "id": "ca50719e36fc4dd1abee8c740e92d6a7",
+                    "question": "A charged particle enters a magnetic field with velocity perpendicular to the field. What is its path?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Straight line",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Parabola",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Circle",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Spiral",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e181dcffa8954f7995bf9526629e5cc6",
+                    "question": "A charged particle with charge $!$q$!$ enters a uniform magnetic field of strength $!$B$!$ with a velocity $!$v$!$ perpendicular to the field. The particle's mass is $!$m$!$. What is the radius of the circular path it follows?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$ \\frac{mv}{qB} $!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$ \\frac{qB}{mv} $!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$ \\frac{mv^2}{qB} $!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$ \\frac{qBv}{m} $!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ff6eaf5deb554d69b057ffbb7c06755e",
+                    "question": "Which of the following statements correctly describe the motion of a charged particle in a magnetic field?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "If the velocity of the particle is parallel to the magnetic field, the particle experiences no force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the velocity of the particle is perpendicular to the magnetic field, the particle moves in a circular path.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force on the particle is always perpendicular to both the velocity and the magnetic field.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of the particle changes as it moves through the magnetic field.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "6d787a2b27854b0b95374aa1482fa954",
+            "concepts": [
+                "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+            ],
+            "variants": [
+                {
+                    "id": "2eb22ba4312241f8b78b638a4c2ca700",
+                    "question": "What is the radius of the circular path of a charge '$!$q$!$' with mass '$!$m$!$' and velocity '$!$v$!$' in a magnetic field '$!$B$!$'?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$mvqB$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$qB/mv$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$mv/qB$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$qB/mv^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c05841622c2e471e8a33edf497cad874",
+                    "question": "A charge '$!$q$!$' with mass '$!$m$!$' moves with a speed '$!$v$!$' in a uniform magnetic field '$!$B$!$'. Which of the following expressions gives the radius of the circular path of the charge?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$mv/Bq$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$mv/qB$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$qB/mv$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$mvB/q$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "72aeae4d787c4076ace410185963597d",
+                    "question": "In a magnetic field of strength '$!$0.5 \\text{ T}$!$', a proton with charge '$!$1.6 \\times 10^{-19} \\text{ C}$!$' and mass '$!$1.67 \\times 10^{-27} \\text{ kg}$!$' moves in a circular path with a radius of '$!$0.2 \\text{ m}$!$', what is the speed of the proton?  (Ignore relativistic effects)",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$4.0 \\times 10^6 \\text{ m/s}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$6.4 \\times 10^6 \\text{ m/s}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$1.6 \\times 10^7 \\text{ m/s}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2.5 \\times 10^7 \\text{ m/s}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "8e89998309844756af443c88e15ce9d8",
+            "concepts": [
+                "0686c4f9-2dd6-4c52-b79a-a66dd4561b52"
+            ],
+            "variants": [
+                {
+                    "id": "757011d78dc1457cb86d43051354b8f8",
+                    "question": "What is the period of revolution of a charge in a magnetic field?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Proportional to charge and field strength",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Inversely proportional to mass",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Independent of mass",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Proportional to mass, inversely proportional to charge and field strength",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4c8e45c1deb64a3f9025f108d9eb59f7",
+                    "question": "A proton with charge $!$e$!$ and mass $!$m$!$ is moving in a uniform magnetic field $!$\\textbf{B}$!$ with a speed $!$v$!$. Which of the following statements about the period of revolution of the proton is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The period increases with increasing magnetic field strength.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The period decreases with increasing speed of the proton.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The period is independent of the charge of the proton.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The period is proportional to the mass of the proton and inversely proportional to the magnetic field strength.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "521b967a1a6448ef88e95a91cd368fcb",
+                    "question": "An electron with a mass of $!$9.1 \\times 10^{-31}$!$ kg enters a region of uniform magnetic field with a strength of 0.2 T. The electron moves in a circular path with a speed of $!$3 \\times 10^6$!$ m/s.  What is the period of the electron's circular motion?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$1.18 \\times 10^{-10}$!$ s",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$5.3 \\times 10^{-9}$!$ s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$3.2 \\times 10^{-11}$!$ s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$7.6 \\times 10^{-7}$!$ s",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "7c53584e98bd4fb28b2da9fa6f32969a",
+            "concepts": [
+                "33e1eb9a-8506-4f9c-b1d1-d4407bcf49d7"
+            ],
+            "variants": [
+                {
+                    "id": "ee203cfac9054d319e2f5139037f663e",
+                    "question": "If a charged particle in a magnetic field starts losing energy, how will its path change?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Remains circular",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Becomes a straight line",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Spirals inward",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Spirals outward",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4ac75dbb96c849368f02cf9f33536ceb",
+                    "question": "A charged particle is moving in a uniform magnetic field and starts losing kinetic energy via radiation. Which of the following statements correctly describes the changes in the particle's path? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The radius of the particle's path decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The particle's speed decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The period of the particle's circular motion decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The particle's path becomes a straight line.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "610ca8468361433292beaac316926182",
+                    "question": "A charged particle is moving in a magnetic field with a kinetic energy of $!$E_k$!$ and a radius of curvature of its path $!$r$!$ . If the magnetic field strength is doubled, what will be the new radius of curvature, assuming the particle's kinetic energy remains constant?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$r/4$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$r/2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$r$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2r$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "c5e88133111d4eb1877c0891a95edc83",
+            "concepts": [
+                "d24de8b2-dd86-4378-b34f-5b7f77ce96d8"
+            ],
+            "variants": [
+                {
+                    "id": "433c04113f894b2f9ff969e9753d4f67",
+                    "question": "Does the magnetic force do work on a moving charge?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Yes, always",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Yes, sometimes",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "No, never",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Depends on the charge's velocity",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f37c54d09fad4a2fb69501a79b89d6ea",
+                    "question": "Which of the following statements regarding the work done by magnetic force on a moving charge is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The magnetic force always does positive work.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic force always does negative work.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic force sometimes does positive work and sometimes negative work.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic force never does work.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bb1b363965c3465d853a91f515f0cf81",
+                    "question": "A proton with a charge of $!$1.6 \\times 10^{-19} C$!$ is moving with a velocity of $!$5 \\times 10^6 m/s$!$ in a direction perpendicular to a uniform magnetic field of $!$0.2 T$!$. What is the magnitude of the magnetic force acting on the proton, given that the force is given by $!$F = qvB$!$ where $!$q$!$ is the charge, $!$v$!$ is the velocity, and $!$B$!$ is the magnetic field strength?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$1.6 \\times 10^{-12} N$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$1.6 \\times 10^{-13} N$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$8 \\times 10^{-13} N$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$3.2 \\times 10^{-12} N$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "adeb2c9da93c49fa9f9d01e5692ddb86",
+            "concepts": [
+                "869566af-fb78-4d6f-b591-4f86eae31f82"
+            ],
+            "variants": [
+                {
+                    "id": "d8884de0773a4bb09d4403ef9aee6044",
+                    "question": "Under what condition does a charged particle move undeflected in crossed electric and magnetic fields?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "When electric field is stronger than magnetic field",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "When velocity is perpendicular to both fields",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "When velocity equals the ratio of electric to magnetic field strengths",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "When magnetic field is stronger than electric field",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "21ecf1330b864d3a9c1df57925437982",
+                    "question": "A proton with a speed of $!$2.0 \\times 10^6 \\text{ m/s}$!$ enters a region with crossed electric and magnetic fields. The electric field has a magnitude of $!$5.0 \\times 10^4 \\text{ N/C}$!$. What is the magnitude of the magnetic field required for the proton to move undeflected?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$0.25 \\text{ T}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$2.5 \\text{ T}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4.0 \\text{ T}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The proton will always be deflected regardless of the magnetic field strength.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "ade3979bb4bd40399d1b3ceccaac4416",
+                    "question": "An electron enters a region of crossed electric and magnetic fields. The electric field is directed downwards and has a strength of $!$10^4 \\text{ N/C}$!$. The magnetic field is directed into the page. The electron moves undeflected through the fields.  Which of the following statements must be true? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The electron's velocity is parallel to the magnetic field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The electron's velocity is perpendicular to both the electric and magnetic fields.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnitude of the electron's velocity is equal to the ratio of the electric field strength to the magnetic field strength.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnetic force on the electron is equal in magnitude and opposite in direction to the electric force.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "855cf79062694013b09fa6c62994f212",
+            "concepts": [
+                "f69857d1-d285-419d-8458-a425ac5cf3d5"
+            ],
+            "variants": [
+                {
+                    "id": "33b70c85bc30428f96c2990e08cee2a8",
+                    "question": "A proton and an electron enter a uniform electric field with the same initial velocity. Which particle will experience a greater force?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Proton",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electron",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both experience the same force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Cannot be determined",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b69a4a739bbb4857816c3a5a17b55995",
+                    "question": "A proton and an electron are placed in a uniform electric field. If the proton experiences a force of '$!$5 \\times 10^{-15} N$!$', what is the magnitude of the force experienced by the electron?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "'$!$5 \\times 10^{-15} N$!$'",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "'$!$2.5 \\times 10^{-15} N$!$'",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "'$!$10 \\times 10^{-15} N$!$'",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "'$!$1 \\times 10^{-15} N$!$'",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e55cd75eacd14dd29bd5e49d331d31c0",
+                    "question": "Which of the following statements are true regarding the force experienced by a charged particle in a uniform electric field?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The force is proportional to the charge of the particle.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force is proportional to the strength of the electric field.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force is in the same direction as the electric field for a positive charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force is independent of the velocity of the particle.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "56a09a92ccce46039a1be74233436104",
+            "concepts": [
+                "f69857d1-d285-419d-8458-a425ac5cf3d5",
+                "5c33bb63-3c6d-413f-a1af-25385ab95845",
+                "2528a69f-0369-4021-ac12-870b5423cd8a",
+                "f34446c8-9452-48c0-ab50-0cb3fd1b9679",
+                "0686c4f9-2dd6-4c52-b79a-a66dd4561b52"
+            ],
+            "variants": [
+                {
+                    "id": "ab8c017ac2cb4416874c6db8755b217f",
+                    "question": "Match the formulas to their concepts:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Force on a charge in an electric field",
+                            "optionB": "$!$F = qE$!$"
+                        },
+                        {
+                            "optionA": "Acceleration in an electric field",
+                            "optionB": "$!$a = \\frac{qE}{m}$!$"
+                        },
+                        {
+                            "optionA": "Kinetic energy gain in an electric field",
+                            "optionB": "$!$qV$!$"
+                        },
+                        {
+                            "optionA": "Radius of circular motion in a magnetic field",
+                            "optionB": "$!$R = \\frac{mv}{qB}$!$"
+                        },
+                        {
+                            "optionA": "Period of revolution in a magnetic field",
+                            "optionB": "$!$T = \\frac{2\\pi m}{qB}$!$"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

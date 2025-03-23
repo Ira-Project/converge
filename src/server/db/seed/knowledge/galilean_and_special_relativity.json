@@ -1,0 +1,1004 @@
+{
+    "name": "Galilean and Special Relativity",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "6278249fc0fa42969b7ba0fdf080ecf3",
+            "concepts": [
+                "132daf0d-8cac-47f0-8249-0868803f12ef"
+            ],
+            "variants": [
+                {
+                    "id": "3763094dadf44507a3e9fe1d2d7c26b4",
+                    "question": "Which of the following best describes a reference frame?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A system of coordinate axes and clocks distributed throughout space.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A point in space from which observations are made.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A specific location in time.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The path an object takes through space.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "20b3588d12c544d39558fd086942d49f",
+                    "question": "Which of the following statements about reference frames are true? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A reference frame consists of a coordinate system and a set of synchronized clocks.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Reference frames can be inertial or non-inertial.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The laws of physics are the same in all inertial reference frames.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A rotating carousel is an example of an inertial reference frame.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "3992de4dd1f84cc692b140ad3b3fa93c",
+                    "question": "Imagine two observers: one standing still on the ground and another in a train moving at constant velocity. How does the reference frame of the observer in the train compare to the reference frame of the observer on the ground?",
+                    "image": "Stick figure labeled A standing on the ground next to train tracks. Stick figure labeled B inside a train moving on the tracks to the right with an arrow indicating velocity $!\\vec{v}$!$",
+                    "options": [
+                        {
+                            "option_text": "The train's reference frame is accelerating relative to the ground's reference frame.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The train's reference frame is moving at constant velocity relative to the ground's reference frame.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The train's reference frame is rotating relative to the ground's reference frame.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The train's reference frame is stationary relative to the ground's reference frame.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "814689c86bf648caae03c09e21501920",
+            "concepts": [
+                "f68ed561-000a-41ba-a2cb-1256709ba82e"
+            ],
+            "variants": [
+                {
+                    "id": "9fbb2c57af8e4493929e405fd33bc398",
+                    "question": "What is the defining characteristic of an inertial reference frame?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It experiences constant acceleration.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It does not experience acceleration.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It moves at the speed of light.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It rotates around a fixed axis.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bffc5e5d87f04b1d97e51c2eca4898a4",
+                    "question": "Which of the following statements regarding inertial reference frames is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "An inertial reference frame does not accelerate.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Newton's laws of motion hold true in an inertial reference frame.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An inertial reference frame can be in constant velocity motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An inertial reference frame must be at rest.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4f20e9143a5f4055acca241f75aac597",
+                    "question": "A spacecraft is moving with a constant velocity of $!$20 \"> m/s$!$ relative to an inertial reference frame. An astronaut inside the spacecraft throws a ball with a velocity of $!$5 \"> m/s$!$ in the same direction as the spacecraft's motion. What is the velocity of the ball relative to the inertial reference frame?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$5 \"> m/s$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$15 \"> m/s$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$20 \"> m/s$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$25 \"> m/s$!$",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "81ee2fc31b0a45f0b12437593458ae4e",
+            "concepts": [
+                "af99d217-2569-4adb-aea1-e7a319f682ac"
+            ],
+            "variants": [
+                {
+                    "id": "c921f9705b7246478e5c8e8df5013469",
+                    "question": "In an inertial frame, an object with no external forces acting on it will:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Remain at rest.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Move with constant velocity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Accelerate uniformly.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Move in a circular path.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "d90a43f733344d10bc9ad495c866eca5",
+                    "question": "A spaceship is drifting in space with no external forces acting on it. Select all the statements that correctly describe the spaceship's motion.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The spaceship will remain at its current position.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The spaceship will continue moving in a straight line at a constant speed.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The spaceship will gradually slow down and come to a stop.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The spaceship will start spinning.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a867a2ffec7f4fca916490c1441d4bad",
+                    "question": "A hockey puck is sliding on frictionless ice with a constant velocity of $!$10 \\text{ m/s}$!$. After 5 seconds, how far will the puck have traveled?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$10 \\text{ m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$25 \\text{ m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$50 \\text{ m}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$100 \\text{ m}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "0eb2d20b1cca45b98ae4245566de03b8",
+            "concepts": [
+                "15b83cdd-f54a-4f0b-b7ba-f57223c7d3c4"
+            ],
+            "variants": [
+                {
+                    "id": "97492a048ea54e3b81fc001f7aa2e98a",
+                    "question": "Which transformation equations are used in non-relativistic physics to relate coordinates between inertial frames?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Lorentz transformations",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Galilean transformations",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Maxwell's equations",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Schr\u00f6dinger equation",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a0ca9a2bb76a4653a841395d9c4f7130",
+                    "question": "A ball is thrown upwards with an initial velocity of $!$20 \\text{ m/s}$!$. Assuming the acceleration due to gravity is $!$9.8 \\text{ m/s}^2$!$.  After 3 seconds, what will be the ball's velocity? Neglect air resistance.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$9.4 \\text{ m/s}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$-9.4 \\text{ m/s}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$49.4 \\text{ m/s}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$-29.4 \\text{ m/s}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "453898ac3bff49f59e1a53d3b1030459",
+                    "question": "Which of the following concepts are related to Galilean transformations? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Invariance of the speed of light",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Principle of relativity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Absolute time and space",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Time dilation",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "273eb27c45064f469a18121f77b1a461",
+            "concepts": [
+                "af08fd9a-f90b-4b6c-bc4c-39068a5e1fda"
+            ],
+            "variants": [
+                {
+                    "id": "27227968b89c4061b03d20bddc3e5c2d",
+                    "question": "According to Galilean velocity addition, if a train moves at $!$20 m/s$!$ and a person on the train walks at $!$2 m/s$!$ in the same direction, what is the person's velocity relative to the ground?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$18 m/s$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$20 m/s$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$22 m/s$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$40 m/s$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "188db427737d4c74982c15ddfcd92a6c",
+                    "question": "A boat moves at a speed of $!$10 m/s$!$ relative to the water. The water moves at a speed of $!$5 m/s$!$ relative to the shore. Which of the following statements is correct regarding the boat's speed relative to the shore, according to Galilean velocity addition?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "If the boat moves in the same direction as the water, its speed relative to the shore is $!$5 m/s$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If the boat moves in the opposite direction to the water, its speed relative to the shore is $!$15 m/s$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If the boat moves in the same direction as the water, its speed relative to the shore is $!$15 m/s$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The boat's speed relative to the shore is always $!$10 m/s$!$ regardless of its direction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ab4d6c73c92a4bd98fe4dfa51cd6c11a",
+                    "question": "A train is moving at $!$30 m/s$!$. A person on the train starts running at $!$4 m/s$!$ in the same direction as the train. If the train's speed is halved, what happens to the person's velocity relative to the ground (according to Galilean velocity addition), assuming the person maintains the same running speed?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It decreases by $!$15 m/s$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It decreases by $!$19 m/s$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "73e694cd266b4847b2243161993e5e3e",
+            "concepts": [
+                "8780e1cb-7061-47a2-b838-f4bf3780fd2a"
+            ],
+            "variants": [
+                {
+                    "id": "7d983b30237749b4ac387db17b33f103",
+                    "question": "The principle of relativity states that:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The laws of physics are the same in all inertial frames.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of light is constant in all reference frames.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Time is absolute and flows at the same rate for all observers.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravity is a curvature of spacetime.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cf1a73e06c3441bb9789d5c7604265fe",
+                    "question": "Which of the following statements about the principle of relativity is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The laws of physics are the same for all observers in uniform motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of light in a vacuum is the same for all observers, regardless of the motion of the light source.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Measurements of time and distance are relative to the observer's motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The laws of physics are different for observers in accelerated motion relative to each other.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a7553471306f45459cff1428200a529a",
+                    "question": "A spaceship is moving at a constant velocity relative to an observer on Earth. According to the principle of relativity, which of the following observations would be TRUE for both the spaceship and the Earth observer?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Time passes at the same rate.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The length of objects is the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of light is the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The mass of objects is the same.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6865ce10765145afbd6a4f47442f9269",
+            "concepts": [
+                "1d64c795-06d8-4470-ba11-c2f8c16c22a5"
+            ],
+            "variants": [
+                {
+                    "id": "efef00ecfd034257a53689b477a8395b",
+                    "question": "The constancy of the speed of light postulates that:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Light travels at different speeds depending on the observer's motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Light's speed in a vacuum is the same for all observers.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of light is infinite.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Light can be accelerated beyond its speed in a vacuum",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4f343b40a4b24f3d930642c1273dede7",
+                    "question": "Which of the following statements are consistent with the constancy of the speed of light? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The speed of light in a vacuum is the same for all observers, regardless of their relative motion or the motion of the light source.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of light changes depending on the medium through which it travels.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Time dilation and length contraction occur as a consequence of the constant speed of light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Michelson-Morley experiment disproved the existence of the luminiferous aether, supporting the constancy of the speed of light.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "b46a4af00f7c48cd82b9c48ed204ce95",
+                    "question": "A spaceship is moving at 0.8c (where c is the speed of light) relative to an observer on Earth.  The spaceship emits a beam of light in the forward direction. According to the principle of the constancy of the speed of light, what will be the speed of the light beam relative to the observer on Earth?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "0.8c",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1.0c",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1.8c",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "0.2c",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "32f3dd0ec9844b9d808a10b17fa0bdb2",
+            "concepts": [
+                "79df688b-df1e-4c20-b8cc-247370a90937"
+            ],
+            "variants": [
+                {
+                    "id": "2c31a5c7bff04b8c9bd75af16547fef3",
+                    "question": "Which set of transformations accounts for relativistic effects when relating spacetime coordinates between inertial frames?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Galilean transformations",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Lorentz transformations",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Fourier transformations",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Laplace transformations",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "73473382099c4e84b054ed3c6b3100f5",
+                    "question": "A spacecraft is moving at $!$0.6c$!$ relative to an observer on Earth. The spacecraft emits a light signal. What is the speed of the light signal as measured by the observer on Earth?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$0.4c$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.6c$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$c$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$1.6c$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "065779e9171a4621be10b07437d75697",
+                    "question": "Which of the following transformations correctly describe how spacetime coordinates change between two inertial frames in relative motion? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Galilean Transformations, which are accurate for low speeds.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Lorentz Transformations, which account for time dilation and length contraction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Euler Transformations, which describe rotations in three-dimensional space.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Affine Transformations, which preserve collinearity and ratios of distances.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3572539c260f416789ae2183de9486e3",
+            "concepts": [
+                "a0d65d2b-9a39-4a41-bda5-09be98a1c66a"
+            ],
+            "variants": [
+                {
+                    "id": "5b7f2f5a9b9842eeb9ac38be2ffd9e39",
+                    "question": "What does the gamma factor ($!$\\gamma$!$) represent in special relativity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The speed of light in a vacuum.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The gravitational constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The factor by which time and length are affected by relative motion.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The ratio of an object's velocity to the speed of light.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e4a5e12122b447b0baa8f2072bc3f6ec",
+                    "question": "If the relative velocity between two observers is doubled, what happens to the gamma factor ($!$\\gamma$!$) in special relativity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It increases, but not necessarily by a factor of two.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It decreases.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e155fac6df0f4579aa6a7c0cb6663fb0",
+                    "question": "Which of the following statements about the gamma factor ($!$\\gamma$!$) in special relativity is/are correct? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is always greater than or equal to 1.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It approaches infinity as the relative velocity approaches the speed of light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is equal to 1 when the relative velocity is zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is a measure of the relativistic mass of an object.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "70dd601daa6b46acab74854d4f2b795f",
+            "concepts": [
+                "0b935911-e793-4b1e-99f1-b6338367d9d5"
+            ],
+            "variants": [
+                {
+                    "id": "a6e41b0bbec049daa4423c51aac5b357",
+                    "question": "Time dilation means that:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Moving clocks run slower than stationary clocks.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Moving clocks run faster than stationary clocks.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Time is absolute and unaffected by motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Time stops at the speed of light.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9145b4457550426abed4d6acb29ba57d",
+                    "question": "A spaceship travels at 0.6c relative to Earth. How much time passes on Earth for every 10 seconds that pass on the spaceship?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "8 seconds",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "10 seconds",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "12.5 seconds",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "16.7 seconds",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e202194acefd4caeae7b7381efaf4e2a",
+                    "question": "Which of the following statements about time dilation are correct? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Time dilation occurs due to the relative motion between observers.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Time dilation is a prediction of special relativity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Time dilation has been experimentally verified.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Time dilation affects only biological processes, not physical ones.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "7bd0cfa2aed5440384378b90dd7c417a",
+            "concepts": [
+                "bb0b6d22-6ec2-4604-812f-a427b7b70055"
+            ],
+            "variants": [
+                {
+                    "id": "219ca23437294f6ba8e720a2aaa717c2",
+                    "question": "What is proper time?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Time measured by a moving observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Time measured by a stationary observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The shortest possible time interval between two events.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The time interval between two events that occur at the same location.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c4e959a09a174811b33a4740f708ef39",
+                    "question": "Which of the following statements are true about proper time? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is the time measured by an observer in the same frame of reference as the events.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is always less than or equal to the coordinate time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is invariant under Lorentz transformations.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the time measured by an observer moving at the speed of light relative to the events.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a8743400ac2f490495c4b3256a0c4ed8",
+                    "question": "A spacecraft travels from Earth to a distant star at a constant velocity close to the speed of light. Which of the following best describes the proper time interval between the departure from Earth and the arrival at the star?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The time interval measured by a clock on Earth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The time interval measured by a clock on the spacecraft.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The time interval measured by a clock on Earth multiplied by $!$\\gamma$!$ where $!$\\gamma$!$ is the Lorentz factor",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The time interval measured by a clock on the spacecraft multiplied by $!$\\gamma$!$ where $!$\\gamma$!$ is the Lorentz factor",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "88e2bef14be941f19b0fd097274e3105",
+            "concepts": [
+                "a2cc780f-e223-46ae-8ac0-d8b76d0c5385"
+            ],
+            "variants": [
+                {
+                    "id": "ea17a62922e74d35aeae8815a0accae2",
+                    "question": "Length contraction implies that:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Moving objects appear longer in the direction of motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Moving objects appear shorter in the direction of motion.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The length of an object is independent of its motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Objects shrink in all directions when they move.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "40b752a94e5147319073f394322fdbfd",
+                    "question": "A spaceship traveling at 0.8c relative to Earth has a proper length of 100 meters. What is its length as measured by an observer on Earth?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "100 meters",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "80 meters",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "60 meters",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "40 meters",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "63f3dc25033745019ee1e47fce3d9f8c",
+                    "question": "Which of the following statements about length contraction is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Length contraction occurs only in the direction of motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The length of an object is maximum in its rest frame.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Length contraction is a consequence of the fact that the speed of light is constant in all inertial frames.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Length contraction is noticeable at everyday speeds.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "484a65f666414f4ca3a90b42c3f2aeb4",
+            "concepts": [
+                "0b935911-e793-4b1e-99f1-b6338367d9d5",
+                "a2cc780f-e223-46ae-8ac0-d8b76d0c5385",
+                "a0d65d2b-9a39-4a41-bda5-09be98a1c66a",
+                "bd343d72-034d-49e8-a9e1-878729f47b2e"
+            ],
+            "variants": [
+                {
+                    "id": "703923e335cc41e4a19a46f0054bde89",
+                    "question": "Match the concepts with their corresponding formulas:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Time dilation",
+                            "optionB": "$!$ \\Delta t = \\gamma \\Delta t' $!$"
+                        },
+                        {
+                            "optionA": "Length contraction",
+                            "optionB": "$!$ L = \\frac{L_0}{\\gamma} $!$"
+                        },
+                        {
+                            "optionA": "Gamma factor",
+                            "optionB": "$!$ \\gamma = \\frac{1}{\\sqrt{1 - \\frac{v^2}{c^2}}} $!$"
+                        },
+                        {
+                            "optionA": "Relativistic velocity addition",
+                            "optionB": "$!$ u = \\frac{u' + v}{1 + \\frac{u'v}{c^2}} $!$"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

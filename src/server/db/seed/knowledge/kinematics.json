@@ -1,0 +1,933 @@
+{
+    "name": "Kinematics",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "750478bca76e43759dacc8b6408af66b",
+            "concepts": [
+                "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                "e36724ff-c9a8-42ac-9b06-e20dc0863e14",
+                "0e8a6662-eb83-48e0-a158-6f8a1acf9f25",
+                "07cf984a-d8bd-4836-a2c2-e4b66ded7563"
+            ],
+            "variants": [
+                {
+                    "id": "b9b43a6efa574bba9d8ef93dc8165594",
+                    "question": "Which of the following is a scalar quantity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Displacement",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Velocity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Distance",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Acceleration",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "22d8bcd0d099456797d53d61e8842c49",
+                    "question": "Which of the following are scalar quantities? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Distance",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Velocity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Acceleration",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "535009f02a8d4d8789d4668d9e421500",
+                    "question": "A car travels a certain distance. If the time taken to cover the distance is doubled, what happens to the speed of the car?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is quadrupled",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "da45884ca4fa4b9482ccb7a0c0ec4841",
+            "concepts": [
+                "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb"
+            ],
+            "variants": [
+                {
+                    "id": "42bc7b1887784f9c8572fa6a437ee0e3",
+                    "question": "An object moves with uniform velocity. Which statement is true?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Its speed changes but direction remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its speed and direction both change.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its speed and direction remain constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Its direction changes but speed remains constant.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "844cd05240074cccb46aedfd2006316c",
+                    "question": "Which of the following statements is true about an object moving with uniform velocity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The object's acceleration is zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's acceleration is constant but non-zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's speed changes but its direction remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's speed and direction both change.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c48759105bf042939d4b657642afc343",
+                    "question": "An object is moving with uniform velocity. If the time interval over which the object is observed is doubled, what happens to the distance covered by the object?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The distance covered remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance covered is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance covered is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The distance covered is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "1917aed0703f426cb8507dcd83b1ed2f",
+            "concepts": [
+                "7324cb66-eb46-4113-b3d5-83cf146d1a66"
+            ],
+            "variants": [
+                {
+                    "id": "2a5972f3bc474c6b9df81ca008883508",
+                    "question": "What does the slope of a position-time graph represent?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Displacement",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Velocity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Distance",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9f15127ac1f84538ba712d1af6a9c091",
+                    "question": "Which of the following statements is correct regarding the slope of a position-time graph?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A steeper slope indicates a slower speed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A negative slope indicates motion in the positive direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The slope represents the instantaneous velocity of the object.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A horizontal line on the graph indicates constant acceleration.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ec78dd7de5a841a8888ae68b122749e8",
+                    "question": "In a position-time graph, if the time is doubled while keeping the displacement constant, what happens to the slope of the graph?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "3c1aeea4624f4b199a034503d0552d44",
+            "concepts": [
+                "aefc9bba-b343-428a-b4fd-99b26e37f8d2"
+            ],
+            "variants": [
+                {
+                    "id": "d7aee61a2d8448b9aa01dbfc31967bec",
+                    "question": "What quantity can be found from the area under a velocity-time graph?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Velocity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Displacement",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7301cba0fe5549a290e235375d53ea46",
+                    "question": "If the velocity of an object is doubled and the time is halved, what happens to the area under the velocity-time graph?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "17be229a9d4141859d5649c3afc0d781",
+                    "question": "Which of the following can be found from a velocity-time graph? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Instantaneous velocity at any given time",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Average velocity over a period of time",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Displacement over a period of time",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Instantaneous acceleration at any given time",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "bb057ba626b14b74ab93e99d49431cf9",
+            "concepts": [
+                "42c7d107-9324-4e8c-a6b6-bd2324a95140",
+                "79a68cd7-6ffc-49c0-9688-31a9103cb68c"
+            ],
+            "variants": [
+                {
+                    "id": "3a7a6994626547acab73ccc76d41061c",
+                    "question": "A projectile is launched. Which of the following remains constant during its flight?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Vertical velocity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Horizontal velocity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Vertical acceleration",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "87bdf49bb9604ef5b990f29e9c84c708",
+                    "question": "A projectile is launched at an angle $!$\\theta$!$ above the horizontal. Select all quantities that remain constant during the projectile's flight.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Horizontal Acceleration",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Horizontal Velocity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Vertical Velocity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e402136f71ea49c4ad01778f68f7d258",
+                    "question": "A projectile is launched. If the launch velocity is doubled, what happens to the maximum height reached by the projectile?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "04ac75d9aadf47f28e3b06fa5dd4a52a",
+            "concepts": [
+                "6f9d1452-fd20-4d7a-9d3c-72435dc763a5"
+            ],
+            "variants": [
+                {
+                    "id": "0c1a088594d942f487f046eb339009c6",
+                    "question": "Which equation correctly represents the range of a projectile?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$x = u \\cos{\\theta} t$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$x = \\frac{u^2 \\sin{\\theta}}{2g}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$ x = \\frac{u^2 \\sin{2\\theta}}{g}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$x = u \\sin{\\theta} t - \\frac{1}{2}gt^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1e044279329243859b3a861c86650835",
+                    "question": "Which of the following equations is NOT a valid equation of motion for a projectile launched at an angle $!$\\theta$!$ with initial velocity $!$u$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$v = u + at$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v^2 = u^2 + 2as$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$s = ut + \\frac{1}{2}at^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$a = \\frac{v-u}{t}$!$",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0d83b6062af34a4fb87c1656ec8b303b",
+                    "question": "A projectile is launched with an initial velocity of $!$20 \\ m/s$!$ at an angle of $!$30^\\circ$!$ with the horizontal. Calculate the range of the projectile. (Take $!$g = 10 \\ m/s^2$!$)",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$35.3 \\ m$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$20 \\ m$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$17.3 \\ m$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$40 \\ m$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "e8a97f68047e4ce08d821de43a01c8dc",
+            "concepts": [
+                "5767da91-a3a1-4028-941e-1d952425ebae"
+            ],
+            "variants": [
+                {
+                    "id": "e9724970b3514331afec25213e5b2efa",
+                    "question": "An object falling through air experiences increasing fluid resistance. What happens to its acceleration?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It becomes zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6ca4931f6c474a9bb7434f3313a587b6",
+                    "question": "A ball is dropped from a height of 10 meters. As it falls, it experiences air resistance. Which of the following statements are CORRECT about the ball's motion? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The ball's speed increases at a constant rate.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The ball's acceleration decreases as it falls.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The net force on the ball is equal to its weight.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The ball eventually reaches a terminal velocity where its acceleration becomes zero.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "1885241e7484475b9b50ee73a6dcbf8e",
+                    "question": "A skydiver with a mass of $!$70 \\text{ kg}$!$ jumps out of an airplane. Initially, the skydiver experiences an acceleration due to gravity of $!$9.8 \\text{ m/s}^2$!$. After falling for a while, the skydiver reaches a terminal velocity of $!$50 \\text{ m/s}$!$. What is the magnitude of the air resistance force acting on the skydiver at terminal velocity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$490 \\text{ N}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$686 \\text{ N}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$980 \\text{ N}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0 \\text{ N}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "0be1bf645dca4ae5bda263f6785d5c49",
+            "concepts": [
+                "f108fcea-6443-4429-ac16-0bcdcfaf165e"
+            ],
+            "variants": [
+                {
+                    "id": "6236cc3b73254e53b8c154f00bcb503c",
+                    "question": "When an object reaches terminal speed, which statement is true?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Fluid resistance force is greater than weight.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Fluid resistance force is less than weight.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Fluid resistance force is zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Fluid resistance force equals weight.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6d7f63784748417b94b532e0103b9087",
+                    "question": "When an object is falling at terminal velocity, which of the following statements are true? Check all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The object is accelerating downwards.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's velocity is constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The net force on the object is zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object is experiencing zero air resistance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "3f4a99efea0d49778a5a972009b5b9d8",
+                    "question": "An object is falling at its terminal speed. If the cross-sectional area of the object is doubled, but its mass remains constant, what happens to the new terminal speed of the object?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The terminal speed increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The terminal speed decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The terminal speed remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object no longer has a terminal speed.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "e1921bcb5c7e4f6289dcf50f96dd0f38",
+            "concepts": [
+                "c8719026-decb-412a-83fa-e2864025491a"
+            ],
+            "variants": [
+                {
+                    "id": "a25a19b583034e2f96890ff11b181886",
+                    "question": "In a velocity-time graph, a horizontal line represents:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Uniform acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Constant deceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Zero acceleration and constant velocity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increasing velocity",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "33bccba445e548749863d0399581ca2d",
+                    "question": "Which of the following statements is TRUE regarding a velocity-time graph?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A horizontal line indicates changing velocity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A line with a positive slope indicates constant deceleration.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A horizontal line represents zero acceleration and constant velocity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A line with a negative slope indicates increasing velocity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "792457a43e974209a92835e7019b9cbc",
+                    "question": "In a velocity-time graph, if the line is horizontal, which of the following is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The object's speed is not changing.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object is at rest.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's acceleration is zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's velocity is changing at a constant rate.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "9a0e3c1a76dd4d08964720707a742273",
+            "concepts": [
+                "c1170020-784b-45f6-9ec5-8dfe77a1f9d0"
+            ],
+            "variants": [
+                {
+                    "id": "aff506312039478594646392e3c78739",
+                    "question": "What is the formula for average velocity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$v = \\frac{\\Delta s}{\\Delta t}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$s = s_0 + vt$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = u + at$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$a = \\frac{\\Delta v}{\\Delta t}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3f555451c1a84e05b5b9ed2ca5c76860",
+                    "question": "Which of the following equations is the correct formula for average velocity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$v = \\frac{\\Delta x}{\\Delta t}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$x = x_0 + vt$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = v_0 + at$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$a = \\frac{\\Delta v}{\\Delta t}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f35f5b166927479596e7b501f4a1b3b8",
+                    "question": "A car travels a distance of 100 meters in 20 seconds. What is its average velocity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$5 \\text{ m/s}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$10 \\text{ m/s}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$20 \\text{ m/s}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$100 \\text{ m/s}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "bbd4c1ca8c384f92b55e45f7ae3d9f39",
+            "concepts": [
+                "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
+            ],
+            "variants": [
+                {
+                    "id": "ff6e997f92894797ab979b13f1ef0ab0",
+                    "question": "Which concept is a prerequisite for understanding uniformly accelerated motion?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Position",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Average speed",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Acceleration",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Uniform motion",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "19d58838536a4161960b33f4d9aaf3f2",
+                    "question": "Which of the following concepts are essential prerequisites for a comprehensive understanding of uniformly accelerated motion? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Understanding of vectors",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Calculus (specifically derivatives and integrals)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Knowledge of Newton's Laws of Motion",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A basic understanding of algebra and trigonometry",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "50de25de36944a4297746c3652c72d3a",
+                    "question": "A car starts from rest and undergoes uniform acceleration. If its final velocity after 5 seconds is 20 m/s, what is its acceleration?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2 \\text{ m/s}^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4 \\text{ m/s}^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$10 \\text{ m/s}^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$20 \\text{ m/s}^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "3ab2094cbcfc4a20971d13ace3e572fa",
+            "concepts": [
+                "e3fddcf7-988e-4165-9433-91670464bef8",
+                "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                "e36724ff-c9a8-42ac-9b06-e20dc0863e14",
+                "0e8a6662-eb83-48e0-a158-6f8a1acf9f25",
+                "07cf984a-d8bd-4836-a2c2-e4b66ded7563"
+            ],
+            "variants": [
+                {
+                    "id": "caeb8f4a92df473f8013c8e47d22b009",
+                    "question": "Match the following concepts with their definitions:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Position",
+                            "optionB": "A vector that defines an object's location."
+                        },
+                        {
+                            "optionA": "Displacement",
+                            "optionB": "The change in position between two points."
+                        },
+                        {
+                            "optionA": "Distance",
+                            "optionB": "The total path length traveled by an object."
+                        },
+                        {
+                            "optionA": "Velocity",
+                            "optionB": "The rate of change of displacement over time."
+                        },
+                        {
+                            "optionA": "Acceleration",
+                            "optionB": "The rate of change of velocity per unit time."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

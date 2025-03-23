@@ -1,0 +1,945 @@
+{
+    "name": "Wave Phenomena",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "a28d863e10aa46278312f68fdb2b2096",
+            "concepts": [
+                "3e1698e4-8c93-4ded-9001-7fc63338226c",
+                "5370751f-a17a-47ff-9226-44edf450c53c"
+            ],
+            "variants": [
+                {
+                    "id": "965aa7d05730420d89df5912cbc24920",
+                    "question": "What are lines perpendicular to wavefronts that indicate the direction of energy transfer called?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Wavefronts",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Rays",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Crests",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Troughs",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bfe66978860c490ab041345b52318713",
+                    "question": "If the frequency of a wave is doubled, what happens to the direction of energy transfer indicated by the lines perpendicular to wavefronts?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains unchanged.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It reverses.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It becomes perpendicular to the original direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It becomes parallel to the wavefronts.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ef5933b746eb45169d0dcd941005ec23",
+                    "question": "Consider the image below. Which of the following statements are true about the lines perpendicular to the wavefronts?\n\n$!$ \\includegraphics[width=0.4\\textwidth]{wavefronts_and_rays.png} $!$\n\nSelect all that apply.",
+                    "image": "An image showing a series of circular wavefronts emanating from a point source. The wavefronts are evenly spaced. Several rays are drawn perpendicular to the wavefronts, radiating outwards from the source.",
+                    "options": [
+                        {
+                            "option_text": "They indicate the direction of wave propagation.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They are called rays.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They are parallel to the wavefronts.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They always converge towards a point.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "321de612df0941cbb3620666b9cee736",
+            "concepts": [
+                "b9b5f931-f3b7-4d3b-9fb4-5192aad643ee",
+                "b026fa54-ee84-4a2b-b829-fb9c65b1acaf"
+            ],
+            "variants": [
+                {
+                    "id": "4a7f901ea1fb47c39ef36cf1b6fe5455",
+                    "question": "According to Snell's Law, what remains constant when a wave passes from one medium to another?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Frequency",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Wavelength",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Amplitude",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "64a9c22fdb3c416a968cb288f130b652",
+                    "question": "Which of the following statements is TRUE regarding the behavior of a wave as it transitions from one medium to another, according to Snell's Law?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The speed of the wave remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The frequency of the wave remains constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The wavelength of the wave remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both the speed and wavelength of the wave remain constant.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2cd5ab49161942d08f793c548ea7b030",
+                    "question": "A light ray passes from air into water at an angle of incidence of 30 degrees. The refractive index of water is 1.33. Which of the following statements are correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The angle of refraction is greater than 30 degrees.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of light in water is greater than the speed of light in air.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The frequency of the light remains the same in both media.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The wavelength of the light increases in water.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "d9f94d396d674e8e9aa1d0129b62d179",
+            "concepts": [
+                "20e890de-4959-433b-9daf-8578a8797bde",
+                "e8f34cbc-12af-482f-90c6-1a3e5584a670"
+            ],
+            "variants": [
+                {
+                    "id": "70798399216743ca989c94084944f1c5",
+                    "question": "Which phenomenon occurs when light travels from a denser to a rarer medium at an angle greater than the critical angle?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Refraction",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Diffraction",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Total internal reflection",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Dispersion",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d667a46114674ebeba24afa217dca711",
+                    "question": "Which of the following statements is INCORRECT regarding the phenomenon of total internal reflection?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It occurs when light travels from a denser to a rarer medium.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The angle of incidence must be greater than the critical angle.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The critical angle is the angle of incidence for which the angle of refraction is $!$90^\\[circ]$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Total internal reflection can occur even if the angle of incidence is less than the critical angle.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "328f2df669934399bd856fc63f6a7dcc",
+                    "question": "A ray of light travels from water ($!$n = 1.33$!$) to air ($!$n = 1.00$!$). If the angle of incidence is $!$48.6^\\[circ]$!$, what is the angle of refraction?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$36^\\[circ]$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$45^\\[circ]$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$90^\\[circ]$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The ray undergoes total internal reflection",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "7e938e5c65a84abab8f97acd715768a5",
+            "concepts": [
+                "0385489a-6c6b-46fb-974a-29b815bc23e2",
+                "32eeb327-db7d-40d5-ae0c-9c9e6c507637"
+            ],
+            "variants": [
+                {
+                    "id": "465ba8ce86ac417597e0d3a87a1ca916",
+                    "question": "What is the path difference for constructive interference?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Half-integer multiple of wavelength",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Integer multiple of wavelength",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Quarter multiple of wavelength",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "One wavelength",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d87792106fe4492d8c19662ce8ec9a0e",
+                    "question": "Which of the following statements regarding path difference is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Constructive interference occurs when the path difference is an integer multiple of the wavelength.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Destructive interference occurs when the path difference is a half-integer multiple of the wavelength.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "For constructive interference, the phase difference must be an even multiple of '$!$\\pi$!$'.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "For destructive interference, the path difference can be an integer multiple of wavelength.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8fe89cf3a50f40f592af8f8c5940e0bb",
+                    "question": "Two waves interfere constructively. If the wavelength is doubled, what happens to the path difference for constructive interference?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "961a1e8e656245f0bb3c7c2f0b3ad97d",
+            "concepts": [
+                "f2d204d6-73fa-42f2-b26e-a6c4fa7a8815",
+                "6fcd9e05-3bb7-404e-a6b3-2be71c7d30c1"
+            ],
+            "variants": [
+                {
+                    "id": "073fad3bc1f64f71a2cec5652e2a15fa",
+                    "question": "In Young's double-slit experiment, what happens to the fringe separation when the distance between the slits is increased?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Increases",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Decreases",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Remains the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Becomes zero",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "72c0bf6c4ec74f6498d59bbd38d54b7a",
+                    "question": "In Young's double-slit experiment, if the distance between the slits is doubled, and the distance to the screen is halved, how does the fringe separation change?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Increases by a factor of 4",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Decreases by a factor of 4",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Remains the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increases by a factor of 2",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f0b89e61554a4fa59e348761bcc904bd",
+                    "question": "Which of the following statements is CORRECT regarding Young's double-slit experiment?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Increasing the wavelength of light decreases the fringe separation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increasing the distance between the slits increases the fringe separation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increasing the distance to the screen decreases the fringe separation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Decreasing the distance between the slits increases the fringe separation.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "7fd8424161a34403aa56fc0960fb92b8",
+            "concepts": [
+                "07acd739-4a1b-492f-825f-4174d469820a",
+                "3433e84b-c2bc-4d82-98a3-b07fac86b9db"
+            ],
+            "variants": [
+                {
+                    "id": "48f0d11af5d24d11bbc5cb5906089870",
+                    "question": "What is the condition for the first minimum in single-slit diffraction?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$b \\sin \\theta = \\lambda/2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$b \\sin \\theta = \\lambda$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$b \\sin \\theta = 2\\lambda$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$b \\sin \\theta = 3\\lambda/2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "49f81227014248f383ab9f8a779ac8c7",
+                    "question": "Which of the following equations is correct for the first minimum in single-slit diffraction?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$b \\sin \\theta = \\lambda/2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$b \\sin \\theta = \\lambda$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$b \\sin \\theta = 3\\lambda/2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$b \\sin \\theta = 2\\lambda$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bd5a57c52268463991254674483d2a0f",
+                    "question": "In single-slit diffraction, if the slit width '$!$b$!$' is doubled, what happens to the angle '$!$\\theta$!$' of the first minimum?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "3c314d78dc0f4644a86631a0e6fc3db0",
+            "concepts": [
+                "8581db98-9419-4326-acfb-a267a4e164bd",
+                "09d7f117-cbdf-4a32-8058-07e95e671052"
+            ],
+            "variants": [
+                {
+                    "id": "c36b2730c124420ab2d07785980bd094",
+                    "question": "What happens to the interference pattern in a multiple-slit experiment as the number of slits increases?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Sharper and brighter maxima",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Wider and dimmer maxima",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "No change in the pattern",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The pattern disappears",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "24f42f4a61744faa9a9ab932ae7933dd",
+                    "question": "In a multiple-slit experiment, if the number of slits is increased, which of the following statements is CORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The maxima become sharper and brighter.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The maxima become wider and dimmer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The minima become brighter and wider.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "There is no change in the interference pattern.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0025af7c16664986a8895297b6baee14",
+                    "question": "A multiple-slit experiment is performed with $!$N$!$ slits, producing bright maxima with a width of $!$w$!$. If the number of slits is increased to $!$2N$!$ while keeping all other parameters constant, what will be the new width of the bright maxima?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$w/4$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$w/2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$w$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2w$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "f1cf616a066343fdba1a9f79447aeae7",
+            "concepts": [
+                "15cf7c79-9158-42b2-b21a-603d53e13a58",
+                "ef1a99c2-3e20-4e74-a4eb-fb592aa9adc6"
+            ],
+            "variants": [
+                {
+                    "id": "88deb282a56b4ff1a9d58a66d40c1d75",
+                    "question": "A diffraction grating has $!$5000$!$ lines per $!$cm$!$. What is the slit separation, $!$d$!$, in meters?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2 \\times 10^{-3}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2 \\times 10^{-4}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2 \\times 10^{-5}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2 \\times 10^{-6}$!$",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0a8fe7fe755b4bdda1755dfd5f54cf7e",
+                    "question": "A diffraction grating has $!$5000$!$ lines per $!$cm$!$. If the number of lines per $!$cm$!$ is doubled, what happens to the slit separation, $!$d$!$, in meters?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fcac154af885444ca110fdf1cb39ed18",
+                    "question": "A student is given a diffraction grating. Which of the following could be the separation between the slits in the grating? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2 \\times 10^{-3}$!$ $!$m$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2 \\times 10^{-6}$!$ $!$m$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$5 \\times 10^{-4}$!$ $!$m$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1 \\times 10^{-5}$!$ $!$m$!$.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "cea0d5240ae549e69ec69f34c3999321",
+            "concepts": [
+                "55007d03-c31e-4e6a-83ce-1b2ba6b297a1",
+                "e27c2e9f-b471-47d5-9b85-b9ded51bd50f"
+            ],
+            "variants": [
+                {
+                    "id": "50c16f2153ef442fa7a789755aa4a9de",
+                    "question": "What does the law of reflection state?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The incident ray, reflected ray and normal all lie in the same plane and the angle of incidence is equal to the angle of reflection.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of light is constant in all reference frames.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy is conserved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Momentum is conserved.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c46b028019b84d7f94225a869170600b",
+                    "question": "Which of the following statements is true regarding the law of reflection?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The angle of incidence is equal to the angle of reflection, and the incident ray, reflected ray, and normal all lie in the same plane.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The angle of incidence is greater than the angle of reflection.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The angle of incidence is less than the angle of reflection.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The incident ray, reflected ray, and normal do not necessarily lie in the same plane.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "169ae4f01817417a959cc1b857432230",
+                    "question": "A light ray strikes a reflecting surface such that the angle of incidence is $!$30^\\[circ]$!$. What is the angle of reflection?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$30^\\[circ]$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$45^\\[circ]$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$60^\\[circ]$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$90^\\[circ]$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "b8c1baa95e5d46d7b2d1158fe382f271",
+            "concepts": [
+                "775699d0-3d10-42ba-a511-d9e30b360a8f",
+                "dca44e35-5d0c-47e5-b2f6-0a04273fd319"
+            ],
+            "variants": [
+                {
+                    "id": "4405430b7c164169a1c6cd65608acdd7",
+                    "question": "What is the refractive index of a medium in which light travels at a speed of $!$2 \\times 10^8 \\; m/s$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "1",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1.33",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1.5",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "2",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0e74fae30acc4fbcbb6233fb99597e2e",
+                    "question": "Light travels at a speed of $!$3 \\times 10^8 \\; m/s$!$ in vacuum and $!$2.25 \\times 10^8 \\; m/s$!$ in water. What is the refractive index of water?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "1",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1.33",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1.5",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1.66",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "100012c2a5a54be681503dfb662b8dd3",
+                    "question": "The refractive index of a medium is 1.33. Select all the correct statements about the speed of light in this medium.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The speed of light in this medium is $!$2.25 \\times 10^8 \\; m/s$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Light travels slower in this medium than in vacuum.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Light travels faster in this medium than in diamond.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of light in this medium is greater than $!$3 \\times 10^8 \\; m/s$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "e8f89b43c8ba4f3b9e06d3218ee87f97",
+            "concepts": [
+                "65caed59-8ac0-4612-802e-11e5d1253ab6",
+                "a83a68bf-72f0-481e-bb3b-e61b83011c23"
+            ],
+            "variants": [
+                {
+                    "id": "be4818fed37b4e419c055d9cd800989d",
+                    "question": "Which equation correctly represents Snell's Law in terms of refractive indices?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$n_1 \\sin \\theta_2 = n_2 \\sin \\theta_1$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$n_1 \\cos \\theta_1 = n_2 \\cos \\theta_2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$n_1 \\sin \\theta_1 = n_2 \\sin \\theta_2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\frac{n_1}{\\sin \\theta_1} = \\frac{n_2}{\\sin \\theta_2}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "87c9e6615ba748a49083809e21793c98",
+                    "question": "Which of the following statements regarding Snell's Law is incorrect?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2$!$ where $!$n_1$!$ and $!$n_2$!$ are the refractive indices of the two media and $!$\\theta_1$!$ and $!$\\theta_2$!$ are the angles of incidence and refraction respectively.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Snell's Law describes the relationship between the angles of incidence and refraction of light as it passes from one medium to another.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The ratio of the sines of the angles of incidence and refraction is equal to the reciprocal of the ratio of the refractive indices of the two media.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Snell's Law can be used to calculate the angle of refraction if the angle of incidence and the refractive indices of the two media are known.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b7b68b2c72864abb99dc7e51ca2ea76a",
+                    "question": "If the angle of incidence is doubled, and the refractive indices of the two media remain constant, what happens to the angle of refraction?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It increases, but not necessarily by double.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It decreases, but not necessarily by half.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "9b1cc401086c42d889313cdee5a0d2f0",
+            "concepts": [
+                "b9b5f931-f3b7-4d3b-9fb4-5192aad643ee",
+                "b026fa54-ee84-4a2b-b829-fb9c65b1acaf",
+                "d530a408-b565-4025-927e-4f6db9973395",
+                "c900c966-f4d9-4d00-a385-e2cc97eec532",
+                "55007d03-c31e-4e6a-83ce-1b2ba6b297a1",
+                "e27c2e9f-b471-47d5-9b85-b9ded51bd50f",
+                "20e890de-4959-433b-9daf-8578a8797bde",
+                "e8f34cbc-12af-482f-90c6-1a3e5584a670",
+                "91f3c44f-05b7-4f92-8a1b-05e9d7d0a4c3",
+                "2fa62af7-8bd5-406f-8cc7-9a657ec25237"
+            ],
+            "variants": [
+                {
+                    "id": "ce09f7a9affc41199b6582b7c213468d",
+                    "question": "Match the wave phenomenon with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Refraction",
+                            "optionB": "Bending of light when it enters a new medium"
+                        },
+                        {
+                            "optionA": "Diffraction",
+                            "optionB": "Spreading of light as it passes through an opening or around an obstacle"
+                        },
+                        {
+                            "optionA": "Reflection",
+                            "optionB": "Bouncing of light off a surface"
+                        },
+                        {
+                            "optionA": "Total Internal Reflection",
+                            "optionB": "Complete reflection of light within a denser medium"
+                        },
+                        {
+                            "optionA": "Interference",
+                            "optionB": "Combination of two or more waves to form a resultant wave"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

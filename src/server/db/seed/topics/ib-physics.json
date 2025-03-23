@@ -1,0 +1,125 @@
+{
+  "name": "IB Physics",
+  "topics": [
+    {
+      "name": "Kinematics",
+      "slug": "kinematics",
+      "description": "This chapter investigates the motion of objects using concepts of displacement, velocity, and acceleration, with a focus on graphical analysis and equations of motion in one and two dimensions."
+    },
+    {
+      "name": "Forces and Momentum",
+      "slug": "forces-and-momentum",
+      "description": "This chapter examines the effects of forces on motion, including Newton’s laws, friction, and tension, as well as the principles of linear momentum, impulse, and conservation in collisions."
+    },
+    {
+      "name": "Work, Energy and Power",
+      "slug": "work-energy-and-power",
+      "description": "This chapter delves into the concepts of work, energy, and power, exploring energy transformations, conservation of energy, and the role of forces in mechanical systems."
+    },
+    {
+      "name": "Rigid Body Mechanics",
+      "slug": "rigid-body-mechanics",
+      "description": "This chapter analyzes the motion of rigid bodies under the influence of forces and torques, covering rotational dynamics, moments of inertia, and the conservation of angular momentum."
+    },
+    {
+      "name": "Galilean and Special Relativity",
+      "slug": "galilean-and-special-relativity",
+      "description": "This chapter contrasts Galilean and Einsteinian relativity, introducing time dilation, length contraction, and the relativity of simultaneity, with a focus on the constancy of the speed of light and its implications."
+    },
+    {
+      "name": "Thermal Energy Transfers",
+      "slug": "thermal-energy-transfers",
+      "description": "This chapter examines the mechanisms of thermal energy transfer—conduction, convection, and radiation—along with the factors affecting heat flow and applications in real-world systems."
+    },
+    {
+      "name": "Greenhouse Effect",
+      "slug": "greenhouse-effect",
+      "description": "This chapter examines the physical principles behind the greenhouse effect, including energy balance, infrared radiation, and the role of greenhouse gases in Earth’s climate system."
+    },
+    {
+      "name": "Gas Laws",
+      "slug": "gas-laws",
+      "description": "This chapter explores the behavior of ideal gases through relationships between pressure, volume, and temperature, including Boyle’s, Charles’s, and the ideal gas law, along with kinetic theory explanations."
+    },
+    {
+      "name": "Thermodynamics",
+      "slug": "thermodynamics",
+      "description": "This chapter investigates the principles of thermodynamics, focusing on heat transfer, the laws of thermodynamics, and the relationship between internal energy, work, and temperature in physical systems."
+    },
+    {
+      "name": "Currents and Circuits",
+      "slug": "currents-and-circuits",
+      "description": "This chapter explores electric current, resistance, and potential difference, analyzing circuit components, Ohm’s law, Kirchhoff’s rules, and energy transfer in electrical circuits."
+    },
+    {
+      "name": "Simple Harmonic Motion",
+      "slug": "simple-harmonic-motion",
+      "description": "This chapter explores the characteristics of simple harmonic motion, including periodic motion, energy oscillations, and the mathematical relationships governing displacement, velocity, and acceleration."
+    },
+    {
+      "name": "Wave Model",
+      "slug": "wave-model",
+      "description": "This chapter explores the behavior of mechanical and electromagnetic waves, focusing on wave properties, superposition, interference, and the relationship between wave phenomena and energy transfer."
+    },
+    {
+      "name": "Wave Phenomena",
+      "slug": "wave-phenomena",
+      "description": "This chapter extends the wave model to include phenomena such as diffraction, standing waves, the Doppler effect, and resolution, highlighting the conditions for constructive and destructive interference."
+    },
+    {
+      "name": "Standing Waves and Resonance",
+      "slug": "standing-waves-and-resonance",
+      "description": "This chapter explores the formation of standing waves in strings and air columns, the conditions for resonance, and how natural frequencies lead to amplified oscillations in physical systems."
+    },
+    {
+      "name": "Doppler Effect",
+      "slug": "doppler-effect",
+      "description": "This chapter examines the Doppler effect for sound and light, analyzing how relative motion between source and observer causes shifts in frequency and wavelength, with applications in astronomy and medical imaging."
+    },
+    {
+      "name": "Gravitational Fields",
+      "slug": "gravitational-fields",
+      "description": "This chapter investigates the properties of gravitational fields, including field strength, potential, and the motion of masses under gravity, with applications to planetary orbits and satellite motion."
+    },
+    {
+      "name": "Electric and Magnetic Fields",
+      "slug": "electric-and-magnetic-fields",
+      "description": "This chapter examines the behavior of electric and magnetic fields, including field lines, forces on charges, potential, and the motion of charged particles in uniform fields and combined field configurations."
+    },
+    {
+      "name": "Motion in Electric and Magnetic Fields",
+      "slug": "motion-in-electric-and-magnetic-fields",
+      "description": "This chapter analyzes the motion of charged particles in uniform electric and magnetic fields, focusing on linear, circular, and helical trajectories, and their applications in devices like mass spectrometers and particle accelerators."
+    },
+    {
+      "name": "Electromagnetic Induction",
+      "slug": "electromagnetic-induction",
+      "description": "This chapter explores how changing magnetic fields induce electromotive force (emf), covering Faraday’s and Lenz’s laws, and applications such as generators, transformers, and energy transfer in AC circuits."
+    },
+    {
+      "name": "Structure of the Atom",
+      "slug": "structure-of-the-atom",
+      "description": "This chapter investigates the internal structure of the atom, including subatomic particles, isotopes, nuclear notation, and evidence from experiments like Rutherford’s scattering that led to modern atomic models."
+    },
+    {
+      "name": "Quantum Physics",
+      "slug": "quantum-physics",
+      "description": "This chapter explores the quantum nature of light and matter, including phenomena like the photoelectric effect, energy quantization, wave-particle duality, and the use of quantum models to describe atomic behavior."
+    },
+    {
+      "name": "Radioactive Decay",
+      "slug": "radioactive-decay",
+      "description": "This chapter explores the nature of radioactive decay, including alpha, beta, and gamma emissions, half-life, nuclear stability, and applications of radioactivity in science and technology."
+    },
+    {
+      "name": "Fission",
+      "slug": "fission",
+      "description": "This chapter examines nuclear fission, where heavy nuclei split into smaller fragments, releasing energy. It covers chain reactions, critical mass, and applications in nuclear power and weaponry."
+    },
+    {
+      "name": "Fusion and Stars",
+      "slug": "fusion-and-stars",
+      "description": "This chapter explores nuclear fusion as the energy source of stars, detailing stellar formation, life cycles, nucleosynthesis, and the balance between gravitational collapse and radiation pressure."
+    }
+  ]
+}

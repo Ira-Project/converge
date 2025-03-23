@@ -1,0 +1,929 @@
+{
+    "name": "Fission",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "833e86280c9345a784591d68170834b3",
+            "concepts": [
+                "d28b5c5e-7617-4d12-93c5-491614507352"
+            ],
+            "variants": [
+                {
+                    "id": "6fa0b5ee552844489b192ba47e9c4f48",
+                    "question": "Which of the following best describes nuclear fission?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The combining of light nuclei into a heavier one.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The splitting of a heavy nucleus into smaller ones.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The emission of alpha particles from a nucleus.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The absorption of neutrons by a nucleus.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cfa926adf5e848da9f6ecf0ee1204acb",
+                    "question": "Which of the following statements regarding nuclear fission is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It involves the splitting of a heavy nucleus into two or more smaller nuclei.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is accompanied by the release of a large amount of energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the process responsible for the energy produced in nuclear power plants.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the process by which two light nuclei combine to form a heavier nucleus.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6a22578c9aa64858bb603177c0b61b56",
+                    "question": "A uranium-235 nucleus undergoes fission, resulting in two smaller nuclei and several neutrons. Which of the following statements is correct about the masses of the products compared to the mass of the original uranium-235 nucleus?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The total mass of the products is greater than the mass of the original uranium-235 nucleus.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total mass of the products is equal to the mass of the original uranium-235 nucleus.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total mass of the products is slightly less than the mass of the original uranium-235 nucleus.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total mass of the products is significantly less than the mass of the original uranium-235 nucleus (more than 10% difference).",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "3e47d464b7a84688bda13a9e481f6233",
+            "concepts": [
+                "3b2ffe63-ceed-4fae-a4a1-e42a9f6c3475"
+            ],
+            "variants": [
+                {
+                    "id": "ae1c4a1d814e432db5f876e5b4eb4f6d",
+                    "question": "In induced fission, what initiates the splitting of the nucleus?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A spontaneous decay.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Neutron bombardment.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gamma radiation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Extreme heat.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "20c00e2080694f4eb839bf7f728e7816",
+                    "question": "Which of the following statements regarding induced fission is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is initiated by neutron bombardment.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It results in the splitting of a heavy nucleus into lighter nuclei.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is a spontaneous process that occurs without external influence.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It can be used to generate energy in nuclear reactors.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f2aaa78c48104e519b500e5509cd85e5",
+                    "question": "In a nuclear reactor, induced fission of Uranium-235 is initiated by bombarding it with neutrons. If a single neutron causes the fission of a U-235 nucleus, releasing 3 neutrons, and each of these neutrons causes further fission, releasing 3 more neutrons each, how many neutrons will be released in the third generation of this chain reaction?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "9",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "12",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "27",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "81",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "99c538b936f84f80a0ce644092b55b28",
+            "concepts": [
+                "cdec40c7-d21c-475b-b59f-dfb4c42791b4"
+            ],
+            "variants": [
+                {
+                    "id": "bc63494e171f4e79b9408cae976bdf80",
+                    "question": "How does spontaneous fission differ from induced fission?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It requires an external neutron.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It occurs without external triggers.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It releases less energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It produces heavier daughter nuclei.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1bbc161eb33d4282b1f6ac6c70e9c953",
+                    "question": "Which of the following statements correctly describe the differences between spontaneous and induced fission? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Spontaneous fission occurs randomly, while induced fission requires an external trigger.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Spontaneous fission is more common in lighter elements, while induced fission is more common in heavier elements.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Spontaneous fission releases more energy than induced fission.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Spontaneous fission produces lighter daughter nuclei than induced fission.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "6e9cc893143e49e6b63dde21a445aa4b",
+                    "question": "A uranium-235 nucleus undergoes induced fission after absorbing a neutron. If the total energy released is 200 MeV, and one of the daughter nuclei is krypton-92 with a kinetic energy of 100 MeV, what is the kinetic energy of the other daughter nucleus (in MeV)? Assume that only two daughter nuclei are produced and ignore the kinetic energy of the neutron.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "68",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "82",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "100",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "118",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "2177f22da10145a4a1d482f1deb3b986",
+            "concepts": [
+                "83eee34e-89b7-43eb-aab8-ebe55fad6b86"
+            ],
+            "variants": [
+                {
+                    "id": "b610e51ade464973813b64bf0e4e285e",
+                    "question": "What is the Q-value in a fission reaction?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The number of neutrons released.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The energy released during the reaction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The mass of the reactants.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The half-life of the parent nucleus.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d4de3e7813554907889e7116f32c6476",
+                    "question": "Which of the following statements about the Q-value in a nuclear reaction is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is the energy released during the reaction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the difference in mass between the products and the reactants.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It represents the binding energy of the nucleus.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is always a negative value.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e76a2cf9372e41579b5985f7f3d6fa71",
+                    "question": "In a fission reaction, the mass defect is $!$2.5 \\times 10^{-28} \\text{ kg}!$!$. If the speed of light is $!$3 \\times 10^8 \\text{ m/s}!$!$, what is the Q-value of the reaction?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2.25 \\times 10^{-11} \\text{ J}!$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$7.5 \\times 10^{-20} \\text{ J}!$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2.5 \\times 10^{-19} \\text{ J}!$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$8.33 \\times 10^{-22} \\text{ J}!$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "5fb798aff62145ce880a4acc91192bae",
+            "concepts": [
+                "e0073bfa-4354-4574-81fe-37c2676f570b"
+            ],
+            "variants": [
+                {
+                    "id": "6ad75c99ed304416a29b069c317ec3c4",
+                    "question": "According to the mass-energy equivalence, what is the relationship between energy ($!$E$!$) and mass ($!$m$!$)?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$E = mc$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E = m/c^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E = mc^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$E = c^2/m$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b317879a7fe747c4b65a77a1390a86ea",
+                    "question": "Which of the following statements about mass-energy equivalence is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "If mass is doubled, energy is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Mass and energy are not interchangeable.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A small amount of mass can be converted into a large amount of energy.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Energy can be converted into mass, but mass cannot be converted into energy.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1887191f1efd47b38041ddf2f33d7850",
+                    "question": "According to the mass-energy equivalence, if the mass of an object is tripled, by what factor does its energy change?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is tripled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "80dd4b6e3f8847d5bb1b8e69c9302710",
+            "concepts": [
+                "b4cc2d1a-f724-4aa8-ae80-2b2e74431f34"
+            ],
+            "variants": [
+                {
+                    "id": "bd0834376ca04165b43089b92a163246",
+                    "question": "What is the significance of critical mass in a nuclear chain reaction?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It determines the speed of the reaction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the minimum mass needed for a sustained reaction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the mass of the products formed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the mass lost during the reaction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c40a0011d80d4c39bf809feae4c9df2d",
+                    "question": "Which of the following statements regarding critical mass in a nuclear chain reaction is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is the minimum mass required for a self-sustaining chain reaction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A subcritical mass will result in a chain reaction that dies out.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A supercritical mass will result in an exponentially increasing chain reaction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Critical mass is independent of the material's density and geometry.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d43903601f2d417d907dbfe7d66c4568",
+                    "question": "A spherical mass of Uranium-235 has a radius of 5 cm. Given that the critical mass of U-235 is approximately 52 kg, is this mass supercritical, subcritical or critical? (The density of U-235 is $!$19.1 \\text{ g/cm}^3$!$)",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Supercritical",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Subcritical",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Critical",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Cannot be determined",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "9d5ecd3cd6e54c86a38509aeee84f2e6",
+            "concepts": [
+                "77b221bc-2e1e-4714-b4c4-f67cdba21d28"
+            ],
+            "variants": [
+                {
+                    "id": "6ea29688f6824911aab6af9d686c9272",
+                    "question": "What is the function of a moderator in a nuclear reactor?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "To absorb neutrons.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To speed up neutrons.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To slow down neutrons.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To initiate the chain reaction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "59eb4e6d754544c5b443f827afb6ff7e",
+                    "question": "Which of the following statements are true regarding the function of a moderator in a nuclear reactor? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Moderators slow down neutrons to increase the probability of fission.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Common moderator materials include water, graphite, and heavy water.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Moderators absorb neutrons to control the chain reaction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Moderators speed up neutrons to increase the efficiency of the reactor.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "1f6f8f12cbea4f93810fee7135b1f393",
+                    "question": "A nuclear reactor uses a moderator made of Material X. If the moderator is changed to Material Y, which has twice the moderating power of Material X, what happens to the average speed of neutrons in the reactor?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The average speed of neutrons doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average speed of neutrons remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average speed of neutrons is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The average speed of neutrons is quartered.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "54261be2f2034cdaba1d1881ca3f042c",
+            "concepts": [
+                "2a2af333-a4aa-4f6e-8612-1e25474215a0"
+            ],
+            "variants": [
+                {
+                    "id": "7a890dadddf94261b788b9864a715a9e",
+                    "question": "The primary role of control rods in a nuclear reactor is to:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Increase the speed of the reaction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Absorb neutrons and regulate the reaction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Cool down the reactor core.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Convert heat into electricity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "112131cfc6d648b6b2583b02f14aa311",
+                    "question": "Which of the following statements about the role of control rods in a nuclear reactor are correct? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "They absorb neutrons.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They regulate the chain reaction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They increase the speed of the reaction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They convert heat into electricity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "c6f72401aeb8455f89f84c50838743c3",
+                    "question": "In a nuclear reactor, if the number of control rods inserted is increased, what happens to the rate of the nuclear reaction?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It fluctuates randomly.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "c3e646176f1442a38e2e1bcf3a1188d1",
+            "concepts": [
+                "d3aafbfd-75b5-492f-941b-b6c253ac9975"
+            ],
+            "variants": [
+                {
+                    "id": "0ba7dcd0d53b499099adfb74aba4b794",
+                    "question": "What is the purpose of a heat exchanger in a nuclear reactor?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "To produce neutrons.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To remove heat from the moderator.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To store radioactive waste.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To control the chain reaction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2944bfef69c9481fa5ca76f1ebc362fc",
+                    "question": "A nuclear reactor generates 1000 MW of thermal power. The coolant enters the heat exchanger at 300\u00b0C and leaves at 200\u00b0C.  If the specific heat capacity of the coolant is 4200 J/kg\u00b0C, what is the mass flow rate of the coolant in kg/s?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "1.19 kg/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1190 kg/s",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1666.67 kg/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "4200 kg/s",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8f6bfdafc5144b7491a4188a8aa16594",
+                    "question": "Which of the following components are involved in the heat removal process from a nuclear reactor core? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Moderator",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Control rods",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Coolant",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Heat exchanger",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "36a99fb0127f4b328f9ac5637c83c8dd",
+            "concepts": [
+                "b91ba636-d64e-4169-af32-12b0f8b68495"
+            ],
+            "variants": [
+                {
+                    "id": "2da8a97018784143b5d056844873ed86",
+                    "question": "Which of the following are considered disadvantages of nuclear power?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "High power output.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Abundant fuel reserves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radioactive waste disposal and accident risks.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Low greenhouse gas emissions.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "eccb107374cf47d8a1ff9244a3fd6f5e",
+                    "question": "Identify ALL the disadvantages of using nuclear power as an energy source.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "High initial construction costs.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Risk of accidents and radioactive material release.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Long-term storage of radioactive waste.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Thermal pollution of water bodies.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "b9d7d92088e546ad9f3f6c4e068a3c0d",
+                    "question": "A nuclear power plant produces 1000 MW of power. If the efficiency of the plant is 30%, calculate the amount of heat generated by the nuclear reactor in MW.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "3333 MW",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "300 MW",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "700 MW",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1300 MW",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6659bc7130ba47a4b27b60ccf29448c9",
+            "concepts": [
+                "03bb18ff-5036-4b2d-ad4e-b5b63c5d0192"
+            ],
+            "variants": [
+                {
+                    "id": "38628f1a1be94e758682d35c0276acb3",
+                    "question": "What constitutes radioactive waste from nuclear reactions?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Cooling water from the reactor.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Spent fuel and contaminated materials.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gaseous emissions from the power plant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The heat generated by the reactor.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3b0bf0f2e16844b7860bda63715a2062",
+                    "question": "Which of the following are considered radioactive waste from nuclear reactions? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Spent nuclear fuel rods.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Protective clothing worn by power plant workers.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Tools and equipment used in the reactor core.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Water vapor released from cooling towers.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "c4e4af1067094027ab83d9abc5f33f08",
+                    "question": "In a nuclear power plant, if the amount of spent fuel doubles, how does the amount of radioactive waste change?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It quadruples.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "9fc0be75bcce49fab908cc8e22423e2b",
+            "concepts": [
+                "d28b5c5e-7617-4d12-93c5-491614507352",
+                "3b2ffe63-ceed-4fae-a4a1-e42a9f6c3475",
+                "cdec40c7-d21c-475b-b59f-dfb4c42791b4",
+                "b4cc2d1a-f724-4aa8-ae80-2b2e74431f34",
+                "77b221bc-2e1e-4714-b4c4-f67cdba21d28"
+            ],
+            "variants": [
+                {
+                    "id": "30a5aa827b7f4d959e1d550a1b552126",
+                    "question": "Match the following terms related to nuclear fission with their definitions.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Nuclear Fission",
+                            "optionB": "The splitting of a heavy nucleus into smaller ones."
+                        },
+                        {
+                            "optionA": "Induced Fission",
+                            "optionB": "Fission triggered by neutron bombardment."
+                        },
+                        {
+                            "optionA": "Spontaneous Fission",
+                            "optionB": "Fission occurring without external neutron absorption."
+                        },
+                        {
+                            "optionA": "Critical Mass",
+                            "optionB": "Minimum amount of material needed for a sustained chain reaction."
+                        },
+                        {
+                            "optionA": "Moderator",
+                            "optionB": "Material that slows down neutrons."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

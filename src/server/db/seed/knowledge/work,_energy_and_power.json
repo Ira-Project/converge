@@ -1,0 +1,845 @@
+{
+    "name": "Work, Energy and Power",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "6aee3731c2664c84aa61406330d6c135",
+            "concepts": [
+                "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+            ],
+            "variants": [
+                {
+                    "id": "46f1327f58d641bea4a2903b61e19fd7",
+                    "question": "A force of $!$10 N$!$ is applied to an object, moving it $!$5 m$!$ in the direction of the force. What is the work done?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$50 J$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$10 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$5 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.5 J$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "62e427350f784eefa4ed23fe6de8878e",
+                    "question": "A force of $!$15 N$!$ is applied to an object, moving it $!$10 m$!$ in the direction of the force. What is the work done?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$150 J$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$15 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$10 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1.5 J$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bbd99b5fccfa426d83deec640c7c75c9",
+                    "question": "Which of the following statements is correct regarding work done?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Work done is equal to the force applied multiplied by the distance moved in the direction of the force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Work done is equal to the force applied divided by the distance moved in the direction of the force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Work done is equal to the distance moved divided by the force applied.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Work done is independent of the force applied and the distance moved.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "5961260fba984fc0806bd9e9a3564684",
+            "concepts": [
+                "0f719348-94a2-4b8e-8cd8-638039f27e60"
+            ],
+            "variants": [
+                {
+                    "id": "a6848d23eac94e129656a52249b57c17",
+                    "question": "A car of mass $!$1000 kg$!$ is moving at $!$20 m/s$!$. What's its kinetic energy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$200,000 J$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$100,000 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$400,000 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$20,000 J$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8d6879fa7a8949e08bf86da75b562131",
+                    "question": "A car of mass $!$1000 kg$!$ is moving at $!$20 m/s$!$. If the speed of the car is doubled, but the mass remains constant, what happens to the kinetic energy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is tripled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ce533632a1be456d93f3f52442005470",
+                    "question": "Which of the following correctly describes the kinetic energy of objects with different masses and velocities? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A $!$2 kg$!$ object moving at $!$4 m/s$!$ has a kinetic energy of $!$16 J$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A $!$1 kg$!$ object moving at $!$2 m/s$!$ has a kinetic energy of $!$2 J$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A $!$4 kg$!$ object moving at $!$2 m/s$!$ has a kinetic energy of $!$8 J$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A $!$0.5 kg$!$ object moving at $!$4 m/s$!$ has a kinetic energy of $!$4 J$!$.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "5f602c1e4a8d4e319c43b6de59f9b406",
+            "concepts": [
+                "5bf9b7d2-da7f-425b-a6f3-2a025ffe4ff6",
+                "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+            ],
+            "variants": [
+                {
+                    "id": "fe44215250ba48f893b3722290b162ec",
+                    "question": "A book of mass $!$2 kg$!$ is lifted $!$3 m$!$ vertically. What's the work done by gravity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$-58.8 J$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$58.8 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$6 J$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "59e937d7d30c4a59955defe3760d6e5b",
+                    "question": "A book of mass $!$2 kg$!$ is lifted vertically. The work done by gravity is $!$W$!$. If the mass of the book is halved, what will be the work done by gravity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$W/4$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$W/2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$W$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2W$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5738658836184772a26460118b4f0132",
+                    "question": "Select all the situations where gravity does negative work.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A ball is thrown upwards.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A ball is dropped from a height.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A crane lifts a load vertically upwards.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A person slides a book across a horizontal table.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "7a999ae232c149d78c2d5779d73b3b8a",
+            "concepts": [
+                "505f2546-1535-4bbd-ba04-29237b0892f5"
+            ],
+            "variants": [
+                {
+                    "id": "5a70cffaf3534cb8ba062481638dbbdb",
+                    "question": "Which force does zero work on an object in circular motion at constant speed?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Centripetal force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gravitational force",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Frictional force",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Applied force",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "80817abd73db491f85ab819be03eeecf",
+                    "question": "Which of the following statements is correct regarding the work done by different forces on an object in uniform circular motion?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The centripetal force does positive work.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The net force does zero work.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If friction is present, it always does negative work.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If the speed is not constant, the net force does zero work.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "641a98bd017d42d48fed4ec0d7d75ed5",
+                    "question": "A ball of mass $!$m$!$ is attached to a string of length $!$L$!$ and is swung in a horizontal circle at a constant speed $!$v$!$. What is the work done by the tension in the string on the ball during one complete revolution?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$0$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$mv^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$mgL$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2\\pi L T$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "bcf3aadd30ef495caf8f8da8fa3dbbb3",
+            "concepts": [
+                "63b81607-3bf4-4f72-b289-56cae05f91de"
+            ],
+            "variants": [
+                {
+                    "id": "36280a57755a4e998598fffb33b39ae7",
+                    "question": "A spring with $!$k = 100 N/m$!$ is stretched $!$0.2 m$!$. What's the elastic potential energy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2 J$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$20 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$10 J$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fa73af6bdb1a4b868d1c06ef10dcfa10",
+                    "question": "A spring stores $!$10 J$!$ of elastic potential energy when compressed by $!$0.1 m$!$. What's its spring constant?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2000 N/m$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$1000 N/m$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$500 N/m$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$100 N/m$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0710ab244a15431398fbfbd29e9aff39",
+                    "question": "Which of the following correctly states the formula for elastic potential energy ($!$U$!$), where $!$k$!$ is the spring constant and $!$x$!$ is the displacement from equilibrium?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$U = \\frac{1}{2}kx^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$U = kx$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$U = \\frac{1}{2}kx$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$U = kx^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "07470b4d65154bbf884bc06e102666d9",
+            "concepts": [
+                "0a559a5f-257c-41f7-a035-3696eda7301a"
+            ],
+            "variants": [
+                {
+                    "id": "bb32ee4d158f4131afa0b678404c348f",
+                    "question": "What's the work done extending a spring with $!$k=50 N/m$!$ from $!$0.1 m$!$ to $!$0.3 m$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2 J$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$1.5 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2.5 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4 J$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "748fcb25b56e4a1f9792a9874dc50b73",
+                    "question": "A spring with spring constant $!$k$!$ is extended from $!$x_1$!$ to $!$x_2$!$. Select all the expressions that correctly represent the work done in extending the spring.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$ \\frac{1}{2} k (x_2^2 - x_1^2)$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$ \\frac{1}{2} k (x_2 - x_1)^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$ \\int_{x_1}^{x_2} kx dx $!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$k(x_2 - x_1)$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "26a7eb3c288742d88b665327b3ff2c8c",
+                    "question": "What's the work done in extending a spring of spring constant $!$200 N/m$!$ from $!$0.1 m$!$ to $!$0.2 m$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$1.5 J$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$2 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2.5 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$3 J$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "916d247bbe7547a3afce75e150727e51",
+            "concepts": [
+                "988d792c-195b-46c8-ace2-0828b3655c0b"
+            ],
+            "variants": [
+                {
+                    "id": "975cbaa1ce7c4d51ab0574be3aa014ea",
+                    "question": "An object has $!$10 J$!$ of kinetic and $!$20 J$!$ of potential energy. What's its total mechanical energy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$30 J$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$10 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$20 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$40 J$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "393ce4a291144e65bfb79396fe745acc",
+                    "question": "Which of the following statements regarding the mechanical energy of an object are correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The total mechanical energy is always conserved, even in the presence of non-conservative forces.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If the kinetic energy of the object is doubled, its potential energy must be halved to conserve mechanical energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total mechanical energy is the difference between the kinetic and potential energies of the object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total mechanical energy is the sum of the kinetic and potential energies of the object.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "940038ecaa8f4e909c2d29e1096562ee",
+                    "question": "An object has $!$20 J$!$ of kinetic and $!$40 J$!$ of potential energy. What's its total mechanical energy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$60 J$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$20 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$40 J$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$80 J$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "9439e8d7e4de4db487f0d709de4e98a3",
+            "concepts": [
+                "2691d473-fa9f-48af-866f-fcf735cf65ac"
+            ],
+            "variants": [
+                {
+                    "id": "ce1d0c06d308410a988bdd8ad61d1ef4",
+                    "question": "If $!$100 J$!$ of work is done in $!$5 s$!$, what's the power?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$20 W$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$500 W$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$10 W$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$50 W$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0dd46c13312f4756947dee3bd40cb8e3",
+                    "question": "If the work done is doubled and the time is halved, what happens to the power?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f1bcc7069c2941bd9376428c9f9cf065",
+                    "question": "Which of the following statements about power is incorrect?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Power is the rate at which work is done.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Power is measured in watts.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Power is equal to work done multiplied by time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Power is a scalar quantity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "eed41575fdf44168b92f07012a2b03cc",
+            "concepts": [
+                "0be92c40-ded4-48ee-a466-07236da03b9f"
+            ],
+            "variants": [
+                {
+                    "id": "850ba5ac3b07407cbfff2b8f34ba0d6e",
+                    "question": "A machine uses $!$100 J$!$ of energy and outputs $!$80 J$!$ of useful work. What's its efficiency?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$80%$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$20%$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$100%$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$125%$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "259064f04abb454db3e7d48e9a929dfc",
+                    "question": "Which of the following statements is correct regarding a machine that uses $!$100 J$!$ of energy and outputs $!$80 J$!$ of useful work?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Its efficiency is calculated by dividing the useful work output by the total energy input and multiplying by 100.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Its efficiency can be greater than 100% if the useful work output is greater than the total energy input.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its efficiency is independent of the amount of energy lost as heat.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its efficiency increases if the useful work output decreases while the total energy input remains the same.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "34cbdb64f9b4459dabd072340b8c27b6",
+                    "question": "A machine has an efficiency of $!$80%$!$. If the energy input is doubled, what happens to the useful work output?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It halves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It quadruples",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "27d605372354435a8c8f82d456521804",
+            "concepts": [
+                "b7707328-1562-4540-8e4d-760e27d5a169"
+            ],
+            "variants": [
+                {
+                    "id": "3d666e3346f844b2bf633eefa72346df",
+                    "question": "What does the law of conservation of energy state?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Energy cannot be created or destroyed, only transformed.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Energy can be created and destroyed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy can be created but not destroyed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy can be destroyed but not created.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "73b886c1e8224bd997ea9e13c64921ed",
+                    "question": "Which of the following statements about energy is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Energy can be transformed from one form to another.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total energy of an isolated system remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy can be created in a closed system.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Energy can be used to do work.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c0ba9e9f71ff4de3a72a22ef2e1cd6a5",
+                    "question": "A ball of mass 0.1 kg is dropped from a height of 5 m. Assuming no air resistance, what is the kinetic energy of the ball just before it hits the ground? (Use g = $!$9.8 \newline m/s^2$!$)",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$4.9$!$ J",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$0.5$!$ J",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$9.8$!$ J",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0$!$ J",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "c7142de32d98446db1aa261783cec645",
+            "concepts": [
+                "0f719348-94a2-4b8e-8cd8-638039f27e60",
+                "3c01ec37-9e55-45a6-9bc8-34733b46e8e7",
+                "63b81607-3bf4-4f72-b289-56cae05f91de",
+                "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+            ],
+            "variants": [
+                {
+                    "id": "39915c10970b45838d1169712b4bbb87",
+                    "question": "Match the energy type with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Kinetic Energy",
+                            "optionB": "Energy of motion"
+                        },
+                        {
+                            "optionA": "Gravitational Potential Energy",
+                            "optionB": "Energy due to position in a gravitational field"
+                        },
+                        {
+                            "optionA": "Elastic Potential Energy",
+                            "optionB": "Energy stored in a deformed elastic object"
+                        },
+                        {
+                            "optionA": "Work",
+                            "optionB": "Energy transferred by a force"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

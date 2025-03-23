@@ -1,0 +1,929 @@
+{
+    "name": "Forces and Momentum",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "6b615eb2b2d14256b94dd2e8b46132ac",
+            "concepts": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ],
+            "variants": [
+                {
+                    "id": "100a6921d97e46279948333eb61fe23e",
+                    "question": "Which of the following is a vector quantity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mass",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Time",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fa82193c1859481a99199009bc9508d5",
+                    "question": "Which of the following statements is correct regarding vector quantities?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Vector quantities have both magnitude and direction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Vector quantities have only magnitude.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Vector quantities have only direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Vector quantities are always represented by negative numbers.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "af85968c53c944d98c0f84d70950ba44",
+                    "question": "Two vectors $\\vec{A}$ and $\\vec{B}$ are added to give a resultant vector $\\vec{R}$. If the magnitude of $\\vec{A}$ is doubled, what happens to the magnitude of $\\vec{R}$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It increases but not necessarily doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It decreases.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "a07119670697414bbc11afe1434bfe7e",
+            "concepts": [
+                "18743f7b-2133-4b00-b872-d79300ea4707"
+            ],
+            "variants": [
+                {
+                    "id": "8ac0c98778fb4d9ebf1e0280b0f0a43e",
+                    "question": "A book rests on a table. What force prevents the book from falling?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Gravitational force",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Weight",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Normal contact force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Frictional force",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "800fc04bde62413e977c4cb942260f32",
+                    "question": "A 5 kg block rests on a horizontal surface. The coefficient of static friction between the block and the surface is 0.4. What is the maximum horizontal force that can be applied to the block before it starts to move?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$10 N$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$15 N$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$19.6 N$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$24.6 N$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "399aefb2a92c45f7b18d87bfff99d200",
+                    "question": "Which of the following forces can prevent an object from falling?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Tension",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Normal force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Air resistance",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Applied force",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "857914e9ad654feebb81a74ecc0dcb29",
+            "concepts": [
+                "eb78875d-cb4a-450a-9369-b184b1b4284c"
+            ],
+            "variants": [
+                {
+                    "id": "bbe3fcd70f594d5baa012911f7b9b550",
+                    "question": "Which law states that an object at rest stays at rest unless acted upon by a net force?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Newton's First Law",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Newton's Second Law",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Newton's Third Law",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Hooke's Law",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "eb7ba525f00a4400bf73e4abfe5ce2f2",
+                    "question": "Which of the following statements are related to Newton's First Law of Motion? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "An object at rest stays at rest unless acted upon by a net force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An object in motion stays in motion with the same speed and in the same direction unless acted upon by a net force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "For every action, there is an equal and opposite reaction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The acceleration of an object is directly proportional to the net force acting on the object, is in the same direction as the net force, and is inversely proportional to the mass of the object.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "1f20d296baee4e78a02b0783ac05c80f",
+                    "question": "A book is resting on a table. What happens to the net force on the book if the mass of the book is doubled?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The net force doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The net force is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The net force remains the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The net force becomes zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "53cc649e86fd44b1a1879b8934f30a1f",
+            "concepts": [
+                "4832ddc7-cb21-4a36-b1ff-4a23c466e1c7"
+            ],
+            "variants": [
+                {
+                    "id": "1d6d4a2c477d44eca3b516692b619153",
+                    "question": "What is the relationship between force, mass, and acceleration according to Newton's Second Law?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$F = ma$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F = m/a$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = a/m$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = m^2a$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "585e530ae81d41d687d9cfe9d720b8b7",
+                    "question": "Which of the following statements correctly represents Newton's Second Law of Motion?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$F = ma$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F = \\frac{m}{a}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = \\frac{a}{m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = m^2 a$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "34ad6a6413094acbaba9fea7161e264a",
+                    "question": "A force of 10 N is applied to an object with a mass of 5 kg. What is the acceleration of the object?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2 \\text{ m/s}^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$0.5 \\text{ m/s}^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$50 \\text{ m/s}^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$15 \\text{ m/s}^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "60888d57235543d8a9261d19d1d58eb3",
+            "concepts": [
+                "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
+            ],
+            "variants": [
+                {
+                    "id": "6b8c8b5298e34ac3ad0c80335cfa8781",
+                    "question": "In a collision, which quantity is always conserved?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Kinetic energy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Potential energy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Momentum",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Velocity",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ceb07d232c0c4022b31ece838cbcde27",
+                    "question": "Which of the following statements regarding collisions is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Momentum is always conserved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic energy is always conserved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total energy of the system is always conserved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Collisions can be elastic or inelastic.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "020eec493e45438a9add606bdd09dcca",
+                    "question": "Two objects of equal mass collide. If the velocity of one object is doubled before the collision, what happens to the total momentum of the system?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It depends on the direction of the velocities.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "a6020b02f76548e6a3b403fcc7017c68",
+            "concepts": [
+                "b86eda28-4276-46c1-972e-dc6fe439ef76"
+            ],
+            "variants": [
+                {
+                    "id": "190e692ceb694958a4e06547de689684",
+                    "question": "What type of collision conserves kinetic energy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Elastic collision",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Inelastic collision",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Totally inelastic collision",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Two-dimensional collision",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6c841903024e434a8822a9126dac99d2",
+                    "question": "Which of the following statements is TRUE regarding collisions?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "In an elastic collision, both momentum and kinetic energy are conserved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "In an inelastic collision, momentum is conserved but kinetic energy is not conserved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In a totally inelastic collision, both momentum and kinetic energy are not conserved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The coefficient of restitution for an elastic collision is zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "70af53f634744dd29912e6279c53c034",
+                    "question": "Two objects of masses $!$m_1$!$ and $!$m_2$!$ collide elastically. The initial velocity of $!$m_1$!$ is $!$v_1$!$ and the initial velocity of $!$m_2$!$ is $!$v_2$!$. If the final velocity of $!$m_1$!$ is $!$v_1'$!$, what is the final velocity of $!$m_2$!$ ($!$v_2'$!$) in terms of $!$m_1$!$, $!$m_2$!$, $!$v_1$!$, $!$v_2$!$ and $!$v_1'$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$v_2' = \\frac{m_1(v_1 - v_1') + m_2v_2}{m_2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$v_2' = \\frac{m_1(v_1' - v_1) + m_2v_2}{m_2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v_2' = \\frac{m_1(v_1 - v_1')}{m_2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v_2' = v_1 + v_2 - v_1'$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ff504773418a46258b51c1ad590a8cf2",
+            "concepts": [
+                "4143aa6e-2fe6-4ae4-b9fc-07c4f0a0619c"
+            ],
+            "variants": [
+                {
+                    "id": "d145080de27c432cbc9eef331e61d7a0",
+                    "question": "A ball is swung in a circle at constant speed. Which best describes the direction of acceleration?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Tangent to the circle",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Away from the center",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Towards the center",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "There's no acceleration",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "61d35c8243864b0590efc80c0a5b4dfd",
+                    "question": "Which of the following statements is correct regarding the acceleration of an object moving in a circle at constant speed?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The acceleration is tangent to the circle.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The acceleration is directed away from the center of the circle.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The acceleration is zero since the speed is constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The acceleration is directed towards the center of the circle.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b936f17c7d684a10a9d830db91ca0a97",
+                    "question": "A ball is attached to a string of length $!$L$!$ meters and swung in a horizontal circle at a constant speed of $!$v$!$ m/s. What is the magnitude of the centripetal acceleration of the ball in $!$\\text{m/s}^2$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$vL$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v^2L$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{v}{L}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{v^2}{L}$!$",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "c7f45eca9fb646bc81dde9065dc37fd3",
+            "concepts": [
+                "a51157a0-fd9c-46a1-ac03-cc47674195b0"
+            ],
+            "variants": [
+                {
+                    "id": "c0f608d08419446393f2dd3a388a4ca0",
+                    "question": "Which of the following represents the period of circular motion?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$T = 2\\pi r$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$T = \\omega / 2\\pi$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$T = 2\\pi / \\omega$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$T = 4\\pi^2 r^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "06ba63c5638f48358881af2a9bf6c962",
+                    "question": "If the angular velocity $!$\\omega$!$ of an object in circular motion is doubled, what happens to the period $!$T$!$ of the motion?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The period is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The period remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The period is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The period is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a7212f211b8f49da8653de2fbe352e6e",
+                    "question": "Which of the following equations correctly relate the period $!$T!$!$, frequency $!$f!$!$, and angular velocity $!$\\omega$!$ of circular motion? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$T = 1/f$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\omega = 2\\pi f$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$T = 2\\pi / \\omega$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$f = \\omega / \\pi$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "9fc63f4d765141ae96c61a4a6c73287c",
+            "concepts": [
+                "1276ee7f-13f0-4170-bf26-1b818bcd31d9"
+            ],
+            "variants": [
+                {
+                    "id": "4a7cc034070c4ab38aceb965fdead9c0",
+                    "question": "If a net force acts on an object, which of the following is true?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The object's velocity changes",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's mass changes",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object disappears",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Nothing happens",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cbcc78ee25a140eb8b626c73b039c782",
+                    "question": "If the net force acting on an object is doubled, what happens to the object's acceleration?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It quadruples",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f67c27f30e22466fb8b6799815bd8bb5",
+                    "question": "A constant net force is applied to an object. Select all that apply regarding the object's motion.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The object's velocity changes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's speed must change.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object accelerates.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's mass changes.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "045f2535d1af4269a64c4382a5490371",
+            "concepts": [
+                "7b54edaa-3f9a-424f-ad04-5aa202fef926"
+            ],
+            "variants": [
+                {
+                    "id": "0fb85909c3ea400cb7cc7a90284951a8",
+                    "question": "What does a free-body diagram represent?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The trajectory of an object",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The energy of an object",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The forces acting on an object",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The momentum of an object",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2c4b502408544953a17b71ec7b194cc7",
+                    "question": "Which of the following statements regarding free-body diagrams is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A free-body diagram represents all the forces acting on an object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A free-body diagram can be used to analyze the motion of an object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A free-body diagram includes the forces exerted by the object on other objects.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A free-body diagram typically represents the object as a point particle.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "76ad1685b5ce4feb863e53bdc47c7c26",
+                    "question": "A book of mass $!$m$!$ is at rest on a table. A person then applies a downward force $!$F$!$ on the book. Which of the following is the correct free body diagram representing this scenario?",
+                    "image": "Four free-body diagrams depicting a book on a table. (1) Shows only the normal force and weight. (2) Shows the normal force, weight, and force F acting downward. (3) Shows the normal force, weight, force F acting upwards. (4) Shows only weight and force F acting downward.",
+                    "options": [
+                        {
+                            "option_text": "Diagram (1)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Diagram (2)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Diagram (3)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Diagram (4)",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "0832ee7c9f7e4a8f97c55222ace0bb33",
+            "concepts": [
+                "4b02852b-1796-491b-8b1d-95976a29c9da"
+            ],
+            "variants": [
+                {
+                    "id": "b4e4b5dc96b843ca889196a58e06ac6b",
+                    "question": "What causes buoyant force?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Friction",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Displacement of fluid",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Surface tension",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8691508ec48a4ca78ae7241d839ed34a",
+                    "question": "Which of the following statements regarding buoyant force is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Buoyant force is equal to the weight of the fluid displaced by an object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Buoyant force acts in the upward direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Buoyant force is independent of the shape of the object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Buoyant force is caused by the difference in pressure at the top and bottom of an object submerged in a fluid.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5243345f44cc4cd493c90f020d99702f",
+                    "question": "A ball of mass '$!$m$!$' is floating in a fluid of density '$!$\\rho$!$'. If the density of the fluid is doubled, what happens to the buoyant force on the ball?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "28dbf65bf7df41feb7e15687bfcdc7e6",
+            "concepts": [
+                "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
+                "619a9763-10d2-48a6-a060-de4db6ea3c0a",
+                "7c565773-42d5-45e0-be9a-25f85cfe6a58",
+                "4b02852b-1796-491b-8b1d-95976a29c9da",
+                "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d"
+            ],
+            "variants": [
+                {
+                    "id": "d3d1578af2fc4760b572d28951b4c9e2",
+                    "question": "Match the concepts with their corresponding formulas:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Weight",
+                            "optionB": "$!$W = mg$!$"
+                        },
+                        {
+                            "optionA": "Spring Tension",
+                            "optionB": "$!$T = kx$!$"
+                        },
+                        {
+                            "optionA": "Stokes' Law",
+                            "optionB": "$!$F_D = 6 \\pi \\eta r v$!$"
+                        },
+                        {
+                            "optionA": "Buoyant Force",
+                            "optionB": "$!$F_B = \\rho g V_{imm}$!$"
+                        },
+                        {
+                            "optionA": "Dynamic Friction",
+                            "optionB": "$!$f_d = \\mu_d R$!$"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

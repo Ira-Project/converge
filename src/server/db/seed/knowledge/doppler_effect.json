@@ -1,0 +1,931 @@
+{
+    "name": "Doppler Effect",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "bd69b80d18d64edbbea7221f33902c45",
+            "concepts": [
+                "a20069a8-ca33-4e26-93ce-87c105e52c27"
+            ],
+            "variants": [
+                {
+                    "id": "1221c4a8cc2b48d8ab219987b51f4b7e",
+                    "question": "What is the Doppler Effect?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Change in wave speed due to medium change.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Change in observed frequency due to relative motion.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Change in wave amplitude due to interference.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Change in wave direction due to refraction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "03d8f4d10a4d4f5a8b4cfc4cd68136b9",
+                    "question": "A police car with its siren on is moving towards you. Which of the following statements are true regarding the observed frequency of the siren's sound? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The observed frequency is higher than the actual frequency emitted by the siren.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The observed frequency is lower than the actual frequency emitted by the siren.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The observed frequency is the same as the actual frequency emitted by the siren.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The observed frequency fluctuates randomly as the car approaches.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "2d2f04f7c4174898ad146a4c2f63e30f",
+                    "question": "A stationary observer hears a sound with a frequency of 500 Hz from a moving source. If the source is moving towards the observer at 20 m/s and the speed of sound in air is 340 m/s, what is the actual frequency emitted by the source?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "472 Hz",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "532 Hz",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "500 Hz",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Cannot be determined without knowing the distance between the source and the observer.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6142ae5e46f940498c8a499ed81426d4",
+            "concepts": [
+                "dedb0ed5-156b-48ad-aee3-9f2d97146000"
+            ],
+            "variants": [
+                {
+                    "id": "2e58fb2537e64628b6dadb556afcdd35",
+                    "question": "A train approaches a stationary observer blowing its whistle. What happens to the observed frequency?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Stays the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Depends on the train's speed.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a197aafa60dc48dbb7c89fb23b22871a",
+                    "question": "A train approaches a stationary observer blowing its whistle. The speed of the train is doubled. What happens to the observed frequency of the whistle?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Stays the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increases, but less than double.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "More than doubles.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0474b38392324f779cded89de5fd0ba0",
+                    "question": "A train approaches a stationary observer blowing its whistle. Select all the factors that affect the observed frequency of the whistle:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Speed of the train.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Speed of the sound.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Frequency of the whistle.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Loudness of the whistle.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3f438234a0384d33b2c57d3ab71eb5da",
+            "concepts": [
+                "f1242762-b080-4a5e-9985-7969945d1a0c"
+            ],
+            "variants": [
+                {
+                    "id": "b2e52eca48224bc99c06a27edc929a30",
+                    "question": "An observer moves away from a stationary sound source. The observed wavelength:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Remains constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Depends on the observer's speed.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "392abce5f71049db9b242959699e6114",
+                    "question": "Which of the following statements is TRUE regarding the Doppler effect for sound waves?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "When an observer moves towards a stationary source, the observed frequency decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "When a source moves away from a stationary observer, the observed frequency increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "When an observer moves away from a stationary source, the observed wavelength increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Doppler effect only occurs for light waves, not sound waves.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "16a6a2d7ec2547b5b5696a0821dcfe64",
+                    "question": "An observer is moving away from a stationary sound source with a speed '$!$v$!$', and the speed of sound in the medium is '$!$c$!$', where '$!$v < c$!$'. If the speed of the observer doubles, how does the observed wavelength change?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It halves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It increases by a factor of '$!$ \\frac{c+2v}{c+v} $!$'.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "1197384b7c3e435ea98d1d481c5d33dd",
+            "concepts": [
+                "19724e93-e748-4ce6-9cdb-a6e1b3f2e41f",
+                "ba45dfc9-7996-4dda-bd14-1d7f21675597"
+            ],
+            "variants": [
+                {
+                    "id": "5984aa7d53aa49a59734ad7639325c54",
+                    "question": "A star moving away from Earth will exhibit:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Blue-shift.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Red-shift.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "No shift.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Green-shift.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "786eb0be3fe2428290b2ce6d3137590d",
+                    "question": "Which of the following statements regarding the Doppler effect in light is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A star moving away from the observer appears red-shifted.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A star moving towards the observer appears blue-shifted.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The amount of shift is proportional to the speed of the star relative to the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A stationary star will appear green-shifted.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9685d3b9914e48f09293a6ad7aff8e20",
+                    "question": "A star is moving away from the Earth with a velocity '$!$v$!$', exhibiting a certain red-shift. If the velocity of the star doubles to '$!$2v$!$', what happens to the observed red-shift?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "353bb95f0c4a48a39950915015f67a96",
+            "concepts": [
+                "21d1d259-b66f-4509-8897-4feba2f2b3e6"
+            ],
+            "variants": [
+                {
+                    "id": "d76c7d8dfed440908662b7c2a8e4c165",
+                    "question": "What does '$!$\\Delta f/f = v/c$!$' represent in Doppler effect?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Doppler effect for sound waves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Doppler effect for light waves when $!$v$!$ is much smaller than $!$c$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Doppler effect for any wave.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Relationship between frequency and wavelength.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e18ea345541d482593bad7931b41b63f",
+                    "question": "Which of the following statements is correct regarding the formula '$!$\\Delta f/f = v/c$!$' in Doppler effect?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It represents the Doppler effect for any type of wave.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is an exact formula for the Doppler effect of light waves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is a good approximation when the relative speed '$!$v$!$' between the source and observer is much smaller than the speed of light '$!$c$!$'.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It relates the change in frequency to the change in wavelength of a wave.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "392eb39dbf044d37bb8dd085147eb0d8",
+                    "question": "A police car is moving towards you with its siren on and you measure the frequency to be 450Hz. If the actual frequency is 400Hz and the speed of sound is 340 m/s, what is the speed of the police car?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "34 m/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "38 m/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "42.5 m/s",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "170 m/s",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "8433e06395534b5494bd8c6ffa78c8a4",
+            "concepts": [
+                "73f17e12-18ff-4466-adf7-e5551d71bc83",
+                "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+            ],
+            "variants": [
+                {
+                    "id": "5205660871e24636880ce427088600d0",
+                    "question": "In the formula '$!$f' = f(v/(v \\pm u))$!$', what does the '$!$u$!$' represent?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Speed of the wave.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Speed of the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Relative speed of source and observer.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Speed of sound.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "77c90817c85546f0b5c1d92e91fe2cf9",
+                    "question": "A train approaches a stationary observer at a speed of 40 m/s. The train whistle has a frequency of 500 Hz. If the speed of sound in air is 340 m/s, using the formula '$!$f' = f(v/(v - u))$!$', what is the apparent frequency of the whistle heard by the observer?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "565 Hz",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "444 Hz",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "500 Hz",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "625 Hz",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "99e449b8f83d4507a20eac74042e78a5",
+                    "question": "Which of the following statements is correct regarding the Doppler effect formula, '$!$f' = f(v/(v \\pm u))$!$'?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "'$!$u$!$' represents the speed of the source relative to the observer, '$!$v$!$' represents the speed of the wave, and '$!$f$!$' represents the observed frequency.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "'$!$u$!$' represents the speed of the wave, '$!$v$!$' represents the speed of the source relative to the observer, and '$!$f$!$' represents the source frequency.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "'$!$u$!$' represents the speed of the observer, '$!$v$!$' represents the speed of the wave, and '$!$f$!$' represents the source frequency.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "'$!$u$!$' represents the speed of sound, '$!$v$!$' represents the speed of the source, and '$!$f$!$' represents the observed frequency.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ddd82b5e85d64a709c4f1b66b592df0f",
+            "concepts": [
+                "435c8687-60ee-4c29-8be8-7d8e711f518a"
+            ],
+            "variants": [
+                {
+                    "id": "ca25c126bb4845a39dfdfbcd44391ea7",
+                    "question": "Which phenomenon explains the redshift of light from distant galaxies?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Expanding Universe",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gravitational lensing",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Cosmic microwave background radiation",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Supernovae explosions",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "336c486892864fb28df58e35799cd9b0",
+                    "question": "Which of the following phenomena can cause a shift in the observed wavelength of light? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Doppler effect due to relative motion",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Expansion of the Universe",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gravitational fields",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Refraction of light",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "4afd9f30fff54dffa1887797b67eba6e",
+                    "question": "If the velocity of a galaxy moving away from Earth doubles, what happens to the observed redshift of light from that galaxy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It approximately doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "136365bed19d4ce9ae90ca240baaf508",
+            "concepts": [
+                "cbaf95f3-0748-4f73-83a2-8a9f27f14500"
+            ],
+            "variants": [
+                {
+                    "id": "bff35688ef39483c86ad472a15fc12a3",
+                    "question": "A source emits a frequency '$!$f$!$'. If it moves towards the observer, the observed frequency '$!$f'$!$' will be:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Lower than '$!$f$!$'.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Higher than '$!$f$!$'.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Equal to '$!$f$!$'.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Cannot be determined.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0a209efb59084334b552620a3f3b1309",
+                    "question": "Which of the following statements is TRUE regarding the Doppler effect for sound waves?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The observed frequency increases when the source moves away from the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The observed frequency decreases when the source moves towards the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The observed frequency remains the same when the source moves towards the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The observed frequency increases when the source moves towards the observer.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4515462dde0b400696eccb69fcf18877",
+                    "question": "A source emitting sound at frequency '$!$f$!$' is moving towards a stationary observer at a constant speed. If the speed of the source is doubled, what happens to the observed frequency '$!$f'$!$'?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It increases but is less than double the original observed frequency.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It decreases.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "b22f816c106c4b5baf254c35c3ba4787",
+            "concepts": [
+                "a738c7c2-d0ca-4760-8351-7ce0f93d7404"
+            ],
+            "variants": [
+                {
+                    "id": "8b12655a88294981a6e8012305fee6ea",
+                    "question": "If a source of sound is stationary and an observer is moving towards it, which quantity changes for the observer?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Speed of sound",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Wavelength",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Frequency",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Both frequency and wavelength",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e69ab98011b949c4b00b56dfe8a14811",
+                    "question": "If an observer moves towards a stationary source of sound with a speed that is half the speed of sound, by what factor does the observed frequency change?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Increases by a factor of 2",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increases by a factor of 1.5",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Decreases by a factor of 2",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Remains unchanged",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c6075d8797314e389cdb3c2ed5addc3d",
+                    "question": "A stationary source emits sound waves of frequency $!$f$!$ and speed $!$v$!$. An observer is moving towards the source with speed $!$v_o$!$. Select all quantities that change for the observer.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Speed of sound in the medium",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Wavelength of the sound wave",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Frequency of the sound wave",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Amplitude of the sound wave",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "a0131be63ed743c58b3923dd7a3979db",
+            "concepts": [
+                "ba45dfc9-7996-4dda-bd14-1d7f21675597"
+            ],
+            "variants": [
+                {
+                    "id": "7f5ab7b2465641288c31dc6151ae78f2",
+                    "question": "What does red-shift imply about a celestial object?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is moving towards the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is moving away from the observer.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is stationary relative to the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its temperature is increasing.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0f36a754755c433597bd2bc393ed58b5",
+                    "question": "Which of the following statements regarding the red-shift of a celestial object is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It indicates that the object is moving towards the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It indicates that the object is moving away from the observer.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It indicates that the object is stationary relative to the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It indicates that the object's temperature is decreasing.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e01b0656ab254740829940a952d50260",
+                    "question": "A star exhibits red-shift. What happens to the observed wavelength of light emitted by the star as it moves away from the observer with increasing speed?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The observed wavelength decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The observed wavelength remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The observed wavelength increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The observed wavelength fluctuates randomly.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "b0c01f0e540c4c62ad2ba56692b946e1",
+            "concepts": [
+                "3cd98a9d-ab46-4f5b-8041-d34e450ae4d5"
+            ],
+            "variants": [
+                {
+                    "id": "f1f4d52120514d5f83882a8cecb04f72",
+                    "question": "In the context of Doppler effect, what does blue shift indicate?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The source is moving away from the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The source is moving towards the observer.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The source is stationary.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The observer is moving away from the source.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "39b308f1c96546eaad3bd46357970716",
+                    "question": "A star emits light with a wavelength of $!$ \\lambda_0 $!$$. Due to the Doppler effect, the observed wavelength on Earth is $!$ \\lambda $!$$.  If $!$ \\lambda < \\lambda_0 $!$$. Which of the following statements could be true? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The star is moving towards the Earth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The star is moving away from the Earth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Earth is moving towards the star.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Earth and the star are both stationary.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "ac50a8e92dc64840b098c5300e89ce2f",
+                    "question": "A source of light is moving towards an observer with speed v. The speed of light is c, and the original frequency of the light is $!$f_0$!$. If the observed frequency is $!$f$!$, then $!$f/f_0$!$$. is given by?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$ \\sqrt{(c+v)/(c-v)} $!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$ \\sqrt{(c-v)/(c+v)} $!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$(c+v)/c $!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$(c-v)/c $!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "31605742571c4361b2f179ef47818db8",
+            "concepts": [
+                "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+                "f09a3cf7-42e1-4878-b989-bb756bfc1f03",
+                "7e1b8781-921d-4c7a-9f2a-f4e2cad83bb2",
+                "96b30691-b8b2-48ca-b045-8fe1c34c2801",
+                "8004f091-3866-4725-923f-566d362ee31a"
+            ],
+            "variants": [
+                {
+                    "id": "65d442bb0b554b5a9e26135279c6429e",
+                    "question": "Match the symbol with its meaning in Doppler Effect formulas:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "$!$f$!$",
+                            "optionB": "Emitted Frequency"
+                        },
+                        {
+                            "optionA": "$!$f'$!$",
+                            "optionB": "Observed Frequency"
+                        },
+                        {
+                            "optionA": "$!$\\lambda$!$",
+                            "optionB": "Emitted Wavelength"
+                        },
+                        {
+                            "optionA": "$!$\\lambda'$!$",
+                            "optionB": "Observed Wavelength"
+                        },
+                        {
+                            "optionA": "$!$v$!$",
+                            "optionB": "Wave Speed"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

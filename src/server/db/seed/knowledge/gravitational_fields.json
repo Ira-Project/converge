@@ -1,0 +1,1004 @@
+{
+    "name": "Gravitational Fields",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "5d2ab97fa21547a687be306eac90743c",
+            "concepts": [
+                "913f94ce-32fd-4e0b-81d1-2d6512bc5085"
+            ],
+            "variants": [
+                {
+                    "id": "c404dfbfb43647f8b356952884767cb4",
+                    "question": "Which of the following correctly states Newton's Law of Gravitation?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$F = G\\frac{m_1m_2}{r}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = G\\frac{m_1m_2}{r^2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F = G\\frac{m_1m_2}{r^3}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = G\\frac{2m_1m_2}{r^2}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "31b66639bd2a487fab1cc0fd3da55863",
+                    "question": "Which of the following statements regarding Newton's Law of Gravitation is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The force of gravity is directly proportional to the product of the masses of the two objects.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force of gravity is inversely proportional to the square of the distance between the centers of the two objects.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force of gravity is independent of the medium separating the two objects.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force of gravity is a repulsive force.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "49707681621044fdbb9bced151d210db",
+                    "question": "Two objects of masses $!$m_1$!$ and $!$m_2$!$ are separated by a distance $!$r$!$. The gravitational force between them is measured to be $!$F$!$. If the distance between the objects is doubled, what is the new gravitational force between them?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$F/2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F/4$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$2F$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$4F$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "743a0a2db70b4cbb859e38b0b200479d",
+            "concepts": [
+                "0426771a-a8e3-4a0d-aca0-c3f723e53367"
+            ],
+            "variants": [
+                {
+                    "id": "e67bdc6f3b814684b059d379f7ea7f30",
+                    "question": "What is the formula for gravitational field strength?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$g = \\frac{F}{m}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$g = \\frac{Gm}{r^2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$g = \\frac{GM}{r}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$g = F \\cdot m$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "968e8f2fd78b4c919f91fe7445a8d868",
+                    "question": "Which of the following equations are valid expressions for gravitational field strength, $!$g$!$?. Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$g = \\frac{F}{m}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$g = \\frac{GM}{r^2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$g = G\\frac{Mm}{r^2} \\cdot \\frac{1}{m}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$g = \\sqrt{\\frac{GM}{r^3}}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "ccc5848e111147d582079f02c5d369c7",
+                    "question": "A planet has a mass $!$M$!$ of $!$6 \\times 10^{24} \\text{ kg}$!$ and a radius $!$r$!$ of $!$6.4 \\times 10^6 \\text{ m}$!$. The gravitational constant $!$G$!$ is $!$6.67 \\times 10^{-11} \\text{ N m}^2 \\text{kg}^{-2}$!$. What is the gravitational field strength, $!$g$!$?, at the surface of the planet?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$9.77 \\text{ N kg}^{-1}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$9.77 \\text{ m s}^{-2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$6.25 \\times 10^7 \\text{ N kg}^{-1}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$3.92 \\times 10^{14} \\text{ N kg}^{-1}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3a825f8c907a4a54bc2772eb17d035d7",
+            "concepts": [
+                "c1358bdf-8b0d-431f-b9b1-3a05b8e0581e"
+            ],
+            "variants": [
+                {
+                    "id": "c6d5d1acb0fd4beba53dede63ab29b79",
+                    "question": "A planet orbits a star. Which of Kepler's laws describes the shape of the planet's orbit?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Kepler's First Law",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kepler's Second Law",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kepler's Third Law",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "None of the above",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "73b29b2e68284f049aa638f7b773709d",
+                    "question": "A planet takes 2 years to orbit a star. Another planet orbits the same star in 8 years. What is the ratio of the semi-major axes of the two planets' orbits, according to Kepler's Third Law?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "1:16",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1:4",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "4:1",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "2:3",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a0c6177d79c74a71953b895489002e76",
+                    "question": "Which of the following statements are consistent with Kepler's laws of planetary motion? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A planet sweeps out equal areas in equal times as it orbits a star.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The shape of a planet's orbit is described by an ellipse with the star at one focus.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The square of a planet's orbital period is proportional to the cube of the semi-major axis of its orbit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force of gravity between a planet and a star is inversely proportional to the distance between them.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "56cfa3bb66ff47f3992e4c9894fcf95a",
+            "concepts": [
+                "7a6c4ba7-fdbf-4768-a295-c1f80405cc97"
+            ],
+            "variants": [
+                {
+                    "id": "22d03b60bf1e4fb39579d86f1c3d6b65",
+                    "question": "Which law states that a line connecting a planet to the sun sweeps out equal areas in equal times?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Kepler's First Law",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kepler's Second Law",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kepler's Third Law",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Newton's Law of Universal Gravitation",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ce671bf046184fc2b772ee3fbac64171",
+                    "question": "Which of the following statements are consistent with Kepler's Second Law? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A planet moves faster when it is closer to the sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A planet moves slower when it is farther from the sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of a planet is constant throughout its orbit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A line connecting a planet to the sun sweeps out equal areas in equal times.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "8d9a8a85d4b6419ba95a741c7f9d5094",
+                    "question": "According to Kepler's Second Law, if the time interval is doubled, what happens to the area swept out by a line connecting a planet to the sun?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The area is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The area remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The area is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The area is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "731510acf5fe48078b3a8f15e8a38e67",
+            "concepts": [
+                "743c1657-ccbf-4c07-9271-689fe01f8ba9"
+            ],
+            "variants": [
+                {
+                    "id": "e10faa13381b405ba6f7101e7e1d17f9",
+                    "question": "What is the relationship between the orbital period ($!$T$!$), and the semi-major axis ($!$r$!$), of a planet's orbit according to Kepler's Third Law?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$T \\propto r$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$T^2 \\propto r^3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$T^3 \\propto r^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$T \\propto r^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "78e2005bc01443ad8e02d6fe494e14bc",
+                    "question": "If the semi-major axis ($!$r$!$) of a planet's orbit is doubled, what happens to its orbital period ($!$T$!$)?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The orbital period remains unchanged.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The orbital period is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The orbital period increases by a factor of $!$2\\sqrt{2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The orbital period increases by a factor of 8.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "158dde09021b449e9761a5276e8b97b6",
+                    "question": "Which of the following statements correctly describes the relationship between a planet's orbital period ($!$T$!$) and its semi-major axis ($!$r$!$)?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "If the semi-major axis is increased, the orbital period increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$T^2$!$ is directly proportional to $!$r^3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the orbital period is decreased, the semi-major axis decreases",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The square root of the orbital period is directly proportional to the cube root of the semi-major axis.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "75f2afd7503d4fc48d0d4f268c3088d1",
+            "concepts": [
+                "fbd8edf3-8814-4fd4-a0d3-e99cc717d126"
+            ],
+            "variants": [
+                {
+                    "id": "31e0df816b19453bb9358bc0abdc61cc",
+                    "question": "What is the correct formula for the orbital speed of a satellite?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$v = \\sqrt{\\frac{GM}{r}}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$v = \\sqrt{\\frac{GM}{r^2}}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = \\frac{GM}{r}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = \\sqrt{2GM r}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "79c3b892f4334fb294fb362967876a60",
+                    "question": "Which of the following correctly describe the orbital speed of a satellite? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$The orbital speed is inversely proportional to the square root of the orbital radius.$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$The orbital speed is independent of the mass of the satellite.$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$The orbital speed is directly proportional to the orbital radius.$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$The orbital speed is directly proportional to the square root of the mass of the planet.$!$",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e49f7823e1d947afa14ec5c13f80f913",
+                    "question": "A satellite is orbiting a planet of mass $!$6 \\times 10^{24}$!$ kg at a distance of $!$4.2 \\times 10^7$!$ m from the center of the planet.  What is the orbital speed of the satellite in m/s?  Use $!$G = 6.67 \\times 10^{-11}$!$ N m$!$^2$!$ /kg$!$^2$!$",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$4000$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2000$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$3080$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$10000$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "cb331d0bf20643a79ff0e576d05c3578",
+            "concepts": [
+                "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+            ],
+            "variants": [
+                {
+                    "id": "99e7b50e294d4ac9925147a288bb8d7b",
+                    "question": "What does the formula $!$E_p = -\\frac{GMm}{r}$!$ represent in the context of gravity?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Gravitational Potential Energy",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gravitational Potential",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Escape Velocity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic Energy",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cf84b034f368491198cd15e760afaec1",
+                    "question": "If the distance between two masses is halved, and one of the masses is doubled, how does the gravitational potential energy between them change according to the formula $!$E_p = -\\frac{GMm}{r}$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is doubled",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "89842b44e74c44338ebb8f130274c01b",
+                    "question": "Which of the following statements are true about the formula $!$E_p = -\\frac{GMm}{r}$!$ in the context of gravity? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It represents the gravitational potential energy between two masses.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The negative sign indicates that the potential energy is always negative.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The formula indicates that the gravitational potential energy increases as the distance between the masses increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$G$!$ represents the gravitational constant, a fundamental constant in physics.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c1cb135e5eb2442cbbffaee530f45162",
+            "concepts": [
+                "3e125180-5cf1-4f7b-a223-cc1bda7f1317"
+            ],
+            "variants": [
+                {
+                    "id": "7ae749ef74d249aeb414309a1e4d3494",
+                    "question": "Gravitational potential is defined as:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The work done per unit mass to bring a mass from infinity to a point.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force per unit mass experienced by a small test mass placed at that point.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The energy stored in a gravitational field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The acceleration due to gravity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d766fff96d4d4605990cd87cfa152cef",
+                    "question": "Which of the following statements correctly describe gravitational potential? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is the work done per unit mass to bring a mass from infinity to a point.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is a scalar quantity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is measured in joules per kilogram.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is always positive.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "66ef6b2daaae4c1da1aa1d481254c901",
+                    "question": "A mass $!$m$!$ is placed at a distance $!$r$!$ from a point mass $!$M$!$. If the distance $!$r$!$ is doubled, what happens to the gravitational potential experienced by the mass $!$m$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "f8d8604a81dc4296842ade513f797089",
+            "concepts": [
+                "6ef79646-7259-4c9c-a7cd-80a451d36360"
+            ],
+            "variants": [
+                {
+                    "id": "3f951dbe63694b25bc792e164114e901",
+                    "question": "What is the formula for the work done to move a mass m between two points with gravitational potentials $!$V_{gA}$!$ and $!$V_{gB}$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$W = m(V_{gB} + V_{gA})$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$W = m(V_{gB} - V_{gA})$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$W = \\frac{V_{gB} - V_{gA}}{m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$W = m V_{gB} V_{gA}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f01e8d8e815a4b339007f033bb87512e",
+                    "question": "Which of the following statements is correct regarding the work done to move a mass m between two points with gravitational potentials $!$V_{gA}$!$ and $!$V_{gB}$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The work done is equal to the mass multiplied by the sum of the potentials i.e. $!$W = m(V_{gB} + V_{gA})$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The work done is equal to the mass multiplied by the difference in the potentials i.e. $!$W = m(V_{gB} - V_{gA})$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The work done is equal to the difference in the potentials divided by the mass i.e. $!$W = \\frac{V_{gB} - V_{gA}}{m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The work done is equal to the mass multiplied by the product of the potentials i.e. $!$W = m V_{gB} V_{gA}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b0a2e1a7f06e4d3f95e7435410fdad67",
+                    "question": "If the mass $!$m$!$ is doubled, what happens to the amount of work done to move it between two points with gravitational potentials $!$V_{gA}$!$ and $!$V_{gB}$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The work done is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The work done is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The work done remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The work done is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "189766dcdd0d4e2f887705471e579808",
+            "concepts": [
+                "6596a162-fb14-45d2-96ea-3eb0b84b3230"
+            ],
+            "variants": [
+                {
+                    "id": "d4ac3898922941cb8e8c5a1be3e71ca1",
+                    "question": "What is true about equipotential surfaces in a gravitational field?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The gravitational potential is constant on these surfaces",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "No work is done in moving a mass along an equipotential surface.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The gravitational field lines are parallel to the equipotential surfaces.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The gravitational force is zero on these surfaces",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a3e6e6a8fa8840288e370c50b382a1ef",
+                    "question": "Which of the following statements is INCORRECT about equipotential surfaces in a gravitational field?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The gravitational potential is constant on these surfaces.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "No work is done in moving a test mass along an equipotential surface.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The gravitational field lines are perpendicular to the equipotential surfaces.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The gravitational force is non-zero on these surfaces and points in a direction perpendicular to the equipotential surface.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "48e3140690b44c8e83527ee4a9f2974b",
+                    "question": "Imagine two equipotential surfaces in a gravitational field. Surface A is at a distance $!$r$!$ from the center of the source mass and Surface B is at a distance $!$2r$!$ from the center of the source mass. What is the ratio of the gravitational potential on surface B to the gravitational potential on surface A?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "2",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1/2",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1/4",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "70db1884a9e04569b59723b183f521ee",
+            "concepts": [
+                "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+            ],
+            "variants": [
+                {
+                    "id": "892a968dc41d4d44967065ff688c1bb2",
+                    "question": "What is the total energy of a satellite in orbit?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Kinetic energy only",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Potential energy only",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The sum of its kinetic and potential energies",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Zero",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cc6f49fbf51544129b55e602f5b4b2fb",
+                    "question": "Which of the following statements regarding the energy of a satellite in orbit is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The total energy of the satellite is always positive.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total energy of the satellite is always negative.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total energy of the satellite is zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total energy of the satellite can be either positive or negative depending on its altitude.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b865e437c0d149ea8945fd5a6cb36b65",
+                    "question": "If the orbital radius of a satellite is doubled, what happens to its total energy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It becomes one-fourth.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "77fbc249b6834553b8609484710e9147",
+            "concepts": [
+                "46604101-3be5-4092-ac9f-5c58ea2f77f3"
+            ],
+            "variants": [
+                {
+                    "id": "5ed592c19fb94882a2c5facb434b90df",
+                    "question": "Which formula represents escape speed?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$v_{esc} = \\sqrt{\\frac{GM}{r}}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v_{esc} = \\sqrt{\\frac{2GM}{r}}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$v_{esc} = \\sqrt{GM r}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v_{esc} = \\frac{2GM}{r}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ca82dbe53a8b475ba27a8917ba4a3dc9",
+                    "question": "Which of the following statements about escape speed is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Escape speed is the minimum speed needed for an object to escape from the gravitational influence of a massive body.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Escape speed depends on the mass of the massive body and the distance from its center.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The escape speed of an object is directly proportional to the square root of the mass of the body.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Escape speed from Earth's surface is approximately 11.2 km/s, regardless of the object's mass.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "73b6653292524da588e742f4adf18b83",
+                    "question": "If the radius of a planet is doubled, but its mass remains constant, what happens to the escape speed from the planet's surface?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It increases by a factor of $!$\\sqrt{2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It decreases by a factor of $!$\\sqrt{2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "1ce0c491113e4e7fbe236293352559ec",
+            "concepts": [
+                "913f94ce-32fd-4e0b-81d1-2d6512bc5085",
+                "c1358bdf-8b0d-431f-b9b1-3a05b8e0581e",
+                "7a6c4ba7-fdbf-4768-a295-c1f80405cc97",
+                "743c1657-ccbf-4c07-9271-689fe01f8ba9"
+            ],
+            "variants": [
+                {
+                    "id": "d6962066052042dbbe5826ad8492c283",
+                    "question": "Match the laws with their descriptions:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Kepler's First Law",
+                            "optionB": "Planets move in elliptical orbits with the Sun at one focus."
+                        },
+                        {
+                            "optionA": "Kepler's Second Law",
+                            "optionB": "A line from a planet to the Sun sweeps equal areas in equal times."
+                        },
+                        {
+                            "optionA": "Kepler's Third Law",
+                            "optionB": "The square of a planet's orbital period is proportional to the cube of its orbit's semi-major axis."
+                        },
+                        {
+                            "optionA": "Newton's Law of Gravitation",
+                            "optionB": "Describes the attractive force between two masses."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

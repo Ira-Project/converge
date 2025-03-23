@@ -1,0 +1,846 @@
+{
+    "name": "Quantum Physics",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "a57a2c72a5a64133bff5dbc8123ed098",
+            "concepts": [
+                "b9451bda-7da9-411b-a7be-e09c4f8f7554",
+                "a854bdcd-203c-43de-a54a-f20d69dbe363",
+                "e0a45e61-9917-4545-8ef5-4ba73f3a8d85"
+            ],
+            "variants": [
+                {
+                    "id": "fe8210e6c9354fe1aca6d7a528e6d917",
+                    "question": "Which of the following correctly describes a photon?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A particle with mass and charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A massless particle with no charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An electromagnetic wave with oscillating electric and magnetic fields.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A discrete bundle of energy.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "ff7677b00f514b79a71aad832e3b7f90",
+                    "question": "Which of the following statements about photons is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A photon has zero rest mass.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A photon travels at the speed of light in a vacuum.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A photon carries energy and momentum.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A photon has a charge of +e.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "abf9c252478f4c51a9ceff0bcb176fcd",
+                    "question": "A photon of wavelength $!$\\lambda$!$ has momentum $!$p$!$. If the wavelength of the photon is doubled, its momentum becomes:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2p$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$p$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$p/2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$p/4$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "84abfd08fb374618a290db1a23a08115",
+            "concepts": [
+                "7f279d95-7489-4786-815c-960324474986"
+            ],
+            "variants": [
+                {
+                    "id": "3cd21ad8325849488f4b4fcd2f4cc5ec",
+                    "question": "What is the momentum of a photon with energy $!$E$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$E/c$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$E c$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E/\\lambda$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E \\lambda$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8fa592518d654bffb59001460f578ad0",
+                    "question": "Which of the following statements is correct regarding the momentum ($!$p$!$) of a photon?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The momentum of a photon is directly proportional to its energy ($!$E$!$) and inversely proportional to the speed of light ($!$c$!$).",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The momentum of a photon is directly proportional to both its energy ($!$E$!$) and the speed of light ($!$c$!$).",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The momentum of a photon is directly proportional to its energy ($!$E$!$) and its wavelength ($!$\\lambda$!$).",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The momentum of a photon is inversely proportional to both its energy ($!$E$!$) and the speed of light ($!$c$!$).",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "90b7482c7fee4fa486fffdb02dbfed26",
+                    "question": "If the energy of a photon is doubled, what happens to its momentum?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "b399d4cdede4495287c6be9cfb439504",
+            "concepts": [
+                "fa18c346-f3c8-43e3-8c3f-5971987bbe30"
+            ],
+            "variants": [
+                {
+                    "id": "4e4cf362fb934b5c86a5e7d40007e679",
+                    "question": "What happens to the kinetic energy of emitted electrons in the photoelectric effect when the intensity of incident light increases?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Increases",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Decreases",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Remains the same",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Becomes zero",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d3ea9076240340ccb237fdb448ff8dc0",
+                    "question": "In the photoelectric effect, if the intensity of incident light is doubled, what happens to the following quantities?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The number of emitted electrons doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The kinetic energy of emitted electrons doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The stopping potential doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The work function of the metal doubles.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "ebb093a9492c49019376f6fe60e1ce86",
+                    "question": "A beam of monochromatic light with frequency $!$ \\nu $!$ is incident on a metal surface, causing photoelectrons to be emitted. Which of the following correctly describes the relationship between the maximum kinetic energy ($!$K_{max}$!$ ) of the emitted photoelectrons, the frequency of the incident light ($!$\\nu$!$), and the work function of the metal ($!$\\phi$!$)?",
+                    "image": "Graph of maximum kinetic energy of photoelectrons versus frequency of incident light. The x-intercept is labeled $!\\nu_0!$ and the y-intercept is labeled $!-\\phi!$",
+                    "options": [
+                        {
+                            "option_text": "$!$ K_{max} = h\\nu + \\phi $!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$ K_{max} = \\frac{h\\nu}{\\phi} $!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$ K_{max} = h(\\nu - \\nu_0) $!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$ K_{max} = \\phi - h\\nu $!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "2bd9804b9d654f06836a661f8231a50c",
+            "concepts": [
+                "4b705e18-0761-4dd4-a760-c05db44f5bba"
+            ],
+            "variants": [
+                {
+                    "id": "1461d9a59402460ca5776e34b5a3cbc1",
+                    "question": "What is the minimum frequency of light required to eject electrons from a metal surface called?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Cutoff frequency",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Threshold frequency",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Critical frequency",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Resonance frequency",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cd502169a75344c68c3d814904cd479c",
+                    "question": "A light source with a frequency of $!$4.6 \\times 10^{14}$!$ Hz is incident on a metal surface. The work function of the metal is $!$2.3$!$ eV. Which of the following statements is/are correct about the interaction of light with the metal surface?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Electrons will be emitted from the metal surface.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The emitted electrons will have kinetic energy.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The maximum kinetic energy of the emitted electrons can be calculated using the equation $!$KE_{max} = hf - \\phi$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The stopping potential for the emitted electrons can be determined.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "97f4e9c0f7c24c7fab83cd481cf69764",
+                    "question": "The work function of a certain metal is $!$3.0$!$ eV.  What is the threshold frequency for this metal?  Planck's constant, $!$h$!$, is equal to $!$6.626 \\times 10^{-34}$!$ J s.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$7.24 \\times 10^{14}$!$ Hz",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$4.55 \\times 10^{14}$!$ Hz",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$9.11 \\times 10^{14}$!$ Hz",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1.24 \\times 10^{15}$!$ Hz",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "426c336aa88342bebaf30816af1dddaa",
+            "concepts": [
+                "0a84b816-12f2-48c5-b801-70ddcbfa3381"
+            ],
+            "variants": [
+                {
+                    "id": "407740ee630d4434a54bd48d7c461e42",
+                    "question": "Which equation best describes the photoelectric effect?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$E_k = hf + \\phi$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E_k = hf - \\phi$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$E_k = \\phi - hf$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E_k = \\frac{hf}{\\phi}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5efa80b0986e44998518f24029bda944",
+                    "question": "If the frequency of the incident light is doubled, what happens to the maximum kinetic energy of the emitted photoelectrons?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It increases but is not necessarily doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "40aab810f35e48c790643dff9bca1230",
+                    "question": "Which of the following statements is/are true regarding the photoelectric effect?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The kinetic energy of emitted electrons is independent of the intensity of the incident light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The stopping potential is dependent on the frequency of the incident light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "There is a minimum threshold frequency below which no photoelectrons are emitted, regardless of intensity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The number of emitted electrons per second is proportional to the work function of the material.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "425db8d9620f4fd999469f3183204771",
+            "concepts": [
+                "6bccbcf8-1f63-4aaa-846f-b35274f54ceb"
+            ],
+            "variants": [
+                {
+                    "id": "604b1b27f3cc4f78ada6a737fb4ff5b0",
+                    "question": "In Compton scattering, what happens to the wavelength of the scattered photon compared to the incident photon?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Increases",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Decreases",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Remains the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Becomes zero",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ecd8311080cc4beebebc82303b206a12",
+                    "question": "In Compton scattering, if the angle of scattering is doubled, what happens to the change in wavelength of the scattered photon?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Doubles",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "More than doubles",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Halves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Becomes zero",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2785671ccd62468b8cf8983503303f87",
+                    "question": "A photon with wavelength $!$\\lambda$!$ undergoes Compton scattering and is scattered at an angle $!$\\theta$!$. Which of the following statements regarding the scattered photon are true? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The scattered photon's wavelength is always greater than $!$\\lambda$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The scattered photon's wavelength can be less than $!$\\lambda$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The scattered photon's wavelength is equal to $!$\\lambda$!$ if $!$\\theta = 0$!$ degrees",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The change in wavelength is maximum when $!$\\theta = 180$!$ degrees",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "e6ca8c6e393c4043ac798cf88c225e09",
+            "concepts": [
+                "2e26502d-a72c-466c-b99c-dd2649625bc1"
+            ],
+            "variants": [
+                {
+                    "id": "180f5f81965a40f9970edd7fda80e614",
+                    "question": "Which experiment confirmed the wave nature of matter?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Michelson-Morley experiment",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Davisson-Germer experiment",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Rutherford's gold foil experiment",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Stern-Gerlach experiment",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "93b8b1c9332c4ace94f04c2e75e44841",
+                    "question": "Which of the following experiments provided evidence for the wave nature of particles? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Photoelectric effect",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Davisson-Germer experiment",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Compton scattering",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Rutherford's gold foil experiment",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "8736da8170004010a0910b951f95504d",
+                    "question": "An electron beam is accelerated through a potential difference $!$V$!$ and then diffracted by a crystal lattice with interplanar spacing $!$d$!$. The first-order diffraction maximum is observed at an angle $!$\\theta$!$.  Using the de Broglie relation and Bragg's law ($!$n\\lambda = 2d\\sin\\theta$!$), find the wavelength $!$\\lambda$!$ of the electrons in terms of $!$V$!$ , $!$d$!$, and $!$\\theta$!$. Assume the electron's charge is $!$e$!$ and its mass is $!$m$!$.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\lambda = \\frac{h}{\\sqrt{2meV}}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\lambda = 2d\\sin\\theta$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\lambda = \\sqrt{\\frac{150}{V}}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\lambda = \\frac{hc}{eV}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "8b12a0a6a1364cc7ba9f302c4c85fb31",
+            "concepts": [
+                "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+            ],
+            "variants": [
+                {
+                    "id": "15da7aab5c43447ab4cb0c841ca15fa6",
+                    "question": "What is the de Broglie wavelength of a particle with momentum $!$p$!$?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$h/p$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$hp$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$p/h$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$h/p^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e0f2a806501941d2939ddf8140c09635",
+                    "question": "Which of the following statements is correct regarding the de Broglie wavelength of a particle?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is directly proportional to the momentum of the particle.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is inversely proportional to the momentum of the particle.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is directly proportional to the square of the momentum of the particle.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is independent of the momentum of the particle.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cca5e081071e494d8e32121df2ceca92",
+                    "question": "If the momentum of a particle is doubled, what happens to its de Broglie wavelength?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It quadruples.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains unchanged.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "94494646ce45473fbe0e015ca8ab92da",
+            "concepts": [
+                "05e68472-6392-44b4-a183-0a708667bcf4"
+            ],
+            "variants": [
+                {
+                    "id": "87040d1462774b94887cde0d5b8fd800",
+                    "question": "According to Bohr's quantization condition, what is the relationship between the circumference of an electron's orbit ($!$2\\pi r$!$) and its wavelength ($!$\\lambda$!$)?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$2\\pi r = n\\lambda$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$2\\pi r = \\lambda/n$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2\\pi r = n/\\lambda$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2\\pi r = \\lambda$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "857f6b6e80264589a95846f0bb784a0b",
+                    "question": "If the radius of the electron's orbit is doubled, what will happen to the wavelength associated with the electron?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The wavelength will be doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The wavelength will be halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wavelength will be quadrupled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wavelength will remain unchanged.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "35837360f17a4662a1646c4d98f07cbe",
+                    "question": "Which of the following statements are consistent with Bohr's model of the atom?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The angular momentum of an electron is quantized.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electrons orbit the nucleus in specific, allowed orbits.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The energy of an electron is quantized.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An electron can exist in any orbit around the nucleus.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "b0e5ea9ca8ca4d399fe80805a0a79227",
+            "concepts": [
+                "707d50fc-aa14-4fe5-8982-7a2d85a16f76"
+            ],
+            "variants": [
+                {
+                    "id": "94bd68320aaa40e1979cc06dfcb87e79",
+                    "question": "Which of the following phenomena provides evidence for the particle nature of light?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Diffraction",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Interference",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Compton Scattering",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Polarization",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2efef201c884402e905e937071cc28cf",
+                    "question": "Which of the following statements regarding the nature of light is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Light exhibits wave-like properties such as diffraction and interference.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The photoelectric effect demonstrates the particle-like nature of light.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Compton scattering supports the wave-like nature of light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Light can be polarized, which is a property of transverse waves.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3f5251bd9a6d46168274f81be4291874",
+                    "question": "A photon with wavelength $!$ \\lambda $!$ undergoes Compton scattering from a stationary electron. The scattered photon is detected at an angle $!$ \\theta $!$ relative to the incident direction. If the Compton wavelength of the electron is $!$ \\lambda_c $!$, what is the wavelength $!$ \\lambda' $!$ of the scattered photon?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$ \\lambda' = \\lambda + \\lambda_c (1 - \\cos \\theta) $!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$ \\lambda' = \\lambda - \\lambda_c (1 - \\cos \\theta) $!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$ \\lambda' = \\lambda + \\lambda_c (1 + \\cos \\theta) $!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$ \\lambda' = \\frac{\\lambda}{1 + \\frac{\\lambda_c}{\\lambda} (1 - \\cos \\theta)} $!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "41c828a91d4f4c0f883fe459b4f2e433",
+            "concepts": [
+                "af40d0c0-79b8-4f61-ae04-181c33113b03",
+                "fc61ca59-6b90-4172-8d29-30967a79b1ef",
+                "7f279d95-7489-4786-815c-960324474986",
+                "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+            ],
+            "variants": [
+                {
+                    "id": "dbc3da86cb2c4f93b5f16e6179a75294",
+                    "question": "Match the formulas with their corresponding concepts:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "$!$c = f \\lambda$!$",
+                            "optionB": "Light wave speed relation"
+                        },
+                        {
+                            "optionA": "$!$E = hf$!$",
+                            "optionB": "Photon energy relation"
+                        },
+                        {
+                            "optionA": "$!$p = \\frac{E}{c}$!$",
+                            "optionB": "Photon momentum relation"
+                        },
+                        {
+                            "optionA": "$!$\\lambda = \\frac{h}{p}$!$",
+                            "optionB": "de Broglie wavelength"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}
