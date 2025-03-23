@@ -78,8 +78,6 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
     }
   };
 
-  console.log(isDescending, topLabel, bottomLabel);
-
   return (
     <div className="flex flex-col gap-8">
       <p className="text-xl text-center mb-4"> 
