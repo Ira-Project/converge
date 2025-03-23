@@ -1,22 +1,30 @@
-import { and } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { GetLeaderboardInput } from "./leaderboard.input";
+import type { GetTopicsInput, GetSubmissionsInput, TopicBreakdownInput } from "./analytics.input";
 import { ActivityType, CONCEPT_MAPPING_ASSIGNMENT_SCORE, KNOWLEDGE_ZAP_ASSIGNMENT_SCORE, LEARN_BY_TEACHING_ASSIGNMENT_SCORE, READ_AND_RELAY_ASSIGNMENT_SCORE, REASONING_ASSIGNMENT_SCORE, STEP_SOLVE_ASSIGNMENT_SCORE } from "@/lib/constants";
+import { activity } from "@/server/db/schema/activity";
 
-export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeaderboardInput) => {
+export const getTopics = async (ctx: ProtectedTRPCContext, input: GetTopicsInput) => {
+  const activities = await ctx.db.query.activity.findMany({
+    where: and(
+      eq(activity.classroomId, input.classroomId),
+      eq(activity.isLive, true),
+    ),
+    with: {
+      topic: true,
+    },
+  })
+
+  const topics = activities.map((activity) => activity.topic)
+  const uniqueTopics = [...new Set(topics)]
+
+  return uniqueTopics
+}
+
+export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmissionsInput) => {
   const activities = await ctx.db.query.activity.findMany({
     where: (table, { eq }) => and(eq(table.classroomId, input.classroomId), eq(table.isLive, true)),
   });
-
-  const studentScores = new Map<string, {
-    scoresByActivity: Map<string, {
-      score: number;
-      timeSpent: number;
-      accuracy: number;
-      name: string;
-      userEmail: string;
-    }>;
-  }>();
 
   const submissions: {
     userId: string | null;
@@ -25,8 +33,11 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
     submittedAt: Date | null;
     createdAt: Date;
     activityId: string;
+    activityType: ActivityType;
+    topic: string;
     name: string;
     userEmail: string;
+    userAvatar: string;
   }[] = [];
 
   for (const act of activities) {
@@ -49,19 +60,30 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
               columns: {
                 name: true,
                 email: true,
+                avatar: true,
+              }
+            },
+            activity: {
+              with: {
+                topic: true,
               }
             }
           }
         });
         submissions.push(...kza.map(s => ({
           userId: s.userId,
-          score: (s.questionsCompleted ?? 0) / (s.totalAttempts ?? 1) * KNOWLEDGE_ZAP_ASSIGNMENT_SCORE,
+          score: s.totalAttempts ? 
+            ((s.questionsCompleted ?? 0) / (s.totalAttempts ?? 1)) * KNOWLEDGE_ZAP_ASSIGNMENT_SCORE : 
+            0,
           accuracy: s.totalAttempts ? (s.questionsCompleted ?? 0) / (s.totalAttempts ?? 1) : 0,
           submittedAt: s.submittedAt,
           createdAt: s.createdAt,
           activityId: act.id,
+          activityType: ActivityType.KnowledgeZap,
+          topic: s.activity?.topic?.name ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
+          userAvatar: s.user?.avatar ?? "",
         })));
         break; 
       case ActivityType.ReasonTrace:
@@ -77,6 +99,12 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
               columns: {
                 name: true,
                 email: true,
+                avatar: true,
+              }
+            },
+            activity: {
+              with: {
+                topic: true,
               }
             }
           },
@@ -85,7 +113,7 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
             userId: true,
             submittedAt: true,
             createdAt: true,
-          }
+          },
         });
         submissions.push(...rta.map(s => ({
           userId: s.userId,
@@ -97,8 +125,11 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
           submittedAt: s.submittedAt,
           createdAt: s.createdAt,
           activityId: act.id,
+          activityType: ActivityType.ReasonTrace,
+          topic: s.activity?.topic?.name ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
+          userAvatar: s.user?.avatar ?? "",
         })));
         break;
       case ActivityType.LearnByTeaching:
@@ -112,6 +143,12 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
               columns: {
                 name: true,
                 email: true,
+                avatar: true,
+              }
+            },
+            activity: {
+              with: {
+                topic: true,
               }
             }
           }
@@ -123,8 +160,11 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
           submittedAt: s.submittedAt,
           createdAt: s.createdAt,
           activityId: act.id,
+          activityType: ActivityType.LearnByTeaching,
+          topic: s.activity?.topic?.name ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
+          userAvatar: s.user?.avatar ?? "",
         })));
         break;
       case ActivityType.ConceptMapping:
@@ -138,19 +178,28 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
               columns: {
                 name: true,
                 email: true,  
+                avatar: true,
+              }
+            },
+            activity: {
+              with: {
+                topic: true,
               }
             }
           }
         });
         submissions.push(...cm.map(s => ({
           userId: s.userId,
-          score: (s.score ?? 0) * CONCEPT_MAPPING_ASSIGNMENT_SCORE,
+          score: (s.score ?? 0) * CONCEPT_MAPPING_ASSIGNMENT_SCORE, 
           accuracy: s.accuracy ?? 0,
-          submittedAt: s.submittedAt,
+          submittedAt: s.submittedAt, 
           createdAt: s.createdAt,
           activityId: act.id,
+          activityType: ActivityType.ConceptMapping,
+          topic: s.activity?.topic?.name ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
+          userAvatar: s.user?.avatar ?? "",
         })));
         break;
       case ActivityType.StepSolve:
@@ -164,6 +213,12 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
               columns: {
                 name: true,
                 email: true,
+                avatar: true,
+              }
+            },
+            activity: {
+              with: {
+                topic: true,
               }
             }
           }
@@ -175,8 +230,11 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
           submittedAt: s.submittedAt,
           createdAt: s.createdAt,
           activityId: act.id,
+          activityType: ActivityType.StepSolve,
+          topic: s.activity?.topic?.name ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
+          userAvatar: s.user?.avatar ?? "",
         })));
         break;
       case ActivityType.ReadAndRelay:
@@ -190,6 +248,12 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
               columns: {
                 name: true,
                 email: true,
+                avatar: true,
+              }
+            },
+            activity: {
+              with: {
+                topic: true,
               }
             }
           }
@@ -201,101 +265,24 @@ export const getLeaderboard = async (ctx: ProtectedTRPCContext, input: GetLeader
           submittedAt: s.submittedAt,
           createdAt: s.createdAt,
           activityId: act.id,
+          activityType: ActivityType.ReadAndRelay,
+          topic: s.activity?.topic?.name ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
+          userAvatar: s.user?.avatar ?? "",
         })));
         break;
     }
   }
 
-  for (const s of submissions) {
-    if (!s.userId) continue;
-
-    // Initialize student entry if it doesn't exist
-    if (!studentScores.has(s.userId)) {
-      studentScores.set(s.userId, {
-        scoresByActivity: new Map()
-      });
-    }
-
-    const student = studentScores.get(s.userId)!;
-    const activityId = s.activityId;
-
-    // Update score only if it's higher than existing score or if no score exists
-    const existingScore = student.scoresByActivity.get(activityId);
-    if (!existingScore || existingScore.score < s.score) {
-      const timeSpent = s.submittedAt ? (s.submittedAt.getTime() - s.createdAt.getTime()) / 1000 : 0;
-      student.scoresByActivity.set(activityId, {
-        score: s.score,
-        timeSpent:  timeSpent > 3600 ? 3600 : timeSpent,
-        accuracy: s.accuracy,
-        name: s.name,
-        userEmail: s.userEmail,
-      });
-    }
-  }
-
-  const activitySet = new Set<{
-    id: string;
-    name: string;
-    type: string;
-  }>();
-
-  // Convert the Map to an array of student scores
-  const leaderboardData = Array.from(studentScores.entries()).map(([userId, data]) => {
-    const totalScore = Array.from(data.scoresByActivity.values())
-      .reduce((sum, activity) => sum + (Number.isFinite(activity.score) ? activity.score : 0), 0);
-    
-    const activities = Array.from(data.scoresByActivity.values());
-    const validAccuracies = activities.filter(activity => Number.isFinite(activity.accuracy));
-    const averageAccuracy = validAccuracies.length > 0
-      ? validAccuracies.reduce((sum, activity) => sum + activity.accuracy, 0) / validAccuracies.length
-      : 0;
-
-    const totalTimeSpent = Array.from(data.scoresByActivity.values())
-      .reduce((sum, activity) => sum + (Number.isFinite(activity.timeSpent) ? activity.timeSpent : 0), 0);
-
-    // Get the user info from the first activity
-    const userInfo = Array.from(data.scoresByActivity.values())[0];
-
-    // Create a score breakdown object
-    const scoreBreakdown: Record<string, { score: number; accuracy: number; timeSpent: number }> = {};
-    data.scoresByActivity.forEach((activityData, activityId) => {
-      scoreBreakdown[activityId] = {
-        score: activityData.score,
-        accuracy: activityData.accuracy,
-        timeSpent: activityData.timeSpent
-      };
-    });
-
-    return {
-      userId,
-      name: userInfo?.name ?? "",
-      userEmail: userInfo?.userEmail ?? "",
-      totalScore,
-      averageAccuracy,
-      numberOfActivities: data.scoresByActivity.size,
-      totalTimeSpent,
-      scoreBreakdown
-    };
+  submissions.sort((a, b) => {
+    if (!a.submittedAt || !b.submittedAt) return 0;
+    return b.submittedAt.getTime() - a.submittedAt.getTime();
   });
 
-  // Add activities to the set
-  for (const activity of activities) {
-    if (activity.typeText) {
-      activitySet.add({
-        id: activity.id,
-        name: activity.name.replaceAll(",", " "),
-        type: activity.typeText
-      });
-    }
-  }
+  return submissions;
+}
 
-  // Sort by total score in descending order
-  leaderboardData.sort((a, b) => b.totalScore - a.totalScore);
-
-  return {
-    rankings: leaderboardData,
-    activityInfo: Array.from(activitySet)
-  };
+export const topicBreakdown = async (ctx: ProtectedTRPCContext, input: TopicBreakdownInput) => {
+  return
 }
