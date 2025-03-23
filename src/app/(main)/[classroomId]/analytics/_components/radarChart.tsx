@@ -34,7 +34,12 @@ export function SkillsRadarCard(props: {
     ? conceptMapScores.reduce((acc, score) => acc + score, 0) / conceptMapScores.length 
     : 0;
 
-  const creativityScore = (reasonTraceAvg * 0.6) + (conceptMapAvg * 0.4);
+  // Calculate creativity score based on available activities
+  const creativityScore = reasonTraceScores.length === 0
+    ? conceptMapAvg  // Only use concept mapping if no reason trace
+    : conceptMapScores.length === 0
+      ? reasonTraceAvg  // Only use reason trace if no concept mapping
+      : (reasonTraceAvg * 0.6) + (conceptMapAvg * 0.4);  // Use weighted average if both exist
   
   // Calculate Communication score from Learn By Teaching submissions
   const communicationScore = props.submissions
