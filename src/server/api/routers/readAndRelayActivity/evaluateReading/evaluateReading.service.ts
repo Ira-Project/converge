@@ -93,13 +93,15 @@ export const evaluateReading = async (ctx: ProtectedTRPCContext, input: Evaluate
         payload: {
           questionId: question.id,
           newStatus: body.isCorrect ? QuestionStatus.CORRECT : QuestionStatus.INCORRECT,
-          explanation: body.working,
+          working: body.working,
           computedAnswer: body.answer,
           image: body.image ? body.image : undefined,
           imageHeight: body.imageHeight ? body.imageHeight : undefined,
           imageWidth: body.imageWidth ? body.imageWidth : undefined,
           cheatsheetId: cheatsheetId,
-        }
+        },
+        explanationId: cheatsheetId,
+        explanation: input.highlights.join("\n"),
       })
       .then(async () => {
           console.log(index, "Created RealtimeDB Object", Date.now())
