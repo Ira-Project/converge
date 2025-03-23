@@ -35,7 +35,7 @@ export default function TopicBreakdownChart(props: {
     const chartData = Array.from(topicStats.entries()).map(([topic, stats]) => ({
       topic,
       submissions: stats.submissions,
-      averageScore: Math.round(stats.totalScore / stats.submissions),
+      averageScore: (stats.totalScore / stats.submissions).toFixed(2),
     }));
 
     // Add empty entries at start and end for padding
@@ -44,11 +44,19 @@ export default function TopicBreakdownChart(props: {
     ];
   }, [props.submissions]);
 
-  // Calculate max submissions for Y-axis domain
-  const maxSubmissions = React.useMemo(() => {
+
+  // Calculate max submissions and ticks for Y-axis domain
+  const { maxSubmissions, submissionTicks } = React.useMemo(() => {
     const max = Math.max(...data.map(d => d.submissions ?? 0));
-    // Round up to nearest 10 for cleaner axis values
-    return (max / 10) * 10;
+    // Round up to nearest multiple of 4
+    const roundedMax = Math.ceil(max / 4) * 4;
+    // Create 5 evenly spaced ticks from 0 to roundedMax
+    const ticks = [0, roundedMax / 4, roundedMax / 2, (roundedMax * 3) / 4, roundedMax];
+    
+    return {
+      maxSubmissions: roundedMax,
+      submissionTicks: ticks
+    };
   }, [data]);
 
   return (
@@ -73,6 +81,8 @@ export default function TopicBreakdownChart(props: {
             tickLine={false}
             tick={{ fill: '#666', fontSize: 12 }}
             domain={[0, maxSubmissions]}
+            ticks={submissionTicks}
+            tickFormatter={(value: number) => value.toFixed(0)}
           />
           <YAxis 
             label={{ value: 'Average Score', angle: -90, fontSize: 12 }}
