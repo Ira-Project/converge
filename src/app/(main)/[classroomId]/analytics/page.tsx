@@ -7,7 +7,7 @@ import MonthlySubmissionsChart from './_components/submissionChart';
 import RecentSubmissionsList from './_components/submissionsList';
 import TopicBreakdownChart from './_components/topicBreakdown';
 
-export default async function AnalyticsPage(props: { params: { classroomId: string } }) {
+export default async function AnalyticsPage(props: { params: Promise<{ classroomId: string }> }) {
 
   const [{ user }, params] = await Promise.all([
     validateRequest(),

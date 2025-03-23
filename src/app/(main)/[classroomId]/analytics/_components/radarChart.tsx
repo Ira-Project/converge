@@ -14,9 +14,6 @@ export function SkillsRadarCard(props: {
   submissions: RouterOutputs["analytics"]["getSubmissions"]
 }) {
 
-  console.log(props.submissions);
-  console.log(props.submissions.filter(sub => sub.activityType === ActivityType.StepSolve));
-
   // Calculate Memory score from knowledge zap submissions
   const memoryScore = props.submissions
     .filter(sub => sub.activityType === ActivityType.KnowledgeZap)
@@ -51,7 +48,6 @@ export function SkillsRadarCard(props: {
     .reduce((acc, sub) => acc + sub.score, 0) / props.submissions
     .filter(sub => sub.activityType === ActivityType.ReadAndRelay).length || 0;
 
-  console.log(informationLiteracyScore);
 
   // Calculate Problem Solving score from StepSolve submissions
   const problemSolvingScore = props.submissions

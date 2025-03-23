@@ -4,6 +4,7 @@ import { validateRequest } from '@/lib/auth/validate-request';
 import { type RouterOutputs } from '@/trpc/shared';
 import { Leaderboard } from './_components/leaderboard';
 import { ChartNoAxesColumn } from 'lucide-react';
+
 export default async function LeaderboardPage(props: { params: Promise<{ classroomId: string }> }) {
 
   const [{ user }, params] = await Promise.all([
