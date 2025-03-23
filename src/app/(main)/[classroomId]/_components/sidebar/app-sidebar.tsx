@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { BookOpen, Layers, Plus, ChartNoAxesColumn } from "lucide-react"
+import { BookOpen, Layers, Plus, ChartLine, ChartNoAxesColumn } from "lucide-react"
 
 import { NavMain } from "./nav-main"
 import { NavStudents } from "./nav-students"
@@ -70,6 +70,12 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
         isActive: true,
       })
     }
+    navMain.push({
+      title: "Analytics",
+      url: `/${classroom?.id}/analytics`,
+      icon: ChartLine,
+      isActive: true,
+    })
     navMain.push({
       title: "Create Activity",
       url: `/${classroom?.id}#create-activity`,
