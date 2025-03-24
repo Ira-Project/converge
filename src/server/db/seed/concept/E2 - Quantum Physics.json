@@ -1,0 +1,262 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "Tw3DlvElppyxmi7eGH7oq",
+    "topicIdProd": "deqns68lly6wjeez21suz",
+    "chapter_text": "Here's a summary of the concepts covered in the provided text, organized into sections with bullet points:\n\n**Chapter 22: Quantum Physics**\n\n**22.1: Photons and the Photoelectric Effect**\n\n*   **Photons:**\n    *   Light as electromagnetic wave consisting of oscillating electric and magnetic fields.\n    *   Wave speed formula: `c = f \\lambda`\n    *   Light as collection of quanta (bundles of energy).\n    *   Photon energy: `E = hf`\n    *   Photon mass: zero\n    *   Relativistic energy-momentum relation: `E^2 = p^2c^2 + m^2c^4`\n    *   Photon momentum: `p = \\frac{E}{c} = \\frac{hf}{c} = \\frac{h}{\\lambda}`\n*   **The Photoelectric Effect:**\n    *   Emission of electrons (photoelectrons) from a metallic surface when light is incident on it.\n    *   Stopping voltage (Vs): The voltage required to stop all emitted electrons.\n    *   Maximum kinetic energy of emitted electrons: `eV_s = E_{max}`\n    *   Intensity of light does not affect kinetic energy of emitted electrons.\n    *   Electron kinetic energy depends on the frequency of the incident light.\n    *   Critical (threshold) frequency (f\\_c): Minimum frequency below which no electrons are emitted.\n    *   Electrons are emitted with no time delay.\n    *   Work function (\u03d5): The minimum energy required to free an electron from the metal.\n    *   `E_k = hf - \u03d5`\n    *   `eV_s = hf - \u03d5`\n    *   `V_s = \\frac{h}{e} f - \\frac{\u03d5}{e}`\n\n**Compton Scattering**\n\n*   Scattering of light off an electron, resulting in a longer wavelength of the scattered light.\n*   Compton scattering as evidence for the particle nature of light.\n*   Wavelength shift formula: `\\lambda' - \\lambda = \\frac{h}{mc} (1 - cos\u03b8)`\n*   Compton wavelength: `\\frac{h}{mc}`\n\n**22.2 Matter waves**\n\n*   The de Broglie hypothesis: Assigns wave-like properties to particles.\n*   Duality of matter: Particles exhibiting wave-like behavior.\n*   de Broglie wavelength: `\u03bb = \\frac{h}{p}`\n*   Probability waves: Matter waves representing the probability of finding a particle.\n*   Davisson-Germer experiment: Demonstration of electron diffraction.\n*   Davisson-Germer experiment: Electrons of Kinetic energy 54 eV were directed at a surface of nickel.\n*   Electron wavelength formula: `\u03bb = \\frac{h}{\\sqrt{2mqV}}`\n*   Bohr condition for the quantisation of angular momentum: `2\u03c0r = n\u03bb`",
+    "chapter_concepts": [
+        {
+            "concept_id": "b9451bda-7da9-411b-a7be-e09c4f8f7554",
+            "concept_question": "What are photons as electromagnetic waves?",
+            "concept_answer": "Photons are described as electromagnetic waves with oscillating electric and magnetic fields.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "af40d0c0-79b8-4f61-ae04-181c33113b03",
+            "concept_question": "What is the light wave speed relation?",
+            "concept_answer": "The speed of light equals its frequency multiplied by its wavelength.",
+            "concept_formula": [
+                "$!$c = f \\lambda$!$"
+            ],
+            "pre-requisites": [
+                "b9451bda-7da9-411b-a7be-e09c4f8f7554"
+            ]
+        },
+        {
+            "concept_id": "a854bdcd-203c-43de-a54a-f20d69dbe363",
+            "concept_question": "What is light as quanta?",
+            "concept_answer": "Light can be regarded as discrete bundles of energy called quanta.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "fc61ca59-6b90-4172-8d29-30967a79b1ef",
+            "concept_question": "What is the photon energy relation?",
+            "concept_answer": "A photon's energy is directly proportional to its frequency.",
+            "concept_formula": [
+                "$!$E = hf$!$"
+            ],
+            "pre-requisites": [
+                "a854bdcd-203c-43de-a54a-f20d69dbe363"
+            ]
+        },
+        {
+            "concept_id": "e0a45e61-9917-4545-8ef5-4ba73f3a8d85",
+            "concept_question": "What is the photon mass?",
+            "concept_answer": "Photons are massless particles.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "06ae19b0-86a7-407c-9aac-c3079249620b",
+            "concept_question": "What is the relativistic energy-momentum relation?",
+            "concept_answer": "The total energy squared equals momentum squared times c squared plus mass squared times c fourth.",
+            "concept_formula": [
+                "$!$E^2 = p^2c^2 + m^2c^4$!$"
+            ],
+            "pre-requisites": [
+                "e0a45e61-9917-4545-8ef5-4ba73f3a8d85"
+            ]
+        },
+        {
+            "concept_id": "7f279d95-7489-4786-815c-960324474986",
+            "concept_question": "What is the photon momentum relation?",
+            "concept_answer": "A photon's momentum is its energy divided by the speed of light.",
+            "concept_formula": [
+                "$!$p = \\frac{E}{c}$!$",
+                "$!$p = \\frac{hf}{c}$!$",
+                "$!$p = \\frac{h}{\\lambda}$!$"
+            ],
+            "pre-requisites": [
+                "fc61ca59-6b90-4172-8d29-30967a79b1ef",
+                "af40d0c0-79b8-4f61-ae04-181c33113b03"
+            ]
+        },
+        {
+            "concept_id": "976b376b-3046-48eb-a50d-34340630d093",
+            "concept_question": "What is the photoelectric effect?",
+            "concept_answer": "The photoelectric effect is the emission of electrons from metal when light is incident.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "018e7d2e-cb2b-4daa-9c30-e3a0d9d369c9",
+            "concept_question": "What is stopping voltage?",
+            "concept_answer": "Stopping voltage is the minimum potential needed to stop all photoelectrons.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "976b376b-3046-48eb-a50d-34340630d093"
+            ]
+        },
+        {
+            "concept_id": "fa18c346-f3c8-43e3-8c3f-5971987bbe30",
+            "concept_question": "How does light intensity affect kinetic energy?",
+            "concept_answer": "The kinetic energy of emitted electrons is independent of light intensity.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "976b376b-3046-48eb-a50d-34340630d093"
+            ]
+        },
+        {
+            "concept_id": "eed5e782-5086-4649-a21f-65aad1fba5f9",
+            "concept_question": "What determines electron kinetic energy in photoelectric effect?",
+            "concept_answer": "Electron kinetic energy increases with the frequency of the incident light.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "976b376b-3046-48eb-a50d-34340630d093",
+                "fc61ca59-6b90-4172-8d29-30967a79b1ef"
+            ]
+        },
+        {
+            "concept_id": "4b705e18-0761-4dd4-a760-c05db44f5bba",
+            "concept_question": "What is threshold frequency?",
+            "concept_answer": "Threshold frequency is the minimum frequency required to emit electrons from a metal.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "976b376b-3046-48eb-a50d-34340630d093",
+                "eed5e782-5086-4649-a21f-65aad1fba5f9"
+            ]
+        },
+        {
+            "concept_id": "7420a7d4-74af-4817-830b-deb4cdb23928",
+            "concept_question": "Is there a delay in electron emission?",
+            "concept_answer": "Electrons are emitted immediately when light strikes a metal surface.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "976b376b-3046-48eb-a50d-34340630d093"
+            ]
+        },
+        {
+            "concept_id": "b63cfff7-c0f2-44a2-84ab-5c9c9407941e",
+            "concept_question": "What is the work function?",
+            "concept_answer": "The work function is the minimum energy needed to eject an electron from a metal.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "976b376b-3046-48eb-a50d-34340630d093"
+            ]
+        },
+        {
+            "concept_id": "0a84b816-12f2-48c5-b801-70ddcbfa3381",
+            "concept_question": "What is the photoelectric equation?",
+            "concept_answer": "The equation relates the maximum kinetic energy of electrons to photon energy minus the work function.",
+            "concept_formula": [
+                "$!$E_k = hf - \\phi$!$",
+                "$!$eV_s = hf - \\phi$!$",
+                "$!$V_s = \\frac{h}{e}f - \\frac{\\phi}{e}$!$"
+            ],
+            "pre-requisites": [
+                "fc61ca59-6b90-4172-8d29-30967a79b1ef",
+                "b63cfff7-c0f2-44a2-84ab-5c9c9407941e",
+                "018e7d2e-cb2b-4daa-9c30-e3a0d9d369c9"
+            ]
+        },
+        {
+            "concept_id": "6bccbcf8-1f63-4aaa-846f-b35274f54ceb",
+            "concept_question": "What is Compton scattering?",
+            "concept_answer": "Compton scattering is the collision of light with electrons, resulting in a wavelength increase.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7f279d95-7489-4786-815c-960324474986"
+            ]
+        },
+        {
+            "concept_id": "707d50fc-aa14-4fe5-8982-7a2d85a16f76",
+            "concept_question": "What does Compton scattering evidence imply?",
+            "concept_answer": "It supports the particle theory of light by showing a shift in wavelength.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6bccbcf8-1f63-4aaa-846f-b35274f54ceb"
+            ]
+        },
+        {
+            "concept_id": "254b2a82-f030-41e6-beba-8436ce763d64",
+            "concept_question": "What is the Compton wavelength shift formula?",
+            "concept_answer": "The wavelength shift equals h divided by mc times one minus cosine theta.",
+            "concept_formula": [
+                "$!$\\lambda' - \\lambda = \\frac{h}{mc}(1 - \\cos\\theta)$!$"
+            ],
+            "pre-requisites": [
+                "6bccbcf8-1f63-4aaa-846f-b35274f54ceb"
+            ]
+        },
+        {
+            "concept_id": "c1d907e9-f018-4c16-a6ee-4946975d59c2",
+            "concept_question": "What is the Compton wavelength?",
+            "concept_answer": "It is defined as Planck's constant divided by the product of mass and the speed of light.",
+            "concept_formula": [
+                "$!$\\frac{h}{mc}$!$"
+            ],
+            "pre-requisites": [
+                "6bccbcf8-1f63-4aaa-846f-b35274f54ceb"
+            ]
+        },
+        {
+            "concept_id": "795ae241-7d62-4795-a7d7-bdd504723d03",
+            "concept_question": "What is the de Broglie hypothesis?",
+            "concept_answer": "The hypothesis states that all particles exhibit wave-like properties.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b97c5450-2eca-4c38-9361-636c1d4be716",
+            "concept_question": "What is matter wave duality?",
+            "concept_answer": "It means that matter can behave both as particles and as waves.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "795ae241-7d62-4795-a7d7-bdd504723d03"
+            ]
+        },
+        {
+            "concept_id": "6ebe6c0d-c162-454d-9895-d18bb1afb5b9",
+            "concept_question": "What is de Broglie wavelength?",
+            "concept_answer": "A particle\u2019s wavelength is given by dividing Planck\u2019s constant by its momentum.",
+            "concept_formula": [
+                "$!$\\lambda = \\frac{h}{p}$!$"
+            ],
+            "pre-requisites": [
+                "795ae241-7d62-4795-a7d7-bdd504723d03"
+            ]
+        },
+        {
+            "concept_id": "f8d86344-44c1-4409-a04c-a9549dfa1331",
+            "concept_question": "What are probability waves?",
+            "concept_answer": "Probability waves describe the likelihood of a particle\u2019s position.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b97c5450-2eca-4c38-9361-636c1d4be716"
+            ]
+        },
+        {
+            "concept_id": "2e26502d-a72c-466c-b99c-dd2649625bc1",
+            "concept_question": "What is the Davisson-Germer experiment?",
+            "concept_answer": "It demonstrated electron diffraction, confirming the wave nature of matter.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b97c5450-2eca-4c38-9361-636c1d4be716",
+                "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+            ]
+        },
+        {
+            "concept_id": "2fc1331f-b464-447e-aaa9-e1806d7e9191",
+            "concept_question": "What is the electron wavelength formula from kinetic energy?",
+            "concept_answer": "An electron's wavelength is determined using its kinetic energy with mass, charge, and voltage.",
+            "concept_formula": [
+                "$!$\\lambda = \\frac{h}{\\sqrt{2mqV}}$!$"
+            ],
+            "pre-requisites": [
+                "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+            ]
+        },
+        {
+            "concept_id": "05e68472-6392-44b4-a183-0a708667bcf4",
+            "concept_question": "What is the Bohr quantisation condition?",
+            "concept_answer": "The circumference of an electron's orbit equals an integer multiple of its wavelength.",
+            "concept_formula": [
+                "$!$2\\pi r = n\\lambda$!$"
+            ],
+            "pre-requisites": [
+                "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+            ]
+        }
+    ]
+}

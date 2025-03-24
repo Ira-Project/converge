@@ -1,0 +1,302 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "H4wIjqh5ZprxBQ1pHbgDg",
+    "topicIdProd": "5q8hwsq5rsnuqchpck4wq",
+    "chapter_text": "Here's a concise summary of the concepts covered in the document, organized into sections with bullet points and LaTeX formulas where applicable:\n\n**5.1 Kinematics of Rotational Motion**\n\n*   **Angular Displacement:** A\u03b8 (change in angular position)\n*   **Average Angular Velocity:** \\$\\omega = \\frac{\\Delta \\theta}{\\Delta t}\\$\n*   **Instantaneous Angular Velocity:** \\$\\omega = \\lim_{\\Delta t \\to 0} \\frac{\\Delta \\theta}{\\Delta t}\\$\n*   **Average Angular Acceleration:** \\$\\alpha = \\frac{\\Delta \\omega}{\\Delta t}\\$\n*   **Instantaneous Angular Acceleration:** \\$\\alpha = \\lim_{\\Delta t \\to 0} \\frac{\\Delta \\omega}{\\Delta t}\\$\n*   **Relationship between Linear and Angular Velocity:** \\$v = \\omega r\\$\n*   **Relationship between Linear and Angular Acceleration:** \\$a = \\alpha r\\$\n*   **Kinematic Equations for Rotational Motion (analogous to linear motion):**\n\n    *   \\$\\Delta \\theta = \\omega_i t + \\frac{1}{2} \\alpha t^2\\$\n    *   \\$\\Delta \\theta = \\frac{\\omega_i + \\omega}{2} t\\$\n    *   \\$\\omega = \\omega_i + \\alpha t\\$\n    *   \\$\\omega^2 = \\omega_i^2 + 2 \\alpha \\Delta \\theta\\$\n\n**5.2 Rotational Equilibrium and Newton's Second Law**\n\n*   **Torque:**  \\$\\tau = Fd\\$ or \\$\\tau = Fr \\sin{\\theta}\\$ (where *d* is the perpendicular distance and \\$\\theta\\$ is the angle between the force and the position vector).\n*   **Rotational Equilibrium:** Net torque is zero.\n*   **Translational Equilibrium:** Net force is zero.\n\n**5.3 Moment of Inertia**\n\n*   **Moment of Inertia (I):**  A measure of an object's resistance to rotational acceleration. Defined as \\$I = \\sum m_i r_i^2\\$\n*   **Kinetic Energy of Rotational Motion:**  \\$E_k = \\frac{1}{2} I \\omega^2\\$\n\n**Moments of Inertia for common shapes**\n\n*   **Disk or Cylinder:** \\$I = \\frac{1}{2} MR^2\\$\n*   **Sphere:** \\$I = \\frac{2}{5} MR^2\\$\n*   **Rod:** \\$I = \\frac{1}{12} ML^2\\$\n\n**Rolling without slipping**\n\n*   **Kinetic energy of a rolling object:**  \\$E_k = \\frac{1}{2} Mv^2 + \\frac{1}{2} I\\omega^2\\$\n*   **Relation between linear and angular speed for rolling without slipping:** \\$v = \\omega R\\$\n*   **Newton's Second Law for Rotational Motion:**  \\$\\tau_{net} = I \\alpha\\$\n\n**Work and Power**\n*   **Work done in rotational motion:**  \\$W = \\tau \\Delta \\theta\\$\n*   **Power in rotational motion:**  \\$P = \\tau \\omega\\$\n\n**5.4 Angular Momentum**\n\n*   **Angular Momentum (L):**  Defined as \\$L = I \\omega\\$\n*   **Relationship between Net Torque and Angular Momentum:**  \\$\\tau_{net} = \\frac{\\Delta L}{\\Delta t}\\$\n*   **Law of Conservation of Angular Momentum:** When net torque is zero, angular momentum is constant.\n\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "842cde9c-b009-413b-91ff-e2983d8ed77f",
+            "concept_question": "What is angular displacement?",
+            "concept_answer": "Angular displacement is the change in an object's angular position.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102",
+            "concept_question": "What is average angular velocity?",
+            "concept_answer": "Average angular velocity is the change in angular displacement per unit time.",
+            "concept_formula": [
+                "$!$\\omega = \\frac{\\Delta \\theta}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "842cde9c-b009-413b-91ff-e2983d8ed77f"
+            ]
+        },
+        {
+            "concept_id": "dfaab983-a376-4de7-bd00-9214d8933de3",
+            "concept_question": "What is instantaneous angular velocity?",
+            "concept_answer": "Instantaneous angular velocity is the rate of angular displacement change at an instant.",
+            "concept_formula": [
+                "$!$\\omega = \\lim_{\\Delta t \\to 0} \\frac{\\Delta \\theta}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "842cde9c-b009-413b-91ff-e2983d8ed77f"
+            ]
+        },
+        {
+            "concept_id": "855820a0-3e15-45ba-8ca1-50d64f01679e",
+            "concept_question": "What is average angular acceleration?",
+            "concept_answer": "Average angular acceleration is the change in angular velocity per time interval.",
+            "concept_formula": [
+                "$!$\\alpha = \\frac{\\Delta \\omega}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102"
+            ]
+        },
+        {
+            "concept_id": "80468cbc-346f-41f6-9019-e014542d3e32",
+            "concept_question": "What is instantaneous angular acceleration?",
+            "concept_answer": "Instantaneous angular acceleration is the rate of change of angular velocity at a moment.",
+            "concept_formula": [
+                "$!$\\alpha = \\lim_{\\Delta t \\to 0} \\frac{\\Delta \\omega}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "dfaab983-a376-4de7-bd00-9214d8933de3"
+            ]
+        },
+        {
+            "concept_id": "bb070f4f-fc99-4e36-a064-08084eebe4dd",
+            "concept_question": "What is the relation between linear and angular velocity?",
+            "concept_answer": "Linear velocity is the product of angular velocity and the radius.",
+            "concept_formula": [
+                "$!$v = \\omega r$!$"
+            ],
+            "pre-requisites": [
+                "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102"
+            ]
+        },
+        {
+            "concept_id": "779ddbdc-9271-45d1-a253-9131f19cb50f",
+            "concept_question": "What is the relation between linear and angular acceleration?",
+            "concept_answer": "Linear acceleration equals angular acceleration multiplied by the radius.",
+            "concept_formula": [
+                "$!$a = \\alpha r$!$"
+            ],
+            "pre-requisites": [
+                "855820a0-3e15-45ba-8ca1-50d64f01679e"
+            ]
+        },
+        {
+            "concept_id": "2d55391b-a455-46a3-b18c-c0ffb1e8ba67",
+            "concept_question": "What is the angular displacement equation with acceleration?",
+            "concept_answer": "This equation relates angular displacement to initial angular velocity and constant angular acceleration.",
+            "concept_formula": [
+                "$!$\\Delta \\theta = \\omega_i t + \\frac{1}{2} \\alpha t^2$!$"
+            ],
+            "pre-requisites": [
+                "842cde9c-b009-413b-91ff-e2983d8ed77f",
+                "855820a0-3e15-45ba-8ca1-50d64f01679e"
+            ]
+        },
+        {
+            "concept_id": "fd807f39-9d5c-4053-918a-18e4707af5c4",
+            "concept_question": "What is the angular displacement equation using average angular velocity?",
+            "concept_answer": "This equation calculates angular displacement using the average of initial and final angular velocities.",
+            "concept_formula": [
+                "$!$\\Delta \\theta = \\frac{\\omega_i + \\omega}{2} t$!$"
+            ],
+            "pre-requisites": [
+                "842cde9c-b009-413b-91ff-e2983d8ed77f",
+                "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102"
+            ]
+        },
+        {
+            "concept_id": "125e9c94-6095-4937-870d-751b39d3cb55",
+            "concept_question": "What is the angular velocity update equation?",
+            "concept_answer": "This equation expresses final angular velocity as initial angular velocity plus angular acceleration times time.",
+            "concept_formula": [
+                "$!$\\omega = \\omega_i + \\alpha t$!$"
+            ],
+            "pre-requisites": [
+                "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102",
+                "855820a0-3e15-45ba-8ca1-50d64f01679e"
+            ]
+        },
+        {
+            "concept_id": "d18d31de-80dd-481b-ac97-84532b8daf71",
+            "concept_question": "What is the angular velocity squared equation?",
+            "concept_answer": "This equation relates the square of angular velocity to its initial value and angular displacement.",
+            "concept_formula": [
+                "$!$\\omega^2 = \\omega_i^2 + 2 \\alpha \\Delta \\theta$!$"
+            ],
+            "pre-requisites": [
+                "842cde9c-b009-413b-91ff-e2983d8ed77f",
+                "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102",
+                "855820a0-3e15-45ba-8ca1-50d64f01679e"
+            ]
+        },
+        {
+            "concept_id": "66c394e5-9b27-4235-9105-6b2e0ba0b2b0",
+            "concept_question": "What is torque?",
+            "concept_answer": "Torque measures a force's ability to produce rotational motion around an axis.",
+            "concept_formula": [
+                "$!$\\tau = Fd$!$",
+                "$!$\\tau = F r \\sin{\\theta}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "748f92c0-84cc-4948-a0d7-592f16f74304",
+            "concept_question": "What is rotational equilibrium?",
+            "concept_answer": "Rotational equilibrium occurs when the net torque acting on an object is zero.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "66c394e5-9b27-4235-9105-6b2e0ba0b2b0"
+            ]
+        },
+        {
+            "concept_id": "4dc399e4-080e-4bea-af55-7cdc797c028f",
+            "concept_question": "What is translational equilibrium?",
+            "concept_answer": "Translational equilibrium is achieved when the net force on an object is zero.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b5685466-7a37-4ece-ab26-a0e7c37357f4",
+            "concept_question": "What is moment of inertia?",
+            "concept_answer": "Moment of inertia quantifies an object's resistance to rotational acceleration.",
+            "concept_formula": [
+                "$!$I = \\sum m_i r_i^2$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "6352f0ee-0f0b-4829-ad63-9c74e3c1288d",
+            "concept_question": "What is rotational kinetic energy?",
+            "concept_answer": "Rotational kinetic energy is the energy due to an object's rotation.",
+            "concept_formula": [
+                "$!$E_k = \\frac{1}{2} I \\omega^2$!$"
+            ],
+            "pre-requisites": [
+                "b5685466-7a37-4ece-ab26-a0e7c37357f4",
+                "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102"
+            ]
+        },
+        {
+            "concept_id": "ce26676f-2505-496d-a13c-45eac6b1329c",
+            "concept_question": "What is the moment of inertia of a disk?",
+            "concept_answer": "A disk or cylinder's moment of inertia is half its mass times the radius squared.",
+            "concept_formula": [
+                "$!$I = \\frac{1}{2} MR^2$!$"
+            ],
+            "pre-requisites": [
+                "b5685466-7a37-4ece-ab26-a0e7c37357f4"
+            ]
+        },
+        {
+            "concept_id": "f6586b7d-c0fe-4287-91e9-f20de7e236bd",
+            "concept_question": "What is the moment of inertia of a sphere?",
+            "concept_answer": "A sphere's moment of inertia is two-fifths of its mass times radius squared.",
+            "concept_formula": [
+                "$!$I = \\frac{2}{5} MR^2$!$"
+            ],
+            "pre-requisites": [
+                "b5685466-7a37-4ece-ab26-a0e7c37357f4"
+            ]
+        },
+        {
+            "concept_id": "e7c0b9dd-4995-4142-ba78-a54339d150c3",
+            "concept_question": "What is the moment of inertia of a rod?",
+            "concept_answer": "A rod's moment of inertia is one-twelfth its mass times the square of its length.",
+            "concept_formula": [
+                "$!$I = \\frac{1}{12} ML^2$!$"
+            ],
+            "pre-requisites": [
+                "b5685466-7a37-4ece-ab26-a0e7c37357f4"
+            ]
+        },
+        {
+            "concept_id": "36fae90c-82f8-4597-9669-7f280c300fc6",
+            "concept_question": "What is the kinetic energy of rolling motion?",
+            "concept_answer": "It is the sum of translational and rotational kinetic energies of a rolling object.",
+            "concept_formula": [
+                "$!$E_k = \\frac{1}{2} Mv^2 + \\frac{1}{2} I\\omega^2$!$"
+            ],
+            "pre-requisites": [
+                "6352f0ee-0f0b-4829-ad63-9c74e3c1288d"
+            ]
+        },
+        {
+            "concept_id": "daaa4850-76fd-458c-99ae-480cec59b41f",
+            "concept_question": "What is the rolling without slipping speed relation?",
+            "concept_answer": "For rolling without slipping, linear speed equals angular speed times the radius.",
+            "concept_formula": [
+                "$!$v = \\omega R$!$"
+            ],
+            "pre-requisites": [
+                "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102"
+            ]
+        },
+        {
+            "concept_id": "3b2a38ec-ad3c-4fda-9fed-c1f652dea80e",
+            "concept_question": "What is Newton's second law for rotation?",
+            "concept_answer": "It states that net torque is the product of moment of inertia and angular acceleration.",
+            "concept_formula": [
+                "$!$\\tau_{net} = I \\alpha$!$"
+            ],
+            "pre-requisites": [
+                "66c394e5-9b27-4235-9105-6b2e0ba0b2b0",
+                "b5685466-7a37-4ece-ab26-a0e7c37357f4"
+            ]
+        },
+        {
+            "concept_id": "da2bab81-01d0-4015-a959-63b96cc1eb6e",
+            "concept_question": "What is work in rotational motion?",
+            "concept_answer": "Work in rotational motion is the product of torque and angular displacement.",
+            "concept_formula": [
+                "$!$W = \\tau \\Delta \\theta$!$"
+            ],
+            "pre-requisites": [
+                "66c394e5-9b27-4235-9105-6b2e0ba0b2b0",
+                "842cde9c-b009-413b-91ff-e2983d8ed77f"
+            ]
+        },
+        {
+            "concept_id": "a0a53c72-e207-4c14-b8fe-df6e3ea91501",
+            "concept_question": "What is power in rotational motion?",
+            "concept_answer": "Rotational power is defined as torque multiplied by angular velocity.",
+            "concept_formula": [
+                "$!$P = \\tau \\omega$!$"
+            ],
+            "pre-requisites": [
+                "66c394e5-9b27-4235-9105-6b2e0ba0b2b0",
+                "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102"
+            ]
+        },
+        {
+            "concept_id": "2b9428ca-8d6d-4190-afd1-29f6d9298536",
+            "concept_question": "What is angular momentum?",
+            "concept_answer": "Angular momentum is the product of an object's moment of inertia and angular velocity.",
+            "concept_formula": [
+                "$!$L = I \\omega$!$"
+            ],
+            "pre-requisites": [
+                "b5685466-7a37-4ece-ab26-a0e7c37357f4",
+                "80c3aa28-c1e1-4de7-ad2a-5fbd87c8d102"
+            ]
+        },
+        {
+            "concept_id": "e65c6de6-2adc-49f5-a752-d74aab9d5a28",
+            "concept_question": "What is the torque-angular momentum relationship?",
+            "concept_answer": "The net torque equals the rate of change of angular momentum.",
+            "concept_formula": [
+                "$!$\\tau_{net} = \\frac{\\Delta L}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "66c394e5-9b27-4235-9105-6b2e0ba0b2b0",
+                "2b9428ca-8d6d-4190-afd1-29f6d9298536"
+            ]
+        },
+        {
+            "concept_id": "17d26f54-4ee0-443a-bbdc-27314f8ac8f8",
+            "concept_question": "What is angular momentum conservation?",
+            "concept_answer": "Angular momentum remains constant when the net torque acting is zero.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2b9428ca-8d6d-4190-afd1-29f6d9298536",
+                "e65c6de6-2adc-49f5-a752-d74aab9d5a28"
+            ]
+        }
+    ]
+}

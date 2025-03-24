@@ -1,0 +1,170 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "7KeoBL42eRKPAKIJdLufp",
+    "topicIdProd": "21ql0ungo3camo6fa5qof",
+    "chapter_text": "Here's a concise summary of the concepts covered in the document, organized into sections with bullet points and LaTeX formulas where applicable:\n\n**1. Motion in a Uniform Electric Field**\n\n*   Path of a charged particle: Straight line (if initially at rest or velocity parallel to the field) or parabolic.\n*   Force on a charge: Directly proportional to charge and electric field strength.\n*   Acceleration: \\(a = \\frac{qE}{m}\\)\n*   Kinetic Energy: Gain equals work done by the electric force (\\(qV\\)).\n*   Projectile motion analogy: Motion with initial velocity perpendicular to the field is analogous to projectile motion.\n    *   Horizontal velocity remains constant.\n    *   Vertical velocity increases uniformly.\n    *   Kinetic energy: \\(E_k = \\frac{1}{2}m(u^2 + (\\frac{qE}{m}t)^2)\\)\n*   Change in kinetic energy: \\(\\Delta E_k = \\frac{1}{2} m (\\frac{qE}{m} t)^2\\)\n*   Vertical Distance:\n    *   \\(y = \\frac{1}{2}\\frac{qE}{m}t^2\\)\n\n**2. Motion in a Uniform Magnetic Field**\n\n*   Force: The magnetic force on a charge moving in a magnetic field is perpendicular to both the velocity and the field.\n*   Circular Path: If velocity is perpendicular to the magnetic field.\n*   Radius of circular path: \\(R = \\frac{mv}{qB}\\)\n*   Period of revolution: \\(T = \\frac{2\\pi m}{qB}\\) (Independent of speed)\n*   Spiral Path: If the particle loses energy during motion in a magnetic field.\n*   Magnetic Force:  Does no work on the charge.\n\n**3. Motion in Crossed Electric and Magnetic Fields**\n\n*   Straight-Line Motion: Possible if electric and magnetic forces balance.\n*   Velocity for undeflected motion: \\(E = vB\\) or \\(v = \\frac{E}{B}\\)\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "2b9aa9a0-ea17-4bb8-95b8-eda10b340504",
+            "concept_question": "Path of charged particle in electric field?",
+            "concept_answer": "The charged particle's trajectory is either straight or parabolic based on its initial velocity relative to the field.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f69857d1-d285-419d-8458-a425ac5cf3d5",
+            "concept_question": "Force on charge in electric field?",
+            "concept_answer": "The force on a charge is directly proportional to the charge amount and the electric field strength.",
+            "concept_formula": [
+                "$!$F = qE$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "5c33bb63-3c6d-413f-a1af-25385ab95845",
+            "concept_question": "Acceleration in an electric field?",
+            "concept_answer": "Acceleration is determined by dividing the electric force by the mass of the particle.",
+            "concept_formula": [
+                "$!$a = \\frac{qE}{m}$!$"
+            ],
+            "pre-requisites": [
+                "f69857d1-d285-419d-8458-a425ac5cf3d5"
+            ]
+        },
+        {
+            "concept_id": "2528a69f-0369-4021-ac12-870b5423cd8a",
+            "concept_question": "Kinetic energy gain by electric force?",
+            "concept_answer": "The increase in kinetic energy equals the work done by the electric force over a potential difference.",
+            "concept_formula": [
+                "$!$qV$!$"
+            ],
+            "pre-requisites": [
+                "f69857d1-d285-419d-8458-a425ac5cf3d5"
+            ]
+        },
+        {
+            "concept_id": "2827f571-9eef-4da2-8682-938022aec822",
+            "concept_question": "Projectile motion analogy in electric field?",
+            "concept_answer": "A charged particle with perpendicular initial velocity exhibits projectile motion with constant horizontal and uniformly increasing vertical speed.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2b9aa9a0-ea17-4bb8-95b8-eda10b340504",
+                "5c33bb63-3c6d-413f-a1af-25385ab95845"
+            ]
+        },
+        {
+            "concept_id": "2747ab59-c3fd-4a59-866a-b31de38d076e",
+            "concept_question": "Horizontal kinetic energy in projectile-like electric motion",
+            "concept_answer": "The kinetic energy due to horizontal motion is given by 1/2 m u\u00b2, representing the constant energy from the particle's initial horizontal velocity.",
+            "concept_formula": [
+                "$!$E_{k,h} = \\frac{1}{2} m u^2$!$"
+            ],
+            "pre-requisites": [
+                "2827f571-9eef-4da2-8682-938022aec822"
+            ]
+        },
+        {
+            "concept_id": "454335dd-7f0c-4a16-971f-5948e160e83a",
+            "concept_question": "Vertical kinetic energy in projectile-like electric motion",
+            "concept_answer": "The kinetic energy gained from vertical acceleration in the electric field is given by 1/2 m (qE/m t)\u00b2, highlighting the energy increase due to acceleration.",
+            "concept_formula": [
+                "$!$E_{k,v} = \\frac{1}{2} m \\left(\\frac{qE}{m}t\\right)^2$!$"
+            ],
+            "pre-requisites": [
+                "5c33bb63-3c6d-413f-a1af-25385ab95845"
+            ]
+        },
+        {
+            "concept_id": "d6c0a2f6-3474-4e1a-90b0-ccbb292c91a7",
+            "concept_question": "Change in kinetic energy under electric acceleration?",
+            "concept_answer": "The change in kinetic energy arises solely from the energy gained by vertical acceleration in the electric field.",
+            "concept_formula": [
+                "$!$\\Delta E_k = \\frac{1}{2} m \\left(\\frac{qE}{m}t\\right)^2$!$"
+            ],
+            "pre-requisites": [
+                "5c33bb63-3c6d-413f-a1af-25385ab95845"
+            ]
+        },
+        {
+            "concept_id": "a5fee9d5-2b2a-4e9d-8caf-a83a70245740",
+            "concept_question": "Vertical displacement in electric field?",
+            "concept_answer": "The vertical distance traveled is proportional to the acceleration and the square of the elapsed time.",
+            "concept_formula": [
+                "$!$y = \\frac{1}{2}\\frac{qE}{m}t^2$!$"
+            ],
+            "pre-requisites": [
+                "5c33bb63-3c6d-413f-a1af-25385ab95845"
+            ]
+        },
+        {
+            "concept_id": "b25ee8f9-2294-41b4-b69e-f67058964e5e",
+            "concept_question": "Magnetic force on a moving charge?",
+            "concept_answer": "The magnetic force always acts perpendicular to both the velocity and the magnetic field.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "9608ce91-85fd-4769-948b-5b32a202a3d0",
+            "concept_question": "Circular motion condition in magnetic field?",
+            "concept_answer": "A charged particle travels in a circular path when its velocity is perpendicular to the magnetic field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b25ee8f9-2294-41b4-b69e-f67058964e5e"
+            ]
+        },
+        {
+            "concept_id": "f34446c8-9452-48c0-ab50-0cb3fd1b9679",
+            "concept_question": "Radius of circular motion in magnetic field?",
+            "concept_answer": "The radius of circular motion is given by the particle's momentum divided by the product of charge and magnetic field.",
+            "concept_formula": [
+                "$!$R = \\frac{mv}{qB}$!$"
+            ],
+            "pre-requisites": [
+                "b25ee8f9-2294-41b4-b69e-f67058964e5e",
+                "9608ce91-85fd-4769-948b-5b32a202a3d0"
+            ]
+        },
+        {
+            "concept_id": "0686c4f9-2dd6-4c52-b79a-a66dd4561b52",
+            "concept_question": "Period of revolution in magnetic field?",
+            "concept_answer": "The period of revolution is directly proportional to the mass and inversely proportional to the charge and magnetic field strength.",
+            "concept_formula": [
+                "$!$T = \\frac{2\\pi m}{qB}$!$"
+            ],
+            "pre-requisites": [
+                "b25ee8f9-2294-41b4-b69e-f67058964e5e",
+                "9608ce91-85fd-4769-948b-5b32a202a3d0"
+            ]
+        },
+        {
+            "concept_id": "33e1eb9a-8506-4f9c-b1d1-d4407bcf49d7",
+            "concept_question": "Spiral motion in magnetic field?",
+            "concept_answer": "When a charged particle loses energy, its circular path gradually becomes a spiral inward.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "9608ce91-85fd-4769-948b-5b32a202a3d0"
+            ]
+        },
+        {
+            "concept_id": "d24de8b2-dd86-4378-b34f-5b7f77ce96d8",
+            "concept_question": "Work done by magnetic force?",
+            "concept_answer": "The magnetic force does not perform work on a charged particle because it is always perpendicular to the displacement.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b25ee8f9-2294-41b4-b69e-f67058964e5e"
+            ]
+        },
+        {
+            "concept_id": "869566af-fb78-4d6f-b591-4f86eae31f82",
+            "concept_question": "Undeflected motion in crossed fields?",
+            "concept_answer": "A charged particle moves in a straight line when electric and magnetic forces cancel, which occurs when its speed is determined by the ratio of the electric to magnetic field strengths.",
+            "concept_formula": [
+                "$!$v = \\frac{E}{B}$!$"
+            ],
+            "pre-requisites": [
+                "f69857d1-d285-419d-8458-a425ac5cf3d5",
+                "b25ee8f9-2294-41b4-b69e-f67058964e5e"
+            ]
+        }
+    ]
+}

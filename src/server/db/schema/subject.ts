@@ -8,11 +8,9 @@ import {
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
 import { classrooms } from "./classroom";
-import { explainAssignments } from "./learnByTeaching/explainAssignment";
 import { users } from "./user";
-import { reasoningQuestions } from "./reasoning/reasoningQuestions";
-import { explainQuestions } from "./learnByTeaching/explainQuestions";
 import { activity } from "./activity";
+import { concepts } from "./concept";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -84,8 +82,6 @@ export const topicRelations = relations(topics, ({ one, many }) => ({
     fields: [topics.courseId],
     references: [courses.id],
   }),
+  concepts: many(concepts),
   activities: many(activity),
-  explainAssignments: many(explainAssignments),
-  questions: many(explainQuestions),
-  reasoningQuestions: many(reasoningQuestions),
 }));

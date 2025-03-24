@@ -1,398 +1,418 @@
 {
-  "name": "Simple Harmonic Motion",
-  "topicIdDev": "QoUD52AFmibtZ7SGqIbmI",
-  "topicIdProd": "qY4JbQSoTts2eHzmUE9Gx",
-  "latexDelimiter": "$!$",
-  "multipleChoiceQuestions": [
-    {
-      "id": "ZjuTLnh2umt8b4xzPWSpm",
-      "variants": [
+    "name": "Simple Harmonic Motion",
+    "topicIdDev": "QoUD52AFmibtZ7SGqIbmI",
+    "topicIdProd": "qY4JbQSoTts2eHzmUE9Gx",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
         {
-          "id": "TtS1mzySVrJoxjp1zkaOK",
-          "question": "The period of the pedululum, oscillating with simple harmonic motion (SHM), can be calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{\\fbox{}}{g}}$!$. Fill in the blank with the correct variable.",
-          "image": null,
-          "options": [
-            {
-              "text": "$!$l$!$",
-              "image": null,
-              "isCorrect": true
-            },
-            {
-              "text": "$!$m$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$k$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$g$!$",
-              "image": null,
-              "isCorrect": false
-            }
-          ]
+            "id": "ZjuTLnh2umt8b4xzPWSpm",
+            "variants": [
+                {
+                    "id": "TtS1mzySVrJoxjp1zkaOK",
+                    "question": "The period of the pedululum, oscillating with simple harmonic motion (SHM), can be calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{\\fbox{}}{g}}$!$. Fill in the blank with the correct variable.",
+                    "image": null,
+                    "options": [
+                        {
+                            "text": "$!$l$!$",
+                            "image": null,
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "$!$m$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$k$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$g$!$",
+                            "image": null,
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0n8Cc3zmEmVQZQdQL8Ftg",
+                    "question": "The period of the pedululum, oscillating with simple harmonic motion (SHM), can be calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{l}{\\fbox{}}}$!$. Fill in the blank with the correct variable.",
+                    "image": null,
+                    "options": [
+                        {
+                            "text": "$!$l$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$m$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$k$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$g$!$",
+                            "image": null,
+                            "isCorrect": true
+                        }
+                    ]
+                },
+                {
+                    "id": "WWwLl5Y4ZpL54mEpXlGeA",
+                    "question": "What is the formula for the period, $!$T$!$, of a pendulum oscillating with simple harmonic motion (SHM)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "text": "$!$T = 2\\pi\\sqrt{\\frac{l}{g}}$!$",
+                            "image": null,
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "$!$T = 2\\pi\\sqrt{\\frac{g}{l}}$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$T = \\pi\\sqrt{\\frac{l}{g}}$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$T = \\pi\\sqrt{\\frac{g}{l}}$!$",
+                            "image": null,
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ],
+            "concepts": [
+                "42360656-7edd-45e1-9018-41817f8bc0d5",
+                "2ad8c228-6aae-422b-8b9f-6c6e4d83a2f2"
+            ]
         },
         {
-          "id": "0n8Cc3zmEmVQZQdQL8Ftg",
-          "question": "The period of the pedululum, oscillating with simple harmonic motion (SHM), can be calculated using the formula $!$T = 2\\pi\\sqrt{\\frac{l}{\\fbox{}}}$!$. Fill in the blank with the correct variable.",
-          "image": null,
-          "options": [
-            {
-              "text": "$!$l$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$m$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$k$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$g$!$",
-              "image": null,
-              "isCorrect": true
-            }
-          ]
+            "id": "nBwMD7hKNGpc0lV0YfOVk",
+            "variants": [
+                {
+                    "id": "alWGu0ttYsNOsPWEDTtPY",
+                    "question": "For a pendulum undergoing simple harmonic motion (SHM), when does its acceleration reach its maximum value?",
+                    "image": null,
+                    "options": [
+                        {
+                            "text": "When the object reaches its maximum displacement from equilibrium",
+                            "image": null,
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "When the object reaches its maximum velocity",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "The acceleration remains the same throughout the motion",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "The acceleration is always non-zero during the motion",
+                            "image": null,
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "xKp9nQw2mRt5vL8yH3jS",
+                    "question": "For a pendulum undergoing simple harmonic motion (SHM), when does its acceleration reach its minimum value?",
+                    "image": null,
+                    "options": [
+                        {
+                            "text": "When the object reaches its minimum displacement from equilibrium",
+                            "image": null,
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "When the object reaches its minimum velocity",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "The acceleration remains the same throughout the motion",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "The acceleration is always non-zero during the motion",
+                            "image": null,
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ],
+            "concepts": [
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                "3ec5c7a4-6a70-4299-bd95-2a6d9e2e15e6"
+            ]
         },
         {
-          "id": "WWwLl5Y4ZpL54mEpXlGeA",
-          "question": "What is the formula for the period, $!$T$!$, of a pendulum oscillating with simple harmonic motion (SHM)?",
-          "image": null,
-          "options": [
-            {
-              "text": "$!$T = 2\\pi\\sqrt{\\frac{l}{g}}$!$",
-              "image": null,
-              "isCorrect": true 
-            },
-            {
-              "text": "$!$T = 2\\pi\\sqrt{\\frac{g}{l}}$!$", 
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$T = \\pi\\sqrt{\\frac{l}{g}}$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$T = \\pi\\sqrt{\\frac{g}{l}}$!$",
-              "image": null,
-              "isCorrect": false
-            }
-          ]
+            "id": "Kj8Dn4mP9xL2vR5tY7wQ",
+            "variants": [
+                {
+                    "id": "9YXruvEWwUN4bw2ZQrCQ4",
+                    "question": "A mass attached to a spring is displaced from its equilibrium position and when released, it oscillates with simple harmonic motion (SHM). If acceleration is $!$a$!$, $!$s$!$ is the displacement from equilibrium, and $!$v$!$ is the velocity of the mass, which of the following statements is true?",
+                    "image": null,
+                    "options": [
+                        {
+                            "text": "$!$a \\propto -v$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$a \\propto v$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$a \\propto -s$!$",
+                            "image": null,
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "$!$a \\propto s$!$",
+                            "image": null,
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9bXkM3nQwL7vFpR8tZcY5",
+                    "question": "A mass-spring system is displaced from its equilibrium position and when released, it oscillates with simple harmonic motion (SHM). What statement is true about the acceleration of the mass?",
+                    "image": null,
+                    "options": [
+                        {
+                            "text": "The acceleration is always zero",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "The acceleration is always in the same direction as the displacement",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "The acceleration is always in the opposite direction to the displacement",
+                            "image": null,
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "The acceleration is always in the same direction as the velocity",
+                            "image": null,
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ],
+            "concepts": [
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                "d78371e9-ca79-4775-a401-313887dd8cc2"
+            ]
+        },
+        {
+            "id": "Xt7vR5tY7wQKj8Dn4mP9",
+            "variants": [
+                {
+                    "id": "bN7Kx9pQvR3mWt8yL4jZc",
+                    "question": "What is the formula for the period, $!$T$!$, of a mass-spring system oscillating with simple harmonic motion (SHM)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "text": "$!$T = 2\\pi\\sqrt{\\frac{m}{k}}$!$",
+                            "image": null,
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "$!$T = 2\\pi\\sqrt{\\frac{k}{m}}$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$T = \\pi\\sqrt{\\frac{m}{k}}$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$T = \\pi\\sqrt{\\frac{k}{m}}$!$",
+                            "image": null,
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "Hn4kL9mR2vX7tY5pQ8wZc",
+                    "question": "The period of a mass-spring system, under simple harmonic motion (SHM), is $!$T = 2\\pi\\sqrt{\\frac{\\fbox{}}{k}}$!$. Fill in the blank with the correct variable.",
+                    "image": null,
+                    "options": [
+                        {
+                            "text": "$!$m$!$",
+                            "image": null,
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "$!$k$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$g$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$l$!$",
+                            "image": null,
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "Kj9Pn4mR2vX7tY5pQ8wZc",
+                    "question": "The period of a mass-spring system, under simple harmonic motion (SHM), is $!$T = 2\\pi\\sqrt{\\frac{m}{\\fbox{}}}$!$. Fill in the blank with the correct variable.",
+                    "image": null,
+                    "options": [
+                        {
+                            "text": "$!$k$!$",
+                            "image": null,
+                            "isCorrect": true
+                        },
+                        {
+                            "text": "$!$m$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$g$!$",
+                            "image": null,
+                            "isCorrect": false
+                        },
+                        {
+                            "text": "$!$l$!$",
+                            "image": null,
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ],
+            "concepts": [
+                "eac352c8-92f0-4606-84ae-c8dc382203f6"
+            ]
         }
-      ]
-    },
-    {
-      "id": "nBwMD7hKNGpc0lV0YfOVk",
-      "variants": [
+    ],
+    "matchingQuestions": [
         {
-          "id": "alWGu0ttYsNOsPWEDTtPY",
-          "question": "For a pendulum undergoing simple harmonic motion (SHM), when does its acceleration reach its maximum value?",
-          "image": null,
-          "options": [
-            {
-              "text": "When the object reaches its maximum displacement from equilibrium",
-              "image": null,
-              "isCorrect": true
-            },
-            {
-              "text": "When the object reaches its maximum velocity",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "The acceleration remains the same throughout the motion",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "The acceleration is always non-zero during the motion",
-              "image": null,
-              "isCorrect": false
-            }
-          ]
-        },
-        {
-          "id": "xKp9nQw2mRt5vL8yH3jS",
-          "question": "For a pendulum undergoing simple harmonic motion (SHM), when does its acceleration reach its minimum value?",
-          "image": null,
-          "options": [
-            {
-              "text": "When the object reaches its minimum displacement from equilibrium",
-              "image": null,
-              "isCorrect": true
-            },
-            {
-              "text": "When the object reaches its minimum velocity",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "The acceleration remains the same throughout the motion",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "The acceleration is always non-zero during the motion",
-              "image": null,
-              "isCorrect": false
-            }
-          ]
+            "id": "lffr6zc38rKB45Mk6us4M",
+            "variants": [
+                {
+                    "id": "Z8vl4iM1AhXOFQluWgrD5",
+                    "question": "For a mass-spring system displaced from equilibrium towards the right, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
+                    "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_1.png",
+                    "options": [
+                        {
+                            "optionA": "Point A",
+                            "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
+                        },
+                        {
+                            "optionA": "Point B",
+                            "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
+                        },
+                        {
+                            "optionA": "Point C",
+                            "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
+                        },
+                        {
+                            "optionA": "Point D",
+                            "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
+                        }
+                    ]
+                },
+                {
+                    "id": "lpz1Yow6kIVoknamPcrwB",
+                    "question": "For a mass-spring system displaced from equilibrium towards the right, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
+                    "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_2.png",
+                    "options": [
+                        {
+                            "optionA": "Point A",
+                            "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
+                        },
+                        {
+                            "optionA": "Point B",
+                            "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
+                        },
+                        {
+                            "optionA": "Point C",
+                            "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
+                        },
+                        {
+                            "optionA": "Point D",
+                            "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
+                        }
+                    ]
+                },
+                {
+                    "id": "q9oHHwhaPymaJN7kfR4O2",
+                    "question": "For a mass-spring system displaced from equilibrium towards the left, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
+                    "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_1.png",
+                    "options": [
+                        {
+                            "optionA": "Point A",
+                            "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
+                        },
+                        {
+                            "optionA": "Point B",
+                            "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
+                        },
+                        {
+                            "optionA": "Point C",
+                            "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
+                        },
+                        {
+                            "optionA": "Point D",
+                            "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
+                        }
+                    ]
+                },
+                {
+                    "id": "4TGgroKPwy5pKDhJPsXa4",
+                    "question": "For a mass-spring system displaced from equilibrium towards the left, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
+                    "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_2.png",
+                    "options": [
+                        {
+                            "optionA": "Point A",
+                            "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
+                        },
+                        {
+                            "optionA": "Point B",
+                            "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
+                        },
+                        {
+                            "optionA": "Point C",
+                            "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
+                        },
+                        {
+                            "optionA": "Point D",
+                            "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
+                        }
+                    ]
+                }
+            ],
+            "concepts": [
+                "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                "d78371e9-ca79-4775-a401-313887dd8cc2",
+                "fc99e39a-659f-4746-8117-b063accd98e7"
+            ]
         }
-      ]
-    },
-    {
-      "id": "Kj8Dn4mP9xL2vR5tY7wQ",
-      "variants": [
-        {
-          "id": "9YXruvEWwUN4bw2ZQrCQ4",
-          "question": "A mass attached to a spring is displaced from its equilibrium position and when released, it oscillates with simple harmonic motion (SHM). If acceleration is $!$a$!$, $!$s$!$ is the displacement from equilibrium, and $!$v$!$ is the velocity of the mass, which of the following statements is true?",
-          "image": null,
-          "options": [
-            {
-              "text": "$!$a \\propto -v$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$a \\propto v$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$a \\propto -s$!$",
-              "image": null,
-              "isCorrect": true
-            },
-            {
-              "text": "$!$a \\propto s$!$",
-              "image": null,
-              "isCorrect": false
-            }
-          ]
-        },
-        {
-          "id": "9bXkM3nQwL7vFpR8tZcY5",
-          "question": "A mass-spring system is displaced from its equilibrium position and when released, it oscillates with simple harmonic motion (SHM). What statement is true about the acceleration of the mass?",
-          "image": null,
-          "options": [
-            {
-              "text": "The acceleration is always zero",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "The acceleration is always in the same direction as the displacement",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "The acceleration is always in the opposite direction to the displacement",
-              "image": null,
-              "isCorrect": true
-            },
-            {
-              "text": "The acceleration is always in the same direction as the velocity",
-              "image": null,
-              "isCorrect": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "Xt7vR5tY7wQKj8Dn4mP9",
-      "variants": [
-        {
-          "id": "bN7Kx9pQvR3mWt8yL4jZc",
-          "question": "What is the formula for the period, $!$T$!$, of a mass-spring system oscillating with simple harmonic motion (SHM)?",
-          "image": null,
-          "options": [
-            {
-              "text": "$!$T = 2\\pi\\sqrt{\\frac{m}{k}}$!$",
-              "image": null,
-              "isCorrect": true 
-            },
-            {
-              "text": "$!$T = 2\\pi\\sqrt{\\frac{k}{m}}$!$", 
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$T = \\pi\\sqrt{\\frac{m}{k}}$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$T = \\pi\\sqrt{\\frac{k}{m}}$!$",
-              "image": null,
-              "isCorrect": false
-            }
-          ]
-        },
-        {
-          "id": "Hn4kL9mR2vX7tY5pQ8wZc",
-          "question": "The period of a mass-spring system, under simple harmonic motion (SHM), is $!$T = 2\\pi\\sqrt{\\frac{\\fbox{}}{k}}$!$. Fill in the blank with the correct variable.",
-          "image": null,
-          "options": [
-            {
-              "text": "$!$m$!$",
-              "image": null,
-              "isCorrect": true
-            },
-            {
-              "text": "$!$k$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$g$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$l$!$",
-              "image": null,
-              "isCorrect": false
-            }
-          ]
-        },
-        {
-          "id": "Kj9Pn4mR2vX7tY5pQ8wZc",
-          "question": "The period of a mass-spring system, under simple harmonic motion (SHM), is $!$T = 2\\pi\\sqrt{\\frac{m}{\\fbox{}}}$!$. Fill in the blank with the correct variable.",
-          "image": null,
-          "options": [
-            {
-              "text": "$!$k$!$",
-              "image": null,
-              "isCorrect": true
-            },
-            {
-              "text": "$!$m$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$g$!$",
-              "image": null,
-              "isCorrect": false
-            },
-            {
-              "text": "$!$l$!$",
-              "image": null,
-              "isCorrect": false
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "matchingQuestions": [
-    {
-      "id": "lffr6zc38rKB45Mk6us4M",
-      "variants": [
-        {
-          "id": "Z8vl4iM1AhXOFQluWgrD5",
-          "question": "For a mass-spring system displaced from equilibrium towards the right, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
-          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_1.png",
-          "options": [
-            {
-              "optionA": "Point A",
-              "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
-            },
-            {
-              "optionA": "Point B",
-              "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
-            },
-            {
-              "optionA": "Point C",
-              "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
-            },
-            {
-              "optionA": "Point D",
-              "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
-            }
-          ]
-        },
-        {
-          "id": "lpz1Yow6kIVoknamPcrwB",
-          "question": "For a mass-spring system displaced from equilibrium towards the right, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
-          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_2.png",
-          "options": [
-            {
-              "optionA": "Point A",
-              "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
-            },
-            {
-              "optionA": "Point B",
-              "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
-            },
-            {
-              "optionA": "Point C",
-              "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
-            },
-            {
-              "optionA": "Point D",
-              "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
-            }
-          ]
-        },
-        {
-          "id": "q9oHHwhaPymaJN7kfR4O2",
-          "question": "For a mass-spring system displaced from equilibrium towards the left, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
-          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_1.png",
-          "options": [
-            {
-              "optionA": "Point A",
-              "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
-            },
-            {
-              "optionA": "Point B",
-              "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
-            },
-            {
-              "optionA": "Point C",
-              "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
-            },
-            {
-              "optionA": "Point D",
-              "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
-            }
-          ]
-        },
-        {
-          "id": "4TGgroKPwy5pKDhJPsXa4",
-          "question": "For a mass-spring system displaced from equilibrium towards the left, the graph below shows how the velocity of the mass varies with time. Match the points on the graph with the correct descriptions.",
-          "image": "https://converge-question-images.s3.us-west-1.amazonaws.com/waves_kz_q3_img_2.png",
-          "options": [
-            {
-              "optionA": "Point A",
-              "optionB": "acceleration is zero and the mass is at its maximum velocity to the right"
-            },
-            {
-              "optionA": "Point B",
-              "optionB": "acceleration is at its maximum magnitude and pointing towards the left"
-            },
-            {
-              "optionA": "Point C",
-              "optionB": "acceleration is zero and the mass is at its maximum velocity to the left"
-            },
-            {
-              "optionA": "Point D",
-              "optionB": "acceleration is at its maximum magnitude and pointing towards the right"
-            }
-          ]
-        }
-      ]
-    }
-  ],
-  "orderingQuestions": []
+    ],
+    "orderingQuestions": []
 }

@@ -1,0 +1,203 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "ll3dh4ahr5eseomk70lun",
+    "topicIdProd": "93AZWjw8THAvAEyyhHQp6",
+    "chapter_text": "Here's a summary of the concepts and formulas from the document, organized by topic:\n\n**3.1 Work**\n\n*   **Work Done by a Force:** The product of the force in the direction of the displacement and the distance traveled.\n    *   Formula:  `W = Fs \\cos{\\theta}`\n*   **Joule (Unit of Work):**  1 J = 1 Nm.\n*   **Work Done by a Varying Force:** The area under the force vs. distance graph.\n*   **Work Done in Circular Motion:** Zero, because the centripetal force is always perpendicular to the displacement.\n\n**The Work-Kinetic Energy Relation**\n\n*   **Kinetic Energy:** The energy an object possesses due to its motion.\n    *   Formula: `E_k = \\frac{1}{2} mv^2`\n*   **Work-Kinetic Energy Theorem:** The net work done on an object equals its change in kinetic energy.\n    *   Formula:  `W_{net} = \\Delta E_k`\n\n**Work Done by Gravity**\n\n*   **Work Done by Gravity (Horizontal Displacement):** Zero\n*   **Work Done by Gravity (Vertical Displacement):** `mgh` (positive if falling, negative if rising).\n\n**Gravitational Potential Energy**\n\n*   **Gravitational Potential Energy:** The energy of an object due to its position in a gravitational field.\n    *   Formula: `E_p = mgh`\n\n**Tension in a Spring**\n\n*   **Hooke's Law:**  The force required to extend or compress a spring is proportional to the displacement.\n    *   Formula:  `F = kx`\n*   **Elastic Potential Energy:** The energy stored in a spring due to its extension or compression.\n    *   Formula: `E_H = \\frac{1}{2} kx^2`\n*   **Work Done Extending a Spring from X1 to X2:**  `W = \\frac{1}{2} k (x_2^2 - x_1^2)`\n\n**3.2 Conservation of Energy**\n\n*   **Total Mechanical Energy:** The sum of kinetic and potential energies in a system.\n    * Formula: `E = E_k + E_p = \\frac{1}{2} mv^2 + mgh`\n*   **Law of Conservation of Total Mechanical Energy:** In an isolated system (no external work done), the total mechanical energy remains constant.\n    *   `E = E_k + E_p + E_H = \\frac{1}{2} mv^2 + mgh + \\frac{1}{2} kx^2`\n*   `\\Delta E_T = W_{ext} + Q` where `\\Delta E_T` is the change in total energy, `W_{ext}` is the work done by external forces, and `Q` is the heat transfered.\n\n**3.3 Power and Efficiency**\n\n*   **Power:** The rate at which work is done or energy is transferred.\n    *   Formula: `P = \\frac{\\Delta W}{\\Delta t}` or `P = Fv` (for constant force)\n*   **Efficiency:** The ratio of useful energy output to total energy input.\n    *   Formula:  `\\eta = \\frac{\\text{useful energy out}}{\\text{actual energy in}} = \\frac{\\text{useful power out}}{\\text{actual power in}}`\n\n**3.4 Energy Transfers**\n\n*   Energy can be transferred from one form to another, such as gravitational potential energy to kinetic energy or elastic potential energy to kinetic energy, and eventually to thermal energy.\n*   **Law of Conservation of Energy:** Energy cannot be created or destroyed; it can only be transferred from one form to another.\n*   **Sankey Diagrams:** A visual representation of energy transfers, where the width of arrows corresponds to the amount of energy.",
+    "chapter_concepts": [
+        {
+            "concept_id": "67784893-a7f7-4ebc-ac63-a3f494a49df0",
+            "concept_question": "What is work done by a force?",
+            "concept_answer": "It is the product of the force component in the displacement direction and the distance traveled.",
+            "concept_formula": [
+                "$!$W = Fs \\cos{\\theta}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "ee6ae1af-1b5f-47a1-ac3e-0d62af58bd25",
+            "concept_question": "What is a Joule?",
+            "concept_answer": "A Joule is the unit of work equal to one newton-meter.",
+            "concept_formula": [
+                "$!$1 J = 1 Nm$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e515d26f-7767-4267-b081-c9c385fdcaf0",
+            "concept_question": "What is work done by a varying force?",
+            "concept_answer": "It is the area under a force versus distance graph.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "505f2546-1535-4bbd-ba04-29237b0892f5",
+            "concept_question": "What is work done in circular motion?",
+            "concept_answer": "It is zero because the centripetal force is always perpendicular to displacement.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "0f719348-94a2-4b8e-8cd8-638039f27e60",
+            "concept_question": "What is kinetic energy?",
+            "concept_answer": "It is the energy an object possesses due to its motion.",
+            "concept_formula": [
+                "$!$E_k = \\frac{1}{2} mv^2$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f15b2cb1-9fa3-4c7a-a335-23aba0faaaca",
+            "concept_question": "What is the Work-Kinetic Energy theorem?",
+            "concept_answer": "It states that the net work done equals the change in kinetic energy.",
+            "concept_formula": [
+                "$!$W_{net} = \\Delta E_k$!$"
+            ],
+            "pre-requisites": [
+                "67784893-a7f7-4ebc-ac63-a3f494a49df0",
+                "0f719348-94a2-4b8e-8cd8-638039f27e60"
+            ]
+        },
+        {
+            "concept_id": "69f8951f-3b53-4acd-bfd4-55ecb48c19b6",
+            "concept_question": "What is work done by gravity in horizontal displacement?",
+            "concept_answer": "It is zero.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "5bf9b7d2-da7f-425b-a6f3-2a025ffe4ff6",
+            "concept_question": "What is work done by gravity vertically?",
+            "concept_answer": "It equals mgh, being positive if falling and negative if rising.",
+            "concept_formula": [
+                "$!$mgh$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "3c01ec37-9e55-45a6-9bc8-34733b46e8e7",
+            "concept_question": "What is gravitational potential energy?",
+            "concept_answer": "It is the energy an object has due to its position in a gravitational field.",
+            "concept_formula": [
+                "$!$E_p = mgh$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "8bf58a22-0e23-4658-b015-5010716b120a",
+            "concept_question": "What is Hooke's Law?",
+            "concept_answer": "It states that the force to extend or compress a spring is proportional to the displacement.",
+            "concept_formula": [
+                "$!$F = kx$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "63b81607-3bf4-4f72-b289-56cae05f91de",
+            "concept_question": "What is elastic potential energy?",
+            "concept_answer": "It is the energy stored in a spring due to its extension or compression.",
+            "concept_formula": [
+                "$!$E_H = \\frac{1}{2} kx^2$!$"
+            ],
+            "pre-requisites": [
+                "8bf58a22-0e23-4658-b015-5010716b120a"
+            ]
+        },
+        {
+            "concept_id": "0a559a5f-257c-41f7-a035-3696eda7301a",
+            "concept_question": "What is work done extending a spring?",
+            "concept_answer": "It is given by half the spring constant times the difference of squares of the final and initial extensions.",
+            "concept_formula": [
+                "$!$W = \\frac{1}{2} k (x_2^2 - x_1^2)$!$"
+            ],
+            "pre-requisites": [
+                "8bf58a22-0e23-4658-b015-5010716b120a",
+                "63b81607-3bf4-4f72-b289-56cae05f91de"
+            ]
+        },
+        {
+            "concept_id": "988d792c-195b-46c8-ace2-0828b3655c0b",
+            "concept_question": "What is total mechanical energy?",
+            "concept_answer": "It is the sum of the kinetic and potential energies in a system.",
+            "concept_formula": [
+                "$!$E = E_k + E_p = \\frac{1}{2} mv^2 + mgh$!$"
+            ],
+            "pre-requisites": [
+                "0f719348-94a2-4b8e-8cd8-638039f27e60",
+                "3c01ec37-9e55-45a6-9bc8-34733b46e8e7"
+            ]
+        },
+        {
+            "concept_id": "0b54587c-65be-47e5-b509-3c9611378fb5",
+            "concept_question": "What is the law of conservation of total mechanical energy?",
+            "concept_answer": "It states that the total mechanical energy remains constant in an isolated system.",
+            "concept_formula": [
+                "$!$E = E_k + E_p + E_H = \\frac{1}{2} mv^2 + mgh + \\frac{1}{2} kx^2$!$"
+            ],
+            "pre-requisites": [
+                "0f719348-94a2-4b8e-8cd8-638039f27e60",
+                "3c01ec37-9e55-45a6-9bc8-34733b46e8e7",
+                "63b81607-3bf4-4f72-b289-56cae05f91de"
+            ]
+        },
+        {
+            "concept_id": "3bb51644-01af-4658-9269-086a4b96d8d0",
+            "concept_question": "What relates total energy change to external work and heat?",
+            "concept_answer": "It shows that the change in total energy equals the work done by external forces plus heat transfer.",
+            "concept_formula": [
+                "$!$\\Delta E_T = W_{ext} + Q$!$"
+            ],
+            "pre-requisites": [
+                "988d792c-195b-46c8-ace2-0828b3655c0b",
+                "0b54587c-65be-47e5-b509-3c9611378fb5"
+            ]
+        },
+        {
+            "concept_id": "2691d473-fa9f-48af-866f-fcf735cf65ac",
+            "concept_question": "What is power?",
+            "concept_answer": "It is the rate at which work is done or energy is transferred.",
+            "concept_formula": [
+                "$!$P = \\frac{\\Delta W}{\\Delta t}$!$",
+                "$!$P = Fv$!$"
+            ],
+            "pre-requisites": [
+                "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+            ]
+        },
+        {
+            "concept_id": "0be92c40-ded4-48ee-a466-07236da03b9f",
+            "concept_question": "What is efficiency?",
+            "concept_answer": "It is the ratio of useful output energy to total input energy.",
+            "concept_formula": [
+                "$!$\\eta = \\frac{\\text{useful energy out}}{\\text{actual energy in}} = \\frac{\\text{useful power out}}{\\text{actual power in}}$!$"
+            ],
+            "pre-requisites": [
+                "2691d473-fa9f-48af-866f-fcf735cf65ac"
+            ]
+        },
+        {
+            "concept_id": "56408c37-361a-4fb8-9377-e7c7e0aa28ad",
+            "concept_question": "What are energy transfers?",
+            "concept_answer": "They involve the conversion of energy from one form to another, such as kinetic to potential or thermal.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b7707328-1562-4540-8e4d-760e27d5a169",
+            "concept_question": "What is the law of conservation of energy?",
+            "concept_answer": "It states that energy is neither created nor destroyed, only transformed.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "56408c37-361a-4fb8-9377-e7c7e0aa28ad"
+            ]
+        },
+        {
+            "concept_id": "e9458c05-6368-468d-bfe5-a5e8a10012f3",
+            "concept_question": "What are Sankey diagrams?",
+            "concept_answer": "They are visual representations of energy transfers with arrow widths proportional to energy amounts.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "56408c37-361a-4fb8-9377-e7c7e0aa28ad"
+            ]
+        }
+    ]
+}

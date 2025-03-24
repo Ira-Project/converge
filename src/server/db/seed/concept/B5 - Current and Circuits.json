@@ -1,0 +1,225 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "eJFLmJpdjyW495c7j9Fon",
+    "topicIdProd": "HVUAVdPYxs08yExPRVE6E",
+    "chapter_text": "Here's a summary of the concepts and formulas from the provided text, organized into sections:\n\n**11.1 Potential Difference, Current and Resistance**\n\n*   **Electric Charge:** Fundamental property shared by nuclei (positive) and electrons (negative).\n*   **Coulomb (C):** Unit of electric charge. Charge of electron = -1.6 x 10^-19 C\n*   **Conservation of Charge:** Total charge before equals total charge after any process.\n*   **Free Electrons:** Electrons loosely attached to nuclei in metals, free to move throughout the metal.\n*   **Potential Difference (V):** Work done per unit charge to move a point charge from one point to another.\n\n    *   Formula:  `V = \\frac{W}{q}`\n    *   Unit: Volt (V), where 1 V = 1 J C^-1\n*   **Direct Current (dc):** Motion of electrons in the same direction.\n*   **Electric Current (I):** Rate of flow of charge through the cross-sectional area of a conductor.\n\n    *   Formula: `I = \\frac{\\Delta q}{\\Delta t}`\n    *   Unit: Ampere (A), where 1 A = 1 C s^-1\n*   **Conductors:** Materials with many free electrons per unit volume.\n*   **Insulators:** Materials with very few free electrons per unit volume.\n*   **Electric Resistance (R):** Property of a conductor that determines the current for a given potential difference.\n*   Formula: R=V/I\n*   Ohm's Law:\n    * Materials that obey Ohm's law have a constant resistance at constant temperature.\n*   Factors Affecting Resistance:\n    *   Nature of material.\n    *   Length (L) of the conductor.\n    *   Cross-sectional area (A) of the conductor.\n    *   Temperature\n*   **Resistivity (\u03c1):** Intrinsic property of a material, related to resistance.\n\n    *   Formula: `R = \\rho \\frac{L}{A}`\n    *   Unit: \u03a9 m\n\n**11.2 Voltage, Power and emf**\n\n*   **Voltage (V):** Common term for potential difference. Formula V=IR\n*   **Electric Power (P):** Rate at which energy is dissipated in a resistor or used by an electrical device.\n\n    *   Formulas: `P = IV = RI^2 = \\frac{V^2}{R}`\n*   **Electromotive Force (emf) (\u03b5):** Work done per unit charge in moving charge from one terminal of a battery to the other (or work done to move charge around the circuit).\n    *   Unit: Volt (V)\n\n    *   Formula: `\\varepsilon = \\frac{W}{q}`\n* Relation between emf and the power\n    * e=P/I\n\n**11.3 Resistors in Electric Circuits**\n\n*   **Resistors in Series:** Total resistance is the sum of individual resistances.\n\n    *   Formula: `R_T = R_1 + R_2 + R_3 + ...`\n*   **Resistors in Parallel:** Reciprocal of total resistance is the sum of the reciprocals of individual resistances.\n\n    *   Formula: `\\frac{1}{R_T} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3} + ...`\n\n**11.4 Terminal Potential Difference and the Potential Divider**\n\n*   **Internal Resistance (r):** Resistance within a cell or battery.\n*   **Terminal Potential Difference (V):** Potential difference across the terminals of a battery when current is flowing.\n\n    *   Formula: `V = \\varepsilon - Ir`\n*   **Potential Divider (Potentiometer):** Circuit that provides a variable potential difference.\n\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "77e4705f-53bd-4619-90fe-17c3de969cee",
+            "concept_question": "What is electric charge?",
+            "concept_answer": "Electric charge is a fundamental property of particles that can be positive or negative.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "bfa6ae83-4287-4629-bb9c-0dcf7fc4a9e1",
+            "concept_question": "What is a coulomb?",
+            "concept_answer": "A coulomb is the SI unit used to measure electric charge.",
+            "concept_formula": [
+                "$!$q_e = -1.6 \\times 10^{-19}\\,\\text{C}$!$"
+            ],
+            "pre-requisites": [
+                "77e4705f-53bd-4619-90fe-17c3de969cee"
+            ]
+        },
+        {
+            "concept_id": "be5fd64b-5efa-4d62-b513-095f1e80a52c",
+            "concept_question": "What is conservation of charge?",
+            "concept_answer": "Conservation of charge states that total electric charge remains constant in any process.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "77e4705f-53bd-4619-90fe-17c3de969cee"
+            ]
+        },
+        {
+            "concept_id": "506388e4-0f9e-46d1-8117-be06b5562edb",
+            "concept_question": "What are free electrons?",
+            "concept_answer": "Free electrons are electrons loosely bound to atoms that can move freely in metals.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "77e4705f-53bd-4619-90fe-17c3de969cee"
+            ]
+        },
+        {
+            "concept_id": "e8c3f3c6-319c-4efc-8227-e1ff3ffbc6b8",
+            "concept_question": "What is potential difference?",
+            "concept_answer": "Potential difference is the work done per unit charge to move a point charge.",
+            "concept_formula": [
+                "$!$V = \\frac{W}{q}$!$",
+                "$!$1\\,V = 1\\,J\\,C^{-1}$!$"
+            ],
+            "pre-requisites": [
+                "77e4705f-53bd-4619-90fe-17c3de969cee"
+            ]
+        },
+        {
+            "concept_id": "64d9549c-6136-48cf-aa2a-38910b77b9cc",
+            "concept_question": "What is direct current?",
+            "concept_answer": "Direct current is the flow of electrons in a single, constant direction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "506388e4-0f9e-46d1-8117-be06b5562edb"
+            ]
+        },
+        {
+            "concept_id": "256ec7c4-12c5-4544-a05c-e10e460ca12a",
+            "concept_question": "What is electric current?",
+            "concept_answer": "Electric current is the rate of flow of electric charge through a conductor.",
+            "concept_formula": [
+                "$!$I = \\frac{\\Delta q}{\\Delta t}$!$",
+                "$!$1\\,A = 1\\,C\\,s^{-1}$!$"
+            ],
+            "pre-requisites": [
+                "77e4705f-53bd-4619-90fe-17c3de969cee"
+            ]
+        },
+        {
+            "concept_id": "d0c2d581-1ba7-46f6-9179-bd765e0a4796",
+            "concept_question": "What are conductors?",
+            "concept_answer": "Conductors are materials that allow free electrons to move freely.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "506388e4-0f9e-46d1-8117-be06b5562edb"
+            ]
+        },
+        {
+            "concept_id": "4a44eee5-5657-44ef-baad-e6b992392c91",
+            "concept_question": "What are insulators?",
+            "concept_answer": "Insulators are materials that limit the movement of free electrons.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "506388e4-0f9e-46d1-8117-be06b5562edb"
+            ]
+        },
+        {
+            "concept_id": "c5c4647e-135a-4cc3-8d83-7b3ac772662b",
+            "concept_question": "What is electric resistance?",
+            "concept_answer": "Resistance is a property of a conductor that determines the current for a given potential difference.",
+            "concept_formula": [
+                "$!$R = \\frac{V}{I}$!$"
+            ],
+            "pre-requisites": [
+                "e8c3f3c6-319c-4efc-8227-e1ff3ffbc6b8",
+                "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+            ]
+        },
+        {
+            "concept_id": "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+            "concept_question": "What is Ohm's law?",
+            "concept_answer": "Ohm's law states that the voltage across a resistor is directly proportional to the current flowing through it.",
+            "concept_formula": [
+                "$!$V = IR$!$"
+            ],
+            "pre-requisites": [
+                "c5c4647e-135a-4cc3-8d83-7b3ac772662b",
+                "e8c3f3c6-319c-4efc-8227-e1ff3ffbc6b8",
+                "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+            ]
+        },
+        {
+            "concept_id": "6b168cca-c358-4432-96e7-3461329d8b2c",
+            "concept_question": "What is voltage?",
+            "concept_answer": "Voltage is another term for potential difference in an electric circuit.",
+            "concept_formula": [
+                "$!$V = IR$!$"
+            ],
+            "pre-requisites": [
+                "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+                "e8c3f3c6-319c-4efc-8227-e1ff3ffbc6b8"
+            ]
+        },
+        {
+            "concept_id": "82634878-faca-47c5-b8ff-c0c3bd335aae",
+            "concept_question": "What is electric power?",
+            "concept_answer": "Electric power is the rate at which electrical energy is converted into other forms.",
+            "concept_formula": [
+                "$!$P = IV$!$",
+                "$!$P = RI^2$!$",
+                "$!$P = \\frac{V^2}{R}$!$"
+            ],
+            "pre-requisites": [
+                "256ec7c4-12c5-4544-a05c-e10e460ca12a",
+                "e8c3f3c6-319c-4efc-8227-e1ff3ffbc6b8",
+                "c5c4647e-135a-4cc3-8d83-7b3ac772662b"
+            ]
+        },
+        {
+            "concept_id": "eb27e38f-4ed0-4d98-ade1-999960aacae5",
+            "concept_question": "What is electromotive force?",
+            "concept_answer": "Electromotive force is the work done per unit charge by a battery or source.",
+            "concept_formula": [
+                "$!$\\varepsilon = \\frac{W}{q}$!$"
+            ],
+            "pre-requisites": [
+                "77e4705f-53bd-4619-90fe-17c3de969cee",
+                "e8c3f3c6-319c-4efc-8227-e1ff3ffbc6b8"
+            ]
+        },
+        {
+            "concept_id": "766cdc9f-cbd7-46c5-af98-619889e9ed8c",
+            "concept_question": "What is the relation between emf and power?",
+            "concept_answer": "Electromotive force is equal to the power divided by the current.",
+            "concept_formula": [
+                "$!$\\varepsilon = \\frac{P}{I}$!$"
+            ],
+            "pre-requisites": [
+                "eb27e38f-4ed0-4d98-ade1-999960aacae5",
+                "82634878-faca-47c5-b8ff-c0c3bd335aae",
+                "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+            ]
+        },
+        {
+            "concept_id": "7e1eb003-fe0f-4d19-bc2c-5bbf746731d8",
+            "concept_question": "What are resistors in series?",
+            "concept_answer": "Resistors in series add together to yield a total resistance equal to their sum.",
+            "concept_formula": [
+                "$!$R_T = R_1 + R_2 + R_3 + \\ldots$!$"
+            ],
+            "pre-requisites": [
+                "c5c4647e-135a-4cc3-8d83-7b3ac772662b"
+            ]
+        },
+        {
+            "concept_id": "9fa1c405-382b-4536-a722-8d3db2c9d128",
+            "concept_question": "What are resistors in parallel?",
+            "concept_answer": "Resistors in parallel have a total resistance whose reciprocal is the sum of reciprocals of individual resistances.",
+            "concept_formula": [
+                "$!$\\frac{1}{R_T} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3} + \\ldots$!$"
+            ],
+            "pre-requisites": [
+                "c5c4647e-135a-4cc3-8d83-7b3ac772662b"
+            ]
+        },
+        {
+            "concept_id": "9146e633-f335-439d-b970-736d260c9c3b",
+            "concept_question": "What is internal resistance?",
+            "concept_answer": "Internal resistance is the inherent resistance present within a battery or cell.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "c5c4647e-135a-4cc3-8d83-7b3ac772662b"
+            ]
+        },
+        {
+            "concept_id": "aa41a63a-b3d4-4ca2-87a2-640e15a9d86b",
+            "concept_question": "What is terminal potential difference?",
+            "concept_answer": "Terminal potential difference is the voltage measured across a battery's terminals when current flows.",
+            "concept_formula": [
+                "$!$V = \\varepsilon - Ir$!$"
+            ],
+            "pre-requisites": [
+                "eb27e38f-4ed0-4d98-ade1-999960aacae5",
+                "9146e633-f335-439d-b970-736d260c9c3b",
+                "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+            ]
+        },
+        {
+            "concept_id": "558be0c2-aab5-44a8-bd5c-72e9a1dc0fd6",
+            "concept_question": "What is a potential divider?",
+            "concept_answer": "A potential divider is a circuit that provides a variable output voltage.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "aa41a63a-b3d4-4ca2-87a2-640e15a9d86b"
+            ]
+        }
+    ]
+}

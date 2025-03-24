@@ -1,0 +1,213 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "G6dgJDtqkmlsaUd9n9jmq",
+    "topicIdProd": "7iubapfajp3p8dpqj8kkv",
+    "chapter_text": "Here's a concise summary of the concepts discussed in the provided text, formatted with bullet points and LaTeX formulas where applicable:\n\n**Doppler Effect (General)**\n\n*   Definition: Change in observed frequency of a wave due to relative motion between source and observer.\n*   Applies to sound and light waves.\n\n**Doppler Effect for Sound (Low Speeds)**\n\n*   Moving Observer:\n    *   Approaching source: Higher observed frequency, same wavelength.\n    *   Receding source: Lower observed frequency, same wavelength.\n*   Moving Source (Stationary Observer):\n    *   Source moving away: Lower frequency, longer wavelength.\n    *   Source moving towards: Higher frequency, shorter wavelength.\n\n*   Formulae for a Moving Source and Stationary Observer:\n\n    *   Frequency:  $f' = f\\left(\\frac{v}{v \\pm u}\\right)$, where $+$ is used when the source is receding and $-$ when approaching.\n\n    *   Wavelength: $\\lambda' = \\lambda\\left(1 \\mp \\frac{u}{v}\\right)$, where $+$ is used when the source is receding and $-$ when approaching.\n\n*   Stationary Source and Moving Observer:\n\n    *   The moving observer will measure the same wavelength as the source, but a different frequency.\n    *   Formul for frequency shift: $f' = f\\left(\\frac{v+u}{v}\\right)$, where $u$ is positive if moving toward the source and negative if moving away.\n\n**Doppler Effect for Light (Low Speeds)**\n\n*   Formula: $\\frac{\\Delta f}{f} = \\frac{v}{c} \\approx \\frac{\\Delta\\lambda}{\\lambda}$, where $v$ is the relative speed, $c$ is the speed of light, $f$ is the emitted frequency, $\\Delta f$ is the change in observed frequency, $\\lambda$ is the emitted wavelength, and $\\Delta\\lambda$ is the change in observed wavelength.\n*   Blue-shift: Increase in frequency, decrease in wavelength (approaching source).\n*   Red-shift: Decrease in frequency, increase in wavelength (receding source).\n*   Evidence for an expanding universe based on the red-shift of light from distant galaxies.\n\n**Key Variables:**\n\n*   $f$: Emitted frequency\n*   $f'$: Observed frequency\n*   $\\lambda$: Emitted wavelength\n*   $\\lambda'$: Observed wavelength\n*   $v$: Wave speed (speed of sound or light)\n*   $u$: Speed of source or observer (relative to the medium)\n*   $c$: Speed of light in vacuum\n*   $\\Delta f$: Change in frequency\n*   $\\Delta \\lambda$: Change in wavelength\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "a20069a8-ca33-4e26-93ce-87c105e52c27",
+            "concept_question": "What is Doppler Effect?",
+            "concept_answer": "It is the change in observed frequency due to relative motion between source and observer.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "dedb0ed5-156b-48ad-aee3-9f2d97146000",
+            "concept_question": "What happens when a moving observer approaches a source?",
+            "concept_answer": "The observer measures a higher frequency with unchanged wavelength.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a20069a8-ca33-4e26-93ce-87c105e52c27"
+            ]
+        },
+        {
+            "concept_id": "f1242762-b080-4a5e-9985-7969945d1a0c",
+            "concept_question": "What happens when a moving observer recedes from a source?",
+            "concept_answer": "The observer measures a lower frequency while the wavelength remains constant.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a20069a8-ca33-4e26-93ce-87c105e52c27"
+            ]
+        },
+        {
+            "concept_id": "19724e93-e748-4ce6-9cdb-a6e1b3f2e41f",
+            "concept_question": "What is observed when a moving source recedes?",
+            "concept_answer": "The observer detects a lower frequency and a longer wavelength.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a20069a8-ca33-4e26-93ce-87c105e52c27"
+            ]
+        },
+        {
+            "concept_id": "cbaf95f3-0748-4f73-83a2-8a9f27f14500",
+            "concept_question": "What is the frequency observation when a moving source approaches?",
+            "concept_answer": "The observer detects a higher frequency when the source approaches.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a20069a8-ca33-4e26-93ce-87c105e52c27"
+            ]
+        },
+        {
+            "concept_id": "e0c216ed-5cc3-44d3-93e4-327c56fe04d6",
+            "concept_question": "What is the wavelength observation when a moving source approaches?",
+            "concept_answer": "The observer detects a shorter wavelength when the source approaches.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a20069a8-ca33-4e26-93ce-87c105e52c27"
+            ]
+        },
+        {
+            "concept_id": "73f17e12-18ff-4466-adf7-e5551d71bc83",
+            "concept_question": "What is the frequency formula for a moving source?",
+            "concept_answer": "It relates observed and emitted frequencies with wave and relative speeds.",
+            "concept_formula": [
+                "$!$f' = f\\left(\\frac{v}{v \\pm u}\\right)$!$"
+            ],
+            "pre-requisites": [
+                "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+                "f09a3cf7-42e1-4878-b989-bb756bfc1f03",
+                "8004f091-3866-4725-923f-566d362ee31a",
+                "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+            ]
+        },
+        {
+            "concept_id": "3025a391-46fe-4157-bcf6-a45645f0a553",
+            "concept_question": "What is the wavelength formula for a moving source?",
+            "concept_answer": "It expresses the observed wavelength in terms of emitted wavelength and relative speeds.",
+            "concept_formula": [
+                "$!$\\lambda' = \\lambda\\left(1 \\mp \\frac{u}{v}\\right)$!$"
+            ],
+            "pre-requisites": [
+                "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                "7e1b8781-921d-4c7a-9f2a-f4e2cad83bb2",
+                "96b30691-b8b2-48ca-b045-8fe1c34c2801",
+                "8004f091-3866-4725-923f-566d362ee31a",
+                "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+            ]
+        },
+        {
+            "concept_id": "a738c7c2-d0ca-4760-8351-7ce0f93d7404",
+            "concept_question": "What is the frequency formula for a moving observer with a stationary source?",
+            "concept_answer": "The observed frequency is adjusted linearly relative to the emitted frequency.",
+            "concept_formula": [
+                "$!$f' = f\\left(\\frac{v+u}{v}\\right)$!$"
+            ],
+            "pre-requisites": [
+                "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+                "f09a3cf7-42e1-4878-b989-bb756bfc1f03",
+                "8004f091-3866-4725-923f-566d362ee31a",
+                "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+            ]
+        },
+        {
+            "concept_id": "21d1d259-b66f-4509-8897-4feba2f2b3e6",
+            "concept_question": "What is the light Doppler effect formula?",
+            "concept_answer": "It relates fractional frequency and wavelength changes to the ratio of relative speed and c.",
+            "concept_formula": [
+                "$!$\\frac{\\Delta f}{f} = \\frac{v}{c}$!$",
+                "$!$\\frac{\\Delta\\lambda}{\\lambda} \\approx \\frac{v}{c}$!$"
+            ],
+            "pre-requisites": [
+                "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+                "3da3b75d-d472-4d0f-b6e4-c5167dd2fd26",
+                "7e1b8781-921d-4c7a-9f2a-f4e2cad83bb2",
+                "be8038ae-a43a-48ed-b9ae-89fc1f937287",
+                "8004f091-3866-4725-923f-566d362ee31a",
+                "5dab74ab-387d-4288-8961-5ac6d456b3e9"
+            ]
+        },
+        {
+            "concept_id": "3cd98a9d-ab46-4f5b-8041-d34e450ae4d5",
+            "concept_question": "What is blue-shift in Doppler effect for light?",
+            "concept_answer": "Blue-shift is the increase in frequency and concurrent decrease in wavelength when approaching.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "21d1d259-b66f-4509-8897-4feba2f2b3e6"
+            ]
+        },
+        {
+            "concept_id": "ba45dfc9-7996-4dda-bd14-1d7f21675597",
+            "concept_question": "What is red-shift in Doppler effect for light?",
+            "concept_answer": "Red-shift is the decrease in frequency and corresponding increase in wavelength when receding.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "21d1d259-b66f-4509-8897-4feba2f2b3e6"
+            ]
+        },
+        {
+            "concept_id": "435c8687-60ee-4c29-8be8-7d8e711f518a",
+            "concept_question": "What evidence for an expanding universe is discussed?",
+            "concept_answer": "Red-shift from distant galaxies supports the theory of an expanding universe.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ba45dfc9-7996-4dda-bd14-1d7f21675597"
+            ]
+        },
+        {
+            "concept_id": "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+            "concept_question": "What does f denote in Doppler effect?",
+            "concept_answer": "f denotes the emitted frequency of a wave.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f09a3cf7-42e1-4878-b989-bb756bfc1f03",
+            "concept_question": "What does f' denote in Doppler effect?",
+            "concept_answer": "f' denotes the observed frequency measured by an observer.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "7e1b8781-921d-4c7a-9f2a-f4e2cad83bb2",
+            "concept_question": "What does \\lambda denote in Doppler effect?",
+            "concept_answer": "\\lambda denotes the emitted wavelength of a wave.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "96b30691-b8b2-48ca-b045-8fe1c34c2801",
+            "concept_question": "What does \\lambda' denote in Doppler effect?",
+            "concept_answer": "\\lambda' denotes the observed wavelength measured by the observer.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "8004f091-3866-4725-923f-566d362ee31a",
+            "concept_question": "What does v denote in Doppler effect formulas?",
+            "concept_answer": "v denotes the wave speed applicable to sound or light.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9",
+            "concept_question": "What does u denote in Doppler effect formulas?",
+            "concept_answer": "u denotes the relative speed of the source or observer.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "5dab74ab-387d-4288-8961-5ac6d456b3e9",
+            "concept_question": "What does c denote in Doppler effect for light?",
+            "concept_answer": "c denotes the speed of light in vacuum.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "3da3b75d-d472-4d0f-b6e4-c5167dd2fd26",
+            "concept_question": "What does \\Delta f denote in Doppler effect formulas?",
+            "concept_answer": "\\Delta f denotes the change in frequency from the emitted value.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "be8038ae-a43a-48ed-b9ae-89fc1f937287",
+            "concept_question": "What does \\Delta \\lambda denote in Doppler effect formulas?",
+            "concept_answer": "\\Delta \\lambda denotes the change in wavelength from the emitted value.",
+            "concept_formula": [],
+            "pre-requisites": []
+        }
+    ]
+}

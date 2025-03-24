@@ -1,0 +1,173 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "6PPsDBZy9nMXjt6GeUcOp",
+    "topicIdProd": "jA5iZ5cKkLy1GIvdT30HQ",
+    "chapter_text": "Here's a concise summary of the thermodynamic concepts covered in the document, organized into sections with associated formulas:\n\n**1. Internal Energy**\n\n*   **Internal Energy (U):** The total random kinetic energy of the particles in a gas plus the potential energy associated with intermolecular forces. For an ideal gas, intermolecular forces are zero.\n*   **Change in Internal Energy (\u0394U):**\n\n    *   \u0394U =  \\frac{3}{2}Nk\\Delta T\n    *   \u0394U =  \\frac{3}{2}nR\\Delta T\n    *   \u0394U =  \\frac{3}{2}V\\Delta P (if V = const)\n    *   \u0394U =  \\frac{3}{2}\\Delta(PV) (if P = const)\n\n**2. Thermodynamic Processes**\n\n*   **Isothermal Process:** Temperature (T) remains constant.\n    *   Formula:  P\u2081V\u2081 = P\u2082V\u2082\n*   **Isobaric Process:** Pressure (P) remains constant.\n    *   Formula:  \\frac{V_1}{T_1} =  \\frac{V_2}{T_2}\n*   **Isovolumetric Process:** Volume (V) remains constant.\n    *   Formula: \\frac{P_1}{T_1} =  \\frac{P_2}{T_2}\n*   **Adiabatic Process:** No heat (Q) enters or leaves the system.\n    *   Formula:  P\u2081V\u2081^{\\frac{5}{3}} = P\u2082V\u2082^{\\frac{5}{3}}\n    *   Formula:  TV^{\\frac{2}{3}} = constant\n\n**3. Work Done in Thermodynamics**\n\n*   **Work Done at Constant Pressure (W):**\n    *   Formula: W = P\u0394V\n*   **General Work Done:** The area under the curve on a pressure-volume (P-V) diagram.\n\n**4. The First Law of Thermodynamics**\n\n*   **Statement:** The amount of heat (Q) given to a system is used to increase its internal energy (\u0394U) and/or do work (W).\n    *   Formula: Q = \u0394U + W\n*   **Sign Conventions:**\n    *   Q > 0: Heat is supplied to the system.\n    *   Q < 0: Heat is removed from the system.\n    *   \u0394U > 0: Internal energy and temperature increase.\n    *   \u0394U < 0: Internal energy and temperature decrease.\n    *   W > 0: Work is done by the gas (expansion).\n    *   W < 0: Work is done on the gas (compression).\n\n**5. The Second Law of Thermodynamics and Entropy**\n\n*   **Entropy (S):** A measure of the disorder of a system.  Systems evolve towards increasing disorder.\n*   **Change in Entropy (\u0394S):**\n    *   Formula: \u0394S = \\frac{Q}{T}\n*   **Second Law Statement:** The entropy of an isolated system never decreases.\n*   **Boltzmann's Entropy Formula:**\n\n    *   Formula: S = k ln \u03a9  (k is the Boltzmann constant, \u03a9 is the number of microstates)\n\n**6. Heat Engines**\n\n*   **Heat Engine:** A device that transfers thermal energy to mechanical energy to perform work.\n*   **Efficiency of a Heat Engine (\u03b7):**\n    *   Formula: \u03b7 = \\frac{useful work}{input energy} = \\frac{W}{Q_H} = 1 -  \\frac{Q_C}{Q_H}\n*   **Carnot Cycle:** A theoretical thermodynamic cycle consisting of two isothermal and two adiabatic processes.\n*   **Carnot Efficiency:** The maximum possible efficiency for an engine operating between two temperatures.\n    *   Formula: \u03b7 = 1 - \\frac{T_C}{T_H}",
+    "chapter_concepts": [
+        {
+            "concept_id": "83ac7906-4640-4e92-bb9b-467af00d64a8",
+            "concept_question": "What is internal energy?",
+            "concept_answer": "Internal energy is the total random kinetic and potential energy of gas particles.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "6b9a3453-b091-4328-827e-1b1b99fdc62f",
+            "concept_question": "What is change in internal energy?",
+            "concept_answer": "Change in internal energy is the variation in a system's total energy due to temperature or pressure-volume changes.",
+            "concept_formula": [
+                "$!$\\Delta U = \\frac{3}{2}Nk\\Delta T$!$",
+                "$!$\\Delta U = \\frac{3}{2}nR\\Delta T$!$",
+                "$!$\\Delta U = \\frac{3}{2}V\\Delta P$!$",
+                "$!$\\Delta U = \\frac{3}{2}\\Delta(PV)$!$"
+            ],
+            "pre-requisites": [
+                "83ac7906-4640-4e92-bb9b-467af00d64a8"
+            ]
+        },
+        {
+            "concept_id": "35102425-1120-416a-af92-53ff2007c713",
+            "concept_question": "What is an isothermal process?",
+            "concept_answer": "An isothermal process is a thermodynamic process during which the temperature remains constant.",
+            "concept_formula": [
+                "$!$P_1V_1 = P_2V_2$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "a65d2074-4916-4415-ae69-7e9a255f26f2",
+            "concept_question": "What is an adiabatic process?",
+            "concept_answer": "An adiabatic process is a thermodynamic process in which no heat is exchanged with the surroundings.",
+            "concept_formula": [
+                "$!$P_1V_1^{\\frac{5}{3}} = P_2V_2^{\\frac{5}{3}}$!$",
+                "$!$TV^{\\frac{2}{3}} = constant$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "10ec3f29-b38b-4c50-a614-0bae695feb56",
+            "concept_question": "What is work done at constant pressure?",
+            "concept_answer": "Work at constant pressure is the energy change calculated as pressure multiplied by the change in volume.",
+            "concept_formula": [
+                "$!$W = P\\Delta V$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "fdfe5e2f-277b-4863-9d18-205e9f833b35",
+            "concept_question": "What is general work in thermodynamics?",
+            "concept_answer": "General work in thermodynamics is represented by the area under a pressure-volume diagram.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "ea914822-cf42-4557-b08f-5f35daecfc70",
+            "concept_question": "What is the First Law of Thermodynamics?",
+            "concept_answer": "The First Law states that heat added to a system increases its internal energy and performs work.",
+            "concept_formula": [
+                "$!$Q = \\Delta U + W$!$"
+            ],
+            "pre-requisites": [
+                "6b9a3453-b091-4328-827e-1b1b99fdc62f",
+                "fdfe5e2f-277b-4863-9d18-205e9f833b35"
+            ]
+        },
+        {
+            "concept_id": "7a27d98a-ef95-4796-b6f6-284ca65857e7",
+            "concept_question": "What is the sign convention for heat and internal energy in thermodynamics?",
+            "concept_answer": "Positive Q supplies heat into the system and positive \u0394U indicates that the system's internal energy is increasing.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ea914822-cf42-4557-b08f-5f35daecfc70"
+            ]
+        },
+        {
+            "concept_id": "07f5a4a6-1f02-4dcd-82f0-0780bcf2d8db",
+            "concept_question": "What is the sign convention for work in thermodynamics?",
+            "concept_answer": "Positive W signifies work done by the system during expansion.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ea914822-cf42-4557-b08f-5f35daecfc70"
+            ]
+        },
+        {
+            "concept_id": "f09c9f23-33c2-4305-94b6-2390bc04ae54",
+            "concept_question": "What is entropy?",
+            "concept_answer": "Entropy is a measure of disorder in a system that tends to increase over time.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "abaeb8c1-1a59-4643-8d11-75f973d9c2ba",
+            "concept_question": "What is change in entropy?",
+            "concept_answer": "Change in entropy quantifies the heat transfer per unit temperature in a process.",
+            "concept_formula": [
+                "$!$\\Delta S = \\frac{Q}{T}$!$"
+            ],
+            "pre-requisites": [
+                "f09c9f23-33c2-4305-94b6-2390bc04ae54"
+            ]
+        },
+        {
+            "concept_id": "1f71288d-a8e1-4128-b6e3-eb8979a0a9b7",
+            "concept_question": "What is the Second Law of Thermodynamics?",
+            "concept_answer": "The Second Law asserts that the entropy of an isolated system cannot decrease.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f09c9f23-33c2-4305-94b6-2390bc04ae54"
+            ]
+        },
+        {
+            "concept_id": "90e98009-ab75-4444-acc8-f75a8a6f2fcb",
+            "concept_question": "What is Boltzmann's entropy formula?",
+            "concept_answer": "Boltzmann's formula relates entropy to the natural logarithm of the number of microstates in a system.",
+            "concept_formula": [
+                "$!$S = k \\ln \\Omega$!$"
+            ],
+            "pre-requisites": [
+                "f09c9f23-33c2-4305-94b6-2390bc04ae54"
+            ]
+        },
+        {
+            "concept_id": "9ed37d43-84fa-4a2b-854a-54ab9a40bf1a",
+            "concept_question": "What is a heat engine?",
+            "concept_answer": "A heat engine is a device that converts thermal energy into mechanical work.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "2627d205-8411-4005-b844-ebf08203f968",
+            "concept_question": "What is the efficiency of a heat engine?",
+            "concept_answer": "Heat engine efficiency is the ratio of useful work output to the heat input.",
+            "concept_formula": [
+                "$!$\\eta = \\frac{W}{Q_H}$!$",
+                "$!$\\eta = 1 - \\frac{Q_C}{Q_H}$!$"
+            ],
+            "pre-requisites": [
+                "9ed37d43-84fa-4a2b-854a-54ab9a40bf1a"
+            ]
+        },
+        {
+            "concept_id": "eb2ed1a7-e528-4b88-8bd6-db3a653c73cf",
+            "concept_question": "What is a Carnot cycle?",
+            "concept_answer": "The Carnot cycle is an ideal cycle featuring two isothermal and two adiabatic processes.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "35102425-1120-416a-af92-53ff2007c713",
+                "a65d2074-4916-4415-ae69-7e9a255f26f2"
+            ]
+        },
+        {
+            "concept_id": "fd04f7d4-aca6-4fa8-a6af-850d9be1e084",
+            "concept_question": "What is Carnot efficiency?",
+            "concept_answer": "Carnot efficiency is the maximum efficiency achievable between two temperature reservoirs.",
+            "concept_formula": [
+                "$!$\\eta = 1 - \\frac{T_C}{T_H}$!$"
+            ],
+            "pre-requisites": [
+                "eb2ed1a7-e528-4b88-8bd6-db3a653c73cf",
+                "2627d205-8411-4005-b844-ebf08203f968"
+            ]
+        }
+    ]
+}

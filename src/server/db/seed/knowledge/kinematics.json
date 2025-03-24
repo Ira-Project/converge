@@ -815,23 +815,23 @@
             "variants": [
                 {
                     "id": "ff6e997f92894797ab979b13f1ef0ab0",
-                    "question": "Which concept is a prerequisite for understanding uniformly accelerated motion?",
+                    "question": "Which of the following is constant for uniformly accelerated motion?",
                     "image": "",
                     "options": [
-                        {
-                            "option_text": "Position",
-                            "is_correct": false
-                        },
-                        {
-                            "option_text": "Average speed",
-                            "is_correct": false
-                        },
                         {
                             "option_text": "Acceleration",
                             "is_correct": true
                         },
                         {
-                            "option_text": "Uniform motion",
+                            "option_text": "Speed",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Velocity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Displacement",
                             "is_correct": false
                         }
                     ],
@@ -839,27 +839,27 @@
                 },
                 {
                     "id": "19d58838536a4161960b33f4d9aaf3f2",
-                    "question": "Which of the following concepts are essential prerequisites for a comprehensive understanding of uniformly accelerated motion? Select all that apply.",
+                    "question": "Which of the following is true for uniformly accelerated motion?",
                     "image": "",
                     "options": [
                         {
-                            "option_text": "Understanding of vectors",
+                            "option_text": "The acceleration is constant",
                             "is_correct": true
                         },
                         {
-                            "option_text": "Calculus (specifically derivatives and integrals)",
+                            "option_text": "The speed is constant",
                             "is_correct": false
                         },
                         {
-                            "option_text": "Knowledge of Newton's Laws of Motion",
+                            "option_text": "The velocity is constant",
                             "is_correct": true
                         },
                         {
-                            "option_text": "A basic understanding of algebra and trigonometry",
+                            "option_text": "The velocity is constant",
                             "is_correct": true
                         }
                     ],
-                    "single_correct": false
+                    "single_correct": true
                 },
                 {
                     "id": "50de25de36944a4297746c3652c72d3a",

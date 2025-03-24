@@ -1,0 +1,357 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "tpsekvfwflyvyztzrjksh",
+    "topicIdProd": "xeqljgvj9k5xqj8unt2wb",
+    "chapter_text": "Here's a concise summary of the concepts covered in the document, organized by section and including relevant formulas:\n\n**Chapter 2: Forces and Newton's Laws**\n\n*   **2.1 Forces and their Direction**\n    *   Force (vector quantity)\n    *   Weight:  $W = mg$ (where *m* is mass and *g* is the gravitational field strength)\n    *   Tension (force in a stretched/compressed body)\n    *   Spring Tension:  $T = kx$ (Hooke's Law, where *k* is the spring constant and *x* is the extension)\n    *   Normal Contact Forces\n    *   Drag Forces (oppose motion through a fluid)\n    *   Stokes' Law for drag force on a sphere: $F_D = 6 \\pi \\eta r v$\n    *   Buoyant Forces (Upthrust): $F_B = \\rho g V_{imm}$ (where $\\rho$ is the density of the fluid and $V_{imm}$ is the immersed volume)\n    *   Frictional Forces (oppose motion)\n        *   Dynamic Friction: $f_d = \\mu_d R$ (where $\\mu_d$ is the coefficient of dynamic friction and *R* is the normal force)\n        *   Maximum Static Friction: $f_s = \\mu_s R$ (where $\\mu_s$ is the coefficient of static friction)\n\n*   **Equilibrium**\n    *   Resultant or net force is zero: $\\sum F = 0$\n    *   Free-body force diagrams\n\n*   **2.2 Newton's Laws of Motion**\n    *   Newton's First Law (Law of Inertia): A body at rest stays at rest, and a body in motion stays in motion with constant velocity, unless acted upon by a net force.\n    *   Newton's Third Law: If body X exerts a force on body Y, then body Y exerts an equal and opposite force on body X.\n    *   Newton's Second Law: $F = ma$ (where *F* is the net force, *m* is the mass, and *a* is the acceleration)\n\n*   **The Inclined Plane**\n    * Acceleration of a block on a frictionless inclined plane: $a = g \\sin \\theta$\n\n*   **2.3 Circular Motion**\n    *   Angular Speed: $\\omega = \\frac{\\Delta \\theta}{\\Delta t}$\n\n        *   Relationship to linear speed:  $v = r\\omega$\n\n    *   Period:  $T = \\frac{2\\pi}{\\omega}$\n    *   Frequency:  $f = \\frac{1}{T}$\n    *   Centripetal Acceleration: $a = \\frac{v^2}{r} = r\\omega^2 = 4\\pi^2 r f^2 = \\frac{4\\pi^2 r}{T^2}$\n    *   Centripetal Force\n\n**Chapter 4: Linear Momentum**\n\n*   **4.1 Newton's Second Law in terms of Momentum**\n    *   Linear Momentum: $p = mv$\n    *   Newton's Second Law: $F_{net} = \\frac{\\Delta p}{\\Delta t}$\n\n*   **4.2 Impulse and Force-Time Graphs**\n    *   Impulse: $J = F_{net} \\Delta t = \\Delta p$\n        *   Impulse is equal to area under the curve of a force-time graph.\n\n*   **4.3 Conservation of Momentum**\n    *   Law of Conservation of Momentum: When the net force on a system is zero, the total momentum of the system remains constant.  If $F_{net} = 0$, it follows that $\\Delta p = 0$\n\n*   **Extension: The Rocket Equation**\n    * The expression of the speed of the change in rocket speed as a result of fuel ejecting with speed $u$:\n    $\\delta v = \\frac{u \\delta m}{M}$\n\n*   **4.4 Kinetic Energy and Momentum**\n    *   Kinetic Energy in terms of momentum: $E_k = \\frac{p^2}{2m}$\n    *   Elastic Collision: Kinetic energy is conserved.\n    *   Inelastic Collision: Kinetic energy is not conserved.\n        *   Totally Inelastic: Bodies stick together after collision; maximum kinetic energy is lost.\n*    **4.5 Two-dimensional collisions**\n    * Collision in a two dimensional space where the momentum of the objects is summed based on the initial direction of the movement.\n\n",
+    "chapter_concepts": [
+        {
+            "concept_id": "7caeca74-0d42-49f5-8535-2b40190ae354",
+            "concept_question": "What is force?",
+            "concept_answer": "Force is a vector quantity that has magnitude and direction.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
+            "concept_question": "What is weight?",
+            "concept_answer": "Weight is the gravitational force on an object due to its mass.",
+            "concept_formula": [
+                "$!$W = mg$!$"
+            ],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "5b15946f-2b9b-4812-8d52-adc669033e30",
+            "concept_question": "What is tension?",
+            "concept_answer": "Tension is the force transmitted through a medium when it is stretched or compressed.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "619a9763-10d2-48a6-a060-de4db6ea3c0a",
+            "concept_question": "What is spring tension?",
+            "concept_answer": "Spring tension is the force in a spring described by Hooke's Law proportional to displacement.",
+            "concept_formula": [
+                "$!$T = kx$!$"
+            ],
+            "pre-requisites": [
+                "5b15946f-2b9b-4812-8d52-adc669033e30"
+            ]
+        },
+        {
+            "concept_id": "18743f7b-2133-4b00-b872-d79300ea4707",
+            "concept_question": "What are normal contact forces?",
+            "concept_answer": "Normal contact forces are forces exerted perpendicular to surfaces in contact.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "7a969809-71da-49a4-9e6b-736f7621d7a5",
+            "concept_question": "What are drag forces?",
+            "concept_answer": "Drag forces are forces that oppose an object\u2019s motion through a fluid.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "7c565773-42d5-45e0-be9a-25f85cfe6a58",
+            "concept_question": "What is Stokes' Law?",
+            "concept_answer": "Stokes' Law quantifies the drag force on a sphere in a viscous fluid.",
+            "concept_formula": [
+                "$!$F_D = 6 \\pi \\eta r v$!$"
+            ],
+            "pre-requisites": [
+                "7a969809-71da-49a4-9e6b-736f7621d7a5"
+            ]
+        },
+        {
+            "concept_id": "4b02852b-1796-491b-8b1d-95976a29c9da",
+            "concept_question": "What are buoyant forces?",
+            "concept_answer": "Buoyant forces are upward forces on immersed objects due to the displaced fluid's weight.",
+            "concept_formula": [
+                "$!$F_B = \\rho g V_{imm}$!$"
+            ],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "778495fe-8aaf-4dd1-8ca6-0babd3a0e9ed",
+            "concept_question": "What are frictional forces?",
+            "concept_answer": "Frictional forces oppose the relative motion between contacting surfaces.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d",
+            "concept_question": "What is dynamic friction?",
+            "concept_answer": "Dynamic friction is the frictional force experienced by moving objects.",
+            "concept_formula": [
+                "$!$f_d = \\mu_d R$!$"
+            ],
+            "pre-requisites": [
+                "778495fe-8aaf-4dd1-8ca6-0babd3a0e9ed",
+                "18743f7b-2133-4b00-b872-d79300ea4707"
+            ]
+        },
+        {
+            "concept_id": "449698ac-d328-44dc-b788-60c326d2524d",
+            "concept_question": "What is maximum static friction?",
+            "concept_answer": "Maximum static friction is the highest frictional force before motion begins.",
+            "concept_formula": [
+                "$!$f_s = \\mu_s R$!$"
+            ],
+            "pre-requisites": [
+                "778495fe-8aaf-4dd1-8ca6-0babd3a0e9ed",
+                "18743f7b-2133-4b00-b872-d79300ea4707"
+            ]
+        },
+        {
+            "concept_id": "2e689418-e014-486a-86a3-e151148f4c6d",
+            "concept_question": "What is equilibrium in mechanics?",
+            "concept_answer": "Equilibrium is the state where the net force acting on an object is zero.",
+            "concept_formula": [
+                "$!$\\sum F = 0$!$"
+            ],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "7b54edaa-3f9a-424f-ad04-5aa202fef926",
+            "concept_question": "What are free-body force diagrams?",
+            "concept_answer": "Free-body diagrams are graphical representations of all forces acting on an object.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "eb78875d-cb4a-450a-9369-b184b1b4284c",
+            "concept_question": "What is Newton's First Law?",
+            "concept_answer": "Newton's First Law states that an object remains at rest or in constant motion unless acted on by a net force.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "ea7cc401-df23-432d-bf1d-57ebbf5f4b1e",
+            "concept_question": "What is Newton's Third Law?",
+            "concept_answer": "Newton's Third Law states that for every action, there is an equal and opposite reaction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "4832ddc7-cb21-4a36-b1ff-4a23c466e1c7",
+            "concept_question": "What is Newton's Second Law?",
+            "concept_answer": "Newton's Second Law relates net force to mass and acceleration.",
+            "concept_formula": [
+                "$!$F = ma$!$"
+            ],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "5401e088-85b0-4910-9ebd-1359f8ec7d30",
+            "concept_question": "What is acceleration on a frictionless inclined plane?",
+            "concept_answer": "On a frictionless inclined plane, acceleration equals gravitational acceleration multiplied by the sine of the incline angle.",
+            "concept_formula": [
+                "$!$a = g \\sin \\theta$!$"
+            ],
+            "pre-requisites": [
+                "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
+                "4832ddc7-cb21-4a36-b1ff-4a23c466e1c7"
+            ]
+        },
+        {
+            "concept_id": "93f43dd2-abd6-44a7-a8b0-e3052ca1909e",
+            "concept_question": "What is angular speed?",
+            "concept_answer": "Angular speed is the rate at which an object rotates, measured in radians per time.",
+            "concept_formula": [
+                "$!$\\omega = \\frac{\\Delta \\theta}{\\Delta t}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f08dbfc4-7ece-47af-8c8f-7609d1f384aa",
+            "concept_question": "What is linear speed relation to angular speed?",
+            "concept_answer": "The linear speed of a rotating object is the product of its radius and angular speed.",
+            "concept_formula": [
+                "$!$v = r\\omega$!$"
+            ],
+            "pre-requisites": [
+                "93f43dd2-abd6-44a7-a8b0-e3052ca1909e"
+            ]
+        },
+        {
+            "concept_id": "a51157a0-fd9c-46a1-ac03-cc47674195b0",
+            "concept_question": "What is the period in circular motion?",
+            "concept_answer": "The period is the time required for one complete revolution in circular motion.",
+            "concept_formula": [
+                "$!$T = \\frac{2\\pi}{\\omega}$!$"
+            ],
+            "pre-requisites": [
+                "93f43dd2-abd6-44a7-a8b0-e3052ca1909e"
+            ]
+        },
+        {
+            "concept_id": "24604eeb-cbe5-47fa-8481-aea6fc9d1ab0",
+            "concept_question": "What is frequency in circular motion?",
+            "concept_answer": "Frequency is the number of cycles per unit time and is the inverse of the period.",
+            "concept_formula": [
+                "$!$f = \\frac{1}{T}$!$"
+            ],
+            "pre-requisites": [
+                "a51157a0-fd9c-46a1-ac03-cc47674195b0"
+            ]
+        },
+        {
+            "concept_id": "4143aa6e-2fe6-4ae4-b9fc-07c4f0a0619c",
+            "concept_question": "What is centripetal acceleration?",
+            "concept_answer": "Centripetal acceleration is the acceleration directed inward toward the center of a circular path.",
+            "concept_formula": [
+                "$!$a = \\frac{v^2}{r}$!$",
+                "$!$a = r\\omega^2$!$",
+                "$!$a = 4\\pi^2 r f^2$!$",
+                "$!$a = \\frac{4\\pi^2 r}{T^2}$!$"
+            ],
+            "pre-requisites": [
+                "93f43dd2-abd6-44a7-a8b0-e3052ca1909e",
+                "f08dbfc4-7ece-47af-8c8f-7609d1f384aa",
+                "a51157a0-fd9c-46a1-ac03-cc47674195b0",
+                "24604eeb-cbe5-47fa-8481-aea6fc9d1ab0"
+            ]
+        },
+        {
+            "concept_id": "041ce8cc-2fb0-4b3a-9cc5-d67ec71d6d66",
+            "concept_question": "What is centripetal force?",
+            "concept_answer": "Centripetal force is the net force that keeps an object moving in a circular path.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4832ddc7-cb21-4a36-b1ff-4a23c466e1c7",
+                "4143aa6e-2fe6-4ae4-b9fc-07c4f0a0619c"
+            ]
+        },
+        {
+            "concept_id": "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
+            "concept_question": "What is linear momentum?",
+            "concept_answer": "Linear momentum is the product of an object's mass and its velocity.",
+            "concept_formula": [
+                "$!$p = mv$!$"
+            ],
+            "pre-requisites": [
+                "7caeca74-0d42-49f5-8535-2b40190ae354"
+            ]
+        },
+        {
+            "concept_id": "1276ee7f-13f0-4170-bf26-1b818bcd31d9",
+            "concept_question": "How is force related to momentum change?",
+            "concept_answer": "The net force is equal to the rate of change of linear momentum.",
+            "concept_formula": [
+                "$!$F_{net} = \\frac{\\Delta p}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
+                "4832ddc7-cb21-4a36-b1ff-4a23c466e1c7"
+            ]
+        },
+        {
+            "concept_id": "e05e18d6-41b8-4d65-b398-dc198fc1c062",
+            "concept_question": "What is impulse in mechanics?",
+            "concept_answer": "Impulse is the product of net force and time interval, equal to the change in momentum.",
+            "concept_formula": [
+                "$!$J = F_{net}\\Delta t$!$",
+                "$!$J = \\Delta p$!$"
+            ],
+            "pre-requisites": [
+                "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
+                "1276ee7f-13f0-4170-bf26-1b818bcd31d9"
+            ]
+        },
+        {
+            "concept_id": "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec",
+            "concept_question": "What is momentum conservation?",
+            "concept_answer": "Momentum conservation means that the total momentum remains constant when no net force acts.",
+            "concept_formula": [
+                "$!$\\Delta p = 0$!$"
+            ],
+            "pre-requisites": [
+                "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
+                "1276ee7f-13f0-4170-bf26-1b818bcd31d9"
+            ]
+        },
+        {
+            "concept_id": "dcbf6cc9-917c-46de-89ab-2d17760e3ef9",
+            "concept_question": "What is the rocket equation?",
+            "concept_answer": "The rocket equation relates the small change in velocity to the exhaust speed and mass change.",
+            "concept_formula": [
+                "$!$\\delta v = \\frac{u \\delta m}{M}$!$"
+            ],
+            "pre-requisites": [
+                "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
+                "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
+            ]
+        },
+        {
+            "concept_id": "d30ed964-9157-4141-ab54-7fc13ff87639",
+            "concept_question": "What is kinetic energy in momentum terms?",
+            "concept_answer": "Kinetic energy can be expressed as the square of momentum divided by twice the mass.",
+            "concept_formula": [
+                "$!$E_k = \\frac{p^2}{2m}$!$"
+            ],
+            "pre-requisites": [
+                "c86c1ebf-b59a-4cec-8781-d933b9a8aeba"
+            ]
+        },
+        {
+            "concept_id": "b86eda28-4276-46c1-972e-dc6fe439ef76",
+            "concept_question": "What is elastic collision?",
+            "concept_answer": "An elastic collision is an interaction where kinetic energy is conserved.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d30ed964-9157-4141-ab54-7fc13ff87639"
+            ]
+        },
+        {
+            "concept_id": "12e22714-a218-4c0c-bafa-d416f5a45fb7",
+            "concept_question": "What is inelastic collision?",
+            "concept_answer": "An inelastic collision is an interaction where kinetic energy is not conserved.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d30ed964-9157-4141-ab54-7fc13ff87639"
+            ]
+        },
+        {
+            "concept_id": "d1b17eff-ff2a-4e58-9890-2cc29f66fba5",
+            "concept_question": "What is a totally inelastic collision?",
+            "concept_answer": "In a totally inelastic collision, colliding objects stick together, losing maximum kinetic energy.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "12e22714-a218-4c0c-bafa-d416f5a45fb7"
+            ]
+        },
+        {
+            "concept_id": "ba9d9e71-f009-425d-aa72-6c25b4be1c27",
+            "concept_question": "What are two-dimensional collisions?",
+            "concept_answer": "Two-dimensional collisions involve momentum conservation in more than one spatial direction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
+                "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
+            ]
+        }
+    ]
+}

@@ -19,7 +19,7 @@ import { explainAssignments } from "../../schema/learnByTeaching/explainAssignme
 import { ActivityType } from "@/lib/constants";
 import { activity } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
-import { concepts } from "../../schema/learnByTeaching/concept";
+import { concepts } from "../../schema/concept";
 
 export async function createLearnByTeachingAssignment() {
 
