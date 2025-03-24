@@ -1,25 +1,8 @@
-import { and, eq } from "drizzle-orm";
+import { and } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { GetTopicsInput, GetSubmissionsInput, TopicBreakdownInput } from "./analytics.input";
-import { ActivityType, CONCEPT_MAPPING_ASSIGNMENT_SCORE, KNOWLEDGE_ZAP_ASSIGNMENT_SCORE, LEARN_BY_TEACHING_ASSIGNMENT_SCORE, READ_AND_RELAY_ASSIGNMENT_SCORE, REASONING_ASSIGNMENT_SCORE, STEP_SOLVE_ASSIGNMENT_SCORE } from "@/lib/constants";
-import { activity } from "@/server/db/schema/activity";
+import type { GetSubmissionsInput } from "./analytics.input";
+import { ActivityType, CONCEPT_MAPPING_ASSIGNMENT_SCORE, KNOWLEDGE_ZAP_ASSIGNMENT_SCORE, LEARN_BY_TEACHING_ASSIGNMENT_SCORE, READ_AND_RELAY_ASSIGNMENT_SCORE, REASONING_ASSIGNMENT_SCORE, Roles, STEP_SOLVE_ASSIGNMENT_SCORE } from "@/lib/constants";
 
-export const getTopics = async (ctx: ProtectedTRPCContext, input: GetTopicsInput) => {
-  const activities = await ctx.db.query.activity.findMany({
-    where: and(
-      eq(activity.classroomId, input.classroomId),
-      eq(activity.isLive, true),
-    ),
-    with: {
-      topic: true,
-    },
-  })
-
-  const topics = activities.map((activity) => activity.topic)
-  const uniqueTopics = [...new Set(topics)]
-
-  return uniqueTopics
-}
 
 export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmissionsInput) => {
   const activities = await ctx.db.query.activity.findMany({
@@ -35,6 +18,7 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
     activityId: string;
     activityType: ActivityType;
     topic: string;
+    topicId: string;
     name: string;
     userEmail: string;
     userAvatar: string;
@@ -81,6 +65,7 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
           activityId: act.id,
           activityType: ActivityType.KnowledgeZap,
           topic: s.activity?.topic?.name ?? "",
+          topicId: s.activity?.topic?.id ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
           userAvatar: s.user?.avatar ?? "",
@@ -127,6 +112,7 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
           activityId: act.id,
           activityType: ActivityType.ReasonTrace,
           topic: s.activity?.topic?.name ?? "",
+          topicId: s.activity?.topic?.id ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
           userAvatar: s.user?.avatar ?? "",
@@ -162,6 +148,7 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
           activityId: act.id,
           activityType: ActivityType.LearnByTeaching,
           topic: s.activity?.topic?.name ?? "",
+          topicId: s.activity?.topic?.id ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
           userAvatar: s.user?.avatar ?? "",
@@ -197,6 +184,7 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
           activityId: act.id,
           activityType: ActivityType.ConceptMapping,
           topic: s.activity?.topic?.name ?? "",
+          topicId: s.activity?.topic?.id ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
           userAvatar: s.user?.avatar ?? "",
@@ -232,6 +220,7 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
           activityId: act.id,
           activityType: ActivityType.StepSolve,
           topic: s.activity?.topic?.name ?? "",
+          topicId: s.activity?.topic?.id ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
           userAvatar: s.user?.avatar ?? "",
@@ -267,6 +256,7 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
           activityId: act.id,
           activityType: ActivityType.ReadAndRelay,
           topic: s.activity?.topic?.name ?? "",
+          topicId: s.activity?.topic?.id ?? "",
           name: s.user?.name ?? "",
           userEmail: s.user?.email ?? "",
           userAvatar: s.user?.avatar ?? "",
@@ -283,6 +273,30 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
   return submissions;
 }
 
-export const topicBreakdown = async (ctx: ProtectedTRPCContext, input: TopicBreakdownInput) => {
-  return
+export const getConceptTracking = async (ctx: ProtectedTRPCContext, input: GetSubmissionsInput) => {
+  const trackedConcepts = await ctx.db.query.conceptTracking.findMany({
+    where: (table, { eq }) => eq(table.classroomId, input.classroomId),
+  });
+
+  const concepts = await ctx.db.query.concepts.findMany({
+    with: {
+      conceptsToTopics: true,
+    }
+  });
+  const edges = await ctx.db.query.conceptEdges.findMany();
+
+  const students = await ctx.db.query.usersToClassrooms.findMany({
+    where: (table, { eq, and }) => and(eq(table.classroomId, input.classroomId), eq(table.role, Roles.Student)),
+    columns: {
+      userId: true,
+    }
+  });
+  
+
+  return {
+    trackedConcepts,
+    concepts,
+    edges,
+    numberOfStudents: students.length,
+  }
 }

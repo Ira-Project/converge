@@ -28,7 +28,6 @@ export default function ConfirmationModal({
           <LoadingButton 
             className="bg-lime-700 text-white hover:bg-lime-800"
             loading={loading}
-            disabled={loading}
             onClick={ async () => {
               await onSubmit();
               closeRef.current?.click();

@@ -2,10 +2,7 @@ import React from 'react';
 import { api } from '@/trpc/server';
 import { validateRequest } from '@/lib/auth/validate-request';
 import { type RouterOutputs } from '@/trpc/shared';
-import { SkillsRadarCard } from './_components/radarChart';
-import MonthlySubmissionsChart from './_components/submissionChart';
-import RecentSubmissionsList from './_components/submissionsList';
-import TopicBreakdownChart from './_components/topicBreakdown';
+import { AnalyticsDashboard } from './_components/AnalyticsDashboard';
 
 export default async function AnalyticsPage(props: { params: Promise<{ classroomId: string }> }) {
 
@@ -16,11 +13,13 @@ export default async function AnalyticsPage(props: { params: Promise<{ classroom
 
   let classroom: RouterOutputs["classroom"]["get"] | undefined;
   let submissions: RouterOutputs["analytics"]["getSubmissions"] | undefined;
+  let conceptData: RouterOutputs["analytics"]["getConceptTracking"] | undefined;
 
   if (user) {
-    [classroom, submissions] = await Promise.all([
+    [classroom, submissions, conceptData] = await Promise.all([
       api.classroom.get.query({ id: params.classroomId }),  
-      api.analytics.getSubmissions.query({ classroomId: params.classroomId })
+      api.analytics.getSubmissions.query({ classroomId: params.classroomId }),
+      api.analytics.getConceptTracking.query({ classroomId: params.classroomId })
     ]);
   }
 
@@ -35,39 +34,13 @@ export default async function AnalyticsPage(props: { params: Promise<{ classroom
         {classroom?.course && (
           <p className="text-sm">{classroom?.course?.subject?.name} | {classroom?.course?.name}</p>
         )}
-      </div>
+      </div>  
 
-      {/* Leaderboard Content */}
-      <div className="px-8 mb-8">
-        <div className="flex flex-row gap-2 mb-4">
-          <p className="text-lg font-medium">Skills</p>
-        </div>
-        {submissions && <SkillsRadarCard submissions={submissions} />}
-      </div>
-
-      {/* Submissions Content */}
-      <div className="px-8 mb-8">
-        <div className="flex flex-row gap-2 mb-4">
-          <p className="text-lg font-medium">Engagement</p>
-        </div>
-        <div className="flex flex-row gap-4">
-          <div className="w-3/5 h-[400px]">
-            {submissions && <MonthlySubmissionsChart submissions={submissions} />}
-          </div>
-          <div className="w-2/5 h-[400px]">
-            {submissions && <RecentSubmissionsList submissions={submissions} />}
-          </div>
-        </div>
-      </div>
-
-
-      {/* Leaderboard Content */}
-      <div className="px-8 mb-8">
-        <div className="flex flex-row gap-2 mb-4">
-          <p className="text-lg font-medium">Topic Breakdown</p>
-        </div>
-        {submissions && <TopicBreakdownChart submissions={submissions} />}
-      </div>
+      {submissions && conceptData && 
+        <AnalyticsDashboard 
+          submissions={submissions} 
+          conceptTracking={conceptData} />
+      }
     </div>
   );
 };
