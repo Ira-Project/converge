@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { BookOpen, Layers, Plus, ChartLine, ChartNoAxesColumn } from "lucide-react"
+import { BookOpen, Layers, Plus, ChartLine, ChartNoAxesColumn, Origami } from "lucide-react"
 
 import { NavMain } from "./nav-main"
 import { NavStudents } from "./nav-students"
@@ -40,11 +40,16 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
     filteredActivities = activities.filter((activity) => activity.activities.some((a) => a.isLive));
   }
   
-  // TODO: Add Analytics
   const navMain = [
     {
+      title: "Activities",
+      url: `/${classroom?.id}`,
+      icon: Origami,
+      isActive: true,
+    },
+    {
       title: "Topics",
-      url: "/",
+      url: `${classroom?.id}`,
       icon: Layers,
       isActive: true,
       items: filteredActivities.map((topic) => ({

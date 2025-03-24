@@ -30,7 +30,6 @@ export default function ReadAndRelayConfirmationModal({
           <LoadingButton 
             className="bg-blue-700 text-white hover:bg-blue-900"
             loading={loading}
-            disabled={loading}
             onClick={onSubmit}>
             Submit
           </LoadingButton>

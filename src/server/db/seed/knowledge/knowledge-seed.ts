@@ -17,6 +17,7 @@ import { activity } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 
 import { topics } from "../../schema/subject";
+import { concepts, conceptTracking } from "../../schema/concept";
 
 export async function createKnowledgeZapAssignment(topicName: string) {
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
@@ -459,5 +460,169 @@ export async function computeQuestionsCompleted() {
       totalAttempts: totalAttempts,
       questionsCompleted: questionsCompleted,
     }).where(eq(knowledgeZapAssignmentAttempts.id, attempt.id));
+  }
+}
+
+export async function addConceptsToKnowledgeZapQuestions(topicName: string) {
+  const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
+
+  const topic = await db.select().from(topics).where(eq(topics.name, json.name as string))
+
+  if(!topic[0]?.id) {
+    console.log("Topic not found", json.name)
+    return
+  }
+
+  for (const question of json.multipleChoiceQuestions) {
+    console.log("Updating question concepts for", question.id)
+    for (const concept of question.concepts) {
+      console.log("Creating concept", concept)
+      await db.insert(knowledgeZapQuestionsToConcepts).values({
+        id: generateId(21),
+        questionId: question.id,
+        conceptId: concept,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      })
+    }
+  }
+
+  for (const question of json.matchingQuestions) {
+    console.log("Updating question concepts for", question.id )
+    for (const concept of question.concepts) {
+      console.log("Creating concept", concept)
+      await db.insert(knowledgeZapQuestionsToConcepts).values({
+        id: generateId(21),
+        questionId: question.id,
+        conceptId: concept,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      })
+    }
+  }
+  
+  for (const question of json.orderingQuestions) {
+    console.log("Updating question concepts for", question.id)
+    for (const concept of question.concepts) {
+      console.log("Creating concept", concept)
+      await db.insert(knowledgeZapQuestionsToConcepts).values({
+        id: generateId(21),
+        questionId: question.id,
+        conceptId: concept,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      })
+    }
+  }
+}
+
+
+export async function findConceptsWithoutKnowledgeZaps() {
+  // Get all concepts that don't have any associated knowledge zap questions
+  const conceptsWithoutZaps = await db
+    .select({
+      id: concepts.id,
+      text: concepts.text,
+    })
+    .from(concepts)
+    .leftJoin(
+      knowledgeZapQuestionsToConcepts,
+      eq(knowledgeZapQuestionsToConcepts.conceptId, concepts.id)
+    )
+    .where(isNull(knowledgeZapQuestionsToConcepts.id));
+
+  if (conceptsWithoutZaps.length === 0) {
+    console.log("All concepts have knowledge zap questions.");
+    return [];
+  }
+
+  console.log(`Found ${conceptsWithoutZaps.length} concepts without knowledge zaps:`);
+  conceptsWithoutZaps.forEach(concept => {
+    console.log(`- Concept ID: ${concept.id}, Text: ${concept.text}`);
+  });
+} 
+
+export async function findKnowledgeZapQuestionsWithoutConcepts() {
+  // Get all knowledge zap questions that don't have any associated concepts
+  const questionsWithoutConcepts = await db
+    .select({
+      id: knowledgeZapQuestions.id,
+      question: knowledgeZapQuestions.question,
+      type: knowledgeZapQuestions.type
+    })
+    .from(knowledgeZapQuestions)
+    .leftJoin(
+      knowledgeZapQuestionsToConcepts,
+      eq(knowledgeZapQuestionsToConcepts.questionId, knowledgeZapQuestions.id)
+    )
+    .where(isNull(knowledgeZapQuestionsToConcepts.id));
+
+  if (questionsWithoutConcepts.length === 0) {
+    console.log("All knowledge zap questions have concepts associated.");
+    return [];
+  }
+
+  console.log(`Found ${questionsWithoutConcepts.length} questions without concepts:`);
+  questionsWithoutConcepts.forEach(question => {
+    console.log(`- Question ID: ${question.id}, Type: ${question.type}`);
+  });
+
+  return questionsWithoutConcepts;
+}
+
+export async function createConceptTrackerForAllKnowledgeZapAttempts() {
+  const attempts = await db
+    .select({
+      questionAttemptId: knowledgeZapQuestionAttempts.id,
+      userId: knowledgeZapAssignmentAttempts.userId,
+      activityId: knowledgeZapAssignmentAttempts.activityId,
+      classroomId: activity.classroomId,
+      questionId: knowledgeZapQuestionAttempts.questionId,
+      conceptId: knowledgeZapQuestionsToConcepts.conceptId,
+      isCorrect: knowledgeZapQuestionAttempts.isCorrect,
+      createdAt: knowledgeZapQuestionAttempts.createdAt
+    })
+    .from(knowledgeZapQuestionAttempts)
+    .innerJoin(
+      knowledgeZapAssignmentAttempts,
+      eq(knowledgeZapQuestionAttempts.attemptId, knowledgeZapAssignmentAttempts.id)
+    )
+    .innerJoin(
+      knowledgeZapQuestionsToConcepts,
+      eq(knowledgeZapQuestionAttempts.questionId, knowledgeZapQuestionsToConcepts.questionId)
+    )
+    .innerJoin(
+      activity,
+      eq(knowledgeZapAssignmentAttempts.activityId, activity.id)
+    );
+
+  // Print summary statistics
+  console.log(`Total attempts found: ${attempts.length}`);
+  console.log(`Unique users: ${new Set(attempts.map(a => a.userId)).size}`);
+  console.log(`Unique concepts: ${new Set(attempts.map(a => a.conceptId)).size}`);
+  console.log("\nDetailed attempts data:");
+  
+  // Print the data in table format with date
+  console.table(attempts.map(attempt => ({
+    Date: attempt.createdAt,
+    User: attempt.userId?.substring(0, 8) + "...",
+    Activity: attempt.activityId?.substring(0, 8) + "...",
+    Question: attempt.questionId?.substring(0, 8) + "...",
+    Concept: attempt.conceptId?.substring(0, 8) + "...",
+    Correct: attempt.isCorrect ? "✓" : "✗"
+  })));
+
+  // Create concept tracking records for each attempt
+  for (const attempt of attempts) {
+    await db.insert(conceptTracking).values({
+      id: generateId(21),
+      isCorrect: attempt.isCorrect,
+      conceptId: attempt.conceptId,
+      userId: attempt.userId,
+      classroomId: attempt.classroomId,
+      activityType: ActivityType.KnowledgeZap,
+      createdAt: attempt.createdAt,
+      updatedAt: attempt.createdAt,
+    });
   }
 }

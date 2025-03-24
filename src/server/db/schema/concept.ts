@@ -59,6 +59,7 @@ export const conceptRelationsToTopics = relations(conceptsToTopics, ({ one }) =>
 
 export const conceptTracking = pgTable("concept_tracking", {
   id: varchar("id", { length: 21 }).primaryKey(),
+  isCorrect: boolean("is_correct").notNull(),
   conceptId: varchar("concept_id", { length: 36 }).references(() => concepts.id),
   userId: varchar("user_id", { length: 21 }).references(() => users.id),
   classroomId: varchar("classroom_id", { length: 21 }).references(() => classrooms.id),

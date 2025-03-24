@@ -30,7 +30,6 @@ export default function ConfirmationModal({
           <LoadingButton 
             className="bg-amber-700 text-white hover:bg-amber-900"
             loading={loading}
-            disabled={loading}
             onClick={onSubmit}>
             Submit
           </LoadingButton>

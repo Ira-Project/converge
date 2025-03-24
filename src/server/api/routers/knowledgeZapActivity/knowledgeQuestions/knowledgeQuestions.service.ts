@@ -6,14 +6,33 @@ import { knowledgeZapQuestionAttempts } from "@/server/db/schema/knowledgeZap/kn
 import { matchingAttempt, matchingAttemptSelection, matchingQuestions } from "@/server/db/schema/knowledgeZap/matchingQuestions";
 import { multipleChoiceAttempt, multipleChoiceQuestions } from "@/server/db/schema/knowledgeZap/multipleChoiceQuestions";
 import { orderingAttempt, orderingAttemptSelection, orderingQuestions } from "@/server/db/schema/knowledgeZap/orderingQuestions";
+import { conceptTracking } from "@/server/db/schema/concept";
+import { ActivityType } from "@/lib/constants";
+import { knowledgeZapAssignmentAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
 
 export const checkMatchingAnswer = async (ctx: ProtectedTRPCContext, input: CheckMatchingAnswerInput) => {
   const { assignmentAttemptId, matchingQuestionId, questionId, answer } = input;
+
+  const assignmentAttempt = await ctx.db.query.knowledgeZapAssignmentAttempts.findFirst({
+    where: eq(knowledgeZapAssignmentAttempts.id, assignmentAttemptId),
+    with: {
+      activity: true
+    }
+  });
+
+  if (!assignmentAttempt?.activity?.classroomId) {
+    throw new Error("Classroom ID not found for this activity");
+  }
 
   const matchingQuestion = await ctx.db.query.matchingQuestions.findFirst({
     where: eq(matchingQuestions.id, matchingQuestionId),
     with: {
       options: true,
+      question: {
+        with: {
+          questionsToConcepts: true,
+        }
+      }
     }
   });
 
@@ -61,6 +80,23 @@ export const checkMatchingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
     })
   );
 
+  if (matchingQuestion?.question.questionsToConcepts) {
+    await Promise.all(
+      matchingQuestion.question.questionsToConcepts.map((concept) =>
+        ctx.db.insert(conceptTracking).values({
+          id: generateId(21),
+          conceptId: concept.conceptId,
+          userId: ctx.user.id,
+          classroomId: assignmentAttempt?.activity?.classroomId,
+          activityType: ActivityType.KnowledgeZap,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          isCorrect: correct ?? false,
+        })
+      )
+    );
+  }
+
   return {
     correct: correct ?? false,
   };
@@ -70,10 +106,26 @@ export const checkMatchingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
 export const checkMultipleChoiceAnswer = async (ctx: ProtectedTRPCContext, input: CheckMultipleChoiceAnswerInput) => {
   const { assignmentAttemptId, multipleChoiceQuestionId, questionId, answerOptionId } = input;
 
+  const assignmentAttempt = await ctx.db.query.knowledgeZapAssignmentAttempts.findFirst({
+    where: eq(knowledgeZapAssignmentAttempts.id, assignmentAttemptId),
+    with: {
+      activity: true
+    }
+  });
+
+  if (!assignmentAttempt?.activity?.classroomId) {
+    throw new Error("Classroom ID not found for this activity");
+  }
+
   const multipleChoiceQuestion = await ctx.db.query.multipleChoiceQuestions.findFirst({
     where: eq(multipleChoiceQuestions.id, multipleChoiceQuestionId),
     with: {
       options: true,
+      question: {
+        with: {
+          questionsToConcepts: true,
+        }
+      }
     }
   });
 
@@ -96,6 +148,23 @@ export const checkMultipleChoiceAnswer = async (ctx: ProtectedTRPCContext, input
     isCorrect: correct ?? false,
   });
 
+  if (multipleChoiceQuestion?.question.questionsToConcepts) {
+    await Promise.all(
+      multipleChoiceQuestion.question.questionsToConcepts.map((concept) =>
+        ctx.db.insert(conceptTracking).values({
+          id: generateId(21),
+          conceptId: concept.conceptId,
+          userId: ctx.user.id,
+          classroomId: assignmentAttempt?.activity?.classroomId,
+          activityType: ActivityType.KnowledgeZap,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          isCorrect: correct ?? false,
+        })
+      )
+    );
+  }
+
   return {
     correct: correct ?? false,
   };
@@ -105,10 +174,26 @@ export const checkMultipleChoiceAnswer = async (ctx: ProtectedTRPCContext, input
 export const checkOrderingAnswer = async (ctx: ProtectedTRPCContext, input: CheckOrderingAnswerInput) => {
   const { assignmentAttemptId, orderingQuestionId, questionId, answer } = input;
 
+  const assignmentAttempt = await ctx.db.query.knowledgeZapAssignmentAttempts.findFirst({
+    where: eq(knowledgeZapAssignmentAttempts.id, assignmentAttemptId),
+    with: {
+      activity: true
+    }
+  });
+
+  if (!assignmentAttempt?.activity?.classroomId) {
+    throw new Error("Classroom ID not found for this activity");
+  }
+
   const orderingQuestion = await ctx.db.query.orderingQuestions.findFirst({
     where: eq(orderingQuestions.id, orderingQuestionId),
     with: {
       options: true,
+      question: {
+        with: {
+          questionsToConcepts: true,
+        }
+      }
     }
   });
 
@@ -152,6 +237,23 @@ export const checkOrderingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
       });
     })
   );
+
+  if (orderingQuestion?.question.questionsToConcepts) {
+    await Promise.all(
+      orderingQuestion.question.questionsToConcepts.map((concept) =>
+        ctx.db.insert(conceptTracking).values({
+          id: generateId(21),
+          conceptId: concept.conceptId,
+          userId: ctx.user.id,
+          classroomId: assignmentAttempt?.activity?.classroomId,
+          activityType: ActivityType.KnowledgeZap,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+          isCorrect: correct ?? false,
+        })
+      )
+    );
+  }
 
   return {
     correct: correct ?? false,
