@@ -40,7 +40,6 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
     filteredActivities = activities.filter((activity) => activity.activities.some((a) => a.isLive));
   }
   
-  // TODO: Add Analytics
   const navMain = [
     {
       title: "Topics",
