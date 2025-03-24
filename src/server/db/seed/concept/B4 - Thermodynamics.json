@@ -1,7 +1,5 @@
 {
     "delimeter": "$!$",
-    "topicIdDev": "6PPsDBZy9nMXjt6GeUcOp",
-    "topicIdProd": "jA5iZ5cKkLy1GIvdT30HQ",
     "chapter_text": "Here's a concise summary of the thermodynamic concepts covered in the document, organized into sections with associated formulas:\n\n**1. Internal Energy**\n\n*   **Internal Energy (U):** The total random kinetic energy of the particles in a gas plus the potential energy associated with intermolecular forces. For an ideal gas, intermolecular forces are zero.\n*   **Change in Internal Energy (\u0394U):**\n\n    *   \u0394U =  \\frac{3}{2}Nk\\Delta T\n    *   \u0394U =  \\frac{3}{2}nR\\Delta T\n    *   \u0394U =  \\frac{3}{2}V\\Delta P (if V = const)\n    *   \u0394U =  \\frac{3}{2}\\Delta(PV) (if P = const)\n\n**2. Thermodynamic Processes**\n\n*   **Isothermal Process:** Temperature (T) remains constant.\n    *   Formula:  P\u2081V\u2081 = P\u2082V\u2082\n*   **Isobaric Process:** Pressure (P) remains constant.\n    *   Formula:  \\frac{V_1}{T_1} =  \\frac{V_2}{T_2}\n*   **Isovolumetric Process:** Volume (V) remains constant.\n    *   Formula: \\frac{P_1}{T_1} =  \\frac{P_2}{T_2}\n*   **Adiabatic Process:** No heat (Q) enters or leaves the system.\n    *   Formula:  P\u2081V\u2081^{\\frac{5}{3}} = P\u2082V\u2082^{\\frac{5}{3}}\n    *   Formula:  TV^{\\frac{2}{3}} = constant\n\n**3. Work Done in Thermodynamics**\n\n*   **Work Done at Constant Pressure (W):**\n    *   Formula: W = P\u0394V\n*   **General Work Done:** The area under the curve on a pressure-volume (P-V) diagram.\n\n**4. The First Law of Thermodynamics**\n\n*   **Statement:** The amount of heat (Q) given to a system is used to increase its internal energy (\u0394U) and/or do work (W).\n    *   Formula: Q = \u0394U + W\n*   **Sign Conventions:**\n    *   Q > 0: Heat is supplied to the system.\n    *   Q < 0: Heat is removed from the system.\n    *   \u0394U > 0: Internal energy and temperature increase.\n    *   \u0394U < 0: Internal energy and temperature decrease.\n    *   W > 0: Work is done by the gas (expansion).\n    *   W < 0: Work is done on the gas (compression).\n\n**5. The Second Law of Thermodynamics and Entropy**\n\n*   **Entropy (S):** A measure of the disorder of a system.  Systems evolve towards increasing disorder.\n*   **Change in Entropy (\u0394S):**\n    *   Formula: \u0394S = \\frac{Q}{T}\n*   **Second Law Statement:** The entropy of an isolated system never decreases.\n*   **Boltzmann's Entropy Formula:**\n\n    *   Formula: S = k ln \u03a9  (k is the Boltzmann constant, \u03a9 is the number of microstates)\n\n**6. Heat Engines**\n\n*   **Heat Engine:** A device that transfers thermal energy to mechanical energy to perform work.\n*   **Efficiency of a Heat Engine (\u03b7):**\n    *   Formula: \u03b7 = \\frac{useful work}{input energy} = \\frac{W}{Q_H} = 1 -  \\frac{Q_C}{Q_H}\n*   **Carnot Cycle:** A theoretical thermodynamic cycle consisting of two isothermal and two adiabatic processes.\n*   **Carnot Efficiency:** The maximum possible efficiency for an engine operating between two temperatures.\n    *   Formula: \u03b7 = 1 - \\frac{T_C}{T_H}",
     "chapter_concepts": [
         {
@@ -55,8 +53,8 @@
         },
         {
             "concept_id": "fdfe5e2f-277b-4863-9d18-205e9f833b35",
-            "concept_question": "What is general work in thermodynamics?",
-            "concept_answer": "General work in thermodynamics is represented by the area under a pressure-volume diagram.",
+            "concept_question": "How can we calculate work done from a P-V diagram?",
+            "concept_answer": "Work done is represented by the area under a pressure-volume diagram.",
             "concept_formula": [],
             "pre-requisites": []
         },
@@ -168,6 +166,20 @@
                 "eb2ed1a7-e528-4b88-8bd6-db3a653c73cf",
                 "2627d205-8411-4005-b844-ebf08203f968"
             ]
+        },
+        {
+            "concept_id": "33d336d8-e822-4e6a-b221-0189c28fe43b",
+            "concept_question": "What is a closed system?",
+            "concept_answer": "A closed system is a system that does not exchange matter with its surroundings.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "848a6db8-1e4a-42d9-a919-27796882a956",
+            "concept_question": "What is an isolated system?",
+            "concept_answer": "An isolated system is a system that does not exchange matter or energy with its surroundings.",
+            "concept_formula": [],
+            "pre-requisites": []
         }
     ]
 }
