@@ -37,7 +37,7 @@ export const knowledgeZapQuestionRelations = relations(knowledgeZapQuestions, ({
     fields: [knowledgeZapQuestions.topicId],
     references: [topics.id],
   }),
-  knowledgeZapQuestionsToConcepts: many(knowledgeZapQuestionsToConcepts),
+  questionsToConcepts: many(knowledgeZapQuestionsToConcepts),
 }));
 
 
@@ -103,7 +103,7 @@ export const knowledgeZapQuestionsToConcepts = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     questionId: varchar("question_id", { length: 21 }).notNull().references(() => knowledgeZapQuestions.id),
-    conceptId: varchar("concept_id", { length: 21 }).notNull().references(() => concepts.id),
+    conceptId: varchar("concept_id", { length: 36 }).notNull().references(() => concepts.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),

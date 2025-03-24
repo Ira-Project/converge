@@ -13,6 +13,7 @@ import { conceptsToTopics } from "../../schema/concept";
 export async function createConcepts(topicName: string) {
   // Parameters for assignment creation
   const { default: data } = await import( `./${topicName}.json`, { assert: { type: "json" } });
+
   
   const topicId = process.env.ENVIRONMENT === "prod" ? data.topicIdProd : data.topicIdDev;
   const topic = await db.select().from(topics).where(
