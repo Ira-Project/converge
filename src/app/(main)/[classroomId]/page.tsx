@@ -4,6 +4,7 @@ import { UploadLessonPlanForm } from './_components/upload-lesson-plan-form';
 import Image from "next/image";
 import { validateRequest } from '@/lib/auth/validate-request';
 import { Roles } from '@/lib/constants';
+import TopicList from './_components/topic-list';
 
 export default async function ClassroomPage(props: { params: Promise<{ classroomId: string }> }) {
   const [{ user }, params] = await Promise.all([
@@ -39,11 +40,11 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
 
       {/* Topics */}
       <div className="px-4 mt-40 flex flex-col gap-8 w-full">
-        {topics?.map((topic, index) => (
-          <div key={index}>
-            <TopicSection topic={topic} role={userToClassroom?.role ?? Roles.Student} classroomId={params.classroomId}/>
-          </div>
-        ))}
+        <TopicList 
+          topics={topics ?? []} 
+          role={userToClassroom?.role ?? Roles.Student} 
+          classroomId={params.classroomId}
+        />
       </div>
 
       {/* Upload Lesson Plan */}
