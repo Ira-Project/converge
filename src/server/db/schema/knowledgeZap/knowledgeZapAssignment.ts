@@ -24,6 +24,7 @@ export const knowledgeZapAssignments = pgTable(
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
     isDeleted: boolean("is_deleted").default(false).notNull(),
     deletedAt: timestamp("deleted_at", { mode: "date" }),
+    isLatest: boolean("is_latest").default(true).notNull(),
   }
 );
 

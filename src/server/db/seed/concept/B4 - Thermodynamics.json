@@ -55,8 +55,8 @@
         },
         {
             "concept_id": "fdfe5e2f-277b-4863-9d18-205e9f833b35",
-            "concept_question": "What is general work in thermodynamics?",
-            "concept_answer": "General work in thermodynamics is represented by the area under a pressure-volume diagram.",
+            "concept_question": "How can we calculate work done from a P-V diagram?",
+            "concept_answer": "Work done is represented by the area under a pressure-volume diagram.",
             "concept_formula": [],
             "pre-requisites": []
         },
@@ -168,6 +168,20 @@
                 "eb2ed1a7-e528-4b88-8bd6-db3a653c73cf",
                 "2627d205-8411-4005-b844-ebf08203f968"
             ]
+        },
+        {
+            "concept_id": "33d336d8-e822-4e6a-b221-0189c28fe43b",
+            "concept_question": "What is a closed system?",
+            "concept_answer": "A closed system is a system that does not exchange matter with its surroundings.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "848a6db8-1e4a-42d9-a919-27796882a956",
+            "concept_question": "What is an isolated system?",
+            "concept_answer": "An isolated system is a system that does not exchange matter or energy with its surroundings.",
+            "concept_formula": [],
+            "pre-requisites": []
         }
     ]
 }

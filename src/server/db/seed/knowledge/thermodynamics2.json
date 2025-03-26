@@ -1,0 +1,925 @@
+{
+    "name": "Thermodynamics",
+    "topicIdDev": "6PPsDBZy9nMXjt6GeUcOp",
+    "topicIdProd": "jA5iZ5cKkLy1GIvdT30HQ",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "585f539c01594c84978bc",
+            "concepts": [
+                "83ac7906-4640-4e92-bb9b-467af00d64a8"
+            ],
+            "variants": [
+                {
+                    "id": "492d0ab9d0ef4521b6a5c",
+                    "question": "Which of the following statements best defines internal energy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The total energy of a system including its kinetic and potential energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The sum of the kinetic and potential energies of the particles within a system.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The energy transferred as heat during a thermodynamic process.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The energy associated with the motion of a system as a whole.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "19ae8a12bbe34dbcaece3",
+                    "question": "If the kinetic energy of all the particles in a system is doubled, and the potential energy of all the particles remains constant, how does the internal energy of the system change?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It increases, but not necessarily by double.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0a5749dfd87843e5bed0b",
+                    "question": "Which of the following contribute to the internal energy of an ideal gas?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The kinetic energy of the gas molecules.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The potential energy due to intermolecular forces between the gas molecules.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The rotational and vibrational energy of the gas molecules.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The gravitational potential energy of the gas molecules due to their height above the ground.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "1a1e177501074cc8acb44",
+            "concepts": [
+                "35102425-1120-416a-af92-53ff2007c713"
+            ],
+            "variants": [
+                {
+                    "id": "aadc80130bde43f393bce",
+                    "question": "In an isothermal process, which of the following remains constant?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Pressure",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Volume",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Temperature",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Internal Energy",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fbd724312362412e93bc2",
+                    "question": "Which of the following statements regarding an isothermal process is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The temperature of the system remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Heat can be exchanged with the surroundings.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The internal energy of an ideal gas remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "No work is done by or on the system.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4961c2946aca4812b37be",
+                    "question": "A container of ideal gas undergoes an isothermal expansion at 300 K, doubling its volume. If the initial pressure was $!$2 \\times 10^5 \\text{ Pa}$!$, what is the final pressure in Pascals?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$4 \\times 10^5 \\text{ Pa}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2 \\times 10^5 \\text{ Pa}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1 \\times 10^5 \\text{ Pa}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$0.5 \\times 10^5 \\text{ Pa}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "42beee7c6e7a4a66b546b",
+            "concepts": [
+                "6b9a3453-b091-4328-827e-1b1b99fdc62f"
+            ],
+            "variants": [
+                {
+                    "id": "1f707d87579c4a559e6de",
+                    "question": "Which equation represents the change in internal energy ($!$\\Delta U$!$) of an ideal gas?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\Delta U = Q + W$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\Delta U = \\frac{3}{2} nR\\Delta T$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\Delta U = nC_v\\Delta T$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\Delta U = \\Delta Q$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "6a3b9076edc3479a8e3c4",
+                    "question": "Which of the following equations correctly represent the change in internal energy ($!$\\Delta U$!$) of an ideal gas? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$\\Delta U = Q + W$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\Delta U = \\frac{3}{2} nR\\Delta T$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\Delta U = nC_v\\Delta T$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\Delta U = \\Delta Q$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "033c36ab1f0a4b739f449",
+                    "question": "For an ideal gas undergoing an isochoric process, if the absolute temperature ($!$\\Delta T$!$) is doubled, what happens to the change in internal energy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "7b7b0e34e17243ed96f28",
+            "concepts": [
+                "a65d2074-4916-4415-ae69-7e9a255f26f2"
+            ],
+            "variants": [
+                {
+                    "id": "4f4fd09c40224619b8ee0",
+                    "question": "What is true for an adiabatic process?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "No heat exchange occurs.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Temperature remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pressure remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Volume remains constant.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "18d14f6afff949ef92c1e",
+                    "question": "Which of the following statements are true for an adiabatic process? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "No heat is exchanged between the system and its surroundings.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The temperature of the system remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The internal energy of the system remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The work done by the system is equal to the change in its internal energy.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "1bf5ad4ce5354307a308c",
+                    "question": "In an adiabatic process, if the volume of an ideal gas is halved, what happens to its temperature?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It increases but is not necessarily doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It decreases.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "bd6593ee8ff44578ba24d",
+            "concepts": [
+                "ea914822-cf42-4557-b08f-5f35daecfc70"
+            ],
+            "variants": [
+                {
+                    "id": "8d707d79d2a74f2da8d60",
+                    "question": "According to the First Law of Thermodynamics:",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Energy cannot be created or destroyed, only transferred or converted.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The entropy of an isolated system always increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Heat flows spontaneously from a colder body to a hotter body.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Perpetual motion machines are possible.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fb22529da9694a2cb4c1a",
+                    "question": "Which of the following statements about the First Law of Thermodynamics is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Energy cannot be created or destroyed, but it can be transferred from one form to another.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In an isolated system, the total energy remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The change in internal energy of a system is equal to the heat added to the system minus the work done by the system.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A perpetual motion machine of the first kind is possible, which can produce work without consuming energy.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "97898b5629b54fd787941",
+                    "question": "A gas is enclosed in a cylinder with a movable piston. If 200 J of heat is added to the system and the system does 100 J of work on the surroundings, what is the change in internal energy ($!$ \\Delta U !$!$) of the system according to the First Law of Thermodynamics?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$ \\Delta U = 100 \\text{ J} !$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$ \\Delta U = -100 \\text{ J} !$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$ \\Delta U = 200 \\text{ J} !$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$ \\Delta U = 300 \\text{ J} !$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "61d4f88939854c49a363b",
+            "concepts": [
+                "10ec3f29-b38b-4c50-a614-0bae695feb56"
+            ],
+            "variants": [
+                {
+                    "id": "a828a3f3ff5b4370860e6",
+                    "question": "A gas expands from volume $!$V_1$!$ to $!$V_2$!$ at constant pressure $!$P$!$. What is the work done by the gas?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$W = P(V_2 - V_1)$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$W = P(V_1 - V_2)$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$W = \\frac{P}{V_2 - V_1}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$W = 0$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "339214334b2d4302b646d",
+                    "question": "Which of the following statements is correct regarding the work done by a gas during expansion at constant pressure?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The work done is positive if the gas expands.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The work done is negative if the gas expands.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The work done is zero if the gas expands.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The work done is independent of the pressure.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d0a41af4e0d94d2db23d2",
+                    "question": "A gas expands at a constant pressure $!$P$!$ from volume $!$V_1$!$ to $!$V_2$!$. If the pressure is doubled, what happens to the work done by the gas?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The work done is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The work done is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The work done is quadrupled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The work done remains the same.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "e1f539f1de5042e887845",
+            "concepts": [
+                "f09c9f23-33c2-4305-94b6-2390bc04ae54"
+            ],
+            "variants": [
+                {
+                    "id": "ce0b14fa4f2640549ebd5",
+                    "question": "Which of the following describes entropy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A measure of order in a system.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A measure of disorder or randomness in a system.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total energy of a system.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The temperature of a system.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5ad087ba160548939929d",
+                    "question": "Which of the following statements regarding entropy are correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Entropy is a measure of order in a system.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Entropy always increases in an isolated system.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Entropy can be decreased by doing work on a system.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Entropy is zero at absolute zero temperature for a perfect crystal.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e12620f965fc4267b5390",
+                    "question": "A system absorbs 500 J of heat and does 200 J of work on its surroundings. What is the change in entropy of the system if the temperature is constant at 300 K?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$1 \\text{ J/K}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$1.67 \\text{ J/K}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2.33 \\text{ J/K}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.33 \\text{ J/K}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "c93858f191be4c2a86606",
+            "concepts": [
+                "1f71288d-a8e1-4128-b6e3-eb8979a0a9b7"
+            ],
+            "variants": [
+                {
+                    "id": "7bd8b634a4ec4477b9b7b",
+                    "question": "What does the Second Law of Thermodynamics state about entropy?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The entropy of an isolated system can only decrease.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The entropy of an isolated system can only increase or remain constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Entropy is always conserved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Entropy has no relation to isolated systems.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8ed9b61dc6c34338b5420",
+                    "question": "Which of the following statements are consistent with the Second Law of Thermodynamics? Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The total entropy of an isolated system can only increase over time or remain constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Natural processes tend to evolve towards states of greater disorder.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Heat can spontaneously flow from a colder body to a hotter body.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is possible to create a perfect heat engine that converts all heat input into work.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "7da923c2d8be41b58093b",
+                    "question": "Consider an isolated system undergoing a process that doubles its volume. Assuming ideal gas behavior and constant temperature, what happens to the entropy of the system?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The entropy of the system remains unchanged.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The entropy of the system doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The entropy of the system increases, but not necessarily by a factor of two.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The entropy of the system decreases.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "cc95218022024915b4f17",
+            "concepts": [
+                "eb2ed1a7-e528-4b88-8bd6-db3a653c73cf"
+            ],
+            "variants": [
+                {
+                    "id": "2f6c7121460c464dbc841",
+                    "question": "What is a Carnot cycle?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "A theoretical thermodynamic cycle with maximum efficiency.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A cycle that describes the operation of a refrigerator.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A cycle that converts mechanical work into heat.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A cycle that violates the Second Law of Thermodynamics.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fe3a357e49fc4832884ba",
+                    "question": "Which of the following statements about the Carnot cycle is INCORRECT?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It is a theoretical cycle.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It consists of two isothermal and two adiabatic processes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It has the maximum possible efficiency for a heat engine operating between two given temperatures.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It can be practically implemented in real-world engines.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "055800326b834403b72d2",
+                    "question": "A Carnot engine operates between two heat reservoirs. What happens to the efficiency of the engine if the temperature of the cold reservoir is halved, keeping the temperature of the hot reservoir constant?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The efficiency increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The efficiency decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The efficiency remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The efficiency becomes zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "e320f5e53b354c8986cb1",
+            "concepts": [
+                "90e98009-ab75-4444-acc8-f75a8a6f2fcb"
+            ],
+            "variants": [
+                {
+                    "id": "63d37b99fe4145d2b5e45",
+                    "question": "What does Boltzmann's entropy formula, $!$S = k \\ln \\Omega$!$, relate entropy to?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "Temperature",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pressure",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The number of microstates of a system.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Internal energy",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3a8cb271376b42eeb0684",
+                    "question": "Which of the following statements regarding Boltzmann's entropy formula, $!$S = k \\ln \\Omega$!$, is correct?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "It relates entropy to the temperature of a system.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It relates entropy to the pressure of a system.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It relates entropy to the number of microstates of a system.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It relates entropy to the internal energy of a system.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8a4da535730c40fea11e6",
+                    "question": "If a system has $!$10^{23}$!$ microstates, what is its entropy according to Boltzmann's formula ($!$k = 1.38 \\times 10^{-23} \\, J/K$!$)?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$1.38 \\, J/K$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$13.8 \\, J/K$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$30.34 \\, J/K$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$23 \\, J/K$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "a7131eafcb00449184625",
+            "concepts": [
+                "fd04f7d4-aca6-4fa8-a6af-850d9be1e084"
+            ],
+            "variants": [
+                {
+                    "id": "59e2587cc0124b5792529",
+                    "question": "A heat engine operates between a hot reservoir at $!$T_H$!$ and a cold reservoir at $!$T_C$!$. What is its maximum theoretical efficiency?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$1 - \\frac{T_C}{T_H}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\frac{T_C}{T_H}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{T_H}{T_C}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1 + \\frac{T_C}{T_H}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1cd81c9de0df4e4aa383e",
+                    "question": "A heat engine operates between a hot reservoir at 600 K and a cold reservoir at 300 K. What is its maximum theoretical efficiency?",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "$!$0.2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.5$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$0.7$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "76c6be6267db4525ab534",
+                    "question": "Which of the following statements are true regarding the efficiency of a Carnot engine?  Select all that apply.",
+                    "image": "",
+                    "options": [
+                        {
+                            "option_text": "The efficiency depends on the working substance used in the engine.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The efficiency is always less than 100%.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The efficiency can be improved by increasing the temperature of the hot reservoir.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The efficiency can be improved by decreasing the temperature of the cold reservoir.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "ddc583ee8644459b88d4d",
+            "concepts": [
+                "35102425-1120-416a-af92-53ff2007c713",
+                "a65d2074-4916-4415-ae69-7e9a255f26f2",
+                "10ec3f29-b38b-4c50-a614-0bae695feb56",
+                "6b9a3453-b091-4328-827e-1b1b99fdc62f"
+            ],
+            "variants": [
+                {
+                    "id": "17990b77e036458eb601b",
+                    "question": "Match the thermodynamic process with its corresponding formula:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Isothermal Process",
+                            "optionB": "$!$P_1V_1 = P_2V_2$!$"
+                        },
+                        {
+                            "optionA": "Adiabatic Process",
+                            "optionB": "$!$P_1V_1^{\\frac{5}{3}} = P_2V_2^{\\frac{5}{3}}$!$"
+                        },
+                        {
+                            "optionA": "Work at constant pressure",
+                            "optionB": "$!$W = P\\Delta V$!$"
+                        },
+                        {
+                            "optionA": "Change in Internal Energy",
+                            "optionB": "$!$\\Delta U = \\frac{3}{2}nR\\Delta T$!$"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

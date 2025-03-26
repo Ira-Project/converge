@@ -4,7 +4,7 @@ import { classrooms, usersToClassrooms } from "@/server/db/schema/classroom";
 import { db } from "@/server/db";
 import { ActivityType, Roles } from "@/lib/constants";
 import { activity } from "@/server/db/schema/activity";
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 import { knowledgeZapAssignments } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
 import { stepSolveAssignments } from "@/server/db/schema/stepSolve/stepSolveAssignment";
 import { reasoningAssignments } from "@/server/db/schema/reasoning/reasoningAssignment";
@@ -45,7 +45,12 @@ export async function createClassroom(
   });
 
   // Get all knowledge zap assignments
-  const kza = await db.select().from(knowledgeZapAssignments).where(eq(knowledgeZapAssignments.isDeleted, false));
+  const kza = await db.select().from(knowledgeZapAssignments).where(
+    and(
+      eq(knowledgeZapAssignments.isDeleted, false), 
+      eq(knowledgeZapAssignments.isLatest, true)
+    )
+  );
   for(const knowledgeZapAssignment of kza) {
     await db.insert(activity).values({
       id: generateId(21),
@@ -57,7 +62,6 @@ export async function createClassroom(
       typeText: ActivityType.KnowledgeZap,
       order: 0,
       points: 100,
-
     })
   }
 

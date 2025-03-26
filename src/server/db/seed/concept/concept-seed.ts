@@ -13,7 +13,6 @@ import { conceptsToTopics } from "../../schema/concept";
 export async function createConcepts(topicName: string) {
   // Parameters for assignment creation
   const { default: data } = await import( `./${topicName}.json`, { assert: { type: "json" } });
-
   
   const topicId = process.env.ENVIRONMENT === "prod" ? data.topicIdProd : data.topicIdDev;
   const topic = await db.select().from(topics).where(
@@ -34,19 +33,40 @@ export async function createConcepts(topicName: string) {
   console.log(`Total concepts to create: ${data.chapter_concepts.length}`)
   
   for (const concept of data.chapter_concepts) {
-    console.log(`Creating concept: ${concept.concept_question}`)
+    // Check if concept already exists
+    const existingConcept = await db.select()
+      .from(concepts)
+      .where(eq(concepts.id, concept.concept_id as string));
+
+    if (existingConcept.length > 0) {
+      console.log(`Concept already exists: ${concept.concept_question}`);
+      continue;
+    }
+
+    console.log(`Creating concept: ${concept.concept_question}`);
     await db.insert(concepts).values({
       id: concept.concept_id,
       text: concept.concept_question,
       answerText: concept.concept_answer,
       formulas: concept.concept_formula,
-    })
-    console.log(`Created concept to topic: ${concept.concept_question}`)
-    await db.insert(conceptsToTopics).values({
-      id: generateId(21),
-      conceptId: concept.concept_id,
-      topicId: topicId as string,
-    })
+    });
+
+    console.log(`Created concept to topic: ${concept.concept_question}`);
+    // Check if concept-topic relationship already exists
+    const existingConceptTopic = await db.select()
+      .from(conceptsToTopics)
+      .where(and(
+        eq(conceptsToTopics.conceptId, concept.concept_id as string),
+        eq(conceptsToTopics.topicId, topicId as string)
+      ));
+
+    if (existingConceptTopic.length === 0) {
+      await db.insert(conceptsToTopics).values({
+        id: generateId(21),
+        conceptId: concept.concept_id,
+        topicId: topicId as string,
+      });
+    }
   }  
 
   console.log('Creating concept prerequisite edges...')

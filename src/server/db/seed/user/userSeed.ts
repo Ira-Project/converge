@@ -19,6 +19,7 @@ import { knowledgeZapAssignmentAttempts } from "../../schema/knowledgeZap/knowle
 import { explainTestAttempts } from "../../schema/learnByTeaching/explainTestAttempt";
 import { explainComputedAnswers, explanations } from "../../schema/learnByTeaching/explanations";
 import { conceptMappingAttemptEdges, conceptMappingAttemptNodes, conceptMappingAttempts, conceptMappingMapAttempt } from "../../schema/conceptMapping/conceptMappingAttempts";
+import { conceptTracking } from "../../schema/concept";
 
 
 async function deleteStepSolveAttempt(attemptId: string) {
@@ -333,6 +334,7 @@ export async function deleteUser(email: string) {
   await db.delete(passwordResetTokens).where(eq(passwordResetTokens.userId, userId));
   await db.delete(emailVerificationCodes).where(eq(emailVerificationCodes.userId, userId));
   await db.delete(usersToClassrooms).where(eq(usersToClassrooms.userId, userId));
+  await db.delete(conceptTracking).where(eq(conceptTracking.userId, userId));
 
   await db.delete(users).where(eq(users.id, userId));
 
