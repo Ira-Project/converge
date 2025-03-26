@@ -379,7 +379,7 @@
                 },
                 {
                     "id": "651fa544141d4d6b903292883c167c67",
-                    "question": "If the Earth's albedo is 0.3 and the solar constant is 1361 $!$W/m^2!$!$, what is the average temperature of the Earth in Kelvin? (Assume Earth is a black body and use Stefan-Boltzmann constant $!$\\sigma = 5.67 \\times 10^{-8} W/m^2K^4!$!$)",
+                    "question": "If the Earth's albedo is 0.3 and the solar constant is 1361 $!$W/m^2$!$, what is the average temperature of the Earth in Kelvin? (Assume Earth is a black body and use Stefan-Boltzmann constant $!$\\sigma = 5.67 \\times 10^{-8} W/m^2K^4$!$)",
                     "image": "",
                     "options": [
                         {
@@ -791,7 +791,7 @@
                             "is_correct": false
                         },
                         {
-                            "option_text": "$!${100 \n\nover 4\n\npi} W/m^2$!$",
+                            "option_text": "$!${\\frac{100}{4\\pi}} W/m^2$!$",
                             "is_correct": true
                         },
                         {

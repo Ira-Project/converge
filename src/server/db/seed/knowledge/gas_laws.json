@@ -572,7 +572,7 @@
             "variants": [
                 {
                     "id": "762a561b6b9e4155b058ecae082dfc57",
-                    "question": "What is the relationship between pressure ($!$P!$!$), density ($!$\\rho!$!$), and rms speed ($!$c!$!$) of a gas?",
+                    "question": "What is the relationship between pressure ($!$P$!$), density ($!$\\rho$!$), and rms speed ($!$c$!$) of a gas?",
                     "image": "",
                     "options": [
                         {
@@ -596,7 +596,7 @@
                 },
                 {
                     "id": "b6ca373f8f5247edb09467b3019ed775",
-                    "question": "Which of the following statements about the relationship between pressure ($!$P!$!$), density ($!$\\rho!$!$), and rms speed ($!$c!$!$) of a gas is correct?",
+                    "question": "Which of the following statements about the relationship between pressure ($!$P$!$), density ($!$\\rho$!$), and rms speed ($!$c$!$) of a gas is correct?",
                     "image": "",
                     "options": [
                         {
@@ -620,7 +620,7 @@
                 },
                 {
                     "id": "466a49f449ce4b64a3f55b215a284857",
-                    "question": "If the rms speed ($!$c!$!$) of the gas molecules is doubled, and the density ($!$\\rho!$!$) remains constant, what happens to the pressure ($!$P!$!$) of the gas?",
+                    "question": "If the rms speed ($!$c$!$) of the gas molecules is doubled, and the density ($!$\\rho$!$) remains constant, what happens to the pressure ($!$P$!$) of the gas?",
                     "image": "",
                     "options": [
                         {
@@ -676,11 +676,11 @@
                 },
                 {
                     "id": "7308a4400ae1484ba6f229e32b1c822b",
-                    "question": "Which of the following statements is correct regarding the Boltzmann constant ($k$)?",
+                    "question": "Which of the following statements is correct regarding the Boltzmann constant ($!$k$!$)?",
                     "image": "",
                     "options": [
                         {
-                            "option_text": "It relates the gas constant ($R$) to Avogadro's number ($N_A$) such that $k=\\frac{R}{N_A}$",
+                            "option_text": "It relates the gas constant ($!$R$!$) to Avogadro's number ($!$N_A$!$) such that $!$k=\\frac{R}{N_A}$!$",
                             "is_correct": true
                         },
                         {
@@ -700,23 +700,23 @@
                 },
                 {
                     "id": "61310cc4d945494c8635f3693a51b9c5",
-                    "question": "If the temperature of an ideal gas increases by $\\Delta T$, and there are $N$ molecules of the gas present, what is the corresponding change ($\\Delta U$) in the internal energy of the gas?",
+                    "question": "If the temperature of an ideal gas increases by $!$\\Delta T$!$, and there are $!$N$!$ molecules of the gas present, what is the corresponding change ($!$\\Delta U$!$) in the internal energy of the gas?",
                     "image": "",
                     "options": [
                         {
-                            "option_text": "$\\Delta U = \\frac{3}{2} \\cdot N \\cdot k \\cdot \\Delta T$",
+                            "option_text": "$!$\\Delta U = \\frac{3}{2} \\cdot N \\cdot k \\cdot \\Delta T$!$",
                             "is_correct": true
                         },
                         {
-                            "option_text": "$\\Delta U = \\frac{1}{2} \\cdot N \\cdot k \\cdot \\Delta T$",
+                            "option_text": "$!$\\Delta U = \\frac{1}{2} \\cdot N \\cdot k \\cdot \\Delta T$!$",
                             "is_correct": false
                         },
                         {
-                            "option_text": "$\\Delta U = N \\cdot k \\cdot \\Delta T$",
+                            "option_text": "$!$\\Delta U = N \\cdot k \\cdot \\Delta T$!$",
                             "is_correct": false
                         },
                         {
-                            "option_text": "$\\Delta U = 3 \\cdot N \\cdot k \\cdot \\Delta T$",
+                            "option_text": "$!$\\Delta U = 3 \\cdot N \\cdot k \\cdot \\Delta T$!$",
                             "is_correct": false
                         }
                     ],
