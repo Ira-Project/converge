@@ -23,7 +23,7 @@ export const viewport: Viewport = {
 };
 
 import 'katex/dist/katex.min.css';
-import { PostHogProvider } from "@/hooks/posthog";
+import { PostHogProvider } from "@/hooks/posthog-provider";
 
 export default function RootLayout({
   children,
