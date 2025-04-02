@@ -6,7 +6,7 @@ import { topics } from "../../schema/subject";
 
 import conceptMappingJson from "./work_energy_power.json";
 
-import { activity } from "../../schema/activity";
+import { activity, activityToAssignment } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 import { ActivityType } from "@/lib/constants";
 
@@ -191,17 +191,24 @@ export async function createConceptMappingAssignment() {
     // If activity does not exist, create it
     if(existingActivity.length === 0) {
       console.log("Adding assignment to classroom. Creating activity", assignmentId, classroom.id);
+      const activityId = generateId(21);
       await db.insert(activity).values({
-        id: generateId(21),
+        id: activityId,
         assignmentId: assignmentId,
         classroomId: classroom.id,
         name: assignmentName,
         topicId: topicId,
-        type: ActivityType.KnowledgeZap,
         typeText: ActivityType.ConceptMapping,
         order: 0,
         points: 100,
       })
+      await db.insert(activityToAssignment).values({
+        id: generateId(21),
+        activityId: activityId,
+        conceptMappingAssignmentId: assignmentId,
+      })
+      console.log("Activity created", assignmentId, classroom.id);
+
     }
   }
 
@@ -248,6 +255,9 @@ export async function deleteConceptMappingAssignment(assignmentId: string) {
     console.log("Deleting concept mapping node", node.id);
     await db.delete(conceptMappingNodes).where(eq(conceptMappingNodes.id, node.id));
   }
+
+  console.log("Deleting activity to assignment", assignmentId);
+  await db.delete(activityToAssignment).where(eq(activityToAssignment.conceptMappingAssignmentId, assignmentId));
 
   console.log("Deleting concept mapping activities", assignmentId);
   const activities = await db.select().from(activity).where(eq(activity.assignmentId, assignmentId));

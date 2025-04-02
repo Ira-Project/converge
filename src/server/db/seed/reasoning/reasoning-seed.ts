@@ -10,7 +10,7 @@ import { topics } from "../../schema/subject";
 import reasoningJson from "./thermal_energy_transfers.json";
 import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../../schema/reasoning/reasoningQuestions";
 import { reasoningAssignmentAttempts, reasoningAssignments, } from "../../schema/reasoning/reasoningAssignment";
-import { activity } from "../../schema/activity";
+import { activity, activityToAssignment } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 import { ActivityType } from "@/lib/constants";
 import { reasoningPathwayAttempts, reasoningAttemptFinalAnswer, reasoningPathwayAttemptSteps } from "../../schema/reasoning/reasoningQuestionAttempts";
@@ -183,17 +183,22 @@ export async function createReasoningAssignment() {
 
     // If activity does not exist, create it
     if (existingActivity.length === 0) {
+      const activityId = generateId(21);
       console.log("Adding assignment to classroom. Creating activity", assignmentId, classroom.id);
       await db.insert(activity).values({
-        id: generateId(21),
+        id: activityId,
         assignmentId: assignmentId,
         classroomId: classroom.id,
         name: assignmentName,
         topicId: topicId,
-        type: ActivityType.ReasonTrace,
         typeText: ActivityType.ReasonTrace,
         order: 0,
         points: 100,
+      })
+      await db.insert(activityToAssignment).values({
+        id: generateId(21),
+        activityId: activityId,
+        reasonTraceAssignmentId: assignmentId,
       })
     }
   }
@@ -255,6 +260,9 @@ export async function deleteReasoningAssignment(assignmentId: string) {
     console.log("Deleting questions", question[0].questionText?.substring(0, 30));
     await db.delete(reasoningQuestions).where(eq(reasoningQuestions.id, question[0].id));
   }
+
+  console.log("Deleting activity to assignment", assignmentId);
+  await db.delete(activityToAssignment).where(eq(activityToAssignment.reasonTraceAssignmentId, assignmentId));
 
   const activities = await db.select().from(activity).where(eq(activity.assignmentId, assignmentId));
   for (const act of activities) {

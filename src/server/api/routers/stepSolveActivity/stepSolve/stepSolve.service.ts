@@ -1,20 +1,29 @@
 import { asc, eq, sql } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import { ActivityType, Roles } from "@/lib/constants";
+import { Roles } from "@/lib/constants";
 import { stepSolveQuestionToAssignment, stepSolveStep } from "@/server/db/schema/stepSolve/stepSolveQuestions";
 import type { CreateStepSolveAssignmentAttemptInput, GetStepSolveAssignmentAnalyticsInput, GetStepSolveAssignmentInput, GetStepSolveAssignmentQuestionAnalyticsInput, GetStepSolveAssignmentSubmissionsInput, SubmitStepSolveAssignmentAttemptInput } from "./stepSolve.input";
 import { stepSolveAssignmentAttempts,  } from "@/server/db/schema/stepSolve/stepSolveAssignment";
 
 
 export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: GetStepSolveAssignmentInput) => {
-  const activity = await ctx.db.query.activity.findFirst({
-    where: (table, { eq }) => eq(table.id, input.activityId),
+  
+  console.log("Getting step solve assignment", input.activityId);
+  const activityToAssignments = await ctx.db.query.activityToAssignment.findMany({
+    where: (table, { eq }) => eq(table.activityId, input.activityId),
+    with: {
+      stepSolveAssignment: true
+    }
   });
 
-  const assignmentId = activity?.assignmentId;
+  console.log("Activity to assignments", activityToAssignments);
 
-  if (!assignmentId || activity?.typeText !== ActivityType.StepSolve as string) {
+  // Get a random assignment from the activity
+  const randomAssignment = activityToAssignments[Math.floor(Math.random() * activityToAssignments.length)];
+  const assignmentId = randomAssignment?.stepSolveAssignment?.id;
+
+  if (!assignmentId) {
     throw new Error("Assignment not found");
   }
 
@@ -76,6 +85,7 @@ export const createStepSolveAssignmentAttempt = async (ctx: ProtectedTRPCContext
   const id = generateId(21);
   await ctx.db.insert(stepSolveAssignmentAttempts).values({
     id: id,
+    assignmentId: input.assignmentId,
     activityId: input.activityId,
     userId: ctx.user.id,
   });
@@ -84,18 +94,8 @@ export const createStepSolveAssignmentAttempt = async (ctx: ProtectedTRPCContext
 
 export const submitStepSolveAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: SubmitStepSolveAssignmentAttemptInput) => {
 
-  const activity = await ctx.db.query.activity.findFirst({
-    where: (table, { eq }) => eq(table.id, input.activityId),
-  });
-
-  const assignmentId = activity?.assignmentId;
-
-  if (!assignmentId || activity?.typeText !== ActivityType.StepSolve as string) {
-    throw new Error("Assignment not found");
-  }
-
   const assignment = await ctx.db.query.stepSolveAssignments.findFirst({
-    where: (table, { eq }) => eq(table.id, assignmentId),
+    where: (table, { eq }) => eq(table.id, input.assignmentId),
     with: {
       stepSolveQuestions: {
         columns: {
@@ -261,7 +261,6 @@ export const getStepSolveAssignmentAnalytics = async (ctx: ProtectedTRPCContext,
       }
     });
   }
-
   
   const averageScore = submissions.length > 0 
     ? submissions.reduce((a, b) => a + (b.completionRate ?? 0), 0) / submissions.length 
@@ -320,33 +319,27 @@ export const getStepSolveAssignmentSubmissions = async (ctx: ProtectedTRPCContex
 }
 
 export const getStepSolveAssignmentQuestionAnalytics = async (ctx: ProtectedTRPCContext, input: GetStepSolveAssignmentQuestionAnalyticsInput) => {
-  // First, get the assignment to fetch question details
-  const activity = await ctx.db.query.activity.findFirst({
-    where: (table, { eq }) => eq(table.id, input.activityId),
-  });
-
-  const assignmentId = activity?.assignmentId;
-  
-  if (!assignmentId || activity?.typeText !== ActivityType.StepSolve as string) {
-    throw new Error("Assignment not found");
-  }
-
-  const assignment = await ctx.db.query.stepSolveAssignments.findFirst({
-    where: (table, { eq }) => eq(table.id, assignmentId),
+  // Get all assignments for this activity directly from activityToAssignment
+  const activityAssignments = await ctx.db.query.activityToAssignment.findMany({
+    where: (table, { eq }) => eq(table.activityId, input.activityId),
     with: {
-      stepSolveQuestions: {
+      stepSolveAssignment: {
         with: {
-          q: {
-            columns: {
-              id: true,
-              questionText: true,
-            },
+          stepSolveQuestions: {
             with: {
-              steps: {
+              q: {
                 columns: {
                   id: true,
-                  stepNumber: true,
-                  stepText: true,
+                  questionText: true,
+                },
+                with: {
+                  steps: {
+                    columns: {
+                      id: true,
+                      stepNumber: true,
+                      stepText: true,
+                    }
+                  }
                 }
               }
             }
@@ -356,6 +349,11 @@ export const getStepSolveAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
     }
   });
 
+  if (!activityAssignments.length) {
+    throw new Error("No assignments found for this activity");
+  }
+
+  // Get all submissions for this activity
   let submissions = [];
   if (ctx.user.role === Roles.Student) {
     submissions = await ctx.db.query.stepSolveAssignmentAttempts.findMany({
@@ -421,17 +419,19 @@ export const getStepSolveAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
     }>
   }>();
 
-  // Initialize the map with questions and steps from the assignment
-  assignment?.stepSolveQuestions.forEach(sq => {
-    const question = sq.q;
-    questionAnalytics.set(question.id, {
-      questionText: question.questionText,
-      steps: new Map(
-        question.steps.map(step => [
-          step.id,
-          { stepText: step.stepText, stepNumber: step.stepNumber, correct: 0, total: 0 }
-        ])
-      )
+  // Initialize the map with questions and steps from all assignments
+  activityAssignments.forEach(assignment => {
+    assignment.stepSolveAssignment?.stepSolveQuestions.forEach(sq => {
+      const question = sq.q;
+      questionAnalytics.set(question.id, {
+        questionText: question.questionText,
+        steps: new Map(
+          question.steps.map(step => [
+            step.id,
+            { stepText: step.stepText, stepNumber: step.stepNumber, correct: 0, total: 0 }
+          ])
+        )
+      });
     });
   });
 

@@ -4,7 +4,6 @@ import { generateId } from "lucia";
 import { explainComputedAnswers, explanations } from "@/server/db/schema/learnByTeaching/explanations";
 import { actions } from "@/server/realtime_db/schema/actions";
 import { AssignmentUpdateActionType, QuestionStatus } from "@/lib/constants";
-import { ConsoleLogWriter } from "drizzle-orm";
 
 type ResponseType = {
   body: {

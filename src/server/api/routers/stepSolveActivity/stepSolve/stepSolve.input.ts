@@ -7,12 +7,14 @@ export type GetStepSolveAssignmentInput = z.infer<typeof getStepSolveAssignmentS
 
 export const createStepSolveAssignmentAttemptSchema = z.object({
   activityId: z.string(),
+  assignmentId: z.string(),
 });
 export type CreateStepSolveAssignmentAttemptInput = z.infer<typeof createStepSolveAssignmentAttemptSchema>;
 
 export const submitStepSolveAssignmentAttemptSchema = z.object({
   attemptId: z.string(),
   activityId: z.string(),
+  assignmentId: z.string(),
 });
 export type SubmitStepSolveAssignmentAttemptInput = z.infer<typeof submitStepSolveAssignmentAttemptSchema>;
 

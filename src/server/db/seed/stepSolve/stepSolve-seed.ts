@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+/* eslint-disable @typescript-eslint/no-unsafe-member-access */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { db } from "../..";
@@ -7,17 +9,21 @@ import { generateId } from "lucia";
 import { topics } from "../../schema/subject";
 import { classrooms } from "../../schema/classroom";
 
-import stepSolve from "./thermal_energy_transfers.json";
 import { stepSolveQuestions, stepSolveQuestionToAssignment, stepSolveStep, stepSolveStepOptions } from "../../schema/stepSolve/stepSolveQuestions";
 import { stepSolveAssignmentAttempts, stepSolveAssignments } from "../../schema/stepSolve/stepSolveAssignment";
 import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "../../schema/stepSolve/stepSolveQuestionAttempts";
-import { activity } from "../../schema/activity";
+import { activity, activityToAssignment } from "../../schema/activity";
 import { ActivityType } from "@/lib/constants";
 
-export async function createStepSolveAssignment() {
-  const topicId = process.env.ENVIRONMENT === "prod" ? stepSolve.topicIdProd : stepSolve.topicIdDev;
+export async function createStepSolveAssignment(topicName: string) {
+  const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
+
+  const id = process.env.ENVIRONMENT === "prod" ? json.idProd : json.idDev;
+
+  console.log("Creating step solve assignment", json.name);
+
   const topic = await db.select().from(topics).where(
-    eq(topics.id, topicId),
+    eq(topics.name, json.name as string),
   )
 
   if(topic?.[0] === undefined) {
@@ -25,7 +31,9 @@ export async function createStepSolveAssignment() {
     return
   }
 
-  const existingAssignment = await db.select().from(stepSolveAssignments).where(eq(stepSolveAssignments.topicId, topicId));
+  console.log("Topic found", topic[0].id);
+
+  const existingAssignment = await db.select().from(stepSolveAssignments).where(eq(stepSolveAssignments.id, id as string));
 
   let stepSolveAssignment;
 
@@ -35,10 +43,10 @@ export async function createStepSolveAssignment() {
   } else {
     console.log("Creating step solve assignment");
     const ssa = await db.insert(stepSolveAssignments).values({
-      id: generateId(21),
-      name: stepSolve.name,
+      id: id as string,
+      name: json.name as string,
       description: "Step Solve",
-      topicId: topicId,
+      topicId: topic[0].id,
       createdAt: new Date(),
       updatedAt: new Date(),
     }).returning({
@@ -52,28 +60,28 @@ export async function createStepSolveAssignment() {
   }
 
 
-  for (const stepSolveQuestion of stepSolve.questions) {
+  for (const stepSolveQuestion of json.questions) {
     // Check if question already exists
     const existingQuestion = await db.select().from(stepSolveQuestions).where(
       and(
-        eq(stepSolveQuestions.questionText, stepSolveQuestion.questionText),
-        eq(stepSolveQuestions.topicId, topicId)
+        eq(stepSolveQuestions.questionText, stepSolveQuestion.questionText as string),
+        eq(stepSolveQuestions.topicId, topic[0].id)
       )
     )
 
     let questionId: string;
     if (existingQuestion?.[0]?.id !== undefined) {
-      console.log(`Question "${stepSolveQuestion.questionText.substring(0, 30)}..." already exists`)
+      console.log(`Question "${(stepSolveQuestion.questionText as string).substring(0, 30)}..." already exists`)
       questionId = existingQuestion[0].id;
     } else {
       // Create the step solve question
-      console.log("Creating step solve question", stepSolveQuestion.questionText.substring(0, 30));
+      console.log("Creating step solve question", (stepSolveQuestion.questionText as string).substring(0, 30));
       questionId = generateId(21)
       await db.insert(stepSolveQuestions).values({
         id: questionId,
         questionText: stepSolveQuestion.questionText,
         questionImage: stepSolveQuestion.questionImage,
-        topicId: topicId,
+        topicId: topic[0].id,
       })
     }
 
@@ -82,7 +90,7 @@ export async function createStepSolveAssignment() {
       const existingStep = await db.select().from(stepSolveStep).where(
         and(
           eq(stepSolveStep.questionId, questionId),
-          eq(stepSolveStep.id, step.id)
+          eq(stepSolveStep.id, step.id as string)
         )
       )
 
@@ -105,8 +113,8 @@ export async function createStepSolveAssignment() {
         console.log("Creating step solve step option", option.optionText.substring(0, 30));
         const existingOption = await db.select().from(stepSolveStepOptions).where(
           and(
-            eq(stepSolveStepOptions.stepId, step.id),
-            eq(stepSolveStepOptions.optionText, option.optionText)
+            eq(stepSolveStepOptions.stepId, step.id as string),
+            eq(stepSolveStepOptions.optionText, option.optionText as string)
           )
         )
 
@@ -134,27 +142,56 @@ export async function createStepSolveAssignment() {
   const classes= await db.select().from(classrooms);
   for(const classroom of classes) {
     // Check if activity already exists in the classroom
+
+    console.log("Checking if activity exists in classroom", topic[0].id, classroom.id);
+
     const existingActivity = await db.select().from(activity).where(
       and(
-        eq(activity.assignmentId, stepSolveAssignment.id),
-        eq(activity.classroomId, classroom.id)
+        eq(activity.topicId, topic[0].id),
+        eq(activity.classroomId, classroom.id),
+        eq(activity.typeText, ActivityType.StepSolve)
       )
     )
+
+    console.log("Existing activity", existingActivity);
 
     // If activity does not exist, create it
     if(existingActivity.length === 0) {
       console.log("Adding assignment to classroom. Creating activity", stepSolveAssignment.id, classroom.id);
+      const activityId = generateId(21);
       await db.insert(activity).values({
-        id: generateId(21),
-        assignmentId: stepSolveAssignment.id,
+        id: activityId,
         classroomId: classroom.id,
-        name: stepSolve.name,
-        topicId: topicId,
-        type: ActivityType.StepSolve,
+        name: json.name as string,
+        topicId: topic[0].id,
         typeText: ActivityType.StepSolve,
         order: 0,
         points: 100,
       })
+      console.log("Adding assignment to activity", stepSolveAssignment.id, activityId);
+      await db.insert(activityToAssignment).values({
+        id: generateId(21),
+        activityId: activityId,
+        stepSolveAssignmentId: stepSolveAssignment.id,
+      })
+    } else {
+      console.log("Adding assignment to activity", stepSolveAssignment.id, classroom.id);
+      const assignmentToActivities = await db.select().from(activityToAssignment).where(
+        and(
+          eq(activityToAssignment.activityId, existingActivity[0]?.id ?? ""),
+          eq(activityToAssignment.stepSolveAssignmentId, stepSolveAssignment.id)
+        )
+      );
+      if(assignmentToActivities.length === 0) {
+        console.log("Adding assignment to classroom. Activity already exists, but no assignment to activities", stepSolveAssignment.id, classroom.id);
+        await db.insert(activityToAssignment).values({
+          id: generateId(21),
+          activityId: existingActivity[0]?.id ?? "",
+          stepSolveAssignmentId: stepSolveAssignment.id,
+        })
+      } else {
+        console.log("Assignment to activity already exists", stepSolveAssignment.id, existingActivity[0]?.id ?? "");
+      }
     }
   }
 
@@ -211,29 +248,34 @@ export async function deleteStepSolveAssignment(stepSolveAssignmentId: string) {
     }
   }
 
+  console.log("Deleting attempts", stepSolveAssignmentId);
+  await db.delete(stepSolveAssignmentAttempts).where(eq(stepSolveAssignmentAttempts.assignmentId, stepSolveAssignmentId));
+
+  console.log("Deleting activity to assignment", stepSolveAssignmentId);
+  await db.delete(activityToAssignment).where(eq(activityToAssignment.stepSolveAssignmentId, stepSolveAssignmentId));
+
   // Delete the assignment
   console.log("Deleting assignment", stepSolveAssignmentId);
   await db.delete(stepSolveAssignments).where(eq(stepSolveAssignments.id, stepSolveAssignmentId));
 
-  const activities = await db.select().from(activity).where(eq(activity.assignmentId, stepSolveAssignmentId));
+  const activities = await db.select().from(activity).where(
+    and(
+      eq(activity.topicId, stepSolveAssignment[0]?.topicId ?? ""), 
+      eq(activity.typeText, ActivityType.StepSolve)
+    )
+  );
   for (const act of activities) {
-    if(act.type !== ActivityType.StepSolve) {
-      console.log("Activity is not step solve, skipping");
-      continue;
-    }
-
     if(!act.id) {
       console.log("Activity id not found");
       continue;
     }
 
-    //Delete the step solve assignment attempts
-    console.log("Deleting step solve assignment attempts", act.id);
-    await db.delete(stepSolveAssignmentAttempts).where(eq(stepSolveAssignmentAttempts.activityId, act.id));
-
-    //Delete the activity
-    console.log("Deleting activity", act.id);
-    await db.delete(activity).where(eq(activity.id, act.id));
+    // Get assignment to activities. If there are none, delete the activity
+    const assignmentToActivities = await db.select().from(activityToAssignment).where(eq(activityToAssignment.activityId, act.id));
+    if(assignmentToActivities.length === 0) {
+      console.log("Deleting activity", act.id);
+      await db.delete(activity).where(eq(activity.id, act.id));
+    }
   } 
 
   console.log("Step solve deletion complete");
@@ -290,3 +332,26 @@ export async function updateStepSolveAssignmentAttempts() {
     }).where(eq(stepSolveAssignmentAttempts.id, attempt.id));
   }
 }
+
+export async function addAssignmentIdToAttempts() {
+  const attempts = await db.select().from(stepSolveAssignmentAttempts);
+  for (const attempt of attempts) {
+    if(!attempt.activityId) {
+      console.log("Activity id not found for step solve assignment attempt", attempt.id);
+      continue;
+    }
+    const assignment = await db.select().from(activityToAssignment).where(eq(activityToAssignment.activityId, attempt.activityId));
+    if(!assignment[0]) {
+      console.log("Assignment not found for step solve assignment attempt", attempt.id);
+      continue;
+    }
+    if(assignment.length > 1) {
+      console.log("Multiple assignments found for step solve assignment attempt", attempt.id);
+      continue;
+    }
+    await db.update(stepSolveAssignmentAttempts).set({
+      assignmentId: assignment[0].stepSolveAssignmentId
+    }).where(eq(stepSolveAssignmentAttempts.id, attempt.id));
+  }
+}
+
