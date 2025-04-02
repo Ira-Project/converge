@@ -23,6 +23,7 @@ export const viewport: Viewport = {
 };
 
 import 'katex/dist/katex.min.css';
+import { PostHogProvider } from "@/hooks/posthog";
 
 export default function RootLayout({
   children,
@@ -52,8 +53,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <TRPCReactProvider>{children}</TRPCReactProvider>
-          <Toaster />
+          <PostHogProvider>
+            <TRPCReactProvider>{children}</TRPCReactProvider>
+            <Toaster />
+          </PostHogProvider>
         </ThemeProvider>
       </body>
     </html>
