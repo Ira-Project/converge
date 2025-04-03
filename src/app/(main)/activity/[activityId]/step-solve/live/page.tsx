@@ -23,11 +23,16 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
       userToClassroom = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: activity?.classroomId });
     }
 
+    if(!activity || !stepSolveAssignment?.id) {
+      redirect(`${Paths.Classroom}${params.classroomId}`);
+    }
+
     stepSolveAttemptId = await api.stepSolve.createAttempt.mutate({ 
-      activityId: params.activityId 
+      activityId: params.activityId ,
+      assignmentId: stepSolveAssignment?.id ?? ""
     });
 
-    if (!activity || !stepSolveAssignment || !stepSolveAttemptId) {
+    if (!stepSolveAttemptId) {
       redirect(`${Paths.Classroom}${params.classroomId}`);
     }
   }

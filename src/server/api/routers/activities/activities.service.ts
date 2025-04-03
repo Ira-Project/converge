@@ -12,7 +12,6 @@ export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivit
       id: true,
       name: true,
       description: true,
-      type: true,
       typeText: true,
       assignmentId: true,
       classroomId: true,
@@ -45,7 +44,6 @@ export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivit
       id: string;
       name: string;
       description: string;
-      type: ActivityType;
       typeText: ActivityType;
       assignmentId: string;
       classroomId: string | null;
@@ -71,7 +69,6 @@ export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivit
         id: activity.id,
         name: activity.name,
         description: activity.description ?? "",
-        type: activity.type as ActivityType,
         typeText: activity.typeText as ActivityType,
         assignmentId: activity.assignmentId ?? "",
         classroomId: activity.classroomId ?? "",

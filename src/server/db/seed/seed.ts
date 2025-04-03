@@ -11,15 +11,15 @@ import { classrooms } from "../schema/classroom";
 import { activity } from "../schema/activity";
 
 import { addConceptsToKnowledgeZapQuestions, computeQuestionsCompleted, createConceptTrackerForAllKnowledgeZapAttempts, createKnowledgeZapAssignment, deleteKnowledgeZapAssignment, findConceptsWithoutKnowledgeZaps, findKnowledgeZapQuestionsWithoutConcepts, updateKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
-import { createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts } from "./stepSolve/stepSolve-seed";
+import { addAssignmentIdToAttempts, createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts } from "./stepSolve/stepSolve-seed";
 import { computeAccuracyForReasoningAssignment, createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 import { deleteUser } from "./user/userSeed";
 import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
-import { migrateActivityTypeToText } from "./otherSeed";
 import { addConceptsToQuestions, createLearnByTeachingAssignment } from "./learnByTeaching/learnByTeaching-seed";
 import { createTopics } from "./topics/topic-seed";
 import { createConcepts } from "./concept/concept-seed";
+import { addActivityToAssignment } from "./activity";
 
 if(process.env.ENVIRONMENT === "prod") {
   console.log("WARNING: Running in production");
@@ -33,6 +33,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // ADD ACTIVITIES TO CLASSROOMS
 // THIS SHOULD NEVER BE NECESSARY. ONLY HERE FOR EMERGENCY PURPOSES
 // await addActivitiesClassrooms();
+// await addActivityToAssignment();
 
 // TOPIC CREATION
 // await createTopics();
@@ -114,9 +115,12 @@ if(process.env.ENVIRONMENT === "prod") {
 // await computeAccuracyForReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION
-// await deleteStepSolveAssignment("9bec9vz7cy115oso3pmlz");
-// await createStepSolveAssignment();
+// await deleteStepSolveAssignment("6uyBKuPSx22HEHjHxBdmh");
+// await deleteStepSolveAssignment("r2GZSPW3y2jpC359DVteN");
+// await createStepSolveAssignment("B4 - Thermodynamics");
+// await createStepSolveAssignment("thermodynamics");
 // await updateStepSolveAssignmentAttempts();
+await addAssignmentIdToAttempts();
 
 // READ AND RELAY CREATION AND DELETION
 // await createReadAndRelayAssignment();

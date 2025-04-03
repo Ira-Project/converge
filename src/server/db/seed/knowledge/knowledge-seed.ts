@@ -13,7 +13,7 @@ import { knowledgeZapQuestionAttempts, knowledgeZapQuestions, knowledgeZapQuesti
 import { matchingAnswerOptions, matchingAttempt, matchingAttemptSelection, matchingQuestions } from "../../schema/knowledgeZap/matchingQuestions";
 import { orderingAnswerOptions, orderingAttempt, orderingAttemptSelection, orderingQuestions } from "../../schema/knowledgeZap/orderingQuestions";
 
-import { activity } from "../../schema/activity";
+import { activity, activityToAssignment } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 
 import { topics } from "../../schema/subject";
@@ -315,16 +315,21 @@ export async function createKnowledgeZapAssignment(topicName: string) {
     // If activity does not exist, create it
     if(existingActivity.length === 0) {
       console.log("Adding assignment to classroom. Creating activity", knowledgeZapAssignment.id, classroom.id);
+      const activityId = generateId(21);
       await db.insert(activity).values({
-        id: generateId(21),
+        id: activityId,
         assignmentId: knowledgeZapAssignment.id,
         classroomId: classroom.id,
         name: json.name,
         topicId: topicId,
-        type: ActivityType.KnowledgeZap,
         typeText: ActivityType.KnowledgeZap,
         order: 0,
         points: 100,
+      })
+      await db.insert(activityToAssignment).values({
+        id: generateId(21),
+        activityId: activityId,
+        knowledgeZapAssignmentId: knowledgeZapAssignment.id,
       })
     }
   }
@@ -628,16 +633,21 @@ export async function updateKnowledgeZapAssignment(topicName: string) {
     // If activity does not exist, create it
     if(existingActivity.length === 0) {
       console.log("Adding assignment to classroom. Creating activity", knowledgeZapAssignment.id, classroom.id);
+      const activityId = generateId(21);
       await db.insert(activity).values({
-        id: generateId(21),
+        id: activityId,
         assignmentId: knowledgeZapAssignment.id,
         classroomId: classroom.id,
         name: json.name,
         topicId: topicId,
-        type: ActivityType.KnowledgeZap,
         typeText: ActivityType.KnowledgeZap,
         order: 0,
         points: 100,
+      })
+      await db.insert(activityToAssignment).values({
+        id: generateId(21),
+        activityId: activityId,
+        knowledgeZapAssignmentId: knowledgeZapAssignment.id,
       })
     } else {
       console.log("Checking if activity has attempts", knowledgeZapAssignment.id, classroom.id);
@@ -773,6 +783,9 @@ export async function deleteKnowledgeZapAssignment(assignmentId: string) {
   for(const act of activities) {
     console.log("Deleting knowledge zap assignment attempts", act.id);
     await db.delete(knowledgeZapAssignmentAttempts).where(eq(knowledgeZapAssignmentAttempts.activityId, act.id));
+
+    console.log("Deleting activity to assignment", act.id);
+    await db.delete(activityToAssignment).where(eq(activityToAssignment.knowledgeZapAssignmentId, assignmentId));
 
     console.log("Deleting activity", act.id);
     await db.delete(activity).where(eq(activity.id, act.id));

@@ -1,0 +1,153 @@
+{
+    "name": "Thermodynamics",
+    "idDev": "r2GZSPW3y2jpC359DVteN",
+    "idProd": "D2eg49pJg9oL8JwAPdZ0D",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "fc834676f65444128114a",
+            "questionText": "A group of engineers is designing an internal combustion engine. During the adiabatic compression stroke, the air-fuel mixture is compressed from an initial volume $!$V_1 = 0.001 \\; \\text{m}^3$!$ and pressure $!$P_1 = 1 \\; \\text{atm}$!$ to a final volume $!$V_2 = 0.0001 \\; \\text{m}^3$!$ with the gas behaving ideally and a ratio of specific heats $!$\\gamma = \\frac{5}{3}$!$. After the compression, the gas expands, doing $!$W = 500 \\; \\text{J}$!$ of work on the piston and expelling $!$Q_C = 300 \\; \\text{J}$!$ of heat to the surroundings. Determine the engine's efficiency $!$\\eta$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0e3b589f6c614bb68eb12",
+                    "stepText": "Let's begin by determining the final pressure after the adiabatic compression stroke. Select the appropriate adiabatic relationship from the options provided.",
+                    "stepText2": "Now, using the selected formula and the values $!$P_1 = 101325 \\; \\text{Pa}$!$, $!$V_1 = 0.001 \\; \\text{m}^3$!$, $!$V_2 = 0.0001 \\; \\text{m}^3$!$, and $!$\\gamma = \\frac{5}{3}$!$, calculate the numerical value of $!$P_2$!$ in Pascals.",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4709000"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "options": [
+                        {
+                            "optionText": "$!$P_1 V_1^{\\gamma} = P_2 V_2^{\\gamma}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P_1 V_1 = P_2 V_2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "24528a044e2b4becac689",
+                    "stepText": "Great, now that you have determined the final pressure, let's move on to finding the heat input. For a working engine cycle, the heat input $!$Q_H$!$ is related to the work output and the rejected heat. Please select the energy conservation formula from the options below that properly relates $!$Q_H$!$, the work $!$W$!$, and the heat rejection $!$Q_C$!$. ",
+                    "stepText2": "Now, using the selected relation with $!$W = 500 \\; J$!$ and $!$Q_C = 300 \\; J$!$, calculate the numerical value of $!$Q_H$!$ in Joules.",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "800"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "options": [
+                        {
+                            "optionText": "$!$Q_H = W + Q_C$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q_H = W - Q_C$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ac708c70ed3544c7a9e29",
+                    "stepText": "Finally, we need to determine the efficiency $!$\\eta$!$ of the engine. Please select the appropriate efficiency formula from the options provided that correctly relates the work output and the heat input.",
+                    "stepText2": "After choosing the formula, use it along with $!$W = 500 \\; J$!$ and the heat input you computed to calculate the numerical efficiency (express your answer as a decimal, for example, 0.625 for 62.5%).",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.625"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "options": [
+                        {
+                            "optionText": "$!$\\eta = 1 - \\frac{Q_C}{Q_H}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{Q_C}{Q_H}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "88084b0caa25401aa6f45",
+            "questionText": "A refrigerator operates in a cycle. The refrigerant absorbs Q_C = 250 J of heat from the inside of the refrigerator at a temperature T_C = 270 K and releases Q_H = 300 J of heat to the kitchen at a temperature T_H = 300 K. Calculate the net change in entropy for the entire cycle of the refrigerant.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "928acb8e0289442083284",
+                    "stepText": "Let's start by determining the entropy change for the process in which the refrigerant absorbs heat from the cold reservoir. First, select the appropriate formula to calculate the change in entropy (hint: it involves dividing the heat transferred by the temperature).",
+                    "stepText2": "Now, using your chosen formula, compute the numerical value of the entropy change when Q_C = 250 J is absorbed at T_C = 270 K. Enter the numerical answer (do not include units in your calculation response).",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.93"
+                    ],
+                    "stepSolveAnswerUnits": "J/K",
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta S = Q \\cdot T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta S = \\frac{Q}{T}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta S = \\frac{T}{Q}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "29d2a77a685b44929c19d",
+                    "stepText": "Great, now let's calculate the entropy change for the process where the refrigerant releases heat to the hot reservoir. Again, select the formula that you believe is appropriate for computing entropy change.",
+                    "stepText2": "Then, compute the numerical value of this entropy change given that Q_H = 300 J is released at T_H = 300 K. Remember to account for the sign convention since heat is being released. Provide the numerical answer.",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-1"
+                    ],
+                    "stepSolveAnswerUnits": "J/K",
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta S = Q \\cdot T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta S = \\frac{Q}{T}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta S = \\frac{T}{Q}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e63af029545f47f1a250b",
+                    "stepText": "Now that you have determined the entropy changes for both the heating and cooling processes, let's combine these results. Remember that the refrigerant undergoes a complete cycle, which means its overall state returns to the initial condition.",
+                    "stepText2": "Using your previous results, calculate the net change in entropy for the entire cycle of the refrigerant by summing the two computed entropy changes. Provide your numerical answer.",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0"
+                    ],
+                    "stepSolveAnswerUnits": "J/K",
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

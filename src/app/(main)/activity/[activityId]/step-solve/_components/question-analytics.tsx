@@ -39,9 +39,11 @@ const QuestionAnalytics = async ({ activityId }: { activityId: string }) => {
               {
                 questionData.steps.map((step) => (
                   <div className="space-y-1" key={step.stepId}>
-                    <div className="flex justify-between text-xs">
-                      <span >Step {step.stepNumber}: {step.stepText}</span>
-                      <span>{(step.percentageCorrect * 100).toFixed(2)}%</span>
+                    <div className="flex justify-between text-xs gap-4">
+                      <span>
+                        <FormattedText text={`Step ${step.stepNumber}: ${step.stepText}`} />
+                      </span>
+                      <span className="my-auto text-xs align-middle">{(step.percentageCorrect * 100).toFixed(2)}%</span>
                     </div>
                     <Progress color="teal" value={step.percentageCorrect * 100} />
                   </div>

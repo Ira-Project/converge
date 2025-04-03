@@ -61,7 +61,8 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
   const submitAssignment = async () => {
     await submissionMutation.mutateAsync({
       attemptId: stepSolveAttemptId,
-      activityId: activityId
+      activityId: activityId,
+      assignmentId: stepSolveAssignment?.id ?? ""
     });
     setSubmissionmodalOpen(true);
   }

@@ -17,7 +17,7 @@ type QuestionType = {
 import json from "./electric_charge.json";
 import { explainAssignments } from "../../schema/learnByTeaching/explainAssignment";
 import { ActivityType } from "@/lib/constants";
-import { activity } from "../../schema/activity";
+import { activity, activityToAssignment } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 import { concepts } from "../../schema/concept";
 
@@ -92,16 +92,21 @@ export async function createLearnByTeachingAssignment() {
     // If activity does not exist, create it
     if(existingActivity.length === 0) {
       console.log("Adding assignment to classroom. Creating activity", assignmentId, classroom.id);
+      const activityId = generateId(21);
       await db.insert(activity).values({
-        id: generateId(21),
+        id: activityId,
         assignmentId: assignmentId,
         classroomId: classroom.id,
         name: json.name,
         topicId: topicId,
-        type: ActivityType.LearnByTeaching,
         typeText: ActivityType.LearnByTeaching,
         order: 0,
         points: 100,
+      })
+      await db.insert(activityToAssignment).values({
+        id: generateId(21),
+        activityId: activityId,
+        learnByTeachingAssignmentId: assignmentId,
       })
       console.log("Created activity for classroom:", classroom.id);
     }

@@ -5,7 +5,6 @@ export interface Activity {
   id: string;
   name: string;
   description: string;
-  type: ActivityType;
   typeText: ActivityType;
   assignmentId: string;
   classroomId: string | null;

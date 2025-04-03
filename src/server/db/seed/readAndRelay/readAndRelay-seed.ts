@@ -15,7 +15,7 @@ type QuestionType = {
 import json from "./current_and_circuits.json";
 import { readAndRelayAssignments } from "../../schema/readAndRelay/readAndRelayAssignments";
 import { readAndRelayAnswers, readAndRelayQuestions, readAndRelayQuestionToAssignment } from "../../schema/readAndRelay/readAndRelayQuestions";
-import { activity } from "../../schema/activity";
+import { activity, activityToAssignment } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 import { ActivityType } from "@/lib/constants";
 import { knowledgeZapAssignments } from "../../schema/knowledgeZap/knowledgeZapAssignment";
@@ -35,7 +35,6 @@ export async function createReadAndRelayAssignment() {
     console.log("Assignment already exists")
     return
   }
-
 
   // Create the assignment object
   await db.insert(readAndRelayAssignments).values({
@@ -102,16 +101,21 @@ export async function createReadAndRelayAssignment() {
     // If activity does not exist, create it
     if(existingActivity.length === 0) {
       console.log("Adding assignment to classroom. Creating activity", assignmentId, classroom.id);
+      const activityId = generateId(21);
       await db.insert(activity).values({
-        id: generateId(21),
+        id: activityId,
         assignmentId: assignmentId,
         classroomId: classroom.id,
         name: json.name,
         topicId: topicId,
-        type: ActivityType.ReadAndRelay,
         typeText: ActivityType.ReadAndRelay,
         order: 0,
         points: 100,
+      })
+      await db.insert(activityToAssignment).values({
+        id: generateId(21),
+        activityId: activityId,
+        readAndRelayAssignmentId: assignmentId,
       })
     }
   }
@@ -179,6 +183,8 @@ export async function deleteReadAndRelayAssignment(assignmentId: string) {
     await db.delete(readAndRelayQuestions).where(eq(readAndRelayQuestions.id, question[0].id));
   }
 
+  console.log("Deleting activity to assignment", assignmentId);
+  await db.delete(activityToAssignment).where(eq(activityToAssignment.readAndRelayAssignmentId, assignmentId));
 
   for(const act of activities) {
     console.log("Deleting activity", act.id);
