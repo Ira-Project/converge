@@ -3,6 +3,8 @@ import { generateId } from "lucia";
 import type { CheckStepInput } from "./checkStep.input";
 import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "@/server/db/schema/stepSolve/stepSolveQuestionAttempts";
 import { eq } from "drizzle-orm";
+import { conceptTracking } from "@/server/db/schema/concept";
+import { ActivityType } from "@/lib/constants";
 
 
 export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput) => {
@@ -71,6 +73,11 @@ export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput
     where: (step, { eq }) => eq(step.id, input.stepId),
     with: {
       opt: true,
+      concepts: {
+        columns: {
+          conceptId: true,
+        },
+      }
     }
   });
 
@@ -90,14 +97,38 @@ export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput
 
   
   if(!stepHasReasoning) {
-    evaluationCorrect = step.stepSolveAnswer?.includes(input.answer?.toLowerCase() ?? "") ?? false;
+    evaluationCorrect = step.stepSolveAnswer?.includes(input.answer?.trim().toLowerCase() ?? "") ?? false;
+    for(const answer of step.stepSolveAnswer ?? []) {
+      console.log(answer, input.answer);
+      try {
+        const answerNumber = parseFloat(input.answer ?? "");
+        const stepSolveAnswerNumber = parseFloat(answer ?? "");
+        isCorrect = Math.abs(answerNumber - stepSolveAnswerNumber) < 0.01;
+        if(isCorrect) {
+        evaluationCorrect = true;
+          break;
+        }
+      } catch (error) {
+        console.log(error);
+      }
+    };
     reasoningCorrect = true;
   } else if (!stepHasEvaluation) {
     reasoningCorrect = stepOption.isCorrect;
     evaluationCorrect = true;
   } else {
-    evaluationCorrect = step.stepSolveAnswer?.includes(input.answer?.toLowerCase() ?? "") ?? false;
     reasoningCorrect = stepOption.isCorrect;
+    evaluationCorrect = step.stepSolveAnswer?.includes(input.answer?.toLowerCase() ?? "") ?? false;
+    //Also check if answer is correct numerically
+    for(const answer of step.stepSolveAnswer ?? []) {
+      const answerNumber = parseFloat(input.answer ?? "");
+      const stepSolveAnswerNumber = parseFloat(answer ?? "");
+      const calculation = Math.abs(answerNumber - stepSolveAnswerNumber) < 0.01;
+      if(calculation) {
+        evaluationCorrect = true;
+        break;
+      }
+    }
   }
 
   isCorrect = reasoningCorrect && evaluationCorrect;
@@ -135,6 +166,31 @@ export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput
     evaluationScore: stepHasEvaluation ? evaluationCorrectScore : undefined,
     stepsCompleted: isCorrect ? stepsCompleted + 1 : stepsCompleted,
   }).where(eq(stepSolveQuestionAttempts.id, questionAttemptId));
+
+  const stepSolveAssignmentAttempt = await ctx.db.query.stepSolveAssignmentAttempts.findFirst({
+    where: (attempt, { eq }) => eq(attempt.id, input.attemptId),
+    with: {
+      activity: {
+        columns: { id: true },
+        with: {
+          classroom: {
+            columns: { id: true },
+          },
+        },
+      },
+    }
+  });
+
+  for (const concept of step.concepts) {
+    await ctx.db.insert(conceptTracking).values({
+      id: generateId(15),
+      conceptId: concept.conceptId ?? "",
+      userId: ctx.user.id,
+      activityType: ActivityType.StepSolve,
+      classroomId: stepSolveAssignmentAttempt?.activity?.classroom?.id ?? "",
+      isCorrect: isCorrect,
+    });
+  }
   
   return {
     isCorrect,

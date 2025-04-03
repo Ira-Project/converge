@@ -157,6 +157,11 @@ const StepSolveStepComponent = ({
                 <p className="text-center font-semibold">
                   {form.getValues('userAnswer')}
                 </p>
+                <p className="text-center text-sm text-muted-foreground">
+                  {stepSolveAnswerUnits && (
+                    <FormattedText text={stepSolveAnswerUnits} />
+                  )}
+                </p>
               </>
             )
           }
@@ -197,7 +202,7 @@ const StepSolveStepComponent = ({
 
           {!isCompleted && !isCorrect && (
             <LoadingButton 
-              disabled={isDisabled} 
+              disabled={isDisabled || (options && options.length > 0 && !form.getValues('optionId'))} 
               loading={isLoading}
               variant="link"
               className="p-2 bottom-0 right-0 mt-auto ml-auto hover:no-underline">
