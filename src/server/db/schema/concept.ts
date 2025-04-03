@@ -12,6 +12,7 @@ import { topics } from "./subject";
 import { users } from "./user";
 import { classrooms } from "./classroom";
 import { knowledgeZapQuestionsToConcepts } from "./knowledgeZap/knowledgeZapQuestions";
+import { stepSolveStepConcepts } from "./stepSolve/stepSolveQuestions";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -33,6 +34,8 @@ export const conceptRelations = relations(concepts, ({ many }) => ({
   conceptsToTopics: many(conceptsToTopics),
   conceptTracking: many(conceptTracking),
   conceptEdges: many(conceptEdges),
+  stepSolveStepConcepts: many(stepSolveStepConcepts),
+  knowledgeZapQuestionsToConcepts: many(knowledgeZapQuestionsToConcepts),
 }));
 
 

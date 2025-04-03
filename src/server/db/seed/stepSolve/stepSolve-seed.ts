@@ -9,16 +9,20 @@ import { generateId } from "lucia";
 import { topics } from "../../schema/subject";
 import { classrooms } from "../../schema/classroom";
 
-import { stepSolveQuestions, stepSolveQuestionToAssignment, stepSolveStep, stepSolveStepOptions } from "../../schema/stepSolve/stepSolveQuestions";
+import { stepSolveQuestions, stepSolveQuestionToAssignment, stepSolveStep, stepSolveStepConcepts, stepSolveStepOptions } from "../../schema/stepSolve/stepSolveQuestions";
 import { stepSolveAssignmentAttempts, stepSolveAssignments } from "../../schema/stepSolve/stepSolveAssignment";
 import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "../../schema/stepSolve/stepSolveQuestionAttempts";
 import { activity, activityToAssignment } from "../../schema/activity";
 import { ActivityType } from "@/lib/constants";
+import { conceptTracking } from "../../schema/concept";
+import { concepts } from "../../schema/concept";
+import { knowledgeZapQuestionAttempts, knowledgeZapQuestionsToConcepts } from "../../schema/knowledgeZap/knowledgeZapQuestions";
+import { knowledgeZapQuestions } from "../../schema/knowledgeZap/knowledgeZapQuestions";
 
 export async function createStepSolveAssignment(topicName: string) {
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
 
-  const id = process.env.ENVIRONMENT === "prod" ? json.idProd : json.idDev;
+  const id = process.env.ENVIRONMENT === "prod" ? json.id : json.id;
 
   console.log("Creating step solve assignment", json.name);
 
@@ -86,6 +90,7 @@ export async function createStepSolveAssignment(topicName: string) {
     }
 
     // Check and create steps
+    console.log("Creating step solve steps", questionId);
     for (const [index, step] of stepSolveQuestion.steps.entries()) {
       const existingStep = await db.select().from(stepSolveStep).where(
         and(
@@ -93,7 +98,7 @@ export async function createStepSolveAssignment(topicName: string) {
           eq(stepSolveStep.id, step.id as string)
         )
       )
-
+      
       if (existingStep?.[0]?.id === undefined) {
         console.log("Creating step solve step", step.stepText.substring(0, 30));
         await db.insert(stepSolveStep).values({
@@ -104,21 +109,23 @@ export async function createStepSolveAssignment(topicName: string) {
           stepImage: step.stepImage,
           stepNumber: index + 1,
           stepSolveAnswer: step.stepSolveAnswer ?? undefined,
-          stepSolveAnswerUnits: step.stepSolveAnswerUnit ?? undefined,
+          stepSolveAnswerUnits: step.stepSolveAnswerUnits ?? undefined,
         })
+      } else {
+        console.log("Step solve step already exists", step.stepText.substring(0, 30));
       }
 
       // Check and create options
+      console.log("Creating step solve step options", step.stepText.substring(0, 30));
       for (const option of step.options) {
-        console.log("Creating step solve step option", option.optionText.substring(0, 30));
         const existingOption = await db.select().from(stepSolveStepOptions).where(
           and(
             eq(stepSolveStepOptions.stepId, step.id as string),
             eq(stepSolveStepOptions.optionText, option.optionText as string)
           )
         )
-
         if (existingOption?.[0]?.id === undefined) {
+          console.log("Creating step solve step option", option.optionText.substring(0, 30));
           await db.insert(stepSolveStepOptions).values({
             id: generateId(21),
             stepId: step.id,
@@ -126,16 +133,49 @@ export async function createStepSolveAssignment(topicName: string) {
             optionImage: option.optionImage,
             isCorrect: option.isCorrect,
           })
+        } else {
+          console.log("Step solve step option already exists", option.optionText.substring(0, 30));
+        }
+      }
+
+      // Check and create concepts
+      console.log("Creating step solve step concepts", step.stepText.substring(0, 30));
+      for (const concept of step.stepConcepts) {
+        const existingStepSolveStepConcept = await db.select().from(stepSolveStepConcepts).where(
+          and(
+            eq(stepSolveStepConcepts.stepId, step.id as string),
+            eq(stepSolveStepConcepts.conceptId, concept as string)
+          )
+        )
+        if (existingStepSolveStepConcept?.[0]?.id === undefined) {
+          console.log("Creating step solve step concept", concept.substring(0, 30));
+          await db.insert(stepSolveStepConcepts).values({
+            id: generateId(21),
+            stepId: step.id as string,
+            conceptId: concept,
+          })
+        } else {
+          console.log("Step solve step concept already exists", concept.substring(0, 30));
         }
       }
     }
 
     console.log("Creating step solve question to assignment", questionId, stepSolveAssignment.id);
-    await db.insert(stepSolveQuestionToAssignment).values({
-      id: generateId(21),
-      assignmentId: stepSolveAssignment.id,
-      questionId: questionId,
-    })
+    const existingStepSolveQuestionToAssignment = await db.select().from(stepSolveQuestionToAssignment).where(
+      and(
+        eq(stepSolveQuestionToAssignment.assignmentId, stepSolveAssignment.id),
+        eq(stepSolveQuestionToAssignment.questionId, questionId)
+      )
+    )
+    if (existingStepSolveQuestionToAssignment?.[0]?.id === undefined) {
+      await db.insert(stepSolveQuestionToAssignment).values({
+        id: generateId(21),
+        assignmentId: stepSolveAssignment.id,
+        questionId: questionId,
+      })
+    } else {
+      console.log("Step solve question to assignment already exists", questionId, stepSolveAssignment.id);
+    }
 
   }
 
@@ -175,7 +215,6 @@ export async function createStepSolveAssignment(topicName: string) {
         stepSolveAssignmentId: stepSolveAssignment.id,
       })
     } else {
-      console.log("Adding assignment to activity", stepSolveAssignment.id, classroom.id);
       const assignmentToActivities = await db.select().from(activityToAssignment).where(
         and(
           eq(activityToAssignment.activityId, existingActivity[0]?.id ?? ""),
@@ -229,15 +268,14 @@ export async function deleteStepSolveAssignment(stepSolveAssignmentId: string) {
           await db.delete(stepSolveQuestionAttemptSteps).where(eq(stepSolveQuestionAttemptSteps.id, attempt.id));
         }
 
-        const stepOptions = await db.select().from(stepSolveStepOptions).where(eq(stepSolveStepOptions.stepId, step.id));
-        for (const option of stepOptions) {
-          console.log("Deleting step option", option.id, option.optionText);
-          await db.delete(stepSolveStepOptions).where(eq(stepSolveStepOptions.id, option.id));
-        }
+        console.log("Deleting step options", step.id);
+        await db.delete(stepSolveStepOptions).where(eq(stepSolveStepOptions.stepId, step.id));
+
+        console.log("Deleting step concepts", step.id);
+        await db.delete(stepSolveStepConcepts).where(eq(stepSolveStepConcepts.stepId, step.id));
 
         console.log("Deleting step", step.id, step.stepText);
         await db.delete(stepSolveStep).where(eq(stepSolveStep.id, step.id));
-
       }
 
       //Delete the question attempts
@@ -355,3 +393,148 @@ export async function addAssignmentIdToAttempts() {
   }
 }
 
+export async function addConceptsToStepSolveSteps(topicName: string) {
+  const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
+
+  const topic = await db.select().from(topics).where(eq(topics.name, json.name as string))
+
+  if(!topic[0]?.id) {
+    console.log("Topic not found", json.name)
+    return
+  }
+
+  for (const question of json.questions) {
+    for (const step of question.steps) {
+      for (const concept of step.stepConcepts) {
+        // Check if step concept already exists
+        const existingStepConcept = await db.select().from(stepSolveStepConcepts).where(
+          and(
+            eq(stepSolveStepConcepts.stepId, step.id as string), 
+            eq(stepSolveStepConcepts.conceptId, concept as string)
+          )
+        );
+        if(existingStepConcept[0]) {
+          console.log("Step concept already exists", step.id, concept)
+          continue;
+        }
+        await db.insert(stepSolveStepConcepts).values({
+          id: generateId(21),
+          stepId: step.id,
+          conceptId: concept,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        })
+    }
+  }
+  }
+}
+
+export async function findConceptsWithoutStepSolveSteps() {
+  // Get all concepts that don't have any associated step solve steps
+  const conceptsWithoutSteps = await db
+    .select({
+      id: concepts.id,
+      text: concepts.text,
+    })
+    .from(concepts)
+    .leftJoin(
+      stepSolveStepConcepts,
+      eq(stepSolveStepConcepts.conceptId, concepts.id)
+    )
+    .where(isNull(stepSolveStepConcepts.id));
+
+  if (conceptsWithoutSteps.length === 0) {
+    console.log("All concepts have step solve steps.");
+    return [];
+  }
+
+  console.log(`Found ${conceptsWithoutSteps.length} concepts without step solve steps:`);
+  conceptsWithoutSteps.forEach(concept => {
+    console.log(`- Concept ID: ${concept.id}, Text: ${concept.text}`);
+  });
+} 
+
+export async function findStepSolveStepsWithoutConcepts () {
+  // Get all step solve steps that don't have any associated concepts
+  const stepsWithoutConcepts = await db
+    .select({
+      id: stepSolveStep.id,
+      stepText: stepSolveStep.stepText,
+    })
+    .from(stepSolveStep)
+    .leftJoin(
+      stepSolveStepConcepts,
+      eq(stepSolveStepConcepts.stepId, stepSolveStep.id)
+    )
+    .where(isNull(stepSolveStepConcepts.id));
+
+  if (stepsWithoutConcepts.length === 0) {
+    console.log("All step solve steps have concepts associated.");
+    return [];
+  }
+
+  console.log(`Found ${stepsWithoutConcepts.length} step solve steps without concepts:`);
+  stepsWithoutConcepts.forEach(step => {
+    console.log(`- Step ID: ${step.id}, Step Text: ${step.stepText}`);
+  });
+}
+
+export async function createConceptTrackerForAllStepAttempts() {
+  const attempts = await db
+    .select({
+      userId: stepSolveAssignmentAttempts.userId,
+      activityId: stepSolveAssignmentAttempts.activityId,
+      classroomId: activity.classroomId,
+      conceptId: stepSolveStepConcepts.conceptId,
+      stepId: stepSolveQuestionAttemptSteps.stepSolveStepId,
+      isCorrect: stepSolveQuestionAttemptSteps.isCorrect,
+      createdAt: stepSolveQuestionAttemptSteps.createdAt
+    })
+    .from(stepSolveQuestionAttemptSteps)
+    .innerJoin(
+      stepSolveQuestionAttempts,
+      eq(stepSolveQuestionAttemptSteps.questionAttemptId, stepSolveQuestionAttempts.id)
+    )
+    .innerJoin(
+      stepSolveAssignmentAttempts,
+      eq(stepSolveQuestionAttempts.attemptId, stepSolveAssignmentAttempts.id)
+    )
+    .innerJoin(
+      stepSolveStepConcepts,
+      eq(stepSolveQuestionAttemptSteps.stepSolveStepId, stepSolveStepConcepts.stepId)
+    )
+    .innerJoin(
+      activity,
+      eq(stepSolveAssignmentAttempts.activityId, activity.id)
+    );
+
+  // Print summary statistics
+  console.log(`Total attempts found: ${attempts.length}`);
+  console.log(`Unique users: ${new Set(attempts.map(a => a.userId)).size}`);
+  console.log(`Unique concepts: ${new Set(attempts.map(a => a.conceptId)).size}`);
+  console.log("\nDetailed attempts data:");
+  
+  // Print the data in table format with date
+  console.table(attempts.map(attempt => ({
+    Date: attempt.createdAt,
+    User: attempt.userId?.substring(0, 8) + "...",
+    Activity: attempt.activityId?.substring(0, 8) + "...",
+    Step: attempt.stepId?.substring(0, 8) + "...",
+    Concept: attempt.conceptId?.substring(0, 8) + "...",
+    Correct: attempt.isCorrect ? "✓" : "✗"
+  })));
+
+  // Create concept tracking records for each attempt
+  for (const attempt of attempts) {
+    await db.insert(conceptTracking).values({
+      id: generateId(21),
+      isCorrect: attempt.isCorrect ?? false,
+      conceptId: attempt.conceptId,
+      userId: attempt.userId,
+      classroomId: attempt.classroomId,
+      activityType: ActivityType.StepSolve,
+      createdAt: attempt.createdAt,
+      updatedAt: attempt.createdAt,
+    });
+  }
+}

@@ -10,6 +10,7 @@ import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm/relations";
 import { topics } from "../subject";
 import { stepSolveAssignments } from "./stepSolveAssignment";
+import { concepts } from "../concept";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -85,6 +86,7 @@ export const stepSolveStepRelations = relations(stepSolveStep, ({ one, many }) =
     references: [stepSolveQuestions.id],
   }),
   opt: many(stepSolveStepOptions),
+  concepts: many(stepSolveStepConcepts),
 }));
 
 // Table for storing each step option for a step that has multiple choice question with its text, image, and if it's correct
@@ -106,5 +108,29 @@ export const stepSolveStepOptionsRelations = relations(stepSolveStepOptions, ({ 
   step: one(stepSolveStep, {
     fields: [stepSolveStepOptions.stepId],
     references: [stepSolveStep.id],
+  }),
+}));
+
+
+export const stepSolveStepConcepts = pgTable(
+  "step_solve_step_concepts",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    stepId: varchar("step_id", { length: 21 }).references(() => stepSolveStep.id),
+    conceptId: varchar("concept_id", { length: 36 }).references(() => concepts.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+);
+export const stepSolveStepConceptsRelations = relations(stepSolveStepConcepts, ({ one }) => ({
+  step: one(stepSolveStep, {
+    fields: [stepSolveStepConcepts.stepId],
+    references: [stepSolveStep.id],
+  }),
+  concept: one(concepts, {
+    fields: [stepSolveStepConcepts.conceptId],
+    references: [concepts.id],
   }),
 }));
