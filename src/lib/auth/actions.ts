@@ -23,6 +23,7 @@ import { env } from "@/env";
 import { eq } from "drizzle-orm";
 import { getClassroomIdFromPathname } from "../server-utils";
 import { usersToClassrooms } from "@/server/db/schema/classroom";
+import posthog from "posthog-js";
 
 export interface ActionResponse<T> {
   fieldError?: Partial<Record<keyof T, string | undefined>>;
@@ -74,6 +75,13 @@ export async function login(
       formError: "Incorrect email or password",
     };
   }
+
+  posthog.identify(existingUser.id, {
+    email: existingUser.email,
+    name: existingUser.name,
+    role: existingUser.role,
+    defaultClassroomId: existingUser.defaultClassroomId,
+  });
 
   const session = await lucia.createSession(existingUser.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
@@ -144,6 +152,13 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
     }
   }
 
+  posthog.identify(userId, {
+    email: email,
+    name: name,
+    role: returnPath ? Roles.Student : Roles.Teacher,
+    defaultClassroomId: classroomId,
+  });
+
   const verificationCode = await generateEmailVerificationCode(userId, email);
   await sendMail(email, EmailTemplate.EmailVerification, { code: verificationCode });
 
@@ -167,6 +182,8 @@ export async function logout(): Promise<never> {
     redirect(returnPath ?? "/login");
   }
 
+  posthog.reset();
+  
   await lucia.invalidateSession(session.id);
   const sessionCookie = lucia.createBlankSessionCookie();
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
@@ -238,6 +255,8 @@ export async function verifyEmail(_: unknown, formData: FormData): Promise<{ err
     // If the user is a student, they are onboarded automatically
     isOnboarded: returnPath ? true : false,
   }).where(eq(users.id, user.id));
+
+  posthog.capture("email_verified");
   
   const session = await lucia.createSession(user.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
@@ -263,6 +282,10 @@ export async function sendPasswordResetLink(
     });
 
     if (!user?.emailVerified) return { error: "Provided email is invalid." };
+
+    posthog.capture("password_reset_requested", {
+      email: user.email,
+    });
 
     const verificationToken = await generatePasswordResetToken(user.id);
 
@@ -320,6 +343,11 @@ export async function resetPassword(
   const user = await db.query.users.findFirst({
     where: (table, { eq }) => eq(table.id, dbToken.userId),
   });
+
+  posthog.capture("password_reset_successful", {
+    email: user?.email,
+  });
+
   if (user?.defaultClassroomId) redirect(returnPath ?? `${Paths.Classroom}${user.defaultClassroomId}`); 
   return redirect(returnPath ?? Paths.Onboarding);
 }

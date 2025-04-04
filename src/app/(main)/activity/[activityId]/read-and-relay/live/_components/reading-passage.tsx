@@ -5,6 +5,7 @@ import './reading-passage.css';
 import TextWithHighlights from '@/components/text-with-highlights';
 import { getStartContainer, parseContent } from '../utils';
 import { toast } from 'sonner';
+import posthog from 'posthog-js';
 
 export type ContentSegment = {
   id: string;
@@ -79,6 +80,7 @@ const ReadingPassage: React.FC<Props> = ({
   }, [highlights, formulas]);
 
   const handleLatexClick = (segment: ContentSegment) => {
+    posthog.capture("read_and_relay_latex_clicked");
     const existingSegmentHighlights = segmentHighlights[segment.id] ?? [];
 
     // Check max number of highlights/formulas
@@ -126,6 +128,7 @@ const ReadingPassage: React.FC<Props> = ({
   };
 
   const handleTextSelection = () => {
+    posthog.capture("read_and_relay_text_selected");
     const selection = window.getSelection();
     if (!selection?.toString()) return;
 

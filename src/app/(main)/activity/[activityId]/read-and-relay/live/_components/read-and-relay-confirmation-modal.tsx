@@ -1,11 +1,15 @@
 import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
 import { LoadingButton } from "@/components/loading-button";
+import posthog from "posthog-js";
+import React from "react";
 
 export default function ReadAndRelayConfirmationModal({ 
   onSubmit, 
   loading,
-} : { onSubmit: () => void, loading: boolean }) {  
+} : { onSubmit: () => Promise<void>, loading: boolean }) {  
+  
+  const closeRef = React.useRef<HTMLButtonElement>(null);
 
   return (
     <Dialog>
@@ -30,7 +34,11 @@ export default function ReadAndRelayConfirmationModal({
           <LoadingButton 
             className="bg-blue-700 text-white hover:bg-blue-900"
             loading={loading}
-            onClick={onSubmit}>
+            onClick={ async () => {
+              posthog.capture("read_and_relay_submitted");
+              await onSubmit();
+              closeRef.current?.click();
+            }}>
             Submit
           </LoadingButton>
         </DialogFooter>

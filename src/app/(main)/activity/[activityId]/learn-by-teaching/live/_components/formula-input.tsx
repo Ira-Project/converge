@@ -1,6 +1,7 @@
 import FormattedText from '@/components/formatted-text'
 import { PlusIcon, TrashIcon } from '@/components/icons'
 import { Button } from '@/components/ui/button'
+import posthog from 'posthog-js'
 import { useState } from 'react'
 import { addStyles, EditableMathField } from 'react-mathquill'
 
@@ -26,6 +27,7 @@ export default function FormulaInput({ formulaList, updateValue } : FormulaInput
             size="sm"
             variant="link"
             onClick={(e) => {
+              posthog.capture("learn_by_teaching_add_formula_clicked");
               e.preventDefault()
               const newFormula = [...formulaListState, '']
               setFormulaListState(newFormula)
@@ -64,6 +66,7 @@ export default function FormulaInput({ formulaList, updateValue } : FormulaInput
                   className="bg-red-300 text-white"
                   variant="outline"
                   onClick={(e) => {
+                    posthog.capture("learn_by_teaching_remove_formula_clicked");
                     e.preventDefault()
                     const newFormula = [...formulaListState]
                     newFormula.splice(index, 1)

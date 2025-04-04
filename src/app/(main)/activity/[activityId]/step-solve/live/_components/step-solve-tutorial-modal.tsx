@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbPage, BreadcrumbSeparator } from "@/components/ui/breadcrumb";
 import { ActivityType, Paths } from "@/lib/constants";
 import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils";
+import posthog from "posthog-js";
 
 const Dialog = dynamic(() => import('@/components/ui/dialog').then((mod) => mod.Dialog), { ssr: false });
 
@@ -18,7 +19,13 @@ export default function AssignmentTutorialModal({ classroomId, topic }: Props) {
   const { tutorialUrl } = getMetaDataFromActivityType(ActivityType.StepSolve, "");
 
   return (
-    <Dialog defaultOpen>
+    <Dialog defaultOpen onOpenChange={(open) => {
+      if (open) {
+        posthog.capture("step_solve_tutorial_opened");
+      } else {
+        posthog.capture("step_solve_tutorial_closed");
+      }
+    }}>
       <DialogTrigger asChild>
         <Button 
           size="sm"

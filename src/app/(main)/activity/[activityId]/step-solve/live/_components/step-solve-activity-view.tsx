@@ -13,6 +13,7 @@ import StepSolveStepComponent from './step-component';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import FormattedText from '@/components/formatted-text';
+import posthog from 'posthog-js';
 
 interface StepSolveActivityViewProps {
   stepSolveAssignment: RouterOutputs["stepSolve"]["getAssignment"];
@@ -103,6 +104,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
   }
 
   const handleContinue = () => {
+    posthog.capture("step_solve_continue_clicked");
     setQuestionStates(prev => {
       const newStates = [...prev];
       const currentState = newStates[currentQuestionIndex];
@@ -232,7 +234,10 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
                   <div className="flex justify-end mt-8">
                     <Button
                       variant="link"
-                      onClick={() => setCurrentQuestionIndex(prev => prev + 1)}
+                      onClick={() => {
+                        posthog.capture("step_solve_next_question_clicked");
+                        setCurrentQuestionIndex(prev => prev + 1)
+                      }}
                     >
                       Next Question
                     </Button>

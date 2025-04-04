@@ -18,6 +18,7 @@ import { makeActivityLiveSchema } from "@/server/api/routers/activities/activiti
 import { useState, useEffect } from "react";
 import { Check, Copy } from "lucide-react";
 import { Paths } from "@/lib/constants";
+import posthog from "posthog-js";
 
 export default function AssignmentShareModal({ 
   activityId, isLive
@@ -36,6 +37,9 @@ export default function AssignmentShareModal({
   })
 
   const onSubmit = form.handleSubmit(async (values) => {
+    posthog.capture("learn_by_teaching_live_published", {
+      dueDate: values.dueDate,
+    });
     await makeAssignmentLive.mutateAsync({
       activityId: activityId,
       dueDate: values.dueDate,
@@ -53,6 +57,7 @@ export default function AssignmentShareModal({
   }, [activityId]);
 
   const copyToClipboard = async () => {
+    posthog.capture("learn_by_teaching_live_share_copied");
     await navigator.clipboard.writeText(assignmentLink);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -60,7 +65,9 @@ export default function AssignmentShareModal({
 
   return (
     <Dialog>
-      <DialogTrigger asChild>
+      <DialogTrigger asChild onClick={() => {
+        posthog.capture("learn_by_teaching_live_share_clicked");
+      }}>
         <Button size="sm" className="bg-amber-700 hover:bg-amber-900">
           Share
           <Share1Icon />

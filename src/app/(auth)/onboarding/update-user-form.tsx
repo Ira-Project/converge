@@ -11,6 +11,7 @@ import { GradesOptions, Paths } from "@/lib/constants";
 import { MultiSelect } from "@/components/ui/multi-select";
 import { updateUserSchema } from "@/server/api/routers/userOnboarding/userOnboarding.input";
 import { Badge } from "@/components/ui/badge";
+import posthog from "posthog-js";
 
 interface Props {
   courses: RouterOutputs["subject"]["listCourses"];
@@ -63,7 +64,7 @@ export const UpdateUserForm = ({ courses, subjects, email, name }: Props) => {
   })
 
   const onSubmit = form.handleSubmit(async (values) => {
-    console.log("values", values);
+    posthog.capture("user_onboarding_submitted");
     const classroomId = await updateUser.mutateAsync(values);
     void router.push(`${Paths.Classroom}${classroomId}`);
   });

@@ -17,6 +17,7 @@ import {
   SidebarMenuSubButton,
   SidebarMenuSubItem,
 } from "@/components/ui/sidebar"
+import posthog from "posthog-js"
 
 export function NavMain({
   items,
@@ -43,6 +44,13 @@ export function NavMain({
               asChild
               defaultOpen={false}
               className="group/collapsible"
+              onOpenChange={(open) => {
+                if (open) {
+                  posthog.capture("sidebar_item_opened", {
+                    item: item.title
+                  });
+                }
+              }}
             >
               <SidebarMenuItem>
                 <CollapsibleTrigger asChild>

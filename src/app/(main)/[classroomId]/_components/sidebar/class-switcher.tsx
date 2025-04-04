@@ -18,6 +18,7 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from "@/components/ui/sidebar"
+import posthog from "posthog-js"
 
 export function ClassSwitcher({
   teams,
@@ -35,7 +36,9 @@ export function ClassSwitcher({
     <SidebarMenu>
       <SidebarMenuItem>
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
+          <DropdownMenuTrigger asChild onClick={() => {
+            posthog.capture("class_switcher_opened")
+          }}>
             <SidebarMenuButton
               size="lg"
               className="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
@@ -64,7 +67,12 @@ export function ClassSwitcher({
             {teams.map((team, index) => (
               <DropdownMenuItem
                 key={team.name}
-                onClick={() => setActiveTeam(team)}
+                onClick={() => {
+                  setActiveTeam(team)
+                  posthog.capture("class_switcher_clicked", {
+                    team: team.name
+                  })
+                }}
                 className="gap-2 p-2"
               >
                 <div className="flex size-6 items-center justify-center">

@@ -1,15 +1,20 @@
 import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogDescription, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
 import { LoadingButton } from "@/components/loading-button";
+import posthog from "posthog-js";
+import React from "react";
 
 export default function ConfirmationModal({ 
   onSubmit, 
   loading,
-} : { onSubmit: () => void, loading: boolean }) {  
+} : { onSubmit: () => Promise<void>, loading: boolean }) {  
+  const closeRef = React.useRef<HTMLButtonElement>(null);
 
   return (
     <Dialog>
-      <DialogTrigger asChild>
+      <DialogTrigger asChild onClick={() => {
+        posthog.capture("learn_by_teaching_live_share_clicked");
+      }}>
         <Button 
           size="sm"
           className="bg-amber-700 text-white hover:bg-amber-900">
@@ -30,7 +35,11 @@ export default function ConfirmationModal({
           <LoadingButton 
             className="bg-amber-700 text-white hover:bg-amber-900"
             loading={loading}
-            onClick={onSubmit}>
+            onClick={ async () => {
+              posthog.capture("learn_by_teaching_submitted");
+              await onSubmit();
+              closeRef.current?.click();
+            }}>
             Submit
           </LoadingButton>
         </DialogFooter>
