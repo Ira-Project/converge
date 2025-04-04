@@ -5,8 +5,6 @@ import { validateRequest } from "@/lib/auth/validate-request";
 import { api } from "@/trpc/server";
 import { redirect } from "next/navigation";
 import { AppSidebar } from "./_components/sidebar/app-sidebar";
-// import PostHogClient from "@/lib/posthog";
-import posthog from "posthog-js";
 
 export default async function MainLayout(props: { params: Promise<{ classroomId: string }>, children: React.ReactNode }) {
 
@@ -18,13 +16,6 @@ export default async function MainLayout(props: { params: Promise<{ classroomId:
   let students;
   let usersToClassrooms;
   if(user) {
-    // const posthog = PostHogClient();
-    posthog.identify(user.id, {
-      email: user.email,
-      name: user.name,
-      role: user.role,
-    });
-
     classroom = await api.classroom.get.query({ id: params.classroomId, });
     activities = await api.activities.getActivities.query({ classroomId: params.classroomId });
     students = await api.classroom.students.query({ id: params.classroomId });

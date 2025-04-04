@@ -76,13 +76,6 @@ export async function login(
     };
   }
 
-  posthog.identify(existingUser.id, {
-    email: existingUser.email,
-    name: existingUser.name,
-    role: existingUser.role,
-    defaultClassroomId: existingUser.defaultClassroomId,
-  });
-
   const session = await lucia.createSession(existingUser.id, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
   (await cookies()).set(sessionCookie.name, sessionCookie.value, sessionCookie.attributes);
@@ -151,13 +144,6 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
       });
     }
   }
-
-  posthog.identify(userId, {
-    email: email,
-    name: name,
-    role: returnPath ? Roles.Student : Roles.Teacher,
-    defaultClassroomId: classroomId,
-  });
 
   const verificationCode = await generateEmailVerificationCode(userId, email);
   await sendMail(email, EmailTemplate.EmailVerification, { code: verificationCode });

@@ -24,12 +24,17 @@ export const viewport: Viewport = {
 
 import 'katex/dist/katex.min.css';
 import { PostHogProvider } from "@/hooks/posthog-provider";
+import { validateRequest } from "@/lib/auth/validate-request";
+import { SuspendedPostHogUserIdentify } from "@/hooks/posthog-identify";
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+
+  const { user } = await validateRequest();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -55,6 +60,9 @@ export default function RootLayout({
         >
           <PostHogProvider>
             <TRPCReactProvider>{children}</TRPCReactProvider>
+            {user && (
+              <SuspendedPostHogUserIdentify id={user.id} email={user.email} name={user.name ?? ""} role={user.role} />
+            )}
             <Toaster />
           </PostHogProvider>
         </ThemeProvider>
