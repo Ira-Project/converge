@@ -11,7 +11,7 @@ import { classrooms } from "../schema/classroom";
 import { activity } from "../schema/activity";
 
 import { addConceptsToKnowledgeZapQuestions, computeQuestionsCompleted, createConceptTrackerForAllKnowledgeZapAttempts, createKnowledgeZapAssignment, deleteKnowledgeZapAssignment, findConceptsWithoutKnowledgeZaps, findKnowledgeZapQuestionsWithoutConcepts, updateKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
-import { addAssignmentIdToAttempts, createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts, addConceptsToStepSolveSteps, findStepSolveStepsWithoutConcepts } from "./stepSolve/stepSolve-seed";
+import { addAssignmentIdToAttempts, createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts, addConceptsToStepSolveSteps, findStepSolveStepsWithoutConcepts, createConceptTrackerForAllStepAttempts } from "./stepSolve/stepSolve-seed";
 import { computeAccuracyForReasoningAssignment, createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
@@ -63,13 +63,14 @@ if(process.env.ENVIRONMENT === "prod") {
 // await computeAccuracyForReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION 
-// await deleteStepSolveAssignment("6uyBKuPSx22HEHjHxBdmh");
+// await deleteStepSolveAssignment("0c3d517a4a094552b6cb0");
 // await createStepSolveAssignment("A1 - Kinematics_1");
 // await addConceptsToStepSolveSteps("B1 - Thermal Energy Transfers");
 // await findConceptsWithoutStepSolveSteps();
 // await findStepSolveStepsWithoutConcepts();
 // await updateStepSolveAssignmentAttempts();
 // await addAssignmentIdToAttempts();
+// await createConceptTrackerForAllStepAttempts();
 
 // READ AND RELAY CREATION AND DELETION
 // await createReadAndRelayAssignment();
