@@ -4,8 +4,6 @@ import Image from "next/image";
 import { validateRequest } from '@/lib/auth/validate-request';
 import { Roles } from '@/lib/constants';
 import TopicList from './_components/topic-list';
-import PostHogClient from "@/lib/posthog";
-
 export default async function ClassroomPage(props: { params: Promise<{ classroomId: string }> }) {
   const [{ user }, params] = await Promise.all([
     validateRequest(),
@@ -14,15 +12,6 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
 
   let classroom, topics, userToClassroom: { role: Roles } | undefined;
   if (user) {
-    const posthog = PostHogClient();
-    posthog.identify({
-      distinctId: user.id,
-      properties: {
-        email: user.email,
-        name: user.name,
-        role: user.role,
-      }
-    });
     [classroom, topics, userToClassroom] = await Promise.all([
       api.classroom.get.query({ id: params.classroomId }),
       api.activities.getActivities.query({ classroomId: params.classroomId }),
