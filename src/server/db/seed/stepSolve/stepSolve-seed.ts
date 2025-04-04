@@ -525,16 +525,16 @@ export async function createConceptTrackerForAllStepAttempts() {
   })));
 
   // Create concept tracking records for each attempt
-  for (const attempt of attempts) {
-    await db.insert(conceptTracking).values({
-      id: generateId(21),
-      isCorrect: attempt.isCorrect ?? false,
-      conceptId: attempt.conceptId,
-      userId: attempt.userId,
-      classroomId: attempt.classroomId,
-      activityType: ActivityType.StepSolve,
-      createdAt: attempt.createdAt,
-      updatedAt: attempt.createdAt,
-    });
-  }
+  // for (const attempt of attempts) {
+  //   await db.insert(conceptTracking).values({
+  //     id: generateId(21),
+  //     isCorrect: attempt.isCorrect ?? false,
+  //     conceptId: attempt.conceptId,
+  //     userId: attempt.userId,
+  //     classroomId: attempt.classroomId,
+  //     activityType: ActivityType.StepSolve,
+  //     createdAt: attempt.createdAt,
+  //     updatedAt: attempt.createdAt,
+  //   });
+  // }
 }
