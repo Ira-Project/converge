@@ -31,6 +31,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
+import posthog from "posthog-js"
 
 export type LeaderboardEntry = {
   userId: string
@@ -164,6 +165,7 @@ export function Leaderboard(props: {
   })
 
   const downloadCSV = () => {
+    posthog.capture("leaderboard_download_csv_clicked");
     // Create CSV header
     const headers = ['Rank', 'Name'];
     const activityHeaders = props.activityInfo.map(activity => (activity.name + " (" + activity.type + ")"));

@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { api } from '@/trpc/react';
 import { Button } from '@/components/ui/button';
 import FormattedText from '@/components/formatted-text';
+import posthog from 'posthog-js';
 interface OrderingQuestionProps {
   assignmentAttemptId: string;
   orderingQuestionId: string;
@@ -35,6 +36,7 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
 
 
   const handleSubmit = async () => {
+    posthog.capture("knowledge_zap_ordering_question_submitted");
     const result = await checkOrderingAnswer.mutateAsync({
       assignmentAttemptId: assignmentAttemptId,
       orderingQuestionId: orderingQuestionId,
@@ -54,6 +56,7 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
   };
 
   const handleDragOver = (e: React.DragEvent, overItem: MultipleChoiceOption) => {
+    posthog.capture("knowledge_zap_ordering_question_drag_completed");
     e.preventDefault();
     if (draggedItem === overItem) return;
 
@@ -68,6 +71,7 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
   };
 
   const handleContinue = () => { 
+    posthog.capture("knowledge_zap_ordering_question_continue_clicked");
     setOrder(options);
     setIsSubmitted(false);
     setIsCorrect(false);

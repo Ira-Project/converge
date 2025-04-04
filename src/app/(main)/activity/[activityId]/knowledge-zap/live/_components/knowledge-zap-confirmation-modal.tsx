@@ -2,6 +2,7 @@ import { Dialog, DialogClose, DialogContent, DialogFooter, DialogHeader, DialogT
 import { Button } from '@/components/ui/button';
 import { LoadingButton } from "@/components/loading-button";
 import React from 'react';
+import posthog from "posthog-js";
 
 export default function ConfirmationModal({ 
   onSubmit, 
@@ -29,6 +30,7 @@ export default function ConfirmationModal({
             className="bg-lime-700 text-white hover:bg-lime-800"
             loading={loading}
             onClick={ async () => {
+              posthog.capture("knowledge_zap_submitted");
               await onSubmit();
               closeRef.current?.click();
             }}>

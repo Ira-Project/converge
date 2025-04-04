@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { api } from '@/trpc/react';
 import { Button } from '@/components/ui/button';
 import FormattedText from '@/components/formatted-text';
+import posthog from 'posthog-js';
 interface MatchingQuestionProps {
   assignmentAttemptId: string;
   matchingQuestionId: string;
@@ -40,6 +41,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
   };
 
   const handleSubmit = async () => {
+    posthog.capture("knowledge_zap_matching_question_submitted");
     const result = await checkMatchingAnswer.mutateAsync({
       assignmentAttemptId: assignmentAttemptId,
       matchingQuestionId: matchingQuestionId,
@@ -120,6 +122,8 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
         ctx.fill();
       }
     });
+    
+    posthog.capture("knowledge_zap_matching_question_lines_drawn");
   };
 
   const handleMatch = (term: string, definition: string) => {
@@ -155,6 +159,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
   };
 
   const handleContinue = () => {
+    posthog.capture("knowledge_zap_matching_question_continue_clicked");
     setMatches([]);
     setSelectedTerm(null);
     setSelectedDefinition(null);

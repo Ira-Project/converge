@@ -27,8 +27,6 @@ export const ConceptGraph = ({ concepts, edges, trackedConcepts, numberOfStudent
 
   let filteredConcepts = concepts;
   if(selectedTopics.length > 0) {
-    console.log('Selected Topics:', selectedTopics);
-    console.log('Before filtering:', concepts);
     filteredConcepts = concepts.filter(concept => {
       const hasMatchingTopic = concept.conceptsToTopics.some(ctt => {
         console.log('Checking topic:', ctt.topicId);
@@ -36,10 +34,7 @@ export const ConceptGraph = ({ concepts, edges, trackedConcepts, numberOfStudent
       });
       return hasMatchingTopic;
     });
-    console.log('After filtering:', filteredConcepts);
   }
-
-  console.log(filteredConcepts);
 
   const filteredConceptIds = filteredConcepts.map(concept => concept.id);
 

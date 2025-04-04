@@ -24,6 +24,7 @@ import { Separator } from '@/components/ui/separator';
 import Image from 'next/image';
 import { Pagination, PaginationContent, PaginationItem, PaginationPrevious, PaginationNext, PaginationLink } from "@/components/ui/pagination"
 import { ImageModal } from '@/components/image-modal';
+import posthog from 'posthog-js';
 
 const getColumns = (questionText?: string, answerText?: string) => {
   let columns = 1;
@@ -108,6 +109,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   const handleDrop = (e: React.DragEvent, index: number): void => {
     e.preventDefault();
     setIsDragging(false);
+    posthog.capture("reason_trace_part_1_step_dropped");
 
     const newReasoningPathwayOptions = [...currentState!.reasoningPathwayOptions];
     const newUsedSteps = [...currentState!.usedSteps];
@@ -142,6 +144,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   // PART 1 FUNCTIONS
 
   const handleSubmit = async (): Promise<void> => {
+    posthog.capture("reason_trace_check_part_1_clicked");
     if (currentState?.reasoningPathwayOptions.every(step => step)) {
       const result = await part1Mutation.mutateAsync({
         attemptId: reasoningAttemptId,
@@ -176,6 +179,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   };
 
   const reset = (): void => {
+    posthog.capture("reason_trace_reset_part_1_clicked");
     const newQuestionStates = [...questionStates];
     newQuestionStates[currentQuestionIndex] = {
       reasoningPathwayOptions: Array(currentQuestion?.question.numberOfSteps).fill(null) as (StepObject | null)[],
@@ -191,6 +195,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   const handlePart2Drop = (e: React.DragEvent, index: number): void => {
     e.preventDefault();
     setIsDragging(false);
+    posthog.capture("reason_trace_part_2_step_dropped");
 
     if (!draggedItem) return;
 
@@ -217,6 +222,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   };
 
   const handlePart2Submit = async (): Promise<void> => {
+    posthog.capture("reason_trace_check_part_2_clicked");
     if (currentState?.part2Steps.every(step => step)) {
       const result = await part2Mutation.mutateAsync({
         attemptId: reasoningAttemptId,
@@ -254,6 +260,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   }
 
   const resetPart2 = (): void => {
+    posthog.capture("reason_trace_reset_part_2_clicked");
     const newQuestionStates = [...questionStates];
     newQuestionStates[currentQuestionIndex] = {
       ...currentState!,
@@ -274,6 +281,9 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   })
 
   const handlePart3Submit = async (values: Part3FinalCorrectAnswerInput) => {
+    posthog.capture("reason_trace_check_part_3_clicked", {
+      answer: values.answer
+    });
     setQuestionStates(questionStates.map(state => ({...state, part3Error: undefined})));
     const result = await part3Mutation.mutateAsync({
       attemptId: reasoningAttemptId,
@@ -692,7 +702,10 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                     currentQuestionIndex > 0 && (
                       <PaginationItem>
                         <PaginationPrevious 
-                          onClick={() => setCurrentQuestionIndex(prev => prev - 1)}
+                          onClick={() => {
+                            setCurrentQuestionIndex(prev => prev - 1)
+                            posthog.capture("reason_trace_previous_question_clicked");
+                          }}
                         />
                       </PaginationItem>
                     )
@@ -701,7 +714,12 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                     reasoningAssignment?.reasoningQuestions.map((question, index) => (
                       <PaginationItem key={index}>
                         <PaginationLink 
-                          onClick={() => setCurrentQuestionIndex(index)}
+                          onClick={() => {
+                            setCurrentQuestionIndex(index)
+                            posthog.capture("reason_trace_question_clicked", {
+                              questionIndex: index
+                            });
+                          }}
                           isActive={currentQuestionIndex === index}
                         >
                           {index + 1}
@@ -713,7 +731,10 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                     currentQuestionIndex < (reasoningAssignment?.reasoningQuestions?.length ?? 0) - 1 && (
                       <PaginationItem>
                         <PaginationNext 
-                          onClick={() => setCurrentQuestionIndex(prev => prev + 1)}
+                          onClick={() => {
+                            setCurrentQuestionIndex(prev => prev + 1)
+                            posthog.capture("reason_trace_next_question_clicked");
+                          }}
                         />
                       </PaginationItem>
                     )

@@ -9,6 +9,7 @@ import TopicBreakdownChart from './topicBreakdown';
 import { type RouterOutputs } from '@/trpc/shared';
 import { FilterIcon } from 'lucide-react';
 import { ConceptGraph } from './conceptGraph';
+import posthog from 'posthog-js';
 
 interface AnalyticsDashboardProps {
   conceptTracking: RouterOutputs["analytics"]["getConceptTracking"];
@@ -43,7 +44,10 @@ export function AnalyticsDashboard({ submissions, conceptTracking }: AnalyticsDa
         <MultiSelect
           options={topics.map(topic => ({ label: topic.name, value: topic.id }))}
           value={selectedTopicIds}
-          onValueChange={(value) => setSelectedTopicIds(value)}
+          onValueChange={(value) => {
+            setSelectedTopicIds(value)
+            posthog.capture("analytics_topic_filter_changed");
+          }}
           placeholder="Filter Topics"
           maxCount={2}
           className="w-full max-w-xl truncate"

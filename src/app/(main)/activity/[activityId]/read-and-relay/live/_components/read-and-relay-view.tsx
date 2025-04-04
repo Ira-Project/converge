@@ -23,6 +23,7 @@ import { Button } from "@/components/ui/button";
 import { TrashIcon } from "@/components/icons";
 import { LoadingButton } from "@/components/loading-button";
 import Image from "next/image";
+import posthog from "posthog-js";
 interface Props {
   activityId: string
   topic: string;
@@ -120,6 +121,7 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
   const [formulas, setFormulas] = useState<Formula[]>([]);
 
   const onSubmit = (async () => {
+    posthog.capture("read_and_relay_cheatsheet_submitted");
     questionsStateDispatch({
       type: AssignmentUpdateActionType.SET_LOADING,
     })

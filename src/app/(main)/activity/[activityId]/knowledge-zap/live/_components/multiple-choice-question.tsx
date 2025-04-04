@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { type MultipleChoiceOption } from '../types';
 import FormattedText from '@/components/formatted-text';
+import posthog from 'posthog-js';
 
 interface MultipleChoiceQuestionProps {
   assignmentAttemptId: string;
@@ -46,6 +47,7 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
 
 
   const handleSubmit = async () => {
+    posthog.capture("knowledge_zap_multiple_choice_question_submitted");
     const result = await checkMultipleChoiceAnswer.mutateAsync({
       assignmentAttemptId: assignmentAttemptId,
       multipleChoiceQuestionId: multipleChoiceQuestionId,
@@ -57,6 +59,7 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
   };
 
   const handleContinue = () => {
+    posthog.capture("knowledge_zap_multiple_choice_question_continue_clicked");
     setSelected(null);
     setIsSubmitted(false);
     setIsCorrect(false);
@@ -86,6 +89,7 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
           <button
             key={option.id}
             onClick={() => {
+              posthog.capture("knowledge_zap_multiple_choice_question_option_clicked")
               setSelected(option.id);
             }}
             className={getButtonClassNames(

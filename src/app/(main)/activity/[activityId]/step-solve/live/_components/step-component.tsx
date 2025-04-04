@@ -7,6 +7,7 @@ import { useForm } from 'react-hook-form';
 import StepOption from './step-option';
 import Image from 'next/image';
 import { Input } from '@/components/ui/input';
+import posthog from 'posthog-js';
 
 interface StepSolveStepComponentProps {
   id: string;
@@ -45,6 +46,9 @@ const StepSolveStepComponent = ({
 }: StepSolveStepComponentProps) => {
 
   const handleSubmit = async (input: submitAnswerInput) => {
+    posthog.capture("step_solve_answer_submitted", {
+      userAnswer: input.userAnswer,
+    });
     await handleSubmitAnswer({
       stepId: id,
       userAnswer: input.userAnswer,
@@ -97,7 +101,10 @@ const StepSolveStepComponent = ({
                           disabled={isDisabled}
                           key={option.id}
                           type="button"
-                          onClick={() => field.onChange(option.id)}
+                          onClick={() => {
+                            posthog.capture("step_solve_option_selected");
+                            field.onChange(option.id)
+                          }}
                           className="w-full cursor-pointer"
                         >
                           <StepOption

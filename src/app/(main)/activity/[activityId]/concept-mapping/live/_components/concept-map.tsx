@@ -25,6 +25,7 @@ import DraggableStep from './draggable-step';
 import { LoadingButton } from '@/components/loading-button';
 
 import Image from 'next/image';
+import posthog from 'posthog-js';
 
 
 export const enum NodeType {
@@ -64,6 +65,9 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
   };
 
   const onStepUse = (step: string) => {
+    posthog.capture("concept_mapping_step_used", {
+      step: step,
+    });
     setUsedSteps(prev => [...prev, step]);
   };
 
@@ -237,6 +241,7 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
   }), [edgeStatuses, memoizedHandlers]);
 
   const handleEvaluateMap = async () => {
+    posthog.capture("concept_mapping_evaluate_clicked"); 
     const result = await evaluateMapMutation.mutateAsync({
       attemptId: attemptId,
       assignmentId: assignmentId,

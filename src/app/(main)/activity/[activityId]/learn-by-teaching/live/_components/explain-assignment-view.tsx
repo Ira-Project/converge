@@ -25,6 +25,7 @@ import dynamic from 'next/dynamic';
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import AssignmentShareModal from "./explain-assignment-share-modal";
+import posthog from "posthog-js";
 
 const FormulaInput = dynamic(() => import('./formula-input'), { ssr: false });
 
@@ -120,6 +121,7 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
   })
 
   const onSubmit = form.handleSubmit(async (values) => {
+    posthog.capture("learn_by_teaching_explanation_submitted");
     questionsStateDispatch({
       type: AssignmentUpdateActionType.SET_LOADING,
     })
