@@ -154,14 +154,16 @@ const StepSolveStepComponent = ({
                 <p className="text-center text-sm text-muted-foreground">
                   You got it right! Your answer was:
                 </p>
-                <p className="text-center font-semibold">
-                  {form.getValues('userAnswer')}
-                </p>
-                <p className="text-center text-sm text-muted-foreground">
-                  {stepSolveAnswerUnits && (
-                    <FormattedText text={stepSolveAnswerUnits} />
-                  )}
-                </p>
+                <div className="flex flex-row gap-2 items-center justify-center">
+                  <p className="text-center font-semibold">
+                    {form.getValues('userAnswer')}
+                  </p>
+                  <p className="text-center text-muted-foreground font-semibold">
+                    {stepSolveAnswerUnits && (
+                      <FormattedText text={stepSolveAnswerUnits} />
+                    )}
+                  </p>
+                </div>
               </>
             )
           }

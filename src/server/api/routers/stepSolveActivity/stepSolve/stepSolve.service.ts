@@ -19,66 +19,163 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
 
   console.log("Activity to assignments", activityToAssignments);
 
-  // Get a random assignment from the activity
-  const randomAssignment = activityToAssignments[Math.floor(Math.random() * activityToAssignments.length)];
-  const assignmentId = randomAssignment?.stepSolveAssignment?.id;
-
-  if (!assignmentId) {
-    throw new Error("Assignment not found");
-  }
-
-  return await ctx.db.query.stepSolveAssignments.findFirst({
-    where: (table, { eq }) => eq(table.id, assignmentId),
-    columns: {
-      id: true,
-      name: true,
-      createdAt: true,
-      createdBy: true,
-      description: true,
-    },
-    with: {
-      topic: {
-        columns: {
-          name: true,
-        }
+  // Check if we're in development environment
+  const isDev = process.env.ENVIRONMENT === "dev";
+  
+  if (isDev && activityToAssignments.length > 1) {
+    console.log("Development environment detected. Combining questions from all assignments.");
+    
+    // Use the first assignment as the base
+    const firstAssignment = activityToAssignments[0]?.stepSolveAssignment;
+    const assignmentId = firstAssignment?.id;
+    
+    if (!assignmentId) {
+      throw new Error("Assignment not found");
+    }
+    
+    // Get the base assignment details
+    const baseAssignment = await ctx.db.query.stepSolveAssignments.findFirst({
+      where: (table, { eq }) => eq(table.id, assignmentId),
+      columns: {
+        id: true,
+        name: true,
+        createdAt: true,
+        createdBy: true,
+        description: true,
       },
-      stepSolveQuestions: {
-        orderBy: [asc(stepSolveQuestionToAssignment.order)],
+      with: {
+        topic: {
+          columns: {
+            name: true,
+          }
+        }
+      }
+    });
+    
+    if (!baseAssignment) {
+      throw new Error("Base assignment not found");
+    }
+    
+    // Collect all questions from all assignments
+    const allQuestions = [];
+    
+    for (const activityAssignment of activityToAssignments) {
+      const assignment = activityAssignment.stepSolveAssignment;
+      if (!assignment?.id) continue;
+      
+      const assignmentWithQuestions = await ctx.db.query.stepSolveAssignments.findFirst({
+        where: (table, { eq }) => eq(table.id, assignment.id),
         with: {
-          q: {
-            columns: {
-              id: true,
-              questionText: true,
-              questionImage: true,
-            },
+          stepSolveQuestions: {
+            orderBy: [asc(stepSolveQuestionToAssignment.order)],
             with: {
-              steps: {
-                orderBy: [asc(stepSolveStep.stepNumber)],
+              q: {
                 columns: {
                   id: true,
-                  stepText: true,
-                  stepTextPart2: true,
-                  stepImage: true,
-                  stepNumber: true,
-                  stepSolveAnswer: true,
-                  stepSolveAnswerUnits: true,
+                  questionText: true,
+                  questionImage: true,
                 },
                 with: {
-                  opt: {
+                  steps: {
+                    orderBy: [asc(stepSolveStep.stepNumber)],
                     columns: {
                       id: true,
-                      optionText: true,
-                      optionImage: true,
+                      stepText: true,
+                      stepTextPart2: true,
+                      stepImage: true,
+                      stepNumber: true,
+                      stepSolveAnswer: true,
+                      stepSolveAnswerUnits: true,
+                    },
+                    with: {
+                      opt: {
+                        columns: {
+                          id: true,
+                          optionText: true,
+                          optionImage: true,
+                        }
+                      },
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      });
+      
+      if (assignmentWithQuestions?.stepSolveQuestions) {
+        allQuestions.push(...assignmentWithQuestions.stepSolveQuestions);
+      }
+    }
+    
+    // Return the combined assignment
+    return {
+      ...baseAssignment,
+      stepSolveQuestions: allQuestions,
+    };
+  } else {
+    // Get a random assignment from the activity (original behavior)
+    const randomAssignment = activityToAssignments[Math.floor(Math.random() * activityToAssignments.length)];
+    const assignmentId = randomAssignment?.stepSolveAssignment?.id;
+
+    if (!assignmentId) {
+      throw new Error("Assignment not found");
+    }
+
+    return await ctx.db.query.stepSolveAssignments.findFirst({
+      where: (table, { eq }) => eq(table.id, assignmentId),
+      columns: {
+        id: true,
+        name: true,
+        createdAt: true,
+        createdBy: true,
+        description: true,
+      },
+      with: {
+        topic: {
+          columns: {
+            name: true,
+          }
+        },
+        stepSolveQuestions: {
+          orderBy: [asc(stepSolveQuestionToAssignment.order)],
+          with: {
+            q: {
+              columns: {
+                id: true,
+                questionText: true,
+                questionImage: true,
+              },
+              with: {
+                steps: {
+                  orderBy: [asc(stepSolveStep.stepNumber)],
+                  columns: {
+                    id: true,
+                    stepText: true,
+                    stepTextPart2: true,
+                    stepImage: true,
+                    stepNumber: true,
+                    stepSolveAnswer: true,
+                    stepSolveAnswerUnits: true,
                   },
+                  with: {
+                    opt: {
+                      columns: {
+                        id: true,
+                        optionText: true,
+                        optionImage: true,
+                      }
+                    },
+                  }
                 }
               }
             }
           }
         }
       }
-    }
-  });
+    });
+  }
 }
 
 export const createStepSolveAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: CreateStepSolveAssignmentAttemptInput) => {
