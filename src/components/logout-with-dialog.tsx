@@ -16,6 +16,7 @@ import { logout } from "@/lib/auth/actions";
 import { APP_TITLE } from "@/lib/constants";
 import { toast } from "sonner";
 import { LogOut } from "lucide-react";
+import posthog from "posthog-js";
 
 export const LogoutWithDialog = () => {
   const [open, setOpen] = useState(false);
@@ -24,6 +25,7 @@ export const LogoutWithDialog = () => {
   const handleSignout = async () => {
     setIsLoading(true);
     try {
+      posthog.reset();
       await logout();
       toast("Signed out successfully");
     } catch (error) {

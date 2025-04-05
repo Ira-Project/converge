@@ -3,7 +3,7 @@ import { generateId } from "lucia/dist/crypto";
 import { classrooms, usersToClassrooms } from "@/server/db/schema/classroom";
 import { db } from "@/server/db";
 import { ActivityType, Roles } from "@/lib/constants";
-import { activity } from "@/server/db/schema/activity";
+import { activity, activityToAssignment } from "@/server/db/schema/activity";
 import { eq, and } from "drizzle-orm";
 import { knowledgeZapAssignments } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
 import { stepSolveAssignments } from "@/server/db/schema/stepSolve/stepSolveAssignment";
@@ -67,8 +67,9 @@ export async function createClassroom(
   // Get all step solve assignments
   const ssa = await db.select().from(stepSolveAssignments).where(eq(stepSolveAssignments.isDeleted, false));
   for(const stepSolveAssignment of ssa) {
+    const activityId = generateId(21);
     await db.insert(activity).values({
-      id: generateId(21),
+      id: activityId,
       assignmentId: stepSolveAssignment.id,
       classroomId: classroom[0]?.id,
       name: stepSolveAssignment.name ?? "",
@@ -76,6 +77,12 @@ export async function createClassroom(
       typeText: ActivityType.StepSolve,
       order: 0,
       points: 100,
+    })
+    await db.insert(activityToAssignment).values({
+      id: generateId(21),
+      activityId: activityId,
+      stepSolveAssignmentId: stepSolveAssignment.id,
+      createdAt: new Date(),
     })
   }
 

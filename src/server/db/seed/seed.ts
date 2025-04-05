@@ -11,7 +11,7 @@ import { classrooms } from "../schema/classroom";
 import { activity } from "../schema/activity";
 
 import { addConceptsToKnowledgeZapQuestions, computeQuestionsCompleted, createConceptTrackerForAllKnowledgeZapAttempts, createKnowledgeZapAssignment, deleteKnowledgeZapAssignment, findConceptsWithoutKnowledgeZaps, findKnowledgeZapQuestionsWithoutConcepts, updateKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
-import { addAssignmentIdToAttempts, createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts, addConceptsToStepSolveSteps, findStepSolveStepsWithoutConcepts, createConceptTrackerForAllStepAttempts } from "./stepSolve/stepSolve-seed";
+import { addAssignmentIdToAttempts, createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts, addConceptsToStepSolveSteps, findStepSolveStepsWithoutConcepts, createConceptTrackerForAllStepAttempts, createStepSolveToAssignment } from "./stepSolve/stepSolve-seed";
 import { computeAccuracyForReasoningAssignment, createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
@@ -66,11 +66,15 @@ if(process.env.ENVIRONMENT === "prod") {
 // await deleteStepSolveAssignment("0c3d517a4a094552b6cb0");
 // await createStepSolveAssignment("A1 - Kinematics_1");
 // await addConceptsToStepSolveSteps("B1 - Thermal Energy Transfers");
+// await addConceptsToStepSolveSteps("B4 - Thermodynamics");
+// await addConceptsToStepSolveSteps("C1 - Simple Harmonic Motion");
+// await addConceptsToStepSolveSteps("E3 - Radioactive Decay");
 // await findConceptsWithoutStepSolveSteps();
 // await findStepSolveStepsWithoutConcepts();
 // await updateStepSolveAssignmentAttempts();
 // await addAssignmentIdToAttempts();
 // await createConceptTrackerForAllStepAttempts();
+await createStepSolveToAssignment();
 
 // READ AND RELAY CREATION AND DELETION
 // await createReadAndRelayAssignment();
