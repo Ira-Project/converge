@@ -26,6 +26,7 @@ import { APP_TITLE } from "@/lib/constants";
 import { toast } from "sonner";
 import Image from "next/image";
 import Avatar from 'boring-avatars'
+import posthog from "posthog-js";
 
 export const UserDropdown = ({
   name,
@@ -74,6 +75,7 @@ const SignoutConfirmation = () => {
   const handleSignout = async () => {
     setIsLoading(true);
     try {
+      posthog.reset();
       await logout();
       toast("Signed out successfully");
     } catch (error) {

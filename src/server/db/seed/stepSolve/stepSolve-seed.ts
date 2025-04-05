@@ -238,6 +238,22 @@ export async function createStepSolveAssignment(topicName: string) {
   console.log("--------------------------------");
 }
 
+export async function createStepSolveToAssignment() {
+  const activities = await db.select().from(activity).where(eq(activity.typeText, ActivityType.StepSolve));
+  for(const activity of activities) {
+    const assignmentToActivities = await db.select().from(activityToAssignment).where(eq(activityToAssignment.activityId, activity.id));
+    if(assignmentToActivities.length === 0) {
+      console.log("Activity has no assignment", activity.id, activity.classroomId);
+      console.log("Adding assignment to activity", activity.id);
+      await db.insert(activityToAssignment).values({
+        id: generateId(21),
+        activityId: activity.id,
+        stepSolveAssignmentId: activity.assignmentId,
+      })
+    }
+  }
+}
+
 export async function deleteStepSolveAssignment(stepSolveAssignmentId: string) {
   //First get the step solve assignment
   const stepSolveAssignment = await db.select().from(stepSolveAssignments).where(eq(stepSolveAssignments.id, stepSolveAssignmentId));
@@ -525,16 +541,16 @@ export async function createConceptTrackerForAllStepAttempts() {
   })));
 
   // Create concept tracking records for each attempt
-  // for (const attempt of attempts) {
-  //   await db.insert(conceptTracking).values({
-  //     id: generateId(21),
-  //     isCorrect: attempt.isCorrect ?? false,
-  //     conceptId: attempt.conceptId,
-  //     userId: attempt.userId,
-  //     classroomId: attempt.classroomId,
-  //     activityType: ActivityType.StepSolve,
-  //     createdAt: attempt.createdAt,
-  //     updatedAt: attempt.createdAt,
-  //   });
-  // }
+  for (const attempt of attempts) {
+    await db.insert(conceptTracking).values({
+      id: generateId(21),
+      isCorrect: attempt.isCorrect ?? false,
+      conceptId: attempt.conceptId,
+      userId: attempt.userId,
+      classroomId: attempt.classroomId,
+      activityType: ActivityType.StepSolve,
+      createdAt: attempt.createdAt,
+      updatedAt: attempt.createdAt,
+    });
+  }
 }

@@ -1,0 +1,170 @@
+{
+    "name": "Simple Harmonic Motion",
+    "idDev": "s1djs0ow5j9t5upngzaq7",
+    "idProd": "9t6ocjxhz10rs98mgtjm4",
+    "topicIdDev": "QoUD52AFmibtZ7SGqIbmI",
+    "topicIdProd": "qY4JbQSoTts2eHzmUE9Gx",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "ab1b8045f62543df938ad",
+            "questionText": "A simple pendulum with length $!$l$!$ makes 75 complete oscillations over four minutes. Find the length, $!$l$!$, of the pendulum.",
+            "questionImage": "",
+            "steps": [
+                {
+                    "id": "dd18793c92c84af69c223",
+                    "stepText": "First, let's find the time period of the pendulum. What formula can be used to find the time period?",
+                    "stepText2": "Calculate the time period of the pendulum up to 1 decimal place (in $!$s$!$).",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.2",
+                        "3.2 s",
+                        "3.2 seconds",
+                        "3.2 sec",
+                        "3.2sec",
+                        "3.2s",
+                        "3.2seconds"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Period ($!$T$!$) = $!$\\frac{\\text{time (in minutes)}}{\\text{number of oscillations}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": " Period ($!$T$!$) = $!$\\frac{\\text{time (in seconds)}}{\\text{number of oscillations}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Period ($!$T$!$) = $!$2*\\pi*\\sqrt{\\frac{l}{g}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ],
+                    "stepConcepts": [
+                        "42360656-7edd-45e1-9018-41817f8bc0d5",
+                        "2ad8c228-6aae-422b-8b9f-6c6e4d83a2f2"
+                    ]
+                },
+                {
+                    "id": "97d212f94ba9494bbae8d",
+                    "stepText": "Now, the time period is known to be $!$3.2 s$!$. Using this, how would you find the length, $!$l$!$, of the pendulum?",
+                    "stepText2": "Calculate the length of the pendulum up to 1 decimal places (in $!$m$!$). Assume $!$g = 10 m/s^2$!$.",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.5",
+                        "2.5 m",
+                        "2.5m",
+                        "2.6 m",
+                        "2.6m",
+                        "2.6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Use the formula $!$T = 2\\pi\\sqrt{\\frac{l}{g}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Use the formula $!$T = \\frac{\\text{time (in seconds)}}{\\text{number of oscillations}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ],
+                    "stepConcepts": [
+                        "42360656-7edd-45e1-9018-41817f8bc0d5",
+                        "2ad8c228-6aae-422b-8b9f-6c6e4d83a2f2"
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "6607d90cd31c479aada14",
+            "questionText": "A vertical, cylindrical buoy of mass $!$0.42 kg$!$ is floating in the ocean. At $!$t = 0$!$ ,the buoy is displaced vertically downwards by a distance of $!$28 cm$!$ and begins to oscillate with simple harmonic motion. When the buoy is $!$15 cm$!$ above the water surface, the restoring force that acts on the buoy is $!$1.7 N$!$. What is the maximum acceleration of the buoy?",
+            "questionImage": "https://converge-question-images.s3.us-west-1.amazonaws.com/shm_ss_q2.png",
+            "steps": [
+                {
+                    "id": "03125c7597f440a5a6747",
+                    "stepText": "We know that the buoy is undergoing simple harmonic motion. Based on this information, which of the following is true?",
+                    "stepImage": "",
+                    "options": [
+                        {
+                            "optionText": "The restoring force on the buoy is proportional to its displacement from the equilibrium position and acts in the opposite direction to the displacement",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The net force on the buoy is zero",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The two forces acting on the buoy - gravity and buoyancy - are equal and opposite",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ],
+                    "stepConcepts": [
+                        "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                        "3ec5c7a4-6a70-4299-bd95-2a6d9e2e15e6"
+                    ]
+                },
+                {
+                    "id": "72d670685b6e428ebaf50",
+                    "stepText": "Since the restoring force $!$F$!$ is proportional to the displacement $!$x$!$ and acts in the opposite direction to the displacement, it can be written as $!$F = -kx$!$ where $!$k$!$ is proportionality constant. Calculate the value of $!$k$!$ up to 3 decimal places (in $!$N/m$!$).",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.113",
+                        "0.113 N/m",
+                        "0.113N/m"
+                    ],
+                    "options": [],
+                    "stepConcepts": [
+                        "95872c1e-24cf-47b0-996a-114214857435",
+                        "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                        "3ec5c7a4-6a70-4299-bd95-2a6d9e2e15e6"
+                    ]
+                },
+                {
+                    "id": "47fd8e668d884533a9a8b",
+                    "stepText": "When will the buoy have maximum acceleration?",
+                    "stepImage": "",
+                    "options": [
+                        {
+                            "optionText": "When the buoy is at its maximum displacement",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "When the buoy is at its equilibrium position",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ],
+                    "stepConcepts": [
+                        "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                        "3ec5c7a4-6a70-4299-bd95-2a6d9e2e15e6"
+                    ]
+                },
+                {
+                    "id": "6a2f3efe64f44bcf909f4",
+                    "stepText": "Now that we have the value of $!$k$!$, you can use it to calculate the maximum force on the buoy. And then, calculate the maximum acceleration of the buoy up to 1 decimal place (in $!$m/s^2$!$).",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.5",
+                        "7.5 m/s^2",
+                        "7.5m/s^2"
+                    ],
+                    "options": [],
+                    "stepConcepts": [
+                        "95872c1e-24cf-47b0-996a-114214857435",
+                        "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                        "3ec5c7a4-6a70-4299-bd95-2a6d9e2e15e6"
+                    ]
+                }
+            ]
+        }
+    ],
+    "id": "3bc1898d6a094565b8f1b"
+}
