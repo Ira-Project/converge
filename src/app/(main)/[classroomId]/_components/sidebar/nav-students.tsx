@@ -13,10 +13,12 @@ import {
 } from "@/components/ui/sidebar"
 import { type RouterOutputs } from "@/trpc/shared";
 import { useState } from "react";
-
+import AddStudentsModal from "./add-students-modal";
 export function NavStudents({
+  classroomId,
   students,
 }: {
+  classroomId: string;
   students: RouterOutputs["classroom"]["students"];
 }) {
   const [showAll, setShowAll] = useState(false)
@@ -56,6 +58,7 @@ export function NavStudents({
           </>
         )}
       </SidebarMenu>
+      <AddStudentsModal classroomId={classroomId} />
     </SidebarGroup>
   )
 }
