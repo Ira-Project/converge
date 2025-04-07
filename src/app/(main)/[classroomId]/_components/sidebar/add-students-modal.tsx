@@ -42,7 +42,7 @@ export default function AssignmentShareModal({
         </DialogHeader>
         <div className="space-y-4">
           <p className="text-sm text-muted-foreground">
-            To invite your students to this classroom, copy the link below and share it with them. When your students login they will be added to the classroom.
+            To invite your students to this classroom, copy the link below and share it with them. When your students login they will be added to the classroom. Remember your students will only see the activities that you have published and marked as live. 
           </p>
           <div className="flex gap-2">
             <Input 
