@@ -1,0 +1,229 @@
+{
+    "id": "956658fc497e4b418c0e3",
+    "name": "Work, Energy and Power",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "537000346f1e4d178d159",
+            "questionText": "A car engine converts chemical energy from gasoline into mechanical work. For every $!$100 J$!$ of chemical energy input, the engine produces $!$30 J$!$ of useful mechanical work to propel the car, with the remaining $!$70 J$!$ lost as heat. The car, with a mass of $!$1200 kg$!$, then uses this mechanical work to accelerate from an initial speed of $!$10 m/s$!$ to a final speed. Calculate what is the final speed of the car, after using all $!$30 J$!$ of mechanical work from the engine.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fb6a586a43874c8693aa9",
+                    "stepText": "Let's start by identifying the formula for kinetic energy. Please choose the correct formula that relates mass, velocity, and kinetic energy.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_k = \\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_k = mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_k = \\frac{mv}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "81ff65c27abf4ca487739",
+                    "stepText": "Great, now calculate the initial kinetic energy of the car using the mass $!$1200 kg$!$ and initial speed $!$10 m/s$!$. Use the kinetic energy formula you identified in the previous step.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d47678b825004fe1a915e",
+                    "stepText": "Now, add the mechanical work of $!$30 J$!$ to the initial kinetic energy to find the final kinetic energy of the car. What is the final kinetic energy?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60030"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "f15b2cb1-9fa3-4c7a-a335-23aba0faaaca",
+                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5c9b47a3747441cba77d6",
+                    "stepText": "Next, select the correct formula that will allow you to determine the final speed from the final kinetic energy and mass of the car.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\sqrt{\\frac{2E_k}{m}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{E_k}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{m}{E_k}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bffb330d610a4a73a2e76",
+                    "stepText": "Finally, using the formula you selected and the final kinetic energy of $!$60030 J$!$ along with the mass $!$1200 kg$!$, calculate the final speed of the car.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10.0025"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "739d6d0989ef49808b192",
+            "questionText": "A cyclist pedals up a hill with a constant speed. The hill has a height of $!$50 m$!$, and the cyclist and bicycle combined have a weight of $!$700 N$!$. The cyclist's power output is $!$100 W$!$, and they take $!$60 seconds$!$ to reach the top of the hill. If the cyclist's body consumes $!$5000 J$!$ of energy during that time, determine the efficiency of the cyclist's energy conversion during this climb.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6a05f7ba42bd462f8b170",
+                    "stepText": "Let's start by identifying the correct formula to calculate the work done when an object is raised vertically (i.e., the gravitational potential energy gain). Please choose the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5bf9b7d2-da7f-425b-a6f3-2a025ffe4ff6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = Fs\\cos\\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = F\\times h$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_k = \\frac{1}{2} mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ae8777b88ba64f93997d4",
+                    "stepText": "Now, use the weight (force) provided and the hill's height to compute the increase in gravitational potential energy. Multiply the weight by the height to obtain the work done against gravity. What is the result?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "35000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "5bf9b7d2-da7f-425b-a6f3-2a025ffe4ff6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "55dd191091614f4baee25",
+                    "stepText": "Next, determine the ideal mechanical power required if the cyclist were to supply exactly this amount of work over 60 seconds. Divide the work done by the time taken. What is the computed power?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "583.33"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "58d011b9301b48f8a1c28",
+                    "stepText": "In this step, identify the correct expression to define efficiency in energy conversion. Please select the formula that relates the useful mechanical power (or work) output to the energy input.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0be92c40-ded4-48ee-a466-07236da03b9f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\eta = \\frac{\\text{mechanical energy output}}{\\text{chemical energy consumed}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{\\text{actual power output}}{\\text{ideal power required}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{\\text{chemical energy consumed}}{\\text{mechanical energy output}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fbec5ee63d9d45bc97953",
+                    "stepText": "Finally, using the realistic approach, calculate the efficiency by comparing the cyclist's actual power output (100 W) with the ideal power required (as computed earlier). Compute the ratio and express it as a percentage. What is the efficiency (rounded to a whole percentage)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "17"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "0be92c40-ded4-48ee-a466-07236da03b9f",
+                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

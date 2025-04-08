@@ -1,0 +1,184 @@
+{
+    "id": "2970ada08e4f405f88b6d",
+    "name": "Forces and Momentum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "4af4999192744b7098b67",
+            "questionText": "An astronaut with a mass of $!$m_A = 100\\,\\text{kg}$!$ is performing a spacewalk and accidentally collides with a piece of space debris with a mass of $!$m_D = 5\\,\\text{kg}$!$. Before the collision, the astronaut is stationary relative to the ISS, and the debris is moving at a velocity of $!$v_D = 8\\,\\text{m/s}$!$ towards her. Upon impact, the debris becomes embedded in the astronaut's suit. Assuming that the collision is completely inelastic, meaning the debris and the astronaut move together as one mass after the collision, determine the final velocity $!$v_f$!$ of the astronaut-debris system immediately after the impact.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "108061d0f19149d6bb618",
+                    "stepText": "Let's start by identifying the formula used to calculate the linear momentum of an object. Which option below correctly shows this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c86c1ebf-b59a-4cec-8781-d933b9a8aeba"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p = mv$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = m+v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = \\frac{m}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "26b34a1ccf90469cb7b05",
+                    "stepText": "Great$!$ Now, using the concept of linear momentum, calculate the momentum of the debris given its mass and velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "40"
+                    ],
+                    "stepSolveAnswerUnits": "kg\\,m/s",
+                    "stepConcepts": [
+                        "c86c1ebf-b59a-4cec-8781-d933b9a8aeba"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c7fae997645c47dab9831",
+                    "stepText": "Next, determine the combined mass of the astronaut and the debris after they stick together.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "105"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "4a8eb75ebe7c4654a7d4c",
+                    "stepText": "Before calculating the final velocity, identify the correct relationship that allows you to relate the momentum and the combined mass to the final velocity. Which option below is the proper formula?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
+                        "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v_f = \\frac{p}{m_{total}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v_f = \\frac{m_{total}}{p}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v_f = p\\cdot m_{total}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7b56ec3394b64ebf87443",
+                    "stepText": "Finally, using the correct relationship from the previous step, calculate the final velocity of the astronaut-debris system by dividing the initial momentum by the combined mass.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.38"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
+                        "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "4112bd6cbb9c4b1db08ef",
+            "questionText": "A rocket with an initial mass $!$M_0 = 5000\\,\\text{kg}$!$ is launched vertically upward. It expels exhaust gases at a constant speed of $!$u = 2500\\,\\text{m/s}$!$ relative to the rocket. During a short interval $!$\\Delta t = 0.1\\,\\text{s}$!$, the rocket burns and ejects $!$\\Delta m = 50\\,\\text{kg}$!$ of fuel. Determine the average thrust force exerted on the rocket during this time interval due solely to the expulsion of the exhaust gases.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6fef25c0526d40f18db97",
+                    "stepText": "Let's start by identifying the formula that relates the thrust force due to mass ejection with the mass of fuel expelled, the time interval, and the exhaust speed. Please choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7caeca74-0d42-49f5-8535-2b40190ae354"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{\\Delta m}{\\Delta t} \\times u$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = u \\div \\frac{\\Delta m}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{\\Delta t}{\\Delta m} \\times u$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = M_0 \\times a$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ec5bd140529440eb94507",
+                    "stepText": "Great, now that you have identified the formula, calculate the mass ejection rate by dividing the mass of fuel expelled by the time interval. What is $!$\\frac{\\Delta m}{\\Delta t}$!$? (Remember to perform the division using the given numerical values.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "500"
+                    ],
+                    "stepSolveAnswerUnits": "kg/s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "af4af1f86b4c4b97917c3",
+                    "stepText": "Now, using the mass ejection rate you computed, multiply it by the exhaust speed to determine the thrust force. What is the thrust force? (Multiply the mass ejection rate by $!$u$!$ using the provided numerical values.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1250000"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

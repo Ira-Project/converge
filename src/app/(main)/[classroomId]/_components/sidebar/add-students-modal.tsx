@@ -3,7 +3,7 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { Button } from '@/components/ui/button';
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Check, Copy } from "lucide-react";
 import { Paths } from "@/lib/constants";
 import posthog from "posthog-js";
@@ -16,9 +16,16 @@ export default function AssignmentShareModal({
 
   const [copied, setCopied] = useState(false);
 
+  const [classroomLink, setClassroomLink] = useState<string>('');
+
+  useEffect(() => {
+    // Set the assignment link after component mounts
+    setClassroomLink(`${window.location.origin}${Paths.Classroom}${classroomId}`);
+  }, [classroomId]);
+
   const copyToClipboard = async () => {
     posthog.capture("classsroom_share_copied");
-    await navigator.clipboard.writeText(`${window.location.origin}${Paths.Classroom}${classroomId}`);
+    await navigator.clipboard.writeText(classroomLink);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -47,7 +54,7 @@ export default function AssignmentShareModal({
           <div className="flex gap-2">
             <Input 
               readOnly 
-              value={`${window.location.origin}${Paths.Classroom}${classroomId}`}
+              value={classroomLink}
               className="flex-1"
             />
             <Button

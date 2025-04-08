@@ -1,0 +1,225 @@
+{
+    "name": "Kinematics",
+    "id": "db2fdf47a6094bcba17e9",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "35fd3ec298834102a08b2",
+            "questionText": "A robotic arm in a manufacturing plant picks up an object. The arm moves in three stages. First, it moves horizontally a distance of $!$0.5\\,\\text{m}$!$ in $!$1\\,\\text{s}$!$ with uniform acceleration. Second, it holds the object stationary for $!$2\\,\\text{s}$!$. Third, it moves vertically upwards $!$0.2\\,\\text{m}$!$ in $!$0.5\\,\\text{s}$!$ with uniform acceleration. Considering both horizontal and vertical movements, calculate the average velocity of the robotic arm during the entire motion.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "80161fae2afa4c70b3389",
+                    "stepText": "Let's start by determining the net displacement of the arm. In the horizontal stage, it moves a certain distance and in the vertical stage, it moves upward. Which formula best represents how you calculate the displacement (as a vector difference between the final and initial positions)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "42f9486d-bb12-41c1-a177-31ddbff30efd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta s = s_{final} - s_{initial}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = s_0 + vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{\\Delta s}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2a897a453b744a22b69d3",
+                    "stepText": "Great, now add the durations of all three stages (the horizontal movement, the stationary period, and the vertical movement) to calculate the total time of the motion.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.5"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "a834792cb4e34da784d15",
+                    "stepText": "Next, compute the average velocity vector components by dividing each displacement component by the total time. Which formula correctly relates displacement, time, and average velocity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c1170020-784b-45f6-9ec5-8dfe77a1f9d0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\frac{\\Delta s}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\Delta s \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\Delta s - \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ead004413f344e0bb4aed",
+                    "stepText": "Finally, calculate the magnitude of the average velocity vector using the vector components. Which mathematical operation should be used to obtain the magnitude from its components?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.154"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$|v| = \\sqrt{v_x^2+v_y^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$|v| = v_x+v_y$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$|v| = \\frac{v_x+v_y}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7312898e7f7741e5bd9a0",
+            "questionText": "A delivery drone takes off from a warehouse. It ascends vertically for $!$10\\,s$!$ at a constant acceleration of $!$2\\,m/s^2$!$, then flies horizontally at a constant velocity for $!$30\\,s$!$ to deliver a package. After dropping the package, it decelerates horizontally at a rate of $!$1\\,m/s^2$!$ for $!$15\\,s$!$ before landing. Calculate the total distance traveled by the drone during its flight.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d64e3a8c4f7f45f6914d7",
+                    "stepText": "Let's begin by selecting the correct formula to calculate the vertical distance traveled during the drone's ascent (starting from rest with constant acceleration). Identify the proper expression that relates displacement, acceleration, and time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d = ut + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = u + at$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = \\frac{v^2 - u^2}{2a}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d18e08ec26d44754b2c5d",
+                    "stepText": "Now, consider the deceleration phase. Since the drone comes to rest in $!$15\\,s$!$ due to a deceleration of $!$1\\,m/s^2$!$, use the relation between acceleration and time to compute the constant horizontal cruise speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fa2428c194e34ddc86226",
+                    "stepText": "Next, calculate the horizontal distance covered during the cruise phase. Use the constant cruise speed and the cruise time of $!$30\\,s$!$ to determine this distance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "450"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d78d567cfa8f46bea2091",
+                    "stepText": "Now, select the correct formula for determining the horizontal distance traveled during the deceleration phase when the drone slows down from the cruise speed to rest. Identify the proper expression that includes the initial speed, time, and deceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d = v_i t - \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = v_i t + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = \\frac{v_i^2}{at}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8523e4531c6046198a4d5",
+                    "stepText": "Finally, add together the vertical ascent distance, the horizontal cruise distance, and the horizontal deceleration distance to determine the total distance traveled by the drone.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "662.5"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "e36724ff-c9a8-42ac-9b06-e20dc0863e14"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

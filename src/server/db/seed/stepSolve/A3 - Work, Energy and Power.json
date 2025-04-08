@@ -1,0 +1,216 @@
+{
+    "id": "76ec318d947c44a0b715b",
+    "name": "Work, Energy and Power",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "b1eef76ad4f34c9b9b962",
+            "questionText": "A cyclist pedals up a hill with a constant speed. The hill has a height of $!$50\\text{ m}$!$ and the cyclist and bicycle have a combined weight of $!$700\\text{ N}$!$. The cyclist's power output is $!$100\\text{ W}$!$ and they take $!$60\\text{ s}$!$ to reach the top. The cyclist's body consumes $!$5000\\text{ J}$!$ of energy during that time. Determine the efficiency of the cyclist's energy conversion during the ascent.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "61ed7296c5cb4663be72b",
+                    "stepText": "Let's start by determining the relation between power, time, and work done. Identify the formula that correctly relates these quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0",
+                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = P \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{P}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = P + t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3d1e86620b5b47f681215",
+                    "stepText": "Now, use the given power output and time to calculate the mechanical work done during the ascent.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0",
+                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "eee9f064073b4a22b20f6",
+                    "stepText": "Next, to find the efficiency, identify the correct concept that expresses efficiency as a ratio. Which of the following formulas represents efficiency?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0be92c40-ded4-48ee-a466-07236da03b9f",
+                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\eta = \\frac{\\text{Mechanical Work Output}}{\\text{Chemical Energy Input}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{\\text{Chemical Energy Input}}{\\text{Mechanical Work Output}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\text{Mechanical Work Output} - \\text{Chemical Energy Input}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7b545af5d3d146abacc5e",
+                    "stepText": "Finally, use your calculated work output and the given chemical energy consumed to compute the efficiency. What numerical value do you obtain for efficiency (as a ratio)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.2"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0be92c40-ded4-48ee-a466-07236da03b9f"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "f8fde2dc66fa4b8f845de",
+            "questionText": "A delivery company's electric van accelerates from rest to a speed of $!$20 \\text{ m/s}$!$ on a horizontal road. During this acceleration, the motor does $!$500,000 \\text{ J}$!$ of work. After this, the van travels up a hill, gaining $!$10\\text{ m}$!$ in vertical height. If the van's mass is $!$1500\\text{ kg}$!$, what is the total change in the van's mechanical energy from the start of the acceleration to reaching the height of $!$10\\text{ m}$!$ on the hill?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b36d4d4eb4e44ddeac1ae",
+                    "stepText": "Let's start by identifying which formula correctly represents the kinetic energy of an object. Please select the correct formula from the options provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_k = \\frac{1}{2} mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_k = mv$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_k = mgh$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "099585a9a0994cc3939ea",
+                    "stepText": "Great$!$ Now, using the kinetic energy formula and the given values (mass $!$m=1500\\text{ kg}$!$, speed $!$v=20\\text{ m/s}$!$), calculate the kinetic energy of the van after accelerating.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "300000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f62c29c570654912b19aa",
+                    "stepText": "Next, determine which formula correctly represents the gravitational potential energy gained by an object when it is raised to a certain height. Choose the appropriate formula from the options.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3c01ec37-9e55-45a6-9bc8-34733b46e8e7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_p = mgh$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_p = \\frac{1}{2} mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_p = mv$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "09481f11b7ae4ab3ba24d",
+                    "stepText": "Now, calculate the increase in gravitational potential energy when the van ascends a height of $!$10\\text{ m}$!$. Use the given mass and an appropriate value for gravitational acceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "147000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "3c01ec37-9e55-45a6-9bc8-34733b46e8e7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3852c46776bd40cf83907",
+                    "stepText": "Finally, combine the changes in kinetic energy and gravitational potential energy to find the total change in mechanical energy of the van from the beginning until it reaches the top of the hill.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "447000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "988d792c-195b-46c8-ace2-0828b3655c0b"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}
