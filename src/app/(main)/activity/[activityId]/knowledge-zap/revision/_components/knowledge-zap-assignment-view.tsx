@@ -160,7 +160,7 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
   const submitAssignment = async () => {
     await submissionMutation.mutateAsync({
       assignmentAttemptId: knowledgeZapAttemptId,
-      assignmentId: knowledgeZapAssignment?.assignmentId ?? "",
+      assignmentId: knowledgeZapAssignment?.id ?? "",
     });
     setSubmissionmodalOpen(true);
   }

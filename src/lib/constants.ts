@@ -12,6 +12,10 @@ export enum Paths {
   ResetPassword = "/reset-password",
   GoogleLogin = "/login/google",
   Classroom = "/",
+  Activities = "/activities",
+  Documentation = "/documentation",
+  Leaderboard = "/leaderboard",
+  Analytics = "/analytics",
   LearnByTeaching = "/learn-by-teaching/",
   ReasonTrace = "/reason-trace/",
   KnowledgeZap = "/knowledge-zap/",
@@ -21,6 +25,10 @@ export enum Paths {
   CreateAssignment = "/create-assignment/",
   Activity = "/activity/",
   LiveActivity = "live",
+}
+
+export enum ComponentIds {
+  CreateAssignment = "create-assignment",
 }
 
 export enum Roles {

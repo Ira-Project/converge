@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const createAssignmentAttemptSchema = z.object({
-  activityId: z.string(),
+  activityId: z.string().optional(),
 });
 export type CreateAssignmentAttemptInput = z.infer<typeof createAssignmentAttemptSchema>;
 

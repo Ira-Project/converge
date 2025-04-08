@@ -10,11 +10,20 @@ import { type KnowledgeZapQuestionObjects } from "@/app/(main)/activity/[activit
 
 export const createAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: CreateAssignmentAttemptInput) => { 
   const id = generateId(21);
-  await ctx.db.insert(knowledgeZapAssignmentAttempts).values({
-    id, 
-    activityId: input.activityId,
-    userId: ctx.user.id,
-  })
+
+  if(input.activityId) {
+    await ctx.db.insert(knowledgeZapAssignmentAttempts).values({
+      id, 
+      activityId: input.activityId,
+      userId: ctx.user.id,
+    })
+  } else {
+    await ctx.db.insert(knowledgeZapAssignmentAttempts).values({
+      id, 
+      userId: ctx.user.id,
+      isRevision: true,
+    })
+  }
   return id;
 };
 
@@ -30,6 +39,7 @@ export const submitAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: 
       questionToAssignment: true,
     }
   });
+
   if(!assignment?.questionToAssignment) {
     throw new Error("Assignment not found");
   }
@@ -45,7 +55,6 @@ export const submitAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: 
       totalAttempts: questionAttempts.length,
     })
   .where(eq(knowledgeZapAssignmentAttempts.id, input.assignmentAttemptId))
-  
 
 };
 
@@ -263,7 +272,7 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
   questions.sort(() => Math.random() - 0.5);
 
   return {
-    ...assignment,
+    assignmentId: assignment.id,
     questions,
   };
 }
@@ -387,4 +396,48 @@ export const getHeatMap = async (ctx: ProtectedTRPCContext, input: GetHeatMapInp
     heatMap,
   }
 
+}
+
+export const getRevisionAssignment = async (ctx: ProtectedTRPCContext) => {
+
+//   Revision Algorithm
+
+// - Create a question list
+// - Get all the concepts that have an associated knowledge question
+// - Get all the concepts from concept tracker that the user has attempted and sort them by date created
+
+// Last Incorrect
+// - Get all concepts where the last attempt was incorrect and store in a list
+// - Add covered concepts to the maintained concept list
+// - Pick one associated question from concepts and then add it to the question list as long as concept is not in maintained concept list
+
+// Ranking 
+// - We will consider concept accuracy score in these buckets
+// 	- 1 day
+// 	- 1 week
+// 	- 2 weeks
+// 	- 1 month
+// 	- 3 months
+// 	- Overall
+// - We will average these scores for each concept and rank them based on this average. 
+// - The advantage with this algorithm is that by definition the short term averages will get weighted heavier since those attempts feature in all buckets.
+// - We will include any concepts with a score lower than X
+
+// Adding Concepts
+// - We will have 20 questions per revision, and we will add all remaining questions from live assignments that students have not covered yet 
+  
+  const questionList = [];
+
+  const concepts = await ctx.db.query.knowledgeZapQuestionsToConcepts.findMany({
+    with: {
+      concept: true,
+    }
+  });
+
+  const conceptTracker = await ctx.db.query.conceptTracking.findMany({
+    where: (conceptTracker, { eq }) => eq(conceptTracker.userId, ctx.user.id),
+  });
+
+
+  
 }
