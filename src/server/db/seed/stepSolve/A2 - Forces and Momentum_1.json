@@ -1,0 +1,255 @@
+{
+    "id": "c370932744af4b938529b",
+    "name": "Forces and Momentum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "35e5032407d14bce80222",
+            "questionText": "Consider a block of mass $!$m = 2\\text{ kg}$!$ attached to a spring with a spring constant $!$k = 50\\text{ N/m}$!$ on a horizontal surface with a coefficient of dynamic friction $!$\\mu_d = 0.3$!$. The spring is initially compressed by $!$x_0 = 0.5\\text{ m}$!$ from its equilibrium position and then released. Determine the distance the block travels before it comes to a complete stop due to the combined forces of the spring and friction. Assume that the block starts moving immediately upon release.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b068f94a917644d88cceb",
+                    "stepText": "Let's start by identifying the proper formula for the elastic potential energy stored in a compressed spring. Which of the following represents the correct formula?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "619a9763-10d2-48a6-a060-de4db6ea3c0a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$U = kx$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$U = \\frac{1}{2}kx^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$U = kx^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f46729a11aa04305b3b5a",
+                    "stepText": "Now, use the formula from the previous step to calculate the initial energy stored in the spring when it is compressed by $!$0.5$!$ m with a spring constant of $!$50$!$ N/m.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.25"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "619a9763-10d2-48a6-a060-de4db6ea3c0a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d122faa60cde42628978c",
+                    "stepText": "Next, determine which formula is used to calculate the dynamic friction force acting on the block on a horizontal surface.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d",
+                        "18743f7b-2133-4b00-b872-d79300ea4707"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f_d = \\mu_d R$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f_d = \\mu_s R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f_d = mg$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "51e880bbf5664002ac6d7",
+                    "stepText": "Using the expression for friction force $!$F_f = \\mu_d m g$!$, the friction force is approximately $!$5.88$!$ N. Now, calculate the work done by friction over the $!$0.5$!$ m displacement from the compressed position to equilibrium.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.94"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
+                        "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8e9d9c591f994af1a5fc2",
+                    "stepText": "At equilibrium, the block\u2019s kinetic energy is equal to the initial spring energy minus the work done against friction, giving approximately $!$3.31$!$ J. Now, identify the correct energy balance equation for the motion beyond equilibrium where this remaining kinetic energy is used both to store additional spring energy and to do work against friction as the block moves an extra distance $!$x$!$. Which option best represents this energy balance?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "619a9763-10d2-48a6-a060-de4db6ea3c0a",
+                        "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$3.31 = \\frac{1}{2}kx^2 + F_fx$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$3.31 = kx^2 + F_fx$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$3.31 = \\frac{1}{2}kx^2 - F_fx$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fc6e6f72cc624dd5bceb2",
+                    "stepText": "Finally, using the energy balance from the previous step, solve for the additional displacement $!$x$!$ beyond equilibrium. Then add the initial $!$0.5$!$ m (the distance from the compressed start to equilibrium) to find the total distance the block travels before stopping. What is the total distance traveled?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.76"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "619a9763-10d2-48a6-a060-de4db6ea3c0a",
+                        "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "9e823c9616c54fceb31a8",
+            "questionText": "An astronaut with a mass of $!$m_0 = 100 \\text{ kg}$!$ is performing a spacewalk and accidentally collides with a piece of debris with a mass of $!$m_d = 5 \\text{ kg}$!$. Before the collision, the astronaut is stationary relative to the ISS, and the debris is moving at a velocity of $!$v_d = 3 \\text{ m/s}$!$ towards her. The collision is partially inelastic, with a coefficient of restitution of $!$e = 0.6$!$. Calculate the kinetic energy lost during the collision. (Note: The coefficient of restitution is the ratio of the relative speed of the two objects after the collision to the relative speed before the collision. For an elastic collision, the coefficient of restitution is 1.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "768044d458544858a4a3f",
+                    "stepText": "Let's begin by selecting the formula that expresses the principle of momentum conservation. Which of the following formulas best represents that the total momentum before and after the collision remains constant?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta p = 0$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = ma$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = mv$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3a996d0fa3af4510a9d3b",
+                    "stepText": "Now, consider the collision's coefficient of restitution. Please choose the formula that correctly relates the relative speeds after and before the collision given that the astronaut was initially at rest.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$e = \\frac{v_d' - v_a}{v_d - 0}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$e = \\frac{v_a - v_d'}{v_d - 0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$e = \\frac{v_a + v_d'}{v_d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "80b731469195493194dfb",
+                    "stepText": "After identifying the relationships, use the momentum conservation and the restitution relations to solve for the astronaut's final velocity ($!$v_a$!$). Substitute the known values and isolate $!$v_a$!$. What is the value of $!$v_a$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.05714"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1dbf59ad953849c881e82",
+                    "stepText": "Next, calculate the initial kinetic energy of the debris using its mass and velocity. What is the initial kinetic energy?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "22.5"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7b32768ffcc1465ba66e9",
+                    "stepText": "Finally, compute the kinetic energy lost during the collision by first determining the final kinetic energies of both the astronaut and the debris, then subtracting the total final kinetic energy from the initial kinetic energy. What is the kinetic energy lost?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "13.72"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

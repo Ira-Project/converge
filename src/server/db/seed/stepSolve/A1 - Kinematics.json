@@ -1,0 +1,251 @@
+{
+    "name": "Kinematics",
+    "id": "8f4b100b34aa481996497",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "7d42f42e5e394cce8241e",
+            "questionText": "A skydiver with a mass of $!$75 kg$!$ jumps from a plane. Assume the air resistance force acting on the skydiver is given by $!$F = kv^2$!$, where $!$k = 0.25 kg/m$!$. Calculate the terminal velocity $!$v_T$!$ of the skydiver.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "25b3c824f5ff485ea2602",
+                    "stepText": "Let's start by identifying the force balance at terminal velocity. At this stage the gravitational force is balanced by the air resistance (drag) force. Which of the following options represents that balance correctly? Choose the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5767da91-a3a1-4028-941e-1d952425ebae",
+                        "f108fcea-6443-4429-ac16-0bcdcfaf165e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$mg = k v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$mg = k v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$m = \\frac{k}{v^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bb9d270d2c3542bb8b3d4",
+                    "stepText": "Great, now that you have identified the force balance, let's express the terminal velocity in terms of the given quantities. Which of the following expressions correctly rearranges the balance equation to solve for terminal velocity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f108fcea-6443-4429-ac16-0bcdcfaf165e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v_T = \\sqrt{\\frac{mg}{k}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v_T = \\frac{mg}{k}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v_T = \\frac{k}{mg}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "416702403e8b4cd4a927d",
+                    "stepText": "Now, let's calculate the numerical value. Substitute the known values $!$m = 75$!$, $!$g = 9.8\\,m/s^2$!$, and $!$k = 0.25$!$ into your chosen expression and perform the calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "54.2"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "f108fcea-6443-4429-ac16-0bcdcfaf165e"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "82d9aef350a64434a97e4",
+            "questionText": "A train's motion is described by a velocity-time graph. The graph shows the train initially at rest. Over a period of $!$20 seconds$!$, the velocity increases linearly to $!$30 m/s$!$, then remains constant for $!$30 seconds$!$, and finally decreases linearly to rest over another $!$10 seconds$!$. Calculate the total displacement of the train during this $!$60-second$!$ interval.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a5f2bacb7eeb42f0bbc8e",
+                    "stepText": "Let's start by identifying the proper formula for finding displacement during a phase where the area under the velocity-time curve forms a triangle. Which formula best represents the area of a triangle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                        "aefc9bba-b343-428a-b4fd-99b26e37f8d2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta s = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta s = \\frac{1}{2}vt$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta s = v^2t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fe16d2f49a9547ba8789d",
+                    "stepText": "Great, now that you have chosen the area-of-a-triangle formula, calculate the displacement during the acceleration phase (0 to 20 s) when the train speeds up from rest to 30 m/s. (Hint: Use the values for time and final velocity in the appropriate formula.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "300"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                        "aefc9bba-b343-428a-b4fd-99b26e37f8d2"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9fff704dc0304d3b8322f",
+                    "stepText": "Next, consider the constant velocity phase. Identify the formula that you would use to compute displacement when the train is moving at a constant speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb",
+                        "aefc9bba-b343-428a-b4fd-99b26e37f8d2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta s = \\frac{1}{2}vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta s = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta s = v + t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ed88ab56b9744e62bb6c8",
+                    "stepText": "Now, using that formula, calculate the displacement during the constant velocity phase (from 20 s to 50 s) where the train travels at 30 m/s for 30 seconds.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "900"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb",
+                        "aefc9bba-b343-428a-b4fd-99b26e37f8d2"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c4eedf389e674618b71af",
+                    "stepText": "Let's now focus on the deceleration phase where the velocity decreases linearly back to zero. Again, identify the formula to compute the displacement when the graph forms a triangle.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                        "aefc9bba-b343-428a-b4fd-99b26e37f8d2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta s = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta s = \\frac{1}{2}vt$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta s = v - t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d7155b95b25e4ddd9fa7c",
+                    "stepText": "Now, calculate the displacement during the deceleration phase (from 50 s to 60 s) using the appropriate values for time and velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "150"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                        "aefc9bba-b343-428a-b4fd-99b26e37f8d2"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "87f2dcc431904a1880e0b",
+                    "stepText": "Finally, add the displacements from the acceleration, constant velocity, and deceleration phases to find the total displacement of the train over the 60-second interval.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1350"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                        "aefc9bba-b343-428a-b4fd-99b26e37f8d2"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

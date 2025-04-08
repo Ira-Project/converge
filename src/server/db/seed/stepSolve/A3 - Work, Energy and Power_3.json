@@ -1,0 +1,223 @@
+{
+    "id": "396018908db2453194f83",
+    "name": "Work, Energy and Power",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "352d74b248ba4ba8b1a00",
+            "questionText": "A cyclist is pedaling up a hill at a constant speed. The combined weight of the cyclist and bicycle is $!$700 N$!$. The hill has a height of $!$50 m$!$. The cyclist's power output is $!$100 W$!$, and it takes them $!$60 seconds$!$ to reach the top of the hill. Assuming their body consumes $!$5000 J$!$ of energy during that time, calculate the efficiency $!$\\eta$!$ of the cyclist's energy conversion in percentage.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2d00587cf49e4e7f97124",
+                    "stepText": "Let's start by identifying the appropriate formula to calculate the gain in gravitational potential energy when climbing a hill. Choose the formula that best relates potential energy to the vertical height climbed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3c01ec37-9e55-45a6-9bc8-34733b46e8e7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_p = mgh$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_p = \\frac{1}{2} mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_p = F \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e5beeffecd5142dea3e45",
+                    "stepText": "Now, use the formula you selected to calculate the gravitational potential energy gain when the cyclist climbs a height of $!$50 m$!$ with a weight of $!$700 N$!$. Multiply the weight by the height.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "35000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "3c01ec37-9e55-45a6-9bc8-34733b46e8e7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2ddb8e1fed1c407581cf9",
+                    "stepText": "Great, next let\u2019s determine the relationship to compute work output from power and time. Identify the correct formula that expresses work done as a product of power and time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = P \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{P}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = P + t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "57cc4c288d7b4e12a9702",
+                    "stepText": "Using the relationship you identified, calculate the mechanical work output by multiplying the cyclist's power output of $!$100 W$!$ by the time of $!$60 s$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2dbaa37509ec4cc480e1d",
+                    "stepText": "Finally, compute the efficiency of the cyclist's energy conversion by dividing the mechanical work output by the gravitational potential energy gain and multiplying by 100 to get a percentage. What is the efficiency?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "17"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "0be92c40-ded4-48ee-a466-07236da03b9f"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "8c80e3c03b2c4c7388bc6",
+            "questionText": "A construction worker is using a crane to lift a $!$500 kg$!$ beam vertically upwards to a height of $!$20 meters$!$. The crane exerts a force that varies with distance. The force increases linearly for the first $!$5 meters$!$, remains constant for the next $!$10 meters$!$, and then decreases linearly back to the original force at $!$20 meters$!$. Given that the force at $!$5 meters$!$ is $!$6000 N$!$, and at $!$20 meters$!$ the force returns to $!$4905 N$!$, estimate the total work done by the crane on the beam during this process in Joules.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "289599e04a93497980cc7",
+                    "stepText": "Let's begin by calculating the beam's weight force. Identify the correct formula to compute the weight of an object given its mass and the acceleration due to gravity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5bf9b7d2-da7f-425b-a6f3-2a025ffe4ff6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = mg$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = mgh$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8a460eb605fe42ed84f1c",
+                    "stepText": "Now, using the two force values from the first segment (the force at 0 m and at 5 m), calculate the average force in the first segment. Use the method of averaging the initial and final forces.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5452.5"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "e515d26f-7767-4267-b081-c9c385fdcaf0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "182b8861b69a4d52851d0",
+                    "stepText": "Great. Now compute the work done in the first segment by multiplying the average force you just calculated by the displacement of $!$5 \\text{ m}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "27262.5"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1858daa84c2c40b4a9cf0",
+                    "stepText": "Next, determine the work done in the second segment where the force remains constant at $!$6000 \\text{ N}$!$ over a displacement of $!$10 \\text{ m}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "95e0234447d848319e2d5",
+                    "stepText": "Proceed to calculate the work done in the third segment. This segment is similar to the first: compute the average force (from $!$6000 \\text{ N}$!$ to $!$4905 \\text{ N}$!$) and multiply by the displacement of $!$5 \\text{ m}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "27262.5"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9cfb3a6f8d77497d99d80",
+                    "stepText": "Finally, add the work contributions from all three segments to determine the total work done by the crane on the beam.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "114525"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

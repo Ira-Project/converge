@@ -1,0 +1,176 @@
+{
+    "id": "f5e7c8b15cd94e4b95b92",
+    "name": "Work, Energy and Power",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "3f6898b4f8bc4a6c8f700",
+            "questionText": "A construction crane lifts a $!$500 \\text{ kg}$!$ steel beam vertically $!$20 \\text{ m}$!$. The lifting force increases linearly from $!$5000 \\text{ N}$!$ at the start to $!$10000 \\text{ N}$!$ at $!$5 \\text{ m}$!$, remains constant at $!$10000 \\text{ N}$!$ from $!$5 \\text{ m}$!$ to $!$15 \\text{ m}$!$, and then decreases linearly back to $!$5000 \\text{ N}$!$ at $!$20 \\text{ m}$!$. Determine the total work done by the crane on the beam during this lift in Joules.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3d083346fecf4d9e9104f",
+                    "stepText": "Let's start by identifying the correct formula needed to calculate the work done by a force. Please choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = Fs \\cos{\\theta}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{F}{s}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "21cadbdcb0f14debaa924",
+                    "stepText": "Great$!$ Now, consider the first segment (0 to 5 m) where the force increases linearly from 5000 N to 10000 N. Compute the work done in this segment by determining the average force and then multiplying by the displacement. What is the work done in this segment?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "37500"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "e515d26f-7767-4267-b081-c9c385fdcaf0",
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1b5a723d9e1149d680787",
+                    "stepText": "Now, move on to the second segment (5 to 15 m) where the force is constant at 10000 N. Determine the work done in this segment by multiplying the constant force by the displacement. What is the work done in this segment?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bf1f1f1749d04fc8911d9",
+                    "stepText": "Next, examine the third segment (15 to 20 m) where the force decreases linearly from 10000 N back to 5000 N. As with the first segment, compute the work done by calculating the average force and multiplying it by the displacement. What is the work done in this segment?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "37500"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "e515d26f-7767-4267-b081-c9c385fdcaf0",
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f215ea7e8e51433d802f4",
+                    "stepText": "Finally, combine the work done in all three segments by summing them up to determine the total work done by the crane on the beam. What is the total work done?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "175000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "9c952b486c984fcba68be",
+            "questionText": "An electric delivery van, initially at rest, accelerates to a speed of 20 m/s on a level road. During this acceleration, the electric motor performs 500,000 J of work. Calculate the kinetic energy gained by the van.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "52a4af7584f34ce9bf05a",
+                    "stepText": "Let's start by identifying the formula that relates the net work done to the change in kinetic energy. Please select the formula that correctly expresses this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f15b2cb1-9fa3-4c7a-a335-23aba0faaaca",
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0",
+                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W_{net} = \\Delta E_k$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_k = \\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = Fd \\cos{\\theta}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = E_k + E_p$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f422a866bb6740c7a8342",
+                    "stepText": "Now that we've related work to the change in kinetic energy, determine the initial kinetic energy of the van given that it starts from rest. What value do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f7a318c9b7ac47fcb63fd",
+                    "stepText": "Finally, using the work-energy theorem, calculate the kinetic energy gained by the van by considering the work done by the electric motor. What is the numerical value of the kinetic energy gained?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "500000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "f15b2cb1-9fa3-4c7a-a335-23aba0faaaca"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

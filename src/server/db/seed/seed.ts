@@ -11,7 +11,7 @@ import { classrooms } from "../schema/classroom";
 import { activity } from "../schema/activity";
 
 import { addConceptsToKnowledgeZapQuestions, computeQuestionsCompleted, createConceptTrackerForAllKnowledgeZapAttempts, createKnowledgeZapAssignment, deleteKnowledgeZapAssignment, findConceptsWithoutKnowledgeZaps, findKnowledgeZapQuestionsWithoutConcepts, updateKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
-import { addAssignmentIdToAttempts, createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts, addConceptsToStepSolveSteps, findStepSolveStepsWithoutConcepts, createConceptTrackerForAllStepAttempts, createStepSolveToAssignment } from "./stepSolve/stepSolve-seed";
+import { addAssignmentIdToAttempts, createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts, addConceptsToStepSolveSteps, findStepSolveStepsWithoutConcepts, createConceptTrackerForAllStepAttempts, createStepSolveToAssignment, findConceptsWithoutStepSolveSteps } from "./stepSolve/stepSolve-seed";
 import { computeAccuracyForReasoningAssignment, createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
@@ -40,7 +40,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createTopics();
 
 // CONCEPT CREATION
-// await createConcepts("A1 - Kinematics");
+// await createConcepts("A3 - Work, Energy and Power");
 
 
 // LEARN BY TEACHING CREATION
@@ -63,18 +63,29 @@ if(process.env.ENVIRONMENT === "prod") {
 // await computeAccuracyForReasoningAssignment();
 
 // STEP SOLVE CREATION AND DELETION 
-// await deleteStepSolveAssignment("0c3d517a4a094552b6cb0");
+// await deleteStepSolveAssignment("396018908db2453194f83");
+// await createStepSolveAssignment("A1 - Kinematics");
 // await createStepSolveAssignment("A1 - Kinematics_1");
-// await addConceptsToStepSolveSteps("B1 - Thermal Energy Transfers");
-// await addConceptsToStepSolveSteps("B4 - Thermodynamics");
-// await addConceptsToStepSolveSteps("C1 - Simple Harmonic Motion");
-// await addConceptsToStepSolveSteps("E3 - Radioactive Decay");
+// await createStepSolveAssignment("A1 - Kinematics_2");
+// await createStepSolveAssignment("A1 - Kinematics_3");
+// await createStepSolveAssignment("A1 - Kinematics_4");
+// await createStepSolveAssignment("A2 - Forces and Momentum");
+// await createStepSolveAssignment("A2 - Forces and Momentum_1");
+// await createStepSolveAssignment("A2 - Forces and Momentum_2");
+// await createStepSolveAssignment("A2 - Forces and Momentum_3");
+// await createStepSolveAssignment("A2 - Forces and Momentum_4");
+// await createStepSolveAssignment("A3 - Work, Energy and Power");
+// await createStepSolveAssignment("A3 - Work, Energy and Power_1");
+// await createStepSolveAssignment("A3 - Work, Energy and Power_2");
+// await createStepSolveAssignment("A3 - Work, Energy and Power_3");
+// await createStepSolveAssignment("A3 - Work, Energy and Power_4");
+
 // await findConceptsWithoutStepSolveSteps();
 // await findStepSolveStepsWithoutConcepts();
 // await updateStepSolveAssignmentAttempts();
 // await addAssignmentIdToAttempts();
 // await createConceptTrackerForAllStepAttempts();
-await createStepSolveToAssignment();
+// await createStepSolveToAssignment();
 
 // READ AND RELAY CREATION AND DELETION
 // await createReadAndRelayAssignment();
@@ -84,7 +95,7 @@ await createStepSolveToAssignment();
 // await createConceptMappingAssignment();
 
 // USER DELETION
-// await deleteUser("vignesh+1@iraproject.com");
+// await deleteUser("vignesh+2@iraproject.com");
 
 // MIGRATE ACTIVITY TYPE TO TEXT
 // await migrateActivityTypeToText();

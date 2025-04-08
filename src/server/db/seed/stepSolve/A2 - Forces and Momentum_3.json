@@ -1,0 +1,183 @@
+{
+    "id": "b23ec111038c40edadd9d",
+    "name": "Forces and Momentum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "c030c6c1656a4fdea66e7",
+            "questionText": "A crane lifts a $!$500 kg$!$ steel beam vertically upwards. Initially, the beam is at rest on the ground. The crane exerts an upward tension force, $!$T$!$, through a cable. As the beam ascends, it experiences its weight, $!$W$!$, due to gravity and a drag force, $!$F_d$!$, from the wind opposing its motion. The drag force is proportional to the square of the beam's velocity, given by $!$F_d = bv^2$!$, where $!$b = 2.0 kg/m$!$.\n\nAt a certain height, the crane operator adjusts the tension such that the beam moves upwards at a constant velocity. Calculate the tension $!$T$!$ in the cable when the beam reaches a constant velocity of $!$5 m/s$!$. (Assume $!$g = 9.8 m/s^2$!$)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "91eaef0d494243fea8398",
+                    "stepText": "Let's start by considering that the beam is moving at a constant velocity, so its acceleration is zero. Which of the following equations best represents this equilibrium condition?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2e689418-e014-486a-86a3-e151148f4c6d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\sum F = 0$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = ma$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T = mg$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cfb54cbf9db048a5b19fb",
+                    "stepText": "Great$!$ Now, to progress, calculate the weight of the beam using its mass and gravitational acceleration. Enter the numerical value for the weight.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4900"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7c2dfce4c90a4c06a4feb",
+                    "stepText": "Next, determine the drag force acting on the beam using the provided relation between drag force and velocity. Compute its numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "50"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "7a969809-71da-49a4-9e6b-736f7621d7a5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e1873ac5a67244d3bac25",
+                    "stepText": "Finally, use the equilibrium condition to calculate the tension in the cable by summing the weight and the drag force. What is the tension force?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4950"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "2e689418-e014-486a-86a3-e151148f4c6d",
+                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
+                        "7a969809-71da-49a4-9e6b-736f7621d7a5"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "e12af7f819d3445592f3e",
+            "questionText": "A 1500 kg car travels on a circular racetrack with a radius of 500 m. Initially, the car moves at 30 m/s, but then its speed is doubled to 60 m/s while maintaining the same radius. Given these conditions, what is the frequency (in Hz) of the car's motion at the new speed? (Recall that frequency is the reciprocal of the period, and the period is the time it takes for one complete revolution of the circular track.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9b35b8a403c6433591d24",
+                    "stepText": "Let's start by determining which formula you should use to calculate the circumference of a circle given its radius. Please select the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$C = 2\\pi r$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$C = \\pi r^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$C = 2r$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "06f8c46a49a64865bcfce",
+                    "stepText": "Now, use the circumference of the racetrack and the given car speed to calculate the period, which is the time for one complete revolution. Compute the period using the relationship between distance and speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "52.36"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "a51157a0-fd9c-46a1-ac03-cc47674195b0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ab74c2b618c74e9088b43",
+                    "stepText": "Great, now select the correct formula that relates the period of revolution to the frequency of motion.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "24604eeb-cbe5-47fa-8481-aea6fc9d1ab0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f = 1/T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = 2\\pi T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6ab54552046346b29ddec",
+                    "stepText": "Finally, using the period you calculated earlier, compute the frequency of the car's motion. Remember that frequency is the reciprocal of the period.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0191"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "24604eeb-cbe5-47fa-8481-aea6fc9d1ab0"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

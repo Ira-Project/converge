@@ -1,0 +1,234 @@
+{
+    "id": "a38f5437a89b48bdbc033",
+    "name": "Forces and Momentum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "c9c90a2a10ec44aca5099",
+            "questionText": "A rocket with an initial mass of 1000 kg is launched vertically upwards. The rocket expels exhaust gases downwards at a speed of $!$2500 \\frac{m}{s}$!$ relative to the rocket. Over a 60-second burn, the rocket expels 400 kg of fuel at a constant rate. Assuming negligible atmospheric drag and a constant gravitational acceleration of $!$9.8 \\frac{m}{s^2}$!$, calculate the change in velocity of the rocket after the 60-second burn.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0d2a2abe09c041ee9eda7",
+                    "stepText": "Let's start by identifying the rocket equation concept that relates the exhaust speed and the mass ratio to the change in velocity. Which of the following formulas correctly represents the theoretical change in velocity for a rocket based on its fuel consumption? (Remember, do not reveal the answer directly.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "dcbf6cc9-917c-46de-89ab-2d17760e3ef9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta v = v_e \\ln\\left(\\frac{m_0}{m_f}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta v = \\frac{v_e}{\\ln\\left(\\frac{m_0}{m_f}\\right)}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta v = v_e \\left(\\frac{m_0 - m_f}{m_f}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta v = \\frac{u \\delta m}{M}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a9a40a1a58ec49d39bbdb",
+                    "stepText": "Great, now calculate the mass ratio by dividing the initial mass $!$m_0$!$ by the final mass after burn. Recall that the final mass is the initial mass minus the mass of the expelled fuel.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.6667"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "dcbf6cc9-917c-46de-89ab-2d17760e3ef9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ae17611086864fd6b2ff4",
+                    "stepText": "Next, compute the natural logarithm of the mass ratio you calculated. This value is dimensionless.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.5108"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "dcbf6cc9-917c-46de-89ab-2d17760e3ef9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7e1c90d504ae47ecbe2ac",
+                    "stepText": "Now, determine the ideal change in velocity by multiplying the exhaust velocity with the logarithm of the mass ratio. This gives the theoretical change in velocity before considering any losses.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1277"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "dcbf6cc9-917c-46de-89ab-2d17760e3ef9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ee89bea3d9984c8988056",
+                    "stepText": "Next, calculate the gravity losses during the burn by multiplying the gravitational acceleration by the burn duration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "588"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "543fc3c630b240a9baed1",
+                    "stepText": "Finally, obtain the net change in velocity by subtracting the gravity losses from the ideal change in velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "689"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "dcbf6cc9-917c-46de-89ab-2d17760e3ef9",
+                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "d87575b8453049ca944a3",
+            "questionText": "A $!$0.5 kg$!$ block is attached to a spring with a spring constant $!$k = 50 \\frac{N}{m}$!$ on a horizontal surface with a coefficient of static friction $!$\\mu_s = 0.3$!$ and dynamic friction $!$\\mu_d = 0.2$!$. The spring is initially compressed by $!$0.1 m$!$ from its equilibrium position and then released. Determine the position of the block when it momentarily stops for the first time after being released.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3c67d920866e4ef391db9",
+                    "stepText": "Let's start by finding the initial energy stored in the compressed spring. Identify the correct expression that relates the spring constant and compression to the stored energy.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7caeca74-0d42-49f5-8535-2b40190ae354"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$U=\\frac{1}{2}kx^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$U=kx$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$U=mgx$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b16eb627beb846f3a3d57",
+                    "stepText": "Next, determine the frictional force acting on the block as it slides. Which formula shows the relationship for kinetic friction using the dynamic friction coefficient?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
+                        "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f=\\mu_dmg$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f=\\mu_smg$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f=\\frac{mg}{\\mu_d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "aa8fa24f1314424eb7703",
+                    "stepText": "Now, set up the energy conservation equation. The initial spring energy is partly converted into spring energy at the turning point and partly lost doing work against friction. Which equation best represents this energy balance?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7caeca74-0d42-49f5-8535-2b40190ae354"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{1}{2}k(0.1)^2 = \\frac{1}{2}kx_f^2 + f_k (x_f+0.1)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{2}k(0.1)^2 = \\frac{1}{2}kx_f^2 - f_k (x_f+0.1)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$k(0.1)^2 = \\frac{1}{2}kx_f^2 + f_k (x_f+0.1)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "aa577b63f8e441e5b6082",
+                    "stepText": "Finally, use the energy balance equation you selected to solve for the block's turning position. After simplifying, you will arrive at a quadratic equation in $!$x_f$!$. Calculate the positive solution for $!$x_f$!$ (in meters), which is the distance from equilibrium where the block momentarily stops.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0608"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "2e689418-e014-486a-86a3-e151148f4c6d"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

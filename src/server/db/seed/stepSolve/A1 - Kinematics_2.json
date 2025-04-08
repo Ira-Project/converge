@@ -1,0 +1,231 @@
+{
+    "name": "Kinematics",
+    "id": "eb38de61a0e94f799f09f",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "60133a8426ba4079980da",
+            "questionText": "A water balloon is launched from a slingshot on flat ground at an angle of $!$\\theta = 60^{\\circ}$!$ above the horizontal with an initial velocity of $!$u = 15 \\frac{m}{s}$!$. Assuming negligible air resistance and a gravitational acceleration of $!$g = 9.81 \\frac{m}{s^2}$!$, determine the magnitude of the water balloon's velocity at the instant when it reaches half of its maximum height above the ground.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "92b51ff81feb42aeadd5c",
+                    "stepText": "Let's start by resolving the initial velocity into its horizontal and vertical components. Which pair of formulas would you use to determine $!$u_x$!$ and $!$u_y$!$ respectively?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6549c13e-d336-4760-899a-1964b1b38828",
+                        "b0d5027f-abc0-4033-bb04-8e368b7d0d22"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$u_x = u \\cos\\theta\\quad \\text{and}\\quad u_y = u \\sin\\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$u_x = u \\sin\\theta\\quad \\text{and}\\quad u_y = u \\cos\\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$u_x = u \\tan\\theta\\quad \\text{and}\\quad u_y = u \\cot\\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f8ceb861e76849509e409",
+                    "stepText": "Now, using the vertical component ($!$u_y$!$) you identified, calculate the maximum height reached by the water balloon and then determine half of that maximum height. Enter the half maximum height as your numerical answer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.30"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "418fa35f80b24061b5b5d",
+                    "stepText": "Great, now that you have the half maximum height, determine the vertical velocity ($!$v_y$!$) of the water balloon at that height. Which equation would you choose to relate the vertical velocity with displacement?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "9.19"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a",
+                        "07cf984a-d8bd-4836-a2c2-e4b66ded7563"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v_y^2 = u_y^2 - 2g\\,y$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v_y = u_y - g\\,t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v_y^2 = u_y^2 + 2g\\,y$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "27dd47f5151140bd8dd5b",
+                    "stepText": "Remember that in projectile motion, the horizontal velocity remains constant. Which concept or relation best supports that the horizontal velocity does not change?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "42c7d107-9324-4e8c-a6b6-bd2324a95140",
+                        "4dfd857b-d6d7-4d02-927d-822401187e9f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$x = u_x\\,t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a_x = 0$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v_x = u_x - g\\,t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7ee88b04d10f41f38355d",
+                    "stepText": "Finally, combine the constant horizontal velocity and the vertical velocity at half maximum height to find the magnitude of the water balloon's velocity. Provide the final numerical result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "11.87"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "0e8a6662-eb83-48e0-a158-6f8a1acf9f25"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "df68e805500541dfa933b",
+            "questionText": "A delivery drone starts from rest at a warehouse. It ascends vertically with a constant acceleration of $!$a_1 = 2 \\frac{m}{s^2}$!$ for a duration of $!$t_1 = 10\\,s$!$. Then, it flies horizontally at a constant velocity for $!$t_2 = 30\\,s$!$ to deliver a package. After dropping the package, the drone decelerates horizontally at a constant rate of $!$a_2 = -1 \\frac{m}{s^2}$!$ for a duration of $!$t_3 = 15\\,s$!$ before landing. Calculate the total displacement (magnitude) of the drone from its starting point at the warehouse.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "cec1acb5dd49492cbe52c",
+                    "stepText": "Let's start by determining the final speed achieved during the vertical ascent. Since the drone starts from rest and accelerates uniformly, identify the correct formula to find the final velocity under constant acceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "07cf984a-d8bd-4836-a2c2-e4b66ded7563",
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = u + at$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{s}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a3dc021c19774a649619e",
+                    "stepText": "Assuming you determined the correct formula in step 1, use it with $!$a_1 = 2\\,m/s^2$!$ and $!$t_1 = 10\\,s$!$ to calculate the final speed at the end of the vertical ascent. (Remember, the drone started from rest.) Then, consider that this speed is used during the horizontal constant flight phase.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "07cf984a-d8bd-4836-a2c2-e4b66ded7563"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b5b17955ffbd4f92b3343",
+                    "stepText": "Next, calculate the horizontal displacement during the constant velocity phase. Use the fact that when moving at a constant speed, the displacement is the product of speed and time. Determine this displacement given the speed from step 2 and a flight duration of $!$t_2 = 30\\,s$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "600"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "097abd11b71b49daad5a0",
+                    "stepText": "Now, compute the horizontal displacement during the deceleration phase. Use the kinematic relationship that accounts for an initial speed, a constant acceleration (deceleration here), and the time period of deceleration. Calculate the displacement for this phase using $!$v = 20\\,m/s$!$, $!$a_2 = -1\\,m/s^2$!$, and $!$t_3 = 15\\,s$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "187.5"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "72739528ea834d5bac2bb",
+                    "stepText": "Finally, sum the horizontal displacements from the constant velocity phase and the deceleration phase to determine the drone's total displacement from its starting point. What is the resulting total displacement?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "787.5"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "e36724ff-c9a8-42ac-9b06-e20dc0863e14"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}
