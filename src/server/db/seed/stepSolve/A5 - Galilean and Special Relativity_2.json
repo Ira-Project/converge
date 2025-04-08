@@ -1,0 +1,200 @@
+{
+    "id": "4c28b0d60f4e474da0e2c",
+    "name": "Galilean and Special Relativity",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "df92bbe5c42e4465976c4",
+            "questionText": "A meter stick has a proper length of 1 meter. An observer in a spaceship is traveling at a speed of $!$0.866c$!$ relative to the meter stick, along the direction of the stick's length. According to the observer in the spaceship, how much time does it take for the meter stick to pass a point on the spaceship (with the point located at the origin in the spaceship's frame of reference)?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d5992dc695a8453c99f57",
+                    "stepText": "Let's start by recalling the formula that relates an object's proper length to its observed (contracted) length when it is moving at high speed. Which one of these formulas represents length contraction?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a2cc780f-e223-46ae-8ac0-d8b76d0c5385"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L = L_0 \\sqrt{1 - \\frac{v^2}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L = \\frac{L_0}{1 - \\frac{v}{c}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "22a11c9aa6f2460ca34ef",
+                    "stepText": "Now, using $!$v = 0.866c$!$, calculate the contraction factor given by $!$\\sqrt{1 - \\frac{v^2}{c^2}}$!$. This factor, when multiplied by the proper length $!$L_0 = 1\\,m$!$, provides the contracted length.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.5"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a2cc780f-e223-46ae-8ac0-d8b76d0c5385",
+                        "a0d65d2b-9a39-4a41-bda5-09be98a1c66a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ad763b2a93e0484fa88f3",
+                    "stepText": "Great, now that we have the contracted length, determine which equation correctly gives the time it takes for the stick to pass a fixed point in the spaceship's frame.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "af99d217-2569-4adb-aea1-e7a319f682ac"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$t = \\frac{L}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$t = L \\times v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8509c22831b0491ca3281",
+                    "stepText": "Finally, calculate the time it takes for the meter stick to pass the origin by dividing the contracted length $!$L = 0.5\\, m$!$ by the velocity $!$v = 0.866 \\times 3\\times 10^8\\, m/s$!$. Provide your answer in seconds.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.93e-9"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "af99d217-2569-4adb-aea1-e7a319f682ac"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "81d44c7def694e348dcb0",
+            "questionText": "A muon is created in the upper atmosphere at an altitude of 10^4 m relative to the Earth and travels straight downward at a speed of 0.995c. The muon's half-life in its rest frame is $!$2.2 \\times 10^{-6}$!$ s. According to an observer on Earth, what is the probability that the muon reaches the Earth's surface without decaying (using the dilated half-life)?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d769a92dcefc4a94bc1b7",
+                    "stepText": "Let's start by finding how long the muon takes to reach the Earth in the Earth frame. Use the relation between distance and constant velocity in an inertial frame. What is the travel time (t = d/v) if the distance is $!$10^4\\,m$!$ and the speed is $!$0.995c$!$? (Remember, $!$c\\approx 3\\times10^8\\,m/s$!$)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.35e-5"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "af99d217-2569-4adb-aea1-e7a319f682ac"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4f862a6227cd4d9cb03ab",
+                    "stepText": "Great, now to account for relativistic effects, identify the correct formula to compute the gamma factor (\\(\\gamma\\\\)). Which of the following formulas is used to calculate \\(\\gamma\\)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a0d65d2b-9a39-4a41-bda5-09be98a1c66a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\gamma = \\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\gamma = \\frac{1}{\\sqrt{1-\\frac{v}{c}}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\gamma = \\sqrt{1-\\frac{v^2}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "dc4b2a05596b480f8ac31",
+                    "stepText": "Now, using the gamma factor (approximately 10) and the muon's proper half-life of $!$2.2\\times10^{-6}\\,s$!$, compute the dilated half-life observed in the Earth frame. Multiply the proper half-life by gamma to get the dilated half-life.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.2e-5"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "0b935911-e793-4b1e-99f1-b6338367d9d5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a85ffd45f00f47baafae4",
+                    "stepText": "To determine the survival probability of the muon, we need to know the decay law. Which of the following expressions correctly represents the survival probability based on exponential decay using the half-life?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$P=\\exp\\left(-\\frac{t}{T_{1/2}}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P=\\exp\\left(-\\frac{t}{T_{1/2}}\\ln2\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P=1-\\exp\\left(-\\frac{t}{T_{1/2}}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a9b365a0e10a442980187",
+                    "stepText": "Finally, use the computed travel time (from step 1) and the dilated half-life (from step 3) in the decay formula to calculate the survival probability. What is the numerical value of this probability?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.348"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

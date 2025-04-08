@@ -1,6 +1,6 @@
 {
-    "name": "Kinematics",
     "id": "eb38de61a0e94f799f09f",
+    "name": "Kinematics",
     "topicIdDev": "",
     "topicIdProd": "",
     "latexDelimiter": "$!$",
@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "92b51ff81feb42aeadd5c",
-                    "stepText": "Let's start by resolving the initial velocity into its horizontal and vertical components. Which pair of formulas would you use to determine $!$u_x$!$ and $!$u_y$!$ respectively?",
+                    "id": "ba0894f4f4e345958356e",
+                    "stepText": "Let's start by breaking the initial velocity into its horizontal and vertical components. First, please select the correct formula to compute the horizontal component of the velocity.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -20,110 +20,93 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "6549c13e-d336-4760-899a-1964b1b38828",
-                        "b0d5027f-abc0-4033-bb04-8e368b7d0d22"
+                        "6549c13e-d336-4760-899a-1964b1b38828"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$u_x = u \\cos\\theta\\quad \\text{and}\\quad u_y = u \\sin\\theta$!$",
+                            "optionText": "$!$u_x = u \\cos{\\theta}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$u_x = u \\sin\\theta\\quad \\text{and}\\quad u_y = u \\cos\\theta$!$",
+                            "optionText": "$!$u_x = u \\sin{\\theta}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$u_x = u \\tan\\theta\\quad \\text{and}\\quad u_y = u \\cot\\theta$!$",
+                            "optionText": "$!$u_x = \\frac{u}{\\cos{\\theta}}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "f8ceb861e76849509e409",
-                    "stepText": "Now, using the vertical component ($!$u_y$!$) you identified, calculate the maximum height reached by the water balloon and then determine half of that maximum height. Enter the half maximum height as your numerical answer.",
+                    "id": "408498fb7b9f46d5bb66d",
+                    "stepText": "Now that we have the vertical component of the velocity as well, determine the maximum height reached by the projectile using that component. Choose the appropriate formula that relates the vertical component and gravitational acceleration to the maximum height.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "4.30"
+                        ""
                     ],
-                    "stepSolveAnswerUnits": "m",
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "db4469d3-56b0-4923-9df8-aa1377bb9e6b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$h_{max} = \\frac{u_y^2}{2g}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$h_{max} = \\frac{2g}{u_y^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$h_{max} = u_y \\cdot t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c54cbb9f7fba456eb2a8f",
+                    "stepText": "Great. Now consider the vertical motion to find the vertical velocity when the balloon is at half of its maximum height. Identify the correct kinematic equation that links the vertical displacement and the vertical velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
                     "stepConcepts": [
                         "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
-                    "options": []
-                },
-                {
-                    "id": "418fa35f80b24061b5b5d",
-                    "stepText": "Great, now that you have the half maximum height, determine the vertical velocity ($!$v_y$!$) of the water balloon at that height. Which equation would you choose to relate the vertical velocity with displacement?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "9.19"
-                    ],
-                    "stepSolveAnswerUnits": "m/s",
-                    "stepConcepts": [
-                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a",
-                        "07cf984a-d8bd-4836-a2c2-e4b66ded7563"
-                    ],
                     "options": [
                         {
-                            "optionText": "$!$v_y^2 = u_y^2 - 2g\\,y$!$",
+                            "optionText": "$!$v_y^2 = u_y^2 - 2gy$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$v_y = u_y - g\\,t$!$",
+                            "optionText": "$!$v_y = u_y - 2gy$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$v_y^2 = u_y^2 + 2g\\,y$!$",
+                            "optionText": "$!$v_y^2 = u_y^2 - gy$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "27dd47f5151140bd8dd5b",
-                    "stepText": "Remember that in projectile motion, the horizontal velocity remains constant. Which concept or relation best supports that the horizontal velocity does not change?",
+                    "id": "0790443b6a304ac68d6be",
+                    "stepText": "Finally, combine the constant horizontal velocity and the computed vertical velocity using the Pythagorean theorem to find the total speed at that instant. Use $!$v = \\sqrt{u_x^2 + v_y^2}$!$ to perform the calculation.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "42c7d107-9324-4e8c-a6b6-bd2324a95140",
-                        "4dfd857b-d6d7-4d02-927d-822401187e9f"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$x = u_x\\,t$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$a_x = 0$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$v_x = u_x - g\\,t$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "7ee88b04d10f41f38355d",
-                    "stepText": "Finally, combine the constant horizontal velocity and the vertical velocity at half maximum height to find the magnitude of the water balloon's velocity. Provide the final numerical result.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "11.87"
+                        "11.88"
                     ],
                     "stepSolveAnswerUnits": "m/s",
                     "stepConcepts": [
@@ -139,8 +122,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "cec1acb5dd49492cbe52c",
-                    "stepText": "Let's start by determining the final speed achieved during the vertical ascent. Since the drone starts from rest and accelerates uniformly, identify the correct formula to find the final velocity under constant acceleration.",
+                    "id": "02ff13232441467091963",
+                    "stepText": "Let's start by finding the upward displacement during the vertical acceleration phase. Identify the correct formula to calculate displacement when an object starts from rest and accelerates uniformly.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -148,17 +131,46 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "07cf984a-d8bd-4836-a2c2-e4b66ded7563",
                         "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$v = u + at$!$",
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
+                            "optionText": "$!$s = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = at$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "83adfe7e089642d19ead0",
+                    "stepText": "Next, consider the deceleration phase. To find the horizontal velocity at the start of deceleration, identify the correct way to compute the initial velocity when decelerating uniformly from a given time period.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "07cf984a-d8bd-4836-a2c2-e4b66ded7563"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = |a|\\,t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = a\\,t^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
@@ -170,40 +182,12 @@
                     ]
                 },
                 {
-                    "id": "a3dc021c19774a649619e",
-                    "stepText": "Assuming you determined the correct formula in step 1, use it with $!$a_1 = 2\\,m/s^2$!$ and $!$t_1 = 10\\,s$!$ to calculate the final speed at the end of the vertical ascent. (Remember, the drone started from rest.) Then, consider that this speed is used during the horizontal constant flight phase.",
+                    "id": "87e504515b644bff833da",
+                    "stepText": "Now, calculate the horizontal displacement during the deceleration phase using the average velocity method. Use the computed initial velocity from the deceleration phase and the fact that the final speed becomes zero. Provide only the numerical result.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "20"
-                    ],
-                    "stepSolveAnswerUnits": "m/s",
-                    "stepConcepts": [
-                        "07cf984a-d8bd-4836-a2c2-e4b66ded7563"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "b5b17955ffbd4f92b3343",
-                    "stepText": "Next, calculate the horizontal displacement during the constant velocity phase. Use the fact that when moving at a constant speed, the displacement is the product of speed and time. Determine this displacement given the speed from step 2 and a flight duration of $!$t_2 = 30\\,s$!$.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "600"
-                    ],
-                    "stepSolveAnswerUnits": "m",
-                    "stepConcepts": [
-                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "097abd11b71b49daad5a0",
-                    "stepText": "Now, compute the horizontal displacement during the deceleration phase. Use the kinematic relationship that accounts for an initial speed, a constant acceleration (deceleration here), and the time period of deceleration. Calculate the displacement for this phase using $!$v = 20\\,m/s$!$, $!$a_2 = -1\\,m/s^2$!$, and $!$t_3 = 15\\,s$!$.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "187.5"
+                        "112.5"
                     ],
                     "stepSolveAnswerUnits": "m",
                     "stepConcepts": [
@@ -212,16 +196,16 @@
                     "options": []
                 },
                 {
-                    "id": "72739528ea834d5bac2bb",
-                    "stepText": "Finally, sum the horizontal displacements from the constant velocity phase and the deceleration phase to determine the drone's total displacement from its starting point. What is the resulting total displacement?",
+                    "id": "1828cd3084ad4f69baeee",
+                    "stepText": "Finally, combine the horizontal displacement from the constant velocity phase with the displacement from the deceleration phase. Since the vertical displacement nets to zero, the total displacement is simply the total horizontal distance. Calculate this sum as the final answer.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "787.5"
+                        "562.5"
                     ],
                     "stepSolveAnswerUnits": "m",
                     "stepConcepts": [
-                        "e36724ff-c9a8-42ac-9b06-e20dc0863e14"
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
                     "options": []
                 }

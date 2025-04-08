@@ -1,0 +1,171 @@
+{
+    "id": "0dd191163a7b446aacaf8",
+    "name": "Galilean and Special Relativity",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "10edf80fc78e46919b232",
+            "questionText": "A muon is created in the upper atmosphere at an altitude of 10 km ($!$10 \\times 10^3 \\text{ m}$!$) above the Earth's surface. The muon has a proper half-life of 2.2 microseconds ($!$2.2 \\times 10^{-6} \\text{ s}$!$) and is traveling towards the Earth at a speed of 0.99$!$c$!$, where $!$c$!$ is the speed of light. Accounting for time dilation, determine the average distance the muon will travel as observed from Earth before it decays.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "aa5fd7a2bb8f4e10ab5e9",
+                    "stepText": "Let's start by determining the Lorentz factor. Please select the correct formula that relates the velocity $!$v$!$ and the speed of light $!$c$!$ for computing $!$\\gamma$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a0d65d2b-9a39-4a41-bda5-09be98a1c66a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\gamma = \\frac{1}{\\sqrt{1 - \\frac{v^2}{c^2}}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\gamma = \\sqrt{1 - \\frac{v^2}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\gamma = 1 - \\frac{v^2}{c^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "912cffeddf0c4a9890a9a",
+                    "stepText": "Great! Now, using the value of $!$\\gamma$!$ you obtained, calculate the dilated half-life in the Earth frame by multiplying $!$\\gamma$!$ with the proper half-life ($!$2.2 \\times 10^{-6} \\text{ s}$!$). What is the dilated half-life?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "0b935911-e793-4b1e-99f1-b6338367d9d5",
+                        "a0d65d2b-9a39-4a41-bda5-09be98a1c66a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "490357b049b84bd393abd",
+                    "stepText": "Finally, determine the average distance the muon travels, as observed from Earth, by choosing the correct relation between distance, speed, and time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$d = v \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = \\frac{v}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = v + t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "832178bca54643dd9fef0",
+            "questionText": "An astronaut is traveling in a spaceship moving at a constant speed of $!$0.8c$!$ relative to Earth. The spaceship has a rest length of $!$100$!$ meters ($!$L_0 = 100$!$ m). The astronaut fires a laser pulse from the back of the spaceship towards the front (in the direction of motion). What is the time taken for the laser pulse to reach the front of the spaceship according to the Earth observer's frame of reference?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e8be408cf19b4de0afb37",
+                    "stepText": "Let's start by determining the contracted length of the spaceship as seen by an Earth observer. To do that, we need to use the length contraction concept. Which of the following formulas correctly represents the length contraction relation in special relativity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8f95aa1b-0eb7-42ba-bd59-8b8b8322f61a",
+                        "a2cc780f-e223-46ae-8ac0-d8b76d0c5385"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L = L_0 \\sqrt{1 - \\frac{v^2}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L = L_0 \\left(1 - \\frac{v}{c}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L = L_0 \\left(1 + \\frac{v}{c}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e93b223688bb4bef9d29d",
+                    "stepText": "Great, now that you have determined how to get the contracted length, let\u2019s set up an equation for the situation. In the Earth frame, the front of the spaceship is initially at the contracted length $L$ from the back. As time passes, the front moves forward with speed $v$ while the laser pulse moves with speed $c$. Which equation correctly relates the distance travelled by the light pulse to the initial gap and the distance the front moves?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "af99d217-2569-4adb-aea1-e7a319f682ac"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$c t = L + v t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$c t = L - v t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$c t = L \\cdot v t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "acac3567321f4fd79263a",
+                    "stepText": "Now, using the equation you identified, solve for the time $t$ that it takes for the laser pulse to reach the front of the spaceship. Remember to substitute the contracted length and the speeds (with $c = 3\\times10^8\\,m/s$ and $v = 0.8c$) as needed. What is the numerical value for $t$ in seconds?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1e-6"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "af99d217-2569-4adb-aea1-e7a319f682ac"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

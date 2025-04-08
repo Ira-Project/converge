@@ -11,52 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "2d00587cf49e4e7f97124",
-                    "stepText": "Let's start by identifying the appropriate formula to calculate the gain in gravitational potential energy when climbing a hill. Choose the formula that best relates potential energy to the vertical height climbed.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "3c01ec37-9e55-45a6-9bc8-34733b46e8e7"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$E_p = mgh$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$E_p = \\frac{1}{2} mv^2$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$E_p = F \\times t$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "e5beeffecd5142dea3e45",
-                    "stepText": "Now, use the formula you selected to calculate the gravitational potential energy gain when the cyclist climbs a height of $!$50 m$!$ with a weight of $!$700 N$!$. Multiply the weight by the height.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "35000"
-                    ],
-                    "stepSolveAnswerUnits": "J",
-                    "stepConcepts": [
-                        "3c01ec37-9e55-45a6-9bc8-34733b46e8e7"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "2ddb8e1fed1c407581cf9",
-                    "stepText": "Great, next let\u2019s determine the relationship to compute work output from power and time. Identify the correct formula that expresses work done as a product of power and time.",
+                    "id": "5c888c229413472195e6c",
+                    "stepText": "Let's start by determining the expression that relates mechanical work (\\(W\\)) to power (\\(P\\)) and time (\\(t\\)). Which of the following formulas correctly expresses this relationship?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -78,15 +34,15 @@
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$W = P + t$!$",
+                            "optionText": "$!$W = \\frac{t}{P}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "57cc4c288d7b4e12a9702",
-                    "stepText": "Using the relationship you identified, calculate the mechanical work output by multiplying the cyclist's power output of $!$100 W$!$ by the time of $!$60 s$!$.",
+                    "id": "3f43a737ab5942e1a96df",
+                    "stepText": "Now that you have identified the correct expression, calculate the mechanical work output by the cyclist using the given power output of $!$100\\,W$!$ over a time interval of $!$60\\,s$!$. What is the total mechanical work done?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -99,18 +55,81 @@
                     "options": []
                 },
                 {
-                    "id": "2dbaa37509ec4cc480e1d",
-                    "stepText": "Finally, compute the efficiency of the cyclist's energy conversion by dividing the mechanical work output by the gravitational potential energy gain and multiplying by 100 to get a percentage. What is the efficiency?",
+                    "id": "2dfb15af1e6b49faa36b6",
+                    "stepText": "Next, consider how efficiency is defined in energy conversion problems. Which of the following expressions correctly represents the efficiency \\(\\eta\\) in terms of useful energy output and energy input?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "17"
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0be92c40-ded4-48ee-a466-07236da03b9f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\eta = \\frac{\\text{useful energy out}}{\\text{actual energy in}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{\\text{actual energy in}}{\\text{useful energy out}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\text{useful energy out} - \\text{actual energy in}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "175ac5c5cfa946ae9a8f8",
+                    "stepText": "Using your chosen efficiency formula, calculate the efficiency of the cyclist's energy conversion. Use the mechanical work output you computed (\\(6000\\,J\\)) as the useful energy output and the given chemical energy input of $!$5000\\,J$!$. What is the efficiency in percentage?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "120"
                     ],
                     "stepSolveAnswerUnits": "%",
                     "stepConcepts": [
                         "0be92c40-ded4-48ee-a466-07236da03b9f"
                     ],
                     "options": []
+                },
+                {
+                    "id": "bfa632b0d7fc47419d961",
+                    "stepText": "Finally, reflect on the result you just obtained. An efficiency above $!$100\\%$!$ is not physically possible. Which of the following options best explains what this outcome might indicate about the provided data?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "The chemical energy input is underestimated relative to the mechanical work output.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The mechanical work output is overestimated relative to the chemical energy input.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The time duration is too long for the provided power output.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The gravitational potential energy value is calculated incorrectly.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
                 }
             ]
         },
@@ -120,8 +139,20 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "289599e04a93497980cc7",
-                    "stepText": "Let's begin by calculating the beam's weight force. Identify the correct formula to compute the weight of an object given its mass and the acceleration due to gravity.",
+                    "id": "69fe9e43a9494284ae68e",
+                    "stepText": "Let's start by computing the base force which is due to the weight of the beam. Use the mass and gravitational acceleration to find the force acting on the beam initially. What is the product of the mass ($!$500 \\; kg$!$) and the gravitational acceleration ($!$9.81 \\; m/s^2$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4905"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "9aae4ee6bc6c4f50a3be6",
+                    "stepText": "Great, now that we have the base force, notice that for the first and last segments the force varies linearly. For such a segment, identify the correct formula to compute the work done. Which formula would you choose?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -129,43 +160,29 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "5bf9b7d2-da7f-425b-a6f3-2a025ffe4ff6"
+                        "e515d26f-7767-4267-b081-c9c385fdcaf0"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$F = mg$!$",
+                            "optionText": "$!$W = d \\times \\frac{F_{\\text{initial}} + F_{\\text{final}}}{2}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$F = mgh$!$",
+                            "optionText": "$!$W = F_{\\text{final}} \\times d$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$F = \\frac{1}{2}mv^2$!$",
+                            "optionText": "$!$W = mgh$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "8a460eb605fe42ed84f1c",
-                    "stepText": "Now, using the two force values from the first segment (the force at 0 m and at 5 m), calculate the average force in the first segment. Use the method of averaging the initial and final forces.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "5452.5"
-                    ],
-                    "stepSolveAnswerUnits": "N",
-                    "stepConcepts": [
-                        "e515d26f-7767-4267-b081-c9c385fdcaf0"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "182b8861b69a4d52851d0",
-                    "stepText": "Great. Now compute the work done in the first segment by multiplying the average force you just calculated by the displacement of $!$5 \\text{ m}$!$.",
+                    "id": "3dac556a1004473288a27",
+                    "stepText": "Now, apply the concept from the previous step to the first segment (from $!$0$!$ to $!$5$!$ m) where the force increases linearly from $!$4905 N$!$ to $!$6000 N$!$. Calculate the work done in this segment by multiplying the distance by the average of the two forces.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -178,8 +195,8 @@
                     "options": []
                 },
                 {
-                    "id": "1858daa84c2c40b4a9cf0",
-                    "stepText": "Next, determine the work done in the second segment where the force remains constant at $!$6000 \\text{ N}$!$ over a displacement of $!$10 \\text{ m}$!$.",
+                    "id": "8860101f98fb4d0baad7a",
+                    "stepText": "Moving on, for the second segment (from $!$5$!$ m to $!$15$!$ m) the force remains constant. Calculate the work done in this segment by multiplying the constant force by the distance covered.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -192,8 +209,8 @@
                     "options": []
                 },
                 {
-                    "id": "95e0234447d848319e2d5",
-                    "stepText": "Proceed to calculate the work done in the third segment. This segment is similar to the first: compute the average force (from $!$6000 \\text{ N}$!$ to $!$4905 \\text{ N}$!$) and multiply by the displacement of $!$5 \\text{ m}$!$.",
+                    "id": "9a7dc290d47a4f0fb6aae",
+                    "stepText": "Similarly, for the third segment (from $!$15$!$ m to $!$20$!$ m) the force decreases linearly from $!$6000 N$!$ back to $!$4905 N$!$. Using the same method as for the first segment, compute the work done in this segment.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -206,15 +223,17 @@
                     "options": []
                 },
                 {
-                    "id": "9cfb3a6f8d77497d99d80",
-                    "stepText": "Finally, add the work contributions from all three segments to determine the total work done by the crane on the beam.",
+                    "id": "29e2430752ec439684b40",
+                    "stepText": "Finally, combine the work calculated for each segment to estimate the total work done by the crane. Sum the work of the three segments to obtain the final answer.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "114525"
                     ],
                     "stepSolveAnswerUnits": "J",
-                    "stepConcepts": [],
+                    "stepConcepts": [
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                    ],
                     "options": []
                 }
             ]

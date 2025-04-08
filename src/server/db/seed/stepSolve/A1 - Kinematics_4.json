@@ -1,6 +1,6 @@
 {
-    "name": "Kinematics",
     "id": "db2fdf47a6094bcba17e9",
+    "name": "Kinematics",
     "topicIdDev": "",
     "topicIdProd": "",
     "latexDelimiter": "$!$",
@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "80161fae2afa4c70b3389",
-                    "stepText": "Let's start by determining the net displacement of the arm. In the horizontal stage, it moves a certain distance and in the vertical stage, it moves upward. Which formula best represents how you calculate the displacement (as a vector difference between the final and initial positions)?",
+                    "id": "d580770b83c04606b0320",
+                    "stepText": "Let's start by finding the net displacement magnitude from the horizontal and vertical displacements. Consider the right approach to combine these two components into a single value using a familiar geometric relation. Which formula would you use to calculate the magnitude of a vector given its horizontal and vertical components?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -20,29 +20,30 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
+                        "e3fddcf7-988e-4165-9433-91670464bef8",
                         "42f9486d-bb12-41c1-a177-31ddbff30efd"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\Delta s = s_{final} - s_{initial}$!$",
+                            "optionText": "$!$|\\Delta r| = \\sqrt{(\\Delta x)^2 + (\\Delta y)^2}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$s = s_0 + vt$!$",
+                            "optionText": "$!$|\\Delta r| = \\Delta x + \\Delta y$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$v = \\frac{\\Delta s}{\\Delta t}$!$",
+                            "optionText": "$!$|\\Delta r| = \\sqrt{\\Delta x + \\Delta y}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "2a897a453b744a22b69d3",
-                    "stepText": "Great, now add the durations of all three stages (the horizontal movement, the stationary period, and the vertical movement) to calculate the total time of the motion.",
+                    "id": "b6b7525c476a4a0a9939a",
+                    "stepText": "Great, now that you are ready to compute the net displacement magnitude, use the horizontal displacement of 0.5\\,m and the vertical displacement of 0.2\\,m to determine the magnitude. Then, calculate the total time taken for the three stages by adding the times 1\\,s, 2\\,s, and 0.5\\,s.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -53,62 +54,19 @@
                     "options": []
                 },
                 {
-                    "id": "a834792cb4e34da784d15",
-                    "stepText": "Next, compute the average velocity vector components by dividing each displacement component by the total time. Which formula correctly relates displacement, time, and average velocity?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "c1170020-784b-45f6-9ec5-8dfe77a1f9d0"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$v = \\frac{\\Delta s}{\\Delta t}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$v = \\Delta s \\times \\Delta t$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$v = \\Delta s - \\Delta t$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "ead004413f344e0bb4aed",
-                    "stepText": "Finally, calculate the magnitude of the average velocity vector using the vector components. Which mathematical operation should be used to obtain the magnitude from its components?",
+                    "id": "7b9a11d02b4d4b30a6ac9",
+                    "stepText": "Now, using the net displacement magnitude from step 1 along with the total time from step 2, calculate the average velocity magnitude by dividing the net displacement by the total time. What is the resulting average velocity?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "0.154"
                     ],
                     "stepSolveAnswerUnits": "m/s",
-                    "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "$!$|v| = \\sqrt{v_x^2+v_y^2}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$|v| = v_x+v_y$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$|v| = \\frac{v_x+v_y}{2}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "stepConcepts": [
+                        "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                        "c1170020-784b-45f6-9ec5-8dfe77a1f9d0"
+                    ],
+                    "options": []
                 }
             ]
         },
@@ -118,8 +76,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "d64e3a8c4f7f45f6914d7",
-                    "stepText": "Let's begin by selecting the correct formula to calculate the vertical distance traveled during the drone's ascent (starting from rest with constant acceleration). Identify the proper expression that relates displacement, acceleration, and time.",
+                    "id": "b517455f38734039be818",
+                    "stepText": "Let's start by identifying the appropriate formula to calculate the vertical distance traveled during uniformly accelerated motion from rest. Please choose the correct formula.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -131,53 +89,39 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$d = ut + \\frac{1}{2}at^2$!$",
+                            "optionText": "$!$d = \\frac{1}{2}at^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$d = u + at$!$",
+                            "optionText": "$!$d = at$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$d = \\frac{v^2 - u^2}{2a}$!$",
+                            "optionText": "$!$d = vt$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "d18e08ec26d44754b2c5d",
-                    "stepText": "Now, consider the deceleration phase. Since the drone comes to rest in $!$15\\,s$!$ due to a deceleration of $!$1\\,m/s^2$!$, use the relation between acceleration and time to compute the constant horizontal cruise speed.",
+                    "id": "1b855add20dc46f0aea45",
+                    "stepText": "Now, using the formula you selected and the given values $!$a=2\\,m/s^2$!$ and $!$t=10\\,s$!$, calculate the vertical distance the drone ascends.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "15"
+                        "100"
                     ],
-                    "stepSolveAnswerUnits": "m/s",
+                    "stepSolveAnswerUnits": "m",
                     "stepConcepts": [
                         "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
                     "options": []
                 },
                 {
-                    "id": "fa2428c194e34ddc86226",
-                    "stepText": "Next, calculate the horizontal distance covered during the cruise phase. Use the constant cruise speed and the cruise time of $!$30\\,s$!$ to determine this distance.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "450"
-                    ],
-                    "stepSolveAnswerUnits": "m",
-                    "stepConcepts": [
-                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "d78d567cfa8f46bea2091",
-                    "stepText": "Now, select the correct formula for determining the horizontal distance traveled during the deceleration phase when the drone slows down from the cruise speed to rest. Identify the proper expression that includes the initial speed, time, and deceleration.",
+                    "id": "64d0b61289864ec4b0f97",
+                    "stepText": "Next, for the horizontal flight segment, the drone first travels at a constant velocity and then decelerates. Identify the correct pair of formulas to calculate: (i) the distance traveled at constant velocity and (ii) the distance covered during deceleration.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -185,38 +129,52 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
+                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb",
                         "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$d = v_i t - \\frac{1}{2}at^2$!$",
+                            "optionText": "Option A: (i) $!$d = vt$!$, (ii) $!$d = v_{0}t - \\frac{1}{2}at^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$d = v_i t + \\frac{1}{2}at^2$!$",
+                            "optionText": "Option B: (i) $!$d = at$!$, (ii) $!$d = \\frac{1}{2}at^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$d = \\frac{v_i^2}{at}$!$",
+                            "optionText": "Option C: (i) $!$d = ut + \\frac{1}{2}at^2$!$, (ii) $!$d = vt$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "8523e4531c6046198a4d5",
-                    "stepText": "Finally, add together the vertical ascent distance, the horizontal cruise distance, and the horizontal deceleration distance to determine the total distance traveled by the drone.",
+                    "id": "2f8ee7ba4da34db59aa65",
+                    "stepText": "Now, use the correct formulas from the previous step to calculate the total horizontal distance. For the constant velocity phase, use the speed attained during ascent ($!$20\\,m/s$!$) over $!$30\\,s$!$, and for the deceleration phase, use the initial speed of $!$20\\,m/s$!$, a deceleration of $!$1\\,m/s^2$!$, and a time duration of $!$15\\,s$!$. Sum both distances to obtain the horizontal distance.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "662.5"
+                        "787.5"
                     ],
                     "stepSolveAnswerUnits": "m",
                     "stepConcepts": [
-                        "e36724ff-c9a8-42ac-9b06-e20dc0863e14"
+                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb",
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
+                    "options": []
+                },
+                {
+                    "id": "c39a67cb4c5c4054a2f95",
+                    "stepText": "Finally, combine the vertical distance from step 2 and the horizontal distance from step 4 to find the total distance traveled by the drone during its flight. What is the total distance?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "887.5"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
                     "options": []
                 }
             ]

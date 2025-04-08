@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "f9f298db400d4948a4812",
-                    "stepText": "Let's start by considering the vertical force balance. Identify the equation that correctly represents the equilibrium of forces acting in the vertical direction, involving the normal force ($!$N$!$), the frictional force ($!$f$!$), the weight ($!$mg$!$), and the banking angle ($!$\\theta$!$).",
+                    "id": "4ce58237030a47cfb3aa5",
+                    "stepText": "Let's start by analyzing the vertical forces acting on the car. For this banked turn, the normal force supports the car's weight. Identify the correct relationship that represents vertical equilibrium (where the vertical component of the normal force balances the weight). Which formula is appropriate here?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -20,115 +20,118 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "2e689418-e014-486a-86a3-e151148f4c6d"
+                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
+                        "18743f7b-2133-4b00-b872-d79300ea4707"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$N \\cos(\\theta) + f \\sin(\\theta) = mg$!$",
+                            "optionText": "$!$N \\cos\\theta = mg$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$N \\sin(\\theta) + f \\cos(\\theta) = mg$!$",
+                            "optionText": "$!$N \\sin\\theta = mg$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$N \\cos(\\theta) - f \\sin(\\theta) = mg$!$",
+                            "optionText": "$!$mg = N \\sin\\theta$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "2fcfb9723d5d4ea98c0f8",
-                    "stepText": "Great$!$ Now, using the vertical equilibrium equation you selected, express the normal force $!$N$!$ in terms of $!$mg$, $!$f$, and the trigonometric functions of the banking angle. Calculate the numerical value of $!$N$!$ using $!$m = 1500 \\text{ kg}$!$, $!$g = 9.8 \\text{ m/s}^2$!$, $!$f = 8000 \\text{ N}$!$, and $!$\\theta = 20^\\circ$!$. (Hint: Use approximations for $!$\\sin(20^\\circ)$!$ and $!$\\cos(20^\\circ)$!$ if needed.)",
+                    "id": "0b500b517833410db25a4",
+                    "stepText": "Great! Now that we have the vertical equilibrium relation, use it to solve for the normal force, $!$N$!$. Compute $!$N = \\frac{mg}{\\cos\\theta}$!$ using the given values $!$m=1500\\,kg$!$, $!$g=9.8\\,m/s^2$!$, and $!$\\theta=20^\\circ$!$. What numerical value do you obtain for $!$N$!$ (in newtons)?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "12738"
+                        "15636"
                     ],
                     "stepSolveAnswerUnits": "N",
                     "stepConcepts": [
+                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
+                        "18743f7b-2133-4b00-b872-d79300ea4707"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "cc4a975c75bd46e5b92e4",
+                    "stepText": "Now that we have the normal force, consider the horizontal forces that provide the centripetal force. In the banked turn, the horizontal component of the normal force works together with the full frictional force. Which of the following expressions correctly represents the total horizontal force available for centripetal acceleration?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "619a9763-10d2-48a6-a060-de4db6ea3c0a",
+                        "2e689418-e014-486a-86a3-e151148f4c6d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$N \\sin\\theta + f_{max} = m \\frac{v^2}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$N \\cos\\theta + f_{max} = m \\frac{v^2}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$N + f_{max} = m \\frac{v^2}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "eb69c1b00a7741c5ba289",
+                    "stepText": "Excellent! Substitute the expression for $!$N$!$ that you obtained earlier into the horizontal force equation and solve for $!$v^2$!$. Using the known values (where $!$f_{max} = 8000\\,N$!$, $!$r = 500\\,m$!$, and $!$m = 1500\\,kg$!$), calculate the numerical value for $!$v^2$!$ (in $!$m^2/s^2$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4447"
+                    ],
+                    "stepSolveAnswerUnits": "m^2/s^2",
+                    "stepConcepts": [
+                        "619a9763-10d2-48a6-a060-de4db6ea3c0a",
                         "2e689418-e014-486a-86a3-e151148f4c6d"
                     ],
                     "options": []
                 },
                 {
-                    "id": "c3362b0eae704e6f8572d",
-                    "stepText": "Next, let\u2019s shift our focus to the horizontal forces that provide the centripetal force. Which of the following correctly represents the horizontal force balance equation that relates the horizontal components of the normal force and friction to the centripetal force required for circular motion?",
+                    "id": "bee8e7633a624ad2ad265",
+                    "stepText": "Finally, determine the maximum speed $!$v$!$ for the car. Which of the following relationships should be used to extract $!$v$!$ from $!$v^2$!$, and what is its calculated value in $!$m/s$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "041ce8cc-2fb0-4b3a-9cc5-d67ec71d6d66"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$N \\sin(\\theta) + f \\cos(\\theta) = \\frac{m v^2}{r}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$N \\cos(\\theta) + f \\sin(\\theta) = \\frac{m v^2}{r}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$f \\sin(\\theta) + N \\cos(\\theta) = \\frac{m v^2}{r}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "6e69c79ae56f42fab33ca",
-                    "stepText": "Now, substitute the expression you obtained for $!$N$!$ from the vertical balance into your horizontal force equation and manipulate the relation to solve for $!$v^2$!$. Which of the following forms correctly represents the derived relation for $!$v^2$!$ in terms of known quantities, including $!$g$, $!$\\tan(\\theta)$!$, $!$f$, $!$\\cos(\\theta)$!$, and $!$\\cos(40^\\circ)$!$ (noting a trigonometric identity related to the double angle)?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "4832ddc7-cb21-4a36-b1ff-4a23c466e1c7",
-                        "4143aa6e-2fe6-4ae4-b9fc-07c4f0a0619c"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$v^2 = \\frac{r}{m}\\Bigl( g\\tan(\\theta) + \\frac{f\\cos(40^\\circ)}{\\cos(\\theta)} \\Bigr)$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$v^2 = \\frac{r}{m}\\Bigl( g\\sin(\\theta) + \\frac{f\\cos(\\theta)}{\\tan(\\theta)} \\Bigr)$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$v^2 = \\frac{r}{m}\\Bigl( g\\cos(\\theta) + \\frac{f\\sin(\\theta)}{\\cos(\\theta)} \\Bigr)$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "09c7e8bc1f344912a6412",
-                    "stepText": "Finally, use the relation you derived for $!$v^2$!$ to calculate the maximum safe speed $!$v$!$ at which the car can negotiate the turn without skidding. Substitute $!$r = 500 \\text{ m}$!$, $!$m = 1500 \\text{ kg}$!$, $!$g = 9.8 \\text{ m/s}^2$!$, $!$f = 8000 \\text{ N}$!$, and the appropriate trigonometric values for $!$\\theta = 20^\\circ$!$. What is the numerical value of $!$v$!$ in m/s?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "63"
+                        "66.7"
                     ],
                     "stepSolveAnswerUnits": "m/s",
                     "stepConcepts": [
-                        "4832ddc7-cb21-4a36-b1ff-4a23c466e1c7",
-                        "4143aa6e-2fe6-4ae4-b9fc-07c4f0a0619c"
+                        "4143aa6e-2fe6-4ae4-b9fc-07c4f0a0619c",
+                        "93f43dd2-abd6-44a7-a8b0-e3052ca1909e"
                     ],
-                    "options": []
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\sqrt{v^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{v^2}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
                 }
             ]
         },
@@ -138,8 +141,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "8b5f0b8ac2964b94bb09f",
-                    "stepText": "Let's start by identifying the force that represents the gravitational pull on the beam. Which formula correctly represents the weight of an object?",
+                    "id": "ddb37d93388d4d01a263b",
+                    "stepText": "Let's start by identifying the fundamental law that relates net force, mass, and acceleration. Please select the appropriate formula.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -147,17 +150,16 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
-                        "7caeca74-0d42-49f5-8535-2b40190ae354"
+                        "4832ddc7-cb21-4a36-b1ff-4a23c466e1c7"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$W = mg$!$",
+                            "optionText": "$!$F = ma$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$F = ma$!$",
+                            "optionText": "$!$W = mg$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
@@ -165,26 +167,17 @@
                             "optionText": "$!$T = kx$!$",
                             "optionImage": "",
                             "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = g\\sin\\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "ed50f7a8e6654bdd8833e",
-                    "stepText": "Great, now calculate the net force needed for the upward acceleration using Newton's Second Law. Use the mass of the beam and its acceleration.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "1000"
-                    ],
-                    "stepSolveAnswerUnits": "N",
-                    "stepConcepts": [
-                        "4832ddc7-cb21-4a36-b1ff-4a23c466e1c7"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "0b3404539a3246d3b926e",
-                    "stepText": "Next, set up the force balance for the beam. Which equation correctly relates the tension in the cable, the weight of the beam, and the drag force to the net force?",
+                    "id": "1b7591cd4fcb47ed9a60a",
+                    "stepText": "Great! Now, using the principle of net force, set up the equation that represents the forces in the vertical direction acting on the beam. Which of the following expressions correctly represents the net force?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -201,20 +194,54 @@
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$T + mg - F_d = ma$!$",
+                            "optionText": "$!$T + mg + F_d = ma$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$T - mg + F_d = ma$!$",
+                            "optionText": "$!$T - mg = ma$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T - F_d = ma$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "1e7f536fef134c10acb98",
-                    "stepText": "Finally, solve for the tension $!$T$!$ in the cable by substituting the values for the net force, the weight of the beam, and the drag force into the force balance equation.",
+                    "id": "062f969d2d6a48c49e4c1",
+                    "stepText": "Let's compute the weight of the beam. Use the given mass and gravitational acceleration to calculate this force. What is the weight $!$mg$!$ (in Newtons)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "19600"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
+                        "7caeca74-0d42-49f5-8535-2b40190ae354"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "98d3da359ffa4952a2c8b",
+                    "stepText": "Next, determine the additional force required to accelerate the beam upward by multiplying the mass by the given acceleration. What is the value of $!$ma$!$ (in Newtons)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1000"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "4832ddc7-cb21-4a36-b1ff-4a23c466e1c7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6aaa207b84d445f48035f",
+                    "stepText": "Finally, combine the weight, the force from acceleration, and the opposing drag force to find the tension in the cable. What is the tension $!$T$!$ (in Newtons)?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

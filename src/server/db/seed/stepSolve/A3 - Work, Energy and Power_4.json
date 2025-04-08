@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "3d083346fecf4d9e9104f",
-                    "stepText": "Let's start by identifying the correct formula needed to calculate the work done by a force. Please choose the correct formula from the options below.",
+                    "id": "2280520c0c05430f95292",
+                    "stepText": "Let's start by identifying the fundamental expression used to calculate the work done by a force. Which of the following formulas correctly represents work done by a force?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -29,20 +29,20 @@
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$W = \\frac{F}{s}$!$",
+                            "optionText": "$!$W = \\frac{1}{2} kx^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$W = mv^2$!$",
+                            "optionText": "$!$W = mgh$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "21cadbdcb0f14debaa924",
-                    "stepText": "Great$!$ Now, consider the first segment (0 to 5 m) where the force increases linearly from 5000 N to 10000 N. Compute the work done in this segment by determining the average force and then multiplying by the displacement. What is the work done in this segment?",
+                    "id": "91682154dd424b3b82708",
+                    "stepText": "Great. Now, let\u2019s analyze the first segment of the lift from $!$0 \\text{ m}$!$ to $!$5 \\text{ m}$!$, where the force increases linearly from $!$5000 \\text{ N}$!$ to $!$10000 \\text{ N}$!$. Calculate the work done in this segment by finding the average force and multiplying it by the displacement. What is the work done in this segment?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -50,14 +50,14 @@
                     ],
                     "stepSolveAnswerUnits": "J",
                     "stepConcepts": [
-                        "e515d26f-7767-4267-b081-c9c385fdcaf0",
-                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0",
+                        "e515d26f-7767-4267-b081-c9c385fdcaf0"
                     ],
                     "options": []
                 },
                 {
-                    "id": "1b5a723d9e1149d680787",
-                    "stepText": "Now, move on to the second segment (5 to 15 m) where the force is constant at 10000 N. Determine the work done in this segment by multiplying the constant force by the displacement. What is the work done in this segment?",
+                    "id": "ab136c7a777942ba8fbbb",
+                    "stepText": "Now, move to the second segment from $!$5 \\text{ m}$!$ to $!$15 \\text{ m}$!$, where the force remains constant at $!$10000 \\text{ N}$!$. Multiply the constant force by the distance (remembering that the distance covered is the difference between 15 m and 5 m). What is the work for this segment?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -70,8 +70,8 @@
                     "options": []
                 },
                 {
-                    "id": "bf1f1f1749d04fc8911d9",
-                    "stepText": "Next, examine the third segment (15 to 20 m) where the force decreases linearly from 10000 N back to 5000 N. As with the first segment, compute the work done by calculating the average force and multiplying it by the displacement. What is the work done in this segment?",
+                    "id": "85f532523f834e5f83a9d",
+                    "stepText": "Next, consider the final segment of the lift from $!$15 \\text{ m}$!$ to $!$20 \\text{ m}$!$, where the force decreases linearly from $!$10000 \\text{ N}$!$ back to $!$5000 \\text{ N}$!$. Similar to the first segment, compute the work done by using the average force method. What is the work for this segment?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -79,14 +79,14 @@
                     ],
                     "stepSolveAnswerUnits": "J",
                     "stepConcepts": [
-                        "e515d26f-7767-4267-b081-c9c385fdcaf0",
-                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                        "67784893-a7f7-4ebc-ac63-a3f494a49df0",
+                        "e515d26f-7767-4267-b081-c9c385fdcaf0"
                     ],
                     "options": []
                 },
                 {
-                    "id": "f215ea7e8e51433d802f4",
-                    "stepText": "Finally, combine the work done in all three segments by summing them up to determine the total work done by the crane on the beam. What is the total work done?",
+                    "id": "0982bc0f53f44edd83179",
+                    "stepText": "Finally, add the work values from all three segments to obtain the total work done by the crane on the beam. What is the total work done?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -106,8 +106,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "52a4af7584f34ce9bf05a",
-                    "stepText": "Let's start by identifying the formula that relates the net work done to the change in kinetic energy. Please select the formula that correctly expresses this relationship.",
+                    "id": "fc3539bea0e541e09543d",
+                    "stepText": "Let's start by identifying the theorem that connects the net work done on an object to its change in kinetic energy. Please select the formula that expresses this concept.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -115,50 +115,43 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "f15b2cb1-9fa3-4c7a-a335-23aba0faaaca",
-                        "67784893-a7f7-4ebc-ac63-a3f494a49df0",
-                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                        "f15b2cb1-9fa3-4c7a-a335-23aba0faaaca"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$W_{net} = \\Delta E_k$!$",
+                            "optionText": "$!$W_{net}=\\Delta E_k$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$E_k = \\frac{1}{2}mv^2$!$",
+                            "optionText": "$!$E_k=\\frac{1}{2}mv^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$W = Fd \\cos{\\theta}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$E = E_k + E_p$!$",
+                            "optionText": "$!$W=F d \\cos\\theta$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "f422a866bb6740c7a8342",
-                    "stepText": "Now that we've related work to the change in kinetic energy, determine the initial kinetic energy of the van given that it starts from rest. What value do you get?",
+                    "id": "a115104397af42a9a4e03",
+                    "stepText": "Great, now that we've recalled the work-kinetic energy theorem, consider that the van initially was at rest (meaning its initial kinetic energy was zero). Knowing the work performed is 500,000 J, calculate the change in kinetic energy.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "0"
+                        "500000"
                     ],
                     "stepSolveAnswerUnits": "J",
                     "stepConcepts": [
-                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
+                        "f15b2cb1-9fa3-4c7a-a335-23aba0faaaca"
                     ],
                     "options": []
                 },
                 {
-                    "id": "f7a318c9b7ac47fcb63fd",
-                    "stepText": "Finally, using the work-energy theorem, calculate the kinetic energy gained by the van by considering the work done by the electric motor. What is the numerical value of the kinetic energy gained?",
+                    "id": "f38e40583e7f47cb833f1",
+                    "stepText": "Now, using your previous result, determine the final kinetic energy gained by the van. What is the numerical value of the kinetic energy after the work has been done?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

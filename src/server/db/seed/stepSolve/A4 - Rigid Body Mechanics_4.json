@@ -1,0 +1,277 @@
+{
+    "id": "56980481b66146228934f",
+    "name": "Rigid Body Mechanics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a9615c86320e4f6daf279",
+            "questionText": "A seesaw consists of a uniform plank of length $!$4\\,\\text{m}$!$ and mass $!$10\\,\\text{kg}$!$, pivoted at its center. A child of mass $!$30\\,\\text{kg}$!$ sits at one end, and another child of mass $!$20\\,\\text{kg}$!$ sits $!$1\\,\\text{m}$!$ from the other end. If the seesaw is released from rest in this unbalanced configuration, what is its initial angular acceleration? Assume $!$g = 9.8\\,\\text{m/s}^2$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8b4080936f7f4e4382f93",
+                    "stepText": "Let's start by calculating the torques created by the children. To do this, first select the correct formula for the torque caused by a force applied at a distance from a pivot.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "66c394e5-9b27-4235-9105-6b2e0ba0b2b0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\tau = F \\times d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\tau = \\frac{F}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\tau = \\frac{d}{F}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d0104864c5fd4a3495bfa",
+                    "stepText": "Great! Now compute the net torque about the pivot. Remember that one child applies a torque in one direction and the other in the opposite direction. Use the appropriate distances and the gravitational force (calculated as mass multiplied by $!$g$!$). What is the net torque (in $!$\\text{N\\,m}$!$) about the pivot?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "392"
+                    ],
+                    "stepSolveAnswerUnits": "N\u00b7m",
+                    "stepConcepts": [
+                        "66c394e5-9b27-4235-9105-6b2e0ba0b2b0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "cc394ffcab6d4b0dba644",
+                    "stepText": "Let's move to finding the moment of inertia. First, for the seesaw's plank (a uniform rod pivoted about its center), please select the correct formula for its moment of inertia.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e7c0b9dd-4995-4142-ba78-a54339d150c3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{1}{12} ML^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{1}{3} ML^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = ML^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "974b82f842f244069af39",
+                    "stepText": "Now, compute the total moment of inertia of the system. This includes the plank and the two children (considered as point masses with moment of inertia $!$I=mr^2$!$). What is the total moment of inertia (in $!$\\text{kg\\,m^2}$!$) about the pivot?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "153.33"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m^2",
+                    "stepConcepts": [
+                        "b5685466-7a37-4ece-ab26-a0e7c37357f4",
+                        "e7c0b9dd-4995-4142-ba78-a54339d150c3"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ee39c66c5d2949828235b",
+                    "stepText": "Now, to find the angular acceleration, start by selecting the correct relation among net torque, moment of inertia, and angular acceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3b2a38ec-ad3c-4fda-9fed-c1f652dea80e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\alpha = \\frac{\\tau}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\alpha = \\tau \\times I$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\alpha = \\frac{I}{\\tau}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "75fed05dd3f2415fbaf82",
+                    "stepText": "Finally, calculate the initial angular acceleration using your net torque and total moment of inertia. What is the angular acceleration (in $!$\\text{rad/s^2}$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.56"
+                    ],
+                    "stepSolveAnswerUnits": "rad/s^2",
+                    "stepConcepts": [
+                        "3b2a38ec-ad3c-4fda-9fed-c1f652dea80e"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "db1a299fdb254e5d92460",
+            "questionText": "A figure skater is spinning with an initial angular velocity $!$\\omega_i$!$ of $!$2\\,\\text{rad/s}$!$ and has their arms fully extended, resulting in a moment of inertia $!$I_i$!$ of $!$4\\,\\text{kg}\\cdot\\text{m}^2$!$. The skater then pulls their arms inward, decreasing their moment of inertia to $!$I_f$!$ of $!$2.5\\,\\text{kg}\\cdot\\text{m}^2$!$. Calculate the change in the skater's rotational kinetic energy between the initial and final states.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "cfb05154f68d439ab8c47",
+                    "stepText": "Let's start by computing the initial angular momentum of the skater. Identify the correct formula that relates the moment of inertia and angular velocity to angular momentum.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2b9428ca-8d6d-4190-afd1-29f6d9298536"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L = I \\omega$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L = I + \\omega$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L = \\frac{1}{2} I \\omega^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "884976eb00cd4769b16c7",
+                    "stepText": "Now, using the formula you selected, calculate the initial angular momentum by multiplying the initial moment of inertia $!$I_i = 4$!$ by the initial angular velocity $!$\\omega_i = 2$!$. What is the numerical value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m^2/s",
+                    "stepConcepts": [
+                        "2b9428ca-8d6d-4190-afd1-29f6d9298536"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d9b133e6d1224dc08941b",
+                    "stepText": "Great. Next, we use the conservation of angular momentum principle when the skater pulls in their arms. Identify the correct relationship that equates the initial and final angular momentum.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "17d26f54-4ee0-443a-bbdc-27314f8ac8f8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I_i \\omega_i = I_f \\omega_f$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{\\omega_i}{I_i} = \\frac{\\omega_f}{I_f}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I_i + \\omega_i = I_f + \\omega_f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3c9d290f121344d0aa27f",
+                    "stepText": "Using the conservation equation from the previous step and the fact that the initial angular momentum is 8 kg\u00b7m\u00b2/s, compute the final angular velocity $!$\\omega_f$!$ given that $!$I_f = 2.5$!$. What is the value of $!$\\omega_f$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.2"
+                    ],
+                    "stepSolveAnswerUnits": "rad/s",
+                    "stepConcepts": [
+                        "2b9428ca-8d6d-4190-afd1-29f6d9298536",
+                        "17d26f54-4ee0-443a-bbdc-27314f8ac8f8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6286a26b32774eac97022",
+                    "stepText": "Finally, determine the change in the skater's rotational kinetic energy. First, select the correct formula for rotational kinetic energy. Then, using the values $!$I_i = 4$!$, $!$\\omega_i = 2$!$, $!$I_f = 2.5$!$, and $!$\\omega_f = 3.2$!$, compute the initial kinetic energy and the final kinetic energy, and finally find their difference. Identify the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.8"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "6352f0ee-0f0b-4829-ad63-9c74e3c1288d",
+                        "2b9428ca-8d6d-4190-afd1-29f6d9298536",
+                        "17d26f54-4ee0-443a-bbdc-27314f8ac8f8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$KE = \\frac{1}{2} I \\omega^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$KE = I \\omega$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$KE = I \\omega^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

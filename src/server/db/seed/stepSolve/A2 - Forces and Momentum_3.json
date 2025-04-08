@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "91eaef0d494243fea8398",
-                    "stepText": "Let's start by considering that the beam is moving at a constant velocity, so its acceleration is zero. Which of the following equations best represents this equilibrium condition?",
+                    "id": "69a8353477054429aaa4d",
+                    "stepText": "Let's start by recalling how to calculate the weight of the beam. Identify the correct formula to compute weight from mass and gravitational acceleration.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -20,29 +20,29 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "2e689418-e014-486a-86a3-e151148f4c6d"
+                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\sum F = 0$!$",
+                            "optionText": "$!$W = mg$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$F = ma$!$",
+                            "optionText": "$!$W = m + g$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$T = mg$!$",
+                            "optionText": "$!$W = m/g$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "cfb54cbf9db048a5b19fb",
-                    "stepText": "Great$!$ Now, to progress, calculate the weight of the beam using its mass and gravitational acceleration. Enter the numerical value for the weight.",
+                    "id": "b63392b393824dc3b9fe0",
+                    "stepText": "Now, calculate the beam's weight using the provided mass $!$500 kg$!$ and gravitational acceleration $!$9.8 m/s^2$!$. Plug the values into the formula you selected in the previous step.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -55,8 +55,38 @@
                     "options": []
                 },
                 {
-                    "id": "7c2dfce4c90a4c06a4feb",
-                    "stepText": "Next, determine the drag force acting on the beam using the provided relation between drag force and velocity. Compute its numerical value.",
+                    "id": "3d8e3adac0714d6090ddb",
+                    "stepText": "Next, let's determine the drag force acting on the beam. Identify which formula correctly represents the drag force given that it is proportional to the square of the velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a969809-71da-49a4-9e6b-736f7621d7a5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F_d = bv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F_d = b/v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F_d = bv$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e3fa9ab2eb5c4d3c95fa7",
+                    "stepText": "Now, compute the magnitude of the drag force using $!$b = 2.0\\,kg/m$!$ and velocity $!$v = 5\\,m/s$!$ based on the formula you identified.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -69,8 +99,38 @@
                     "options": []
                 },
                 {
-                    "id": "e1873ac5a67244d3bac25",
-                    "stepText": "Finally, use the equilibrium condition to calculate the tension in the cable by summing the weight and the drag force. What is the tension force?",
+                    "id": "258d7b5a4bef4537a160f",
+                    "stepText": "At constant velocity, the beam is in equilibrium. Which relationship correctly represents the balance of forces acting on the beam under these conditions?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2e689418-e014-486a-86a3-e151148f4c6d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T = W + F_d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T = W - F_d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T = F_d - W$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "79691452433445928204d",
+                    "stepText": "Finally, calculate the tension $!$T$!$ in the cable using the weight and drag force values obtained in the previous steps.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -78,9 +138,7 @@
                     ],
                     "stepSolveAnswerUnits": "N",
                     "stepConcepts": [
-                        "2e689418-e014-486a-86a3-e151148f4c6d",
-                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
-                        "7a969809-71da-49a4-9e6b-736f7621d7a5"
+                        "2e689418-e014-486a-86a3-e151148f4c6d"
                     ],
                     "options": []
                 }
@@ -92,36 +150,82 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "9b35b8a403c6433591d24",
-                    "stepText": "Let's start by determining which formula you should use to calculate the circumference of a circle given its radius. Please select the correct formula.",
+                    "id": "100e56a6beb94ae2b4b6d",
+                    "stepText": "Let's start by connecting the car's linear speed to its angular speed. Which formula correctly relates the linear speed $!$v$!$ to the angular speed $!$\\omega$!$ and radius $!$r$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         ""
                     ],
                     "stepSolveAnswerUnits": "",
-                    "stepConcepts": [],
+                    "stepConcepts": [
+                        "f08dbfc4-7ece-47af-8c8f-7609d1f384aa"
+                    ],
                     "options": [
                         {
-                            "optionText": "$!$C = 2\\pi r$!$",
+                            "optionText": "$!$v = r\\omega$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$C = \\pi r^2$!$",
+                            "optionText": "$!$\\omega = r/v$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$C = 2r$!$",
+                            "optionText": "$!$v = 2\\pi r\\omega$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "06f8c46a49a64865bcfce",
-                    "stepText": "Now, use the circumference of the racetrack and the given car speed to calculate the period, which is the time for one complete revolution. Compute the period using the relationship between distance and speed.",
+                    "id": "53e0373b0314489aa07e1",
+                    "stepText": "Great! Now using the relation between linear and angular speed, compute the angular speed $!$\\omega$!$ when the car's new speed is $!$60\\,m/s$!$ and the radius is $!$500\\,m$!$. (Divide the linear speed by the radius.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.12"
+                    ],
+                    "stepSolveAnswerUnits": "rad/s",
+                    "stepConcepts": [
+                        "f08dbfc4-7ece-47af-8c8f-7609d1f384aa"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f98acf35a7224375aab8d",
+                    "stepText": "Now that we have the angular speed, let's identify the formula for the period $!$T$!$ (the time for one complete revolution) in terms of angular speed. Which option correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a51157a0-fd9c-46a1-ac03-cc47674195b0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T = \\frac{2\\pi}{\\omega}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T = \\omega\\,2\\pi$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T = \\frac{\\omega}{2\\pi}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a70003fa44984041a9383",
+                    "stepText": "Using the formula for the period, compute the period $!$T$!$ by dividing $!$2\\pi$!$ by the angular speed $!$\\omega$!$ you calculated. What is the period in seconds?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -134,8 +238,8 @@
                     "options": []
                 },
                 {
-                    "id": "ab74c2b618c74e9088b43",
-                    "stepText": "Great, now select the correct formula that relates the period of revolution to the frequency of motion.",
+                    "id": "8d6b016eb40a421ba4ea8",
+                    "stepText": "Next, let's identify the relationship between the period and frequency. Which of the following correctly expresses frequency $!$f$!$ in terms of the period $!$T$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -147,25 +251,25 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$f = 1/T$!$",
+                            "optionText": "$!$f = \\frac{1}{T}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$f = T$!$",
+                            "optionText": "$!$f = \\frac{T}{1}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$f = 2\\pi T$!$",
+                            "optionText": "$!$f = T$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "6ab54552046346b29ddec",
-                    "stepText": "Finally, using the period you calculated earlier, compute the frequency of the car's motion. Remember that frequency is the reciprocal of the period.",
+                    "id": "6b788693224542358c172",
+                    "stepText": "Finally, calculate the frequency by taking the reciprocal of the period you found. What is the frequency in Hz?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

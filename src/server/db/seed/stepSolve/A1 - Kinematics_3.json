@@ -1,6 +1,6 @@
 {
-    "name": "Kinematics",
     "id": "76473cc6e7f6413fade6f",
+    "name": "Kinematics",
     "topicIdDev": "",
     "topicIdProd": "",
     "latexDelimiter": "$!$",
@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "770f561871c746e09af9c",
-                    "stepText": "Let's start by resolving the initial velocity into its horizontal component. Please select the correct expression to calculate the horizontal component of the velocity.",
+                    "id": "00b19914a0e841bfa681c",
+                    "stepText": "Let's start by resolving the initial velocity into its horizontal component. Identify the correct formula that relates the horizontal component $!$u_x$!$ to the initial velocity $!$u$!$ and the angle $!$\\theta$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -24,25 +24,25 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$u_x = u \\cos{\\theta}$!$",
+                            "optionText": "$!$u_x = u \\cos \\theta$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$u_x = u \\sin{\\theta}$!$",
+                            "optionText": "$!$u_x = u \\sin \\theta$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$u_x = u \\tan{\\theta}$!$",
+                            "optionText": "$!$u_x = \\frac{u}{\\cos \\theta}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "23af4f1b1b95404c95124",
-                    "stepText": "Great, now let's determine the time of flight. Please choose the correct formula that relates the vertical component of the initial velocity to the total time the projectile remains in the air.",
+                    "id": "2c62a5231b924b9b8adfb",
+                    "stepText": "Now, let's determine the time of flight using the vertical component of the motion. Identify the proper formula that relates the total time of flight $!$T$!$ to the vertical component of the initial velocity and gravity $!$g$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -50,30 +50,29 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "377eb13a-aa52-4d38-8d8f-5df93a80f025",
-                        "b0d5027f-abc0-4033-bb04-8e368b7d0d22"
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$t = \\frac{2u_y}{g}$!$",
+                            "optionText": "$!$T = \\frac{2u \\sin \\theta}{g}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$t = \\frac{u_y}{g}$!$",
+                            "optionText": "$!$T = \\frac{u}{g}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$t = \\frac{2u}{g}$!$",
+                            "optionText": "$!$T = \\frac{u \\sin \\theta}{g}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "13900505624a435cb0328",
-                    "stepText": "Finally, using the horizontal component of the velocity and the time of flight you determined earlier, calculate the horizontal range of the projectile.",
+                    "id": "31be09e38f55468f89f71",
+                    "stepText": "Great work! Now calculate the horizontal range by multiplying the horizontal component of the velocity by the time of flight. Provide the numerical result along with its units.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -89,31 +88,16 @@
         },
         {
             "id": "9c25f991e83b4b9d9064c",
-            "questionText": "A delivery drone starts its journey at the origin, $!$(0,0)!$. It first flies $!$100 \\, \\text{m}$!$ east, then $!$50 \\, \\text{m}$!$ north, and finally $!$25 \\, \\text{m}$!$ west. Calculate the final displacement from the origin in meters.",
+            "questionText": "A delivery drone starts its journey at the origin, $!(0,0)!$. It first flies $!$100 \\, \\text{m}$!$ east, then $!$50 \\, \\text{m}$!$ north, and finally $!$25 \\, \\text{m}$!$ west. Calculate the final displacement from the origin in meters.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "bcbef803aa694a95abc8e",
-                    "stepText": "Let's start by determining the net east-west displacement. The drone flies 100 m east and 25 m west. How would you combine these distances to get the net displacement in that direction?",
+                    "id": "aa5e3509c6a54dbc9887f",
+                    "stepText": "Let's start by finding the final horizontal coordinate. The drone moves east and then west. Compute the net change in the x-direction.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "75"
-                    ],
-                    "stepSolveAnswerUnits": "m",
-                    "stepConcepts": [
-                        "42f9486d-bb12-41c1-a177-31ddbff30efd",
-                        "e3fddcf7-988e-4165-9433-91670464bef8"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "4c5407646dd247149430f",
-                    "stepText": "Now, determine the net north-south displacement. The drone only moves 50 m north. What is the net displacement in the north-south direction?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "50"
                     ],
                     "stepSolveAnswerUnits": "m",
                     "stepConcepts": [
@@ -122,8 +106,22 @@
                     "options": []
                 },
                 {
-                    "id": "dfd0d4526d514a318b0ec",
-                    "stepText": "Next, identify the correct formula to calculate the magnitude of the final displacement using the horizontal and vertical components you have determined.",
+                    "id": "8d62ddc9f3d7476886827",
+                    "stepText": "Great! Now, determine the final vertical coordinate by considering the northward movement.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "50"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "e3fddcf7-988e-4165-9433-91670464bef8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "48e87867ab934d9eb5f8f",
+                    "stepText": "Now, select the correct formula you would use to compute the magnitude of the displacement from the origin using the final coordinates. Which formula correctly relates the x and y components of the displacement?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -135,25 +133,25 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$d = \\sqrt{x^2+y^2}$!$",
+                            "optionText": "$!$d = \\sqrt{x^2 + y^2}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$d = x+y$!$",
+                            "optionText": "$!$d = x + y$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$d = \\frac{x+y}{2}$!$",
+                            "optionText": "$!$d = x - y$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "089d1e155753413f85ac1",
-                    "stepText": "Finally, use the net displacements from steps 1 and 2 in the formula you selected to compute the final displacement. Substitute the values and calculate its approximate magnitude.",
+                    "id": "1f7d2ce126534c45acc80",
+                    "stepText": "Finally, applying your selected formula with the values obtained for the x and y components, calculate the final displacement from the origin.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

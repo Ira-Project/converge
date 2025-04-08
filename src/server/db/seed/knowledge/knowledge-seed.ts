@@ -18,6 +18,7 @@ import { classrooms } from "../../schema/classroom";
 
 import { topics } from "../../schema/subject";
 import { concepts, conceptTracking } from "../../schema/concept";
+import { users } from "../../schema/user";
 
 export async function createKnowledgeZapAssignment(topicName: string) {
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
@@ -969,4 +970,176 @@ export async function createConceptTrackerForAllKnowledgeZapAttempts() {
       updatedAt: attempt.createdAt,
     });
   }
+}
+
+export async function calculateUserConceptScore(userId: string, conceptId: string) {
+  const conceptTrackers = await db.select().from(conceptTracking).where(
+    and(
+      eq(conceptTracking.userId, userId), 
+      eq(conceptTracking.conceptId, conceptId)
+    )
+  );
+  
+  const total = conceptTrackers.length;
+  const totalCorrect = conceptTrackers.filter(a => a.isCorrect).length;
+  const totalScore = total > 0 ? (totalCorrect / total) * 100 : 0;
+
+  const dayTrack = conceptTrackers.filter(a => a.createdAt > new Date(Date.now() - 24 * 60 * 60 * 1000));
+  const dayCorrect = dayTrack.filter(a => a.isCorrect).length;
+  const dayTotal = dayTrack.length;
+  const dayScore = dayTotal > 0 ? (dayCorrect / dayTotal) * 100 : 0;
+
+  const weekTrack = conceptTrackers.filter(a => a.createdAt > new Date(Date.now() - 7 * 24 * 60 * 60 * 1000));
+  const weekCorrect = weekTrack.filter(a => a.isCorrect).length;
+  const weekTotal = weekTrack.length;
+  const weekScore = weekTotal > 0 ? (weekCorrect / weekTotal) * 100 : 0;
+
+  const biWeekTrack = conceptTrackers.filter(a => a.createdAt > new Date(Date.now() - 14 * 24 * 60 * 60 * 1000));
+  const biWeekCorrect = biWeekTrack.filter(a => a.isCorrect).length;
+  const biWeekTotal = biWeekTrack.length;
+  const biWeekScore = biWeekTotal > 0 ? (biWeekCorrect / biWeekTotal) * 100 : 0;
+
+  const monthTrack = conceptTrackers.filter(a => a.createdAt > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
+  const monthCorrect = monthTrack.filter(a => a.isCorrect).length;
+  const monthTotal = monthTrack.length;
+  const monthScore = monthTotal > 0 ? (monthCorrect / monthTotal) * 100 : 0;
+
+  const threeMonthTrack = conceptTrackers.filter(a => a.createdAt > new Date(Date.now() - 90 * 24 * 60 * 60 * 1000));
+  const threeMonthCorrect = threeMonthTrack.filter(a => a.isCorrect).length;
+  const threeMonthTotal = threeMonthTrack.length;
+  const threeMonthScore = threeMonthTotal > 0 ? (threeMonthCorrect / threeMonthTotal) * 100 : 0;
+
+  return {
+    userId,
+    conceptId,
+    totalAttempts: total,
+    totalCorrect,
+    totalScore: totalScore.toFixed(2),
+    dayScore: dayScore.toFixed(2),
+    weekScore: weekScore.toFixed(2),
+    biWeekScore: biWeekScore.toFixed(2),
+    monthScore: monthScore.toFixed(2),
+    threeMonthScore: threeMonthScore.toFixed(2)
+  };
+}
+
+export async function printConceptScores() {
+  // Get all unique user-concept pairs from conceptTracking
+  const userConceptPairs = await db
+    .select({
+      userId: conceptTracking.userId,
+      conceptId: conceptTracking.conceptId,
+    })
+    .from(conceptTracking)
+    .where(
+      and(
+        eq(conceptTracking.activityType, ActivityType.KnowledgeZap),
+        not(isNull(conceptTracking.userId)),
+        not(isNull(conceptTracking.conceptId))
+      )
+    )
+    .groupBy(conceptTracking.userId, conceptTracking.conceptId);
+  
+  console.log(`Found ${userConceptPairs.length} unique user-concept pairs`);
+  
+  // Get concept text for better output
+  const conceptsMap = new Map();
+  const conceptIds = [...new Set(userConceptPairs.map(pair => pair.conceptId))];
+  
+  for (const conceptId of conceptIds) {
+    if (conceptId) {
+      const concept = await db.select().from(concepts).where(eq(concepts.id, conceptId));
+      if (concept.length > 0 && concept[0]?.text) {
+        conceptsMap.set(conceptId, concept[0].text);
+      }
+    }
+  }
+  
+  // Get user information (name, email, role)
+  const userMap = new Map();
+  const userIds = [...new Set(userConceptPairs.map(pair => pair.userId))];
+  
+  for (const userId of userIds) {
+    if (userId) {
+      const userResults = await db.select({
+        id: users.id,
+        name: users.name,
+        email: users.email,
+        role: users.role
+      }).from(users).where(eq(users.id, userId));
+      
+      if (userResults.length > 0 && userResults[0]) {
+        const userData = userResults[0];
+        userMap.set(userId, {
+          name: userData.name ?? 'Unknown',
+          email: userData.email ?? 'Unknown',
+          role: userData.role ?? 'Unknown'
+        });
+      } else {
+        userMap.set(userId, {
+          name: 'Unknown',
+          email: 'Unknown',
+          role: 'Unknown'
+        });
+      }
+    }
+  }
+  
+  // Calculate scores for each pair
+  const results = [];
+  
+  for (const pair of userConceptPairs) {
+    if (pair.userId && pair.conceptId) {
+      const score = await calculateUserConceptScore(pair.userId, pair.conceptId);
+      const userData = userMap.get(pair.userId) ?? { name: 'Unknown', email: 'Unknown', role: 'Unknown' };
+      
+      results.push({
+        UserId: pair.userId,
+        UserName: userData.name,
+        UserEmail: userData.email,
+        UserRole: userData.role,
+        ConceptId: pair.conceptId,
+        ConceptName: conceptsMap.get(pair.conceptId) ?? pair.conceptId,
+        TotalAttempts: score.totalAttempts,
+        TotalCorrect: score.totalCorrect,
+        TotalScore: score.totalScore,
+        DayScore: score.dayScore,
+        WeekScore: score.weekScore,
+        MonthScore: score.monthScore
+      });
+    }
+  }
+  
+  // Print CSV header
+  console.log("UserId,UserName,UserEmail,UserRole,ConceptId,ConceptName,TotalAttempts,TotalCorrect,TotalScore,DayScore,WeekScore,MonthScore");
+  
+  // Print CSV rows
+  for (const result of results) {
+    console.log(
+      `${result.UserId},` +
+      `"${result.UserName}",` +
+      `"${result.UserEmail}",` +
+      `${result.UserRole},` +
+      `${result.ConceptId},` +
+      `"${result.ConceptName.replace(/"/g, '""')}",` + // Escape quotes in CSV
+      `${result.TotalAttempts},` +
+      `${result.TotalCorrect},` +
+      `${result.TotalScore},` +
+      `${result.DayScore},` +
+      `${result.WeekScore},` +
+      `${result.MonthScore}`
+    );
+  }
+  
+  // Also print in table format for convenience
+  console.log("\nUser-Concept Score Summary (Table Format):");
+  console.table(results.map(result => ({
+    UserId: result.UserId.substring(0, 8) + "...",
+    UserName: result.UserName,
+    UserEmail: result.UserEmail,
+    UserRole: result.UserRole,
+    Concept: result.ConceptName.substring(0, 15) + "...",
+    TotalAttempts: result.TotalAttempts,
+    TotalScore: result.TotalScore + "%"
+  })));
 }

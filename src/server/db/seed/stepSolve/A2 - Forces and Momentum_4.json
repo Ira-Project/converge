@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "0d2a2abe09c041ee9eda7",
-                    "stepText": "Let's start by identifying the rocket equation concept that relates the exhaust speed and the mass ratio to the change in velocity. Which of the following formulas correctly represents the theoretical change in velocity for a rocket based on its fuel consumption? (Remember, do not reveal the answer directly.)",
+                    "id": "2811d050479643dc937a9",
+                    "stepText": "Let's start by identifying the formula that connects the exhaust speed, initial and final mass to obtain the theoretical change in velocity (\\(\\Delta v_{thrust}\\)). Which of the following formulas is used in this context?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -24,72 +24,25 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\Delta v = v_e \\ln\\left(\\frac{m_0}{m_f}\\right)$!$",
+                            "optionText": "$!$\\Delta v = v_e \\cdot \\ln\\left(\\frac{m_{initial}}{m_{final}}\\right)$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\Delta v = \\frac{v_e}{\\ln\\left(\\frac{m_0}{m_f}\\right)}$!$",
+                            "optionText": "$!$\\Delta v = v_e \\cdot \\left(m_{initial} - m_{final}\\right)$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$\\Delta v = v_e \\left(\\frac{m_0 - m_f}{m_f}\\right)$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$\\Delta v = \\frac{u \\delta m}{M}$!$",
+                            "optionText": "$!$\\Delta v = \\ln\\left(v_e \\cdot \\frac{m_{initial}}{m_{final}}\\right)$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "a9a40a1a58ec49d39bbdb",
-                    "stepText": "Great, now calculate the mass ratio by dividing the initial mass $!$m_0$!$ by the final mass after burn. Recall that the final mass is the initial mass minus the mass of the expelled fuel.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "1.6667"
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "dcbf6cc9-917c-46de-89ab-2d17760e3ef9"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "ae17611086864fd6b2ff4",
-                    "stepText": "Next, compute the natural logarithm of the mass ratio you calculated. This value is dimensionless.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "0.5108"
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "dcbf6cc9-917c-46de-89ab-2d17760e3ef9"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "7e1c90d504ae47ecbe2ac",
-                    "stepText": "Now, determine the ideal change in velocity by multiplying the exhaust velocity with the logarithm of the mass ratio. This gives the theoretical change in velocity before considering any losses.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "1277"
-                    ],
-                    "stepSolveAnswerUnits": "m/s",
-                    "stepConcepts": [
-                        "dcbf6cc9-917c-46de-89ab-2d17760e3ef9"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "ee89bea3d9984c8988056",
-                    "stepText": "Next, calculate the gravity losses during the burn by multiplying the gravitational acceleration by the burn duration.",
+                    "id": "f10356f235a14e888751e",
+                    "stepText": "Great. Now, to account for the effect of gravity during the burn, calculate the gravitational loss by multiplying the gravitational acceleration by the burn time. Compute the product of $!$g$!$ and $!$t$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -102,8 +55,8 @@
                     "options": []
                 },
                 {
-                    "id": "543fc3c630b240a9baed1",
-                    "stepText": "Finally, obtain the net change in velocity by subtracting the gravity losses from the ideal change in velocity.",
+                    "id": "d3c6e52103404c809e3e3",
+                    "stepText": "Now, combine the results from the previous steps. Subtract the gravitational loss you just computed from the theoretical change in velocity (which would be calculated using the rocket equation with the mass values provided). What is the net change in velocity, $!$\\Delta v_{net}$!$, after the burn?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -124,8 +77,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "3c67d920866e4ef391db9",
-                    "stepText": "Let's start by finding the initial energy stored in the compressed spring. Identify the correct expression that relates the spring constant and compression to the stored energy.",
+                    "id": "ed61fa41c9d64ce0b23d5",
+                    "stepText": "Let's start by identifying the correct formula for the spring potential energy stored when a spring is compressed. Which of the following formulas do you think represents this energy?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -133,29 +86,43 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "7caeca74-0d42-49f5-8535-2b40190ae354"
+                        "619a9763-10d2-48a6-a060-de4db6ea3c0a"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$U=\\frac{1}{2}kx^2$!$",
+                            "optionText": "$!$U = \\frac{1}{2}kx^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$U=kx$!$",
+                            "optionText": "$!$U = kx$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$U=mgx$!$",
+                            "optionText": "$!$U = kx^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "b16eb627beb846f3a3d57",
-                    "stepText": "Next, determine the frictional force acting on the block as it slides. Which formula shows the relationship for kinetic friction using the dynamic friction coefficient?",
+                    "id": "f064c72a9d734cc78f868",
+                    "stepText": "Great! Now, using the formula you selected, calculate the initial spring potential energy when the spring is compressed by $!$0.1 \\text{ m}$!$. Use $!$k = 50 \\frac{N}{m}$!$. What is the energy value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.25"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "619a9763-10d2-48a6-a060-de4db6ea3c0a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6a2f48a621c04860be21d",
+                    "stepText": "Next, the block experiences friction as it moves. Identify the correct formula for the dynamic friction force acting on the block on a horizontal surface. Which one of these formulas correctly represents the friction force?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -163,60 +130,57 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
                         "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$f=\\mu_dmg$!$",
+                            "optionText": "$!$f = \\mu_d m g$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$f=\\mu_smg$!$",
+                            "optionText": "$!$f = \\mu_s m g$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$f=\\frac{mg}{\\mu_d}$!$",
+                            "optionText": "$!$f = m g$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "aa8fa24f1314424eb7703",
-                    "stepText": "Now, set up the energy conservation equation. The initial spring energy is partly converted into spring energy at the turning point and partly lost doing work against friction. Which equation best represents this energy balance?",
+                    "id": "40f1b913fdf34d889d761",
+                    "stepText": "Now, consider the energy balance. The initial spring energy is partly used to compress the spring at the turning point and partly lost due to work done by the friction force over the total distance traveled ($!$0.1 + x_m$!$). Which of the following expressions best represents the energy conservation relation (initial energy minus friction work equals final spring energy)?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         ""
                     ],
                     "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "7caeca74-0d42-49f5-8535-2b40190ae354"
-                    ],
+                    "stepConcepts": [],
                     "options": [
                         {
-                            "optionText": "$!$\\frac{1}{2}k(0.1)^2 = \\frac{1}{2}kx_f^2 + f_k (x_f+0.1)$!$",
+                            "optionText": "$!$U_{initial} - f(0.1 + x_m) = \\frac{1}{2}kx_m^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\frac{1}{2}k(0.1)^2 = \\frac{1}{2}kx_f^2 - f_k (x_f+0.1)$!$",
+                            "optionText": "$!$U_{initial} + f(0.1 + x_m) = \\frac{1}{2}kx_m^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$k(0.1)^2 = \\frac{1}{2}kx_f^2 + f_k (x_f+0.1)$!$",
+                            "optionText": "$!$U_{initial} \\times f(0.1 + x_m) = \\frac{1}{2}kx_m^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "aa577b63f8e441e5b6082",
-                    "stepText": "Finally, use the energy balance equation you selected to solve for the block's turning position. After simplifying, you will arrive at a quadratic equation in $!$x_f$!$. Calculate the positive solution for $!$x_f$!$ (in meters), which is the distance from equilibrium where the block momentarily stops.",
+                    "id": "37678f63becb4df2b1e50",
+                    "stepText": "Finally, after substituting the known numerical values (with $!$U_{initial} = 0.25 \\text{ J}$!$ and the friction force calculated as $!$f = 0.98 \\text{ N}$!$) into the conservation equation, you obtain a quadratic equation in $!$x_m$!$. Which of the following is the correct quadratic formula to solve for $!$x_m$!$, and what is the computed value (taking the positive root) in meters?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -224,9 +188,25 @@
                     ],
                     "stepSolveAnswerUnits": "m",
                     "stepConcepts": [
-                        "2e689418-e014-486a-86a3-e151148f4c6d"
+                        "dcbf6cc9-917c-46de-89ab-2d17760e3ef9"
                     ],
-                    "options": []
+                    "options": [
+                        {
+                            "optionText": "$!$x_m = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$x_m = \\frac{-b \\pm \\sqrt{4ac - b^2}}{2a}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$x_m = \\frac{-b \\mp \\sqrt{b^2-4ac}}{2a}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
                 }
             ]
         }

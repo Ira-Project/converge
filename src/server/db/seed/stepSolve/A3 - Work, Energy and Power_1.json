@@ -11,38 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "9d952676c83b40d496143",
-                    "stepText": "Let's start by identifying the correct relationship between power, force, and velocity. Please choose the correct formula that links these quantities.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$P = F \\times v$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$P = \\frac{F}{v}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$P = \\frac{v}{F}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "7ca945ecce2b4cac80703",
-                    "stepText": "Next, consider the efficiency of the engine. The engine produces $!$30 J$!$ of mechanical work for every $!$100 J$!$ of chemical energy input. Please select the correct relation that expresses the mechanical output power in terms of the chemical energy input and the efficiency.",
+                    "id": "6d3ff00869b143b2a2b8e",
+                    "stepText": "Let's start by recalling the concept of engine efficiency. Which of the following formulas correctly expresses the relationship between the useful energy output and the chemical energy input?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -54,25 +24,69 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$P_{out} = \\eta \\times P_{in}$!$",
+                            "optionText": "$!$\\eta = \\frac{\\text{useful energy out}}{\\text{actual energy in}}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$P_{out} = \\frac{P_{in}}{\\eta}$!$",
+                            "optionText": "$!$E_p = mgh$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$P_{out} = P_{in} - \\eta$!$",
+                            "optionText": "$!$W = Fs$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "bae3ea45f8de4aae8c162",
-                    "stepText": "Now that you have identified the relationships, use the formula $!$F = \\frac{P}{v}$!$ to calculate the magnitude of the opposing force. Substitute the mechanical output power of $!$30 J/s$!$ (from the efficiency) and the speed $!$20 m/s$!$. Perform the division to obtain the force.",
+                    "id": "6ffc631fe59d4c039b3e6",
+                    "stepText": "Great! Now, assuming the engine draws in chemical energy at a rate of 100 J per second, use the efficiency ratio to determine the mechanical output power. Calculate the power output given that only 30% of the chemical energy becomes useful work.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "0be92c40-ded4-48ee-a466-07236da03b9f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "78831b596ee6480ba75c9",
+                    "stepText": "Now, when the car moves at a constant speed, the entire mechanical power is used to overcome resistive forces such as air resistance and friction. Identify the correct formula that relates power to force and velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = Fv$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{F}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = F + v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ba7571949fd4423390959",
+                    "stepText": "Finally, use the relation from the previous step to calculate the magnitude of the opposing force using the mechanical power output (30 W) and the constant speed (20 m/s). Compute the force by dividing the power by the speed.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -92,8 +106,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "c77df7c3d9b3434ca7826",
-                    "stepText": "Let's begin by recalling how to determine the work done when the force varies with displacement. Identify the correct concept that relates the work done by a varying force to the area under the force vs. displacement curve.",
+                    "id": "be2b9c83aac84cbab28fd",
+                    "stepText": "Let's start by determining the method to calculate work when the force varies with distance. Which of the following formulas represents the work done by a varying force?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -105,39 +119,25 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$W = F \\Delta d$!$",
+                            "optionText": "$!$W = Fs \\cos{\\theta}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$W = \\text{area under the force vs. displacement curve}$!$",
+                            "optionText": "$!$W = \\int F\\,dh$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$W = mgh$!$",
+                            "optionText": "$!$E_k = \\frac{1}{2}mv^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "abfce3c9a991482b83a0f",
-                    "stepText": "Now, focus on the first interval (from $!$0$!$ m to $!$5$!$ m), where the force increases linearly. Begin by calculating the average force over this interval using the arithmetic mean of the initial and final forces.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "5500"
-                    ],
-                    "stepSolveAnswerUnits": "N",
-                    "stepConcepts": [
-                        "e515d26f-7767-4267-b081-c9c385fdcaf0"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "040637c749f541b28049c",
-                    "stepText": "Great. With the average force found for the interval from $!$0$!$ to $!$5$!$ m, determine the work done over this range by multiplying the average force by the displacement of $!$5$!$ m.",
+                    "id": "b17191e0dd6d4db98cdbd",
+                    "stepText": "Great! Now, calculate the work done in the first segment where the force increases linearly from h = 0 m to h = 5 m. Use integration of the given force function over this interval to find the work. What is the numerical value for this work?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -145,13 +145,13 @@
                     ],
                     "stepSolveAnswerUnits": "J",
                     "stepConcepts": [
-                        "67784893-a7f7-4ebc-ac63-a3f494a49df0"
+                        "e515d26f-7767-4267-b081-c9c385fdcaf0"
                     ],
                     "options": []
                 },
                 {
-                    "id": "e6cea0936e914750afa3d",
-                    "stepText": "Next, consider the interval from $!$5$!$ m to $!$15$!$ m, where the force is constant. Calculate the work done in this segment by multiplying the constant force by the displacement of $!$10$!$ m.",
+                    "id": "711564e28fef4165be9cc",
+                    "stepText": "Now, consider the middle segment from h = 5 m to h = 15 m, where the force is constant at 6000 N. Calculate the work done in this segment by using the formula for work done by a constant force over a displacement. What is the numerical value?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -164,22 +164,22 @@
                     "options": []
                 },
                 {
-                    "id": "f057e2496e374993b42aa",
-                    "stepText": "Now, for the final interval from $!$15$!$ m to $!$20$!$ m, the force decreases linearly. Similar to the first interval, first compute the average force over this 5 m displacement.",
+                    "id": "a97ee27113da4420a2305",
+                    "stepText": "Next, calculate the work done in the third segment from h = 15 m to h = 20 m, where the force decreases linearly. Use integration over this interval (a similar process to the first segment) to determine the work. What is the numerical value for this segment?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "5500"
+                        "27500"
                     ],
-                    "stepSolveAnswerUnits": "N",
+                    "stepSolveAnswerUnits": "J",
                     "stepConcepts": [
                         "e515d26f-7767-4267-b081-c9c385fdcaf0"
                     ],
                     "options": []
                 },
                 {
-                    "id": "19560383cb2846b7adca5",
-                    "stepText": "Finally, calculate the work done in this last interval by multiplying the average force by the displacement of $!$5$!$ m, and then add the work from all three intervals to get the total work done by the crane.",
+                    "id": "8873f899b0e94e5ab396d",
+                    "stepText": "Finally, add the work values from all three segments to obtain the total work done by the crane in lifting the beam. What is the total work done?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

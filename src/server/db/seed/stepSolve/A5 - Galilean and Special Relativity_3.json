@@ -1,0 +1,215 @@
+{
+    "id": "65a4f6e52e70440e92e53",
+    "name": "Galilean and Special Relativity",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "261e0037f47b418aa1065",
+            "questionText": "An astronaut is traveling in a spaceship at a constant velocity of $!$0.8c$!$ relative to Earth, and the proper length of the spaceship is $!$L_0 = 100$!$ meters. Considering the effects of length contraction, calculate the time it takes according to the Earth observer for the spaceship to pass a fixed point on Earth.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4d777a9a281a46a6ae2c2",
+                    "stepText": "Let's start by identifying the formula that relates the proper length to the contracted length due to relativistic effects. Which of the following formulas is appropriate for calculating the length contraction?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a2cc780f-e223-46ae-8ac0-d8b76d0c5385"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L = L_0\\sqrt{1-\\frac{v^2}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L = L_0\\gamma$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L = L_0\\left(1-\\frac{v}{c}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1cd96232b0424047aaf48",
+                    "stepText": "Great, now that you've identified the correct formula, use it to calculate the contracted length $!$L$!$. Substitute $!$L_0 = 100$!$ meters and $!$v = 0.8c$!$ into the formula. What is the numerical value of $!$L$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a2cc780f-e223-46ae-8ac0-d8b76d0c5385"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ba2fa68ebb9d4acf83005",
+                    "stepText": "Now, identify the proper formula to determine the time taken by the spaceship to pass a fixed point from Earth's perspective. Which formula correctly relates time with distance and velocity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "af99d217-2569-4adb-aea1-e7a319f682ac"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta t = \\frac{L}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta t = L \\times v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta t = \\frac{L_0}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e0866c4bf4d940919769c",
+                    "stepText": "Finally, using the contracted length you calculated earlier and the given velocity, compute the time $!$\\Delta t$!$ as seen from the Earth observer. Remember, $!$v = 0.8c = 0.8 \\times 3 \\times 10^8$!$ m/s. What is the value of $!$\\Delta t$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.5e-7"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "af99d217-2569-4adb-aea1-e7a319f682ac"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "5b473cc77e93418387ae9",
+            "questionText": "A muon is created in the upper atmosphere at an altitude of 95 km above the Earth's surface. It travels toward the Earth at a speed of 0.995c, and its proper half-life is 2.2 \\(\\times 10^{-6}\\) s. Considering the effects of time dilation, determine the probability that the muon will reach the Earth's surface without decaying.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e6d2b086c9d641159e28f",
+                    "stepText": "Let's begin by determining the travel time in the laboratory frame for the muon to cover the distance from its creation point to Earth's surface. Which formula correctly relates distance, speed, and time?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "af99d217-2569-4adb-aea1-e7a319f682ac"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$t = d/v$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$t = d \\cdot v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = v/d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "51611ef3af0b47989a7de",
+                    "stepText": "Great. Now that we know how to compute the travel time, we need to account for the effects of special relativity. To do that, we must compute the gamma factor for a speed of $!$0.995c$!$. Which expression below correctly defines the gamma factor?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a0d65d2b-9a39-4a41-bda5-09be98a1c66a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\gamma = \\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\gamma = \\sqrt{1-\\frac{v^2}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\gamma = 1-\\frac{v}{c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a9cfaaa512f4447e87b9b",
+                    "stepText": "With the lab travel time and the gamma factor in hand, calculate the proper time experienced by the muon. Recall that proper time is given by $!$t_{proper} = t_{lab}/\\gamma$!$. What is the proper time (in seconds) if $!$t_{lab} \\approx 3.18 \\times 10^{-4}$!$ s and $!$\\gamma \\approx 10$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.18e-5"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "bb0b6d22-6ec2-4604-812f-a427b7b70055"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "574728a663144cbb83909",
+                    "stepText": "Finally, muon decay follows an exponential behavior. The survival probability is modeled using its proper half-life. Identify the correct expression that represents the survival probability in terms of the proper time $!$t_{proper}$!$ and the proper half-life $!$T_{1/2}$!$. (Remember: the survival probability decreases by a factor of 2 for each half-life elapsed.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bb0b6d22-6ec2-4604-812f-a427b7b70055"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = 2^{-\\frac{t_{proper}}{T_{1/2}}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\exp\\left(-\\frac{t_{proper}}{T_{1/2}}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{t_{proper}}{T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
