@@ -1,0 +1,216 @@
+{
+    "id": "5c45b44191c34df888bed",
+    "name": "Structure of the Atom",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "ce246f6a04d74c20a9345",
+            "questionText": "Astronomers observe the emission spectrum of a distant star composed primarily of hydrogen. They identify a spectral line corresponding to the transition of an electron from the energy level $!$n = 3$!$ to $!$n = 2$!$. Using the Bohr model for hydrogen, calculate the wavelength ($!$\\lambda$!$) of the emitted photon during this transition. Recall that the energy levels are given by $!$E_n = -\\frac{13.6}{n^2} \\text{ eV}$!$ and the energy of a photon is $!$E = \\frac{hc}{\\lambda}$!$, where $!$h = 4.135 \\times 10^{-15} \\text{ eV s}$!$ and $!$c = 3 \\times 10^8 \\text{ m/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "db1bf42f0c6247eabd4b8",
+                    "stepText": "Let's start by identifying the correct formula to calculate the energy levels of a hydrogen atom. Choose the formula that properly relates the principal quantum number, n, to the energy of that level.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "516d8e51-d173-4735-85ca-b40323ce5f3c",
+                        "39c26da9-7279-4edd-9cce-990d74d28d60",
+                        "b01ed396-ec06-4393-8ddf-6b57407970b5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = -\\frac{13.6}{n^2} \\text{ eV}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = -\\frac{13.6}{n} \\text{ eV}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = -13.6 n^2 \\text{ eV}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0ce5c676eba647afab555",
+                    "stepText": "Assuming you have computed the energy values for the levels n = 3 and n = 2 using the chosen formula, now calculate the absolute energy difference (\\(\\Delta E\\)) between these two levels. Provide the result in electron volts (eV).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.889"
+                    ],
+                    "stepSolveAnswerUnits": "eV",
+                    "stepConcepts": [
+                        "516d8e51-d173-4735-85ca-b40323ce5f3c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "40ef49f9ad0c4d2c91be6",
+                    "stepText": "Now, let's move on to relating the photon's energy to its wavelength. Identify the correct formula that expresses the relationship between the energy of a photon and its wavelength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = \\frac{hc}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = hc\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{\\lambda}{hc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3aaa61c0816e4e039e4b9",
+                    "stepText": "Great, now calculate the value of the product $!$hc$!$ using the given values for Planck's constant ($!$h = 4.135 \\times 10^{-15} \\text{ eV s}$!$) and the speed of light ($!$c = 3 \\times 10^8 \\text{ m/s}$!$). Provide your answer in units of eV\u00b7m.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.2405e-6"
+                    ],
+                    "stepSolveAnswerUnits": "eV\u00b7m",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "207c4afcba334990b83be",
+                    "stepText": "Finally, use the photon energy relation together with the energy difference (\\(\\Delta E\\)) and the product $!$hc$!$ to determine the wavelength ($!$\\lambda$!$) of the emitted photon. Enter the wavelength in meters (m).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.56e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e",
+                        "114913f7-42e4-4f1e-a164-563a0df26437"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "7b139666b23944dca3458",
+            "questionText": "Astronomers observe the hydrogen spectral line at $!$\\lambda_0 = 656.3 \\text{ nm}$!$ (Balmer alpha) in a distant galaxy. However, due to the galaxy's motion, the observed wavelength is redshifted to $!$\\lambda = 690.0 \\text{ nm}$!$. Based on this observed redshift, determine the velocity ($!$v$!$) at which the galaxy is receding from Earth, assuming the redshift ($!$z$!$) is given by $!$z = (\\lambda - \\lambda_0)/\\lambda_0$!$ and for relatively small velocities ($!$v \\ll c$!$), the redshift is also approximated by $!$z \\approx v/c$!$, where $!$c = 3 \\times 10^8 \\text{ m/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4ef20b6abd4f4080b3de8",
+                    "stepText": "Let's start by identifying the formula used to calculate the redshift $!$z$!$ from the given wavelengths. Which of the following options represents the correct expression?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b1d7aa44-8d11-4c29-963d-f20ee78901d7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$z = (\\lambda - \\lambda_0)/\\lambda_0$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$z = \\lambda/ (\\lambda - \\lambda_0)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$z = \\lambda_0 / (\\lambda - \\lambda_0)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2bb60d8c49f347e9adce6",
+                    "stepText": "Great! Now, use the redshift formula to compute its numerical value by substituting $!$\\lambda_0 = 656.3\\text{ nm}$!$ and $!$\\lambda = 690.0\\text{ nm}$!$. What is the resulting value of $!$z$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0513"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b1d7aa44-8d11-4c29-963d-f20ee78901d7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9c6b407147b9459f9c960",
+                    "stepText": "Now that we have determined the redshift, let's identify the formula that relates $!$z$!$ to the recession velocity $!$v$!$ for small speeds ($!$v \\ll c$!$). Which of the following expressions correctly connects these quantities?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b1d7aa44-8d11-4c29-963d-f20ee78901d7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = z \\times c$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = z / c$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = c / z$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "01737061cf4b488d87a6c",
+                    "stepText": "Finally, calculate the galaxy's recession velocity by multiplying the computed redshift by the speed of light $!$c = 3 \\times 10^8 \\text{ m/s}$!$. What is the numerical value of $!$v$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.54e7"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "b1d7aa44-8d11-4c29-963d-f20ee78901d7"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

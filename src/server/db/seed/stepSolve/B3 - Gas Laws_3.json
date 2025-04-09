@@ -1,0 +1,196 @@
+{
+    "id": "abb3ef2a387c4c0b88dd5",
+    "name": "Gas Laws",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "7b6eda755f6045d494c6a",
+            "questionText": "A sealed bag of chips is taken on a road trip from sea level to a mountain summit. At sea level, the bag's initial conditions are a pressure of $!$1 \\text{ atm}$!$ and a temperature of $!$293 \\text{ K}$!$. Upon reaching the summit, the atmospheric pressure drops to $!$0.7 \\text{ atm}$!$ and the temperature decreases to $!$273 \\text{ K}$!$. Assuming the bag can freely expand, calculate the percentage change in the volume of the bag as it moves from sea level to the mountain summit.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "15f1ebdf379e4c3f9311e",
+                    "stepText": "Let's start by identifying the correct formula that relates volume, temperature, and pressure for an ideal gas when the amount of substance is constant. Which of the following expressions properly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = \\frac{nRT}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$PV = nRT$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$n = \\frac{P}{RT}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d2d924a67f48425faf7d1",
+                    "stepText": "Great, now that you have established the formula, compute the ratio $!$\\frac{T_2}{T_1}$!$ using the temperatures $!$T_2 = 273 \\text{ K}$!$ and $!$T_1 = 293 \\text{ K}$!$. What is this ratio (rounded to three decimals)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.932"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "05334c5b2ba0459e8381b",
+                    "stepText": "Now, compute the ratio $!$\\frac{P_1}{P_2}$!$ using the pressures $!$P_1 = 1 \\text{ atm}$!$ and $!$P_2 = 0.7 \\text{ atm}$!$. What value do you obtain (rounded to three decimals)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.429"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "32380075-16b5-495f-8782-f16e86b9f750"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "66d74c8c0d424417b8b6e",
+                    "stepText": "Excellent. Now, use the results from the previous two steps. Multiply the ratio $!$\\frac{T_2}{T_1}$!$ by the ratio $!$\\frac{P_1}{P_2}$!$ to determine the overall volume ratio $!$\\frac{V_2}{V_1}$!$. What is the resulting value (rounded to two decimals)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.33"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b5fd9ae108b9493792299",
+                    "stepText": "Finally, use the volume ratio you derived to calculate the percentage change in the bag's volume. Hint: subtract 1 from the volume ratio and then multiply by 100. What is the percentage increase in the volume?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "33"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "9c4406d3364541b39ae4a",
+            "questionText": "A high-altitude weather balloon is initially filled with $!$10\\text{ moles}$!$ of helium at sea level, where the pressure is $!$1 \\text{ atm}$!$ and the temperature is $!$25^{\\circ} \\text{C}$!$. The balloon ascends to an altitude where the pressure is $!$0.5 \\text{ atm}$!$ and the temperature is $!$-20^{\\circ} \\text{C}$!$. Assuming ideal gas behavior, determine the final volume of the balloon in $!$\\text{m}^3$!$. (Gas constant $!$R = 8.314 \\text{ J/(mol.K)}$!$)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "97a6ed1d5a104b7d9b283",
+                    "stepText": "Let's start by converting the final pressure from atm to Pa. Please choose the correct conversion factor that relates $!$1\\,atm$!$ to pascals.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "86a57088-565f-474c-9102-9732ab3553d0",
+                        "c7e0f404-9572-42ea-a802-87fba0d3d31c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,atm = 1.013 \\times 10^{5}\\,Pa$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,atm = 9.81 \\times 10^{0}\\,Pa$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,atm = 1.013 \\times 10^{4}\\,Pa$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0b7157f07d374f87937f1",
+                    "stepText": "Great! Now let's convert the given temperature from degrees Celsius to Kelvin for the final state. Please select the correct temperature conversion formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$T(K) = T(^{\\circ}C) + 273.15$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T(K) = T(^{\\circ}C) - 273.15$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T(K) = T(^{\\circ}C) \\times 273.15$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a4053c66adac485681353",
+                    "stepText": "Now, using the ideal gas law, we need to compute the numerator of the expression $!$nRT$!$. Calculate $!$n \\times R \\times T$!$ using $!$n=10$!$, $!$R=8.314\\,J/(mol\\cdot K)$!$, and the converted final temperature from the previous step. What is the product? (Round to one decimal place)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "21047.1"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bb268dccdad54096a089a",
+                    "stepText": "Finally, determine the final volume of the balloon by dividing the numerator you just calculated by the converted final pressure. Compute $!$V = \\frac{nRT}{P}$!$. What is the volume in $!$m^3$!$? (Round to three decimal places)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.415"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,264 @@
+{
+    "id": "a603928b7f2e40d69eab6",
+    "name": "Structure of the Atom",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "182589ba0c664c2ea4ab8",
+            "questionText": "In a laboratory, a sample of excited hydrogen gas emits light, producing an emission spectrum. Two prominent lines in this spectrum have wavelengths of 656 nm and 486 nm, corresponding to electron transitions between different energy levels in the hydrogen atoms. Given that the energy of a photon is defined by the equation $!$E = \\frac{hc}{\\lambda}$!$, where $!$h$!$ is Planck's constant ($!$6.626 x 10^{-34} Js$!$) and $!$c$!$ is the speed of light ($!$3.0 x 10^8 m/s$!$), calculate the energy difference between the two energy levels corresponding to these wavelengths. Report your answer in electron volts ($!$eV$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "621109f41bd44fafa2e35",
+                    "stepText": "Let's start by recalling the correct formula that relates the energy of a photon with its wavelength. Please select the formula that correctly expresses this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = \\frac{hc}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{h\\lambda}{c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{h}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{c}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e2d056b13a2741c1b8d5f",
+                    "stepText": "Great, now convert the given wavelengths from nanometers to meters and then calculate the difference between their reciprocals, i.e., compute $!$\\frac{1}{486\\times10^{-9}} - \\frac{1}{656\\times10^{-9}}$!$. (Hint: The result should be in units of $!$m^{-1}$!$.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.332e5"
+                    ],
+                    "stepSolveAnswerUnits": "m^{-1}",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fb161b3e1d2b4d2485d0c",
+                    "stepText": "Excellent. Next, calculate the product of Planck's constant and the speed of light using the provided values ($!$6.626\\times10^{-34}\\,Js$!$ and $!$3.0\\times10^{8}\\,m/s$!$). This gives you the constant product $!$hc$!$. What is its value in $!$J\\cdot m$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.9878e-25"
+                    ],
+                    "stepSolveAnswerUnits": "J\u00b7m",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f007a09a29cc489d8d265",
+                    "stepText": "Now, combine your results from the previous steps. Multiply the product from step 3 ($!$hc$!$) by the reciprocal difference from step 2 to calculate the energy difference in Joules. What is the obtained value in Joules?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.058e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e118b66837c04a91a925a",
+                    "stepText": "Finally, convert the energy difference from Joules to electron volts using the conversion factor $!$1\\,eV = 1.602\\times10^{-19}\\,J$!$. What is the energy difference in electron volts?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.66"
+                    ],
+                    "stepSolveAnswerUnits": "eV",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "844b03fe972d47e283f6a",
+            "questionText": "Consider a researcher studying the behavior of alpha particles directed toward a thin gold foil. In an experiment based on Rutherford's model, most alpha particles pass through the foil with little or no deflection while a small fraction is significantly deflected, and an even smaller number bounce back. What does the strong Coulomb interaction between an alpha particle and a gold nucleus during a close approach imply about the magnitude and spatial distribution of the atom's positive nuclear charge?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5f2756fb396f445a9424a",
+                    "stepText": "Let's start by recalling the key idea introduced by Rutherford regarding the structure of the atom. Which statement best describes the nucleus according to Rutherford's atomic model?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ceb70f21-79bc-4347-9b30-2ea290416b57"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$The atom's positive charge is concentrated in a small, dense nucleus.$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$The atom's positive charge is uniformly spread throughout the atom.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$The atom has no central positive charge; it is all in the electrons.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "eb59d8d045dc404daeae6",
+                    "stepText": "Now consider the behavior of the alpha particles as they pass near the gold atoms. Which concept explains the slight deflection experienced by most alpha particles due to repulsive forces?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4e02ba06-28b8-401f-ac47-d8b33f0f08e1"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Alpha particles experience a repulsive force due to the concentrated positive charge of the nucleus.$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Alpha particles are deflected because they are attracted to the electrons in the gold foil.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Alpha particles are slightly deflected due to random scattering by magnetic fields.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8c8aaae9839545308c21a",
+                    "stepText": "Great, now let\u2019s focus on the cases where alpha particles are strongly deflected or even bounced back. Which option best describes the phenomenon that initiates these large-angle deflections?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5986cd5f-f3eb-4fae-b26b-047cbb298f55"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$It is initiated when an alpha particle experiences a strong Coulomb interaction with a concentrated positive charge.$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$It arises from weak gravitational forces acting on the alpha particle.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$It occurs because of the electron cloud deflecting the alpha particle.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "daf1dbfea63e481099335",
+                    "stepText": "Now, think about what this strong Coulomb interaction reveals about the distribution of the nuclear positive charge. Which statement best reflects this spatial distribution?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "79dd82d6-b48a-4528-91fc-561aa897a70e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$The positive charge is heavily concentrated in a very small central region (the nucleus).$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$The positive charge is evenly distributed over the entire atom.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$The positive charge is mostly located in the electron cloud surrounding the atom.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "989dc281109b4f63a1f1e",
+                    "stepText": "Finally, combining your insights from the previous steps, which conclusion best summarizes the implications of the strong Coulomb interaction on the magnitude and spatial distribution of the nuclear positive charge?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ceb70f21-79bc-4347-9b30-2ea290416b57",
+                        "5986cd5f-f3eb-4fae-b26b-047cbb298f55",
+                        "79dd82d6-b48a-4528-91fc-561aa897a70e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$The nuclear charge is large in magnitude and is concentrated in a tiny nucleus.$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$The nuclear charge is small and spread uniformly throughout the atom.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$The nuclear charge varies and is primarily located in the electrons surrounding the nucleus.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

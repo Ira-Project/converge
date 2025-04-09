@@ -1,0 +1,190 @@
+{
+    "id": "ac2e43ab5ce943b193e32",
+    "name": "Gravitational Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "174eeaefebfc49e0b9653",
+            "questionText": "Imagine a space elevator extending from the Earth's surface ($!$radius = 6.371 \\times 10^6 \\text{ m}$!$) to geostationary orbit ($!$radius = 4.2164 \\times 10^7 \\text{ m}$!$). An engineer wants to lift a ($!$m = 1000 \\text{ kg}$!$) research module up the elevator. Calculate the change in gravitational potential energy ($!$\\Delta E_p$!$) of the module as it is moved from the Earth's surface to geostationary orbit. The mass of Earth is ($!$M = 5.972 \\times 10^{24} \\text{ kg}$!$) and the gravitational constant is ($!$G = 6.674 \\times 10^{-11} \\text{ N m}^2 \\text{ kg}^{-2}$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2bddb80cd6a54bd8b78f1",
+                    "stepText": "Let's start by identifying the formula that correctly represents the change in gravitational potential energy when moving a mass between two radial distances. Which of the following expressions would you select?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532",
+                        "3e125180-5cf1-4f7b-a223-cc1bda7f1317"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta E_p = -\\frac{GMm}{r} + \\frac{GMm}{r_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E_p = GMm \\left(\\frac{1}{r_0} - \\frac{1}{r}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_p = \\frac{1}{2}mv^2 - \\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{GMm}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "157ddf942ea4487bbdf0a",
+                    "stepText": "Great, now that the formula has been identified, let\u2019s compute the multiplication constant $!$GMm$!$. Using the given values for $!$G$!$, $!$M$!$, and $!$m$!$, calculate this constant.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.985e17"
+                    ],
+                    "stepSolveAnswerUnits": "J\u00b7m",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "47c9c5bdc8144efa9501d",
+                    "stepText": "Next, determine the difference between the reciprocals of the two radial distances, $!$\\frac{1}{R_e}$!$ and $!$\\frac{1}{r_{geo}}$!$. Calculate $!$\\left(\\frac{1}{R_e} - \\frac{1}{r_{geo}\\right)$!$ using the provided values.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.331e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m^-1",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5d18b025bf19411c929f3",
+                    "stepText": "Finally, combine your results from the previous steps by multiplying the constant from Step 2 and the reciprocal difference from Step 3. This product gives you the change in gravitational potential energy $!$\\Delta E_p$!$. Compute this final value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.3e10"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "99d4fa0c43f349f08cb22",
+            "questionText": "A probe lands on a moon with a non-uniform mass distribution. At a specific location on the surface, the gravitational field strength is measured to be $!$g = 1.8 \\text{ N/kg}$!$ and the radius from the center of the moon to this location is $!$r = 1.5 \\times 10^6 \\text{ m}$!$. Calculate the escape speed ($!$v_{esc}$!$) required for a small rover to leave the moon's gravitational influence from this location.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0759b15ad5eb4efd80df3",
+                    "stepText": "Let's start by recalling the relationship between the gravitational field strength and the product $!$GM$!$. Please select the correct formula that connects these two quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0426771a-a8e3-4a0d-aca0-c3f723e53367"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$g = \\frac{GM}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$g = \\frac{GM}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$g = \\frac{r^2}{GM}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3b04b1b66a6742fa9fa89",
+                    "stepText": "Now, consider the escape speed. Identify the correct formula for $!$v_{esc}$!$ that you would use to compute the minimum speed required to overcome the gravitational field.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "46604101-3be5-4092-ac9f-5c58ea2f77f3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v_{esc} = \\sqrt{\\frac{GM}{r}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v_{esc} = \\sqrt{\\frac{2GM}{r}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v_{esc} = \\sqrt{\\frac{2g}{r}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6cff5c86a9764577af6a4",
+                    "stepText": "Great, with the correct formulas identified, now substitute the expression for $!$GM$!$ (from the gravitational field strength) into the escape speed formula. This will simplify the expression under the square root to $!$2gr$!$. Calculate the numerical value of $!$2 \\times g \\times r$!$ using $!$g = 1.8 \\text{ N/kg}$!$ and $!$r = 1.5 \\times 10^6 \\text{ m}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5400000"
+                    ],
+                    "stepSolveAnswerUnits": "m^2/s^2",
+                    "stepConcepts": [
+                        "0426771a-a8e3-4a0d-aca0-c3f723e53367",
+                        "46604101-3be5-4092-ac9f-5c58ea2f77f3"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fe1da40705474ba48bf8d",
+                    "stepText": "Finally, determine the escape speed by computing the square root of the value obtained in the previous step. What is the numerical value of $!$v_{esc}$!$ in $!$m/s$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2323.8"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "46604101-3be5-4092-ac9f-5c58ea2f77f3"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

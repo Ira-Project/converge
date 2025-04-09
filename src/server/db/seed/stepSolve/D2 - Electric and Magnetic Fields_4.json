@@ -1,0 +1,153 @@
+{
+    "id": "55f353c2de994b5280394",
+    "name": "Electric and Magnetic Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "631061c3c4764c82b377b",
+            "questionText": "In a high-voltage power distribution system, two parallel wires, each 50 m long and separated by 0.25 m, carry currents of 150 A and 200 A in the same direction. Given that the permeability of free space is $!$\\mu_0 = 4\\pi\\times10^{-7}\\, T\\cdot m/A$!$, calculate the magnitude of the attractive force between the two wires.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "666c3e7b314745e48010e",
+                    "stepText": "Let's start by identifying the correct formula for the force per unit length between two parallel current-carrying wires. Which of the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ac74a17b-73bf-4f45-8bc1-41c2338b9863"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{F}{L} = \\frac{\\mu_0 I_1 I_2}{2\\pi d}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{F}{L} = \\frac{2\\pi d}{\\mu_0 I_1 I_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{F}{L} = \\mu_0 I_1 I_2 2\\pi d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "373f681006b646e3ab224",
+                    "stepText": "Great, now that we have the formula, let\u2019s substitute in the values for the numerator (ignoring the constant factors of $!$\\pi$!$ and powers of 10 for now). Compute the product $!$4 \\times 150 \\times 200$!$ for the numerator.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "120000"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ac74a17b-73bf-4f45-8bc1-41c2338b9863"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6a9e2f57c0e24a0d824c9",
+                    "stepText": "Now, after incorporating the $!$10^{-7}$!$ factor from $!$\\mu_0$!$ and considering the denominator components (with $!$2\\pi \\times 0.25$!$), perform the division (after canceling the common $!$\\pi$!$ terms) to arrive at the force per unit length in $!$N/m$!$. What is the computed $!$F/L$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.024"
+                    ],
+                    "stepSolveAnswerUnits": "N/m",
+                    "stepConcepts": [
+                        "ac74a17b-73bf-4f45-8bc1-41c2338b9863"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "498d63b0ca8c45c594b3d",
+                    "stepText": "Finally, multiply the force per unit length by the length of the wires (50 m) to find the total attractive force between them. What is the resulting force in Newtons?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.2"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "ac74a17b-73bf-4f45-8bc1-41c2338b9863"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "14a723da4f1744c780f62",
+            "questionText": "A Maglev train uses a series of superconducting magnets to levitate and propel itself along a guideway. One of the train's magnets produces a magnetic field of 8.0 T that interacts with a 30 m long section of a guideway coil carrying a current of 500 A. Calculate the magnitude of the magnetic force exerted on this section of the guideway coil when the magnetic field is at an angle of $!$30^{\\circ}$!$ to the coil.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "587a324866564c0b80133",
+                    "stepText": "Let's start by identifying the correct formula to calculate the magnetic force on a current-carrying wire. Select the appropriate formula below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f811e506-c07a-4cc9-8b32-e4a587510caf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = B I L \\sin \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = q E$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = I v B$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ca92ba58db704eb792352",
+                    "stepText": "Great! Now that you have the formula concept, compute the product of the current $!$I$!$ and the length $!$L$!$ of the coil using the given values $!$I = 500\\,A$!$ and $!$L = 30\\,m$!$. What is $!$I \\times L$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15000"
+                    ],
+                    "stepSolveAnswerUnits": "$!$A\\cdot m$!$",
+                    "stepConcepts": [
+                        "f811e506-c07a-4cc9-8b32-e4a587510caf"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f5ad9082489342a6b07db",
+                    "stepText": "Now, combine the value computed in the previous step with the magnetic field and the sine of the angle. Multiply the result by the magnetic field $!$B = 8.0\\,T$!$ and the value of $!$\\sin 30^\\circ$!$ to determine the magnetic force. What value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60000"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "f811e506-c07a-4cc9-8b32-e4a587510caf"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

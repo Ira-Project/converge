@@ -1,0 +1,214 @@
+{
+    "id": "986608795be04f3a8ec82",
+    "name": "Wave Model",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "22570f13860440008981c",
+            "questionText": "A guitar string with a length of 0.65 m is tuned to produce a fundamental frequency ($!$f_1$!$) of 440 Hz (A4 note). The wave speed (v) on the string is directly related to the tension (T), and the wavelength ($!$\\lambda$!$) of the fundamental frequency is twice the length of the string. If the tension in the string is increased such that the wave speed changes from 286 m/s to 330 m/s, what is the change in frequency ($!$\\Delta f = f_2 - f_1$!$) produced by the guitar string?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7b0b964c40854396b78e5",
+                    "stepText": "Let's start by recalling how the fundamental frequency of a vibrating string is related to the wave speed and the string length. Please choose the correct formula for the fundamental frequency of a string.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f = \\frac{v}{2L}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = \\frac{2L}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = \\frac{v}{L}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = \\frac{2v}{L}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a94bf14dd4f54b5d812a6",
+                    "stepText": "Next, determine the wavelength for the fundamental mode. The wavelength is twice the length of the string. Use this idea to calculate the wavelength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.3"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "feb9fb41faa248619274d",
+                    "stepText": "Now, using the initial wave speed of $!$286\\,m/s$!$, compute the fundamental frequency ($!$f_1$!$) of the string by applying the relation you identified in Step 1. Go ahead and calculate $!$f_1$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "220"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8771027aa9fb4b88b26fd",
+                    "stepText": "With the new wave speed of $!$330\\,m/s$!$, determine the new fundamental frequency ($!$f_2$!$) using the same formula. Please calculate $!$f_2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "253.85"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fff1dabd69b148f58cbff",
+                    "stepText": "Finally, find the change in frequency ($!$\\Delta f = f_2 - f_1$!$) by subtracting the initial frequency from the new frequency. What is the resulting change?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "33.85"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "97c3008048324ce88a886",
+            "questionText": "A medical ultrasound device operating at a frequency of 5 MHz (5 $!$\\times$!$ 10^6 Hz) is used to image a liver, where the speed of sound in the liver tissue is approximately 1540 m/s. If the device is switched to a higher frequency of 7.5 MHz (7.5 $!$\\times$!$ 10^6 Hz) to improve image resolution, determine the percentage change in wavelength when the frequency is increased from 5 MHz to 7.5 MHz, assuming the speed of sound remains constant.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1c1a57adbc31488f9e7be",
+                    "stepText": "Let's start by identifying the correct formula to calculate the wavelength given the speed and frequency. Which of the following formulas should be used?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537",
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{v}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = v \\times f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{f}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9f7cf8efa1264672928ae",
+                    "stepText": "Great, now calculate the wavelength, denoted as $!$\\lambda_1$!$, of the ultrasound in liver tissue at the initial frequency of 5 $!$MHz$!$. Use the provided sound speed of 1540 m/s.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.000308"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "e0895152-4252-461e-a416-6c7cf6bf732b",
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "48d3a952b3b546c0a74fb",
+                    "stepText": "Now, compute the wavelength, $!$\\lambda_2$!$, for the higher frequency of 7.5 $!$MHz$!$ using the same speed of 1540 m/s.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0002053"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "e0895152-4252-461e-a416-6c7cf6bf732b",
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "97883cfe83824efdbb23d",
+                    "stepText": "Before proceeding to the final calculation, let's determine the correct expression for calculating the percentage change in wavelength. Which of the following expressions represents the correct percentage change in wavelength?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{\\lambda_1-\\lambda_2}{\\lambda_1}\\times100$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{\\lambda_2-\\lambda_1}{\\lambda_2}\\times100$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{\\lambda_1+\\lambda_2}{\\lambda_1}\\times100$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ad9c8db12b754053868da",
+                    "stepText": "Finally, using the values calculated in the previous steps and the correct expression you identified, compute the percentage reduction in wavelength when the ultrasound frequency increases from 5 MHz to 7.5 MHz.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "33.33"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

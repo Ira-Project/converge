@@ -1,0 +1,206 @@
+{
+    "id": "8a09e87c19d5462eb9d3a",
+    "name": "Thermodynamics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "bca62ef0a3784022932e3",
+            "questionText": "An air conditioning system uses a refrigerant that undergoes a cycle. During the cycle, the refrigerant absorbs Q_C = 10,000 J of heat from the room and releases Q_H = 12,000 J of heat to the outside. The inside temperature is $!$T_C = 20^{\\circ}C$!$ and the outside temperature is $!$T_H = 40^{\\circ}C$!$. The cycle operates at 30% of the maximum possible (Carnot) efficiency. Calculate the actual work done by the air conditioner in one cycle.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2d23dbf5e3a54309bd20e",
+                    "stepText": "Let's start by determining the ideal efficiency for a refrigerator operating on a Carnot cycle. To proceed, please identify the correct formula that relates the cold temperature $!$T_C$!$ and the hot temperature $!$T_H$!$ for the ideal efficiency of a refrigerator.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eb2ed1a7-e528-4b88-8bd6-db3a653c73cf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\eta=\\frac{T_C}{T_H-T_C}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\eta=\\frac{T_H}{T_H-T_C}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta=\\frac{T_C}{T_C-T_H}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "932653d123664df39aa92",
+                    "stepText": "Great! Now that you have the correct expression for the ideal efficiency, convert the given temperatures to Kelvin (using $!$T(K)=T(\\circ C)+273$!$) and compute the ideal efficiency value. Then, considering the cycle operates at 30% of the ideal performance, calculate the actual efficiency by multiplying the ideal efficiency by 0.30. Enter the numerical value you obtain for the actual efficiency.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.395"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fd04f7d4-aca6-4fa8-a6af-850d9be1e084"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fc870f433b7e4b1da1716",
+                    "stepText": "Now, let\u2019s use the relationship between the efficiency and the work input for a refrigerator. Identify the correct formula that expresses the work input $!$W$!$ in terms of the heat extracted from the cold space $!$Q_C$!$ and the actual efficiency.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$W=\\frac{Q_C}{COP}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W=Q_C\\times COP$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W=Q_H-COP$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5518faab252c4b89b1aff",
+                    "stepText": "Finally, using the formula from the previous step, calculate the work done by the refrigerator.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2276"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "d79b359d819c4c68b4460",
+            "questionText": "A car engine operates in a four-stroke cycle approximating a heat engine. In one cycle, the engine takes in Q_H = 2500 J of heat from the combustion of fuel and exhausts Q_C = 1800 J of heat. Assuming the engine as a closed system, and given that during the expansion stroke the pressure remains constant with P = 1.5 \\(\\times\\) 10^5 Pa while the volume increases by \\(\\Delta V = 0.5\\, m^3\\), determine how much of the total heat intake is converted into work.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "cadfd0cf53d24aef90653",
+                    "stepText": "Let's start by determining the fundamental relation for a cyclic heat engine. In a full cycle, the change in internal energy is zero. Which formula correctly relates the net work output to the heat absorbed and rejected?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ea914822-cf42-4557-b08f-5f35daecfc70",
+                        "7a27d98a-ef95-4796-b6f6-284ca65857e7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = Q_H - Q_C$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = P\\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q_H = Q_C + W$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = \\Delta U + W$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e97b6690e2be475f9177f",
+                    "stepText": "Great, now that you have identified the relation, use it to calculate the net work output of the engine. Compute the value by subtracting the rejected heat from the absorbed heat.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "700"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ea914822-cf42-4557-b08f-5f35daecfc70"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2576db4670474f509fbf3",
+                    "stepText": "Next, let\u2019s identify how to determine the efficiency of the heat engine. Efficiency in this context is defined as the fraction of the total heat intake that gets converted to net work. Which formula represents this efficiency?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2627d205-8411-4005-b844-ebf08203f968"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\eta = \\frac{W_{net}}{Q_H}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{Q_C}{Q_H}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{W_{net}}{P\\Delta V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{\\Delta U}{Q_H}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "58d8955e05ea430bacc12",
+                    "stepText": "Now, use the efficiency formula you've identified. Calculate the efficiency by dividing the net work output by the total heat intake. What numerical value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.28"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2627d205-8411-4005-b844-ebf08203f968"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

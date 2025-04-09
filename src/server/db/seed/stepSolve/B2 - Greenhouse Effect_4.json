@@ -1,0 +1,199 @@
+{
+    "id": "331c4fc4ada14d608db5f",
+    "name": "Greenhouse Effect",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9ed6a5cd4e814f3d8c3a3",
+            "questionText": "Researchers are investigating the impact of increased nitrous oxide ($!$N_2O$!$) concentration on the intensity of radiation emitted from Earth. Initially, the emissivity ($!$\\epsilon$!$) of the atmosphere is 0.65. With increasing $!$N_2O$!$, the emissivity changes to 0.72. If the surface temperature of the Earth remains constant at 288 K, calculate the percentage change in the intensity of radiation emitted from Earth due to the increased concentration of $!$N_2O$!$. Assume that the Stefan-Boltzmann constant ($!$\\sigma$!$) is $!$5.67 \\times 10^{-8} W m^{-2} K^{-4}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "589bc3db7bf444c9bbb1d",
+                    "stepText": "Let's start by identifying the correct formula to calculate the intensity of radiation emitted by a body using emissivity, the Stefan-Boltzmann constant, and the temperature. Please choose the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743",
+                        "a83c5f2e-c2d2-4381-9ccd-58212da2172b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\epsilon \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{\\sigma T^4}{\\epsilon}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\epsilon T^4 \\sigma^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8ed11e8d582d435bbbb03",
+                    "stepText": "Great. Now, using the formula you selected, calculate the initial intensity $!$I_1 = 0.65 \\times \\sigma \\times 288^4$!$. Compute the value considering $!$\\sigma = 5.67 \\times 10^{-8} W m^{-2} K^{-4}$!$ and provide your answer in W m$!$^{-2}$!$. (Round your answer appropriately.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "254"
+                    ],
+                    "stepSolveAnswerUnits": "W m^{-2}",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d0ce8b1b0a134eb2bcb94",
+                    "stepText": "Now, calculate the new intensity $!$I_2 = 0.72 \\times \\sigma \\times 288^4$!$ with the updated emissivity value. Compute the numerical value using the same constants as before and provide your answer in W m$!$^{-2}$!$. (Round your answer appropriately.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "281"
+                    ],
+                    "stepSolveAnswerUnits": "W m^{-2}",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "37a6694e9bfa420293cc4",
+                    "stepText": "Finally, determine the percentage change in the intensity. Use the formula for percentage change: $!$\\frac{I_2-I_1}{I_1} \\times 100$!$ and calculate the result based on your previous answers. Provide your answer as a percentage.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10.77"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "aac16a904c6d4112b891f",
+            "questionText": "A climatologist observes that the Earth's albedo has decreased from 0.32 to 0.30 over a decade due to melting ice caps. Given that the solar constant (S) is approximately $!$1400 W/m^2$!$, and assuming that the Earth's emitted radiation (given by $!$\\sigma T^4$!$) balances the absorbed solar radiation, where the Stefan-Boltzmann constant (\\( \\sigma \\)) is $!$5.67\\times10^{-8} W m^{-2} K^{-4}$!$, calculate the corresponding change in Earth's equilibrium temperature (\\( \\Delta T \\)) resulting from this albedo decrease.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "cb346cfd17e3487e8144b",
+                    "stepText": "Let's start by identifying the energy balance equation at equilibrium that relates Earth's absorbed solar radiation to its emitted radiation. Which of the following represents the correct energy balance equation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b51ed1b6-771b-45fa-9760-5d85e7688f2a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$(1-\\alpha)\\frac{S}{4} = \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$(1-\\alpha)S = \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{S}{4} = \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c716f376fc054f3e9d582",
+                    "stepText": "Great! Now, deduce the expression for Earth's equilibrium temperature in terms of the albedo. Which of the following expressions correctly rearranges the energy balance equation to solve for $!$T$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b51ed1b6-771b-45fa-9760-5d85e7688f2a",
+                        "4423e9c4-c105-4183-9ce7-c7d4352e4ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T = \\left[ \\frac{(1-\\alpha)S}{4\\sigma} \\right]^{1/4}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T = \\frac{(1-\\alpha)S}{4\\sigma}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T = \\left[ \\frac{\\sigma}{(1-\\alpha)S/4} \\right]^{1/4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c46f0bfa8c8e4d62a08b3",
+                    "stepText": "Using the correct expression, calculate the Earth\u2019s initial equilibrium temperature for an albedo of 0.32. Use $!$S = 1400\\,W/m^2$!$ and $!$\\sigma = 5.67\\times10^{-8}\\,W\\,m^{-2}\\,K^{-4}$!$. What numerical value in Kelvin do you obtain (approximately)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "254"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "4423e9c4-c105-4183-9ce7-c7d4352e4ec0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "606cd9214dee4bcfb0989",
+                    "stepText": "Now, calculate the Earth\u2019s equilibrium temperature for the later period when the albedo is 0.30 using the same parameters. What is the approximate temperature in Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "256"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "4423e9c4-c105-4183-9ce7-c7d4352e4ec0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c3aeb9eb509046c59556c",
+                    "stepText": "Finally, determine the change in Earth's equilibrium temperature, $!$\\Delta T$!$, by finding the difference between the two temperatures calculated. What is the approximate change in Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "4423e9c4-c105-4183-9ce7-c7d4352e4ec0"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

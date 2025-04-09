@@ -1,0 +1,216 @@
+{
+    "id": "0c948b7527174dd9bc16a",
+    "name": "Structure of the Atom",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a80f4cba31684e9f9295b",
+            "questionText": "Astronomers observe a distant galaxy emitting light. The hydrogen-alpha ($!$H\\alpha$!$) line, which has a rest wavelength of 656.3 nm, is observed to be redshifted to 720.0 nm. Assuming that the redshift is due to the galaxy's motion away from Earth, calculate the difference in photon energy (in electron volts, eV) between the emitted $!$H\\alpha$!$ photon (at 656.3 nm) and the observed redshifted photon (at 720.0 nm). Use Planck's constant (h = 4.135 $!$\\times$!$ 10$!$^{-15}$!$ eV $!$\\cdot$!$ s) and the speed of light (c = 3 $!$\\times$!$ 10$!$^8$!$ m/s).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "922d9989c90348ebae304",
+                    "stepText": "Let's start by identifying the correct formula that relates a photon's energy to its wavelength. Select the formula that involves Planck's constant $!$h$!$, the speed of light $!$c$!$, and the wavelength $!$\\lambda$!$ in the correct way.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = \\frac{hc}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{h\\lambda}{c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{c}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4ef919feb6ee4191b1061",
+                    "stepText": "Great, now that we have the right formula, compute the product $!$hc$!$ using the provided values $!$h = 4.135 \\times 10^{-15}$!$ eV$!$\\cdot$!$s and $!$c = 3 \\times 10^{8}$!$ m/s. What is the value of $!$hc$!$ in eV\u00b7m?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.2405e-6"
+                    ],
+                    "stepSolveAnswerUnits": "eV m",
+                    "stepConcepts": [
+                        "114913f7-42e4-4f1e-a164-563a0df26437",
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "65442680e779460db8d9a",
+                    "stepText": "Next, convert the wavelength of the emitted H$!$\\alpha$!$ photon from nanometers to meters. Given that 1 nm equals $!$10^{-9}$!$ m, determine the wavelength in meters for 656.3 nm.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "656.3e-9"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8199b7a6b0de46b88c6ce",
+                    "stepText": "Utilize the computed product $!$hc$!$ and the converted wavelength to calculate the energy of the emitted photon. What is the energy of the H$!$\\alpha$!$ photon with the wavelength you just converted?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.89"
+                    ],
+                    "stepSolveAnswerUnits": "eV",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b9d6086041884832b47af",
+                    "stepText": "Now, repeat the process for the observed redshifted photon. Convert the wavelength of 720.0 nm into meters and then compute its energy using the same product $!$hc$!$. What is the energy of this photon?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.72"
+                    ],
+                    "stepSolveAnswerUnits": "eV",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d9a406a6812b4e92bcefc",
+                    "stepText": "Finally, determine the difference in photon energy by subtracting the energy of the observed redshifted photon from that of the emitted photon. What is the energy difference between them?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.17"
+                    ],
+                    "stepSolveAnswerUnits": "eV",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "30d5351f3f3e4cd5ad05b",
+            "questionText": "Using the Bohr model for an electron in a hypothetical atom, determine the energy (in eV) required to completely remove the electron (i.e. the ionization energy) from the atom. Assume the electron is in the n = 3 energy level and that the effective nuclear charge experienced by the electron is $!$Z_{\\text{eff}} = 2$!$. Use the formulas $!$E_{n} = -13.6 eV/n^2$!$ and $!$r_{n} = a_{0} n^2/Z_{\\text{eff}}$!$ with $!$a_{0} = 0.0529 nm$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "370970e75f194f33991b9",
+                    "stepText": "Let's start by identifying the correct energy formula for an electron in a hydrogen-like atom when the effective nuclear charge is taken into account. Please choose the formula that correctly incorporates $!$Z_{\\text{eff}}$!$ and the principal quantum number $!$n$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "516d8e51-d173-4735-85ca-b40323ce5f3c",
+                        "b01ed396-ec06-4393-8ddf-6b57407970b5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_n=-\\frac{13.6\\, Z_{\\text{eff}}^2}{n^2}\\,\\text{eV}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_n=-\\frac{13.6}{n^2}\\,\\text{eV}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_n=-\\frac{13.6\\, Z_{\\text{eff}}}{n}\\,\\text{eV}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0797b76701784ef4aa7fb",
+                    "stepText": "Great! Now that we have the correct form in mind, substitute the given values $!$Z_{\\text{eff}} = 2$!$ and $!$n = 3$!$ into the part of the formula where these variables appear. Compute the value of $!$\\frac{Z_{\\text{eff}}^2}{n^2}$!$. What is the numerical value (to three decimal places) of this fraction?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.444"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "516d8e51-d173-4735-85ca-b40323ce5f3c",
+                        "b01ed396-ec06-4393-8ddf-6b57407970b5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "dce4c4a3ba7e41c295328",
+                    "stepText": "Excellent work. Now, use the constant $!$13.6\\,\\text{eV}$!$ from the hydrogen energy formula and multiply it by the fraction you just computed. This will give you the magnitude of the electron's binding energy. Calculate this multiplication to obtain the binding energy (ignoring the sign).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.04"
+                    ],
+                    "stepSolveAnswerUnits": "eV",
+                    "stepConcepts": [
+                        "516d8e51-d173-4735-85ca-b40323ce5f3c",
+                        "b01ed396-ec06-4393-8ddf-6b57407970b5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "44c0cefad06a4d4cb3c40",
+                    "stepText": "Finally, recall that the ionization energy is defined as the amount of energy required to remove the electron from its level, which is the absolute value of the electron's binding energy. Choose the statement below that best describes the relationship between the binding energy and the ionization energy.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "516d8e51-d173-4735-85ca-b40323ce5f3c",
+                        "b01ed396-ec06-4393-8ddf-6b57407970b5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Ionization energy is equal to the absolute value of the binding energy.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Ionization energy is the negative of the binding energy.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Ionization energy is twice the binding energy in magnitude.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

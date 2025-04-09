@@ -1,0 +1,209 @@
+{
+    "id": "c8048524397a4b6b977c3",
+    "name": "Quantum Physics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "155e215c27ba4a78ab818",
+            "questionText": "An engineer is designing an electron microscope. To enhance the resolution for nanoscale imaging, they accelerate electrons through a potential difference of $!$150 V$!$. Given that the electron's mass is approximately $!$9.109 x 10^{-31} kg$!$ and its charge is $!$1.602 x 10^{-19} C$!$, calculate the de Broglie wavelength of these electrons. This wavelength will determine the microscope's ability to resolve fine details. Use Planck's constant, $!$h = 6.626 x 10^{-34} Js$!$, for your calculations.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a9d93c4235c84b40a8ed4",
+                    "stepText": "Let's start by identifying the core concept that relates a particle's momentum to its wavelength. Please choose the correct de Broglie relation from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{h}{p}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = h \\cdot p$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{p}{h}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "384bae253fb4427b98c9a",
+                    "stepText": "Great. Now, considering that electrons accelerated by a potential difference gain kinetic energy, which formula correctly expresses the de Broglie wavelength in terms of the accelerating potential $!$V$!$? Select the appropriate relation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2fc1331f-b464-447e-aaa9-e1806d7e9191"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{h}{\\sqrt{2m e V}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{h}{2m e V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\sqrt{\\frac{h}{2m e V}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "640ffd2ce7c5444f99289",
+                    "stepText": "Excellent. Now, let\u2019s compute the intermediate value inside the square root: calculate $!$2 \\times m \\times e \\times V$!$. Using $!$m=9.109\\times10^{-31} kg$!$, $!$e=1.602\\times10^{-19} C$!$, and $!$V=150 V$!$, what is the numerical value of this product?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.377e-47"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2fc1331f-b464-447e-aaa9-e1806d7e9191"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "83bfba4551b64e5aae845",
+                    "stepText": "Now that you have the value inside the square root, proceed by calculating its square root to find the momentum term in the denominator. What is the square root of the value obtained in the previous step?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.614e-24"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2fc1331f-b464-447e-aaa9-e1806d7e9191"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "42525316794542c6b8594",
+                    "stepText": "Finally, apply the de Broglie formula by dividing Planck's constant $!$h=6.626\\times10^{-34} Js$!$ by the momentum value from the previous step to determine the electron's wavelength. What is the computed de Broglie wavelength in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.0e-10"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "6ebe6c0d-c162-454d-9895-d18bb1afb5b9",
+                        "2fc1331f-b464-447e-aaa9-e1806d7e9191"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "3c6215007fa54b2182184",
+            "questionText": "In a medical imaging facility, X-rays with an initial wavelength of 0.075 nm are used to scan a patient's bones. Some photons undergo Compton scattering with electrons and are scattered at an angle of $!$110^{\\circ}$!$ relative to their original direction. Using the constants $!$h = 6.626 x 10^{-34} Js$!$, $!$m_e = 9.109 x 10^{-31} kg$!$, and $!$c = 3 x 10^8 m/s$!$, calculate the final wavelength of the scattered X-ray photons.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b65db1d9172b4e21b4bc7",
+                    "stepText": "Let's start by identifying the correct formula that represents the change in wavelength in Compton scattering. Which of the following formulas do you think is the appropriate one?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "254b2a82-f030-41e6-beba-8436ce763d64"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta \\lambda = \\frac{h}{m_e c}(1 - \\cos\\theta)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta \\lambda = \\frac{h}{m_e c}(\\cos\\theta - 1)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta \\lambda = \\frac{h}{c}(1 - \\cos\\theta)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8cb617fd364149bf910f1",
+                    "stepText": "Great! Now, calculate the Compton wavelength $!$\\lambda_C = \\frac{h}{m_e c}$!$ using the provided constants. Enter the numerical value you obtain (in meters).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.43e-12"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "c1d907e9-f018-4c16-a6ee-4946975d59c2"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8115a8a0110d49f299fa4",
+                    "stepText": "Now, compute the factor $!$(1 - \\cos\\theta)$!$ for the scattering angle of $!$110^{\\circ}$!$. Remember to evaluate the cosine correctly, and then subtract it from 1.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.3420"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "5ee108fba62d41eaa7922",
+                    "stepText": "Next, determine the change in wavelength $!$\\Delta \\lambda$!$ by multiplying the Compton wavelength with the factor you computed in the previous step. What numerical value do you get (in meters)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.26e-12"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "254b2a82-f030-41e6-beba-8436ce763d64",
+                        "c1d907e9-f018-4c16-a6ee-4946975d59c2"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "994005eda8d44b4b8a0fa",
+                    "stepText": "Finally, add the change in wavelength to the initial wavelength. Note that the X-ray's initial wavelength of 0.075 nm should be converted into meters before the addition. What is the final wavelength of the scattered X-ray photons (in meters)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.83e-11"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

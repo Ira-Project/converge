@@ -1,0 +1,178 @@
+{
+    "id": "9f2f36d11a714e3fabe3f",
+    "name": "Greenhouse Effect",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "6f195188b566418485c44",
+            "questionText": "Deforestation leads to a reduction in Earth's albedo. Assume the Earth's albedo decreases from 0.3 to 0.25 due to deforestation. The solar constant, $!$S$!$, remains at 1400 $!$\\frac{W}{m^2}$!$. Calculate the change in Earth's equilibrium temperature, assuming the emissivity of Earth remains constant and using the Stefan-Boltzmann constant $!$\\sigma = 5.67 \\times 10^{-8} \\frac{W}{m^2 K^4}$!$. Provide your answer in Kelvin.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "87ddb62df6c54f68b48ca",
+                    "stepText": "Let's start by identifying the energy balance equation that relates Earth's equilibrium temperature to the albedo, solar constant, and the Stefan-Boltzmann constant. Which of the following formulas correctly represents this energy balance (remember to consider how the absorbed solar flux is distributed over Earth's surface)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b51ed1b6-771b-45fa-9760-5d85e7688f2a",
+                        "cb2ae0e5-1e89-4f8d-8848-9873f4991312"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T = \\left[\\frac{(1-a)S}{4\\sigma}\\right]^{1/4}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T = \\left[\\frac{(1-a)S}{\\sigma}\\right]^{1/4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T = \\left[\\frac{S}{4\\sigma(1-a)}\\right]^{1/4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2e79cc6b063a4d5e80757",
+                    "stepText": "Great! Now, using the selected equation, compute the equilibrium temperature for Earth before deforestation (with an albedo of 0.3). Begin by calculating the absorbed solar flux for this state and then determine the equilibrium temperature. What numerical value do you obtain for the initial equilibrium temperature? (Hint: Perform the operations step by step and apply the fourth root at the final stage.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "256"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "b51ed1b6-771b-45fa-9760-5d85e7688f2a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "019a61c0202a47a0a6a4d",
+                    "stepText": "Now, similarly calculate the equilibrium temperature for Earth after deforestation, when the albedo decreases to 0.25. Compute the absorbed solar flux with this new albedo and then use the same energy balance formula to find the new equilibrium temperature. What is the numerical value for the new temperature?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "261"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "b51ed1b6-771b-45fa-9760-5d85e7688f2a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "390696bcc7104e3fbc4d2",
+                    "stepText": "Finally, determine the change in Earth's equilibrium temperature as a result of the albedo change. Subtract the initial temperature from the new temperature to get the difference. What is the calculated change?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "b51ed1b6-771b-45fa-9760-5d85e7688f2a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "1df156d47503484290109",
+            "questionText": "Increased methane concentrations in the atmosphere trap more heat due to resonance in absorption of infrared radiation, enhancing the greenhouse effect. Consider a scenario where the Earth's emissivity decreases from 0.6 to 0.58 due to this increased methane. Assuming the Earth's temperature is 288 K and the surrounding temperature is 250 K, and given that the surface area of the Earth is approximately $!$5.1 \\times 10^{14} m^2$!$, what is the change in net power radiated by the Earth? Use the Stefan-Boltzmann constant $!$\\sigma = 5.67 \\times 10^{-8} \\frac{W}{m^2 K^4}$!$. Provide your answer in Watts.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f84a90f662214894ae1d8",
+                    "stepText": "Let's start by identifying the equation used to compute the net power radiated by a body. Please select the correct formula that represents the net power radiated from a body considering both its emission and the surrounding temperature.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e3a5ec68-44b5-4731-ba26-1e6d6d1e4970"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P_{net} = \\epsilon \\sigma A (T^4 - T_s^4)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P_{net} = \\epsilon A \\sigma (T - T_s)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P_{net} = \\sigma A (\\epsilon T^4 - T_s^4)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9925320f67e54cf5a8c23",
+                    "stepText": "Now, using the given temperatures, compute the difference between the fourth powers of the temperature of the Earth and its surroundings, i.e. compute $!$T^4 - T_{sur}^4$!$. Given that $!$T = 288\\,K$!$ and $!$T_{sur} = 250\\,K$!$, calculate this difference.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.96e9"
+                    ],
+                    "stepSolveAnswerUnits": "K^4",
+                    "stepConcepts": [
+                        "e3a5ec68-44b5-4731-ba26-1e6d6d1e4970"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b63a80c5448a4ce6b5808",
+                    "stepText": "Great, now calculate the product of the Earth's surface area and the Stefan-Boltzmann constant, expressed as $!$A \\sigma$!$. Use the values $!$A = 5.1\\times10^{14} m^2$!$ and $!$\\sigma = 5.67\\times10^{-8} \\frac{W}{m^2 K^4}$!$. What is the resulting value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.89e7"
+                    ],
+                    "stepSolveAnswerUnits": "W/K^4",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "1be37275fdc4403c950d8",
+                    "stepText": "Now, combine the results from the previous steps by multiplying $!$A\\sigma$!$ with $!$T^4 - T_{sur}^4$!$. This will give you the term representing the net factor before taking into account changes in emissivity. Calculate this product.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8.58e16"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "89a8f47816b64cd99367b",
+                    "stepText": "Finally, determine the change in net power by accounting for the change in emissivity due to increased methane concentration. Find the difference $!$\\Delta\\epsilon = \\epsilon_{after} - \\epsilon_{before}$!$ and multiply it with the previous result. What is the final change in net power radiated by the Earth?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-1.72e15"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "e3a5ec68-44b5-4731-ba26-1e6d6d1e4970"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

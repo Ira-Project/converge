@@ -1,0 +1,165 @@
+{
+    "id": "dfcafc088fbb4714bdcd3",
+    "name": "Radioactive Decay",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "09dfa1def5134b2e90ae8",
+            "questionText": "A nuclear power plant has experienced a leak of Strontium-90 ($!$Sr-90$!$), a beta emitter, into the surrounding environment. The $!$Sr-90$!$ has a half-life ($!$T_{1/2}$!$) of 29 years. Suppose that the initial activity ($!$A_0$!$) of $!$Sr-90$!$ in a soil sample is measured to be 500 Becquerels (Bq). After 50 years, a farmer wants to cultivate this land. What would be the expected activity of $!$Sr-90$!$ in the soil at that time?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9cf12585b0324b27b4171",
+                    "stepText": "Let's start by identifying the correct decay formula that connects the initial activity, the elapsed time, and the half-life of a radioactive substance. Which of the following formulas correctly represents the decay process using half-life?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a",
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5",
+                        "20858360-083f-4e41-9600-cc0be9bb2194"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 \\left(\\frac{1}{2}\\right)^{t/T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 \\left(\\frac{1}{2}\\right)^{T_{1/2}/t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = A_0 e^{-t/T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e45c96e7d6934b52b10b2",
+                    "stepText": "Great! Now, using the time (t = $!$50$!$ years) and the half-life ( $!$T_{1/2} = 29$!$ years), calculate the exponent $!$\\frac{t}{T_{1/2}}$!$. What is the result of this division?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.724"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7a9a30bc601b4a919b3f8",
+                    "stepText": "Now that you know the exponent, determine the decay factor by calculating $!$\\left(\\frac{1}{2}\\right)^{\\frac{t}{T_{1/2}}}$!$. What is the numerical value of this decay factor?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.303"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "20de21c7bb9547a0bf8bc",
+                    "stepText": "Finally, use the decay factor to compute the expected activity after 50 years by multiplying the initial activity ($!$500$!$ Bq) by this decay factor. What is the resulting activity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "151.5"
+                    ],
+                    "stepSolveAnswerUnits": "Bq",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "6382553f9e6d439289afb",
+            "questionText": "A hospital uses Technetium-99m (Tc-99m) for medical imaging. Tc-99m has a half-life of 6 hours and decays via gamma emission. If the initial activity ($!$A_0$!$) of a Tc-99m sample is 20 mCi (millicuries) at 8:00 AM, what will be its activity at 8:00 PM the same day?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1d2111212c8a46378c545",
+                    "stepText": "Let's start by identifying the correct formula to calculate the remaining activity using the half-life of a radioactive substance. Which of the following formulas relates the final activity to the initial activity, time elapsed, and half-life?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 \\times \\left(1/2\\right)^{t/T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 \\times \\left(1/2\\right)^{T_{1/2}/t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cd31b76596044e6e9d6c0",
+                    "stepText": "Great! Now, calculate the exponent by dividing the elapsed time by the half-life. What is the value of $!$t/T_{1/2}$!$ if $!$t = 12\\,\\text{hours}$!$ and $!$T_{1/2} = 6\\,\\text{hours}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "29b53598b79f4d0096ff8",
+                    "stepText": "Now that you have the exponent, determine the decay factor by raising $!$1/2$!$ to the power you just calculated. What is the decay factor $!$(1/2)^2$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.25"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d621a82ca69e4e8ba529c",
+                    "stepText": "Finally, multiply the initial activity by the decay factor to find the remaining activity at 8:00 PM. What is the final activity in mCi?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5"
+                    ],
+                    "stepSolveAnswerUnits": "mCi",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5",
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

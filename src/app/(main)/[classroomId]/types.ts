@@ -1,23 +1,21 @@
-import { type ActivityType } from "@/lib/constants";
-
 // types.ts
 export interface Activity {
   id: string;
   name: string;
-  description: string;
-  typeText: ActivityType;
-  assignmentId: string;
-  classroomId: string | null;
+  topic: {
+    id: string;
+    name: string;
+  } | null;
+  typeText: string | null;
   isLive: boolean;
   isLocked: boolean;
   order: number;
-  dueDate: string;
+  dueDate: Date | null;
 }
 
 export interface Topic {
   name: string;
   slug: string;
   description: string;
-  imageUrl: string;
   activities: Activity[];
 }

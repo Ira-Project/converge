@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "b068f94a917644d88cceb",
-                    "stepText": "Let's start by identifying the proper formula for the elastic potential energy stored in a compressed spring. Which of the following represents the correct formula?",
+                    "id": "60aa9cdef653401fa2c4a",
+                    "stepText": "Let's start by finding the initial energy stored in the compressed spring. Please select the correct formula that represents the energy stored in a spring.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -24,14 +24,19 @@
                     ],
                     "options": [
                         {
+                            "optionText": "$!$U = \\frac{1}{2} kx^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
                             "optionText": "$!$U = kx$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$U = \\frac{1}{2}kx^2$!$",
+                            "optionText": "$!$U = \\frac{1}{2} kx$!$",
                             "optionImage": "",
-                            "isCorrect": true
+                            "isCorrect": false
                         },
                         {
                             "optionText": "$!$U = kx^2$!$",
@@ -41,22 +46,8 @@
                     ]
                 },
                 {
-                    "id": "f46729a11aa04305b3b5a",
-                    "stepText": "Now, use the formula from the previous step to calculate the initial energy stored in the spring when it is compressed by $!$0.5$!$ m with a spring constant of $!$50$!$ N/m.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "6.25"
-                    ],
-                    "stepSolveAnswerUnits": "J",
-                    "stepConcepts": [
-                        "619a9763-10d2-48a6-a060-de4db6ea3c0a"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "d122faa60cde42628978c",
-                    "stepText": "Next, determine which formula is used to calculate the dynamic friction force acting on the block on a horizontal surface.",
+                    "id": "6c457d65efba435684500",
+                    "stepText": "Great. Now, as the block moves, friction opposes its motion. Please choose the correct formula for the frictional force acting on the block on a horizontal surface.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -64,17 +55,16 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d",
-                        "18743f7b-2133-4b00-b872-d79300ea4707"
+                        "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$f_d = \\mu_d R$!$",
+                            "optionText": "$!$f_d = \\mu_d mg$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$f_d = \\mu_s R$!$",
+                            "optionText": "$!$f_d = \\mu_d m$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
@@ -82,68 +72,90 @@
                             "optionText": "$!$f_d = mg$!$",
                             "optionImage": "",
                             "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f_d = \\mu_d g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "51e880bbf5664002ac6d7",
-                    "stepText": "Using the expression for friction force $!$F_f = \\mu_d m g$!$, the friction force is approximately $!$5.88$!$ N. Now, calculate the work done by friction over the $!$0.5$!$ m displacement from the compressed position to equilibrium.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "2.94"
-                    ],
-                    "stepSolveAnswerUnits": "J",
-                    "stepConcepts": [
-                        "ef8aedcd-2a10-45df-a29f-ed2362df9af7",
-                        "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "8e9d9c591f994af1a5fc2",
-                    "stepText": "At equilibrium, the block\u2019s kinetic energy is equal to the initial spring energy minus the work done against friction, giving approximately $!$3.31$!$ J. Now, identify the correct energy balance equation for the motion beyond equilibrium where this remaining kinetic energy is used both to store additional spring energy and to do work against friction as the block moves an extra distance $!$x$!$. Which option best represents this energy balance?",
+                    "id": "0eaeb11787e640eb90f81",
+                    "stepText": "Now that we have the initial spring energy and the friction force, set up the energy balance. At the turning point the spring is partially reconverted into potential energy while friction has done work over the traveled distance. Which of the following equations correctly represents the energy conservation between the spring energy and the work done by friction?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         ""
                     ],
                     "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "619a9763-10d2-48a6-a060-de4db6ea3c0a",
-                        "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d"
-                    ],
+                    "stepConcepts": [],
                     "options": [
                         {
-                            "optionText": "$!$3.31 = \\frac{1}{2}kx^2 + F_fx$!$",
+                            "optionText": "$!$\\frac{1}{2} kx_0^2 - f_d (x_{turn}+x_0) = \\frac{1}{2} kx_{turn}^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$3.31 = kx^2 + F_fx$!$",
+                            "optionText": "$!$\\frac{1}{2} kx_0^2 + f_d (x_{turn}+x_0) = \\frac{1}{2} kx_{turn}^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$3.31 = \\frac{1}{2}kx^2 - F_fx$!$",
+                            "optionText": "$!$kx_0^2 - f_d x_{turn} = kx_{turn}^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{2} kx_0^2 - f_d x_{turn} = \\frac{1}{2} kx_{turn}^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "fc6e6f72cc624dd5bceb2",
-                    "stepText": "Finally, using the energy balance from the previous step, solve for the additional displacement $!$x$!$ beyond equilibrium. Then add the initial $!$0.5$!$ m (the distance from the compressed start to equilibrium) to find the total distance the block travels before stopping. What is the total distance traveled?",
+                    "id": "21eb2504937d42d084a3e",
+                    "stepText": "Having set up the energy conservation, the next step is to rearrange the equation into a quadratic form in terms of the spring displacement at the turning point, $!$x_{turn}$!$. Identify which quadratic equation correctly represents this formulation.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "0.76"
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{1}{2} kx_{turn}^2 + f_d(x_{turn}+x_0) - \\frac{1}{2} kx_0^2 = 0$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$kx_{turn}^2 + f_d x_{turn} - \\frac{1}{2} kx_0^2 = 0$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{2} kx_{turn}^2 - f_d x_{turn} + \\frac{1}{2} kx_0^2 = 0$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$kx_{turn}^2 - f_d(x_{turn}+x_0) + \\frac{1}{2} kx_0^2 = 0$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e70b099d087d49ba9ec23",
+                    "stepText": "Finally, once you have determined $!$x_{turn}$!$, the total distance traveled by the block is given by $!$d_{total} = x_{turn} + x_0$!$. Calculate this sum to find the distance, and express your answer as a numerical value with appropriate units.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.77"
                     ],
                     "stepSolveAnswerUnits": "m",
-                    "stepConcepts": [
-                        "619a9763-10d2-48a6-a060-de4db6ea3c0a",
-                        "ccbae418-a8ec-4c9c-a0f5-79cca1b9e78d"
-                    ],
+                    "stepConcepts": [],
                     "options": []
                 }
             ]
@@ -154,8 +166,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "768044d458544858a4a3f",
-                    "stepText": "Let's begin by selecting the formula that expresses the principle of momentum conservation. Which of the following formulas best represents that the total momentum before and after the collision remains constant?",
+                    "id": "c87798efbcc9446eb9f7b",
+                    "stepText": "Let's start by applying conservation of momentum. Identify the equation that correctly represents the total momentum before and after the collision.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -163,29 +175,35 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
+                        "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
                         "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\Delta p = 0$!$",
+                            "optionText": "$!$m_dv_d = m_av_a + m_dv_d' $!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$F = ma$!$",
+                            "optionText": "$!$m_av_a = m_dv_d' $!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$p = mv$!$",
+                            "optionText": "$!$m_av_a + m_dv_d' = 0 $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$m_dv_d = m_av_a - m_dv_d' $!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "3a996d0fa3af4510a9d3b",
-                    "stepText": "Now, consider the collision's coefficient of restitution. Please choose the formula that correctly relates the relative speeds after and before the collision given that the astronaut was initially at rest.",
+                    "id": "d001c74012cf4fa8ba57e",
+                    "stepText": "Now, let's use the coefficient of restitution to relate the final speeds of the debris and the astronaut. Which equation best represents this relationship? (Hint: The coefficient of restitution is the ratio of the relative speed of the two objects after the collision to the relative speed before the collision.)",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -195,25 +213,30 @@
                     "stepConcepts": [],
                     "options": [
                         {
-                            "optionText": "$!$e = \\frac{v_d' - v_a}{v_d - 0}$!$",
+                            "optionText": "$!$v_d' - v_a = e \\cdot 3 $!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$e = \\frac{v_a - v_d'}{v_d - 0}$!$",
+                            "optionText": "$!$v_a - v_d' = e \\cdot 3 $!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$e = \\frac{v_a + v_d'}{v_d}$!$",
+                            "optionText": "$!$v_d' + v_a = e \\cdot 3 $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v_d' \\times v_a = e \\cdot 3 $!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "80b731469195493194dfb",
-                    "stepText": "After identifying the relationships, use the momentum conservation and the restitution relations to solve for the astronaut's final velocity ($!$v_a$!$). Substitute the known values and isolate $!$v_a$!$. What is the value of $!$v_a$!$?",
+                    "id": "d21fa5a0e8f34e0e98531",
+                    "stepText": "Great. With the relationships from momentum conservation and the restitution condition, solve the simultaneous equations to find the astronaut's final velocity $!$v_a$!$. Please compute its value.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -221,13 +244,14 @@
                     ],
                     "stepSolveAnswerUnits": "m/s",
                     "stepConcepts": [
+                        "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
                         "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
                     ],
                     "options": []
                 },
                 {
-                    "id": "1dbf59ad953849c881e82",
-                    "stepText": "Next, calculate the initial kinetic energy of the debris using its mass and velocity. What is the initial kinetic energy?",
+                    "id": "d1b8b4dda98a405c931c4",
+                    "stepText": "Now, calculate the initial kinetic energy of the debris using its mass and speed. Enter the initial kinetic energy value.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -238,12 +262,24 @@
                     "options": []
                 },
                 {
-                    "id": "7b32768ffcc1465ba66e9",
-                    "stepText": "Finally, compute the kinetic energy lost during the collision by first determining the final kinetic energies of both the astronaut and the debris, then subtracting the total final kinetic energy from the initial kinetic energy. What is the kinetic energy lost?",
+                    "id": "a1f3c20c44aa453e9e1ef",
+                    "stepText": "Proceed by computing the final kinetic energy of the system. This includes the kinetic energy of both the astronaut and the debris after the collision. Please calculate the combined final kinetic energy.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "13.72"
+                        "8.785"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "e3fcfda056784f9ab4f95",
+                    "stepText": "Finally, determine the kinetic energy lost during the collision by finding the difference between the initial and final kinetic energies. What is the energy lost?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "13.7"
                     ],
                     "stepSolveAnswerUnits": "J",
                     "stepConcepts": [],

@@ -1,0 +1,144 @@
+{
+    "id": "f668fb1e843f45f699abb",
+    "name": "Electric and Magnetic Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "2a3b49bed9944096b2af3",
+            "questionText": "In an electroplating process, a metallic spoon is coated with silver in a silver nitrate solution. The spoon acts as the cathode, and a silver electrode acts as the anode, with a potential difference applied between them. Silver ions ($!$Ag^+$!$) with a charge of $!$1.602 \\times 10^{-19} \\text{ C}$!$ migrate towards the spoon. If the potential difference between the anode and the cathode is $!$3.0 \\text{ V}$!$, and the process deposits $!$1.5 \\times 10^{15}$!$ silver ions onto the spoon, calculate the total change in kinetic energy ($!$\\Delta E_k$!$) of all the silver ions as they move from the anode to the cathode.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "61d86280a8c84c7387393",
+                    "stepText": "Let's start by identifying the correct relationship that tells us how to determine the energy gain of a charge moving through a potential difference. Which formula best applies for finding the change in kinetic energy for one ion?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2e3345f3-50bf-494f-af69-22c660edffd3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$qV$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{V}{q}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = qE$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c1dc592ee4434b449a5b7",
+                    "stepText": "Great, now that you have identified the correct relationship, calculate the energy gained by one silver ion. Use the charge $!$q = 1.602 \\times 10^{-19} \\text{ C}$!$ and the potential difference $!$V = 3.0 \\text{ V}$!$. What is the energy change per ion?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.806e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "2e3345f3-50bf-494f-af69-22c660edffd3"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "32c75ae750a84c369c47d",
+                    "stepText": "Now, using the energy change for one ion, determine the total kinetic energy change for all the silver ions deposited. Multiply the energy per ion by the number of ions, $!$1.5 \\times 10^{15}$!$. What is the total kinetic energy gained?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.209e-4"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "2e3345f3-50bf-494f-af69-22c660edffd3"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "0067d8600e674bba8be45",
+            "questionText": "During a thunderstorm, a power line suspended between two pylons experiences a strong electric field due to a positively charged cloud overhead. The presence of the cloud induces a negative charge on the ground directly beneath it. Assume that the distance between the cloud and the ground is $!$500 \\text{ m}$!$, and the potential difference between the cloud and the ground is $!$2.0 \\times 10^6 \\text{ V}$!$. Calculate the magnitude of the electric field ($!$E$!$) between the cloud and the ground, assuming a uniform electric field.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "29d759558f0f445baefa1",
+                    "stepText": "Let's start by identifying the correct formula that links the electric field ($!$E$!$), the potential difference ($!$\\Delta V$!$), and the distance ($!$d$!$) in a uniform electric field. Choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c0b53321-be82-4f86-9262-ba7a1549c203"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = \\Delta V / d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = d / \\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\Delta V \\cdot d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\Delta V^2 / d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "322561e424a147db94f37",
+                    "stepText": "Great, now that you have the formula, substitute the given values into it. Use $!$\\Delta V = 2.0\\times10^6\\text{ V}$!$ and $!$d = 500\\text{ m}$!$ to calculate the numerical value of the electric field.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4000"
+                    ],
+                    "stepSolveAnswerUnits": "V/m",
+                    "stepConcepts": [
+                        "c0b53321-be82-4f86-9262-ba7a1549c203"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a4c334d120f1464c8b791",
+                    "stepText": "Finally, review your calculation to confirm that your result represents the magnitude of the uniform electric field between the cloud and the ground.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c0b53321-be82-4f86-9262-ba7a1549c203"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

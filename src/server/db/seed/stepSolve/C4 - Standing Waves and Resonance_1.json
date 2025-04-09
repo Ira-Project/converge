@@ -1,0 +1,242 @@
+{
+    "id": "a08392183e3a47daa4572",
+    "name": "Standing Waves and Resonance",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "54becca77bfe4673835ef",
+            "questionText": "A suspension bridge with a natural frequency of $!$0.5\\,\\mathrm{Hz}$!$ is subjected to wind gusts that exert a periodic force on the bridge. At a particular time, the frequency of the wind gusts is close to the bridge's natural frequency. The bridge has a relatively low damping coefficient, and its span is $!$200\\,\\mathrm{m}$!$. Assuming that the critical amplitude is reached when the energy transferred to the bridge equals $!$5\\times10^7\\,\\mathrm{J/m}$!$, how many cycles of wind gusts at the bridge's natural frequency are required for the amplitude of the bridge's oscillation to reach this critical level?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f765e7f1b9624dba9ceb9",
+                    "stepText": "Let's start by finding the total energy required for the bridge. We know the energy density is given per unit length, and the bridge spans a certain distance. Identify the correct expression that relates the total energy required $!$E_{total}$!$ to the energy density and the span $!$L$!$ of the bridge.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$E_{total} = (\\text{Energy per meter}) \\times L$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_{total} = (\\text{Energy per meter}) + L$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_{total} = \\frac{L}{\\text{Energy per meter}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bdd32ad27de948fd95340",
+                    "stepText": "Great. Now that you have the expression for the total energy, consider the energy added to the bridge by the wind in each cycle. Based on an order-of-magnitude argument in a resonantly driven, lightly-damped system, identify the energy transfer per cycle $!$\\Delta E$!$ that is typically assumed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b3a7838d-1251-4a30-9fd8-7add8add3144",
+                        "c23e1006-4cb9-4e66-891e-4231f4a84553"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta E \\sim 10^7\\,\\mathrm{J/cycle}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta E \\sim 10^5\\,\\mathrm{J/cycle}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E \\sim 10^9\\,\\mathrm{J/cycle}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fa4e76edd53048a4a7be3",
+                    "stepText": "Now, use your results from the previous steps to calculate the number of cycles required. Divide the total energy required by the energy added per cycle. Compute $!$n = \\frac{E_{total}}{\\Delta E}$!$ using the values: energy density $5\\times10^7\\,\\mathrm{J/m}$, bridge span $200\\,\\mathrm{m}$, and $\\Delta E \\sim 10^7\\,\\mathrm{J/cycle}$. What is the numerical value of $!$n$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1000"
+                    ],
+                    "stepSolveAnswerUnits": "cycles",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "41e60e07929e46ebab6bb",
+                    "stepText": "For further insight, if you are interested, you may also determine the total time required if the bridge is being hit at its natural frequency. Using $!$T = n / f$!$, where the natural frequency $!$f$!$ is $0.5\\,\\mathrm{Hz}$, compute the duration of time corresponding to $n$ cycles.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2000"
+                    ],
+                    "stepSolveAnswerUnits": "seconds",
+                    "stepConcepts": [
+                        "524f0548-0ea5-4a4b-8776-652b87aa3602"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "c2961c8a4536485c8d69f",
+            "questionText": "A guitar string is fixed at both ends and has a length of $!$0.75\\,\\mathrm{m}$!$ and a mass per unit length of $!$0.01\\,\\mathrm{kg/m}$!$. When the string vibrates in its fundamental mode, it produces a frequency of $!$220\\,\\mathrm{Hz}$!$. The string is then lightly touched at a point $!$0.25\\,\\mathrm{m}$!$ from one end, forcing it to vibrate in a higher harmonic while the tension in the string remains constant. Determine the new frequency of vibration.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "65ae56d7c03347ddb2e33",
+                    "stepText": "Let's start by identifying the equation needed to compute the wave speed $!$v$!$ for a string vibrating in its fundamental mode. Which of the following formulas correctly relates $!$v$!$ to the length $!$L$!$ and the fundamental frequency $!$f$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "001c90f1-aa84-454f-b15c-1c8c7c11db88"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = 2L f$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = L f/2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = L f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "aabc433cae514c98a2c72",
+                    "stepText": "Great! Now, using your chosen formula and the given values $!$L = 0.75\\,\\mathrm{m}$!$ and $!$f = 220\\,\\mathrm{Hz}$!$, calculate the wave speed $!$v$!$. Recall that you are multiplying $!$2$, $!$L$, and $!$f$!$ together.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "330"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "001c90f1-aa84-454f-b15c-1c8c7c11db88"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "05ecb71a471b42c78f068",
+                    "stepText": "Now, consider that touching the string lightly at $!$0.25\\,\\mathrm{m}$!$ forces a node at that point. Identify the correct expression that gives the location of a node in a standing wave on a string fixed at both ends.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2cd535a8-0dc0-4553-a558-05a880670546"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$x = \\frac{m}{n}L$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$x = \\frac{n}{m}L$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$x = \\frac{L}{2n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e78ba97567ee4740926ca",
+                    "stepText": "Using the node condition $!$x = (m/n)L$!$ with $!$x = 0.25\\,\\mathrm{m}$!$ and $!$L = 0.75\\,\\mathrm{m}$!$, and choosing the smallest integer $!$m=1$!$, determine the harmonic number $!$n$!$. (Hint: Solve for $!$n$!$ such that $!$m/n = 0.25/0.75$!$.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2cd535a8-0dc0-4553-a558-05a880670546"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "83cf9b3f4f474885bc83e",
+                    "stepText": "Now that you have determined the harmonic number $!$n$!$, let's select the correct formula that relates the frequency of the $!$n^{th}$!$ harmonic to the wave speed $!$v$!$ and the string length $!$L$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6efad7ba-9922-43c6-86b6-ad0cd8b75bd2",
+                        "524f0548-0ea5-4a4b-8776-652b87aa3602"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f = \\frac{n v}{2L}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = \\frac{v}{nL}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = \\frac{2L}{n v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4354680ce6714601be746",
+                    "stepText": "Finally, using the correct formula with $!$n = 3$!$, $!$v = 330\\,\\mathrm{m/s}$!$, and $!$L = 0.75\\,\\mathrm{m}$!$, calculate the new frequency of vibration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "660"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "6efad7ba-9922-43c6-86b6-ad0cd8b75bd2",
+                        "524f0548-0ea5-4a4b-8776-652b87aa3602"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

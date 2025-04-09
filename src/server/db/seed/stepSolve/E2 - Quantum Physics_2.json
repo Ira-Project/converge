@@ -1,0 +1,292 @@
+{
+    "id": "2a4e7f7ca8444c74be3e0",
+    "name": "Quantum Physics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "c93765de1e9c494d83ced",
+            "questionText": "An electron is confined within a one-dimensional quantum dot of length $!$L = 5 \\text{ nm}$!$. Assuming the electron behaves as a wave described by the de Broglie hypothesis and that its orbit equals twice the length of the quantum dot, determine the electron's velocity given Planck's constant $!$h = 6.626 \\times 10^{-34} \\text{ Js}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "dcc0086906734c8395ef8",
+                    "stepText": "Let's start by considering the standing wave condition for an electron confined in a one-dimensional box. Identify the correct relationship between the wavelength $!$\\lambda$!$ and the length $!$L$!$ of the quantum dot, given that the orbit equals twice the dot's length.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = 2L$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = L$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = L/2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "81984d25d1f5405db41ca",
+                    "stepText": "Great. Now, using the selected relation and the given length $!$L = 5 \\times 10^{-9}$!$ m, calculate the electron's wavelength $!$\\lambda$!$. (Remember to substitute the value for $!$L$!$ properly.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1e-8"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "4d63e76c315049f0a69e8",
+                    "stepText": "Next, let\u2019s use the de Broglie relation to connect the momentum of the electron with its wavelength. Please choose the formula that correctly relates the momentum $!$p$!$, Planck's constant $!$h$!$, and the wavelength $!$\\lambda$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p = \\frac{h}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = h \\times \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = \\frac{\\lambda}{h}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "359527413f0f47dbadd7a",
+                    "stepText": "Using the correct relation from the previous step and the given value $!$h = 6.626 \\times 10^{-34}$!$ J\\,s, along with the wavelength you computed, calculate the electron's momentum $!$p$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.626e-26"
+                    ],
+                    "stepSolveAnswerUnits": "kg\\,m/s",
+                    "stepConcepts": [
+                        "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e93bd8c7d74a4505b12ee",
+                    "stepText": "Now, let's link the electron's momentum to its velocity. Choose the appropriate formula that connects momentum $!$p$!$, electron mass $!$m$!$, and velocity $!$v$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\frac{p}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{m}{p}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = p \\times m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "911f6c8a15834242b40cb",
+                    "stepText": "Finally, use the relation from the previous step to compute the electron's velocity $!$v$!$, using the momentum you calculated ($!$6.626 \\times 10^{-26}$!$ kg\\,m/s) and the electron mass $!$m = 9.11 \\times 10^{-31}$!$ kg.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.27e4"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "b5cad2f2fa0d42f4bb60f",
+            "questionText": "A photodetector in a telescope uses a metal with a work function $!$\\phi = 2.5 \\text{ eV}$!$. The detector is exposed to light from a distant galaxy with a frequency $!$f = 8 \\times 10^{14} \\text{ Hz}$!$. Calculate the stopping voltage $!$V_s$!$ required to halt the emitted photoelectrons. Use the relations $!$E_{photoelectron} = hf - \\phi$!$, $!$E = e V_s$!$, Planck's constant $!$h = 6.626 \\times 10^{-34} \\text{ Js}$!$, and the conversion $!$1 \\text{ eV} = 1.602 \\times 10^{-19} \\text{ J}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4291cdd1658046d39492d",
+                    "stepText": "Let's start by identifying the correct relation that gives the energy of a photon when its frequency is known. Please select the appropriate formula that connects energy and frequency.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fc61ca59-6b90-4172-8d29-30967a79b1ef"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = hf$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{hf}{c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = eV$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5f027e49401f472b8c117",
+                    "stepText": "Great! Now use the identified formula to calculate the energy of the incoming photon by multiplying Planck's constant $!$h = 6.626 \\times 10^{-34} \\text{ Js}$!$ with the frequency $!$f = 8 \\times 10^{14} \\text{ Hz}$!$. Compute this product to obtain the photon energy in joules.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.3008e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "fc61ca59-6b90-4172-8d29-30967a79b1ef"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ab4d4a78f1194dbda6676",
+                    "stepText": "Next, we need to convert the metal's work function from electron volts to joules. Identify the correct conversion factor for converting eV to J.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$1 \\text{ eV} = 1.602 \\times 10^{-19} \\text{ J}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1 \\text{ J} = 1.602 \\times 10^{-19} \\text{ eV}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1 \\text{ eV} = 6.626 \\times 10^{-34} \\text{ J}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "eecab25249b141c8ae9b5",
+                    "stepText": "Using the conversion factor, calculate the work function in joules by multiplying $!$2.5 \\text{ eV}$!$ by the conversion factor. What is the work function in joules?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.005e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "b63cfff7-c0f2-44a2-84ab-5c9c9407941e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "820521342b9e4523bc9c0",
+                    "stepText": "Now determine the maximum kinetic energy of the photoelectron by subtracting the work function (in joules) from the photon energy calculated earlier. What is this kinetic energy?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.2958e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381",
+                        "b63cfff7-c0f2-44a2-84ab-5c9c9407941e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ea18d55258a8453eb6fbc",
+                    "stepText": "Finally, identify the correct relation that connects the kinetic energy of the emitted electron to the stopping voltage $!$V_s$!$. Which formula correctly relates these quantities?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V_s = \\frac{E}{e}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V_s = E \\cdot e$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_s = \\sqrt{\\frac{E}{e}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "aa1ea499cf2241adada73",
+                    "stepText": "Using the correct formula from the previous step, calculate the stopping voltage $!$V_s$!$ by dividing the kinetic energy of the photoelectron by the elementary charge $!$e = 1.602 \\times 10^{-19} \\text{ C}$!$. What is the stopping voltage?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.81"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

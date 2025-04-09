@@ -1,0 +1,186 @@
+{
+    "id": "bfb3b3ab5a924d3c98bcb",
+    "name": "Thermal Energy Transfers",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "ec20b111adbe42dfa812b",
+            "questionText": "An engineer is designing a solar water heater using a black metal plate exposed to sunlight to heat water flowing through pipes. The plate has a surface area of $!$2 \\; m^2$!$ and reaches a temperature of $!$80^\\circ C$!$ on a sunny day. Assuming the plate behaves as a perfect black body, calculate the radiated intensity in $!$W/m^2$!$. First convert the Celsius temperature to Kelvin. Use the Stefan-Boltzmann constant, $!$\\sigma = 5.67 \\times 10^{-8} \\;W\\,m^{-2}\\,K^{-4}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7cc0790a23914843a9819",
+                    "stepText": "Let's start by identifying the correct formula for converting a temperature from Celsius to Kelvin. Please select the appropriate conversion expression.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c6bf6d0a-28fa-49be-b9a9-78e246403dae",
+                        "9c067b29-5b92-4476-b2d5-d21d8461c543"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T_K = T_C + 273$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T_K = T_C - 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T_K = T_C \\times 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "df3f3b01ef2f4da084cdb",
+                    "stepText": "Great! Now, using the formula you selected, convert the temperature $!$80^\\circ C$!$ to Kelvin by performing the appropriate calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "353.15"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "c6bf6d0a-28fa-49be-b9a9-78e246403dae",
+                        "9c067b29-5b92-4476-b2d5-d21d8461c543"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fc23049dfb2d4f609cfbd",
+                    "stepText": "Next, identify the correct formula used to calculate radiated intensity from a black body according to the Stefan-Boltzmann law. Please choose the right expression.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "24ae2b53-8791-43f2-912d-9283b7a97b08"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{T^4}{\\sigma}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\sigma \\sqrt{T}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "39effccb01a24e57a9ef9",
+                    "stepText": "Finally, calculate the radiated intensity by using the Kelvin temperature obtained in Step 2 and the Stefan-Boltzmann law. Use the given $!$\\sigma = 5.67 \\times 10^{-8} \\;W\\,m^{-2}\\,K^{-4}$!$. Enter the computed intensity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "883"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [
+                        "b0ad1633-e25d-4572-ae32-9ff8680691a6",
+                        "24ae2b53-8791-43f2-912d-9283b7a97b08"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "435d759bfed749ada0ad5",
+            "questionText": "A blacksmith heats a $!$0.5 \\; kg$!$ metal horseshoe in a forge. The horseshoe, initially at room temperature ($!$25^{\\circ}C$!$), is plunged into a $!$5 \\; kg$!$ water bath (initially at $!$20^{\\circ}C$!$) for quenching. Assuming the specific heat capacity of the metal is $!$450 \\; J/kg \\cdot K$!$ and the specific heat capacity of water is $!$4186 \\; J/kg \\cdot K$!$, and that the horseshoe is heated to $!$800^{\\circ}C$!$ before being plunged into water, calculate the final temperature of the water and horseshoe after thermal equilibrium is achieved. Neglect heat losses to the surroundings.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "80f359a2882f4e5785505",
+                    "stepText": "Let's start by identifying the correct formula used to calculate the amount of heat transferred when the temperature changes. Which of the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = mc\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = m\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = c\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "70d211f3fe2744dcae29a",
+                    "stepText": "Great! Now, using the heat transfer formula, calculate the product of the mass and specific heat capacity for the metal horseshoe. Multiply its mass ($!$0.5\\;kg$!$) by its specific heat capacity ($!$450\\;J/kg\\cdot K$!$). What value do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "225"
+                    ],
+                    "stepSolveAnswerUnits": "J/K",
+                    "stepConcepts": [
+                        "9414abbf-4451-4fb2-8108-34d36766c93b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c0567a649cf8408e89957",
+                    "stepText": "Excellent. Next, compute the product of the mass and specific heat capacity for the water bath. Multiply the mass of water ($!$5\\;kg$!$) by its specific heat capacity ($!$4186\\;J/kg\\cdot K$!$). What result do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20930"
+                    ],
+                    "stepSolveAnswerUnits": "J/K",
+                    "stepConcepts": [
+                        "9414abbf-4451-4fb2-8108-34d36766c93b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b3c8dc2db4ac4ad78ee0a",
+                    "stepText": "Now, apply the principle of conservation of energy. The heat lost by the metal must be equal to the heat gained by the water, which can be expressed as: $!$225 \\times \\Delta T_{metal} = 20930 \\times \\Delta T_{water}$!$. Set up and solve this equation to find the final equilibrium temperature.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "28.3"
+                    ],
+                    "stepSolveAnswerUnits": "\u00b0C",
+                    "stepConcepts": [
+                        "e47ccd3a-7157-4ee3-83e7-67c329486e3f"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

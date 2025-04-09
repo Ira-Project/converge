@@ -1,0 +1,165 @@
+{
+    "id": "687f2f909a9f4e73b9504",
+    "name": "Wave Phenomena",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "d3afbfaff12f465b8f7dc",
+            "questionText": "A white light source is incident on a diffraction grating that has 600 lines per millimeter. The resulting diffraction pattern is observed on a screen placed 1.5 meters away from the grating. Calculate the angular separation $!$\\Delta \\theta$!$ between the red light (wavelength $!$\\lambda_{red} = 700 \\text{ nm}$!$) and the blue light (wavelength $!$\\lambda_{blue} = 400 \\text{ nm}$!$) in the first-order spectrum.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c268997a96344d0e9acac",
+                    "stepText": "Let's begin by determining the spacing $!$d$!$ between the grating lines. Convert the provided 600 lines per millimeter to lines per meter and then use the reciprocal to compute $!$d$!$. What numerical value do you get for $!$d$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.67e-6"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "15cf7c79-9158-42b2-b21a-603d53e13a58"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3970d70aedd745dab9741",
+                    "stepText": "Great! Now, for the first-order diffraction (with order $!$m = 1$!$), we need to recall the formula that relates the grating spacing, the diffraction angle, and the wavelength. Please choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "15cf7c79-9158-42b2-b21a-603d53e13a58"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d \\sin \\theta = m\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d \\cos \\theta = m\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d \\tan \\theta = m\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "62c66088069f4835a21ac",
+                    "stepText": "Now that you have the correct relation, use it to calculate the diffraction angle for red light. Remember to first express the red wavelength in meters and then compute $!$\\theta_{red} = \\arcsin(\\lambda_{red}/d)$!$. What is the value of $!$\\theta_{red}$!$ in degrees?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "24.8"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [
+                        "15cf7c79-9158-42b2-b21a-603d53e13a58"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a240fce5d51a47aca13e9",
+                    "stepText": "Excellent! Next, apply the same process for the blue light by calculating $!$\\theta_{blue} = \\arcsin(\\lambda_{blue}/d)$!$. Make sure to convert the blue wavelength to meters before plugging it in. What value do you obtain for $!$\\theta_{blue}$!$ in degrees?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "13.9"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [
+                        "15cf7c79-9158-42b2-b21a-603d53e13a58"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8c389b03f37247848a240",
+                    "stepText": "Finally, determine the angular separation $!$\\Delta \\theta$!$ between the red and blue light by subtracting the blue angle from the red angle. What is the value of $!$\\Delta \\theta$!$ in degrees?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10.9"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [
+                        "15cf7c79-9158-42b2-b21a-603d53e13a58"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "f2d40b939d6c4dd295391",
+            "questionText": "In a double-slit experiment, two slits are separated by a distance $!$d = 0.2 \\text{ mm}$!$. A screen is placed at a distance $!$D = 1.0 \\text{ m}$!$ from the slits. If the fifth-order bright fringe is observed at a distance $!$2$!$ cm from the central bright fringe, determine the wavelength $!$\\lambda$!$ of the light used in the experiment.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9392d87de5bb490889238",
+                    "stepText": "Let's start by recalling the formula that relates the position of a bright fringe (y), the fringe order (m), the wavelength ($!$\\lambda$!$), the distance to the screen ($!$D$!$), and the slit separation ($!$d$!$). Please select from the options the expression that correctly represents this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a4304044-8d79-4983-a6c4-1fc06a60398b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$y = \\frac{m\\lambda D}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$y = \\frac{\\lambda d}{mD}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$y = \\frac{mD}{\\lambda d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6a8bef79d79243f6a803c",
+                    "stepText": "Great, now that you have the relationship, rearrange the formula to solve for $!$\\lambda$!$ and substitute the given values: $!$y = 0.02\\,m$!$, $!$d = 2 \\times 10^{-4}\\,m$!$, $!$m = 5$!$, and $!$D = 1.0\\,m$!$. Calculate the numerical value for $!$\\lambda$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a4304044-8d79-4983-a6c4-1fc06a60398b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1ada346afa82470682026",
+                    "stepText": "Now, to interpret your result, convert the wavelength from meters to nanometers. Recall that $!$1\\,m = 10^{9}\\,nm$!$. Compute the wavelength in nanometers.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "800"
+                    ],
+                    "stepSolveAnswerUnits": "nm",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

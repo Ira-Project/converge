@@ -88,38 +88,17 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
     setQuestionStates(prev => {
       const newStates = [...prev];
       if (newStates[currentQuestionIndex]) {
-        const currentStep = currentQuestion.q.steps.find(step => step.id === input.stepId);
-        const isLastStep = currentStep?.stepNumber === currentQuestion.q.steps.length;
         
         newStates[currentQuestionIndex] = {
           ...newStates[currentQuestionIndex],
-          currentStepCorrect: result.isCorrect,
-          // If it's the last step and the answer is correct, automatically increment the step
-          step: result.isCorrect && isLastStep ? newStates[currentQuestionIndex].step + 1 : newStates[currentQuestionIndex].step,
+          currentStepCorrect: result.isCorrect ? undefined : result.isCorrect,
+          step: result.isCorrect ? newStates[currentQuestionIndex].step + 1 : newStates[currentQuestionIndex].step,
           questionAttemptId: result.questionAttemptId
         };
       }
       return newStates;
     });
   }
-
-  const handleContinue = () => {
-    posthog.capture("step_solve_continue_clicked");
-    setQuestionStates(prev => {
-      const newStates = [...prev];
-      const currentState = newStates[currentQuestionIndex];
-      
-      if (currentState && currentState.step === currentState.step) {
-        newStates[currentQuestionIndex] = {
-          ...currentState,
-          step: currentState.step + 1,
-          currentStepCorrect: undefined
-        };
-      }
-      return newStates;
-    });
-  };
-
 
   return (
     <div className="flex flex-col">
@@ -217,7 +196,6 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
                         isCorrect={currentState?.currentStepCorrect}
                         isLoading={checkStepMutation.isLoading}
                         isDisabled={checkStepMutation.isLoading}
-                        handleContinue={handleContinue}
                         isLast={step.stepNumber === currentQuestion.q.steps.length}
                         stepSolveAnswerUnits={step.stepSolveAnswerUnits ?? undefined} />
                       {

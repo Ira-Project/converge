@@ -1,0 +1,168 @@
+{
+    "id": "ad402cd738514456a4ed4",
+    "name": "Wave Model",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "af57382502a04d1fbdeae",
+            "questionText": "A radio antenna broadcasts electromagnetic waves at a frequency of $!$98.5 \\ MHz$!$. The signal travels through the atmosphere to a receiver located $!$50 \\ km$!$ away. Due to atmospheric conditions, there is a delay of $!$20 \\ \\mu s$!$ in the signal's arrival. Considering that electromagnetic waves are produced by accelerating charges and travel at the speed of light, calculate the phase difference between the emitted and received signal at the receiver.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "092da3ffeeff4b0a865d5",
+                    "stepText": "Let's start by identifying the formula that relates phase difference with frequency and time delay. Please select the correct formula for computing the phase difference (\\(\\Delta\\phi\\)) from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0c3ff372-9bd8-4961-9294-ab325dbdc20e",
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta\\phi = 2\\pi f \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta\\phi = f \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta\\phi = 2\\pi \\frac{\\Delta t}{T}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5834c10e25ce4cee9c6d3",
+                    "stepText": "Great! Now, calculate the product of the frequency and the time delay. Recall that the frequency is given in megahertz (MHz) and the time delay in microseconds (\\(\\mu s\\)). Convert these values to base units (Hz for frequency and seconds for time) before multiplying. What is the computed product \\(f \\Delta t\\)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1970"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "dd940ad041014e7aa7d89",
+                    "stepText": "Excellent! Next, use the product from the previous step to compute the phase difference by multiplying it by \\(2\\pi\\). What is the total phase difference (in radians) before considering its periodicity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12374"
+                    ],
+                    "stepSolveAnswerUnits": "radians",
+                    "stepConcepts": [
+                        "0c3ff372-9bd8-4961-9294-ab325dbdc20e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "cffd25a97b9e4953bc610",
+                    "stepText": "Finally, remember that phase is periodic modulo \\(2\\pi\\). Considering this periodicity, determine the effective phase difference between the emitted and received signals. What is the phase difference after accounting for complete cycles?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0"
+                    ],
+                    "stepSolveAnswerUnits": "radians",
+                    "stepConcepts": [
+                        "0c3ff372-9bd8-4961-9294-ab325dbdc20e"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "97474456b1ae41dea9043",
+            "questionText": "A medical ultrasound device emits sound waves at a frequency of $!$5 \\ MHz$!$ for imaging a liver. The speed of sound in the liver tissue is $!$1540 \\ m/s$!$. If the ultrasound frequency is increased to $!$7.5 \\ MHz$!$, determine the new wavelength of the sound waves within the liver tissue.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e2702ddb14a04cb8a10f4",
+                    "stepText": "Let's start by identifying the correct relationship between wave speed, frequency, and wavelength. Please select the formula that correctly relates these quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e0895152-4252-461e-a416-6c7cf6bf732b",
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{v}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{\\lambda}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = v \\times \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b6421a0a8592473aa6f86",
+                    "stepText": "Great, now let's convert the increased ultrasound frequency from $!$MHz$!$ to $!$Hz$!$. Remember that $!$1 \\ MHz = 10^6 \\ Hz$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7500000"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d11cdd3f3cfe422380289",
+                    "stepText": "Now that we have the frequency in $!$Hz$!$, use the relationship you identified to calculate the wavelength in $!$m$!$. Use the speed of sound $!$1540 \\ m/s$!$ and the frequency from the previous step.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0002053"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7cf13dfaaa7448a28c3ff",
+                    "stepText": "Finally, convert the wavelength from $!$m$!$ to $!$mm$!$ using the conversion factor $!$1 \\ m = 1000 \\ mm$!$. What is the wavelength in millimeters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.2053"
+                    ],
+                    "stepSolveAnswerUnits": "mm",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

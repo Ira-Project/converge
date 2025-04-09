@@ -1,0 +1,214 @@
+{
+    "id": "91192f8791ac4deda928e",
+    "name": "Thermodynamics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "b67595b48c44466b932a6",
+            "questionText": "An air conditioning system utilizes a refrigerant in a cyclical process to cool a room. The refrigerant absorbs $!$Q_C$!$ = 10,000 J of heat from a room maintained at $!$T_C$!$ = 20$!$^{\\circ}$!$C and releases $!$Q_H$!$ = 12,000 J of heat to the outside environment at $!$T_H = 40^{\\circ}C$!$. Given that the air conditioner operates at 30% of the Carnot efficiency, calculate the change in entropy of the refrigerant during one cycle.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "dc3631835c5b47feb4c3a",
+                    "stepText": "Let's start by recalling that for a cyclic process the working substance returns to its initial state. Please select the statement that correctly describes the behavior of a state function, such as entropy, over one complete cycle.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f09c9f23-33c2-4305-94b6-2390bc04ae54",
+                        "abaeb8c1-1a59-4643-8d11-75f973d9c2ba"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta S=0 \\text{ over a cycle}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta S=\\frac{Q}{T} \\text{ for the entire cycle}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta S \\text{ equals the net heat exchanged during the process}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b51acc51d20f49f3aadab",
+                    "stepText": "Now, using the idea that the refrigerant, after a full cycle, returns to its initial state, determine the net change in its entropy. Provide your numerical answer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0"
+                    ],
+                    "stepSolveAnswerUnits": "J/K",
+                    "stepConcepts": [
+                        "f09c9f23-33c2-4305-94b6-2390bc04ae54",
+                        "abaeb8c1-1a59-4643-8d11-75f973d9c2ba"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "77f0a934ae36498b83f88",
+                    "stepText": "Great, now that you've determined the net entropy change of the refrigerant, distinguish this from the entropy changes in the room and the outside environment. Select the explanation that correctly identifies how the refrigerant's behavior differs from that of its surroundings.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f09c9f23-33c2-4305-94b6-2390bc04ae54",
+                        "abaeb8c1-1a59-4643-8d11-75f973d9c2ba"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "The refrigerant experiences zero net entropy change over the cycle, while the reservoirs (room and outside) may show non-zero entropy changes due to heat transfers.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Both the refrigerant and its surroundings undergo the same non-zero net entropy change for the cycle.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The refrigerant's entropy change exactly equals the algebraic sum of the entropy changes in the room and the outside.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "faa7d6776d5c4831b7d88",
+            "questionText": "A physics student rapidly compresses air inside a well-insulated cylinder fitted with a piston. Initially, the air occupies a volume of $!$V_1 = 5.0 \\times 10^{-4} \\ m^3$!$ at atmospheric pressure $!$P_1 = 1.013 \\times 10^5 \\ Pa$!$ and room temperature $!$T_1 = 22^\\circ C$!$. The air is quickly compressed to one-tenth of its original volume. Considering this compression as an adiabatic process, estimate the change in internal energy of the air during this process.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8c9dbf585d644c65a42ed",
+                    "stepText": "Let's begin by determining the number of moles of air using the ideal gas law. Identify the correct formula that relates pressure, volume, temperature, and the number of moles.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$n = \\frac{P V}{R T}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$n = \\frac{P T}{R V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$n = \\frac{R T}{P V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9d370e96abb0471ba6fbd",
+                    "stepText": "Great. Now, consider that the process is adiabatic. Please choose the correct adiabatic relationship that will help you determine the final temperature after compression.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a65d2074-4916-4415-ae69-7e9a255f26f2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T V^{\\gamma-1} = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P V^{\\gamma} = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T P^{1-\\gamma} = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ed3a1613f34b47f4bee1b",
+                    "stepText": "Now that you have the relationships, calculate the change in temperature $!$\\Delta T = T_2 - T_1$!$ knowing that $!$T_2 = T_1 \\left(\\frac{V_1}{V_2}\\right)^{\\gamma-1}$!$. Use $!$T_1 = 295\\;K$!$, a compression factor of 10, and $!$\\gamma-1 = 0.4$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "445"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "101273f4b1714d9bh8svb",
+                    "stepText": "To calculate the change in internal energy, what formula should we use?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6b9a3453-b091-4328-827e-1b1b99fdc62f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta U = n C_v \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta U = 3/2 n R \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta U = 3/2 k_B T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "101273f4b1714d9b84d9b",
+                    "stepText": "Finally, compute the change in internal energy using the relation above where $!$n$!$ is determined from step 1 and $!$\\Delta T$!$ is determined from step 2. What is the change in internal energy?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "191"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "6b9a3453-b091-4328-827e-1b1b99fdc62f"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

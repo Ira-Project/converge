@@ -1,0 +1,209 @@
+{
+    "id": "afef2eb6f12b410bb0d27",
+    "name": "Gas Laws",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "337c2f7795364fbcb0172",
+            "questionText": "A container holds argon gas at an initial state where the pressure, $!$P_1$!$, is $!$2 \\text{ atm}$!$ and the temperature, $!$T_1$!$, is $!$300 \\text{ K}$!$. The number of argon atoms is doubled, and the internal energy of the gas is quadrupled. Assuming the volume of the container remains constant, determine the final pressure, $!$P_2$!$, in atmospheres.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c13ef2190a8046068f49c",
+                    "stepText": "Let's start by recalling the formula used to calculate the internal energy of a monatomic ideal gas. Please identify the correct formula below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1ee9b2cb-3884-442f-83e1-a5f64a7559e2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$U = \\frac{3}{2} N k T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$U = N k T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$U = \\frac{5}{2} N k T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cb0ff5fbeee1450f9aedd",
+                    "stepText": "Now, using the relationship for internal energy and the given changes\u2014doubling the number of atoms and quadrupling the internal energy\u2014determine the new temperature. If the initial temperature $!$T_1$!$ is 300 K, calculate $!$T_2$!$ based on these changes.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "600"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "1ee9b2cb-3884-442f-83e1-a5f64a7559e2"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1ec352910da94524b3202",
+                    "stepText": "Great! Next, recall that at constant volume, the ideal gas law indicates that pressure is proportional to the product $!$N k T$!$. Identify the correct formula that relates pressure, number of particles, and temperature when volume is constant.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = \\frac{NkT}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = NkTV$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{N}{V} T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b13fe10bd8674aa593e73",
+                    "stepText": "Finally, use the proportional relationship from the ideal gas law. Since the number of atoms doubles and the temperature you computed in Step 2 has increased, determine the final pressure $!$P_2$!$ if the initial pressure $!$P_1$!$ is 2 atm.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "atm",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+         {
+            "id": "e1ec76f980414c2bb7b35",
+            "questionText": "A sealed bag of potato chips contains $!$2 \\text{ g}$!$ of nitrogen gas ($!$N_2$!$) at an initial temperature of $!$25 ^\\circ \\text{C}$!$ and a pressure of $!$1 \\text{ atm}$!$. The bag is transported to a mountain location where the atmospheric pressure drops to $!$0.7 \\text{ atm}$!$ and the temperature decreases to $!$10 ^\\circ \\text{C}$!$. Given that the molar mass of $!$N_2$!$ is approximately $!$28 \\text{ g/mol}$!$, calculate the final volume of the bag as a percentage of its initial volume.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9209708e626541188e67e",
+                    "stepText": "Let's start by determining the number of moles of $!$N_2$!$ using the substance's mass and molar mass. Please identify the correct formula to calculate the number of moles when given mass and molar mass.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cea261f3-185d-4b25-a018-242587beafe2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$n = \\frac{m}{\\mu}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$n = m \\times \\mu$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$n = \\frac{\\mu}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0cb64b01f07e4153bf452",
+                    "stepText": "Now, convert the initial temperature from $!$^\\circ C$!$ to Kelvin. Recall that you add $!$273$!$ to the Celsius value. What is the initial temperature in Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "298"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "5a7ed906a50b4735bb8c7",
+                    "stepText": "Next, convert the final temperature from $!$^\\circ C$!$ to Kelvin using the same conversion. What is the final temperature in Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "283"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "1380e38c5b54427a91cdb",
+                    "stepText": "Moving forward, we need to use the Ideal Gas Law to determine the volume of a gas. Please choose the correct formula that relates volume with the number of moles, the universal gas constant, temperature, and pressure.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = \\frac{nRT}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{P}{nRT}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = nRT \\times P$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "dd6e961707104df7966b1",
+                    "stepText": "Finally, using your previous computations, determine the final volume expressed as a percentage of the initial volume. Consider that the ratio of the final to initial volume can be calculated with $!$\\frac{V_2}{V_1}=\\frac{T_2}{T_1}\\times\\frac{P_1}{P_2}$!$. Compute this ratio and then convert it to a percentage.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "136"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

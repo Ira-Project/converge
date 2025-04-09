@@ -1,0 +1,244 @@
+{
+    "id": "c20ab165eb204ada97896",
+    "name": "Radioactive Decay",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "0430546575464eb1a4e95",
+            "questionText": "A hospital receives a shipment of Iodine-131 ($!$I-131$!$) with an initial activity ($!$A_0$!$) of 50 mCi. $!$I-131$!$ is used for thyroid treatments. Given that the half-life ($!$T_{1/2}$!$) of $!$I-131$!$ is approximately 8 days and considering the random and spontaneous nature of radioactive decay, what will be the activity of the $!$I-131$!$ sample after 24 days? Use the formula $!$A = A_0 e^{-\\lambda t}$!$ to find the activity.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5dfe31c513ea4a71ab090",
+                    "stepText": "Let's start by recalling the relation for the decay constant. Identify the correct formula that relates the decay constant $!$\\lambda$!$ to the half-life $!$T_{1/2}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d",
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{ln2}{T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = T_{1/2} \\cdot ln2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{T_{1/2}}{ln2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = T_{1/2}^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9b3f8158e41644cc83225",
+                    "stepText": "Now that you have the proper formula, calculate the numerical value for $!$\\lambda$!$ using $!$T_{1/2} = 8\\ \\text{days}$!$ and $!$ln2 \\approx 0.693$!$. What is the value of $!$\\lambda$!$ in $!$/day$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0866"
+                    ],
+                    "stepSolveAnswerUnits": "1/day",
+                    "stepConcepts": [
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d",
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e2c6d81b6b774e799a703",
+                    "stepText": "Great, now identify the decay law you will use to compute the remaining activity of the sample over time. Which formula correctly represents the activity $!$A$!$ as a function of the initial activity $!$A_0$!$, decay constant $!$\\lambda$!$, and time $!$t$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 e^{-\\lambda t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 e^{\\lambda t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = A_0 - \\lambda t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = \\frac{A_0}{1 + \\lambda t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c4dc1f7f3f1f428b94af4",
+                    "stepText": "Finally, substitute $!$A_0 = 50\\ \\text{mCi}$!$, $!$t = 24\\ \\text{days}$!$, and your computed $!$\\lambda$!$ into the decay equation to calculate the final activity. What is the activity of the $!$I-131$!$ sample after 24 days?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.25"
+                    ],
+                    "stepSolveAnswerUnits": "mCi",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5",
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d",
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "95529e208d5c40229d266",
+            "questionText": "A nuclear power plant experiences a leak, releasing Strontium-90 ($!$Sr-90$!$) into the surrounding environment. $!$Sr-90$!$ has a half-life ($!$T_{1/2}$!$) of approximately 29 years. If the initial concentration of $!$Sr-90$!$ in the soil is measured to be $!$C_0$!$, environmental scientists determine that the safe level of concentration is $!$C_0/8$!$. How many years will it take for the concentration of $!$Sr-90$!$ in the soil to decrease to a safe level, given the random nature of radioactive decay? Use the formula $!$A = A_0 e^{-\\lambda t}$!$ to estimate the time.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d946ff2f7103496fb4e2e",
+                    "stepText": "Let's start by identifying the radioactive decay law that models the decrease in concentration of a substance over time. Which one of the following equations is the correct decay formula?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 e^{-\\lambda t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 - \\lambda t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = A_0 (1 - \\lambda t)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a0803f4746d449118a9c9",
+                    "stepText": "Now, consider that the concentration decreases from its initial value $!$C_0$!$ to a safe level of $!$C_0/8$!$. After dividing by $!$C_0$!$, set up the equation relating the exponential term to the safe fraction. Which of the following correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$e^{-\\lambda t} = 1/8$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$e^{-\\lambda t} = 8$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$e^{-\\lambda t} = 1/2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "dfd5fbcb47584521a1c22",
+                    "stepText": "Next, we need to relate the decay constant $!$\\lambda$!$ to the half-life $!$T_{1/2}$!$. Which of the following formulas correctly defines $!$\\lambda$!$ in terms of the half-life?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{ln(2)}{T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{T_{1/2}}{ln(2)}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{ln(8)}{T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b4cfbe5182514699bb539",
+                    "stepText": "Using the relation from the previous step and given that the half-life $!$T_{1/2}$!$ is 29 years, please calculate the decay constant $!$\\lambda$!$ by substituting $!$T_{1/2} = 29$!$ years. (Hint: Use an approximate value for $!$ln(2)$!$ if needed.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0239"
+                    ],
+                    "stepSolveAnswerUnits": "yr^{-1}",
+                    "stepConcepts": [
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d17d8b3a8fa94490a34e2",
+                    "stepText": "Finally, with $!$e^{-\\lambda t} = 1/8$!$ and the computed decay constant, solve for the time $!$t$!$ needed for the concentration to reach the safe level. Substitute the expression for $!$\\lambda$!$ and calculate $!$t$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "87"
+                    ],
+                    "stepSolveAnswerUnits": "years",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5",
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

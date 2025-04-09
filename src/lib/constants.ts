@@ -12,6 +12,10 @@ export enum Paths {
   ResetPassword = "/reset-password",
   GoogleLogin = "/login/google",
   Classroom = "/",
+  Activities = "/activities",
+  Documentation = "/documentation",
+  Leaderboard = "/leaderboard",
+  Analytics = "/analytics",
   LearnByTeaching = "/learn-by-teaching/",
   ReasonTrace = "/reason-trace/",
   KnowledgeZap = "/knowledge-zap/",
@@ -21,6 +25,10 @@ export enum Paths {
   CreateAssignment = "/create-assignment/",
   Activity = "/activity/",
   LiveActivity = "live",
+}
+
+export enum ComponentIds {
+  CreateAssignment = "create-assignment",
 }
 
 export enum Roles {
@@ -168,3 +176,7 @@ export const LEARN_BY_TEACHING_ASSIGNMENT_SCORE = 10
 export const CONCEPT_MAPPING_ASSIGNMENT_SCORE = 10
 export const STEP_SOLVE_ASSIGNMENT_SCORE = 10
 export const READ_AND_RELAY_ASSIGNMENT_SCORE = 10
+
+export const MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE = 20;
+
+export const STEP_SOLVE_ANSWER_TOLERANCE = 0.05;

@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "fb6a586a43874c8693aa9",
-                    "stepText": "Let's start by identifying the formula for kinetic energy. Please choose the correct formula that relates mass, velocity, and kinetic energy.",
+                    "id": "68598f79ad2a4f758d225",
+                    "stepText": "Let's start by finding the initial kinetic energy of the car using its mass and initial speed. Identify the correct formula for kinetic energy.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -24,39 +24,25 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$E_k = \\frac{1}{2}mv^2$!$",
+                            "optionText": "$!$KE = \\frac{1}{2} mv^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$E_k = mv^2$!$",
+                            "optionText": "$!$KE = mv^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$E_k = \\frac{mv}{2}$!$",
+                            "optionText": "$!$KE = mv$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "81ff65c27abf4ca487739",
-                    "stepText": "Great, now calculate the initial kinetic energy of the car using the mass $!$1200 kg$!$ and initial speed $!$10 m/s$!$. Use the kinetic energy formula you identified in the previous step.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "60000"
-                    ],
-                    "stepSolveAnswerUnits": "J",
-                    "stepConcepts": [
-                        "0f719348-94a2-4b8e-8cd8-638039f27e60"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "d47678b825004fe1a915e",
-                    "stepText": "Now, add the mechanical work of $!$30 J$!$ to the initial kinetic energy to find the final kinetic energy of the car. What is the final kinetic energy?",
+                    "id": "44bcca91d4eb463b97ab5",
+                    "stepText": "Great, now that you have the formula, compute the initial kinetic energy by plugging in the values for mass (1200 kg) and initial speed (10 m/s). Then add the 30 J of work provided by the engine to obtain the final kinetic energy.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -64,14 +50,13 @@
                     ],
                     "stepSolveAnswerUnits": "J",
                     "stepConcepts": [
-                        "f15b2cb1-9fa3-4c7a-a335-23aba0faaaca",
                         "0f719348-94a2-4b8e-8cd8-638039f27e60"
                     ],
                     "options": []
                 },
                 {
-                    "id": "5c9b47a3747441cba77d6",
-                    "stepText": "Next, select the correct formula that will allow you to determine the final speed from the final kinetic energy and mass of the car.",
+                    "id": "49e1453279454900a1d41",
+                    "stepText": "Now, relate the final kinetic energy to the final speed using an appropriate formula. Identify the correct kinetic energy formula that connects energy and speed.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -83,25 +68,25 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$v = \\sqrt{\\frac{2E_k}{m}}$!$",
+                            "optionText": "$!$KE = \\frac{1}{2} mv^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$v = \\frac{E_k}{m}$!$",
+                            "optionText": "$!$KE = mv$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$v = \\frac{m}{E_k}$!$",
+                            "optionText": "$!$KE = mv^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "bffb330d610a4a73a2e76",
-                    "stepText": "Finally, using the formula you selected and the final kinetic energy of $!$60030 J$!$ along with the mass $!$1200 kg$!$, calculate the final speed of the car.",
+                    "id": "ba0076321cb24ad3b72b6",
+                    "stepText": "Finally, using the relation between kinetic energy and speed, solve for the final speed of the car by rearranging the formula and taking the square root. Calculate the final speed.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -121,8 +106,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "6a05f7ba42bd462f8b170",
-                    "stepText": "Let's start by identifying the correct formula to calculate the work done when an object is raised vertically (i.e., the gravitational potential energy gain). Please choose the correct formula.",
+                    "id": "2f321181cfcd4364a5a45",
+                    "stepText": "Let's start by determining the mechanical work output. Which formula correctly relates work, power, and time?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -130,57 +115,43 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "5bf9b7d2-da7f-425b-a6f3-2a025ffe4ff6"
+                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$W = Fs\\cos\\theta$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$W = F\\times h$!$",
+                            "optionText": "$!$W = P \\times t$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$E_k = \\frac{1}{2} mv^2$!$",
+                            "optionText": "$!$W = \\frac{P}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{t}{P}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "ae8777b88ba64f93997d4",
-                    "stepText": "Now, use the weight (force) provided and the hill's height to compute the increase in gravitational potential energy. Multiply the weight by the height to obtain the work done against gravity. What is the result?",
+                    "id": "c5f9f52614ae48c380013",
+                    "stepText": "Great, now that you have identified the relationship, use the formula $!$W = P \\times t$!$ to compute the work done by the cyclist. Use the values $!$P = 100\\,W$!$ and $!$t = 60\\,s$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "35000"
+                        "6000"
                     ],
                     "stepSolveAnswerUnits": "J",
-                    "stepConcepts": [
-                        "5bf9b7d2-da7f-425b-a6f3-2a025ffe4ff6"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "55dd191091614f4baee25",
-                    "stepText": "Next, determine the ideal mechanical power required if the cyclist were to supply exactly this amount of work over 60 seconds. Divide the work done by the time taken. What is the computed power?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "583.33"
-                    ],
-                    "stepSolveAnswerUnits": "W",
                     "stepConcepts": [
                         "2691d473-fa9f-48af-866f-fcf735cf65ac"
                     ],
                     "options": []
                 },
                 {
-                    "id": "58d011b9301b48f8a1c28",
-                    "stepText": "In this step, identify the correct expression to define efficiency in energy conversion. Please select the formula that relates the useful mechanical power (or work) output to the energy input.",
+                    "id": "d231188c0bc44b8ba2702",
+                    "stepText": "Next, we need to express the concept of efficiency. Which formula correctly represents efficiency in the context of energy conversion?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -192,34 +163,33 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\eta = \\frac{\\text{mechanical energy output}}{\\text{chemical energy consumed}} \\times 100\\%$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$\\eta = \\frac{\\text{actual power output}}{\\text{ideal power required}} \\times 100\\%$!$",
+                            "optionText": "$!$\\eta = \\frac{W_{out}}{E_{consumed}}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\eta = \\frac{\\text{chemical energy consumed}}{\\text{mechanical energy output}} \\times 100\\%$!$",
+                            "optionText": "$!$\\eta = \\frac{E_{consumed}}{W_{out}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{W_{out} - E_{consumed}}{E_{consumed}}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "fbec5ee63d9d45bc97953",
-                    "stepText": "Finally, using the realistic approach, calculate the efficiency by comparing the cyclist's actual power output (100 W) with the ideal power required (as computed earlier). Compute the ratio and express it as a percentage. What is the efficiency (rounded to a whole percentage)?",
+                    "id": "2ee8ee71ab7d4a1f8dd33",
+                    "stepText": "Now, using the work output calculated in Step 2 and the given energy consumption of $!$5000\\,J$!$, compute the efficiency. What is the numerical value of the efficiency?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "17"
+                        "1.2"
                     ],
-                    "stepSolveAnswerUnits": "%",
+                    "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "0be92c40-ded4-48ee-a466-07236da03b9f",
-                        "2691d473-fa9f-48af-866f-fcf735cf65ac"
+                        "0be92c40-ded4-48ee-a466-07236da03b9f"
                     ],
                     "options": []
                 }

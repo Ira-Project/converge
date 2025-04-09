@@ -1,0 +1,156 @@
+{
+    "id": "000760cc77cd4a0fb3146",
+    "name": "Fission",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "8f7011dc076c4630aa475",
+            "questionText": "A research team is exploring Thorium as an alternative nuclear fuel. They induce fission in Thorium by neutron bombardment. Suppose that after a fission event, the mass of the fission products is 0.2 atomic mass units less than the original mass of the Thorium nucleus. Given that 1 atomic mass unit (amu) is approximately $!$1.66054 \\times 10^{-27}$!$ kg, the speed of light c is approximately $!$3 \\times 10^8$!$ m/s, and 1 MeV is equivalent to $!$1.602 \\times 10^{-13}$!$ Joules, calculate the energy released during this single fission event expressed in MeV.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f465c956959c4be59835b",
+                    "stepText": "Let's start by converting the given mass loss from atomic mass units (amu) to kilograms. Use the provided conversion factor to determine the mass loss in $!$kg$!$. What value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.32108e-28"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "05608edd-814d-4512-8e8c-1d46241af01d",
+                        "e0073bfa-4354-4574-81fe-37c2676f570b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a1205df88abb4feebb391",
+                    "stepText": "Great, now that you have the mass loss in $!$kg$!$, the next step is to determine the relation between mass and energy. Please select the correct formula that relates the change in mass to energy for this fission process.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "35d54b23-8c3e-414f-855e-429319c72d63",
+                        "e0073bfa-4354-4574-81fe-37c2676f570b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E=\\Delta m c^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E=\\Delta m / c^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E=\\Delta m c$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "65cc5ed9cdaf4c83aafb5",
+                    "stepText": "Now, use the energy-mass equivalence along with the given value of the speed of light to compute the energy released in Joules, and then convert that energy into $!$MeV$!$ using the provided conversion factor. What is the energy released expressed in $!$MeV$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "186.6"
+                    ],
+                    "stepSolveAnswerUnits": "MeV",
+                    "stepConcepts": [
+                        "35d54b23-8c3e-414f-855e-429319c72d63"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "f87d9108f33b4d278a551",
+            "questionText": "Consider a nuclear power plant utilizing Uranium-235. The reactor is designed such that the moderator slows down neutrons effectively, and control rods are in place to manage the chain reaction. If the power plant initially operates with a certain number of control rods inserted and generates 500 MW of power, and then, due to increasing energy demand, the operators decide to slowly withdraw the control rods, increasing the reactor's power output. If the energy released per fission event is approximately $!$3.2 \\times 10^{-11}$!$ J, and the reactor now produces 1000 MW of power, determine the change in the number of fissions occurring per second required to achieve this new power output.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1f240842f8fe4da88b1b9",
+                    "stepText": "Let's start by identifying the basic relation between the reactor power, the number of fission events per second, and the energy released per fission. Please select the correct formula that expresses this relation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "83eee34e-89b7-43eb-aab8-ebe55fad6b86",
+                        "35d54b23-8c3e-414f-855e-429319c72d63"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = N \\times E_{fission}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{E_{fission}}{N}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = N + E_{fission}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8b50140ffc2f45229576c",
+                    "stepText": "Great, now that you have the relation, let's calculate the initial number of fissions per second when the reactor is producing 500 MW of power. Remember to convert megawatts to watts ($!$1\\,MW = 10^6\\,W$!$) and use the energy per fission value provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.5625e19"
+                    ],
+                    "stepSolveAnswerUnits": "fissions/s",
+                    "stepConcepts": [
+                        "83eee34e-89b7-43eb-aab8-ebe55fad6b86"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f18a464b773945ab87409",
+                    "stepText": "Now, using the same approach, calculate the number of fissions per second when the reactor operates at 1000 MW. Don\u2019t forget to convert the power to watts!",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.125e19"
+                    ],
+                    "stepSolveAnswerUnits": "fissions/s",
+                    "stepConcepts": [
+                        "83eee34e-89b7-43eb-aab8-ebe55fad6b86"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8ac677ff908b45d3b7592",
+                    "stepText": "Finally, determine the change in the number of fissions per second required by finding the difference between the new rate and the initial rate. What is the additional number of fissions per second needed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.5625e19"
+                    ],
+                    "stepSolveAnswerUnits": "fissions/s",
+                    "stepConcepts": [
+                        "83eee34e-89b7-43eb-aab8-ebe55fad6b86"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

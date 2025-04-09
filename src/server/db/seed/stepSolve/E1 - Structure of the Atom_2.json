@@ -1,0 +1,233 @@
+{
+    "id": "fff615950f4b4836afc19",
+    "name": "Structure of the Atom",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "ed5608e211204405a2dd7",
+            "questionText": "An astronomer observes the emission spectrum of a distant star composed primarily of hydrogen. The astronomer detects a spectral line corresponding to the transition of an electron from an energy level $!$n = 4$!$ to an energy level $!$n = 2$!$. Using the Bohr model for hydrogen, calculate the wavelength $!$\\lambda$!$ of the emitted photon associated with this transition. (Hint: First calculate the energy difference between the two levels, then use this energy difference to find the frequency and subsequently the wavelength of the photon. Use $!$E_n = -\\frac{13.6}{n^2} \\text{ eV}$!$ and $!$E = \\frac{hc}{\\lambda}$!$, where $!$h = 4.135 \\times 10^{-15} \\text{ eV s}$!$ and $!$c = 3 \\times 10^8 \\text{ m/s}$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "532e1c59e551467abfa29",
+                    "stepText": "Let's start by identifying the correct expression for the energy levels in hydrogen. Which of the following formulas correctly represents the energy of a level with quantum number $!$n$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "516d8e51-d173-4735-85ca-b40323ce5f3c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_n = -\\frac{13.6}{n^2} \\text{ eV}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_n = -13.6 n^2 \\text{ eV}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_n = \\frac{13.6}{n^2} \\text{ eV}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "591a4af93fd14f7a87983",
+                    "stepText": "Great, now using the selected energy level expression, calculate the magnitude of the energy difference $!$\\Delta E$!$ between the levels for $!$n=4$!$ and $!$n=2$!$. (Reminder: Compute each energy using the formula and then subtract appropriately, taking the absolute value of the difference.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.55"
+                    ],
+                    "stepSolveAnswerUnits": "eV",
+                    "stepConcepts": [
+                        "516d8e51-d173-4735-85ca-b40323ce5f3c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "376891d6172e4cc6b0ac7",
+                    "stepText": "Let's now choose the correct relation that connects the energy of a photon to its wavelength. Which of the following expressions is appropriate for linking $!$E$!$ and $!$\\lambda$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{hc}{E}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{E}{hc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{E}{hc^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e8bfdf4a90f74f2e97e68",
+                    "stepText": "Proceeding further, calculate the product $!$hc$!$ using the given values $!$h = 4.135 \\times 10^{-15} \\text{ eV s}$!$ and $!$c = 3 \\times 10^8 \\text{ m/s}$!$. This product is required to compute the wavelength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.2405e-6"
+                    ],
+                    "stepSolveAnswerUnits": "eV\u00b7m",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "cef2ecbe45f24146bd6f7",
+                    "stepText": "Finally, use the previously calculated energy difference and the product $!$hc$!$ to determine the wavelength of the emitted photon. Compute $!$\\lambda = \\frac{hc}{\\Delta E}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.863e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "fd953f1921614ca381894",
+            "questionText": "Using Rutherford's model, compare the positive charge distribution in gold atoms from a thin foil with that in another metal, given that in the gold foil experiment a small fraction of alpha particles undergo large-angle deflections and a second experiment with the other metal results in more slight deflections and far fewer large-angle deflections. What do these observations imply about the relative distributions of positive charge in the two metals?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4bd5f8b8a4f84a48a7876",
+                    "stepText": "Let's start by recalling the key aspect of Rutherford's atomic model. Which statement best describes the nucleus as interpreted by Rutherford?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ceb70f21-79bc-4347-9b30-2ea290416b57"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$The nucleus is a small, dense, positively charged core containing most of the atom's mass.$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$The nucleus is a large, diffuse region where positive charge is spread evenly throughout the atom.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$The nucleus is a hollow sphere with electrons embedded throughout its structure.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$The nucleus does not exist; the atom's mass is distributed uniformly in a cloud of electrons.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9102b0b81d72489b9318f",
+                    "stepText": "Great, now that you've recalled the concept of a concentrated nucleus, consider the nature of deflections in the gold foil experiment. Which factor is primarily responsible for the occurrence of large-angle deflections of alpha particles?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5986cd5f-f3eb-4fae-b26b-047cbb298f55",
+                        "79dd82d6-b48a-4528-91fc-561aa897a70e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A strong Coulomb interaction with a highly concentrated positive charge in a compact nucleus.$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A weak magnetic interaction due to a spread-out positive charge throughout the atom.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Collisions with loosely bound electrons causing mass scattering.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Random deflections from a uniform neutral charge distribution.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f2f828d075354c63b96d1",
+                    "stepText": "Now, link your understanding from the previous steps: Given the gold foil experiment shows a few large-angle deflections, while the other metal produces mostly slight deflections, what inference about the distribution of positive charge in the two metals can you make?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ceb70f21-79bc-4347-9b30-2ea290416b57",
+                        "5986cd5f-f3eb-4fae-b26b-047cbb298f55",
+                        "79dd82d6-b48a-4528-91fc-561aa897a70e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Gold atoms have a highly concentrated positive nucleus, whereas the other metal\u2019s positive charge is spread out over a larger volume.$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Both metals must have equally concentrated nuclei, and the difference in deflections is due to experimental error.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Gold atoms have a diffuse positive charge, while the other metal exhibits a concentrated nucleus.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$The variations in deflections arise solely from differences in electron arrangements, not from any change in nuclear charge distribution.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

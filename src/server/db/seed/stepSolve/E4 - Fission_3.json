@@ -1,0 +1,181 @@
+{
+    "id": "851e7b7318af41de92318",
+    "name": "Fission",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "97204189ad8e491e9e667",
+            "questionText": "Scientists are conducting an experiment involving the spontaneous fission of Californium-252 ($!$^{252}Cf$!$). The initial mass of the Californium-252 nucleus is measured to be 252.081626 atomic mass units (u). After fission, the resulting fragments are a Xenon-140 nucleus ($!$^{140}Xe$!$) with a mass of 139.92164 u and a Cerium-108 nucleus ($!$^{108}Ce$!$) with a mass of 107.90417 u, along with the release of 4 neutrons, each with a mass of 1.0086649 u. Given that 1 u is equivalent to $!$1.66054 \\times 10^{-27}$!$ kg and the speed of light ($!$c$!$) is $!$2.99792 \\times 10^8$!$ m/s, calculate the fission Q-value (in MeV) for this spontaneous fission event using the mass-energy equivalence formula $!$Q = \\Delta m c^2$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "04bd9ad5fa9644b7bbc6f",
+                    "stepText": "Let's begin by calculating the total final mass of all fission fragments. Sum the mass of the Xenon-140 nucleus, the Cerium-108 nucleus, and the mass of the 4 neutrons (each neutron having a mass of 1.0086649 u). Provide the numerical total in atomic mass units (u).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "251.86047"
+                    ],
+                    "stepSolveAnswerUnits": "u",
+                    "stepConcepts": [
+                        "cdec40c7-d21c-475b-b59f-dfb4c42791b4"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "caf6c4ed915e4e34a97fc",
+                    "stepText": "Great, now determine the mass defect $!$\\Delta m$!$ by subtracting the total final mass from the initial mass of Californium-252 (252.081626 u). Compute this difference in atomic mass units (u).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.221156"
+                    ],
+                    "stepSolveAnswerUnits": "u",
+                    "stepConcepts": [
+                        "05608edd-814d-4512-8e8c-1d46241af01d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1a20d0c323e94b6c981f6",
+                    "stepText": "Finally, convert the mass defect into energy by selecting the correct mass-energy equivalence formula that relates the mass defect to the fission Q-value. Which of the following formulas is appropriate?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e0073bfa-4354-4574-81fe-37c2676f570b",
+                        "35d54b23-8c3e-414f-855e-429319c72d63"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = \\Delta m c^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = \\Delta m / c^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = \\Delta m + c^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "74a952d8f7094ed5869fc",
+            "questionText": "A nuclear power plant is experiencing a malfunction where the control rods are only partially deploying, causing a reduced capacity to absorb neutrons. The reactor core contains Uranium-235, which undergoes induced fission upon neutron bombardment. The plant's operators observe that the rate of fission is increasing at a rate of $!$5 \\times 10^{15}$!$ fissions per second every minute. The heat exchanger is removing heat at a rate of $!$2.0 \\times 10^9$!$ Joules per second, but the energy released per fission event is approximately $!$3.2 \\times 10^{-11}$!$ Joules. If the reactor's critical operating threshold is reached when the heat generation exceeds the heat removal by $!$5 \\times 10^8$!$ Joules per second, how many seconds do the operators have to fully deploy the control rods before this critical threshold is reached?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7da63fee0c874282b325e",
+                    "stepText": "Let's start by converting the observed increase in the fission rate from a per minute basis to a per second squared value. Identify the conversion factor that correctly relates a rate given per minute to one given per second.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Divide by 60}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Multiply by 60}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Subtract 60}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b6cfeefb03634ab688763",
+                    "stepText": "Now that you have identified the correct conversion factor, use it to compute the fission rate increase in fissions per second squared by dividing $!$5\\times10^{15}$!$ by 60. What is the resulting value (approximately)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8.33e13"
+                    ],
+                    "stepSolveAnswerUnits": "fissions/s\u00b2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "e0b6f54c066147f6abf00",
+                    "stepText": "Great, now let's determine how quickly the heat generation is increasing. Considering that each fission releases $!$3.2\\times10^{-11}$!$ Joules, which operation would you use to combine the fission rate increase (in fissions/s\u00b2) and the energy per fission to obtain a rate of increase in heat generation (in J/s\u00b2)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65",
+                        "83eee34e-89b7-43eb-aab8-ebe55fad6b86"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Multiply the two values}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Divide the fission rate by the energy per fission}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Add the two values}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d9c119cad2fa42f6930cc",
+                    "stepText": "Finally, use the rate at which the heat generation is increasing and the excess heat threshold of $!$5\\times10^{8}$!$ J/s to determine the available time before reaching the critical limit. Which of the following formulas correctly relates a constant rate of increase to the time needed to accumulate a given excess? Then calculate the numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.87e5"
+                    ],
+                    "stepSolveAnswerUnits": "seconds",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$t = \\frac{\\Delta \\text{Heat}}{\\text{Heat Rate Increase}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$t = \\frac{\\text{Heat Rate Increase}}{\\Delta \\text{Heat}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = \\Delta \\text{Heat} \\times \\text{Heat Rate Increase}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

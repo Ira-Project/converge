@@ -1,0 +1,210 @@
+{
+    "id": "4650497936264242be52a",
+    "name": "Wave Phenomena",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "b471bae4d33d409fa447f",
+            "questionText": "In a Young's double-slit experiment, two slits are separated by a distance $!$d = 0.1 \\text{ mm}$!$. The interference pattern is observed on a screen placed at a distance $!$D = 2.5 \\text{ m}$!$ from the slits. If the tenth bright fringe is located at a distance $!$s = 12.5 \\text{ cm}$!$ from the central maximum, calculate the wavelength $!$\\lambda$!$ of the light used in the experiment.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "029f8ad7eb184a3e8d961",
+                    "stepText": "Let's start by identifying which formula relates the position of the mth bright fringe in Young's experiment. Choose the correct expression from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a4304044-8d79-4983-a6c4-1fc06a60398b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$y_m = \\frac{m \\lambda D}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$y_m = \\frac{d \\lambda}{m D}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$y_m = \\frac{m D}{\\lambda d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "414258e740ed4c18b430b",
+                    "stepText": "Now, convert the given slit separation of $!$0.1\\ \\text{mm}$!$ into meters. What is the value in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1e-4"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7021e2ccc073410eb9cda",
+                    "stepText": "Next, convert the position of the tenth bright fringe from $!$12.5\\ \\text{cm}$!$ to meters. What is the converted value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.125"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "fa0a48a3269740079c77d",
+                    "stepText": "Great, now compute the numerator of the wavelength formula by multiplying the fringe position (in meters) by the slit separation (in meters). What is the product $!$(y_m \\times d)$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.25e-5"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ddb5c49c2c5549d6a8fa3",
+                    "stepText": "Then, calculate the denominator by multiplying the fringe order by the distance from the slits to the screen. What is $!$(m \\times D)$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "25"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7ee8a55192c2499aaaef5",
+                    "stepText": "Finally, find the wavelength by dividing the numerator by the denominator from the previous steps. What is the wavelength $!$\\lambda$!$ in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a4304044-8d79-4983-a6c4-1fc06a60398b"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "8159b96aab1b4ceab4664",
+            "questionText": "A light ray is traveling within a fiber optic cable with a core refractive index of $!$n_1 = 1.48$!$ and a cladding refractive index of $!$n_2 = 1.45$!$. Determine whether total internal reflection will occur at the core-cladding interface when the incident angle is 5% greater than the critical angle.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "bc3f5b26c6d3440aabe43",
+                    "stepText": "Let's start by identifying the correct formula to calculate the critical angle for total internal reflection. Which of the following expressions correctly represents the relationship needed to compute the critical angle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "20e890de-4959-433b-9daf-8578a8797bde"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\sin \\theta_{c} = \\frac{n_2}{n_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\sin \\theta_{c} = \\frac{n_1}{n_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\theta_{c} = \\frac{n_2}{n_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "367236998bd64dfebd6ab",
+                    "stepText": "Great! Now that you have chosen the correct formula, use it to calculate the value of $!$\\sin \\theta_{c}$!$ using the given refractive indices ($!$n_1 = 1.48$!$ and $!$n_2 = 1.45$!$). Please perform this division.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.9797"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "20e890de-4959-433b-9daf-8578a8797bde"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "34ed70af879e487b8f66c",
+                    "stepText": "Now, use the inverse sine function to determine the critical angle $!$\\theta_{c}$!$ in degrees. What numerical value do you obtain (using a calculator)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "78.5"
+                    ],
+                    "stepSolveAnswerUnits": "\u00b0",
+                    "stepConcepts": [
+                        "20e890de-4959-433b-9daf-8578a8797bde"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "39bda404babe43d4b32af",
+                    "stepText": "With the critical angle calculated, compute the incident angle which is 5% greater than the critical angle. Multiply the critical angle by 1.05 to obtain the incident angle.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "82.4"
+                    ],
+                    "stepSolveAnswerUnits": "\u00b0",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "b4754c6b08674ea4b6907",
+                    "stepText": "Finally, compare the incident angle with the critical angle to determine if total internal reflection occurs. Select the statement that correctly describes the occurrence of total internal reflection when the incident angle is 5% greater than the critical angle.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "20e890de-4959-433b-9daf-8578a8797bde"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Yes, total internal reflection will occur because the incident angle exceeds the critical angle.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "No, total internal reflection will not occur because the incident angle does not exceed the critical angle.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

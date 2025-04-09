@@ -1,0 +1,228 @@
+{
+    "id": "5ec17d59e8954780bdaf5",
+    "name": "Simple Harmonic Motion",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a19b7cf4ecf047f0b59b1",
+            "questionText": "A tuning fork, when struck, vibrates at a frequency that produces a pure tone. The prongs of the tuning fork undergo Simple Harmonic Motion (SHM). Suppose a tuning fork vibrates at a frequency of $!$440 \\text{ Hz}$!$. A small piece of clay with a mass of $!$2 \\text{ grams}$!$ is then added to one of the prongs. This addition effectively increases the mass of the prong by $!$2 \\text{ grams}$!$. Assuming the original effective mass of the vibrating part of the tuning fork is $!$10 \\text{ grams}$!$, and that the stiffness (spring constant) of the tuning fork remains unchanged, determine the new frequency of the tuning fork after the clay is added.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "34559b4ecd23481683c1d",
+                    "stepText": "Let's start by identifying the relationship that links the effective mass ($!$m$!$), the frequency ($!$f$!$), and the spring constant ($!$k$!$). Please choose the option that represents the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eed7f907-b397-4f8c-8f17-d4f199db79ab"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$k = m (2\\pi f)^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$k = \\frac{m}{(2\\pi f)^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$k = \\frac{(2\\pi f)^2}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "04ec4912a5a447a49e2a9",
+                    "stepText": "Great. Now, determine the new effective mass after adding the clay. Use the given original effective mass and the additional mass to find the total mass.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12"
+                    ],
+                    "stepSolveAnswerUnits": "grams",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "9492228b78064fadba08c",
+                    "stepText": "Next, identify the relationship that expresses the frequency of a body undergoing SHM in terms of its spring constant ($!$k$!$) and effective mass ($!$m$!$). Please choose the correct option.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eed7f907-b397-4f8c-8f17-d4f199db79ab",
+                        "2ad8c228-6aae-422b-8b9f-6c6e4d83a2f2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f = \\frac{1}{2\\pi}\\sqrt{\\frac{k}{m}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = 2\\pi \\sqrt{\\frac{m}{k}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = \\sqrt{\\frac{k}{m}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e929891c75ac46b28cf86",
+                    "stepText": "Finally, using the fact that the stiffness of the tuning fork remains unchanged, calculate the new frequency by relating the original frequency to the new effective mass. (Hint: You might use a relationship like $!$f_{new} = f_{0}\\sqrt{\\frac{m_{0}}{m_{new}}}$!$.) Compute the numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "402"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "eed7f907-b397-4f8c-8f17-d4f199db79ab"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "d49de05db205451998443",
+            "questionText": "A child is on a swing, which can be approximated as undergoing Simple Harmonic Motion (SHM). The swing has a length of $!$3 \\text{ m}$!$. If the child swings such that the maximum angle the swing makes with the vertical is $!$20^\\circ$!$, what is the child's maximum velocity during the swing's motion? You may assume that the acceleration due to gravity is $!$g = 9.8 \\text{ m/s}^2$!$ and that for small angles, $!$\\sin(\\theta) \\approx \\theta$!$, where $!$\\theta$!$ is in radians.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "781478c06c844f7692918",
+                    "stepText": "Let's start by determining how much vertical drop the swing undergoes at its maximum displacement. Identify the formula that best represents the drop in height $!$h$!$ using the swing length $!$L$!$ and the angle $!$\\theta$!$, considering small angle approximations.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eed7f907-b397-4f8c-8f17-d4f199db79ab"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$h = L - L\\cos(\\theta)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$h = \\frac{L\\theta^2}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$h = L\\sin(\\theta)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b999c8cc4e9644c69a59e",
+                    "stepText": "Great. Now, recall that the loss in gravitational potential energy is converted to kinetic energy at the bottom of the swing. Choose the correct energy conservation equation that links the potential energy loss and the kinetic energy gain.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e6cbee8e-24f0-49b0-acff-dee433badd26"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$mgh = \\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{2}mv^2 = mgh$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$mv^2 = mgh$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "55eb9bf448c94f41b4fd2",
+                    "stepText": "Excellent. With that relation, rearrange the equation to solve for the maximum speed $!$v$!$. After substituting the approximate expression for $!$h$!$, pick the expression that correctly represents $!$v$!$ in terms of $!$\\theta, g,$!$ and $!$L$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cc2f2c1f-d27b-4fb2-afe3-0628f191cf12"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\theta \\sqrt{gL}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\sqrt{gL\\theta}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{\\sqrt{gL}}{\\theta}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e0aa665871d047aaa0077",
+                    "stepText": "Now, convert the maximum angle from degrees to radians. Compute the radian value corresponding to a $!$20^\\circ$!$ angle. Provide your answer as an approximate numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.349"
+                    ],
+                    "stepSolveAnswerUnits": "radians",
+                    "stepConcepts": [
+                        "42360656-7edd-45e1-9018-41817f8bc0d5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1735e80068d846168a30b",
+                    "stepText": "Finally, substitute the values $!$L = 3 \\text{ m}$!$, $!$g = 9.8 \\text{ m/s}^2$!$, and the radian value from the previous step into your expression for $!$v$!$. Calculate the numerical maximum velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.89"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "bfe73a51-56e1-42c2-b400-35e2aa8f4737"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

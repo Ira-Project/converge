@@ -1,0 +1,127 @@
+{
+    "id": "bc7a31859cd2448aa2256",
+    "name": "Galilean and Special Relativity",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "1847420d704e4db286236",
+            "questionText": "A spaceship travels past Earth at a constant speed of $!$0.8c$!$. An astronaut on the spaceship measures the length of the spaceship to be $!$L_0 = 100 \\; m$!$. What length would an observer on Earth measure for the spaceship, taking into account length contraction?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "81d36a81ad00485fa5f08",
+                    "stepText": "Let's start by identifying the correct formula that relates the proper length to the contracted length in the context of length contraction. Which of the following formulas applies?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a2cc780f-e223-46ae-8ac0-d8b76d0c5385",
+                        "8f95aa1b-0eb7-42ba-bd59-8b8b8322f61a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L = L_0 \\sqrt{1-\\frac{v^2}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L = L_0 \\left(1-\\frac{v}{c}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L = L_0 \\left(1-\\frac{v^2}{c^2}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2b9be194ccf740c984e11",
+                    "stepText": "Great, now that you have the proper formula, let's compute the term $!$1-\\frac{v^2}{c^2}$!$ given that the spaceship's speed is $!$v = 0.8c$!$. What numerical value does this expression evaluate to?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.36"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a2cc780f-e223-46ae-8ac0-d8b76d0c5385"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f82b75fd5cd941849e42b",
+                    "stepText": "Now, use the value you just calculated to determine the contracted length. Multiply the proper length $!$L_0 = 100 \\; m$!$ by the square root of your computed value. What is the length measured by an observer on Earth?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a2cc780f-e223-46ae-8ac0-d8b76d0c5385",
+                        "8f95aa1b-0eb7-42ba-bd59-8b8b8322f61a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "fdff344d34694e18b5e85",
+            "questionText": "A train is moving at a constant velocity of $!$20 \\frac{m}{s}$!$ relative to the ground. A passenger inside the train throws a ball forward. The velocity of the ball relative to the ground is measured to be $!$28 \\frac{m}{s}$!$. What is the velocity of the ball relative to the train, according to Galilean velocity addition?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "249b7f679469488294244",
+                    "stepText": "Let's start by identifying the correct formula for Galilean velocity addition. Which of the following formulas correctly represents this concept?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "af08fd9a-f90b-4b6c-bc4c-39068a5e1fda"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$u = u' + v$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$u = v - u'$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$u = \\frac{u' + v}{1 + \\frac{u'v}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "51f660c935f348e180557",
+                    "stepText": "Great, now that you have identified the correct formula, let's use it to compute the velocity of the ball relative to the train. Calculate the relative velocity by subtracting the train's velocity from the ball's ground velocity: $!$v_{ball/train} = v_{ball/ground} - v_{train}$!$. What is the numerical result?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "af08fd9a-f90b-4b6c-bc4c-39068a5e1fda"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

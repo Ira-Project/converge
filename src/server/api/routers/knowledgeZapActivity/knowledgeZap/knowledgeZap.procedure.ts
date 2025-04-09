@@ -26,4 +26,8 @@ export const knowledgeZapRouter = createTRPCRouter({
   getHeatMap: protectedProcedure
     .input(inputs.getHeatMapInput)
     .query(({ ctx, input }) => services.getHeatMap(ctx, input)),
+
+  getKnowledgeZapRevisionActivity: protectedProcedure
+    .input(inputs.getKnowledgeZapRevisionActivityInput)
+    .query(({ ctx, input }) => services.getKnowledgeZapRevisionActivity(ctx, input)),
 });

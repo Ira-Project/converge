@@ -1,0 +1,275 @@
+{
+    "id": "003a26f93657473399133",
+    "name": "Rigid Body Mechanics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a5981a55088040af9194f",
+            "questionText": "A bowling ball, which can be modeled as a solid sphere, has a mass of $!$M = 7\\,\\text{kg}$!$ and a radius of $!$R = 0.1\\,\\text{m}$!$. It rolls without slipping down a bowling lane with a linear velocity of its center of mass being $!$v = 4\\,\\text{m/s}$!$. What is the total kinetic energy of the bowling ball as it travels down the lane?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6c4018f05696406fbf6d1",
+                    "stepText": "Let's start by identifying the correct expression for the total kinetic energy of a rolling object. Please select the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "36fae90c-82f8-4597-9669-7f280c300fc6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$KE_{total} = \\frac{1}{2} Mv^2 + \\frac{1}{2} I \\omega^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$KE_{total} = Mv^2 + I \\omega^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$KE_{total} = \\frac{1}{2} I \\omega^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f889fd25e6334bf3aef4c",
+                    "stepText": "Great. Now, identify the correct moment of inertia for a solid sphere. Choose the appropriate formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f6586b7d-c0fe-4287-91e9-f20de7e236bd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{2}{5}MR^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{1}{2}MR^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = MR^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6f240e02422d44f4a89f2",
+                    "stepText": "Excellent. For rolling without slipping, the angular velocity is related to the linear velocity. Which relation correctly represents this condition? Please select the correct option.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "daaa4850-76fd-458c-99ae-480cec59b41f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\omega R$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\omega = vR$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{\\omega}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "615a288815bc4de78c5e5",
+                    "stepText": "Now, calculate the translational kinetic energy using the formula $!$\\frac{1}{2}Mv^2$!$. Use the given mass and linear velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "56"
+                    ],
+                    "stepSolveAnswerUnits": "Joules",
+                    "stepConcepts": [
+                        "36fae90c-82f8-4597-9669-7f280c300fc6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "87e113b4061c4a9c937e0",
+                    "stepText": "Next, compute the rotational kinetic energy. Using the moment of inertia from step 2 and the relation from step 3, determine the rotational energy $!$\\frac{1}{2}I\\omega^2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "22.4"
+                    ],
+                    "stepSolveAnswerUnits": "Joules",
+                    "stepConcepts": [
+                        "f6586b7d-c0fe-4287-91e9-f20de7e236bd",
+                        "daaa4850-76fd-458c-99ae-480cec59b41f",
+                        "36fae90c-82f8-4597-9669-7f280c300fc6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "718476e106a042d9bc2e4",
+                    "stepText": "Finally, add the translational and rotational kinetic energies to find the total kinetic energy of the bowling ball.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "78.4"
+                    ],
+                    "stepSolveAnswerUnits": "Joules",
+                    "stepConcepts": [
+                        "36fae90c-82f8-4597-9669-7f280c300fc6"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "589c962fa564408983b22",
+            "questionText": "A solid cylindrical wheel with a radius of $!$R = 0.3\\,\\text{m}$!$ and a mass of $!$M = 15\\,\\text{kg}$!$ starts from rest and accelerates uniformly due to a constant torque applied to it. After $!$t = 5\\,\\text{s}$!$, the wheel reaches an angular velocity of $!$\\omega = 10\\,\\text{rad/s}$!$. How much work was done by the torque on the wheel during this 5-second interval?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5ab66304ddf7443aaa312",
+                    "stepText": "Let's start by determining the formula for the moment of inertia $!$I$!$ of a solid cylinder. Please select the correct expression that relates $!$I$!$, the mass $!$M$!$, and the radius $!$R$!$ for a solid cylinder.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ce26676f-2505-496d-a13c-45eac6b1329c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{1}{2} M R^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = M R^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{1}{3} M R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "59a63c3d88d04a52b7b7c",
+                    "stepText": "Great! Now that you have identified the moment of inertia formula, substitute the given values $!$M = 15\\,kg$!$ and $!$R = 0.3\\,m$!$ into the expression to calculate $!$I$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.675"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m\u00b2",
+                    "stepConcepts": [
+                        "ce26676f-2505-496d-a13c-45eac6b1329c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ea2ab039c3b848dd83f52",
+                    "stepText": "Moving on, we need the formula for rotational kinetic energy. Identify the correct expression that relates the rotational kinetic energy $!$K$!$, moment of inertia $!$I$!$, and angular velocity $!$\\omega$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6352f0ee-0f0b-4829-ad63-9c74e3c1288d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$K = \\frac{1}{2} I \\omega^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$K = I \\omega^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$K = \\frac{1}{2} M \\omega^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9e48e28d6530430597309",
+                    "stepText": "Excellent! Now, use the identified formula and the computed moment of inertia along with the given angular velocity $!$\\omega = 10\\,rad/s$!$ to calculate the rotational kinetic energy. This energy represents the change in rotational energy from rest.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "33.75"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "6352f0ee-0f0b-4829-ad63-9c74e3c1288d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b30f73dea70d4b02b9158",
+                    "stepText": "Finally, considering that the wheel started from rest, the work done by the applied torque over the 5-second interval is equal to the increase in rotational kinetic energy. Which concept best relates work to the change in rotational kinetic energy?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "da2bab81-01d0-4015-a959-63b96cc1eb6e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Work done is equal to the change in rotational kinetic energy",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Work done is equal to the product of torque and time",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Work done is equal to the force multiplied by the angular displacement",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

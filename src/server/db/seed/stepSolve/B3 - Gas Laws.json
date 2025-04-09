@@ -1,0 +1,209 @@
+{
+    "id": "79108238f2d741f0a186c",
+    "name": "Gas Laws",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "7c7140a7b7d641ec9d742",
+            "questionText": "A weather balloon is filled with $!$10$!$ moles of helium at sea level, where the pressure is $!$1 atm$!$ and the temperature is $!$25^{\\circ}C$!$. The balloon then ascends to a higher altitude where the pressure drops to $!$0.5 atm$!$ and the temperature decreases to $!$-20^{\\circ}C$!$. Assuming ideal gas behavior, calculate the final volume of the balloon in liters. Use $!$R = 0.0821 \\frac{L \\cdot atm}{mol \\cdot K}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "06cb9143882148199c46f",
+                    "stepText": "Let's start by identifying the fundamental equation that relates pressure, volume, number of moles, and temperature for an ideal gas. Which of the following formulas represents the ideal gas law?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$PV = nRT$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{nRT}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{P}{nRT}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5bda540511e84caca7b1d",
+                    "stepText": "Great. Now, let's convert the initial temperature from Celsius to Kelvin. Add 273 to the Celsius temperature of 25\u00b0C. What is the result in Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "298"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "f28efb03e86845e2895da",
+                    "stepText": "Similarly, convert the final temperature from Celsius to Kelvin by adding 273 to -20\u00b0C. What is the final temperature in Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "253"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "dcdc4681ceac4566ae415",
+                    "stepText": "Now that we have the temperatures in Kelvin, choose the correct formula that you would use to calculate the volume under given conditions using the ideal gas law.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = \\frac{nRT}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{nP}{RT}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{nT}{RP}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2b9243998f3b4cf498380",
+                    "stepText": "Lastly, substitute the given values into the formula using $!$n = 10$!$, $!$R = 0.0821 \\frac{L\\cdot atm}{mol\\cdot K}$!$, the final temperature $!$T = 253 K$!$, and the final pressure $!$P = 0.5 atm$!$. Calculate the final volume of the balloon in liters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "415.4"
+                    ],
+                    "stepSolveAnswerUnits": "L",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "abbc343fd6fc44bcbc73a",
+            "questionText": "A rigid steel container with a fixed volume of 50 liters contains nitrogen gas at an initial pressure of 2 atm and an initial temperature of 300 K. If the container is heated to 400 K, determine the new pressure inside the container in Pascals (given that 1 atm = 101325 Pa).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "26b399a48aee4308b8649",
+                    "stepText": "Let's start by identifying the gas law that relates pressure and temperature when the volume is constant. Which of the following expressions represents that relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "270d4413-84b9-4f8c-86af-bf08f1dd3195"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{P}{T} = constant$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$PV = constant$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{V}{T} = constant$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "609a0589cc1047d3a4196",
+                    "stepText": "Now, using the selected relationship, calculate the new pressure in atm by finding the ratio $!$T_2/T_1$!$ and multiplying it with the initial pressure $!$P_1$!$. Compute: $!$2 \\text{ atm} \\times (400/300)$!$. What is the value in atm?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.6667"
+                    ],
+                    "stepSolveAnswerUnits": "atm",
+                    "stepConcepts": [
+                        "270d4413-84b9-4f8c-86af-bf08f1dd3195"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "965d025621354f1c97828",
+                    "stepText": "Next, we need to choose the appropriate conversion factor to convert atmospheres to Pascals. Which of the following expresses the correct conversion factor?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "86a57088-565f-474c-9102-9732ab3553d0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1 \\text{ atm} = 101325 \\text{ Pa}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1 \\text{ atm} = 100000 \\text{ Pa}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1 \\text{ atm} = 98066 \\text{ Pa}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0f1cf0835f2c456ea71ee",
+                    "stepText": "Finally, convert the new pressure from atm to Pascals by multiplying the pressure in atm by the conversion factor from the previous step. What is the pressure in Pascals?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "270000"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "86a57088-565f-474c-9102-9732ab3553d0"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

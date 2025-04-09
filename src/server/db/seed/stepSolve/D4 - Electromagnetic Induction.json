@@ -1,0 +1,187 @@
+{
+    "id": "94311b180ef441a39afcb",
+    "name": "Electromagnetic Induction",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "dd00988dba8e4530b7796",
+            "questionText": "Consider an electric guitar pickup with a coil of 500 turns wrapped around a magnet. A steel string vibrates above the pickup, causing the magnetic flux through the coil to change. Suppose the area of the coil is $!$2 \\times 10^{-4} \\mathrm{m}^2$!$ and the magnetic field near the string varies as $!$B(t) = 0.05 \\cos(2\\pi f t)$!$ Tesla, where $!$f = 440 \\mathrm{Hz}$!$ is the frequency of the vibrating string. Calculate the generator peak voltage induced in the coil due to the changing magnetic flux.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "02935b888b4b450387331",
+                    "stepText": "Let's start by recalling the concept of magnetic flux. Identify the correct formula that relates magnetic flux to the magnetic field and the area of the coil, considering the orientation angle.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a36f52e3-bc9a-40d7-86cc-f5525829e75d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Phi = BA\\cos\\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Phi = NBA$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Phi = \\frac{B}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b7e28aaf6ee54b9fac7d6",
+                    "stepText": "Great. Now, using the values provided, calculate the magnetic flux through one turn of the coil. Remember to consider that the cosine factor reaches its maximum value when the magnetic field is aligned with the area normal.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1e-5"
+                    ],
+                    "stepSolveAnswerUnits": "Wb",
+                    "stepConcepts": [
+                        "a36f52e3-bc9a-40d7-86cc-f5525829e75d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7818d017dd1d48f582475",
+                    "stepText": "Now that you have the flux per turn, determine the total flux linkage by considering all 500 turns of the coil. Multiply the flux per turn by the number of turns.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5e-3"
+                    ],
+                    "stepSolveAnswerUnits": "Wb",
+                    "stepConcepts": [
+                        "43ab751d-5780-4129-9908-e52dacbdf1d8",
+                        "a36f52e3-bc9a-40d7-86cc-f5525829e75d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bd550e3d8bbb4d968f504",
+                    "stepText": "To connect the change in flux linkage to the generated voltage, recall Faraday's Law. Please select the correct formula that relates the induced electromotive force (emf) to the time derivative of the flux linkage.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "01f9d96a-7639-4028-8921-a8d295d26596"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\epsilon = -N\\frac{\\Delta\\Phi}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\epsilon = -\\frac{\\Delta\\Phi}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\epsilon = N\\frac{\\Delta\\Phi}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d1fa5195df5244a9971c6",
+                    "stepText": "Finally, use the relationship for the peak generator voltage. The peak induced emf is given by multiplying the number of turns, the amplitude of the magnetic field, the coil area, and the angular frequency. Calculate this peak voltage using $!$N (B_{0})(2\\pi f)(A)$!$. Plug in the provided numbers to get the final answer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "13.84"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "7073ea45-4d03-4030-a8b5-3d49cd6413fe",
+                        "01f9d96a-7639-4028-8921-a8d295d26596",
+                        "a36f52e3-bc9a-40d7-86cc-f5525829e75d",
+                        "43ab751d-5780-4129-9908-e52dacbdf1d8"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "8e79f01795274cd7a8d46",
+            "questionText": "In a transformer, the primary coil has 200 turns and is connected to an alternating current source that produces a changing magnetic flux in the iron core. The magnetic flux through each turn of the primary coil is given by $!$\\Phi(t) = 0.02 \\sin(120\\pi t)$!$ Weber, where $!$t$!$ is in seconds. If the secondary coil has 800 turns, determine the induced electromotive force (EMF) in the secondary coil based on Faraday's Law.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "77adfa3239e74b91b5bd5",
+                    "stepText": "Let's start by identifying the key concept for this problem. Which formula relates the rate of change of magnetic flux to the induced EMF in a coil?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "01f9d96a-7639-4028-8921-a8d295d26596"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\epsilon = -N \\frac{\\Delta\\Phi}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\epsilon = BvL$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\epsilon = 2\\pi fNBA$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "16f68e2613944712bf8e1",
+                    "stepText": "Great, now that we have identified the law, let's compute the derivative of the magnetic flux at $!$t=0$!$. Given $!$\\Phi(t)=0.02\\sin(120\\pi t)$!$, determine the value of $!$d\\Phi/dt$!$ at $!$t=0$!$. (Hint: Differentiate the sine function and remember that $!$\\cos(0)=1$!$.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.54"
+                    ],
+                    "stepSolveAnswerUnits": "Weber/second",
+                    "stepConcepts": [
+                        "a36f52e3-bc9a-40d7-86cc-f5525829e75d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6bd6d165d237451fb0905",
+                    "stepText": "Now, using the result from the previous step and the total number of turns in the secondary coil, calculate the induced EMF at $!$t=0$!$. (Reminder: The EMF is given by multiplying the number of turns with the derivative of the magnetic flux, and include the appropriate negative sign as per the law.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-6031.87"
+                    ],
+                    "stepSolveAnswerUnits": "Volts",
+                    "stepConcepts": [
+                        "01f9d96a-7639-4028-8921-a8d295d26596"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

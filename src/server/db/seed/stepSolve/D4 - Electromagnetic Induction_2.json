@@ -1,0 +1,225 @@
+{
+    "id": "da67b107d5fa4d7ab2a25",
+    "name": "Electromagnetic Induction",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "8d02041b0816472c83013",
+            "questionText": "A high-speed train is traveling at a constant speed of $!$180 \\text{ km/h}$!$ on a straight, horizontal track. The vertical component of the Earth's magnetic field in that region is $!$50 \\text{ }\\mu\\text{T}$!$. The distance between the rails is $!$1.5 \\text{ m}$!$. Assuming the rails are electrically isolated except for a section $!$5 \\text{ km}$!$ down the track where they are connected by a resistive load of $!$0.1 \\Omega$!$, determine the magnitude of the current flowing through this resistive load due to the motional EMF induced in the train's axles.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "aa9287e4ad5f46ee97925",
+                    "stepText": "Let's start by converting the train's speed from $!$km/h$!$ to $!$m/s$!$. Which conversion factor should be used in this conversion?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "50"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "Divide by $!$3.6$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Multiply by $!$3.6$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Divide by $!$1.8$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8f6370a20f9e41e0a332d",
+                    "stepText": "Great! Now that you have the speed in $!$m/s$!$, we need to identify the correct relationship for computing the motional EMF induced in a conductor moving in a magnetic field. Which of the following formulas represents the motional EMF?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "70734415-23ea-4f42-9d80-7b51cd1cf9e6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\epsilon = BvL$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\epsilon = vBL^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\epsilon = \\frac{B}{vL}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "05ff3a9fc5744f6f8cae6",
+                    "stepText": "Excellent! Using your converted speed (from Step 1) and the appropriate formula, compute the induced motional EMF given that the magnetic field is $!$50\\times10^{-6}\\,\\text{T}$!$ and the distance between the rails is $!$1.5\\,\\text{m}$!$. Please calculate the numerical value of the EMF.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.00375"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "70734415-23ea-4f42-9d80-7b51cd1cf9e6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2cbbac850532457cab19d",
+                    "stepText": "Now, with the induced EMF calculated, we need to determine the relationship that lets us compute the current flowing through a resistor when a voltage is applied. Which of the following represents the correct relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{V}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = V \\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{R}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0d7b0c32348c400aa09b4",
+                    "stepText": "Finally, using the relationship you identified in the previous step and the computed EMF (from Step 3) along with the given resistance of $!$0.1\\,\\Omega$!$, calculate the magnitude of the current flowing through the resistive load. Please enter the numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0375"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "24dc3f7af4eb4786941b8",
+            "questionText": "A transformer in a residential neighborhood steps down the voltage from the utility pole to household levels. The primary coil is connected to an AC voltage source of $!$2400 \\text{ V}$!$, and has $!$1200$!$ turns. The secondary coil, which supplies power to a house, has $!$60$!$ turns and is connected to a load that draws a current of $!$20 \\text{ A}$!$. If the transformer is $!$95\\%$!$ efficient, calculate the magnetic flux through each turn of the secondary coil, assuming the frequency of the AC voltage is $!$60 \\text{ Hz}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "044d145406bf41d5831d8",
+                    "stepText": "Let's start by determining the turns ratio of the transformer. Use the number of primary and secondary turns to calculate the ratio. What is the correct mathematical relationship to compute the turns ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "01f9d96a-7639-4028-8921-a8d295d26596"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Turns Ratio} = \\frac{N_{primary}}{N_{secondary}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Turns Ratio} = \\frac{N_{secondary}}{N_{primary}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Turns Ratio} = N_{primary} \\times N_{secondary}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c61f0c390a65406eae187",
+                    "stepText": "Now that you have the turns ratio, use it to calculate the ideal secondary voltage based on the primary voltage. Divide the primary voltage by the turns ratio. What value do you obtain for the secondary voltage?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "120"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "7073ea45-4d03-4030-a8b5-3d49cd6413fe"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c64c5757be964f909519d",
+                    "stepText": "Great, now consider which transformer equation correctly relates the rms voltage, frequency, number of turns, and magnetic flux per turn. Identify the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "01f9d96a-7639-4028-8921-a8d295d26596",
+                        "a36f52e3-bc9a-40d7-86cc-f5525829e75d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = 4.44 \\times f \\times N \\times \\Phi$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = 2\\pi \\times f \\times N \\times \\Phi$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{N \\times \\Phi}{4.44 \\times f}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8065c918a9a544caa0ae4",
+                    "stepText": "Finally, apply the selected formula to solve for the magnetic flux per turn in the secondary coil. Substitute the secondary voltage, frequency, and number of secondary turns into the equation $!$\\Phi = \\frac{V}{4.44 \\times f \\times N}$!$. Calculate the magnetic flux value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0075"
+                    ],
+                    "stepSolveAnswerUnits": "Wb",
+                    "stepConcepts": [
+                        "01f9d96a-7639-4028-8921-a8d295d26596",
+                        "a36f52e3-bc9a-40d7-86cc-f5525829e75d"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,217 @@
+{
+    "id": "eef71db746494334a94da",
+    "name": "Fusion and Stars",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "0dfcbb7fc6384c828bd64",
+            "questionText": "Consider a deuterium-tritium fusion reactor operating on the reaction $!$^2_1H + ^3_1H \\rightarrow ^4_2He + ^1_0n$!$. The masses are given as follows: deuterium = 2.0141 amu, tritium = 3.01605 amu, helium-4 = 4.002603 amu, and a neutron = 1.008665 amu. Assuming that the mass difference is entirely converted to energy according to Einstein's mass-energy equivalence principle (with 1 amu equivalent to 931.5 MeV/$!$c^2$!$), first compute the Q-value (energy released in a single reaction) in MeV. Then, using this Q-value, determine the number of fusion reactions per second required to sustain a power output of 500 MW.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b1a559cc10b54e32b2a0d",
+                    "stepText": "Let's start by calculating the mass defect. Add the masses of the reactants and, separately, the masses of the products, and then subtract the latter from the former. What numerical value (in $!$amu$!$) do you obtain for the mass defect?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.018882"
+                    ],
+                    "stepSolveAnswerUnits": "amu",
+                    "stepConcepts": [
+                        "d42487b2-db43-4fc5-9fc0-a62818835b39"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c3c4cb0a37c24662831a4",
+                    "stepText": "Great! Now, to convert the mass defect into energy, you need to use Einstein's mass-energy equivalence principle. Please select the correct formula which expresses this conversion.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3e3147e9-a9e5-4cc3-8d6e-14259c4fa3e6",
+                        "f69775cb-ea85-401a-96fc-3f0855976fe9",
+                        "d42487b2-db43-4fc5-9fc0-a62818835b39"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q=\\Delta m\\;c^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q=\\Delta m/c^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q=c^2/\\Delta m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "db39ca8e19e9433daeb77",
+                    "stepText": "Using the conversion factor $!$1\\;amu=931.5\\;MeV$!$, multiply your mass defect by this factor to find the Q-value in MeV. What is the calculated Q-value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "17.58"
+                    ],
+                    "stepSolveAnswerUnits": "MeV",
+                    "stepConcepts": [
+                        "3e3147e9-a9e5-4cc3-8d6e-14259c4fa3e6",
+                        "f69775cb-ea85-401a-96fc-3f0855976fe9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ce9f936397b346749a1b3",
+                    "stepText": "Now, convert the energy per reaction from MeV to Joules. Use the conversion factor $!$1\\;MeV=1.602\\times10^{-13}\\;J$!$. What is the energy released per reaction in Joules?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.813e-12"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "f69775cb-ea85-401a-96fc-3f0855976fe9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2d89144c78b446a48fa0d",
+                    "stepText": "Finally, determine the number of fusion reactions per second needed for a power output of 500 MW. Divide the total power output (in Joules per second) by the energy per reaction you calculated. What is the number of reactions per second required?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.78e20"
+                    ],
+                    "stepSolveAnswerUnits": "reactions/s",
+                    "stepConcepts": [
+                        "f69775cb-ea85-401a-96fc-3f0855976fe9",
+                        "d42487b2-db43-4fc5-9fc0-a62818835b39"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "83cdfcd649014fd7a1b49",
+            "questionText": "A sun-like star is nearing the end of its main sequence lifetime. Initially, it primarily fused hydrogen into helium via the proton-proton chain. After exhausting the hydrogen in its core, the star's core begins to contract and heat up. This increased temperature eventually initiates the triple-alpha process, where helium nuclei fuse to form carbon. Given that the star's initial luminosity on the main sequence was $!$L_{\\odot}$!$ (solar luminosity) with a surface temperature of 5778 K, and after the triple-alpha process starts, its luminosity increases to 100 $!$L_{\\odot}$!$ while its surface temperature decreases to 4000 K, by what factor does the star's radius change? Use the relationship $!$L = 4\\pi R^2 \\sigma T^4$!$, where $!$L$!$ is luminosity, $!$R$!$ is radius, $!$T$!$ is temperature, and $!$\\sigma$!$ is the Stefan-Boltzmann constant.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e3cbf735cbf343898343e",
+                    "stepText": "Let's start by identifying the formula that relates a star's luminosity, radius, and temperature. Please select the correct expression that we should use.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L = 4 \\pi R^2 \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L = 4 \\pi R \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L = \\pi R^2 \\sigma T^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "26d69915dcb343239bd78",
+                    "stepText": "Great! Now that we have the correct formula, let\u2019s form the expression for the ratio of the star\u2019s final radius to its initial radius. How would you express $!$R_f/R_i$!$ based on the given information?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0",
+                        "369a9276-6e32-408e-90e0-7dd8f419995e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R_f/R_i = \\sqrt{(L_f/L_i)(T_i/T_f)^4}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R_f/R_i = \\sqrt{(L_f/L_i)(T_f/T_i)^4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_f/R_i = (L_f/L_i)(T_i/T_f)^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1f3b83f1c1254b71b1f9c",
+                    "stepText": "Now, calculate the value of $!$(T_i/T_f)^4$!$ using the given temperatures, where $!$T_i = 5778$!$ K and $!$T_f = 4000$!$ K. What is the numerical result to two decimal places?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.35"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5848dac207d6482b887c8",
+                    "stepText": "Excellent. Next, multiply the ratio of luminosities $!$L_f/L_i$!$ (given as 100) by the value we just calculated. What is the product of $!$100 \\times 4.35$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "435"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0",
+                        "369a9276-6e32-408e-90e0-7dd8f419995e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "dcbdc5cdefc94950a5c48",
+                    "stepText": "Finally, take the square root of the product obtained in the previous step to find the factor by which the star's radius changes. What is $!$\\sqrt{435}$!$ approximately?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20.86"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

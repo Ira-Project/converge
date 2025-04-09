@@ -1,0 +1,201 @@
+{
+    "id": "f13df38aa6f04444a780f",
+    "name": "Fission",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "4aeb6d1db4bf4944b722a",
+            "questionText": "In a nuclear power plant, a malfunction causes the control rods to fail, leading to an exponential increase in the rate of nuclear fission. The reactor core temperature is rising rapidly, and the heat exchanger is operating at its maximum capacity, removing heat at a rate of $!$150 MW$!$. The initial rate of fission energy production is $!$200 MW$!$, and it is increasing at a rate of $!$20 MW/s$!$. Assuming the heat exchanger's removal rate remains constant, calculate how many seconds the operators have before the rate of fission energy production exceeds the heat removal capacity by $!$50%$!$ of the heat exchanger's maximum capacity, potentially leading to a nuclear accident.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d7c4c554225743b19d4c2",
+                    "stepText": "Let's start by setting up the equation that expresses the fission power production over time, given an initial production and a constant rate of increase. Please choose the formula that correctly represents this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d28b5c5e-7617-4d12-93c5-491614507352"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P(t)=200+20t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P(t)=200*20t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P(t)=20t-200$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6cbe6669f0d74506a0025",
+                    "stepText": "Great, now that we have the expression for the fission power production, let's determine the safe threshold power level. The heat exchanger removes $!$150 MW$!$, and a 50% excess corresponds to an additional $!$75 MW$!$. Which expression correctly computes the threshold power level?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$150+75$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$150*1.5$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$150-75$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "14cee17588c341f187664",
+                    "stepText": "Now, using the expressions from the previous steps, set up the equation where the fission power production equals the safe threshold power level, and then solve for the time $!$t$!$. Calculate the value of $!$t$!$ in seconds.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.25"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "d28b5c5e-7617-4d12-93c5-491614507352"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "910436270a8748b1b5be8",
+            "questionText": "In a research lab, scientists are investigating the spontaneous fission of Californium-252 ($!$Cf-252$!$). They've determined that the mass of the original $!$Cf-252$!$ nucleus is $!$4.15677 \\times 10^{-25}\\,kg$!$ and that after spontaneous fission the resulting fragments have a combined mass of $!$4.15623 \\times 10^{-25}\\,kg$!$. Using the mass-energy equivalence formula $!$Q = \\Delta m c^2$!$, where $!$c = 3.00 \\times 10^8\\,m/s$!$, calculate the fission Q-value for this spontaneous fission event in $!$MeV$!$ (Note: $!$1\\,MeV = 1.602 \\times 10^{-13}\\,J$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b131f80f75fc4b6297701",
+                    "stepText": "Let's start by identifying the correct formula to calculate the mass defect. Think about how you would express the mass defect (\\(\\Delta m\\)) in terms of the initial mass and the mass of the fragments. Which of the following represents the appropriate expression?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "05608edd-814d-4512-8e8c-1d46241af01d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta m = m_{\\text{initial}} - m_{\\text{fragments}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta m = m_{\\text{fragments}} - m_{\\text{initial}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta m = m_{\\text{initial}} + m_{\\text{fragments}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fdebd0f9a0384760acc52",
+                    "stepText": "Great! Now, using the expression for mass defect, substitute the given masses: \\(m_{\\text{initial}} = 4.15677 \\times 10^{-25} \\;kg\\) and \\(m_{\\text{fragments}} = 4.15623 \\times 10^{-25} \\;kg\\). Calculate the numerical value for \\(\\Delta m\\).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.4e-29"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "05608edd-814d-4512-8e8c-1d46241af01d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "13d76bf012fb4e4299a69",
+                    "stepText": "Excellent. Next, to compute the energy released in the fission process, we use the mass-energy equivalence relation. Which among the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e0073bfa-4354-4574-81fe-37c2676f570b",
+                        "35d54b23-8c3e-414f-855e-429319c72d63"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = \\Delta m c^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = \\frac{\\Delta m}{c^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = c^2 \\Delta m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b7ed80a925e4469c90026",
+                    "stepText": "Now, using the mass defect you calculated and the speed of light \\(c = 3.00 \\times 10^8 \\;m/s\\), substitute these into the mass-energy formula to compute the energy \\(Q\\) in joules. Perform the numerical calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.86e-12"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "e0073bfa-4354-4574-81fe-37c2676f570b",
+                        "35d54b23-8c3e-414f-855e-429319c72d63"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "36d084391c52471bbd4e6",
+                    "stepText": "Finally, convert the energy from joules to mega-electronvolts (MeV) using the conversion factor \\(1 \\;MeV = 1.602 \\times 10^{-13} \\;J\\). Divide the energy in joules by the conversion factor to obtain the final Q-value in MeV.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30.4"
+                    ],
+                    "stepSolveAnswerUnits": "MeV",
+                    "stepConcepts": [
+                        "35d54b23-8c3e-414f-855e-429319c72d63"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

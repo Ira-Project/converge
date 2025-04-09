@@ -4,7 +4,7 @@ import type { CheckStepInput } from "./checkStep.input";
 import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "@/server/db/schema/stepSolve/stepSolveQuestionAttempts";
 import { eq } from "drizzle-orm";
 import { conceptTracking } from "@/server/db/schema/concept";
-import { ActivityType } from "@/lib/constants";
+import { ActivityType, STEP_SOLVE_ANSWER_TOLERANCE } from "@/lib/constants";
 
 
 export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput) => {
@@ -103,7 +103,7 @@ export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput
       try {
         const answerNumber = parseFloat(input.answer ?? "");
         const stepSolveAnswerNumber = parseFloat(answer ?? "");
-        isCorrect = Math.abs(answerNumber - stepSolveAnswerNumber) < 0.01;
+        isCorrect = Math.abs(answerNumber - stepSolveAnswerNumber) < STEP_SOLVE_ANSWER_TOLERANCE;
         if(isCorrect) {
         evaluationCorrect = true;
           break;

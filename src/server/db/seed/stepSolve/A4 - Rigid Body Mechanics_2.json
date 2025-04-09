@@ -1,0 +1,289 @@
+{
+    "id": "d6fc617d0dbd4348a8e47",
+    "name": "Rigid Body Mechanics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9e7b7dc2c66c4265b80d8",
+            "questionText": "A uniform rod of length $!$L = 1\\,\\text{m}$!$ and mass $!$M = 2\\,\\text{kg}$!$ is initially at rest on a frictionless horizontal surface. A force of $!$F = 10\\,\\text{N}$!$ is applied perpendicularly to one end of the rod. Calculate the instantaneous angular displacement of the rod after $!$t = 2\\,\\text{s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1e746c93713142be9ec91",
+                    "stepText": "Let's start by determining how to compute the torque produced by the applied force. Identify the correct formula that relates torque to force and the lever arm (the distance from the center of mass to the point of force application).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "66c394e5-9b27-4235-9105-6b2e0ba0b2b0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\tau = Fd$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\tau = \\frac{F}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\tau = Fr$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cd5221b99a274ea1ab5cc",
+                    "stepText": "Great. Now, use the lever arm value, which for a uniform rod is its half-length ($!$L/2$!$), along with the applied force to compute the torque. Calculate the torque value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5"
+                    ],
+                    "stepSolveAnswerUnits": "N\u00b7m",
+                    "stepConcepts": [
+                        "66c394e5-9b27-4235-9105-6b2e0ba0b2b0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "05e02eeaa04e4d6eae9eb",
+                    "stepText": "Next, consider the resistance of the rod to rotation by determining its moment of inertia about its center. Identify the correct formula for the moment of inertia of a uniform rod rotating about its center.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e7c0b9dd-4995-4142-ba78-a54339d150c3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{1}{12}ML^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{1}{2}MR^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = MR^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "48fb895acf484aa09e975",
+                    "stepText": "Using the appropriate formula, calculate the moment of inertia for the rod given its mass and length.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.16667"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m\u00b2",
+                    "stepConcepts": [
+                        "e7c0b9dd-4995-4142-ba78-a54339d150c3"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4c0b5ad16aef4076bface",
+                    "stepText": "Now, apply the rotational analog of Newton's second law. Compute the angular acceleration using the torque and the moment of inertia you calculated.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30"
+                    ],
+                    "stepSolveAnswerUnits": "rad/s\u00b2",
+                    "stepConcepts": [
+                        "66c394e5-9b27-4235-9105-6b2e0ba0b2b0",
+                        "e7c0b9dd-4995-4142-ba78-a54339d150c3",
+                        "3b2a38ec-ad3c-4fda-9fed-c1f652dea80e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4de5c4001312432a9336f",
+                    "stepText": "Finally, determine the angular displacement of the rod after $!$t = 2\\,\\text{s}$!$ for a constant angular acceleration. Identify the correct kinematic equation for angular displacement under constant angular acceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "rad",
+                    "stepConcepts": [
+                        "2d55391b-a455-46a3-b18c-c0ffb1e8ba67"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta \\theta = \\omega_i t + \\frac{1}{2}\\alpha t^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta \\theta = \\alpha t^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta \\theta = \\frac{\\alpha t^2}{2\\omega_i}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "6419e642bc07410b98c46",
+            "questionText": "A seesaw consists of a uniform plank of length $!$L = 4\\,\\text{m}$!$ and mass $!$M = 10\\,\\text{kg}$!$, pivoted at its center. A child of mass $!$m_1 = 30\\,\\text{kg}$!$ sits at one end, and another child of mass $!$m_2 = 20\\,\\text{kg}$!$ sits $!$d = 1\\,\\text{m}$!$ from the other end. If the seesaw is released from rest in this unbalanced configuration, what is its initial angular acceleration?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "19457b939be84a3c9dc7c",
+                    "stepText": "Let's begin by identifying the concept that tells us how to calculate the rotational effect produced by a force. Which of the following formulas defines the torque ($!$\\tau$!$) produced by a force applied at a distance from a pivot?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "66c394e5-9b27-4235-9105-6b2e0ba0b2b0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\tau = Fd$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\tau = F + d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\tau = \\frac{F}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "80503763c4d742ce841e3",
+                    "stepText": "Great, now use the determined concept to compute the net torque about the seesaw's pivot. Consider the distances from the center: the first child is at $!$2\\,\\text{m}$!$ from the pivot, and the second child\u2019s distance from the pivot is $!$1\\,\\text{m}$!$. Using $!$g = 9.8\\,\\text{m/s}^2$!$, calculate the net torque by summing each child's contribution (taking proper sign conventions). What is the net torque (in $!$\\text{N}\\cdot\\text{m}$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-392"
+                    ],
+                    "stepSolveAnswerUnits": "N\u00b7m",
+                    "stepConcepts": [
+                        "66c394e5-9b27-4235-9105-6b2e0ba0b2b0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5016f80360db4423aa8ea",
+                    "stepText": "Now, let\u2019s focus on the moment of inertia. For the uniform plank used as a seesaw, we need to recall the formula for the moment of inertia of a rod pivoted about its center. Which of the following formulas correctly represents this?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e7c0b9dd-4995-4142-ba78-a54339d150c3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{1}{12} ML^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{1}{2} ML^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = ML^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5cd434a9dc814662a96f8",
+                    "stepText": "Excellent. Now, calculate the total moment of inertia ($!$I_{total}$!$) of the seesaw system. First, compute the plank's moment of inertia using the rod formula. Then, add the contributions of the two children treated as point masses (using $!$m \\times r^2$!$ for each, where $!$r$!$ is the distance from the pivot). What is the total moment of inertia (in $!$\\text{kg}\\cdot\\text{m}^2$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "153.3"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m\u00b2",
+                    "stepConcepts": [
+                        "e7c0b9dd-4995-4142-ba78-a54339d150c3"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4a84ed8ab0a247798c7a4",
+                    "stepText": "Now that we have both the net torque and the total moment of inertia, let's identify the rotational dynamics relation that connects these quantities to angular acceleration ($!$\\alpha$!$). Which of the following formulas correctly relates them?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3b2a38ec-ad3c-4fda-9fed-c1f652dea80e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\alpha = \\frac{\\tau}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\alpha = \\tau \\times I$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\alpha = \\frac{I}{\\tau}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "dbbcd2c12e574e658e24e",
+                    "stepText": "Finally, use the net torque and the moment of inertia computed earlier to calculate the initial angular acceleration ($!$\\alpha$!$) of the seesaw. Divide the net torque by the total moment of inertia. What is the angular acceleration (in $!$\\text{rad/s}^2$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-2.56"
+                    ],
+                    "stepSolveAnswerUnits": "rad/s\u00b2",
+                    "stepConcepts": [
+                        "3b2a38ec-ad3c-4fda-9fed-c1f652dea80e"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

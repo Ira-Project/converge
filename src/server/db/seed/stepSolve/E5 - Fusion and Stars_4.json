@@ -1,0 +1,185 @@
+{
+    "id": "890afa6fbe6c4f20b5df6",
+    "name": "Fusion and Stars",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "49de459f02f847bb961fe",
+            "questionText": "A research team is observing a main sequence star that is more massive than our Sun. This massive star primarily uses the CNO cycle for nuclear fusion in its core. Suppose the core temperature of this star is $!$3 \\times 10^7 K$!$ and its luminosity is $!$500 L_{\\odot}$!$, where $!$L_{\\odot}$!$ is the luminosity of the Sun ($!$3.828 \\times 10^{26} W$!$). The Sun has a surface temperature of approximately 5778 K. Given that the luminosity $!$L$!$ of a star is related to its radius $!$R$!$ and surface temperature $!$T$!$ by the formula $!$L = 4 \\pi R^2 \\sigma T^4$!$, where $!$\\sigma$!$ is the Stefan-Boltzmann constant ($!$5.67 \\times 10^{-8} W m^{-2} K^{-4}$!$), calculate the radius of this massive star in terms of the solar radius $!$R_{\\odot}$!$, which is approximately $!$6.957 \\times 10^8 m$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b661fa0beee746c3ad257",
+                    "stepText": "Let's start by identifying the correct formula that relates a star's luminosity $!$L$!$, radius $!$R$!$, and surface temperature $!$T$!$ using the Stefan-Boltzmann law. Please select the appropriate formula from the options provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L = 4\\pi R^2 \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L = 4\\pi R \\sigma T^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L = \\sigma T^4 / (4\\pi R^2)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5b2a186a006244d385906",
+                    "stepText": "Great. Now, consider applying that formula to both the massive star and the Sun. By dividing the star's luminosity by the Sun's luminosity, we obtain a relation between their radii and surface temperatures. Please choose the correct expression representing this ratio.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{L}{L_{\\odot}} = \\frac{R^2}{R_{\\odot}^2} \\left(\\frac{T}{T_{\\odot}}\\right)^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{L}{L_{\\odot}} = \\frac{R}{R_{\\odot}} \\left(\\frac{T}{T_{\\odot}}\\right)^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{L}{L_{\\odot}} = \\frac{R^2}{R_{\\odot}^2} \\left(\\frac{T}{T_{\\odot}}\\right)^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7fa7d3bd2abb43e09274e",
+                    "stepText": "Now that you have the ratio, substitute the given value $!$L = 500 L_{\\odot}$!$ into the equation. Assuming the star's effective surface temperature is approximately the same as that of the Sun (so that $!$T/T_{\\odot} \\simeq 1$!$), determine the numerical value of $!$(R/R_{\\odot})^2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "500"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e400930f2cbb4ba693b53",
+                    "stepText": "Finally, to obtain the required ratio of the star's radius to the Sun's radius ($!$R/R_{\\odot}$!$), take the square root of the value from the previous step. What is the approximate numerical value of $!$R/R_{\\odot}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "22.36"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "dc04483bc9164e04ad29c",
+            "questionText": "Assume Star B is a main sequence star located 10 parsecs from Earth with an apparent brightness of $!$2.0 \\times 10^{-8} \\; W/m^2$!$ and Star A has the same luminosity as Star B but a parallax angle that is half that of Star B (so its distance is doubled). Given that Star A is a red giant with an effective surface temperature of 3500 K and Star B has a temperature of 5800 K, calculate how many times larger Star A's radius is compared to Star B's radius. (Assume both stars have the same luminosity)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7911114de6824c899c7a1",
+                    "stepText": "Let's start by recalling the relationship between a star's luminosity (L), its radius (R), and its effective surface temperature (T). Which of the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L=4\\pi R^2 \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L=4\\pi R^3 \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L=4\\pi R^2 \\sigma T^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a74fbdadcd634d38b0b49",
+                    "stepText": "Great, now that we have identified the appropriate luminosity formula, consider that both stars have equal luminosity. By setting the luminosity expressions equal for Star A and Star B, we can derive a relationship between their radii and temperatures. Which of the following correctly expresses the relation between the ratio of the radii $!$(R_A/R_B)$!$ and the temperatures $!$(T_A)$!$ and $!$(T_B)$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$(R_A/R_B)^2=(T_B/T_A)^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$(R_A/R_B)^2=(T_A/T_B)^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$(R_A/R_B)^2=(T_B/T_A)^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9ddf1a9f151a4c1bad733",
+                    "stepText": "Now, using the derived relation, substitute the given temperatures for Star B ($!$5800\\;K$!$) and Star A ($!$3500\\;K$!$) to calculate the ratio of their radii. Remember that after deriving $(R_A/R_B)^2=(T_B/T_A)^4$, taking the square root gives $!$(R_A/R_B)=(T_B/T_A)^2$. What is the numerical value of $!$(R_A/R_B)$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.74"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { BookOpen, Layers, Plus, ChartLine, ChartNoAxesColumn, Origami } from "lucide-react"
+import { BookOpen, FileText, Plus, ChartLine, ChartNoAxesColumn, Home } from "lucide-react"
 
 import { NavMain } from "./nav-main"
 import { NavStudents } from "./nav-students"
@@ -16,7 +16,7 @@ import {
 } from "@/components/ui/sidebar"
 import { type RouterOutputs } from "@/trpc/shared"
 import Image from "next/image"
-import { Roles } from "@/lib/constants"
+import { ComponentIds, Paths, Roles } from "@/lib/constants"
 
 
 interface AppSidebarProps {
@@ -42,25 +42,25 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
   
   const navMain = [
     {
-      title: "Activities",
+      title: "Home",
       url: `/${classroom?.id}`,
-      icon: Origami,
+      icon: Home,
       isActive: true,
     },
     {
-      title: "Topics",
-      url: `${classroom?.id}`,
-      icon: Layers,
+      title: "Activity Library",
+      url: `${classroom?.id}${Paths.Activities}`,
+      icon: BookOpen,
       isActive: true,
       items: filteredActivities.map((topic) => ({
         title: topic.name,
-        url: `/${classroom?.id}#${topic.slug}`,
+        url: `/${classroom?.id}${Paths.Activities}#${topic.slug}`,
       })),
     },
     {
       title: "Documentation",
-      url: `/${classroom?.id}/documentation`,
-      icon: BookOpen,
+      url: `${classroom?.id}${Paths.Documentation}`,
+      icon: FileText,
       isActive: true,
     },
 
@@ -70,20 +70,20 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
     if(classroom?.showLeaderboardTeachers) {
       navMain.push({
         title: "Leaderboard",
-        url: `/${classroom?.id}/leaderboard`,
+        url: `/${classroom?.id}${Paths.Leaderboard}`,
         icon: ChartNoAxesColumn,
         isActive: true,
       })
     }
     navMain.push({
       title: "Analytics",
-      url: `/${classroom?.id}/analytics`,
+      url: `/${classroom?.id}${Paths.Analytics}`,
       icon: ChartLine,
       isActive: true,
     })
     navMain.push({
       title: "Create Activity",
-      url: `/${classroom?.id}#create-activity`,
+      url: `/${classroom?.id}#${ComponentIds.CreateAssignment}`,
       icon: Plus,
       isActive: true,
     })
@@ -91,7 +91,7 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
     if(classroom?.showLeaderboardStudents) {
       navMain.push({
         title: "Leaderboard",
-        url: `/${classroom?.id}/leaderboard`,
+        url: `/${classroom?.id}${Paths.Leaderboard}`,
         icon: ChartNoAxesColumn,
         isActive: true,
       })

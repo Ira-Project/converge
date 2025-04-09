@@ -1,0 +1,143 @@
+{
+    "id": "39d583707f9d4e6796cd8",
+    "name": "Fusion and Stars",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "2b4d1b392ebf48f28cbe6",
+            "questionText": "A fusion research team is investigating a deuterium-tritium reactor using the reaction $!$^2_1H + ^3_1H \\rightarrow ^4_2He + ^1_0n$!$. The team has improved the magnetic confinement, increasing the confinement time by 50% (from 1 second to 1.5 seconds). Assuming the plasma temperature is sufficiently high for the reaction to occur and that the mass defect is $!$5 \\times 10^{-29}$!$ kg, calculate the energy released (in joules) per fusion event.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3693ec331ec8431a8eecd",
+                    "stepText": "Let's begin by identifying the correct relation between energy and mass defect in a fusion event. Please select the formula that correctly relates energy to the mass defect.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3e3147e9-a9e5-4cc3-8d6e-14259c4fa3e6",
+                        "d42487b2-db43-4fc5-9fc0-a62818835b39",
+                        "f69775cb-ea85-401a-96fc-3f0855976fe9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E=mc^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E=mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E=\\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2eba6c3f4ac94b6fbfcde",
+                    "stepText": "Great, now that you've identified the relation, let's compute the square of the speed of light. Given that the speed of light is $!$3\\times10^8$!$ m/s, calculate $!$c^2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "9e16"
+                    ],
+                    "stepSolveAnswerUnits": "m^2/s^2",
+                    "stepConcepts": [
+                        "f69775cb-ea85-401a-96fc-3f0855976fe9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ea7377925dce405298d52",
+                    "stepText": "Now, using the mass defect of $!$5\\times10^{-29}$!$ kg and the computed value for $!$c^2$!$, calculate the energy released per fusion event by applying the relation you identified.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.5e-12"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "3e3147e9-a9e5-4cc3-8d6e-14259c4fa3e6",
+                        "f69775cb-ea85-401a-96fc-3f0855976fe9"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "65cb5d48f7c541acb2508",
+            "questionText": "A star with an initial mass of $!$30$!$ solar masses undergoes stellar evolution. After spending several million years on the main sequence, it exhausts the hydrogen fuel in its core and eventually undergoes a supernova explosion. Suppose that after the supernova, the remnant core collapses to form a black hole. If the black hole's mass is determined to be $!$8$!$ solar masses and $!$2$!$ solar masses worth of energy is released, what is the proportion of the mass that the black hole retained relative to the mass of the released energy?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0064b14359b14a3f8c909",
+                    "stepText": "Let's start by identifying the two key values given in the problem: one is the mass of the black hole that remains after the supernova, and the other is the mass equivalent of the energy released. What are these two masses?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d496b03b-a2e0-4751-803e-78f8faeeac4b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "dc6a468227414bfbaba52",
+                    "stepText": "Great. Now, to compare the retained mass with the released energy, we need to form a ratio. Which mathematical operation would correctly allow you to form a ratio of the retained mass to the released mass equivalent?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{\\text{Retained Mass}}{\\text{Released Energy Mass}}$!$ (Division)",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Retained Mass} \\times \\text{Released Energy Mass}$!$ (Multiplication)",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Retained Mass} - \\text{Released Energy Mass}$!$ (Subtraction)",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Retained Mass} + \\text{Released Energy Mass}$!$ (Addition)",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e494dd6d42ad4881bec29",
+                    "stepText": "Now that you've identified the correct operation, perform the calculation by dividing the black hole's mass by the released energy mass. What numerical value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

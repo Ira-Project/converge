@@ -1,0 +1,194 @@
+{
+    "id": "ed5dd0667a274ce993534",
+    "name": "Wave Model",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "815ef49ca9bd445e82c23",
+            "questionText": "A guitar string with a length of $!$0.65 \\ m$!$ is fixed at both ends. When plucked, the string vibrates, producing a sound wave. The speed of the wave on the string is $!$220 \\ m/s$!$. Assuming the string vibrates in its fundamental mode (first harmonic), calculate the frequency $!$f$!$ of the sound wave produced by the vibrating guitar string.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b7f8ce2860e943f3bbea4",
+                    "stepText": "Let's start by recalling the relation between the wavelength $!$\\lambda$!$ and the length $!$L$!$ of a string vibrating in its fundamental mode. Please select the correct formula for this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = L$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = 2L$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = 4L$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d381c76b7c69416fbecfc",
+                    "stepText": "Great! Now, using the relation you picked and the given string length $!$L=0.65\\,m$!$, calculate the wavelength $!$\\lambda$!$ of the wave on the string.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.3"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f0dca14d4ea64a85bacb0",
+                    "stepText": "Next, let's recall the relationship connecting wave speed $!$v$!$, frequency $!$f$!$, and wavelength $!$\\lambda$!$. Identify the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537",
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\frac{f}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = f\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{\\lambda}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fa868033b76e47cbb6b2d",
+                    "stepText": "Finally, using the computed wavelength $!$\\lambda=1.3\\,m$!$ and the given wave speed $!$v=220\\,m/s$!$, calculate the frequency $!$f=\\frac{v}{\\lambda}$!$ of the wave.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "169.23"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "541970742e234411a3532",
+            "questionText": "An ultrasound device emits a sound wave with a frequency of 5 MHz into a patient's body. In tissue A, the speed of sound is 1540 m/s, while in tissue B, it is 1650 m/s. Calculate the percentage change in the wavelength of the ultrasound wave as it travels from tissue A to tissue B.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2bd9020ed0ad474b93b37",
+                    "stepText": "Let's start by identifying the correct formula that relates the speed, frequency, and wavelength of a wave, which you will use for the calculations. Please select the formula that correctly allows you to compute the wavelength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = v/f$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = f/v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\lambda f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\lambda/f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "821314e121bc41bba947f",
+                    "stepText": "Great! Now, using the identified relation, compute the wavelength in tissue A by dividing the speed in tissue A by the frequency. Enter the computed wavelength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.000308"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "21e638bf1334485781492",
+                    "stepText": "Next, apply the same relation to calculate the wavelength in tissue B by dividing the speed in tissue B by the frequency. Provide your result for the wavelength in tissue B.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.00033"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fbfe553f08104ceb84128",
+                    "stepText": "Now that you have both wavelengths, determine the percentage change in the wavelength as the sound travels from tissue A to tissue B. Compute the percentage change using the difference between the two wavelengths relative to tissue A.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.14"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

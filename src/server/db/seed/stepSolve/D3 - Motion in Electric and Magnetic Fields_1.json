@@ -1,0 +1,273 @@
+{
+    "id": "f237a04b02f149169790d",
+    "name": "Motion in Electric and Magnetic Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "394f6c9bcc174c35b77ff",
+            "questionText": "A proton with a charge of $!$1.602 \\times 10^{-19}~C$!$ and a mass of $!$1.672 \\times 10^{-27}~kg$!$ is injected perpendicularly into a uniform magnetic field of strength $!$0.5~T$!$. If the proton's initial velocity is $!$5 \\times 10^6~m/s$!$, calculate the radius of its circular path after it has lost half of its initial kinetic energy, assuming the magnetic field remains constant.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "966db1d0032b4a87a69a0",
+                    "stepText": "Let's start by identifying the formula for the magnetic force acting on a charged particle moving in a magnetic field. Which of the following options correctly represents the expression for this force?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f69857d1-d285-419d-8458-a425ac5cf3d5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = q E$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = q vB$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{mv^2}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{qB}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b14868d7da80430a98673",
+                    "stepText": "Now, consider the centripetal force required for circular motion. Which of the following formulas correctly expresses the centripetal force acting on a particle moving at speed $!$v$!$ in a circle of radius $!$r$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{mv^2}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = q vB$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = q E$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{m}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "736d091ae5bb4c6590bb6",
+                    "stepText": "Great! Next, by setting the magnetic force equal to the centripetal force, you can derive an expression for the radius of the circular path. Which of the following expressions correctly represents the radius in terms of mass, speed, charge, and magnetic field?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679",
+                        "f69857d1-d285-419d-8458-a425ac5cf3d5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$r = \\frac{mv}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$r = \\frac{qB}{mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$r = \\frac{qE}{mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$r = \\frac{mv^2}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d95ce228735541a796a5d",
+                    "stepText": "Now, note that the proton loses half of its initial kinetic energy. Since kinetic energy is proportional to $!$v^2$!$, this reduction causes the speed to change. Calculate the new speed $!$v'$!$ if the initial speed is $!$v_0$!$ = $!$5 \\times 10^6~m/s$!$. (Hint: Express $!$v'$!$ in terms of $!$v_0$!$.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.54e6"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "2528a69f-0369-4021-ac12-870b5423cd8a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "827bd2b733cf400782c69",
+                    "stepText": "Finally, use the radius formula derived earlier along with the new speed to calculate the radius of the proton's circular path. Substitute the values: $!$m=1.672\\times10^{-27}~kg$!$, $!$v' = 3.54\\times10^6~m/s$!$, $!$q=1.602\\times10^{-19}~C$!$, and $!$B=0.5~T$!$. Compute the radius.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.074"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "1bcc55ef1aec433fae2b1",
+            "questionText": "An electron with a charge of $!$-1.602 \\times 10^{-19}~C$!$ and a mass of $!$9.11 \\times 10^{-31}~kg$!$ is shot horizontally at a velocity of $!$3 \\times 10^6~m/s$!$ into a uniform electric field between two parallel plates. The electric field strength is $!$2000~N/C$!$, and the electron travels a horizontal distance of $!$5~cm$!$ within the field. Calculate the change in the electron's kinetic energy during this time, assuming the electron enters the field midway between the plates and does not strike either plate.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "694f2ce194444a3cb3018",
+                    "stepText": "Let's start by identifying the proper formula to calculate the force acting on a charged particle in an electric field. Which of the following formulas correctly relates the charge and the electric field to the force on the particle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f69857d1-d285-419d-8458-a425ac5cf3d5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = qE$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{q}{E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = qmE$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c127926db6564ca0b67a2",
+                    "stepText": "Now, using the horizontal distance and the electron's velocity, calculate the time the electron spends within the electric field. Remember, time can be found by dividing the distance by the velocity. What is the time in seconds?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.67e-8"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "493d8d92a40d4d4bba753",
+                    "stepText": "Great. Next, we need to determine the acceleration of the electron while it is in the electric field. Which of the following formulas correctly relates the force we considered earlier to the electron's acceleration?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5c33bb63-3c6d-413f-a1af-25385ab95845"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$a = \\frac{F}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$a = \\frac{m}{F}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = qE t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "581a6236999a4b74b330f",
+                    "stepText": "Now that you have determined the acceleration, let\u2019s compute the vertical displacement of the electron while it remains in the field. Use the relation that involves half the acceleration and the square of the time, i.e., the formula for displacement under constant acceleration. What is the vertical displacement in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0491"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a5fee9d5-2b2a-4e9d-8caf-a83a70245740"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b4b1a655101f4436954bb",
+                    "stepText": "Finally, to find the change in the electron's kinetic energy, we need the work done on the electron by the electric field. Which formula correctly relates force and displacement to work done? After that, using your computed values for the magnitude of the force and the vertical displacement, calculate the work (change in kinetic energy) in joules.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.57e-17"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "2528a69f-0369-4021-ac12-870b5423cd8a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = F \\times y$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{1}{2} m v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = qEy$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

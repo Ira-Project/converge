@@ -1,0 +1,215 @@
+{
+    "id": "1f458775eb204b16b184c",
+    "name": "Motion in Electric and Magnetic Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "c1a0b414b1dd4c2783f3f",
+            "questionText": "An electron with a charge $!$q = -1.6 \\times 10^{-19} C$!$ and mass $!$m = 9.11 \\times 10^{-31} kg$!$ is shot horizontally with an initial velocity of $!$u = 3 \\times 10^6 m/s$!$ into a uniform electric field between two parallel plates. The electric field strength is $!$E = 200 N/C$!$. After traveling a horizontal distance of $!$x = 0.1 m$!$ through the field, what is the change in the electron's kinetic energy $!$\\Delta E_k$!$ due to its vertical acceleration?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d1e04283f8f0420490ea4",
+                    "stepText": "Let's start by determining the electron's vertical acceleration. Identify the correct formula that relates the electric field, charge, and mass to the acceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5c33bb63-3c6d-413f-a1af-25385ab95845",
+                        "f69857d1-d285-419d-8458-a425ac5cf3d5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$a = \\frac{qE}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$a = \\frac{mE}{q}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = qEm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5c8964ab612e4c44995a8",
+                    "stepText": "Now, compute the time that the electron spends traveling through the electric field using the horizontal distance and initial horizontal speed. Use the relationship $!$t = \\frac{x}{u}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.33e-8"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "bb3d1483fe004ccc91ef0",
+                    "stepText": "Good job. Next, using the acceleration from step 1 and the time from step 2, calculate the vertical velocity acquired by the electron with the relation $!$v = a\\,t$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.17e6"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "5c33bb63-3c6d-413f-a1af-25385ab95845",
+                        "2827f571-9eef-4da2-8682-938022aec822"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "dd8e15a452dc4e39aaaf6",
+                    "stepText": "To determine the change in kinetic energy resulting from the electron's vertical motion, identify the proper formula that relates the mass and the acquired vertical velocity to the kinetic energy.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "454335dd-7f0c-4a16-971f-5948e160e83a",
+                        "d6c0a2f6-3474-4e1a-90b0-ccbb292c91a7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta E_{k} = \\frac{1}{2} m v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta E_{k} = m v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E_{k} = qEv$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0648979635ce4f8eb8541",
+                    "stepText": "Finally, using the vertical velocity from step 3 and the electron's mass, calculate the change in the electron's kinetic energy in the vertical direction. Apply the formula you selected in step 4.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.24e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "454335dd-7f0c-4a16-971f-5948e160e83a",
+                        "d6c0a2f6-3474-4e1a-90b0-ccbb292c91a7"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "b7a56a9d86964c67af314",
+            "questionText": "An alpha particle (charge $!$q = +3.2 \\times 10^{-19} C$!$, mass $!$m = 6.64 \\times 10^{-27} kg$!$) is moving with a velocity of $!$v = 5 \\times 10^5 m/s$!$ in a region with a uniform electric field of $!$E = 1000 N/C$!$ pointing upwards and a uniform magnetic field of magnitude $!$B$!$ (which has been previously set so that the particle passes through the region undeflected). If the electric field is now turned off, determine the radius $!$R$!$ of the circular path that the alpha particle follows due to the magnetic field alone.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "68eb88c56863494683108",
+                    "stepText": "Let's start by considering that the particle passes through the crossed fields undeflected. This implies that the magnetic and electric forces balance. Identify the formula that relates the particle's speed $!$v$!$, the electric field $!$E$!$, and the magnetic field $!$B$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "869566af-fb78-4d6f-b591-4f86eae31f82"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\frac{E}{B}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$B = \\frac{qE}{mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = qE$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6f31ebe5a18748609c6e8",
+                    "stepText": "Now that you have selected the correct relation, use it to calculate the magnetic field strength $!$B$!$. Use the relationship $!$B = \\frac{E}{v}$!$ by substituting the given values for $!$E$!$ and $!$v$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.002"
+                    ],
+                    "stepSolveAnswerUnits": "T",
+                    "stepConcepts": [
+                        "869566af-fb78-4d6f-b591-4f86eae31f82"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "618d62397f0f475aa868c",
+                    "stepText": "Next, once the electric field is turned off, the magnetic force acts as the centripetal force, making the particle follow a circular path. Identify the formula that equates the magnetic force to the centripetal force.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$qvB = m\\frac{v^2}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$qvB = \\frac{mv}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$qE = m\\frac{v^2}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "42d65402683b46128c571",
+                    "stepText": "Finally, rearrange the chosen equation to solve for the radius $!$R$!$. Substitute the numerical values for the mass $!$m$!$, speed $!$v$!$, charge $!$q$!$, and the magnetic field $!$B$!$ to calculate $!$R$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.19"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

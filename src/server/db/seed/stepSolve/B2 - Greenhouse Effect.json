@@ -1,0 +1,174 @@
+{
+    "id": "580fd3432a9043ef93bb3",
+    "name": "Greenhouse Effect",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "bda70b6fecba4f978976a",
+            "questionText": "A climatologist is analyzing satellite data and determines that Earth's albedo has decreased from 0.3 to 0.28 over the past 50 years. Given that the solar constant $!$S$!$ is approximately 1400 $!$W/m^2$!$, calculate the percentage change in Earth's average intensity $!$I_{av}$!$ of absorbed solar radiation due to this change in albedo. Assume that the solar constant remains the same.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "937bda17f11b423bade58",
+                    "stepText": "Let's start by identifying the correct formula to calculate the average absorbed solar intensity $!$I_{av}$!$. Which one of the following formulas would you choose?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cb2ae0e5-1e89-4f8d-8848-9873f4991312",
+                        "d92482b7-8562-4293-b4e3-92db7d81228c",
+                        "e8d4c5ce-4c7a-4d7c-961e-4d854e7f5cda"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I_{av} = (1-\\alpha) \\frac{S}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I_{av} = \\alpha \\frac{S}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I_{av} = (1-\\alpha)S$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e094fd9d2da84e4ba0877",
+                    "stepText": "Great, now that we have the formula, calculate the initial absorbed intensity $!$I_1$!$ using an albedo of 0.3. Remember that the solar constant $!$S$!$ is 1400 $!$W/m^2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "245"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [
+                        "cb2ae0e5-1e89-4f8d-8848-9873f4991312",
+                        "d92482b7-8562-4293-b4e3-92db7d81228c",
+                        "e8d4c5ce-4c7a-4d7c-961e-4d854e7f5cda"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1ab657d83ac748f9b9f17",
+                    "stepText": "Next, compute the new absorbed intensity $!$I_2$!$ with the decreased albedo of 0.28 using the same formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "252"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [
+                        "cb2ae0e5-1e89-4f8d-8848-9873f4991312",
+                        "d92482b7-8562-4293-b4e3-92db7d81228c",
+                        "e8d4c5ce-4c7a-4d7c-961e-4d854e7f5cda"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "332fb030e3794a1998de2",
+                    "stepText": "Now, determine the change in intensity $!$\\Delta I$!$ by subtracting the initial value from the new value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "e3715cfc2ee64e76be330",
+                    "stepText": "Finally, calculate the percentage change in absorbed solar radiation using the change in intensity relative to the initial intensity $!$I_1$!$. What is the percentage change?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.86"
+                    ],
+                    "stepSolveAnswerUnits": "percent",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "25356c5ed5a148f1ba1d3",
+            "questionText": "An astrophysicist is studying an exoplanet and determines that its albedo is 0.25 while the intensity radiated from the planet is $!$200 W/m^2$!$. Assuming the planet only absorbs and reflects radiation, calculate the exoplanet's surface temperature T.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2a24cdf0ff9f4eea97d28",
+                    "stepText": "Let's start by identifying the relation that connects the intensity of radiation emitted by a blackbody to its surface temperature. Please select the correct formula that expresses this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = \\sigma T^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\epsilon \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{T}{\\sigma}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0d781b974d334916bdbb7",
+                    "stepText": "Great. Now that you have the correct relation, substitute the given intensity and the value of $!$\\sigma = 5.67 \\times 10^{-8}$!$ into the equation. Calculate the ratio $!$\\frac{200}{5.67 \\times 10^{-8}}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.526e9"
+                    ],
+                    "stepSolveAnswerUnits": "K^4",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2c17217950904b7397cc8",
+                    "stepText": "Now, use the result from the previous step to solve for the surface temperature $!$T$!$. Determine $!$T$!$ by taking the fourth root of the ratio you computed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "244"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

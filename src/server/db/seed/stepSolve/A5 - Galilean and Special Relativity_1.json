@@ -1,0 +1,214 @@
+{
+    "id": "d7011d3c5d1d4a31ba485",
+    "name": "Galilean and Special Relativity",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "bbd0b0caf537486888aa8",
+            "questionText": "A muon is created in the upper atmosphere at an altitude of 10,000 meters with a velocity of 0.99c relative to the Earth, and its proper half-life is $!$2.2\\times10^{-6}$!$ seconds. Considering an observer on Earth, calculate the probability that the muon will reach the Earth's surface without decaying. (Hint: First, compute the gamma factor ($!$\\gamma$!$) for the muon, then its dilated half-life as observed from Earth, and finally use the relation for the probability of not decaying after time t given by $!$e^{-t/(\\tau\\gamma)}$!$, where $!$\\tau$!$ is the proper half-life.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "706b9aa3d4cf4999b80ea",
+                    "stepText": "Let's start by identifying which formula is used to calculate the gamma factor ($!$\\gamma$!$) for an object moving at a relativistic speed. Choose the correct formula for $!$\\gamma$!$ from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a0d65d2b-9a39-4a41-bda5-09be98a1c66a",
+                        "79df688b-df1e-4c20-b8cc-247370a90937"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\gamma = \\frac{1}{\\sqrt{1 - \\frac{v^2}{c^2}}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\gamma = \\sqrt{1 - \\frac{v^2}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\gamma = \\frac{1}{1 - \\frac{v}{c}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2c07056c708c4fb99405c",
+                    "stepText": "Great, now that you've identified the formula, use it with $!$v = 0.99c$!$ to calculate the numerical value of the gamma factor. Provide your answer as a numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.09"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a0d65d2b-9a39-4a41-bda5-09be98a1c66a",
+                        "79df688b-df1e-4c20-b8cc-247370a90937"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "acba41019f9148a39b2b2",
+                    "stepText": "Next, we need to account for time dilation. Identify the correct time dilation relation that connects the proper time (the muon\u2019s half-life in its rest frame) to the dilated time observed from Earth.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0b935911-e793-4b1e-99f1-b6338367d9d5",
+                        "a0d65d2b-9a39-4a41-bda5-09be98a1c66a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$t_{dilated} = \\gamma \\, t_{proper}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$t_{dilated} = \\frac{t_{proper}}{\\gamma}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t_{dilated} = t_{proper} + \\gamma$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "99bbb1d0b5334bcca1b4b",
+                    "stepText": "Now, let's determine how long the muon takes to travel 10,000 meters at a speed of $!$0.99c$!$. Use the relation for time as distance divided by speed. Compute this travel time as a numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.37e-5"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "af99d217-2569-4adb-aea1-e7a319f682ac"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2332b079cc7149868100d",
+                    "stepText": "Finally, choose the correct relation to compute the survival probability of the muon. Which formula correctly represents the probability of the muon not decaying after a time $!$t$!$, using its dilated half-life?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.115"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0b935911-e793-4b1e-99f1-b6338367d9d5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = \\exp \\left(-\\frac{t}{\\gamma \\, \\tau}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\exp \\left(-\\frac{\\gamma \\, t}{\\tau}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\exp \\left(-\\frac{\\tau}{\\gamma \\, t}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "94d03808d5f74693a70f4",
+            "questionText": "Using the relativistic velocity addition formula, calculate the velocity of spaceship B as observed from spaceship A given that spaceship A moves at a velocity of $!$0.6c$!$ and spaceship B moves at a velocity of $!$0.7c$!$ relative to a space station (considered as an inertial reference frame).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ca75d742c37c4e2d951b6",
+                    "stepText": "Let's start by choosing the correct relativistic velocity addition formula that applies for objects moving in the same direction. Which one of the following formulas should you use?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bd343d72-034d-49e8-a9e1-878729f47b2e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$u = \\frac{u' + v}{1 + \\frac{u'v}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$u' = \\frac{u - v}{1 - \\frac{uv}{c^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$x' = x - vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4114167e3c0645cdbc10b",
+                    "stepText": "Great! Now, identify and assign the velocity values for each spaceship. Remember, spaceship B moves at $!$0.7c$!$ relative to the space station and spaceship A moves at $!$0.6c$!$. Confirm which value corresponds to which spaceship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "6d5f34359a2f4d0b9fb73",
+                    "stepText": "Now, substitute the assigned velocities into the selected formula. First, calculate the numerator by subtracting spaceship A's velocity from spaceship B's velocity in the expression $!$(0.7c - 0.6c)$!$. What is the value you obtain for the numerator (in units of $!$c$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1"
+                    ],
+                    "stepSolveAnswerUnits": "c",
+                    "stepConcepts": [
+                        "bd343d72-034d-49e8-a9e1-878729f47b2e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "682ff9b2d447428c86b85",
+                    "stepText": "Finally, using the same formula, compute the relative velocity by dividing the numerator by the denominator. The denominator is given by $!$1 - (0.7 \\times 0.6)$!$, which simplifies to $!$0.58$!$. What is the final relative velocity of spaceship B as seen from spaceship A (in units of $!$c$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1724"
+                    ],
+                    "stepSolveAnswerUnits": "c",
+                    "stepConcepts": [
+                        "bd343d72-034d-49e8-a9e1-878729f47b2e"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,233 @@
+{
+    "id": "7f35b55d57524918a060a",
+    "name": "Doppler Effect",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "b708c47927eb4fa18640c",
+            "questionText": "A police radar gun emits a frequency of $!$8.0 GHz$!$. A car is moving towards the police officer, and the radar gun detects a reflected frequency of $!$8.00015 GHz$!$. Assuming the speed of radio waves is the speed of light, which is approximately $!$3.0 \\times 10^8 m/s$!$, calculate the speed of the car in $!$km/h$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6860a7023b0e494eb18f9",
+                    "stepText": "Let's start by converting the given frequencies into standard units and computing the frequency shift $!$\\Delta f$!$. Calculate the difference between the reflected frequency and the emitted frequency.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "150000"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+                        "f09a3cf7-42e1-4878-b989-bb756bfc1f03"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fcde8af395334db2b6a43",
+                    "stepText": "Great, now that you have the frequency difference, identify the Doppler effect relation that links $!$\\Delta f$!$, the emitted frequency $!$f_0$!$, the speed of the car $!$v$!$, and the speed of light $!$c$!$ for a reflected wave from a moving object. Which formula correctly represents this relation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9",
+                        "8004f091-3866-4725-923f-566d362ee31a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{2 f_0 v}{c}\\$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{f_0 v}{c}\\$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{2 v}{c}\\$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "002d4ee2ea744de4a1da9",
+                    "stepText": "Now that you have selected the appropriate Doppler effect relation, use it to solve for the car\u2019s speed $!$v$!$ in meters per second by substituting $!$\\Delta f = 1.5 \\times 10^5 Hz$!$, $!$f_0 = 8.0 \\times 10^9 Hz$!$, and $!$c = 3.0 \\times 10^8 m/s$!$ into the formula, then isolate and calculate $!$v$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2812.5"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9",
+                        "8004f091-3866-4725-923f-566d362ee31a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "df49f403fe584d35ac861",
+                    "stepText": "Excellent work! Finally, convert the car's speed from meters per second to kilometers per hour. Recall that to convert $!$m/s$!$ to $!$km/h$!$, you multiply by 3.6. Compute the final speed in $!$km/h$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10125"
+                    ],
+                    "stepSolveAnswerUnits": "km/h",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "e06ec878727a40c5a6e81",
+            "questionText": "An astronomer observes a distant galaxy emitting light with a known wavelength of $!$650 nm$!$, while the observed wavelength on Earth is $!$682 nm$!$. Given that the speed of light is approximately $!$3.0 \\times 10^8\\ m/s$!$, determine the galaxy's velocity relative to Earth in $!$km/s$!$ (indicating its direction of motion from the sign of the velocity).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e01a099024024989b0509",
+                    "stepText": "Let's start by identifying the redshift formula. Which of the following expressions correctly represents the redshift $!$z$!$ in terms of the emitted wavelength $!$\\lambda$!$ and the observed wavelength $!$\\lambda'$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "21d1d259-b66f-4509-8897-4feba2f2b3e6",
+                        "ba45dfc9-7996-4dda-bd14-1d7f21675597"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$z = \\frac{\\lambda' - \\lambda}{\\lambda}\\,$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$z = \\frac{\\lambda - \\lambda'}{\\lambda'}\\,$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$z = \\frac{\\lambda' + \\lambda}{\\lambda}\\,$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5477599c2ce74c85b2a18",
+                    "stepText": "Great! Now, using the correct formula from the previous step, calculate the redshift $!$z$!$ from the given wavelengths where $!$\\lambda = 650\\,nm$!$ and $!$\\lambda' = 682\\,nm$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.04923"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "21d1d259-b66f-4509-8897-4feba2f2b3e6",
+                        "ba45dfc9-7996-4dda-bd14-1d7f21675597"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "808c0db83bc947f7a760b",
+                    "stepText": "Let's move forward by identifying the formula that relates the redshift $!$z$!$ to the velocity $!$v$!$ for light in the non-relativistic limit. Which of the options below provides the appropriate relation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "21d1d259-b66f-4509-8897-4feba2f2b3e6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = z\\, c\\,$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{c}{z}\\,$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{z}{c}\\,$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f1238f400cbc4c9ebbd6e",
+                    "stepText": "Now, use the chosen formula to calculate the galaxy's velocity in meters per second using the redshift you computed and the speed of light $!$c = 3.0 \\times 10^8\\,m/s$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.477e7"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "21d1d259-b66f-4509-8897-4feba2f2b3e6",
+                        "5dab74ab-387d-4288-8961-5ac6d456b3e9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "822cce46eecc499986f56",
+                    "stepText": "Next, convert the calculated velocity from meters per second to kilometers per second. What value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "14770"
+                    ],
+                    "stepSolveAnswerUnits": "km/s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "989c3a5d8f034522a15a2",
+                    "stepText": "Finally, interpret the result. Based on the fact that the observed wavelength is greater than the emitted wavelength (i.e. a redshift), what does this redshift indicate about the galaxy's motion relative to Earth?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ba45dfc9-7996-4dda-bd14-1d7f21675597"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "The galaxy is moving away from Earth.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The galaxy is moving towards Earth.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The galaxy is stationary with respect to Earth.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

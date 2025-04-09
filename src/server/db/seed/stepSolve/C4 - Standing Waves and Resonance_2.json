@@ -1,0 +1,213 @@
+{
+    "id": "cff1759d4c0d4c569ac0a",
+    "name": "Standing Waves and Resonance",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "93b2b4d1fb1446748f80d",
+            "questionText": "The current problem asks for the damping coefficient b required for critical damping for a washing machine with a mass of 50 kg. However, to calculate the critical damping coefficient (using the formula $!$b_c = 2\\sqrt{km}$!$), the spring constant k of the system is also needed. Could you please provide the value of the spring constant?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e19cd25bcd8f43c6b1f26",
+                    "stepText": "Let's start by identifying the equilibrium relation between the weight of the mass and the restoring force of the spring. Which of the following formulas correctly expresses the balance between the gravitational force and the spring force (Hint: think of how a spring supports a weight)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$mg = k\\delta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m = k\\delta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$mg = \\frac{k}{\\delta}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a735d2dedb714d2392773",
+                    "stepText": "Great! Now that you have established the equilibrium condition, let's compute the gravitational force (weight) acting on the mass. Given that the mass $!$m=50$!$ kg and the acceleration due to gravity $!$g=9.8$!$ m/s\u00b2, calculate the weight $!$mg$!$. What value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "490"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "88c1c4779f5e4d77ae457",
+                    "stepText": "Now, consider the deflection $!$\\delta$!$ of the spring. If the springs compress by 1 cm under the 50 kg load, express this deflection in meters. What is the deflection value in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.01"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "b0a200de8a6846cf8b662",
+                    "stepText": "Having determined both the weight and the deflection, we now need to set up the calculation for the spring constant $!$k$!$. Which of the following formulas correctly represents the calculation for $!$k$!$ using the values you've just computed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$k = \\frac{mg}{\\delta}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$k = mg\\cdot\\delta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$k = \\frac{\\delta}{mg}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "36aab8d67d55485dbddae",
+                    "stepText": "Finally, use the formula you selected to calculate the spring constant $!$k$!$. Using the weight of 490 N and the deflection of 0.01 m, compute the numerical value of $!$k$!$ in newtons per meter.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "49000"
+                    ],
+                    "stepSolveAnswerUnits": "N/m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "e73b76dd32ac4d6e82f2e",
+            "questionText": "A child is on a swing with a natural frequency of $!$0.5\\,Hz$!$. An adult pushes the swing periodically to keep it going. Initially, the adult pushes with a frequency of $!$0.4\\,Hz$!$. Then, the adult adjusts the pushing frequency to $!$0.5\\,Hz$!$, and the amplitude of the swing increases significantly. Now, suppose the swing has a length of $!$3\\,m$!$. The adult pushes the swing at its resonant frequency, causing it to reach a maximum angle of $!$30^\\circ$!$ from the vertical. If the adult suddenly stops pushing, and the swing experiences damping due to air resistance and friction in the hinges, causing the amplitude to decrease by $!$10\\%$!$ with each swing cycle, how many full cycles will it take for the maximum angle to reduce to $!$15^\\circ$!$?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0f0bc141801e4c429c88d",
+                    "stepText": "Let's start by identifying the correct form for the amplitude decay in this damped system. The amplitude diminishes by a fixed percentage each cycle. Please select the formula that represents how the amplitude $!$A$!$ varies with the number of cycles $!$n$!$ given an initial amplitude $!$A_0$!$. (Remember, one cycle reduces the amplitude by $10\\%$.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 (0.9)^n$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 - 0.1 n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = A_0 (1-0.1n)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "84d3cb8b96224c8db4fd7",
+                    "stepText": "Great! Now, substitute the known maximum angle values into this relationship. The initial amplitude is $!$30^\\circ$!$ and we want the amplitude to reduce to $!$15^\\circ$!$. What is the ratio of the final amplitude to the initial amplitude?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.5"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "b3926dce86b5494c88f2a",
+                    "stepText": "Now that you have the amplitude ratio, set up the exponential equation $!$(0.9)^n = \\text{(amplitude ratio)}$!$. Identify the logarithmic formula that will allow you to solve for $!$n$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$n = \\frac{\\log(\\frac{A}{A_0})}{\\log(0.9)}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$n = \\frac{\\log(0.9)}{\\log(\\frac{A}{A_0})}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$n = \\frac{A/A_0}{0.9}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a26d8437eba04f80a892b",
+                    "stepText": "Excellent. Now, using the logarithmic approach, plug in the values. With $!$\\log(0.5) \\approx -0.30103$!$ and $!$\\log(0.9) \\approx -0.04576$!$, calculate the numerical value of $!$n$!$ from the equation. What value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.57"
+                    ],
+                    "stepSolveAnswerUnits": "cycles",
+                    "stepConcepts": [
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "66ba6d7f659f411c916ca",
+                    "stepText": "Finally, since the swing completes only whole cycles, round your calculated value to determine how many full cycles are needed for the maximum angle to drop to $!$15^\\circ$!$. What is the final number of full cycles?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7"
+                    ],
+                    "stepSolveAnswerUnits": "cycles",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

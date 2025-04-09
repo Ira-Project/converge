@@ -1,0 +1,170 @@
+{
+    "id": "f55ccf295e2b42909c786",
+    "name": "Gas Laws",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "751c5f0e3ade4d59b524e",
+            "questionText": "A scuba diver takes a breath of air at the surface of the ocean. At the surface, the pressure is $!$1 \\text{ atm}$!$, the temperature is $!$298 \\text{ K}$!$, and the volume of air in the diver's lungs is $!$6 \\text{ liters}$!$. The diver then descends to a depth where the pressure is $!$2.5 \\text{ atm}$!$ and the temperature is $!$288 \\text{ K}$!$. Assuming the amount of air remains constant, calculate the new volume of air in the diver's lungs in liters.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a55fad28bbe04dea8c72f",
+                    "stepText": "Let's start by identifying the gas law that relates the initial and final states when the amount of gas remains constant. Select the correct formula that will allow you to relate the pressure, volume, and temperature between two states.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{P_1V_1}{T_1}=\\frac{P_2V_2}{T_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P_1V_1=P_2V_2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$PV=nRT$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$n=\\frac{m}{\\mu}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b1945bcdac514efeb64bb",
+                    "stepText": "Great. Now, using the chosen formula, substitute the initial state values. Calculate the value of $!$\\frac{P_1V_1}{T_1}$!$ using $!$P_1=1 \\text{ atm}$!$, $!$V_1=6 \\text{ L}$!$, and $!$T_1=298 \\text{ K}$!$. What is the numerical result of this calculation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0201"
+                    ],
+                    "stepSolveAnswerUnits": "atm\u00b7L/K",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8681bf68930d4b5d881bf",
+                    "stepText": "Now, let's use the rearranged form of the formula to solve for the final volume $!$V_2$!$. Using your computed value from the previous step along with the final state values $!$P_2=2.5 \\text{ atm}$!$ and $!$T_2=288 \\text{ K}$!$, calculate $!$V_2$!$ by isolating it in the equation. What is the value of $!$V_2$!$ in liters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.32"
+                    ],
+                    "stepSolveAnswerUnits": "L",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "020c709422314c34b6d65",
+            "questionText": "In a car engine cylinder, $!$0.05\\text{ moles}$!$ of air are rapidly compressed. Initially, the volume is $!$400\\text{ cm}^3$!$ at a temperature of $!$300\\text{ K}$!$ and a pressure of $!$1\\text{ atm}$!$. After compression, the volume is reduced to $!$50\\text{ cm}^3$!$. Assuming ideal gas behavior, calculate the change in the internal energy of the air in Joules during the compression.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "27d2af1e309f4029afab3",
+                    "stepText": "Let's start by identifying the formula that relates temperature and volume in an adiabatic process. For a rapid (adiabatic) compression, a specific relation between $!$T$!$ and $!$V$!$ is used. Which of the following options is the correct relation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$T\\,V^{\\gamma-1}=\\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P\\,V=\\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T\\,P^{\\gamma-1}=\\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "589312f1140847d3a4617",
+                    "stepText": "Great. Now, to determine how the temperature changes upon compression, we use the relation from the previous step. Using the formula $!$T_2=T_1\\left(\\frac{V_1}{V_2}\\right)^{\\gamma-1}$!$, calculate the final temperature $!$T_2$!$ in Kelvin. (Recall to use $!$\\gamma=1.4$!$ for air.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "690"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "210482be9f7441b196785",
+                    "stepText": "Now that you have determined the final temperature, let\u2019s focus on how the internal energy changes. For an ideal gas, the change in internal energy is related to the number of moles, a specific heat capacity at constant volume, and the change in temperature. Which of the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1ee9b2cb-3884-442f-83e1-a5f64a7559e2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta U=n\\,C_v\\,\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta U=\\frac{3}{2}nR\\,\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta U=P\\,\\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "abc736277fb3410e91288",
+                    "stepText": "Finally, use the formula chosen in the previous step to calculate the change in internal energy. For a diatomic gas like air, the constant-volume molar heat capacity is given by $!$C_v=\\frac{5}{2}R$!$ where $!$R=8.314\\,J/(mol\\cdot K)$!$. With $!$n=0.05$!$ moles, an initial temperature $!$T_1=300\\,K$!$, and the final temperature we calculated ($!$T_2\\approx690\\,K$!$), evaluate $!$\\Delta U=n\\,C_v\\,(T_2-T_1)$!$ in Joules.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "405"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "1ee9b2cb-3884-442f-83e1-a5f64a7559e2"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

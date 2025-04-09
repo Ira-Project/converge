@@ -1,0 +1,257 @@
+{
+    "id": "2edc057d19094b54a4592",
+    "name": "Gravitational Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "3979fc89164c4f00bde74",
+            "questionText": "A satellite is orbiting Earth in an elliptical orbit. At its closest approach (perigee), its distance from Earth's center is $!$r_1 = 7000\\,\\text{km}$!$ and its speed is $!$v_1 = 8000\\,\\text{m/s}$!$. At its farthest point (apogee), its distance from Earth's center is $!$r_2 = 21000\\,\\text{km}$!$. Given that the mass of the satellite is $!$m = 500\\,\\text{kg}$!$, the gravitational constant is $!$G = 6.674 \\times 10^{-11}\\,\\text{N}\\cdot\\text{m}^2/\\text{kg}^2$!$, and the mass of the Earth is $!$M = 5.972 \\times 10^{24}\\,\\text{kg}$!$, calculate the total energy $!$E_T$!$ of the satellite in its orbit.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8454f1ab42c54a7e984c7",
+                    "stepText": "Let's begin by identifying the correct formula for the kinetic energy at perigee. Choose the correct expression that represents the kinetic energy for a moving object.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$KE = \\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$KE = mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$KE = \\frac{mv}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1677e89f4cb14b668d7b6",
+                    "stepText": "Great! Now, using the formula for kinetic energy and the values $!$m = 500\\,\\text{kg}$!$ and $!$v_1 = 8000\\,\\text{m/s}$!$, calculate the kinetic energy at perigee. Remember to convert all units if necessary.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.6e10"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "0992d2e178d743f986635",
+                    "stepText": "Next, identify the proper formula for gravitational potential energy between the Earth and the satellite. Select the formula that correctly represents gravitational potential energy in this context.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$U = -\\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$U = \\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$U = -\\frac{1}{2}\\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f4c0576428be428a83eef",
+                    "stepText": "Now compute the gravitational potential energy at perigee. Use $!$r_1 = 7000\\,\\text{km}$!$ converted to meters, along with values for $!$G$!$, $!$M$!$, and $!$m$!$. Perform the multiplication and division carefully.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-2.847e10"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "eaf83d20d39c4e879d30c",
+                    "stepText": "Moving forward, choose the appropriate formula for the total orbital energy at perigee, which combines kinetic and potential energy. Identify the correct expression relating these quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_T = \\frac{1}{2}mv^2 - \\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_T = \\frac{1}{2}mv^2 + \\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_T = - \\frac{GMm}{2r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ae870fda45454242a44bf",
+                    "stepText": "Finally, using the kinetic energy and gravitational potential energy values you computed, determine the total energy of the satellite at perigee by summing them together.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-1.247e10"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "55dd68dee2ff4b93a3c7a",
+            "questionText": "A space exploration company is planning to place a satellite into a circular orbit around Mars at an altitude of $!$h = 500 \\,\\text{km}$!$ above the surface. Given that the mass of Mars is $!$M = 6.39 \\times 10^{23} \\,\\text{kg}$!$, the radius of Mars is $!$R = 3389.5 \\,\\text{km}$!$, and the gravitational constant is $!$G = 6.674 \\times 10^{-11} \\,\\text{N} \\cdot \\text{m}^2/\\text{kg}^2$!$, calculate the orbital speed $!$v$!$ required for the satellite to maintain a stable orbit.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1d433768c4bb4a45a8dfb",
+                    "stepText": "Step 1: Let's start by determining the orbital radius $!$r$!$. The orbital radius in a circular orbit is given by the sum of the planet's radius and the satellite's altitude. Compute $!$r = R + h$!$ (remember to convert from kilometers to meters). What is the orbital radius?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.8895e6"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "fbd8edf3-8814-4fd4-a0d3-e99cc717d126"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ff539670e9664ae4b7354",
+                    "stepText": "Step 2: Great! Now, before moving further, select the correct expression that represents the product of the gravitational constant and the mass of the planet ($!$GM$!$). Which expression is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "913f94ce-32fd-4e0b-81d1-2d6512bc5085"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$G \\times M$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$G + M$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{G}{M}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5057334d915448ecbf6ce",
+                    "stepText": "Step 3: Excellent. Now calculate the value of the gravitational parameter $!$GM$!$ using the provided values. Compute $!$GM = G \\times M$!$. What numerical value do you obtain? (Your answer should be in $!$\\text{m}^3/\\text{s}^2$!$)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.2667e13"
+                    ],
+                    "stepSolveAnswerUnits": "m^3/s^2",
+                    "stepConcepts": [
+                        "913f94ce-32fd-4e0b-81d1-2d6512bc5085"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e928bf91ad124b018c5e2",
+                    "stepText": "Step 4: Now that you have $!$GM$!$ and $!$r$!$, we need the proper formula to calculate the orbital speed for a satellite in circular orbit. Select the correct expression for the orbital speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fbd8edf3-8814-4fd4-a0d3-e99cc717d126"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\sqrt{\\frac{GM}{r}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{GM}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\sqrt{\\frac{r}{GM}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4c36b014bd7b424983fc7",
+                    "stepText": "Step 5: Finally, use the formula you identified to calculate the orbital speed $!$v$!$. Substitute the values of $!$GM$!$ and $!$r$!$ into the formula $!$v = \\sqrt{\\frac{GM}{r}}$!$. What orbital speed do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3305"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "fbd8edf3-8814-4fd4-a0d3-e99cc717d126"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,247 @@
+{
+    "id": "98b8f032dec14b7590010",
+    "name": "Current and Circuits",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "b0bde468ed3d48449b97d",
+            "questionText": "A string of 25 identical LED Christmas lights is connected in series to a 120 V power supply. Each LED has a resistance of $!$R = 40\\,\\Omega$!$. Determine the total current flowing through the string of lights when all the LEDs are working.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e481c2dd47054b03a9cfc",
+                    "stepText": "Let's start by identifying the correct approach to calculate the total resistance when resistors are connected in series. Which formula correctly expresses the total resistance?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7e1eb003-fe0f-4d19-bc2c-5bbf746731d8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R_T = R_1 + R_2 + \\ldots + R_n$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R_T = \\frac{1}{R_1 + R_2 + \\ldots + R_n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_T = R_1 \\times R_2 \\times \\ldots \\times R_n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "689aa278cfc64aa68c0d2",
+                    "stepText": "Now, using the series resistor concept, calculate the total resistance for 25 LEDs each with $!$40\\,\\Omega$!$. Multiply the individual resistance by the number of LEDs.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1000"
+                    ],
+                    "stepSolveAnswerUnits": "$!$\\Omega$!$",
+                    "stepConcepts": [
+                        "7e1eb003-fe0f-4d19-bc2c-5bbf746731d8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3b350f2711ce4d729dbe9",
+                    "stepText": "Great, now that you have the total resistance, determine which formula is used to calculate the current from a given voltage and resistance. Choose the correct Ohm's law formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+                        "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{V}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = V \\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{R}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c770df7c65094641af64e",
+                    "stepText": "Finally, substitute the voltage $!$120\\,V$!$ and the total resistance you calculated into the chosen formula to compute the current. What is the numerical value of the current?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.12"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "7e91a9fd5c9846edb3691",
+            "questionText": "A 12 V car battery with an internal resistance of 0.05 $!$\\Omega$!$ powers two headlights connected in parallel. Each headlight has a resistance of 2 $!$\\Omega$!$. Calculate the current flowing through each headlight.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "aff43c575c96410ea6d0b",
+                    "stepText": "Let's start by determining the effective resistance of the two headlights connected in parallel. To do this, you need to identify the correct formula for combining resistors in parallel. Which one of the following formulas identifies the relationship for parallel resistors?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9fa1c405-382b-4536-a722-8d3db2c9d128"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{1}{R_T} = \\frac{1}{R_1} + \\frac{1}{R_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R_T = R_1 + R_2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_T = \\frac{R_1 \\times R_2}{R_1 + R_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "36ee3c344aea49bf8b1e3",
+                    "stepText": "Great! Now, using the appropriate formula for parallel resistors, calculate the equivalent resistance of the two 2 $!$\\Omega$!$ headlights.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1"
+                    ],
+                    "stepSolveAnswerUnits": "\\(\\Omega\\)",
+                    "stepConcepts": [
+                        "9fa1c405-382b-4536-a722-8d3db2c9d128"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d5135e22a7f04f79a4305",
+                    "stepText": "Next, combine this equivalent resistance with the battery's internal resistance. Identify the correct concept used when resistors are connected in series. Which one of these formulas correctly represents adding resistors in series?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7e1eb003-fe0f-4d19-bc2c-5bbf746731d8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R_T = R_1 + R_2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{R_T} = \\frac{1}{R_1} + \\frac{1}{R_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_T = \\frac{R_1 \\times R_2}{R_1 + R_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b64134a42a824d7aa6778",
+                    "stepText": "Using the series combination rule you identified, add the internal resistance (0.05 $!$\\Omega$!$) to the equivalent resistance from the headlights to determine the total circuit resistance, and then use Ohm's law to find the total current from the battery. Which formula from Ohm's law is used to calculate current?",
+                    "stepText2": "Using the formula, compute the total current.",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "11.43"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+                        "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{V}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = V \\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = V - R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "25a721fe7c4f443a8ee04",
+                    "stepText": "Finally, since the headlights are identical and connected in parallel, what will be the current flowing through each headlight?",
+                    "stepText2": "Calculate the current flowing through each headlight.",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.72"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Current will be the same through each headlight.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Current in each headlight will be half of the total current.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Current in each headlight will be double of the total current.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

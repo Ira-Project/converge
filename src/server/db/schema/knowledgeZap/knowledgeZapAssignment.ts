@@ -46,6 +46,7 @@ export const knowledgeZapAssignmentAttempts = pgTable(
     id: varchar("id", { length: 21 }).primaryKey(),
     assignmentId: varchar("assignment_id", { length: 21 }).references(() => knowledgeZapAssignments.id),
     activityId: varchar("activity_id", { length: 21 }).references(() => activity.id),
+    isRevision: boolean("is_revision").default(false).notNull(),
     score: doublePrecision("score"),
     questionsCompleted: integer("questions_completed"),
     totalAttempts: integer("total_attempts"),

@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const createAssignmentAttemptSchema = z.object({
-  activityId: z.string(),
+  activityId: z.string().optional(),
 });
 export type CreateAssignmentAttemptInput = z.infer<typeof createAssignmentAttemptSchema>;
 
@@ -30,5 +30,10 @@ export const getKnowledgeZapActivityInput = z.object({
   activityId: z.string(),
 });
 export type GetKnowledgeZapActivityInput = z.infer<typeof getKnowledgeZapActivityInput>;
+
+export const getKnowledgeZapRevisionActivityInput = z.object({
+  classroomId: z.string(),
+});
+export type GetKnowledgeZapRevisionActivityInput = z.infer<typeof getKnowledgeZapRevisionActivityInput>;
 
 
