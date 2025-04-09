@@ -100,7 +100,7 @@
         },
         {
             "id": "9c4406d3364541b39ae4a",
-            "questionText": "A high-altitude weather balloon is initially filled with $!$10\\text{ moles}$!$ of helium at sea level, where the pressure is $!$1 \\text{ atm}$!$ and the temperature is $!$25^{\\circ} \\text{C}$!$. The balloon ascends to an altitude where the pressure is $!$0.5 \\text{ atm}$!$ and the temperature is $!$-20^{\\circ} \\text{C}$!$. Assuming ideal gas behavior, determine the final volume of the balloon in $!$\\text{m}^3$!$. (Gas constant $!$R = 8.314 \\text{ J/(mol \\cdot K)}$!$)",
+            "questionText": "A high-altitude weather balloon is initially filled with $!$10\\text{ moles}$!$ of helium at sea level, where the pressure is $!$1 \\text{ atm}$!$ and the temperature is $!$25^{\\circ} \\text{C}$!$. The balloon ascends to an altitude where the pressure is $!$0.5 \\text{ atm}$!$ and the temperature is $!$-20^{\\circ} \\text{C}$!$. Assuming ideal gas behavior, determine the final volume of the balloon in $!$\\text{m}^3$!$. (Gas constant $!$R = 8.314 \\text{ J/(mol.K)}$!$)",
             "imageText": "",
             "steps": [
                 {
@@ -146,17 +146,17 @@
                     "stepConcepts": [],
                     "options": [
                         {
-                            "optionText": "$!$T(K) = T(\\,^{\\circ}\\!C) + 273.15$!$",
+                            "optionText": "$!$T(K) = T(^{\\circ}C) + 273.15$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$T(K) = T(\\,^{\\circ}\\!C) - 273.15$!$",
+                            "optionText": "$!$T(K) = T(^{\\circ}C) - 273.15$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$T(K) = T(\\,^{\\circ}\\!C) \\times 273.15$!$",
+                            "optionText": "$!$T(K) = T(^{\\circ}C) \\times 273.15$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }

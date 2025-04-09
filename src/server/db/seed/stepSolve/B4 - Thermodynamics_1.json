@@ -71,7 +71,7 @@
                     ],
                     "options": [
                         {
-                            "optionText": "The refrigerant experiences zero net entropy change over the cycle, while the reservoirs may show non-zero entropy changes due to heat transfers.",
+                            "optionText": "The refrigerant experiences zero net entropy change over the cycle, while the reservoirs (room and outside) may show non-zero entropy changes due to heat transfers.",
                             "optionImage": "",
                             "isCorrect": true
                         },
@@ -165,8 +165,38 @@
                     "options": []
                 },
                 {
+                    "id": "101273f4b1714d9bh8svb",
+                    "stepText": "To calculate the change in internal energy, what formula should we use?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6b9a3453-b091-4328-827e-1b1b99fdc62f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta U = n C_v \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta U = 3/2 n R \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta U = 3/2 k_B T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
                     "id": "101273f4b1714d9b84d9b",
-                    "stepText": "Finally, compute the change in internal energy using the relation $!$\\Delta U = n C_v \\Delta T$!$. With $n$ determined from step 1 and using $!$C_v = \\frac{5}{2} R \\approx 20.8\\;J/(mol\\cdot K)$!$, calculate $!$\\Delta U$!$.",
+                    "stepText": "Finally, compute the change in internal energy using the relation above where $!$n$!$ is determined from step 1 and $!$\\Delta T$!$ is determined from step 2. What is the change in internal energy?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

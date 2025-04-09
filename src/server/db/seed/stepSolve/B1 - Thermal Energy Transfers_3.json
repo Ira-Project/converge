@@ -7,7 +7,7 @@
     "questions": [
         {
             "id": "f92949425c24436898626",
-            "questionText": "Calculate the average kinetic energy of a single water molecule at 100 $!$^{\\circ}$!$C, given that the Boltzmann constant is approximately 1.38 x 10^{-23} J/K. (Note: Use the absolute temperature corresponding to 100 $!$^{\\circ}$!$C in your calculation.)",
+            "questionText": "Calculate the average kinetic energy of a single water molecule at 100 $!$^{\\circ}$!$C, given that the Boltzmann constant is approximately $!$1.38 x 10^{-23}$!$ J/K. (Note: Use the absolute temperature corresponding to 100 $!$^{\\circ}$!$C in your calculation.)",
             "imageText": "",
             "steps": [
                 {
@@ -166,7 +166,7 @@
                 },
                 {
                     "id": "6f0845b582224ac389622",
-                    "stepText": "Using the heat transfer concept, calculate the total heat gained by the water. This is determined by multiplying its mass, specific heat capacity, and its temperature change. Compute $!$200 \\times 4.186 \\times 3$!$.",
+                    "stepText": "Using the heat transfer concept in Step 1 calculate $!$Q_{water}$!$, the total heat gained by the water.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -180,7 +180,7 @@
                 },
                 {
                     "id": "5de6188b36fa40f7b6bd9",
-                    "stepText": "Finally, apply the conservation of energy principle. Set the heat lost by the metal equal to the heat gained by the water and solve for the metal's specific heat capacity ($!$c_m$!$). Use the equation $!$50 \\times c_m \\times 70 = 2511.6$!$. What is the value of $!$c_m$!$ when computed as $!$2511.6/(50 \\times 70)$!$?",
+                    "stepText": "According to the conservation of energy principle, the heat lost by the metal should be equal to the heat gained by the water, which is $!$2511.6\\,J$!$. Set up the equation $!$Q_{metal} = Q_{water}$!$ and solve for the specific heat capacity of the metal.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

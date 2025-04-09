@@ -165,21 +165,37 @@
                 },
                 {
                     "id": "0e6e8b8f2a154ec0b8299",
-                    "stepText": "Now that you have $!$\\omega$!$, let\u2019s compute its square $!$\\omega^2$!$, which will be used in the next step. Calculate $!$\\omega^2$!$ using your previous result.",
+                    "stepText": "To find the maximum acceleration $!$a_{max}$!$, what formula would you use?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "7640000"
+                        ""
                     ],
-                    "stepSolveAnswerUnits": "rad^2/s^2",
+                    "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "749a4b91-5344-4ca1-b7de-fcc787304a68"
+                        "3ec5c7a4-6a70-4299-bd95-2a6d9e2e15e6"
                     ],
-                    "options": []
+                    "options": [
+                        {
+                            "optionText": "$!$a_{max} = \\omega^2 \\times A$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$a_{max} = \\frac{\\omega^2}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a_{max} = \\omega \\times A$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
                 },
                 {
                     "id": "6ae1cec7082d44a8a15e0",
-                    "stepText": "Finally, to find the maximum acceleration $!$a_{max}$!$, multiply the squared angular frequency by the amplitude. Remember to convert the amplitude from millimeters to meters (i.e. $!$2 \\text{ mm} = 0.002 \\text{ m}$!$). Compute $!$a_{max} = \\omega^2 \\times A$!$.",
+                    "stepText": "Using the formula you selected, substitute the values $!$\\omega = 2764.6 \\text{ rad/s}$!$ and $!$A = 0.002 \\text{ m}$!$ to calculate the maximum acceleration $!$a_{max}$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

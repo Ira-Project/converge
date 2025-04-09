@@ -7,7 +7,7 @@
     "questions": [
         {
             "id": "041596f358cc47219a733",
-            "questionText": "An engineer designs a spherical thermos flask with a double-walled vacuum and a reflective inner coating to minimize heat loss. The inner sphere has a radius of 10 cm and the outer sphere has a radius of 11 cm. The thermos contains 0.5 kg of coffee, initially at a temperature of 90\\degree C. Assuming the outer surface of the thermos is at room temperature (20\\degree C) and the emissivity of the reflective coating is 0.05, determine how long it will take for the coffee to cool down to 85\\degree C, applying Stefan-Boltzmann's Law and using a specific heat capacity of coffee of 4200 J/kg\\cdot K.",
+            "questionText": "An engineer designs a spherical thermos flask with a double-walled vacuum and a reflective inner coating to minimize heat loss. The inner sphere has a radius of 10 cm and the outer sphere has a radius of 11 cm. The thermos contains 0.5 kg of coffee, initially at a temperature of $!$90\\degree C$!$. Assuming the outer surface of the thermos is at room temperature ($!$20\\degree C$!$) and the emissivity of the reflective coating is 0.05, determine how long it will take for the coffee to cool down to $!$85\\degree C$!$, applying Stefan-Boltzmann's Law and using a specific heat capacity of coffee of $!$4200\\,J/kg\\cdot K$!$.",
             "imageText": "",
             "steps": [
                 {
@@ -72,7 +72,7 @@
                 },
                 {
                     "id": "a6621202f0bc4089ac4c9",
-                    "stepText": "Now that you have the energy loss (\\(\\Delta Q\\)) and the radiative power (P), calculate the cooling time using the relation between energy, power, and time. Compute \\(t = \\frac{\\Delta Q}{P}\\), and provide the numerical result.",
+                    "stepText": "Now that you have the energy loss ($!$\\Delta Q$!$) and the radiative power ($!$P$!$), calculate the cooling time using the relation between energy, power, and time. Compute $!$t = \\frac{\\Delta Q}{P}$!$, and provide the numerical result.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -86,7 +86,7 @@
         },
         {
             "id": "e705b920b3a24369a267a",
-            "questionText": "A chef is using a double boiler to melt 0.25 kg of chocolate that is initially at 20\\degree C. The chocolate is heated until it is completely melted. The specific heat capacity of the solid chocolate is 1.67 kJ/kg\\cdot K, its melting point is 45\\degree C, and its specific latent heat of fusion is 100 kJ/kg. Assuming that all the energy transferred from the simmering water (at 100\\degree C) to the chocolate is used for heating and melting the chocolate, calculate the total amount of energy (in Joules) required to completely melt the chocolate.",
+            "questionText": "A chef is using a double boiler to melt 0.25 kg of chocolate that is initially at $!$20\\degree C$!$. The chocolate is heated until it is completely melted. The specific heat capacity of the solid chocolate is $!$1.67\\,kJ/kg\\cdot K$!$, its melting point is $!$45\\degree C$!$, and its specific latent heat of fusion is $!$100\\,kJ/kg$!$. Assuming that all the energy transferred from the simmering water (at $!$100\\degree C$!$) to the chocolate is used for heating and melting the chocolate, calculate the total amount of energy (in Joules) required to completely melt the chocolate.",
             "imageText": "",
             "steps": [
                 {
@@ -121,7 +121,7 @@
                 },
                 {
                     "id": "e44b95f17e0847fa910b9",
-                    "stepText": "Great! Now, calculate the temperature change $!$\\Delta T$!$ required to heat the chocolate from its initial temperature of 20\\degree C to its melting point of 45\\degree C.",
+                    "stepText": "Great! Now, calculate the temperature change $!$\\Delta T$!$ required to heat the chocolate from its initial temperature of $!$20\\degree C$!$ to its melting point of $!$45\\degree C$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
