@@ -14,7 +14,7 @@ interface LiveActivitiesListProps {
 const LiveActivitiesList: React.FC<LiveActivitiesListProps> = ({ activities, role, classroomId }) => {
   
   return (
-    <div className="overflow-x-auto max-w-full">
+    <div className="overflow-x-auto max-w-full min-h-[400px]">
       <div className="flex items-center justify-between">
         <p className="text-lg font-bold mb-4">
           {role === Roles.Student ? "Assigned to You" : "Activities You Assigned"}
@@ -33,6 +33,23 @@ const LiveActivitiesList: React.FC<LiveActivitiesListProps> = ({ activities, rol
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
       )}
+      {activities.length === 0 && role === Roles.Student && (
+        <div className="flex items-center justify-center h-3/4">
+          <p className="text-muted-foreground">No activities assigned</p> 
+        </div>
+      )}
+      {activities.length === 0 && role === Roles.Teacher && (
+        <div className="flex items-center justify-center h-3/4 text-center w-3/4 mx-auto">
+          <p className="text-muted-foreground gap-1">
+            <span>You haven’t assigned an activity to your students. Choose from our</span>
+            <Link href={`${Paths.Classroom}${classroomId}${Paths.Activities}`} className="underline mx-1">
+              activity library
+            </Link>
+            <span>to get started.</span>
+          </p> 
+        </div>
+      )}
+
     </div>
   );
 };

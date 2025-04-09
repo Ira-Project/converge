@@ -270,6 +270,10 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
     return b.submittedAt.getTime() - a.submittedAt.getTime();
   });
 
+  if(ctx.user?.role === Roles.Student) {
+    return submissions.filter(s => s.userId === ctx.user?.id);
+  }
+
   return submissions;
 }
 

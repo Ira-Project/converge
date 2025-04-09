@@ -9,6 +9,7 @@ import { reasoningAssignmentAttempts } from "@/server/db/schema/reasoning/reason
 import { readAndRelayAttempts } from "@/server/db/schema/readAndRelay/readAndRelayAttempts";
 import { conceptMappingAttempts } from "@/server/db/schema/conceptMapping/conceptMappingAttempts";
 import { explainTestAttempts } from "@/server/db/schema/learnByTeaching/explainTestAttempt";
+
 export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivitiesInput) => {
 
   const activities = await ctx.db.query.activity.findMany({
@@ -34,6 +35,7 @@ export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivit
           imageUrl: true,
           description: true,          
           slug: true,
+          order: true,
         }
       }
     },
@@ -45,6 +47,7 @@ export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivit
     name: string;
     description: string;
     imageUrl: string;
+    order: string;
     activities: {
       id: string;
       name: string;
@@ -67,6 +70,7 @@ export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivit
           name: activity.topic.name,
           description: activity.topic.description ?? "",
           imageUrl: activity.topic.imageUrl ?? "",  
+          order: activity.topic.order ?? "",
           activities: [],
         };
       }
@@ -84,9 +88,11 @@ export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivit
       });
     }
   }
+
   
-  return Object.values(groupedActivities);
-  
+  const groupedActivitiesList = Object.values(groupedActivities);
+  groupedActivitiesList.sort((a, b) => a.order.localeCompare(b.order));
+  return groupedActivitiesList;
 }
 
 export const getActivity = async (ctx: ProtectedTRPCContext, input: GetActivityInput) => {

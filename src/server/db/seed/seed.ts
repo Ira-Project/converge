@@ -66,31 +66,31 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // STEP SOLVE CREATION AND DELETION 
 
-await createStepSolveAssignment("A1 - Kinematics");
-await createStepSolveAssignment("A1 - Kinematics_1");
-await createStepSolveAssignment("A1 - Kinematics_2");
-await createStepSolveAssignment("A1 - Kinematics_3");
-await createStepSolveAssignment("A1 - Kinematics_4");
-await createStepSolveAssignment("A2 - Forces and Momentum");
-await createStepSolveAssignment("A2 - Forces and Momentum_1");
-await createStepSolveAssignment("A2 - Forces and Momentum_2");
-await createStepSolveAssignment("A2 - Forces and Momentum_3");
-await createStepSolveAssignment("A2 - Forces and Momentum_4");
-await createStepSolveAssignment("A3 - Work, Energy and Power");
-await createStepSolveAssignment("A3 - Work, Energy and Power_1");
-await createStepSolveAssignment("A3 - Work, Energy and Power_2");
-await createStepSolveAssignment("A3 - Work, Energy and Power_3");
-await createStepSolveAssignment("A3 - Work, Energy and Power_4");
-await createStepSolveAssignment("A4 - Rigid Body Mechanics");
-await createStepSolveAssignment("A4 - Rigid Body Mechanics_1");
-await createStepSolveAssignment("A4 - Rigid Body Mechanics_2");
-await createStepSolveAssignment("A4 - Rigid Body Mechanics_3");
-await createStepSolveAssignment("A4 - Rigid Body Mechanics_4");
-await createStepSolveAssignment("A5 - Galilean and Special Relativity");
-await createStepSolveAssignment("A5 - Galilean and Special Relativity_1");
-await createStepSolveAssignment("A5 - Galilean and Special Relativity_2");
-await createStepSolveAssignment("A5 - Galilean and Special Relativity_3");
-await createStepSolveAssignment("A5 - Galilean and Special Relativity_4")
+// await createStepSolveAssignment("A1 - Kinematics");
+// await createStepSolveAssignment("A1 - Kinematics_1");
+// await createStepSolveAssignment("A1 - Kinematics_2");
+// await createStepSolveAssignment("A1 - Kinematics_3");
+// await createStepSolveAssignment("A1 - Kinematics_4");
+// await createStepSolveAssignment("A2 - Forces and Momentum");
+// await createStepSolveAssignment("A2 - Forces and Momentum_1");
+// await createStepSolveAssignment("A2 - Forces and Momentum_2");
+// await createStepSolveAssignment("A2 - Forces and Momentum_3");
+// await createStepSolveAssignment("A2 - Forces and Momentum_4");
+// await createStepSolveAssignment("A3 - Work, Energy and Power");
+// await createStepSolveAssignment("A3 - Work, Energy and Power_1");
+// await createStepSolveAssignment("A3 - Work, Energy and Power_2");
+// await createStepSolveAssignment("A3 - Work, Energy and Power_3");
+// await createStepSolveAssignment("A3 - Work, Energy and Power_4");
+// await createStepSolveAssignment("A4 - Rigid Body Mechanics");
+// await createStepSolveAssignment("A4 - Rigid Body Mechanics_1");
+// await createStepSolveAssignment("A4 - Rigid Body Mechanics_2");
+// await createStepSolveAssignment("A4 - Rigid Body Mechanics_3");
+// await createStepSolveAssignment("A4 - Rigid Body Mechanics_4");
+// await createStepSolveAssignment("A5 - Galilean and Special Relativity");
+// await createStepSolveAssignment("A5 - Galilean and Special Relativity_1");
+// await createStepSolveAssignment("A5 - Galilean and Special Relativity_2");
+// await createStepSolveAssignment("A5 - Galilean and Special Relativity_3");
+// await createStepSolveAssignment("A5 - Galilean and Special Relativity_4")
 
 // await createStepSolveAssignment("B1 - Thermal Energy Transfers_1");
 // await createStepSolveAssignment("B1 - Thermal Energy Transfers_2");
@@ -202,7 +202,7 @@ await createStepSolveAssignment("A5 - Galilean and Special Relativity_4")
 // await createConceptMappingAssignment();
 
 // USER DELETION
-// await deleteUser("vignesh+2@iraproject.com");
+// await deleteUser("vignesh+1@iraproject.com");
 
 // MIGRATE ACTIVITY TYPE TO TEXT
 // await migrateActivityTypeToText();

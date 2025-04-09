@@ -66,24 +66,48 @@ export async function createClassroom(
 
   // Get all step solve assignments
   const ssa = await db.select().from(stepSolveAssignments).where(eq(stepSolveAssignments.isDeleted, false));
-  for(const stepSolveAssignment of ssa) {
+  
+  // Group step solve assignments by topic
+  const stepSolveByTopic: Record<string, typeof ssa> = {};
+  
+  for (const assignment of ssa) {
+    if (!assignment.topicId) continue;
+    if (!stepSolveByTopic[assignment.topicId]) {
+      stepSolveByTopic[assignment.topicId] = [];
+    }
+    stepSolveByTopic[assignment.topicId]?.push(assignment);
+  }
+
+  // Create one activity per topic and add all assignments to activityToAssignment
+  for (const [topicId, assignments] of Object.entries(stepSolveByTopic)) {
+    if (assignments.length === 0) continue;
+    
+    // Use the first assignment to create the activity
+    const firstAssignment = assignments[0];
+    if (!firstAssignment) continue;
+    
     const activityId = generateId(21);
+    
     await db.insert(activity).values({
       id: activityId,
-      assignmentId: stepSolveAssignment.id,
+      assignmentId: firstAssignment.id,
       classroomId: classroom[0]?.id,
-      name: stepSolveAssignment.name ?? "",
-      topicId: stepSolveAssignment.topicId,
+      name: firstAssignment.name ?? "",
+      topicId: topicId,
       typeText: ActivityType.StepSolve,
       order: 0,
       points: 100,
-    })
-    await db.insert(activityToAssignment).values({
-      id: generateId(21),
-      activityId: activityId,
-      stepSolveAssignmentId: stepSolveAssignment.id,
-      createdAt: new Date(),
-    })
+    });
+    
+    // Add all assignments to activityToAssignment
+    for (const assignment of assignments) {
+      await db.insert(activityToAssignment).values({
+        id: generateId(21),
+        activityId: activityId,
+        stepSolveAssignmentId: assignment.id,
+        createdAt: new Date(),
+      });
+    }
   }
 
   // Get all reasoning assignments

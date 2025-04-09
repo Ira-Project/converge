@@ -1,6 +1,6 @@
 import { eq } from "drizzle-orm";
 import { db } from "../..";
-import { activity } from "../../schema/activity";
+import { activity, activityToAssignment } from "../../schema/activity";
 import { classrooms, usersToClassrooms } from "../../schema/classroom";
 import { ActivityType } from "@/lib/constants";
 import { stepSolveAssignmentAttempts } from "../../schema/stepSolve/stepSolveAssignment";
@@ -250,6 +250,8 @@ export async function deleteUser(email: string) {
         continue;
       }
 
+      console.log(`Deleting activity to assignment ${act.assignmentId} with type ${act.typeText}`);
+
       if(act.typeText === ActivityType.StepSolve) {
         const ssAttempts = await db.select().from(stepSolveAssignmentAttempts).where(eq(stepSolveAssignmentAttempts.activityId, act.id));
 
@@ -319,6 +321,7 @@ export async function deleteUser(email: string) {
         }
       }
 
+      await db.delete(activityToAssignment).where(eq(activityToAssignment.activityId, act.id));
       await db.delete(activity).where(eq(activity.id, act.id));
     }
 

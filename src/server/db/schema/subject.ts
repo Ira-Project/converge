@@ -67,6 +67,7 @@ export const topics = pgTable(
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name").notNull(),
+    order: text("order"),
     imageUrl: text("image_url"),
     courseId: varchar("course_id", { length: 21 }).references(() => courses.id),
     description: text("description"),

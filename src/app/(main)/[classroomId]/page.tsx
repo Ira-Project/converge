@@ -5,23 +5,23 @@ import { validateRequest } from '@/lib/auth/validate-request';
 import { ComponentIds, Roles } from '@/lib/constants';
 import RevisionSection from "./_components/revision-section";
 import LiveActivitiesList from "./_components/live-activities-list";
+import RecentSubmissionsList from "./_components/recent-submissions-table";
 export default async function ClassroomPage(props: { params: Promise<{ classroomId: string }> }) {
   const [{ user }, params] = await Promise.all([
     validateRequest(),
     props.params
   ]);
 
-  let classroom, activities, userToClassroom: { role: Roles } | undefined;
+  let submissions, classroom, activities, userToClassroom: { role: Roles } | undefined;
   if (user) {
-    [classroom, activities, userToClassroom] = await Promise.all([
+    [submissions, classroom, activities, userToClassroom] = await Promise.all([
+      api.analytics.getSubmissions.query({ classroomId: params.classroomId }),
       api.classroom.get.query({ id: params.classroomId }),
       api.activities.getLiveActivities.query({ classroomId: params.classroomId }),
       api.classroom.getOrCreateUserToClassroom.query({ classroomId: params.classroomId })
     ]);
   }
   
-  // const role = userToClassroom?.role;
-  const role = Roles.Student;
   
   return (
     <>
@@ -44,24 +44,17 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
         </p>
 
         {/* Revision Section */}
-        {
-          role === Roles.Student && (
-            <RevisionSection classroomId={params.classroomId} />
-          )
-        }
+        <RevisionSection classroomId={params.classroomId} />
 
         {/* Live Activities */}
-        <div className="px-8 grid grid-cols-[2fr_1fr] gap-8">
+        <div className="px-8 grid grid-cols-[2fr_1fr] gap-16">
           <LiveActivitiesList 
             classroomId={params.classroomId}
             activities={activities ?? []} 
-            role={role ?? Roles.Student} 
+            role={userToClassroom?.role ?? Roles.Student} 
           />
-          <div className="bg-gray-50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold">
-              Submission List
-            </h2>
-          </div>
+          <RecentSubmissionsList 
+            submissions={submissions ?? []} />
         </div>
 
         {/* Upload Lesson Plan */}
