@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "38d747ffa40d4c0b87931",
-                    "stepText": "Let's start by converting the given temperatures from Celsius to Kelvin. Identify the correct conversion formula that you should use to convert a temperature from $!$\\,^{\\circ}C$!$ to Kelvin.",
+                    "id": "0440f3496a5d4d6a82ef7",
+                    "stepText": "Let's start by converting the given temperatures from Celsius to Kelvin. Identify the correct conversion relation to change a temperature expressed in \u00b0C to Kelvin.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -22,25 +22,25 @@
                     "stepConcepts": [],
                     "options": [
                         {
-                            "optionText": "$!$T(K) = T(^{\\circ}C) + 273$!$",
+                            "optionText": "$!$T(K)=T(\u00b0C)+273$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$T(K) = T(^{\\circ}C) - 273$!$",
+                            "optionText": "$!$T(K)=T(\u00b0C)-273$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$T(K) = T(^{\\circ}C) \\times 273$!$",
+                            "optionText": "$!$T(K)=T(\u00b0C)+100$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "9002a9bc058f4d43a11e6",
-                    "stepText": "Great. Now, for a refrigerator operating as an ideal reversed Carnot cycle, the coefficient of performance (COP) plays a key role. Please identify the correct expression for COP of such a refrigerator.",
+                    "id": "5f5fc98012d94b99a0267",
+                    "stepText": "Great! Now, using the Kelvin values obtained, we need to determine the coefficient of performance (COP) or efficiency for a reversed Carnot cycle. Please select the correct expression that represents the COP in terms of the cold and hot reservoir temperatures.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -52,39 +52,48 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\text{COP} = \\frac{T_C}{T_H - T_C}$!$",
+                            "optionText": "$!$COP=\\frac{T_c}{T_h-T_c}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\text{COP} = \\frac{T_H}{T_H - T_C}$!$",
+                            "optionText": "$!$COP=\\frac{T_h-T_c}{T_c}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$\\text{COP} = \\frac{T_H - T_C}{T_C}$!$",
+                            "optionText": "$!$COP=\\frac{T_h}{T_h-T_c}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "ee8c257c1976420fa00e2",
-                    "stepText": "Using the conversion from Step 1, compute the Kelvin temperatures for both the room and the interior of the refrigerator. Then, using the formula for COP (i.e., $!$\\text{COP} = \\frac{T_C}{T_H-T_C}$!$), calculate its numerical value. What result do you obtain?",
+                    "id": "6518faab253c4b99b1cff",
+                    "stepText": "Now that you have the COP and the amount of heat removed, what formula describes the relationship between the extracted heat and the COP?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "12.64"
+                        ""
                     ],
                     "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "eb2ed1a7-e528-4b88-8bd6-db3a653c73cf"
-                    ],
-                    "options": []
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$COP = \\frac{\\text{heat removed}}{\\text{work done}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$COP = \\frac{\\text{work done}}{\\text{heat removed}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
                 },
                 {
-                    "id": "b9c32a5070c94adfa430a",
-                    "stepText": "Finally, use the relationship between the heat removed from the interior and the COP to calculate the work input required over the 24-hour period. Remember the relationship is $!$W = \\frac{Q_c}{\\text{COP}}$!$. What is the numerical value of the work required (in Joules)?",
+                    "id": "6518faab253c4b99bdfaf",
+                    "stepText": "Finally, using the formula from the previous step, calculate the work done by the refrigerator.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

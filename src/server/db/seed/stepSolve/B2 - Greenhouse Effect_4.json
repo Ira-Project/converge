@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "bb6af2fbd33a4dd388f16",
-                    "stepText": "Let's start by identifying the correct formula that relates the intensity of radiation to the emissivity, the Stefan-Boltzmann constant, and the temperature. Please choose from the options below.",
+                    "id": "589bc3db7bf444c9bbb1d",
+                    "stepText": "Let's start by identifying the correct formula to calculate the intensity of radiation emitted by a body using emissivity, the Stefan-Boltzmann constant, and the temperature. Please choose the correct formula.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -35,29 +35,43 @@
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$I = \\epsilon T^4 \\sigma$!$",
+                            "optionText": "$!$I = \\epsilon T^4 \\sigma^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "5064a7c418e34c8ea89b9",
-                    "stepText": "Great, now that you have identified the relationship, calculate the change in emissivity by subtracting the initial emissivity from the final emissivity.",
+                    "id": "8ed11e8d582d435bbbb03",
+                    "stepText": "Great. Now, using the formula you selected, calculate the initial intensity $!$I_1 = 0.65 \\times \\sigma \\times 288^4$!$. Compute the value considering $!$\\sigma = 5.67 \\times 10^{-8} W m^{-2} K^{-4}$!$ and provide your answer in W m$!$^{-2}$!$. (Round your answer appropriately.)",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "0.07"
+                        "254"
                     ],
-                    "stepSolveAnswerUnits": "",
+                    "stepSolveAnswerUnits": "W m^{-2}",
                     "stepConcepts": [
-                        "a83c5f2e-c2d2-4381-9ccd-58212da2172b"
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
                     ],
                     "options": []
                 },
                 {
-                    "id": "da28ab17b812403c91707",
-                    "stepText": "Next, use the change in emissivity along with the initial emissivity value to determine the percentage change in the radiation intensity. (Hint: Divide the change by the initial value and multiply by 100.)",
+                    "id": "d0ce8b1b0a134eb2bcb94",
+                    "stepText": "Now, calculate the new intensity $!$I_2 = 0.72 \\times \\sigma \\times 288^4$!$ with the updated emissivity value. Compute the numerical value using the same constants as before and provide your answer in W m$!$^{-2}$!$. (Round your answer appropriately.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "281"
+                    ],
+                    "stepSolveAnswerUnits": "W m^{-2}",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "37a6694e9bfa420293cc4",
+                    "stepText": "Finally, determine the percentage change in the intensity. Use the formula for percentage change: $!$\\frac{I_2-I_1}{I_1} \\times 100$!$ and calculate the result based on your previous answers. Provide your answer as a percentage.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

@@ -102,12 +102,12 @@
         },
         {
             "id": "25356c5ed5a148f1ba1d3",
-            "questionText": "An astrophysicist is studying an exoplanet and determines that its albedo is 0.25 while the intensity radiated from the planet is $!$200 W/m^2$!$. Assuming the planet only absorbs and reflects radiation, first use the energy balance to determine the planet's emissivity. Then, using the Stefan-Boltzmann constant $!$\\sigma = 5.67 \\times 10^{-8} W m^{-2} K^{-4}$!$, calculate the exoplanet's surface temperature T. (Note: Report only the final value of T as your answer.)",
+            "questionText": "An astrophysicist is studying an exoplanet and determines that its albedo is 0.25 while the intensity radiated from the planet is $!$200 W/m^2$!$. Assuming the planet only absorbs and reflects radiation, calculate the exoplanet's surface temperature T.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "fa71f333875640d0b6549",
-                    "stepText": "Let's start by recalling the relationship between emissivity and albedo when a body only absorbs and reflects radiation. Identify the correct formula that relates the two quantities.",
+                    "id": "2a24cdf0ff9f4eea97d28",
+                    "stepText": "Let's start by identifying the relation that connects the intensity of radiation emitted by a blackbody to its surface temperature. Please select the correct formula that expresses this relationship.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -115,50 +115,54 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "f2ae270b-19b5-46d8-b861-ab26bf76266d"
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\epsilon + \\alpha = 1$!$",
+                            "optionText": "$!$I = \\sigma T^4$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\epsilon - \\alpha = 1$!$",
+                            "optionText": "$!$I = \\sigma T^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$\\epsilon \\cdot \\alpha = 1$!$",
+                            "optionText": "$!$I = \\epsilon \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{T}{\\sigma}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "fe1b85a0e6ae4ab29b92d",
-                    "stepText": "Great, now that you have recalled the energy balance relationship, use the Stefan-Boltzmann law assuming a perfect emitter. Write the equation $!$200 = \\sigma T^4$!$ and solve for the temperature $!$T$!$. Identify the expression for $!$T$!$ given $!$\\sigma = 5.67 \\times 10^{-8} W m^{-2} K^{-4}$!$.",
+                    "id": "0d781b974d334916bdbb7",
+                    "stepText": "Great. Now that you have the correct relation, substitute the given intensity and the value of $!$\\sigma = 5.67 \\times 10^{-8}$!$ into the equation. Calculate the ratio $!$\\frac{200}{5.67 \\times 10^{-8}}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.526e9"
+                    ],
+                    "stepSolveAnswerUnits": "K^4",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2c17217950904b7397cc8",
+                    "stepText": "Now, use the result from the previous step to solve for the surface temperature $!$T$!$. Determine $!$T$!$ by taking the fourth root of the ratio you computed.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "244"
                     ],
                     "stepSolveAnswerUnits": "K",
-                    "stepConcepts": [
-                        "adcc2680-ace0-48fc-a717-77d13f0c5743",
-                        "36d01e80-5406-44df-8bc5-5b9a6caaca1f"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "c0ea23b84e4745cda1017",
-                    "stepText": "Now, use your calculated temperature from the previous step and the measured outgoing intensity to determine the effective emissivity. Write the expression $!$\\epsilon = \\frac{\\text{measured intensity}}{\\sigma T^4}$!$ and compute its value.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "1"
-                    ],
-                    "stepSolveAnswerUnits": "",
                     "stepConcepts": [
                         "adcc2680-ace0-48fc-a717-77d13f0c5743"
                     ],

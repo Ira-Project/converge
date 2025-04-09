@@ -11,36 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "f7259a9e635b49babee0b",
-                    "stepText": "Let's start by converting the given Celsius temperatures to Kelvin. Identify the correct conversion formula for $!$T_{K}$!$ in terms of $!$T_{\\circ C}$!$.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "$!$T_{K} = T_{\\circ C} + 273$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$T_{K} = T_{\\circ C} - 273$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$T_{K} = T_{\\circ C} + 300$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "07aec5f2dc3142fa8b57f",
-                    "stepText": "Great, now that you have the temperatures in Kelvin, use the relationship for a reversible refrigerator to determine the minimum work input. Identify the correct formula that relates $!$W_{rev}$!$, $!$Q_C$!$, $!$T_H$!$, and $!$T_C$!$.",
+                    "id": "2d23dbf5e3a54309bd20e",
+                    "stepText": "Let's start by determining the ideal efficiency for a refrigerator operating on a Carnot cycle. To proceed, please identify the correct formula that relates the cold temperature $!$T_C$!$ and the hot temperature $!$T_H$!$ for the ideal efficiency of a refrigerator.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -52,34 +24,74 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$W_{rev} = Q_C \\times \\frac{(T_H - T_C)}{T_C}$!$",
+                            "optionText": "$!$\\eta=\\frac{T_C}{T_H-T_C}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$W_{rev} = Q_C \\times \\frac{(T_H - T_C)}{T_H}$!$",
+                            "optionText": "$!$\\eta=\\frac{T_H}{T_H-T_C}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$W_{rev} = Q_C \\times \\frac{(T_H + T_C)}{T_C}$!$",
+                            "optionText": "$!$\\eta=\\frac{T_C}{T_C-T_H}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "3cca50aa38b345b086ab0",
-                    "stepText": "Now, knowing that the reversible work input has been computed and that the system operates at only 30% of the maximum performance, calculate the actual work done by dividing the reversible work by the performance factor. Compute the actual work (in Joules) using this relationship.",
+                    "id": "932653d123664df39aa92",
+                    "stepText": "Great! Now that you have the correct expression for the ideal efficiency, convert the given temperatures to Kelvin (using $!$T(K)=T(\\circ C)+273$!$) and compute the ideal efficiency value. Then, considering the cycle operates at 30% of the ideal performance, calculate the actual efficiency by multiplying the ideal efficiency by 0.30. Enter the numerical value you obtain for the actual efficiency.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "2277"
+                        "4.395"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fd04f7d4-aca6-4fa8-a6af-850d9be1e084"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fc870f433b7e4b1da1716",
+                    "stepText": "Now, let\u2019s use the relationship between the efficiency and the work input for a refrigerator. Identify the correct formula that expresses the work input $!$W$!$ in terms of the heat extracted from the cold space $!$Q_C$!$ and the actual efficiency.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
                     ],
                     "stepSolveAnswerUnits": "J",
-                    "stepConcepts": [
-                        "2627d205-8411-4005-b844-ebf08203f968"
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$W=\\frac{Q_C}{COP}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W=Q_C\\times COP$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W=Q_H-COP$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5518faab252c4b89b1aff",
+                    "stepText": "Finally, using the formula from the previous step, calculate the work done by the refrigerator.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2276"
                     ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
                     "options": []
                 }
             ]
@@ -90,8 +102,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "b1761821d0854aa59588a",
-                    "stepText": "Let's start by identifying the relation that represents the net work done by a heat engine in a complete cycle. Which of the following expressions correctly links the net work to the heat absorbed and the heat rejected?",
+                    "id": "cadfd0cf53d24aef90653",
+                    "stepText": "Let's start by determining the fundamental relation for a cyclic heat engine. In a full cycle, the change in internal energy is zero. Which formula correctly relates the net work output to the heat absorbed and rejected?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -99,38 +111,39 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "ea914822-cf42-4557-b08f-5f35daecfc70"
+                        "ea914822-cf42-4557-b08f-5f35daecfc70",
+                        "7a27d98a-ef95-4796-b6f6-284ca65857e7"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$W_{net} = Q_H - Q_C$!$",
+                            "optionText": "$!$W = Q_H - Q_C$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$W_{net} = Q_H + Q_C$!$",
+                            "optionText": "$!$W = P\\Delta V$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$W_{net} = Q_C - Q_H$!$",
+                            "optionText": "$!$Q_H = Q_C + W$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$W_{net} = Q_H \\times Q_C$!$",
+                            "optionText": "$!$Q = \\Delta U + W$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "c959fe5afb994d699e610",
-                    "stepText": "Great! Now, using the relationship you selected in Step 1, compute the net work done over the cycle by subtracting the heat rejected from the heat absorbed. Use the given values $!$Q_H = 2500\\,J$!$ and $!$Q_C = 1800\\,J$!$. What numerical value do you obtain for the net work?",
+                    "id": "e97b6690e2be475f9177f",
+                    "stepText": "Great, now that you have identified the relation, use it to calculate the net work output of the engine. Compute the value by subtracting the rejected heat from the absorbed heat.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
+                        "700"
                     ],
                     "stepSolveAnswerUnits": "J",
                     "stepConcepts": [
@@ -139,8 +152,8 @@
                     "options": []
                 },
                 {
-                    "id": "cee8242aeb944b1ab606c",
-                    "stepText": "Now, let\u2019s determine the relation for the efficiency of the engine. Efficiency is defined as the ratio of the net work output to the heat input. Which of the following formulas correctly represents this concept?",
+                    "id": "2576db4670474f509fbf3",
+                    "stepText": "Next, let\u2019s identify how to determine the efficiency of the heat engine. Efficiency in this context is defined as the fraction of the total heat intake that gets converted to net work. Which formula represents this efficiency?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -157,34 +170,33 @@
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\eta = \\frac{Q_H}{W_{net}}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$\\eta = \\frac{W_{net}}{Q_C}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
                             "optionText": "$!$\\eta = \\frac{Q_C}{Q_H}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{W_{net}}{P\\Delta V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{\\Delta U}{Q_H}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "9db16b6ea0514150a1019",
-                    "stepText": "Finally, using your result from Step 2 and the efficiency relation from Step 3, calculate the engine's efficiency by dividing the net work by the heat input. Convert your result into a percentage. Keep in mind that, although the expansion stroke at constant pressure provides a work value calculated by $!$W = P\\Delta V$!$, the overall cycle involves additional processes that affect the net work output. What numerical value (in percent) do you determine for the efficiency?",
+                    "id": "58d8955e05ea430bacc12",
+                    "stepText": "Now, use the efficiency formula you've identified. Calculate the efficiency by dividing the net work output by the total heat intake. What numerical value do you obtain?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
+                        "0.28"
                     ],
-                    "stepSolveAnswerUnits": "%",
+                    "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "2627d205-8411-4005-b844-ebf08203f968",
-                        "10ec3f29-b38b-4c50-a614-0bae695feb56"
+                        "2627d205-8411-4005-b844-ebf08203f968"
                     ],
                     "options": []
                 }

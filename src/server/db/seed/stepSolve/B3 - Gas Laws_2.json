@@ -100,14 +100,14 @@
                 }
             ]
         },
-        {
+         {
             "id": "e1ec76f980414c2bb7b35",
             "questionText": "A sealed bag of potato chips contains $!$2 \\text{ g}$!$ of nitrogen gas ($!$N_2$!$) at an initial temperature of $!$25 ^\\circ \\text{C}$!$ and a pressure of $!$1 \\text{ atm}$!$. The bag is transported to a mountain location where the atmospheric pressure drops to $!$0.7 \\text{ atm}$!$ and the temperature decreases to $!$10 ^\\circ \\text{C}$!$. Given that the molar mass of $!$N_2$!$ is approximately $!$28 \\text{ g/mol}$!$, calculate the final volume of the bag as a percentage of its initial volume.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "6a0b2884025046bf8b32e",
-                    "stepText": "Let's start by calculating the number of moles of $!$N_2$!$. Which formula would you use to determine the number of moles from a given mass and molar mass?",
+                    "id": "9209708e626541188e67e",
+                    "stepText": "Let's start by determining the number of moles of $!$N_2$!$ using the substance's mass and molar mass. Please identify the correct formula to calculate the number of moles when given mass and molar mass.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -136,50 +136,32 @@
                     ]
                 },
                 {
-                    "id": "12beeea5460e4b4b9f7ab",
-                    "stepText": "Great! Now, we need to recall the gas relation that connects pressure, volume, number of moles and temperature. Which gas law equation is appropriate for this problem?",
+                    "id": "0cb64b01f07e4153bf452",
+                    "stepText": "Now, convert the initial temperature from $!$^\\circ C$!$ to Kelvin. Recall that you add $!$273$!$ to the Celsius value. What is the initial temperature in Kelvin?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
+                        "298"
                     ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$PV = nRT$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$P = \\frac{F}{A}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$E_k = \\frac{3}{2}kT$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "cfdf09f4487e4189b1de7",
-                    "stepText": "Now, convert the given temperatures from Celsius to Kelvin. Remember that $!$T(K) = T(^\\circ C) + 273$!$. Calculate the Kelvin temperatures for both the initial and final conditions.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "298,283"
-                    ],
-                    "stepSolveAnswerUnits": "K,K",
+                    "stepSolveAnswerUnits": "K",
                     "stepConcepts": [],
                     "options": []
                 },
                 {
-                    "id": "71406afae4524550a0850",
-                    "stepText": "Excellent. Next, express the ratio of the final volume to initial volume using the ideal gas law. Which of the following ratios correctly represents $!$V_2/V_1$!$ in terms of temperature and pressure (assuming the moles and gas constant cancel out)?",
+                    "id": "5a7ed906a50b4735bb8c7",
+                    "stepText": "Next, convert the final temperature from $!$^\\circ C$!$ to Kelvin using the same conversion. What is the final temperature in Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "283"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "1380e38c5b54427a91cdb",
+                    "stepText": "Moving forward, we need to use the Ideal Gas Law to determine the volume of a gas. Please choose the correct formula that relates volume with the number of moles, the universal gas constant, temperature, and pressure.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -191,25 +173,25 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\frac{V_2}{V_1} = \\frac{T_2}{T_1} \\times \\frac{P_1}{P_2}$!$",
+                            "optionText": "$!$V = \\frac{nRT}{P}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\frac{V_2}{V_1} = \\frac{T_1}{T_2} \\times \\frac{P_2}{P_1}$!$",
+                            "optionText": "$!$V = \\frac{P}{nRT}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$\\frac{V_2}{V_1} = \\frac{P_2}{P_1} \\times \\frac{T_2}{T_1}$!$",
+                            "optionText": "$!$V = nRT \\times P$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "e340dda2e1b44232a5ae7",
-                    "stepText": "Finally, substitute the Kelvin temperatures and pressures into your ratio. Using $!$T_1=298\\,K$!$, $!$T_2=283\\,K$!$, $!$P_1=1\\,atm$!$, and $!$P_2=0.7\\,atm$!$, compute the numerical value of $!$V_2/V_1$!$ and convert it to a percentage of the initial volume.",
+                    "id": "dd6e961707104df7966b1",
+                    "stepText": "Finally, using your previous computations, determine the final volume expressed as a percentage of the initial volume. Consider that the ratio of the final to initial volume can be calculated with $!$\\frac{V_2}{V_1}=\\frac{T_2}{T_1}\\times\\frac{P_1}{P_2}$!$. Compute this ratio and then convert it to a percentage.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

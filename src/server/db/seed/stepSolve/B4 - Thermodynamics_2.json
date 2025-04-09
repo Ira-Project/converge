@@ -7,26 +7,12 @@
     "questions": [
         {
             "id": "98ec912980da4bab85c56",
-            "questionText": "An air conditioning system utilizes a refrigerant in a cycle. In each cycle the refrigerant absorbs $!$Q_C = 10000 \\text{ J}$!$ of heat from the room at an inside temperature of $!$T_C = 20^{\\circ}C$!$ and rejects $!$Q_H = 12000 \\text{ J}$!$ of heat to the outside at an outside temperature of $!$T_H = 40^{\\circ}C$!$. The cycle operates at 30% of the maximum possible (Carnot) efficiency. Determine the net change in entropy for the cycle, taking into account the actual efficiency of the air conditioner.",
+            "questionText": "A new experimental cooling system uses a refrigerant that is not recycled back to its original state. The refrigerant starts from state A, absorbing $!$Q_1 = 10,000 \\text{ J}$!$ of heat from an indoor reservoir maintained at $!$T_1 = 20^{\\circ}C$!$ (293.15 K). It then ends at state B, rejecting $!$Q_2 = 6,000 \\text{ J}$!$ of heat to an outdoor reservoir at $!$T_2 = 50^{\\circ}C$!$ (323.15 K) Can you calculate the net entropy change for the refrigerant?",
             "imageText": "",
             "steps": [
                 {
-                    "id": "3c3bdc7df5d34a63a5113",
-                    "stepText": "Let's start by noting that in a complete cycle the working fluid returns to its initial state. This means that its net entropy change is zero. Thus, only the external reservoirs (the room and the outside) contribute to the overall entropy change. Press 'Next' to continue.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "abaeb8c1-1a59-4643-8d11-75f973d9c2ba"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "b1036c367fa443058b23a",
-                    "stepText": "Now, identify the correct formula to calculate the change in entropy $!$\\Delta S$!$ when a quantity of heat $!$Q$!$ is exchanged at a constant temperature $!$T$!$. Choose the correct expression from the options below.",
+                    "id": "6790c636c7724b65ac1fa",
+                    "stepText": "Let's start by identifying the correct formula to calculate the change in entropy when heat is transferred at a constant temperature. Which of the following formulas correctly calculates the change in entropy $!$(\\Delta S)$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -55,12 +41,12 @@
                     ]
                 },
                 {
-                    "id": "bd1153c4532b4e2bbe666",
-                    "stepText": "Great! Using the formula you selected, calculate the entropy change for the cold (inside) reservoir. Use $!$Q_C=10000 \\text{ J}$!$ and remember that the temperature $!$20^{\\circ}C$!$ must be in Kelvin ($!$293.15 \\text{ K}$!$). What is $!$\\Delta S_C = -\\frac{Q_C}{T_C}$!$?",
+                    "id": "93b40a134e4e49de8d574",
+                    "stepText": "Great, now that you have the correct entropy formula, calculate the increase in entropy when the refrigerant absorbs $!$Q_1 = 10,000 \\text{ J}$!$ of heat from the indoor reservoir at $!$T_1 = 293.15 \\text{ K}$!$. Compute $!$\\Delta S_1 = Q_1 / T_1$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "-34.13"
+                        "34.14"
                     ],
                     "stepSolveAnswerUnits": "J/K",
                     "stepConcepts": [
@@ -69,12 +55,12 @@
                     "options": []
                 },
                 {
-                    "id": "2ac62562feac463b98807",
-                    "stepText": "Now, apply the same method to calculate the entropy change for the hot (outside) reservoir. With $!$Q_H=12000 \\text{ J}$!$ and $!$T_H=40^{\\circ}C$!$ converted to Kelvin ($!$313.15 \\text{ K}$!$), compute $!$\\Delta S_H = \\frac{Q_H}{T_H}$!$.",
+                    "id": "c3231bc7523a4765b8b1b",
+                    "stepText": "Next, consider the process at the outdoor reservoir where the refrigerant rejects $!$Q_2 = 6,000 \\text{ J}$!$ of heat at $!$T_2 = 323.15 \\text{ K}$!$. Calculate the magnitude of the entropy change for this step using $!$\\Delta S_2 = Q_2 / T_2$!$ (remember that this represents a decrease in entropy).",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "38.31"
+                        "18.56"
                     ],
                     "stepSolveAnswerUnits": "J/K",
                     "stepConcepts": [
@@ -83,34 +69,18 @@
                     "options": []
                 },
                 {
-                    "id": "3b0ee04152ba46658fd15",
-                    "stepText": "Finally, combine the entropy changes of the two reservoirs to determine the net entropy change for the cycle. Remember that the operating efficiency (30% of Carnot) provides context about irreversibility but does not alter these $Q$ values. What is the sum $!$\\Delta S_{net} = \\Delta S_H + \\Delta S_C$!$? Also, select the statement that best describes the role of efficiency in this calculation.",
+                    "id": "69d184cfdfad44e8bc25b",
+                    "stepText": "Now, let's combine the two contributions. Determine the net entropy change of the refrigerant by taking the difference between the increase from the indoor process and the decrease from the outdoor process. Compute $!$\\Delta S_{net} = \\Delta S_1 - \\Delta S_2$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "4.18"
+                        "15.58"
                     ],
                     "stepSolveAnswerUnits": "J/K",
                     "stepConcepts": [
                         "abaeb8c1-1a59-4643-8d11-75f973d9c2ba"
                     ],
-                    "options": [
-                        {
-                            "optionText": "The efficiency affects the work output but does not change the net entropy computed from the exchanged heats.",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "The efficiency directly reduces the magnitude of the individual entropy changes in the reservoirs.",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "A lower efficiency always results in a negative net entropy change.",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "options": []
                 }
             ]
         },
