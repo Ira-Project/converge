@@ -5,7 +5,7 @@ import { api } from '@/trpc/react';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { type MultipleChoiceOption } from '../types';
+import { type MultipleChoiceOption } from '../../types';
 import FormattedText from '@/components/formatted-text';
 import posthog from 'posthog-js';
 

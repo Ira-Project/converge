@@ -245,13 +245,6 @@ export async function deleteUser(email: string) {
     console.log(`Found ${activities.length} activities in classroom ${classroom.id}`);
 
     for(const act of activities) {
-      if(!act.assignmentId) {
-        console.log(`Activity ${act.id} has no assignment ID, skipping`);
-        continue;
-      }
-
-      console.log(`Deleting activity to assignment ${act.assignmentId} with type ${act.typeText}`);
-
       if(act.typeText === ActivityType.StepSolve) {
         const ssAttempts = await db.select().from(stepSolveAssignmentAttempts).where(eq(stepSolveAssignmentAttempts.activityId, act.id));
 

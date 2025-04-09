@@ -1,6 +1,6 @@
 // MatchingQuestion.tsx
 import React, { useState, useRef, useEffect } from 'react';
-import type { Match } from '../types';
+import type { Match } from '../../types';
 import { LoadingButton } from '@/components/loading-button';
 import Image from 'next/image';
 

@@ -7,7 +7,6 @@ import { subjects } from "../schema/subject";
 import { emailsToPreload } from "./emailsToPreload";
 import { preloadedUsers } from "../schema/user";
 import { Roles } from "@/lib/constants";
-import { activity } from "../schema/activity";
 
 export async function createCoursesSubjectsAndTopics() {
   const list = [
