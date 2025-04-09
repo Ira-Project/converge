@@ -54,7 +54,7 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
       isActive: true,
       items: filteredActivities.map((topic) => ({
         title: topic.name,
-        url: `${classroom?.id}${Paths.Activities}#${topic.slug}`,
+        url: `/${classroom?.id}${Paths.Activities}#${topic.slug}`,
       })),
     },
     {
