@@ -1,0 +1,225 @@
+{
+    "id": "ba51f2c1c47241efb655d",
+    "name": "Doppler Effect",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "bb33387048e9429fbed1c",
+            "questionText": "A doctor is using a Doppler ultrasound to measure the blood flow in a patient's artery. The ultrasound probe emits a sound wave with a frequency of $!$7.5 \\text{ MHz}$!$. The speed of sound in the blood is approximately $!$1540 \\text{ m/s}$!$. The ultrasound machine detects a reflected frequency of $!$7.502 \\text{ MHz}$!$. Assuming the blood is flowing towards the probe, calculate the velocity of the blood flow in $!$\\text{m/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ef26b634454c4c3f9c86d",
+                    "stepText": "Let's start by calculating the frequency shift $!$\\Delta f$!$ which is the difference between the detected (reflected) frequency and the emitted frequency. Use the provided frequencies to compute this value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2000"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1700980398394cd7a7388",
+                    "stepText": "Now, identify the correct Doppler ultrasound formula that relates the frequency shift $!$\\Delta f$!$, the blood flow velocity $!$ v$!$, the transmitted frequency $!$ f_0$!$, and the speed of sound $!$ c$!$. Please choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+                        "f09a3cf7-42e1-4878-b989-bb756bfc1f03",
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{2 v f_0}{c}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{v f_0}{2 c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{c f_0}{2 v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "18d0ad58a38f4c0e8fbe2",
+                    "stepText": "Next, rearrange the chosen formula to solve for the blood flow velocity $!$ v$!$. What is the expression for $!$ v$!$ in terms of $!$\\Delta f, f_0,$!$ and $!$ c$!$? Please select the correct rearrangement from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+                        "f09a3cf7-42e1-4878-b989-bb756bfc1f03",
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ v = \\frac{\\Delta f \\cdot c}{2 f_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ v = \\frac{2 \\Delta f \\cdot c}{f_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ v = \\frac{\\Delta f \\cdot c}{f_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3c4f051c5f8841f6a9b26",
+                    "stepText": "Finally, substitute the values $!$\\Delta f = 2000 \\text{ Hz}$!$, $!$ c = 1540 \\text{ m/s}$!$, and $!$ f_0 = 7.5 \\times 10^{6} \\text{ Hz}$!$ into your expression for $!$ v$!$ and calculate the numerical value for the blood flow velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.20533"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+                        "f09a3cf7-42e1-4878-b989-bb756bfc1f03",
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "b3f1255980504ac6bea5d",
+            "questionText": "An astronomer observes a distant galaxy emitting light with a known spectral line at a wavelength of $!\\lambda = 656.3 \\text{ nm}!$ (Hydrogen-alpha line). However, the astronomer measures the wavelength of this spectral line in the galaxy's light to be $!\\lambda' = 690.0 \\text{ nm}!$. Given that the speed of light is approximately $!c = 3.0 \\times 10^8 \\text{ m/s}!$, determine the galaxy's velocity relative to Earth. Is the galaxy moving towards or away from the Earth? Provide your answer in $!\\text{m/s}!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "87175b6d8cbb4d67ab384",
+                    "stepText": "Let's start by identifying the formula to compute the redshift ($!$z$!$) for light. Redshift relates the observed wavelength ($!$\\lambda'$!$) to the emitted wavelength ($!$\\lambda$!$). Which of these formulas correctly represents redshift?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ba45dfc9-7996-4dda-bd14-1d7f21675597",
+                        "21d1d259-b66f-4509-8897-4feba2f2b3e6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$z = (\\lambda' - \\lambda)/\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$z = (\\lambda - \\lambda')/\\lambda'$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$z = \\lambda/\\lambda'$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a4bf97d10dbb41dba63a3",
+                    "stepText": "Great! Now, using the formula you selected, calculate the redshift ($!$z$!$) with the given values $!$\\lambda = 656.3\\,nm$!$ and $!$\\lambda' = 690.0\\,nm$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0513"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ba45dfc9-7996-4dda-bd14-1d7f21675597"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "74a5f9b8179d4177b3846",
+                    "stepText": "Next, let's determine the correct formula to calculate the galaxy's velocity ($!$v$!$) using the redshift ($!$z$!$) you just found and the speed of light ($!$c$!$). Which of the following options correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5dab74ab-387d-4288-8961-5ac6d456b3e9",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = z \\cdot c$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = c/z$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = z/c$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fe03c8064d034868a610e",
+                    "stepText": "Now, calculate the galaxy's velocity by applying the formula you selected with $!$c = 3.0 \\times 10^8\\,m/s$!$. Additionally, select the option that correctly indicates whether the galaxy is moving towards or away from Earth.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.54e7"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "5dab74ab-387d-4288-8961-5ac6d456b3e9",
+                        "ba45dfc9-7996-4dda-bd14-1d7f21675597"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Moving away",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Moving towards",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

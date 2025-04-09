@@ -1,0 +1,197 @@
+{
+    "id": "ed0cd35c33f34a24bf536",
+    "name": "Simple Harmonic Motion",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "88c41618a3f6462a9b594",
+            "questionText": "Consider a car with a suspension system modeled as a spring-mass system undergoing simple harmonic motion. The car has a mass of $!$m = 1200 \\text{ kg}$!$, and each of the four identical springs has a spring constant of $!$k = 2 \\times 10^4 \\text{ N/m}$!$. Assuming the weight is evenly distributed, what is the period of oscillation for the car's suspension system?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "25f258fa430949bb82dae",
+                    "stepText": "Let's start by determining the effective spring constant for the suspension system, considering the springs are arranged in parallel. Identify the correct expression for the effective spring constant.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eac352c8-92f0-4606-84ae-c8dc382203f6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$k_{eff}=4k$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$k_{eff}=\\frac{k}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$k_{eff}=k^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f6c0bdccf16e4cbfa2f44",
+                    "stepText": "Now, using the expression you selected for the effective spring constant, substitute the given value $!$k = 2 \\times 10^4 \\text{ N/m}$!$ to calculate the effective spring constant. Provide the numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "80000"
+                    ],
+                    "stepSolveAnswerUnits": "N/m",
+                    "stepConcepts": [
+                        "eac352c8-92f0-4606-84ae-c8dc382203f6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a49e9e08f3bd4f108d175",
+                    "stepText": "Great, now let\u2019s identify the formula for the period of a mass-spring system undergoing simple harmonic motion. Choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eac352c8-92f0-4606-84ae-c8dc382203f6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T=2\\pi\\sqrt{\\frac{m}{k}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T=\\sqrt{\\frac{m}{k}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T=\\frac{1}{2\\pi}\\sqrt{\\frac{m}{k}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e5954e352f994a6ca70e9",
+                    "stepText": "With the formula selected, substitute the values $!$m = 1200 \\text{ kg}$!$ and $!$k_{eff} = 80000 \\text{ N/m}$!$ into the expression $!$\\frac{m}{k_{eff}}$!$. Calculate this intermediate value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.015"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eac352c8-92f0-4606-84ae-c8dc382203f6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "061dcbe6b42845fe90a0a",
+                    "stepText": "Finally, complete the calculation by taking the square root of the intermediate value and then multiplying by $!$2\\pi$!$ to find the period of oscillation. What is the final period?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.77"
+                    ],
+                    "stepSolveAnswerUnits": "seconds",
+                    "stepConcepts": [
+                        "eac352c8-92f0-4606-84ae-c8dc382203f6"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "2450033e774b42e381f10",
+            "questionText": "A tuning fork oscillates in simple harmonic motion, producing a sound wave. Suppose a tuning fork with a frequency of $!$440 \\text{ Hz}$!$ (which corresponds to the A4 note) is struck. If the amplitude of the tuning fork's prong is $!$2 \\text{ mm}$!$, determine the maximum acceleration experienced by the prong during its oscillation. Assume the motion starts at the equilibrium position.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ad1dcbcc8ba6428b86132",
+                    "stepText": "Let's start by recalling the formula that relates the angular frequency $!$\\omega$!$ to the frequency $!$f$!$ in simple harmonic motion. Please identify the correct formula from the options.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "749a4b91-5344-4ca1-b7de-fcc787304a68"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\omega = 2\\pi f$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\omega = \\frac{f}{2\\pi}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\omega = f^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "646f60ceb3c14ba988465",
+                    "stepText": "Great! Now, using the formula $!$\\omega = 2\\pi f$!$ and the given frequency $!$f = 440\\text{ Hz}$!$, calculate the angular frequency $!$\\omega$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2764.6"
+                    ],
+                    "stepSolveAnswerUnits": "rad/s",
+                    "stepConcepts": [
+                        "749a4b91-5344-4ca1-b7de-fcc787304a68"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "0e6e8b8f2a154ec0b8299",
+                    "stepText": "Now that you have $!$\\omega$!$, let\u2019s compute its square $!$\\omega^2$!$, which will be used in the next step. Calculate $!$\\omega^2$!$ using your previous result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7640000"
+                    ],
+                    "stepSolveAnswerUnits": "rad^2/s^2",
+                    "stepConcepts": [
+                        "749a4b91-5344-4ca1-b7de-fcc787304a68"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6ae1cec7082d44a8a15e0",
+                    "stepText": "Finally, to find the maximum acceleration $!$a_{max}$!$, multiply the squared angular frequency by the amplitude. Remember to convert the amplitude from millimeters to meters (i.e. $!$2 \\text{ mm} = 0.002 \\text{ m}$!$). Compute $!$a_{max} = \\omega^2 \\times A$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15280"
+                    ],
+                    "stepSolveAnswerUnits": "m/s^2",
+                    "stepConcepts": [
+                        "3ec5c7a4-6a70-4299-bd95-2a6d9e2e15e6"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

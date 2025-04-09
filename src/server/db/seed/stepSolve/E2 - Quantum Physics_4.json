@@ -1,0 +1,229 @@
+{
+    "id": "eb0a482216b44ef08384e",
+    "name": "Quantum Physics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "6b18755603cb4734a29c2",
+            "questionText": "In a photoelectric effect experiment, a metal surface is illuminated with light of two different wavelengths. The first wavelength, $!$\\lambda_1 = 300 \\text{ nm}$!$, results in a stopping potential of $!$1.5 \\text{ V}$!$. When the wavelength is changed to $!$\\lambda_2 = 200 \\text{ nm}$!$, the stopping potential increases to $!$3.0 \\text{ V}$!$. Determine the work function $!$\\phi$!$ of the metal in electron volts ($!$\\text{eV}$!$). Use $!$h = 6.626 \\times 10^{-34} \\text{ Js}$!$ and $!$c = 3 \\times 10^8 \\text{ m/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1205f97706d44fa180929",
+                    "stepText": "Let's start by identifying the relation that connects the speed of light, frequency, and wavelength. Select the correct formula that relates these quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "af40d0c0-79b8-4f61-ae04-181c33113b03"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$c = f \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$c = \\frac{f}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = c \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e2769c777fa34d51b1517",
+                    "stepText": "Great. Now, convert the first wavelength $!$\\lambda_1 = 300\\;nm$!$ into meters before using it in any calculations. What is $\\lambda_1$ in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "af40d0c0-79b8-4f61-ae04-181c33113b03"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6d8dbbbfe2be4045b2bba",
+                    "stepText": "Using the photon energy relation $!$E = \\frac{hc}{\\lambda}$!$, calculate the energy of a photon for $!$\\lambda_1$!$. Compute $!$\\frac{hc}{\\lambda_1}$!$ in Joules.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.626e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "af40d0c0-79b8-4f61-ae04-181c33113b03",
+                        "fc61ca59-6b90-4172-8d29-30967a79b1ef"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "efaa2de8e18640a392666",
+                    "stepText": "Next, calculate the kinetic energy of the photoelectrons for the first case using the stopping potential. Multiply the electron charge $!$e = 1.602 \\times 10^{-19}~C$!$ by $!$V_s = 1.5~V$!$ to find $!$eV_1$!$ in Joules.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.403e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "018e7d2e-cb2b-4daa-9c30-e3a0d9d369c9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6f388b75e6a6491898f4c",
+                    "stepText": "Now, using the photoelectric equation $!$E_k = hf - \\phi$!$, determine the work function for the first wavelength by subtracting the kinetic energy from the photon energy. Compute $!$\\phi_1 = \\frac{hc}{\\lambda_1} - eV_1$!$ in Joules.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.223e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381",
+                        "b63cfff7-c0f2-44a2-84ab-5c9c9407941e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c73e38bf58ea43948ed37",
+                    "stepText": "Finally, repeat a similar process for the second wavelength $!$\\lambda_2 = 200\\;nm$!$ with a stopping potential of $!$3.0~V$!$. Calculate the photon energy and the kinetic energy, then determine the work function $!$\\phi_2$!$ for this case. Average the two work functions from both wavelengths and convert the resulting work function from Joules to electron volts. What is the final value of the work function in $!$eV$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.92"
+                    ],
+                    "stepSolveAnswerUnits": "eV",
+                    "stepConcepts": [
+                        "af40d0c0-79b8-4f61-ae04-181c33113b03",
+                        "fc61ca59-6b90-4172-8d29-30967a79b1ef",
+                        "018e7d2e-cb2b-4daa-9c30-e3a0d9d369c9",
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "eacc67e9abb24211bb323",
+            "questionText": "An electron microscope uses electrons accelerated through a potential difference to image a sample. To achieve a resolution capable of resolving features of approximately $!$0.05 \\text{ nm}$!$, what accelerating voltage ($!$V$!$) is required? Assume the electron is non-relativistic, and use the following constants: electron mass $!$m = 9.11 \\times 10^{-31} \\text{ kg}$!$, elementary charge $!$q = 1.602 \\times 10^{-19} \\text{ C}$!$, and Planck's constant $!$h = 6.626 \\times 10^{-34} \\text{ Js}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "06d57aff65724c36ad7a7",
+                    "stepText": "Let's begin by identifying the appropriate relation that connects the electron's wavelength to its accelerating voltage. Recall that for electrons, the de Broglie wavelength can be expressed in terms of the accelerating voltage. Choose the option that correctly represents this relation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2fc1331f-b464-447e-aaa9-e1806d7e9191",
+                        "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{h}{\\sqrt{2mqV}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{h}{2mqV}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{h\\sqrt{2mqV}}{}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ac65d66195c545af8f1c0",
+                    "stepText": "Great. Now, rearrange the chosen equation to solve for the accelerating voltage $!$V$!$. Identify the correct re-arranged form where $!$V$!$ is isolated.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2fc1331f-b464-447e-aaa9-e1806d7e9191"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = \\frac{h^2}{2mq\\lambda^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{2mq\\lambda^2}{h^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{h}{2mq\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "30097976ada74723adccb",
+                    "stepText": "Now, convert the resolution requirement into the proper units and calculate its square. Given that the required resolution is $!$0.05 \\text{ nm}$!$, first express it in meters, then determine $!$\\lambda^2$ for use in the equation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.5e-21"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "84632c0a402740708f558",
+                    "stepText": "Next, substitute the known constants along with the computed $!$\\lambda^2$ into the rearranged formula. At this stage, compute the denominator, which involves the product $!$2 \\times m \\times q \\times \\lambda^2$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.30e-70"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2fc1331f-b464-447e-aaa9-e1806d7e9191"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5174054efc59410db0a98",
+                    "stepText": "Finally, using the previously obtained numerator (which is $!$h^2$!$) and the denominator from the last step, compute the accelerating voltage $!$V$!$. What is the approximate value of $!$V$!$ in volts?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "601"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "2fc1331f-b464-447e-aaa9-e1806d7e9191"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

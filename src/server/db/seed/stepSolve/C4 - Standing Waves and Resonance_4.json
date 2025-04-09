@@ -1,0 +1,242 @@
+{
+    "id": "0813227f3952469ba26b5",
+    "name": "Standing Waves and Resonance",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "e1eb1aba8feb4fe4ac5f0",
+            "questionText": "A tuning fork with a frequency of $!$440~\\mathrm{Hz}$!$ is used to create resonance in a pipe that is open at one end and closed at the other. The speed of sound in air is $!$343~\\mathrm{m/s}$!$. Determine the wavelength corresponding to the fifth harmonic in this closed pipe configuration.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4875580b6dfd43f8a4621",
+                    "stepText": "Let's start by identifying which formula relates the wavelength to the length of a closed pipe resonating at a specific harmonic. Please select the correct formula for a closed pipe system.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0deb0cf3-4f02-472f-9b66-a770ccf171bc"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda_n = \\frac{4L}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda_n = \\frac{2L}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda_n = \\frac{L}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b349c584a2174203bb217",
+                    "stepText": "Next, to determine the wavelength of the sound produced by the tuning fork, we need to relate the speed of sound to the frequency and wavelength. Please choose the correct relation that connects these quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "524f0548-0ea5-4a4b-8776-652b87aa3602"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{v}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = v \\times f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{f}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "83bea6e9b9fc488fa4047",
+                    "stepText": "Great, now using the relation from the previous step, calculate the wavelength of the sound produced by the tuning fork using the given speed $!$343~\\mathrm{m/s}$!$ and frequency $!$440~\\mathrm{Hz}$!$. Provide your numerical answer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.780"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "524f0548-0ea5-4a4b-8776-652b87aa3602"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "803728de4cc74240b9c30",
+                    "stepText": "Now, to understand the resonance condition for the closed pipe, identify the formula that relates the pipe length to the wavelength for a given harmonic. Choose the correct formula for computing the effective length of the pipe at a specific harmonic in a closed pipe system.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0deb0cf3-4f02-472f-9b66-a770ccf171bc"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L = \\frac{n\\lambda}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L = \\frac{\\lambda}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L = \\frac{2n\\lambda}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e95248b8a91344358a88f",
+                    "stepText": "Finally, combining the information from the previous steps, determine the wavelength corresponding to the fifth harmonic. Recall that the sound's wavelength is determined by the tuning fork and remains unchanged by the resonance condition. Enter your final numerical answer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.780"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "524f0548-0ea5-4a4b-8776-652b87aa3602",
+                        "0deb0cf3-4f02-472f-9b66-a770ccf171bc"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "5eeed2e71b9b49938650c",
+            "questionText": "A mass-spring system is set into vertical oscillation with damping. After the mass is released, its amplitude decreases to $!$\\frac{1}{e}$!$ of its initial amplitude after 5 complete cycles. Given that the initial (undamped) frequency is $!$2.0\\,Hz$!$, what is the approximate frequency of the damped oscillation?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "087bb183792f4bd9b5e19",
+                    "stepText": "Let's start by finding the total time elapsed for 5 cycles. Given the initial (undamped) frequency $!$f_0 = 2.0\\,Hz$!$, determine the period of oscillation and then calculate the time for 5 cycles.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.5"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "05c93a0903f743a88c72b",
+                    "stepText": "Great. Now, consider that the amplitude of a damped oscillator decays according to an exponential relation. Please choose the correct formula for the amplitude decay envelope from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$e^{-\\frac{\\gamma t}{2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$e^{-\\gamma t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$e^{-\\frac{\\gamma}{2t}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c4dd21869c524251844b6",
+                    "stepText": "Using the decay relation and knowing that after 5 cycles the amplitude reduces to $!$1/e$!$, set up the relation $!$e^{-\\frac{\\gamma t}{2}}=\\frac{1}{e}$!$. With the total time $!$t=2.5\\,s$!$, solve for the damping coefficient $!$\\gamma$!$. Calculate the value of $!$\\gamma$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.8"
+                    ],
+                    "stepSolveAnswerUnits": "s^{-1}",
+                    "stepConcepts": [
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a6d3e8785fb8411d9a3c8",
+                    "stepText": "Now that you have the damping coefficient, identify the correct formula to calculate the damped angular frequency $!$\\omega_d$!$ from the undamped angular frequency $!$\\omega_0$!$ and $!$\\gamma$!$. Please choose the correct option from the formulas below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "524f0548-0ea5-4a4b-8776-652b87aa3602"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\omega_d = \\sqrt{\\omega_0^2 - \\left(\\frac{\\gamma}{2}\\right)^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\omega_d = \\omega_0 - \\frac{\\gamma}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\omega_d = \\omega_0 \\cdot e^{-\\frac{\\gamma}{2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c680a31cb0d14ac092a35",
+                    "stepText": "Finally, convert the damped angular frequency $!$\\omega_d$!$ to the damped oscillation frequency $!$f_d$!$ using the relation between angular frequency and frequency. Compute the numerical value of $!$f_d$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.0"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "524f0548-0ea5-4a4b-8776-652b87aa3602"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

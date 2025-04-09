@@ -1,0 +1,190 @@
+{
+    "id": "73fdb22c0ae644e1bcd15",
+    "name": "Doppler Effect",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "945cb96233054a7786203",
+            "questionText": "A police officer is using a radar gun that emits radio waves at a frequency of $!$8\\;GHz$!$. A car is moving towards the officer, and the radar gun detects the frequency of the reflected waves to be $!$8.0002\\;GHz$!$. Given that the speed of radio waves is approximately the speed of light, $!$c = 3 \\times 10^8\\;m/s$!$, what is the speed of the car?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e23e3583826549209c035",
+                    "stepText": "Let's start by identifying the Doppler effect formula for a situation involving a two\u2010way reflection when a car is approaching. Which of the following formulas correctly expresses the relationship between the emitted frequency $!$f$!$ and the received frequency $!$f_r$!$ in this reflection scenario?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9",
+                        "8004f091-3866-4725-923f-566d362ee31a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f_r = f\\left(\\frac{c+v}{c-v}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f_r = f\\left(\\frac{c-v}{c+v}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f_r = f\\left(1+\\frac{v}{c}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "266d8dbe05734a55bf96f",
+                    "stepText": "Great, now that you've identified the correct formula, compute the ratio between the received frequency $!$f_r$!$ and the emitted frequency $!$f$!$. Use the given frequencies $!$8.0002\\;GHz$!$ and $!$8\\;GHz$!$ to determine $!$R = \\frac{f_r}{f}$!$. What is the numerical value of $!$R$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.000025"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+                        "f09a3cf7-42e1-4878-b989-bb756bfc1f03"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a49485cb8959419bb6494",
+                    "stepText": "Now, by substituting the ratio $!$R$!$ into the Doppler formula $!$\\frac{c+v}{c-v} = R$!$, we need to rearrange the equation to solve for the car's speed $!$v$!$ in terms of $!$R$!$ and $!$c$!$. Which of the following expressions correctly isolates $!$v$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = c\\left(\\frac{R-1}{R+1}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = c\\left(\\frac{R+1}{R-1}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = c\\left(\\frac{R-1}{2}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bb1eefb1a729499889cca",
+                    "stepText": "Finally, substitute the given value of the speed of light $!$c = 3 \\times 10^8\\;m/s$!$ and the computed ratio $!$R = 1.000025$!$ into the expression for $!$v$!$. After performing the calculation, what is the numerical value of the car's speed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3750"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "4505f55f5bc94f4487755",
+            "questionText": "A doctor is using Doppler ultrasound to examine blood flow in a patient's artery. The ultrasound probe emits sound waves at a frequency of $!$5 MHz$!$. The speed of sound in human tissue is approximately $!$1540 m/s$!$. The ultrasound machine detects a shift in frequency of $!$2 kHz$!$ from the blood cells moving towards the probe. What is the speed of the blood flow in the artery?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6adb4875b4b04ce88bdd4",
+                    "stepText": "Let's start by identifying which Doppler ultrasound formula relates the frequency shift $!$\\Delta f$!$, the emitted frequency $!$f_0$!$, the blood velocity $!$v$!$, and the speed of sound $!$c$!$. Which one of the following formulas is needed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{2 f_0 v}{c}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{f_0 v}{c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{2 c v}{f_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4e6cfa9f1cd04fceafd97",
+                    "stepText": "Great, now that we've focused on the proper relationship, calculate the product of the frequency shift $!$\\Delta f$!$ and the speed of sound $!$c$!$. Use the values $!$\\Delta f = 2000\\,Hz$!$ and $!$c = 1540\\,m/s$!$. What is the result of $!$\\Delta f \\times c$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3080000"
+                    ],
+                    "stepSolveAnswerUnits": "m\\,s^{-2}",
+                    "stepConcepts": [
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "5fd087bf-30b8-4f0e-9ea8-08c67db5840f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6c33e1c9cac241419261f",
+                    "stepText": "Now, compute the denominator of the rearranged formula, which is $!$2 f_0$!$. Given that the emitted frequency is $!$5\\,MHz$!$ (or $!$5\\times10^6\\,Hz$!$), what is the value of $!$2 f_0$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10000000"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "5fd087bf-30b8-4f0e-9ea8-08c67db5840f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "96855ac509bc446d8de00",
+                    "stepText": "Finally, calculate the speed of the blood flow $!$v$!$ by dividing the result from the numerator (Step 2) by the denominator (Step 3), using the rearranged formula $!$v = \\frac{\\Delta f \\times c}{2 f_0}$!$. What is the computed value of $!$v$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.308"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9",
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

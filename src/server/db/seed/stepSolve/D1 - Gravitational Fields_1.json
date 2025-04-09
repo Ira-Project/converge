@@ -1,0 +1,222 @@
+{
+    "id": "f26c03b55168433bbeb26",
+    "name": "Gravitational Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "83322c0774af4508bf7bf",
+            "questionText": "Consider a newly discovered planet, Kepler-186f-b, which has a mass ($!$M$!$) of 5 times the Earth's mass ($!$M_E = 5.972 \\times 10^{24}$!$ kg) and a radius ($!$R$!$) of 1.5 times the Earth's radius ($!$R_E = 6.371 \\times 10^6$!$ m). A spacecraft of mass ($!$m = 1000$!$ kg) is launched from the surface of Kepler-186f-b. What is the minimum speed ($!$v$!$) with which the spacecraft must be launched from the surface of Kepler-186f-b to escape the planet's gravitational field?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8b4c0c6d45da4034b65ce",
+                    "stepText": "Let's start by identifying the correct formula required to calculate the escape speed from a gravitational field. Please select the formula that relates escape speed to the gravitational constant, the mass of the planet, and its radius.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "46604101-3be5-4092-ac9f-5c58ea2f77f3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\sqrt{\\frac{GM}{R}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\sqrt{\\frac{GM}{R^2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\sqrt{\\frac{2GM}{R}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\sqrt{\\frac{G2M}{R}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "dc1e414cec10449ca76ed",
+                    "stepText": "Now, calculate the mass of Kepler-186f-b knowing it is 5 times the Earth's mass. (Recall that Earth's mass is $!$5.972\\times10^{24}$!$ kg.) What is the mass of the planet?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.986e25"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "670a8f569d1a48fe815fc",
+                    "stepText": "Next, determine the radius of Kepler-186f-b given that it is 1.5 times the Earth's radius (Earth\u2019s radius is $!$6.371\\times10^{6}$!$ m). What is the planet's radius?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "9.5565e6"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "8c62135bbef24b60b28cc",
+                    "stepText": "Using the computed mass and the gravitational constant $!$G = 6.67\\times10^{-11}$!$ m$!$^3$/kg/s$!$^2$!$, calculate the intermediate value by multiplying $!$2G$!$ with the mass and then dividing by the planet's radius. What is the value obtained inside the square root?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.17e8"
+                    ],
+                    "stepSolveAnswerUnits": "m^2/s^2",
+                    "stepConcepts": [
+                        "46604101-3be5-4092-ac9f-5c58ea2f77f3"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3a13e3fbb96a4091833d6",
+                    "stepText": "Finally, take the square root of the value from the previous step to determine the escape speed of the spacecraft. What is the minimum escape speed required?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.04e4"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "46604101-3be5-4092-ac9f-5c58ea2f77f3"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "061e722d14f944e4b5884",
+            "questionText": "An artificial satellite with a mass ($!$m = 1500$!$ kg) is orbiting the Earth in an elliptical orbit. At its perigee (closest approach), the satellite is at a distance ($!$r_p = 7 \\times 10^6$!$ m) from the Earth's center and has a speed ($!$v_p = 8000$!$ m/s). At its apogee (farthest point), the satellite is at a distance ($!$r_a = 21 \\times 10^6$!$ m) from the Earth's center. Calculate the total energy ($!$E_T$!$) of the satellite in its orbit.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1de37bd8057a4df2b1e09",
+                    "stepText": "Let's start by recalling the formula to determine the semi-major axis $!$a$!$ of an elliptical orbit in terms of the perigee $!$r_p$!$ and apogee $!$r_a$!$. Please identify the correct formula among the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "a = $!$(r_p + r_a)/2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "a = $!$2r_a - r_p$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "a = $!$\\sqrt{r_p \\times r_a}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "495cf3b8217e4bbc89913",
+                    "stepText": "Great! Now, using the formula you identified, calculate the semi-major axis $!$a$!$ given that $!$r_p = 7 \\times 10^6 \\; m$!$ and $!$r_a = 21 \\times 10^6 \\; m$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.4e7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "68d19191a9ea4acd942c6",
+                    "stepText": "Next, recall the formula for the total orbital energy of a satellite in an elliptical orbit in terms of $!$GM$!$, $!$m$!$, and $!$a$!$. Please select the correct formula from the options provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "E = $!$-\\frac{GMm}{2a}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "E = $!$-\\frac{GMm}{a}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "E = $!$-\\frac{GMm}{a^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7283542e639f459da677c",
+                    "stepText": "Now, compute the numerator part $!$GMm$!$ using the provided values: Earth's gravitational parameter $!$GM = 3.986 \\times 10^{14} \\; m^3/s^2$!$ and the satellite's mass $!$m = 1500 \\; kg$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.979e17"
+                    ],
+                    "stepSolveAnswerUnits": "kg*m^3/s^2",
+                    "stepConcepts": [
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7f909f9b519e4be9b0bb7",
+                    "stepText": "Now calculate the denominator of the energy formula, which is $!$2a$!$. Use the semi-major axis you computed earlier.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.8e7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3c7c075499734501ad7b7",
+                    "stepText": "Finally, substitute the numerator and the denominator into the total energy formula to calculate $!$E_T$!$. Remember that the formula includes a negative sign. Compute the value accordingly.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-2.14e10"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

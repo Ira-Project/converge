@@ -1,8 +1,8 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import type { SubmitAssignmentAttemptSchema, GetSubmissionsInput, GetAnalyticsCardsInput, CreateAssignmentAttemptInput, GetKnowledgeZapActivityInput, GetHeatMapInput } from "./knowledgeZap.input";
+import type { SubmitAssignmentAttemptSchema, GetSubmissionsInput, GetAnalyticsCardsInput, CreateAssignmentAttemptInput, GetKnowledgeZapActivityInput, GetHeatMapInput, GetKnowledgeZapRevisionActivityInput } from "./knowledgeZap.input";
 import { eq } from "drizzle-orm";
-import { ActivityType, Roles } from "@/lib/constants";
+import { ActivityType, MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE, Roles } from "@/lib/constants";
 import { knowledgeZapAssignmentAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
 import { knowledgeZapAssignments } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
 import { KnowledgeZapQuestionType } from "@/lib/constants";
@@ -398,46 +398,301 @@ export const getHeatMap = async (ctx: ProtectedTRPCContext, input: GetHeatMapInp
 
 }
 
-export const getRevisionAssignment = async (ctx: ProtectedTRPCContext) => {
-
-//   Revision Algorithm
-
-// - Create a question list
-// - Get all the concepts that have an associated knowledge question
-// - Get all the concepts from concept tracker that the user has attempted and sort them by date created
-
-// Last Incorrect
-// - Get all concepts where the last attempt was incorrect and store in a list
-// - Add covered concepts to the maintained concept list
-// - Pick one associated question from concepts and then add it to the question list as long as concept is not in maintained concept list
-
-// Ranking 
-// - We will consider concept accuracy score in these buckets
-// 	- 1 day
-// 	- 1 week
-// 	- 2 weeks
-// 	- 1 month
-// 	- 3 months
-// 	- Overall
-// - We will average these scores for each concept and rank them based on this average. 
-// - The advantage with this algorithm is that by definition the short term averages will get weighted heavier since those attempts feature in all buckets.
-// - We will include any concepts with a score lower than X
-
-// Adding Concepts
-// - We will have 20 questions per revision, and we will add all remaining questions from live assignments that students have not covered yet 
+export const getKnowledgeZapRevisionActivity = async (ctx: ProtectedTRPCContext, input: GetKnowledgeZapRevisionActivityInput) => {
   
-  const questionList = [];
+  const questionIdsList:string[] = [];
 
-  const concepts = await ctx.db.query.knowledgeZapQuestionsToConcepts.findMany({
-    with: {
-      concept: true,
+  const activities = await ctx.db.query.activity.findMany({
+    where: (activity, { and, eq }) => 
+      and(
+        eq(activity.classroomId, input.classroomId),
+        eq(activity.typeText, ActivityType.KnowledgeZap as string),
+        eq(activity.isLive, true),
+      ),
+    columns: {
+      topicId: true,
     }
   });
 
+  const topicSet = new Set(activities.map(a => a.topicId ?? ''));
+
   const conceptTracker = await ctx.db.query.conceptTracking.findMany({
-    where: (conceptTracker, { eq }) => eq(conceptTracker.userId, ctx.user.id),
+    where: (conceptTracker, { and, eq }) => and(
+      eq(conceptTracker.userId, ctx.user.id),
+      eq(conceptTracker.activityType, ActivityType.KnowledgeZap),
+    ),
   });
 
+  const conceptsToReview: string[] = [];
+  const conceptsAddedToQuestions = new Set<string>();
 
+  // STEP 1: Get the concept ids where the users last attempt was incorrect
+  const processedConcepts = new Set<string>();
+  for(const concept of conceptTracker) {
+    if(!concept.conceptId) continue;
+
+    if(concept.isCorrect) {
+      processedConcepts.add(concept.conceptId);
+    } else {
+      if (!processedConcepts.has(concept.conceptId)) {
+        conceptsToReview.push(concept.conceptId);
+      }
+    }
+  }
   
+  // STEP 2: Add concepts with previous mistakes to the question list only if the revision has less than concept limit
+  if(conceptsToReview.length < MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE) {
+
+    const conceptScoreMap = new Map<string, number>();
+
+    const processedConcepts = new Set<string>();
+
+    for(const concept of conceptTracker) {
+
+      if(!concept.conceptId) continue;
+
+      // If the concept has already been added to the question list, skip it
+      if(conceptsToReview.includes(concept.conceptId)) continue;
+      if(processedConcepts.has(concept.conceptId)) continue;
+
+      processedConcepts.add(concept.conceptId);
+
+      // Get all the concept tracker entries for the concept
+      const conceptTrackerForConcept = conceptTracker.filter(c => c.conceptId === concept.conceptId);
+
+      // Get the scores for the concept
+      const yesterdayConcepts = conceptTrackerForConcept.filter(c => c.createdAt > new Date(new Date().setDate(new Date().getDate() - 1)));
+      const yesterdayScore = yesterdayConcepts.reduce((a, b) => a + (b.isCorrect ? 1 : 0), 0) / yesterdayConcepts.length;
+      const weekConcepts = conceptTrackerForConcept.filter(c => c.createdAt > new Date(new Date().setDate(new Date().getDate() - 7)));
+      const weekScore = weekConcepts.reduce((a, b) => a + (b.isCorrect ? 1 : 0), 0) / weekConcepts.length;
+      const monthConcepts = conceptTrackerForConcept.filter(c => c.createdAt > new Date(new Date().setDate(new Date().getDate() - 30)));
+      const monthScore = monthConcepts.reduce((a, b) => a + (b.isCorrect ? 1 : 0), 0) / monthConcepts.length;
+      const overallScore = conceptTrackerForConcept.reduce((a, b) => a + (b.isCorrect ? 1 : 0), 0) / conceptTrackerForConcept.length;
+
+      const scores = [yesterdayScore, weekScore, monthScore, overallScore];
+      const eligibleScores = scores.filter(s => !Number.isNaN(s));
+
+      if(eligibleScores.length === 0) {
+        console.log("No scores how did this happen", concept);
+      };
+
+      // Create a weighted average of the scores
+      const averageScore = eligibleScores.reduce((a, b) => a + b, 0) / eligibleScores.length; 
+      conceptScoreMap.set(concept.conceptId, averageScore);
+    }
+
+    // Sort the concepts by score
+    const sortedConcepts = Array.from(conceptScoreMap.entries()).sort((a, b) => b[1] - a[1]);
+
+    // Iterate through the concepts and add them to the conceptsAddedToQuestions depending on how many concepts are left to review
+    // We will add concepts with a score below 50% first
+
+    for(const [concept, score] of sortedConcepts) {
+      if(conceptsToReview.length === 0) break;
+
+      if(score < 0.4) {
+        conceptsToReview.push(concept);
+      }
+    }
+
+    if (conceptsToReview.length < Math.floor(MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE * 0.5)) {
+      // Add concepts with a score above 60%
+      for(const [concept, score] of sortedConcepts) {
+        if(conceptsToReview.length === MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE) break;
+
+        if(score < 0.5) {
+          conceptsToReview.push(concept);
+        }
+      }
+    }
+
+    if(conceptsToReview.length < MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE * 0.6) {
+      // Add concepts with a score above 70%  
+      for(const [concept, score] of sortedConcepts) {
+        if(conceptsToReview.length === MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE) break;
+
+        if(score < 0.6) {
+          conceptsToReview.push(concept);
+        }
+      }
+    }
+  }
+
+  const concepts = await ctx.db.query.knowledgeZapQuestionsToConcepts.findMany({
+    with: {
+      question: {
+        with: {
+          topic: true,
+        }
+      }
+    }
+  });
+
+  const liveConcepts = concepts.filter(c => topicSet.has(c.question.topic?.id ?? ''));
+
+  // STEP 3: Add new concepts to the question list at random to reach the concept limit
+  if(conceptsToReview.length < MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE) {
+
+    const conceptsToAddFromConceptTracker = liveConcepts.filter(c => c.conceptId && !conceptsToReview.includes(c.conceptId));
+    // Get unique concept IDs from the filtered concept tracker
+    const uniqueConceptIds = [...new Set<string>(
+      conceptsToAddFromConceptTracker
+        .map(c => c.conceptId)
+        .filter(c => c !== null && c !== undefined)
+      )
+    ];
+    
+    // Shuffle the concept IDs to randomize selection
+    const shuffledConcepts = [...uniqueConceptIds].sort(() => Math.random() - 0.5);
+    
+    let count = 0;
+    // Add concepts up to the limit
+    while(conceptsToReview.length < MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE) {
+      count++;
+      if(count > 100) {
+        console.log("This should never happen");
+        break;
+      }
+
+      const concept = shuffledConcepts.shift();
+      if (concept !== undefined && concept !== null) {
+        conceptsToReview.push(concept);
+      }
+      if(!concept) break;
+    }
+  }
+
+  // Add question Ids to the list based on the concepts
+  for(const concept of conceptsToReview) {
+    if(conceptsAddedToQuestions.has(concept)) continue;
+
+    const questions = concepts.filter(c => c.conceptId === concept).map(c => c.questionId);
+    // choose a random question from the list
+    const question = questions[Math.floor(Math.random() * questions.length)];
+
+    if(!question) {
+      console.log("This should never happen");
+      continue
+    };
+    // get the other concepts in the question
+    const allConceptsInQuestion = concepts.filter(c => c.questionId === question).map(c => c.conceptId);
+
+    // add the question to the question list
+    questionIdsList.push(question);
+
+    // add the other concepts to the conceptsAddedToQuestions
+    allConceptsInQuestion.forEach(c => conceptsAddedToQuestions.add(c));
+  }
+
+  console.log("CONCEPTS TO REVIEW", conceptsToReview, conceptsToReview.length);
+  console.log("CONCEPTS ADDED TO QUESTIONS", conceptsAddedToQuestions, conceptsAddedToQuestions.size);
+  console.log("QUESTION IDS LIST", questionIdsList, questionIdsList.length);
+  console.log("--------------------------------");
+
+  const knowledgeZapQuestions = await ctx.db.query.knowledgeZapQuestions.findMany({
+    where: (question, { and, inArray }) => 
+      and(
+        inArray(question.id, questionIdsList),
+        inArray(question.topicId, Array.from(topicSet)), 
+      ),
+  });
+
+  console.log("KNOWLEDGE ZAP QUESTIONS", knowledgeZapQuestions.length);
+  const questions: KnowledgeZapQuestionObjects[] = [];
+  console.log("KNOWLEDGE ZAP QUESTIONS", knowledgeZapQuestions.length);
+
+  await Promise.all(knowledgeZapQuestions.map(async (question) => {
+    const questionIds = question.questionId;
+
+    if (!questionIds) return;
+
+    let questionObject: KnowledgeZapQuestionObjects | null = null;
+
+    if (question.type === KnowledgeZapQuestionType.MULTIPLE_CHOICE) {
+      const multipleChoiceQuestions = await ctx.db.query.multipleChoiceQuestions.findMany({
+        where: (multipleChoiceQuestion, { inArray, and }) => and(
+          inArray(multipleChoiceQuestion.id, questionIds),
+          eq(multipleChoiceQuestion.multipleCorrect, false)
+        ),
+        with: {
+          options: {
+            columns: {
+              id: true,
+              option: true,
+              imageUrl: true,
+            }
+          }
+        }
+      });
+
+      if (multipleChoiceQuestions.length > 0) {
+        questionObject = {
+          id: question.id,
+          type: KnowledgeZapQuestionType.MULTIPLE_CHOICE,
+          variants: multipleChoiceQuestions.map((q) => ({
+            id: q.id,
+            question: q.question,
+            imageUrl: q.imageUrl,
+            options: q.options.sort(() => Math.random() - 0.5),
+          })),
+        };
+      }
+    }
+
+    if (question.type === KnowledgeZapQuestionType.MATCHING) {
+      const matchingQuestions = await ctx.db.query.matchingQuestions.findMany({
+        where: (matchingQuestion, { inArray }) => inArray(matchingQuestion.id, questionIds),
+        with: {
+          options: true,
+        }
+      });
+
+      if (matchingQuestions.length > 0) {
+        questionObject = {
+          id: question.id,
+          type: KnowledgeZapQuestionType.MATCHING,
+          variants: matchingQuestions.map((matchingQuestion) => ({
+            id: matchingQuestion.id,
+            question: matchingQuestion.question,
+            imageUrl: matchingQuestion.imageUrl,
+            optionAs: matchingQuestion.options.map(o => o.optionA).sort(() => Math.random() - 0.5),
+            optionBs: matchingQuestion.options.map(o => o.optionB).sort(() => Math.random() - 0.5),
+          })),
+        };
+      }
+    }
+
+    if (question.type === KnowledgeZapQuestionType.ORDERING) {
+      const orderingQuestions = await ctx.db.query.orderingQuestions.findMany({
+        where: (orderingQuestion, { inArray }) => inArray(orderingQuestion.id, questionIds),
+        with: {
+          options: {
+            columns: {
+              id: true,
+              option: true,
+            }
+          }
+        }
+      });
+
+      if (orderingQuestions.length > 0) {
+        questionObject = {
+          id: question.id,
+          type: KnowledgeZapQuestionType.ORDERING,
+          variants: orderingQuestions.map((q) => ({
+            ...q,
+            options: q.options.sort(() => Math.random() - 0.5),
+          })),
+        };
+      }
+    }
+
+    if (questionObject) {
+      questions.push(questionObject);
+    }
+  }));
+
+  return {
+    questions,
+  };
 }

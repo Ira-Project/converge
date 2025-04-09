@@ -1,9 +1,14 @@
-import { eq } from "drizzle-orm";
+import { and, desc, eq, isNotNull } from "drizzle-orm";
 import { activity } from "@/server/db/schema/activity";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { GetActivitiesInput, GetActivityInput, MakeActivityLiveInput } from "./activities.input";
-import type { ActivityType } from "@/lib/constants";
-
+import type { GetActivitiesInput, GetActivityInput, GetLiveActivitiesInput, MakeActivityLiveInput } from "./activities.input";
+import { Roles, ActivityType } from "@/lib/constants";
+import { knowledgeZapAssignmentAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
+import { stepSolveAssignmentAttempts } from "@/server/db/schema/stepSolve/stepSolveAssignment";
+import { reasoningAssignmentAttempts } from "@/server/db/schema/reasoning/reasoningAssignment";
+import { readAndRelayAttempts } from "@/server/db/schema/readAndRelay/readAndRelayAttempts";
+import { conceptMappingAttempts } from "@/server/db/schema/conceptMapping/conceptMappingAttempts";
+import { explainTestAttempts } from "@/server/db/schema/learnByTeaching/explainTestAttempt";
 export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivitiesInput) => {
 
   const activities = await ctx.db.query.activity.findMany({
@@ -117,6 +122,104 @@ export const makeActivityLive = async (ctx: ProtectedTRPCContext, input: MakeAct
   }).where(eq(activity.id, input.activityId));
   
 } 
+
+export const getLiveActivities = async (ctx: ProtectedTRPCContext, input: GetLiveActivitiesInput) => {
+  const activities = await ctx.db.query.activity.findMany({
+    where: and(eq(activity.classroomId, input.classroomId), eq(activity.isLive, true)),
+    with: {
+      topic: {
+        columns: {
+          id: true,
+          name: true,
+        }
+      }
+    },
+    orderBy: [desc(activity.dueDate)],
+  });
+
+  
+  if(ctx.user.role === Roles.Teacher) return activities;
+
+  const submittedActivityIds: string[] = [];
+  for(const activity of activities) {
+    switch(activity.typeText) {
+      case ActivityType.KnowledgeZap:
+        const knowledgeZapAttempts = await ctx.db.query.knowledgeZapAssignmentAttempts.findMany({
+          where: and(
+            eq(knowledgeZapAssignmentAttempts.activityId, activity.id),
+            eq(knowledgeZapAssignmentAttempts.userId, ctx.user.id),
+            isNotNull(knowledgeZapAssignmentAttempts.submittedAt),
+          ),
+        });
+        if(knowledgeZapAttempts.length > 0) {
+          submittedActivityIds.push(activity.id);
+        }
+        break;
+      case ActivityType.StepSolve:
+        const stepSolveAttempts = await ctx.db.query.stepSolveAssignmentAttempts.findMany({
+          where: and(
+            eq(stepSolveAssignmentAttempts.activityId, activity.id),
+            eq(stepSolveAssignmentAttempts.userId, ctx.user.id),
+            isNotNull(stepSolveAssignmentAttempts.submittedAt),
+          ),
+        });
+        if(stepSolveAttempts.length > 0) {
+          submittedActivityIds.push(activity.id);
+        }
+        break;
+      case ActivityType.ReasonTrace:
+        const reasonTraceAttempts = await ctx.db.query.reasoningAssignmentAttempts.findMany({
+          where: and(
+            eq(reasoningAssignmentAttempts.activityId, activity.id),
+            eq(reasoningAssignmentAttempts.userId, ctx.user.id),
+            isNotNull(reasoningAssignmentAttempts.submittedAt),
+          ),
+        });
+        if(reasonTraceAttempts.length > 0) {
+          submittedActivityIds.push(activity.id);
+        }
+        break;
+      case ActivityType.ReadAndRelay:
+        const rrAttempts = await ctx.db.query.readAndRelayAttempts.findMany({
+          where: and(
+            eq(readAndRelayAttempts.activityId, activity.id),
+            eq(readAndRelayAttempts.userId, ctx.user.id),
+            isNotNull(readAndRelayAttempts.submittedAt),
+          ),
+        });
+        if(rrAttempts.length > 0) {
+          submittedActivityIds.push(activity.id);
+        }
+        break;
+      case ActivityType.ConceptMapping:
+        const cmAttempts = await ctx.db.query.conceptMappingAttempts.findMany({
+          where: and(
+            eq(conceptMappingAttempts.activityId, activity.id),
+            eq(conceptMappingAttempts.userId, ctx.user.id),
+            isNotNull(conceptMappingAttempts.submittedAt),
+          ),
+        });
+        if(cmAttempts.length > 0) {
+          submittedActivityIds.push(activity.id);
+        }
+        break;
+      case ActivityType.LearnByTeaching:
+        const ltAttempts = await ctx.db.query.explainTestAttempts.findMany({
+          where: and(
+            eq(explainTestAttempts.activityId, activity.id),
+            eq(explainTestAttempts.userId, ctx.user.id),
+            isNotNull(explainTestAttempts.submittedAt),
+          ),
+        });
+        if(ltAttempts.length > 0) {
+          submittedActivityIds.push(activity.id);
+        }
+        break;
+    }
+  }
+
+  return activities.filter(activity => !submittedActivityIds.includes(activity.id));
+}
 
 
 

@@ -1,0 +1,209 @@
+{
+    "id": "23f1bfe2c8d5405886408",
+    "name": "Electromagnetic Induction",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "ff3c91bbb54549ae8a16e",
+            "questionText": "A transformer in a power distribution system has a primary coil with 500 turns and is connected to an alternating voltage source of 120 V. The magnetic flux in the core changes at a rate of 0.05 Weber/second. If the secondary coil is designed to output 2400 V, determine the rate of change of magnetic flux linkage (in Weber-turns per second) in the secondary coil.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "328c52c4143e46689916d",
+                    "stepText": "Let's start by identifying the relation that connects the induced electromotive force with the coil turns and the rate of change of magnetic flux. Which formula expresses this relation correctly?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "01f9d96a-7639-4028-8921-a8d295d26596"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\epsilon = N \\frac{d\\Phi}{dt}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\epsilon = \\frac{1}{N} \\frac{d\\Phi}{dt}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\epsilon = B v L$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ace01fadfee24a7f96fdf",
+                    "stepText": "Great! Now let's determine the relationship between the primary and secondary coils of a transformer. Which equation correctly represents the transformer turn ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "01f9d96a-7639-4028-8921-a8d295d26596"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{V_p}{V_s} = \\frac{N_p}{N_s}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{V_p}{V_s} = \\frac{N_s}{N_p}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_p \\times V_s = N_p \\times N_s$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "86003589cd0146b491443",
+                    "stepText": "Using the transformer relation, calculate the number of turns in the secondary coil. Given that $!$N_p = 500$!$, $!$V_p = 120\\,\\text{V}$!$, and $!$V_s = 2400\\,\\text{V}$!$, compute $!$N_s = (N_p \\times V_s)/V_p$!$. What is the computed value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10000"
+                    ],
+                    "stepSolveAnswerUnits": "turns",
+                    "stepConcepts": [
+                        "01f9d96a-7639-4028-8921-a8d295d26596"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "dc39afec6ee2461593fea",
+                    "stepText": "Now, calculate the rate of change of magnetic flux linkage in the secondary coil. Multiply the secondary coil turns by the given rate of change of magnetic flux $!$\\frac{d\\Phi}{dt} = 0.05\\,\\text{Weber/s}$!$. What is the final computed value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "500"
+                    ],
+                    "stepSolveAnswerUnits": "Weber-turns/s",
+                    "stepConcepts": [
+                        "43ab751d-5780-4129-9908-e52dacbdf1d8",
+                        "01f9d96a-7639-4028-8921-a8d295d26596"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "fb88104705014565a3452",
+            "questionText": "The problem asks for the induced EMF in the coil due to the change in inductance from 5 mH to 5.01 mH, assuming the current remains constant. However, the time interval over which this change occurs is not provided. Please provide the time duration during which the inductance changes in order to calculate the induced EMF.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "33f0dfbff4ce4ee99fb72",
+                    "stepText": "Let's begin by identifying the relationship between the induced EMF and the change in inductance when the current is constant. Which of the following expressions most correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3acc1ba7-ccc9-4760-958e-e67639d3f739"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\mathcal{E} = I\\frac{dL}{dt}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\mathcal{E} = L\\frac{dI}{dt}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\mathcal{E} = \\frac{dL}{dt}\\frac{1}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\mathcal{E} = \\frac{I}{L}\\frac{dL}{dt}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "27576fb4ffb84940bc462",
+                    "stepText": "Great! Now, let's compute the change in inductance using the values given. Recall that $!$\\Delta L = L_{final} - L_{initial}$!$. With $!$L_{initial} = 5\\;\\text{mH}$!$ and $!$L_{final} = 5.01\\;\\text{mH}$!$, calculate $!$\\Delta L$!$ in Henries.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1e-5"
+                    ],
+                    "stepSolveAnswerUnits": "H",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "d66403f0ef8d42f28a66f",
+                    "stepText": "Now that we have computed $!$\\Delta L$!$, consider what additional information is necessary to calculate the rate of change $!$\\frac{dL}{dt}$!$, which then allows you to find the induced EMF. Which of the following is the missing parameter?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3acc1ba7-ccc9-4760-958e-e67639d3f739"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "The time duration $!$\\Delta t$!$ during which the inductance changes",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The magnitude of the constant current $!$I$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The number of turns in the coil",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The strength of the magnetic field",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "09465f82637c4e7485d0c",
+                    "stepText": "Finally, based on the formula and the computed $!$\\Delta L$!$, explain why the problem cannot be solved without knowing the time duration $!$\\Delta t$!$. What conclusion can you draw regarding the ability to calculate the induced EMF?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "01f9d96a-7639-4028-8921-a8d295d26596",
+                        "3acc1ba7-ccc9-4760-958e-e67639d3f739"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,209 @@
+{
+    "id": "5641c81e60c54958bded9",
+    "name": "Motion in Electric and Magnetic Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "0dbe4704649b43a0bb9e0",
+            "questionText": "An electron with a charge of $!$q = -1.602 \\times 10^{-19} C$!$ and a mass of $!$m = 9.109 \\times 10^{-31} kg$!$ is injected horizontally with an initial velocity of $!$u = 3 \\times 10^6 m/s$!$ into a uniform electric field between two parallel plates. The electric field strength is $!$E = 2000 N/C$!$. The length of the plates is $!$L = 0.1 m$!$. Calculate the vertical displacement $!$y$!$ of the electron as it exits the region between the plates, assuming the electric field is only present between the plates and neglecting any relativistic effects.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "34d6af8accd4462fbff16",
+                    "stepText": "Let's start by finding the electron's vertical acceleration while it is in the electric field. Which formula correctly gives the acceleration when a charged particle experiences an electric force? Choose the formula that represents $!$a = \\frac{qE}{m}$!$ without directly revealing it.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5c33bb63-3c6d-413f-a1af-25385ab95845"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$a = \\frac{qE}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$a = \\frac{m}{qE}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = qEm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = \\frac{q}{Em}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "26a8b6c58dcd4fc1b6c61",
+                    "stepText": "Great! Now calculate the time the electron spends between the plates. Use the relationship between horizontal distance and velocity, where time is given by $!$t = \\frac{L}{u}$!$. Compute the numerical value using $!$L = 0.1\\,m$!$ and $!$u = 3\\times10^6\\,m/s$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.33e-8"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "54832b17408b4d6aad7c3",
+                    "stepText": "Now, let\u2019s determine how to find the vertical displacement. Which of the following formulas correctly relates the vertical displacement $!$y$!$ to the vertical acceleration $!$a$!$ and time $!$t$!$, assuming the initial vertical velocity is zero?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a5fee9d5-2b2a-4e9d-8caf-a83a70245740"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$y = \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$y = at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$y = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$y = \\frac{at}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cb588d897c104f39a14f8",
+                    "stepText": "Finally, using the vertical acceleration from step 1 and the time computed in step 2, calculate the vertical displacement. Remember that the vertical displacement is given by $!$y = \\frac{1}{2}at^2$!$ where $!$a$!$ is the acceleration (note its sign indicates the direction). Enter your numerical answer for $!$y$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-0.195"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "5c33bb63-3c6d-413f-a1af-25385ab95845",
+                        "a5fee9d5-2b2a-4e9d-8caf-a83a70245740"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "c81aff131b2e472ea1b7e",
+            "questionText": "An alpha particle (charge $!$q = +3.204 \\times 10^{-19} C$!$, mass $!$m = 6.64 \\times 10^{-27} kg$!$) moves with a velocity of $!$2 \\times 10^5 m/s$!$ horizontally into a region containing both an electric field of magnitude $!$E = 1000 N/C$!$ pointing upwards, and a magnetic field pointing into the page. First, the magnetic field is adjusted so that the alpha particle passes through undeflected. After this adjustment, the electric field is switched off. What is the radius $!$R$!$ of the circular path the alpha particle now follows due to the magnetic field alone?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "dda30c4d9e0547e2aedfb",
+                    "stepText": "Let's start by finding the relationship between the electric and magnetic forces when the particle is undeflected. Identify the correct formula that expresses the condition where the electric force equals the magnetic force.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f69857d1-d285-419d-8458-a425ac5cf3d5",
+                        "869566af-fb78-4d6f-b591-4f86eae31f82"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$B = \\frac{E}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$B = \\frac{v}{E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$B = Ev$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "00a1a539597d49fc82f1f",
+                    "stepText": "Great, now use the formula you selected to calculate the magnetic field strength $!$B$!$. Use the values $!$E = 1000 N/C$!$ and $!$v = 2 \\times 10^5 m/s$!$. What is the magnetic field in Tesla?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.005"
+                    ],
+                    "stepSolveAnswerUnits": "T",
+                    "stepConcepts": [
+                        "f69857d1-d285-419d-8458-a425ac5cf3d5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "34848501c5684b3783ed8",
+                    "stepText": "Now, after turning off the electric field, the magnetic force provides the centripetal force needed for circular motion. Identify the correct formula that relates the magnetic force to the centripetal force, leading to the expression for the radius $!$R$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R = \\frac{mv}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R = \\frac{qB}{mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R = \\frac{mv^2}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7aa378247b8a467c80b6d",
+                    "stepText": "Finally, substitute the given numerical values ($!$m = 6.64 \\times 10^{-27} kg$!$, $!$v = 2 \\times 10^5 m/s$!$, $!$q = 3.204 \\times 10^{-19} C$!$, and the magnetic field obtained earlier) into your chosen formula to compute the radius $!$R$!$. What is the radius in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.83"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

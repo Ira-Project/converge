@@ -1,0 +1,172 @@
+{
+    "id": "9724161c0e0f429593394",
+    "name": "Standing Waves and Resonance",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a6106212be024e6c93130",
+            "questionText": "A suspension bridge has a natural frequency of $!$0.5\\,\\text{Hz}$!$. During a storm, wind gusts exert a periodic force on the bridge. Assume that without any damping, the amplitude of oscillation would increase linearly with time when the driving frequency matches the natural frequency. However, the bridge's engineers have installed a damping system that provides a damping force proportional to the bridge's velocity. Given that it takes $!$10\\,\\text{minutes}$!$ for the amplitude to reach a dangerous level when the wind gusts have a frequency of $!$0.5\\,\\text{Hz}$!$, and the damping system reduces the amplitude growth rate by $!$60\\%$!$, determine how long it would take for the bridge's oscillations to reach the same dangerous level if the frequency of the wind gusts were $!$0.6\\,\\text{Hz}$!$ and the damping system reduces the amplitude growth rate by $!$50\\%$!$. Assume the amplitude increases linearly with time.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b24f2798818b46669c371",
+                    "stepText": "Let's start by determining the basic relation between the amplitude A, the undamped growth rate k, and time t, when the amplitude increases linearly. Please choose the formula that best represents this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c23e1006-4cb9-4e66-891e-4231f4a84553",
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = k \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = k + t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = \\frac{k}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d8000cbc4e3d496992bb1",
+                    "stepText": "Great, now that you have the relation, consider the first scenario where the driving frequency is $!$0.5\\,\\text{Hz}$!$ and the damping system reduces the undamped growth rate by 60% (making the effective growth rate $!$0.40k$!$). Using the linear relation, determine the dangerous amplitude level reached in 10 minutes. What is the numerical factor multiplying k?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1c63e8b99b774057864d3",
+                    "stepText": "Now, let's analyze how the undamped growth rate changes with a change in the driving frequency. When the frequency increases from $!$0.5\\,\\text{Hz}$!$ to $!$0.6\\,\\text{Hz}$!$, the energy input per unit time scales with frequency. Which option correctly represents the scaling factor for the growth rate?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c23e1006-4cb9-4e66-891e-4231f4a84553"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{0.6}{0.5}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{0.5}{0.6}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$0.6 \\times 0.5$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9f7cfee0ec7d4c86a4c65",
+                    "stepText": "Finally, using the scaling factor and the new damping condition (50% reduction), determine how long it would take for the oscillations to reach the dangerous amplitude level. Recall that the dangerous amplitude remains the same, and use the relation $!$A = (effective growth rate) \\times t$!$. What is the time (in minutes) needed in this scenario?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.67"
+                    ],
+                    "stepSolveAnswerUnits": "minutes",
+                    "stepConcepts": [
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8",
+                        "c23e1006-4cb9-4e66-891e-4231f4a84553"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "97d93dc082e747ee8a934",
+            "questionText": "A tuning fork with a frequency of $!$440\\,\\text{Hz}$!$ is held above a closed pipe, in which sound travels at a speed of $!$343\\,\\text{m/s}$!$. Calculate the length $!$L_2$!$ of the pipe required for the first overtone resonance.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "641844331d864d86b7e17",
+                    "stepText": "Let's start by identifying the relationship between the length of a closed pipe and the wavelength for its first overtone resonance. Please select the formula that correctly represents this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0deb0cf3-4f02-472f-9b66-a770ccf171bc"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L = \\lambda/4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L = 3\\lambda/4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L = \\lambda/2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "83e5b4ef1a9049be8186c",
+                    "stepText": "Great, now that you have identified the relationship, calculate the wavelength using the wave speed and the frequency. Use the relation $!$\\lambda = v/f$!$ for this purpose.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.78"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "524f0548-0ea5-4a4b-8776-652b87aa3602"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "0bf96ded75d3452d9e065",
+                    "stepText": "Now, use the wavelength you calculated along with the relationship you identified to determine the length of the pipe for the first overtone resonance. Multiply appropriately to find the final length.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.585"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "0deb0cf3-4f02-472f-9b66-a770ccf171bc",
+                        "524f0548-0ea5-4a4b-8776-652b87aa3602"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

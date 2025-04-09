@@ -1,0 +1,209 @@
+{
+    "id": "c3e94f99b5d94e6394ba5",
+    "name": "Simple Harmonic Motion",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "69f90e4fe71a4e62b8c3d",
+            "questionText": "Consider a mass-spring system oscillating horizontally on a frictionless surface. The mass m is 0.5 kg and the spring constant k is 200 N/m. Initially, the system is set into motion with an amplitude $!$x_0$!$ of 0.1 m. Determine the velocity of the mass when it is at a displacement x of 0.05 m from the equilibrium position.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "66a0816a3aab46f5a0668",
+                    "stepText": "Let's start by setting up the energy conservation equation. At the maximum amplitude $!$x_0$!$, all the energy is stored as potential energy, and at a displacement $!$x$!$, some energy is kinetic. Please select the correct energy conservation relation for this system.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e6cbee8e-24f0-49b0-acff-dee433badd26"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{1}{2}k x_0^2 = \\frac{1}{2}k x^2 + \\frac{1}{2}m v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{2}m v^2 = \\frac{1}{2}k x_0^2 + \\frac{1}{2}k x^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$m g x_0 = m g x + \\frac{1}{2}m v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "35f34938192e400382c8b",
+                    "stepText": "Great. Now, rearrange the energy conservation equation to isolate the kinetic energy term. Which relation correctly expresses $!$v^2$!$ in terms of $!$k$, $!$m$, $!$x_0$, and $!$x$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e6cbee8e-24f0-49b0-acff-dee433badd26"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v^2 = \\frac{k}{m}(x_0^2 - x^2)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v^2 = \\frac{m}{k}(x_0^2 - x^2)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{k}{m}(x_0 - x)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "29bb0a9910024f1a844b4",
+                    "stepText": "Now, compute the value of $!$x_0^2 - x^2$!$ using the amplitude $!$x_0 = 0.1\\,m$!$ and the displacement $!$x = 0.05\\,m$!$. What is the numerical result of this expression?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0075"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "cd3d883e3ed14574aa838",
+                    "stepText": "Finally, substitute the given values $!$k = 200\\,N/m$!$, $!$m = 0.5\\,kg$!$, and the computed value $!$x_0^2 - x^2 = 0.0075\\,m^2$!$ into the equation $!$v^2 = \\frac{k}{m}(x_0^2 - x^2)$!$. Compute $!$v^2$!$ and then determine the velocity $!$v$!$ by taking the square root. What is the approximate velocity value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.73"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "e6cbee8e-24f0-49b0-acff-dee433badd26"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "72a98794aa514d36b8dd4",
+            "questionText": "A tuning fork vibrates at a frequency of 440 Hz when struck, meaning its original period is $!$T = 1/440 s$!$. The tuning fork's prong oscillates as a simple harmonic oscillator with an effective mass of $!$0.05 kg$!$ and a spring constant $!$k = 1000 N/m$!$, so that its period is given by $!$T = 2\\pi\\sqrt{m/k}$!$. Now, a small piece of clay with a mass of $!$0.01 kg$!$ is added to one of the prongs, changing its effective mass. What is the new period $!$T'$!$ of the oscillations after adding the clay?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3ae9ba9ce0184f2db9453",
+                    "stepText": "Let's start by identifying the formula used to calculate the period of a mass-spring oscillator. Please choose the correct formula from the options provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eac352c8-92f0-4606-84ae-c8dc382203f6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T = 2\\pi\\sqrt{\\frac{m}{k}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T = \\sqrt{\\frac{m}{k}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T = \\frac{m}{2\\pi k}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8f9b3d71c060429191154",
+                    "stepText": "Great! Now, determine the new effective mass after adding the clay. Calculate the sum of the original mass and the clay mass.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.06"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "c6abc0b82b29483a8e43c",
+                    "stepText": "Now, using the effective mass you just found, select the correct formula to calculate the new period $!$T'$!$ of the oscillation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eac352c8-92f0-4606-84ae-c8dc382203f6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T' = 2\\pi\\sqrt{\\frac{m'}{k}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T' = 2\\pi\\sqrt{\\frac{k}{m'}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T' = \\sqrt{\\frac{m'}{k}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a05add4cf0694440b60a6",
+                    "stepText": "Now, compute the square root term by calculating $!$\\sqrt{m'/k}$!$ given $!$m' = 0.06\\,kg$!$ and $!$k = 1000\\,N/m$!$. What numerical value do you obtain for this term?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.00775"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "eac352c8-92f0-4606-84ae-c8dc382203f6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d235c2923df84a7a997b2",
+                    "stepText": "Almost there! Multiply the result from the previous step by $!$2\\pi$!$ to obtain the new period $!$T'$!$. What is the final numerical value of $!$T'$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0487"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "eac352c8-92f0-4606-84ae-c8dc382203f6"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,153 @@
+{
+    "id": "745b8970d9a3488e9ed4f",
+    "name": "Electric and Magnetic Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "73dc9d8005be4a039fac9",
+            "questionText": "In a high-voltage power distribution system, two parallel wires, wire A and wire B, are separated by a distance of $!$r = 0.25\\,\\text{m}$!$. Wire A carries a current of $!$I_A = 150\\,\\text{A}$!$, and wire B carries a current of $!$I_B = 225\\,\\text{A}$!$ in the same direction. Given that the permeability of free space is $!$\\mu_0 = 4\\pi \\times 10^{-7}\\,\\text{T}\\cdot\\text{m/A}$!$, calculate the magnitude of the force per unit length acting between the two wires.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8e4b9628b1564900a9742",
+                    "stepText": "Let's start by identifying the correct formula for the force per unit length between two current\u2010carrying wires. Please select the formula that you think is appropriate.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ac74a17b-73bf-4f45-8bc1-41c2338b9863"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F/L = \\frac{\\mu_0 I_1 I_2}{2\\pi r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{\\mu_0 I_1 I_2}{2\\pi r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F/L = \\frac{\\mu_0 I_1 I_2}{\\pi r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a537ebb4610e459eb6665",
+                    "stepText": "Great! Now, let\u2019s multiply the currents from wire A and wire B. Compute the product $!$I_A \\times I_B$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "33750"
+                    ],
+                    "stepSolveAnswerUnits": "A^2",
+                    "stepConcepts": [
+                        "ac74a17b-73bf-4f45-8bc1-41c2338b9863"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d9e6a1ea40e44907983e9",
+                    "stepText": "Excellent. Next, calculate the intermediate value by multiplying the numerical factor from $!$\\mu_0 = 4\\pi\\times10^{-7}$!$ (ignoring the $\\pi$ for now) with the product of the currents you just computed. Compute $!$4\\times10^{-7} \\times 33750$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0135"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ac74a17b-73bf-4f45-8bc1-41c2338b9863"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d194477dd9674b9db559c",
+                    "stepText": "Finally, incorporate the remaining factors in the formula by dividing the result from the previous step by the denominator $!$2\\pi r$!$. Note that after canceling out the common $\\pi$ factor, this division effectively multiplies your intermediate value by 2. Calculate the final force per unit length.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.027"
+                    ],
+                    "stepSolveAnswerUnits": "N/m",
+                    "stepConcepts": [
+                        "ac74a17b-73bf-4f45-8bc1-41c2338b9863"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "6c5df78d664143cbb48c6",
+            "questionText": "A Maglev train utilizes a magnetic field to levitate above the tracks. Suppose the train has superconducting magnets that generate a magnetic field of $!$B = 5.0\\,\\text{T}$!$, and these interact with coils in the guideway that are each $!$L = 0.30\\,\\text{m}$!$ long carrying a current of $!$I = 450\\,\\text{A}$!$. If the angle between the magnetic field and the current in the coils is $!$\\theta = 90^\\circ$!$, calculate the total magnetic force propelling the train forward assuming there are 400 coil segments each contributing equally to the thrust. Use the magnetic force formula $!$F = B I L \\sin \\theta$!$ for one segment.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0dc10f95d44546c887abe",
+                    "stepText": "Let's begin by identifying which formula is needed for calculating the force on a current-carrying segment in a magnetic field. Please select the appropriate formula from the following options.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f811e506-c07a-4cc9-8b32-e4a587510caf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = B I L \\sin \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = qE$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = k\\frac{q_1q_2}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "16c5301a0ea14f6594740",
+                    "stepText": "Great! Now using the formula you identified for one coil segment, calculate the magnetic force on that single segment. Remember, $!$B = 5.0\\,\\text{T}$!$, $!$I = 450\\,\\text{A}$!$, $!$L = 0.30\\,\\text{m}$!$, and $!$\\sin 90^\\circ = 1$!$. Multiply these values accordingly.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "675"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "f811e506-c07a-4cc9-8b32-e4a587510caf"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d614322a2c674a7cbed34",
+                    "stepText": "Excellent! Now that you have computed the force for one coil segment, determine the total magnetic force exerted by all the coil segments. Multiply the single segment force by the total number of segments (400) to obtain the final result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "270000"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "f811e506-c07a-4cc9-8b32-e4a587510caf"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

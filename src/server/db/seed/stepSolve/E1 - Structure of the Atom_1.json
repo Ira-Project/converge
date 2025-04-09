@@ -1,0 +1,260 @@
+{
+    "id": "708a96acb0b94763bd07e",
+    "name": "Structure of the Atom",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "eae4b8a681b841a8a5969",
+            "questionText": "The astronomers observed a redshift in the hydrogen spectral line corresponding to the transition from energy level $!$n = 3$!$ to $!$n = 2$!$, and the observed wavelength of this line is $!$656.45 \\text{ nm}$!$. Assuming the hydrogen atom in the distant galaxy behaves according to the Bohr model, calculate the energy of the photon associated with this spectral line before redshift. Please provide the value of the redshift $!$z$!$ if known.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2f8106ad192a42c089a79",
+                    "stepText": "Let's start by identifying the formula that relates the emitted wavelength in a hydrogen atom transition. Select from the options below the formula that correctly represents the relation for the n = 3 to n = 2 transition using the Bohr model.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "516d8e51-d173-4735-85ca-b40323ce5f3c",
+                        "39c26da9-7279-4edd-9cce-990d74d28d60"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{1}{\\lambda} = R\\left(\\frac{1}{2^2} - \\frac{1}{3^2}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{\\lambda} = R\\left(\\frac{1}{3^2} - \\frac{1}{2^2}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = R\\left(\\frac{1}{2^2} - \\frac{1}{3^2}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "94f1f041493c4d5099f10",
+                    "stepText": "Great, now that you have the correct form, calculate the emitted wavelength $!$\\lambda_0$!$ using the relation. Remember that the Rydberg constant $!$R$!$ is approximately $!$1.097\\times10^{7}\\text{ m}^{-1}$!$. Provide the numerical value in meters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.56e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "516d8e51-d173-4735-85ca-b40323ce5f3c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b33f83890d744a24b8973",
+                    "stepText": "Now, identify the correct formula that expresses the energy of a photon in terms of its wavelength. Choose the option that correctly links $!$E$!$, $!$h$!$, $!$c$!$, and $!$\\lambda$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e",
+                        "114913f7-42e4-4f1e-a164-563a0df26437"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = \\frac{hc}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = h\\lambda c$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{\\lambda}{hc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "738de79841e344509f98e",
+                    "stepText": "Excellent. Using the value of $!$\\lambda_0$!$ you computed and the constants $!$h = 6.626\\times10^{-34}\\text{ J\u00b7s}$!$ and $!$c = 3.00\\times10^{8}\\text{ m/s}$!$, calculate the energy $!$E$!$ of the photon in joules.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.03e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f0d5086aa7f14e6f89eb4",
+                    "stepText": "Next, determine which formula correctly defines the redshift $!$z$!$ in terms of the observed wavelength $!$\\lambda_{obs}$!$ and the emitted wavelength $!$\\lambda_0$!$. Choose the appropriate option.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "083551ad-58fe-4254-a95e-82b753f374e4",
+                        "e9d6f13b-eb96-43cb-b099-24d950661fd8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$z = \\frac{\\lambda_{obs} - \\lambda_0}{\\lambda_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$z = \\frac{\\lambda_0 - \\lambda_{obs}}{\\lambda_{obs}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$z = \\frac{\\lambda_{obs}}{\\lambda_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d4ac5f582130450cae5a0",
+                    "stepText": "Finally, compute the redshift $!$z$!$ numerically using the observed wavelength $!$656.45\\text{ nm}$!$ and your computed emitted wavelength converted to nanometers. Provide the value of $!$z$!$ as a dimensionless number.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.34e-4"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "083551ad-58fe-4254-a95e-82b753f374e4",
+                        "e9d6f13b-eb96-43cb-b099-24d950661fd8",
+                        "b1d7aa44-8d11-4c29-963d-f20ee78901d7"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "0274d6a23cc94eb5b4e0a",
+            "questionText": "A researcher is studying a semiconductor material and wants to understand the behavior of electrons within the material's atoms, based on Rutherford's and Bohr's models. Suppose an electron in an atom within the semiconductor is orbiting the nucleus with a velocity $!$v = 2.19 \\times 10^6 \\text{ m/s}$!$ in the $!$n = 1$!$ orbit. Using the principles of angular momentum quantization, calculate the radius of this orbit in terms of Bohr radius $!$a = \\frac{h^2}{4\\pi^2 k e^2 m}$!$, given that the mass of the electron is $!$9.11 \\times 10^{-31} \\text{ kg}$!$ and Planck's constant is $!$h = 6.626 \\times 10^{-34} \\text{ J s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "37c2aa62f5494abf8c1f8",
+                    "stepText": "Let's start by identifying the correct formula for angular momentum quantization of an electron in orbit. Which of the following expressions represents the quantization condition?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "933e7925-8098-434d-a7e9-8b87f134afa3",
+                        "f3adea61-e184-4afc-af61-87a032de7132"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$mvr = n\\frac{h}{2\\pi}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$mv^2 = n\\frac{h}{2\\pi}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$r = \\frac{h}{mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$mvr = h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d8fa1fe18c5f47eebfe4a",
+                    "stepText": "Great. Now, using that quantization relation for the case $!$n=1$!$, rearrange the formula to isolate the orbital radius $!$r$!$. Which of the following expressions correctly isolates $!$r$!$ in terms of $!$h$, $!$m$, and $!$v$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "933e7925-8098-434d-a7e9-8b87f134afa3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$r = \\frac{h}{2\\pi mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$r = \\frac{2\\pi mv}{h}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$r = \\frac{mv}{2\\pi h}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$r = \\frac{h}{mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8a43b746441e4937aefb3",
+                    "stepText": "Now that you have the correct expression, substitute the values $!$h = 6.626\\times10^{-34}\\text{ J s}$!$, $!$m = 9.11\\times10^{-31}\\text{ kg}$!$, and $!$v = 2.19\\times10^6 \\text{ m/s}$!$ into $!$r = \\frac{h}{2\\pi m v}$!$ and compute the orbit radius. What is the numerical value you obtain for $!$r$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.3e-11"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "933e7925-8098-434d-a7e9-8b87f134afa3",
+                        "f3adea61-e184-4afc-af61-87a032de7132"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "412cd7f8df274098a5f51",
+                    "stepText": "Finally, compare your computed orbital radius with the Bohr radius defined as $!$a = \\frac{h^2}{4\\pi^2 k e^2 m}$!$. Express the radius of the electron's orbit in terms of the Bohr radius by computing the ratio $!$\\frac{r}{a}$!$. What is the value of this ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6aef4d5c-f5b1-4ad6-937a-29ff158b5d72"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

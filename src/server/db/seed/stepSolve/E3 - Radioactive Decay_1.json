@@ -1,0 +1,211 @@
+{
+    "id": "6082025dda994eadb075b",
+    "name": "Radioactive Decay",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "3009837a627340b186cae",
+            "questionText": "A hospital prepares a sample of Technetium-99m ($!$\\text{Tc-99m}$!$) with an initial activity ($!$A_0$!$) of $!$10 \\text{ mCi}$!$ at 8:00 AM. Technetium-99m is used for medical imaging, and it has a half-life ($!$T_{1/2}$!$) of approximately 6 hours due to its gamma decay properties. Considering the need to efficiently schedule imaging procedures and the spontaneous decay of the sample, calculate the activity ($!$A$!$) of the Technetium-99m sample at 8:00 PM on the same day. Remember to first calculate the decay constant ($!$\\lambda$!$) using the given half-life, and then use the activity decay formula to determine the remaining activity after the specified time period.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9e7bc18503e14381ad4a1",
+                    "stepText": "Let's start by identifying the correct formula to compute the decay constant ($!$\\lambda$!$) from the half-life ($!$T_{1/2}$!$). Please choose the proper formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a",
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{\\ln 2}{T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{T_{1/2}}{\\ln 2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{0.5}{T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "94c15bce014144f1867fa",
+                    "stepText": "Great, now use the formula you selected along with the given half-life of $!$6\\text{ hours}$!$ to compute the decay constant ($!$\\lambda$!$). Please calculate and enter the numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1155"
+                    ],
+                    "stepSolveAnswerUnits": "hr^{-1}",
+                    "stepConcepts": [
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a",
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "688ffb928a20436da958e",
+                    "stepText": "Now, determine the elapsed time ($!$\\Delta t$!$) from 8:00 AM to 8:00 PM. Please calculate the time difference in hours.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12"
+                    ],
+                    "stepSolveAnswerUnits": "hours",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "b9bf3dd9f19a449e84daf",
+                    "stepText": "Excellent! Now, choose the correct decay formula for calculating the activity ($!$A$!$) given the initial activity ($!$A_0$!$) and the decay constant ($!$\\lambda$!$). Which of the following formulas is appropriate?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5",
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 \\cdot e^{-\\lambda \\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 \\cdot \\lambda \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = A_0 \\cdot e^{\\lambda \\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1e973f73fb424001943f9",
+                    "stepText": "Finally, using the decay formula and the calculated values ($!$A_0 = 10\\text{ mCi}$!$, $!$\\lambda = 0.1155\\text{ hr}^{-1}$!$, and $!$\\Delta t = 12\\text{ hours}$!$), compute the remaining activity at 8:00 PM. Please provide the numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.5"
+                    ],
+                    "stepSolveAnswerUnits": "mCi",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "46d2c7de4c174752bc22c",
+            "questionText": "An archaeologist discovers an ancient wooden artifact. Analysis shows that the current activity of Carbon-14 ($!$^{14}\\text{C}$!$) in the artifact is 30% of the activity found in living wood today. Given that Carbon-14 decays with a half-life ($!$T_{1/2}$!$) of 5,730 years, determine the approximate age of the wooden artifact.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f864de4952c944cfa6863",
+                    "stepText": "Let's start by identifying the correct formula that describes radioactive decay using the half-life concept. Please select the formula which represents the decay of activity over time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a",
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A=A_0\\left(\\frac{1}{2}\\right)^{\\frac{t}{T_{1/2}}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A=A_0\\left(2\\right)^{\\frac{t}{T_{1/2}}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A=A_0\\left(1-\\frac{t}{T_{1/2}}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A=A_0e^{-\\frac{t}{T_{1/2}}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e404d3e7bb51482b82c2e",
+                    "stepText": "Great! Now that you have the correct decay formula, substitute the given information. Knowing that the current activity is 30% of the original activity and that $!$T_{1/2}=5730$!$ years, write the equation that relates these values. Choose the option that correctly expresses the relation using a logarithmic form.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\ln(0.30)=\\frac{t}{5730}\\ln(\\frac{1}{2})$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\ln(0.30)=\\frac{5730}{t}\\ln(\\frac{1}{2})$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\ln(0.30)=t\\ln(\\frac{1}{2})$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\ln(0.30)=\\frac{t}{5730}\\ln(2)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7257b288a34f4c0897425",
+                    "stepText": "Now, using the relation from the previous step, solve for $!$t$!$. Calculate the product after isolating $!$t$!$ and determine its numerical value. Enter the numerical result along with the proper time unit.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "9950"
+                    ],
+                    "stepSolveAnswerUnits": "years",
+                    "stepConcepts": [
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

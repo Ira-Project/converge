@@ -1,0 +1,195 @@
+{
+    "id": "04327d09f8a949cfbbb96",
+    "name": "Thermodynamics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "6576b617d8a94470b69d3",
+            "questionText": "A refrigerator operates in a room with a temperature of $!$27^{\\circ}C$!$, while maintaining its interior at $!$5^{\\circ}C$!$. During a 24-hour period, the refrigerator must remove $!$8.64 \\times 10^6 J$!$ of heat from its interior in order to keep its contents at the desired temperature. Assuming the refrigerator operates as an ideal Carnot cycle working in reverse, calculate the amount of electrical energy (work) in Joules that must be supplied to the refrigerator during this period.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "38d747ffa40d4c0b87931",
+                    "stepText": "Let's start by converting the given temperatures from Celsius to Kelvin. Identify the correct conversion formula that you should use to convert a temperature from $!$\\,^{\\circ}C$!$ to Kelvin.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$T(K) = T(^{\\circ}C) + 273$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T(K) = T(^{\\circ}C) - 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T(K) = T(^{\\circ}C) \\times 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9002a9bc058f4d43a11e6",
+                    "stepText": "Great. Now, for a refrigerator operating as an ideal reversed Carnot cycle, the coefficient of performance (COP) plays a key role. Please identify the correct expression for COP of such a refrigerator.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eb2ed1a7-e528-4b88-8bd6-db3a653c73cf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{COP} = \\frac{T_C}{T_H - T_C}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{COP} = \\frac{T_H}{T_H - T_C}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{COP} = \\frac{T_H - T_C}{T_C}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ee8c257c1976420fa00e2",
+                    "stepText": "Using the conversion from Step 1, compute the Kelvin temperatures for both the room and the interior of the refrigerator. Then, using the formula for COP (i.e., $!$\\text{COP} = \\frac{T_C}{T_H-T_C}$!$), calculate its numerical value. What result do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12.64"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eb2ed1a7-e528-4b88-8bd6-db3a653c73cf"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b9c32a5070c94adfa430a",
+                    "stepText": "Finally, use the relationship between the heat removed from the interior and the COP to calculate the work input required over the 24-hour period. Remember the relationship is $!$W = \\frac{Q_c}{\\text{COP}}$!$. What is the numerical value of the work required (in Joules)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "684000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "4110c13c2fd940fbbb97e",
+            "questionText": "An ideal monatomic gas is contained within an insulated cylinder fitted with a movable piston. Initially, the gas has a volume $!$V_1 = 0.1 m^3$!$ and a pressure $!$P_1 = 2 \\times 10^5 \\text{ Pa}$!$. The gas undergoes an adiabatic expansion, increasing its volume to $!$V_2 = 0.3 m^3$!$. Assuming that $!$\\gamma = \\frac{5}{3}$!$ for a monatomic gas, calculate the work done by the gas during the expansion.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8c3904d9d12f48d2bda5d",
+                    "stepText": "Let's start by recalling the relationship that holds for an adiabatic process in an ideal gas. Identify the formula that connects pressure and volume in such a process.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a65d2074-4916-4415-ae69-7e9a255f26f2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P_1V_1^{\\gamma} = P_2V_2^{\\gamma}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_1T_1 = V_2T_2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "92b716872f4c42998183e",
+                    "stepText": "Great! Now, using the relationship, calculate the final pressure $!$P_2$!$ by applying the formula $!$P_2 = P_1 (\\frac{V_1}{V_2})^{\\gamma}$!$. Use the initial values given: $!$P_1 = 2 \\times 10^5 \\text{ Pa}$!$, $!$V_1 = 0.1 \\text{ m}^3$!$, $!$V_2 = 0.3 \\text{ m}^3$!$, and $!$\\gamma = \\frac{5}{3}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "32120"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "a65d2074-4916-4415-ae69-7e9a255f26f2"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d004dbe0b1e1499db7f84",
+                    "stepText": "Now that you have obtained the final pressure, let\u2019s identify the proper expression to calculate the work done by the gas during the adiabatic expansion. Which of the following formulas correctly represents the work done in this process?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a65d2074-4916-4415-ae69-7e9a255f26f2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = \\frac{P_1V_1 - P_2V_2}{\\gamma - 1}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = P\\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = \\Delta(PV)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4977c8c929994fc5bce58",
+                    "stepText": "Excellent! Using your chosen work expression, calculate the work done by the gas. Compute the values $!$P_1V_1$!$ and $!$P_2V_2$!$, then use them along with $!$\\gamma$!$ to find $!$W$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15546"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "a65d2074-4916-4415-ae69-7e9a255f26f2"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,161 @@
+{
+    "id": "fbe10dfd72324a929926b",
+    "name": "Electromagnetic Induction",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "0c949d3c5e4f4f399d0ee",
+            "questionText": "A transformer in a power distribution system has a primary coil with 500 turns and is connected to an alternating voltage source of 120 V. The magnetic flux in the core changes at a rate of 0.05 Weber/second, and the transformer is designed to output 2400 V with 95% efficiency. Assuming a primary current of 2 A, determine the secondary current.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d62535ae946842d098ebe",
+                    "stepText": "Let's begin by identifying the correct relationship that lets you calculate the electrical power in a circuit. Which of the following expressions correctly relates voltage and current to power?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$P = V \\times I$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{V}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = V + I$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "216e3ea6056a459eb9596",
+                    "stepText": "Great! Now that you've identified the correct power relationship, use it to calculate the primary input power given the primary voltage $!$V_p = 120\\,V$!$ and the primary current $!$I_p = 2\\,A$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "240"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "9d8d3a99a82b4cbd8cc86",
+                    "stepText": "Next, adjust for the transformer efficiency. Multiply the primary input power by the efficiency (95%) to obtain the output (secondary) power.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "228"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "576f81b2c295479fb9eca",
+                    "stepText": "Finally, using the output power and the designed secondary voltage $!$V_s = 2400\\,V$!$, calculate the secondary current. How do you determine the current from these values?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.095"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "35a96ae3ff264b96981f5",
+            "questionText": "A train is traveling at a constant speed of $!$30 m/s$!$ on a track that runs perpendicular to a uniform magnetic field of $!$0.5 T$!$. The axle connecting the wheels is $!$1.5 m$!$ long. Determine the magnitude of the electric field experienced by the electrons in the axle.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6ffbb814ad864391870d0",
+                    "stepText": "Let's start by identifying the physical concept that relates to a conductor moving through a magnetic field. Which concept is most relevant here?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "70734415-23ea-4f42-9d80-7b51cd1cf9e6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\epsilon = BvL$!$  (Motional EMF)",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\epsilon = -N \\frac{\\Delta\\Phi}{\\Delta t}$!$  (Faraday's Law)",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Self Induction",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f6f684a785b64d7ea5437",
+                    "stepText": "Now that you've recognized the role of a moving conductor in a magnetic field, consider how the internal electric field in the axle is established. Which relationship equates the magnetic force on an electron with the electric force at equilibrium?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "70734415-23ea-4f42-9d80-7b51cd1cf9e6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = vB$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = BvL$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{v}{B}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "42270e3382684f02ac936",
+                    "stepText": "Great, now that you have the equilibrium condition, substitute the given numerical values for the speed $!$v = 30\\,m/s$!$ and the magnetic field $!$B = 0.5\\,T$!$ into the relationship. Compute the magnitude of the electric field experienced in the axle.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15"
+                    ],
+                    "stepSolveAnswerUnits": "V/m",
+                    "stepConcepts": [
+                        "70734415-23ea-4f42-9d80-7b51cd1cf9e6"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

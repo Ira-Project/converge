@@ -1,0 +1,229 @@
+{
+    "id": "facb93655b024f5387c6e",
+    "name": "Current and Circuits",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "f3a9974c435643cd8f8cc",
+            "questionText": "A string of 250 LED Christmas lights is connected in series to a 120 V power source, and each LED has a resistance of 2 $!$\\Omega$!$ (assume the wiring has negligible resistance). Calculate the total power consumed by the entire string of lights.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1c32081c20054e7b9e083",
+                    "stepText": "Let's start by determining how resistances add when components are connected in series. Please select the correct formula used to combine resistors in series.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7e1eb003-fe0f-4d19-bc2c-5bbf746731d8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R_T = R_1 + R_2 + R_3 + \\ldots$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R_T = \\frac{R_1 R_2}{R_1 + R_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_T = \\sqrt{R_1^2 + R_2^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a534165ef0f3479497d39",
+                    "stepText": "Great! Now, using the concept of resistors in series, calculate the total resistance of the 250 LEDs if each LED has a resistance of 2 $!$\\Omega$!$. Multiply the number of LEDs by the resistance of one LED.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "500"
+                    ],
+                    "stepSolveAnswerUnits": "$!$\\Omega$!$",
+                    "stepConcepts": [
+                        "7e1eb003-fe0f-4d19-bc2c-5bbf746731d8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a453ea0af9484f57b03cc",
+                    "stepText": "Next, to determine the current flowing through the circuit, please select the correct formula that expresses the relationship between voltage, current, and resistance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+                        "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{V}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = V \\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{R}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "76c2a90979be47c49e516",
+                    "stepText": "Now, calculate the circuit current by dividing the supplied voltage (120 V) by the total resistance you calculated.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.24"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+                        "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ca772730289949dba1e80",
+                    "stepText": "To find the total power consumed by the lights, please select the correct formula that relates power, voltage, and current.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = IV$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = I^2R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{V^2}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3703825454f1476a9cdd1",
+                    "stepText": "Finally, compute the power consumed by multiplying the voltage (120 V) by the current (0.24 A) you obtained.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "28.8"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "339512c2ad774295930cb",
+            "questionText": "A car battery has an electromotive force (EMF) of $!$12.6\\,\\text{V}$!$ and an internal resistance of $!$0.08\\,\\Omega$!$. When the headlights are turned on, the battery supplies a current of $!$10\\,\\text{A}$!$. Determine the power delivered to the headlights.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "cf49a455123b4d0b9ce38",
+                    "stepText": "Let's start by determining the voltage drop across the battery's internal resistance. To do this, identify the correct formula that relates voltage, current, and resistance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = I \\times r$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{I}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = I + r$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5d663e7b6e6e4f119ee7b",
+                    "stepText": "Great, now that we would calculate the voltage drop using the selected formula, compute the voltage drop by multiplying the battery current by its internal resistance (with current being 10 A and resistance 0.08 \u03a9). What is the computed drop in voltage?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.8"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ab5fb902c8d04e1c9b515",
+                    "stepText": "Now, determine the voltage across the headlights by subtracting the internal voltage drop from the battery EMF. Use the value of the EMF (12.6 V) and the calculated voltage drop from the previous step. What is the resulting voltage across the headlights?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "11.8"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "aa41a63a-b3d4-4ca2-87a2-640e15a9d86b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "310b93ca8c5c4f759a33d",
+                    "stepText": "Finally, calculate the power delivered to the headlights by multiplying the load voltage by the current flowing through them. With a current of 10 A and the computed load voltage, what is the resulting power?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "118"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

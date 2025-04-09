@@ -1,0 +1,194 @@
+{
+    "id": "8a09e87c19d5462eb9d3a",
+    "name": "Thermodynamics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "bca62ef0a3784022932e3",
+            "questionText": "An air conditioning system uses a refrigerant that undergoes a cycle. During the cycle, the refrigerant absorbs Q_C = 10,000 J of heat from the room and releases Q_H = 12,000 J of heat to the outside. The inside temperature is $!$T_C = 20^{\\circ}C$!$ and the outside temperature is $!$T_H = 40^{\\circ}C$!$. The cycle operates at 30% of the maximum possible (Carnot) efficiency. Calculate the actual work done by the air conditioner in one cycle.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f7259a9e635b49babee0b",
+                    "stepText": "Let's start by converting the given Celsius temperatures to Kelvin. Identify the correct conversion formula for $!$T_{K}$!$ in terms of $!$T_{\\circ C}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$T_{K} = T_{\\circ C} + 273$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T_{K} = T_{\\circ C} - 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T_{K} = T_{\\circ C} + 300$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "07aec5f2dc3142fa8b57f",
+                    "stepText": "Great, now that you have the temperatures in Kelvin, use the relationship for a reversible refrigerator to determine the minimum work input. Identify the correct formula that relates $!$W_{rev}$!$, $!$Q_C$!$, $!$T_H$!$, and $!$T_C$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eb2ed1a7-e528-4b88-8bd6-db3a653c73cf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W_{rev} = Q_C \\times \\frac{(T_H - T_C)}{T_C}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W_{rev} = Q_C \\times \\frac{(T_H - T_C)}{T_H}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W_{rev} = Q_C \\times \\frac{(T_H + T_C)}{T_C}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3cca50aa38b345b086ab0",
+                    "stepText": "Now, knowing that the reversible work input has been computed and that the system operates at only 30% of the maximum performance, calculate the actual work done by dividing the reversible work by the performance factor. Compute the actual work (in Joules) using this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2277"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "2627d205-8411-4005-b844-ebf08203f968"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "d79b359d819c4c68b4460",
+            "questionText": "A car engine operates in a four-stroke cycle approximating a heat engine. In one cycle, the engine takes in Q_H = 2500 J of heat from the combustion of fuel and exhausts Q_C = 1800 J of heat. Assuming the engine as a closed system, and given that during the expansion stroke the pressure remains constant with P = 1.5 \\(\\times\\) 10^5 Pa while the volume increases by \\(\\Delta V = 0.5\\, m^3\\), determine how much of the total heat intake is converted into work.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b1761821d0854aa59588a",
+                    "stepText": "Let's start by identifying the relation that represents the net work done by a heat engine in a complete cycle. Which of the following expressions correctly links the net work to the heat absorbed and the heat rejected?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ea914822-cf42-4557-b08f-5f35daecfc70"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W_{net} = Q_H - Q_C$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W_{net} = Q_H + Q_C$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W_{net} = Q_C - Q_H$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W_{net} = Q_H \\times Q_C$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c959fe5afb994d699e610",
+                    "stepText": "Great! Now, using the relationship you selected in Step 1, compute the net work done over the cycle by subtracting the heat rejected from the heat absorbed. Use the given values $!$Q_H = 2500\\,J$!$ and $!$Q_C = 1800\\,J$!$. What numerical value do you obtain for the net work?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ea914822-cf42-4557-b08f-5f35daecfc70"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "cee8242aeb944b1ab606c",
+                    "stepText": "Now, let\u2019s determine the relation for the efficiency of the engine. Efficiency is defined as the ratio of the net work output to the heat input. Which of the following formulas correctly represents this concept?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2627d205-8411-4005-b844-ebf08203f968"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\eta = \\frac{W_{net}}{Q_H}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{Q_H}{W_{net}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{W_{net}}{Q_C}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\eta = \\frac{Q_C}{Q_H}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9db16b6ea0514150a1019",
+                    "stepText": "Finally, using your result from Step 2 and the efficiency relation from Step 3, calculate the engine's efficiency by dividing the net work by the heat input. Convert your result into a percentage. Keep in mind that, although the expansion stroke at constant pressure provides a work value calculated by $!$W = P\\Delta V$!$, the overall cycle involves additional processes that affect the net work output. What numerical value (in percent) do you determine for the efficiency?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "2627d205-8411-4005-b844-ebf08203f968",
+                        "10ec3f29-b38b-4c50-a614-0bae695feb56"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

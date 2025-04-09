@@ -1,0 +1,158 @@
+{
+    "id": "e52e9047562d4700ad1b3",
+    "name": "Wave Phenomena",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9fe8f54d99314c90ab86b",
+            "questionText": "A white light is incident on a diffraction grating with 600 lines per millimeter. The resulting diffraction pattern is observed on a screen 2.5 meters away. Determine the linear separation \\(\\Delta y\\) between the red light (\\(\\lambda = 700\\,\\text{nm}\\)) and the blue light (\\(\\lambda = 400\\,\\text{nm}\\)) in the first-order spectrum (\\(n = 1\\)).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1397562b24844f6499b24",
+                    "stepText": "Let's start by calculating the grating spacing \\(d\\). Given the grating has 600 lines per millimeter, convert that to lines per meter and then find \\(d\\) as the reciprocal of that value. Enter the numerical value you obtain.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.67e-6"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "15cf7c79-9158-42b2-b21a-603d53e13a58"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b51031a96e694114819f5",
+                    "stepText": "Great! Now, to analyze the diffraction pattern, we need to use the proper diffraction condition for a grating. Which of the following formulas correctly represents the diffraction condition for a grating?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "15cf7c79-9158-42b2-b21a-603d53e13a58"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d \\sin \\theta = n\\lambda,\\; n=0,\\pm1,\\pm2,...$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{n\\lambda}{d} = \\sin \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = d \\cos \\theta / n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "92715edd3db940cf9c873",
+                    "stepText": "Now, using the diffraction condition with \\(n = 1\\) and the wavelength for red light \\( (700\\,\\text{nm}) \\), compute the corresponding angle, and then determine the linear position on the screen using \\(y = L\\tan\\theta\\) with \\(L = 2.5\\,\\text{m}\\). Calculate the position for the red light.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.16"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "d8fd24cee57e45f9bed31",
+                    "stepText": "Following the same procedure, compute the linear position on the screen for the blue light \\( (\\lambda = 400\\,\\text{nm}) \\) using \\(y = L\\tan\\theta\\). What is the position of the blue light on the screen?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.62"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "5253b8677bfb464396062",
+                    "stepText": "Finally, determine the linear separation \\(\\Delta y\\) between the red and blue light spots by subtracting the blue light position from the red light position. What value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.54"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "c7f3e957561941c691602",
+            "questionText": "In a double-slit experiment, light of wavelength $!$\\lambda = 550 \\text{ nm}$!$ is incident on two slits separated by a distance $!$d = 0.15 \\text{ mm}$!$. An interference pattern is observed on a screen located $!$D = 2.0 \\text{ m}$!$ from the slits. Calculate the distance $!$s$!$ between the central bright fringe and the third bright fringe.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "519f791f28304bf5b2efd",
+                    "stepText": "Let's start by identifying the correct formula that relates the position of the mth bright fringe to the fringe order, wavelength, distance to the screen, and slit separation. Which of the following options is the correct expression?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a4304044-8d79-4983-a6c4-1fc06a60398b",
+                        "63d3847c-57c8-4ae5-8eb1-08c5f5a0078d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$s = \\frac{m \\lambda D}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = \\frac{d}{m \\lambda D}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = m \\lambda D d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "37f9f9cbe3644c8a80186",
+                    "stepText": "Great, now that you have identified the right formula, let's compute the numerator by multiplying the fringe order $!$m=3$!$, the wavelength $!$\\lambda$!$ (in meters), and the distance to the screen $!$D$!$. What is the numerical value of this product?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.3e-6"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "5375824c5c9145b6861c7",
+                    "stepText": "Now, to complete the calculation of the fringe position, divide the numerator you calculated by the slit separation $!$d$!$ (in meters). What is the resulting distance between the central bright fringe and the third bright fringe?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.022"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

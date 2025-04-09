@@ -15,3 +15,8 @@ export const makeActivityLiveSchema = z.object({
   dueDate: z.date().min(new Date()),
 });
 export type MakeActivityLiveInput = z.infer<typeof makeActivityLiveSchema>;
+
+export const getLiveActivitiesSchema = z.object({
+  classroomId: z.string(),
+});
+export type GetLiveActivitiesInput = z.infer<typeof getLiveActivitiesSchema>;

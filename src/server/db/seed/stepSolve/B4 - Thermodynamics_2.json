@@ -1,0 +1,227 @@
+{
+    "id": "6f431778f3dc4248b4a96",
+    "name": "Thermodynamics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "98ec912980da4bab85c56",
+            "questionText": "An air conditioning system utilizes a refrigerant in a cycle. In each cycle the refrigerant absorbs $!$Q_C = 10000 \\text{ J}$!$ of heat from the room at an inside temperature of $!$T_C = 20^{\\circ}C$!$ and rejects $!$Q_H = 12000 \\text{ J}$!$ of heat to the outside at an outside temperature of $!$T_H = 40^{\\circ}C$!$. The cycle operates at 30% of the maximum possible (Carnot) efficiency. Determine the net change in entropy for the cycle, taking into account the actual efficiency of the air conditioner.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3c3bdc7df5d34a63a5113",
+                    "stepText": "Let's start by noting that in a complete cycle the working fluid returns to its initial state. This means that its net entropy change is zero. Thus, only the external reservoirs (the room and the outside) contribute to the overall entropy change. Press 'Next' to continue.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "abaeb8c1-1a59-4643-8d11-75f973d9c2ba"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b1036c367fa443058b23a",
+                    "stepText": "Now, identify the correct formula to calculate the change in entropy $!$\\Delta S$!$ when a quantity of heat $!$Q$!$ is exchanged at a constant temperature $!$T$!$. Choose the correct expression from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "abaeb8c1-1a59-4643-8d11-75f973d9c2ba"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta S = \\frac{Q}{T}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta S = Q \\times T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta S = \\frac{T}{Q}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bd1153c4532b4e2bbe666",
+                    "stepText": "Great! Using the formula you selected, calculate the entropy change for the cold (inside) reservoir. Use $!$Q_C=10000 \\text{ J}$!$ and remember that the temperature $!$20^{\\circ}C$!$ must be in Kelvin ($!$293.15 \\text{ K}$!$). What is $!$\\Delta S_C = -\\frac{Q_C}{T_C}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-34.13"
+                    ],
+                    "stepSolveAnswerUnits": "J/K",
+                    "stepConcepts": [
+                        "abaeb8c1-1a59-4643-8d11-75f973d9c2ba"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2ac62562feac463b98807",
+                    "stepText": "Now, apply the same method to calculate the entropy change for the hot (outside) reservoir. With $!$Q_H=12000 \\text{ J}$!$ and $!$T_H=40^{\\circ}C$!$ converted to Kelvin ($!$313.15 \\text{ K}$!$), compute $!$\\Delta S_H = \\frac{Q_H}{T_H}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "38.31"
+                    ],
+                    "stepSolveAnswerUnits": "J/K",
+                    "stepConcepts": [
+                        "abaeb8c1-1a59-4643-8d11-75f973d9c2ba"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3b0ee04152ba46658fd15",
+                    "stepText": "Finally, combine the entropy changes of the two reservoirs to determine the net entropy change for the cycle. Remember that the operating efficiency (30% of Carnot) provides context about irreversibility but does not alter these $Q$ values. What is the sum $!$\\Delta S_{net} = \\Delta S_H + \\Delta S_C$!$? Also, select the statement that best describes the role of efficiency in this calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.18"
+                    ],
+                    "stepSolveAnswerUnits": "J/K",
+                    "stepConcepts": [
+                        "abaeb8c1-1a59-4643-8d11-75f973d9c2ba"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "The efficiency affects the work output but does not change the net entropy computed from the exchanged heats.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The efficiency directly reduces the magnitude of the individual entropy changes in the reservoirs.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "A lower efficiency always results in a negative net entropy change.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cd503b27b3f845458b3fd",
+            "questionText": "A car engine operates in a four-stroke cycle and is considered as a closed system. In one cycle, it intakes $!$Q_H = 2500 \\text{ J}$!$ of heat from fuel combustion and exhausts $!$Q_C = 1800 \\text{ J}$!$ of heat. During the expansion stroke, the pressure is constant as the volume changes from $!$V_1 = 1.0 \\times 10^{-4} \\text{ m}^3$!$ to $!$V_2 = 5.0 \\times 10^{-4} \\text{ m}^3$!$. Estimate the constant pressure during this expansion stroke.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3c981502ed824393943c2",
+                    "stepText": "Let's start by identifying the expression that relates the net work output of a closed cycle to the heat absorbed and heat expelled. Which of the following represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ea914822-cf42-4557-b08f-5f35daecfc70"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q_H - Q_C$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q_H + Q_C$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q_H \\times Q_C$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cff0fb0fa86b43119e067",
+                    "stepText": "Great, now that you've recalled the net work relationship, calculate the net work produced by the cycle using the values $!$Q_H = 2500 \\text{ J}$!$ and $!$Q_C = 1800 \\text{ J}$!$. What is $!$W_{net} = Q_H - Q_C$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "700"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ea914822-cf42-4557-b08f-5f35daecfc70"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "971e4d26f2bb4eff86a05",
+                    "stepText": "Next, consider the expansion stroke where the pressure is constant. Which formula correctly relates the work done during a constant pressure process to the pressure and change in volume?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "10ec3f29-b38b-4c50-a614-0bae695feb56"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = P\\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{\\Delta V}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = P + \\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2054c346eded45e992814",
+                    "stepText": "Now, calculate the change in volume $!$\\Delta V = V_2 - V_1$!$ using $!$V_1 = 1.0 \\times 10^{-4} \\text{ m}^3$!$ and $!$V_2 = 5.0 \\times 10^{-4} \\text{ m}^3$!$. What is the value of $!$\\Delta V$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.0e-4"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [
+                        "10ec3f29-b38b-4c50-a614-0bae695feb56"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4272d0d0565c4c5eabf98",
+                    "stepText": "Finally, by equating the net work from the cycle to the work done during the expansion stroke, solve for the constant pressure using the relationship $!$P \\times \\Delta V = W_{net}$!$. Substitute the net work and change in volume you previously calculated. What is the pressure $!$P$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.75e6"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "10ec3f29-b38b-4c50-a614-0bae695feb56"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

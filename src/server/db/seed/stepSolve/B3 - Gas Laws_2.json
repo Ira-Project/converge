@@ -1,0 +1,227 @@
+{
+    "id": "afef2eb6f12b410bb0d27",
+    "name": "Gas Laws",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "337c2f7795364fbcb0172",
+            "questionText": "A container holds argon gas at an initial state where the pressure, $!$P_1$!$, is $!$2 \\text{ atm}$!$ and the temperature, $!$T_1$!$, is $!$300 \\text{ K}$!$. The number of argon atoms is doubled, and the internal energy of the gas is quadrupled. Assuming the volume of the container remains constant, determine the final pressure, $!$P_2$!$, in atmospheres.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c13ef2190a8046068f49c",
+                    "stepText": "Let's start by recalling the formula used to calculate the internal energy of a monatomic ideal gas. Please identify the correct formula below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1ee9b2cb-3884-442f-83e1-a5f64a7559e2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$U = \\frac{3}{2} N k T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$U = N k T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$U = \\frac{5}{2} N k T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cb0ff5fbeee1450f9aedd",
+                    "stepText": "Now, using the relationship for internal energy and the given changes\u2014doubling the number of atoms and quadrupling the internal energy\u2014determine the new temperature. If the initial temperature $!$T_1$!$ is 300 K, calculate $!$T_2$!$ based on these changes.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "600"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "1ee9b2cb-3884-442f-83e1-a5f64a7559e2"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1ec352910da94524b3202",
+                    "stepText": "Great! Next, recall that at constant volume, the ideal gas law indicates that pressure is proportional to the product $!$N k T$!$. Identify the correct formula that relates pressure, number of particles, and temperature when volume is constant.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = \\frac{NkT}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = NkTV$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{N}{V} T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b13fe10bd8674aa593e73",
+                    "stepText": "Finally, use the proportional relationship from the ideal gas law. Since the number of atoms doubles and the temperature you computed in Step 2 has increased, determine the final pressure $!$P_2$!$ if the initial pressure $!$P_1$!$ is 2 atm.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "atm",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "e1ec76f980414c2bb7b35",
+            "questionText": "A sealed bag of potato chips contains $!$2 \\text{ g}$!$ of nitrogen gas ($!$N_2$!$) at an initial temperature of $!$25 ^\\circ \\text{C}$!$ and a pressure of $!$1 \\text{ atm}$!$. The bag is transported to a mountain location where the atmospheric pressure drops to $!$0.7 \\text{ atm}$!$ and the temperature decreases to $!$10 ^\\circ \\text{C}$!$. Given that the molar mass of $!$N_2$!$ is approximately $!$28 \\text{ g/mol}$!$, calculate the final volume of the bag as a percentage of its initial volume.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6a0b2884025046bf8b32e",
+                    "stepText": "Let's start by calculating the number of moles of $!$N_2$!$. Which formula would you use to determine the number of moles from a given mass and molar mass?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cea261f3-185d-4b25-a018-242587beafe2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$n = \\frac{m}{\\mu}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$n = m \\times \\mu$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$n = \\frac{\\mu}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "12beeea5460e4b4b9f7ab",
+                    "stepText": "Great! Now, we need to recall the gas relation that connects pressure, volume, number of moles and temperature. Which gas law equation is appropriate for this problem?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$PV = nRT$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{F}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_k = \\frac{3}{2}kT$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cfdf09f4487e4189b1de7",
+                    "stepText": "Now, convert the given temperatures from Celsius to Kelvin. Remember that $!$T(K) = T(^\\circ C) + 273$!$. Calculate the Kelvin temperatures for both the initial and final conditions.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "298,283"
+                    ],
+                    "stepSolveAnswerUnits": "K,K",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "71406afae4524550a0850",
+                    "stepText": "Excellent. Next, express the ratio of the final volume to initial volume using the ideal gas law. Which of the following ratios correctly represents $!$V_2/V_1$!$ in terms of temperature and pressure (assuming the moles and gas constant cancel out)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{V_2}{V_1} = \\frac{T_2}{T_1} \\times \\frac{P_1}{P_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{V_2}{V_1} = \\frac{T_1}{T_2} \\times \\frac{P_2}{P_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{V_2}{V_1} = \\frac{P_2}{P_1} \\times \\frac{T_2}{T_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e340dda2e1b44232a5ae7",
+                    "stepText": "Finally, substitute the Kelvin temperatures and pressures into your ratio. Using $!$T_1=298\\,K$!$, $!$T_2=283\\,K$!$, $!$P_1=1\\,atm$!$, and $!$P_2=0.7\\,atm$!$, compute the numerical value of $!$V_2/V_1$!$ and convert it to a percentage of the initial volume.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "136"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

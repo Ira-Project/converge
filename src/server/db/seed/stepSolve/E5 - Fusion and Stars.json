@@ -1,0 +1,162 @@
+{
+    "id": "bdc0f8fba4d74c14b6a49",
+    "name": "Fusion and Stars",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "7910cbb54a904623ace96",
+            "questionText": "Consider a binary star system consisting of Star A and Star B. Star A is currently a main sequence star undergoing hydrogen fusion via the CNO cycle, and Star B has evolved into a red giant. Initially, both stars had approximately the same mass. Assume that the initial mass of both stars was $!$5 M_\\odot$!$, where $!$M_\\odot$!$ is the solar mass. If Star B has a radius 50 times larger than the Sun ($!$50 R_\\odot$!$) and an effective surface temperature of 3,500 K, while Star A has a surface temperature of 20,000 K, calculate the ratio of the luminosity of Star B to Star A, assuming Star A's radius is $!$2 R_\\odot$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c71ea0b564004bd2a3d49",
+                    "stepText": "Let's start by recalling the relationship that defines a star's luminosity in terms of its radius and effective temperature. Identify the correct formula for the luminosity based on the Stefan-Boltzmann law.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L=4\\pi R^2 \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L=\\pi R^2 \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L=4\\pi R \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "20e351ca14244721b2c4b",
+                    "stepText": "Great, now that you have identified the correct luminosity formula, let's focus on the radius part. Compute the factor due to the radii by taking the ratio $!$(R_B / R_A)^2$!$. Use the given values $!$R_B = 50 R_\\odot$!$ and $!$R_A = 2 R_\\odot$!$. What do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "625"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "3c48b8540f4d40c4ba07a",
+                    "stepText": "Excellent. Next, let's calculate the temperature factor by finding the ratio raised to the fourth power, that is, $!$(T_B / T_A)^4$!$. Substitute $!$T_B = 3500\\,K$!$ and $!$T_A = 20000\\,K$!$ into the expression. What is the numerical result (approximately)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.000938"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "31c71b93b19a438ebbbbf",
+                    "stepText": "Now, combine the two computed factors to find the ratio of the luminosities $!$L_B/L_A$!$ by multiplying the radius factor and temperature factor from the previous steps. What is the final ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.586"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "4c76a48684414e7d92afc",
+            "questionText": "A sun-like star is transitioning from the main sequence to the red giant phase. During its main sequence stage, the star primarily fuses hydrogen into helium via the proton-proton chain, maintaining stellar equilibrium. As the core hydrogen is depleted, the star begins to fuse helium into carbon via the triple alpha process. Assume that the rate of energy production in the core during the hydrogen fusion phase is $!$1.0 \\times 10^{26}$!$ W and the core temperature is $!$1.5 \\times 10^7$!$ K. As the star transitions to helium fusion, the energy production rate increases by a factor of 10, and the core temperature rises to $!$2.0 \\times 10^8$!$ K. By what factor does the radiation pressure change in the core of the star? (Assume radiation pressure is proportional to $!$T^4$!$ and directly related to the rate of energy production).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "43d5a1f6a20e454fbc2a3",
+                    "stepText": "Let's start by calculating the ratio of the new core temperature to the original core temperature. Use the given temperatures to compute $!$T_{new}/T_{old}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "13.33"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "9f98a1782f734f48bfba4",
+                    "stepText": "Now, because radiation pressure is proportional to the fourth power of the temperature, determine the correct operation to obtain the temperature contribution. Which formula correctly represents the temperature effect on radiation pressure?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$(T_{new}/T_{old})^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$(T_{new}-T_{old})^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T_{new}^4 - T_{old}^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$(T_{new}+T_{old})^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "beeb0e61ae4a4ff2a0741",
+                    "stepText": "Next, consider the change in the energy production rate. What is the factor increase from the initial rate to the new rate?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f69775cb-ea85-401a-96fc-3f0855976fe9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c60528976b094458b9446",
+                    "stepText": "Finally, combine the effects from the temperature increase and the energy production rate. Multiply the factor from the energy production change by the factor obtained from raising the temperature ratio to the fourth power to get the overall factor change in radiation pressure.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "316050"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f69775cb-ea85-401a-96fc-3f0855976fe9"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

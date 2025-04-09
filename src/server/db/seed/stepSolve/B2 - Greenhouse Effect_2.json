@@ -1,0 +1,168 @@
+{
+    "id": "37bf78b1ed68476c887ab",
+    "name": "Greenhouse Effect",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "1c34d3e5839b4cdea8ea1",
+            "questionText": "A climatologist observes that Earth's albedo has decreased from 0.30 to 0.28 over a period of 50 years. Given that the solar constant '$!$S$!$' is approximately 1400 '$!$\\frac{W}{m^2}$!$', calculate the change in Earth's average intensity of absorbed solar radiation '$!$I_{av}$!$' in '$!$\\frac{W}{m^2}$!$' due to this change in albedo. What is the increase in the average intensity?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "22cc7c667a0942fe820d6",
+                    "stepText": "Let's start by identifying the correct formula that we need to use to compute Earth's average absorbed solar radiation intensity $!$I_{av}$!$. Which among the following formulas is the appropriate one?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cb2ae0e5-1e89-4f8d-8848-9873f4991312",
+                        "d92482b7-8562-4293-b4e3-92db7d81228c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I_{av} = (1-\\alpha)\\frac{S}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I_{av} = (1+\\alpha)\\frac{S}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I_{av} = \\alpha\\frac{S}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0fc0f2af3fac4dc0ac859",
+                    "stepText": "Great! Now, using the identified formula, calculate the initial average intensity $!$I_{av1}$!$ when the albedo $!$\\alpha$!$ is 0.30. Remember that the solar constant $!$S$!$ is 1400 $!$\\frac{W}{m^2}$!$, so compute $!$S/4$!$ first and then apply the formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "245"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [
+                        "cb2ae0e5-1e89-4f8d-8848-9873f4991312"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "89d3e8220e894513950c2",
+                    "stepText": "Now, repeat the calculation for the new albedo value of 0.28. Using the same approach with $!$S/4$!$, compute the average intensity $!$I_{av2}$!$ for this lower albedo.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "252"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [
+                        "cb2ae0e5-1e89-4f8d-8848-9873f4991312"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "669e1f489050452d9b572",
+                    "stepText": "Finally, find the increase in the average absorbed intensity by computing the difference between the new intensity and the initial intensity. What is the change in $!$I_{av}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [
+                        "cb2ae0e5-1e89-4f8d-8848-9873f4991312"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "cf7236c27ea14630adfb8",
+            "questionText": "A scientist is studying the Earth's energy balance. Assuming Earth radiates as a blackbody with an emissivity '$!$\\epsilon$!$' of 0.6 and an albedo '$!$\\alpha$!$' of 0.3, the solar constant '$!$S$!$' is 1400 '$!$\\frac{W}{m^2}$!$', and the average surface temperature of the Earth is '$!$T$!$' = 288 K. If the temperature of space '$!$T_s$!$' is 0 K, what is the net power radiated '$!$P_{net}$!$' per unit area in '$!$\\frac{W}{m^2}$!$'?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "37ca775e2b67479693a7e",
+                    "stepText": "Let's start by identifying the correct formula that expresses the net power radiated by a body using the Stefan\u2013Boltzmann law. Please select the correct formula from the following options.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e3a5ec68-44b5-4731-ba26-1e6d6d1e4970"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P_{net} = \\epsilon \\sigma (T^4 - T_s^4) $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P_{net} = \\alpha \\sigma T^4 $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P_{net} = \\epsilon S (T - T_s) $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "02f1f66aa92b45a797887",
+                    "stepText": "Great, now that we have the correct formula, compute $!$T^4$!$ for $!$T=288\\,K$!$. What is the value of $!$T^4$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.88e9"
+                    ],
+                    "stepSolveAnswerUnits": "K^4",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c1c36f23a13f4fd28520d",
+                    "stepText": "Now, using the result of $!$T^4$!$, calculate the product $!$\\sigma T^4$!$. Here, $!$\\sigma$!$ is the Stefan\u2013Boltzmann constant, $5.67\\times10^{-8} \\frac{W}{m^2 K^4}$. What is $!$\\sigma T^4$!$? (Remember that the units will be in $!$W/m^2$!$.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "390"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "246dabbefb4f4c3e8dc2a",
+                    "stepText": "Finally, multiply the product from the previous step by the emissivity $!$\\epsilon$!$ (which is 0.6) to determine the net power radiated $!$P_{net}$!$ per unit area. What is the final value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "234"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [
+                        "e3a5ec68-44b5-4731-ba26-1e6d6d1e4970"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

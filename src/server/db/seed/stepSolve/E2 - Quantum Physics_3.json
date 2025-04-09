@@ -1,0 +1,166 @@
+{
+    "id": "4abfb109997b449fbeb70",
+    "name": "Quantum Physics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "4613b17f276f4e8684e25",
+            "questionText": "Consider an electron confined in a one-dimensional infinite potential well (quantum dot) of length L = 5 nm with its wave function vanishing at the boundaries. The electron is in the n = 3 energy level. Using the quantization condition for momentum in an infinite well, first express the electron's momentum p, and then determine its de Broglie wavelength \\(\\lambda\\) by using Planck's constant \\(h = 6.626 \\times 10^{-34} \\text{ Js}\\). (Useful constants: electron mass \\(m = 9.109 \\times 10^{-31} \\text{ kg}\\)). Compute the electron's de Broglie wavelength \\(\\lambda\\).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ca7d2ec71b964c0983635",
+                    "stepText": "Let's start by identifying the momentum quantization formula for a particle confined in a one-dimensional infinite potential well. Which of the following formulas is the correct expression for the electron's momentum in this scenario?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$p = \\frac{n\\pi \\hbar}{L}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = \\frac{2n\\pi \\hbar}{L}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = \\frac{n \\hbar}{L}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6afa57bf13bf4591a0a50",
+                    "stepText": "Now, using the momentum quantization formula you identified, substitute the given value for n = 3 and the well width L = 5\u00d710\u207b\u2079 m. Calculate the electron's momentum in SI units.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.99e-25"
+                    ],
+                    "stepSolveAnswerUnits": "kg m/s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "39c5a5969e6644e89fac3",
+                    "stepText": "Great! Next, let\u2019s identify the correct de Broglie wavelength relation. Which of the following options correctly relates a particle's wavelength to its momentum?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{h}{p}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{p}{h}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{2\\pi p}{h}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9a9b912be2e84cbd809e0",
+                    "stepText": "Finally, using the de Broglie relation and the momentum you calculated earlier, determine the electron's de Broglie wavelength. Provide your answer in meters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.33e-9"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "1db938f2aae44fb0a825b",
+            "questionText": "An X-ray photon with an initial wavelength of $!$\\lambda = 0.05 \\text{ nm}$!$ is scattered by an electron in a Compton scattering experiment. The scattered photon is detected at an angle of $!$\\theta = 60^\\circ$!$ relative to the direction of the incident photon. Using the formula $!$\\Delta \\lambda = \\frac{h}{m_e c}(1 - \\cos \\theta)$!$, where $!$h = 6.626 \\times 10^{-34} \\text{ Js}$!$, $!$m_e = 9.109 \\times 10^{-31} \\text{ kg}$!$, and $!$c = 3.00 \\times 10^8 \\text{ m/s}$!$, first calculate the Compton wavelength shift $!$\\Delta \\lambda$!$. Then, determine the wavelength $!$\\lambda'$!$ of the scattered photon after the collision using $!$\\lambda' = \\lambda + \\Delta \\lambda$!$. (Provide the numerical value for $!$\\lambda'$!$.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "442bba2bb976483dbeb5b",
+                    "stepText": "Let's start by identifying the correct formula for the Compton wavelength shift. Please select the formula that correctly relates $!$\\Delta \\lambda$!$, $!$h$!$, $!$m_e$!$, $!$c$!$, and $!$\\theta$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "254b2a82-f030-41e6-beba-8436ce763d64",
+                        "6bccbcf8-1f63-4aaa-846f-b35274f54ceb"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta \\lambda = \\frac{h}{m_e c}(1-\\cos \\theta)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta \\lambda = \\frac{m_e c}{h}(1-\\cos \\theta)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta \\lambda = \\frac{h}{c}(1-\\cos \\theta)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3952efec213c488f95a29",
+                    "stepText": "Great, now that you have identified the formula, use it to compute the Compton wavelength shift $!$\\Delta \\lambda$!$. Remember that the Compton wavelength for an electron is given by $!$\\frac{h}{m_e c}$!$, and that for $!$\\theta = 60^\\circ$!$, $!$\\cos 60^\\circ = 0.5$!$. Calculate $!$\\Delta \\lambda$!$ using these values.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.213e-12"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "254b2a82-f030-41e6-beba-8436ce763d64"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ccdba51e62c94217a6a59",
+                    "stepText": "Now, use the result from the previous step to determine the wavelength $!$\\lambda'$!$ of the scattered photon. Add the initial wavelength $!$\\lambda$!$, which is $!$0.05 \\text{ nm}$!$ (or $!$5.0 \\times 10^{-11} \\text{ m}$!$), to the computed $!$\\Delta \\lambda$!$. Compute $!$\\lambda'$!$ accordingly.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.1213e-11"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "254b2a82-f030-41e6-beba-8436ce763d64"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

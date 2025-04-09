@@ -1,0 +1,187 @@
+{
+    "id": "7c0fedd9f1514059995b5",
+    "name": "Quantum Physics",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "dc38926c269f4cba98d2a",
+            "questionText": "In a photoelectric experiment, a researcher illuminates a metal surface with light of frequency $!$f = 1.5 \\times 10^{15} \\text{ Hz}$!$. The stopping voltage required to completely suppress the photoelectric current is measured to be $!$V_s = 1.8 \\text{ V}$!$. Given that the charge of an electron is $!$e = 1.6 \\times 10^{-19} \\text{ C}$!$ and using Planck's constant $!$h = 6.626 \\times 10^{-34} \\text{ J s}$!$, determine the threshold frequency $!$f_0$!$ for the metal in Hertz $!$\\text{Hz}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "afe4644667bd4a479062a",
+                    "stepText": "Let's begin by identifying the basic photoelectric equation that relates the kinetic energy of the emitted electrons to the incident photon energy and the work function of the metal. Please select the formula that best represents this relation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381",
+                        "b63cfff7-c0f2-44a2-84ab-5c9c9407941e",
+                        "018e7d2e-cb2b-4daa-9c30-e3a0d9d369c9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$eV_s = hf - hf_0$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$eV_s = hf_0 - hf$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_s = \\frac{hf - hf_0}{e}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "350aef49cc8441999bb55",
+                    "stepText": "Great. Now, based on the selected equation, we know that the threshold frequency $!$f_0$!$ can be isolated from the equation. Please choose the correct rearrangement to solve for $!$f_0$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381",
+                        "4b705e18-0761-4dd4-a760-c05db44f5bba"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f_0 = f - \\frac{eV_s}{h}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f_0 = \\frac{eV_s}{h} - f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f_0 = f + \\frac{eV_s}{h}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d566586892a34dfe95704",
+                    "stepText": "Now that we have the correct rearrangement, let's compute the term $!$\\frac{eV_s}{h}$!$. Using the given values $!$e = 1.6 \\times 10^{-19}\\text{ C}$!$, $!$V_s = 1.8 \\text{ V}$!$, and $!$h = 6.626 \\times 10^{-34}\\text{ J s}$!$, calculate this quantity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.35e14"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "fc61ca59-6b90-4172-8d29-30967a79b1ef",
+                        "7f279d95-7489-4786-815c-960324474986"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6e6669372a35451aaef18",
+                    "stepText": "Using the result from the previous step, substitute into the rearranged formula to find the threshold frequency $!$f_0$!$. Remember to subtract the computed value from the given frequency $!$f = 1.5 \\times 10^{15}\\text{ Hz}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.065e15"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381",
+                        "4b705e18-0761-4dd4-a760-c05db44f5bba"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7aee8ce7161442209d417",
+                    "stepText": "Finally, let's reflect on your result. Which of the following statements best describes the significance of the threshold frequency in the photoelectric effect?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "976b376b-3046-48eb-a50d-34340630d093",
+                        "4b705e18-0761-4dd4-a760-c05db44f5bba"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Only light with a frequency higher than this threshold can cause electron emission.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Any light frequency, regardless of its value, will cause electron emission.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The threshold frequency has no impact on the number of electrons emitted.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4dfa3de6b1bd4f4d86bc8",
+            "questionText": "An electron with a kinetic energy of $!$250\\,\\text{eV}$!$ is used to study the crystal structure of a material using electron diffraction. Given that the mass of an electron is $!$9.11 \\times 10^{-31}~\\text{kg}$!$ and its charge is $!$1.602 \\times 10^{-19}~\\text{C}$!$, calculate the required accelerating voltage $!$V$!$ to achieve the given kinetic energy.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "64dd58ada8ba406391211",
+                    "stepText": "Let's start by identifying the relationship between the kinetic energy gained by an electron and the accelerating voltage. Which of the following equations correctly relates the electron's kinetic energy $!$K$!$ and the accelerating voltage $!$V$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$K = eV$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$K = \\frac{V}{e}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$K = \\frac{e}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a03ae61cc5ed4ca78aa84",
+                    "stepText": "Great, now that you have identified the correct relation, use it to calculate the accelerating voltage $!$V$!$. Given that the kinetic energy $!$K$!$ is $250\\,\\text{eV}$ and noting that $1\\,\\text{eV}$ is the energy acquired by an electron when accelerated through $1\\,\\text{V}$, determine the numerical value of $!$V$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "250"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

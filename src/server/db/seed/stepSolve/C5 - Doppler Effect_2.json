@@ -1,0 +1,161 @@
+{
+    "id": "4bb0e4590dfe40c19cbbf",
+    "name": "Doppler Effect",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "61fce35b03bc461395106",
+            "questionText": "A doctor is using a Doppler ultrasound to measure blood flow in an artery. The ultrasound probe emits a sound wave with a frequency of $!$7.5 \\text{ MHz}$!$. The speed of sound in the body is approximately $!$1540 \\text{ m/s}$!$. If the doctor observes a reflected frequency of $!$7.502 \\text{ MHz}$!$, and assuming the blood is flowing towards the probe, calculate the speed of the blood flow in $!$\\text{m/s}$!$. You can assume that the artery is stationary.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fa7fe16b12404b7aaedcf",
+                    "stepText": "Let's start by finding the frequency shift ($!$\\Delta f$!$) by comparing the emitted frequency and the observed frequency. Compute $!$\\Delta f = f' - f_0$!$, where $!$f_0$!$ is the emitted frequency and $!$f'$!$ is the reflected frequency.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2000"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "3da3b75d-d472-4d0f-b6e4-c5167dd2fd26",
+                        "f09a3cf7-42e1-4878-b989-bb756bfc1f03"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "cf36729ec6ec4f3ba9890",
+                    "stepText": "Great, now that you have calculated the frequency shift, identify the correct formula that relates the frequency shift to the blood flow speed. Which expression corresponds to the Doppler shift in a reflected ultrasound, where the shift is approximately given by $!$\\Delta f = \\frac{2 f_0 v}{c}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{2 f_0 v}{c}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{f_0 v}{c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{2 c}{f_0 v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fbc787f7af19417bb4d12",
+                    "stepText": "Now, rearrange the formula to solve for the blood flow speed $!$v$!$. Identify the correct rearranged expression which shows $!$v$!$ in terms of $!$\\Delta f$, $!$c$, and $!$f_0$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\frac{\\Delta f\\, c}{2 f_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{2 f_0}{\\Delta f\\, c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{\\Delta f}{2 f_0\\, c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "70aee7c8b32f4d14b3e4e",
+                    "stepText": "Now that you have the rearranged formula, substitute the known values ($!$\\Delta f = 2000 \\text{ Hz}$!$, $!$c = 1540 \\text{ m/s}$!$, and $!$f_0 = 7.5 \\times 10^6 \\text{ Hz}$!$) into the expression $!$v = \\frac{\\Delta f\\, c}{2 f_0}$!$ to compute the blood flow speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.2053"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "e50b438b6e8f40ddb5f5a",
+            "questionText": "A bat emits a sonar pulse at a frequency of $!$40 \\text{ kHz}$!$ to detect a moth flying directly away from it. The bat is flying at a speed of $!$10 \\text{ m/s}$!$, and the moth is flying at a speed of $!$5 \\text{ m/s}$!$, both relative to the air. Given that the speed of sound in air is $!$343 \\text{ m/s}$!$, determine the frequency of the echo as perceived by the bat in $!$\\text{kHz}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a92872299ce4424799286",
+                    "stepText": "Let's start by identifying the appropriate Doppler effect formula to calculate the frequency received by the moth, $!$f_1$!$, when the bat emits a pulse with frequency $!$f_0$!$ while both the bat and the moth are in motion. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "73f17e12-18ff-4466-adf7-e5551d71bc83"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f_1 = f_0 \\times \\left(\\frac{c - v_m}{c - v_b}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f_1 = f_0 \\times \\left(\\frac{c + v_b}{c - v_m}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f_1 = f_0 \\times \\left(\\frac{c - v_b}{c + v_m}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6169e838fa1544378a62d",
+                    "stepText": "Great, now that you have identified the correct formula to determine the frequency $!$f_1$!$ received by the moth, let's use this result to calculate the echo frequency $!$f_{echo}$!$ as perceived by the bat. In this step, when the moth reflects the sound, it acts as a moving source and the bat, moving toward it, receives the echo. Use the Doppler relation that incorporates the bat\u2019s motion toward a moving source to compute $!$f_{echo}$!$. (Use your computed $!$f_1$!$ from the previous step in your calculation.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "41.2"
+                    ],
+                    "stepSolveAnswerUnits": "kHz",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "a738c7c2-d0ca-4760-8351-7ce0f93d7404"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

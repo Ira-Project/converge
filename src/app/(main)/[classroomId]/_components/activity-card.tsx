@@ -2,43 +2,29 @@ import React from 'react';
 import { type Activity } from '../types';
 import { getMetaDataFromActivityType } from '../../../../lib/utils/activityUtils';
 import Image from 'next/image';
-import { ExternalLinkIcon, InfoCircledIcon } from '@radix-ui/react-icons';
+import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { cn, formatDateShort } from '@/lib/utils';
-import { Paths, Roles } from '@/lib/constants';
+import { type ActivityType, Paths, Roles } from '@/lib/constants';
 
 interface ActivityCardProps {
   activity: Activity;
   role: Roles;
-  classroomId: string;
 }
 
-const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role, classroomId }) => {
-  const { id, typeText, isLive, dueDate } = activity;
-  const { url, iconImage, title, tags, colour, description } = getMetaDataFromActivityType(typeText, id);
-
+const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role }) => {
+  const { id, typeText, topic, dueDate } = activity;
+  const { url, iconImage, title, colour, description } = getMetaDataFromActivityType(typeText as ActivityType ?? undefined, id);
 
   return (
     <div className="border rounded-2xl p-6 w-[400px]">
       <div className="flex items-start justify-between mb-4">
-        <div className="mb-4">
+        <div>
           <Image src={iconImage} alt={title} width={60} height={60} />
         </div>
-        {isLive && (
-          <span className="bg-destructive text-white text-xs px-2 py-1 rounded">LIVE</span>
-        )}
-        {/* {status === "SUBMITTED" && (
-          <span className="bg-gray-500 text-white text-xs px-2 py-1 rounded">SUBMITTED</span>
-        )} */}
       </div>
-      <h4 className="font-medium mb-2 flex items-center">
-        {title}
-        <Link href={`/${classroomId}/documentation/${id}`}>
-          <InfoCircledIcon className="w-4 h-4 ml-2 text-gray-400" />
-        </Link>
-      </h4>
       <div className={cn(
-        "flex gap-2 mb-3",
+        "flex text-md my-auto font-bold",
         {
           "text-amber-700": colour === "amber",
           "text-rose-700": colour === "rose",
@@ -48,15 +34,12 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role, classroomId
           "text-blue-700": colour === "blue",
         }
       )}> 
-        {tags.map((tag, index) => (
-          <span key={index} className="flex gap-2 my-auto font-bold">
-            <span className="text-xs my-auto">
-              {tag}
-            </span>
-            {index < tags.length - 1 && "·"}
-          </span>
-        ))}
+        {title}
       </div>
+      <h4 className="font-medium text-lg mt-2 mb-4 flex items-center">
+        {topic?.name ?? "No topic"}
+      </h4>
+      
       <p className="text-sm text-muted-foreground mb-4 h-[60px] line-clamp-3">{description}</p>
       <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
         {dueDate ? formatDateShort(new Date(dueDate)) : "No due date"}

@@ -1,0 +1,212 @@
+{
+    "id": "7b7705c3c46a42bf805f7",
+    "name": "Thermal Energy Transfers",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "041596f358cc47219a733",
+            "questionText": "An engineer designs a spherical thermos flask with a double-walled vacuum and a reflective inner coating to minimize heat loss. The inner sphere has a radius of 10 cm and the outer sphere has a radius of 11 cm. The thermos contains 0.5 kg of coffee, initially at a temperature of 90\\degree C. Assuming the outer surface of the thermos is at room temperature (20\\degree C) and the emissivity of the reflective coating is 0.05, determine how long it will take for the coffee to cool down to 85\\degree C, applying Stefan-Boltzmann's Law and using a specific heat capacity of coffee of 4200 J/kg\\cdot K.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "867650d79b0943029bc7c",
+                    "stepText": "Let's start by calculating the energy that must be lost by the coffee as it cools. Identify the correct formula to compute the heat energy change using mass, specific heat capacity, and temperature change.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = m\\,c\\,\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = \\sigma A T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = mL$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "446bc07447894421a193c",
+                    "stepText": "Great, now that we have determined how to calculate the energy change, let\u2019s move on to finding the rate of heat loss. Using the concept of radiative power loss, please select the formula that correctly represents the Stefan-Boltzmann Law applied with emissivity and the temperature difference between the inner surface and the room.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "24ae2b53-8791-43f2-912d-9283b7a97b08"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = \\epsilon\\,\\sigma\\,A\\,(T_{in}^4 - T_{room}^4)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = m\\,c\\,\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{\\Delta Q}{\\Delta t} + mL$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a6621202f0bc4089ac4c9",
+                    "stepText": "Now that you have the energy loss (\\(\\Delta Q\\)) and the radiative power (P), calculate the cooling time using the relation between energy, power, and time. Compute \\(t = \\frac{\\Delta Q}{P}\\), and provide the numerical result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3088"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "e705b920b3a24369a267a",
+            "questionText": "A chef is using a double boiler to melt 0.25 kg of chocolate that is initially at 20\\degree C. The chocolate is heated until it is completely melted. The specific heat capacity of the solid chocolate is 1.67 kJ/kg\\cdot K, its melting point is 45\\degree C, and its specific latent heat of fusion is 100 kJ/kg. Assuming that all the energy transferred from the simmering water (at 100\\degree C) to the chocolate is used for heating and melting the chocolate, calculate the total amount of energy (in Joules) required to completely melt the chocolate.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d96ee788f3704923bf6fb",
+                    "stepText": "Let's begin by identifying the correct formula to calculate the energy required to heat a substance. Which of the following formulas correctly relates the mass, specific heat capacity, and temperature change?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = m \\cdot c \\cdot \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = m + c \\cdot \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = m \\cdot \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e44b95f17e0847fa910b9",
+                    "stepText": "Great! Now, calculate the temperature change $!$\\Delta T$!$ required to heat the chocolate from its initial temperature of 20\\degree C to its melting point of 45\\degree C.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "25"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4506061156b2404895a4a",
+                    "stepText": "Using the mass ($!$0.25\\,kg$!$), the specific heat capacity ($!$1.67\\,kJ/kg\\cdot K$!$), and the temperature change you just calculated, compute the energy required for heating the chocolate. Remember to convert the result to Joules.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10438"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "cf21210660d346ca9438c",
+                    "stepText": "Next, we need to determine the energy required to melt the chocolate at its melting point. Please select the correct formula for calculating energy during a phase change (melting).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "17837b86-984f-4bc9-9bdc-22a99995ea2b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = m \\cdot L$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = m \\cdot c \\cdot \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = L / m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "84329f8f983f433db3ffc",
+                    "stepText": "Now, calculate the energy required for melting the chocolate using the mass and the specific latent heat of fusion. Make sure to convert your answer into Joules.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "25000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "17837b86-984f-4bc9-9bdc-22a99995ea2b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ddd2a77e19c940dba8da9",
+                    "stepText": "Finally, combine the energy calculated for heating the chocolate and the energy for melting it to determine the total energy required. What is the total energy in Joules?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "35438"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9",
+                        "17837b86-984f-4bc9-9bdc-22a99995ea2b"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

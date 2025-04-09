@@ -1,0 +1,184 @@
+{
+    "id": "b0828276f90e4ae082721",
+    "name": "Greenhouse Effect",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "546f3978a2304e3a8637f",
+            "questionText": "Researchers are studying methane ($!$CH_4$!$) and nitrous oxide ($!$N_2O$!$) in the atmosphere to determine their impact on outgoing radiation. Suppose the concentration of $!$CH_4$!$ increases, leading to a decrease in the intensity of outgoing longwave radiation by 5 $!$W/m^2$!$. At the same time, $!$N_2O$!$ concentration changes such that it contributes to a further reduction of 3 $!$W/m^2$!$ in the outgoing radiation. The average emissivity of the atmosphere is 0.7. If the surface temperature of Earth is 288 K, by how much would the Earth's surface temperature need to change (in Kelvin) to balance this reduction in outgoing radiation, assuming the emissivity remains constant?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "543f4d5d79c74a39a9490",
+                    "stepText": "Let's start by finding the total reduction in outgoing longwave radiation. Add the contributions from $!$CH_4$!$ and $!$N_2O$!$. What is the sum of these reductions?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "33284ca160844a4bbdb9a",
+                    "stepText": "Next, to connect the change in intensity to a change in temperature, we use a relationship derived from the Stefan\u2013Boltzmann law. Please identify the correct differential relation linking a small change in radiative intensity $!$\\Delta I$!$ to a small change in temperature $!$\\Delta T$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta I = 4\\,\\epsilon\\,\\sigma\\,T^3\\,\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta I = \\epsilon\\,\\sigma\\,T^4/\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta I = 4\\,\\epsilon\\,\\sigma\\,T^2\\,\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "45830ca128144d1f9fac8",
+                    "stepText": "Now, we need to compute $!$T^3$!$ for the surface temperature, where $!$T=288\\,K$!$. Can you calculate the value of $!$T^3$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.39e7"
+                    ],
+                    "stepSolveAnswerUnits": "K^3",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6f99faaf7cdb42a090637",
+                    "stepText": "Great, now combine the known constants with $!$T^3$!$ to form the denominator in the relation. Specifically, compute the product $!$4 \\times \\epsilon \\times \\sigma \\times T^3$!$ using $!$\\epsilon = 0.7$!$, $!$\\sigma = 5.67 \\times 10^{-8}\\,W/m^2K^4$!$, and the $!$T^3$!$ you just computed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.79"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2K",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "552a3699e6aa4305a784f",
+                    "stepText": "Finally, using the relation you identified earlier, compute the required change in surface temperature $!$\\Delta T$!$ by dividing the total reduction in intensity by the product you just computed. What is the value of $!$\\Delta T$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.1"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "adcc2680-ace0-48fc-a717-77d13f0c5743",
+                        "e3a5ec68-44b5-4731-ba26-1e6d6d1e4970"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "e9be46cebef94e6fbdcc3",
+            "questionText": "A scientist is modeling Earth's climate and wants to determine the impact of changing albedo on Earth's equilibrium temperature. Currently, Earth's albedo is 0.30, and the solar constant ($!$S$!$) is 1400 $!$W/m^2$!$. Suppose the albedo increases to 0.33 due to increased ice cover. Assuming Earth's emissivity is 0.6, calculate the new equilibrium temperature of Earth in Kelvin, taking into account the change in albedo.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2c5fec5d0ba64a0ab6aa6",
+                    "stepText": "Let's start by identifying the appropriate energy balance equation that relates the absorbed solar radiation to the emitted thermal radiation of Earth. Please choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b51ed1b6-771b-45fa-9760-5d85e7688f2a",
+                        "a83c5f2e-c2d2-4381-9ccd-58212da2172b",
+                        "d92482b7-8562-4293-b4e3-92db7d81228c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$(1-A)(S/4)=\\epsilon\\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\epsilon\\sigma T^4=(1-A)S$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$S=(1-A)\\epsilon\\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "50769e2afb4346fb9f15a",
+                    "stepText": "Great! Now, substitute the new albedo value and the solar constant into the absorption term. Calculate $!$(1-A)(S/4)$!$ for $!$A=0.33$!$ and $!$S=1400$!$. What is the resulting absorbed flux?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "234.5"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [
+                        "cb2ae0e5-1e89-4f8d-8848-9873f4991312",
+                        "d92482b7-8562-4293-b4e3-92db7d81228c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1e1123cda43f40b8b873d",
+                    "stepText": "Now, using the result from the previous step and the energy balance equation, solve for $!$T^4$!$. Divide the absorbed flux by the product of emissivity and the Stefan-Boltzmann constant (with $!$\\epsilon=0.6$!$ and $!$\\sigma=5.67\\times10^{-8}$!$ W/m\u00b2K\u2074). What value do you get for $!$T^4$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.892e9"
+                    ],
+                    "stepSolveAnswerUnits": "K^4",
+                    "stepConcepts": [
+                        "b51ed1b6-771b-45fa-9760-5d85e7688f2a",
+                        "a83c5f2e-c2d2-4381-9ccd-58212da2172b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e6a0db7159d146f58a537",
+                    "stepText": "Finally, determine the equilibrium temperature by taking the fourth root of your value for $!$T^4$!$. What is the new equilibrium temperature in Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "288"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "4423e9c4-c105-4183-9ce7-c7d4352e4ec0"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

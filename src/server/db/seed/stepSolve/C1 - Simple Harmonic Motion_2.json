@@ -1,0 +1,165 @@
+{
+    "id": "10fc6fd5fc8540a9befc4",
+    "name": "Simple Harmonic Motion",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "ef1ab9e9a072456fafd42",
+            "questionText": "A child is on a swing set performing simple harmonic motion. The swing has a length of $!$L = 2.5\\text{ m}$!$. If the maximum angular displacement of the swing is $!$\\theta_{max} = 0.2\\text{ radians}$!$, determine the maximum velocity, $!$v_{max}$!$, of the child during the swing's motion. Assume the acceleration due to gravity is $!$g = 9.8\\text{ m/s}^2$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "be83ee149ea243fa9dd7b",
+                    "stepText": "Let's start by identifying the correct expression for the angular frequency $!$\\omega$!$ of a simple pendulum undergoing small oscillations. Choose the formula that correctly relates $!$\\omega$!$ with $!$g$!$ and $!$L$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eed7f907-b397-4f8c-8f17-d4f199db79ab"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\omega = \\sqrt{\\frac{g}{L}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\omega = \\sqrt{\\frac{L}{g}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\omega = 2\\pi\\sqrt{\\frac{g}{L}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f74e0f5233464dbd97935",
+                    "stepText": "Great, now that you have the relation, use the provided values $!$g = 9.8\\text{ m/s}^2$!$ and $!$L = 2.5\\text{ m}$!$ to calculate the angular frequency $!$\\omega$!$. What is the computed value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.98"
+                    ],
+                    "stepSolveAnswerUnits": "rad/s",
+                    "stepConcepts": [
+                        "eed7f907-b397-4f8c-8f17-d4f199db79ab"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fe4629b690224428babd6",
+                    "stepText": "Now, consider the relation for the maximum tangential velocity $!$v_{max}$!$ in terms of the angular frequency $!$\\omega$!$, the length $!$L$!$, and the maximum angular displacement $!$\\theta_{max}$!$. Choose the correct expression from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bfe73a51-56e1-42c2-b400-35e2aa8f4737"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v_{max} = L \\omega \\theta_{max}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v_{max} = \\frac{L \\theta_{max}}{\\omega}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v_{max} = \\frac{\\omega}{L \\theta_{max}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ed4d9044e09a448e81cf5",
+                    "stepText": "Finally, using the expression you selected, calculate the maximum velocity $!$v_{max}$!$ by multiplying the length of the swing, the angular frequency, and the maximum angular displacement. Use $!$L = 2.5\\text{ m}$!$, $!$\\theta_{max} = 0.2\\text{ radians}$!$, and your computed $!$\\omega \\approx 1.98\\text{ rad/s}$!$. What is the maximum velocity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.99"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "bfe73a51-56e1-42c2-b400-35e2aa8f4737"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "7cb59c7021ca4f94bc503",
+            "questionText": "A car's suspension system, modeled as a spring-mass system, oscillates after hitting a bump. The car has a mass of $!$m = 1500 \\text{ kg}$!$, and the suspension spring has a spring constant of $!$k = 60000 \\text{ N/m}$!$. After hitting a bump, the system initially has a total energy of $!$E_T = 300 \\text{ J}$!$. Calculate the maximum velocity, $!$v_{max}$!$, of the car's oscillation after hitting the bump.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f8ceb65d3b3a4a9680922",
+                    "stepText": "Let's start by identifying the energy scenario. At maximum velocity, all the total energy is kinetic. Which of the following formulas correctly expresses kinetic energy in terms of mass and velocity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e6cbee8e-24f0-49b0-acff-dee433badd26"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{1}{2} m v^2 = E_T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m v = E_T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{2} m v = E_T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ee8d821c6bf24272aa85d",
+                    "stepText": "Great, with the correct kinetic energy formula in place, let's substitute the known values to solve for $!$v_{max}^2$!$. Using the relation $!$v_{max}^2 = \\frac{2E_T}{m}$!$, calculate its numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.4"
+                    ],
+                    "stepSolveAnswerUnits": "m^2/s^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "8cc0ceb710da48b7ae14f",
+                    "stepText": "Now that you have $!$v_{max}^2$!$, let's determine $!$v_{max}$!$ by taking its square root. Compute the square root of the previous result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.632"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

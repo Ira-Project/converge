@@ -1,0 +1,203 @@
+{
+    "id": "92f55cbb965d4ea594f3b",
+    "name": "Current and Circuits",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "8c75d12cd7dc4240ae2ce",
+            "questionText": "An electrician is wiring a new room and connects three appliances in parallel to a single $!$120\\,\\text{V}$!$ power supply. The appliances have resistances of $!$R_1 = 60\\,\\Omega$!$, $!$R_2 = 120\\,\\Omega$!$, and $!$R_3 = 40\\,\\Omega$!$, respectively. Considering that the electrician wants to ensure the circuit breaker doesn't trip, calculate the total current (in amperes) drawn from the power supply by these appliances.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e21c1e15ccaf41feace35",
+                    "stepText": "Let's start by identifying the formula we need to find the equivalent resistance for appliances connected in parallel. Please select the correct formula for resistors in parallel.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9fa1c405-382b-4536-a722-8d3db2c9d128"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{1}{R_{eq}} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R_{eq} = R_1 + R_2 + R_3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_{eq} = \\sqrt{R_1^2 + R_2^2 + R_3^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "13a24b6c67a440e48a2f2",
+                    "stepText": "Great! Now substitute the given resistance values into the formula you selected to calculate the equivalent resistance of the appliances. Compute the numerical value of the equivalent resistance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20"
+                    ],
+                    "stepSolveAnswerUnits": "\u03a9",
+                    "stepConcepts": [
+                        "9fa1c405-382b-4536-a722-8d3db2c9d128"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "db39caa9ec0f40d687048",
+                    "stepText": "Next, we need to determine which formula relates voltage, current, and resistance according to Ohm's law. Please select the appropriate formula for Ohm's law.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+                        "e8c3f3c6-319c-4efc-8227-e1ff3ffbc6b8",
+                        "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{V}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = V \\cdot R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = V - R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "07f1ecc5584644a19d0e2",
+                    "stepText": "Finally, using the equivalent resistance you've calculated and the given voltage, apply Ohm's law to compute the total current drawn from the power supply. What is the numerical value of the total current?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+                        "e8c3f3c6-319c-4efc-8227-e1ff3ffbc6b8",
+                        "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "96de16d02b964999819aa",
+            "questionText": "A string of LED Christmas lights is connected in series and powered by a $!$9\\,\\text{V}$!$ power source. There are 30 LEDs in the string, and each LED has a resistance of $!$25\\,\\Omega$!$. Determine the electric current (in amperes) flowing through each LED when all the lights are functioning correctly.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "118171d4b7a349e5a9b1b",
+                    "stepText": "Let's start by recalling how resistors combine in a series circuit. Identify the formula that describes the total resistance in a series connection.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7e1eb003-fe0f-4d19-bc2c-5bbf746731d8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R_T = R_1 + R_2 + \\ldots$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R_T = \\frac{1}{R_1} + \\frac{1}{R_2} + \\ldots$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_T = R_1 \\times R_2 \\times \\ldots$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f931984cbac048e9aa1b4",
+                    "stepText": "Now that we know how resistances add in series, calculate the total resistance by multiplying the number of LEDs by the resistance of each LED.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "750"
+                    ],
+                    "stepSolveAnswerUnits": "$!$\\Omega$!$",
+                    "stepConcepts": [
+                        "7e1eb003-fe0f-4d19-bc2c-5bbf746731d8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e540e5b4551943dba7c4c",
+                    "stepText": "Great, now let's recall the relationship between voltage, current, and resistance. Identify the correct formulation of Ohm's law.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{V}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = V \\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{R}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "56c0393d4ce943cf8b7b3",
+                    "stepText": "Using the total resistance from Step 2 and the given voltage of the power source, calculate the current flowing through the LEDs.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.012"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

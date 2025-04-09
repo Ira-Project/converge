@@ -1,0 +1,202 @@
+{
+    "id": "85e3ea76920a4af5b0c52",
+    "name": "Fusion and Stars",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "ff073ab104df455b8fd1c",
+            "questionText": "Star A and Star B have identical luminosities. Using the parallax method, the distance to Star A is twice the distance to Star B. Star B is identified as a main sequence star that is actively fusing hydrogen into helium. Given that the luminosity $!$L$!$ is related to the radius $!$R$!$ and temperature $!$T$!$ by the formula $!$L = 4\\pi R^2 \\sigma T^4$!$, determine how the radius of Star A compares to the radius of Star B. Assume the surface temperature of Star A is 1/3rd that of Star B. What is the ratio of the radius of Star A to Star B?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1d6f748f546341b59ab22",
+                    "stepText": "Let's begin by identifying the proper formula that relates a star's luminosity to its radius and surface temperature. Which of the following formulas is the correct expression for luminosity in terms of radius and temperature?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L=4\\pi R^2 \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L=4\\pi R \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L=R^2 \\sigma T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L=4\\pi R^2 T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7b4497f7e0ad46318dc96",
+                    "stepText": "Since both stars have the same luminosity, their luminosity expressions are equal. Which equation correctly represents the equality after canceling out the common terms?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R_A^2 T_A^4 = R_B^2 T_B^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R_A T_A^4 = R_B T_B^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_A^2 T_A = R_B^2 T_B$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_A^2 T_B^4 = R_B^2 T_A^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "97ddef03a06b409b97a6b",
+                    "stepText": "Now, substitute the given relation for the temperatures where the surface temperature of Star A is one third that of Star B ($!$T_A = \\frac{T_B}{3}$!$). Which of the following equations correctly incorporates this substitution?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R_A^2 \\left(\\frac{T_B}{3}\\right)^4 = R_B^2 T_B^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R_A^2 \\left(\\frac{T_B}{3}\\right)^2 = R_B^2 T_B^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_A^2 \\left(\\frac{T_B}{3}\\right)^4 = R_B^2 \\left(\\frac{T_B}{3}\\right)^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_A^2 T_B^4 = R_B^2 \\left(\\frac{T_B}{3}\\right)^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ef9c863405064c70a4f55",
+                    "stepText": "Finally, simplify the equation from the previous step to find the ratio of the radii. Cancel the common terms and solve for $!$\\frac{R_A}{R_B}$!$. What is the numerical value of the ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "9"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c56e852c-09d8-41e1-a4f6-ef37635858f0"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "e0918688813e424094b5d",
+            "questionText": "Consider a star with a mass similar to our Sun that initially fused hydrogen into helium via the proton-proton chain, resulting in the release of energy. As the core's hydrogen is depleted, it contracts, leading to a temperature increase. Subsequently, the triple alpha process initiates, converting helium into carbon. If the energy released from the triple alpha process is $!$10^{14} J$!$ and the mass difference $!$\\Delta m$!$ between the initial and final states is related to the energy released $!$Q$!$ by the equation $!$Q = \\Delta m c^2$!$, and assuming the star's initial mass was $!$1.989 \\times 10^{30} \\text{ kg}$!$, what percentage of the star's initial mass is converted into energy during the triple alpha process? Use the speed of light $!$c = 3 \\times 10^8 \\text{ m/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "103a163cf9874b93a4c16",
+                    "stepText": "Let's start by identifying the correct formula that relates the energy released ($!$Q$!$), the mass difference ($!$\\Delta m$!$), and the speed of light ($!$c$!$). Which formula would you choose?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3e3147e9-a9e5-4cc3-8d6e-14259c4fa3e6",
+                        "d42487b2-db43-4fc5-9fc0-a62818835b39",
+                        "369a9276-6e32-408e-90e0-7dd8f419995e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q=\\Delta m c^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q=\\Delta m/c^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q=c^2/\\Delta m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ffebfbdf89734578b4bb9",
+                    "stepText": "Great, now that you have selected the relationship between $!$Q$!$ and $!$\\Delta m$!$, use it to calculate the mass difference. With $!$Q = 10^{14}\\,J$!$ and $!$c = 3 \\times 10^8\\,m/s$!$, compute $!$\\Delta m = Q/c^2$!$. What is the mass difference in kilograms?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.11e-3"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "3e3147e9-a9e5-4cc3-8d6e-14259c4fa3e6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "474ad1a0a93647dfa0cee",
+                    "stepText": "Now, use the mass difference you calculated to determine what percentage of the star's initial mass is converted into energy. The star's initial mass is given as $!$1.989 \\times 10^{30} \\text{ kg}$!$. Compute the percentage using the ratio $!$(\\Delta m/M) \\times 100$!$. What percentage do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.58e-32"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "3e3147e9-a9e5-4cc3-8d6e-14259c4fa3e6"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,209 @@
+{
+    "id": "8735f3978ee6425083082",
+    "name": "Wave Phenomena",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9cd0951fb0c44170a992f",
+            "questionText": "In a physics lab, a monochromatic light with a wavelength of $!$\\lambda = 550 \\text{ nm}$!$ is shone through a single slit. Originally, the slit width is $!$b = 2.0 \\mu\\text{m}$!$, but it is then reduced to $!$b = 1.0 \\mu\\text{m}$!$. The diffraction pattern is observed on a screen placed $!$D = 1.5 \\text{ m}$!$ away from the slit. Determine the distance from the center of the central maximum to the first minimum on the screen for the reduced slit width of $!$b = 1.0 \\mu\\text{m}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "762763080b914a609339e",
+                    "stepText": "Let's start by identifying the condition for the first diffraction minimum in a single-slit experiment. Choose the formula that correctly represents the relationship between the slit width, the diffraction angle, and the wavelength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "07acd739-4a1b-492f-825f-4174d469820a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ b \\sin \\theta = \\lambda $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ b \\sin \\theta = 2\\lambda $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ b \\tan \\theta = \\lambda $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "da21c97a5e6d4fc1b4f31",
+                    "stepText": "Now, using the selected condition, compute $!$\\sin \\theta = \\lambda/b$!$ with the given values. Convert $!$\\lambda = 550 \\text{ nm}$!$ to meters and $!$b = 1.0 \\mu\\text{m}$!$ to meters, then perform the division.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.55"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "07acd739-4a1b-492f-825f-4174d469820a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b25685faa3db45c39c8d9",
+                    "stepText": "Great, now determine the diffraction angle $!$\\theta$!$ by applying the inverse sine function to the value you just computed. What is the angle in degrees?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "33.37"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [
+                        "07acd739-4a1b-492f-825f-4174d469820a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9d0557d8a7b44a7da47ea",
+                    "stepText": "Next, recall that the distance from the central maximum to the first minimum on the screen is determined by the relation $!$x = D \\tan \\theta$!$. Identify the correct formula to relate these quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$ x = D \\sin \\theta $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ x = D \\tan \\theta $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ x = D \\cos \\theta $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3024ed2dcde7438791ee2",
+                    "stepText": "Finally, calculate the distance $!$x$!$ from the center to the first minimum using $!$x = D \\tan \\theta$!$ with $!$D = 1.5 \\text{ m}$!$ and the angle from step 3. What is the computed distance on the screen?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.99"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "56daccf59fa848de8d8e5",
+            "questionText": "A white light source is incident on a diffraction grating with 600 lines per millimeter. The resulting spectrum is projected onto a screen 2 meters away from the grating. Calculate the linear separation ($!$\\Delta y$!$) between the red light ($!$\\lambda = 700$!$ nm) and the blue light ($!$\\lambda = 400$!$ nm) in the first-order spectrum (n = 1), assuming the grating equation $!$d \\sin(\\theta) = n\\lambda$!$ and the small angle approximation where applicable.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "72875d2fecfe4807a8641",
+                    "stepText": "Let's start by determining the grating spacing ($!$d$!$) based on the line density given. Please select the correct relation for calculating $!$d$!$ from the number of lines per meter.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "15cf7c79-9158-42b2-b21a-603d53e13a58"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ d = \\frac{1}{\\text{lines per meter}} $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ d = \\text{lines per meter} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ d = \\text{lines per millimeter} \\times 1000 $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a3e6878c83104beb88a3e",
+                    "stepText": "Great! Now, to find the diffraction angles for each wavelength, we need to use the grating equation in combination with the small angle approximation. Please choose the correct grating equation that relates $!$d$, $!$\\theta$, $!$n$, and $!$\\lambda$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "15cf7c79-9158-42b2-b21a-603d53e13a58"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ d\\sin\\theta = n\\lambda $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ d\\theta = n\\lambda $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ \\sin\\theta = \\frac{d}{n\\lambda} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b9aace4f6ed041038473b",
+                    "stepText": "Now, using the small angle approximation, the diffraction angle can be approximated as $!$\\theta \\approx \\frac{\\lambda}{d}$!$. Calculate the difference between the diffraction angles for the red light ($!$\\lambda = 700 \\times 10^{-9}$!$ m) and the blue light ($!$\\lambda = 400 \\times 10^{-9}$!$ m). Provide the numerical value for $!$(\\theta_{red} - \\theta_{blue})$ in radians.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.18"
+                    ],
+                    "stepSolveAnswerUnits": "rad",
+                    "stepConcepts": [
+                        "fccc17be-fcc2-4075-82c4-e570a95384e9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ba3149f6730444c297089",
+                    "stepText": "Finally, with the angular difference obtained and knowing that the screen is placed 2 m away, calculate the linear separation ($!$\\Delta y$!$) on the screen using the small angle relation $!$y \\approx L\\theta$!$. Compute $!$\\Delta y = L(\\theta_{red} - \\theta_{blue})$!$ and provide the numeric value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.36"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "fccc17be-fcc2-4075-82c4-e570a95384e9"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

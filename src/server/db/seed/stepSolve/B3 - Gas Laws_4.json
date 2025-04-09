@@ -1,0 +1,197 @@
+{
+    "id": "246a15eb51f44786aa03d",
+    "name": "Gas Laws",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "49b1e4c61cd343c1b90b1",
+            "questionText": "A scuba diver takes a breath of air at the surface of the ocean. At the surface, the pressure is $!$1 \\text{ atm}$!$, the temperature is $!$298 \\text{ K}$!$, and the volume of air in the diver's lungs is $!$6 \\text{ liters}$!$. The diver then descends to a depth where the pressure is $!$2.5 \\text{ atm}$!$ and the temperature is $!$288 \\text{ K}$!$. Assuming the amount of air remains constant, calculate the new volume of air in the diver's lungs at this depth, assuming they held their breath.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "028f0b7838ad4edfa2a12",
+                    "stepText": "Let's start by recalling the correct relationship that applies for a fixed amount of gas where pressure, volume, and temperature are involved. Identify which of the following formulas correctly represents this constant relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ \\frac{P_1V_1}{T_1} = \\frac{P_2V_2}{T_2} $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ P_1V_1 = P_2V_2 $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ \\frac{V_1}{T_1} = \\frac{V_2}{T_2} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e00ea04ba4e648a59a22e",
+                    "stepText": "Great, now that we've identified the proper relationship, let\u2019s calculate the pressure ratio $!$ (P_1/P_2) $!$. Use the given pressures $!$P_1 = 1\\,atm$!$ and $!$P_2 = 2.5\\,atm$!$ to compute this ratio.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.4"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f4da4c6a4d3a49988a28e",
+                    "stepText": "Now, let\u2019s determine the temperature ratio $!$ (T_2/T_1) $!$. Use the given temperatures $!$T_1 = 298\\,K$!$ and $!$T_2 = 288\\,K$!$ to obtain this ratio.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.9664"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2e7ce1ddf7754a00b2d92",
+                    "stepText": "Now that we have both ratios, apply them to the initial volume $!$V_1 = 6\\,L$!$ to find the new volume $!$V_2$!$. Multiply $!$6\\,L$!$ by the pressure ratio and the temperature ratio.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.32"
+                    ],
+                    "stepSolveAnswerUnits": "L",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "03bd8d396cc04870a90a3",
+            "questionText": "A sealed bag of chips is transported from sea level to a mountain summit. At sea level, the bag contains air at a pressure of $!$1 \\text{ atm}$!$ and a temperature of $!$293 \\text{ K}$!$. Upon reaching the summit, the atmospheric pressure drops to $!$0.7 \\text{ atm}$!$ and the temperature decreases to $!$273 \\text{ K}$!$. Assuming the bag can freely expand, calculate the percentage change in the volume of the bag.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "75c7414cd9f04290b45aa",
+                    "stepText": "Let's start by recalling the fundamental gas law that relates pressure, volume, number of moles, temperature, and the gas constant. Please select the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$PV = nRT$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = nRT$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = nRT$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8f5718d6e94846779be85",
+                    "stepText": "Given that the number of moles remains constant, the volume is proportional to the temperature divided by the pressure. Which of the following correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V \\propto \\frac{T}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V \\propto T \\cdot P$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V \\propto \\frac{P}{T}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cc158863e14441ccb337d",
+                    "stepText": "Great, now calculate the ratio $!$T_1/P_1$!$ using the sea level values: $!$T_1 = 293 \\text{ K}$!$ and $!$P_1 = 1 \\text{ atm}$!$. What is this ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "293"
+                    ],
+                    "stepSolveAnswerUnits": "K/atm",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ce4fb955327c4c208c878",
+                    "stepText": "Next, compute the ratio $!$T_2/P_2$!$ using the summit conditions: $!$T_2 = 273 \\text{ K}$!$ and $!$P_2 = 0.7 \\text{ atm}$!$. What value do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "390"
+                    ],
+                    "stepSolveAnswerUnits": "K/atm",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d55ccb38ca994fe79514a",
+                    "stepText": "Finally, determine the volume ratio $!$V_2/V_1$!$ by dividing the final $T/P$ ratio by the initial $T/P$ ratio, and then calculate the percentage change in volume using the expression $!$(V_2/V_1 - 1) \\times 100$!$. What is the approximate percentage change?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "33"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "0d435e5c-9b10-457d-a7e6-d3de648690e5"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

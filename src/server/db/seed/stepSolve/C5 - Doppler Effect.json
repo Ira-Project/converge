@@ -1,0 +1,202 @@
+{
+    "id": "91888ece269a4670a8855",
+    "name": "Doppler Effect",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "db3f9a0ad7f94b098513e",
+            "questionText": "An ambulance is traveling towards you at a speed of $!$25 m/s$!$ with its siren emitting a sound wave at a frequency of $!$400 Hz$!$. The speed of sound in air is $!$343 m/s$!$. As the ambulance approaches you, the frequency of the siren appears to change due to the Doppler effect. Calculate the observed frequency of the ambulance siren as it approaches you.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5a72712d3fd244b5864e2",
+                    "stepText": "Let's start by identifying the correct Doppler effect formula to use when a source is moving towards a stationary observer. Please select the formula that correctly relates the observed frequency to the emitted frequency in this scenario.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "73f17e12-18ff-4466-adf7-e5551d71bc83",
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "f09a3cf7-42e1-4878-b989-bb756bfc1f03",
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ f' = f \\left(\\frac{c}{c + v_s}\\right) $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ f' = f \\left(\\frac{c+v_s}{c}\\right) $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ f' = f \\left(\\frac{c}{c - v_s}\\right) $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ f' = f \\left(\\frac{c - v_s}{c}\\right) $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "29883a782a1d49bc854d6",
+                    "stepText": "Great, now that you have the formula, substitute the known values into the part of the formula's denominator. Compute $!$ c - v_s $!$ using $!$ c = 343 \\text{ m/s} $!$ and $!$ v_s = 25 \\text{ m/s} $!$. What is the result?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "318"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d1185554b2de40e6ab2e3",
+                    "stepText": "Now, use the substitution and the computed denominator to calculate the final observed frequency. Multiply the source frequency by the ratio $!$ \\frac{343}{318} $!$. What is the observed frequency?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "431.2"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "5a42821793ce4aa08e4fa",
+            "questionText": "A police officer uses a radar gun emitting a frequency of $!$77 GHz$!$ to detect the speed of a car. The radar gun detects a frequency shift of $!$9.5 kHz$!$ in the reflected signal from the car. Assuming the car is moving directly towards the officer and the speed of light is approximately $!$3.0 x 10^8 m/s$!$, determine the speed of the car in $!$m/s$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "96363a00c97d4fbf99791",
+                    "stepText": "Let's start by determining the appropriate Doppler shift formula for a reflected signal. In this scenario, the shift involves a two-way travel (to the car and back). Identify the correct formula that relates the frequency shift $!$\\Delta f$!$, the speed of the target $!$v$!$, the transmitted frequency $!$f$!$, and the speed of light $!$c$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9",
+                        "8004f091-3866-4725-923f-566d362ee31a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{2v}{c} f$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{v}{c} f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta f = \\frac{2f}{v} c$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "44d8c3178da94dacba96c",
+                    "stepText": "Great, now that we have the Doppler shift relation, rearrange the formula to solve for the speed $!$v$!$. Please choose the correct rearranged version that expresses $!$v$!$ in terms of $!$\\Delta f$!$, $!$c$!$, and $!$f$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9",
+                        "8004f091-3866-4725-923f-566d362ee31a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\frac{\\Delta f \\cdot c}{2f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{\\Delta f \\cdot c}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{2 \\Delta f \\cdot c}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1a05c85fbc6b43c9b7b51",
+                    "stepText": "Now, calculate the numerator of the expression $!$\\Delta f \\cdot c$!$. Use the given values: $!$\\Delta f = 9.5 \\times 10^3\\,Hz$!$ and $!$c = 3.0 \\times 10^8\\,m/s$!$. What do you get for the numerator?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.85e12"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "5dab74ab-387d-4288-8961-5ac6d456b3e9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8704fba9d1ac4f399a9f4",
+                    "stepText": "Proceed by determining the denominator of the speed equation, which is $!$2f$!$. With the transmitted frequency given as $!$77 \\times 10^9\\,Hz$!$, calculate $!$2f$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.54e11"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5fd087bf-30b8-4f0e-9ea8-08c67db5840f",
+                        "7e1b8781-921d-4c7a-9f2a-f4e2cad83bb2"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "02c14e39fab745e18e365",
+                    "stepText": "Finally, combine your results to compute the speed $!$v$!$ by dividing the numerator by the denominator from the previous steps. What is the approximate speed of the car in $!$m/s$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "18.5"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9",
+                        "8004f091-3866-4725-923f-566d362ee31a"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

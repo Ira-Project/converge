@@ -1,0 +1,183 @@
+{
+    "id": "2d036f6c5d6b43b09630f",
+    "name": "Standing Waves and Resonance",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "4c068924bae144e59ae08",
+            "questionText": "A child on a swing is being pushed by an adult. The adult notices that the swing's amplitude increases significantly when pushing at a certain frequency. The swing has a natural frequency of $!$0.5\\,\\text{Hz}$!$. If the adult applies a periodic force with a frequency of $!$0.5\\,\\text{Hz}$!$, and the swing's motion is subject to damping due to friction, calculate the amplitude of the swing after $!$10\\,\\text{s}$!$, assuming the amplitude increases by $!$0.2\\,\\text{m}$!$ for each cycle without damping and that damping reduces the amplitude by $!$5\\%$!$ per cycle. Assume the initial amplitude is zero.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6496c6d9762547f3b7699",
+                    "stepText": "Let's start by finding the number of cycles the swing goes through in the given time. To do so, you'll need to use the relation between frequency and period. Which of the following formulas correctly relates the period $!$T$!$ to the frequency $!$f$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$T = \\frac{1}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T = f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T = f^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8521c667950e472fa1067",
+                    "stepText": "Great! Now, if there were no damping, the amplitude would simply increase by a fixed amount every cycle. Identify the correct relation that would give the total amplitude increase after a number of cycles, where each cycle adds a constant increment $!$\\Delta A$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$A_{total} = n \\cdot \\Delta A$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A_{total} = \\frac{\\Delta A}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A_{total} = n^2 \\cdot \\Delta A$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d71e03ca24f740bea531f",
+                    "stepText": "Now, let\u2019s account for damping. The damping reduces the amplitude by 5% each cycle, meaning that before adding the push increment, the amplitude is scaled down. Which recurrence relation correctly combines both the damping effect and the constant push per cycle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A_n = 0.95 \\cdot A_{n-1} + 0.2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A_n = A_{n-1} + 0.2 \\cdot 0.95$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A_n = 0.95 \\cdot (A_{n-1} + 0.2)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "999f278e15b54d5c9852c",
+                    "stepText": "Finally, using the recurrence relation from the previous step, calculate the amplitude after the final cycle by iterating through each cycle. What is the amplitude at the end of the given time period?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.90"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "038b72d57bcd4a7684f69",
+            "questionText": "An organ pipe that is open at both ends has a length of 1.5 m and the speed of sound in air is 343 m/s. Taking into account that open ends form antinodes, calculate the wavelength of the second harmonic produced by this pipe.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "21c8325b8e114553b6724",
+                    "stepText": "Let's start by identifying the correct formula for the wavelength of a harmonic in an organ pipe that is open at both ends. Please select the proper formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e9603b49-b438-4024-a0f2-1f8da3c929e7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda_n = \\frac{2L}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda_n = \\frac{L}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda_n = \\frac{4L}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3ccb0e36c0124babade6c",
+                    "stepText": "Great, now that you've recalled the formula, determine the harmonic number (n) corresponding to the second harmonic produced by the pipe.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "001c90f1-aa84-454f-b15c-1c8c7c11db88",
+                        "675c0c76-e5a0-48e5-b592-4f77f5c0bcc2"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "07aa5a0578724f009a7bf",
+                    "stepText": "Now substitute the given length $!$L = 1.5\\,m$!$ and the harmonic number from the previous step into the wavelength formula to compute the wavelength. What value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.5"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "e9603b49-b438-4024-a0f2-1f8da3c929e7",
+                        "6efad7ba-9922-43c6-86b6-ad0cd8b75bd2"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,229 @@
+{
+    "id": "da32895f471b405aac8e0",
+    "name": "Motion in Electric and Magnetic Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "defc0a406b464cacab61f",
+            "questionText": "A proton with a charge of $!$1.602 \\times 10^{-19} \\text{ C}$!$, a mass of $!$1.672 \\times 10^{-27} \\text{ kg}$!$, and an initial velocity of $!$5 \\times 10^6 \\text{ m/s}$!$ (which is perpendicular to a uniform magnetic field of strength $!$0.5 \\text{ T}$!$) is injected into the magnetic field. Given these conditions, how long will it take for the proton to complete one revolution around its circular path?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0a5c1361280041fc8633f",
+                    "stepText": "Let's start by identifying the appropriate formula that relates the mass, velocity, charge, and magnetic field to the radius of the circular motion. Which of the following formulas correctly gives the radius?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679",
+                        "9608ce91-85fd-4769-948b-5b32a202a3d0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R = \\frac{mv}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R = \\frac{qB}{mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R = \\frac{mv^2}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a2c61d47fc9e425ca6463",
+                    "stepText": "Now that you have the correct formula for the radius, substitute the given values for mass ($!$m = 1.672 \\times 10^{-27}\\text{ kg}$!$), velocity ($!$v = 5 \\times 10^6\\text{ m/s}$!$), charge ($!$q = 1.602 \\times 10^{-19}\\text{ C}$!$), and magnetic field ($!$B = 0.5\\text{ T}$!$) into this formula. Calculate the radius of the circular path.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.104"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679",
+                        "9608ce91-85fd-4769-948b-5b32a202a3d0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ddbefa81bcaa47a49c5f1",
+                    "stepText": "Great job calculating the radius! Next, we need to find the time period for one complete revolution. Identify the correct formula that represents the time period (T) of the circular motion of a charged particle in a magnetic field.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0686c4f9-2dd6-4c52-b79a-a66dd4561b52"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T = \\frac{2\\pi m}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T = \\frac{m}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T = \\frac{2\\pi v}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8fa60839773d4cbaaa23a",
+                    "stepText": "Finally, using the correct period formula, substitute the given values for mass, charge, and magnetic field to compute the time period for one complete revolution. What is the approximate time?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.31e-7"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "0686c4f9-2dd6-4c52-b79a-a66dd4561b52"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "d07a4bdf4633490db3586",
+            "questionText": "An electron, with charge $!$q = -1.602 \\times 10^{-19} C$!$ and mass $!$m = 9.11 \\times 10^{-31} kg$!$, is shot horizontally at an initial velocity of $!$u = 3 \\times 10^6 m/s$!$ into a uniform electric field between two parallel plates. The electric field strength is $!$E = 2000 N/C$!$, and the plates are $!$l = 0.1 m$!$ long. Determine the vertical displacement of the electron as it exits the region between the plates.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3d2c0a3ce9be4c0fbf2ea",
+                    "stepText": "Let's start by identifying the formula that gives the force on a charged particle when it is placed in an electric field. Which of the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f69857d1-d285-419d-8458-a425ac5cf3d5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = qE$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = ma$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{1}{2} m u^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e63c659b09b84237a50fb",
+                    "stepText": "Now, using the force from the previous step, we can determine the acceleration of the electron. Select the correct formula that relates acceleration, charge, electric field, and mass.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5c33bb63-3c6d-413f-a1af-25385ab95845"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$a = \\frac{qE}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$a = qEm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = \\frac{m}{qE}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4a701f3b7f814752a1eb7",
+                    "stepText": "Great, now that we have established the acceleration, let\u2019s calculate the time the electron spends between the plates. Use the horizontal motion relationship with the plate length $!$l$!$ and the initial horizontal velocity $!$u$!$. Compute the time $!$t = l/u$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.33e-8"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "12b6338ca7794bfab34c4",
+                    "stepText": "Now, use the time computed in the previous step along with the vertical acceleration to calculate the vertical displacement of the electron. Which formula would you use to determine the vertical displacement due to this acceleration?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a5fee9d5-2b2a-4e9d-8caf-a83a70245740"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$y = \\frac{1}{2} a t^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$y = a t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$y = u t + \\frac{1}{2} a t^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "873e3e2334f04857ac456",
+                    "stepText": "Finally, now that you have the formula, calculate the vertical displacement using the acceleration $!$a = -3.518 \\times 10^{14} m/s^2$!$ (considering the direction), and the time $!$t = 3.33 \\times 10^{-8} s$!$. Compute $!$y = \\frac{1}{2} a t^2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-0.195"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a5fee9d5-2b2a-4e9d-8caf-a83a70245740"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

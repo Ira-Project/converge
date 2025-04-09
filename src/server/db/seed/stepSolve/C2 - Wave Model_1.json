@@ -1,0 +1,214 @@
+{
+    "id": "202e1575a8d54f389cd0b",
+    "name": "Wave Model",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "424cb4a1970843838c0ab",
+            "questionText": "A radio station broadcasts at a frequency of $!$98.5 \\ MHz$!$. The electromagnetic waves travel from the transmitter to a receiver located $!$100 \\ km$!$ away. Due to atmospheric conditions, the signal experiences a slight delay of $!$0.0001 \\ s$!$. Given that electromagnetic waves are produced by accelerating charges, calculate the phase difference between the emitted signal and the received signal. (Use the speed of light as $!$3.00 \\times 10^8 \\ m/s$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "419d3ee74fe844b2bcee1",
+                    "stepText": "Let's start by identifying the formula that relates the phase difference to the frequency and the time delay. Choose the correct expression for calculating phase difference between two signals when there is a time delay.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0c3ff372-9bd8-4961-9294-ab325dbdc20e",
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta \\phi = 2\\pi f \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta \\phi = \\frac{\\Delta t}{2\\pi f}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta \\phi = f \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bf75f3bcb2564aa7b263e",
+                    "stepText": "Great, now that we have the correct relationship, let\u2019s use the given frequency and time delay. Convert the frequency from $!$MHz$!$ to $!$Hz$!$ and multiply it by the delay ($!$\\Delta t$!$) to determine the intermediate product. What value do you obtain for $!$f \\Delta t$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "9850"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9c0e4c9b66db475484477",
+                    "stepText": "Next, multiply the product from the previous step by $!$2\\pi$!$ to convert it into the phase difference in radians. What is the result of this multiplication?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "61900"
+                    ],
+                    "stepSolveAnswerUnits": "radians",
+                    "stepConcepts": [
+                        "0c3ff372-9bd8-4961-9294-ab325dbdc20e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d67511e3f60b4a4b87943",
+                    "stepText": "Finally, reflect on how the computed phase difference should be interpreted. Should it be reported as the absolute accumulated phase difference, or should it be reduced modulo $!$2\\pi$!$? Please choose the correct interpretation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0c3ff372-9bd8-4961-9294-ab325dbdc20e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Report the absolute phase difference as calculated.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Report the phase difference modulo $!$2\\pi$!$, which would be nearly zero.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Convert the phase difference into degrees instead.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f5c3ba58c8b847ed9a359",
+            "questionText": "Two gravitational wave detectors are located 3000 km apart, and a gravitational wave from a binary black hole merger is detected at the first detector 0.005 s before the second detector. Assuming that the wave travels in a straight line between the detectors, first compute the speed of the gravitational wave from these values, and then, given that the frequency of the detected waves is 100 Hz, calculate the wavelength of these gravitational waves.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4b7914a642814804b35dd",
+                    "stepText": "Let's start by converting the given distance from kilometers to meters. Calculate the distance in meters when the distance is 3000 km.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3000000"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7e6698456db9494b8382d",
+                    "stepText": "Great, now that you have the distance in meters, identify the correct formula to calculate the wave speed when you know the distance and the time delay. Please choose the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = d \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{d}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{\\Delta t}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a85b58e0e8f1450f83386",
+                    "stepText": "Now, use your conversion from Step 1 and the time delay of $!$0.005\\ s$!$ to calculate the speed of the gravitational wave. Divide the distance by the time delay.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "600000000"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f4d0c6b392314e98ba066",
+                    "stepText": "Excellent. Next, identify the correct formula to compute the wavelength when given the wave speed and frequency. Please select the appropriate formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = v \\times f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{v}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{f}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "39d014b263aa4e12ac402",
+                    "stepText": "Now, using the wave speed you calculated in Step 3 and the given frequency of $!$100\\ Hz$!$, compute the wavelength. Divide the speed by the frequency to obtain the wavelength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6000000"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,241 @@
+{
+    "id": "7a2166e355ce4d70bc128",
+    "name": "Radioactive Decay",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "23999f5c09c840be88de2",
+            "questionText": "Technetium-99m ($!$Tc-99m$!$) is a radioactive isotope widely used in medical imaging. It has a half-life ($!$T_{1/2}$!$) of approximately 6 hours and decays via gamma emission. A hospital pharmacy prepares a batch of $!$Tc-99m$!$ with an initial activity ($!$A_0$!$) of 200 mCi at 6:00 AM. Given the random and spontaneous nature of radioactive decay, calculate the activity of the $!$Tc-99m$!$ sample at 6:00 PM on the same day. Apply the formula $!$A = A_0 e^{-\\lambda t}$!$ to determine the remaining activity, where $!$\\lambda$!$ is the decay constant.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "719c42c2e7b84f78a2168",
+                    "stepText": "Let's start by identifying the formula to calculate the decay constant ($!$\\lambda$!$) using the half-life ($!$T_{1/2}$!$). Which of the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d",
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{0.693}{T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = T_{1/2} \\times 0.693$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{T_{1/2}}{0.693}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9ea4ac25371348159933e",
+                    "stepText": "Great, now using the selected formula, calculate the decay constant ($!$\\lambda$!$) given that the half-life ($!$T_{1/2}$!$) is 6 hours. Enter your numerical result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1155"
+                    ],
+                    "stepSolveAnswerUnits": "per hour",
+                    "stepConcepts": [
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d",
+                        "ee32cb2b-386d-44a5-967d-83065fc7128a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3828933032f2472292242",
+                    "stepText": "Now, determine the elapsed time ($!$t$!$) between the starting time of 6:00 AM and the ending time of 6:00 PM. What is this time interval in hours?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12"
+                    ],
+                    "stepSolveAnswerUnits": "hours",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "5f7e9124608b42a3abb7b",
+                    "stepText": "Let's move on to identifying the exponential decay formula used to calculate the remaining activity ($!$A$!$). Which option below correctly provides this formula?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 e^{-\\lambda t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 e^{\\lambda t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = A_0 (1 - \\lambda t)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cea063c4b7094b27a45e1",
+                    "stepText": "Using your earlier result for $!$\\lambda$!$ and the elapsed time $!$t$!$, calculate the product $!$\\lambda \\times t$!$. What is the value of this exponent?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.386"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bdcf771ac7df43bbbf8ff",
+                    "stepText": "Finally, compute the remaining activity ($!$A$!$) of the $!$Tc-99m$!$ sample at 6:00 PM using the decay formula with your calculated exponent. What is the final activity in mCi?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "50"
+                    ],
+                    "stepSolveAnswerUnits": "mCi",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "3836c877ac8b4e75b2ecc",
+            "questionText": "A hospital receives a shipment of I-131 with an initial activity of 50 mCi and a half-life of 8 days. Using the formula $!$A = A_0 e^{-\\lambda t}$!$ and first computing the decay constant $!$\\lambda$!$ based on the half-life, determine the activity $!$A$!$ of the I-131 sample after 24 days.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "bd6534fefda143ae81dad",
+                    "stepText": "Let's start by identifying the relationship between the decay constant and the half-life. Which formula correctly expresses the decay constant $!$\\lambda$!$ in terms of the half-life $!$T_{1/2}$!$? Please choose the appropriate option.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{ln2}{T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = T_{1/2} \\cdot ln2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{T_{1/2}}{ln2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0346e8bad83d4bf49240d",
+                    "stepText": "Great. Now that you have the expression for $!$\\lambda$!$, move on to the exponential decay law. Which formula correctly relates the current activity $!$A$!$, the initial activity $!$A_0$!$, the decay constant $!$\\lambda$!$, and time $!$t$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 e^{-\\lambda t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 (1 - \\lambda t)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = A_0 e^{\\lambda t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "809ef8619fff423aa4117",
+                    "stepText": "Now, calculate the product $!$\\lambda t$!$ using the decay constant expression from step 1 and the time $!$t = 24$!$ days (with the half-life being 8 days). What numerical value do you obtain for $!$\\lambda t$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.079"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4a96e678-9acd-4cc8-8563-b2cf4e679b6d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2e8da527baf7489f9bd0e",
+                    "stepText": "Excellent. Next, use the calculated exponent from step 3 to evaluate the decay factor, which is given by $!$e^{-\\lambda t}$!$. What is the numerical value of this decay factor?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.125"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8c4a55de07904709afe93",
+                    "stepText": "Finally, determine the remaining activity of the I-131 sample after 24 days. Multiply the initial activity by the decay factor you found in step 4. What is the final activity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.25"
+                    ],
+                    "stepSolveAnswerUnits": "mCi",
+                    "stepConcepts": [
+                        "25c877b8-9a98-41c4-9844-addf85fe40a5"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

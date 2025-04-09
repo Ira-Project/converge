@@ -1,0 +1,192 @@
+{
+    "id": "2805bab7f8e542e68ff47",
+    "name": "Gravitational Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "15318bc36e63472bbbf9a",
+            "questionText": "Two asteroids, Asteroid A and Asteroid B, are separated by a significant distance in space. Asteroid A has a mass, $!$M_A = 5 \\times 10^{12} \\text{ kg}$!$, and a radius, $!$r_A = 5000 \\text{ m}$!$. Asteroid B is more massive with a mass, $!$M_B = 9 \\times 10^{13} \\text{ kg}$!$, and a radius, $!$r_B = 20000 \\text{ m}$!$. A spacecraft is tasked with transferring a $!$m = 50 \\text{ kg}$!$ sample from the surface of Asteroid A to the surface of Asteroid B. Determine the amount of work, $!$W$!$, required to move the $!$m = 50 \\text{ kg}$!$ sample from the surface of Asteroid A to the surface of Asteroid B.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1fbba301cf2a4cbead545",
+                    "stepText": "Let's start by identifying the formula that gives the gravitational potential energy of a mass at the surface of an asteroid. Which formula correctly represents the gravitational potential energy $!$U$!$ for a mass $!$m$!$ at a distance $!$r$!$ from a mass $!$M$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$U = -\\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$U = \\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$U = \\frac{1}{2}\\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "06f1eb5f26cd404d9e776",
+                    "stepText": "Great! Now, using the formula, calculate the value of $!$M_A/r_A$!$ for Asteroid A given that $!$M_A = 5 \\times 10^{12} \\text{ kg}$!$ and $!$r_A = 5000 \\text{ m}$!$. What is $!$M_A/r_A$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1000000000"
+                    ],
+                    "stepSolveAnswerUnits": "kg/m",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8718bf0512864eee8a014",
+                    "stepText": "Now, let\u2019s find the value of $!$M_B/r_B$!$ for Asteroid B using $!$M_B = 9 \\times 10^{13} \\text{ kg}$!$ and $!$r_B = 20000 \\text{ m}$!$. Compute $!$M_B/r_B$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4500000000"
+                    ],
+                    "stepSolveAnswerUnits": "kg/m",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d5d19ff110a44a578a582",
+                    "stepText": "With those values, determine the difference $!$(M_B/r_B - M_A/r_A)$!$ that will be used in calculating the work required. What is this difference?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3500000000"
+                    ],
+                    "stepSolveAnswerUnits": "kg/m",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "83df4f542d074197aa07a",
+                    "stepText": "Finally, use the work formula $!$\\Delta U = -G \\cdot m \\cdot (M_B/r_B - M_A/r_A)$!$ with the gravitational constant $!$G = 6.67 \\times 10^{-11} \\text{ N}\\cdot\\text{m}^2/\\text{kg}^2$!$, the mass $!$m = 50 \\text{ kg}$!$, and the difference computed earlier. Calculate the work $!$W$!$ required for the transfer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-11672.5"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "7f8b2e1d1c1142f2880e2",
+            "questionText": "Consider a planet, Planet X, that is significantly more massive than Earth. Planet X has a mass of $!$M = 3.0 \\times 10^{25} \\text{ kg}$!$ and a radius of $!$R = 8.0 \\times 10^6 \\text{ m}$!$. A satellite with a mass of $!$m = 1500 \\text{ kg}$!$ is orbiting Planet X at a distance of $!$r = 2.0 \\times R$!$ from the planet's center. Calculate the total energy, $!$E_T$!$, of the satellite in its orbit around Planet X.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a32705a7819c492893bb3",
+                    "stepText": "Let's start by identifying the formula you need to use to calculate the total energy of a satellite in a circular orbit. Please choose the correct formula for the total energy from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_T = -\\frac{GMm}{2r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_T = -\\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_T = \\frac{1}{2}mv^2 - \\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bda336512a184b9ebdb9e",
+                    "stepText": "Great! Now, determine the actual orbital radius $!$r$!$ where the satellite is orbiting. Given that the satellite is located at $!$r = 2R$!$ and you know $!$R = 8.0 \\times 10^6 \\text{ m}$!$, calculate the value of $!$r$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.6e7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ee17ebfb816e4416a4527",
+                    "stepText": "Next, compute the product $!$GMm$!$ using the provided values: $!$G = 6.67 \\times 10^{-11} \\text{ m}^3\\text{/kg/s}^2$!$, $!$M = 3.0 \\times 10^{25} \\text{ kg}$!$, and $!$m = 1500 \\text{ kg}$!$. What is the numerical value of this product?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.0015e18"
+                    ],
+                    "stepSolveAnswerUnits": "m^3 kg s^-2",
+                    "stepConcepts": [
+                        "913f94ce-32fd-4e0b-81d1-2d6512bc5085",
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1f6c7e2a9dbe495591551",
+                    "stepText": "Moving forward, calculate the value of the denominator by multiplying 2 by the orbital radius $!$r$!$ that you computed. What is the resulting value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.2e7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "93413eaffac2422093f90",
+                    "stepText": "Finally, substitute your computed values into the total energy formula to find $!$E_T$!$. Remember to include the negative sign as indicated by the formula. What is the total energy of the satellite?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-9.38e10"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

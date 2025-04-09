@@ -1,0 +1,198 @@
+{
+    "id": "00ee86c9ee2d448191038",
+    "name": "Thermal Energy Transfers",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "f92949425c24436898626",
+            "questionText": "Calculate the average kinetic energy of a single water molecule at 100 $!$^{\\circ}$!$C, given that the Boltzmann constant is approximately 1.38 x 10^{-23} J/K. (Note: Use the absolute temperature corresponding to 100 $!$^{\\circ}$!$C in your calculation.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7dd505de030a413d91146",
+                    "stepText": "Let's start by converting the temperature from degrees Celsius to Kelvin. Identify the correct relation to convert $!$T_{C}$!$ to $!$T_{K}$!$ without giving away the result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9c067b29-5b92-4476-b2d5-d21d8461c543"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T_{K} = T_{C} + 273$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T_{K} = T_{C} - 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T_{K} = T_{C} \\times 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d61444c6387b4912baa47",
+                    "stepText": "Now, using the selected conversion, compute the absolute temperature in Kelvin for 100 $!$^{\\circ}$!$C.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "373"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "9c067b29-5b92-4476-b2d5-d21d8461c543"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "64873789a70548698eb23",
+                    "stepText": "Great, now let's choose the correct formula for the average kinetic energy of a molecule from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a852a496-e4e5-447f-a0de-1eb60c3de179"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_{k} = \\frac{3}{2} kT$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_{k} = kT$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_{k} = \\frac{1}{2} kT$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5257cb5b4df247e399bbc",
+                    "stepText": "Finally, substitute the given values into the kinetic energy formula to compute the average kinetic energy. Use $!$k = 1.38 \\times 10^{-23}$!$ J/K and the temperature you computed. What is the numerical value of the energy?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.72e-21"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "a852a496-e4e5-447f-a0de-1eb60c3de179",
+                        "f857b477-089b-49c4-9799-2ddfedff841b"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "0af1f72a5afe42318572c",
+            "questionText": "A physics student heats a 50 gram metal block to a temperature of 95 $!$^{\\circ}C$!$ and then places it into a calorimeter containing 200 grams of water initially at 22 $!$^{\\circ}C$!$. The final equilibrium temperature of the water and metal is measured to be 25 $!$^{\\circ}C$!$. Assuming the calorimeter is perfectly insulated and no heat is lost to the surroundings, calculate the specific heat capacity of the metal. The specific heat capacity of water is 4.186 $!$J/g^{\\circ}C$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c24b62de8c514a40beff4",
+                    "stepText": "Let's start by identifying the fundamental formula that relates heat energy, mass, specific heat capacity, and temperature change. Which one of the following formulas is used to calculate the heat transferred?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = mc\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = m\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = c\\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "83743748091349309a9d1",
+                    "stepText": "Great, now consider the metal block. Calculate its change in temperature by subtracting the final temperature from the initial temperature. What is $!$\\Delta T_{metal} = 95 - 25$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "70"
+                    ],
+                    "stepSolveAnswerUnits": "$!$^{\\circ}C$!$",
+                    "stepConcepts": [
+                        "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "83dd0a16bf0b49369fef7",
+                    "stepText": "Now, let\u2019s determine the temperature change for the water. Subtract the initial water temperature from the final temperature. What is $!$\\Delta T_{water} = 25 - 22$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3"
+                    ],
+                    "stepSolveAnswerUnits": "$!$^{\\circ}C$!$",
+                    "stepConcepts": [
+                        "3b7f994b-1da0-41f0-80dc-d5f7eabdaf00"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6f0845b582224ac389622",
+                    "stepText": "Using the heat transfer concept, calculate the total heat gained by the water. This is determined by multiplying its mass, specific heat capacity, and its temperature change. Compute $!$200 \\times 4.186 \\times 3$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2511.6"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5de6188b36fa40f7b6bd9",
+                    "stepText": "Finally, apply the conservation of energy principle. Set the heat lost by the metal equal to the heat gained by the water and solve for the metal's specific heat capacity ($!$c_m$!$). Use the equation $!$50 \\times c_m \\times 70 = 2511.6$!$. What is the value of $!$c_m$!$ when computed as $!$2511.6/(50 \\times 70)$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.7176"
+                    ],
+                    "stepSolveAnswerUnits": "$!$J/(g\\cdot^{\\circ}C)$!$",
+                    "stepConcepts": [
+                        "9414abbf-4451-4fb2-8108-34d36766c93b"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

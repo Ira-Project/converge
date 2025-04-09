@@ -1,0 +1,204 @@
+{
+    "id": "26202b30871645479d6aa",
+    "name": "Electric and Magnetic Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9350da328e1c43399012f",
+            "questionText": "In a mass spectrometer, singly ionized neon atoms ($!$Ne^+$!$) are accelerated through a potential difference of $!$\\Delta V = 500\\ \\text{V}$!$ and then enter a uniform magnetic field of $!$B = 0.10\\ \\text{T}$!$. The magnetic field is perpendicular to the velocity of the ions. The radius of the circular path followed by the neon ions is measured to be $!$r = 0.05 \\text{ m}$!$. Given that the charge of an ion is $!$q = 1.60 \\times 10^{-19} \\text{ C}$!$, calculate the mass of a single neon ion in kilograms.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d266beba961140c6ba326",
+                    "stepText": "Let's start by considering how the kinetic energy gained by the neon ion relates to the potential difference it is accelerated through. Identify the correct equation that relates the kinetic energy $!$\\frac{1}{2}mv^2$!$ of the ion to the work done by the potential difference $!$q\\Delta V$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e5888dcb-4bc0-4c40-8775-34a2ee76ab02",
+                        "2ea34cb0-b608-4374-9d6c-63725f3e0956"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{1}{2}mv^2 = q\\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$mv^2 = q\\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{2}mv = q\\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8e4f0a27af8441d7b1bd8",
+                    "stepText": "Next, consider the effect of the perpendicular magnetic field on the moving ion. Which formula correctly represents the balance between the magnetic force experienced by the ion and the centripetal force required for its circular motion?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "522866e5-3c70-4a23-87f0-6b202495073f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$qvB = \\frac{mv^2}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$qB = \\frac{mv}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$qvB = \\frac{m^2v}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2b60584d02f549068f01e",
+                    "stepText": "Now, you have two expressions for the velocity of the ion: one from the energy consideration and the other from the magnetic force balance. Identify the correct process to set these expressions equal to each other so that the mass of the ion can eventually be isolated.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e5888dcb-4bc0-4c40-8775-34a2ee76ab02",
+                        "522866e5-3c70-4a23-87f0-6b202495073f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\sqrt{\\frac{2q\\Delta V}{m}} = \\frac{qBr}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\sqrt{\\frac{2q\\Delta V}{m}} = \\frac{m}{qBr}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{2q\\Delta V}{m} = \\frac{qBr}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ba4a2afb70ee4e8c9a75f",
+                    "stepText": "Finally, substitute the given numerical values into the derived equation for the mass of the ion, which is of the form $!$m = \\frac{qB^2r^2}{2\\Delta V}$!$. Use $!$q = 1.60\\times10^{-19}\\text{ C}$!$, $!$B = 0.10\\text{ T}$!$, $!$r = 0.05\\text{ m}$!$, and $!$\\Delta V = 500\\text{ V}$!$ to perform the calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.0e-27"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "e5888dcb-4bc0-4c40-8775-34a2ee76ab02",
+                        "522866e5-3c70-4a23-87f0-6b202495073f"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "d584e287b2eb4053a7218",
+            "questionText": "Assuming a uniform electric field exists between the electrodes, how much work is done by the electric field to move a silver ion ($!$q = 1.602 \\times 10^{-19} \\text{ C}$!$) from the anode to the cathode, given that the potential difference is $!$\\Delta V = 12 \\text{ V}$!$ and the distance between the electrodes is $!$d = 0.1 \\text{ m}$!$?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fbecefa6dbea4c3d91eed",
+                    "stepText": "Let's start by identifying the relevant formula that relates the work done by an electric field to the charge and the potential difference. Which of the following formulas expresses this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "306b3cf8-0e61-4b6b-b694-4907440c3f02"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = q \\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = \\Delta V / q$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = q + \\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = q - \\Delta V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b014cfbfb8574c9992c9e",
+                    "stepText": "Great! Now, using the formula selected in the previous step, calculate the work done by substituting the values for the charge and the potential difference. Provide the numerical result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.9224e-18"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "306b3cf8-0e61-4b6b-b694-4907440c3f02"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "195e760781f4451bbcc08",
+                    "stepText": "Now that you have computed the work done, decide whether the given distance between the electrodes is required for this calculation. Which option correctly reflects its role?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c0b53321-be82-4f86-9262-ba7a1549c203"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Yes, the distance is needed.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "No, the distance is not required.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

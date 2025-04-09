@@ -1,0 +1,217 @@
+{
+    "id": "2c7f1163fde440c4a3238",
+    "name": "Current and Circuits",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "c47c48eceb764d68801bd",
+            "questionText": "A car battery with an electromotive force (EMF) of $!$\\varepsilon = 12\\,\\text{V}$!$ powers the headlights. When the headlights are turned on, a current of $!$I = 5\\,\\text{A}$!$ flows through them. The battery has an internal resistance of $!$r = 0.2\\,\\Omega$!$. The headlights are connected directly to the battery terminals. Calculate the power dissipated by the headlights, taking into account the effect of the battery's internal resistance on the terminal potential difference.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3eecc85e2e7a41d9add88",
+                    "stepText": "Let's start by determining the voltage drop across the battery's internal resistance. Please choose the correct formula that relates the voltage drop to the current and resistance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+                        "c5c4647e-135a-4cc3-8d83-7b3ac772662b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = I \\times r$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{r}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = I \\div r$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5579fe6585df4f3ead787",
+                    "stepText": "Now, compute the voltage drop using the given current $!$I = 5\\,\\text{A}$!$ and internal resistance $!$r = 0.2\\,\\Omega$!$. Multiply these values as per the identified formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+                        "c5c4647e-135a-4cc3-8d83-7b3ac772662b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c50d2219a5744adcaf1e5",
+                    "stepText": "Next, determine the effective terminal voltage across the battery when powering the headlights. Identify the correct relationship between the electromotive force $!$\\varepsilon$!$, the voltage drop, and the terminal voltage.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "aa41a63a-b3d4-4ca2-87a2-640e15a9d86b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V_T = \\varepsilon - I\\times r$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V_T = \\varepsilon + I\\times r$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_T = I\\times r - \\varepsilon$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4c2bc93bbd454c45ba2c6",
+                    "stepText": "Using the relationship from the previous step, calculate the terminal voltage given the battery's EMF of $!$12\\,\\text{V}$!$ and the voltage drop you computed earlier.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "11"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "aa41a63a-b3d4-4ca2-87a2-640e15a9d86b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a0bdac76d46d442da2189",
+                    "stepText": "Now, to find the power dissipated by the headlights, first select the correct formula that relates power, current, and voltage.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = I \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{V}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = I + V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5486988174f24add9811d",
+                    "stepText": "Finally, using the effective terminal voltage and the given current, calculate the power dissipated by the headlights.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "55"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "db15a01d836844b38f5e5",
+            "questionText": "In a laboratory experiment, students construct a simple circuit using a 6 V battery and an ammeter. When a copper wire is placed in the gap, the ammeter reads a current of 3 A. Determine the effective resistance of the copper wire.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f9058ded79cf4dcca6b81",
+                    "stepText": "Let's start by identifying the relationship that connects voltage, current, and resistance in a circuit. Please select the formula that will allow you to compute resistance from the given voltage and current.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = I \\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R = V \\times I$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R = \\frac{V}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        }
+                    ]
+                },
+                {
+                    "id": "9947b1704d8d4c48964bb",
+                    "stepText": "Great, now that you have chosen the correct formula, substitute the given values: a battery voltage of $!$6\\,V$!$ and a current of $!$3\\,A$!$, into the formula to calculate the effective resistance. What numerical value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "\u03a9",
+                    "stepConcepts": [
+                        "1c8e3997-e1d9-4422-aace-b2d82e6e249a",
+                        "c5c4647e-135a-4cc3-8d83-7b3ac772662b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "230cafe1a6a64cb7a5cb1",
+                    "stepText": "Now, reflect on the calculated resistance value. Explain in your own words how this value represents the opposition offered by the copper wire to the flow of electric current in the circuit.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c5c4647e-135a-4cc3-8d83-7b3ac772662b",
+                        "256ec7c4-12c5-4544-a05c-e10e460ca12a"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

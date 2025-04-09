@@ -1,0 +1,186 @@
+{
+    "id": "5c450f5512d0451a817e3",
+    "name": "Wave Model",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "5f51ee3f577f4309adf56",
+            "questionText": "A medical ultrasound device emits sound waves into the body to create images of internal organs. These sound waves are longitudinal waves that travel at different speeds through different tissues due to varying densities. Suppose an ultrasound device emits a sound wave with a frequency of $!$5 \\ MHz$!$. After traveling through a layer of fat ($!$v = 1450 \\ m/s$!$), the wave enters a muscle layer ($!$v = 1580 \\ m/s$!$). Calculate the change in wavelength as the ultrasound wave transitions from the fat layer to the muscle layer.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fdfc378ba5754226b08f4",
+                    "stepText": "Let's start by identifying the correct formula needed to calculate the wavelength from the speed and frequency of the wave. Which formula do you think is used to relate wavelength with speed and frequency?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{v}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = v \\times f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{f}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c631ba43a5fa49538ef62",
+                    "stepText": "Great, now that we have the formula, calculate the wavelength in the fat layer. Use the wave's speed in fat and the given frequency. What is the wavelength in fat?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.9e-4"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "15a03eb1499b422f86661",
+                    "stepText": "Now, apply the same formula to calculate the wavelength in the muscle layer. Use the provided speed for the muscle layer. What is the wavelength in muscle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.16e-4"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d",
+                        "e0895152-4252-461e-a416-6c7cf6bf732b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "83465066a1014e33bb4f4",
+                    "stepText": "Finally, determine the change in wavelength as the ultrasound wave transitions from fat to muscle by subtracting the wavelength in fat from the wavelength in muscle. What is the resulting change in wavelength?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.6e-5"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "0a7186da-b22d-4135-a6f5-d6628de8e47d"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "9dc8b8a952d94f9aa976d",
+            "questionText": "A radio antenna emits electromagnetic waves at a frequency of $!$98.5 \\ MHz$!$. These waves travel to a receiver located $!$50 \\ km$!$ away. Due to atmospheric conditions, there's a slight delay in the arrival time of the signal. If the delay is measured to be $!$5 \\ \\mu s$!$, what is the phase difference between the emitted signal and the received signal at the receiver, considering the electromagnetic waves are produced by accelerating charges?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fe48263f55e248308983f",
+                    "stepText": "Let's begin by determining the number of cycles that occur during the delay. Identify the correct formula that relates the frequency $!$f$!$ and the delay $!$\\Delta t$!$ to the total number of cycles.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$N = f \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$N = f / \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$N = \\Delta t / f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6bcff4550d99452abd902",
+                    "stepText": "Great. Now, use the formula from the previous step by multiplying the frequency $!$f = 98.5 \\times 10^6\\,Hz$!$ with the delay $!$\\Delta t = 5 \\times 10^{-6}\\,s$!$ to determine the total number of cycles. What do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "492.5"
+                    ],
+                    "stepSolveAnswerUnits": "cycles",
+                    "stepConcepts": [
+                        "ee8bb1a6-fd07-4f51-81ae-e388a2828537"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "42eebc6a00e041e392762",
+                    "stepText": "Next, note that only the fractional part of the cycles affects the phase difference. To convert this fractional cycle into a phase difference in radians, identify the correct multiplication factor from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0c3ff372-9bd8-4961-9294-ab325dbdc20e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\phi = 2\\pi \\times (\\text{fractional part})$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\phi = \\pi \\times (\\text{fractional part})$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\phi = 360 \\times (\\text{fractional part})$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bd8531088c1843e4941e7",
+                    "stepText": "Finally, compute the phase difference by multiplying the fractional part of the cycles (which is the decimal part from step 2) by the conversion factor you identified. What is the phase difference in radians? (It is approximately equal to multiplying 0.5 by $!$2\\pi$!$)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.1416"
+                    ],
+                    "stepSolveAnswerUnits": "radians",
+                    "stepConcepts": [
+                        "0c3ff372-9bd8-4961-9294-ab325dbdc20e"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

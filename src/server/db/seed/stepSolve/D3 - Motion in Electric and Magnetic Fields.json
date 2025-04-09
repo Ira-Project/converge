@@ -1,0 +1,224 @@
+{
+    "id": "7f76b231212d4e8a9574d",
+    "name": "Motion in Electric and Magnetic Fields",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "ac24cc384291414989d1f",
+            "questionText": "An alpha particle, carrying a charge of $!$q = +2e$!$ and mass $!$m = 6.64 \\times 10^{-27}$!$ kg, is injected horizontally into a region containing a uniform electric field of strength $!$E = 5000$!$ N/C pointing vertically upwards and a uniform magnetic field of magnitude $!$B = 0.1$!$ T directed into the page. The particle travels undeflected through the region, implying that the magnetic force exactly cancels the electric force. After establishing this condition, the electric field is suddenly switched off. Using the fact that the particle initially moves at the exact speed needed for force cancellation, calculate the radius $!$R$!$ of the circular path the alpha particle now follows due solely to the magnetic field.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "bd664f29f2444ac7877a1",
+                    "stepText": "Let's start by identifying the relationship that gives the particle the exact speed needed for the undeflected motion in the presence of the crossed electric and magnetic fields. Please select the correct formula which relates $!$v$, $!$E$, and $!$B$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "869566af-fb78-4d6f-b591-4f86eae31f82"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\frac{E}{B}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = E \\times B$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{B}{E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = E + B$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fad2a840ac844adba52a4",
+                    "stepText": "Now that we have the proper relationship, determine the speed $!$v$!$ by substituting the given values for $!$E$!$ and $!$B$!$. Compute $!$v = \\frac{E}{B}$!$ using the provided numbers.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "50000"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "869566af-fb78-4d6f-b591-4f86eae31f82"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c08149385bf440219e902",
+                    "stepText": "After switching off the electric field, the magnetic force acts as the centripetal force. Identify the correct formula that relates the radius $!$R$, mass $!$m, velocity $!$v, charge $!$q, and magnetic field $!$B$!$ when a charged particle moves in a circular path in a magnetic field.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R = \\frac{mv}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R = \\frac{qB}{mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R = \\frac{m}{qvB}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R = \\frac{qv}{mB}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "49871a2b8d9247be9317a",
+                    "stepText": "Using the correct radius formula from the previous step and the computed speed, calculate the radius $!$R$!$ for the circular motion by substituting $!$m = 6.64 \\times 10^{-27}$!$ kg, $!$v = 50000$!$ m/s, $!$q = 3.2 \\times 10^{-19}$!$ C, and $!$B = 0.1$!$ T. Perform the calculation to find $!$R$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0104"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "12901f9b895c4b4f9e5ec",
+            "questionText": "A cosmic ray proton with charge $!$q = +1.60 \\times 10^{-19}$!$ C and mass $!$m = 1.67 \\times 10^{-27}$!$ kg enters the Earth's magnetic field at a location where the field strength is $!$B = 5 \\times 10^{-5}$!$ T. The proton's initial velocity has two components: one parallel to the magnetic field and one perpendicular to it. The perpendicular component of the velocity is $!$v_{\\perp} = 3 \\times 10^6$!$ m/s. As the proton travels through the atmosphere, it undergoes collisions and gradually loses energy. Assuming that $!$5\\%$!$ of its initial kinetic energy is lost per second, determine the radius of the spiral path after $!$t = 5$!$ seconds. You may assume that only the perpendicular component of velocity is affected by the collisions, and that energy loss translates directly to a reduction in this perpendicular velocity component.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f423d5e8a0184ff780557",
+                    "stepText": "Let's start by identifying the formula that relates the radius of the circular motion of a charged particle in a magnetic field to its mass, perpendicular velocity, charge, and magnetic field strength. Choose the correct formula:",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f69857d1-d285-419d-8458-a425ac5cf3d5",
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$r = \\frac{mv}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$r = \\frac{qB}{mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$r = \\frac{mv^2}{qB}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "26c7569800ea4dd7bf671",
+                    "stepText": "Great. Now, use the identified formula and the initial perpendicular velocity $!$v_{\\perp}=3\\times10^6$!$ m/s to compute the initial radius $!$r_0$!$. Substitute the values for mass, charge, and field strength into the formula. What is the computed initial radius?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "626"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bd486eb6a87240ac99f10",
+                    "stepText": "Now consider the energy loss. Due to collisions, the proton loses 5% of its perpendicular kinetic energy per second. Recall that kinetic energy is proportional to the square of velocity. Identify the correct relationship that shows how the perpendicular velocity changes when the energy is reduced by a certain fraction:",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2528a69f-0369-4021-ac12-870b5423cd8a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = v_0 \\sqrt{\\frac{E}{E_0}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = v_0 \\frac{E}{E_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{E}{v_0\\sqrt{E_0}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4281e77051b84d3797654",
+                    "stepText": "Using the relationship you selected, calculate the new perpendicular velocity after 5 seconds. Remember, the energy reduction factor after 5 seconds is $(0.95)^5$, and the velocity scales with the square root of the remaining energy fraction. What is the computed new perpendicular velocity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2640000"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "2528a69f-0369-4021-ac12-870b5423cd8a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "0b4e64c203a74f8b88b66",
+                    "stepText": "Finally, use the same radius formula from Step 1 with the new perpendicular velocity to determine the new radius of the spiral path after 5 seconds. What is the computed new radius?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "550"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "f34446c8-9452-48c0-ab50-0cb3fd1b9679"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

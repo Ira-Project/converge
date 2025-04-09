@@ -1,0 +1,174 @@
+{
+    "id": "764521b42d2343b4addfa",
+    "name": "Current and Circuits",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "bd6f9667caa34e41a4165",
+            "questionText": "In a laboratory experiment, a 12 V battery is connected to a circuit containing an ammeter and a gap for testing materials. When a copper wire is inserted into the gap, the ammeter reads 2 A, and when a glass rod is inserted, the ammeter reads 0.001 A. Assuming that the ammeter has negligible resistance and does not affect the voltage across the tested material, what is the ratio of the power dissipated by the copper wire to the power dissipated by the glass rod?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f69c096a98ae45d5a4c53",
+                    "stepText": "Let's start by identifying the formula that we need to calculate the power dissipated in each component. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = IV$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = I^2V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{I}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{V}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "55632dfed6f44a9c8063d",
+                    "stepText": "Great, now using the identified power formula, calculate the power dissipated by the copper wire with a battery voltage of $!$12\\,V$!$ and a current of $!$2\\,A$!$. What is the resulting power output?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "24"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4fc5bf8b43034183aefde",
+                    "stepText": "Now, apply the same power formula to the glass rod case where the battery voltage is $!$12\\,V$!$ and the current is $!$0.001\\,A$!$. Compute the power dissipated by the glass rod.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.012"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2da1aaf48eb44b3cbf379",
+                    "stepText": "Finally, determine the ratio of the power dissipated by the copper wire to that dissipated by the glass rod by dividing the power values obtained in the previous steps. What is the numerical ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2000"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "5bcc0743a4f449c687ccd",
+            "questionText": "A string of 50 LED Christmas lights is connected in series to a 120 V power source. Each LED is designed to operate at 2 V and consumes 0.1 W of power. Assuming that the resistance of each LED is uniform and consistent, calculate the current flowing through the circuit when all LEDs are functioning properly.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "da13418057a84cf5924c3",
+                    "stepText": "Let's start by identifying the correct formula that can be used to compute the current when you know the power and voltage of a component. Choose the formula that relates current to power and voltage.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{P}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = P \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{V}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "be19e37da06944a7b8fd8",
+                    "stepText": "Great, now that we have the correct formula, substitute the LED's power and voltage values into the formula to calculate the current through one LED. What numerical result do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.05"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "82634878-faca-47c5-b8ff-c0c3bd335aae"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c2a25eece7774a829423f",
+                    "stepText": "Now, considering that the LEDs are connected in series, determine how the current behaves in such a circuit. Select the statement that best explains the behavior of current in a series circuit.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7e1eb003-fe0f-4d19-bc2c-5bbf746731d8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "The current is the sum of the currents through each LED.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The current remains the same through all LEDs.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The current decreases for each LED added.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

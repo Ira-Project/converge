@@ -1,0 +1,231 @@
+{
+    "id": "8562e4f35a1a40599ae7d",
+    "name": "Thermal Energy Transfers",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "1029ba9fa9524988b7acc",
+            "questionText": "A chef is using a double boiler to melt chocolate for a delicate sauce. The double boiler consists of a pot filled with 2.0 kg of water, which is heated on a stove, and a bowl containing the chocolate that sits above the simmering water. The water is initially at $!$20^{\\circ}C$!$ and is brought to its boiling point ($!$100^{\\circ}C$!$). Assume that all the energy transferred to the water is used to raise its temperature and eventually vaporize it. The specific heat capacity of water is $!$4186 \\; J/kg \\cdot K$!$, and the specific latent heat of vaporization of water is $!$2.26 \\times 10^6 \\; J/kg$!$. Calculate the total amount of heat energy (in Joules) that must be supplied to the water to bring it from its initial temperature to its boiling point and then completely vaporize it.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0cc2a4ba6d154ffeaadad",
+                    "stepText": "Let's start by determining the appropriate formula to calculate the energy needed to raise the temperature of a substance. Please select the formula that relates mass, specific heat capacity, and temperature change.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = m c \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = \\frac{m}{c \\Delta T}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = m + c + \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b3fac1486fc0421b9b0ad",
+                    "stepText": "Great! Now, using the formula you selected, calculate the heat energy required to raise the temperature of 2.0 kg of water from 20$!$^{\\circ}C$!$ to 100$!$^{\\circ}C$!$. (Hint: Compute the temperature change first.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "669760"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9",
+                        "41c41e12-90ac-4147-8422-ecac5667f6f1"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3ade3dc099ce4e3095540",
+                    "stepText": "Next, we need to identify the correct formula for the energy required to change the phase of a substance without a temperature change. Which formula relates the mass of the substance and its specific latent heat?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "17837b86-984f-4bc9-9bdc-22a99995ea2b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = mL$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = \\frac{L}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = m + L$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8c94913e2f1e4751b4980",
+                    "stepText": "Well done. Now, compute the heat energy required to completely vaporize 2.0 kg of water at its boiling point using the latent heat. Use the value provided for latent heat of vaporization.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4520000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "17837b86-984f-4bc9-9bdc-22a99995ea2b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bb964344cb9a471880c49",
+                    "stepText": "Finally, combine the energy values from heating the water and vaporizing it to obtain the total heat energy needed. What is the sum of these energies?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5189760"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "3ed6a9b8-e10e-4b9d-8aee-d243dc6ee1d9",
+                        "17837b86-984f-4bc9-9bdc-22a99995ea2b"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "8c4fd39f91e944e7ad4a1",
+            "questionText": "A blacksmith is heating a horseshoe in a forge. The horseshoe, with a surface area of $!$0.05 \\; m^2$!$, is initially at a room temperature of $!$25^{\\circ}C$!$, and is heated until it reaches a temperature of $!$800^{\\circ}C$!$. Assuming the horseshoe behaves as a black body, calculate the total power radiated by the horseshoe at $!$800^{\\circ}C$!$. (Stefan-Boltzmann constant $!$\\sigma = 5.67 \\times 10^{-8} \\; W \\cdot m^{-2} \\cdot K^{-4}$!$)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8ecafd8fcc8a47f9991e2",
+                    "stepText": "Let's start by determining how to convert a temperature from Celsius to Kelvin. Please select the correct conversion formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9c067b29-5b92-4476-b2d5-d21d8461c543"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T_K = T_C + 273$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T_K = T_C - 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T_K = 273 - T_C$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7fb06062049841cf8e2a9",
+                    "stepText": "Great, now use the chosen conversion to calculate the final temperature in Kelvin when the horseshoe is at $!$800^{\\circ}C$!$. What numerical value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1073"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "9c067b29-5b92-4476-b2d5-d21d8461c543"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "18d46dc225f74241a4f38",
+                    "stepText": "Next, we need to identify the black body radiation formula for power based on the Stefan-Boltzmann law. Which of the following formulas is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5acfffeb-fd01-4402-a3a7-3abc5766789a",
+                        "24ae2b53-8791-43f2-912d-9283b7a97b08"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = A\\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = A\\sigma T^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\sigma T^4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "dab5d71ad6c34086887ad",
+                    "stepText": "Now, with the Kelvin temperature found, compute the value of $!$T^4$!$ for $!$T = 1073\\;K$!$. What numerical result do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.325e12"
+                    ],
+                    "stepSolveAnswerUnits": "K^4",
+                    "stepConcepts": [
+                        "24ae2b53-8791-43f2-912d-9283b7a97b08"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "fc3707d2d1624b4ca23d2",
+                    "stepText": "Finally, substitute the given values into the Stefan-Boltzmann law using $!$A = 0.05\\;m^2$!$, $!$\\sigma = 5.67 \\times 10^{-8}\\;W\\,m^{-2}\\,K^{-4}$!$, and your computed $!$T^4$!$ to calculate the total power radiated. What is the final numerical value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3757"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "5acfffeb-fd01-4402-a3a7-3abc5766789a",
+                        "24ae2b53-8791-43f2-912d-9283b7a97b08"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

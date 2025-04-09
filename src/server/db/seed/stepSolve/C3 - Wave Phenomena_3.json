@@ -1,0 +1,195 @@
+{
+    "id": "a8e1ac5202c54a7e88240",
+    "name": "Wave Phenomena",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "60a19d6583ba433ab1fe1",
+            "questionText": "Consider an oil slick floating on water. The refractive index of the oil is $!$n_{oil} = 1.45$!$, and the refractive index of the water is $!$n_{water} = 1.33$!$. Suppose a region of the slick appears green in color, corresponding to a wavelength of $!$\\lambda = 520 \\text{ nm}$!$ in air. Assuming that the green color results from constructive interference, calculate the minimum thickness $!$t$!$ of the oil slick in that region. Assume near-normal incidence of light.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2830a03ae4924bf9b8531",
+                    "stepText": "Let's start by identifying the interference condition for a thin film when one of the reflected beams undergoes a $\\pi$ phase shift. Please select the correct formula representing the condition for constructive interference in this scenario.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0385489a-6c6b-46fb-974a-29b815bc23e2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$2n_{oil}t = (m + \\frac{1}{2})\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$2n_{oil}t = m\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$n_{oil}t = (m + \\frac{1}{2})\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "32b2d2e1eabc4207baf44",
+                    "stepText": "Great, now that you have the interference condition, consider the fact that we are looking for the minimum thickness. This corresponds to choosing the smallest non-negative integer value for m. Which option shows the correct condition when m is set to this minimal value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0385489a-6c6b-46fb-974a-29b815bc23e2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$2n_{oil}t = \\frac{1}{2}\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$2n_{oil}t = \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$2n_{oil}t = 2\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "052be9a7da3342c88546c",
+                    "stepText": "Now that you have the interference equation for the minimum thickness, rearrange the equation to solve for the film thickness $!$t$!$ in terms of the wavelength $!$\\lambda$!$ and the refractive index of oil $!$n_{oil}$!$. Which of the following expressions is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "775699d0-3d10-42ba-a511-d9e30b360a8f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$t = \\frac{\\lambda}{4n_{oil}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$t = \\frac{\\lambda}{2n_{oil}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = \\frac{\\lambda}{n_{oil}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "84905be3e4ac4a4abd5c2",
+                    "stepText": "Finally, substitute the numerical values $!$\\lambda = 520\\,\\text{nm}$!$ and $!$n_{oil} = 1.45$!$ into your expression and calculate the minimum thickness $!$t$!$. Compute this value by evaluating $!$t = \\frac{520}{4 \\times 1.45}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "89.7"
+                    ],
+                    "stepSolveAnswerUnits": "nm",
+                    "stepConcepts": [
+                        "775699d0-3d10-42ba-a511-d9e30b360a8f"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "7f31dbbc22624e5da59e5",
+            "questionText": "In a double-slit experiment, light with a wavelength of $!$\\lambda = 632.8 \\text{ nm}$!$ is incident on two slits separated by a distance of $!$d = 0.2 \\text{ mm}$!$. The interference pattern is observed on a screen placed at a distance of $!$D = 3.0 \\text{ m}$!$ from the slits. Determine the distance $!$s$!$ on the screen between the central bright fringe and the third bright fringe ($!$n = 3$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7815ab5de9524067afff4",
+                    "stepText": "Let's start by recalling which formula we should use to determine the position of the bright fringes in a double-slit experiment. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a4304044-8d79-4983-a6c4-1fc06a60398b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$y_{n} = \\frac{n \\lambda D}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$y_{n} = \\frac{n \\lambda d}{D}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$y_{n} = \\frac{d \\sin \\theta}{n \\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e70c0b0b121d4901820e9",
+                    "stepText": "Great. Now, let's convert the wavelength from nanometers to meters. Given that $!$1 \\text{ nm} = 10^{-9} \\text{ m}$!$, convert $!$632.8 \\text{ nm}$!$ to meters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.328e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "eaf5c560019c4fb5bf086",
+                    "stepText": "Next, convert the slit separation from millimeters to meters. Given that $!$1 \\text{ mm} = 10^{-3} \\text{ m}$!$, convert $!$0.2 \\text{ mm}$!$ to meters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2e-4"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "48d224ccf78b4123a811b",
+                    "stepText": "Now that you have identified the formula and performed the necessary unit conversions, substitute the values with $!$n = 3$!$, the converted wavelength, $!$D = 3.0 \\text{ m}$!$, and the converted slit separation into the formula. Calculate the distance on the screen between the central and third bright fringe.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0285"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a4304044-8d79-4983-a6c4-1fc06a60398b"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

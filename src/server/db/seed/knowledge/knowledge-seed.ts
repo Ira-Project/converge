@@ -8,7 +8,7 @@ import { generateId } from "lucia";
 
 import { knowledgeZapAssignmentAttempts, knowledgeZapAssignments } from "../../schema/knowledgeZap/knowledgeZapAssignment";
 import { multipleChoiceAnswerOptions, multipleChoiceAttempt, multipleChoiceQuestions } from "../../schema/knowledgeZap/multipleChoiceQuestions";
-import { ActivityType, KnowledgeZapQuestionType } from "@/lib/constants";
+import { ActivityType, KnowledgeZapQuestionType, Roles } from "@/lib/constants";
 import { knowledgeZapQuestionAttempts, knowledgeZapQuestions, knowledgeZapQuestionsToConcepts, knowledgeZapQuestionToAssignment } from "../../schema/knowledgeZap/knowledgeZapQuestions";
 import { matchingAnswerOptions, matchingAttempt, matchingAttemptSelection, matchingQuestions } from "../../schema/knowledgeZap/matchingQuestions";
 import { orderingAnswerOptions, orderingAttempt, orderingAttemptSelection, orderingQuestions } from "../../schema/knowledgeZap/orderingQuestions";
@@ -626,7 +626,7 @@ export async function updateKnowledgeZapAssignment(topicName: string) {
     // Check if activity already exists in the classroom
     const existingActivity = await db.select().from(activity).where(
       and(
-        eq(activity.assignmentId, existingAssignment[0]?.id ?? ""),
+        eq(activity.assignmentId, knowledgeZapAssignment.id),
         eq(activity.classroomId, classroom.id)
       )
     )
@@ -987,27 +987,31 @@ export async function calculateUserConceptScore(userId: string, conceptId: strin
   const dayTrack = conceptTrackers.filter(a => a.createdAt > new Date(Date.now() - 24 * 60 * 60 * 1000));
   const dayCorrect = dayTrack.filter(a => a.isCorrect).length;
   const dayTotal = dayTrack.length;
-  const dayScore = dayTotal > 0 ? (dayCorrect / dayTotal) * 100 : 0;
+  const dayScore = (dayCorrect / dayTotal) * 100;
 
   const weekTrack = conceptTrackers.filter(a => a.createdAt > new Date(Date.now() - 7 * 24 * 60 * 60 * 1000));
   const weekCorrect = weekTrack.filter(a => a.isCorrect).length;
   const weekTotal = weekTrack.length;
-  const weekScore = weekTotal > 0 ? (weekCorrect / weekTotal) * 100 : 0;
+  const weekScore = (weekCorrect / weekTotal) * 100;
 
   const biWeekTrack = conceptTrackers.filter(a => a.createdAt > new Date(Date.now() - 14 * 24 * 60 * 60 * 1000));
   const biWeekCorrect = biWeekTrack.filter(a => a.isCorrect).length;
   const biWeekTotal = biWeekTrack.length;
-  const biWeekScore = biWeekTotal > 0 ? (biWeekCorrect / biWeekTotal) * 100 : 0;
+  const biWeekScore = (biWeekCorrect / biWeekTotal) * 100;
 
   const monthTrack = conceptTrackers.filter(a => a.createdAt > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
   const monthCorrect = monthTrack.filter(a => a.isCorrect).length;
   const monthTotal = monthTrack.length;
-  const monthScore = monthTotal > 0 ? (monthCorrect / monthTotal) * 100 : 0;
+  const monthScore = (monthCorrect / monthTotal) * 100;
 
   const threeMonthTrack = conceptTrackers.filter(a => a.createdAt > new Date(Date.now() - 90 * 24 * 60 * 60 * 1000));
   const threeMonthCorrect = threeMonthTrack.filter(a => a.isCorrect).length;
   const threeMonthTotal = threeMonthTrack.length;
   const threeMonthScore = threeMonthTotal > 0 ? (threeMonthCorrect / threeMonthTotal) * 100 : 0;
+
+  const avgScore = calculateAverageScore([totalScore, dayScore, weekScore, biWeekScore, monthScore, threeMonthScore]);
+
+  console.log(`${dayScore}, ${weekScore}, ${biWeekScore}, ${monthScore}, ${threeMonthScore}, ${avgScore}`);
 
   return {
     userId,
@@ -1019,8 +1023,17 @@ export async function calculateUserConceptScore(userId: string, conceptId: strin
     weekScore: weekScore.toFixed(2),
     biWeekScore: biWeekScore.toFixed(2),
     monthScore: monthScore.toFixed(2),
-    threeMonthScore: threeMonthScore.toFixed(2)
+    threeMonthScore: threeMonthScore.toFixed(2),
+    averageScore: calculateAverageScore([totalScore, dayScore, weekScore, biWeekScore, monthScore, threeMonthScore])
   };
+}
+
+function calculateAverageScore(scores: number[]): string {
+  const validScores = scores.filter(score => !isNaN(score));
+  if (validScores.length === 0) return "0.00";
+  
+  const sum = validScores.reduce((acc, score) => acc + score, 0);
+  return (sum / validScores.length).toFixed(2);
 }
 
 export async function printConceptScores() {
@@ -1059,6 +1072,15 @@ export async function printConceptScores() {
   const userMap = new Map();
   const userIds = [...new Set(userConceptPairs.map(pair => pair.userId))];
   
+  const excludedEmails = [
+    'vignesh@iraproject.com',
+    'likhit@iraproject.com',
+    'vig9295@gmail.com',
+    'likhitnayak@gmail.com'
+  ];
+  
+  const filteredUserIds = [];
+  
   for (const userId of userIds) {
     if (userId) {
       const userResults = await db.select({
@@ -1070,26 +1092,33 @@ export async function printConceptScores() {
       
       if (userResults.length > 0 && userResults[0]) {
         const userData = userResults[0];
+        
+        // Skip users with excluded emails or role 'teacher'
+        if (
+          excludedEmails.includes(userData.email ?? '') || 
+          userData.role === Roles.Teacher
+        ) {
+          continue;
+        }
+        
         userMap.set(userId, {
           name: userData.name ?? 'Unknown',
           email: userData.email ?? 'Unknown',
           role: userData.role ?? 'Unknown'
         });
-      } else {
-        userMap.set(userId, {
-          name: 'Unknown',
-          email: 'Unknown',
-          role: 'Unknown'
-        });
+        
+        filteredUserIds.push(userId);
       }
     }
   }
+  
+  console.log(`Found ${filteredUserIds.length} users after filtering out excluded emails and teachers`);
   
   // Calculate scores for each pair
   const results = [];
   
   for (const pair of userConceptPairs) {
-    if (pair.userId && pair.conceptId) {
+    if (pair.userId && pair.conceptId && filteredUserIds.includes(pair.userId)) {
       const score = await calculateUserConceptScore(pair.userId, pair.conceptId);
       const userData = userMap.get(pair.userId) ?? { name: 'Unknown', email: 'Unknown', role: 'Unknown' };
       
@@ -1105,41 +1134,44 @@ export async function printConceptScores() {
         TotalScore: score.totalScore,
         DayScore: score.dayScore,
         WeekScore: score.weekScore,
-        MonthScore: score.monthScore
+        MonthScore: score.monthScore,
+        AverageScore: score.averageScore
       });
     }
   }
   
   // Print CSV header
-  console.log("UserId,UserName,UserEmail,UserRole,ConceptId,ConceptName,TotalAttempts,TotalCorrect,TotalScore,DayScore,WeekScore,MonthScore");
+  // console.log("UserId,UserName,UserEmail,UserRole,ConceptId,ConceptName,TotalAttempts,TotalCorrect,TotalScore,DayScore,WeekScore,MonthScore,AverageScore");
   
-  // Print CSV rows
-  for (const result of results) {
-    console.log(
-      `${result.UserId},` +
-      `"${result.UserName}",` +
-      `"${result.UserEmail}",` +
-      `${result.UserRole},` +
-      `${result.ConceptId},` +
-      `"${result.ConceptName.replace(/"/g, '""')}",` + // Escape quotes in CSV
-      `${result.TotalAttempts},` +
-      `${result.TotalCorrect},` +
-      `${result.TotalScore},` +
-      `${result.DayScore},` +
-      `${result.WeekScore},` +
-      `${result.MonthScore}`
-    );
-  }
+  // // Print CSV rows
+  // for (const result of results) {
+  //   console.log(
+  //     `${result.UserId},` +
+  //     `"${result.UserName}",` +
+  //     `"${result.UserEmail}",` +
+  //     `${result.UserRole},` +
+  //     `${result.ConceptId},` +
+  //     `"${result.ConceptName.replace(/"/g, '""')}",` + // Escape quotes in CSV
+  //     `${result.TotalAttempts},` +
+  //     `${result.TotalCorrect},` +
+  //     `${result.TotalScore},` +
+  //     `${result.DayScore},` +
+  //     `${result.WeekScore},` +
+  //     `${result.MonthScore},` +
+  //     `${result.AverageScore}`
+  //   );
+  // }
   
-  // Also print in table format for convenience
-  console.log("\nUser-Concept Score Summary (Table Format):");
-  console.table(results.map(result => ({
-    UserId: result.UserId.substring(0, 8) + "...",
-    UserName: result.UserName,
-    UserEmail: result.UserEmail,
-    UserRole: result.UserRole,
-    Concept: result.ConceptName.substring(0, 15) + "...",
-    TotalAttempts: result.TotalAttempts,
-    TotalScore: result.TotalScore + "%"
-  })));
+  // // Also print in table format for convenience
+  // console.log("\nUser-Concept Score Summary (Table Format):");
+  // console.table(results.map(result => ({
+  //   UserId: result.UserId.substring(0, 8) + "...",
+  //   UserName: result.UserName,
+  //   UserEmail: result.UserEmail,
+  //   UserRole: result.UserRole,
+  //   Concept: result.ConceptName.substring(0, 15) + "...",
+  //   TotalAttempts: result.TotalAttempts,
+  //   TotalScore: result.TotalScore + "%",
+  //   AverageScore: result.AverageScore + "%"
+  // })));
 }
