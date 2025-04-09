@@ -17,3 +17,63 @@ export function formatDate(date: Date) {
 export function formatDateShort(date: Date) {
   return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric', hour: 'numeric', minute: 'numeric' });
 }
+
+/**
+ * Scrolls to the element with the specified ID, using the window's hash
+ * @param hash The ID of the element to scroll to (without the # symbol)
+ * @param options Options for scrolling
+ */
+export function scrollToHashElement(hash: string, options?: { 
+  behavior?: ScrollBehavior; 
+  delay?: number;
+  callback?: () => void;
+  offset?: number;
+}) {
+  if (!hash) return;
+  
+  const delay = options?.delay ?? 300;
+  const behavior = options?.behavior ?? 'smooth';
+  const offset = options?.offset ?? 0;
+  
+  setTimeout(() => {
+    const element = document.getElementById(hash);
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior,
+      });
+      
+      options?.callback?.();
+    }
+  }, delay);
+}
+
+/**
+ * Sets up a listener for hash changes and scrolls to the element
+ * when the hash changes or on initial load
+ * @param dependencies Array of dependencies to re-run the effect when they change
+ * @param offset Optional vertical offset in pixels from the element
+ * @returns A cleanup function to remove the event listener
+ */
+export function useHashNavigation(dependencies: React.DependencyList = [], offset = 0) {
+  const handleHashScroll = () => {
+    const hash = window.location.hash.substring(1);
+    if (hash) {
+      scrollToHashElement(hash, { offset });
+    }
+  };
+
+  // Run on initial load
+  handleHashScroll();
+
+  // Listen for hash changes
+  window.addEventListener('hashchange', handleHashScroll);
+  
+  // Return cleanup function
+  return () => {
+    window.removeEventListener('hashchange', handleHashScroll);
+  };
+}

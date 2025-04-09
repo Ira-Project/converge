@@ -29,7 +29,6 @@ interface StepSolveStepComponentProps {
     userAnswer?: string;
     optionId?: string;
   }) => Promise<void>;
-  handleContinue: () => void;
   isCorrect?: boolean;
   isLoading: boolean;
   isDisabled: boolean;
@@ -42,7 +41,7 @@ interface submitAnswerInput {
 }
 
 const StepSolveStepComponent = ({ 
-  id, stepNumber, stepText, stepTextPart2, stepImage, options, answer, handleSubmitAnswer, isCompleted, isCorrect, isLoading, isDisabled, handleContinue, isLast, stepSolveAnswerUnits
+  id, stepNumber, stepText, stepTextPart2, stepImage, options, answer, handleSubmitAnswer, isCompleted, isCorrect, isLoading, isDisabled, isLast, stepSolveAnswerUnits
 }: StepSolveStepComponentProps) => {
 
   const handleSubmit = async (input: submitAnswerInput) => {
@@ -64,7 +63,7 @@ const StepSolveStepComponent = ({
   })
 
   return (
-    <div className="mx-auto flex flex-col gap-4">
+    <div className="mx-auto flex flex-col gap-4 mb-12">
       <h2 className="text-sm font-bold text-muted-foreground text-center">STEP {stepNumber}</h2>
       <div className="text-center">
         {stepText && <FormattedText text={stepText} />}
@@ -78,7 +77,7 @@ const StepSolveStepComponent = ({
           {isCompleted ? options && options.length > 0 && (
             <>  
               <p className="text-center text-sm text-muted-foreground"> 
-                You selected: 
+                You got it right! Your selected option was: 
               </p>
               <StepOption 
                 step={options?.find(option => option.id === form.getValues('optionId'))?.optionText ?? ''}
@@ -129,7 +128,8 @@ const StepSolveStepComponent = ({
           }
 
           {!isCompleted ? (
-            answer && answer?.length > 0 && (        
+            answer && answer?.length > 0 && 
+            !(answer.length === 1 && answer[0] === "") && (        
               <div className="flex flex-row gap-2 items-center justify-center">
                 <FormField
                   control={form.control}
@@ -178,28 +178,6 @@ const StepSolveStepComponent = ({
           {!isCompleted && isCorrect === false && (
             <p className="text-red-500 text-sm">Incorrect answer. Please try again.</p>
           )}  
-
-          {!isCompleted && isCorrect === true && !isLast && (
-            <>
-              <p className="text-green-500 text-sm">Good job! You got it.</p>
-              <LoadingButton 
-                variant="link"
-                className="p-2 bottom-0 right-0 mt-auto ml-auto hover:no-underline"
-                onClick={handleContinue}>
-                <div className="flex flex-row gap-2">
-                <span className="my-auto font-semibold">
-                  Continue
-                </span>
-                <Image 
-                  className="my-auto"
-                  src="/images/step-solve.png" 
-                  alt="Step Solve"
-                  width={32} 
-                  height={32} />
-                </div>
-              </LoadingButton>
-            </>
-          )}
 
           {isLast && isCompleted && (
             <div className="text-center mt-4">

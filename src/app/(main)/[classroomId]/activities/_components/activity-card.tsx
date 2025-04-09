@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { ExternalLinkIcon, InfoCircledIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { cn, formatDateShort } from '@/lib/utils';
-import { Paths, Roles } from '@/lib/constants';
+import { type ActivityType, Paths, Roles } from '@/lib/constants';
 
 interface ActivityCardProps {
   activity: Activity;
@@ -15,7 +15,7 @@ interface ActivityCardProps {
 
 const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role, classroomId }) => {
   const { id, typeText, isLive, dueDate } = activity;
-  const { url, iconImage, title, tags, colour, description } = getMetaDataFromActivityType(typeText, id);
+  const { url, iconImage, title, tags, colour, description } = getMetaDataFromActivityType(typeText as ActivityType, id);
 
 
   return (

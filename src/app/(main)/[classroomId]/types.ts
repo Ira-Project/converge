@@ -12,3 +12,11 @@ export interface Activity {
   order: number;
   dueDate: Date | null;
 }
+
+export interface Topic {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  activities: Activity[];
+}
