@@ -1,9 +1,10 @@
 import React from 'react';
 import ActivityCard from './activity-card';
-import { type Topic } from '../../types';
+import { type Topic } from '../types';
 import { Roles } from '@/lib/constants';
 import { Separator } from '@/components/ui/separator';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
+
 interface TopicSectionProps {
   topic: Topic;
   role: Roles;

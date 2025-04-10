@@ -11,6 +11,7 @@ import { LightningBoltIcon } from '@/components/icons';
 import MultipleChoiceQuestion from './multiple-choice-question';
 import OrderingQuestion from './ordering-question';
 import { KnowledgeZapQuestionType } from '@/lib/constants';
+
 interface KnowledgeZapAssignmentViewProps {
   assignmentAttemptId: string;
   knowledgeZapAssignment?: RouterOutputs["knowledgeZap"]["getKnowledgeZapRevisionActivity"];
@@ -185,10 +186,16 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
                 </div>
               ) : (
                 <div className="flex flex-col gap-4 px-16 py-32">
-                  <p className="text-center text-2xl">
-                    Congratulations! You have completed your revision. <br /> 
-                    You can always revisit this activity to revise your concepts.
-                  </p>                  
+                  {knowledgeZapAssignment && knowledgeZapAssignment?.questions.length > 0 ? (
+                    <p className="text-center text-2xl">
+                      Congratulations! You have completed your revision. <br /> 
+                      You can always revisit this activity to revise your concepts.
+                    </p>                  
+                  ) : (
+                    <p className="text-center text-2xl">
+                      No questions to revise. Please check back later when activities are assigned.
+                    </p>
+                  )}
                 </div>
               )}
             </CardContent>

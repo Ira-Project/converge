@@ -6,7 +6,7 @@ import { type Roles } from '@/lib/constants';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
 import { useHashNavigation } from '@/lib/utils';
-import { type Topic } from '../../types';
+import { type Topic } from '../types';
 
 interface TopicListProps {
   topics: Topic[];

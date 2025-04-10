@@ -1,5 +1,5 @@
 import React from 'react';
-import { type Activity } from '../../types';
+import { type Activity } from '../types';
 import { getMetaDataFromActivityType } from '@/lib/utils/activityUtils';
 import Image from 'next/image';
 import { ExternalLinkIcon, InfoCircledIcon } from '@radix-ui/react-icons';

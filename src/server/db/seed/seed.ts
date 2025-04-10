@@ -202,7 +202,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createConceptMappingAssignment();
 
 // USER DELETION
-// await deleteUser("vignesh+2@iraproject.com");
+// await deleteUser("vignesh+1@iraproject.com");
 
 // MIGRATE ACTIVITY TYPE TO TEXT
 // await migrateActivityTypeToText();

@@ -1,6 +1,6 @@
 // OrderingQuestion.tsx
 import React, { useState } from 'react';
-import type { MultipleChoiceOption } from '../types';
+import type { MultipleChoiceOption } from '../../types';
 import { LoadingButton } from '@/components/loading-button';
 import Image from 'next/image';
 
