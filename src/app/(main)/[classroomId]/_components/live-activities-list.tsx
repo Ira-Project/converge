@@ -14,9 +14,9 @@ interface LiveActivitiesListProps {
 const LiveActivitiesList: React.FC<LiveActivitiesListProps> = ({ activities, role, classroomId }) => {
   
   return (
-    <div className="overflow-x-auto max-w-full min-h-[400px]">
+    <div className="overflow-x-auto max-w-full min-h-[300px]">
       <div className="flex items-center justify-between">
-        <p className="text-lg font-bold mb-4">
+        <p className="text-xl font-bold mb-4">
           {role === Roles.Student ? "Assigned to You" : "Activities You Assigned"}
         </p>
         <Link href={`${Paths.Classroom}${classroomId}/${Paths.Activities}`} className="text-sm text-gray-500 underline">

@@ -11,7 +11,7 @@ const RevisionSection: React.FC<RevisionSectionProps> = ({ classroomId }) => {
   
   return (
     <div className="px-8">
-      <p className="text-lg font-bold mb-4">
+      <p className="text-xl font-bold mb-4">
         Revision and Practice
       </p>
       <div className="grid grid-cols-3 gap-8 mb-8">

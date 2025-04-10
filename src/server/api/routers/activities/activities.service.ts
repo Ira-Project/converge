@@ -1,7 +1,7 @@
 import { and, desc, eq, isNotNull } from "drizzle-orm";
 import { activity } from "@/server/db/schema/activity";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { GetActivitiesInput, GetActivityInput, GetLiveActivitiesInput, MakeActivityLiveInput } from "./activities.input";
+import type { GetActivitiesInput, GetActivityInput, GetLiveActivitiesInput, GetRandomActivitiesInput, MakeActivityLiveInput } from "./activities.input";
 import { Roles, ActivityType } from "@/lib/constants";
 import { knowledgeZapAssignmentAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
 import { stepSolveAssignmentAttempts } from "@/server/db/schema/stepSolve/stepSolveAssignment";
@@ -225,6 +225,64 @@ export const getLiveActivities = async (ctx: ProtectedTRPCContext, input: GetLiv
   }
 
   return activities.filter(activity => !submittedActivityIds.includes(activity.id));
+}
+
+export const getRandomActivities = async (ctx: ProtectedTRPCContext, input: GetRandomActivitiesInput) => {
+  // Get a random activity of each type
+  const activityTypes = [
+    ActivityType.KnowledgeZap,
+    ActivityType.StepSolve,
+    ActivityType.ReasonTrace,
+    ActivityType.ReadAndRelay,
+    ActivityType.ConceptMapping,
+    ActivityType.LearnByTeaching,
+  ];
+
+  const randomActivities = [];
+
+  for (const type of activityTypes) {
+    const activitiesOfType = await ctx.db.query.activity.findMany({
+      where: and(eq(activity.typeText, type), eq(activity.classroomId, input.classroomId)),
+      columns: {
+        id: true,
+        name: true,
+        typeText: true,
+        isLive: true,
+        isLocked: true,
+        order: true,
+        dueDate: true,
+      },
+      with: {
+        topic: {
+          columns: {
+            id: true,
+            name: true,
+          }
+        }
+      },
+    });
+
+    if (activitiesOfType.length > 0) {
+      // Get a random activity of this type
+      const randomIndex = Math.floor(Math.random() * activitiesOfType.length);
+      const randomActivity = activitiesOfType[randomIndex];
+      if (randomActivity) {
+        randomActivities.push(randomActivity);
+      }
+    }
+  }
+
+  // Filter out any undefined values and ensure they match the Activity type
+  return randomActivities.filter(Boolean).map(activity => ({
+    id: activity.id,
+    name: activity.name,
+    topic: activity.topic,
+    typeText: activity.typeText,
+    isLive: activity.isLive,
+    isLocked: activity.isLocked,
+    order: activity.order,
+    dueDate: activity.dueDate,
+  }));
 }
 
 

@@ -18,4 +18,8 @@ export const activitiesRouter = createTRPCRouter({
   makeActivityLive: protectedProcedure
     .input(inputs.makeActivityLiveSchema)
     .mutation(({ ctx, input }) => services.makeActivityLive(ctx, input)),
+
+  getRandomActivities: protectedProcedure
+    .input(inputs.getRandomActivitiesSchema)
+    .query(({ ctx, input }) => services.getRandomActivities(ctx, input)),
 });
