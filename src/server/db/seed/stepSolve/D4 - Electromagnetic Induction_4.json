@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "d62535ae946842d098ebe",
-                    "stepText": "Let's begin by identifying the correct relationship that lets you calculate the electrical power in a circuit. Which of the following expressions correctly relates voltage and current to power?",
+                    "id": "6c5dd60eb23542b18e451",
+                    "stepText": "Let's start by identifying the correct formula to compute the input power from the primary voltage and current. Which one of the following formulas relates voltage ($!$V$!$), current ($!$I$!$), and power ($!$P$!$)?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -39,8 +39,8 @@
                     ]
                 },
                 {
-                    "id": "216e3ea6056a459eb9596",
-                    "stepText": "Great! Now that you've identified the correct power relationship, use it to calculate the primary input power given the primary voltage $!$V_p = 120\\,V$!$ and the primary current $!$I_p = 2\\,A$!$.",
+                    "id": "3296230c114c404997443",
+                    "stepText": "Now, use the formula you selected to calculate the primary input power. Given that the voltage is $!$120\\,V$!$ and the current is $!$2\\,A$!$, what is the input power?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -51,8 +51,36 @@
                     "options": []
                 },
                 {
-                    "id": "9d8d3a99a82b4cbd8cc86",
-                    "stepText": "Next, adjust for the transformer efficiency. Multiply the primary input power by the efficiency (95%) to obtain the output (secondary) power.",
+                    "id": "7233443585d1440490a94",
+                    "stepText": "Next, let's identify the formula that relates the efficiency of a transformer to its input and output power. Which formula correctly applies the efficiency to determine the output power?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$P_{out} = \\text{efficiency} \\times P_{in}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P_{out} = \\frac{P_{in}}{\\text{efficiency}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P_{out} = P_{in} - \\text{efficiency}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9b2aca1688c648e5b2453",
+                    "stepText": "Now, apply the efficiency to compute the usable output power. Given that the primary input power is $!$240\\,W$!$ and the transformer has an efficiency of $!$95\\%$!$, what is the output power?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -63,8 +91,36 @@
                     "options": []
                 },
                 {
-                    "id": "576f81b2c295479fb9eca",
-                    "stepText": "Finally, using the output power and the designed secondary voltage $!$V_s = 2400\\,V$!$, calculate the secondary current. How do you determine the current from these values?",
+                    "id": "cdf5211f73c04b96a5fbb",
+                    "stepText": "Now, let's choose the correct formula that relates power, voltage, and current for determining the secondary current. Which of the following options is the appropriate formula?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{P}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = P \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{V}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7afe613b71cf4c36a0268",
+                    "stepText": "Finally, calculate the secondary current. With the output power at $!$228\\,W$!$ and the secondary voltage at $!$2400\\,V$!$, what is the current in the secondary coil?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -82,8 +138,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "6ffbb814ad864391870d0",
-                    "stepText": "Let's start by identifying the physical concept that relates to a conductor moving through a magnetic field. Which concept is most relevant here?",
+                    "id": "d5c75bfa152b4e018c20e",
+                    "stepText": "Let's start by identifying the correct formula that gives the induced electromotive force (EMF) when a conductor moves through a magnetic field. Which one of the following formulas represents that concept?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -95,64 +151,84 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\epsilon = BvL$!$  (Motional EMF)",
+                            "optionText": "$!$\\epsilon = BvL$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\epsilon = -N \\frac{\\Delta\\Phi}{\\Delta t}$!$  (Faraday's Law)",
+                            "optionText": "$!$\\epsilon = B+v+L$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "Self Induction",
+                            "optionText": "$!$\\epsilon = \\frac{v}{BL}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\epsilon = B^2vL^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "f6f684a785b64d7ea5437",
-                    "stepText": "Now that you've recognized the role of a moving conductor in a magnetic field, consider how the internal electric field in the axle is established. Which relationship equates the magnetic force on an electron with the electric force at equilibrium?",
+                    "id": "6c21109e4fdb44cf8678f",
+                    "stepText": "Now that we've identified the proper formula for motional EMF, use it along with the given values: magnetic field $!$B = 0.5 T$!$, speed $!$v = 30 m/s$!$, and length $!$L = 1.5 m$!$. Compute the induced EMF. What is the numerical value for the induced EMF?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "22.5"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "70734415-23ea-4f42-9d80-7b51cd1cf9e6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a359957677ed41f98da8b",
+                    "stepText": "Next, think about how the electric field in the axle is related to the induced EMF. Which of the following relationships correctly connects the electric field $!$E$!$ with the induced EMF $!$\\epsilon$!$ and the length $!$L$!$ of the conductor?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         ""
                     ],
                     "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "70734415-23ea-4f42-9d80-7b51cd1cf9e6"
-                    ],
+                    "stepConcepts": [],
                     "options": [
                         {
-                            "optionText": "$!$E = vB$!$",
+                            "optionText": "$!$E = \\epsilon /L$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$E = BvL$!$",
+                            "optionText": "$!$E = \\epsilon \\cdot L$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$E = \\frac{v}{B}$!$",
+                            "optionText": "$!$E = L/\\epsilon$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\epsilon - L$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "42270e3382684f02ac936",
-                    "stepText": "Great, now that you have the equilibrium condition, substitute the given numerical values for the speed $!$v = 30\\,m/s$!$ and the magnetic field $!$B = 0.5\\,T$!$ into the relationship. Compute the magnitude of the electric field experienced in the axle.",
+                    "id": "33a1f76b3c6d4284a890f",
+                    "stepText": "Finally, using the induced EMF calculated in the previous step and the axle length provided, compute the magnitude of the electric field experienced by the electrons. What is the value of this electric field?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "15"
                     ],
                     "stepSolveAnswerUnits": "V/m",
-                    "stepConcepts": [
-                        "70734415-23ea-4f42-9d80-7b51cd1cf9e6"
-                    ],
+                    "stepConcepts": [],
                     "options": []
                 }
             ]

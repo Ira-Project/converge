@@ -13,7 +13,7 @@
                 {
                     "id": "2221043ba1234996a47b6",
                     "stepText": "Let's start by calculating the electrical power output from the thermal power using the given conversion efficiency. Identify the correct relation to compute the electrical power from the thermal power and efficiency.",
-                    "stepText2": "",
+                    "stepText2": "Calculate the electrical power output from the thermal power using the given conversion efficiency.",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "1050"
@@ -40,8 +40,8 @@
                 },
                 {
                     "id": "cb8e163f36a34082a456a",
-                    "stepText": "Great, now using the calculated electrical power output, compute the total annual electrical energy generated. Multiply the electrical power by the total hours in a year. Please choose the correct formula that relates power, time, and energy.",
-                    "stepText2": "",
+                    "stepText": "Great, now using the calculated electrical power output, compute the total annual electrical energy generated. Please choose the correct formula that relates power, time, and energy.",
+                    "stepText2": "Compute the total annual electrical energy generated in $!$MWh$!$.",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "9198000"
@@ -68,7 +68,7 @@
                 },
                 {
                     "id": "fdd6484ae7844cdbbfc83",
-                    "stepText": "Finally, determine how much waste is produced per MWh of electricity by dividing the total annual radioactive waste volume by the annual energy production. Identify the correct expression for this relation.",
+                    "stepText": "Finally, determine how much waste is produced per MWh of electricity by dividing the total annual radioactive waste volume by the annual energy production.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -76,34 +76,18 @@
                     ],
                     "stepSolveAnswerUnits": "m^3/MWh",
                     "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "$!$Waste \\ per \\ MWh = \\frac{Total \\ Waste}{Energy}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$Waste \\ per \\ MWh = Total \\ Waste \\times Energy$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$Waste \\ per \\ MWh = Total \\ Waste - Energy$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "options": []
                 }
             ]
         },
         {
             "id": "f7369e2a9c2d493e811f5",
-            "questionText": "A research team is designing a nuclear reactor using Thorium as fuel. They are focused on efficiently achieving critical mass and sustaining a chain reaction. A moderator is used to slow down neutrons, enhancing the probability of further fission. The reactor's core is designed to operate at a power level where each fission event releases approximately $!$200 MeV$!$. Given that the core contains $!$1000 kg$!$ of Thorium and that Thorium has a molar mass of approximately $!$232 g/mol$!$, what is the minimum amount of moderator material (in $!$kg$!$) required to ensure the reactor can sustain a continuous chain reaction at $!$50\\%$!$ of its maximum potential, assuming the moderator has a neutron absorption cross-section of $!$0.01 barns$!$ and the Thorium has a fission cross-section of $!$2 barns$!$? Also, the density of the moderator material is $!$1 g/cm^3$!$.",
+            "questionText": "In a nuclear weapons design lab, engineers are working with Plutonium-239 ($!$^{239}Pu$!$). After modifications, the fission Q-value is measured as $!$2.0 \\times 10^{14}$!$ J/kg and the mass difference per fission event is $!$2.22 \\times 10^{-12}$!$ kg. If the initial design uses $!$6.0$!$ kg of Plutonium-239 and all of it undergoes fission, calculate the total energy released from the modified design.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "9c3c8331051446a2b3c1c",
-                    "stepText": "Let's start by converting the mass of thorium into moles. In order to do that, you need to identify the correct conversion formula from mass (in grams) to moles using the molar mass. Please select the correct formula.",
+                    "id": "c17006f621c84758afec4",
+                    "stepText": "Let's begin by identifying the physical meaning of the fission Q-value. Please select the description that best explains what the fission Q-value represents in this context.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -111,30 +95,29 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "d28b5c5e-7617-4d12-93c5-491614507352",
-                        "b4cc2d1a-f724-4aa8-ae80-2b2e74431f34"
+                        "83eee34e-89b7-43eb-aab8-ebe55fad6b86"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$n = \\frac{mass}{molar~mass}$!$",
+                            "optionText": "$!$\\text{It is the energy released per unit mass during the fission process.}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$n = mass \\times molar~mass$!$",
+                            "optionText": "$!$\\text{It is the total energy released by the entire mass of the fuel.}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$n = mass - molar~mass$!$",
+                            "optionText": "$!$\\text{It is the mass defect per fission event.}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "2b883d04c6674bae8dce1",
-                    "stepText": "Great, now that you've determined the number of moles, the next step is to convert moles to the number of atoms using Avogadro's number. Which relation correctly represents this conversion?",
+                    "id": "015219fd140a4a80861f9",
+                    "stepText": "Great! Now, determine the correct mathematical relationship to calculate the total energy released when a certain mass undergoes fission. Which formula correctly relates the fission Q-value and the mass of the fuel?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -142,115 +125,37 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "d28b5c5e-7617-4d12-93c5-491614507352"
+                        "83eee34e-89b7-43eb-aab8-ebe55fad6b86"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$N = n \\times N_A$!$",
+                            "optionText": "$!$E_{total} = Q \\times m$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$N = \\frac{n}{N_A}$!$",
+                            "optionText": "$!$E_{total} = Q / m$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$N = n + N_A$!$",
+                            "optionText": "$!$E_{total} = Q + m$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "7b86c0e7caf745d0b57a2",
-                    "stepText": "Now, to maintain a continuous chain reaction at 50% of maximum potential, the absorption rate by the fuel must equal that by the moderator. Based on this, select the formula that correctly relates the number of moderator atoms ($!$N_{mod}$!$) to the number of thorium atoms ($!$N_{Th}$!$) using their respective absorption cross-sections.",
+                    "id": "c8327f2af7e94846935f2",
+                    "stepText": "Now that you have identified the correct relationship, use it to calculate the total energy released. Multiply the fission Q-value, $!$2.0 \\times 10^{14}$!$ J/kg, by the total mass, $!$6.0$!$ kg, to find the total energy.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
+                        "1.2e15"
                     ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "77b221bc-2e1e-4714-b4c4-f67cdba21d28"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$N_{mod} = \\frac{\\sigma_f}{\\sigma_m} \\times N_{Th}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$N_{mod} = \\sigma_m \\times N_{Th}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$N_{mod} = \\frac{N_{Th}}{\\sigma_f + \\sigma_m}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "37d43271e3ee426880bd6",
-                    "stepText": "Next, once you have the number of moderator atoms required, you should convert that number into moles. Identify the proper relationship for converting the number of atoms to moles.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "e0073bfa-4354-4574-81fe-37c2676f570b"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$n = \\frac{N}{N_A}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$n = N \\times N_A$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$n = N - N_A$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "556309e6d7944b7d838aa",
-                    "stepText": "Finally, with the number of moles of moderator known, convert the mass from grams to kilograms. Please choose the formula that correctly performs the conversion from grams to kilograms.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "1508b8ef-120f-4a20-96a4-688f96b211a3"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$mass_{kg} = \\frac{mass_{g}}{1000}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$mass_{kg} = mass_{g} \\times 1000$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$mass_{kg} = mass_{g} - 1000$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
                 }
             ]
         }

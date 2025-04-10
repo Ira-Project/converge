@@ -108,38 +108,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "3d2c0a3ce9be4c0fbf2ea",
-                    "stepText": "Let's start by identifying the formula that gives the force on a charged particle when it is placed in an electric field. Which of the following formulas correctly represents this relationship?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "f69857d1-d285-419d-8458-a425ac5cf3d5"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$F = qE$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$F = ma$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$F = \\frac{1}{2} m u^2$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "e63c659b09b84237a50fb",
-                    "stepText": "Now, using the force from the previous step, we can determine the acceleration of the electron. Select the correct formula that relates acceleration, charge, electric field, and mass.",
+                    "id": "0f17e87cde9c4d2b89391",
+                    "stepText": "Let's start by identifying the formula that relates the electric force to the resulting acceleration of a charged particle in an electric field. Which formula correctly represents the vertical acceleration of the electron when placed in an electric field?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -156,20 +126,34 @@
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$a = qEm$!$",
+                            "optionText": "$!$a = \\frac{mE}{q}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$a = \\frac{m}{qE}$!$",
+                            "optionText": "$!$a = qEm$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "4a701f3b7f814752a1eb7",
-                    "stepText": "Great, now that we have established the acceleration, let\u2019s calculate the time the electron spends between the plates. Use the horizontal motion relationship with the plate length $!$l$!$ and the initial horizontal velocity $!$u$!$. Compute the time $!$t = l/u$!$.",
+                    "id": "cce0020c51004aec87cf5",
+                    "stepText": "Great, now compute the magnitude of the vertical acceleration using the formula you selected. Use the values \\(q = 1.602 \\times 10^{-19} C\\) (magnitude), \\(E = 2000 \\, N/C\\), and \\(m = 9.11 \\times 10^{-31} kg\\). What is the acceleration?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.52e14"
+                    ],
+                    "stepSolveAnswerUnits": "m/s^2",
+                    "stepConcepts": [
+                        "5c33bb63-3c6d-413f-a1af-25385ab95845"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "02ad5063e6b74c6293013",
+                    "stepText": "Now, as the electron travels horizontally between the plates, its speed remains constant. Determine the time it takes for the electron to traverse the length of the plates using the horizontal distance \\(l = 0.1 m\\) and the horizontal velocity \\(u = 3 \\times 10^6 m/s\\). What is the time spent in the electric field?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -180,8 +164,8 @@
                     "options": []
                 },
                 {
-                    "id": "12b6338ca7794bfab34c4",
-                    "stepText": "Now, use the time computed in the previous step along with the vertical acceleration to calculate the vertical displacement of the electron. Which formula would you use to determine the vertical displacement due to this acceleration?",
+                    "id": "272ac608e6d84d0e93c99",
+                    "stepText": "Next, identify the formula that gives the vertical displacement of a particle starting from rest under constant acceleration. Which formula correctly represents the vertical displacement in this scenario?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -193,32 +177,33 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$y = \\frac{1}{2} a t^2$!$",
+                            "optionText": "$!$y = \\frac{1}{2}at^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$y = a t$!$",
+                            "optionText": "$!$y = at$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$y = u t + \\frac{1}{2} a t^2$!$",
+                            "optionText": "$!$y = \\frac{at^2}{u}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "873e3e2334f04857ac456",
-                    "stepText": "Finally, now that you have the formula, calculate the vertical displacement using the acceleration $!$a = -3.518 \\times 10^{14} m/s^2$!$ (considering the direction), and the time $!$t = 3.33 \\times 10^{-8} s$!$. Compute $!$y = \\frac{1}{2} a t^2$!$.",
+                    "id": "52650d8552994b698e1ae",
+                    "stepText": "Finally, calculate the vertical displacement by substituting the computed acceleration and time into the vertical displacement formula. What is the vertical displacement of the electron as it exits the plates?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "-0.195"
+                        "0.195"
                     ],
                     "stepSolveAnswerUnits": "m",
                     "stepConcepts": [
+                        "5c33bb63-3c6d-413f-a1af-25385ab95845",
                         "a5fee9d5-2b2a-4e9d-8caf-a83a70245740"
                     ],
                     "options": []

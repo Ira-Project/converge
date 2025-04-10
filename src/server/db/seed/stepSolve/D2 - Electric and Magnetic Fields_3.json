@@ -12,7 +12,7 @@
             "steps": [
                 {
                     "id": "391a5ff160164f79a4636",
-                    "stepText": "Let's start by identifying the correct formula for the magnetic force acting on a current-carrying conductor. Which of the following formulas correctly represents the force when a conductor of length $!$L$!$ carrying a current $!$I$!$ is placed perpendicular to a magnetic field $!$B$!$?",
+                    "stepText": "Let's start by identifying the correct formula for the magnetic force acting on a current-carrying conductor. Which of the following formulas correctly represents the force when a conductor of length $!$L$!$ carrying a current $!$I$!$ is placed at an angle $!$\\theta$!$ to a magnetic field $!$B$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -42,7 +42,7 @@
                 },
                 {
                     "id": "80232c46ab224ddca90fc",
-                    "stepText": "Great, now that you have considered the magnetic force, let's determine how to express the force per unit length for the train. Since the coils are uniformly distributed along the train, the total force is evenly divided by its length. Which of the following expressions correctly gives the force per meter?",
+                    "stepText": "Great, now that you have considered the magnetic force, let's determine how to express the force per unit length for the train. Since the conductor is perpendicular to the magnetic field, the angle $!$\\theta$!$ is $!$90^\\circ$!$. Using that, which of the following expressions correctly gives the force per meter?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -135,38 +135,8 @@
                     "options": []
                 },
                 {
-                    "id": "2c9b11e7ae42456a8a031",
-                    "stepText": "Now that you have the ion's kinetic energy from the potential difference, identify the correct expression to compute the velocity of the ion using the energy relation $!$\\frac{1}{2}mv^2 = qV$!$. Which of the following expressions should be used?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "e5888dcb-4bc0-4c40-8775-34a2ee76ab02"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$v = \\sqrt{\\frac{2qV}{m}}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$v = \\frac{qV}{m}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$v = \\sqrt{\\frac{qV}{m}}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
                     "id": "f36cd82a07c742be883ea",
-                    "stepText": "Using the energy relation $!$\\frac{1}{2}mv^2 = qV$!$ with the computed kinetic energy and the mass you calculated, determine the velocity of the carbon ion. Enter the numerical value.",
+                    "stepText": "Using the energy relation $!$\\KE = qV$!$ with the mass you calculated, determine the velocity of the carbon ion. Enter the numerical value.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

@@ -50,7 +50,7 @@
                     "stepSolveAnswer": [
                         "9e16"
                     ],
-                    "stepSolveAnswerUnits": "m^2/s^2",
+                    "stepSolveAnswerUnits": "$!$m^2/s^2$!$",
                     "stepConcepts": [
                         "f69775cb-ea85-401a-96fc-3f0855976fe9"
                     ],
@@ -79,22 +79,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "0064b14359b14a3f8c909",
-                    "stepText": "Let's start by identifying the two key values given in the problem: one is the mass of the black hole that remains after the supernova, and the other is the mass equivalent of the energy released. What are these two masses?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "d496b03b-a2e0-4751-803e-78f8faeeac4b"
-                    ],
-                    "options": []
-                },
-                {
                     "id": "dc6a468227414bfbaba52",
-                    "stepText": "Great. Now, to compare the retained mass with the released energy, we need to form a ratio. Which mathematical operation would correctly allow you to form a ratio of the retained mass to the released mass equivalent?",
+                    "stepText": "Let's compare the retained mass with the released energy, we need to form a ratio. Which mathematical operation would correctly allow you to form a ratio of the retained mass to the released mass equivalent?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -104,7 +90,7 @@
                     "stepConcepts": [],
                     "options": [
                         {
-                            "optionText": "$!$\\frac{\\text{Retained Mass}}{\\text{Released Energy Mass}}$!$ (Division)",
+                            "optionText": "$!$\\frac{\\text{Retained Mass}}{\\text{Released Energy Mass}}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
