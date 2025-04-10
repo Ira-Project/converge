@@ -20,3 +20,8 @@ export const getLiveActivitiesSchema = z.object({
   classroomId: z.string(),
 });
 export type GetLiveActivitiesInput = z.infer<typeof getLiveActivitiesSchema>;
+
+export const getRandomActivitiesSchema = z.object({
+  classroomId: z.string(),
+});
+export type GetRandomActivitiesInput = z.infer<typeof getRandomActivitiesSchema>;

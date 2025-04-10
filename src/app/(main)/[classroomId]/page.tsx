@@ -6,22 +6,24 @@ import { ComponentIds, Roles } from '@/lib/constants';
 import RevisionSection from "./_components/revision-section";
 import LiveActivitiesList from "./_components/live-activities-list";
 import RecentSubmissionsList from "./_components/recent-submissions-table";
+import { AnalyticsSection } from "./_components/analytics-section";
+import ActivityLibrarySample from "./_components/activity-library-sample";
 export default async function ClassroomPage(props: { params: Promise<{ classroomId: string }> }) {
   const [{ user }, params] = await Promise.all([
     validateRequest(),
     props.params
   ]);
 
-  let submissions, classroom, activities, userToClassroom: { role: Roles } | undefined;
+  let submissions, classroom, activities, randomActivities, userToClassroom: { role: Roles } | undefined;
   if (user) {
-    [submissions, classroom, activities, userToClassroom] = await Promise.all([
+    [submissions, classroom, activities, randomActivities, userToClassroom] = await Promise.all([
       api.analytics.getSubmissions.query({ classroomId: params.classroomId }),
       api.classroom.get.query({ id: params.classroomId }),
       api.activities.getLiveActivities.query({ classroomId: params.classroomId }),
+      api.activities.getRandomActivities.query({ classroomId: params.classroomId }),
       api.classroom.getOrCreateUserToClassroom.query({ classroomId: params.classroomId })
     ]);
   }
-  
   
   return (
     <>
@@ -36,7 +38,7 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
         )}
       </div>
 
-      <div className="flex flex-col gap-y-8">
+      <div className="flex flex-col gap-y-8 mb-16">
 
         {/* Welcome Message */}
         <p className="px-8 text-2xl mt-40">
@@ -56,6 +58,21 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
           <RecentSubmissionsList 
             submissions={submissions ?? []} />
         </div>
+
+        {/* Analytics Section */}
+        <AnalyticsSection classroomId={params.classroomId} />
+
+
+        {/* Random Activities */}
+        {
+          userToClassroom?.role === Roles.Teacher && (
+            <ActivityLibrarySample 
+              classroomId={params.classroomId}
+              activities={randomActivities ?? []} 
+              role={userToClassroom?.role ?? Roles.Student} 
+            />
+          )
+        }
 
         {/* Upload Lesson Plan */}
         {userToClassroom?.role === Roles.Teacher && (

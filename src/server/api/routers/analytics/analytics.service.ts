@@ -289,13 +289,21 @@ export const getConceptTracking = async (ctx: ProtectedTRPCContext, input: GetSu
   });
   const edges = await ctx.db.query.conceptEdges.findMany();
 
+  if(ctx.user?.role === Roles.Student) {
+    return {
+      trackedConcepts: trackedConcepts.filter(t => t.userId === ctx.user?.id),
+      concepts,
+      edges,
+      numberOfStudents: 1,
+    }
+  }
+
   const students = await ctx.db.query.usersToClassrooms.findMany({
     where: (table, { eq, and }) => and(eq(table.classroomId, input.classroomId), eq(table.role, Roles.Student)),
     columns: {
       userId: true,
     }
   });
-  
 
   return {
     trackedConcepts,

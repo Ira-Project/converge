@@ -23,8 +23,8 @@ export default function RecentSubmissionsList(props: {
   const totalSubmissions = props.submissions.filter(sub => sub.submittedAt && new Date(sub.submittedAt).getMonth() === new Date().getMonth()).length;
 
   return (
-    <div className="flex flex-col h-full min-h-[400px]">
-      <p className="text-lg font-bold mb-4">
+    <div className="flex flex-col h-full min-h-[300px]">
+      <p className="text-xl font-bold mb-4">
         Recent Submissions
       </p>
       <div className="bg-white rounded-2xl mx-auto border h-full my-auto overflow-y-scroll w-full">
