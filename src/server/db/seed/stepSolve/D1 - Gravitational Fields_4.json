@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "1fbba301cf2a4cbead545",
-                    "stepText": "Let's start by identifying the formula that gives the gravitational potential energy of a mass at the surface of an asteroid. Which formula correctly represents the gravitational potential energy $!$U$!$ for a mass $!$m$!$ at a distance $!$r$!$ from a mass $!$M$!$?",
+                    "id": "f5054b5589254a1d9894b",
+                    "stepText": "Let's start by identifying the correct formula for gravitational potential at a point. Pick the formula that relates the gravitational potential $!$V_g$!$ to the mass $!$M$!$ and the distance $!$r$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -20,79 +20,67 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                        "3e125180-5cf1-4f7b-a223-cc1bda7f1317"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$U = -\\frac{GMm}{r}$!$",
+                            "optionText": "$!$V_g = -\\frac{GM}{r}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$U = \\frac{GMm}{r}$!$",
+                            "optionText": "$!$V_g = \\frac{GM}{r}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$U = \\frac{1}{2}\\frac{GMm}{r}$!$",
+                            "optionText": "$!$V_g = -\\frac{GM}{r^2}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "06f1eb5f26cd404d9e776",
-                    "stepText": "Great! Now, using the formula, calculate the value of $!$M_A/r_A$!$ for Asteroid A given that $!$M_A = 5 \\times 10^{12} \\text{ kg}$!$ and $!$r_A = 5000 \\text{ m}$!$. What is $!$M_A/r_A$!$?",
+                    "id": "52717ac65d48469a84efa",
+                    "stepText": "Moving on, identify the correct formula to calculate the work done when transferring a mass between two points with different gravitational potentials. Which formula relates the work $!$W$!$ to the mass $!$m$!$ and the difference in potentials?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "1000000000"
+                        ""
                     ],
-                    "stepSolveAnswerUnits": "kg/m",
+                    "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                        "6ef79646-7259-4c9c-a7cd-80a451d36360"
                     ],
-                    "options": []
+                    "options": [
+                        {
+                            "optionText": "$!$W = m (V_{gB} - V_{gA})$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = m \\left(\\frac{V_{gB}+V_{gA}}{2}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{m}{2} (V_{gB} - V_{gA})$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
                 },
                 {
-                    "id": "8718bf0512864eee8a014",
-                    "stepText": "Now, let\u2019s find the value of $!$M_B/r_B$!$ for Asteroid B using $!$M_B = 9 \\times 10^{13} \\text{ kg}$!$ and $!$r_B = 20000 \\text{ m}$!$. Compute $!$M_B/r_B$!$.",
+                    "id": "5d48ace80527418d99e34",
+                    "stepText": "Finally, substitute the values into the formula identified in the previous step. First, note that the gravitational potential at a surface is given by $!$V_g = -\\frac{GM}{r}$!$. Hence, the work done is calculated by $!$W = m \\left(-\\frac{GM_B}{r_B} + \\frac{GM_A}{r_A}\\right)$!$. What is the value of $!$W$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "4500000000"
-                    ],
-                    "stepSolveAnswerUnits": "kg/m",
-                    "stepConcepts": [
-                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "d5d19ff110a44a578a582",
-                    "stepText": "With those values, determine the difference $!$(M_B/r_B - M_A/r_A)$!$ that will be used in calculating the work required. What is this difference?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "3500000000"
-                    ],
-                    "stepSolveAnswerUnits": "kg/m",
-                    "stepConcepts": [
-                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "83df4f542d074197aa07a",
-                    "stepText": "Finally, use the work formula $!$\\Delta U = -G \\cdot m \\cdot (M_B/r_B - M_A/r_A)$!$ with the gravitational constant $!$G = 6.67 \\times 10^{-11} \\text{ N}\\cdot\\text{m}^2/\\text{kg}^2$!$, the mass $!$m = 50 \\text{ kg}$!$, and the difference computed earlier. Calculate the work $!$W$!$ required for the transfer.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "-11672.5"
+                        "-11.67"
                     ],
                     "stepSolveAnswerUnits": "J",
                     "stepConcepts": [
-                        "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
+                        "6ef79646-7259-4c9c-a7cd-80a451d36360"
                     ],
                     "options": []
                 }
@@ -104,8 +92,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "a32705a7819c492893bb3",
-                    "stepText": "Let's start by identifying the formula you need to use to calculate the total energy of a satellite in a circular orbit. Please choose the correct formula for the total energy from the options below.",
+                    "id": "b2453976b59741d2983e1",
+                    "stepText": "Let's start by identifying the formula that relates the total energy $!$E_T$!$ of an orbiting satellite with the planet's mass, the satellite's mass, the gravitational constant, and the orbital radius. Which of the following expressions best represents this relationship?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -127,15 +115,20 @@
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$E_T = \\frac{1}{2}mv^2 - \\frac{GMm}{r}$!$",
+                            "optionText": "$!$E_T = \\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_T = -\\frac{GMm}{4r}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "bda336512a184b9ebdb9e",
-                    "stepText": "Great! Now, determine the actual orbital radius $!$r$!$ where the satellite is orbiting. Given that the satellite is located at $!$r = 2R$!$ and you know $!$R = 8.0 \\times 10^6 \\text{ m}$!$, calculate the value of $!$r$!$.",
+                    "id": "f5483c1aa16d47ada6ff7",
+                    "stepText": "Great, now that you have identified the proper energy formula, let's find the orbital radius $!$r$!$. The satellite is orbiting at a distance equal to $!$2R$!$, and the planet's radius is given as $!$R = 8.0 \\times 10^6 \\text{ m}$!$. Calculate the value of $!$r$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -146,35 +139,8 @@
                     "options": []
                 },
                 {
-                    "id": "ee17ebfb816e4416a4527",
-                    "stepText": "Next, compute the product $!$GMm$!$ using the provided values: $!$G = 6.67 \\times 10^{-11} \\text{ m}^3\\text{/kg/s}^2$!$, $!$M = 3.0 \\times 10^{25} \\text{ kg}$!$, and $!$m = 1500 \\text{ kg}$!$. What is the numerical value of this product?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "3.0015e18"
-                    ],
-                    "stepSolveAnswerUnits": "m^3 kg s^-2",
-                    "stepConcepts": [
-                        "913f94ce-32fd-4e0b-81d1-2d6512bc5085",
-                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "1f6c7e2a9dbe495591551",
-                    "stepText": "Moving forward, calculate the value of the denominator by multiplying 2 by the orbital radius $!$r$!$ that you computed. What is the resulting value?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "3.2e7"
-                    ],
-                    "stepSolveAnswerUnits": "m",
-                    "stepConcepts": [],
-                    "options": []
-                },
-                {
-                    "id": "93413eaffac2422093f90",
-                    "stepText": "Finally, substitute your computed values into the total energy formula to find $!$E_T$!$. Remember to include the negative sign as indicated by the formula. What is the total energy of the satellite?",
+                    "id": "c37634955e8d469490a97",
+                    "stepText": "Now, using the formula and the values provided (with $!$G = 6.67 \\times 10^{-11}$!$, $!$M = 3.0 \\times 10^{25}$!$, $!$m = 1500$!$, and your computed $!$r$!$), substitute them appropriately into the expression for the total energy. Carry out the calculation to determine the numerical value of $!$E_T$!$. What is your computed total energy?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

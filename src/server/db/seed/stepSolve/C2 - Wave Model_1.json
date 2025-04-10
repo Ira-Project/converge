@@ -71,7 +71,7 @@
                 },
                 {
                     "id": "d67511e3f60b4a4b87943",
-                    "stepText": "Finally, reflect on how the computed phase difference should be interpreted. Should it be reported as the absolute accumulated phase difference, or should it be reduced modulo $!$2\\pi$!$? Please choose the correct interpretation.",
+                    "stepText": "Finally, reflect on how the computed phase difference should be interpreted.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -83,17 +83,17 @@
                     ],
                     "options": [
                         {
-                            "optionText": "Report the absolute phase difference as calculated.",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "Report the phase difference modulo $!$2\\pi$!$, which would be nearly zero.",
+                            "optionText": "The absolute phase difference between the emitted and received signals is $!$61900$!$ radians.",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "Convert the phase difference into degrees instead.",
+                            "optionText": "Since the delay corresponds to an integer number of cycles, the phase difference is $!$0$!$.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Convert the phase difference into degrees and report it as such.",
                             "optionImage": "",
                             "isCorrect": false
                         }

@@ -7,12 +7,40 @@
     "questions": [
         {
             "id": "a6106212be024e6c93130",
-            "questionText": "A suspension bridge has a natural frequency of $!$0.5\\,\\text{Hz}$!$. During a storm, wind gusts exert a periodic force on the bridge. Assume that without any damping, the amplitude of oscillation would increase linearly with time when the driving frequency matches the natural frequency. However, the bridge's engineers have installed a damping system that provides a damping force proportional to the bridge's velocity. Given that it takes $!$10\\,\\text{minutes}$!$ for the amplitude to reach a dangerous level when the wind gusts have a frequency of $!$0.5\\,\\text{Hz}$!$, and the damping system reduces the amplitude growth rate by $!$60\\%$!$, determine how long it would take for the bridge's oscillations to reach the same dangerous level if the frequency of the wind gusts were $!$0.6\\,\\text{Hz}$!$ and the damping system reduces the amplitude growth rate by $!$50\\%$!$. Assume the amplitude increases linearly with time.",
+            "questionText": "A suspension bridge has a natural frequency of $!$0.5\\,\\text{Hz}$!$. During a storm, wind gusts exert a periodic force on the bridge. Assume that without any damping, the amplitude of oscillation would increase linearly with time when the driving frequency matches the natural frequency. However, the bridge's engineers have installed a damping system that provides a damping force proportional to the bridge's velocity. Given that it takes $!$10\\,\\text{minutes}$!$ for the amplitude to reach a dangerous level when the wind gusts have a frequency of $!$0.5\\,\\text{Hz}$!$, and the damping system reduces the amplitude growth rate by $!$60\\%$!$, determine how long it would take for the bridge's oscillations to reach the same dangerous level if the damping system reduces the amplitude growth rate by $!$50\\%$!$. Assume the amplitude increases linearly with time.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "b24f2798818b46669c371",
-                    "stepText": "Let's start by determining the basic relation between the amplitude A, the undamped growth rate k, and time t, when the amplitude increases linearly. Please choose the formula that best represents this relationship.",
+                    "id": "3e4bafe7465049cc8942d",
+                    "stepText": "Let's start by recalling the basic relationship for a quantity that increases linearly with time. Identify the correct formula that relates the amplitude $!$A$!$, the growth rate $!$r$!$, and the time $!$t$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$A = r \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = \\frac{r}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = r + t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "791092a911b14520b34c7",
+                    "stepText": "Now, consider the first scenario with a driving frequency of $!$0.5\\,\\text{Hz}$!$ and a damping reduction of 60%. The undamped rate is $!$R$!$. Determine the effective amplitude growth rate after damping by choosing the correct expression in terms of $!$R$!$. Recall that the damping reduces the rate by 60%.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -20,44 +48,29 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "c23e1006-4cb9-4e66-891e-4231f4a84553",
                         "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$A = k \\times t$!$",
+                            "optionText": "$!$0.40R$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$A = k + t$!$",
+                            "optionText": "$!$0.60R$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$A = \\frac{k}{t}$!$",
+                            "optionText": "$!$1.60R$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "d8000cbc4e3d496992bb1",
-                    "stepText": "Great, now that you have the relation, consider the first scenario where the driving frequency is $!$0.5\\,\\text{Hz}$!$ and the damping system reduces the undamped growth rate by 60% (making the effective growth rate $!$0.40k$!$). Using the linear relation, determine the dangerous amplitude level reached in 10 minutes. What is the numerical factor multiplying k?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "4"
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "1c63e8b99b774057864d3",
-                    "stepText": "Now, let's analyze how the undamped growth rate changes with a change in the driving frequency. When the frequency increases from $!$0.5\\,\\text{Hz}$!$ to $!$0.6\\,\\text{Hz}$!$, the energy input per unit time scales with frequency. Which option correctly represents the scaling factor for the growth rate?",
+                    "id": "62942f8954e2454bb1922",
+                    "stepText": "Using the effective growth rate you identified for the first scenario, set up the expression for the dangerous amplitude $!$A_{danger}$!$ reached in $!$10\\,\\text{minutes}$!$. Select the expression that correctly represents $!$A_{danger}$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -65,39 +78,66 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "c23e1006-4cb9-4e66-891e-4231f4a84553"
+                        "5e378e0f-48cf-407a-a0e2-ae8912ca9a53"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\frac{0.6}{0.5}$!$",
+                            "optionText": "$!$A_{danger} = (0.40R) \\times 10$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\frac{0.5}{0.6}$!$",
+                            "optionText": "$!$A_{danger} = (0.60R) \\times 10$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$0.6 \\times 0.5$!$",
+                            "optionText": "$!$A_{danger} = (1.40R) \\times 10$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "9f7cfee0ec7d4c86a4c65",
-                    "stepText": "Finally, using the scaling factor and the new damping condition (50% reduction), determine how long it would take for the oscillations to reach the dangerous amplitude level. Recall that the dangerous amplitude remains the same, and use the relation $!$A = (effective growth rate) \\times t$!$. What is the time (in minutes) needed in this scenario?",
+                    "id": "02b6820ba8dc429ba203e",
+                    "stepText": "For the second scenario when the damping system reduces the amplitude growth rate by 50%, identify the new effective growth rate in terms of $!$R$!$. Choose the correct expression.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "6.67"
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$0.50R$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$0.40R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$0.60R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a91225a3694843c69ba9e",
+                    "stepText": "Finally, equate the expressions for the dangerous amplitude from both scenarios to solve for the new time $!$T$!$ required in the second scenario. Compute the value of $!$T$!$ in minutes using the relationship established.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
                     ],
                     "stepSolveAnswerUnits": "minutes",
-                    "stepConcepts": [
-                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8",
-                        "c23e1006-4cb9-4e66-891e-4231f4a84553"
-                    ],
+                    "stepConcepts": [],
                     "options": []
                 }
             ]

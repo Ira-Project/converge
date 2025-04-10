@@ -7,68 +7,12 @@
     "questions": [
         {
             "id": "4c068924bae144e59ae08",
-            "questionText": "A child on a swing is being pushed by an adult. The adult notices that the swing's amplitude increases significantly when pushing at a certain frequency. The swing has a natural frequency of $!$0.5\\,\\text{Hz}$!$. If the adult applies a periodic force with a frequency of $!$0.5\\,\\text{Hz}$!$, and the swing's motion is subject to damping due to friction, calculate the amplitude of the swing after $!$10\\,\\text{s}$!$, assuming the amplitude increases by $!$0.2\\,\\text{m}$!$ for each cycle without damping and that damping reduces the amplitude by $!$5\\%$!$ per cycle. Assume the initial amplitude is zero.",
+            "questionText": "A child on a swing is being pushed by an adult. The adult notices that the swing's amplitude increases significantly when pushing at a certain frequency. The swing has a natural frequency of $!$0.5\\,\\text{Hz}$!$. If the adult applies a periodic force with a frequency of $!$0.5\\,\\text{Hz}$!$, and the swing's motion is subject to damping due to friction, calculate the amplitude of the swing after $!$4\\,\\text{s}$!$, assuming the amplitude increases by $!$0.2\\,\\text{m}$!$ for each cycle without damping and that damping reduces the amplitude by $!$5\\%$!$ per cycle. Assume the initial amplitude is zero.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "6496c6d9762547f3b7699",
-                    "stepText": "Let's start by finding the number of cycles the swing goes through in the given time. To do so, you'll need to use the relation between frequency and period. Which of the following formulas correctly relates the period $!$T$!$ to the frequency $!$f$!$?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "$!$T = \\frac{1}{f}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$T = f$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$T = f^2$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "8521c667950e472fa1067",
-                    "stepText": "Great! Now, if there were no damping, the amplitude would simply increase by a fixed amount every cycle. Identify the correct relation that would give the total amplitude increase after a number of cycles, where each cycle adds a constant increment $!$\\Delta A$!$.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "$!$A_{total} = n \\cdot \\Delta A$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$A_{total} = \\frac{\\Delta A}{n}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$A_{total} = n^2 \\cdot \\Delta A$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "d71e03ca24f740bea531f",
-                    "stepText": "Now, let\u2019s account for damping. The damping reduces the amplitude by 5% each cycle, meaning that before adding the push increment, the amplitude is scaled down. Which recurrence relation correctly combines both the damping effect and the constant push per cycle?",
+                    "id": "7b6f942f1b6d4e3281090",
+                    "stepText": "Let's start by identifying the phenomenon that occurs when the forcing frequency equals the natural frequency of the swing. Which concept does this situation illustrate?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -76,38 +20,116 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                        "b3a7838d-1251-4a30-9fd8-7add8add3144"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$A_n = 0.95 \\cdot A_{n-1} + 0.2$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$A_n = A_{n-1} + 0.2 \\cdot 0.95$!$",
+                            "optionText": "$!$\\text{Damping}\\, $!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$A_n = 0.95 \\cdot (A_{n-1} + 0.2)$!$",
+                            "optionText": "$!$\\text{Resonance}\\, $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Forced Oscillation without Resonance}\\, $!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "999f278e15b54d5c9852c",
-                    "stepText": "Finally, using the recurrence relation from the previous step, calculate the amplitude after the final cycle by iterating through each cycle. What is the amplitude at the end of the given time period?",
+                    "id": "22c212bdb5854c8687014",
+                    "stepText": "Great, now that we've recognized the phenomenon, determine the period of the swing using its driving frequency. Identify the formula that relates period $!$T$!$ and frequency $!$f$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "0.90"
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$T=\\frac{1}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T=f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T=f^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "529fed899f834b42a03f8",
+                    "stepText": "Since the period $!$T$!$ is determined by the frequency, calculate the number of full driving cycles that occur in $!$4\\,\\text{s}$!$. Provide the numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "cycles",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "3128ce9109454daaa8323",
+                    "stepText": "Now, consider the effect of the push and damping on the amplitude for each cycle. Which iterative update rule correctly represents adding a push of $!$0.2\\,\\text{m}$!$ and then applying a damping factor of $!$0.95$!$ (i.e., a reduction of $!$5\\%$!$) per cycle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$A_{n}=(A_{n-1}+0.2)\\times0.95$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A_{n}=A_{n-1}+0.2\\times0.95$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A_{n+1}=A_{n}\\times0.95+0.2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "02329ddd98704a5d8fe37",
+                    "stepText": "Let's apply the update rule for the first cycle. Starting with an initial amplitude $!$A_{0}=0$!$, calculate the amplitude $!$A_{1}$!$ at the end of the first cycle.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.19"
                     ],
                     "stepSolveAnswerUnits": "m",
-                    "stepConcepts": [
-                        "77fc2045-58a6-40d8-8660-0b520dd6d8b8"
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "a45de248509144af97b06",
+                    "stepText": "Now, using the iterative update rule, compute the amplitude $!$A_{2}$!$ after $!$4\\,\\text{s}$!$. Provide the final amplitude as a numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.37"
                     ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
                     "options": []
                 }
             ]

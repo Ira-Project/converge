@@ -7,7 +7,7 @@
     "questions": [
         {
             "id": "b708c47927eb4fa18640c",
-            "questionText": "A police radar gun emits a frequency of $!$8.0 GHz$!$. A car is moving towards the police officer, and the radar gun detects a reflected frequency of $!$8.00015 GHz$!$. Assuming the speed of radio waves is the speed of light, which is approximately $!$3.0 \\times 10^8 m/s$!$, calculate the speed of the car in $!$km/h$!$.",
+            "questionText": "A police radar gun emits a frequency of $!$8.0\\,\\text{GHz}$!$. A car is moving towards the police officer, and the radar gun detects a reflected frequency of $!$8.00015\\,\\text{GHz}$!$. Assuming the speed of radio waves is the speed of light, which is approximately $!$3.0 \\times 10^8\\,\\text{m/s}$!$, calculate the speed of the car in $!$km/h$!$.",
             "imageText": "",
             "steps": [
                 {
@@ -41,17 +41,17 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\Delta f = \\frac{2 f_0 v}{c}\\$!$",
+                            "optionText": "$!$\\Delta f = \\frac{2 f_0 v}{c}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\Delta f = \\frac{f_0 v}{c}\\$!$",
+                            "optionText": "$!$\\Delta f = \\frac{f_0 v}{c}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$\\Delta f = \\frac{2 v}{c}\\$!$",
+                            "optionText": "$!$\\Delta f = \\frac{2 v}{c}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }

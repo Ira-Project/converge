@@ -7,12 +7,12 @@
     "questions": [
         {
             "id": "9fe8f54d99314c90ab86b",
-            "questionText": "A white light is incident on a diffraction grating with 600 lines per millimeter. The resulting diffraction pattern is observed on a screen 2.5 meters away. Determine the linear separation \\(\\Delta y\\) between the red light (\\(\\lambda = 700\\,\\text{nm}\\)) and the blue light (\\(\\lambda = 400\\,\\text{nm}\\)) in the first-order spectrum (\\(n = 1\\)).",
+            "questionText": "A white light is incident on a diffraction grating with 600 lines per millimeter. The resulting diffraction pattern is observed on a screen 2.5 meters away. Determine the linear separation ($!$\\Delta y$!$) between the red light ($!$\\lambda = 700\\,\\text{nm}$!$) and the blue light ($!$\\lambda = 400\\,\\text{nm}$!$) in the first-order spectrum ($!$n = 1$!$).",
             "imageText": "",
             "steps": [
                 {
                     "id": "1397562b24844f6499b24",
-                    "stepText": "Let's start by calculating the grating spacing \\(d\\). Given the grating has 600 lines per millimeter, convert that to lines per meter and then find \\(d\\) as the reciprocal of that value. Enter the numerical value you obtain.",
+                    "stepText": "Let's start by calculating the grating spacing ($!$d$!$). Given the grating has 600 lines per millimeter, convert that to lines per meter and then find $!$d$!$ as the reciprocal of that value. Enter the numerical value you obtain.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -43,7 +43,7 @@
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\frac{n\\lambda}{d} = \\sin \\theta$!$",
+                            "optionText": "$!$\\frac{n\\lambda}{d} = \\tan \\theta$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
@@ -56,7 +56,7 @@
                 },
                 {
                     "id": "92715edd3db940cf9c873",
-                    "stepText": "Now, using the diffraction condition with \\(n = 1\\) and the wavelength for red light \\( (700\\,\\text{nm}) \\), compute the corresponding angle, and then determine the linear position on the screen using \\(y = L\\tan\\theta\\) with \\(L = 2.5\\,\\text{m}\\). Calculate the position for the red light.",
+                    "stepText": "Now, using the diffraction condition with $!$n = 1$!$ and the wavelength for red light $!$\\lambda = 700\\,\\text{nm}$!$, compute the corresponding angle, and then determine the linear position on the screen using $!$y = L\\tan\\theta$!$ with $!$L = 2.5\\,\\text{m}$!$. Calculate the position for the red light.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -68,7 +68,7 @@
                 },
                 {
                     "id": "d8fd24cee57e45f9bed31",
-                    "stepText": "Following the same procedure, compute the linear position on the screen for the blue light \\( (\\lambda = 400\\,\\text{nm}) \\) using \\(y = L\\tan\\theta\\). What is the position of the blue light on the screen?",
+                    "stepText": "Following the same procedure, compute the linear position on the screen for the blue light $!$\\lambda = 400\\,\\text{nm}$!$ using $!$y = L\\tan\\theta$!$. What is the position of the blue light on the screen?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -80,7 +80,7 @@
                 },
                 {
                     "id": "5253b8677bfb464396062",
-                    "stepText": "Finally, determine the linear separation \\(\\Delta y\\) between the red and blue light spots by subtracting the blue light position from the red light position. What value do you obtain?",
+                    "stepText": "Finally, determine the linear separation $!$\\Delta y$!$ between the red and blue light spots by subtracting the blue light position from the red light position. What value do you obtain?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

@@ -12,7 +12,7 @@
             "steps": [
                 {
                     "id": "092da3ffeeff4b0a865d5",
-                    "stepText": "Let's start by identifying the formula that relates phase difference with frequency and time delay. Please select the correct formula for computing the phase difference (\\(\\Delta\\phi\\)) from the options below.",
+                    "stepText": "Let's start by identifying the formula that relates phase difference with frequency and time delay. Please select the correct formula for computing the phase difference ($!$\\Delta\\phi$!$) from the options below.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -43,7 +43,7 @@
                 },
                 {
                     "id": "5834c10e25ce4cee9c6d3",
-                    "stepText": "Great! Now, calculate the product of the frequency and the time delay. Recall that the frequency is given in megahertz (MHz) and the time delay in microseconds (\\(\\mu s\\)). Convert these values to base units (Hz for frequency and seconds for time) before multiplying. What is the computed product \\(f \\Delta t\\)?",
+                    "stepText": "Great! Now, calculate the product of the frequency and the time delay. Recall that the frequency is given in megahertz (MHz) and the time delay in microseconds ($!$\\mu s$!$). Convert these values to base units (Hz for frequency and seconds for time) before multiplying. What is the computed product ($!$f \\Delta t$!$)?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -57,7 +57,7 @@
                 },
                 {
                     "id": "dd940ad041014e7aa7d89",
-                    "stepText": "Excellent! Next, use the product from the previous step to compute the phase difference by multiplying it by \\(2\\pi\\). What is the total phase difference (in radians) before considering its periodicity?",
+                    "stepText": "Excellent! Next, use the product from the previous step to compute the phase difference by multiplying it by $!$2\\pi$!$. What is the total phase difference (in radians) before considering its periodicity?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -71,7 +71,7 @@
                 },
                 {
                     "id": "cffd25a97b9e4953bc610",
-                    "stepText": "Finally, remember that phase is periodic modulo \\(2\\pi\\). Considering this periodicity, determine the effective phase difference between the emitted and received signals. What is the phase difference after accounting for complete cycles?",
+                    "stepText": "Finally, remember that phase is periodic modulo $!$2\\pi$!$. Considering this periodicity, determine the effective phase difference between the emitted and received signals. What is the phase difference after accounting for complete cycles?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
