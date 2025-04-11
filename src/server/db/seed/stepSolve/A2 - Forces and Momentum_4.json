@@ -12,7 +12,7 @@
             "steps": [
                 {
                     "id": "2811d050479643dc937a9",
-                    "stepText": "Let's start by identifying the formula that connects the exhaust speed, initial and final mass to obtain the theoretical change in velocity (\\(\\Delta v_{thrust}\\)). Which of the following formulas is used in this context?",
+                    "stepText": "Let's start by identifying the formula that connects the exhaust speed, initial and final mass to obtain the theoretical change in velocity ($!$\\Delta v_{thrust}$!$). Which of the following formulas is used in this context?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -180,8 +180,8 @@
                 },
                 {
                     "id": "37678f63becb4df2b1e50",
-                    "stepText": "Finally, after substituting the known numerical values (with $!$U_{initial} = 0.25 \\text{ J}$!$ and the friction force calculated as $!$f = 0.98 \\text{ N}$!$) into the conservation equation, you obtain a quadratic equation in $!$x_m$!$. Which of the following is the correct quadratic formula to solve for $!$x_m$!$, and what is the computed value (taking the positive root) in meters?",
-                    "stepText2": "",
+                    "stepText": "Finally, after substituting the known numerical values (with $!$U_{initial} = 0.25 \\text{ J}$!$ and the friction force calculated as $!$f = 0.98 \\text{ N}$!$) into the conservation equation, you obtain a quadratic equation in $!$x_m$!$. Which of the following is the correct quadratic formula to solve for $!$x_m$!$?",
+                    "stepText2": "What is the computed value (taking the positive root) in meters?",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "0.0608"

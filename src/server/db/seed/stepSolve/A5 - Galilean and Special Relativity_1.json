@@ -104,7 +104,7 @@
                 {
                     "id": "2332b079cc7149868100d",
                     "stepText": "Finally, choose the correct relation to compute the survival probability of the muon. Which formula correctly represents the probability of the muon not decaying after a time $!$t$!$, using its dilated half-life?",
-                    "stepText2": "",
+                    "stepText2": "What is the survival probability of the muon?",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "0.115"
@@ -169,18 +169,6 @@
                     ]
                 },
                 {
-                    "id": "4114167e3c0645cdbc10b",
-                    "stepText": "Great! Now, identify and assign the velocity values for each spaceship. Remember, spaceship B moves at $!$0.7c$!$ relative to the space station and spaceship A moves at $!$0.6c$!$. Confirm which value corresponds to which spaceship.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [],
-                    "options": []
-                },
-                {
                     "id": "6d5f34359a2f4d0b9fb73",
                     "stepText": "Now, substitute the assigned velocities into the selected formula. First, calculate the numerator by subtracting spaceship A's velocity from spaceship B's velocity in the expression $!$(0.7c - 0.6c)$!$. What is the value you obtain for the numerator (in units of $!$c$!$)?",
                     "stepText2": "",
@@ -196,7 +184,7 @@
                 },
                 {
                     "id": "682ff9b2d447428c86b85",
-                    "stepText": "Finally, using the same formula, compute the relative velocity by dividing the numerator by the denominator. The denominator is given by $!$1 - (0.7 \\times 0.6)$!$, which simplifies to $!$0.58$!$. What is the final relative velocity of spaceship B as seen from spaceship A (in units of $!$c$!$)?",
+                    "stepText": "Finally, using the same formula, compute the relative velocity by dividing the numerator by the denominator. The denominator is given by $!$1 - (0.7 \\times 0.6)$!$. What is the final relative velocity of spaceship B as seen from spaceship A (in units of $!$c$!$)?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

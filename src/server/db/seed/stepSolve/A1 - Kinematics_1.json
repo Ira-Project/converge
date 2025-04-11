@@ -7,12 +7,12 @@
     "questions": [
         {
             "id": "de32bb46ba4046df87186",
-            "questionText": "An automated guided vehicle (AGV) starts from rest and accelerates at a rate of $!$0.5 \\frac{m}{s^2}$!$ for $!$5$!$ seconds. It then maintains a constant speed for $!$10$!$ seconds before decelerating at a rate of $!$1 \\frac{m}{s^2}$!$ until it comes to a stop. Calculate the total distance covered by the AGV during its journey.",
+            "questionText": "An automated guided vehicle (AGV) starts from rest and accelerates at a rate of $!$0.5\\, m/s^2$!$ for $!$5 \\text{ seconds}$!$. It then maintains a constant speed for $!$10 \\text{ seconds}$!$ before decelerating at a rate of $!$1\\,m/s^2$!$ until it comes to a stop. Calculate the total distance covered by the AGV during its journey.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "11867934b760487aa3afa",
-                    "stepText": "Let's start by considering the acceleration phase. The AGV starts from rest and accelerates uniformly. Which formula correctly relates initial velocity, acceleration, and time to compute the final velocity?",
+                    "id": "bc10709d3096455da9ead",
+                    "stepText": "Let's start by determining which displacement formula applies when an object accelerates uniformly from rest. Identify the correct formula for displacement during uniformly accelerated motion.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -20,30 +20,29 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "0e8a6662-eb83-48e0-a158-6f8a1acf9f25",
                         "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$v = u + at$!$",
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$v = at$!$",
+                            "optionText": "$!$s = vt$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$v = \\frac{s}{t}$!$",
+                            "optionText": "$!$s = ut$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "c2eadeb830604a8193652",
-                    "stepText": "Great. Now based on that, calculate the distance covered during the acceleration phase using the appropriate displacement equation for objects starting from rest. What is the distance covered in this phase?",
+                    "id": "0db69c1f22c34945903ec",
+                    "stepText": "Now, using the chosen formula and knowing that the initial velocity $!$u=0$!$, acceleration $!$a=0.5\\,m/s^2$!$, and time $!$t=5\\,s$!$, calculate the displacement for the acceleration phase.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -53,27 +52,11 @@
                     "stepConcepts": [
                         "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
-                    "options": [
-                        {
-                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$s = vt$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$s = u + at^2$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "options": []
                 },
                 {
-                    "id": "4780b6dbb7e3498e92ed8",
-                    "stepText": "Now, consider the phase when the AGV is moving at a constant speed. Which simple relationship correctly gives the distance traveled during constant speed motion?",
+                    "id": "b733f8d04fac4f0c88e94",
+                    "stepText": "Next, the AGV moves at a constant speed. Identify the correct formula for determining displacement when an object moves with uniform (constant) speed.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -81,7 +64,7 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "e36724ff-c9a8-42ac-9b06-e20dc0863e14"
+                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb"
                     ],
                     "options": [
                         {
@@ -90,50 +73,64 @@
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$s = v + t$!$",
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$s = \\frac{v}{t}$!$",
+                            "optionText": "$!$s = s_0 + at$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "07a80582da944ffc98aa5",
-                    "stepText": "Let's move on to the deceleration phase. The AGV slows down uniformly from its constant speed to a stop. Which formula would you use to calculate the stopping distance during deceleration?",
+                    "id": "8f91bfd02e06479780760",
+                    "stepText": "With a constant speed of $!$2.5\\,m/s$!$ (obtained from the acceleration phase) maintained over $!$10\\,s$!$, calculate the displacement for this constant speed segment.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "3.125"
+                        "25"
                     ],
                     "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "de5441552f534e1cb9b5f",
+                    "stepText": "For the deceleration phase, the AGV slows down uniformly until it stops. Identify the correct displacement formula that applies when an object decelerates.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
                     "stepConcepts": [
                         "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$s = \\frac{v^2}{2a}$!$",
+                            "optionText": "$!$s = ut - \\frac{1}{2}at^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$s = vt$!$",
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$s = \\frac{1}{2}at$!$",
+                            "optionText": "$!$s = vt$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "e7066e7d57114ca2b108b",
-                    "stepText": "Finally, sum up the distances found in the acceleration, constant speed, and deceleration phases to obtain the total distance covered. What is the total distance traveled by the AGV?",
+                    "id": "a8bbfbff96bb44048310e",
+                    "stepText": "Finally, using the deceleration formula with an initial speed of $!$2.5\\,m/s$!$ and deceleration $!$1\\,m/s^2$!$, compute the displacement during deceleration. Then, sum the displacements from all three phases to find the total distance traveled. What is the total distance?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -141,7 +138,8 @@
                     ],
                     "stepSolveAnswerUnits": "m",
                     "stepConcepts": [
-                        "e36724ff-c9a8-42ac-9b06-e20dc0863e14"
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a",
+                        "4e975fd0-c8b9-4ea7-a7f2-e68f006ffbfb"
                     ],
                     "options": []
                 }
@@ -149,12 +147,12 @@
         },
         {
             "id": "2224eb97de8547a2875e2",
-            "questionText": "A delivery drone starts from rest and ascends vertically with a constant acceleration of $!$2 \\frac{m}{s^2}$!$ for $!$10$!$ seconds. Then, it flies horizontally at a constant velocity for $!$30$!$ seconds before decelerating horizontally at $!$1 \\frac{m}{s^2}$!$ for $!$15$!$ seconds to land. Calculate the magnitude of the final displacement between the drone\u2019s landing position and its initial position at the warehouse.",
+            "questionText": "A delivery drone starts from rest and ascends vertically with a constant acceleration of $!$2\\,m/s^2$!$ for $!$10\\,s$!$. Then, it flies horizontally at a constant velocity for $!$30\\,s$!$ before decelerating horizontally at $!$1\\,m/s^2$!$ for $!$15\\,s$!$ to land. Calculate the magnitude of the final displacement between the drone's landing position and its initial position at the warehouse.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "a9a40ae54213432ca77ac",
-                    "stepText": "Let's start by determining the altitude reached during the vertical ascent. Identify the correct formula that calculates the displacement for an object starting from rest under constant acceleration.",
+                    "id": "e66afa92e5894834bf6d7",
+                    "stepText": "Let's start by determining which equation correctly relates displacement, initial velocity, acceleration, and time for an object under uniformly accelerated motion. Please select the appropriate formula.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -171,34 +169,34 @@
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$v = u + at$!$",
+                            "optionText": "$!$s = vt$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$s = vt$!$",
+                            "optionText": "$!$s = s_0 + vt$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "1a6c2b999138431f89178",
-                    "stepText": "Great, now move to the horizontal phase. During deceleration, the drone comes to rest from a certain speed over a time of $!$15$!$ seconds with a deceleration of $!$1 \\frac{m}{s^2}$!$. Calculate the initial speed at the beginning of deceleration.",
+                    "id": "424393959b7f467c97c75",
+                    "stepText": "Now, using the selected formula, calculate the vertical displacement when the drone ascends with an initial velocity of zero, an acceleration of $!$2\\,m/s^2$!$, over a time of $!$10\\,s$!$. Substitute the values appropriately.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "15"
+                        "100"
                     ],
-                    "stepSolveAnswerUnits": "m/s",
+                    "stepSolveAnswerUnits": "m",
                     "stepConcepts": [
-                        "07cf984a-d8bd-4836-a2c2-e4b66ded7563"
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
                     "options": []
                 },
                 {
-                    "id": "895ec111dee84bfba038d",
-                    "stepText": "Now, consider the horizontal distances covered in both the constant velocity and deceleration phases. For the deceleration phase, select the correct formula that helps determine the distance traveled when an object decelerates uniformly from a given speed to rest.",
+                    "id": "f200c586e95e4eb593a17",
+                    "stepText": "Next, consider the deceleration phase of the horizontal motion. The drone decelerates from its initial horizontal speed to a stop. Identify the correct formula that relates the initial velocity, deceleration, and time when the final velocity is zero.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -210,25 +208,39 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$d = \\frac{v^2}{2a}$!$",
+                            "optionText": "$!$0 = u - at$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$d = vt$!$",
+                            "optionText": "$!$u = at$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$d = ut + \\frac{1}{2}at^2$!$",
+                            "optionText": "$!$s = ut - \\frac{1}{2}at^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "07c0450ea597436daef45",
-                    "stepText": "Finally, combine your findings. Calculate the total horizontal displacement by adding the distance covered during the constant velocity phase and the deceleration phase. (Remember, the vertical displacement cancels out.)",
+                    "id": "10c36798cf2b4e7e82edc",
+                    "stepText": "Using the equation from the previous step, calculate the initial horizontal speed during the deceleration phase, given that the deceleration is $!$1\\,m/s^2$!$ over $!$15\\,s$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a520c9b216884a3f8246f",
+                    "stepText": "Now, determine the total horizontal displacement. This consists of two parts: displacement during the constant velocity phase and the displacement during the deceleration phase. Combine the two parts to obtain the overall horizontal distance traveled.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -236,9 +248,40 @@
                     ],
                     "stepSolveAnswerUnits": "m",
                     "stepConcepts": [
-                        "e36724ff-c9a8-42ac-9b06-e20dc0863e14"
+                        "976c240a-1fbe-4cc3-bec4-a1cd6c0c9f6a"
                     ],
                     "options": []
+                },
+                {
+                    "id": "1ea21ef26a4c47bba96c2",
+                    "stepText": "Finally, since the vertical and horizontal displacements are perpendicular, use the Pythagorean theorem to combine them and find the magnitude of the final displacement. Select the proper formula to do this.",
+                    "stepText2": "What is the magnitude of the final displacement?",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "571.5"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "42f9486d-bb12-41c1-a177-31ddbff30efd",
+                        "e3fddcf7-988e-4165-9433-91670464bef8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$D = \\sqrt{s_{horizontal}^2 + s_{vertical}^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$D = s_{horizontal} + s_{vertical}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$D = \\sqrt{s_{horizontal}^2 - s_{vertical}^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
                 }
             ]
         }

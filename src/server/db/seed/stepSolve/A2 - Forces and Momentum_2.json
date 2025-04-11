@@ -95,7 +95,7 @@
                     "stepSolveAnswer": [
                         "4447"
                     ],
-                    "stepSolveAnswerUnits": "m^2/s^2",
+                    "stepSolveAnswerUnits": "$!$m^2/s^2$!$",
                     "stepConcepts": [
                         "619a9763-10d2-48a6-a060-de4db6ea3c0a",
                         "2e689418-e014-486a-86a3-e151148f4c6d"
@@ -104,7 +104,7 @@
                 },
                 {
                     "id": "bee8e7633a624ad2ad265",
-                    "stepText": "Finally, determine the maximum speed $!$v$!$ for the car. Which of the following relationships should be used to extract $!$v$!$ from $!$v^2$!$, and what is its calculated value in $!$m/s$!$?",
+                    "stepText": "Finally, determine the maximum speed $!$v$!$ for the car in $!$m/s$!$",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -115,23 +115,7 @@
                         "4143aa6e-2fe6-4ae4-b9fc-07c4f0a0619c",
                         "93f43dd2-abd6-44a7-a8b0-e3052ca1909e"
                     ],
-                    "options": [
-                        {
-                            "optionText": "$!$v = \\sqrt{v^2}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$v = v^2$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$v = \\frac{v^2}{2}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "options": []
                 }
             ]
         },

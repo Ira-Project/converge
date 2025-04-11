@@ -11,8 +11,53 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "aa5fd7a2bb8f4e10ab5e9",
-                    "stepText": "Let's start by determining the Lorentz factor. Please select the correct formula that relates the velocity $!$v$!$ and the speed of light $!$c$!$ for computing $!$\\gamma$!$.",
+                    "id": "83895611a55f49398f711",
+                    "stepText": "Let's start by identifying the proper half-life of the muon (its lifetime in its own rest frame). Look at the problem statement and extract that value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.2e-6"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "bb0b6d22-6ec2-4604-812f-a427b7b70055"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "24476fa7d43948a38ae6a",
+                    "stepText": "Great. Now, to account for time dilation due to the muon\u2019s high speed, you need to recall the formula that relates the proper time interval $!$\\Delta t'$!$ to the dilated time $!$\\Delta t$!$. Which of the following formulas is used in time dilation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0b935911-e793-4b1e-99f1-b6338367d9d5",
+                        "a0d65d2b-9a39-4a41-bda5-09be98a1c66a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta t = \\gamma \\Delta t'$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta t = \\Delta t'/\\gamma$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta t = \\gamma^2 \\Delta t'$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0b52f615aafb4e60a5340",
+                    "stepText": "Next, to determine the time dilation effect, you need the gamma factor. Identify the correct formula for the gamma factor from the options below.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -24,29 +69,43 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\gamma = \\frac{1}{\\sqrt{1 - \\frac{v^2}{c^2}}}$!$",
+                            "optionText": "$!$\\gamma = \\frac{1}{\\sqrt{1-\\frac{v^2}{c^2}}}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\gamma = \\sqrt{1 - \\frac{v^2}{c^2}}$!$",
+                            "optionText": "$!$\\gamma = \\sqrt{1-\\frac{v^2}{c^2}}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$\\gamma = 1 - \\frac{v^2}{c^2}$!$",
+                            "optionText": "$!$\\gamma = 1 - \\frac{v}{c}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "912cffeddf0c4a9890a9a",
-                    "stepText": "Great! Now, using the value of $!$\\gamma$!$ you obtained, calculate the dilated half-life in the Earth frame by multiplying $!$\\gamma$!$ with the proper half-life ($!$2.2 \\times 10^{-6} \\text{ s}$!$). What is the dilated half-life?",
+                    "id": "53d69efec87242bebe37c",
+                    "stepText": "Now, using the gamma factor formula and the given speed $!$v=0.99c$!$, calculate the gamma factor. Provide your answer as a numerical value.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
+                        "7.09"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a0d65d2b-9a39-4a41-bda5-09be98a1c66a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bcc7d298eed1452092a81",
+                    "stepText": "With the gamma factor determined, apply the time dilation formula to compute the dilated lifetime as observed from Earth. Multiply the proper half-life by the gamma factor. What is the dilated lifetime?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15.6e-6"
                     ],
                     "stepSolveAnswerUnits": "s",
                     "stepConcepts": [
@@ -56,32 +115,18 @@
                     "options": []
                 },
                 {
-                    "id": "490357b049b84bd393abd",
-                    "stepText": "Finally, determine the average distance the muon travels, as observed from Earth, by choosing the correct relation between distance, speed, and time.",
+                    "id": "743dfb5dd140426a85b74",
+                    "stepText": "Finally, compute the distance the muon travels in the Earth's frame by multiplying its speed by the dilated lifetime. Assume $!$c=3 \\times 10^8\\text{ m/s}$!$ and that $!$v=0.99c$!$. What is the distance traveled as observed from Earth?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
+                        "4.63e3"
                     ],
                     "stepSolveAnswerUnits": "m",
-                    "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "$!$d = v \\times t$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$d = \\frac{v}{t}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$d = v + t$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "stepConcepts": [
+                        "af99d217-2569-4adb-aea1-e7a319f682ac"
+                    ],
+                    "options": []
                 }
             ]
         },
@@ -123,7 +168,7 @@
                 },
                 {
                     "id": "e93b223688bb4bef9d29d",
-                    "stepText": "Great, now that you have determined how to get the contracted length, let\u2019s set up an equation for the situation. In the Earth frame, the front of the spaceship is initially at the contracted length $L$ from the back. As time passes, the front moves forward with speed $v$ while the laser pulse moves with speed $c$. Which equation correctly relates the distance travelled by the light pulse to the initial gap and the distance the front moves?",
+                    "stepText": "Great, now that you have determined how to get the contracted length, let\u2019s set up an equation for the situation. In the Earth frame, the front of the spaceship is initially at the contracted length $!$L$!$ from the back. As time passes, the front moves forward with speed $!$v$!$ while the laser pulse moves with speed $!$c$!$. Which equation correctly relates the distance travelled by the light pulse to the initial gap and the distance the front moves?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -153,7 +198,7 @@
                 },
                 {
                     "id": "acac3567321f4fd79263a",
-                    "stepText": "Now, using the equation you identified, solve for the time $t$ that it takes for the laser pulse to reach the front of the spaceship. Remember to substitute the contracted length and the speeds (with $c = 3\\times10^8\\,m/s$ and $v = 0.8c$) as needed. What is the numerical value for $t$ in seconds?",
+                    "stepText": "Now, using the equation you identified, solve for the time $!$t$!$ that it takes for the laser pulse to reach the front of the spaceship. Remember to substitute the contracted length and the speeds (with $!$c = 3\\times10^8\\,m/s$!$ and $!$v = 0.8c$!$) as needed. What is the numerical value for $!$t$!$ in seconds?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

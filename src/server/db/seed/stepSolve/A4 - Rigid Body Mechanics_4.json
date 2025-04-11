@@ -86,13 +86,13 @@
                 },
                 {
                     "id": "974b82f842f244069af39",
-                    "stepText": "Now, compute the total moment of inertia of the system. This includes the plank and the two children (considered as point masses with moment of inertia $!$I=mr^2$!$). What is the total moment of inertia (in $!$\\text{kg\\,m^2}$!$) about the pivot?",
+                    "stepText": "Now, compute the total moment of inertia of the system. This includes the plank and the two children (considered as point masses with moment of inertia $!$I=mr^2$!$). What is the total moment of inertia (in $!$kg\\,m^2$!$) about the pivot?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "153.33"
                     ],
-                    "stepSolveAnswerUnits": "kg\u00b7m^2",
+                    "stepSolveAnswerUnits": "$!$kg\\,m^2$!$",
                     "stepConcepts": [
                         "b5685466-7a37-4ece-ab26-a0e7c37357f4",
                         "e7c0b9dd-4995-4142-ba78-a54339d150c3"
@@ -131,13 +131,13 @@
                 },
                 {
                     "id": "75fed05dd3f2415fbaf82",
-                    "stepText": "Finally, calculate the initial angular acceleration using your net torque and total moment of inertia. What is the angular acceleration (in $!$\\text{rad/s^2}$!$)?",
+                    "stepText": "Finally, calculate the initial angular acceleration using your net torque and total moment of inertia. What is the angular acceleration (in $!$rad/s^2$!$)?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "2.56"
                     ],
-                    "stepSolveAnswerUnits": "rad/s^2",
+                    "stepSolveAnswerUnits": "$!$rad/s^2$!$",
                     "stepConcepts": [
                         "3b2a38ec-ad3c-4fda-9fed-c1f652dea80e"
                     ],
@@ -242,7 +242,7 @@
                 {
                     "id": "6286a26b32774eac97022",
                     "stepText": "Finally, determine the change in the skater's rotational kinetic energy. First, select the correct formula for rotational kinetic energy. Then, using the values $!$I_i = 4$!$, $!$\\omega_i = 2$!$, $!$I_f = 2.5$!$, and $!$\\omega_f = 3.2$!$, compute the initial kinetic energy and the final kinetic energy, and finally find their difference. Identify the correct formula from the options below.",
-                    "stepText2": "",
+                    "stepText2": "What is the change in the skater's rotational kinetic energy?",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "4.8"
