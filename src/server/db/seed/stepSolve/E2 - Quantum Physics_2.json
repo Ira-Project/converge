@@ -88,7 +88,7 @@
                     "stepSolveAnswer": [
                         "6.626e-26"
                     ],
-                    "stepSolveAnswerUnits": "kg\\,m/s",
+                    "stepSolveAnswerUnits": "$!$kg\\,m/s$!$",
                     "stepConcepts": [
                         "6ebe6c0d-c162-454d-9895-d18bb1afb5b9"
                     ],
@@ -138,7 +138,7 @@
         },
         {
             "id": "b5cad2f2fa0d42f4bb60f",
-            "questionText": "A photodetector in a telescope uses a metal with a work function $!$\\phi = 2.5 \\text{ eV}$!$. The detector is exposed to light from a distant galaxy with a frequency $!$f = 8 \\times 10^{14} \\text{ Hz}$!$. Calculate the stopping voltage $!$V_s$!$ required to halt the emitted photoelectrons. Use the relations $!$E_{photoelectron} = hf - \\phi$!$, $!$E = e V_s$!$, Planck's constant $!$h = 6.626 \\times 10^{-34} \\text{ Js}$!$, and the conversion $!$1 \\text{ eV} = 1.602 \\times 10^{-19} \\text{ J}$!$.",
+            "questionText": "A photodetector in a telescope uses a metal with a work function $!$\\phi = 2.5 \\text{ eV}$!$. The detector is exposed to light from a distant galaxy with a frequency $!$f = 8 \\times 10^{14} \\text{ Hz}$!$. Calculate the stopping voltage $!$V_s$!$ required to halt the emitted photoelectrons. Use the relations $!$E_{\\text{photoelectron}} = hf - \\phi$!$, $!$E = e V_s$!$, Planck's constant $!$h = 6.626 \\times 10^{-34} \\text{ Js}$!$, and the conversion $!$1 \\text{ eV} = 1.602 \\times 10^{-19} \\text{ J}$!$.",
             "imageText": "",
             "steps": [
                 {

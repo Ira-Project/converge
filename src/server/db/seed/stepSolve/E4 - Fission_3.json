@@ -6,41 +6,89 @@
     "latexDelimiter": "$!$",
     "questions": [
         {
-            "id": "97204189ad8e491e9e667",
-            "questionText": "Scientists are conducting an experiment involving the spontaneous fission of Californium-252 ($!$^{252}Cf$!$). The initial mass of the Californium-252 nucleus is measured to be 252.081626 atomic mass units (u). After fission, the resulting fragments are a Xenon-140 nucleus ($!$^{140}Xe$!$) with a mass of 139.92164 u and a Cerium-108 nucleus ($!$^{108}Ce$!$) with a mass of 107.90417 u, along with the release of 4 neutrons, each with a mass of 1.0086649 u. Given that 1 u is equivalent to $!$1.66054 \\times 10^{-27}$!$ kg and the speed of light ($!$c$!$) is $!$2.99792 \\times 10^8$!$ m/s, calculate the fission Q-value (in MeV) for this spontaneous fission event using the mass-energy equivalence formula $!$Q = \\Delta m c^2$!$.",
+            "id": "5878ea3e73cd4ce39a178",
+            "questionText": "Assume a nuclear power plant reactor initially contains $!$1000\\,kg$!$ of uranium-235 and operates for 24 hours, consuming $!$1\\,g$!$ of uranium-235 per hour. What is the remaining mass of uranium-235 in the reactor at the end of the 24-hour period (in $!$kg$!$)?",
             "imageText": "",
             "steps": [
                 {
-                    "id": "04bd9ad5fa9644b7bbc6f",
-                    "stepText": "Let's begin by calculating the total final mass of all fission fragments. Sum the mass of the Xenon-140 nucleus, the Cerium-108 nucleus, and the mass of the 4 neutrons (each neutron having a mass of 1.0086649 u). Provide the numerical total in atomic mass units (u).",
+                    "id": "43fe088758924d80b205f",
+                    "stepText": "Let's start by determining the total mass of uranium-235 consumed in 24 hours. Multiply the hourly consumption of $!$1\\,g/hr$!$ by the total time of $!$24\\,hr$!$. What is this total consumption in grams?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "251.86047"
+                        "24"
                     ],
-                    "stepSolveAnswerUnits": "u",
-                    "stepConcepts": [
-                        "cdec40c7-d21c-475b-b59f-dfb4c42791b4"
-                    ],
+                    "stepSolveAnswerUnits": "g",
+                    "stepConcepts": [],
                     "options": []
                 },
                 {
-                    "id": "caf6c4ed915e4e34a97fc",
-                    "stepText": "Great, now determine the mass defect $!$\\Delta m$!$ by subtracting the total final mass from the initial mass of Californium-252 (252.081626 u). Compute this difference in atomic mass units (u).",
+                    "id": "8b8a3c5e2cfc41f38c0c5",
+                    "stepText": "Next, we need to convert the consumed mass from grams to kilograms. Identify the correct conversion factor between grams and kilograms from the options below.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "0.221156"
+                        ""
                     ],
-                    "stepSolveAnswerUnits": "u",
-                    "stepConcepts": [
-                        "05608edd-814d-4512-8e8c-1d46241af01d"
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,kg = 1000\\,g$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,kg = 100\\,g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,kg = 10\\,g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,kg = 500\\,g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c80038bdc62d48c88ffc4",
+                    "stepText": "Using the conversion factor you selected, convert the total consumption of $!$24\\,g$!$ into kilograms.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.024"
                     ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
                     "options": []
                 },
                 {
-                    "id": "1a20d0c323e94b6c981f6",
-                    "stepText": "Finally, convert the mass defect into energy by selecting the correct mass-energy equivalence formula that relates the mass defect to the fission Q-value. Which of the following formulas is appropriate?",
+                    "id": "6ca8750a2774416d8a669",
+                    "stepText": "Finally, subtract the mass of uranium-235 that has been consumed (in kilograms) from the initial mass of $!$1000\\,kg$!$ to determine the remaining mass. What is the remaining mass?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "999.976"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "1732617aeca641d8896aa",
+            "questionText": "Calculate the fission Q-value, in $!$MeV$!$, for the spontaneous fission of Californium-252 ($!$^{252}Cf$!$) nucleus into Xenon-132 ($!$^{132}Xe$!$), Cerium-116 ($!$^{116}Ce$!$), and four neutrons ($!$4n$!$), given that $!$m(^{252}Cf)=252.081626\\,u$!$, $!$m(^{132}Xe)=131.904153\\,u$!$, $!$m(^{116}Ce)=115.903326\\,u$!$, $!$m(n)=1.008665\\,u$!$, and $!$1\\,u=931.5\\,\\frac{MeV}{c^2}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5e685e6c3d9d478ea1966",
+                    "stepText": "Let's begin by identifying the appropriate formula to convert a mass difference into energy. Select the formula that correctly represents the mass-energy equivalence relation.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -49,11 +97,11 @@
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
                         "e0073bfa-4354-4574-81fe-37c2676f570b",
-                        "35d54b23-8c3e-414f-855e-429319c72d63"
+                        "05608edd-814d-4512-8e8c-1d46241af01d"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$Q = \\Delta m c^2$!$",
+                            "optionText": "$!$Q = \\Delta m \\cdot c^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
@@ -63,117 +111,50 @@
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$Q = \\Delta m + c^2$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "id": "74a952d8f7094ed5869fc",
-            "questionText": "A nuclear power plant is experiencing a malfunction where the control rods are only partially deploying, causing a reduced capacity to absorb neutrons. The reactor core contains Uranium-235, which undergoes induced fission upon neutron bombardment. The plant's operators observe that the rate of fission is increasing at a rate of $!$5 \\times 10^{15}$!$ fissions per second every minute. The heat exchanger is removing heat at a rate of $!$2.0 \\times 10^9$!$ Joules per second, but the energy released per fission event is approximately $!$3.2 \\times 10^{-11}$!$ Joules. If the reactor's critical operating threshold is reached when the heat generation exceeds the heat removal by $!$5 \\times 10^8$!$ Joules per second, how many seconds do the operators have to fully deploy the control rods before this critical threshold is reached?",
-            "imageText": "",
-            "steps": [
-                {
-                    "id": "7da63fee0c874282b325e",
-                    "stepText": "Let's start by converting the observed increase in the fission rate from a per minute basis to a per second squared value. Identify the conversion factor that correctly relates a rate given per minute to one given per second.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "$!$\\text{Divide by 60}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$\\text{Multiply by 60}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$\\text{Subtract 60}$!$",
+                            "optionText": "$!$Q = c^2 / \\Delta m$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "b6cfeefb03634ab688763",
-                    "stepText": "Now that you have identified the correct conversion factor, use it to compute the fission rate increase in fissions per second squared by dividing $!$5\\times10^{15}$!$ by 60. What is the resulting value (approximately)?",
+                    "id": "062e61ef037e484c96622",
+                    "stepText": "Now, calculate the total mass of the final products by adding the mass of $!$^{132}Xe$!$, the mass of $!$^{116}Ce$!$, and four times the mass of a neutron. Enter your result in atomic mass units ($!$u$!$).",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "8.33e13"
+                        "251.842139"
                     ],
-                    "stepSolveAnswerUnits": "fissions/s\u00b2",
+                    "stepSolveAnswerUnits": "u",
                     "stepConcepts": [],
                     "options": []
                 },
                 {
-                    "id": "e0b6f54c066147f6abf00",
-                    "stepText": "Great, now let's determine how quickly the heat generation is increasing. Considering that each fission releases $!$3.2\\times10^{-11}$!$ Joules, which operation would you use to combine the fission rate increase (in fissions/s\u00b2) and the energy per fission to obtain a rate of increase in heat generation (in J/s\u00b2)?",
+                    "id": "c5fe8bfc624e49429f765",
+                    "stepText": "Next, find the mass difference $!$\\Delta m$!$ by subtracting the final mass (sum from the previous step) from the initial mass of the $!$^{252}Cf$!$ nucleus. Provide the mass difference in atomic mass units ($!$u$!$).",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
+                        "0.239487"
                     ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "e9e5acb5-aca0-4fc4-a7bc-b0c45e51be65",
-                        "83eee34e-89b7-43eb-aab8-ebe55fad6b86"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$\\text{Multiply the two values}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$\\text{Divide the fission rate by the energy per fission}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$\\text{Add the two values}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "stepSolveAnswerUnits": "u",
+                    "stepConcepts": [],
+                    "options": []
                 },
                 {
-                    "id": "d9c119cad2fa42f6930cc",
-                    "stepText": "Finally, use the rate at which the heat generation is increasing and the excess heat threshold of $!$5\\times10^{8}$!$ J/s to determine the available time before reaching the critical limit. Which of the following formulas correctly relates a constant rate of increase to the time needed to accumulate a given excess? Then calculate the numerical value.",
+                    "id": "d4ec9f291e854ec8b70e4",
+                    "stepText": "Finally, use the mass-energy equivalence relation to determine the fission Q-value. Multiply the mass difference by the conversion factor $!$931.5\\,MeV/u$!$. What is the Q-value in $!$MeV$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "1.87e5"
+                        "223"
                     ],
-                    "stepSolveAnswerUnits": "seconds",
-                    "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "$!$t = \\frac{\\Delta \\text{Heat}}{\\text{Heat Rate Increase}}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$t = \\frac{\\text{Heat Rate Increase}}{\\Delta \\text{Heat}}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$t = \\Delta \\text{Heat} \\times \\text{Heat Rate Increase}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "stepSolveAnswerUnits": "MeV",
+                    "stepConcepts": [
+                        "e0073bfa-4354-4574-81fe-37c2676f570b",
+                        "05608edd-814d-4512-8e8c-1d46241af01d"
+                    ],
+                    "options": []
                 }
             ]
         }

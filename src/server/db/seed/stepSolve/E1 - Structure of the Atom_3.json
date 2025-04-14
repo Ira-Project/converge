@@ -53,7 +53,7 @@
                     "stepSolveAnswer": [
                         "5.332e5"
                     ],
-                    "stepSolveAnswerUnits": "m^{-1}",
+                    "stepSolveAnswerUnits": "$!$m^{-1}$!$",
                     "stepConcepts": [
                         "6c8fd7e5-446f-44d0-87f4-63ad0de73b9e"
                     ],
@@ -103,12 +103,12 @@
         },
         {
             "id": "844b03fe972d47e283f6a",
-            "questionText": "Consider a researcher studying the behavior of alpha particles directed toward a thin gold foil. In an experiment based on Rutherford's model, most alpha particles pass through the foil with little or no deflection while a small fraction is significantly deflected, and an even smaller number bounce back. What does the strong Coulomb interaction between an alpha particle and a gold nucleus during a close approach imply about the magnitude and spatial distribution of the atom's positive nuclear charge?",
+            "questionText": "A beam of $!$10^7$!$ alpha particles (each of charge $!$+2e$!$ and kinetic energy $!$5.0\\,MeV$!$) is directed at two very thin metal foils. One foil is gold (atomic number $!$Z = 79$!$) and the other is made of an unknown metal (atomic number $!$Z = 47$!$). Assume that, according to Rutherfords formula for point nuclei, the differential scattering cross-section at large angles approximately scales as$!$d\\sigma/d\\Omega \\propto (Z_{\\text{target}})^2/\\sin^4(\\theta/2)$!$. For a scattering angle of $!$\\theta = 130\\degree$!$, in the gold foil $!$150$!$ alpha particles are scattered (i.e. detected at $!$\\theta \\geq 130\\degree$!$). In the unknown-metal foil only $!$30$!$ alpha particles are scattered. Determine the approximate effective nuclear radius $!$R_{\\text{eff}}$!$ of the unknown metal.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "5f2756fb396f445a9424a",
-                    "stepText": "Let's start by recalling the key idea introduced by Rutherford regarding the structure of the atom. Which statement best describes the nucleus according to Rutherford's atomic model?",
+                    "id": "8c8765a64f914f2f9a3a8",
+                    "stepText": "Let's start by considering how the number of scattered alpha particles should scale with the atomic number of the target. Which of these proportionality relations correctly represents the dependence on $!$Z$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -116,29 +116,54 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "ceb70f21-79bc-4347-9b30-2ea290416b57"
+                        "ceb70f21-79bc-4347-9b30-2ea290416b57",
+                        "ee1c1be9-4322-4448-8c34-4f3e4b573d86"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$The atom's positive charge is concentrated in a small, dense nucleus.$!$",
+                            "optionText": "$!$N \\propto Z^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$The atom's positive charge is uniformly spread throughout the atom.$!$",
+                            "optionText": "$!$N \\propto Z$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$The atom has no central positive charge; it is all in the electrons.$!$",
+                            "optionText": "$!$N \\propto Z^3$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "eb59d8d045dc404daeae6",
-                    "stepText": "Now consider the behavior of the alpha particles as they pass near the gold atoms. Which concept explains the slight deflection experienced by most alpha particles due to repulsive forces?",
+                    "id": "13df2d796ea349c688d75",
+                    "stepText": "Great. Now, using that scaling, determine the expected number of scattered alpha particles for the unknown metal foil if it were a perfect point nucleus. Use the ratio $!$(47^2)/(79^2)$!$ to scale the 150 particles observed in gold. Calculate the expected yield.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "53"
+                    ],
+                    "stepSolveAnswerUnits": "particles",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "21e9e8e0b0134675954a1",
+                    "stepText": "Now, compare this expected yield with the actual observed yield (30 particles) for the unknown metal. Compute the fraction $!$f$!$ defined as $!$f = (observed yield)/(expected yield)$!$. What is the value of $!$f$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.565"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "d477b86ae3b94c148eda2",
+                    "stepText": "Next, consider how the scattering angle is related to the impact parameter $!$b$!$ in Rutherford scattering. Which of the following formulas correctly expresses this relationship?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -150,113 +175,75 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$Alpha particles experience a repulsive force due to the concentrated positive charge of the nucleus.$!$",
+                            "optionText": "$!$b = \\frac{kZ_1 Z_2 e^2}{2E} \\cot(\\theta/2)$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$Alpha particles are deflected because they are attracted to the electrons in the gold foil.$!$",
+                            "optionText": "$!$b = \\frac{2E}{kZ_1 Z_2 e^2} \\tan(\\theta/2)$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$Alpha particles are slightly deflected due to random scattering by magnetic fields.$!$",
+                            "optionText": "$!$b = \\frac{kZ_1 Z_2 e^2}{E} \\sin(\\theta/2)$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "8c8aaae9839545308c21a",
-                    "stepText": "Great, now let\u2019s focus on the cases where alpha particles are strongly deflected or even bounced back. Which option best describes the phenomenon that initiates these large-angle deflections?",
+                    "id": "14a40ba706ad4a73ad7d3",
+                    "stepText": "Having identified the correct relation, use it to compute the impact parameter $!$b$!$ for an alpha particle scattered at $!$\\theta = 130^\\circ$!$. Given that for $!$\\theta = 130^\\circ$!$, $!$\\theta/2 = 65^\\circ$!$ and $!$\\cot(65^\\circ) \\approx 0.466$!$, and using the provided numerical values (with the kinetic energy $!$E \\approx 8.0\\times10^{-13}\\,J$!$), calculate $!$b$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.3e-15"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "4e02ba06-28b8-401f-ac47-d8b33f0f08e1"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2fd4d5067f2d42789d942",
+                    "stepText": "Now, we interpret the reduced yield as due to finite nuclear size. The idea is that only alpha particles with an impact parameter larger than the effective nuclear radius $!$R_{\\text{eff}}$!$ undergo Rutherford-type scattering. This leads to a geometric probability. Which of these expressions correctly represents the fraction $!$f$!$ in terms of $!$R_{\\text{eff}}$!$ and $!$b$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         ""
                     ],
                     "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "5986cd5f-f3eb-4fae-b26b-047cbb298f55"
-                    ],
+                    "stepConcepts": [],
                     "options": [
                         {
-                            "optionText": "$!$It is initiated when an alpha particle experiences a strong Coulomb interaction with a concentrated positive charge.$!$",
+                            "optionText": "$!$f = 1 - \\frac{R_{\\text{eff}}^2}{b^2}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$It arises from weak gravitational forces acting on the alpha particle.$!$",
+                            "optionText": "$!$f = \\frac{R_{\\text{eff}}^2}{b^2}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$It occurs because of the electron cloud deflecting the alpha particle.$!$",
+                            "optionText": "$!$f = 1 + \\frac{R_{\\text{eff}}^2}{b^2}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "daf1dbfea63e481099335",
-                    "stepText": "Now, think about what this strong Coulomb interaction reveals about the distribution of the nuclear positive charge. Which statement best reflects this spatial distribution?",
+                    "id": "c5c828452cea498f95b47",
+                    "stepText": "Finally, use the geometric relation $!$f = 1 - (R_{\\text{eff}}^2/b^2)$!$ to solve for the effective nuclear radius $!$R_{\\text{eff}}$!$. With $!$f \\approx 0.565$!$ and $!$b \\approx 6.3\\times10^{-15}\\,m$!$, calculate $!$R_{\\text{eff}}$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
+                        "4.2e-15"
                     ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "79dd82d6-b48a-4528-91fc-561aa897a70e"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$The positive charge is heavily concentrated in a very small central region (the nucleus).$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$The positive charge is evenly distributed over the entire atom.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$The positive charge is mostly located in the electron cloud surrounding the atom.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "989dc281109b4f63a1f1e",
-                    "stepText": "Finally, combining your insights from the previous steps, which conclusion best summarizes the implications of the strong Coulomb interaction on the magnitude and spatial distribution of the nuclear positive charge?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "ceb70f21-79bc-4347-9b30-2ea290416b57",
-                        "5986cd5f-f3eb-4fae-b26b-047cbb298f55",
-                        "79dd82d6-b48a-4528-91fc-561aa897a70e"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$The nuclear charge is large in magnitude and is concentrated in a tiny nucleus.$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$The nuclear charge is small and spread uniformly throughout the atom.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$The nuclear charge varies and is primarily located in the electrons surrounding the nucleus.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
                 }
             ]
         }

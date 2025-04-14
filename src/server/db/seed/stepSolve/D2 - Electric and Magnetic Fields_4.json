@@ -41,22 +41,8 @@
                     ]
                 },
                 {
-                    "id": "373f681006b646e3ab224",
-                    "stepText": "Great, now that we have the formula, let\u2019s substitute in the values for the numerator (ignoring the constant factors of $!$\\pi$!$ and powers of 10 for now). Compute the product $!$4 \\times 150 \\times 200$!$ for the numerator.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "120000"
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "ac74a17b-73bf-4f45-8bc1-41c2338b9863"
-                    ],
-                    "options": []
-                },
-                {
                     "id": "6a9e2f57c0e24a0d824c9",
-                    "stepText": "Now, after incorporating the $!$10^{-7}$!$ factor from $!$\\mu_0$!$ and considering the denominator components (with $!$2\\pi \\times 0.25$!$), perform the division (after canceling the common $!$\\pi$!$ terms) to arrive at the force per unit length in $!$N/m$!$. What is the computed $!$F/L$!$?",
+                    "stepText": "Now, incorporating the value of $!$\\mu_0 = 4\\pi\\times10^{-7}\\, T\\cdot m/A$!$, substitute the values into the formula to arrive at the force per unit length in $!$N/m$!$. What is the computed $!$F/L$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

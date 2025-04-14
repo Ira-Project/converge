@@ -25,11 +25,6 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\Delta E_p = -\\frac{GMm}{r} + \\frac{GMm}{r_0}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
                             "optionText": "$!$\\Delta E_p = GMm \\left(\\frac{1}{r_0} - \\frac{1}{r}\\right)$!$",
                             "optionImage": "",
                             "isCorrect": true
@@ -62,13 +57,13 @@
                 },
                 {
                     "id": "47c9c5bdc8144efa9501d",
-                    "stepText": "Next, determine the difference between the reciprocals of the two radial distances, $!$\\frac{1}{R_e}$!$ and $!$\\frac{1}{r_{geo}}$!$. Calculate $!$\\left(\\frac{1}{R_e} - \\frac{1}{r_{geo}\\right)$!$ using the provided values.",
+                    "stepText": "Next, determine the difference between the reciprocals of the two radial distances, $!$\\frac{1}{R_e}$!$ and $!$\\frac{1}{r_{geo}}$!$. Calculate $!$\\left(\\frac{1}{R_e} - \\frac{1}{r_{geo}}\\right)$!$ using the provided values.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "1.331e-7"
                     ],
-                    "stepSolveAnswerUnits": "m^-1",
+                    "stepSolveAnswerUnits": "$!$m^{-1}$!$",
                     "stepConcepts": [
                         "ba8a45fb-f342-4482-89ac-8d8dbc50f532"
                     ],
@@ -163,7 +158,7 @@
                     "stepSolveAnswer": [
                         "5400000"
                     ],
-                    "stepSolveAnswerUnits": "m^2/s^2",
+                    "stepSolveAnswerUnits": "$!$m^2/s^2$!$",
                     "stepConcepts": [
                         "0426771a-a8e3-4a0d-aca0-c3f723e53367",
                         "46604101-3be5-4092-ac9f-5c58ea2f77f3"

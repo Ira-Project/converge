@@ -103,12 +103,12 @@
         },
         {
             "id": "fb88104705014565a3452",
-            "questionText": "The problem asks for the induced EMF in the coil due to the change in inductance from 5 mH to 5.01 mH, assuming the current remains constant. However, the time interval over which this change occurs is not provided. Please provide the time duration during which the inductance changes in order to calculate the induced EMF.",
+            "questionText": "A coil carries a constant current of $!$2.0\\,\\text{A}$!$. Due to a slow change in its configuration, the coil's inductance increases linearly from $!$5.00\\,\\text{mH}$!$ to $!$5.01\\,\\text{mH}$!$ over a time interval of $!$10.0\\,\\text{ms}$!$. Determine the induced EMF in the coil during this interval.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "33f0dfbff4ce4ee99fb72",
-                    "stepText": "Let's begin by identifying the relationship between the induced EMF and the change in inductance when the current is constant. Which of the following expressions most correctly represents this relationship?",
+                    "id": "88a766461adf4de397a77",
+                    "stepText": "Let's start by identifying the correct formula that relates the induced EMF from self-induction. Please select the formula that correctly expresses the induced EMF due to a changing inductance with a constant current.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -120,42 +120,77 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\mathcal{E} = I\\frac{dL}{dt}$!$",
+                            "optionText": "$!$\\epsilon = -I \\frac{dL}{dt}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\mathcal{E} = L\\frac{dI}{dt}$!$",
+                            "optionText": "$!$\\epsilon = -L \\frac{dI}{dt}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$\\mathcal{E} = \\frac{dL}{dt}\\frac{1}{I}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$\\mathcal{E} = \\frac{I}{L}\\frac{dL}{dt}$!$",
+                            "optionText": "$!$\\epsilon = I \\frac{dL}{dt}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "27576fb4ffb84940bc462",
-                    "stepText": "Great! Now, let's compute the change in inductance using the values given. Recall that $!$\\Delta L = L_{final} - L_{initial}$!$. With $!$L_{initial} = 5\\;\\text{mH}$!$ and $!$L_{final} = 5.01\\;\\text{mH}$!$, calculate $!$\\Delta L$!$ in Henries.",
+                    "id": "3d34e43e27524aba982aa",
+                    "stepText": "Now, calculate the change in inductance $!$\\Delta L$!$. The inductance increases from $!$5.00\\,\\text{mH}$!$ to $!$5.01\\,\\text{mH}$!$. Remember to convert the value into henries before computing.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "1e-5"
+                        "1.0e-5"
                     ],
                     "stepSolveAnswerUnits": "H",
                     "stepConcepts": [],
                     "options": []
                 },
                 {
-                    "id": "d66403f0ef8d42f28a66f",
-                    "stepText": "Now that we have computed $!$\\Delta L$!$, consider what additional information is necessary to calculate the rate of change $!$\\frac{dL}{dt}$!$, which then allows you to find the induced EMF. Which of the following is the missing parameter?",
+                    "id": "8779361a299f4d49853c2",
+                    "stepText": "Next, convert the given time interval of $!$10.0\\,\\text{ms}$!$ to seconds for consistency with SI units.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.010"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7d3186fae6fb4399ae09f",
+                    "stepText": "Using your previous results, determine the rate of change of inductance $!$\\frac{dL}{dt}$!$ by dividing the change in inductance by the time interval.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.0e-3"
+                    ],
+                    "stepSolveAnswerUnits": "H/s",
+                    "stepConcepts": [
+                        "3acc1ba7-ccc9-4760-958e-e67639d3f739"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7580b4df97ad41868f8d5",
+                    "stepText": "Now, apply the formula identified in Step 1. Using the constant current of $!$2.0\\,\\text{A}$!$ and your computed rate of change of inductance, calculate the induced EMF in the coil.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-0.002"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "3acc1ba7-ccc9-4760-958e-e67639d3f739"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1889b8114cf4440d9f7ed",
+                    "stepText": "Finally, consider the negative sign in your induced EMF result. Which concept explains why the induced EMF has a negative sign?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -163,45 +198,25 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "3acc1ba7-ccc9-4760-958e-e67639d3f739"
+                        "a42ad859-ed49-4773-b675-15519dcc2b70"
                     ],
                     "options": [
                         {
-                            "optionText": "The time duration $!$\\Delta t$!$ during which the inductance changes",
+                            "optionText": "Lenz's Law",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "The magnitude of the constant current $!$I$!$",
+                            "optionText": "Faraday's Law",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "The number of turns in the coil",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "The strength of the magnetic field",
+                            "optionText": "Motional EMF",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
-                },
-                {
-                    "id": "09465f82637c4e7485d0c",
-                    "stepText": "Finally, based on the formula and the computed $!$\\Delta L$!$, explain why the problem cannot be solved without knowing the time duration $!$\\Delta t$!$. What conclusion can you draw regarding the ability to calculate the induced EMF?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "01f9d96a-7639-4028-8921-a8d295d26596",
-                        "3acc1ba7-ccc9-4760-958e-e67639d3f739"
-                    ],
-                    "options": []
                 }
             ]
         }

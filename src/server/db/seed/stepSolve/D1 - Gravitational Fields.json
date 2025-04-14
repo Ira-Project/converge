@@ -151,7 +151,7 @@
             "steps": [
                 {
                     "id": "1d433768c4bb4a45a8dfb",
-                    "stepText": "Step 1: Let's start by determining the orbital radius $!$r$!$. The orbital radius in a circular orbit is given by the sum of the planet's radius and the satellite's altitude. Compute $!$r = R + h$!$ (remember to convert from kilometers to meters). What is the orbital radius?",
+                    "stepText": "Let's start by determining the orbital radius $!$r$!$. The orbital radius in a circular orbit is given by the sum of the planet's radius and the satellite's altitude. Compute $!$r = R + h$!$ (remember to convert from kilometers to meters). What is the orbital radius?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -164,44 +164,14 @@
                     "options": []
                 },
                 {
-                    "id": "ff539670e9664ae4b7354",
-                    "stepText": "Step 2: Great! Now, before moving further, select the correct expression that represents the product of the gravitational constant and the mass of the planet ($!$GM$!$). Which expression is correct?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "913f94ce-32fd-4e0b-81d1-2d6512bc5085"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$G \\times M$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$G + M$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$\\frac{G}{M}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
                     "id": "5057334d915448ecbf6ce",
-                    "stepText": "Step 3: Excellent. Now calculate the value of the gravitational parameter $!$GM$!$ using the provided values. Compute $!$GM = G \\times M$!$. What numerical value do you obtain? (Your answer should be in $!$\\text{m}^3/\\text{s}^2$!$)",
+                    "stepText": "Excellent. Now calculate the value of the gravitational parameter $!$GM$!$ using the provided values. Compute $!$GM = G \\times M$!$. What numerical value do you obtain? (Your answer should be in $!$\\text{m}^3/\\text{s}^2$!$)",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "4.2667e13"
                     ],
-                    "stepSolveAnswerUnits": "m^3/s^2",
+                    "stepSolveAnswerUnits": "$!$m^3/s^2$!$",
                     "stepConcepts": [
                         "913f94ce-32fd-4e0b-81d1-2d6512bc5085"
                     ],
@@ -209,7 +179,7 @@
                 },
                 {
                     "id": "e928bf91ad124b018c5e2",
-                    "stepText": "Step 4: Now that you have $!$GM$!$ and $!$r$!$, we need the proper formula to calculate the orbital speed for a satellite in circular orbit. Select the correct expression for the orbital speed.",
+                    "stepText": "Now that you have $!$GM$!$ and $!$r$!$, we need the proper formula to calculate the orbital speed for a satellite in circular orbit. Select the correct expression for the orbital speed.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -239,7 +209,7 @@
                 },
                 {
                     "id": "4c36b014bd7b424983fc7",
-                    "stepText": "Step 5: Finally, use the formula you identified to calculate the orbital speed $!$v$!$. Substitute the values of $!$GM$!$ and $!$r$!$ into the formula $!$v = \\sqrt{\\frac{GM}{r}}$!$. What orbital speed do you obtain?",
+                    "stepText": "Finally, use the formula you identified to calculate the orbital speed $!$v$!$. Substitute the values of $!$GM$!$ and $!$r$!$ into the formula $!$v = \\sqrt{\\frac{GM}{r}}$!$. What orbital speed do you obtain?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

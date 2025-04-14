@@ -13,7 +13,7 @@
                 {
                     "id": "aa9287e4ad5f46ee97925",
                     "stepText": "Let's start by converting the train's speed from $!$km/h$!$ to $!$m/s$!$. Which conversion factor should be used in this conversion?",
-                    "stepText2": "",
+                    "stepText2": "Calculate the speed in $!$m/s$!$.",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "50"
@@ -132,7 +132,7 @@
                 {
                     "id": "044d145406bf41d5831d8",
                     "stepText": "Let's start by determining the turns ratio of the transformer. Use the number of primary and secondary turns to calculate the ratio. What is the correct mathematical relationship to compute the turns ratio?",
-                    "stepText2": "",
+                    "stepText2": "Calculate the turns ratio.",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "20"
@@ -188,7 +188,7 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$V = 4.44 \\times f \\times N \\times \\Phi$!$",
+                            "optionText": "$!$V = \\frac{2\\pi}{\\sqrt{2}} \\times f \\times N \\times \\Phi$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },

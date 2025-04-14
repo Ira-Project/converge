@@ -11,36 +11,20 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "301acb8c7e9a440d917bc",
-                    "stepText": "Let's start by finding the orbital radius at which the satellite will orbit Mars. Identify the correct expression that relates the orbital radius to the radius of Mars and the altitude of the satellite.",
+                    "id": "b304abec03e7462ea5c34",
+                    "stepText": "Let's begin by converting the given values from kilometers to meters and finding the orbital radius. Recall that the orbital radius $!$r$!$ is given by adding the planet's radius $!$R$!$ and the altitude $!$h$!$. Convert $!$R = 3389.5\\,km$!$ and $!$h = 500\\,km$!$ into meters and compute $!$r = R + h$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
+                        "3.8895e6"
                     ],
-                    "stepSolveAnswerUnits": "",
+                    "stepSolveAnswerUnits": "m",
                     "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "$!$r = R + h$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$r = R - h$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$r = h - R$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "options": []
                 },
                 {
-                    "id": "d4944f8e5030410888300",
-                    "stepText": "Great! Now that you understand how to find the orbital radius, determine which formula is used to compute the total mechanical energy of a satellite in a circular orbit around a massive body.",
+                    "id": "502ff46ff9414657935e1",
+                    "stepText": "Great! Now that you have the orbital radius, identify the correct formula for the total orbital energy of a satellite in a stable circular orbit. Select the formula that expresses the total energy $!$E_T$!$ in terms of $!$G$!$, $!$M$!$, $!$m$!$, and $!$r$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -52,53 +36,39 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$E = -\\frac{GMm}{2r}$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$E = -\\frac{GMm}{r}$!$",
+                            "optionText": "$!$E_T = \\frac{GMm}{r}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$E = \\frac{GMm}{2r}$!$",
+                            "optionText": "$!$E_T = -\\frac{GMm}{2r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_T = \\frac{1}{2}mv^2 - \\frac{GMm}{r}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "25d76e98def241ad98dff",
-                    "stepText": "Now, proceed to compute the product of the universal gravitational constant $!$G$!$ and the mass of Mars $!$M$!$. Use the values $!$G = 6.674\\times10^{-11}\\,\\text{m}^3/\\text{kg}\\,\\text{s}^2$!$ and $!$M = 6.39\\times10^{23}\\,\\text{kg}$!$.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "4.266e13"
-                    ],
-                    "stepSolveAnswerUnits": "m^3/s^2",
-                    "stepConcepts": [
-                        "913f94ce-32fd-4e0b-81d1-2d6512bc5085"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "d5bfc07fa9264f9a943f6",
-                    "stepText": "Excellent. Next, calculate the numerator of the energy expression by multiplying the product $!$GM$!$ from the previous step by the satellite's mass $!$m = 500\\,\\text{kg}$!$. What do you obtain?",
+                    "id": "cf213af3ca24481ca9383",
+                    "stepText": "Now, calculate the numerator of the energy expression, which involves the product $!$G \\times M \\times m$!$. Use the given values for $!$G$!$, $!$M$!$, and $!$m$!$ to compute this value.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "2.133e16"
                     ],
-                    "stepSolveAnswerUnits": "kg\u00b7m^3/s^2",
+                    "stepSolveAnswerUnits": "$!$J\\,m$!$",
                     "stepConcepts": [
-                        "913f94ce-32fd-4e0b-81d1-2d6512bc5085"
+                        "ea1e89e6-51eb-4c26-9db9-4af747efca26"
                     ],
                     "options": []
                 },
                 {
-                    "id": "3d4e0e6a37d24056b8a30",
-                    "stepText": "To continue, determine the denominator of the energy formula by finding twice the orbital radius. Recall that the orbital radius was computed earlier. What is the value of $!$2r$!$?",
+                    "id": "5cf5ed0e722a413889ed2",
+                    "stepText": "Next, compute the denominator by multiplying the orbital radius by 2, i.e. calculate $!$2r$!$, using the orbital radius you obtained in Step 1.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -109,8 +79,8 @@
                     "options": []
                 },
                 {
-                    "id": "e6ef63fffdb94bcdab2bc",
-                    "stepText": "Finally, use the total mechanical energy formula for circular orbits to calculate the total energy $!$E$!$. Combine the numerator and denominator computed in the previous steps and ensure you include the negative sign in the formula. What is the resulting energy required for the satellite?",
+                    "id": "2c513de0486741e091db4",
+                    "stepText": "Finally, determine the total orbital energy by dividing the numerator by the denominator and applying the appropriate negative sign. What is the resulting total energy of the satellite in its orbit?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -126,40 +96,24 @@
         },
         {
             "id": "dd7ffff3fedb486caabe5",
-            "questionText": "A team of astronomers has discovered a new dwarf planet in the outer reaches of our solar system. The dwarf planet orbits the Sun with a semi-major axis of $!$a = 8.0 \\times 10^{12}\\,\\text{m}$!$ and an orbital period of $!$T = 600\\,\\text{years}$!$ (with 1 year equal to $!$3.154 \\times 10^7\\,\\text{seconds}$!$). Given that the dwarf planet's mass is $!$m = 5.0 \\times 10^{22}\\,\\text{kg}$!$, first use Kepler's Third Law to estimate the mass of the Sun, and then calculate the gravitational force between the Sun and the dwarf planet. (Provide the final numerical value for the gravitational force.)",
+            "questionText": "A team of astronomers has discovered a new dwarf planet in the outer reaches of our solar system. The dwarf planet orbits the Sun with a semi-major axis of $!$a = 8.0 \\times 10^{12}\\,\\text{m}$!$ and an orbital period of $!$T = 600\\,\\text{years}$!$ (with 1 year equal to $!$3.154 \\times 10^7\\,\\text{seconds}$!$). Given that the dwarf planet's mass is $!$m = 5.0 \\times 10^{22}\\,\\text{kg}$!$, first use Kepler's Third Law to estimate the mass of the Sun, and then calculate the gravitational force between the Sun and the dwarf planet.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "c0241753dfe44ffcbe361",
-                    "stepText": "Let's start by converting the orbital period from years to seconds. Identify the correct conversion relation that you would use to convert $!$600\\,\\text{years}$!$ into seconds.",
+                    "id": "d0718b3a283a49958af8a",
+                    "stepText": "Let's start by converting the orbital period from years to seconds. Multiply the period in years by the conversion factor $!$3.154 \\times 10^7\\,\\text{s/year}$!$. What is the period in seconds?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        ""
+                        "1.8924e10"
                     ],
-                    "stepSolveAnswerUnits": "",
+                    "stepSolveAnswerUnits": "s",
                     "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "$!$T_{s} = 600 \\times 3.154 \\times 10^7$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$T_{s} = \\frac{600}{3.154 \\times 10^7}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$T_{s} = 600 + 3.154 \\times 10^7$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
+                    "options": []
                 },
                 {
-                    "id": "ebbe481a2220489eb9a47",
-                    "stepText": "Now, let\u2019s determine the relation given by Kepler's Third Law that connects the gravitational parameter $!$GM$!$ with the semi-major axis $!$a$!$ and the orbital period $!$T$!$. Please select the correct formula.",
+                    "id": "918306a8152448f48cdcc",
+                    "stepText": "Great. Next, recall the relationship in orbital mechanics from Kepler's Third Law. Identify the correct formula that relates the orbital period $!$T$!$, the semi-major axis $!$a$!$, the gravitational constant $!$G$!$, and the mass $!$M$!$ of the sun.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -167,49 +121,90 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "743c1657-ccbf-4c07-9271-689fe01f8ba9",
-                        "fbd8edf3-8814-4fd4-a0d3-e99cc717d126"
+                        "fbd8edf3-8814-4fd4-a0d3-e99cc717d126",
+                        "743c1657-ccbf-4c07-9271-689fe01f8ba9"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$GM = \\frac{4\\pi^2a^3}{T^2}$!$",
+                            "optionText": "$!$T^2 = \\frac{4\\pi^2 a^3}{GM}$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$GM = \\frac{T^2a^3}{4\\pi^2}$!$",
+                            "optionText": "$!$T = \\frac{4\\pi^2 a^3}{GM}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$GM = \\frac{a^3}{T^2}$!$",
+                            "optionText": "$!$T^2 = \\frac{GM}{4\\pi^2 a^3}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "fed64f5728e2420aa8ad4",
-                    "stepText": "Great, now that you have converted the time and identified the relation, calculate the mass of the Sun using the established relation with the values for $!$a$!$ and the orbital period in seconds. Provide the numerical value you obtain.",
+                    "id": "e7e3fca127db4294ba374",
+                    "stepText": "Now, let\u2019s calculate the cube of the semi-major axis $!$a$!$. Given $!$a = 8.0 \\times 10^{12}\\,\\text{m}$!$, compute $!$a^3$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "8.5e29"
+                        "5.12e38"
+                    ],
+                    "stepSolveAnswerUnits": "$!$m^3$!$",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "6f2c668d022d41b1b3f67",
+                    "stepText": "With the values of $!$T\\,(in\\,s)$!$ and $!$a^3$!$ at hand, use the rearranged formula from Kepler's Third Law $!$M = \\frac{4\\pi^2a^3}{GT^2}$!$ to calculate the mass of the Sun. What numerical value do you get for $!$M$!$ (remember to keep track of the units)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8.47e29"
                     ],
                     "stepSolveAnswerUnits": "kg",
                     "stepConcepts": [
-                        "743c1657-ccbf-4c07-9271-689fe01f8ba9",
                         "fbd8edf3-8814-4fd4-a0d3-e99cc717d126"
                     ],
                     "options": []
                 },
                 {
-                    "id": "0b7de9afc4854833aa22e",
-                    "stepText": "Now, use the estimated mass of the Sun along with the dwarf planet's mass and the given distance to calculate the gravitational force between them. Identify and apply the appropriate relation from Newton's law of gravitation and compute the force.",
+                    "id": "dc5ffd04fb5f413cabe6f",
+                    "stepText": "Now that we have estimated the Sun's mass, let\u2019s turn to the next part. Identify the correct formula for Newton's Law of Gravitation that relates the gravitational force $!$F$!$, masses $!$M$!$ and $!$m$!$, the gravitational constant $!$G$!$, and the distance $!$r$!$ between them.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "4.4e16"
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "913f94ce-32fd-4e0b-81d1-2d6512bc5085"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{GMm}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{Gm}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{GMm}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "442d792c22c1486997ec7",
+                    "stepText": "Excellent. Finally, using Newton's Law of Gravitation, calculate the gravitational force between the Sun and the dwarf planet. First, compute the square of the distance $!$r$!$, where $!$r = 8.0 \\times 10^{12}\\,\\text{m}$!$. Then, combine it with the computed mass of the Sun and the given mass of the dwarf planet using the formula. What is the gravitational force?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.42e16"
                     ],
                     "stepSolveAnswerUnits": "N",
                     "stepConcepts": [

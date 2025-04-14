@@ -7,7 +7,7 @@
     "questions": [
         {
             "id": "49de459f02f847bb961fe",
-            "questionText": "A research team is observing a main sequence star that is more massive than our Sun. This massive star primarily uses the CNO cycle for nuclear fusion in its core. Suppose the core temperature of this star is $!$3 \\times 10^7 K$!$ and its luminosity is $!$500 L_{\\odot}$!$, where $!$L_{\\odot}$!$ is the luminosity of the Sun ($!$3.828 \\times 10^{26} W$!$). The Sun has a surface temperature of approximately 5778 K. Given that the luminosity $!$L$!$ of a star is related to its radius $!$R$!$ and surface temperature $!$T$!$ by the formula $!$L = 4 \\pi R^2 \\sigma T^4$!$, where $!$\\sigma$!$ is the Stefan-Boltzmann constant ($!$5.67 \\times 10^{-8} W m^{-2} K^{-4}$!$), calculate the radius of this massive star in terms of the solar radius $!$R_{\\odot}$!$, which is approximately $!$6.957 \\times 10^8 m$!$.",
+            "questionText": "A research team is observing a main sequence star that is more massive than our Sun. This massive star primarily uses the CNO cycle for nuclear fusion in its core. Suppose the core temperature of this star is $!$3 \\times 10^7 K$!$ and its luminosity is $!$500 L_{\\odot}$!$, where $!$L_{\\odot}$!$ is the luminosity of the Sun ($!$3.828 \\times 10^{26} W$!$). The Sun has a surface temperature of approximately 5778 K. Calculate the radius of this massive star in terms of the solar radius $!$R_{\\odot}$!$, which is approximately $!$6.957 \\times 10^8 m$!$.",
             "imageText": "",
             "steps": [
                 {
@@ -167,7 +167,7 @@
                 },
                 {
                     "id": "9ddf1a9f151a4c1bad733",
-                    "stepText": "Now, using the derived relation, substitute the given temperatures for Star B ($!$5800\\;K$!$) and Star A ($!$3500\\;K$!$) to calculate the ratio of their radii. Remember that after deriving $(R_A/R_B)^2=(T_B/T_A)^4$, taking the square root gives $!$(R_A/R_B)=(T_B/T_A)^2$. What is the numerical value of $!$(R_A/R_B)$!$?",
+                    "stepText": "Now, using the derived relation, substitute the given temperatures for Star B ($!$5800\\;K$!$) and Star A ($!$3500\\;K$!$) to calculate the ratio of their radii. Remember that after deriving $!$(R_A/R_B)^2=(T_B/T_A)^4$!$, taking the square root gives $!$(R_A/R_B)=(T_B/T_A)^2$!$. What is the numerical value of $!$(R_A/R_B)$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

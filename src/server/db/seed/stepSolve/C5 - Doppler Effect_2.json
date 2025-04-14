@@ -27,7 +27,7 @@
                 },
                 {
                     "id": "cf36729ec6ec4f3ba9890",
-                    "stepText": "Great, now that you have calculated the frequency shift, identify the correct formula that relates the frequency shift to the blood flow speed. Which expression corresponds to the Doppler shift in a reflected ultrasound, where the shift is approximately given by $!$\\Delta f = \\frac{2 f_0 v}{c}$!$?",
+                    "stepText": "Great, now that you have calculated the frequency shift, identify the correct formula that relates the frequency shift to the blood flow speed.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -58,7 +58,7 @@
                 },
                 {
                     "id": "fbc787f7af19417bb4d12",
-                    "stepText": "Now, rearrange the formula to solve for the blood flow speed $!$v$!$. Identify the correct rearranged expression which shows $!$v$!$ in terms of $!$\\Delta f$, $!$c$, and $!$f_0$!$.",
+                    "stepText": "Now, rearrange the formula to solve for the blood flow speed $!$v$!$. Identify the correct rearranged expression which shows $!$v$!$ in terms of $!$\\Delta f$!$, $!$c$!$, and $!$f_0$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -110,8 +110,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "a92872299ce4424799286",
-                    "stepText": "Let's start by identifying the appropriate Doppler effect formula to calculate the frequency received by the moth, $!$f_1$!$, when the bat emits a pulse with frequency $!$f_0$!$ while both the bat and the moth are in motion. Please select the correct formula from the options below.",
+                    "id": "9f50e0fc47a54aeca6e3f",
+                    "stepText": "Let's start by identifying the appropriate Doppler effect formula for the first leg of the problem where the bat is a moving source and the moth is a moving observer. Choose the formula that relates the original frequency $!$f$!$ to the frequency received by the observer based on the speeds of the source and observer.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -120,29 +120,77 @@
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
                         "a20069a8-ca33-4e26-93ce-87c105e52c27",
-                        "73f17e12-18ff-4466-adf7-e5551d71bc83"
+                        "73f17e12-18ff-4466-adf7-e5551d71bc83",
+                        "a738c7c2-d0ca-4760-8351-7ce0f93d7404"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$f_1 = f_0 \\times \\left(\\frac{c - v_m}{c - v_b}\\right)$!$",
+                            "optionText": "$!$f' = f \\left(\\frac{v - u_{observer}}{v - u_{source}}\\right)$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$f_1 = f_0 \\times \\left(\\frac{c + v_b}{c - v_m}\\right)$!$",
+                            "optionText": "$!$f' = f \\left(\\frac{v + u_{observer}}{v - u_{source}}\\right)$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$f_1 = f_0 \\times \\left(\\frac{c - v_b}{c + v_m}\\right)$!$",
+                            "optionText": "$!$f' = f \\left(\\frac{v - u_{observer}}{v + u_{source}}\\right)$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "6169e838fa1544378a62d",
-                    "stepText": "Great, now that you have identified the correct formula to determine the frequency $!$f_1$!$ received by the moth, let's use this result to calculate the echo frequency $!$f_{echo}$!$ as perceived by the bat. In this step, when the moth reflects the sound, it acts as a moving source and the bat, moving toward it, receives the echo. Use the Doppler relation that incorporates the bat\u2019s motion toward a moving source to compute $!$f_{echo}$!$. (Use your computed $!$f_1$!$ from the previous step in your calculation.)",
+                    "id": "9fc574ba336440ae85c2a",
+                    "stepText": "Now, substitute the given values $!$v=343\\,m/s$!$, $!$u_{source}=10\\,m/s$!$, $!$u_{observer}=5\\,m/s$!$, and $!$f=40\\,kHz$!$ into the formula you selected in Step 1. Calculate the intermediate frequency received by the moth.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "40.6"
+                    ],
+                    "stepSolveAnswerUnits": "kHz",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d21595f60b954d41a86e9",
+                    "stepText": "Great, now consider the return journey where the moth acts as a moving reflector (or source) and the bat becomes the moving observer. Identify the correct Doppler effect formula for this scenario. Which one correctly represents the relationship between the frequency emitted by the reflector and the frequency detected by the bat?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a20069a8-ca33-4e26-93ce-87c105e52c27",
+                        "19724e93-e748-4ce6-9cdb-a6e1b3f2e41f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f' = f \\left(\\frac{v + u_{observer}}{v + u_{source}}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f' = f \\left(\\frac{v - u_{observer}}{v + u_{source}}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f' = f \\left(\\frac{v + u_{observer}}{v - u_{source}}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c27c8bb2aafe4de79f59d",
+                    "stepText": "Finally, using the intermediate frequency from Step 2 along with the values $!$v=343\\,m/s$!$, $!$u_{bat}=10\\,m/s$!$ (for the bat as observer) and $!$u_{moth}=5\\,m/s$!$ (for the moth as the source in reflection), substitute these into your chosen formula from Step 3 to compute the echo frequency as detected by the bat.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -151,7 +199,8 @@
                     "stepSolveAnswerUnits": "kHz",
                     "stepConcepts": [
                         "a20069a8-ca33-4e26-93ce-87c105e52c27",
-                        "a738c7c2-d0ca-4760-8351-7ce0f93d7404"
+                        "8004f091-3866-4725-923f-566d362ee31a",
+                        "bbf4917b-1be4-4827-b1ae-ddfdaa7124a9"
                     ],
                     "options": []
                 }

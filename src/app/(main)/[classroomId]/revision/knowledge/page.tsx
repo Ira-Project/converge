@@ -4,7 +4,7 @@ import { redirect } from "next/navigation";
 import { api } from "@/trpc/server";
 import KnowledgeZapAssignmentView from "./_components/knowledge-zap-assignment-view";
 
-export default async function ActivityPage(props: { params: Promise<{ classroomId: string }> }) {
+export default async function KnowledgeZapRevisionPage(props: { params: Promise<{ classroomId: string }> }) {
   const params = await props.params;
   const { user } = await validateRequest();
 

@@ -71,7 +71,7 @@
                 },
                 {
                     "id": "fa4e76edd53048a4a7be3",
-                    "stepText": "Now, use your results from the previous steps to calculate the number of cycles required. Divide the total energy required by the energy added per cycle. Compute $!$n = \\frac{E_{total}}{\\Delta E}$!$ using the values: energy density $5\\times10^7\\,\\mathrm{J/m}$, bridge span $200\\,\\mathrm{m}$, and $\\Delta E \\sim 10^7\\,\\mathrm{J/cycle}$. What is the numerical value of $!$n$!$?",
+                    "stepText": "Now, use your results from the previous steps to calculate the number of cycles required. Divide the total energy required by the energy added per cycle. Compute $!$n = \\frac{E_{total}}{\\Delta E}$!$ using the values: energy density $!$5\\times10^7\\,\\mathrm{J/m}$!$, bridge span $!$200\\,\\mathrm{m}$!$, and $!$\\Delta E \\sim 10^7\\,\\mathrm{J/cycle}$!$. What is the numerical value of $!$n$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -79,20 +79,6 @@
                     ],
                     "stepSolveAnswerUnits": "cycles",
                     "stepConcepts": [],
-                    "options": []
-                },
-                {
-                    "id": "41e60e07929e46ebab6bb",
-                    "stepText": "For further insight, if you are interested, you may also determine the total time required if the bridge is being hit at its natural frequency. Using $!$T = n / f$!$, where the natural frequency $!$f$!$ is $0.5\\,\\mathrm{Hz}$, compute the duration of time corresponding to $n$ cycles.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "2000"
-                    ],
-                    "stepSolveAnswerUnits": "seconds",
-                    "stepConcepts": [
-                        "524f0548-0ea5-4a4b-8776-652b87aa3602"
-                    ],
                     "options": []
                 }
             ]
@@ -134,7 +120,7 @@
                 },
                 {
                     "id": "aabc433cae514c98a2c72",
-                    "stepText": "Great! Now, using your chosen formula and the given values $!$L = 0.75\\,\\mathrm{m}$!$ and $!$f = 220\\,\\mathrm{Hz}$!$, calculate the wave speed $!$v$!$. Recall that you are multiplying $!$2$, $!$L$, and $!$f$!$ together.",
+                    "stepText": "Great! Now, using your chosen formula and the given values $!$L = 0.75\\,\\mathrm{m}$!$ and $!$f = 220\\,\\mathrm{Hz}$!$, calculate the wave speed $!$v$!$. Recall that you are multiplying $!$2$!$, $!$L$!$, and $!$f$!$ together.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

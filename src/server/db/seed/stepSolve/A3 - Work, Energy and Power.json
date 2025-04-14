@@ -7,7 +7,7 @@
     "questions": [
         {
             "id": "b1eef76ad4f34c9b9b962",
-            "questionText": "A cyclist pedals up a hill with a constant speed. The hill has a height of $!$50\\text{ m}$!$ and the cyclist and bicycle have a combined weight of $!$700\\text{ N}$!$. The cyclist's power output is $!$100\\text{ W}$!$ and they take $!$60\\text{ s}$!$ to reach the top. The cyclist's body consumes $!$5000\\text{ J}$!$ of energy during that time. Determine the efficiency of the cyclist's energy conversion during the ascent.",
+            "questionText": "A cyclist pedals up a hill with a constant speed. The hill has a height of $!$50\\text{ m}$!$ and the cyclist and bicycle have a combined weight of $!$700\\text{ N}$!$. The cyclist's power output is $!$100\\text{ W}$!$ and they take $!$60\\text{ s}$!$ to reach the top. The cyclist's body consumes $!$8000\\text{ J}$!$ of energy during that time. Determine the efficiency of the cyclist's energy conversion during the ascent.",
             "imageText": "",
             "steps": [
                 {
@@ -86,59 +86,15 @@
                 },
                 {
                     "id": "0ec8e70686da4446a556b",
-                    "stepText": "Using the work output computed earlier and the energy consumed by the cyclist's body (given as $!$5000\\text{ J}$!$), apply the efficiency formula to calculate the efficiency of energy conversion.",
+                    "stepText": "Using the work output computed earlier and the energy consumed by the cyclist's body (given as $!$8000\\text{ J}$!$), apply the efficiency formula to calculate the efficiency of energy conversion.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "1.2"
+                        "0.75"
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
                         "0be92c40-ded4-48ee-a466-07236da03b9f"
-                    ],
-                    "options": []
-                },
-                {
-                    "id": "793d95b247e8426992301",
-                    "stepText": "For additional insight, it's often useful to compare the mechanical work output with the gravitational potential energy change during the ascent. Which of the following expressions correctly represents gravitational potential energy ($!$E_p$!$) in terms of weight and height?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "3c01ec37-9e55-45a6-9bc8-34733b46e8e7"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$E_p = mgh$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$E_p = \\frac{1}{2}mv^2$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$E_p = \\frac{mg}{h}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "80ffd9e94ce9485db9765",
-                    "stepText": "Finally, apply the gravitational potential energy formula using the given weight ($!$700\\text{ N}$!$) and height ($!$50\\text{ m}$!$) to compute the change in potential energy during the climb.",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "35000"
-                    ],
-                    "stepSolveAnswerUnits": "J",
-                    "stepConcepts": [
-                        "3c01ec37-9e55-45a6-9bc8-34733b46e8e7"
                     ],
                     "options": []
                 }

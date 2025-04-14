@@ -121,20 +121,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "98b4049b54de4be890454",
-                    "stepText": "Let's start by determining the distances from the pivot for each child. Given that the plank is 4 m long and pivoted at its center, what are the distances from the pivot for the child at the end and the child sitting 1 m from the opposite end?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "r1 = 2, r2 = 1"
-                    ],
-                    "stepSolveAnswerUnits": "m",
-                    "stepConcepts": [],
-                    "options": []
-                },
-                {
-                    "id": "27831cd627bb4d3aa5de1",
-                    "stepText": "Now, to compute the individual torques exerted by each child, we need to select the correct formula for torque. Which among the following formulas correctly represents torque in this context?",
+                    "id": "7517ce77db094f25b0bd9",
+                    "stepText": "Let's start by identifying the appropriate formula that relates a force acting at a distance from the pivot to the resulting torque. Please select the correct formula.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -146,25 +134,39 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\tau = m g r$!$",
+                            "optionText": "$!$\\tau = F d$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\tau = m r$!$",
+                            "optionText": "$!$\\tau = F/d$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$\\tau = m g$!$",
+                            "optionText": "$!$\\tau = d/F$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "061476c4e19b4c2e9cbf1",
-                    "stepText": "After computing the torques for each child and finding the net torque, we move on to determining the moment of inertia of the seesaw system. First, for the uniform plank pivoted about its center, which formula correctly gives its moment of inertia?",
+                    "id": "145ddb289b51436e80cb3",
+                    "stepText": "Using the concept of torque, compute the net torque about the pivot. Consider that the lever arm for the child seated at the end is half the seesaw's length and for the other child, the lever arm is the difference between the half-length and the given distance from that end. Now, calculate the net torque (remember to use the gravitational acceleration $!$g = 9.8\\,\\text{m/s}^2$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "392"
+                    ],
+                    "stepSolveAnswerUnits": "N\u00b7m",
+                    "stepConcepts": [
+                        "66c394e5-9b27-4235-9105-6b2e0ba0b2b0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bdead82360fd4dd98d894",
+                    "stepText": "Next, we need the formula for the moment of inertia of a uniform rod about its center. Please choose the correct formula.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -176,39 +178,40 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$I = \\frac{1}{12}ML^2$!$",
+                            "optionText": "$!$I = \\frac{1}{12} M L^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$I = \\frac{1}{3}ML^2$!$",
+                            "optionText": "$!$I = \\frac{1}{3} M L^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$I = ML^2$!$",
+                            "optionText": "$!$I = M L^2$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "6e4dd0e6a6544d318cab7",
-                    "stepText": "Great, now that we have the formula for the rod, compute the total moment of inertia by summing the contribution of the plank and the contributions of the children (modeled as point masses). What value do you obtain for the total moment of inertia?",
+                    "id": "b50578f4313a455ba73f6",
+                    "stepText": "Now, compute the total moment of inertia of the system. This includes the moment of inertia of the rod and the contributions from each child treated as a point mass (using $!$I = m d^2$!$ for point masses). Calculate the total moment of inertia using the given values.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "153.33"
                     ],
-                    "stepSolveAnswerUnits": "kg\\,m^2",
+                    "stepSolveAnswerUnits": "kg\u00b7m^2",
                     "stepConcepts": [
+                        "b5685466-7a37-4ece-ab26-a0e7c37357f4",
                         "e7c0b9dd-4995-4142-ba78-a54339d150c3"
                     ],
                     "options": []
                 },
                 {
-                    "id": "5e52091733a04316af7a1",
-                    "stepText": "Next, we need to relate the net torque and the moment of inertia to angular acceleration. Which equation correctly establishes this relationship in rotational dynamics?",
+                    "id": "4e65fbc8656448d9ada06",
+                    "stepText": "Next, identify the correct formula that relates the net torque, the total moment of inertia, and the angular acceleration. Please select the correct relation.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -220,31 +223,31 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$\\alpha = \\frac{\\tau}{I}$!$",
+                            "optionText": "$!$\\tau_{net} = I \\alpha$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$\\alpha = \\frac{I}{\\tau}$!$",
+                            "optionText": "$!$\\tau_{net} = I / \\alpha$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$\\alpha = \\tau \\, I$!$",
+                            "optionText": "$!$\\alpha = I \\tau_{net}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "24e28c64679b4c91bb574",
-                    "stepText": "Finally, using the net torque you computed earlier and the total moment of inertia from the previous step, calculate the initial angular acceleration of the seesaw. What numerical value do you get?",
+                    "id": "a3d5f554aed845e7bcb20",
+                    "stepText": "Finally, using the net torque and the total moment of inertia you've calculated, determine the angular acceleration of the seesaw. Compute the value of angular acceleration.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "2.55"
+                        "2.56"
                     ],
-                    "stepSolveAnswerUnits": "rad/s^2",
+                    "stepSolveAnswerUnits": "$!$rad/s^2$!$",
                     "stepConcepts": [
                         "3b2a38ec-ad3c-4fda-9fed-c1f652dea80e"
                     ],

@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "1205f97706d44fa180929",
-                    "stepText": "Let's start by identifying the relation that connects the speed of light, frequency, and wavelength. Select the correct formula that relates these quantities.",
+                    "id": "c8e4161d154e40728e1d6",
+                    "stepText": "Let's begin by identifying the correct photoelectric effect equation that connects the stopping potential, the photon energy from the light, and the work function. Which one of the following represents this relationship?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -20,49 +20,49 @@
                     ],
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
-                        "af40d0c0-79b8-4f61-ae04-181c33113b03"
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$c = f \\lambda$!$",
+                            "optionText": "$!$eV_s = \\frac{hc}{\\lambda} - \\phi$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$c = \\frac{f}{\\lambda}$!$",
+                            "optionText": "$!$eV_s = \\frac{hc}{\\lambda} + \\phi$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$f = c \\lambda$!$",
+                            "optionText": "$!$eV_s = \\phi - \\frac{hc}{\\lambda}$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
                 },
                 {
-                    "id": "e2769c777fa34d51b1517",
-                    "stepText": "Great. Now, convert the first wavelength $!$\\lambda_1 = 300\\;nm$!$ into meters before using it in any calculations. What is $\\lambda_1$ in meters?",
+                    "id": "edb06ec9d828425f9d7d3",
+                    "stepText": "Great! Now, using the given values $!$h = 6.626 \\times 10^{-34} \\text{ Js}$!$ and $!$c = 3 \\times 10^8 \\text{ m/s}$!$, multiply them to compute the product $!$hc$!$. Provide your answer in units of $!$\\text{J}\\cdot\\text{m}$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "3e-7"
+                        "1.9878e-25"
                     ],
-                    "stepSolveAnswerUnits": "m",
+                    "stepSolveAnswerUnits": "J\u00b7m",
                     "stepConcepts": [
                         "af40d0c0-79b8-4f61-ae04-181c33113b03"
                     ],
                     "options": []
                 },
                 {
-                    "id": "6d8dbbbfe2be4045b2bba",
-                    "stepText": "Using the photon energy relation $!$E = \\frac{hc}{\\lambda}$!$, calculate the energy of a photon for $!$\\lambda_1$!$. Compute $!$\\frac{hc}{\\lambda_1}$!$ in Joules.",
+                    "id": "1d05c7f125f941fd9e897",
+                    "stepText": "Now, use the computed $!$hc$!$ to calculate the energy of a photon with wavelength $!$\\lambda_1 = 300 \\text{ nm}$!$. Remember to convert the wavelength to meters and then convert the photon energy from joules to electron volts. What is the photon energy in eV?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "6.626e-19"
+                        "4.14"
                     ],
-                    "stepSolveAnswerUnits": "J",
+                    "stepSolveAnswerUnits": "eV",
                     "stepConcepts": [
                         "af40d0c0-79b8-4f61-ae04-181c33113b03",
                         "fc61ca59-6b90-4172-8d29-30967a79b1ef"
@@ -70,28 +70,29 @@
                     "options": []
                 },
                 {
-                    "id": "efaa2de8e18640a392666",
-                    "stepText": "Next, calculate the kinetic energy of the photoelectrons for the first case using the stopping potential. Multiply the electron charge $!$e = 1.602 \\times 10^{-19}~C$!$ by $!$V_s = 1.5~V$!$ to find $!$eV_1$!$ in Joules.",
+                    "id": "a7fca68446da49eeba695",
+                    "stepText": "Similarly, determine the energy (in eV) of a photon with wavelength $!$\\lambda_2 = 200 \\text{ nm}$!$ using the product $!$hc$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "2.403e-19"
+                        "6.20"
                     ],
-                    "stepSolveAnswerUnits": "J",
+                    "stepSolveAnswerUnits": "eV",
                     "stepConcepts": [
-                        "018e7d2e-cb2b-4daa-9c30-e3a0d9d369c9"
+                        "af40d0c0-79b8-4f61-ae04-181c33113b03",
+                        "fc61ca59-6b90-4172-8d29-30967a79b1ef"
                     ],
                     "options": []
                 },
                 {
-                    "id": "6f388b75e6a6491898f4c",
-                    "stepText": "Now, using the photoelectric equation $!$E_k = hf - \\phi$!$, determine the work function for the first wavelength by subtracting the kinetic energy from the photon energy. Compute $!$\\phi_1 = \\frac{hc}{\\lambda_1} - eV_1$!$ in Joules.",
+                    "id": "664ec84831d44926b9ac7",
+                    "stepText": "Using the photon energy you calculated for $!$\\lambda_1$!$ and the corresponding stopping potential of $!$1.5 \\text{ V}$!$, apply the photoelectric equation to find the work function $!$\\phi$!$ of the metal for the first case. What is your result in electron volts?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "4.223e-19"
+                        "2.64"
                     ],
-                    "stepSolveAnswerUnits": "J",
+                    "stepSolveAnswerUnits": "eV",
                     "stepConcepts": [
                         "0a84b816-12f2-48c5-b801-70ddcbfa3381",
                         "b63cfff7-c0f2-44a2-84ab-5c9c9407941e"
@@ -99,8 +100,23 @@
                     "options": []
                 },
                 {
-                    "id": "c73e38bf58ea43948ed37",
-                    "stepText": "Finally, repeat a similar process for the second wavelength $!$\\lambda_2 = 200\\;nm$!$ with a stopping potential of $!$3.0~V$!$. Calculate the photon energy and the kinetic energy, then determine the work function $!$\\phi_2$!$ for this case. Average the two work functions from both wavelengths and convert the resulting work function from Joules to electron volts. What is the final value of the work function in $!$eV$!$?",
+                    "id": "d2444e2a22074a4ca5f97",
+                    "stepText": "Next, use the photon energy from $!$\\lambda_2$!$ and the stopping potential $!$3.0 \\text{ V}$!$ to calculate an alternative value for the work function $!$\\phi$!$. What value do you obtain in eV?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.20"
+                    ],
+                    "stepSolveAnswerUnits": "eV",
+                    "stepConcepts": [
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381",
+                        "b63cfff7-c0f2-44a2-84ab-5c9c9407941e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b6e2bc3b58894035b6f9c",
+                    "stepText": "Since the two calculated values for the work function differ slightly, a reasonable approach is to average them. Calculate the average of the two values to provide your best estimate for $!$\\phi$!$ in eV.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -108,10 +124,8 @@
                     ],
                     "stepSolveAnswerUnits": "eV",
                     "stepConcepts": [
-                        "af40d0c0-79b8-4f61-ae04-181c33113b03",
-                        "fc61ca59-6b90-4172-8d29-30967a79b1ef",
-                        "018e7d2e-cb2b-4daa-9c30-e3a0d9d369c9",
-                        "0a84b816-12f2-48c5-b801-70ddcbfa3381"
+                        "0a84b816-12f2-48c5-b801-70ddcbfa3381",
+                        "b63cfff7-c0f2-44a2-84ab-5c9c9407941e"
                     ],
                     "options": []
                 }
@@ -185,19 +199,19 @@
                 },
                 {
                     "id": "30097976ada74723adccb",
-                    "stepText": "Now, convert the resolution requirement into the proper units and calculate its square. Given that the required resolution is $!$0.05 \\text{ nm}$!$, first express it in meters, then determine $!$\\lambda^2$ for use in the equation.",
+                    "stepText": "Now, convert the resolution requirement into the proper units and calculate its square. Given that the required resolution is $!$0.05 \\text{ nm}$!$, first express it in meters, then determine $!$\\lambda^2$!$ for use in the equation.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
                         "2.5e-21"
                     ],
-                    "stepSolveAnswerUnits": "m^2",
+                    "stepSolveAnswerUnits": "$!$m^2$!$",
                     "stepConcepts": [],
                     "options": []
                 },
                 {
                     "id": "84632c0a402740708f558",
-                    "stepText": "Next, substitute the known constants along with the computed $!$\\lambda^2$ into the rearranged formula. At this stage, compute the denominator, which involves the product $!$2 \\times m \\times q \\times \\lambda^2$.",
+                    "stepText": "Next, substitute the known constants along with the computed $!$\\lambda^2$!$ into the rearranged formula. At this stage, compute the denominator, which involves the product $!$2 \\times m \\times q \\times \\lambda^2$!$.",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [

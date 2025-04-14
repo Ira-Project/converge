@@ -7,12 +7,12 @@
     "questions": [
         {
             "id": "352d74b248ba4ba8b1a00",
-            "questionText": "A cyclist is pedaling up a hill at a constant speed. The combined weight of the cyclist and bicycle is $!$700 N$!$. The hill has a height of $!$50 m$!$. The cyclist's power output is $!$100 W$!$, and it takes them $!$60 seconds$!$ to reach the top of the hill. Assuming their body consumes $!$5000 J$!$ of energy during that time, calculate the efficiency $!$\\eta$!$ of the cyclist's energy conversion in percentage.",
+            "questionText": "A cyclist is pedaling up a hill at a constant speed. The combined weight of the cyclist and bicycle is $!$700 N$!$. The hill has a height of $!$50 m$!$. The cyclist's power output is $!$100 W$!$, and it takes them $!$60 \\text{ seconds}$!$ to reach the top of the hill. Assuming their body consumes $!$8000 J$!$ of energy during that time, calculate the efficiency $!$\\eta$!$ of the cyclist's energy conversion in percentage.",
             "imageText": "",
             "steps": [
                 {
                     "id": "5c888c229413472195e6c",
-                    "stepText": "Let's start by determining the expression that relates mechanical work (\\(W\\)) to power (\\(P\\)) and time (\\(t\\)). Which of the following formulas correctly expresses this relationship?",
+                    "stepText": "Let's start by determining the expression that relates mechanical work ($!$W$!$) to power ($!$P$!$) and time ($!$t$!$). Which of the following formulas correctly expresses this relationship?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -56,7 +56,7 @@
                 },
                 {
                     "id": "2dfb15af1e6b49faa36b6",
-                    "stepText": "Next, consider how efficiency is defined in energy conversion problems. Which of the following expressions correctly represents the efficiency \\(\\eta\\) in terms of useful energy output and energy input?",
+                    "stepText": "Next, consider how efficiency is defined in energy conversion problems. Which of the following expressions correctly represents the efficiency $!$\\eta$!$ in terms of useful energy output and energy input?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -86,56 +86,23 @@
                 },
                 {
                     "id": "175ac5c5cfa946ae9a8f8",
-                    "stepText": "Using your chosen efficiency formula, calculate the efficiency of the cyclist's energy conversion. Use the mechanical work output you computed (\\(6000\\,J\\)) as the useful energy output and the given chemical energy input of $!$5000\\,J$!$. What is the efficiency in percentage?",
+                    "stepText": "Using your chosen efficiency formula, calculate the efficiency of the cyclist's energy conversion. Use the mechanical work output you computed ($!$6000\\,J$!$) as the useful energy output and the given chemical energy input of $!$8000\\,J$!$. What is the efficiency in percentage?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "120"
+                        "75"
                     ],
                     "stepSolveAnswerUnits": "%",
                     "stepConcepts": [
                         "0be92c40-ded4-48ee-a466-07236da03b9f"
                     ],
                     "options": []
-                },
-                {
-                    "id": "bfa632b0d7fc47419d961",
-                    "stepText": "Finally, reflect on the result you just obtained. An efficiency above $!$100\\%$!$ is not physically possible. Which of the following options best explains what this outcome might indicate about the provided data?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [],
-                    "options": [
-                        {
-                            "optionText": "The chemical energy input is underestimated relative to the mechanical work output.",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "The mechanical work output is overestimated relative to the chemical energy input.",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "The time duration is too long for the provided power output.",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "The gravitational potential energy value is calculated incorrectly.",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
                 }
             ]
         },
         {
             "id": "8c80e3c03b2c4c7388bc6",
-            "questionText": "A construction worker is using a crane to lift a $!$500 kg$!$ beam vertically upwards to a height of $!$20 meters$!$. The crane exerts a force that varies with distance. The force increases linearly for the first $!$5 meters$!$, remains constant for the next $!$10 meters$!$, and then decreases linearly back to the original force at $!$20 meters$!$. Given that the force at $!$5 meters$!$ is $!$6000 N$!$, and at $!$20 meters$!$ the force returns to $!$4905 N$!$, estimate the total work done by the crane on the beam during this process in Joules.",
+            "questionText": "A construction worker is using a crane to lift a $!$500\\,kg$!$ beam vertically upwards to a height of $!$20\\,m$!$. The crane exerts a force that varies with distance. The force increases linearly for the first $!$5\\,m$!$, remains constant for the next $!$10\\,m$!$, and then decreases linearly back to the original force at $!$20\\,m$!$. Given that the force at $!$5\\,m$!$ is $!$6000\\,N$!$, and at $!$20\\,m$!$ the force returns to $!$4905\\,N$!$, estimate the total work done by the crane on the beam during this process in Joules.",
             "imageText": "",
             "steps": [
                 {

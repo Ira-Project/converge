@@ -11,8 +11,8 @@
             "imageText": "",
             "steps": [
                 {
-                    "id": "57f9242d75d843e4b6e91",
-                    "stepText": "Let's start by recalling the definition of linear momentum. Please select the formula that correctly represents linear momentum.",
+                    "id": "102e6860cd88475b84fbb",
+                    "stepText": "Let's start by identifying the correct formula to calculate the momentum of an object. Which of the following formulas correctly represents momentum?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -24,14 +24,14 @@
                     ],
                     "options": [
                         {
-                            "optionText": "$!$p = m+v$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
                             "optionText": "$!$p = mv$!$",
                             "optionImage": "",
                             "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = m + v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
                         },
                         {
                             "optionText": "$!$p = m/v$!$",
@@ -41,8 +41,8 @@
                     ]
                 },
                 {
-                    "id": "28fffcaad8f34922b4de7",
-                    "stepText": "Great! Now, using the formula you selected, compute the total initial momentum of the system. Remember that the astronaut is initially at rest and the debris is moving. What is the combined initial momentum?",
+                    "id": "24927dc217e942118d951",
+                    "stepText": "Now that you have the momentum formula, calculate the momentum of the debris given its mass $!$m_D = 5\\,\\text{kg}$!$ and velocity $!$v_D = 8\\,\\text{m/s}$!$. What is the momentum of the debris?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -55,20 +55,66 @@
                     "options": []
                 },
                 {
-                    "id": "d6762497be2d48568d01d",
-                    "stepText": "Next, determine the total mass of the astronaut-debris system immediately after they stick together. Calculate the sum of the astronaut's mass and the debris' mass.",
+                    "id": "9af8579afc7d4ab4be7a1",
+                    "stepText": "Great, now determine the expression for the combined mass of the astronaut and the debris after the collision. Which of the following options correctly represents the combined mass?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
-                        "105"
+                        ""
                     ],
-                    "stepSolveAnswerUnits": "kg",
+                    "stepSolveAnswerUnits": "",
                     "stepConcepts": [],
-                    "options": []
+                    "options": [
+                        {
+                            "optionText": "$!$m_A + m_D$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m_A \\times m_D$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$m_A - m_D$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
                 },
                 {
-                    "id": "4e1ea8919407439e993ea",
-                    "stepText": "Finally, apply the concept of momentum conservation. Using the total initial momentum and the combined mass, calculate the final velocity by dividing the momentum by the total mass. What is the final velocity of the combined system?",
+                    "id": "2eebfef885cd477cafc44",
+                    "stepText": "Using what you know about conservation principles, identify which principle equates the total momentum before the collision to the total momentum after the collision. Choose the correct statement.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p_{initial} = p_{final}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p_{initial} = \\frac{p_{final}}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p_{initial} = m \\Delta v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3ca7cd6a2f584425be9b8",
+                    "stepText": "Finally, using the conservation of momentum, calculate the final velocity $!$v_f$!$ of the combined system. Recall that the total initial momentum is the momentum of the debris (since the astronaut is stationary) and the combined mass is $!$m_A + m_D$!$. What is the final velocity?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -76,6 +122,7 @@
                     ],
                     "stepSolveAnswerUnits": "m/s",
                     "stepConcepts": [
+                        "c86c1ebf-b59a-4cec-8781-d933b9a8aeba",
                         "e6f9d5ea-99e4-41df-af5b-b93ac2a0c1ec"
                     ],
                     "options": []

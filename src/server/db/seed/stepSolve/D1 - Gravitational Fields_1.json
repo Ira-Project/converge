@@ -37,11 +37,6 @@
                             "optionText": "$!$v = \\sqrt{\\frac{2GM}{R}}$!$",
                             "optionImage": "",
                             "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$v = \\sqrt{\\frac{G2M}{R}}$!$",
-                            "optionImage": "",
-                            "isCorrect": false
                         }
                     ]
                 },
@@ -71,7 +66,7 @@
                 },
                 {
                     "id": "8c62135bbef24b60b28cc",
-                    "stepText": "Using the computed mass and the gravitational constant $!$G = 6.67\\times10^{-11}$!$ m$!$^3$/kg/s$!$^2$!$, calculate the intermediate value by multiplying $!$2G$!$ with the mass and then dividing by the planet's radius. What is the value obtained inside the square root?",
+                    "stepText": "Using the computed mass and the gravitational constant $!$G = 6.67\\times10^{-11} \\text{m}^3/\\text{kg}/\\text{s}^2$!$, calculate the intermediate value by multiplying $!$2G$!$ with the mass and then dividing by the planet's radius. What is the value obtained inside the square root?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -182,7 +177,7 @@
                     "stepSolveAnswer": [
                         "5.979e17"
                     ],
-                    "stepSolveAnswerUnits": "kg*m^3/s^2",
+                    "stepSolveAnswerUnits": "$!$kg\\,m^3/s^2$!$",
                     "stepConcepts": [
                         "ea1e89e6-51eb-4c26-9db9-4af747efca26"
                     ],

@@ -7,7 +7,7 @@
     "questions": [
         {
             "id": "155e215c27ba4a78ab818",
-            "questionText": "An engineer is designing an electron microscope. To enhance the resolution for nanoscale imaging, they accelerate electrons through a potential difference of $!$150 V$!$. Given that the electron's mass is approximately $!$9.109 x 10^{-31} kg$!$ and its charge is $!$1.602 x 10^{-19} C$!$, calculate the de Broglie wavelength of these electrons. This wavelength will determine the microscope's ability to resolve fine details. Use Planck's constant, $!$h = 6.626 x 10^{-34} Js$!$, for your calculations.",
+            "questionText": "An engineer is designing an electron microscope. To enhance the resolution for nanoscale imaging, they accelerate electrons through a potential difference of $!$150 V$!$. Given that the electron's mass is approximately $!$9.109 \\times 10^{-31} kg$!$ and its charge is $!$1.602 \\times 10^{-19} C$!$, calculate the de Broglie wavelength of these electrons. This wavelength will determine the microscope's ability to resolve fine details. Use Planck's constant, $!$h = 6.626 \\times 10^{-34} Js$!$, for your calculations.",
             "imageText": "",
             "steps": [
                 {
@@ -85,22 +85,8 @@
                     "options": []
                 },
                 {
-                    "id": "83bfba4551b64e5aae845",
-                    "stepText": "Now that you have the value inside the square root, proceed by calculating its square root to find the momentum term in the denominator. What is the square root of the value obtained in the previous step?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        "6.614e-24"
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "2fc1331f-b464-447e-aaa9-e1806d7e9191"
-                    ],
-                    "options": []
-                },
-                {
                     "id": "42525316794542c6b8594",
-                    "stepText": "Finally, apply the de Broglie formula by dividing Planck's constant $!$h=6.626\\times10^{-34} Js$!$ by the momentum value from the previous step to determine the electron's wavelength. What is the computed de Broglie wavelength in meters?",
+                    "stepText": "Finally, apply the de Broglie formula by dividing Planck's constant $!$h=6.626\\times10^{-34} Js$!$ by the square root of the value from the previous step to determine the electron's wavelength. What is the computed de Broglie wavelength in meters?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -117,7 +103,7 @@
         },
         {
             "id": "3c6215007fa54b2182184",
-            "questionText": "In a medical imaging facility, X-rays with an initial wavelength of 0.075 nm are used to scan a patient's bones. Some photons undergo Compton scattering with electrons and are scattered at an angle of $!$110^{\\circ}$!$ relative to their original direction. Using the constants $!$h = 6.626 x 10^{-34} Js$!$, $!$m_e = 9.109 x 10^{-31} kg$!$, and $!$c = 3 x 10^8 m/s$!$, calculate the final wavelength of the scattered X-ray photons.",
+            "questionText": "In a medical imaging facility, X-rays with an initial wavelength of $!$0.075 nm$!$ are used to scan a patient's bones. Some photons undergo Compton scattering with electrons and are scattered at an angle of $!$110^{\\circ}$!$ relative to their original direction. Using the constants $!$h = 6.626 \\times 10^{-34} Js$!$, $!$m_e = 9.109 \\times 10^{-31} kg$!$, and $!$c = 3 \\times 10^8 m/s$!$, calculate the final wavelength of the scattered X-ray photons.",
             "imageText": "",
             "steps": [
                 {

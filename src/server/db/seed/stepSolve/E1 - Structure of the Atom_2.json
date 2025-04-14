@@ -116,83 +116,12 @@
         },
         {
             "id": "fd953f1921614ca381894",
-            "questionText": "Using Rutherford's model, compare the positive charge distribution in gold atoms from a thin foil with that in another metal, given that in the gold foil experiment a small fraction of alpha particles undergo large-angle deflections and a second experiment with the other metal results in more slight deflections and far fewer large-angle deflections. What do these observations imply about the relative distributions of positive charge in the two metals?",
+            "questionText": "A beam of $!$10^7$!$ alpha particles (each of charge $!$+2e$!$ and kinetic energy $!$5.0\\,MeV$!$) is directed at two very thin metal foils. One foil is gold (atomic number $!$Z = 79$!$) and the other is made of an unknown metal (atomic number $!$Z = 47$!$). Assume that, according to Rutherfords formula for point nuclei, the differential scattering cross-section at large angles approximately scales as$!$d\\sigma/d\\Omega \\propto (Z_{\\text{target}})^2/\\sin^4(\\theta/2)$!$. For a scattering angle of $!$\\theta = 130\\degree$!$, in the gold foil $!$150$!$ alpha particles are scattered (i.e. detected at $!$\\theta \\geq 130\\degree$!$). In the unknown-metal foil only $!$30$!$ alpha particles are scattered. Determine the approximate effective nuclear radius $!$R_{\\text{eff}}$!$ of the unknown metal.",
             "imageText": "",
             "steps": [
                 {
-                    "id": "4bd5f8b8a4f84a48a7876",
-                    "stepText": "Let's start by recalling the key aspect of Rutherford's atomic model. Which statement best describes the nucleus as interpreted by Rutherford?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "ceb70f21-79bc-4347-9b30-2ea290416b57"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$The nucleus is a small, dense, positively charged core containing most of the atom's mass.$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$The nucleus is a large, diffuse region where positive charge is spread evenly throughout the atom.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$The nucleus is a hollow sphere with electrons embedded throughout its structure.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$The nucleus does not exist; the atom's mass is distributed uniformly in a cloud of electrons.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "9102b0b81d72489b9318f",
-                    "stepText": "Great, now that you've recalled the concept of a concentrated nucleus, consider the nature of deflections in the gold foil experiment. Which factor is primarily responsible for the occurrence of large-angle deflections of alpha particles?",
-                    "stepText2": "",
-                    "stepImage": "",
-                    "stepSolveAnswer": [
-                        ""
-                    ],
-                    "stepSolveAnswerUnits": "",
-                    "stepConcepts": [
-                        "5986cd5f-f3eb-4fae-b26b-047cbb298f55",
-                        "79dd82d6-b48a-4528-91fc-561aa897a70e"
-                    ],
-                    "options": [
-                        {
-                            "optionText": "$!$A strong Coulomb interaction with a highly concentrated positive charge in a compact nucleus.$!$",
-                            "optionImage": "",
-                            "isCorrect": true
-                        },
-                        {
-                            "optionText": "$!$A weak magnetic interaction due to a spread-out positive charge throughout the atom.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$Collisions with loosely bound electrons causing mass scattering.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$Random deflections from a uniform neutral charge distribution.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        }
-                    ]
-                },
-                {
-                    "id": "f2f828d075354c63b96d1",
-                    "stepText": "Now, link your understanding from the previous steps: Given the gold foil experiment shows a few large-angle deflections, while the other metal produces mostly slight deflections, what inference about the distribution of positive charge in the two metals can you make?",
+                    "id": "8c8765a64f914f2f9a3a8",
+                    "stepText": "Let's start by considering how the number of scattered alpha particles should scale with the atomic number of the target. Which of these proportionality relations correctly represents the dependence on $!$Z$!$?",
                     "stepText2": "",
                     "stepImage": "",
                     "stepSolveAnswer": [
@@ -201,31 +130,133 @@
                     "stepSolveAnswerUnits": "",
                     "stepConcepts": [
                         "ceb70f21-79bc-4347-9b30-2ea290416b57",
-                        "5986cd5f-f3eb-4fae-b26b-047cbb298f55",
-                        "79dd82d6-b48a-4528-91fc-561aa897a70e"
+                        "ee1c1be9-4322-4448-8c34-4f3e4b573d86"
                     ],
                     "options": [
                         {
-                            "optionText": "$!$Gold atoms have a highly concentrated positive nucleus, whereas the other metal\u2019s positive charge is spread out over a larger volume.$!$",
+                            "optionText": "$!$N \\propto Z^2$!$",
                             "optionImage": "",
                             "isCorrect": true
                         },
                         {
-                            "optionText": "$!$Both metals must have equally concentrated nuclei, and the difference in deflections is due to experimental error.$!$",
+                            "optionText": "$!$N \\propto Z$!$",
                             "optionImage": "",
                             "isCorrect": false
                         },
                         {
-                            "optionText": "$!$Gold atoms have a diffuse positive charge, while the other metal exhibits a concentrated nucleus.$!$",
-                            "optionImage": "",
-                            "isCorrect": false
-                        },
-                        {
-                            "optionText": "$!$The variations in deflections arise solely from differences in electron arrangements, not from any change in nuclear charge distribution.$!$",
+                            "optionText": "$!$N \\propto Z^3$!$",
                             "optionImage": "",
                             "isCorrect": false
                         }
                     ]
+                },
+                {
+                    "id": "13df2d796ea349c688d75",
+                    "stepText": "Great. Now, using that scaling, determine the expected number of scattered alpha particles for the unknown metal foil if it were a perfect point nucleus. Use the ratio $!$(47^2)/(79^2)$!$ to scale the 150 particles observed in gold. Calculate the expected yield.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "53"
+                    ],
+                    "stepSolveAnswerUnits": "particles",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "21e9e8e0b0134675954a1",
+                    "stepText": "Now, compare this expected yield with the actual observed yield (30 particles) for the unknown metal. Compute the fraction $!$f$!$ defined as $!$f = (observed yield)/(expected yield)$!$. What is the value of $!$f$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.565"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "d477b86ae3b94c148eda2",
+                    "stepText": "Next, consider how the scattering angle is related to the impact parameter $!$b$!$ in Rutherford scattering. Which of the following formulas correctly expresses this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4e02ba06-28b8-401f-ac47-d8b33f0f08e1"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$b = \\frac{kZ_1 Z_2 e^2}{2E} \\cot(\\theta/2)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$b = \\frac{2E}{kZ_1 Z_2 e^2} \\tan(\\theta/2)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$b = \\frac{kZ_1 Z_2 e^2}{E} \\sin(\\theta/2)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "14a40ba706ad4a73ad7d3",
+                    "stepText": "Having identified the correct relation, use it to compute the impact parameter $!$b$!$ for an alpha particle scattered at $!$\\theta = 130^\\circ$!$. Given that for $!$\\theta = 130^\\circ$!$, $!$\\theta/2 = 65^\\circ$!$ and $!$\\cot(65^\\circ) \\approx 0.466$!$, and using the provided numerical values (with the kinetic energy $!$E \\approx 8.0\\times10^{-13}\\,J$!$), calculate $!$b$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.3e-15"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "4e02ba06-28b8-401f-ac47-d8b33f0f08e1"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2fd4d5067f2d42789d942",
+                    "stepText": "Now, we interpret the reduced yield as due to finite nuclear size. The idea is that only alpha particles with an impact parameter larger than the effective nuclear radius $!$R_{\\text{eff}}$!$ undergo Rutherford-type scattering. This leads to a geometric probability. Which of these expressions correctly represents the fraction $!$f$!$ in terms of $!$R_{\\text{eff}}$!$ and $!$b$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$f = 1 - \\frac{R_{\\text{eff}}^2}{b^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = \\frac{R_{\\text{eff}}^2}{b^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = 1 + \\frac{R_{\\text{eff}}^2}{b^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c5c828452cea498f95b47",
+                    "stepText": "Finally, use the geometric relation $!$f = 1 - (R_{\\text{eff}}^2/b^2)$!$ to solve for the effective nuclear radius $!$R_{\\text{eff}}$!$. With $!$f \\approx 0.565$!$ and $!$b \\approx 6.3\\times10^{-15}\\,m$!$, calculate $!$R_{\\text{eff}}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.2e-15"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
                 }
             ]
         }
