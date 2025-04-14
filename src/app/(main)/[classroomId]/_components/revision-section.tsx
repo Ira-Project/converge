@@ -29,18 +29,19 @@ const RevisionSection: React.FC<RevisionSectionProps> = ({ classroomId }) => {
             Strengthen Knowledge
           </Link>
         </div>
-        <div className="bg-gray-100 p-6 rounded-2xl flex flex-col gap-4 mx-auto h-full justify-center">  
-          <p className="text-gray-700 text-lg font-bold text-center">
+        <div className="bg-teal-100 p-6 rounded-2xl flex flex-col gap-4 mx-auto h-full justify-center">  
+          <p className="text-teal-700 text-lg font-bold text-center">
             Solve Anything
           </p>
-          <p className="text-gray-700 text-center">
+          <p className="text-teal-700 text-center">
             Work through questions that you’ve missed before and practice problem solving
           </p>
-          <div 
-            className="bg-gray-300 text-gray-700 px-4 py-2 rounded-md text-center flex flex-row items-center justify-center">
-            {/* <ShieldPlus className="w-6 h-6 mr-2" /> */}
-            Coming Soon
-          </div>
+          <Link 
+            href={`${Paths.Classroom}${classroomId}/revision/step-solve`} 
+            className="bg-teal-700 text-white px-4 py-2 rounded-md text-center flex flex-row items-center justify-center">
+            <ShieldPlus className="w-6 h-6 mr-2" />
+            Strengthen Evaluation
+          </Link>
         </div>
         <div className="bg-gray-100 p-6 rounded-2xl flex flex-col gap-4 mx-auto h-full justify-center">  
           <p className="text-gray-700 text-lg font-bold text-center">

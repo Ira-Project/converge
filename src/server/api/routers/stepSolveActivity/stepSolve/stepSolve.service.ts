@@ -1,9 +1,9 @@
 import { asc, eq, sql } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import { Roles } from "@/lib/constants";
+import { ActivityType, MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE, Roles } from "@/lib/constants";
 import { stepSolveQuestionToAssignment, stepSolveStep } from "@/server/db/schema/stepSolve/stepSolveQuestions";
-import type { CreateStepSolveAssignmentAttemptInput, GetStepSolveAssignmentAnalyticsInput, GetStepSolveAssignmentInput, GetStepSolveAssignmentQuestionAnalyticsInput, GetStepSolveAssignmentSubmissionsInput, SubmitStepSolveAssignmentAttemptInput } from "./stepSolve.input";
+import type { CreateStepSolveAssignmentAttemptInput, GetStepSolveAssignmentAnalyticsInput, GetStepSolveAssignmentInput, GetStepSolveAssignmentQuestionAnalyticsInput, GetStepSolveAssignmentSubmissionsInput, GetStepSolveRevisionActivityInput, SubmitStepSolveAssignmentAttemptInput } from "./stepSolve.input";
 import { stepSolveAssignmentAttempts,  } from "@/server/db/schema/stepSolve/stepSolveAssignment";
 
 
@@ -180,12 +180,20 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
 
 export const createStepSolveAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: CreateStepSolveAssignmentAttemptInput) => {
   const id = generateId(21);
-  await ctx.db.insert(stepSolveAssignmentAttempts).values({
-    id: id,
-    assignmentId: input.assignmentId,
-    activityId: input.activityId,
-    userId: ctx.user.id,
-  });
+  if(input.activityId) {
+    await ctx.db.insert(stepSolveAssignmentAttempts).values({
+      id: id,
+      assignmentId: input.assignmentId ?? "",
+      activityId: input.activityId ?? "",
+      userId: ctx.user.id,
+    })
+  } else {
+    await ctx.db.insert(stepSolveAssignmentAttempts).values({
+      id: id,
+      userId: ctx.user.id,
+      isRevision: true,
+    });
+  }
   return id;
 }
 
@@ -563,4 +571,238 @@ export const getStepSolveAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
   }));
 
   return results;
+}
+
+export const getStepSolveRevisionActivity = async (ctx: ProtectedTRPCContext, input: GetStepSolveRevisionActivityInput) => {
+  
+  const questionIdsList:string[] = [];
+
+  const activities = await ctx.db.query.activity.findMany({
+    where: (activity, { and, eq }) => 
+      and(
+        eq(activity.classroomId, input.classroomId),
+        eq(activity.typeText, ActivityType.StepSolve as string),
+        eq(activity.isLive, true),
+      ),
+    columns: {
+      topicId: true,
+    }
+  });
+
+  const topicSet = new Set(activities.map(a => a.topicId ?? ''));
+
+  const conceptTracker = await ctx.db.query.conceptTracking.findMany({
+    where: (conceptTracker, { and, eq }) => and(
+      eq(conceptTracker.userId, ctx.user.id),
+      eq(conceptTracker.activityType, ActivityType.StepSolve),
+    ),
+  });
+
+  const conceptsToReview: string[] = [];
+  const conceptsAddedToQuestions = new Set<string>();
+
+  // STEP 1: Get the concept ids where the users last attempt was incorrect
+  const processedConcepts = new Set<string>();
+  for(const concept of conceptTracker) {
+    if(!concept.conceptId) continue;
+
+    if(concept.isCorrect) {
+      processedConcepts.add(concept.conceptId);
+    } else {
+      if (!processedConcepts.has(concept.conceptId)) {
+        conceptsToReview.push(concept.conceptId);
+      }
+    }
+  }
+  
+  // STEP 2: Add concepts with previous mistakes to the question list only if the revision has less than concept limit
+  if(conceptsToReview.length < MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE) {
+
+    const conceptScoreMap = new Map<string, number>();
+
+    const processedConcepts = new Set<string>();
+
+    for(const concept of conceptTracker) {
+
+      if(!concept.conceptId) continue;
+
+      // If the concept has already been added to the question list, skip it
+      if(conceptsToReview.includes(concept.conceptId)) continue;
+      if(processedConcepts.has(concept.conceptId)) continue;
+
+      processedConcepts.add(concept.conceptId);
+
+      // Get all the concept tracker entries for the concept
+      const conceptTrackerForConcept = conceptTracker.filter(c => c.conceptId === concept.conceptId);
+
+      // Get the scores for the concept
+      const yesterdayConcepts = conceptTrackerForConcept.filter(c => c.createdAt > new Date(new Date().setDate(new Date().getDate() - 1)));
+      const yesterdayScore = yesterdayConcepts.reduce((a, b) => a + (b.isCorrect ? 1 : 0), 0) / yesterdayConcepts.length;
+      const weekConcepts = conceptTrackerForConcept.filter(c => c.createdAt > new Date(new Date().setDate(new Date().getDate() - 7)));
+      const weekScore = weekConcepts.reduce((a, b) => a + (b.isCorrect ? 1 : 0), 0) / weekConcepts.length;
+      const monthConcepts = conceptTrackerForConcept.filter(c => c.createdAt > new Date(new Date().setDate(new Date().getDate() - 30)));
+      const monthScore = monthConcepts.reduce((a, b) => a + (b.isCorrect ? 1 : 0), 0) / monthConcepts.length;
+      const overallScore = conceptTrackerForConcept.reduce((a, b) => a + (b.isCorrect ? 1 : 0), 0) / conceptTrackerForConcept.length;
+
+      const scores = [yesterdayScore, weekScore, monthScore, overallScore];
+      const eligibleScores = scores.filter(s => !Number.isNaN(s));
+
+      if(eligibleScores.length === 0) {
+        console.log("No scores how did this happen", concept);
+      };
+
+      // Create a weighted average of the scores
+      const averageScore = eligibleScores.reduce((a, b) => a + b, 0) / eligibleScores.length; 
+      conceptScoreMap.set(concept.conceptId, averageScore);
+    }
+
+    // Sort the concepts by score
+    const sortedConcepts = Array.from(conceptScoreMap.entries()).sort((a, b) => b[1] - a[1]);
+
+    // Iterate through the concepts and add them to the conceptsAddedToQuestions depending on how many concepts are left to review
+    // We will add concepts with a score below 50% first
+
+    for(const [concept, score] of sortedConcepts) {
+      if(conceptsToReview.length === 0) break;
+
+      if(score < 0.4) {
+        conceptsToReview.push(concept);
+      }
+    }
+
+    if (conceptsToReview.length < Math.floor(MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE * 0.5)) {
+      // Add concepts with a score above 60%
+      for(const [concept, score] of sortedConcepts) {
+        if(conceptsToReview.length === MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE) break;
+
+        if(score < 0.5) {
+          conceptsToReview.push(concept);
+        }
+      }
+    }
+
+    if(conceptsToReview.length < MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE * 0.6) {
+      // Add concepts with a score above 70%  
+      for(const [concept, score] of sortedConcepts) {
+        if(conceptsToReview.length === MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE) break;
+
+        if(score < 0.6) {
+          conceptsToReview.push(concept);
+        }
+      }
+    }
+  }
+
+  const concepts = await ctx.db.query.stepSolveStepConcepts.findMany({
+    with: {
+      step: {
+        with: {
+          question: {
+            with: {
+              topic: true,
+            }
+          }
+        }
+      }
+    }
+  });
+
+  const liveConcepts = concepts.filter(c => topicSet.has(c.step?.question?.topic?.id ?? ''));
+
+  // STEP 3: Add new concepts to the question list at random to reach the concept limit
+  if(conceptsToReview.length < MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE) {
+
+    const conceptsToAddFromConceptTracker = liveConcepts.filter(c => c.conceptId && !conceptsToReview.includes(c.conceptId));
+    // Get unique concept IDs from the filtered concept tracker
+    const uniqueConceptIds = [...new Set<string>(
+      conceptsToAddFromConceptTracker
+        .map(c => c.conceptId)
+        .filter(c => c !== null && c !== undefined)
+      )
+    ];
+    
+    // Shuffle the concept IDs to randomize selection
+    const shuffledConcepts = [...uniqueConceptIds].sort(() => Math.random() - 0.5);
+    
+    let count = 0;
+    // Add concepts up to the limit
+    while(conceptsToReview.length < MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE) {
+      count++;
+      if(count > 100) {
+        console.log("This should never happen");
+        break;
+      }
+
+      const concept = shuffledConcepts.shift();
+      if (concept !== undefined && concept !== null) {
+        conceptsToReview.push(concept);
+      }
+      if(!concept) break;
+    }
+  }
+
+  // Add question Ids to the list based on the concepts
+  for(const concept of conceptsToReview) {
+    if(conceptsAddedToQuestions.has(concept)) continue;
+
+    let questions = concepts.filter(c => c.conceptId === concept).map(c => c.step?.question?.id);
+    // First we will create a set of unique questions
+    questions = Array.from(new Set<string>(questions.filter(q => q !== undefined)));
+
+    // choose a random question from the list
+    const question = questions[Math.floor(Math.random() * questions.length)];
+
+    if(!question) {
+      console.log("This should never happen");
+      continue
+    };
+    // get the other concepts in the question
+    const allConceptsInQuestion = concepts.filter(c => c.step?.question?.id === question).map(c => c.conceptId);
+
+    // add the question to the question list
+    questionIdsList.push(question);
+
+    // add the other concepts to the conceptsAddedToQuestions
+    allConceptsInQuestion.forEach(c => c && conceptsAddedToQuestions.add(c));
+  }
+
+  console.log("CONCEPTS TO REVIEW", conceptsToReview, conceptsToReview.length);
+  console.log("CONCEPTS ADDED TO QUESTIONS", conceptsAddedToQuestions, conceptsAddedToQuestions.size);
+  console.log("QUESTION IDS LIST", questionIdsList, questionIdsList.length);
+  console.log("--------------------------------");
+
+  const stepSolveQuestions = await ctx.db.query.stepSolveQuestions.findMany({
+    where: (question, { and, inArray }) => 
+      and(
+        inArray(question.id, questionIdsList),
+        inArray(question.topicId, Array.from(topicSet)), 
+      ),
+      with: {
+        steps: {
+          orderBy: [asc(stepSolveStep.stepNumber)],
+          columns: {
+            id: true,
+            stepText: true,
+            stepTextPart2: true,
+            stepImage: true,
+            stepNumber: true,
+            stepSolveAnswer: true,
+            stepSolveAnswerUnits: true,
+          },
+          with: {
+            opt: {
+              columns: {
+                id: true,
+                optionText: true,
+                optionImage: true,
+              }
+            },
+          }
+        }
+      }
+  });
+
+  return {
+    stepSolveQuestions,
+  };
 }

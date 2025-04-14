@@ -21,4 +21,7 @@ export const stepSolveRouter = createTRPCRouter({
   getQuestionAnalytics: protectedProcedure
     .input(inputs.getStepSolveAssignmentQuestionAnalyticsSchema)
     .query(({ ctx, input }) => services.getStepSolveAssignmentQuestionAnalytics(ctx, input)),
+  getRevisionActivity: protectedProcedure
+    .input(inputs.getStepSolveRevisionActivitySchema)
+    .query(({ ctx, input }) => services.getStepSolveRevisionActivity(ctx, input)),
 });

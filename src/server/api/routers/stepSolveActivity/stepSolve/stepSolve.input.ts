@@ -6,8 +6,8 @@ export const getStepSolveAssignmentSchema = z.object({
 export type GetStepSolveAssignmentInput = z.infer<typeof getStepSolveAssignmentSchema>;
 
 export const createStepSolveAssignmentAttemptSchema = z.object({
-  activityId: z.string(),
-  assignmentId: z.string(),
+  activityId: z.string().optional(),
+  assignmentId: z.string().optional(),
 });
 export type CreateStepSolveAssignmentAttemptInput = z.infer<typeof createStepSolveAssignmentAttemptSchema>;
 
@@ -37,3 +37,8 @@ export const getStepSolveHeatmapSchema = z.object({
   activityId: z.string(),
 });
 export type GetStepSolveHeatmapInput = z.infer<typeof getStepSolveHeatmapSchema>;
+
+export const getStepSolveRevisionActivitySchema = z.object({
+  classroomId: z.string(),
+});
+export type GetStepSolveRevisionActivityInput = z.infer<typeof getStepSolveRevisionActivitySchema>;

@@ -47,6 +47,7 @@ export const stepSolveAssignmentAttempts = pgTable(
     assignmentId: varchar("assignment_id", { length: 21 }).references(() => stepSolveAssignments.id),
     activityId: varchar("activity_id", { length: 21 }).references(() => activity.id),
     score: doublePrecision("score"),
+    isRevision: boolean("is_revision").default(false).notNull(),
     // The reasoning and evaluation scores here are rates of success and only a percentage
     reasoningScore: doublePrecision("reasoning_score"),
     evaluationScore: doublePrecision("evaluation_score"),
