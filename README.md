@@ -27,4 +27,4 @@ This repository only caontains our consumer facing web application. Currently we
 
 ## Contact
 
-To learn more please contact vig9295@gmail.com.
+To learn more please contact vignesh@iraproject.com.
