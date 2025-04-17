@@ -60,7 +60,11 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
         </div>
 
         {/* Analytics Section */}
-        <AnalyticsSection classroomId={params.classroomId} />
+        {
+          userToClassroom && (
+            <AnalyticsSection classroomId={params.classroomId} />
+          )
+        }
 
 
         {/* Random Activities */}
