@@ -1,6 +1,6 @@
 ## What is the Ira Project?
 
-The IRA project is an exploration to use AI and LLMs to build the next generation of assignments. Rather than students solving problems they teach an AI concepts.
+The Ira Project is an exploration to use AI and LLMs to build the next generation of assignments. Rather than students solving problems they teach an AI concepts.
 
 ## What is this repository? What is the tech stack?
 

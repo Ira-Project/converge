@@ -2,7 +2,6 @@ import { SkillsRadarCard } from './radar-chart';
 import { ConceptGraph } from './concept-graph';
 import { api } from '@/trpc/server';
 
-
 export async function AnalyticsSection(props: { classroomId: string }) {
 
   const submissions = await api.analytics.getSubmissions.query({ classroomId: props.classroomId })
