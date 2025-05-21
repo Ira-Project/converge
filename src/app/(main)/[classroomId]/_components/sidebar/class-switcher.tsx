@@ -20,11 +20,12 @@ import {
 } from "@/components/ui/sidebar"
 import posthog from "posthog-js"
 import { CreateClassroomModal } from "./create-classroom-modal"
-import { Paths } from "@/lib/constants"
+import { Paths, Roles } from "@/lib/constants"
 
 export function ClassSwitcher({
   teams,
   currentClassroomId,
+  role,
 }: {
   teams: {
     id: string
@@ -33,6 +34,7 @@ export function ClassSwitcher({
     description: string
   }[]
   currentClassroomId: string
+  role: Roles
 }) {
   const { isMobile } = useSidebar()
   const [activeTeam] = React.useState(teams.find((team) => team.id === currentClassroomId) ?? teams[0])
@@ -82,7 +84,7 @@ export function ClassSwitcher({
               </Link>
             ))}
             <DropdownMenuSeparator />
-            <CreateClassroomModal />
+            {role === Roles.Teacher && <CreateClassroomModal />}
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>
