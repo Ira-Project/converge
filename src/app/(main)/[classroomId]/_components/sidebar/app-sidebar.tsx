@@ -21,6 +21,7 @@ import { ComponentIds, Paths, Roles } from "@/lib/constants"
 
 interface AppSidebarProps {
   classroom: RouterOutputs["classroom"]["get"];
+  classrooms: RouterOutputs["classroom"]["getClassrooms"];
   user?: {
     id: string;
     name: string | null;
@@ -33,7 +34,7 @@ interface AppSidebarProps {
   students: RouterOutputs["classroom"]["students"];
 }
 
-export function AppSidebar({ classroom, user, activities, students, role }: AppSidebarProps) {
+export function AppSidebar({ classroom, classrooms, user, activities, students, role }: AppSidebarProps) {
 
   let filteredActivities = activities;
   if (role === Roles.Student) {
@@ -101,11 +102,12 @@ export function AppSidebar({ classroom, user, activities, students, role }: AppS
   return (
     <Sidebar collapsible="icon">
       <SidebarHeader>
-        <ClassSwitcher teams={[{
+        <ClassSwitcher teams={classrooms.map((classroom) => ({
+          id: classroom?.id ?? "",
           name: classroom?.name ?? "Unknown",
           description: classroom?.description ?? "Unknown",
           logo: () => <Image src="/images/logo.png" alt="Ira Logo" width={48} height={48} />,
-        }]} />
+        }))} currentClassroomId={classroom?.id ?? ""} />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={navMain} />

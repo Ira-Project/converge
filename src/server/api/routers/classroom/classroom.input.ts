@@ -25,3 +25,9 @@ export const getOrCreateUserToClassroomSchema = z.object({
   classroomId: z.string(),
 });
 export type GetOrCreateUserToClassroomInput = z.infer<typeof getOrCreateUserToClassroomSchema>;
+
+export const createClassroomSchema = z.object({
+  name: z.string(),
+  description: z.string().optional(),
+});
+export type CreateClassroomInput = z.infer<typeof createClassroomSchema>;
