@@ -319,6 +319,7 @@ export async function deleteUser(email: string) {
     }
 
     await db.delete(usersToClassrooms).where(eq(usersToClassrooms.classroomId, classroom.id));
+    await db.delete(conceptTracking).where(eq(conceptTracking.classroomId, classroom.id));
 
     await db.delete(classrooms).where(eq(classrooms.createdBy, userId));
   }

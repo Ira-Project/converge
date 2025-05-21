@@ -8,6 +8,8 @@ export const classroomRouter = createTRPCRouter({
     .query(({ ctx, input }) => services.getClassroom(ctx, input)),
   list: protectedProcedure
     .query(({ ctx }) => services.listClassrooms(ctx)),  
+  getClassrooms: protectedProcedure
+    .query(({ ctx }) => services.getClassrooms(ctx)),
   teachers: protectedProcedure
     .input(inputs.getClassroomTeachersSchema)
     .query(({ ctx, input }) => services.getClassroomTeachers(ctx, input)),
@@ -20,4 +22,7 @@ export const classroomRouter = createTRPCRouter({
   getOrCreateUserToClassroom: protectedProcedure
     .input(inputs.getOrCreateUserToClassroomSchema)
     .query(({ ctx, input }) => services.getOrCreateUserToClassroom(ctx, input)),
+  create: protectedProcedure
+    .input(inputs.createClassroomSchema)
+    .mutation(({ ctx, input }) => services.createClassroom(ctx, input)),
 });

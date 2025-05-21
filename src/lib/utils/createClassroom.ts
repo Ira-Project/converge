@@ -26,6 +26,7 @@ export async function createClassroom(
   const classroom = await db.insert(classrooms).values({
     id: generateId(21),
     name: `${name}'s Classroom`,
+    isActive: true,
     description: description,
     code: generateId(6),
     createdBy: userId,

@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { ChevronsUpDown } from "lucide-react"
+import Link from "next/link"
 
 import {
   DropdownMenu,
@@ -9,7 +10,6 @@ import {
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import {
@@ -19,18 +19,23 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import posthog from "posthog-js"
+import { CreateClassroomModal } from "./create-classroom-modal"
+import { Paths } from "@/lib/constants"
 
 export function ClassSwitcher({
   teams,
+  currentClassroomId,
 }: {
   teams: {
+    id: string
     name: string
     logo: React.ElementType
     description: string
   }[]
+  currentClassroomId: string
 }) {
   const { isMobile } = useSidebar()
-  const [activeTeam, setActiveTeam] = React.useState(teams[0])
+  const [activeTeam] = React.useState(teams.find((team) => team.id === currentClassroomId) ?? teams[0])
 
   return (
     <SidebarMenu>
@@ -64,32 +69,20 @@ export function ClassSwitcher({
             <DropdownMenuLabel className="text-xs text-muted-foreground">
               Classrooms
             </DropdownMenuLabel>
-            {teams.map((team, index) => (
-              <DropdownMenuItem
-                key={team.name}
-                onClick={() => {
-                  setActiveTeam(team)
-                  posthog.capture("class_switcher_clicked", {
-                    team: team.name
-                  })
-                }}
-                className="gap-2 p-2"
-              >
-                <div className="flex size-6 items-center justify-center">
-                  <team.logo className="size-4 shrink-0" />
-                </div>
-                {team.name}
-                <DropdownMenuShortcut>⌘{index + 1}</DropdownMenuShortcut>
-              </DropdownMenuItem>
+            {teams.map((team) => (
+              <Link href={`${Paths.Classroom}${team.id}`} key={team.id}>
+                <DropdownMenuItem
+                  className="gap-2 p-2"
+                >
+                  <div className="flex size-6 items-center justify-center">
+                    <team.logo className="size-4 shrink-0" />
+                  </div>
+                  {team.name}
+                </DropdownMenuItem>
+              </Link>
             ))}
             <DropdownMenuSeparator />
-            {/* TODO: Add team Functionality */}
-            {/* <DropdownMenuItem className="gap-2 p-2">
-              <div className="flex size-6 items-center justify-center rounded-md border bg-background">
-                <Plus className="size-4" />
-              </div>
-              <div className="font-medium text-muted-foreground">Add team</div>
-            </DropdownMenuItem> */}
+            <CreateClassroomModal />
           </DropdownMenuContent>
         </DropdownMenu>
       </SidebarMenuItem>
