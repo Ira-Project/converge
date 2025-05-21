@@ -383,5 +383,13 @@ export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateCl
     });
   }
 
+  // Add user to the classroom as a teacher
+  await ctx.db.insert(usersToClassrooms).values({
+    userId: ctx.user.id,
+    classroomId: classroom[0].id,
+    role: Roles.Teacher,
+    createdAt: new Date(),
+  });
+
   return classroom[0].id;
 }

@@ -107,7 +107,7 @@ export function AppSidebar({ classroom, classrooms, user, activities, students, 
           name: classroom?.name ?? "Unknown",
           description: classroom?.description ?? "Unknown",
           logo: () => <Image src="/images/logo.png" alt="Ira Logo" width={48} height={48} />,
-        }))} currentClassroomId={classroom?.id ?? ""} />
+        }))} currentClassroomId={classroom?.id ?? ""} role={role} />
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={navMain} />
