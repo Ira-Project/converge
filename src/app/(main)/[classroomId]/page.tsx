@@ -8,13 +8,16 @@ import LiveActivitiesList from "./_components/live-activities-list";
 import RecentSubmissionsList from "./_components/recent-submissions-table";
 import { AnalyticsSection } from "./_components/analytics-section";
 import ActivityLibrarySample from "./_components/activity-library-sample";
+import { ClassroomHeader } from "./_components/classroom-header";
+import { NoAccessEmptyState } from "@/components/no-access-empty-state";
+
 export default async function ClassroomPage(props: { params: Promise<{ classroomId: string }> }) {
   const [{ user }, params] = await Promise.all([
     validateRequest(),
     props.params
   ]);
 
-  let submissions, classroom, activities, randomActivities, userToClassroom: { role: Roles } | undefined;
+  let submissions, classroom, activities, randomActivities, userToClassroom: { role: Roles; isDeleted?: boolean } | undefined;
   if (user) {
     [submissions, classroom, activities, randomActivities, userToClassroom] = await Promise.all([
       api.analytics.getSubmissions.query({ classroomId: params.classroomId }),
@@ -24,19 +27,16 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
       api.classroom.getOrCreateUserToClassroom.query({ classroomId: params.classroomId })
     ]);
   }
+
+  // Show empty state if user has been removed from classroom
+  if (userToClassroom?.isDeleted) {
+    return <NoAccessEmptyState />;
+  }
   
   return (
     <>
       {/* Header */}
-      <div 
-        className="mb-8 h-32 fixed top-0 z-[5] w-full p-8 text-white"
-        style={{ backgroundImage: `url('/images/cover.png')` }}
-      >
-        <h1 className="text-2xl font-semibold mb-1 mt-4">{classroom?.name}</h1>
-        {classroom?.course && (
-          <p className="text-sm">{classroom?.course?.subject?.name} | {classroom?.course?.name}</p>
-        )}
-      </div>
+      <ClassroomHeader classroom={classroom} />
 
       <div className="flex flex-col gap-y-8 mb-16">
 

@@ -1,6 +1,6 @@
 import { and, eq } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { GetClassroomInput, GetClassroomStudentsInput, GetClassroomTeachersInput, GetOrCreateUserToClassroomInput, JoinClassroomInput, CreateClassroomInput } from "./classroom.input";
+import type { GetClassroomInput, GetClassroomStudentsInput, GetClassroomTeachersInput, GetOrCreateUserToClassroomInput, JoinClassroomInput, CreateClassroomInput, UpdateClassroomInput, RemoveStudentInput, ArchiveClassroomInput } from "./classroom.input";
 import { usersToClassrooms, classrooms } from "@/server/db/schema/classroom";
 import { knowledgeZapAssignments } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
 import { stepSolveAssignments } from "@/server/db/schema/stepSolve/stepSolveAssignment";
@@ -9,6 +9,7 @@ import { explainAssignments } from "@/server/db/schema/learnByTeaching/explainAs
 import { readAndRelayAssignments } from "@/server/db/schema/readAndRelay/readAndRelayAssignments";
 import { conceptMappingAssignments } from "@/server/db/schema/conceptMapping/conceptMappingAssignments";
 import { activity, activityToAssignment } from "@/server/db/schema/activity";
+import { users } from "@/server/db/schema/user";
 
 import { Roles } from "@/lib/constants";
 import { TRPCClientError } from "@trpc/client";
@@ -25,6 +26,8 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
       grade: true,
       showLeaderboardStudents: true,
       showLeaderboardTeachers: true,
+      year: true,
+      isActive: true,
     },
     with: {
       course: {
@@ -44,7 +47,8 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
 }
 
 export const getClassrooms = async (ctx: ProtectedTRPCContext) => {
-  const usersToClassrooms= await ctx.db.query.usersToClassrooms.findMany({
+  // First, try to get active classrooms where user is not deleted
+  const activeUsersToClassrooms = await ctx.db.query.usersToClassrooms.findMany({
     where: (table, { eq }) => and(
       eq(table.userId, ctx.user.id),
       eq(table.isDeleted, false)
@@ -62,7 +66,47 @@ export const getClassrooms = async (ctx: ProtectedTRPCContext) => {
       }
     }
   });
-  return usersToClassrooms.map((userToClassroom) => userToClassroom.classroom).filter((classroom) => !classroom.isDeleted && classroom.isActive);
+  
+  const activeClassrooms = activeUsersToClassrooms
+    .map((userToClassroom) => userToClassroom.classroom)
+    .filter((classroom) => !classroom.isDeleted && classroom.isActive);
+  
+  if (activeClassrooms.length > 0) {
+    return activeClassrooms;
+  }
+  
+  // If no active classrooms, try archived classrooms (not active but not deleted)
+  const archivedClassrooms = activeUsersToClassrooms
+    .map((userToClassroom) => userToClassroom.classroom)
+    .filter((classroom) => !classroom.isDeleted && !classroom.isActive);
+  
+  if (archivedClassrooms.length > 0) {
+    return archivedClassrooms;
+  }
+  
+  // If no archived classrooms, get classrooms where user was removed (isDeleted = true)
+  const deletedUsersToClassrooms = await ctx.db.query.usersToClassrooms.findMany({
+    where: (table, { eq }) => and(
+      eq(table.userId, ctx.user.id),
+      eq(table.isDeleted, true)
+    ),
+    with: {
+      classroom: {
+        columns: {
+          id: true,
+          name: true,
+          code: true,
+          description: true,
+          isDeleted: true,
+          isActive: true,
+        },
+      }
+    }
+  });
+  
+  return deletedUsersToClassrooms
+    .map((userToClassroom) => userToClassroom.classroom)
+    .filter((classroom) => !classroom.isDeleted); // Don't show completely deleted classrooms
 }
 
 export const getClassroomTeachers = async (ctx: ProtectedTRPCContext, input: GetClassroomTeachersInput) => {
@@ -105,6 +149,7 @@ export const getClassroomStudents = async (ctx: ProtectedTRPCContext, input: Get
           id: true,
           name: true,
           avatar: true,
+          email: true,
         }
       }
     }
@@ -198,6 +243,7 @@ export const getOrCreateUserToClassroom = async (ctx: ProtectedTRPCContext, inpu
   ) {
     return {
       role: Roles.Teacher,
+      isDeleted: false,
     }
   }
 
@@ -206,13 +252,68 @@ export const getOrCreateUserToClassroom = async (ctx: ProtectedTRPCContext, inpu
   ) {
     return {
       role: Roles.Student,
+      isDeleted: false,
     }
   }
+
+    // Check if user's default classroom is deleted and needs to be replaced
+    const user = await ctx.db.query.users.findFirst({
+      where: (table, { eq }) => eq(table.id, ctx.user.id),
+      columns: {
+        defaultClassroomId: true,
+      }
+    });
+  
+    if (user?.defaultClassroomId) {
+      // Check if the default classroom is deleted or inactive
+      const defaultClassroom = await ctx.db.query.classrooms.findFirst({
+        where: (table, { eq }) => eq(table.id, user.defaultClassroomId!),
+        columns: {
+          isDeleted: true,
+          isActive: true,
+        }
+      });
+  
+      if (defaultClassroom?.isDeleted ?? !defaultClassroom?.isActive) {
+        // Find an alternative active classroom where the user is a member
+        const activeClassrooms = await ctx.db.query.usersToClassrooms.findMany({
+          where: (table, { eq, and }) => and(
+            eq(table.userId, ctx.user.id),
+            eq(table.isDeleted, false)
+          ),
+          with: {
+            classroom: {
+              columns: {
+                id: true,
+                isActive: true,
+                isDeleted: true,
+              }
+            }
+          }
+        });
+  
+        // Filter to find the first active and non-deleted classroom
+        const alternativeClassroom = activeClassrooms.find(
+          c => c.classroom?.isActive && !c.classroom?.isDeleted
+        );
+  
+        if (alternativeClassroom?.classroom?.id) {
+          // Update the user's default classroom
+          await ctx.db.update(users)
+            .set({
+              defaultClassroomId: alternativeClassroom.classroom.id,
+              updatedAt: new Date(),
+            })
+            .where(eq(users.id, ctx.user.id));
+        }
+      }
+    }
   
   const userToClassroom = await ctx.db.query.usersToClassrooms.findFirst({
     where: (table, { eq }) => and(eq(table.userId, ctx.user.id), eq(table.classroomId, input.classroomId)),
     columns: {
       role: true,
+      isDeleted: true,
     }
   });
 
@@ -224,6 +325,7 @@ export const getOrCreateUserToClassroom = async (ctx: ProtectedTRPCContext, inpu
     role: Roles.Student,
   }).returning({
     role: usersToClassrooms.role,
+    isDeleted: usersToClassrooms.isDeleted,
   });
 
   return newUserToClassroom[0];
@@ -385,3 +487,149 @@ export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateCl
 
   return classroom[0].id;
 }
+
+export const updateClassroom = async (ctx: ProtectedTRPCContext, input: UpdateClassroomInput) => {
+  // First check if the user is a teacher for this classroom
+  const userToClassroom = await ctx.db.query.usersToClassrooms.findFirst({
+    where: (table, { eq, and }) => and(
+      eq(table.userId, ctx.user.id),
+      eq(table.classroomId, input.id),
+      eq(table.isDeleted, false)
+    ),
+    columns: {
+      role: true,
+    }
+  });
+
+  if (!userToClassroom || userToClassroom.role !== Roles.Teacher) {
+    throw new TRPCClientError("You don't have permission to update this classroom");
+  }
+
+  // Update the classroom
+  const [updatedClassroom] = await ctx.db.update(classrooms)
+    .set({
+      name: input.name,
+      description: input.description ?? "",
+      year: input.year,
+      showLeaderboardStudents: input.showLeaderboardStudents,
+      showLeaderboardTeachers: input.showLeaderboardTeachers,
+      updatedAt: new Date(),
+    })
+    .where(eq(classrooms.id, input.id))
+    .returning();
+
+  return updatedClassroom;
+};
+
+export const removeStudent = async (ctx: ProtectedTRPCContext, input: RemoveStudentInput) => {
+  // First check if the user is a teacher for this classroom
+  const userToClassroom = await ctx.db.query.usersToClassrooms.findFirst({
+    where: (table, { eq, and }) => and(
+      eq(table.userId, ctx.user.id),
+      eq(table.classroomId, input.classroomId),
+      eq(table.isDeleted, false)
+    ),
+    columns: {
+      role: true,
+    }
+  });
+
+  if (!userToClassroom || userToClassroom.role !== Roles.Teacher) {
+    throw new TRPCClientError("You don't have permission to remove students from this classroom");
+  }
+
+  // Soft delete the student from the classroom
+  await ctx.db.update(usersToClassrooms)
+    .set({
+      isDeleted: true,
+      deletedAt: new Date(),
+    })
+    .where(
+      and(
+        eq(usersToClassrooms.classroomId, input.classroomId),
+        eq(usersToClassrooms.userId, input.studentId)
+      )
+    );
+
+  return { success: true };
+};
+
+export const archiveClassroom = async (ctx: ProtectedTRPCContext, input: ArchiveClassroomInput) => {
+  // First check if the user is a teacher for this classroom
+  const userToClassroom = await ctx.db.query.usersToClassrooms.findFirst({
+    where: (table, { eq, and }) => and(
+      eq(table.userId, ctx.user.id),
+      eq(table.classroomId, input.id),
+      eq(table.isDeleted, false)
+    ),
+    columns: {
+      role: true,
+    }
+  });
+
+  if (!userToClassroom || userToClassroom.role !== Roles.Teacher) {
+    throw new TRPCClientError("You don't have permission to archive this classroom");
+  }
+
+  // Update the classroom's isActive status to false
+  const [updatedClassroom] = await ctx.db.update(classrooms)
+    .set({
+      isActive: false,
+      updatedAt: new Date(),
+    })
+    .where(eq(classrooms.id, input.id))
+    .returning();
+
+  // Check if this is the user's default classroom
+  const user = await ctx.db.query.users.findFirst({
+    where: (table, { eq }) => eq(table.id, ctx.user.id),
+    columns: {
+      defaultClassroomId: true,
+    }
+  });
+
+  // If this is the user's default classroom, find another active classroom and set it as default
+  if (user?.defaultClassroomId === input.id) {
+    // Find another active classroom where the user is a member
+    const activeClassrooms = await ctx.db.query.usersToClassrooms.findMany({
+      where: (table, { eq, and }) => and(
+        eq(table.userId, ctx.user.id),
+        eq(table.isDeleted, false)
+      ),
+      with: {
+        classroom: {
+          columns: {
+            id: true,
+            isActive: true,
+            isDeleted: true,
+          }
+        }
+      }
+    });
+
+    // Filter to find the first active and non-deleted classroom that's not the one being archived
+    const alternativeClassroom = activeClassrooms.find(
+      c => c.classroom?.id !== input.id && c.classroom?.isActive && !c.classroom?.isDeleted
+    );
+
+    if (alternativeClassroom?.classroom?.id) {
+      // Update the user's default classroom
+      await ctx.db.update(users)
+        .set({
+          defaultClassroomId: alternativeClassroom.classroom.id,
+          updatedAt: new Date(),
+        })
+        .where(eq(users.id, ctx.user.id));
+    } else {
+      // If no alternative classroom exists, set defaultClassroomId to null
+      await ctx.db.update(users)
+        .set({
+          defaultClassroomId: null,
+          updatedAt: new Date(),
+        })
+        .where(eq(users.id, ctx.user.id));
+    }
+  }
+
+  return updatedClassroom;
+};

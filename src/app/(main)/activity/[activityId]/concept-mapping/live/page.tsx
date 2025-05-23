@@ -3,12 +3,13 @@ import { Paths, Roles } from "@/lib/constants";
 import { redirect } from "next/navigation";
 import { api } from "@/trpc/server";
 import ConceptMappingAssignmentView from "./_components/concept-mapping-assignment-view";
+import { NoAccessEmptyState } from "@/components/no-access-empty-state";
 
 export default async function ActivityPage(props: { params: Promise<{ activityId: string, classroomId: string }> }) {
   const params = await props.params;
   const { user } = await validateRequest();
 
-  let activity, userToClassroom;
+  let activity, userToClassroom: { role: Roles; isDeleted?: boolean } | undefined;
   let assignment;
   let activityAttempt;
 
@@ -23,6 +24,11 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
 
     if (!activity || !assignment || !activityAttempt) redirect(`${Paths.Classroom}${params.classroomId}`);
 
+  }
+
+  // Show empty state if user has been removed from classroom
+  if (userToClassroom?.isDeleted) {
+    return <NoAccessEmptyState />;
   }
 
   return (

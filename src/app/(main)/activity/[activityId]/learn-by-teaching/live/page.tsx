@@ -3,12 +3,13 @@ import { Paths, Roles } from "@/lib/constants";
 import { redirect } from "next/navigation";
 import { api } from "@/trpc/server";
 import { AssignmentView } from "./_components/explain-assignment-view";
+import { NoAccessEmptyState } from "@/components/no-access-empty-state";
 
 export default async function AssignmentPage(props: { params: Promise<{ activityId: string }> }) {
   const params = await props.params;
   const { user } = await validateRequest();
 
-  let activity, userToClassroom, assignment, testAttemptId;
+  let activity, userToClassroom: { role: Roles; isDeleted?: boolean } | undefined, assignment, testAttemptId;
 
   if(user?.isOnboarded) {
     activity = await api.activities.getActivity.query({ activityId: params.activityId });
@@ -20,6 +21,11 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
     }
 
     if (!assignment || !activity) redirect(`${Paths.Classroom}${user.classroomId}`);
+  }
+
+  // Show empty state if user has been removed from classroom
+  if (userToClassroom?.isDeleted) {
+    return <NoAccessEmptyState />;
   }
   
 

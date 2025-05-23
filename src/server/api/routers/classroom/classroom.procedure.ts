@@ -25,4 +25,13 @@ export const classroomRouter = createTRPCRouter({
   create: protectedProcedure
     .input(inputs.createClassroomSchema)
     .mutation(({ ctx, input }) => services.createClassroom(ctx, input)),
+  update: protectedProcedure
+    .input(inputs.updateClassroomSchema)
+    .mutation(({ ctx, input }) => services.updateClassroom(ctx, input)),
+  removeStudent: protectedProcedure
+    .input(inputs.removeStudentSchema)
+    .mutation(({ ctx, input }) => services.removeStudent(ctx, input)),
+  archive: protectedProcedure
+    .input(inputs.archiveClassroomSchema)
+    .mutation(({ ctx, input }) => services.archiveClassroom(ctx, input)),
 });

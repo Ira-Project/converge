@@ -17,7 +17,7 @@ import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./re
 import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
 import { addConceptsToQuestions, createLearnByTeachingAssignment } from "./learnByTeaching/learnByTeaching-seed";
 
-import { deleteUser } from "./user/userSeed";
+import { deleteClassroom, deleteUser } from "./user/userSeed";
 import { createTopics } from "./topics/topic-seed";
 import { createConcepts } from "./concept/concept-seed";
 import { addActivityToAssignment } from "./activity";
@@ -85,6 +85,7 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // USER DELETION
 // await deleteUser("vignesh+1@iraproject.com");
+await deleteClassroom("2yemzmtoni3hyzd8es8kf");
 
 // MIGRATE ACTIVITY TYPE TO TEXT
 // await migrateActivityTypeToText();

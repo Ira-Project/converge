@@ -3,6 +3,7 @@ import { Paths, Roles } from "@/lib/constants";
 import { redirect } from "next/navigation";
 import { api } from "@/trpc/server";
 import StepSolveActivityView from "./_components/step-solve-activity-view";
+import { NoAccessEmptyState } from "@/components/no-access-empty-state";
 
 export default async function ActivityPage(props: { params: Promise<{ activityId: string, classroomId: string }> }) {
   const params = await props.params;
@@ -11,7 +12,7 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
   let activity;
   let stepSolveAssignment;
   let stepSolveAttemptId;
-  let userToClassroom;
+  let userToClassroom: { role: Roles; isDeleted?: boolean } | undefined;
 
   if(user?.isOnboarded) {
     [activity, stepSolveAssignment] = await Promise.all([
@@ -35,6 +36,11 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
     if (!stepSolveAttemptId) {
       redirect(`${Paths.Classroom}${params.classroomId}`);
     }
+  }
+
+  // Show empty state if user has been removed from classroom
+  if (userToClassroom?.isDeleted) {
+    return <NoAccessEmptyState />;
   }
 
   return (

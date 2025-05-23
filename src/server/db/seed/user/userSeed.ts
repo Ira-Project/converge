@@ -173,6 +173,100 @@ async function deleteConceptMappingAttempt(attemptId: string) {
     .where(eq(conceptMappingAttempts.id, attemptId));
 }
 
+export async function deleteClassroom(classroomId: string) {
+  console.log(`Starting deletion process for classroom: ${classroomId}`);
+
+  const classroom = await db.select().from(classrooms).where(eq(classrooms.id, classroomId));
+  if(!classroom[0]) {
+    console.log('Classroom not found');
+    throw new Error("Classroom not found");
+  }
+
+  console.log(`Processing classroom: ${classroomId}`);
+  const activities = await db.select().from(activity).where(eq(activity.classroomId, classroomId));
+  console.log(`Found ${activities.length} activities in classroom ${classroomId}`);
+
+  for(const act of activities) {
+    if(act.typeText === ActivityType.StepSolve) {
+      const ssAttempts = await db.select().from(stepSolveAssignmentAttempts).where(eq(stepSolveAssignmentAttempts.activityId, act.id));
+
+      console.log(`Found ${ssAttempts.length} Step Solve attempts to delete`);
+
+      for(const attempt of ssAttempts) {
+        if(!attempt.id) continue;
+        await deleteStepSolveAttempt(attempt.id);
+      }
+    }
+
+    if(act.typeText === ActivityType.ReadAndRelay) {
+      const rrAttempts = await db.select().from(readAndRelayAttempts).where(eq(readAndRelayAttempts.activityId, act.id));
+
+      console.log(`Found ${rrAttempts.length} Read and Relay attempts to delete`);
+
+      for(const attempt of rrAttempts) {
+        if(!attempt.id) continue;
+        await deleteReadAndRelayAttempt(attempt.id);
+      }
+    }
+
+    if(act.typeText === ActivityType.ReasonTrace) {
+      const rtAttempts = await db.select().from(reasoningAssignmentAttempts).where(eq(reasoningAssignmentAttempts.activityId, act.id));
+
+      console.log(`Found ${rtAttempts.length} Reasoning attempts to delete`);
+
+      for(const attempt of rtAttempts) {
+        if(!attempt.id) continue;
+        await deleteReasoningAttempt(attempt.id);
+      }
+    }
+
+    if(act.typeText === ActivityType.KnowledgeZap) {
+      const kzAttempts = await db.select().from(knowledgeZapAssignmentAttempts)
+        .where(eq(knowledgeZapAssignmentAttempts.activityId, act.id));
+
+      console.log(`Found ${kzAttempts.length} Knowledge Zap attempts to delete`);
+
+      for(const attempt of kzAttempts) {
+        if(!attempt.id) continue;
+        await deleteKnowledgeZapAttempt(attempt.id);
+      }
+    }
+
+    if(act.typeText === ActivityType.LearnByTeaching) {
+      const explainAttempts = await db.select().from(explainTestAttempts)
+        .where(eq(explainTestAttempts.activityId, act.id));
+
+      console.log(`Found ${explainAttempts.length} Explain Test attempts to delete`);
+
+      for(const attempt of explainAttempts) {
+        if(!attempt.id) continue;
+        await deleteExplainTestAttempt(attempt.id);
+      }
+    }
+
+    if(act.typeText === ActivityType.ConceptMapping) {
+      const mapAttempts = await db.select().from(conceptMappingAttempts)
+        .where(eq(conceptMappingAttempts.activityId, act.id));
+
+      console.log(`Found ${mapAttempts.length} Concept Mapping attempts to delete`);
+
+      for(const attempt of mapAttempts) {
+        if(!attempt.id) continue;
+        await deleteConceptMappingAttempt(attempt.id);
+      }
+    }
+
+    await db.delete(activityToAssignment).where(eq(activityToAssignment.activityId, act.id));
+    await db.delete(activity).where(eq(activity.id, act.id));
+  }
+
+  await db.delete(usersToClassrooms).where(eq(usersToClassrooms.classroomId, classroomId));
+  await db.delete(conceptTracking).where(eq(conceptTracking.classroomId, classroomId));
+  await db.delete(classrooms).where(eq(classrooms.id, classroomId));
+
+  console.log(`Successfully deleted classroom ${classroomId} and all related data`);
+}
+
 export async function deleteUser(email: string) {
   console.log(`Starting deletion process for user: ${email}`);
 
@@ -240,88 +334,7 @@ export async function deleteUser(email: string) {
   console.log(`Found ${classes.length} classrooms to delete`);
 
   for(const classroom of classes) {
-    console.log(`Processing classroom: ${classroom.id}`);
-    const activities = await db.select().from(activity).where(eq(activity.classroomId, classroom.id));
-    console.log(`Found ${activities.length} activities in classroom ${classroom.id}`);
-
-    for(const act of activities) {
-      if(act.typeText === ActivityType.StepSolve) {
-        const ssAttempts = await db.select().from(stepSolveAssignmentAttempts).where(eq(stepSolveAssignmentAttempts.activityId, act.id));
-
-        console.log(`Found ${ssAttempts.length} Step Solve attempts to delete`);
-
-        for(const attempt of ssAttempts) {
-          if(!attempt.id) continue;
-          await deleteStepSolveAttempt(attempt.id);
-        }
-      }
-
-      if(act.typeText === ActivityType.ReadAndRelay) {
-        const rrAttempts = await db.select().from(readAndRelayAttempts).where(eq(readAndRelayAttempts.activityId, act.id));
-
-        console.log(`Found ${rrAttempts.length} Read and Relay attempts to delete`);
-
-        for(const attempt of rrAttempts) {
-          if(!attempt.id) continue;
-          await deleteReadAndRelayAttempt(attempt.id);
-        }
-      }
-
-      if(act.typeText === ActivityType.ReasonTrace) {
-        const rtAttempts = await db.select().from(reasoningAssignmentAttempts).where(eq(reasoningAssignmentAttempts.activityId, act.id));
-
-        console.log(`Found ${rtAttempts.length} Reasoning attempts to delete`);
-
-        for(const attempt of rtAttempts) {
-          if(!attempt.id) continue;
-          await deleteReasoningAttempt(attempt.id);
-        }
-      }
-
-      if(act.typeText === ActivityType.KnowledgeZap) {
-        const kzAttempts = await db.select().from(knowledgeZapAssignmentAttempts)
-          .where(eq(knowledgeZapAssignmentAttempts.activityId, act.id));
-
-        console.log(`Found ${kzAttempts.length} Knowledge Zap attempts to delete`);
-
-        for(const attempt of kzAttempts) {
-          if(!attempt.id) continue;
-          await deleteKnowledgeZapAttempt(attempt.id);
-        }
-      }
-
-      if(act.typeText === ActivityType.LearnByTeaching) {
-        const explainAttempts = await db.select().from(explainTestAttempts)
-          .where(eq(explainTestAttempts.activityId, act.id));
-
-        console.log(`Found ${explainAttempts.length} Explain Test attempts to delete`);
-
-        for(const attempt of explainAttempts) {
-          if(!attempt.id) continue;
-          await deleteExplainTestAttempt(attempt.id);
-        }
-      }
-
-      if(act.typeText === ActivityType.ConceptMapping) {
-        const mapAttempts = await db.select().from(conceptMappingAttempts)
-          .where(eq(conceptMappingAttempts.activityId, act.id));
-
-        console.log(`Found ${mapAttempts.length} Concept Mapping attempts to delete`);
-
-        for(const attempt of mapAttempts) {
-          if(!attempt.id) continue;
-          await deleteConceptMappingAttempt(attempt.id);
-        }
-      }
-
-      await db.delete(activityToAssignment).where(eq(activityToAssignment.activityId, act.id));
-      await db.delete(activity).where(eq(activity.id, act.id));
-    }
-
-    await db.delete(usersToClassrooms).where(eq(usersToClassrooms.classroomId, classroom.id));
-    await db.delete(conceptTracking).where(eq(conceptTracking.classroomId, classroom.id));
-
-    await db.delete(classrooms).where(eq(classrooms.createdBy, userId));
+    await deleteClassroom(classroom.id);
   }
 
   await db.delete(teacherCourses).where(eq(teacherCourses.userId, userId));

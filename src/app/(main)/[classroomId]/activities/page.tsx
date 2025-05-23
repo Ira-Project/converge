@@ -4,13 +4,16 @@ import Image from "next/image";
 import { validateRequest } from '@/lib/auth/validate-request';
 import { ComponentIds, Roles } from '@/lib/constants';
 import TopicList from './_components/topic-list';
+import { ClassroomHeader } from '../_components/classroom-header';
+import { NoAccessEmptyState } from '@/components/no-access-empty-state';
+
 export default async function ClassroomPage(props: { params: Promise<{ classroomId: string }> }) {
   const [{ user }, params] = await Promise.all([
     validateRequest(),
     props.params
   ]);
 
-  let classroom, topics, userToClassroom: { role: Roles } | undefined;
+  let classroom, topics, userToClassroom: { role: Roles; isDeleted?: boolean } | undefined;
   if (user) {
     [classroom, topics, userToClassroom] = await Promise.all([
       api.classroom.get.query({ id: params.classroomId }),
@@ -22,19 +25,16 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
   if (userToClassroom?.role === Roles.Student) {
     topics = topics?.filter((topic) => topic.activities.some((a) => a.isLive));
   }
+
+  // Show empty state if user has been removed from classroom
+  if (userToClassroom?.isDeleted) {
+    return <NoAccessEmptyState />;
+  }
   
   return (
     <>
       {/* Header */}
-      <div 
-        className="mb-8 h-32 fixed top-0 z-[5] w-full p-8 text-white"
-        style={{ backgroundImage: `url('/images/cover.png')` }}
-      >
-        <h1 className="text-2xl font-semibold mb-1 mt-4">{classroom?.name}</h1>
-        {classroom?.course && (
-          <p className="text-sm">{classroom?.course?.subject?.name} | {classroom?.course?.name}</p>
-        )}
-      </div>
+      <ClassroomHeader classroom={classroom} />
 
       {/* Topics */}
       <div className="px-4 mt-40 flex flex-col gap-8 w-full">
