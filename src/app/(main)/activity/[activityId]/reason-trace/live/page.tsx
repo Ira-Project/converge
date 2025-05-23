@@ -3,12 +3,13 @@ import { Paths, Roles } from "@/lib/constants";
 import { redirect } from "next/navigation";
 import { api } from "@/trpc/server";
 import ReasoningAssignmentView from "./_components/reasoning-assignment-view";
+import { NoAccessEmptyState } from "@/components/no-access-empty-state";
 
 export default async function ActivityPage(props: { params: Promise<{ activityId: string, classroomId: string }> }) {
   const params = await props.params;
   const { user } = await validateRequest();
 
-  let activity, userToClassroom, reasoningAssignment, reasoningAttemptId;
+  let activity, userToClassroom: { role: Roles; isDeleted?: boolean } | undefined, reasoningAssignment, reasoningAttemptId;
 
   if(user?.isOnboarded) {
     activity = await api.activities.getActivity.query({ activityId: params.activityId });
@@ -20,6 +21,11 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
     reasoningAttemptId = await api.reasonTrace.createAttempt.mutate({ activityId: params.activityId });
 
     if (!activity || !reasoningAssignment || !reasoningAttemptId) redirect(`${Paths.Classroom}${params.classroomId}`);
+  }
+
+  // Show empty state if user has been removed from classroom
+  if (userToClassroom?.isDeleted) {
+    return <NoAccessEmptyState />;
   }
 
   return (

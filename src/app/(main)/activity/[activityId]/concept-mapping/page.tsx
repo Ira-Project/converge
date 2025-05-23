@@ -10,17 +10,23 @@ import MistakeAnalytics from "./_components/mistake-analytics";
 import AnalyticsCards from "./_components/analytics-cards";
 import { BarChartIcon, FileTextIcon } from "@/components/icons";
 import SubmissionsTable from "./_components/submission-table";
+import { NoAccessEmptyState } from "@/components/no-access-empty-state";
 
 export default async function AssignmentPage(props: { params: Promise<{ activityId: string }> }) {
   const params = await props.params;
   const { user } = await validateRequest();
 
-  let activity, userToClassroom;
+  let activity, userToClassroom: { role: Roles; isDeleted?: boolean } | undefined;
   if(user?.isOnboarded) {
     activity = await api.activities.getActivity.query({ activityId: params.activityId });
     if(activity?.classroomId) {
       userToClassroom = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: activity?.classroomId });
     }
+  }
+
+  // Show empty state if user has been removed from classroom
+  if (userToClassroom?.isDeleted) {
+    return <NoAccessEmptyState />;
   }
 
   const activityMetaData = getMetaDataFromActivityType(ActivityType.ConceptMapping, activity?.id);

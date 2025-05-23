@@ -5,6 +5,7 @@ import { validateRequest } from '@/lib/auth/validate-request';
 import { ComponentIds, Roles } from '@/lib/constants';
 import TopicList from './_components/topic-list';
 import { ClassroomHeader } from '../_components/classroom-header';
+import { NoAccessEmptyState } from '@/components/no-access-empty-state';
 
 export default async function ClassroomPage(props: { params: Promise<{ classroomId: string }> }) {
   const [{ user }, params] = await Promise.all([
@@ -12,7 +13,7 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
     props.params
   ]);
 
-  let classroom, topics, userToClassroom: { role: Roles } | undefined;
+  let classroom, topics, userToClassroom: { role: Roles; isDeleted?: boolean } | undefined;
   if (user) {
     [classroom, topics, userToClassroom] = await Promise.all([
       api.classroom.get.query({ id: params.classroomId }),
@@ -23,6 +24,11 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
 
   if (userToClassroom?.role === Roles.Student) {
     topics = topics?.filter((topic) => topic.activities.some((a) => a.isLive));
+  }
+
+  // Show empty state if user has been removed from classroom
+  if (userToClassroom?.isDeleted) {
+    return <NoAccessEmptyState />;
   }
   
   return (
