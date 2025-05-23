@@ -4,28 +4,30 @@ export const EMAIL_SENDER = 'contact@iraproject.com';
 
 export const LATEX_DELIMITER = "$!$";
 
-export enum Paths {
-  Login = "/login",
-  Signup = "/signup",
-  Onboarding = '/onboarding',
-  VerifyEmail = "/verify-email",
-  ResetPassword = "/reset-password",
-  GoogleLogin = "/login/google",
-  Classroom = "/",
-  Activities = "/activities",
-  Documentation = "/documentation",
-  Leaderboard = "/leaderboard",
-  Analytics = "/analytics",
-  LearnByTeaching = "/learn-by-teaching/",
-  ReasonTrace = "/reason-trace/",
-  KnowledgeZap = "/knowledge-zap/",
-  StepSolve = "/step-solve/",
-  ReadAndRelay = "/read-and-relay/",
-  ConceptMapping = "/concept-mapping/",
-  CreateAssignment = "/create-assignment/",
-  Activity = "/activity/",
-  LiveActivity = "live",
-}
+export const Paths = {
+  Home: "/",
+  Login: "/login",
+  Signup: "/signup",
+  Onboarding: "/onboarding",
+  Activities: "/activities",
+  Documentation: "/documentation",
+  Leaderboard: "/leaderboard",
+  Analytics: "/analytics",
+  Settings: "/settings",
+  VerifyEmail: "/verify-email",
+  ResetPassword: "/reset-password",
+  GoogleLogin: "/login/google",
+  Classroom: "/",
+  LearnByTeaching: "/learn-by-teaching/",
+  ReasonTrace: "/reason-trace/",
+  KnowledgeZap: "/knowledge-zap/",
+  StepSolve: "/step-solve/",
+  ReadAndRelay: "/read-and-relay/",
+  ConceptMapping: "/concept-mapping/",
+  CreateAssignment: "/create-assignment/",
+  Activity: "/activity/",
+  LiveActivity: "live",
+} as const;
 
 export enum ComponentIds {
   CreateAssignment = "create-assignment",

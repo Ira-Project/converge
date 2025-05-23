@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { BookOpen, FileText, Plus, ChartLine, ChartNoAxesColumn, Home } from "lucide-react"
+import { BookOpen, FileText, Plus, ChartLine, ChartNoAxesColumn, Home, Settings } from "lucide-react"
 
 import { NavMain } from "./nav-main"
 import { NavStudents } from "./nav-students"
@@ -80,6 +80,12 @@ export function AppSidebar({ classroom, classrooms, user, activities, students, 
       title: "Analytics",
       url: `/${classroom?.id}${Paths.Analytics}`,
       icon: ChartLine,
+      isActive: true,
+    })
+    navMain.push({
+      title: "Settings",
+      url: `/${classroom?.id}${Paths.Settings}`,
+      icon: Settings,
       isActive: true,
     })
     navMain.push({

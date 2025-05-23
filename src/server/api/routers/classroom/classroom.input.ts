@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { Roles } from "@/lib/constants"
 
 export const getClassroomSchema = z.object({
   id: z.string(),
@@ -31,3 +32,27 @@ export const createClassroomSchema = z.object({
   description: z.string().optional(),
 });
 export type CreateClassroomInput = z.infer<typeof createClassroomSchema>;
+
+export const updateClassroomSchema = z.object({
+  id: z.string(),
+  name: z.string().min(1),
+  description: z.string().optional(),
+  year: z.number().int().min(2000).max(2100).optional(),
+  showLeaderboardStudents: z.boolean(),
+  showLeaderboardTeachers: z.boolean(),
+});
+
+export type UpdateClassroomInput = z.infer<typeof updateClassroomSchema>;
+
+export const removeStudentSchema = z.object({
+  classroomId: z.string(),
+  studentId: z.string(),
+});
+
+export type RemoveStudentInput = z.infer<typeof removeStudentSchema>;
+
+export const archiveClassroomSchema = z.object({
+  id: z.string(),
+});
+
+export type ArchiveClassroomInput = z.infer<typeof archiveClassroomSchema>;

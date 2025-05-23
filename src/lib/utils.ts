@@ -77,3 +77,22 @@ export function useHashNavigation(dependencies: React.DependencyList = [], offse
     window.removeEventListener('hashchange', handleHashScroll);
   };
 }
+
+/**
+ * Gets the initials from a user's name (first letter of first and last name)
+ * @param name The user's name
+ * @returns The user's initials (1-2 characters)
+ */
+export function getUserInitials(name: string): string {
+  if (!name || typeof name !== 'string') return "U";
+  
+  const parts = name.trim().split(/\s+/);
+  if (parts.length === 0) return "U";
+  
+  const first = parts[0]?.charAt(0)?.toUpperCase() ?? 'U';
+  
+  if (parts.length === 1) return first;
+  
+  const last = parts[parts.length - 1]?.charAt(0)?.toUpperCase() ?? '';
+  return first + last;
+}

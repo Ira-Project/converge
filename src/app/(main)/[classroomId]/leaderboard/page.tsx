@@ -4,6 +4,7 @@ import { validateRequest } from '@/lib/auth/validate-request';
 import { type RouterOutputs } from '@/trpc/shared';
 import { Leaderboard } from './_components/leaderboard';
 import { ChartNoAxesColumn } from 'lucide-react';
+import { ClassroomHeader } from '../_components/classroom-header';
 
 export default async function LeaderboardPage(props: { params: Promise<{ classroomId: string }> }) {
 
@@ -25,15 +26,7 @@ export default async function LeaderboardPage(props: { params: Promise<{ classro
   return (
     <div>
        {/* Header */}
-       <div 
-        className="mb-8 h-32 w-full p-8 text-white"
-        style={{ backgroundImage: `url('/images/cover.png')` }}
-      >
-        <h1 className="text-2xl font-semibold mb-1 mt-4">{classroom?.name}</h1>
-        {classroom?.course && (
-          <p className="text-sm">{classroom?.course?.subject?.name} | {classroom?.course?.name}</p>
-        )}
-      </div>
+       <ClassroomHeader classroom={classroom} />
 
       {/* Leaderboard Content */}
       <div className="px-8 mb-32">
