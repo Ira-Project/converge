@@ -85,7 +85,6 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // USER DELETION
 // await deleteUser("vignesh+1@iraproject.com");
-await deleteClassroom("2yemzmtoni3hyzd8es8kf");
 
 // MIGRATE ACTIVITY TYPE TO TEXT
 // await migrateActivityTypeToText();

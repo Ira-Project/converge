@@ -136,7 +136,7 @@ export default function ClassroomSettingsForm({
               id="showLeaderboardStudents"
               checked={form.watch("showLeaderboardStudents")}
               onCheckedChange={(checked) => 
-                form.setValue("showLeaderboardStudents", checked === true)
+                form.setValue("showLeaderboardStudents", checked === true, { shouldDirty: true })
               }
             />
             <Label
@@ -152,7 +152,7 @@ export default function ClassroomSettingsForm({
               id="showLeaderboardTeachers"
               checked={form.watch("showLeaderboardTeachers")}
               onCheckedChange={(checked) => 
-                form.setValue("showLeaderboardTeachers", checked === true)
+                form.setValue("showLeaderboardTeachers", checked === true, { shouldDirty: true })
               }
             />
             <Label
