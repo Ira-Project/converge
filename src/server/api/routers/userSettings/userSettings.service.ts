@@ -1,8 +1,7 @@
-import { eq, and } from "drizzle-orm";
+import { eq } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
 import type { UpdateUserNameInput, SetDefaultClassroomInput } from "./userSettings.input";
 import { users } from "@/server/db/schema/user";
-import { usersToClassrooms } from "@/server/db/schema/classroom";
 import { TRPCClientError } from "@trpc/client";
 
 export const getUserSettings = async (ctx: ProtectedTRPCContext) => {
