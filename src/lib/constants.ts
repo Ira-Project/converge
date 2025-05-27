@@ -14,6 +14,7 @@ export const Paths = {
   Leaderboard: "/leaderboard",
   Analytics: "/analytics",
   Settings: "/settings",
+  AccountSettings: "/account-settings",
   VerifyEmail: "/verify-email",
   ResetPassword: "/reset-password",
   GoogleLogin: "/login/google",

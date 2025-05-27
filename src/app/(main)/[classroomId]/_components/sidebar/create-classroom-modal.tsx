@@ -28,14 +28,21 @@ export function CreateClassroomModal() {
 
   const createClassroomMutation = api.classroom.create.useMutation({
     onSuccess: (classroomId) => {
-      posthog.capture("classroom_created", {
-        name,
-        description
+      posthog.capture("classroom_created_success", {
+        classroom_id: classroomId,
+        classroom_name: name,
+        has_description: !!description.trim(),
+        description_length: description.trim().length,
       })
       setOpen(false)
       router.push(`/${classroomId}`)
     },
     onError: (error) => {
+      posthog.capture("classroom_creation_failed", {
+        classroom_name: name,
+        has_description: !!description.trim(),
+        error: error.message,
+      })
       console.error("Failed to create classroom:", error)
       setIsLoading(false)
     }
@@ -45,6 +52,12 @@ export function CreateClassroomModal() {
     e.preventDefault()
     if (!name.trim()) return
     
+    posthog.capture("classroom_creation_submitted", {
+      classroom_name: name,
+      has_description: !!description.trim(),
+      description_length: description.trim().length,
+    })
+    
     setIsLoading(true)
     createClassroomMutation.mutate({
       name: name.trim(),
@@ -52,14 +65,35 @@ export function CreateClassroomModal() {
     })
   }
 
+  const handleOpenChange = (newOpen: boolean) => {
+    if (!newOpen && open) {
+      // Closing the modal
+      posthog.capture("create_classroom_modal_closed", {
+        had_name: !!name.trim(),
+        had_description: !!description.trim(),
+        was_submitted: false,
+      })
+    }
+    setOpen(newOpen)
+    
+    // Reset form when closing
+    if (!newOpen) {
+      setName("")
+      setDescription("")
+      setIsLoading(false)
+    }
+  }
+
   return (
-    <Dialog open={open} onOpenChange={setOpen}>
+    <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogTrigger asChild>
         <Button 
           variant="ghost" 
           className="w-full justify-start gap-2 px-2 hover:bg-muted"
           onClick={() => {
-            posthog.capture("create_classroom_modal_opened")
+            posthog.capture("create_classroom_modal_opened", {
+              source: "sidebar",
+            })
           }}
         >
           <div className="flex size-6 items-center justify-center rounded-md border bg-background">

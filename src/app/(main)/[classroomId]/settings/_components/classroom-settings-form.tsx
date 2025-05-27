@@ -11,6 +11,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { api } from "@/trpc/react";
 import { toast } from "sonner";
+import posthog from "posthog-js";
 
 const formSchema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
@@ -49,15 +50,39 @@ export default function ClassroomSettingsForm({
 
   const updateClassroom = api.classroom.update.useMutation({
     onSuccess: () => {
+      const formValues = form.getValues();
+      posthog.capture("classroom_settings_updated", {
+        classroom_id: classroomId,
+        classroom_name: formValues.name,
+        has_description: !!formValues.description?.trim(),
+        year: formValues.year,
+        show_leaderboard_students: formValues.showLeaderboardStudents,
+        show_leaderboard_teachers: formValues.showLeaderboardTeachers,
+        changes_made: {
+          name_changed: formValues.name !== classroom.name,
+          description_changed: formValues.description !== classroom.description,
+          year_changed: formValues.year !== classroom.year,
+          leaderboard_students_changed: formValues.showLeaderboardStudents !== classroom.showLeaderboardStudents,
+          leaderboard_teachers_changed: formValues.showLeaderboardTeachers !== classroom.showLeaderboardTeachers,
+        },
+      });
       toast.success("Classroom settings updated successfully. Refresh the page to see the changes.");
     },
     onError: (error) => {
+      posthog.capture("classroom_settings_update_failed", {
+        classroom_id: classroomId,
+        error: error.message,
+      });
       toast.error(error.message || "Failed to update classroom settings");
     },
   });
 
   const archiveClassroom = api.classroom.archive.useMutation({
     onSuccess: () => {
+      posthog.capture("classroom_archived", {
+        classroom_id: classroomId,
+        classroom_name: classroom.name,
+      });
       toast.success("Classroom archived successfully. It will no longer appear in your classroom list.");
       // Redirect to the classrooms page after a short delay
       setTimeout(() => {
@@ -65,11 +90,24 @@ export default function ClassroomSettingsForm({
       }, 2000);
     },
     onError: (error) => {
+      posthog.capture("classroom_archive_failed", {
+        classroom_id: classroomId,
+        error: error.message,
+      });
       toast.error(error.message || "Failed to archive classroom");
     },
   });
 
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    posthog.capture("classroom_settings_update_attempted", {
+      classroom_id: classroomId,
+      classroom_name: values.name,
+      has_description: !!values.description?.trim(),
+      year: values.year,
+      show_leaderboard_students: values.showLeaderboardStudents,
+      show_leaderboard_teachers: values.showLeaderboardTeachers,
+    });
+    
     updateClassroom.mutate({
       id: classroomId,
       ...values,
@@ -77,9 +115,24 @@ export default function ClassroomSettingsForm({
   };
 
   const handleArchive = () => {
+    posthog.capture("classroom_archive_confirmation_shown", {
+      classroom_id: classroomId,
+      classroom_name: classroom.name,
+    });
+    
     if (confirm("Are you sure you want to archive this classroom?")) {
+      posthog.capture("classroom_archive_confirmed", {
+        classroom_id: classroomId,
+        classroom_name: classroom.name,
+      });
+      
       archiveClassroom.mutate({
         id: classroomId,
+      });
+    } else {
+      posthog.capture("classroom_archive_cancelled", {
+        classroom_id: classroomId,
+        classroom_name: classroom.name,
       });
     }
   };
@@ -135,9 +188,13 @@ export default function ClassroomSettingsForm({
             <Checkbox
               id="showLeaderboardStudents"
               checked={form.watch("showLeaderboardStudents")}
-              onCheckedChange={(checked) => 
-                form.setValue("showLeaderboardStudents", checked === true, { shouldDirty: true })
-              }
+              onCheckedChange={(checked) => {
+                posthog.capture("classroom_settings_leaderboard_students_toggled", {
+                  classroom_id: classroomId,
+                  new_value: checked === true,
+                });
+                form.setValue("showLeaderboardStudents", checked === true, { shouldDirty: true });
+              }}
             />
             <Label
               htmlFor="showLeaderboardStudents"
@@ -151,9 +208,13 @@ export default function ClassroomSettingsForm({
             <Checkbox
               id="showLeaderboardTeachers"
               checked={form.watch("showLeaderboardTeachers")}
-              onCheckedChange={(checked) => 
-                form.setValue("showLeaderboardTeachers", checked === true, { shouldDirty: true })
-              }
+              onCheckedChange={(checked) => {
+                posthog.capture("classroom_settings_leaderboard_teachers_toggled", {
+                  classroom_id: classroomId,
+                  new_value: checked === true,
+                });
+                form.setValue("showLeaderboardTeachers", checked === true, { shouldDirty: true });
+              }}
             />
             <Label
               htmlFor="showLeaderboardTeachers"
