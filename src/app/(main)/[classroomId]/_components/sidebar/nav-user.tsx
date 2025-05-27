@@ -2,6 +2,7 @@
 
 import {
   ChevronsUpDown,
+  Settings,
 } from "lucide-react"
 
 import Avatar from 'boring-avatars'
@@ -26,6 +27,8 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar"
 import { LogoutWithDialog } from "@/components/logout-with-dialog"
+import { Paths } from "@/lib/constants"
+import Link from "next/link"
 
 export function NavUser({
   user,
@@ -81,24 +84,13 @@ export function NavUser({
               </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
-            {/* 
-              // TODO: Add settings here
-              <DropdownMenuGroup>
-                <DropdownMenuItem>
-                  <BadgeCheck />
-                  Account
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <CreditCard />
-                  Billing
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <Bell />
-                  Notifications
-                </DropdownMenuItem>
-              </DropdownMenuGroup>
-              <DropdownMenuSeparator /> 
-            */}
+            <DropdownMenuItem asChild>
+              <Link href={Paths.AccountSettings} className="flex items-center gap-2">
+                <Settings className="h-4 w-4" />
+                Account Settings
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
             <DropdownMenuItem>
               <LogoutWithDialog />
             </DropdownMenuItem>

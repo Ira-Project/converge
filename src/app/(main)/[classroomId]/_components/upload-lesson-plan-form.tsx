@@ -12,6 +12,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { SkillType } from "@/lib/constants";
 import { MultiSelect } from "@/components/ui/multi-select";
+import posthog from "posthog-js";
 
 const skillOptions = Object.values(SkillType).map((skill) => ({
   label: skill,
@@ -38,42 +39,78 @@ export const UploadLessonPlanForm = () => {
   const [fileName, setFileName] = useState("");
 
   const onSubmit = form.handleSubmit(async (values) => {
+    posthog.capture("lesson_plan_upload_started", {
+      topic_name: values.topicName,
+      has_file: !!values.file,
+      file_name: fileName,
+      skills_count: values.skills.length,
+      skills: values.skills,
+    });
+    
     setLoading(true);
-    if (values.file) {
-      const presignedUrl = await getPresignedUrl.mutateAsync({
-        topicName: values.topicName,
-        fileName: fileName,
-        file: values.file,
-        skills: values.skills,
-      });
+    
+    try {
+      if (values.file) {
+        const presignedUrl = await getPresignedUrl.mutateAsync({
+          topicName: values.topicName,
+          fileName: fileName,
+          file: values.file,
+          skills: values.skills,
+        });
 
-      const result = await fetch(presignedUrl, {
-        method: 'PUT',
-        body: values.file
-      })
+        const result = await fetch(presignedUrl, {
+          method: 'PUT',
+          body: values.file
+        })
 
-      if (result.status !== 200 || !result.url) {
-        toast("An error occured while uploading your lesson plan. Please try again later");      
-        setLoading(false);
-        return;
+        if (result.status !== 200 || !result.url) {
+          posthog.capture("lesson_plan_file_upload_failed", {
+            topic_name: values.topicName,
+            file_name: fileName,
+            status: result.status,
+          });
+          toast("An error occured while uploading your lesson plan. Please try again later");      
+          setLoading(false);
+          return;
+        }
+
+        posthog.capture("lesson_plan_file_uploaded_successfully", {
+          topic_name: values.topicName,
+          file_name: fileName,
+        });
+
+        await uploadLessonPlan.mutateAsync({
+          url: result.url, 
+          fileName: fileName,
+          topicName: values.topicName,
+          skills: values.skills,
+        });
+
+      } else {
+        await uploadLessonPlan.mutateAsync({
+          topicName: values.topicName,
+          fileName: fileName,
+          skills: values.skills,
+        });
       }
-
-      await uploadLessonPlan.mutateAsync({
-        url: result.url, 
-        fileName: fileName,
-        topicName: values.topicName,
-        skills: values.skills,
+      
+      
+      setLoading(false);
+      toast("Your requested has been sent. Check back in 48 hours for activities.");
+      
+      // Reset form after successful submission
+      form.reset();
+      setFileName("");
+      
+    } catch (error) {
+      posthog.capture("lesson_plan_upload_failed", {
+        topic_name: values.topicName,
+        has_file: !!values.file,
+        file_name: fileName,
+        error: error instanceof Error ? error.message : 'Unknown error',
       });
-
-    } else {
-      await uploadLessonPlan.mutateAsync({
-        topicName: values.topicName,
-        fileName: fileName,
-        skills: values.skills,
-      });
+      setLoading(false);
     }
-    setLoading(false);
-    toast("Your requested has been sent. Check back in 48 hours for activities.");
   });
 
   return (
@@ -131,8 +168,8 @@ export const UploadLessonPlanForm = () => {
                       e.target.files 
                         && e.target.files[0] !== null 
                         && e.target.files[0]?.name
-                        && setFileName(e.target.files[0]?.name)                    
-                    }}
+                        && setFileName(e.target.files[0]?.name)
+                      }}
                     type="file" />
                 </FormControl>
                 <FormMessage />

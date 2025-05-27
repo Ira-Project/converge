@@ -3,6 +3,7 @@ import { createTRPCRouter } from "./trpc";
 import { classroomRouter } from "./routers/classroom/classroom.procedure";
 import { fileUploadRouter } from "./routers/fileUpload/fileUpload.procedure";
 import { userOnboardingRouter } from "./routers/userOnboarding/userOnboarding.procedure";
+import { userSettingsRouter } from "./routers/userSettings/userSettings.procedure";
 import { subjectRouter } from "./routers/subject/subject.procedure";
 
 import { activitiesRouter } from "./routers/activities/activities.procedure";
@@ -28,6 +29,7 @@ export const appRouter = createTRPCRouter({
   subject: subjectRouter,
   fileUpload: fileUploadRouter,
   userOnboardingRouter: userOnboardingRouter,
+  userSettings: userSettingsRouter,
   activities: activitiesRouter,
   leaderboard: leaderboardRouter,
   analytics: analyticsRouter,
