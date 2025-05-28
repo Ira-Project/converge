@@ -1,6 +1,6 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import type { CheckMatchingAnswerInput, CheckMultipleChoiceAnswerInput, CheckOrderingAnswerInput, FlagQuestionInput } from "./knowledgeQuestions.input";
+import type { CheckMatchingAnswerInput, CheckMultipleChoiceAnswerInput, CheckOrderingAnswerInput, FlagKnowledgeZapQuestionInput } from "./knowledgeQuestions.input";
 import { eq } from "drizzle-orm";
 import { knowledgeZapQuestionAttempts, knowledgeZapQuestionReport } from "@/server/db/schema/knowledgeZap/knowledgeZapQuestions";
 import { matchingAttempt, matchingAttemptSelection, matchingQuestions } from "@/server/db/schema/knowledgeZap/matchingQuestions";
@@ -262,7 +262,7 @@ export const checkOrderingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
 
 };
 
-export const flagQuestion = async (ctx: ProtectedTRPCContext, input: FlagQuestionInput) => {
+export const flagQuestion = async (ctx: ProtectedTRPCContext, input: FlagKnowledgeZapQuestionInput) => {
   const { questionId, type, report, questionText, classroomId } = input;
 
   // Create the question report entry

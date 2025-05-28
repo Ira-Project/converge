@@ -39,6 +39,4 @@ export const flagKnowledgeZapQuestionInput = z.object({
   questionText: z.string(), // The actual question text for email
   classroomId: z.string(),
 });
-
-// Keep the old name for backward compatibility
-export const flagQuestionInput = flagKnowledgeZapQuestionInput;
+export type FlagKnowledgeZapQuestionInput = z.infer<typeof flagKnowledgeZapQuestionInput>;
