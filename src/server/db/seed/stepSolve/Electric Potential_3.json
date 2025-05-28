@@ -1,0 +1,155 @@
+{
+    "id": "6b8586058f084d2ca2b37",
+    "name": "Electric Potential",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "0c216919474f422db265a",
+            "questionText": "Determine the total amount of electric charge, in Coulombs, that has flowed into the smartphone if a portable power bank creates an electric potential difference of $!$18$!$ volts and delivers $!$3600$!$ Joules of electrical potential energy to the smartphone.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b877762995d4482c90e1c",
+                    "stepText": "Let's start by identifying the relationship between electric potential difference, electrical energy, and the charge that flows. Please select the correct formula that connects these quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4235ecb8-e8ea-4100-a964-1482547aed9a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = \\frac{\\Delta E}{Q}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = Q \\cdot \\Delta E$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = Q + \\Delta E$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2ca6578c467547f9b723f",
+                    "stepText": "Great! Now that we've identified the correct formula, let's rearrange this equation to solve for the electric charge $!$Q$!$. Please choose the rearranged formula that isolates $!$Q$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4235ecb8-e8ea-4100-a964-1482547aed9a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = \\frac{\\Delta E}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = V \\cdot \\Delta E$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = \\frac{V}{\\Delta E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cf992391cfd34d8489876",
+                    "stepText": "Now, use the rearranged formula to calculate the total charge. Substitute $!$\\Delta E = 3600$!$ Joules and $!$V = 18$!$ Volts into the equation $!$Q = \\frac{\\Delta E}{V}$!$. What is the resulting value of $!$Q$!$ in Coulombs?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "200"
+                    ],
+                    "stepSolveAnswerUnits": "Coulombs",
+                    "stepConcepts": [
+                        "4235ecb8-e8ea-4100-a964-1482547aed9a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "881cc7f5f1e944c5a3433",
+            "questionText": "An isolated community is installing a new solar farm. If the solar farm produces $!$120\\,MJ$!$ of electrical energy in a $!$4\\,hour$!$ period during peak sunlight, what is the total electrical energy produced by the farm over a full $!$30\\,day$!$ month, assuming this peak generation rate for $!$4\\,hours$!$ each day? Express your answer in $!$MWh$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "45addebe6d7744aaabd3a",
+                    "stepText": "Let's start by calculating the total electrical energy produced over the month in megajoules. Recall that the solar farm produces $!$120\\,MJ$!$ each day. How much energy in megajoules does the farm produce in 30 days?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3600"
+                    ],
+                    "stepSolveAnswerUnits": "MJ",
+                    "stepConcepts": [
+                        "571fee66-0184-464e-a744-645d9e0422f0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "812c27c2579f453db5c76",
+                    "stepText": "Great, now that you've found the total energy in megajoules, we need to convert this energy into megawatt-hours. To do this, identify the correct conversion factor between megajoules and megawatt-hours. Which of the following represents the conversion factor such that $!$1\\,MWh$!$ equals how many $!$MJ$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "571fee66-0184-464e-a744-645d9e0422f0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,MWh = 3600\\,MJ$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,MWh = 3.6\\,MJ$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,MWh = 36000\\,MJ$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "dc2405014d8e49779a306",
+                    "stepText": "Now, using the conversion factor you identified, convert the total energy from megajoules to megawatt-hours by dividing the monthly energy (in $!$MJ$!$) by the conversion factor. What is the total energy produced by the solar farm in $!$MWh$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1"
+                    ],
+                    "stepSolveAnswerUnits": "MWh",
+                    "stepConcepts": [
+                        "571fee66-0184-464e-a744-645d9e0422f0"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

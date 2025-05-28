@@ -5,6 +5,16 @@ export const getActivitiesSchema = z.object({
 });
 export type GetActivitiesInput = z.infer<typeof getActivitiesSchema>;
 
+export const getAllActivitiesSchema = z.object({
+  classroomId: z.string(),
+});
+export type GetAllActivitiesInput = z.infer<typeof getAllActivitiesSchema>;
+
+export const getGeneratedActivitiesSchema = z.object({
+  classroomId: z.string(),
+});
+export type GetGeneratedActivitiesInput = z.infer<typeof getGeneratedActivitiesSchema>;
+
 export const getActivitySchema = z.object({
   activityId: z.string(),
 });

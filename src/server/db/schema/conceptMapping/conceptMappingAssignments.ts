@@ -19,6 +19,7 @@ export const conceptMappingAssignments = pgTable(
     percentageNodesToHide: doublePrecision("percentage_nodes_to_hide").notNull().default(0.5),
     topicId: varchar("topic_id", { length: 21 }).notNull().references(() => topics.id),
     order: integer("order"),
+    generated: boolean("generated").default(false).notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),

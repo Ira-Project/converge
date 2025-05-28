@@ -104,3 +104,100 @@ export async function createConcepts(topicName: string) {
   }
   console.log(`Completed seeding concepts for topic: ${topicName}`)
 }
+
+export async function createGeneratedConcepts(topicName: string, userId: string) {
+  // Parameters for assignment creation
+  const { default: data } = await import( `./${topicName}.json`, { assert: { type: "json" } });
+  
+  const topicId = process.env.ENVIRONMENT === "prod" ? data.topicIdProd : data.topicIdDev;
+  const topic = await db.select().from(topics).where(
+    eq(topics.id, topicId as string),
+  )
+
+  if (topic?.[0] === undefined) {
+    console.log("Topic not found")
+    return
+  }
+
+  if(!topicName.includes(topic?.[0].name)) {
+    console.log("Topic name does not match")
+    return
+  }
+
+  console.log(`Creating generated concepts for topic: ${topicName} by user: ${userId}`)
+  console.log(`Total concepts to create: ${data.chapter_concepts.length}`)
+  
+  for (const concept of data.chapter_concepts) {
+    // Check if concept already exists
+    const existingConcept = await db.select()
+      .from(concepts)
+      .where(eq(concepts.id, concept.concept_id as string));
+
+    if (existingConcept.length > 0) {
+      console.log(`Concept already exists: ${concept.concept_question}`);
+      continue;
+    }
+
+    console.log(`Creating generated concept: ${concept.concept_question}`);
+    await db.insert(concepts).values({
+      id: concept.concept_id,
+      text: concept.concept_question,
+      answerText: concept.concept_answer,
+      formulas: concept.concept_formula,
+      generated: true,
+      createdBy: userId,
+    });
+
+    console.log(`Created generated concept to topic: ${concept.concept_question}`);
+    // Check if concept-topic relationship already exists
+    const existingConceptTopic = await db.select()
+      .from(conceptsToTopics)
+      .where(and(
+        eq(conceptsToTopics.conceptId, concept.concept_id as string),
+        eq(conceptsToTopics.topicId, topicId as string)
+      ));
+
+    if (existingConceptTopic.length === 0) {
+      await db.insert(conceptsToTopics).values({
+        id: generateId(21),
+        conceptId: concept.concept_id,
+        topicId: topicId as string,
+      });
+    }
+  }  
+
+  console.log('Creating concept prerequisite edges...')
+  for (const concept of data.chapter_concepts) {
+    console.log(`Processing prerequisites for concept: ${concept.concept_id} (${concept['pre-requisites'].length} prerequisites)`)
+    for (const prerequisite of concept['pre-requisites']) {
+      // Check if edge already exists in either direction
+      const existingEdge = await db.select()
+        .from(conceptEdges)
+        .where(
+          or(
+            and(
+              eq(conceptEdges.conceptId, concept.concept_id as string),
+              eq(conceptEdges.relatedConceptId, prerequisite as string)
+            ),
+            and(
+              eq(conceptEdges.conceptId, prerequisite as string),
+              eq(conceptEdges.relatedConceptId, concept.concept_id as string)
+            )
+          )
+        );
+
+      // Only insert if edge doesn't exist in either direction
+      if (existingEdge.length === 0) {
+        await db.insert(conceptEdges).values({
+          id: generateId(21),
+          conceptId: concept.concept_id,
+          relatedConceptId: prerequisite,
+        });
+        console.log(`Created edge: ${concept.concept_id} -> ${prerequisite}`)
+      } else {
+        console.log(`Edge already exists between ${concept.concept_id} and ${prerequisite}`)
+      }
+    }
+  }
+  console.log(`Completed seeding generated concepts for topic: ${topicName} by user: ${userId}`)
+}

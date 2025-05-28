@@ -1,0 +1,195 @@
+{
+    "id": "3b7c1278b4ed4916ae01b",
+    "name": "Electric Potential",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "73cca155562e462185327",
+            "questionText": "An isolated community is installing a new solar farm that generates an average power of $!$200\\,\\mathrm{kW}$!$ for $!$8$!$ hours per day. During this time, a total of $!$5.76 \\times 10^6\\,\\mathrm{C}$!$ of charge is transferred. Calculate the voltage gain $!$V$!$ created by the solar farm.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6857a8e3851b4b2babab1",
+                    "stepText": "Let's start by identifying the formula that relates electrical power to energy and time. Which of the following formulas represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "64f6d809-190a-42c7-8bc9-a4f4eceaee29",
+                        "b866d70e-adbe-4435-be21-c2c36ea664ca"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = \\frac{\\Delta E}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\Delta E \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E = P + \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ba74a7a7a48f4595adee3",
+                    "stepText": "Great! Now, the power is given in kilowatts and the time is given in hours. Convert the time from hours to seconds to continue with the energy calculation. What is the value in seconds for 8 hours?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "28800"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "3bc43b8f0b5045dfabe39",
+                    "stepText": "Now, using the relationship between power, energy, and time, calculate the total electrical energy generated. Remember to convert the power from kilowatts to watts before multiplying by time. What is the energy in joules?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5760000000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "64f6d809-190a-42c7-8bc9-a4f4eceaee29"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "82934da7792b4fc796a3a",
+                    "stepText": "Let's identify the formula required to calculate voltage gain from the electrical energy generated and the charge transferred. Which formula correctly shows this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4235ecb8-e8ea-4100-a964-1482547aed9a",
+                        "3b9cc6d9-e970-49d5-bd3e-968c661e4e11"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = \\frac{\\Delta E}{Q}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = \\Delta E \\times Q$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{Q}{\\Delta E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8a7a17c2b56045a7bf86a",
+                    "stepText": "Finally, using the energy calculated in the previous step and the charge transferred provided in the problem, compute the voltage gain. What is the value of the voltage gain in volts?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1000"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "4235ecb8-e8ea-4100-a964-1482547aed9a",
+                        "7ac2b976-6688-4c0b-b4e2-2a6a1f1b95db"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "9b3d30b14faa4b439aa89",
+            "questionText": "Calculate the electrical power, in $!$ \\mathrm{kW} $!$, consumed by a faulty component that uses $!$ 1.8 \\times 10^7 \\; \\mathrm{J} $!$ of electrical energy over a period of $!$ 2 \\; \\mathrm{hours} $!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f93608ab62a34ea7949a5",
+                    "stepText": "Let's begin by converting the time. The faulty component uses energy over a period of $!$2\\;\\mathrm{hours}$!$. How many seconds are there in $!$2\\;\\mathrm{hours}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7200"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "8b5739b0d8b64fab81934",
+                    "stepText": "Great! Now, select the correct formula for electrical power from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b866d70e-adbe-4435-be21-c2c36ea664ca",
+                        "64f6d809-190a-42c7-8bc9-a4f4eceaee29"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P=\\frac{\\Delta E}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P=\\Delta E \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P=\\Delta E+\\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a5b217a7bca845dbb2d54",
+                    "stepText": "Now, using the selected formula, compute the electrical power in watts when the forced energy is $!$1.8\\times 10^7\\;\\mathrm{J}$!$ over $!$7200\\;\\mathrm{s}$!$. What value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2500"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "64f6d809-190a-42c7-8bc9-a4f4eceaee29"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ff1d51fe9a4c4d0d9d573",
+                    "stepText": "Finally, convert the computed power from watts to kilowatts. Given that $!$1\\;\\mathrm{kW}=1000\\;\\mathrm{W}$!$, what is the power in kilowatts?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.5"
+                    ],
+                    "stepSolveAnswerUnits": "kW",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

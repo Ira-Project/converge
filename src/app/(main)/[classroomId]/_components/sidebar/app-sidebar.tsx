@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { BookOpen, FileText, Plus, ChartLine, ChartNoAxesColumn, Home, Settings } from "lucide-react"
+import { BookOpen, FileText, Plus, ChartLine, ChartNoAxesColumn, Home, Settings, Sparkles } from "lucide-react"
 
 import { NavMain } from "./nav-main"
 import { NavStudents } from "./nav-students"
@@ -30,7 +30,7 @@ interface AppSidebarProps {
     avatar: string | null;
   };
   role: Roles;
-  activities: RouterOutputs["activities"]["getActivities"];
+  activities: RouterOutputs["activities"]["getAllActivities"];
   students: RouterOutputs["classroom"]["students"];
 }
 
@@ -39,6 +39,8 @@ export function AppSidebar({ classroom, classrooms, user, activities, students, 
   let filteredActivities = activities;
   if (role === Roles.Student) {
     filteredActivities = activities.filter((activity) => activity.activities.some((a) => a.isLive));
+  } else {
+    filteredActivities = activities.filter((activity) => activity.activities.some((a) => !a.generated));
   }
   
   const navMain = [
@@ -49,7 +51,7 @@ export function AppSidebar({ classroom, classrooms, user, activities, students, 
       isActive: true,
     },
     {
-      title: "Activity Library",
+      title: role === Roles.Student ? "Activities" : "Activity Library",
       url: `${classroom?.id}${Paths.Activities}`,
       icon: BookOpen,
       isActive: true,
@@ -58,6 +60,12 @@ export function AppSidebar({ classroom, classrooms, user, activities, students, 
         url: `/${classroom?.id}${Paths.Activities}#${topic.slug}`,
       })),
     },
+    ...(role === Roles.Teacher ? [{
+      title: "Generated Activities",
+      url: `/${classroom?.id}${Paths.GeneratedActivities}`,
+      icon: Sparkles,
+      isActive: true,
+    }] : []),
     {
       title: "Documentation",
       url: `${classroom?.id}${Paths.Documentation}`,

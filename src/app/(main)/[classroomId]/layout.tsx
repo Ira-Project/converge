@@ -19,7 +19,7 @@ export default async function MainLayout(props: { params: Promise<{ classroomId:
   if(user) {
     classroom = await api.classroom.get.query({ id: params.classroomId, });
     classrooms = await api.classroom.getClassrooms.query();
-    activities = await api.activities.getActivities.query({ classroomId: params.classroomId });
+    activities = await api.activities.getAllActivities.query({ classroomId: params.classroomId });
     students = await api.classroom.students.query({ id: params.classroomId });
     usersToClassrooms = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: params.classroomId });
     
