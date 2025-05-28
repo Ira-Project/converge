@@ -1,0 +1,1318 @@
+{
+  "name": "Electric Potential",
+  "latexDelimiter": "$!$",
+  "multipleChoiceQuestions": [
+      {
+          "id": "11b156aad3834b68ac489",
+          "concepts": [
+              "0f0a337e-b2f7-48b1-98df-caeb7b1426a5"
+          ],
+          "variants": [
+              {
+                  "id": "c070a8c4304a4b1495768",
+                  "question": "What is the fundamental concept behind electricity?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The movement of electric charges",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The flow of magnetic fields",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The generation of light",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The transfer of heat",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "df43bf9a25134db7828b0",
+                  "question": "Which of the following statements accurately describes the fundamental principle of electricity?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The interaction of gravitational forces between objects.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The movement of electric charges.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The propagation of sound waves through a medium.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The transfer of thermal energy between systems.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "b1ec2c7c723f488d92f3a",
+                  "question": "Consider a scenario where the number of electric charges in a system is doubled. What happens to the electrical phenomena within that system?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The electrical effects remain the same.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The electrical effects become weaker.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The electrical effects become stronger.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The electrical effects are reversed in direction.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "b913c96f609e4331913f9",
+          "concepts": [
+              "2b92c988-cc52-4dc8-9973-970aef15b209"
+          ],
+          "variants": [
+              {
+                  "id": "a819326a683b49e28b801",
+                  "question": "What is required for electricity to be transferred from one point to another?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "An input of energy",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "A magnetic field",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "A vacuum",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "A chemical reaction",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "119e531c2fdd43dbb9c83",
+                  "question": "Which of the following is necessary for the transfer of electrical energy between two points?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Presence of a magnetic field",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "An energy input",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "A region devoid of any matter",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Occurrence of a chemical transformation",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "ea7efa135d784b43b7265",
+                  "question": "If the required energy input for electricity transfer is doubled, what happens to the amount of electricity transferred?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "It doubles",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "It halves",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "It quadruples",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "It remains the same",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "22a6b36fd9de41ad86345",
+          "concepts": [
+              "571fee66-0184-464e-a744-645d9e0422f0"
+          ],
+          "variants": [
+              {
+                  "id": "ec93538304af4642855a9",
+                  "question": "Which unit is typically used to measure electrical energy consumption in homes?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "kWh",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "MWh",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Volt",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Ampere",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "cf052b25b3864c1abc5a9",
+                  "question": "A household consumes 1500 kWh of electrical energy in a month. If the cost per kWh is $!$0.15$!$, what is the total electricity bill for the month?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "$!$200$!$",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "$!$225$!$",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "$!$175$!$",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "$!$150$!$",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "9d6b59338c1d4162961b5",
+                  "question": "Which of the following units represents the amount of power consumed over a period of time?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Ampere",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Volt",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Watt",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Kilowatt-hour (kWh)",
+                          "is_correct": true
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "fcae8c6d61c34ad9907b2",
+          "concepts": [
+              "c0964688-9e60-4605-8fb6-25138f0372dd"
+          ],
+          "variants": [
+              {
+                  "id": "57958358b880464bab80b",
+                  "question": "In physics, what does the term 'electricity' broadly refer to?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Electrical energy and charge movement",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Only electrical energy",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Only charge movement",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Magnetic fields and their effects",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "bde97372ee6049b6b975a",
+                  "question": "Which of the following statements accurately describes what the term 'electricity' refers to in physics?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Electricity refers to the phenomena associated with electric charge, whether static or in motion.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Electricity exclusively refers to the flow of electrons through a conductor.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electricity is solely the potential energy stored in an electric field.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electricity only involves the interaction between magnets and conductors.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "9bfdd662627d4184b5f81",
+                  "question": "If the amount of electric charge passing through a conductor doubles, what happens to the electric current, assuming the time interval remains constant?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The electric current doubles.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The electric current halves.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The electric current remains the same.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The electric current becomes four times greater.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "da6deaed3507423ab1cf3",
+          "concepts": [
+              "eac9ff0d-4882-4285-bff0-565932054fa2"
+          ],
+          "variants": [
+              {
+                  "id": "e05bdc7109b34f499ad87",
+                  "question": "How is electricity typically transferred over long distances?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Via transmission lines composed of conducting wires",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Through magnetic fields",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Using compressed air",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Via fiber optic cables",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "3df573a4082941908e327",
+                  "question": "Which of the following is NOT a typical method for transferring electricity over long distances?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Via transmission lines composed of conducting wires",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Through magnetic fields",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Using high-pressure gas pipelines",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Using undersea cables",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "113a869c192f4816aba02",
+                  "question": "Which of the following statements about long-distance electricity transmission is correct?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Electricity is transferred over long distances using compressed air.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Fiber optic cables are the primary method for long-distance electricity transmission.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electricity is typically transferred over long distances via transmission lines composed of conducting wires.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Magnetic fields are used to directly transmit electrical power over long distances.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "8e7eedd191774cde8dff3",
+          "concepts": [
+              "85d167a9-9577-4d3f-a360-b7c92054f6c8"
+          ],
+          "variants": [
+              {
+                  "id": "b551f5c026284f1ebb0cf",
+                  "question": "What is the role of electrons in the concept of electricity?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Electricity is the movement of electrons, which are charged particles",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Electrons act as insulators",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electrons generate magnetic fields",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electrons are not involved in electricity",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "b8702135c6324c51afa69",
+                  "question": "Which of the following statements accurately describes the role of electrons in electrical phenomena?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Electrons are the primary charge carriers, and their movement constitutes electric current.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Electrons are stationary particles that do not contribute to electric current.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electrons act as insulators, preventing the flow of electricity.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electrons only play a role in static electricity, not in current electricity.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "4c6bc3f6c3844967a8a22",
+                  "question": "Consider a copper wire connected to a battery. If the current flowing through the wire is $!$I$!$ amperes, this flow is due to the movement of which subatomic particles?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Protons",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Neutrons",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electrons",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Ions",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "5adeef372e4e40f5954f5",
+          "concepts": [
+              "e57eae54-eef2-418a-9a55-7300c46330ca"
+          ],
+          "variants": [
+              {
+                  "id": "f4bdc79c208a4467acec8",
+                  "question": "What does electric potential represent?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The amount of electrical potential energy linked to charges",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The rate of electron flow",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The magnetic field strength",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The resistance to current flow",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "32673d3f836945fbbc1cc",
+                  "question": "Which of the following statements accurately describes electric potential?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Electric potential is a scalar quantity.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Electric potential is a vector quantity.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electric potential is measured in Amperes.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electric potential is the same as electric current.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "0f9b984915274735a7a58",
+                  "question": "If the charge creating an electric potential is doubled, what happens to the electric potential at a given distance?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The electric potential doubles.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The electric potential halves.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The electric potential remains the same.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The electric potential quadruples.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "01db6c7ff1e241ee8bf9f",
+          "concepts": [
+              "3b9cc6d9-e970-49d5-bd3e-968c661e4e11"
+          ],
+          "variants": [
+              {
+                  "id": "43a53149784b454296e7c",
+                  "question": "What is electric potential difference defined as?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The change in electrical potential energy between two points",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The total electrical energy in a system",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The average kinetic energy of electrons",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The force between two charges",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "2cc5a72a7ecc41cd8aa8b",
+                  "question": "Which of the following statements accurately describes the electric potential difference between two points?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "It is the work done per unit charge to move a charge between the two points.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "It is the force experienced by a unit charge at a point.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "It is the total charge present between two points.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "It is the energy required to create a charge.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "faa8688cf89e410683861",
+                  "question": "A charge of $!$2 C$!$ is moved from point A to point B, and the change in electrical potential energy is $!$10 J$!$. What is the electric potential difference between points A and B?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "$!$5 V$!$",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "$!$20 V$!$",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "$!$12 V$!$",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "$!$8 V$!$",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "ca24cf2e40c5415dae03c",
+          "concepts": [
+              "09af2aae-4f1e-489d-825b-9fc858995036"
+          ],
+          "variants": [
+              {
+                  "id": "6b0c12fb96e3462c8b4ff",
+                  "question": "What is the standard unit for measuring electric potential?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Joule per coulomb, also known as the volt",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Watt",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Ampere",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Ohm",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "277e10bc9cfb46d99c630",
+                  "question": "Which of the following statements accurately describes the unit of electric potential?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "It is the energy required to move a unit charge through an electric field and is measured in volts.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "It is the rate of flow of electric charge and is measured in amperes.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "It is the opposition to the flow of electric current and is measured in ohms.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "It is the power consumed by an electric circuit and is measured in watts.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "fcdb51f67adb40b783a43",
+                  "question": "If it takes 10 Joules of energy to move a charge of 2 Coulombs between two points, what is the electric potential difference between these points?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "5 Volts",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "20 Volts",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "0.2 Volts",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "12 Volts",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "0cb06fbaa7a14352bc077",
+          "concepts": [
+              "50756f76-3952-4773-a87e-92fb4d04f6b1"
+          ],
+          "variants": [
+              {
+                  "id": "1dda00b999ca4e59b4a52",
+                  "question": "What is another term for a positive electric potential difference?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Voltage gain",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Voltage drop",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electric current",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electrical resistance",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "12fa24fc69d04fbfa9f58",
+                  "question": "Which of the following describes a situation where there is a positive electric potential difference?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "A circuit component is consuming power.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Current is flowing against the electric field.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The electric potential is constant.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The electric field is zero.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "24c57d96d7744644a0069",
+                  "question": "A resistor has a positive electric potential difference across it. What happens to the current flowing through the resistor if this potential difference is doubled?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The current doubles.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The current is halved.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The current remains the same.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The current becomes zero.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "c20ed77659bd457faa46c",
+          "concepts": [
+              "abe43c85-6c57-46fb-9c3d-c496ad4653fe"
+          ],
+          "variants": [
+              {
+                  "id": "8b9c2450312f4133ac1b5",
+                  "question": "What term describes a negative electric potential difference?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Voltage drop",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Voltage gain",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electrical power",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electric field",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "e85cb0faaf224b548ad68",
+                  "question": "Which of the following scenarios represents a voltage drop?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The electric potential at point A is lower than at point B.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The electric potential at point A is higher than at point B.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The electric potential is the same at point A and point B.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The current flows from a lower potential to a higher potential.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "e63d2364ad5a49b9b3a7b",
+                  "question": "A circuit has a voltage of $!$V_1 = 12V$!$ at point A and $!$V_2 = 5V$!$ at point B. What is the potential difference between points A and B, and does it represent a voltage drop or gain?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "$!$-7V$!$, Voltage drop",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "$!$7V$!$, Voltage gain",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "$!$17V$!$, Voltage gain",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "$!$-17V$!$, Voltage drop",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "b897b779f0c344c9b9342",
+          "concepts": [
+              "4235ecb8-e8ea-4100-a964-1482547aed9a"
+          ],
+          "variants": [
+              {
+                  "id": "71e5fa945acf4c41bfc89",
+                  "question": "According to the formula $!$V = \\frac{\\Delta E}{Q}$!$, what does 'V' represent?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Electric potential difference",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Electrical charge",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Change in energy",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electric power",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "78f382b8061d42358682d",
+                  "question": "If the change in energy ($!$\\Delta E$!$) is doubled and the charge ($!$Q$!$) remains constant in the formula $!$V = \\frac{\\Delta E}{Q}$!$, what happens to the electric potential difference ($!$V$!$)?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "It is doubled.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "It is halved.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "It remains the same.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "It is quadrupled.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "2800edcf77114d10a4382",
+                  "question": "Which of the following statements correctly describes the variables in the equation $!$V = \\frac{\\Delta E}{Q}$!$?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "$!$V$!$ is the electric potential difference, $!$\\Delta E$!$ is the change in energy, and $!$Q$!$ is the electrical charge.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "$!$V$!$ is the electrical charge, $!$\\Delta E$!$ is the electric potential difference, and $!$Q$!$ is the change in energy.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "$!$V$!$ is the change in energy, $!$\\Delta E$!$ is the electrical charge, and $!$Q$!$ is the electric potential difference.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "$!$V$!$ is the electric power, $!$\\Delta E$!$ is the change in energy, and $!$Q$!$ is the electrical charge.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "ebc99dac80604c46a6955",
+          "concepts": [
+              "b866d70e-adbe-4435-be21-c2c36ea664ca"
+          ],
+          "variants": [
+              {
+                  "id": "4fe4b7eb541546448d0f2",
+                  "question": "What does electrical power describe?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The rate at which electrical energy is produced or transformed",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The total amount of electrical energy",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The force between electric charges",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The opposition to electric current",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "8fc66ccac1a74e72af7d5",
+                  "question": "Which of the following statements accurately describes electrical power?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "It is the rate at which electrical energy is produced or consumed.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "It represents the total energy stored in an electric field.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "It measures the force between stationary electric charges.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "It quantifies the opposition to the flow of electric current.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "694c6902045e45a1a257c",
+                  "question": "An electrical device operates at 120V and draws a current of 2A. What is the power consumed by the device?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "60W",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "240W",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "122W",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "118W",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "4121d990330b4a329dbdf",
+          "concepts": [
+              "64f6d809-190a-42c7-8bc9-a4f4eceaee29"
+          ],
+          "variants": [
+              {
+                  "id": "b72faceb17ec4e699472e",
+                  "question": "In the formula $!$P = \\frac{\\Delta E}{\\Delta t}$!$, what does 'P' represent?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Electrical power",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Change in energy",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Change in time",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Electric potential",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "4022710cdd6847c4ab6ec",
+                  "question": "Which of the following statements correctly describes the variables in the equation $!$P = \\frac{\\Delta E}{\\Delta t}$!$?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "P represents electrical power, $!$\\Delta E$!$ represents the change in energy, and $!$\\Delta t$!$ represents the change in time.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "P represents the change in time, $!$\\Delta E$!$ represents electrical power, and $!$\\Delta t$!$ represents the change in energy.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "P represents the change in energy, $!$\\Delta E$!$ represents the change in time, and $!$\\Delta t$!$ represents electrical power.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "P represents the electric potential, $!$\\Delta E$!$ represents the change in energy, and $!$\\Delta t$!$ represents the change in time.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "4d3065dd911f49d7ba5e7",
+                  "question": "If the change in energy ($!$\\Delta E$!$) is 100 Joules and the change in time ($!$\\Delta t$!$) is 10 seconds, what is the electrical power (P) according to the formula $!$P = \\frac{\\Delta E}{\\Delta t}$!$?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "10 Watts",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "1000 Watts",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "0.1 Watts",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "110 Watts",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "7c2afe8c33ee4b9fab638",
+          "concepts": [
+              "7ac2b976-6688-4c0b-b4e2-2a6a1f1b95db"
+          ],
+          "variants": [
+              {
+                  "id": "579e258c6459421ea5660",
+                  "question": "What is the primary function of a voltmeter in an electrical circuit?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "To measure electric potential difference",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "To measure electric current",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "To measure electrical resistance",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "To measure electrical power",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "9f799defc0e14f78a3411",
+                  "question": "Which of the following statements accurately describes how a voltmeter should be connected in a circuit to measure the potential difference across a resistor?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "In series with the resistor.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "In parallel with the resistor.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The voltmeter must be disconnected before the circuit is powered.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The voltmeter can be connected without regard to the polarity.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "9e086f3ceede475ab430a",
+                  "question": "A student measures the voltage across a resistor in a simple circuit. If the resistance of the resistor is doubled while the current through it remains constant, what happens to the voltmeter reading?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "The voltmeter reading remains the same.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The voltmeter reading is halved.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "The voltmeter reading is doubled.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "The voltmeter reading is quadrupled.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      },
+      {
+          "id": "0e089e3dbcbb4a8193044",
+          "concepts": [
+              "62dfb723-e3c5-4d98-b0bd-c0f8dc9bd39c"
+          ],
+          "variants": [
+              {
+                  "id": "255c0bc2f90148cab7092",
+                  "question": "How do sources and loads affect electric potential in a circuit?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Sources increase potential (voltage gain), loads decrease it (voltage drop)",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Sources decrease potential (voltage drop), loads increase it (voltage gain)",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Sources and loads both increase electric potential",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Sources and loads both decrease electric potential",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "530fd626b3ba4210bc27b",
+                  "question": "Which of the following statements accurately describes the impact of electrical sources and loads on the electric potential in a circuit?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "Sources increase electric potential, while loads decrease it.",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "Sources decrease electric potential, while loads increase it.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Both sources and loads increase electric potential.",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "Both sources and loads decrease electric potential.",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              },
+              {
+                  "id": "e410cbf3f1b34c8db14e2",
+                  "question": "A circuit contains a $!$12V$!$ source and two resistors acting as loads. The first resistor has a voltage drop of $!$5V$!$. What is the voltage drop across the second resistor?",
+                  "image": "",
+                  "options": [
+                      {
+                          "option_text": "$!$7V$!$",
+                          "is_correct": true
+                      },
+                      {
+                          "option_text": "$!$12V$!$",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "$!$5V$!$",
+                          "is_correct": false
+                      },
+                      {
+                          "option_text": "$!$17V$!$",
+                          "is_correct": false
+                      }
+                  ],
+                  "single_correct": true
+              }
+          ]
+      }
+  ],
+  "matchingQuestions": [
+      {
+          "id": "d01e502596304974bbce5",
+          "concepts": [
+              "50756f76-3952-4773-a87e-92fb4d04f6b1",
+              "abe43c85-6c57-46fb-9c3d-c496ad4653fe",
+              "7ac2b976-6688-4c0b-b4e2-2a6a1f1b95db"
+          ],
+          "variants": [
+              {
+                  "id": "aa101fe394d343f2893a7",
+                  "question": "Match the terms with their descriptions.",
+                  "image": null,
+                  "options": [
+                      {
+                          "optionA": "Voltage Gain",
+                          "optionB": "Positive electric potential difference"
+                      },
+                      {
+                          "optionA": "Voltage Drop",
+                          "optionB": "Negative electric potential difference"
+                      },
+                      {
+                          "optionA": "Voltmeter",
+                          "optionB": "Instrument to measure electric potential difference"
+                      }
+                  ]
+              }
+          ]
+      }
+  ],
+  "orderingQuestions": []
+}

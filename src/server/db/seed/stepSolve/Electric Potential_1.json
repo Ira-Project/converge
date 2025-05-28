@@ -1,0 +1,152 @@
+{
+    "id": "3f24453a5b7c4101919ce",
+    "name": "Electric Potential",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "566d8fb511c94a27a9943",
+            "questionText": "A large data center is auditing its power consumption. One server rack consumed $!$18 \\text{ MWh}$!$ of electrical energy in one month. Given that $!$1 \\text{ MWh} = 3.6 \\times 10^9 \\text{ J}$!$ and a month has $!$30$!$ days, calculate the average electrical power (in Watts) that this server rack drew during that month.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7cafc981562f4d43a900e",
+                    "stepText": "Let's start by recalling the concept of electrical power. Identify the correct formula to compute power as the rate at which energy is transferred.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b866d70e-adbe-4435-be21-c2c36ea664ca",
+                        "64f6d809-190a-42c7-8bc9-a4f4eceaee29"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = \\frac{\\Delta E}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\Delta E \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{\\Delta t}{\\Delta E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "56e931af16b7403f80e5d",
+                    "stepText": "Great, now convert the energy consumption from megawatt-hours (MWh) to joules (J). Calculate the total energy in joules using the conversion factor given.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.48e10"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "571fee66-0184-464e-a744-645d9e0422f0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b962a929af4a44f1bb2d2",
+                    "stepText": "Next, convert the time period of one month into seconds. Use the given approximation of 30 days for the month.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2592000"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "1b50fde5b7cb4ecfa75bd",
+                    "stepText": "Now that you have the total energy in joules and the time period in seconds, compute the average power drawn by the server rack by using the proper power formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "25000"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "64f6d809-190a-42c7-8bc9-a4f4eceaee29"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "1dc3ffd7949949eb95e8a",
+            "questionText": "During routine maintenance, a factory technician measures the electric potentials in an industrial machine and finds that at point A the potential is $!$240\\,\\text{V}$!$ and at point B it is $!$225\\,\\text{V}$!$. If the faulty component between these points dissipates $!$450\\,\\text{J}$!$ of electrical potential energy during operation, calculate the total charge (in Coulombs) that has passed through the component using the formula $!$V = \\frac{\\Delta E}{Q}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "17e03f7e0c784f43893e5",
+                    "stepText": "Let's start by determining the voltage drop across the component by finding the difference between the potentials at point A and point B. What is the potential difference $!$\\Delta V$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "3b9cc6d9-e970-49d5-bd3e-968c661e4e11"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4bd9f3dbe4e0406cbf4e3",
+                    "stepText": "Great, now that you have the voltage drop, identify the correct rearranged formula for calculating the total charge $!$Q$!$ that passed through the component. Select the appropriate expression from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4235ecb8-e8ea-4100-a964-1482547aed9a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = \\frac{\\Delta E}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = \\Delta E \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = \\frac{V}{\\Delta E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a944976d5dd04654b50d1",
+                    "stepText": "Now, using the formula you identified, substitute the values $!$\\Delta E = 450\\,\\text{J}$!$ and $!$V = 15\\,\\text{V}$!$ to compute the total charge $!$Q$!$. What is the resulting charge in Coulombs?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30"
+                    ],
+                    "stepSolveAnswerUnits": "C",
+                    "stepConcepts": [
+                        "4235ecb8-e8ea-4100-a964-1482547aed9a"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

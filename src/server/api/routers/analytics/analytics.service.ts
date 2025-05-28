@@ -282,18 +282,54 @@ export const getConceptTracking = async (ctx: ProtectedTRPCContext, input: GetSu
     where: (table, { eq }) => eq(table.classroomId, input.classroomId),
   });
 
-  const concepts = await ctx.db.query.concepts.findMany({
+  // Get the teachers of this classroom
+  const classroomTeachers = await ctx.db.query.usersToClassrooms.findMany({
+    where: (table, { eq, and }) => and(
+      eq(table.classroomId, input.classroomId),
+      eq(table.role, Roles.Teacher),
+      eq(table.isDeleted, false)
+    ),
+    columns: {
+      userId: true,
+    }
+  });
+  
+  const teacherIds = classroomTeachers.map(teacher => teacher.userId);
+
+  const allConcepts = await ctx.db.query.concepts.findMany({
     with: {
       conceptsToTopics: true,
     }
   });
+
+  // Filter concepts to exclude generated ones unless created by a teacher of this classroom
+  const concepts = allConcepts.filter(concept => {
+    // If it's not generated, include it
+    if (!concept.generated) {
+      return true;
+    }
+    // If it's generated and created by a teacher of this classroom, include it
+    if (concept.generated && concept.createdBy && teacherIds.includes(concept.createdBy)) {
+      return true;
+    }
+    // Otherwise, exclude it
+    return false;
+  });
+
   const edges = await ctx.db.query.conceptEdges.findMany();
+  
+  // Filter edges to only include those where both conceptId and relatedConceptId 
+  // are in the filtered concepts list
+  const conceptIds = new Set(concepts.map(concept => concept.id));
+  const filteredEdges = edges.filter(edge => 
+    conceptIds.has(edge.conceptId!) && conceptIds.has(edge.relatedConceptId!)
+  );
 
   if(ctx.user?.role === Roles.Student) {
     return {
       trackedConcepts: trackedConcepts.filter(t => t.userId === ctx.user?.id),
       concepts,
-      edges,
+      edges: filteredEdges,
       numberOfStudents: 1,
     }
   }
@@ -308,7 +344,7 @@ export const getConceptTracking = async (ctx: ProtectedTRPCContext, input: GetSu
   return {
     trackedConcepts,
     concepts,
-    edges,
+    edges: filteredEdges,
     numberOfStudents: students.length,
   }
 }

@@ -174,7 +174,8 @@ const StepSolveStepComponent = ({
               </div>
             )
           ) : 
-            answer && answer?.length > 0 && (
+            answer && answer?.length > 0 && 
+            !(answer.length === 1 && answer[0] === "") && (
               <>
                 <p className="text-center text-sm text-muted-foreground">
                   You got it right! Your answer was:

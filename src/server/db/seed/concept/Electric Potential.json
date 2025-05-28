@@ -1,0 +1,157 @@
+{
+  "delimeter": "$!$",
+  "topicIdDev": "rgmwp^kXHL$6E8tisuiWM",
+  "topicIdProd": "qre&*I@K^yB$@2xB88Q3m",
+  "chapter_text": "Here's a concise summary of the concepts covered in the document, organized into sections:\n\n**Electricity Basics**\n\n*   Electricity is the movement of charges.\n*   Transferring electricity requires energy.\n*   Electrical energy is often measured in kWh (for homes) or MWh (megawatt hours) for larger amounts.\n*   Electricity in physics refers to electrical energy and the movement of charges.\n*   Electricity is transferred through transmission lines (conducting wires).\n*   The movement of electrons is electricity.\n\n**Electric Potential**\n\n*   Electric potential is the amount of electrical potential energy associated with charges (electrons).\n*   Electric potential difference is the change in electrical potential energy associated with charges at two different points.\n*   The unit for electric potential is the joule per coulomb (J/C), which is known as the volt (V).\n*   A positive electric potential difference is often called a voltage gain, while a negative electric potential difference is called a voltage drop.\n\n**Electric Potential Difference Formula**\n*  The electric potential difference can be calculated as:\n    $V = \\frac{\\Delta E}{Q}$\n\n**Electrical Power**\n\n*   Electrical power (P) is the rate at which electrical energy is generated or transformed.\n*   The formula for electrical power:\n    $P = \\frac{\\Delta E}{\\Delta t}$\n\n**Measuring Electric Potential Difference**\n\n*   A voltmeter is used to measure electric potential difference.\n*   Sources increase electric potential (voltage gain), and loads decrease electric potential (voltage drop).",
+  "chapter_concepts": [
+      {
+          "concept_id": "0f0a337e-b2f7-48b1-98df-caeb7b1426a5",
+          "concept_question": "What is electricity?",
+          "concept_answer": "Electricity is the movement of electric charges.",
+          "concept_formula": [],
+          "pre-requisites": []
+      },
+      {
+          "concept_id": "2b92c988-cc52-4dc8-9973-970aef15b209",
+          "concept_question": "What does transferring electricity require?",
+          "concept_answer": "Transferring electricity requires the input of energy.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "0f0a337e-b2f7-48b1-98df-caeb7b1426a5"
+          ]
+      },
+      {
+          "concept_id": "571fee66-0184-464e-a744-645d9e0422f0",
+          "concept_question": "How is electrical energy measured?",
+          "concept_answer": "Electrical energy is measured in kWh for homes and MWh for large amounts.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "0f0a337e-b2f7-48b1-98df-caeb7b1426a5"
+          ]
+      },
+      {
+          "concept_id": "c0964688-9e60-4605-8fb6-25138f0372dd",
+          "concept_question": "How is electricity defined in physics?",
+          "concept_answer": "In physics, electricity refers to electrical energy and charge movement.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "0f0a337e-b2f7-48b1-98df-caeb7b1426a5",
+              "571fee66-0184-464e-a744-645d9e0422f0"
+          ]
+      },
+      {
+          "concept_id": "eac9ff0d-4882-4285-bff0-565932054fa2",
+          "concept_question": "How is electricity transferred?",
+          "concept_answer": "Electricity is transferred via transmission lines composed of conducting wires.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "0f0a337e-b2f7-48b1-98df-caeb7b1426a5"
+          ]
+      },
+      {
+          "concept_id": "85d167a9-9577-4d3f-a360-b7c92054f6c8",
+          "concept_question": "What is the role of electrons in electricity?",
+          "concept_answer": "Electricity is the movement of electrons, which are charged particles.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "0f0a337e-b2f7-48b1-98df-caeb7b1426a5"
+          ]
+      },
+      {
+          "concept_id": "e57eae54-eef2-418a-9a55-7300c46330ca",
+          "concept_question": "What is electric potential?",
+          "concept_answer": "Electric potential is the amount of electrical potential energy linked to charges.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "0f0a337e-b2f7-48b1-98df-caeb7b1426a5",
+              "571fee66-0184-464e-a744-645d9e0422f0"
+          ]
+      },
+      {
+          "concept_id": "3b9cc6d9-e970-49d5-bd3e-968c661e4e11",
+          "concept_question": "What is electric potential difference?",
+          "concept_answer": "Electric potential difference is the change in electrical potential energy between two points.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "e57eae54-eef2-418a-9a55-7300c46330ca"
+          ]
+      },
+      {
+          "concept_id": "09af2aae-4f1e-489d-825b-9fc858995036",
+          "concept_question": "What is the unit for electric potential?",
+          "concept_answer": "The unit for electric potential is joule per coulomb, called the volt.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "e57eae54-eef2-418a-9a55-7300c46330ca"
+          ]
+      },
+      {
+          "concept_id": "50756f76-3952-4773-a87e-92fb4d04f6b1",
+          "concept_question": "What is a voltage gain?",
+          "concept_answer": "A voltage gain is a positive electric potential difference.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "3b9cc6d9-e970-49d5-bd3e-968c661e4e11"
+          ]
+      },
+      {
+          "concept_id": "abe43c85-6c57-46fb-9c3d-c496ad4653fe",
+          "concept_question": "What is a voltage drop?",
+          "concept_answer": "A voltage drop is a negative electric potential difference.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "3b9cc6d9-e970-49d5-bd3e-968c661e4e11"
+          ]
+      },
+      {
+          "concept_id": "4235ecb8-e8ea-4100-a964-1482547aed9a",
+          "concept_question": "What is the electric potential difference formula?",
+          "concept_answer": "",
+          "concept_formula": [
+              "$!$V = \\frac{\\Delta E}{Q}$!$"
+          ],
+          "pre-requisites": [
+              "3b9cc6d9-e970-49d5-bd3e-968c661e4e11"
+          ]
+      },
+      {
+          "concept_id": "b866d70e-adbe-4435-be21-c2c36ea664ca",
+          "concept_question": "What is electrical power?",
+          "concept_answer": "Electrical power is the rate at which electrical energy is produced or transformed.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "571fee66-0184-464e-a744-645d9e0422f0"
+          ]
+      },
+      {
+          "concept_id": "64f6d809-190a-42c7-8bc9-a4f4eceaee29",
+          "concept_question": "What is the electrical power formula?",
+          "concept_answer": "",
+          "concept_formula": [
+              "$!$P = \\frac{\\Delta E}{\\Delta t}$!$"
+          ],
+          "pre-requisites": [
+              "b866d70e-adbe-4435-be21-c2c36ea664ca"
+          ]
+      },
+      {
+          "concept_id": "7ac2b976-6688-4c0b-b4e2-2a6a1f1b95db",
+          "concept_question": "What instrument measures electric potential difference?",
+          "concept_answer": "A voltmeter measures electric potential difference.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "3b9cc6d9-e970-49d5-bd3e-968c661e4e11"
+          ]
+      },
+      {
+          "concept_id": "62dfb723-e3c5-4d98-b0bd-c0f8dc9bd39c",
+          "concept_question": "What effect do sources and loads have on potential?",
+          "concept_answer": "Sources increase electric potential causing a voltage gain, while loads decrease it causing a voltage drop.",
+          "concept_formula": [],
+          "pre-requisites": [
+              "50756f76-3952-4773-a87e-92fb4d04f6b1",
+              "abe43c85-6c57-46fb-9c3d-c496ad4653fe"
+          ]
+      }
+  ]
+}

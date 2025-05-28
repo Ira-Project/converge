@@ -10,8 +10,8 @@ import { ActivityType, Roles } from "@/lib/constants";
 import { classrooms } from "../schema/classroom";
 import { activity } from "../schema/activity";
 
-import { addConceptsToKnowledgeZapQuestions, computeQuestionsCompleted, createConceptTrackerForAllKnowledgeZapAttempts, createKnowledgeZapAssignment, deleteKnowledgeZapAssignment, findConceptsWithoutKnowledgeZaps, findKnowledgeZapQuestionsWithoutConcepts, printConceptScores, updateKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
-import { addAssignmentIdToAttempts, createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts, addConceptsToStepSolveSteps, findStepSolveStepsWithoutConcepts, createConceptTrackerForAllStepAttempts, createStepSolveToAssignment, findConceptsWithoutStepSolveSteps } from "./stepSolve/stepSolve-seed";
+import { addConceptsToKnowledgeZapQuestions, computeQuestionsCompleted, createConceptTrackerForAllKnowledgeZapAttempts, createGeneratedKnowledgeZapAssignment, createKnowledgeZapAssignment, deleteKnowledgeZapAssignment, findConceptsWithoutKnowledgeZaps, findKnowledgeZapQuestionsWithoutConcepts, printConceptScores, updateKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
+import { addAssignmentIdToAttempts, createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts, addConceptsToStepSolveSteps, findStepSolveStepsWithoutConcepts, createConceptTrackerForAllStepAttempts, createStepSolveToAssignment, findConceptsWithoutStepSolveSteps, createGeneratedStepSolveAssignment } from "./stepSolve/stepSolve-seed";
 import { computeAccuracyForReasoningAssignment, createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
@@ -19,7 +19,7 @@ import { addConceptsToQuestions, createLearnByTeachingAssignment } from "./learn
 
 import { deleteClassroom, deleteUser } from "./user/userSeed";
 import { createTopics } from "./topics/topic-seed";
-import { createConcepts } from "./concept/concept-seed";
+import { createConcepts, createGeneratedConcepts } from "./concept/concept-seed";
 import { addActivityToAssignment } from "./activity";
 
 if(process.env.ENVIRONMENT === "prod") {
@@ -41,6 +41,7 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // CONCEPT CREATION
 // await createConcepts("A3 - Work, Energy and Power");
+// await createGeneratedConcepts("Electric Potential", "9ye3dpwdetfqsouswiava");
 
 
 // LEARN BY TEACHING CREATION
@@ -57,6 +58,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createConceptTrackerForAllKnowledgeZapAttempts();
 // await computeQuestionsCompleted();
 // await printConceptScores();
+// await createGeneratedKnowledgeZapAssignment("electric_potential", "9ye3dpwdetfqsouswiava");
 
 // REASONING CREATION
 // await deleteReasoningAssignment("v2f7ppwtin0zt6pkobuun");
@@ -68,6 +70,13 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // await deleteStepSolveAssignment("a38f5437a89b48bdbc033");
 // await createStepSolveAssignment("A1 - Kinematics");
+await createGeneratedStepSolveAssignment("Electric Potential", "9ye3dpwdetfqsouswiava");
+await createGeneratedStepSolveAssignment("Electric Potential_1", "9ye3dpwdetfqsouswiava");
+await createGeneratedStepSolveAssignment("Electric Potential_2", "9ye3dpwdetfqsouswiava");
+await createGeneratedStepSolveAssignment("Electric Potential_3", "9ye3dpwdetfqsouswiava");
+await createGeneratedStepSolveAssignment("Electric Potential_4", "9ye3dpwdetfqsouswiava");
+
+
 
 // await findConceptsWithoutStepSolveSteps();
 // await findStepSolveStepsWithoutConcepts();
