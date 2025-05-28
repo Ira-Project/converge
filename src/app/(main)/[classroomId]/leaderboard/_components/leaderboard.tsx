@@ -112,7 +112,8 @@ export const columns: ColumnDef<LeaderboardEntry>[] = [
     },
   },
   {
-    accessorKey: "score",
+    accessorFn: (row) => row.totalScore * row.averageAccuracy,
+    id: "score",
     header: ({ column }) => {
       return (
         <Button
