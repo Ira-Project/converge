@@ -6,6 +6,17 @@ import { stepSolveQuestionToAssignment, stepSolveStep } from "@/server/db/schema
 import type { CreateStepSolveAssignmentAttemptInput, GetStepSolveAssignmentAnalyticsInput, GetStepSolveAssignmentInput, GetStepSolveAssignmentQuestionAnalyticsInput, GetStepSolveAssignmentSubmissionsInput, GetStepSolveRevisionActivityInput, SubmitStepSolveAssignmentAttemptInput } from "./stepSolve.input";
 import { stepSolveAssignmentAttempts,  } from "@/server/db/schema/stepSolve/stepSolveAssignment";
 
+// Utility function to shuffle an array using Fisher-Yates algorithm
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = shuffled[i];
+    shuffled[i] = shuffled[j]!;
+    shuffled[j] = temp!;
+  }
+  return shuffled;
+}
 
 export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: GetStepSolveAssignmentInput) => {
   
@@ -105,7 +116,18 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
       });
       
       if (assignmentWithQuestions?.stepSolveQuestions) {
-        allQuestions.push(...assignmentWithQuestions.stepSolveQuestions);
+        // Shuffle the options for each step
+        const questionsWithShuffledOptions = assignmentWithQuestions.stepSolveQuestions.map(question => ({
+          ...question,
+          q: {
+            ...question.q,
+            steps: question.q.steps.map(step => ({
+              ...step,
+              opt: shuffleArray(step.opt)
+            }))
+          }
+        }));
+        allQuestions.push(...questionsWithShuffledOptions);
       }
     }
     
@@ -113,7 +135,7 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
     return {
       ...baseAssignment,
       stepSolveQuestions: allQuestions,
-    };
+    } as typeof baseAssignment & { stepSolveQuestions: typeof allQuestions };
   } else {
     // Get a random assignment from the activity (original behavior)
     const randomAssignment = activityToAssignments[Math.floor(Math.random() * activityToAssignments.length)];
@@ -123,7 +145,7 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
       throw new Error("Assignment not found");
     }
 
-    return await ctx.db.query.stepSolveAssignments.findFirst({
+    const assignment = await ctx.db.query.stepSolveAssignments.findFirst({
       where: (table, { eq }) => eq(table.id, assignmentId),
       columns: {
         id: true,
@@ -175,6 +197,27 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
         }
       }
     });
+
+    if (!assignment) {
+      throw new Error("Assignment not found");
+    }
+
+    // Shuffle the options for each step
+    const assignmentWithShuffledOptions = {
+      ...assignment,
+      stepSolveQuestions: assignment.stepSolveQuestions.map(question => ({
+        ...question,
+        q: {
+          ...question.q,
+          steps: question.q.steps.map(step => ({
+            ...step,
+            opt: shuffleArray(step.opt)
+          }))
+        }
+      }))
+    } as typeof assignment;
+
+    return assignmentWithShuffledOptions;
   }
 }
 
@@ -766,10 +809,6 @@ export const getStepSolveRevisionActivity = async (ctx: ProtectedTRPCContext, in
     allConceptsInQuestion.forEach(c => c && conceptsAddedToQuestions.add(c));
   }
 
-  console.log("CONCEPTS TO REVIEW", conceptsToReview, conceptsToReview.length);
-  console.log("CONCEPTS ADDED TO QUESTIONS", conceptsAddedToQuestions, conceptsAddedToQuestions.size);
-  console.log("QUESTION IDS LIST", questionIdsList, questionIdsList.length);
-  console.log("--------------------------------");
 
   const stepSolveQuestions = await ctx.db.query.stepSolveQuestions.findMany({
     where: (question, { and, inArray }) => 
@@ -802,7 +841,16 @@ export const getStepSolveRevisionActivity = async (ctx: ProtectedTRPCContext, in
       }
   });
 
+  // Shuffle the options for each step
+  const questionsWithShuffledOptions = stepSolveQuestions.map(question => ({
+    ...question,
+    steps: question.steps.map(step => ({
+      ...step,
+      opt: shuffleArray(step.opt)
+    }))
+  }));
+
   return {
-    stepSolveQuestions,
+    stepSolveQuestions: questionsWithShuffledOptions,
   };
 }

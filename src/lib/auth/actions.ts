@@ -53,8 +53,11 @@ export async function login(
 
   const { email, password } = parsed.data;
 
+  // Normalize email to lowercase
+  const normalizedEmail = email.toLowerCase();
+
   const existingUser = await db.query.users.findFirst({
-    where: (table, { eq }) => eq(table.email, email),
+    where: (table, { eq }) => eq(table.email, normalizedEmail),
   });
 
   if (!existingUser) {
@@ -111,8 +114,11 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
 
   const { email, password, name } = parsed.data;
 
+  // Normalize email to lowercase
+  const normalizedEmail = email.toLowerCase();
+
   const existingUser = await db.query.users.findFirst({
-    where: (table, { eq }) => eq(table.email, email),
+    where: (table, { eq }) => eq(table.email, normalizedEmail),
     columns: { email: true },
   });
 
@@ -129,7 +135,7 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
   await db.insert(users).values({
     id: userId,
     name,
-    email,
+    email: normalizedEmail,
     hashedPassword,
     role: returnPath ? Roles.Student : Roles.Teacher,
     defaultClassroomId: classroomId,
@@ -145,8 +151,8 @@ export async function signup(_: unknown, formData: FormData): Promise<ActionResp
     }
   }
 
-  const verificationCode = await generateEmailVerificationCode(userId, email);
-  await sendMail(email, EmailTemplate.EmailVerification, { code: verificationCode });
+  const verificationCode = await generateEmailVerificationCode(userId, normalizedEmail);
+  await sendMail(normalizedEmail, EmailTemplate.EmailVerification, { code: verificationCode });
 
   const session = await lucia.createSession(userId, {});
   const sessionCookie = lucia.createSessionCookie(session.id);
@@ -199,7 +205,7 @@ export async function resendVerificationEmail(): Promise<{
       error: `Please wait ${timeFromNow(lastSent.expiresAt)} before resending`,
     };
   }
-  const verificationCode = await generateEmailVerificationCode(user.id, user.email);
+  const verificationCode = await generateEmailVerificationCode(user.id, user.email.toLowerCase());
   await sendMail(user.email, EmailTemplate.EmailVerification, { code: verificationCode });
 
   return { success: true };
@@ -233,7 +239,7 @@ export async function verifyEmail(_: unknown, formData: FormData): Promise<{ err
 
   if (!isWithinExpirationDate(dbCode.expiresAt)) return { error: "Verification code expired" };
 
-  if (dbCode.email !== user.email) return { error: "Email does not match" };
+  if (dbCode.email !== user.email.toLowerCase()) return { error: "Email does not match" };
 
   await lucia.invalidateUserSessions(user.id);
   await db.update(users).set({ 
@@ -262,9 +268,13 @@ export async function sendPasswordResetLink(
   if (!parsed.success) {
     return { error: "Provided email is invalid." };
   }
+
+  // Normalize email to lowercase
+  const normalizedEmail = parsed.data.toLowerCase();
+
   try {
     const user = await db.query.users.findFirst({
-      where: (table, { eq }) => eq(table.email, parsed.data),
+      where: (table, { eq }) => eq(table.email, normalizedEmail),
     });
 
     if (!user?.emailVerified) return { error: "Provided email is invalid." };
@@ -349,9 +359,13 @@ const timeFromNow = (time: Date) => {
 async function generateEmailVerificationCode(userId: string, email: string): Promise<string> {
   await db.delete(emailVerificationCodes).where(eq(emailVerificationCodes.userId, userId));
   const code = generateRandomString(6, alphabet("0-9")); // 6 digit code
+  
+  // Normalize email to lowercase
+  const normalizedEmail = email.toLowerCase();
+  
   await db.insert(emailVerificationCodes).values({
     userId,
-    email,
+    email: normalizedEmail,
     code,
     expiresAt: createDate(new TimeSpan(5, "m")), // 2 minutes
   });

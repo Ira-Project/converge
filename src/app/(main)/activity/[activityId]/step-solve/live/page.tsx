@@ -43,6 +43,10 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
     return <NoAccessEmptyState />;
   }
 
+  if (!stepSolveAssignment) {
+    redirect(`${Paths.Classroom}${activity?.classroomId ?? ""}`);
+  }
+
   return (
     <main>
       <StepSolveActivityView 
