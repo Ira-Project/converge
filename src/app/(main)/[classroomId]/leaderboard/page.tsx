@@ -29,7 +29,7 @@ export default async function LeaderboardPage(props: { params: Promise<{ classro
        <ClassroomHeader classroom={classroom} />
 
       {/* Leaderboard Content */}
-      <div className="px-8 mb-32">
+      <div className="px-8 mb-32 mt-40">
         <div className="flex flex-row gap-2">
           <ChartNoAxesColumn className="w-4 h-4 my-auto" />
           <p className="text-lg font-medium">Leaderboard</p>

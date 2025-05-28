@@ -38,10 +38,10 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
       {/* Header */}
       <ClassroomHeader classroom={classroom} />
 
-      <div className="flex flex-col gap-y-8 mb-16">
+      <div className="flex flex-col gap-y-8 mb-16 mt-40">
 
         {/* Welcome Message */}
-        <p className="px-8 text-2xl mt-40">
+        <p className="px-8 text-2xl">
           👋 Hey {user?.name?.split(" ")[0]}!
         </p>
 

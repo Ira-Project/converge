@@ -8,7 +8,7 @@ interface ClassroomHeaderProps {
 export function ClassroomHeader({ classroom }: ClassroomHeaderProps) {
   return (
     <div 
-      className="mb-8 h-32 fixed top-0 z-[5] w-full p-8 text-white"
+      className="h-32 fixed top-0 z-[5] w-full p-8 text-white"
       style={{ backgroundImage: `url('/images/cover.png')` }}
     >
       <div className="flex items-center gap-3">
