@@ -119,6 +119,12 @@ export function AccountSettingsForm({ initialData }: AccountSettingsFormProps) {
     return <Users className="h-4 w-4" />;
   };
 
+  const formatAcademicYear = (year: number) => {
+    const nextYear = year + 1;
+    const nextYearLastTwo = nextYear.toString().slice(-2);
+    return `${year}-${nextYearLastTwo}`;
+  };
+
   return (
     <div className="space-y-6">
       {/* User Information Card */}
@@ -280,7 +286,7 @@ export function AccountSettingsForm({ initialData }: AccountSettingsFormProps) {
                           {classroom.role}
                         </Badge>
                         <span className="text-xs text-muted-foreground">
-                          Code: {classroom.code}
+                          Year: {formatAcademicYear(classroom.year)}
                         </span>
                       </div>
                     </div>

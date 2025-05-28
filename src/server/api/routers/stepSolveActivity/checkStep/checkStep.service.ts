@@ -1,10 +1,12 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import type { CheckStepInput } from "./checkStep.input";
+import type { CheckStepInput, FlagStepInput } from "./checkStep.input";
 import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "@/server/db/schema/stepSolve/stepSolveQuestionAttempts";
+import { stepSolveStepReport } from "@/server/db/schema/stepSolve/stepSolveQuestions";
 import { eq } from "drizzle-orm";
 import { conceptTracking } from "@/server/db/schema/concept";
-import { ActivityType, STEP_SOLVE_ANSWER_TOLERANCE } from "@/lib/constants";
+import { ActivityType, STEP_SOLVE_ANSWER_TOLERANCE, Roles } from "@/lib/constants";
+import { sendMail, EmailTemplate } from "@/lib/email";
 
 
 export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput) => {
@@ -197,3 +199,63 @@ export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput
     questionAttemptId,
   };
 }
+
+export const flagStep = async (ctx: ProtectedTRPCContext, input: FlagStepInput) => {
+  const { stepId, report, stepText, classroomId } = input;
+
+  // Create the step report entry
+  const reportId = generateId(21);
+  await ctx.db.insert(stepSolveStepReport).values({
+    id: reportId,
+    stepId,
+    report: report ?? "",
+    userId: ctx.user.id,
+  });
+
+  // Get all teachers in the classroom
+  const teachers = await ctx.db.query.usersToClassrooms.findMany({
+    where: (table, { eq, and }) => and(
+      eq(table.classroomId, classroomId),
+      eq(table.role, Roles.Teacher),
+      eq(table.isDeleted, false)
+    ),
+    with: {
+      user: {
+        columns: {
+          email: true,
+          name: true,
+        }
+      }
+    }
+  });
+
+  // Prepare email template props
+  const studentName = ctx.user.name ?? 'A student';
+  const emailProps = {
+    studentName,
+    stepText,
+    report: report ?? undefined,
+  };
+
+  // Send emails to all teachers in the classroom
+  const teacherEmails = teachers.map(t => t.user?.email).filter((email): email is string => Boolean(email));
+  
+  for (const teacherEmail of teacherEmails) {
+    try {
+      await sendMail(teacherEmail, EmailTemplate.FlagStep, emailProps);
+      console.log("Email sent to teacher:", teacherEmail);
+    } catch (error) {
+      console.error('Failed to send email to teacher:', teacherEmail, error);
+    }
+  }
+
+  // Send email to vignesh@iraproject.com
+  try {
+    await sendMail('vignesh@iraproject.com', EmailTemplate.FlagStep, emailProps);
+    console.log("Email sent to vignesh@iraproject.com");
+  } catch (error) {
+    console.error('Failed to send email to vignesh@iraproject.com:', error);
+  }
+
+  return { success: true };
+};

@@ -8,6 +8,10 @@ import { api } from '@/trpc/react';
 import { Button } from '@/components/ui/button';
 import FormattedText from '@/components/formatted-text';
 import posthog from 'posthog-js';
+import { FlagQuestionModal } from './flag-question-modal';
+import { KnowledgeZapQuestionType } from '@/lib/constants';
+import { Flag } from 'lucide-react';
+
 interface OrderingQuestionProps {
   assignmentAttemptId: string;
   orderingQuestionId: string;
@@ -19,21 +23,22 @@ interface OrderingQuestionProps {
   options: MultipleChoiceOption[];
   stackPush: () => void;
   stackPop: () => void;
+  classroomId: string;
 }
 
 const OrderingQuestion: React.FC<OrderingQuestionProps> = ({ 
-  assignmentAttemptId, orderingQuestionId, questionId, question, isDescending, topLabel, bottomLabel, options, stackPush, stackPop 
+  assignmentAttemptId, orderingQuestionId, questionId, question, isDescending, topLabel, bottomLabel, options, stackPush, stackPop, classroomId 
 }) => {
   
   const [order, setOrder] = useState<MultipleChoiceOption[]>(options);
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+  const [isFlagModalOpen, setIsFlagModalOpen] = useState(false);
 
   const [draggedItem, setDraggedItem] = useState<MultipleChoiceOption | null>(null);
 
   const checkOrderingAnswer = api.knowledgeQuestions.checkOrderingAnswer.useMutation();
-
 
   const handleSubmit = async () => {
     posthog.capture("knowledge_zap_ordering_question_submitted");
@@ -84,9 +89,20 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
 
   return (
     <div className="flex flex-col gap-8">
-      <p className="text-xl text-center mb-4"> 
-        <FormattedText text={question} />
-      </p>
+      <div className="flex justify-between items-start">
+        <p className="text-xl text-center flex-1"> 
+          <FormattedText text={question} />
+        </p>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setIsFlagModalOpen(true)}
+          className="text-lime-600 hover:text-lime-700 hover:bg-lime-50 flex items-center gap-1"
+        >
+          <Flag className="h-4 w-4" />
+        </Button>
+      </div>
+      
       <p className="text-sm text-center text-muted-foreground">Put it in the correct order</p>
       <div className="flex flex-row gap-8 px-32 relative w-full">
         <div className="flex flex-col justify-center">
@@ -197,6 +213,15 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
           </Button>
         </div>
       )}
+
+      <FlagQuestionModal
+        isOpen={isFlagModalOpen}
+        onClose={() => setIsFlagModalOpen(false)}
+        questionId={questionId}
+        questionText={question}
+        questionType={KnowledgeZapQuestionType.ORDERING}
+        classroomId={classroomId}
+      />
     </div>
   );
 };

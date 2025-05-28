@@ -8,6 +8,10 @@ import { api } from '@/trpc/react';
 import { Button } from '@/components/ui/button';
 import FormattedText from '@/components/formatted-text';
 import posthog from 'posthog-js';
+import { FlagQuestionModal } from './flag-question-modal';
+import { KnowledgeZapQuestionType } from '@/lib/constants';
+import { Flag } from 'lucide-react';
+
 interface MatchingQuestionProps {
   assignmentAttemptId: string;
   matchingQuestionId: string;
@@ -18,10 +22,11 @@ interface MatchingQuestionProps {
   optionsB: string[];
   stackPush: () => void;
   stackPop: () => void;
+  classroomId: string;
 }
 
 const MatchingQuestion: React.FC<MatchingQuestionProps> = ({ 
-  assignmentAttemptId, matchingQuestionId, questionId, question, imageUrl, optionsA, optionsB, stackPush, stackPop 
+  assignmentAttemptId, matchingQuestionId, questionId, question, imageUrl, optionsA, optionsB, stackPush, stackPop, classroomId 
 }) => {
   
   const [selectedTerm, setSelectedTerm] = useState<string | null>(null);
@@ -31,6 +36,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
+  const [isFlagModalOpen, setIsFlagModalOpen] = useState(false);
 
   const checkMatchingAnswer = api.knowledgeQuestions.checkMatchingAnswer.useMutation();
 
@@ -175,9 +181,19 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
 
   return (
     <div className="flex flex-col gap-8">
-      <p className="text-xl text-center"> 
-        <FormattedText text={question} />
-      </p>
+      <div className="flex justify-between items-start">
+        <p className="text-xl text-center flex-1"> 
+          <FormattedText text={question} />
+        </p>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setIsFlagModalOpen(true)}
+          className="text-lime-600 hover:text-lime-700 hover:bg-lime-50 flex items-center gap-1"
+        >
+          <Flag className="h-4 w-4" />
+        </Button>
+      </div>
       {imageUrl && (
         <Image 
           className="my-auto mx-auto" 
@@ -292,6 +308,15 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
           </Button>
         </div>
       )}
+
+      <FlagQuestionModal
+        isOpen={isFlagModalOpen}
+        onClose={() => setIsFlagModalOpen(false)}
+        questionId={questionId}
+        questionText={question}
+        questionType={KnowledgeZapQuestionType.MATCHING}
+        classroomId={classroomId}
+      />
     </div>
   );
 };

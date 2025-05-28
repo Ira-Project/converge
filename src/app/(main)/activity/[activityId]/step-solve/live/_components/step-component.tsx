@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { useState } from 'react';
 import { Form, FormControl, FormItem, FormField } from '@/components/ui/form';
 import FormattedText from '@/components/formatted-text';
 import { LoadingButton } from '@/components/loading-button';
@@ -7,6 +7,9 @@ import { useForm } from 'react-hook-form';
 import StepOption from './step-option';
 import Image from 'next/image';
 import { Input } from '@/components/ui/input';
+import { FlagStepModal } from './flag-step-modal';
+import { Button } from '@/components/ui/button';
+import { Flag } from 'lucide-react';
 import posthog from 'posthog-js';
 
 interface StepSolveStepComponentProps {
@@ -16,6 +19,7 @@ interface StepSolveStepComponentProps {
   stepTextPart2: string | null;
   stepImage?: string | null;
   attemptId: string;
+  classroomId: string;
   options?: {
     optionText?: string | null;
     optionImage?: string | null;
@@ -41,8 +45,12 @@ interface submitAnswerInput {
 }
 
 const StepSolveStepComponent = ({ 
-  id, stepNumber, stepText, stepTextPart2, stepImage, options, answer, handleSubmitAnswer, isCompleted, isCorrect, isLoading, isDisabled, isLast, stepSolveAnswerUnits
+  id, stepNumber, stepText, stepTextPart2, stepImage, options, answer, handleSubmitAnswer, isCompleted, isCorrect, isLoading, isDisabled, isLast, stepSolveAnswerUnits, classroomId
 }: StepSolveStepComponentProps) => {
+  const [isFlagModalOpen, setIsFlagModalOpen] = useState(false);
+
+  // Combine stepText and stepTextPart2 for flagging
+  const completeStepText = [stepText, stepTextPart2].filter(Boolean).join(' ');
 
   const handleSubmit = async (input: submitAnswerInput) => {
     posthog.capture("step_solve_answer_submitted", {
@@ -64,7 +72,17 @@ const StepSolveStepComponent = ({
 
   return (
     <div className="mx-auto flex flex-col gap-4 mb-12">
-      <h2 className="text-sm font-bold text-muted-foreground text-center">STEP {stepNumber}</h2>
+      <div className="flex justify-between items-start">
+        <h2 className="text-sm font-bold text-muted-foreground text-center flex-1">STEP {stepNumber}</h2>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setIsFlagModalOpen(true)}
+          className="text-teal-600 hover:text-teal-700 hover:bg-teal-50 flex items-center gap-1"
+        >
+          <Flag className="h-4 w-4" />
+        </Button>
+      </div>
       <div className="text-center">
         {stepText && <FormattedText text={stepText} />}
         {stepImage && <Image src={stepImage} alt={stepText ?? ""} width={200} height={200} />}
@@ -206,11 +224,17 @@ const StepSolveStepComponent = ({
               </div>
             </LoadingButton>
           )}
-
         </form>
       </Form>
-    </div>
 
+      <FlagStepModal
+        isOpen={isFlagModalOpen}
+        onClose={() => setIsFlagModalOpen(false)}
+        stepId={id}
+        stepText={completeStepText}
+        classroomId={classroomId}
+      />
+    </div>
   );
 };
 

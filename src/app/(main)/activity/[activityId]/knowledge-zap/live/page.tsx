@@ -5,7 +5,7 @@ import { api } from "@/trpc/server";
 import KnowledgeZapAssignmentView from "./_components/knowledge-zap-assignment-view";
 import { NoAccessEmptyState } from "@/components/no-access-empty-state";
 
-export default async function ActivityPage(props: { params: Promise<{ activityId: string, classroomId: string }> }) {
+export default async function ActivityPage(props: { params: Promise<{ activityId: string }> }) {
   const params = await props.params;
   const { user } = await validateRequest();
 
@@ -19,7 +19,7 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
       userToClassroom = await api.classroom.getOrCreateUserToClassroom.query({ classroomId: activity?.classroomId });
     }
 
-    if (!activity || !knowledgeZapAssignment || !knowledgeZapAttemptId) redirect(`${Paths.Classroom}${params.classroomId}`);
+    if (!activity || !knowledgeZapAssignment || !knowledgeZapAttemptId) redirect(`${Paths.Classroom}${activity?.classroomId ?? ""}`);
   }
 
   // Show empty state if user has been removed from classroom
@@ -35,7 +35,7 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
         topic={activity?.topic?.name ?? ""}
         isLive={activity?.isLive ?? false}
         role={userToClassroom?.role ?? Roles.Student}
-        classroomId={params.classroomId}
+        classroomId={activity?.classroomId ?? ""}
         knowledgeZapAssignment={knowledgeZapAssignment}
         knowledgeZapAttemptId={knowledgeZapAttemptId ?? ""} 
         dueDate={activity?.dueDate ?? undefined}

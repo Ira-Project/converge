@@ -9,6 +9,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { api } from "@/trpc/react";
 import { toast } from "sonner";
 import posthog from "posthog-js";
@@ -166,14 +173,25 @@ export default function ClassroomSettingsForm({
 
         <div className="space-y-2">
           <Label htmlFor="year">Academic Year</Label>
-          <Input
-            id="year"
-            type="number"
-            min={2000}
-            max={2100}
-            placeholder="Enter academic year"
-            {...form.register("year", { valueAsNumber: true })}
-          />
+          <Select
+            value={form.watch("year")?.toString() ?? ""}
+            onValueChange={(value) => {
+              posthog.capture("classroom_settings_year_changed", {
+                classroom_id: classroomId,
+                new_year: parseInt(value),
+              });
+              form.setValue("year", parseInt(value), { shouldDirty: true });
+            }}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Select academic year" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="2024">2024-25</SelectItem>
+              <SelectItem value="2025">2025-26</SelectItem>
+              <SelectItem value="2026">2026-27</SelectItem>
+            </SelectContent>
+          </Select>
           {form.formState.errors.year && (
             <p className="text-sm text-destructive">
               {form.formState.errors.year.message}

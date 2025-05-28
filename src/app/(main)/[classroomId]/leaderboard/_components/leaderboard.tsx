@@ -82,7 +82,7 @@ export const columns: ColumnDef<LeaderboardEntry>[] = [
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
           className="w-full justify-center max-w-48"
         >
-          Total Score
+          Completion
           <ArrowUpDown className="ml-2" />
         </Button>
       )
@@ -109,6 +109,26 @@ export const columns: ColumnDef<LeaderboardEntry>[] = [
     cell: ({ row }) => {
       const formatted = (row.original.averageAccuracy * 100).toFixed(2)
       return <div className="text-center font-medium">{formatted}%</div>
+    },
+  },
+  {
+    accessorKey: "score",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+          className="w-full justify-center max-w-48"
+        >
+          Score
+          <ArrowUpDown className="ml-2" />
+        </Button>
+      )
+    },
+    cell: ({ row }) => {
+      const score = row.original.totalScore * row.original.averageAccuracy
+      const formatted = score.toFixed(2)
+      return <div className="text-center font-medium max-w-48">{formatted}</div>
     },
   },
   {
@@ -169,7 +189,7 @@ export function Leaderboard(props: {
     // Create CSV header
     const headers = ['Rank', 'Name'];
     const activityHeaders = props.activityInfo.map(activity => (activity.name + " (" + activity.type + ")"));
-    headers.push('Total Scores', 'Accuracy (%)', 'Time Spent (mins)');
+    headers.push('Completion', 'Accuracy (%)', 'Score', 'Time Spent (mins)');
     headers.push(...activityHeaders);
 
     
@@ -179,6 +199,7 @@ export function Leaderboard(props: {
       entry.name,
       entry.totalScore.toFixed(2),
       (entry.averageAccuracy * 100).toFixed(2),
+      (entry.totalScore * entry.averageAccuracy).toFixed(2),
       (entry.totalTimeSpent / 60).toFixed(2),
       ...props.activityInfo.map(activity => 
         (entry.scoreBreakdown[activity.id]?.score ?? 0).toFixed(2)

@@ -8,6 +8,9 @@ import { Button } from '@/components/ui/button';
 import { type MultipleChoiceOption } from '../types';
 import FormattedText from '@/components/formatted-text';
 import posthog from 'posthog-js';
+import { FlagQuestionModal } from './flag-question-modal';
+import { KnowledgeZapQuestionType } from '@/lib/constants';
+import { Flag } from 'lucide-react';
 
 interface MultipleChoiceQuestionProps {
   assignmentAttemptId: string;
@@ -18,6 +21,7 @@ interface MultipleChoiceQuestionProps {
   options: MultipleChoiceOption[];
   stackPush: () => void;
   stackPop: () => void;
+  classroomId: string;
 }
 
 const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({  
@@ -28,13 +32,14 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
   imageUrl,
   options, 
   stackPush,
-  stackPop
+  stackPop,
+  classroomId
 }) => {
 
   const [selected, setSelected] = useState<string | null>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCorrect, setIsCorrect] = useState(false);
-
+  const [isFlagModalOpen, setIsFlagModalOpen] = useState(false);
 
   const checkMultipleChoiceAnswer = api.knowledgeQuestions.checkMultipleChoiceAnswer.useMutation();
 
@@ -44,7 +49,6 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
     return `w-full p-3 text-left rounded-lg transition-colors text-center text-sm
     ${isSelected ? 'bg-lime-300' : 'bg-lime-100'}`;
   };
-
 
   const handleSubmit = async () => {
     posthog.capture("knowledge_zap_multiple_choice_question_submitted");
@@ -72,9 +76,20 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
 
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-xl text-center"> 
-        <FormattedText text={question} />
-      </p>
+      <div className="flex justify-between items-start">
+        <p className="text-xl text-center flex-1"> 
+          <FormattedText text={question} />
+        </p>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setIsFlagModalOpen(true)}
+          className="text-lime-600 hover:text-lime-700 hover:bg-lime-50 flex items-center gap-1"
+        >
+          <Flag className="h-4 w-4" />
+        </Button>
+      </div>
+      
       {imageUrl && (
         <Image 
           className="my-auto mx-auto" 
@@ -164,6 +179,15 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
           </Button>
         </div>
       )}
+
+      <FlagQuestionModal
+        isOpen={isFlagModalOpen}
+        onClose={() => setIsFlagModalOpen(false)}
+        questionId={questionId}
+        questionText={question}
+        questionType={KnowledgeZapQuestionType.MULTIPLE_CHOICE}
+        classroomId={classroomId}
+      />
     </div>
   );
 };

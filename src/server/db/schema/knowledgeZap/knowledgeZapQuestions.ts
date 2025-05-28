@@ -12,6 +12,7 @@ import { relations } from "drizzle-orm/relations";
 import { knowledgeZapAssignmentAttempts, knowledgeZapAssignments } from "./knowledgeZapAssignment";
 import { topics } from "../subject";
 import { concepts } from "../concept";
+import { users } from "../user";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -121,4 +122,21 @@ export const knowledgeZapQuestionsToConceptsRelations = relations(knowledgeZapQu
   }),
 }));
 
+/*
+* Stores reports from students about questions
+*/
+export const knowledgeZapQuestionReport = pgTable(
+  "knowledge_zap_question_report",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    questionId: varchar("question_id", { length: 21 }).notNull(),
+    type: knowledgeZapQuestionTypeEnum("type").notNull(),
+    report: text("report").notNull(),
+    userId: varchar("user_id", { length: 21 }).notNull().references(() => users.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+)
 

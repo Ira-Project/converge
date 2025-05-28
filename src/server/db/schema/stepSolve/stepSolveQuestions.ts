@@ -11,6 +11,7 @@ import { relations } from "drizzle-orm/relations";
 import { topics } from "../subject";
 import { stepSolveAssignments } from "./stepSolveAssignment";
 import { concepts } from "../concept";
+import { users } from "../user";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -132,5 +133,33 @@ export const stepSolveStepConceptsRelations = relations(stepSolveStepConcepts, (
   concept: one(concepts, {
     fields: [stepSolveStepConcepts.conceptId],
     references: [concepts.id],
+  }),
+}));
+
+/*
+* Stores reports from students about step solve steps
+*/
+export const stepSolveStepReport = pgTable(
+  "step_solve_step_report",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    stepId: varchar("step_id", { length: 21 }).notNull().references(() => stepSolveStep.id),
+    report: text("report").notNull(),
+    userId: varchar("user_id", { length: 21 }).notNull().references(() => users.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+);
+
+export const stepSolveStepReportRelations = relations(stepSolveStepReport, ({ one }) => ({
+  step: one(stepSolveStep, {
+    fields: [stepSolveStepReport.stepId],
+    references: [stepSolveStep.id],
+  }),
+  user: one(users, {
+    fields: [stepSolveStepReport.userId],
+    references: [users.id],
   }),
 }));
