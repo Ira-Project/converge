@@ -809,10 +809,6 @@ export const getStepSolveRevisionActivity = async (ctx: ProtectedTRPCContext, in
     allConceptsInQuestion.forEach(c => c && conceptsAddedToQuestions.add(c));
   }
 
-  console.log("CONCEPTS TO REVIEW", conceptsToReview, conceptsToReview.length);
-  console.log("CONCEPTS ADDED TO QUESTIONS", conceptsAddedToQuestions, conceptsAddedToQuestions.size);
-  console.log("QUESTION IDS LIST", questionIdsList, questionIdsList.length);
-  console.log("--------------------------------");
 
   const stepSolveQuestions = await ctx.db.query.stepSolveQuestions.findMany({
     where: (question, { and, inArray }) => 
