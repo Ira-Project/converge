@@ -15,45 +15,9 @@ export interface FlagQuestionTemplateProps {
   report?: string;
 }
 
-export const FlagQuestionTemplate = ({ studentName, questionText, report }: FlagQuestionTemplateProps) => {
-  return (
-    <Html>
-      <Head />
-      <Preview>Knowledge Zap Question Flagged as Incorrect</Preview>
-      <Body style={main}>
-        <Container style={container}>
-          <Section>
-            <Text style={title}>{APP_TITLE}</Text>
-            <Text style={heading}>Knowledge Zap Question Flagged</Text>
-            <Text style={text}>
-              <strong>{studentName}</strong> has flagged a Knowledge Zap question as incorrect.
-            </Text>
-            
-            <Section style={questionBox}>
-              <Text style={sectionTitle}>Question:</Text>
-              <Text style={questionTextStyle}>{questionText}</Text>
-            </Section>
-            
-            {report && (
-              <Section style={reportBox}>
-                <Text style={sectionTitle}>Student's Comment:</Text>
-                <Text style={text}>{report}</Text>
-              </Section>
-            )}
-            
-            <Text style={footerText}>
-              Please review this question and take appropriate action if necessary.
-            </Text>
-          </Section>
-        </Container>
-      </Body>
-    </Html>
-  );
-};
-
 const main = {
-  backgroundColor: "#f6f9fc",
-  padding: "10px 0",
+  backgroundColor: '#ffffff',
+  fontFamily: '-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif',
 };
 
 const container = {
@@ -123,4 +87,43 @@ const footerText = {
   ...text,
   marginTop: "30px",
   color: "#666",
-}; 
+};
+
+export const FlagKnowledgeZapQuestionTemplate = ({ studentName, questionText, report }: FlagQuestionTemplateProps) => {
+  return (
+    <Html>
+      <Head />
+      <Preview>Knowledge Zap Question Flagged as Incorrect</Preview>
+      <Body style={main}>
+        <Container style={container}>
+          <Section>
+            <Text style={title}>{APP_TITLE}</Text>
+            <Text style={heading}>Knowledge Zap Question Flagged</Text>
+            <Text style={text}>
+              <strong>{studentName}</strong> has flagged a Knowledge Zap question as incorrect.
+            </Text>
+            
+            <Section style={questionBox}>
+              <Text style={sectionTitle}>Question:</Text>
+              <Text style={questionTextStyle}>{questionText}</Text>
+            </Section>
+            
+            {report && (
+              <Section style={reportBox}>
+                <Text style={sectionTitle}>Student's Comment:</Text>
+                <Text style={text}>{report}</Text>
+              </Section>
+            )}
+            
+            <Text style={footerText}>
+              Please review this question and take appropriate action if necessary.
+            </Text>
+          </Section>
+        </Container>
+      </Body>
+    </Html>
+  );
+};
+
+// Keep the old name for backward compatibility
+export const FlagQuestionTemplate = FlagKnowledgeZapQuestionTemplate; 

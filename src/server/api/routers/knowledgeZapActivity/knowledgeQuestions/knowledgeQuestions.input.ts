@@ -32,7 +32,7 @@ export const checkOrderingAnswerInput = z.object({
 });
 export type CheckOrderingAnswerInput = z.infer<typeof checkOrderingAnswerInput>;
 
-export const flagQuestionInput = z.object({
+export const flagKnowledgeZapQuestionInput = z.object({
   questionId: z.string(),
   type: z.nativeEnum(KnowledgeZapQuestionType),
   report: z.string().optional(),
@@ -40,4 +40,5 @@ export const flagQuestionInput = z.object({
   classroomId: z.string(),
 });
 
-export type FlagQuestionInput = z.infer<typeof flagQuestionInput>;
+// Keep the old name for backward compatibility
+export const flagQuestionInput = flagKnowledgeZapQuestionInput;

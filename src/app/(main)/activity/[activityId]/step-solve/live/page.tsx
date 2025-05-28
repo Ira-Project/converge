@@ -5,7 +5,7 @@ import { api } from "@/trpc/server";
 import StepSolveActivityView from "./_components/step-solve-activity-view";
 import { NoAccessEmptyState } from "@/components/no-access-empty-state";
 
-export default async function ActivityPage(props: { params: Promise<{ activityId: string, classroomId: string }> }) {
+export default async function ActivityPage(props: { params: Promise<{ activityId: string }> }) {
   const params = await props.params;
   const { user } = await validateRequest();
 
@@ -25,7 +25,7 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
     }
 
     if(!activity || !stepSolveAssignment?.id) {
-      redirect(`${Paths.Classroom}${params.classroomId}`);
+      redirect(`${Paths.Classroom}${activity?.classroomId ?? ""}`);
     }
 
     stepSolveAttemptId = await api.stepSolve.createAttempt.mutate({ 
@@ -34,7 +34,7 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
     });
 
     if (!stepSolveAttemptId) {
-      redirect(`${Paths.Classroom}${params.classroomId}`);
+      redirect(`${Paths.Classroom}${activity?.classroomId ?? ""}`);
     }
   }
 
@@ -49,7 +49,7 @@ export default async function ActivityPage(props: { params: Promise<{ activityId
         activityId={params.activityId}
         topic={activity?.topic?.name ?? ""}
         isLive={activity?.isLive ?? true}
-        classroomId={params.classroomId}
+        classroomId={activity?.classroomId ?? ""}
         role={userToClassroom?.role ?? Roles.Student}
         stepSolveAssignment={stepSolveAssignment}
         stepSolveAttemptId={stepSolveAttemptId ?? ""} 

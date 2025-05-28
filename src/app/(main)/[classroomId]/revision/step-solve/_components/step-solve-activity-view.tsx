@@ -138,6 +138,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
                         stepTextPart2={step.stepTextPart2}
                         stepImage={step.stepImage}
                         attemptId={stepSolveAttemptId}
+                        classroomId={classroomId}
                         options={step.opt}
                         answer={step.stepSolveAnswer}
                         handleSubmitAnswer={handleSubmitAnswer}

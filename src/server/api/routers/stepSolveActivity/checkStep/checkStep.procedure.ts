@@ -7,4 +7,7 @@ export const stepSolveCheckStepRouter = createTRPCRouter({
     .input(inputs.checkStepSchema)
     .mutation(({ ctx, input }) => services.checkStep(ctx, input)),
 
+  flagStep: protectedProcedure
+    .input(inputs.flagStepInput)
+    .mutation(({ ctx, input }) => services.flagStep(ctx, input)),
 });

@@ -21,7 +21,7 @@ interface FlagQuestionModalProps {
   classroomId: string;
 }
 
-export const FlagQuestionModal: React.FC<FlagQuestionModalProps> = ({
+export const FlagKnowledgeZapQuestionModal: React.FC<FlagQuestionModalProps> = ({
   isOpen,
   onClose,
   questionId,
@@ -104,4 +104,7 @@ export const FlagQuestionModal: React.FC<FlagQuestionModalProps> = ({
       </DialogContent>
     </Dialog>
   );
-}; 
+};
+
+// Keep the old name for backward compatibility
+export const FlagQuestionModal = FlagKnowledgeZapQuestionModal; 
