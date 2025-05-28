@@ -158,7 +158,9 @@ export function Leaderboard(props: {
   activityInfo: { id: string; name: string; type: string }[]
 }) {
   const data = props.data
-  const [sorting, setSorting] = React.useState<SortingState>([])
+  const [sorting, setSorting] = React.useState<SortingState>([
+    { id: "score", desc: true }
+  ])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []
   )
