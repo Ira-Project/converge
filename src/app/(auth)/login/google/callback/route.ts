@@ -53,9 +53,12 @@ export async function GET(request: Request): Promise<Response> {
       );
     }
 
+    // Normalize email to lowercase
+    const normalizedEmail = user.email.toLowerCase();
+
     const existingUser = await db.query.users.findFirst({
       where: (table, { eq }) =>
-        eq(table.email, user.email!)
+        eq(table.email, normalizedEmail)
     });
 
     if (!existingUser) {
@@ -65,7 +68,7 @@ export async function GET(request: Request): Promise<Response> {
       await db.insert(users).values({
         id: userId,
         name: user.name,
-        email: user.email,
+        email: normalizedEmail,
         emailVerified: true,
         avatar: user.picture,
         role: returnPath ? Roles.Student : Roles.Teacher,

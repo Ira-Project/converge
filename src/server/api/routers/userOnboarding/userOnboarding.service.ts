@@ -12,7 +12,7 @@ export const updateUser = async (ctx: ProtectedTRPCContext, input: updateUserInp
   
   await ctx.db.update(preloadedUsers)
     .set({notOnboarded: false})
-    .where(eq(preloadedUsers.email, input.email));
+    .where(eq(preloadedUsers.email, input.email.toLowerCase()));
   
   for(const course of input.courses) {
     await ctx.db.insert(teacherCourses).values({
@@ -70,7 +70,7 @@ export const updateUser = async (ctx: ProtectedTRPCContext, input: updateUserInp
 
   await ctx.db.update(users)
     .set({name: input.name, isOnboarded: true, defaultClassroomId: classroomId})
-    .where(eq(users.email, ctx.user.email));
+    .where(eq(users.email, ctx.user.email.toLowerCase()));
 
 
   return classroomId;

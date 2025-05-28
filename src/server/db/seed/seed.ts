@@ -41,7 +41,6 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // CONCEPT CREATION
 // await createConcepts("A3 - Work, Energy and Power");
-// await createGeneratedConcepts("Electric Potential", "9ye3dpwdetfqsouswiava");
 
 
 // LEARN BY TEACHING CREATION
@@ -58,7 +57,6 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createConceptTrackerForAllKnowledgeZapAttempts();
 // await computeQuestionsCompleted();
 // await printConceptScores();
-// await createGeneratedKnowledgeZapAssignment("electric_potential", "9ye3dpwdetfqsouswiava");
 
 // REASONING CREATION
 // await deleteReasoningAssignment("v2f7ppwtin0zt6pkobuun");
@@ -70,12 +68,6 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // await deleteStepSolveAssignment("a38f5437a89b48bdbc033");
 // await createStepSolveAssignment("A1 - Kinematics");
-await createGeneratedStepSolveAssignment("Electric Potential", "9ye3dpwdetfqsouswiava");
-await createGeneratedStepSolveAssignment("Electric Potential_1", "9ye3dpwdetfqsouswiava");
-await createGeneratedStepSolveAssignment("Electric Potential_2", "9ye3dpwdetfqsouswiava");
-await createGeneratedStepSolveAssignment("Electric Potential_3", "9ye3dpwdetfqsouswiava");
-await createGeneratedStepSolveAssignment("Electric Potential_4", "9ye3dpwdetfqsouswiava");
-
 
 
 // await findConceptsWithoutStepSolveSteps();
@@ -93,7 +85,9 @@ await createGeneratedStepSolveAssignment("Electric Potential_4", "9ye3dpwdetfqso
 // await createConceptMappingAssignment();
 
 // USER DELETION
-// await deleteUser("vignesh+1@iraproject.com");
+await deleteUser("vigfb9295@gmail.com");
+await deleteUser("Vignesh+3@iraproject.com");
+// await deleteClassroom("3eiin0pujtyg28x8gyiqp");
 
 // MIGRATE ACTIVITY TYPE TO TEXT
 // await migrateActivityTypeToText();

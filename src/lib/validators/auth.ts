@@ -2,13 +2,13 @@ import { z } from "zod";
 
 export const signupSchema = z.object({
   name: z.string().optional(),
-  email: z.string().email("Please enter a valid email"),
+  email: z.string().email("Please enter a valid email").transform(email => email.toLowerCase()),
   password: z.string().min(8, "Please provide your password. Minimum 8 characters required.").max(255),
 });
 export type SignupInput = z.infer<typeof signupSchema>;
 
 export const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email."),
+  email: z.string().email("Please enter a valid email.").transform(email => email.toLowerCase()),
   password: z
     .string()
     .min(8, "Password is too short. Minimum 8 characters required.")
@@ -17,7 +17,7 @@ export const loginSchema = z.object({
 export type LoginInput = z.infer<typeof loginSchema>;
 
 export const forgotPasswordSchema = z.object({
-  email: z.string().email(),
+  email: z.string().email().transform(email => email.toLowerCase()),
 });
 export type ForgotPasswordInput = z.infer<typeof forgotPasswordSchema>;
 

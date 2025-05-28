@@ -377,7 +377,7 @@ export async function uploadPreloadedUsers() {
   for(const email of emailsToPreload) {
     await db.insert(preloadedUsers).values({
       id: generateId(21),
-      email: email,
+      email: email.toLowerCase(),
       role: Roles.Student,
     }).onConflictDoNothing({ target: preloadedUsers.email })
   }

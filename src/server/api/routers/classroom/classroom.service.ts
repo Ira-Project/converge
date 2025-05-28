@@ -238,8 +238,8 @@ export const joinClassroom = async (ctx: ProtectedTRPCContext, input: JoinClassr
 
 export const getOrCreateUserToClassroom = async (ctx: ProtectedTRPCContext, input: GetOrCreateUserToClassroomInput) => {
 
-  if(ctx.user.email === "vignesh@iraproject.com" || 
-    ctx.user.email === "likhit@iraproject.com" 
+  if(ctx.user.email.toLowerCase() === "vignesh@iraproject.com" || 
+    ctx.user.email.toLowerCase() === "likhit@iraproject.com" 
   ) {
     return {
       role: Roles.Teacher,
@@ -247,8 +247,8 @@ export const getOrCreateUserToClassroom = async (ctx: ProtectedTRPCContext, inpu
     }
   }
 
-  if(ctx.user.email === "vig9295@gmail.com" || 
-    ctx.user.email === "likhitnayak@gmail.com" 
+  if(ctx.user.email.toLowerCase() === "vig9295@gmail.com" || 
+    ctx.user.email.toLowerCase() === "likhitnayak@gmail.com" 
   ) {
     return {
       role: Roles.Student,

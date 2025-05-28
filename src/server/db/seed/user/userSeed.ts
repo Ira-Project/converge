@@ -270,7 +270,7 @@ export async function deleteClassroom(classroomId: string) {
 export async function deleteUser(email: string) {
   console.log(`Starting deletion process for user: ${email}`);
 
-  const user = await db.select().from(users).where(eq(users.email, email));
+  const user = await db.select().from(users).where(eq(users.email, email.toLowerCase()));
   if(!user[0]) {
     console.log('User not found');
     throw new Error("User not found");
