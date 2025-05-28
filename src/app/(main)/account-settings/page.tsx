@@ -3,7 +3,6 @@ import { Paths } from "@/lib/constants";
 import { redirect } from "next/navigation";
 import { api } from "@/trpc/server";
 import { AccountSettingsForm } from "./_components/account-settings-form";
-import { Separator } from "@/components/ui/separator";
 
 export const metadata = {
   title: "Account Settings",
@@ -32,9 +31,7 @@ export default async function AccountSettingsPage() {
             Manage your account information and classroom preferences
           </p>
         </div>
-        
-        <Separator />
-        
+                
         <AccountSettingsForm initialData={userSettings} />
       </div>
     </div>

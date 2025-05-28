@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { KnowledgeZapQuestionType } from "@/lib/constants";
 
 export const checkMatchingAnswerInput = z.object({
   assignmentAttemptId: z.string(),
@@ -30,3 +31,13 @@ export const checkOrderingAnswerInput = z.object({
   })),
 });
 export type CheckOrderingAnswerInput = z.infer<typeof checkOrderingAnswerInput>;
+
+export const flagQuestionInput = z.object({
+  questionId: z.string(),
+  type: z.nativeEnum(KnowledgeZapQuestionType),
+  report: z.string().optional(),
+  questionText: z.string(), // The actual question text for email
+  classroomId: z.string(),
+});
+
+export type FlagQuestionInput = z.infer<typeof flagQuestionInput>;

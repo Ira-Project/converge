@@ -38,6 +38,7 @@ export const getUserSettings = async (ctx: ProtectedTRPCContext) => {
           isActive: true,
           isDeleted: true,
           code: true,
+          year: true,
         }
       }
     }
@@ -52,6 +53,7 @@ export const getUserSettings = async (ctx: ProtectedTRPCContext) => {
       description: uc.classroom?.description ?? "",
       code: uc.classroom?.code ?? "",
       role: uc.role,
+      year: uc.classroom.year,
       isActive: uc.classroom?.isActive ?? false,
       isArchived: !uc.classroom?.isActive,
       isUserRemoved: uc.isDeleted,

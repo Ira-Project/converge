@@ -32,7 +32,8 @@ const renderQuestion = (
   question: KnowledgeZapQuestionObjects, 
   assignmentAttemptId: string,
   stackPush: () => void, 
-  stackPop: () => void
+  stackPop: () => void,
+  classroomId: string
 ) => {
 
   const randomVariants = []
@@ -47,80 +48,83 @@ const renderQuestion = (
     return
   }
 
-    switch (question.type) {    
-      case KnowledgeZapQuestionType.MATCHING:
-      return (
-        <div className="flex flex-col gap-4">
-          {
-            randomVariants.map((randomVariant) => {
-              const matchingVariant = randomVariant as MatchingVariant;
-              return (
-                <MatchingQuestion
-                  key={matchingVariant.id}
-                  assignmentAttemptId={assignmentAttemptId}
-                  matchingQuestionId={matchingVariant.id}
-                  questionId={question.id}
-                  question={matchingVariant.question}
-                  optionsA={matchingVariant.optionAs}
-                  optionsB={matchingVariant.optionBs}
-                  imageUrl={matchingVariant.imageUrl}
-                  stackPush={stackPush}
-                  stackPop={stackPop}
-                />
-              );
-            })
-          }
-        </div>
-      );
-    case KnowledgeZapQuestionType.MULTIPLE_CHOICE:
-      return (
-        <div className="flex flex-col gap-4">
-          {
-            randomVariants.map((randomVariant) => {
-              const multipleChoiceVariant = randomVariant as MultipleChoiceVariant;
-              return (
-                <MultipleChoiceQuestion
-                  key={multipleChoiceVariant.id}
-                  assignmentAttemptId={assignmentAttemptId}
-                  multipleChoiceQuestionId={multipleChoiceVariant.id}
-                  questionId={question.id}
-                  question={multipleChoiceVariant.question}
-                  options={multipleChoiceVariant.options}
-                  imageUrl={multipleChoiceVariant.imageUrl}
-                  stackPush={stackPush}
-                  stackPop={stackPop}
-                />
-              );
-            })
-          }
-        </div>
-      );
-    case KnowledgeZapQuestionType.ORDERING:
-      return (
-        <div className="flex flex-col gap-4">
-          {
-            randomVariants.map((randomVariant) => {
-              const orderingVariant = randomVariant as OrderingVariant;
-              return (
-                <OrderingQuestion
-                  key={orderingVariant.id}
-                  topLabel={orderingVariant.topLabel}
-                  bottomLabel={orderingVariant.bottomLabel}
-                  isDescending={orderingVariant.isDescending}
-                  assignmentAttemptId={assignmentAttemptId}
-                  orderingQuestionId={orderingVariant.id}
-                  questionId={question.id}
-                  question={orderingVariant.question}
-                  options={orderingVariant.options}
-                  stackPush={stackPush}
-                  stackPop={stackPop}
-                />
-              );
-            })
-          }
-        </div>
-      );
-    }
+  switch (question.type) {    
+    case KnowledgeZapQuestionType.MATCHING:
+    return (
+      <div className="flex flex-col gap-4">
+        {
+          randomVariants.map((randomVariant) => {
+            const matchingVariant = randomVariant as MatchingVariant;
+            return (
+              <MatchingQuestion
+                key={matchingVariant.id}
+                assignmentAttemptId={assignmentAttemptId}
+                matchingQuestionId={matchingVariant.id}
+                questionId={question.id}
+                question={matchingVariant.question}
+                optionsA={matchingVariant.optionAs}
+                optionsB={matchingVariant.optionBs}
+                imageUrl={matchingVariant.imageUrl}
+                stackPush={stackPush}
+                stackPop={stackPop}
+                classroomId={classroomId}
+              />
+            );
+          })
+        }
+      </div>
+    );
+  case KnowledgeZapQuestionType.MULTIPLE_CHOICE:
+    return (
+      <div className="flex flex-col gap-4">
+        {
+          randomVariants.map((randomVariant) => {
+            const multipleChoiceVariant = randomVariant as MultipleChoiceVariant;
+            return (
+              <MultipleChoiceQuestion
+                key={multipleChoiceVariant.id}
+                assignmentAttemptId={assignmentAttemptId}
+                multipleChoiceQuestionId={multipleChoiceVariant.id}
+                questionId={question.id}
+                question={multipleChoiceVariant.question}
+                options={multipleChoiceVariant.options}
+                imageUrl={multipleChoiceVariant.imageUrl}
+                stackPush={stackPush}
+                stackPop={stackPop}
+                classroomId={classroomId}
+              />
+            );
+          })
+        }
+      </div>
+    );
+  case KnowledgeZapQuestionType.ORDERING:
+    return (
+      <div className="flex flex-col gap-4">
+        {
+          randomVariants.map((randomVariant) => {
+            const orderingVariant = randomVariant as OrderingVariant;
+            return (
+              <OrderingQuestion
+                key={orderingVariant.id}
+                topLabel={orderingVariant.topLabel}
+                bottomLabel={orderingVariant.bottomLabel}
+                isDescending={orderingVariant.isDescending}
+                assignmentAttemptId={assignmentAttemptId}
+                orderingQuestionId={orderingVariant.id}
+                questionId={question.id}
+                question={orderingVariant.question}
+                options={orderingVariant.options}
+                stackPush={stackPush}
+                stackPop={stackPop}
+                classroomId={classroomId}
+              />
+            );
+          })
+        }
+      </div>
+    );
+  }
 };
 
 
@@ -164,6 +168,8 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
     });
     setSubmissionmodalOpen(true);
   }
+
+  console.log("Classroom ID", classroomId);
 
   return (
     <div className="flex flex-col min-h-full h-full">
@@ -224,7 +230,7 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
             <CardContent className="flex flex-col gap-8">
               {questionStack.length > 0 ? (
                 <div className="flex flex-col gap-4">
-                  {questionStack[0] && renderQuestion(questionStack[0], assignmentAttemptId, stackPush, stackPop)}
+                  {questionStack[0] && renderQuestion(questionStack[0], assignmentAttemptId, stackPush, stackPop, classroomId)}
                 </div>
               ) : (
                 <div className="flex flex-col gap-4 px-16 py-32">

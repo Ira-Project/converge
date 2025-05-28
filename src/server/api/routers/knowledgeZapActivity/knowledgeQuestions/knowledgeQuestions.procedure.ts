@@ -16,4 +16,8 @@ export const knowledgeQuestionsRouter = createTRPCRouter({
     .input(inputs.checkOrderingAnswerInput)
     .mutation(({ ctx, input }) => services.checkOrderingAnswer(ctx, input)),
 
+  flagQuestion: protectedProcedure
+    .input(inputs.flagQuestionInput)
+    .mutation(({ ctx, input }) => services.flagQuestion(ctx, input)),
+
 });

@@ -23,7 +23,8 @@ const renderQuestion = (
   question: KnowledgeZapQuestionObjects, 
   assignmentAttemptId: string,
   stackPush: () => void, 
-  stackPop: () => void
+  stackPop: () => void,
+  classroomId: string
 ) => {
 
   const randomVariants = []
@@ -57,6 +58,7 @@ const renderQuestion = (
                   imageUrl={matchingVariant.imageUrl}
                   stackPush={stackPush}
                   stackPop={stackPop}
+                  classroomId={classroomId}
                 />
               );
             })
@@ -80,6 +82,7 @@ const renderQuestion = (
                   imageUrl={multipleChoiceVariant.imageUrl}
                   stackPush={stackPush}
                   stackPop={stackPop}
+                  classroomId={classroomId}
                 />
               );
             })
@@ -105,6 +108,7 @@ const renderQuestion = (
                   options={orderingVariant.options}
                   stackPush={stackPush}
                   stackPop={stackPop}
+                  classroomId={classroomId}
                 />
               );
             })
@@ -182,7 +186,7 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
             <CardContent className="flex flex-col gap-8">
               {questionStack.length > 0 ? (
                 <div className="flex flex-col gap-4">
-                  {questionStack[0] && renderQuestion(questionStack[0], assignmentAttemptId, stackPush, stackPop)}
+                  {questionStack[0] && renderQuestion(questionStack[0], assignmentAttemptId, stackPush, stackPop, classroomId)}
                 </div>
               ) : (
                 <div className="flex flex-col gap-4 px-16 py-32">

@@ -2,6 +2,7 @@ import "server-only";
 
 import { EmailVerificationTemplate } from "./templates/email-verification";
 import { ResetPasswordTemplate } from "./templates/reset-password";
+import { FlagQuestionTemplate } from "./templates/flag-question";
 import { render } from "@react-email/render";
 import { env } from "@/env";
 import { EMAIL_SENDER } from "@/lib/constants";
@@ -13,12 +14,14 @@ export enum EmailTemplate {
   EmailVerification = "EmailVerification",
   PasswordReset = "PasswordReset",
   FileUploaded = "FileUploaded",
+  FlagQuestion = "FlagQuestion",
 }
 
 export type PropsMap = {
   [EmailTemplate.EmailVerification]: ComponentProps<typeof EmailVerificationTemplate>;
   [EmailTemplate.PasswordReset]: ComponentProps<typeof ResetPasswordTemplate>;
   [EmailTemplate.FileUploaded]: ComponentProps<typeof FileUploadedTemplate>;
+  [EmailTemplate.FlagQuestion]: ComponentProps<typeof FlagQuestionTemplate>;
 };
 
 const getEmailTemplate = <T extends EmailTemplate>(template: T, props: PropsMap[NoInfer<T>]) => {
@@ -42,6 +45,13 @@ const getEmailTemplate = <T extends EmailTemplate>(template: T, props: PropsMap[
         subject: "File uploaded",
         body: render(
           <FileUploadedTemplate {...(props as PropsMap[EmailTemplate.FileUploaded])} />,
+        ),
+      };
+    case EmailTemplate.FlagQuestion:
+      return {
+        subject: "Knowledge Zap Question Flagged as Incorrect",
+        body: render(
+          <FlagQuestionTemplate {...(props as PropsMap[EmailTemplate.FlagQuestion])} />,
         ),
       };
     default:

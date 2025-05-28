@@ -1,14 +1,15 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import type { CheckMatchingAnswerInput, CheckMultipleChoiceAnswerInput, CheckOrderingAnswerInput } from "./knowledgeQuestions.input";
+import type { CheckMatchingAnswerInput, CheckMultipleChoiceAnswerInput, CheckOrderingAnswerInput, FlagQuestionInput } from "./knowledgeQuestions.input";
 import { eq } from "drizzle-orm";
-import { knowledgeZapQuestionAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapQuestions";
+import { knowledgeZapQuestionAttempts, knowledgeZapQuestionReport } from "@/server/db/schema/knowledgeZap/knowledgeZapQuestions";
 import { matchingAttempt, matchingAttemptSelection, matchingQuestions } from "@/server/db/schema/knowledgeZap/matchingQuestions";
 import { multipleChoiceAttempt, multipleChoiceQuestions } from "@/server/db/schema/knowledgeZap/multipleChoiceQuestions";
 import { orderingAttempt, orderingAttemptSelection, orderingQuestions } from "@/server/db/schema/knowledgeZap/orderingQuestions";
 import { conceptTracking } from "@/server/db/schema/concept";
-import { ActivityType } from "@/lib/constants";
+import { ActivityType, Roles } from "@/lib/constants";
 import { knowledgeZapAssignmentAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
+import { sendMail, EmailTemplate } from "@/lib/email";
 
 export const checkMatchingAnswer = async (ctx: ProtectedTRPCContext, input: CheckMatchingAnswerInput) => {
   const { assignmentAttemptId, matchingQuestionId, questionId, answer } = input;
@@ -259,5 +260,66 @@ export const checkOrderingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
     correct: correct ?? false,
   };
 
+};
+
+export const flagQuestion = async (ctx: ProtectedTRPCContext, input: FlagQuestionInput) => {
+  const { questionId, type, report, questionText, classroomId } = input;
+
+  // Create the question report entry
+  const reportId = generateId(21);
+  await ctx.db.insert(knowledgeZapQuestionReport).values({
+    id: reportId,
+    questionId,
+    type,
+    report: report ?? "",
+    userId: ctx.user.id,
+  });
+
+  // Get all teachers in the classroom
+  const teachers = await ctx.db.query.usersToClassrooms.findMany({
+    where: (table, { eq, and }) => and(
+      eq(table.classroomId, classroomId),
+      eq(table.role, Roles.Teacher),
+      eq(table.isDeleted, false)
+    ),
+    with: {
+      user: {
+        columns: {
+          email: true,
+          name: true,
+        }
+      }
+    }
+  });
+
+  // Prepare email template props
+  const studentName = ctx.user.name ?? 'A student';
+  const emailProps = {
+    studentName,
+    questionText,
+    report: report ?? undefined,
+  };
+
+  // Send emails to all teachers in the classroom
+  const teacherEmails = teachers.map(t => t.user?.email).filter((email): email is string => Boolean(email));
+  
+  for (const teacherEmail of teacherEmails) {
+    try {
+      await sendMail(teacherEmail, EmailTemplate.FlagQuestion, emailProps);
+      console.log("Email sent to teacher:", teacherEmail);
+    } catch (error) {
+      console.error('Failed to send email to teacher:', teacherEmail, error);
+    }
+  }
+
+  // Send email to vignesh@iraproject.com
+  try {
+    await sendMail('vignesh@iraproject.com', EmailTemplate.FlagQuestion, emailProps);
+    console.log("Email sent to vignesh@iraproject.com");
+  } catch (error) {
+    console.error('Failed to send email to vignesh@iraproject.com:', error);
+  }
+
+  return { success: true };
 };
 
