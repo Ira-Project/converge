@@ -47,6 +47,7 @@ export const activity = pgTable("activity", {
   order: integer("order").notNull(),
   points: integer("points").notNull(),
   topicId: varchar("topic_id", { length: 21 }).references(() => topics.id),
+  generated: boolean("generated").default(false).notNull(),
   createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),

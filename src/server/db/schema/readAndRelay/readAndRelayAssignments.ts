@@ -22,6 +22,7 @@ export const readAndRelayAssignments = pgTable(
     topicId: varchar("topic_id", { length: 21 }).notNull().references(() => topics.id),
     order: integer("order"),
     showAnswers: boolean("show_answers").default(true).notNull(),
+    generated: boolean("generated").default(false).notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),

@@ -1,7 +1,7 @@
 import { and, desc, eq, isNotNull } from "drizzle-orm";
 import { activity } from "@/server/db/schema/activity";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { GetActivitiesInput, GetActivityInput, GetLiveActivitiesInput, GetRandomActivitiesInput, MakeActivityLiveInput } from "./activities.input";
+import type { GetActivitiesInput, GetActivityInput, GetLiveActivitiesInput, GetRandomActivitiesInput, MakeActivityLiveInput, GetGeneratedActivitiesInput, GetAllActivitiesInput } from "./activities.input";
 import { Roles, ActivityType } from "@/lib/constants";
 import { knowledgeZapAssignmentAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
 import { stepSolveAssignmentAttempts } from "@/server/db/schema/stepSolve/stepSolveAssignment";
@@ -13,7 +13,7 @@ import { explainTestAttempts } from "@/server/db/schema/learnByTeaching/explainT
 export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivitiesInput) => {
 
   const activities = await ctx.db.query.activity.findMany({
-    where: eq(activity.classroomId, input.classroomId),
+    where: and(eq(activity.classroomId, input.classroomId), eq(activity.generated, false)),
     columns: {
       id: true,
       name: true,
@@ -283,6 +283,179 @@ export const getRandomActivities = async (ctx: ProtectedTRPCContext, input: GetR
     order: activity.order,
     dueDate: activity.dueDate,
   }));
+}
+
+export const getGeneratedActivities = async (ctx: ProtectedTRPCContext, input: GetGeneratedActivitiesInput) => {
+
+  const activities = await ctx.db.query.activity.findMany({
+    where: and(eq(activity.classroomId, input.classroomId), eq(activity.generated, true)),
+    columns: {
+      id: true,
+      name: true,
+      description: true,
+      typeText: true,
+      assignmentId: true,
+      classroomId: true,
+      isLive: true,
+      isLocked: true,
+      order: true,
+      topicId: true,
+      dueDate: true,
+    },
+    with: {
+      topic: {
+        columns: {
+          id: true,
+          name: true,
+          imageUrl: true,
+          description: true,          
+          slug: true,
+          order: true,
+        }
+      }
+    },
+  })
+
+  // Group activities by topic
+  const groupedActivities: Record<string, {
+    slug: string;
+    name: string;
+    description: string;
+    imageUrl: string;
+    order: string;
+    activities: {
+      id: string;
+      name: string;
+      description: string;
+      typeText: ActivityType;
+      assignmentId: string;
+      classroomId: string | null;
+      isLive: boolean;
+      isLocked: boolean;
+      order: number;
+      dueDate: string;
+    }[];
+  }> = {};
+
+  for (const activity of activities) {
+    if (activity.topic) {
+      if (!groupedActivities[activity.topic.id]) {
+        groupedActivities[activity.topic.id] = {
+          slug: activity.topic.slug,
+          name: activity.topic.name,
+          description: activity.topic.description ?? "",
+          imageUrl: activity.topic.imageUrl ?? "",  
+          order: activity.topic.order ?? "",
+          activities: [],
+        };
+      }
+      groupedActivities[activity.topic.id]!.activities.push({
+        id: activity.id,
+        name: activity.name,
+        description: activity.description ?? "",
+        typeText: activity.typeText as ActivityType,
+        assignmentId: activity.assignmentId ?? "",
+        classroomId: activity.classroomId ?? "",
+        isLive: activity.isLive,
+        isLocked: activity.isLocked,
+        order: activity.order,
+        dueDate: activity.dueDate?.toString() ?? "",
+      });
+    }
+  }
+
+  
+  const groupedActivitiesList = Object.values(groupedActivities);
+  groupedActivitiesList.sort((a, b) => a.order.localeCompare(b.order));
+  return groupedActivitiesList;
+}
+
+export const getAllActivities = async (ctx: ProtectedTRPCContext, input: GetAllActivitiesInput) => {
+
+  const activities = await ctx.db.query.activity.findMany({
+    where: eq(activity.classroomId, input.classroomId),
+    columns: {
+      id: true,
+      name: true,
+      description: true,
+      typeText: true,
+      generated: true,
+      assignmentId: true,
+      classroomId: true,
+      isLive: true,
+      isLocked: true,
+      order: true,
+      topicId: true,
+      dueDate: true,
+    },
+    with: {
+      topic: {
+        columns: {
+          id: true,
+          name: true,
+          imageUrl: true,
+          description: true,          
+          slug: true,
+          order: true,
+        }
+      }
+    },
+  })
+
+  // Group activities by topic
+  const groupedActivities: Record<string, {
+    slug: string;
+    name: string;
+    description: string;
+    imageUrl: string;
+    order: string;
+    activities: {
+      id: string;
+      name: string;
+      generated: boolean;
+      description: string;
+      typeText: ActivityType;
+      assignmentId: string;
+      classroomId: string | null;
+      isLive: boolean;
+      isLocked: boolean;
+      order: number;
+      dueDate: string;
+    }[];
+  }> = {};
+
+  for (const activity of activities) {
+    if (activity.topic) {
+      if (!groupedActivities[activity.topic.id]) {
+        groupedActivities[activity.topic.id] = {
+          slug: activity.topic.slug,
+          name: activity.topic.name,
+          description: activity.topic.description ?? "",
+          imageUrl: activity.topic.imageUrl ?? "",  
+          order: activity.topic.order ?? "",
+          activities: [],
+        };
+      }
+      groupedActivities[activity.topic.id]!.activities.push({
+        id: activity.id,
+        name: activity.name,
+        description: activity.description ?? "",
+        typeText: activity.typeText as ActivityType,
+        generated: activity.generated,
+        assignmentId: activity.assignmentId ?? "",
+        classroomId: activity.classroomId ?? "",
+        isLive: activity.isLive,
+        isLocked: activity.isLocked,
+        order: activity.order,
+        dueDate: activity.dueDate?.toString() ?? "",
+      });
+    }
+  }
+
+  
+  const groupedActivitiesList = Object.values(groupedActivities);
+  groupedActivitiesList.sort((a, b) => a.order.localeCompare(b.order));
+  return groupedActivitiesList;
 }
 
 

@@ -49,7 +49,8 @@ export async function createClassroom(
   const kza = await db.select().from(knowledgeZapAssignments).where(
     and(
       eq(knowledgeZapAssignments.isDeleted, false), 
-      eq(knowledgeZapAssignments.isLatest, true)
+      eq(knowledgeZapAssignments.isLatest, true),
+      eq(knowledgeZapAssignments.generated, false)
     )
   );
   for(const knowledgeZapAssignment of kza) {
@@ -66,7 +67,12 @@ export async function createClassroom(
   }
 
   // Get all step solve assignments
-  const ssa = await db.select().from(stepSolveAssignments).where(eq(stepSolveAssignments.isDeleted, false));
+  const ssa = await db.select().from(stepSolveAssignments).where(
+    and(
+      eq(stepSolveAssignments.isDeleted, false),
+      eq(stepSolveAssignments.generated, false)
+    )
+  );
   
   // Group step solve assignments by topic
   const stepSolveByTopic: Record<string, typeof ssa> = {};
@@ -112,7 +118,10 @@ export async function createClassroom(
   }
 
   // Get all reasoning assignments
-  const ra = await db.select().from(reasoningAssignments).where(eq(reasoningAssignments.isDeleted, false));
+  const ra = await db.select().from(reasoningAssignments).where(and(
+    eq(reasoningAssignments.isDeleted, false),
+    eq(reasoningAssignments.generated, false)
+  ));
   for(const reasoningAssignment of ra) {
     await db.insert(activity).values({
       id: generateId(21),
@@ -127,7 +136,10 @@ export async function createClassroom(
   }
 
   // Get all learn by teaching assignments
-  const lbt = await db.select().from(explainAssignments).where(eq(explainAssignments.isDeleted, false));
+  const lbt = await db.select().from(explainAssignments).where(and(
+    eq(explainAssignments.isDeleted, false),
+    eq(explainAssignments.generated, false)
+  ));
   for(const learnByTeachingAssignment of lbt) {
     await db.insert(activity).values({
       id: generateId(21),
@@ -142,7 +154,10 @@ export async function createClassroom(
   }
 
   // Get all read and relay assignments
-  const rra = await db.select().from(readAndRelayAssignments).where(eq(readAndRelayAssignments.isDeleted, false));
+  const rra = await db.select().from(readAndRelayAssignments).where(and(
+    eq(readAndRelayAssignments.isDeleted, false),
+    eq(readAndRelayAssignments.generated, false)
+  ));
   for(const readAndRelayAssignment of rra) {
     await db.insert(activity).values({  
       id: generateId(21),
@@ -157,7 +172,10 @@ export async function createClassroom(
   }
 
   // Get all concept mapping assignments
-  const cma = await db.select().from(conceptMappingAssignments).where(eq(conceptMappingAssignments.isDeleted, false));
+  const cma = await db.select().from(conceptMappingAssignments).where(and(
+    eq(conceptMappingAssignments.isDeleted, false),
+    eq(conceptMappingAssignments.generated, false)
+  ));
   for(const conceptMappingAssignment of cma) {
     await db.insert(activity).values({
       id: generateId(21),

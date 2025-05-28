@@ -1,4 +1,4 @@
-import { and, eq } from "drizzle-orm";
+import { and, eq, or } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../trpc";
 import type { GetClassroomInput, GetClassroomStudentsInput, GetClassroomTeachersInput, GetOrCreateUserToClassroomInput, JoinClassroomInput, CreateClassroomInput, UpdateClassroomInput, RemoveStudentInput, ArchiveClassroomInput } from "./classroom.input";
 import { usersToClassrooms, classrooms } from "@/server/db/schema/classroom";
@@ -363,7 +363,14 @@ export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateCl
   const kza = await ctx.db.select().from(knowledgeZapAssignments).where(
     and(
       eq(knowledgeZapAssignments.isDeleted, false), 
-      eq(knowledgeZapAssignments.isLatest, true)
+      eq(knowledgeZapAssignments.isLatest, true),
+      or(
+        eq(knowledgeZapAssignments.generated, false),
+        and(
+          eq(knowledgeZapAssignments.generated, true),
+          eq(knowledgeZapAssignments.createdBy, ctx.user.id)
+        )
+      )
     )
   );
   for(const knowledgeZapAssignment of kza) {
@@ -380,8 +387,19 @@ export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateCl
   }
 
   // Get all step solve assignments
-  const ssa = await ctx.db.select().from(stepSolveAssignments).where(eq(stepSolveAssignments.isDeleted, false));
-  
+  const ssa = await ctx.db.select().from(stepSolveAssignments).where(
+    and(
+      eq(stepSolveAssignments.isDeleted, false),
+      or(
+        eq(stepSolveAssignments.generated, false),
+        and(
+          eq(stepSolveAssignments.generated, true),
+          eq(stepSolveAssignments.createdBy, ctx.user.id)
+        )
+      )
+    )
+  );
+
   // Group step solve assignments by topic
   const stepSolveByTopic: Record<string, typeof ssa> = {};
   
@@ -426,7 +444,16 @@ export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateCl
   }
 
   // Get all reasoning assignments
-  const ra = await ctx.db.select().from(reasoningAssignments).where(eq(reasoningAssignments.isDeleted, false));
+  const ra = await ctx.db.select().from(reasoningAssignments).where(and(
+    eq(reasoningAssignments.isDeleted, false),
+    or(
+      eq(reasoningAssignments.generated, false),
+      and(
+        eq(reasoningAssignments.generated, true),
+        eq(reasoningAssignments.createdBy, ctx.user.id)
+      )
+    )
+  ));
   for(const reasoningAssignment of ra) {
     await ctx.db.insert(activity).values({
       id: generateId(21),
@@ -441,7 +468,16 @@ export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateCl
   }
 
   // Get all learn by teaching assignments
-  const lbt = await ctx.db.select().from(explainAssignments).where(eq(explainAssignments.isDeleted, false));
+  const lbt = await ctx.db.select().from(explainAssignments).where(and(
+    eq(explainAssignments.isDeleted, false),
+    or(
+      eq(explainAssignments.generated, false),
+      and(
+        eq(explainAssignments.generated, true),
+        eq(explainAssignments.createdBy, ctx.user.id)
+      )
+    )
+  ));
   for(const learnByTeachingAssignment of lbt) {
     await ctx.db.insert(activity).values({
       id: generateId(21),
@@ -456,7 +492,16 @@ export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateCl
   }
 
   // Get all read and relay assignments
-  const rra = await ctx.db.select().from(readAndRelayAssignments).where(eq(readAndRelayAssignments.isDeleted, false));
+  const rra = await ctx.db.select().from(readAndRelayAssignments).where(and(
+    eq(readAndRelayAssignments.isDeleted, false),
+    or(
+      eq(readAndRelayAssignments.generated, false),
+      and(
+        eq(readAndRelayAssignments.generated, true),
+        eq(readAndRelayAssignments.createdBy, ctx.user.id)
+      )
+    )
+  ));
   for(const readAndRelayAssignment of rra) {
     await ctx.db.insert(activity).values({  
       id: generateId(21),
@@ -471,7 +516,16 @@ export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateCl
   }
 
   // Get all concept mapping assignments
-  const cma = await ctx.db.select().from(conceptMappingAssignments).where(eq(conceptMappingAssignments.isDeleted, false));
+  const cma = await ctx.db.select().from(conceptMappingAssignments).where(and(
+    eq(conceptMappingAssignments.isDeleted, false),
+    or(
+      eq(conceptMappingAssignments.generated, false),
+      and(
+        eq(conceptMappingAssignments.generated, true),
+        eq(conceptMappingAssignments.createdBy, ctx.user.id)
+      )
+    )
+  ));
   for(const conceptMappingAssignment of cma) {
     await ctx.db.insert(activity).values({
       id: generateId(21),

@@ -17,6 +17,7 @@ export const explainAssignments = pgTable(
     order: integer("order"),
     showConcepts: boolean("show_concepts").default(false).notNull(),
     showAnswers: boolean("show_answers").default(true).notNull(),
+    generated: boolean("generated").default(false).notNull(),
     createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
     createdAt: timestamp("created_at").defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),

@@ -10,6 +10,7 @@ export const Paths = {
   Signup: "/signup",
   Onboarding: "/onboarding",
   Activities: "/activities",
+  GeneratedActivities: "/generated-activities",
   Documentation: "/documentation",
   Leaderboard: "/leaderboard",
   Analytics: "/analytics",
