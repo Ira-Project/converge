@@ -1,12 +1,11 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
 import { reasoningAttemptFinalAnswer, reasoningPathwayAttempts, reasoningPathwayAttemptSteps } from "@/server/db/schema/reasoning/reasoningQuestionAttempts";
-import type { Part1EvaluatePathwayInput, part2CorrectPathwayInput, Part3FinalCorrectAnswerInput } from "./reasoning.input";
+import type { Part1IdentifyCorrectPathwayInput, Part2ComputeCorrectAnswerInput, Part3ErrorAnalysisInput } from "./reasoning.input";
 import { ReasoningPathwayStepResult } from "@/lib/constants";
 import { eq } from "drizzle-orm";
 
-
-export const part1EvaluatePathway = async (ctx: ProtectedTRPCContext, input: Part1EvaluatePathwayInput) => {
+export const part1IdentifyCorrectPathway = async (ctx: ProtectedTRPCContext, input: Part1IdentifyCorrectPathwayInput) => {
 
   // Create the part 1 attempt object
   const id = generateId(21);
@@ -31,6 +30,7 @@ export const part1EvaluatePathway = async (ctx: ProtectedTRPCContext, input: Par
           stepNumber: true,
           stepNumberList: true,
           isCorrect: true,
+          replacementOptionId: true,
         }
       }
     }
@@ -49,7 +49,12 @@ export const part1EvaluatePathway = async (ctx: ProtectedTRPCContext, input: Par
     
     // First check if the option exists in any of the correct positions
     for (const pathway of reasoningPathways) {
-      const matchingStep = pathway.steps.find(step => step.answerOptionId === optionId);
+      const matchingStep = pathway.steps.find(step => {
+        // Check both the correct answer option and replacement option
+        const correctOptionId = step.isCorrect ? step.answerOptionId : step.replacementOptionId;
+        return correctOptionId === optionId;
+      });
+      
       if (matchingStep) {
         // If the step exists, check if it's in the correct position
         if(matchingStep.stepNumberList?.includes(index + 1)) {
@@ -94,17 +99,41 @@ export const part1EvaluatePathway = async (ctx: ProtectedTRPCContext, input: Par
   return {
     pathwayId,
     results,
+    overallCorrect,
   };
   
 }
 
-// @TODO: Pass in pathway ID in part 2
-export const part2CorrectPathway = async (ctx: ProtectedTRPCContext, input: part2CorrectPathwayInput) => {
+export const part2ComputeCorrectAnswer = async (ctx: ProtectedTRPCContext, input: Part2ComputeCorrectAnswerInput) => {
+  const question = await ctx.db.query.reasoningQuestions.findFirst({
+    where: (table, { eq }) => eq(table.id, input.questionId),
+    columns: {
+      correctAnswers: true,
+    },
+  });
+
+  const correctAnswers = question?.correctAnswers.map((answer) => answer.toLocaleLowerCase());
+  const correct = correctAnswers?.includes(input.answer.toLocaleLowerCase()) ?? false;
+
+  await ctx.db.insert(reasoningAttemptFinalAnswer).values({
+    id: generateId(21),
+    attemptId: input.attemptId,
+    questionId: input.questionId,
+    answer: input.answer,
+    isCorrect: correct,
+  });
+  
+  return {
+    correct: correct,
+  };
+}
+
+export const part3ErrorAnalysis = async (ctx: ProtectedTRPCContext, input: Part3ErrorAnalysisInput) => {
 
   const id = generateId(21);
   await ctx.db.insert(reasoningPathwayAttempts).values({
     id,
-    part: 2,
+    part: 3,
     attemptId: input.attemptId,
     questionId: input.questionId,
   });
@@ -129,37 +158,32 @@ export const part2CorrectPathway = async (ctx: ProtectedTRPCContext, input: part
     }
   });
   
-  // Evaluate the pathway
+  // Evaluate the incorrect pathway provided by the user to show what would lead to errors
   const results: { optionId: string, result: ReasoningPathwayStepResult }[] = []
-  // Check if pathways exist and get the first one's ID
-  
-  const incorrectOptions = []
+  const incorrectStepIndices: number[] = []
 
   let overallCorrect = true;
 
-  for (const [index, optionId] of input.optionIds.entries()) {
+  for (const [index, optionId] of input.incorrectOptionIds.entries()) {
     let result = ReasoningPathwayStepResult.WRONG;
     
-    const step = reasoningPathway?.steps.find((step) => step.answerOptionId === input.originalOptionIds[index]);
-    const answerOptionId = step?.isCorrect ? step?.answerOptionId : step?.replacementOptionId;
+    const correctStep = reasoningPathway?.steps.find((step) => step.stepNumber === index + 1);
+    const correctOptionId = correctStep?.answerOptionId;
 
-    // Check if option is in correct position
-    if (answerOptionId === optionId) {
+    // Check if this step matches the correct pathway
+    if (correctOptionId === optionId) {
       result = ReasoningPathwayStepResult.CORRECT;
-      if (!step?.isCorrect) {
-        incorrectOptions.push(index);
-      }
     } else {
-      // Check if option exists in a different position
+      // Check if option exists in a different position (wrong position)
       const existsInDifferentPosition = reasoningPathway?.steps.some(
-        (s) => (s.isCorrect ? s.answerOptionId : s.replacementOptionId) === optionId && s.stepNumber !== index + 1
+        (s) => (s.answerOptionId) === optionId && s.stepNumber !== index + 1
       );
       if (existsInDifferentPosition) {
         result = ReasoningPathwayStepResult.WRONG_POSITION;
+      } else {
+        result = ReasoningPathwayStepResult.WRONG;
       }
-    }
-
-    if (result !== ReasoningPathwayStepResult.CORRECT) {
+      incorrectStepIndices.push(index);
       overallCorrect = false;
     }
 
@@ -177,7 +201,7 @@ export const part2CorrectPathway = async (ctx: ProtectedTRPCContext, input: part
     });
   }
 
-  // Update the part 2 attempt object if correct
+  // Update the part 3 attempt object if they correctly identified errors
   if (overallCorrect) {
     await ctx.db.update(reasoningPathwayAttempts).set({
       correct: true,
@@ -186,30 +210,22 @@ export const part2CorrectPathway = async (ctx: ProtectedTRPCContext, input: part
 
   return {
     results,
-    incorrectOptions,
+    incorrectStepIndices,
+    overallCorrect,
   };
 }
 
-export const part3FinalCorrectAnswer = async (ctx: ProtectedTRPCContext, input: Part3FinalCorrectAnswerInput) => {
-  const question = await ctx.db.query.reasoningQuestions.findFirst({
-    where: (table, { eq }) => eq(table.id, input.questionId),
-    columns: {
-      correctAnswers: true,
-    },
-  });
+// Legacy functions for backward compatibility (if needed)
+export const part1EvaluatePathway = part1IdentifyCorrectPathway;
 
-  const correctAnswers = question?.correctAnswers.map((answer) => answer.toLocaleLowerCase());
-  const correct = correctAnswers?.includes(input.answer.toLocaleLowerCase()) ?? false;
-
-  await ctx.db.insert(reasoningAttemptFinalAnswer).values({
-    id: generateId(21),
+export const part2CorrectPathway = async (ctx: ProtectedTRPCContext, input: { attemptId: string; questionId: string; originalOptionIds: string[]; optionIds: string[]; pathwayId: string; }) => {
+  // Map the old part2CorrectPathway to the new part3ErrorAnalysis
+  return await part3ErrorAnalysis(ctx, {
     attemptId: input.attemptId,
     questionId: input.questionId,
-    answer: input.answer,
-    isCorrect: correct,
+    pathwayId: input.pathwayId,
+    incorrectOptionIds: input.optionIds, // The "corrected" options are actually the incorrect ones to analyze
   });
-  
-  return {
-    correct: correct,
-  };
-}
+};
+
+export const part3FinalCorrectAnswer = part2ComputeCorrectAnswer;

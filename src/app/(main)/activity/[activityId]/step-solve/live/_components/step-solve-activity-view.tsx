@@ -82,7 +82,8 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
       questionId: currentQuestion.q.id,
       questionAttemptId: currentState?.questionAttemptId ?? undefined,
       optionId: input.optionId,
-      answer: input.userAnswer
+      answer: input.userAnswer,
+      classroomId: classroomId,
     });
 
     setQuestionStates(prev => {

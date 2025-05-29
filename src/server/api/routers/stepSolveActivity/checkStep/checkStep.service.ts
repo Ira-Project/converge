@@ -183,13 +183,16 @@ export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput
     }
   });
 
+  // Determine classroom ID - use provided classroomId for revision cases, otherwise get from activity
+  const classroomId = input.classroomId ?? stepSolveAssignmentAttempt?.activity?.classroom?.id ?? "";
+
   for (const concept of step.concepts) {
     await ctx.db.insert(conceptTracking).values({
       id: generateId(15),
       conceptId: concept.conceptId ?? "",
       userId: ctx.user.id,
       activityType: ActivityType.StepSolve,
-      classroomId: stepSolveAssignmentAttempt?.activity?.classroom?.id ?? "",
+      classroomId: classroomId,
       isCorrect: isCorrect,
     });
   }
