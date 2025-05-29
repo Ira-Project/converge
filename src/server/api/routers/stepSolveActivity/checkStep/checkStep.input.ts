@@ -7,6 +7,7 @@ export const checkStepSchema = z.object({
   answer: z.string().optional(),
   optionId: z.string().optional(),
   attemptId: z.string(),
+  classroomId: z.string().optional(),
 });
 export type CheckStepInput = z.infer<typeof checkStepSchema>;
 
