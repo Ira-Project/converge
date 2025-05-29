@@ -5,7 +5,7 @@ import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "@/serv
 import { stepSolveStepReport } from "@/server/db/schema/stepSolve/stepSolveQuestions";
 import { eq } from "drizzle-orm";
 import { conceptTracking } from "@/server/db/schema/concept";
-import { ActivityType, STEP_SOLVE_ANSWER_TOLERANCE, Roles } from "@/lib/constants";
+import { ActivityType, STEP_SOLVE_ANSWER_TOLERANCE_PERCENTAGE, Roles } from "@/lib/constants";
 import { sendMail, EmailTemplate } from "@/lib/email";
 
 
@@ -105,7 +105,7 @@ export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput
       try {
         const answerNumber = parseFloat(input.answer ?? "");
         const stepSolveAnswerNumber = parseFloat(answer ?? "");
-        isCorrect = Math.abs(answerNumber - stepSolveAnswerNumber) < STEP_SOLVE_ANSWER_TOLERANCE;
+        isCorrect = Math.abs(answerNumber - stepSolveAnswerNumber) < (Math.abs(stepSolveAnswerNumber) * STEP_SOLVE_ANSWER_TOLERANCE_PERCENTAGE);
         if(isCorrect) {
         evaluationCorrect = true;
           break;
@@ -125,7 +125,7 @@ export const checkStep = async (ctx: ProtectedTRPCContext, input: CheckStepInput
     for(const answer of step.stepSolveAnswer ?? []) {
       const answerNumber = parseFloat(input.answer ?? "");
       const stepSolveAnswerNumber = parseFloat(answer ?? "");
-      const calculation = Math.abs(answerNumber - stepSolveAnswerNumber) < 0.01;
+      const calculation = Math.abs(answerNumber - stepSolveAnswerNumber) < (Math.abs(stepSolveAnswerNumber) * STEP_SOLVE_ANSWER_TOLERANCE_PERCENTAGE);
       if(calculation) {
         evaluationCorrect = true;
         break;
