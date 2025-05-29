@@ -11,6 +11,7 @@ import posthog from 'posthog-js';
 import { FlagQuestionModal } from './flag-question-modal';
 import { KnowledgeZapQuestionType } from '@/lib/constants';
 import { Flag } from 'lucide-react';
+import { RotateCounterClockwiseIcon } from '@/components/icons';
 
 interface MatchingQuestionProps {
   assignmentAttemptId: string;
@@ -178,6 +179,12 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
     }
   };
 
+  const handleReset = () => {
+    posthog.capture("knowledge_zap_matching_question_reset");
+    setMatches([]);
+    setSelectedTerm(null);
+    setSelectedDefinition(null);
+  };
 
   return (
     <div className="flex flex-col gap-8">
@@ -203,54 +210,68 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
           height={300} />
       )}
       <p className="text-sm text-center text-muted-foreground">Match the terms to the definitions</p>
-      <div ref={containerRef} className="grid grid-cols-2 gap-32 relative">
-        <div className="space-y-2 h-full flex flex-col">
-          {optionsA.map((option) => (
-            <button
-              key={option}
-              data-option={cleanLatexForDataAttribute(option)}
-              onClick={() => {
-                if (selectedDefinition) {
-                  handleMatch(option, selectedDefinition);
-                } else {
-                  setSelectedTerm(option);
-                }
-              }}
-              className={`${getButtonClassNames(
-                selectedTerm === option,
-              )} flex-1`}
-              disabled={matches.some(m => m.optionA === option) && !selectedDefinition}
-              style={{
-                boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
-              }}
-            >
-              <FormattedText text={option} />
-            </button>
-          ))}
+      <div>
+        <div ref={containerRef} className="grid grid-cols-2 gap-32 relative">
+          <div className="space-y-2 h-full flex flex-col">
+            {optionsA.map((option) => (
+              <button
+                key={option}
+                data-option={cleanLatexForDataAttribute(option)}
+                onClick={() => {
+                  if (selectedDefinition) {
+                    handleMatch(option, selectedDefinition);
+                  } else {
+                    setSelectedTerm(option);
+                  }
+                }}
+                className={`${getButtonClassNames(
+                  selectedTerm === option,
+                )} flex-1`}
+                disabled={matches.some(m => m.optionA === option) && !selectedDefinition}
+                style={{
+                  boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
+                }}
+              >
+                <FormattedText text={option} />
+              </button>
+            ))}
+          </div>
+          <div className="space-y-2 h-full flex flex-col">
+            {optionsB.map((def) => (
+              <button
+                key={def}
+                data-option={cleanLatexForDataAttribute(def)}
+                onClick={() => {
+                  if (selectedTerm) {
+                    handleMatch(selectedTerm, def);
+                  } else {
+                    setSelectedDefinition(def);
+                  }
+                }}
+                className={getButtonClassNames(
+                  selectedDefinition === def,
+                )}
+                disabled={matches.some(m => m.optionB === def) && !selectedTerm}
+                style={{
+                  boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
+                }}
+              >
+                <FormattedText text={def} />
+              </button>
+            ))}
+          </div>
         </div>
-        <div className="space-y-2 h-full flex flex-col">
-          {optionsB.map((def) => (
-            <button
-              key={def}
-              data-option={cleanLatexForDataAttribute(def)}
-              onClick={() => {
-                if (selectedTerm) {
-                  handleMatch(selectedTerm, def);
-                } else {
-                  setSelectedDefinition(def);
-                }
-              }}
-              className={getButtonClassNames(
-                selectedDefinition === def,
-              )}
-              disabled={matches.some(m => m.optionB === def) && !selectedTerm}
-              style={{
-                boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
-              }}
-            >
-              <FormattedText text={def} />
-            </button>
-          ))}
+        <div className="col-span-2 flex justify-end mt-2">
+          <Button
+            variant="link"
+            size="sm"
+            onClick={handleReset}
+            disabled={matches.length === 0}
+            className="flex items-center gap-2 text-muted-foreground hover:text-gray-900"
+          >
+            <RotateCounterClockwiseIcon className="h-4 w-4" />
+            Reset
+          </Button>
         </div>
       </div>
 
