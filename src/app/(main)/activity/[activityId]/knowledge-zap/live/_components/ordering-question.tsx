@@ -57,10 +57,12 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
   };
 
   const handleDragStart = (item: MultipleChoiceOption) => {
+    if (isSubmitted) return;
     setDraggedItem(item);
   };
 
   const handleDragOver = (e: React.DragEvent, overItem: MultipleChoiceOption) => {
+    if (isSubmitted) return;
     posthog.capture("knowledge_zap_ordering_question_drag_completed");
     e.preventDefault();
     if (draggedItem === overItem) return;
@@ -145,12 +147,14 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
         {order.map((item) => (
           <div
             key={item.id}
-            draggable
+            draggable={!isSubmitted}
             onDragStart={() => handleDragStart(item)}
             onDragOver={(e) => handleDragOver(e, item)}
             className="w-full p-3 rounded-lg transition-colors text-center text-sm bg-lime-100"
             style={{
               boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
+              opacity: isSubmitted ? 0.6 : 1,
+              cursor: isSubmitted ? 'not-allowed' : 'grab',
             }}
           >
             <FormattedText text={item.option} />

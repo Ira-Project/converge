@@ -104,14 +104,18 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
           <button
             key={option.id}
             onClick={() => {
+              if (isSubmitted) return;
               posthog.capture("knowledge_zap_multiple_choice_question_option_clicked")
               setSelected(option.id);
             }}
+            disabled={isSubmitted}
             className={getButtonClassNames(
               selected === option.id,
             )}
             style={{
               boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
+              opacity: isSubmitted ? 0.6 : 1,
+              cursor: isSubmitted ? 'not-allowed' : 'pointer',
             }}
           >
             <FormattedText text={option.option} />

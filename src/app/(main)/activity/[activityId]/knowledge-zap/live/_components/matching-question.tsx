@@ -218,6 +218,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
                 key={option}
                 data-option={cleanLatexForDataAttribute(option)}
                 onClick={() => {
+                  if (isSubmitted) return; // Prevent interaction after submission
                   if (selectedDefinition) {
                     handleMatch(option, selectedDefinition);
                   } else {
@@ -227,9 +228,11 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
                 className={`${getButtonClassNames(
                   selectedTerm === option,
                 )} flex-1`}
-                disabled={matches.some(m => m.optionA === option) && !selectedDefinition}
+                disabled={isSubmitted || (matches.some(m => m.optionA === option) && !selectedDefinition)} // Disable after submission or if already matched
                 style={{
                   boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
+                  opacity: isSubmitted ? 0.6 : 1, // Visual feedback for disabled state
+                  cursor: isSubmitted ? 'not-allowed' : 'pointer',
                 }}
               >
                 <FormattedText text={option} />
@@ -242,6 +245,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
                 key={def}
                 data-option={cleanLatexForDataAttribute(def)}
                 onClick={() => {
+                  if (isSubmitted) return; // Prevent interaction after submission
                   if (selectedTerm) {
                     handleMatch(selectedTerm, def);
                   } else {
@@ -251,9 +255,11 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
                 className={getButtonClassNames(
                   selectedDefinition === def,
                 )}
-                disabled={matches.some(m => m.optionB === def) && !selectedTerm}
+                disabled={isSubmitted || (matches.some(m => m.optionB === def) && !selectedTerm)} // Disable after submission or if already matched
                 style={{
                   boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
+                  opacity: isSubmitted ? 0.6 : 1, // Visual feedback for disabled state
+                  cursor: isSubmitted ? 'not-allowed' : 'pointer',
                 }}
               >
                 <FormattedText text={def} />
@@ -266,8 +272,12 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
             variant="link"
             size="sm"
             onClick={handleReset}
-            disabled={matches.length === 0}
+            disabled={isSubmitted || matches.length === 0} // Disable reset button after submission
             className="flex items-center gap-2 text-muted-foreground hover:text-gray-900"
+            style={{
+              opacity: isSubmitted ? 0.6 : 1, // Visual feedback for disabled state
+              cursor: isSubmitted ? 'not-allowed' : 'pointer',
+            }}
           >
             <RotateCounterClockwiseIcon className="h-4 w-4" />
             Reset

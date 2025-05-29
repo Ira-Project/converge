@@ -57,10 +57,12 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
   };
 
   const handleDragStart = (item: MultipleChoiceOption) => {
+    if (isSubmitted) return;
     setDraggedItem(item);
   };
 
   const handleDragOver = (e: React.DragEvent, overItem: MultipleChoiceOption) => {
+    if (isSubmitted) return;
     posthog.capture("knowledge_zap_ordering_question_drag_completed");
     e.preventDefault();
     if (draggedItem === overItem) return;
@@ -118,7 +120,7 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
             {order.map((option, index) => (
               <div
                 key={option.id}
-                draggable
+                draggable={!isSubmitted}
                 onDragStart={() => handleDragStart(option)}
                 onDragOver={(e) => e.preventDefault()}
                 onDrop={(e) => {
@@ -128,6 +130,8 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
                 className="flex items-center gap-3 p-3 bg-lime-100 rounded-lg border border-gray-200 cursor-move hover:shadow-md transition-shadow"
                 style={{
                   boxShadow: '4px 4px 8px rgba(229, 249, 186, 100), -4px -4px 8px rgba(255, 255, 255, 100)',
+                  opacity: isSubmitted ? 0.6 : 1,
+                  cursor: isSubmitted ? 'not-allowed' : 'move',
                 }}
               >
                 <div className="flex items-center justify-center w-6 h-6 bg-white rounded-full text-sm font-medium text-gray-600">
