@@ -144,6 +144,8 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
     setSubmissionmodalOpen(true);
   }
 
+  const dueDatePassed = dueDate && new Date() > new Date(dueDate);
+
   return (
     <div className="flex flex-col">
       <div className="grid grid-cols-2 w-full h-12 border-b-slate-200 border-b pl-8 pr-4">
@@ -167,7 +169,8 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
               }
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
+                loading={submissionMutation.isLoading}
+                dueDatePassed={dueDatePassed}
                 />
             </>
             : 

@@ -1449,3 +1449,132 @@ export async function createGeneratedKnowledgeZapAssignment(topicName: string, u
   
   return knowledgeZapAssignment;
 }
+
+export async function seedKnowledgeZapAssignmentSubmission(
+  assignmentAttemptId: string,
+  assignmentId: string,
+  options: {
+    mode: 'trial' | 'proper';
+  } = { mode: 'trial' }
+) {
+  const { mode } = options;
+
+  console.log(`🎯 Starting ${mode} mode knowledge zap assignment submission`);
+  console.log(`Assignment Attempt ID: ${assignmentAttemptId}`);
+  console.log(`Assignment ID: ${assignmentId}`);
+
+  // Get the assignment attempt and related data
+  const attempt = await db.query.knowledgeZapAssignmentAttempts.findFirst({
+    where: (attempt, { eq }) => eq(attempt.id, assignmentAttemptId),
+    with: {
+      user: {
+        columns: {
+          id: true,
+          name: true,
+          email: true,
+        }
+      }
+    }
+  });
+
+  if (!attempt) {
+    throw new Error(`Assignment attempt not found: ${assignmentAttemptId}`);
+  }
+
+  // Get the assignment separately using the provided assignmentId
+  const assignment = await db.query.knowledgeZapAssignments.findFirst({
+    where: (assignment, { eq }) => eq(assignment.id, assignmentId),
+    with: {
+      questionToAssignment: true,
+    }
+  });
+
+  if (!assignment) {
+    throw new Error(`Assignment not found: ${assignmentId}`);
+  }
+
+  if (attempt.submittedAt) {
+    console.log(`⚠️  Warning: This attempt has already been submitted at ${attempt.submittedAt.toISOString()}`);
+    if (mode === 'proper') {
+      throw new Error("Cannot resubmit an already submitted attempt in proper mode");
+    }
+  }
+
+  console.log(`📝 User: ${attempt.user?.name ?? 'Unknown'} (${attempt.user?.email ?? 'Unknown'})`);
+  console.log(`📚 Assignment: ${assignment.name ?? 'Unknown'}`);
+
+  // Get all question attempts for this assignment attempt
+  const questionAttempts = await db.query.knowledgeZapQuestionAttempts.findMany({
+    where: (questionAttempt, { eq }) => eq(questionAttempt.attemptId, assignmentAttemptId),
+  });
+
+  console.log(`🔍 Found ${questionAttempts.length} question attempts`);
+
+  // Calculate the score using the same logic as the service
+  const submissionTime = new Date();
+  const correctAttempts = questionAttempts.filter((attempt) => attempt.isCorrect);
+  const score = (correctAttempts.length * correctAttempts.length) / (questionAttempts.length * assignment.questionToAssignment.length);
+  const questionsCompleted = correctAttempts.length;
+  const totalAttempts = questionAttempts.length;
+
+  console.log(`\n📊 SUBMISSION SUMMARY:`);
+  console.log(`   Total questions in assignment: ${assignment.questionToAssignment.length}`);
+  console.log(`   Questions attempted: ${totalAttempts}`);
+  console.log(`   Correct answers: ${questionsCompleted}`);
+  console.log(`   Final score: ${score.toFixed(3)} (${(score * 100).toFixed(1)}%)`);
+  console.log(`   Score calculation: (${questionsCompleted} × ${questionsCompleted}) ÷ (${totalAttempts} × ${assignment.questionToAssignment.length})`);
+
+  if (mode === 'trial') {
+    console.log(`\n🧪 TRIAL MODE COMPLETE - No database changes made`);
+    console.log(`   This attempt would have been submitted with:`);
+    console.log(`   - Score: ${score.toFixed(3)}`);
+    console.log(`   - Questions Completed: ${questionsCompleted}`);
+    console.log(`   - Total Attempts: ${totalAttempts}`);
+    console.log(`   - Submitted At: ${submissionTime.toISOString()}`);
+    
+    return {
+      mode: 'trial',
+      assignmentAttemptId,
+      assignmentId,
+      score,
+      questionsCompleted,
+      totalAttempts,
+      submissionTime,
+      questionAttempts: questionAttempts.map(qa => ({
+        id: qa.id,
+        questionId: qa.questionId,
+        isCorrect: qa.isCorrect,
+      })),
+    };
+  }
+
+  // Submit the attempt using the same logic as the service (proper mode)
+  await db.update(knowledgeZapAssignmentAttempts)
+    .set({
+      score: score,
+      submittedAt: submissionTime,
+      questionsCompleted: questionsCompleted,
+      totalAttempts: totalAttempts,
+      updatedAt: submissionTime,
+    })
+    .where(eq(knowledgeZapAssignmentAttempts.id, assignmentAttemptId));
+
+  console.log(`\n✅ PROPER MODE COMPLETE - Assignment attempt submitted!`);
+  console.log(`   Submitted at: ${submissionTime.toISOString()}`);
+  console.log(`   Database record updated with final scores`);
+
+  return {
+    mode: 'proper',
+    assignmentAttemptId,
+    assignmentId,
+    score,
+    questionsCompleted,
+    totalAttempts,
+    submittedAt: submissionTime,
+    questionAttempts: questionAttempts.map(qa => ({
+      id: qa.id,
+      questionId: qa.questionId,
+      isCorrect: qa.isCorrect,
+    })),
+  };
+}

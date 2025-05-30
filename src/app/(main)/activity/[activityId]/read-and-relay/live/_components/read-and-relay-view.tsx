@@ -142,7 +142,9 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
       attemptId: attemptId,
     });
     setSubmissionmodalOpen(true);
-  }
+  };
+
+  const dueDatePassed = dueDate && new Date() > new Date(dueDate);
 
   return (
     <div className="flex flex-col">
@@ -167,7 +169,8 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
               }
               <ReadAndRelayConfirmationModal 
                 onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
+                loading={submissionMutation.isLoading}
+                dueDatePassed={dueDatePassed}
                 />
             </>
             : 

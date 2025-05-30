@@ -1,4 +1,4 @@
-import { eq } from "drizzle-orm";
+import { eq, and } from "drizzle-orm";
 import { db } from "../..";
 import { activity, activityToAssignment } from "../../schema/activity";
 import { classrooms, usersToClassrooms } from "../../schema/classroom";
@@ -349,4 +349,90 @@ export async function deleteUser(email: string) {
   await db.delete(users).where(eq(users.id, userId));
 
   console.log(`Successfully deleted user ${email} and all related data`);
+}
+
+export async function checkUsersWithInvalidDefaultClassrooms() {
+  console.log("Checking for users with invalid default classroom IDs...");
+
+  // Query users that have a defaultClassroomId set
+  const usersWithDefaultClassrooms = await db
+    .select({
+      userId: users.id,
+      userName: users.name,
+      userEmail: users.email,
+      defaultClassroomId: users.defaultClassroomId,
+    })
+    .from(users);
+
+  // Filter users who have a defaultClassroomId
+  const usersWithDefaults = usersWithDefaultClassrooms.filter(
+    user => user.defaultClassroomId !== null && user.defaultClassroomId !== undefined
+  );
+
+  console.log(`Found ${usersWithDefaults.length} users with default classroom IDs set`);
+
+  if (usersWithDefaults.length === 0) {
+    console.log("No users with default classroom IDs found");
+    return [];
+  }
+
+  const orphanedUsers = [];
+
+  // Check each user's default classroom ID
+  for (const user of usersWithDefaults) {
+    const classroom = await db
+      .select({ id: classrooms.id })
+      .from(classrooms)
+      .where(and(
+        eq(classrooms.id, user.defaultClassroomId!),
+        eq(classrooms.isDeleted, false)
+      ));
+
+    if (classroom.length === 0) {
+      console.log(`❌ User ${user.userEmail} (${user.userId}) has invalid default classroom ID: ${user.defaultClassroomId}`);
+      orphanedUsers.push({
+        userId: user.userId,
+        userName: user.userName,
+        userEmail: user.userEmail,
+        invalidClassroomId: user.defaultClassroomId,
+      });
+    } else {
+      console.log(`✅ User ${user.userEmail} has valid default classroom ID: ${user.defaultClassroomId}`);
+    }
+  }
+
+  if (orphanedUsers.length > 0) {
+    console.log(`\n⚠️  Found ${orphanedUsers.length} users with invalid default classroom IDs:`);
+    orphanedUsers.forEach(user => {
+      console.log(`   - ${user.userEmail} (${user.userId}) -> ${user.invalidClassroomId}`);
+    });
+  } else {
+    console.log("\n✅ All users with default classroom IDs have valid references");
+  }
+
+  return orphanedUsers;
+}
+
+export async function fixUsersWithInvalidDefaultClassrooms() {
+  console.log("Fixing users with invalid default classroom IDs...");
+  
+  const orphanedUsers = await checkUsersWithInvalidDefaultClassrooms();
+  
+  if (orphanedUsers.length === 0) {
+    console.log("No users with invalid default classroom IDs to fix");
+    return;
+  }
+
+  console.log(`Fixing ${orphanedUsers.length} users by setting their defaultClassroomId to null...`);
+  
+  for (const user of orphanedUsers) {
+    await db
+      .update(users)
+      .set({ defaultClassroomId: null })
+      .where(eq(users.id, user.userId));
+    
+    console.log(`✅ Fixed user ${user.userEmail} - set defaultClassroomId to null`);
+  }
+  
+  console.log(`Successfully fixed ${orphanedUsers.length} users`);
 }

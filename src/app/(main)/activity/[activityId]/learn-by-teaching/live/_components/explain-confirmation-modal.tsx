@@ -7,7 +7,8 @@ import React from "react";
 export default function ConfirmationModal({ 
   onSubmit, 
   loading,
-} : { onSubmit: () => Promise<void>, loading: boolean }) {  
+  dueDatePassed = false,
+} : { onSubmit: () => Promise<void>, loading: boolean, dueDatePassed?: boolean }) {  
   const closeRef = React.useRef<HTMLButtonElement>(null);
 
   return (
@@ -23,25 +24,32 @@ export default function ConfirmationModal({
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle className="mb-4 text-xl">Are you sure you want to submit?</DialogTitle>
+          <DialogTitle className="mb-4 text-xl">
+            {dueDatePassed ? "Due Date Has Passed" : "Are you sure you want to submit?"}
+          </DialogTitle>
           <DialogDescription>
-            This action cannot be undone. This will submit your assignment. While you may resubmit the assignment your submission will be visible to the teacher.
+            {dueDatePassed 
+              ? "The due date for this assignment has passed. Please contact your teacher for assistance with submitting this assignment." 
+              : "This action cannot be undone. This will submit your assignment. While you may resubmit the assignment your submission will be visible to the teacher."
+            }
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
           <DialogClose asChild>
-            <Button variant="outline">Cancel</Button>
+            <Button variant="outline">{dueDatePassed ? "Close" : "Cancel"}</Button>
           </DialogClose>
-          <LoadingButton 
-            className="bg-amber-700 text-white hover:bg-amber-900"
-            loading={loading}
-            onClick={ async () => {
-              posthog.capture("learn_by_teaching_submitted");
-              await onSubmit();
-              closeRef.current?.click();
-            }}>
-            Submit
-          </LoadingButton>
+          {!dueDatePassed && (
+            <LoadingButton 
+              className="bg-amber-700 text-white hover:bg-amber-900"
+              loading={loading}
+              onClick={ async () => {
+                posthog.capture("learn_by_teaching_submitted");
+                await onSubmit();
+                closeRef.current?.click();
+              }}>
+              Submit
+            </LoadingButton>
+          )}
         </DialogFooter>
       </DialogContent>
     </Dialog>

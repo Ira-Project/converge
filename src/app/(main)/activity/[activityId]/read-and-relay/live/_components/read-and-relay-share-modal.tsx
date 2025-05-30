@@ -53,7 +53,7 @@ import posthog from "posthog-js";
 
   useEffect(() => {
     // Set the assignment link after component mounts
-    setAssignmentLink(`${window.location.origin}${Paths.Activity}${activityId}${Paths.LearnByTeaching}${Paths.LiveActivity}`);
+    setAssignmentLink(`${window.location.origin}${Paths.Activity}${activityId}${Paths.ReadAndRelay}${Paths.LiveActivity}`);
   }, [activityId]);
 
   const copyToClipboard = async () => {

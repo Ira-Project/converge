@@ -68,6 +68,8 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
     setSubmissionmodalOpen(true);
   }
 
+  const dueDatePassed = dueDate && new Date() > new Date(dueDate);
+
   // Check Step Functions
   const handleSubmitAnswer = async (input: {
     stepId: string;
@@ -126,7 +128,8 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
               }
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
+                loading={submissionMutation.isLoading}
+                dueDatePassed={dueDatePassed}
                 />
             </>
             : 

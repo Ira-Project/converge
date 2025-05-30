@@ -47,6 +47,8 @@ const ConceptMappingAssignmentView: React.FC<ConceptMappingAssignmentViewProps> 
     setSubmissionmodalOpen(true);
   }
 
+  const dueDatePassed = dueDate && new Date() > new Date(dueDate);
+
   return (
     <div className="flex flex-col">
       {/* Header */}
@@ -71,7 +73,8 @@ const ConceptMappingAssignmentView: React.FC<ConceptMappingAssignmentViewProps> 
               }
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
+                loading={submissionMutation.isLoading}
+                dueDatePassed={dueDatePassed}
                 />
             </>
             : 
