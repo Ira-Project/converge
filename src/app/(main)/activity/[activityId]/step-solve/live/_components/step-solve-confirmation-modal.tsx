@@ -7,8 +7,7 @@ import posthog from "posthog-js";
 export default function ConfirmationModal({ 
   onSubmit, 
   loading,
-  dueDatePassed = false,
-} : { onSubmit: () => Promise<void>, loading: boolean, dueDatePassed?: boolean }) {  
+} : { onSubmit: () => Promise<void>, loading: boolean }) {  
   const closeRef = React.useRef<HTMLButtonElement>(null);
 
   return (
@@ -19,31 +18,26 @@ export default function ConfirmationModal({
       <DialogContent>
         <DialogHeader>
           <DialogTitle>
-            {dueDatePassed ? "Due Date Has Passed" : "Are you sure you want to submit?"}
+            Are you sure you want to submit?
           </DialogTitle>
           <DialogDescription>
-            {dueDatePassed 
-              ? "The due date for this assignment has passed. Please contact your teacher for assistance with submitting this assignment." 
-              : "This action cannot be undone. This will submit your assignment. While you may resubmit the assignment your submission will be visible to the teacher."
-            }
+            This action cannot be undone. This will submit your assignment. While you may resubmit the assignment your submission will be visible to the teacher.
           </DialogDescription>
         </DialogHeader>
         <DialogFooter>
           <DialogClose ref={closeRef} asChild>
-            <Button variant="outline">{dueDatePassed ? "Close" : "Cancel"}</Button>
+            <Button variant="outline">Cancel</Button>
           </DialogClose>
-          {!dueDatePassed && (
-            <LoadingButton 
-              className="bg-teal-700 text-white"
-              loading={loading}
-              onClick={ async () => {
-                posthog.capture("step_solve_submitted");
-                await onSubmit();
-                closeRef.current?.click();
-              }}>
-              Submit
-            </LoadingButton>
-          )}
+          <LoadingButton 
+            className="bg-teal-700 text-white"
+            loading={loading}
+            onClick={ async () => {
+              posthog.capture("step_solve_submitted");
+              await onSubmit();
+              closeRef.current?.click();
+            }}>
+            Submit
+          </LoadingButton>
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -153,6 +153,9 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
           <p className="text-lg font-semibold my-auto text-amber-700">
             Learn by Teaching
           </p>
+          {dueDatePassed && (
+            <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded my-auto">PAST DUE</span>
+          )}
           <Separator orientation="vertical" className="h-6 w-px my-auto" />
           <p className="text-sm my-auto">
             {topic}
@@ -170,7 +173,6 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
                 loading={submissionMutation.isLoading}
-                dueDatePassed={dueDatePassed}
                 />
             </>
             : 
