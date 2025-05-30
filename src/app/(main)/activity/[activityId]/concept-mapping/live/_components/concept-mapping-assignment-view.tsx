@@ -74,10 +74,12 @@ const ConceptMappingAssignmentView: React.FC<ConceptMappingAssignmentViewProps> 
                   topic={topic}
                   classroomId={classroomId} />
               }
-              <ConfirmationModal 
-                onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading}
-                />
+              {!dueDatePassed && (
+                <ConfirmationModal 
+                  onSubmit={submitAssignment} 
+                  loading={submissionMutation.isLoading}
+                  />
+              )}
             </>
             : 
             <>

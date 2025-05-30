@@ -170,10 +170,12 @@ export const ReadAndRelayAssignmentView = ({ activityId, readingPassage, topic, 
                   topic={topic}
                   classroom={classroom} />
               }
-              <ReadAndRelayConfirmationModal 
-                onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading}
-                />
+              {!dueDatePassed && (
+                <ReadAndRelayConfirmationModal 
+                  onSubmit={submitAssignment} 
+                  loading={submissionMutation.isLoading}
+                  />
+              )}
             </>
             : 
             <>
