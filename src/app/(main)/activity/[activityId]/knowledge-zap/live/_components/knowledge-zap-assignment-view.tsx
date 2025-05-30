@@ -181,6 +181,9 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
           <p className="text-lg font-semibold my-auto text-lime-700">
             Knowledge Zap
           </p>
+          {dueDatePassed && (
+            <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded my-auto">PAST DUE</span>
+          )}
           <Separator orientation="vertical" className="h-6 w-px my-auto" />
           <p className="text-sm my-auto">
             {topic}
@@ -196,7 +199,6 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
                 loading={submissionMutation.isLoading}
-                dueDatePassed={dueDatePassed}
                 />
             </>
             : 

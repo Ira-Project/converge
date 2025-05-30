@@ -17,6 +17,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role, classroomId
   const { id, typeText, isLive, dueDate } = activity;
   const { url, iconImage, title, tags, colour, description } = getMetaDataFromActivityType(typeText as ActivityType, id);
 
+  const dueDatePassed = dueDate && new Date() > new Date(dueDate);
 
   return (
     <div className="border rounded-2xl p-6 w-[400px]">
@@ -24,9 +25,13 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role, classroomId
         <div className="mb-4">
           <Image src={iconImage} alt={title} width={60} height={60} />
         </div>
-        {isLive && (
-          <span className="bg-destructive text-white text-xs px-2 py-1 rounded">LIVE</span>
-        )}
+        <div className="flex flex-col gap-1">
+          {dueDatePassed ? (
+            <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded">PAST DUE</span>
+          ) : isLive && (
+            <span className="bg-destructive text-white text-xs px-2 py-1 rounded">LIVE</span>
+          )}
+        </div>
         {/* {status === "SUBMITTED" && (
           <span className="bg-gray-500 text-white text-xs px-2 py-1 rounded">SUBMITTED</span>
         )} */}
@@ -58,8 +63,10 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role, classroomId
         ))}
       </div>
       <p className="text-sm text-muted-foreground mb-4 h-[60px] line-clamp-3">{description}</p>
-      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-        {dueDate ? formatDateShort(new Date(dueDate)) : "No due date"}
+      <div className="flex items-center justify-between text-sm mb-4">
+        <span className="text-gray-500">
+          {dueDate ? formatDateShort(new Date(dueDate)) : "No due date"}
+        </span>
       </div>
       <div className="flex gap-3 my-auto items-start vertical-align-middle">
         <Link href={`${url}${Paths.LiveActivity}`} className="p-0 underline text-xs my-auto">
