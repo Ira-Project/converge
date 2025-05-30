@@ -196,10 +196,12 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
               {knowledgeZapAttemptId.length > 0 && <AssignmentTutorialModal 
                 topic={topic}
                 classroomId={classroomId} />}
-              <ConfirmationModal 
-                onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading}
-                />
+              {!dueDatePassed && (
+                <ConfirmationModal 
+                  onSubmit={submitAssignment} 
+                  loading={submissionMutation.isLoading}
+                  />
+              )}
             </>
             : 
             <>

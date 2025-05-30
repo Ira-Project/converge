@@ -170,10 +170,12 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
                   topic={topic}
                   classroom={classroom} />
               }
-              <ConfirmationModal 
-                onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading}
-                />
+              {!dueDatePassed && (
+                <ConfirmationModal 
+                  onSubmit={submitAssignment} 
+                  loading={submissionMutation.isLoading}
+                  />
+              )}
             </>
             : 
             <>
