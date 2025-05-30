@@ -334,6 +334,8 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
     setSubmissionmodalOpen(true);
   }
 
+  const dueDatePassed = dueDate && new Date() > new Date(dueDate);
+
   return (
     <div className="flex flex-col">
       {/* Header */}
@@ -358,7 +360,8 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
               }
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
+                loading={submissionMutation.isLoading}
+                dueDatePassed={dueDatePassed}
                 />
             </>
             : 

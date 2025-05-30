@@ -10,14 +10,14 @@ import { ActivityType, Roles } from "@/lib/constants";
 import { classrooms } from "../schema/classroom";
 import { activity } from "../schema/activity";
 
-import { addConceptsToKnowledgeZapQuestions, computeQuestionsCompleted, createConceptTrackerForAllKnowledgeZapAttempts, createGeneratedKnowledgeZapAssignment, createKnowledgeZapAssignment, deleteKnowledgeZapAssignment, findConceptsWithoutKnowledgeZaps, findKnowledgeZapQuestionsWithoutConcepts, printConceptScores, updateKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
+import { addConceptsToKnowledgeZapQuestions, computeQuestionsCompleted, createConceptTrackerForAllKnowledgeZapAttempts, createGeneratedKnowledgeZapAssignment, createKnowledgeZapAssignment, deleteKnowledgeZapAssignment, findConceptsWithoutKnowledgeZaps, findKnowledgeZapQuestionsWithoutConcepts, printConceptScores, seedKnowledgeZapAssignmentSubmission, updateKnowledgeZapAssignment } from "./knowledge/knowledge-seed";
 import { addAssignmentIdToAttempts, createStepSolveAssignment, deleteStepSolveAssignment, updateStepSolveAssignmentAttempts, addConceptsToStepSolveSteps, findStepSolveStepsWithoutConcepts, createConceptTrackerForAllStepAttempts, createStepSolveToAssignment, findConceptsWithoutStepSolveSteps, createGeneratedStepSolveAssignment } from "./stepSolve/stepSolve-seed";
 import { computeAccuracyForReasoningAssignment, createReasoningAssignment, deleteReasoningAssignment } from "./reasoning/reasoning-seed";
 import { createReadAndRelayAssignment, deleteReadAndRelayAssignment } from "./readAndRelay/readAndRelay-seed";
 import { createConceptMappingAssignment, deleteConceptMappingAssignment } from "./conceptMapping/concept-mapping-seed";
 import { addConceptsToQuestions, createLearnByTeachingAssignment } from "./learnByTeaching/learnByTeaching-seed";
 
-import { deleteClassroom, deleteUser } from "./user/userSeed";
+import { deleteClassroom, deleteUser, checkUsersWithInvalidDefaultClassrooms, fixUsersWithInvalidDefaultClassrooms } from "./user/userSeed";
 import { createTopics } from "./topics/topic-seed";
 import { createConcepts, createGeneratedConcepts } from "./concept/concept-seed";
 import { addActivityToAssignment } from "./activity";
@@ -85,8 +85,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createConceptMappingAssignment();
 
 // USER DELETION
-await deleteUser("vigfb9295@gmail.com");
-await deleteUser("Vignesh+3@iraproject.com");
+// await deleteUser("vigfb9295@gmail.com");
 // await deleteClassroom("3eiin0pujtyg28x8gyiqp");
 
 // MIGRATE ACTIVITY TYPE TO TEXT

@@ -171,6 +171,8 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
 
   console.log("Classroom ID", classroomId);
 
+  const dueDatePassed = dueDate && new Date() > new Date(dueDate);
+
   return (
     <div className="flex flex-col min-h-full h-full">
       {/* Header */}
@@ -193,7 +195,8 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
                 classroomId={classroomId} />}
               <ConfirmationModal 
                 onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading || (dueDate && new Date() > new Date(dueDate) ? true : false)}
+                loading={submissionMutation.isLoading}
+                dueDatePassed={dueDatePassed}
                 />
             </>
             : 
