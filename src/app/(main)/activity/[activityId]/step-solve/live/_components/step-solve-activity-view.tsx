@@ -5,6 +5,7 @@ import SubmissionModal from './step-solve-submission-modal';
 import AssignmentTutorialModal from './step-solve-tutorial-modal';
 import ConfirmationModal from './step-solve-confirmation-modal';
 import AssignmentShareModal from './step-solve-share-modal'
+import ConceptsModal from '@/components/ui/concepts-modal';
 import { type RouterOutputs } from '@/trpc/shared';
 import { api } from "@/trpc/react";
 import { Roles } from "@/lib/constants";
@@ -49,6 +50,12 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
       currentStepIncorrect: undefined,
       questionAttemptId: ''
     })) ?? [] 
+  );
+  
+  // Fetch concepts for teachers
+  const { data: concepts = [] } = api.stepSolve.getAssignmentConcepts.useQuery(
+    { activityId }, 
+    { enabled: role === Roles.Teacher }
   );
   
   const currentQuestion = stepSolveAssignment?.stepSolveQuestions?.[currentQuestionIndex];
@@ -140,9 +147,12 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
             <>
               {
                 stepSolveAttemptId.length > 0 &&
-                <AssignmentTutorialModal 
+                <ConceptsModal 
                   topic={topic}
-                  classroomId={classroomId} />
+                  classroomId={classroomId}
+                  concepts={concepts}
+                  activityType="Step Solve"
+                  />
               }
               <AssignmentShareModal 
                 activityId={activityId}

@@ -24,4 +24,7 @@ export const stepSolveRouter = createTRPCRouter({
   getRevisionActivity: protectedProcedure
     .input(inputs.getStepSolveRevisionActivitySchema)
     .query(({ ctx, input }) => services.getStepSolveRevisionActivity(ctx, input)),
+  getAssignmentConcepts: protectedProcedure
+    .input(inputs.getStepSolveAssignmentConceptsSchema)
+    .query(({ ctx, input }) => services.getStepSolveAssignmentConcepts(ctx, input)),
 });

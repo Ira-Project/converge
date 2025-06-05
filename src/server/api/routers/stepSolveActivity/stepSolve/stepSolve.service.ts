@@ -1,9 +1,9 @@
-import { asc, eq, sql } from "drizzle-orm";
+import { asc, eq, sql, inArray } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
 import { ActivityType, MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE, Roles } from "@/lib/constants";
 import { stepSolveQuestionToAssignment, stepSolveStep } from "@/server/db/schema/stepSolve/stepSolveQuestions";
-import type { CreateStepSolveAssignmentAttemptInput, GetStepSolveAssignmentAnalyticsInput, GetStepSolveAssignmentInput, GetStepSolveAssignmentQuestionAnalyticsInput, GetStepSolveAssignmentSubmissionsInput, GetStepSolveRevisionActivityInput, SubmitStepSolveAssignmentAttemptInput } from "./stepSolve.input";
+import type { CreateStepSolveAssignmentAttemptInput, GetStepSolveAssignmentAnalyticsInput, GetStepSolveAssignmentInput, GetStepSolveAssignmentQuestionAnalyticsInput, GetStepSolveAssignmentSubmissionsInput, GetStepSolveRevisionActivityInput, SubmitStepSolveAssignmentAttemptInput, GetStepSolveAssignmentConceptsInput } from "./stepSolve.input";
 import { stepSolveAssignmentAttempts,  } from "@/server/db/schema/stepSolve/stepSolveAssignment";
 
 // Utility function to shuffle an array using Fisher-Yates algorithm
@@ -736,21 +736,93 @@ export const getStepSolveRevisionActivity = async (ctx: ProtectedTRPCContext, in
     }
   }
 
-  const concepts = await ctx.db.query.stepSolveStepConcepts.findMany({
-    with: {
-      step: {
-        with: {
-          question: {
-            with: {
-              topic: true,
-            }
-          }
-        }
-      }
+  // Step 1: Get step concepts with limited nesting
+  const stepConcepts = await ctx.db.query.stepSolveStepConcepts.findMany({
+    columns: {
+      id: true,
+      stepId: true,
+      conceptId: true,
     }
   });
 
-  const liveConcepts = concepts.filter(c => topicSet.has(c.step?.question?.topic?.id ?? ''));
+  // Step 2: Get all step IDs and query steps with questions
+  const stepIds = stepConcepts.map(sc => sc.stepId).filter((id): id is string => id !== null);
+  const uniqueStepIds = [...new Set(stepIds)];
+
+  if (uniqueStepIds.length === 0) {
+    return {
+      stepSolveQuestions: [],
+    };
+  }
+
+  const steps = await ctx.db.query.stepSolveStep.findMany({
+    where: (step, { inArray }) => inArray(step.id, uniqueStepIds),
+    columns: {
+      id: true,
+      questionId: true,
+    }
+  });
+
+  // Step 3: Get all question IDs and query questions with topics
+  const questionIds = steps.map(s => s.questionId).filter((id): id is string => id !== null);
+  const uniqueQuestionIds = [...new Set(questionIds)];
+
+  if (uniqueQuestionIds.length === 0) {
+    return {
+      stepSolveQuestions: [],
+    };
+  }
+
+  const questions = await ctx.db.query.stepSolveQuestions.findMany({
+    where: (question, { inArray }) => inArray(question.id, uniqueQuestionIds),
+    columns: {
+      id: true,
+      topicId: true,
+    }
+  });
+
+  // Step 4: Create mappings for efficient filtering
+  const stepToQuestionMap = new Map<string, string>();
+  steps.forEach(s => {
+    if (s.questionId) {
+      stepToQuestionMap.set(s.id, s.questionId);
+    }
+  });
+
+  const questionToTopicMap = new Map<string, string>();
+  questions.forEach(q => {
+    if (q.topicId) {
+      questionToTopicMap.set(q.id, q.topicId);
+    }
+  });
+
+  // Step 5: Build the concepts array with topic filtering
+  const concepts = stepConcepts.map(sc => {
+    const questionId = stepToQuestionMap.get(sc.stepId ?? '');
+    const topicId = questionId ? questionToTopicMap.get(questionId) : undefined;
+    
+    return {
+      id: sc.id,
+      stepId: sc.stepId,
+      conceptId: sc.conceptId,
+      step: {
+        id: sc.stepId,
+        questionId: questionId,
+        question: questionId ? {
+          id: questionId,
+          topicId: topicId,
+          topic: {
+            id: topicId,
+          }
+        } : undefined
+      }
+    };
+  });
+
+  const liveConcepts = concepts.filter(c => {
+    const topicId = c.step?.question?.topic?.id;
+    return topicId && topicSet.has(topicId);
+  });
 
   // STEP 3: Add new concepts to the question list at random to reach the concept limit
   if(conceptsToReview.length < MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE) {
@@ -788,25 +860,33 @@ export const getStepSolveRevisionActivity = async (ctx: ProtectedTRPCContext, in
   for(const concept of conceptsToReview) {
     if(conceptsAddedToQuestions.has(concept)) continue;
 
-    let questions = concepts.filter(c => c.conceptId === concept).map(c => c.step?.question?.id);
+    const questionsForConcept = concepts
+      .filter(c => c.conceptId === concept)
+      .map(c => c.step?.question?.id)
+      .filter((id): id is string => id !== undefined);
+    
     // First we will create a set of unique questions
-    questions = Array.from(new Set<string>(questions.filter(q => q !== undefined)));
+    const uniqueQuestions = Array.from(new Set(questionsForConcept));
 
     // choose a random question from the list
-    const question = questions[Math.floor(Math.random() * questions.length)];
+    const question = uniqueQuestions[Math.floor(Math.random() * uniqueQuestions.length)];
 
     if(!question) {
       console.log("This should never happen");
       continue
     };
+    
     // get the other concepts in the question
-    const allConceptsInQuestion = concepts.filter(c => c.step?.question?.id === question).map(c => c.conceptId);
+    const allConceptsInQuestion = concepts
+      .filter(c => c.step?.question?.id === question)
+      .map(c => c.conceptId)
+      .filter((id): id is string => id !== null && id !== undefined);
 
     // add the question to the question list
     questionIdsList.push(question);
 
     // add the other concepts to the conceptsAddedToQuestions
-    allConceptsInQuestion.forEach(c => c && conceptsAddedToQuestions.add(c));
+    allConceptsInQuestion.forEach(conceptId => conceptsAddedToQuestions.add(conceptId));
   }
 
 
@@ -854,3 +934,79 @@ export const getStepSolveRevisionActivity = async (ctx: ProtectedTRPCContext, in
     stepSolveQuestions: questionsWithShuffledOptions,
   };
 }
+
+export const getStepSolveAssignmentConcepts = async (ctx: ProtectedTRPCContext, input: GetStepSolveAssignmentConceptsInput) => {
+  
+  console.log("Getting step solve assignment concepts", input.activityId);
+  
+  // Step 1: Get activity to assignments
+  const activityToAssignments = await ctx.db.query.activityToAssignment.findMany({
+    where: (table, { eq }) => eq(table.activityId, input.activityId),
+    with: {
+      stepSolveAssignment: {
+        with: {
+          stepSolveQuestions: {
+            columns: {
+              id: true,
+              questionId: true,
+            }
+          }
+        }
+      }
+    }
+  });
+
+  if (!activityToAssignments.length) {
+    throw new Error("Assignment not found");
+  }
+
+  // Step 2: Get all question IDs from all assignments
+  const questionIds = activityToAssignments.flatMap(activityAssignment => 
+    activityAssignment.stepSolveAssignment?.stepSolveQuestions.map(q => q.questionId) ?? []
+  );
+
+  const uniqueQuestionIds = [...new Set(questionIds)];
+
+  // Step 3: Get questions with their steps
+  const questions = await ctx.db.query.stepSolveQuestions.findMany({
+    where: (question, { inArray }) => inArray(question.id, uniqueQuestionIds),
+    with: {
+      steps: {
+        columns: {
+          id: true,
+        }
+      }
+    }
+  });
+
+  // Step 4: Get all step IDs
+  const stepIds = questions.flatMap(q => q.steps.map(s => s.id));
+
+  // Step 5: Get step concepts
+  const stepConcepts = await ctx.db.query.stepSolveStepConcepts.findMany({
+    where: (stepConcept, { inArray }) => inArray(stepConcept.stepId, stepIds),
+    columns: {
+      id: true,
+      conceptId: true,
+    }
+  });
+
+  // Step 6: Get all concept IDs
+  const conceptIds = stepConcepts
+    .map(sc => sc.conceptId)
+    .filter((id): id is string => id !== null);
+
+  const uniqueConceptIds = [...new Set(conceptIds)];
+
+  // Step 7: Get the actual concept data
+  const concepts = await ctx.db.query.concepts.findMany({
+    where: (concept, { inArray }) => inArray(concept.id, uniqueConceptIds),
+    columns: {
+      id: true,
+      text: true,
+      answerText: true,
+    }
+  });
+
+  return concepts;
+};

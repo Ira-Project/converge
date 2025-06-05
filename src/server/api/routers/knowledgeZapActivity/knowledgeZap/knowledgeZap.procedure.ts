@@ -30,4 +30,8 @@ export const knowledgeZapRouter = createTRPCRouter({
   getKnowledgeZapRevisionActivity: protectedProcedure
     .input(inputs.getKnowledgeZapRevisionActivityInput)
     .query(({ ctx, input }) => services.getKnowledgeZapRevisionActivity(ctx, input)),
+
+  getAssignmentConcepts: protectedProcedure
+    .input(inputs.getAssignmentConceptsInput)
+    .query(({ ctx, input }) => services.getAssignmentConcepts(ctx, input)),
 });

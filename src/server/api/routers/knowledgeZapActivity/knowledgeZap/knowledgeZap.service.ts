@@ -1,6 +1,6 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import type { SubmitAssignmentAttemptSchema, GetSubmissionsInput, GetAnalyticsCardsInput, CreateAssignmentAttemptInput, GetKnowledgeZapActivityInput, GetHeatMapInput, GetKnowledgeZapRevisionActivityInput } from "./knowledgeZap.input";
+import type { SubmitAssignmentAttemptSchema, GetSubmissionsInput, GetAnalyticsCardsInput, CreateAssignmentAttemptInput, GetKnowledgeZapActivityInput, GetHeatMapInput, GetKnowledgeZapRevisionActivityInput, GetAssignmentConceptsInput } from "./knowledgeZap.input";
 import { eq } from "drizzle-orm";
 import { ActivityType, MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE, Roles } from "@/lib/constants";
 import { knowledgeZapAssignmentAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
@@ -696,3 +696,69 @@ export const getKnowledgeZapRevisionActivity = async (ctx: ProtectedTRPCContext,
     questions,
   };
 }
+
+export const getAssignmentConcepts = async (ctx: ProtectedTRPCContext, input: GetAssignmentConceptsInput) => {
+  
+  const activity = await ctx.db.query.activity.findFirst({
+    where: (activity, { eq }) => eq(activity.id, input.activityId),
+  });
+
+  const assignmentId = activity?.assignmentId;
+
+  if(!assignmentId || activity?.typeText !== ActivityType.KnowledgeZap as string) {
+    throw new Error("Assignment not found");  
+  }
+
+  // Step 1: Get the assignment with questionToAssignment
+  const assignment = await ctx.db.query.knowledgeZapAssignments.findFirst({
+    where: (assignment, { eq }) => eq(knowledgeZapAssignments.id, assignmentId),
+    with: {
+      questionToAssignment: {
+        columns: {
+          id: true,
+          questionId: true,
+        }
+      }
+    }
+  });
+
+  if(!assignment) {
+    throw new Error("Assignment not found");
+  }
+
+  // Step 2: Get all question IDs from the assignment
+  const questionIds = assignment.questionToAssignment.map(qta => qta.questionId);
+
+  // Step 3: Get questions with their concepts relationship
+  const questions = await ctx.db.query.knowledgeZapQuestions.findMany({
+    where: (question, { inArray }) => inArray(question.id, questionIds),
+    with: {
+      questionsToConcepts: {
+        columns: {
+          id: true,
+          conceptId: true,
+        }
+      }
+    }
+  });
+
+  // Step 4: Get all concept IDs
+  const conceptIds = questions
+    .flatMap(q => q.questionsToConcepts)
+    .map(qtc => qtc.conceptId)
+    .filter((id): id is string => id !== null);
+
+  const uniqueConceptIds = [...new Set(conceptIds)];
+
+  // Step 5: Get the actual concept data
+  const concepts = await ctx.db.query.concepts.findMany({
+    where: (concept, { inArray }) => inArray(concept.id, uniqueConceptIds),
+    columns: {
+      id: true,
+      text: true,
+      answerText: true,
+    }
+  });
+
+  return concepts;
+};
