@@ -5,6 +5,7 @@ import SubmissionModal from './knowledge-zap-submission-modal';
 import AssignmentTutorialModal from './knowledge-zap-assignment-tutorial-modal';
 import ConfirmationModal from './knowledge-zap-confirmation-modal';
 import AssignmentShareModal from './knowledge-zap-assignment-share-modal'
+import ConceptsModal from '@/components/ui/concepts-modal';
 import { type RouterOutputs } from '@/trpc/shared';
 import { KnowledgeZapQuestionType, Roles } from "@/lib/constants";
 import { Separator } from '@/components/ui/separator';
@@ -144,6 +145,12 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
     knowledgeZapAssignment?.questions ?? []
   );
 
+  // Fetch concepts for teachers
+  const { data: concepts = [] } = api.knowledgeZap.getAssignmentConcepts.useQuery(
+    { activityId }, 
+    { enabled: role === Roles.Teacher }
+  );
+
   const stackPush = () => {
     setQuestionStack(prevStack => {
       if (prevStack.length === 0) return prevStack;
@@ -205,9 +212,12 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
             </>
             : 
             <>
-              {knowledgeZapAttemptId.length > 0 && <AssignmentTutorialModal 
+              {knowledgeZapAttemptId.length > 0 && <ConceptsModal 
                 topic={topic}
-                classroomId={classroomId} />}
+                classroomId={classroomId}
+                concepts={concepts}
+                activityType="Knowledge Zap"
+                />}
               <AssignmentShareModal 
                 activityId={activityId}
                 isLive={isLive} />

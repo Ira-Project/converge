@@ -36,4 +36,9 @@ export const getKnowledgeZapRevisionActivityInput = z.object({
 });
 export type GetKnowledgeZapRevisionActivityInput = z.infer<typeof getKnowledgeZapRevisionActivityInput>;
 
+export const getAssignmentConceptsInput = z.object({
+  activityId: z.string(),
+});
+export type GetAssignmentConceptsInput = z.infer<typeof getAssignmentConceptsInput>;
+
 
