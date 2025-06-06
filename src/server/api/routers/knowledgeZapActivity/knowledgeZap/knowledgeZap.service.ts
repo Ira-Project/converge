@@ -17,6 +17,12 @@ export const createAssignmentAttempt = async (ctx: ProtectedTRPCContext, input: 
       activityId: input.activityId,
       userId: ctx.user.id,
     })
+  } else if(input.assignmentId) {
+    await ctx.db.insert(knowledgeZapAssignmentAttempts).values({
+      id, 
+      userId: ctx.user.id,
+      assignmentId: input.assignmentId,
+    })
   } else {
     await ctx.db.insert(knowledgeZapAssignmentAttempts).values({
       id, 

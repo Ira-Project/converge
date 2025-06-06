@@ -19,6 +19,7 @@ export default async function KnowledgeZapPreviewPage(props: {
     knowledgeZapAssignment = await api.knowledgeZap.getKnowledgeZapAssignment.query({ assignmentId: params.assignmentId });
     knowledgeZapAttemptId = await api.knowledgeZap.createAssignmentAttempt.mutate({ 
       activityId: undefined,
+      assignmentId: params.assignmentId,
     });
     
     if(params.classroomId) {

@@ -20,7 +20,7 @@ import { addConceptsToQuestions, createLearnByTeachingAssignment } from "./learn
 import { deleteClassroom, deleteUser, checkUsersWithInvalidDefaultClassrooms, fixUsersWithInvalidDefaultClassrooms } from "./user/userSeed";
 import { createTopics } from "./topics/topic-seed";
 import { createConcepts, createGeneratedConcepts } from "./concept/concept-seed";
-import { addActivityToAssignment } from "./activity";
+import { addActivityToAssignment, deleteNonLiveActivitiesFromAllClassrooms } from "./activity";
 
 if(process.env.ENVIRONMENT === "prod") {
   console.log("WARNING: Running in production");
@@ -93,4 +93,5 @@ if(process.env.ENVIRONMENT === "prod") {
 
 // await clearStepSolveAssignmentTemplates();
 // await createStepSolveAssignmentTemplate();
-await updateStepSolveActivityAssignmentIds();
+// await updateStepSolveActivityAssignmentIds();
+// await deleteNonLiveActivitiesFromAllClassrooms();
