@@ -1,4 +1,4 @@
-import { ActivityType } from "@/lib/constants";
+import type { ActivityType } from "@/lib/constants";
 
 // Assignment interface - similar to Activity but for assignments
 export interface Assignment {

@@ -11,7 +11,7 @@ import { conceptMappingAssignments } from "@/server/db/schema/conceptMapping/con
 import { reasoningAssignments } from "@/server/db/schema/reasoning/reasoningAssignment";
 import { explainAssignments } from "@/server/db/schema/learnByTeaching/explainAssignment";
 
-export const getAssignments = async (ctx: ProtectedTRPCContext, input: GetAssignmentsInput) => {
+export const getAssignments = async (ctx: ProtectedTRPCContext, _input: GetAssignmentsInput) => {
   // Fetch all assignments from different types with their topic information
   const [
     knowledgeZapAssignmentsList,

@@ -4,7 +4,7 @@ import React from 'react';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import AssignmentCard from './assignment-card';
-import { Roles } from '@/lib/constants';
+import type { Roles } from '@/lib/constants';
 import type { AssignmentTopic } from '../types';
 
 interface AssignmentTopicSectionProps {

@@ -29,6 +29,7 @@ export const Paths = {
   ConceptMapping: "/concept-mapping/",
   CreateAssignment: "/create-assignment/",
   Activity: "/activity/",
+  ActivityPreview: "/activity-preview/",
   LiveActivity: "live",
 } as const;
 
