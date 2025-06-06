@@ -1,9 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import SubmissionModal from './knowledge-zap-submission-modal';
 import AssignmentTutorialModal from './knowledge-zap-assignment-tutorial-modal';
-import ConfirmationModal from './knowledge-zap-confirmation-modal';
 import { AssignActivityModal } from '@/app/(main)/activity-preview/_components/assign-activity-modal';
 import ConceptsModal from '@/components/ui/concepts-modal';
 import { type RouterOutputs } from '@/trpc/shared';
@@ -167,17 +165,6 @@ const KnowledgeZapPreview: React.FC<KnowledgeZapPreviewViewProps> = ({
     });
   }
 
-  // Submission Functions
-  const submissionMutation = api.knowledgeZap.submitAssignmentAttempt.useMutation();
-  const [submissionModalOpen, setSubmissionmodalOpen] = useState(false);
-  const submitAssignment = async () => {
-    await submissionMutation.mutateAsync({
-      assignmentAttemptId: knowledgeZapAttemptId,
-      assignmentId: knowledgeZapAssignment?.assignmentId ?? "",
-    });
-    setSubmissionmodalOpen(true);
-  }
-
   return (
     <div className="flex flex-col min-h-full h-full">
       {/* Header */}
@@ -192,19 +179,8 @@ const KnowledgeZapPreview: React.FC<KnowledgeZapPreviewViewProps> = ({
             {topic}
           </p>
         </div>
-        <SubmissionModal open={submissionModalOpen} />
         <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-          { role !== Roles.Teacher ?
-            <>
-              {knowledgeZapAttemptId.length > 0 && <AssignmentTutorialModal 
-                topic={topic}
-                classroomId={classroomId} />}
-              <ConfirmationModal 
-                onSubmit={submitAssignment} 
-                loading={submissionMutation.isLoading}
-                />
-            </>
-            : 
+          { role == Roles.Teacher &&
             <>
               {knowledgeZapAttemptId.length > 0 && <ConceptsModal 
                 topic={topic}

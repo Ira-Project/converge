@@ -33,8 +33,8 @@ interface QuestionState {
   currentStepCorrect?: boolean;
 }
 
-const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({ 
-  stepSolveAssignment, 
+const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
+  stepSolveAssignment,
   stepSolveAttemptId,
   activityId,
   topic,
@@ -49,15 +49,15 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
       step: 1,
       currentStepIncorrect: undefined,
       questionAttemptId: ''
-    })) ?? [] 
+    })) ?? []
   );
-  
+
   // Fetch concepts for teachers
   const { data: concepts = [] } = api.stepSolve.getAssignmentConcepts.useQuery(
-    { activityId }, 
+    { activityId },
     { enabled: role === Roles.Teacher }
   );
-  
+
   const currentQuestion = stepSolveAssignment?.stepSolveQuestions?.[currentQuestionIndex];
   const currentState = questionStates[currentQuestionIndex];
 
@@ -84,7 +84,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
     optionId?: string;
   }) => {
     if (!currentQuestion) return;
-    
+
     const result = await checkStepMutation.mutateAsync({
       stepId: input.stepId,
       attemptId: stepSolveAttemptId,
@@ -98,7 +98,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
     setQuestionStates(prev => {
       const newStates = [...prev];
       if (newStates[currentQuestionIndex]) {
-        
+
         newStates[currentQuestionIndex] = {
           ...newStates[currentQuestionIndex],
           currentStepCorrect: result.isCorrect ? undefined : result.isCorrect,
@@ -128,33 +128,37 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
         </div>
         <SubmissionModal open={submissionModalOpen} />
         <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-          { role !== Roles.Teacher ?
+          {role !== Roles.Teacher ?
             <>
               {
                 stepSolveAttemptId.length > 0 &&
-                <AssignmentTutorialModal 
+                <AssignmentTutorialModal
                   topic={topic}
                   classroomId={classroomId} />
               }
               {!dueDatePassed && (
-                <ConfirmationModal 
-                  onSubmit={submitAssignment} 
+                <ConfirmationModal
+                  onSubmit={submitAssignment}
                   loading={submissionMutation.isLoading}
-                  />
+                />
               )}
             </>
-            : 
+            :
             <>
               {
                 stepSolveAttemptId.length > 0 &&
-                <ConceptsModal 
+                <ConceptsModal
                   topic={topic}
                   classroomId={classroomId}
-                  concepts={concepts}
+                  concepts={concepts.map(c => ({
+                    id: c.id,
+                    text: c.name ?? "",
+                    answerText: c.name ?? "",
+                  }))}
                   activityType="Step Solve"
-                  />
+                />
               }
-              <AssignmentShareModal 
+              <AssignmentShareModal
                 activityId={activityId}
                 isLive={isLive} />
             </>
@@ -169,8 +173,8 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
               <div
                 key={index}
                 className={`w-4 h-4 rounded-full flex items-center justify-center border-2 
-                  ${index === currentQuestionIndex 
-                    ? 'border-teal-600 bg-teal-600 text-white' 
+                  ${index === currentQuestionIndex
+                    ? 'border-teal-600 bg-teal-600 text-white'
                     : 'border-teal-600 bg-white'
                   }`}
               />
@@ -180,7 +184,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
             <CardContent className="flex flex-col gap-8">
               <>
                 <div className="text-center text-lg">
-                  <FormattedText 
+                  <FormattedText
                     text={currentQuestion?.q.questionText ?? ""}
                   />
                   <div className="flex justify-center">
@@ -197,7 +201,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
               </>
 
               {
-                currentQuestion?.q.steps.map((step) => 
+                currentQuestion?.q.steps.map((step) =>
                   step.stepNumber <= (currentState?.step ?? 0) && (
                     <div key={step.id}>
                       <StepSolveStepComponent
@@ -218,9 +222,9 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
                         isLast={step.stepNumber === currentQuestion.q.steps.length}
                         stepSolveAnswerUnits={step.stepSolveAnswerUnits ?? undefined} />
                       {
-                        step.stepNumber < (currentState?.step ?? 0) && 
+                        step.stepNumber < (currentState?.step ?? 0) &&
                         step.stepNumber !== currentQuestion.q.steps.length &&
-                        <Separator className="my-4"/>
+                        <Separator className="my-4" />
                       }
                     </div>
                   )
