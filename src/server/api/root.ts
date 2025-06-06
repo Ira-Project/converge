@@ -24,6 +24,7 @@ import { conceptMappingRouter } from "./routers/conceptMappingActivity/conceptMa
 import { evaluateMapRouter } from "./routers/conceptMappingActivity/evaluateMap/evaluateMap.procedure";
 import { leaderboardRouter } from "./routers/leaderboard/leaderboard.procedure";
 import { analyticsRouter } from "./routers/analytics/analytics.procedure";
+import { assignmentsRouter } from "./routers/assignments/assignments.procedure";
 export const appRouter = createTRPCRouter({
   classroom: classroomRouter,
   subject: subjectRouter,
@@ -31,6 +32,7 @@ export const appRouter = createTRPCRouter({
   userOnboardingRouter: userOnboardingRouter,
   userSettings: userSettingsRouter,
   activities: activitiesRouter,
+  assignments: assignmentsRouter,
   leaderboard: leaderboardRouter,
   analytics: analyticsRouter,
   

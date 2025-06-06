@@ -13,12 +13,41 @@ export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
  * Represents a step solve assignment in the system
  * Contains details about the assignment configuration, classroom context, and metadata
  */
+export const stepSolveAssignmentTemplates = pgTable(
+  "step_solve_assignment_templates",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    name: text("name"),
+    description: text("description"),
+    assignmentIds: varchar("assignment_ids", { length: 21 }).array().notNull(),
+    topicId: varchar("topic_id", { length: 21 }).notNull().references(() => topics.id),
+    order: integer("order"),
+    generated: boolean("generated").default(false).notNull(),
+    createdBy: varchar("created_by", { length: 21 }).references(() => users.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+);
+export const stepSolveAssignmentTemplateRelations = relations(stepSolveAssignmentTemplates, ({ one, many }) => ({
+  topic: one(topics, {
+    fields: [stepSolveAssignmentTemplates.topicId],
+    references: [topics.id],
+  }),
+}));
+
+/**
+ * Represents a step solve assignment in the system
+ * Contains details about the assignment configuration, classroom context, and metadata
+ */
 export const stepSolveAssignments = pgTable(
   "step_solve_assignments",
   {
     id: varchar("id", { length: 21 }).primaryKey(),
     name: text("name"),
     description: text("description"),
+    templateId: varchar("template_id", { length: 21 }).references(() => stepSolveAssignmentTemplates.id),
     topicId: varchar("topic_id", { length: 21 }).notNull().references(() => topics.id),
     order: integer("order"),
     generated: boolean("generated").default(false).notNull(),
@@ -33,6 +62,10 @@ export const stepSolveAssignmentRelations = relations(stepSolveAssignments, ({ o
   topic: one(topics, {
     fields: [stepSolveAssignments.topicId],
     references: [topics.id],
+  }),
+  template: one(stepSolveAssignmentTemplates, {
+    fields: [stepSolveAssignments.templateId],
+    references: [stepSolveAssignmentTemplates.id],
   }),
   stepSolveQuestions: many(stepSolveQuestionToAssignment),
 }));

@@ -10,7 +10,7 @@ import { topics } from "../../schema/subject";
 import { classrooms, usersToClassrooms } from "../../schema/classroom";
 
 import { stepSolveQuestions, stepSolveQuestionToAssignment, stepSolveStep, stepSolveStepConcepts, stepSolveStepOptions } from "../../schema/stepSolve/stepSolveQuestions";
-import { stepSolveAssignmentAttempts, stepSolveAssignments } from "../../schema/stepSolve/stepSolveAssignment";
+import { stepSolveAssignmentAttempts, stepSolveAssignments, stepSolveAssignmentTemplates } from "../../schema/stepSolve/stepSolveAssignment";
 import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "../../schema/stepSolve/stepSolveQuestionAttempts";
 import { activity, activityToAssignment } from "../../schema/activity";
 import { ActivityType, Roles } from "@/lib/constants";
@@ -788,5 +788,228 @@ export async function createGeneratedStepSolveAssignment(topicName: string, user
   }
 
   console.log("Generated step solve creation complete");
+  console.log("--------------------------------");
+}
+
+export async function createStepSolveAssignmentTemplate() {
+  console.log("Creating step solve assignment templates...");
+
+  // Get all step solve assignments that are linked to activities
+  const assignmentsWithActivities = await db
+    .select({
+      assignmentId: activityToAssignment.stepSolveAssignmentId,
+      assignment: stepSolveAssignments,
+      topic: topics,
+    })
+    .from(activityToAssignment)
+    .innerJoin(
+      stepSolveAssignments,
+      eq(activityToAssignment.stepSolveAssignmentId, stepSolveAssignments.id)
+    )
+    .innerJoin(
+      activity,
+      eq(activityToAssignment.activityId, activity.id)
+    )
+    .innerJoin(
+      topics,
+      eq(stepSolveAssignments.topicId, topics.id)
+    )
+    .where(
+      and(
+        eq(activity.typeText, ActivityType.StepSolve),
+        eq(stepSolveAssignments.generated, false) // Only use non-generated assignments as templates
+      )
+    );
+
+  // Group by topic to collect all assignment IDs
+  const topicToAssignmentMap = new Map();
+  
+  for (const item of assignmentsWithActivities) {
+    const topicId = item.topic.id;
+    if (!topicToAssignmentMap.has(topicId)) {
+      topicToAssignmentMap.set(topicId, {
+        assignmentIds: [],
+        assignmentIdSet: new Set(), // Track unique IDs
+        topic: item.topic,
+        sampleAssignment: item.assignment, // Keep one for template naming
+      });
+    }
+    
+    // Only add assignment ID if not already present
+    const topicData = topicToAssignmentMap.get(topicId);
+    if (!topicData.assignmentIdSet.has(item.assignment.id)) {
+      topicData.assignmentIdSet.add(item.assignment.id);
+      topicData.assignmentIds.push(item.assignment.id);
+    }
+  }
+
+  console.log(`Found ${topicToAssignmentMap.size} unique topics for template creation`);
+  console.log(topicToAssignmentMap);
+  
+
+  // Create template assignments for each unique topic
+  for (const [topicId, data] of topicToAssignmentMap) {
+    const { assignmentIds, topic, sampleAssignment } = data;
+    const topicIdString = topicId as string;
+    
+    // Check if template already exists for this topic (look for assignments with "Template" in name)
+    const existingTemplate = await db
+      .select()
+      .from(stepSolveAssignmentTemplates)
+      .where(
+        and(
+          eq(stepSolveAssignmentTemplates.topicId, topicIdString),
+          // Look for template assignments by name pattern
+        )
+      );
+
+    const hasTemplate = existingTemplate.some(template => 
+      template.name?.toLowerCase().includes('template')
+    );
+
+    if (hasTemplate) {
+      console.log(`Template already exists for topic: ${topic.name}`);
+      continue;
+    }
+
+    // Create template assignment in the regular assignments table
+    const templateId = generateId(21);
+    console.log(`Creating template for topic: ${topic.name} with ${assignmentIds.length} source assignments`);
+    
+    await db.insert(stepSolveAssignmentTemplates).values({
+      id: templateId,
+      assignmentIds: assignmentIds,
+      name: `${sampleAssignment.name} Template`,
+      description: `Template for ${topic.name}`,
+      topicId: topicIdString,
+      generated: false,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+
+    // Update all source assignments to reference the new template
+    for (const assignmentId of assignmentIds) {
+      await db.update(stepSolveAssignments)
+        .set({ 
+          templateId: templateId,
+          updatedAt: new Date()
+        })
+        .where(eq(stepSolveAssignments.id, assignmentId as string));
+    }
+
+    console.log(`Template created successfully for topic: ${topic.name} and linked to ${assignmentIds.length} assignments`);
+  }
+
+  console.log("Step solve assignment template creation complete");
+  console.log("--------------------------------");
+}
+
+export async function clearStepSolveAssignmentTemplates() {
+  console.log("Clearing step solve assignment templates...");
+
+  try {
+    // First, clear all templateId references from stepSolveAssignments
+    console.log("Clearing templateId from all step solve assignments...");
+    await db.update(stepSolveAssignments)
+      .set({ 
+        templateId: null,
+        updatedAt: new Date()
+      });
+
+    // Then, delete all template objects
+    console.log("Deleting all step solve assignment templates...");
+    await db.delete(stepSolveAssignmentTemplates);
+
+    console.log("All step solve assignment templates cleared successfully");
+  } catch (error) {
+    console.error("Error clearing step solve assignment templates:", error);
+    throw error;
+  }
+
+  console.log("Step solve assignment template clearing complete");
+  console.log("--------------------------------");
+}
+
+export async function updateStepSolveActivityAssignmentIds() {
+  console.log("Updating StepSolve activity assignmentId fields with template IDs...");
+
+  try {
+    // Get all StepSolve activities
+    const stepSolveActivities = await db
+      .select()
+      .from(activity)
+      .where(eq(activity.typeText, ActivityType.StepSolve));
+
+    console.log(`Found ${stepSolveActivities.length} StepSolve activities to update`);
+
+    let updatedCount = 0;
+    let skippedCount = 0;
+
+    for (const act of stepSolveActivities) {
+      // Get the assignment linked to this activity
+      const activityToAssignmentRecord = await db
+        .select()
+        .from(activityToAssignment)
+        .where(eq(activityToAssignment.activityId, act.id));
+
+      if (activityToAssignmentRecord.length === 0) {
+        console.log(`No assignment found for activity ${act.id} - ${act.name}`);
+        skippedCount++;
+        continue;
+      }
+
+      if (activityToAssignmentRecord.length > 1) {
+        console.log(`Multiple assignments found for activity ${act.id} - ${act.name}, using first one`);
+      }
+
+      const assignmentId = activityToAssignmentRecord[0]?.stepSolveAssignmentId;
+      
+      if (!assignmentId) {
+        console.log(`No stepSolveAssignmentId found for activity ${act.id} - ${act.name}`);
+        skippedCount++;
+        continue;
+      }
+
+      // Get the assignment to find its templateId
+      const assignment = await db
+        .select()
+        .from(stepSolveAssignments)
+        .where(eq(stepSolveAssignments.id, assignmentId));
+
+      if (assignment.length === 0) {
+        console.log(`Assignment ${assignmentId} not found for activity ${act.id} - ${act.name}`);
+        skippedCount++;
+        continue;
+      }
+
+      const templateId = assignment[0]?.templateId;
+
+      if (!templateId) {
+        console.log(`No templateId found for assignment ${assignmentId} (activity ${act.id} - ${act.name})`);
+        skippedCount++;
+        continue;
+      }
+
+      // Update the activity's assignmentId to the templateId
+      await db
+        .update(activity)
+        .set({ 
+          assignmentId: templateId,
+          updatedAt: new Date()
+        })
+        .where(eq(activity.id, act.id));
+
+      console.log(`Updated activity ${act.id} - ${act.name}: assignmentId set to template ${templateId}`);
+      updatedCount++;
+    }
+
+    console.log(`Update complete: ${updatedCount} activities updated, ${skippedCount} activities skipped`);
+
+  } catch (error) {
+    console.error("Error updating StepSolve activity assignmentId fields:", error);
+    throw error;
+  }
+
+  console.log("StepSolve activity assignmentId update complete");
   console.log("--------------------------------");
 }
