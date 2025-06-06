@@ -1,6 +1,6 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import type { SubmitAssignmentAttemptSchema, GetSubmissionsInput, GetAnalyticsCardsInput, CreateAssignmentAttemptInput, GetKnowledgeZapActivityInput, GetHeatMapInput, GetKnowledgeZapRevisionActivityInput, GetAssignmentConceptsInput } from "./knowledgeZap.input";
+import type { SubmitAssignmentAttemptSchema, GetSubmissionsInput, GetAnalyticsCardsInput, CreateAssignmentAttemptInput, GetKnowledgeZapActivityInput, GetKnowledgeZapAssignmentInput, GetHeatMapInput, GetKnowledgeZapRevisionActivityInput, GetAssignmentConceptsInput, GetAssignmentConceptsByIdInput } from "./knowledgeZap.input";
 import { eq } from "drizzle-orm";
 import { ActivityType, MAX_CONCEPTS_TO_REVIEW_KNOWLEDGE, Roles } from "@/lib/constants";
 import { knowledgeZapAssignmentAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
@@ -273,6 +273,130 @@ export const getKnowledgeZapActivity = async (ctx: ProtectedTRPCContext, input: 
 
   return {
     assignmentId: assignment.id,
+    questions,
+  };
+}
+
+export const getKnowledgeZapAssignment = async (ctx: ProtectedTRPCContext, input: GetKnowledgeZapAssignmentInput) => {
+  const assignment = await ctx.db.query.knowledgeZapAssignments.findFirst({
+    where: (assignment, { eq }) => eq(knowledgeZapAssignments.id, input.assignmentId),
+    with: {
+      topic: true,
+      questionToAssignment: {
+        with: {
+          question: true,
+        }
+      }
+    }
+  });
+
+  if(!assignment) {
+    throw new Error("Assignment not found");
+  }
+
+  const questions: KnowledgeZapQuestionObjects[] = [];
+
+  // Convert the loop to use Promise.all for parallel execution
+  await Promise.all(assignment.questionToAssignment.map(async (questionToAssignment) => {
+    const question = questionToAssignment.question;
+    const questionIds = question.questionId;
+
+    if (!questionIds) return;
+
+    let questionObject: KnowledgeZapQuestionObjects | null = null;
+
+    if (question.type === KnowledgeZapQuestionType.MULTIPLE_CHOICE) {
+      const multipleChoiceQuestions = await ctx.db.query.multipleChoiceQuestions.findMany({
+        where: (multipleChoiceQuestion, { inArray, and }) => and(
+          inArray(multipleChoiceQuestion.id, questionIds),
+          eq(multipleChoiceQuestion.multipleCorrect, false)
+        ),
+        with: {
+          options: {
+            columns: {
+              id: true,
+              option: true,
+              imageUrl: true,
+            }
+          }
+        }
+      });
+
+      if (multipleChoiceQuestions.length > 0) {
+        questionObject = {
+          id: question.id,
+          type: KnowledgeZapQuestionType.MULTIPLE_CHOICE,
+          variants: multipleChoiceQuestions.map((q) => ({
+            id: q.id,
+            question: q.question,
+            imageUrl: q.imageUrl,
+            options: q.options.sort(() => Math.random() - 0.5),
+          })),
+        };
+      }
+    }
+
+    if (question.type === KnowledgeZapQuestionType.MATCHING) {
+      const matchingQuestions = await ctx.db.query.matchingQuestions.findMany({
+        where: (matchingQuestion, { inArray }) => inArray(matchingQuestion.id, questionIds),
+        with: {
+          options: true,
+        }
+      });
+
+      if (matchingQuestions.length > 0) {
+        questionObject = {
+          id: question.id,
+          type: KnowledgeZapQuestionType.MATCHING,
+          variants: matchingQuestions.map((matchingQuestion) => ({
+            id: matchingQuestion.id,
+            question: matchingQuestion.question,
+            imageUrl: matchingQuestion.imageUrl,
+            optionAs: matchingQuestion.options.map(o => o.optionA).sort(() => Math.random() - 0.5),
+            optionBs: matchingQuestion.options.map(o => o.optionB).sort(() => Math.random() - 0.5),
+          })),
+        };
+      }
+    }
+
+    if (question.type === KnowledgeZapQuestionType.ORDERING) {
+      const orderingQuestions = await ctx.db.query.orderingQuestions.findMany({
+        where: (orderingQuestion, { inArray }) => inArray(orderingQuestion.id, questionIds),
+        with: {
+          options: {
+            columns: {
+              id: true,
+              option: true,
+            }
+          }
+        }
+      });
+
+      if (orderingQuestions.length > 0) {
+        questionObject = {
+          id: question.id,
+          type: KnowledgeZapQuestionType.ORDERING,
+          variants: orderingQuestions.map((q) => ({
+            ...q,
+            options: q.options.sort(() => Math.random() - 0.5),
+          })),
+        };
+      }
+    }
+
+    if (questionObject) {
+      questions.push(questionObject);
+    }
+  }));
+
+  // Randomly sort the questions array before returning
+  questions.sort(() => Math.random() - 0.5);
+
+  return {
+    assignmentId: assignment.id,
+    name: assignment.name,
+    topicId: assignment.topicId,
+    topic: assignment.topic,
     questions,
   };
 }
@@ -712,6 +836,62 @@ export const getAssignmentConcepts = async (ctx: ProtectedTRPCContext, input: Ge
   // Step 1: Get the assignment with questionToAssignment
   const assignment = await ctx.db.query.knowledgeZapAssignments.findFirst({
     where: (assignment, { eq }) => eq(knowledgeZapAssignments.id, assignmentId),
+    with: {
+      questionToAssignment: {
+        columns: {
+          id: true,
+          questionId: true,
+        }
+      }
+    }
+  });
+
+  if(!assignment) {
+    throw new Error("Assignment not found");
+  }
+
+  // Step 2: Get all question IDs from the assignment
+  const questionIds = assignment.questionToAssignment.map(qta => qta.questionId);
+
+  // Step 3: Get questions with their concepts relationship
+  const questions = await ctx.db.query.knowledgeZapQuestions.findMany({
+    where: (question, { inArray }) => inArray(question.id, questionIds),
+    with: {
+      questionsToConcepts: {
+        columns: {
+          id: true,
+          conceptId: true,
+        }
+      }
+    }
+  });
+
+  // Step 4: Get all concept IDs
+  const conceptIds = questions
+    .flatMap(q => q.questionsToConcepts)
+    .map(qtc => qtc.conceptId)
+    .filter((id): id is string => id !== null);
+
+  const uniqueConceptIds = [...new Set(conceptIds)];
+
+  // Step 5: Get the actual concept data
+  const concepts = await ctx.db.query.concepts.findMany({
+    where: (concept, { inArray }) => inArray(concept.id, uniqueConceptIds),
+    columns: {
+      id: true,
+      text: true,
+      answerText: true,
+    }
+  });
+
+  return concepts;
+};
+
+export const getAssignmentConceptsById = async (ctx: ProtectedTRPCContext, input: GetAssignmentConceptsByIdInput) => {
+  
+  // Step 1: Get the assignment with questionToAssignment
+  const assignment = await ctx.db.query.knowledgeZapAssignments.findFirst({
+    where: (assignment, { eq }) => eq(knowledgeZapAssignments.id, input.assignmentId),
     with: {
       questionToAssignment: {
         columns: {

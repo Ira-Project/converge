@@ -44,7 +44,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         return `${Paths.Activity}${assignmentId}`;
     }
     
-    return `${classroomId}${Paths.ActivityPreview}${assignmentId}/${activityTypePath}`;
+    return `/${classroomId}${Paths.ActivityPreview}${assignmentId}/${activityTypePath}`;
   };
 
   switch(activityType) {
