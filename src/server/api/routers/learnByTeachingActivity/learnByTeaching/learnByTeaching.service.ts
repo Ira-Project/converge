@@ -1,16 +1,18 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import { type SubmitTestAttemptSchema, type CreateTestAttemptInput, type GetSubmissionsInput, type GetUnderstandingGapsInput, type GetAnalyticsCardsInput, type GetLearnByTeachingActivityInput } from "./learnByTeaching.input";
+import { type SubmitTestAttemptSchema, type CreateTestAttemptInput, type GetSubmissionsInput, type GetUnderstandingGapsInput, type GetAnalyticsCardsInput, type GetLearnByTeachingActivityInput, type GetLearnByTeachingAssignmentByIdInput } from "./learnByTeaching.input";
 import { explainTestAttempts } from "@/server/db/schema/learnByTeaching/explainTestAttempt";
-import { eq } from "drizzle-orm";
-import { ActivityType, ConceptStatus, Roles } from "@/lib/constants";
+import { eq, asc } from "drizzle-orm";
+import { ActivityType, Roles } from "@/lib/constants";
 import { explainAssignments } from "@/server/db/schema/learnByTeaching/explainAssignment";
+import { explainQuestionToAssignment } from "@/server/db/schema/learnByTeaching/explainQuestions";
 
 export const createTestAttempt = async (ctx: ProtectedTRPCContext, input: CreateTestAttemptInput) => { 
   const id = generateId(21);
   await ctx.db.insert(explainTestAttempts).values({
     id, 
-    activityId: input.activityId,
+    activityId: input.activityId ?? undefined,
+    assignmentId: input.assignmentId ?? undefined,
     userId: ctx.user.id,
   })
   return id;
@@ -54,6 +56,10 @@ export const submitTestAttempt = async (ctx: ProtectedTRPCContext, input: Submit
 export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmissionsInput) => {
   const user = ctx.user.role;
 
+  if (!input.activityId) {
+    throw new Error("Activity ID is required");
+  }
+
   if (user === Roles.Student) {
     return await ctx.db.query.explainTestAttempts.findMany({
       where: (attempts, { eq, and, isNotNull }) => and(
@@ -87,6 +93,10 @@ export const getSubmissions = async (ctx: ProtectedTRPCContext, input: GetSubmis
 }
 
 export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: GetUnderstandingGapsInput) => {
+
+  if (!input.activityId) {
+    throw new Error("Activity ID is required");
+  }
 
   const user = ctx.user.role;
   let submissions = [];
@@ -144,6 +154,11 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
         }
       }
     });
+  }
+
+  // If no assignment ID is available, return empty array
+  if (!activity.assignmentId) {
+    return [];
   }
 
   const questions = await ctx.db.query.explainQuestionToAssignment.findMany({
@@ -233,6 +248,10 @@ export const getUnderstandingGaps = async (ctx: ProtectedTRPCContext, input: Get
 
 export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAnalyticsCardsInput) => {
 
+  if (!input.activityId) {
+    throw new Error("Activity ID is required");
+  }
+
   const user = ctx.user.role;
   let submissions = [];
 
@@ -272,13 +291,17 @@ export const getAnalyticsCards = async (ctx: ProtectedTRPCContext, input: GetAna
   const averageExplanationsPerSubmission = submissions.reduce((a, b) => a + (b.explanations.length ?? 0), 0) / submissions.length;
     
   return {
-    averageScore,
+    averageScore: isNaN(averageScore) ? 0 : averageScore,
     submissionCount,
-    averageExplanationsPerSubmission
+    averageExplanationsPerSubmission: isNaN(averageExplanationsPerSubmission) ? 0 : averageExplanationsPerSubmission
   };
 }
 
 export const getLearnByTeachingActivity = async (ctx: ProtectedTRPCContext, input: GetLearnByTeachingActivityInput) => {
+  if (!input.activityId) {
+    throw new Error("Activity ID is required");
+  }
+
   const activity = await ctx.db.query.activity.findFirst({
     where: (activity, { eq }) => eq(activity.id, input.activityId),
   });
@@ -302,4 +325,35 @@ export const getLearnByTeachingActivity = async (ctx: ProtectedTRPCContext, inpu
 
   return assignment;
 
+}
+
+export const getLearnByTeachingAssignmentById = async (ctx: ProtectedTRPCContext, input: GetLearnByTeachingAssignmentByIdInput) => {
+  if (!input.assignmentId) {
+    throw new Error("Assignment ID is required");
+  }
+
+  return await ctx.db.query.explainAssignments.findFirst({
+    where: (table, { eq }) => eq(table.id, input.assignmentId),
+    columns: {
+      id: true,
+      name: true,
+      createdAt: true,
+      createdBy: true,
+      description: true,
+      topicId: true,
+    },
+    with : {
+      topic: {
+        columns: {
+          name: true,
+        }
+      },
+      questionToAssignment: {
+        orderBy: [asc(explainQuestionToAssignment.order)],
+        with: {
+          question: true,
+        }
+      },
+    }
+  });
 }

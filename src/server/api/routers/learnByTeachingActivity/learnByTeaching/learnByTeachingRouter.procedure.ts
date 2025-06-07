@@ -26,4 +26,8 @@ export const learnByTeachingRouter = createTRPCRouter({
   getLearnByTeachingActivity: protectedProcedure
     .input(inputs.getLearnByTeachingActivityInput)
     .query(({ ctx, input }) => services.getLearnByTeachingActivity(ctx, input)),
+
+  getLearnByTeachingAssignmentById: protectedProcedure
+    .input(inputs.getLearnByTeachingAssignmentByIdInput)
+    .query(({ ctx, input }) => services.getLearnByTeachingAssignmentById(ctx, input)),
 });
