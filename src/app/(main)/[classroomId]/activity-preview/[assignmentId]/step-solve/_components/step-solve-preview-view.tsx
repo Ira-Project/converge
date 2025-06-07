@@ -42,7 +42,7 @@ const StepSolvePreview: React.FC<StepSolvePreviewViewProps> = ({
   role,
 }: StepSolvePreviewViewProps) => {
 
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
+  const [currentQuestionIndex] = useState<number>(0);
   const [questionStates, setQuestionStates] = useState<QuestionState[]>(
     stepSolveAssignment?.stepSolveQuestions?.map(() => ({
       step: 1,

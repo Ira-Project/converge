@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { Dialog, DialogClose, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import { addDays, format } from 'date-fns';
 import { Button } from '@/components/ui/button';
 import { LoadingButton } from "@/components/loading-button";

@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import AssignmentTutorialModal from './knowledge-zap-assignment-tutorial-modal';
 import { AssignActivityModal } from '@/app/(main)/activity-preview/_components/assign-activity-modal';
 import ConceptsModal from '@/components/ui/concepts-modal';
 import { type RouterOutputs } from '@/trpc/shared';

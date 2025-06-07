@@ -6,6 +6,9 @@ export const reasonTraceRouter = createTRPCRouter({
   get: protectedProcedure
     .input(inputs.getReasoningAssignmentSchema)
     .query(({ ctx, input }) => services.getReasoningAssignment(ctx, input)),
+  getById: protectedProcedure
+    .input(inputs.getReasoningAssignmentByIdSchema)
+    .query(({ ctx, input }) => services.getReasoningAssignmentById(ctx, input)),
   createAttempt: protectedProcedure
     .input(inputs.createReasoningAssignmentAttemptSchema)
     .mutation(({ ctx, input }) => services.createReasoningAssignmentAttempt(ctx, input)),
