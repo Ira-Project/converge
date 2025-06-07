@@ -1,7 +1,8 @@
 import { z } from "zod";
 
 export const createAttemptSchema = z.object({
-  activityId: z.string(),
+  activityId: z.string().optional(),
+  assignmentId: z.string().optional(),
 });
 export type CreateAttemptInput = z.infer<typeof createAttemptSchema>;
 
@@ -29,3 +30,8 @@ export const getReadAndRelayActivityInput = z.object({
   activityId: z.string(),
 });
 export type GetReadAndRelayActivityInput = z.infer<typeof getReadAndRelayActivityInput>;
+
+export const getReadAndRelayAssignmentByIdInput = z.object({
+  assignmentId: z.string(),
+});
+export type GetReadAndRelayAssignmentByIdInput = z.infer<typeof getReadAndRelayAssignmentByIdInput>;

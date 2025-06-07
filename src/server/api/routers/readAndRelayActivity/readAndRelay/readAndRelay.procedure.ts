@@ -26,4 +26,8 @@ export const readAndRelayRouter = createTRPCRouter({
   getReadAndRelayActivity: protectedProcedure
     .input(inputs.getReadAndRelayActivityInput)
     .query(({ ctx, input }) => services.getReadAndRelayActivity(ctx, input)),
+
+  getReadAndRelayAssignmentById: protectedProcedure
+    .input(inputs.getReadAndRelayAssignmentByIdInput) 
+    .query(({ ctx, input }) => services.getReadAndRelayAssignmentById(ctx, input)),
 });
