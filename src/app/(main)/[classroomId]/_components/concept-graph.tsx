@@ -23,6 +23,26 @@ export const ConceptGraph = ({ concepts, edges, trackedConcepts, numberOfStudent
     }
   }, [])
 
+  // Check if there are no concepts to display
+  if (concepts.length === 0) {
+    return (
+      <div className="bg-white rounded-lg p-4 mx-auto border h-full flex flex-col justify-center w-full max-w-full">
+        <p className="text-lg font-bold mb-4">
+          Concepts
+        </p>
+        <div className="flex flex-col items-center justify-center min-h-[300px] p-8 text-center">
+          <h3 className="text-lg mb-2">
+            No Concepts Assigned Yet
+          </h3>
+          
+          <p className=" max-w-md mx-auto mb-6">
+            Concepts will appear here once students start completing activities that track learning objectives.
+            Create and assign activities to see concept progress visualization.
+          </p>
+        </div>
+      </div>
+    );
+  }
 
   // Transform the data into the format expected by ForceGraph2D
   const graphData = {

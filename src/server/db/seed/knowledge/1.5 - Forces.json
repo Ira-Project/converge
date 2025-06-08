@@ -1,0 +1,2167 @@
+{
+    "name": "Forces",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "d8a6364f082e47b7b8dc0",
+            "concepts": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "e82678cc-f310-40da-9e78-4c5e20d0f8ad"
+            ],
+            "variants": [
+                {
+                    "id": "441e2790397e4f468626b",
+                    "question": "Which of the following is/are a direct consequence(s) of applying a force to an object?",
+                    "options": [
+                        {
+                            "option_text": "Change in shape",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Change in mass",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Change in velocity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Change in material",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "816f5ca3179642c9bb3af",
+                    "question": "A constant force is applied to an object. Which of the following changes could occur to the object? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The object's shape changes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's mass changes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's velocity changes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's material changes.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "1b3d620d92bb4f15ad40d",
+                    "question": "Which of the following scenarios best illustrates the effect of a force on an object's velocity?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A stationary ball starts rolling when pushed.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A clay ball flattens when pressed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The mass of a metal block changes when heated.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A wooden block changes color when painted.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "4ec08455e78b407e82eef",
+            "concepts": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "d08947a9-6137-4fd0-9510-194af95db5f5",
+                "4716e065-7ace-4fe7-b41a-02e362138b04"
+            ],
+            "variants": [
+                {
+                    "id": "52954eac680740099f3d0",
+                    "question": "A block is being pulled across a rough surface. Which of the following forces act on the block?",
+                    "options": [
+                        {
+                            "option_text": "Applied Force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Tension",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Friction",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Normal Reaction Force",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "decf9824d021401b96d8a",
+                    "question": "A block is pulled horizontally across a rough surface at a constant speed. Which of the following statements is correct regarding the magnitudes of the forces acting on the block?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The applied force is equal to the frictional force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The applied force is greater than the frictional force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The applied force is less than the frictional force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The normal reaction force is greater than the weight of the block.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a401e8f985794d2b8610f",
+                    "question": "A block of mass $!$m$!$ is pulled across a rough horizontal surface with a constant applied force $!$F$!$. The coefficient of kinetic friction between the block and the surface is $!$\\mu_k$!$. Which of the following expressions represents the magnitude of the frictional force acting on the block?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$\\mu_k mg$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$mg$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\mu_k F$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "f48e28ee1a5340be98164",
+            "concepts": [
+                "3e20303c-d807-4753-b313-0259b2682a2e",
+                "259589dd-4c8e-4938-9dde-4a0c9930e92e"
+            ],
+            "variants": [
+                {
+                    "id": "cb47017fd26a4c4781c1d",
+                    "question": "When the net force acting on an object is zero, the object is said to be in:",
+                    "options": [
+                        {
+                            "option_text": "Motion",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Equilibrium",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Centripetal acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Inertia",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1fa0dc7e138144058b152",
+                    "question": "Which of the following statements is correct about an object when the net force acting on it is zero?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The object must be at rest.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object must be moving at a constant velocity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object must be accelerating.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's motion cannot be determined.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1dc721a946f44e83b360c",
+                    "question": "Select all the scenarios in which an object can be considered to be in equilibrium.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "An object moving with constant velocity in a straight line.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An object at rest.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An object accelerating uniformly.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An object moving in a circle at constant speed.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "ff34e86c1d97426c93dd3",
+            "concepts": [
+                "2943a771-25bf-4ed1-ae4e-a7e35cbf1756",
+                "4163b1d6-96ec-41a8-a8ff-f1883bd74931"
+            ],
+            "variants": [
+                {
+                    "id": "afe267478f5549a580cdb",
+                    "question": "What does the spring constant ($!$k$!$) measure?",
+                    "options": [
+                        {
+                            "option_text": "The limit of proportionality of the spring.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The stiffness of the spring.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force applied to the spring.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The extension of the spring.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4e9d8ffd6bd04fa2a2779",
+                    "question": "Which of the following is true regarding the spring constant ($!$k$!$)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A higher value of $!$k$!$ indicates a stiffer spring.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A lower value of $!$k$!$ indicates a stiffer spring.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$k$!$ is measured in meters.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$k$!$ represents the force applied to a spring at its breaking point.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2f9c07af4b234c7391dce",
+                    "question": "Select all the statements that correctly describe the spring constant ($!$k$!$):",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is a measure of the stiffness of the spring.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It relates the force applied to a spring and its extension or compression.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is independent of the material the spring is made of.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is measured in Newtons (N).",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "32ce1d8fcd374613b7b47",
+            "concepts": [
+                "2943a771-25bf-4ed1-ae4e-a7e35cbf1756",
+                "4163b1d6-96ec-41a8-a8ff-f1883bd74931",
+                "14c57299-796f-4df6-927f-383e9d5c44b6"
+            ],
+            "variants": [
+                {
+                    "id": "bb9cd50f8a4f46a3ad3c3",
+                    "question": "Which formula represents Hooke's Law?",
+                    "options": [
+                        {
+                            "option_text": "$!$F = kx$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F = ma$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$M = Fd$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E = mc^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "895bc1faff854998a235b",
+                    "question": "Select all the equations that are dimensionally consistent with Hooke's Law ($!$F = kx$!$), where F is force, k is the spring constant, and x is displacement.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$F = kx$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$2F = 2kx$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F^2 = kx^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = k^2x$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "c08500821f0044c89f811",
+                    "question": "A spring obeys Hooke's Law. If the displacement is doubled, what happens to the force exerted by the spring?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The force is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "a70b99969b9345efbf7b1",
+            "concepts": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "f5896b20-1c3e-4db4-bc63-ee2a2bbb7b90"
+            ],
+            "variants": [
+                {
+                    "id": "11157f35fb584020830cf",
+                    "question": "Which of the following properties are exhibited by force?",
+                    "options": [
+                        {
+                            "option_text": "Magnitude",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Direction",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Colour",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Taste",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "528fc21b316c4ad98f8d8",
+                    "question": "A force of $!$10 N$!$ is applied on an object in the North direction. Which of the following correctly describes the force?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Magnitude only",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Direction only",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both magnitude and direction",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Neither magnitude nor direction",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9590396968e849049fa38",
+                    "question": "Which of the following are vector quantities?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mass",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Weight",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "630fc0461a824ff596c67",
+            "concepts": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "2b9c31ac-1129-4fad-aa8a-1cfd77412d64"
+            ],
+            "variants": [
+                {
+                    "id": "f0cad1c216624515bedd9",
+                    "question": "What is the property of matter that resists changes in motion?",
+                    "options": [
+                        {
+                            "option_text": "Force",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Inertia",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Moment",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Acceleration",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4c3b32f2fa8040dcb1d80",
+                    "question": "Which of the following statements accurately describes inertia?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The force that causes acceleration.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The property of matter that resists changes in velocity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The rate of change of velocity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force of gravity on an object.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ef684d9d2411483783d17",
+                    "question": "Which of the following examples demonstrate the concept of inertia? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A stationary object remaining at rest unless acted upon by an external force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An object in motion continuing to move with the same velocity unless acted upon by an external force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An object accelerating due to an applied force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The gravitational force between two objects.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "415f33ec59a84c6899151",
+            "concepts": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "3e20303c-d807-4753-b313-0259b2682a2e",
+                "2b9c31ac-1129-4fad-aa8a-1cfd77412d64",
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+            ],
+            "variants": [
+                {
+                    "id": "64e7fd3a1bae4385926d1",
+                    "question": "According to Newton's Second Law, what is the relationship between force, mass, and acceleration?",
+                    "options": [
+                        {
+                            "option_text": "Force is directly proportional to mass only.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Force is directly proportional to acceleration only.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Force is proportional to both mass and acceleration.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Force is inversely proportional to both mass and acceleration.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "852a55a459b3414aad882",
+                    "question": "According to Newton's Second Law ($!$F = ma$!$), which of the following statements correctly describes the relationship between force ($!$F$!$), mass ($!$m$!$), and acceleration ($!$a$!$)? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "If the mass is kept constant, the force is directly proportional to the acceleration.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the acceleration is kept constant, the force is inversely proportional to the mass.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If the force is kept constant, the acceleration is inversely proportional to the mass.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the mass is doubled and the acceleration is halved, the force remains constant.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a5c03022eb9d4f049ef60",
+                    "question": "If the mass of an object is doubled while the net force acting on it remains constant, what happens to the acceleration of the object according to Newton's Second Law?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The acceleration is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The acceleration is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The acceleration remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The acceleration is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ab1bd33137164517b66ea",
+            "concepts": [
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+                "356d493b-02b5-4b95-b7b5-f34b9ec99aa1"
+            ],
+            "variants": [
+                {
+                    "id": "3499f8845b03484fb696b",
+                    "question": "What formula represents Newton's Second Law?",
+                    "options": [
+                        {
+                            "option_text": "$!$F = ma$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F = kx$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$M = Fd$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E = mc^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a74eb1ed14f640d1bc1ff",
+                    "question": "A 2 kg block accelerates at 5 m/s$!$^2$!$ on a frictionless surface. According to Newton's Second Law, what is the net force acting on the block?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$2.5 N$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$7 N$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$10 N$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$20 N$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "030b4080246a4a098bffe",
+                    "question": "Which of the following statements correctly describe Newton's Second Law? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Force is directly proportional to acceleration when mass is constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Force is inversely proportional to mass when acceleration is constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The net force acting on an object is equal to the product of its mass and acceleration.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An object at rest stays at rest, and an object in motion stays in motion with the same speed and in the same direction unless acted upon by a net force.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "b7fe797072584256a761a",
+            "concepts": [
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+                "f53acf30-2c06-4f4a-9916-c8a000b422b3"
+            ],
+            "variants": [
+                {
+                    "id": "e195634e80ae41d0b030c",
+                    "question": "One Newton is the force required to accelerate 1 kg of mass by:",
+                    "options": [
+                        {
+                            "option_text": "1 m/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1 m/s$!$^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "9.8 m/s$!$^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "0 m/s$!$^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "610be81bdaaf4942bb93e",
+                    "question": "Which of the following statements about the Newton ($!$N$!$) unit of force is correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "One Newton is the force required to accelerate 1 kg of mass by 1 m/s.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "One Newton is the force required to accelerate 1 kg of mass by 1 m/s$!$^2$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "One Newton is the force required to accelerate 1 kg of mass by 9.8 m/s$!$^2$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "One Newton is the force required to accelerate 1 kg of mass by 0 m/s$!$^2$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e090f8885f3f4823914f3",
+                    "question": "Select all the statements that correctly describe the relationship between force, mass, and acceleration, where force is measured in Newtons ($!$N$!$).",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A force of 1 N is required to accelerate a 1 kg mass at 1 m/s$!$^2$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A force of 2 N is required to accelerate a 2 kg mass at 1 m/s.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A force of 9.8 N is required to accelerate a 1 kg mass at 9.8 m/s$!$^2$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A force of 1 N is required to keep a 1 kg mass moving at a constant velocity of 1 m/s.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "0d6cdd3319284d9d9368f",
+            "concepts": [
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+                "673d32c2-d74f-4e5e-8a7e-2e5df66ce844"
+            ],
+            "variants": [
+                {
+                    "id": "52b82a68cb7d4c698e5b3",
+                    "question": "Which of the following best describes the direction of acceleration in relation to the net force?",
+                    "options": [
+                        {
+                            "option_text": "Perpendicular",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Opposite",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Same direction",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "At an angle of 45 degrees",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9e841eb7b66149e9addaa",
+                    "question": "According to Newton's Second Law of Motion, if the net force acting on an object doubles, what happens to the object's acceleration?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Acceleration doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Acceleration halves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Acceleration remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Acceleration becomes four times the original value.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4e4f53340e724a7490062",
+                    "question": "Select all the statements that correctly describe the relationship between net force and acceleration.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Net force and acceleration are directly proportional.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Acceleration is in the same direction as the net force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Net force and acceleration are inversely proportional.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Acceleration is opposite to the direction of the net force.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "553e06631a154c1c9bd54",
+            "concepts": [
+                "4716e065-7ace-4fe7-b41a-02e362138b04",
+                "4deaaef0-963f-41d9-b2b3-11d2724c3b9e"
+            ],
+            "variants": [
+                {
+                    "id": "a81550b461f143ef98594",
+                    "question": "What is the main effect of friction?",
+                    "options": [
+                        {
+                            "option_text": "Converts potential energy to kinetic energy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Converts kinetic energy into thermal energy",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increases kinetic energy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Reduces thermal energy",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5698a86d0fee43ec93180",
+                    "question": "Which of the following scenarios primarily demonstrates the effect of friction converting kinetic energy into thermal energy?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A car accelerating on a flat road.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A block sliding down a rough inclined plane and heating up.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A ball rolling on a frictionless surface at a constant speed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A pendulum swinging back and forth in a vacuum.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c71e2da92d6c41b08c0f3",
+                    "question": "Select all of the following that are effects of friction:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Conversion of kinetic energy to thermal energy.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increase in the overall mechanical energy of a system.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Opposition to motion between two surfaces in contact.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Conversion of potential energy to kinetic energy.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "d1746dcb8a2543ffa06ad",
+            "concepts": [
+                "4716e065-7ace-4fe7-b41a-02e362138b04",
+                "b9d9a427-ac45-470c-beb9-78cc051848a3"
+            ],
+            "variants": [
+                {
+                    "id": "1331a20aac0a4709bb185",
+                    "question": "Which type of friction is the maximum frictional force before motion begins?",
+                    "options": [
+                        {
+                            "option_text": "Sliding friction",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Static friction",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Fluid friction",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Rolling friction",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "795e94091dfb49599b5d2",
+                    "question": "Which of the following statements accurately describes static friction?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Static friction is the force that opposes the motion of two surfaces sliding against each other.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Static friction is the maximum frictional force that must be overcome before motion begins.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Static friction is the force that opposes the motion of an object rolling over a surface.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Static friction is a type of friction that occurs between a solid object and a fluid (liquid or gas).",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "35035ef2a41e4345a82b2",
+                    "question": "Select all the situations where static friction plays a crucial role:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A car moving at a constant speed on a highway.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A book resting on a table.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A box sliding down a ramp.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Walking without slipping.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "0c3aab7457c9420299588",
+            "concepts": [
+                "4716e065-7ace-4fe7-b41a-02e362138b04",
+                "238be296-cc67-4b9f-90f2-77ce6f81bc0b",
+                "87299170-0973-4be7-930f-997504cef932"
+            ],
+            "variants": [
+                {
+                    "id": "b72647349b3b4d2c9e10c",
+                    "question": "Which of the following is an example of drag?",
+                    "options": [
+                        {
+                            "option_text": "A car moving on the road.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Air resistance on a parachute.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Friction between a box and a floor.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A book resting on a table.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0fc1052762cf4e5d8e28f",
+                    "question": "Which of the following scenarios demonstrate the effects of drag force? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A feather falling slowly through the air.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A car rolling freely on a flat road with the engine off.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An airplane maintaining a constant speed and altitude.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A box sliding down a frictionless ramp.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e505cbe642f54bc8afbad",
+                    "question": "Which of the following best describes the effect of drag on an object moving through a fluid (like air or water)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Drag assists the motion of the object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Drag opposes the motion of the object.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Drag only affects objects in a vacuum.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Drag has no effect on the object's motion.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "eb25273b36924e1894334",
+            "concepts": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "822cbd3c-ba65-4bb4-a5a6-0e446921e50f"
+            ],
+            "variants": [
+                {
+                    "id": "293a784f392a4a44879fa",
+                    "question": "According to Newton's Third Law, for every action force there is:",
+                    "options": [
+                        {
+                            "option_text": "An equal force in the same direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An equal and opposite reaction force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A smaller force in the same direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "No reaction force.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "36b9c724735c4dcca0bb5",
+                    "question": "Which of the following statements correctly describes Newton's Third Law of Motion?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Forces always occur in pairs that are equal in magnitude and opposite in direction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A single force can exist without a corresponding reaction force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Action and reaction forces act on the same object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The reaction force is always greater than the action force.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ba1e976652fa456a986ae",
+                    "question": "Which of the following are examples that illustrate Newton's Third Law? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A book resting on a table exerts a force downward due to gravity, and the table exerts an equal and opposite force upward.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "When you walk, your feet push backward on the Earth, and the Earth pushes forward on your feet, causing you to move forward.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A car accelerating forward experiences an equal and opposite force pushing it backward.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A rocket launching into space expels gases downward, and the gases exert an equal and opposite force upward on the rocket.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "2970cf3c8fb4447181f05",
+            "concepts": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+                "05341b97-d591-4486-bac4-48c336dea59d"
+            ],
+            "variants": [
+                {
+                    "id": "2ca9c83a22c34b949ff4a",
+                    "question": "What is characteristic of circular motion?",
+                    "options": [
+                        {
+                            "option_text": "Constant speed and direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Constant speed and changing direction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Constant direction and changing speed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "No change in speed or direction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "34973899c7584df9a4778",
+                    "question": "Which of the following statements accurately describes an object undergoing uniform circular motion?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The object's velocity is constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's speed is constant, but its velocity changes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's speed changes, but its velocity remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both the object's speed and velocity change.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "41824a78b1b44d38969ac",
+                    "question": "An object is moving in a circle with a constant speed of 5 m/s. Which of the following are true about its motion? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The object's kinetic energy is constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's velocity is constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object is accelerating.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "There is no net force acting on the object.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "331936596e1544edb1d7a",
+            "concepts": [
+                "05341b97-d591-4486-bac4-48c336dea59d",
+                "774ffc0d-cf72-4145-a42f-24801ee68ac7"
+            ],
+            "variants": [
+                {
+                    "id": "f0f64c44ff06478fb17d1",
+                    "question": "Which force is responsible for maintaining an object's circular path?",
+                    "options": [
+                        {
+                            "option_text": "Gravitational force",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Centripetal force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Frictional force",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Applied force",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "31bca0c38c3945838db41",
+                    "question": "An object is moving in a circle at a constant speed. Which of the following forces is directed towards the center of the circle?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Centrifugal force",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Centripetal force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Frictional force",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravitational force",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f58df5efab47415c80906",
+                    "question": "Which of the following statements are true regarding centripetal force? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Centripetal force always points toward the center of the circular path.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Centripetal force is a fictitious force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Centripetal force changes the speed of an object moving in a circle.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Centripetal force is responsible for maintaining circular motion.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c92d1fe495cc47c89711a",
+            "concepts": [
+                "774ffc0d-cf72-4145-a42f-24801ee68ac7",
+                "23b1559b-5838-4eb7-9e9d-3520690b116e"
+            ],
+            "variants": [
+                {
+                    "id": "14f162a569c74d97bae55",
+                    "question": "What happens to an object's motion if the centripetal force is suddenly removed?",
+                    "options": [
+                        {
+                            "option_text": "It stops immediately.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It continues in circular motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It moves in a straight line tangent to its circular path.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It spirals inward.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e6888beb667c41ecb2933",
+                    "question": "Which of the following statements correctly describes the motion of an object immediately after the centripetal force acting on it is removed?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The object will stop moving.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object will continue moving in a circle with the same radius.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object will move along a straight line tangent to the circle at the point where the force was removed.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object will spiral inwards towards the center of the original circular path.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "36b52e086b374b70a28b0",
+                    "question": "An object is moving in a circle at a constant speed due to a centripetal force. Which of the following will happen if the centripetal force is suddenly doubled?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The object will move in a circle with a larger radius.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object will move in a circle with a smaller radius.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object will move in a straight line.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's speed will decrease.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "a1109540680445d694a00",
+            "concepts": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c"
+            ],
+            "variants": [
+                {
+                    "id": "47df99865ea04ae38c507",
+                    "question": "What is the moment of a force?",
+                    "options": [
+                        {
+                            "option_text": "The push or pull acting on an object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The turning effect produced by a force about a pivot.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The resistance to motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The measure of an object's inertia.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e608884fb1a349f69739d",
+                    "question": "Which of the following statements best describes the moment of a force?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is the force multiplied by the time for which it acts.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the turning effect of a force around a fixed point.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the energy transferred when a force moves an object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the rate of change of momentum.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "72d3e4f71f784a679ce2b",
+                    "question": "Select all the statements that correctly describe 'moment of force'.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It measures the turning effect of a force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is calculated as the product of force and the perpendicular distance from the pivot.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is a vector quantity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the same as the applied force.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "99ae5f028390443094ce6",
+            "concepts": [
+                "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c",
+                "d23d0575-69c3-4bd9-814c-465f69e60325"
+            ],
+            "variants": [
+                {
+                    "id": "05efe624a41048bf9e4a2",
+                    "question": "What is the standard unit of measurement for the moment of a force?",
+                    "options": [
+                        {
+                            "option_text": "Newton (N)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Joule (J)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Newton metre (Nm)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Watt (W)",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "dc16d293f6034c5c89c16",
+                    "question": "Which of the following is the correct representation for the unit of moment of force?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "N/m",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Nm",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "N/m\u00b2",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Nm\u00b2",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5fbfd3f3c9d84ae8907e9",
+                    "question": "Select all the units that are NOT the standard unit of measurement for the moment of a force.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Newton (N)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Joule (J)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Newton metre (Nm)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Watt (W)",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "d6227ddaf3f44022903d7",
+            "concepts": [
+                "259589dd-4c8e-4938-9dde-4a0c9930e92e",
+                "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c",
+                "b740ddfa-3ad8-4e38-b850-124c5bb429fe"
+            ],
+            "variants": [
+                {
+                    "id": "e932f10826d14b358db82",
+                    "question": "According to the principle of moments, for an object to be in equilibrium:",
+                    "options": [
+                        {
+                            "option_text": "The sum of clockwise moments must be greater than the sum of anticlockwise moments.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The sum of clockwise moments must be less than the sum of anticlockwise moments.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The sum of clockwise moments must equal the sum of anticlockwise moments.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The moments do not affect equilibrium.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "29d2920a9fb94163981b7",
+                    "question": "Which of the following statements correctly describe the principle of moments for an object in equilibrium? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total clockwise moment is equal to the total anticlockwise moment.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The sum of upward forces must equal the sum of downward forces.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The sum of clockwise moments must be greater than the sum of anticlockwise moments.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object must not be rotating.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "2310565c9dc74e08b73eb",
+                    "question": "A seesaw is balanced when a child sits on one end. If the child moves further away from the pivot, what happens to the anticlockwise moment they exert?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The anticlockwise moment increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The anticlockwise moment decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The anticlockwise moment remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The clockwise moment increases.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "17d6c63aca0d4913a7d1d",
+            "concepts": [
+                "259589dd-4c8e-4938-9dde-4a0c9930e92e",
+                "b740ddfa-3ad8-4e38-b850-124c5bb429fe",
+                "bfadea22-2150-46b6-a059-bc3f7abca23e",
+                "26608215-6830-407e-a1a7-5687a1407c67"
+            ],
+            "variants": [
+                {
+                    "id": "f48587ec3b144dae9012f",
+                    "question": "What conditions must be met for an object to be in equilibrium?",
+                    "options": [
+                        {
+                            "option_text": "Net force must be zero",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Net moment must be zero",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Net force must be non-zero",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Net moment must be non-zero",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "5e7f8ee5150746b593fb8",
+                    "question": "Which of the following conditions must be met for an object to be in equilibrium? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The net force acting on the object is zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The net moment acting on the object is zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The net force acting on the object is non-zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The net moment acting on the object is non-zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "cabaaac76d2044bbadb11",
+                    "question": "An object is in translational equilibrium if:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The net force acting on the object is zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The net moment acting on the object is zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object is rotating at a constant angular velocity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object has a constant linear velocity and zero angular velocity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ade3b093068249a2ade8c",
+            "concepts": [
+                "d6f2546f-bb52-486e-9e50-b82b5aeb5c87"
+            ],
+            "variants": [
+                {
+                    "id": "1f1cbec0a5b5473db054f",
+                    "question": "What is the center of gravity?",
+                    "options": [
+                        {
+                            "option_text": "The point where an object's entire mass is considered to act.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The point where an object's entire weight is considered to act.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The physical center of an object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The point of balance of an object.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0ac819d6e20547d188159",
+                    "question": "Which of the following statements is most accurate regarding the center of gravity of an object?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is the point where the entire mass of the object is concentrated.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the point where the weight of the object appears to act.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is always located at the geometric center of the object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the point where the object experiences the greatest gravitational force.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "eb47bd19c1364d0e8a933",
+                    "question": "Select all the statements that correctly describe the center of gravity:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is the point where the entire mass of an object is assumed to be concentrated.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the point about which the sum of the torques due to gravity is zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the point where the gravitational force appears to act.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "For symmetrically shaped objects with uniform density, it is located at the geometric center.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "5815eec06d2c4b58bc6b3",
+            "concepts": [
+                "d6f2546f-bb52-486e-9e50-b82b5aeb5c87",
+                "105af5c0-e9a1-4e0d-8b01-c569979641fa"
+            ],
+            "variants": [
+                {
+                    "id": "34b7f5f78b0e43e384c96",
+                    "question": "What is the general location of the center of gravity for symmetrical objects with uniform density?",
+                    "options": [
+                        {
+                            "option_text": "At the geometric center.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "At the edge of the object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Outside the object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Dependent on the orientation of the object.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4decc349f47d415e900f3",
+                    "question": "Which of the following statements accurately describes the location of the center of gravity for symmetrical objects with uniform density?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is always located at the geometric center of the object.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is located at the point where the object's mass is most concentrated.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is located outside the object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It can be located anywhere within the object, depending on its shape.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4a677a2a3a444ea183b3f",
+                    "question": "A cube of uniform density has sides of length 2 meters. Where is its center of gravity located?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "At the center of one of its faces.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1 meter from each face.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "2 meters from each face.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "At one of its corners.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6e87d2711fd442a08f082",
+            "concepts": [
+                "d6f2546f-bb52-486e-9e50-b82b5aeb5c87",
+                "ecd41a85-3b88-48ed-bba8-67df1aac012d"
+            ],
+            "variants": [
+                {
+                    "id": "e0a58ef6ea5d4d5895347",
+                    "question": "When will an object topple?",
+                    "options": [
+                        {
+                            "option_text": "When the vertical line through the center of gravity falls outside the base of support.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "When the center of gravity is within the base of support.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "When the object is perfectly balanced.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Toppling only occurs with external forces.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "079d481a04874b2e95c19",
+                    "question": "Which of the following scenarios will cause an object to topple?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The vertical line through the center of gravity falls outside the base of support.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object is pushed with a force directed towards its center of gravity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's weight is evenly distributed across its base.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object is placed on a perfectly level surface.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0c2322f87c774f4d8dcf0",
+                    "question": "Select all of the following conditions that increase an object's likelihood of toppling.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A higher center of gravity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A wider base of support.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A vertical line through the center of gravity falling outside the base of support.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A lower center of gravity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "f4a9c4884d3047ce8d019",
+            "concepts": [
+                "d6f2546f-bb52-486e-9e50-b82b5aeb5c87",
+                "ecd41a85-3b88-48ed-bba8-67df1aac012d",
+                "00c8f7a3-fbbc-4466-8a4b-bad05e8bbde4"
+            ],
+            "variants": [
+                {
+                    "id": "b4731219c3674708b8bfd",
+                    "question": "Which of the following enhances stability?",
+                    "options": [
+                        {
+                            "option_text": "Increasing the height of the center of gravity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Lowering the center of gravity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Reducing the base area",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Using a lighter material",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d9693cb8dff04e2395456",
+                    "question": "A delivery truck has a high center of gravity. Which of the following actions would NOT improve the truck's stability?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Widening the wheelbase",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Lowering the suspension",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Loading heavy cargo on top",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increasing the weight of the chassis",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fd996240d8cf4941a7fe8",
+                    "question": "Which of the following factors contribute to the stability of an object? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A low center of gravity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A narrow base of support",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A wide base of support",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A high center of gravity",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "58722dc08db54bc1961fd",
+            "concepts": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "4716e065-7ace-4fe7-b41a-02e362138b04",
+                "238be296-cc67-4b9f-90f2-77ce6f81bc0b",
+                "774ffc0d-cf72-4145-a42f-24801ee68ac7"
+            ],
+            "variants": [
+                {
+                    "id": "f5e969381027480c8b223",
+                    "question": "Match each force with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Friction",
+                            "optionB": "Opposes motion between surfaces in contact"
+                        },
+                        {
+                            "optionA": "Drag",
+                            "optionB": "Opposes motion through a fluid"
+                        },
+                        {
+                            "optionA": "Centripetal Force",
+                            "optionB": "Maintains an object's circular path"
+                        },
+                        {
+                            "optionA": "Force",
+                            "optionB": "A push or a pull"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "05c82cfb36fe4aacb99f9",
+            "concepts": [
+                "e5f2bcc0-804a-4ce1-aac1-ccbc27903601",
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+                "822cbd3c-ba65-4bb4-a5a6-0e446921e50f",
+                "2943a771-25bf-4ed1-ae4e-a7e35cbf1756"
+            ],
+            "variants": [
+                {
+                    "id": "e44b78e179c440ac8928f",
+                    "question": "Match the law/concept with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Newton's First Law",
+                            "optionB": "Object at rest stays at rest unless acted upon by a net force"
+                        },
+                        {
+                            "optionA": "Newton's Second Law",
+                            "optionB": "Acceleration is proportional to net force and inversely proportional to mass"
+                        },
+                        {
+                            "optionA": "Newton's Third Law",
+                            "optionB": "Every action has an equal and opposite reaction"
+                        },
+                        {
+                            "optionA": "Hooke's Law",
+                            "optionB": "Spring extension is proportional to applied force"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

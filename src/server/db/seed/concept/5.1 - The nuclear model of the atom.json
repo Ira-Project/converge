@@ -1,0 +1,373 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "qw9afeoqfzvopos5xsyld",
+    "topicIdProd": "",
+    "chapter_text": "### The Atom: Early Models and Modern Structure\n*   **Early \"Plum-Pudding\" Model:** Regarded the atom as a positively charged sphere with negatively charged electrons distributed throughout it.\n*   **Modern Nuclear Model:**\n    *   Consists of a small, dense, positively charged **nucleus** at its center.\n    *   Negatively charged **electrons** orbit the nucleus in a surrounding cloud.\n    *   In a neutral atom, the total negative charge of the electrons is equal and opposite to the total positive charge of the nucleus.\n\n### Experimental Evidence: Geiger and Marsden's Scattering\n*   **Experiment:** Alpha ($\\alpha$-) particles were directed at a thin metal foil (e.g., gold).\n*   **Observations:**\n    *   Most $\\alpha$-particles passed straight through the foil undeflected.\n    *   Some $\\alpha$-particles were scattered (deflected) through appreciable angles.\n    *   A very small number (about 1 in 8000) were deflected by more than 90$^\\circ$ (appeared to \"bounce back\").\n*   **Rutherford's Conclusions (Supporting the Nuclear Model):**\n    *   The atom is mostly empty space.\n    *   Almost all of the atom's mass and all of its positive charge are concentrated in a tiny, dense nucleus.\n    *   The observed deflections were due to the strong electrostatic repulsion between the positively charged $\\alpha$-particles and the positively charged nucleus.\n\n### Ions\n*   **Neutral Atom:** An atom with no net electrical charge, meaning the number of protons equals the number of electrons.\n*   **Positive Ion:** Formed when a neutral atom loses one or more negatively charged electrons, resulting in a net positive charge.\n*   **Negative Ion:** Formed when a neutral atom gains one or more extra negatively charged electrons, resulting in a net negative charge.\n\n### Atomic Models: Bohr and Schr\u00f6dinger\n*   **Rutherford-Bohr Model:**\n    *   Suggested that electrons orbit the nucleus in specific, discrete energy levels (orbits).\n    *   **Excitation:** When an atom gains energy (e.g., by heating), electrons can jump to higher energy orbits.\n    *   **De-excitation:** When electrons fall back to lower energy orbits, they emit a photon of electromagnetic radiation. The energy of the emitted photon is equal to the energy difference between the two orbits: $E_{photon} = E_{higher} - E_{lower}$.\n    *   **Ionisation Energy:** The minimum energy required for an electron to completely escape the atom, resulting in the formation of an ion.\n*   **Schr\u00f6dinger Model:**\n    *   Replaced the idea of definite orbits with \"hazy electron clouds,\" representing regions where electrons are most likely to be found.\n    *   Maintained the concept of discrete energy levels, which are unique to each element.\n    *   **Line Spectra:** Produced when excited atoms emit photons with specific energies, resulting in discrete colored lines unique to each element.\n    *   **Continuous Spectra:** Produced by energy changes in many different atoms, resulting in a continuous band of colors.\n\n### The Nucleus: Composition and Notation\n*   The nucleus is composed of positively charged **protons** and uncharged **neutrons**, collectively known as **nucleons**.\n*   **Relative Charges:**\n    *   Proton: +1\n    *   Neutron: 0 (uncharged)\n    *   Electron: -1\n*   **Relative Masses (relative to electron mass = 1):**\n    *   Proton: $\\approx 1836$\n    *   Neutron: $\\approx 1839$\n    *   Electron: $1$\n*   **Proton Number (Atomic Number, Z):**\n    *   The number of protons in the nucleus.\n    *   Uniquely identifies an element and determines its chemical properties.\n    *   In a neutral atom, $Z$ also equals the number of electrons.\n*   **Nucleon Number (Mass Number, A):**\n    *   The total number of protons and neutrons in the nucleus.\n*   **Number of Neutrons:** Calculated as $A - Z$.\n*   **Nuclide Notation:** An atom X is represented as $^{A}_{Z}\\text{X}$, where $A$ is the nucleon number and $Z$ is the proton number.\n*   **Charge on a Nucleus:** Equal to the product of the proton number $Z$ and the charge of a single proton.\n*   **Mass of a Nucleus:** Approximately equal to the product of the nucleon number $A$ and the mass of a single proton.\n\n### Isotopes and Nuclides\n*   **Isotopes:** Atoms of the same element (i.e., same proton number, $Z$) but with different numbers of neutrons (and therefore different nucleon numbers, $A$). They exhibit identical chemical properties.\n*   **Nuclide:** Refers to a specific type of atomic nucleus characterized by a unique combination of protons and neutrons.\n*   **Radioisotopes (Radionuclides):** Isotopes with unstable nuclei that undergo radioactive decay.\n\n### Nuclear Energy: Fission and Fusion\n*   **Mass-Energy Equivalence:** Energy ($E$) and mass ($m$) are interconvertible according to Einstein's famous equation: $E = mc^2$, where $c$ is the speed of light ($3 \\times 10^8 \\text{ m/s}$).\n*   **Mass Defect:** A decrease in mass observed during nuclear reactions, which is converted into a substantial amount of energy. This energy often appears as the kinetic energy of the reaction products.\n*   **Nuclear Fission:**\n    *   **Process:** A heavy, unstable nucleus splits into two or more smaller nuclei (fission fragments), typically after absorbing a neutron. This process releases energy and additional neutrons.\n    *   **Example Reaction:** $^{235}_{92}\\text{U} + ^{1}_{0}\\text{n} \\rightarrow ^{144}_{56}\\text{Ba} + ^{90}_{36}\\text{Kr} + 2^{1}_{0}\\text{n} + \\text{energy}$.\n    *   **Conservation Laws:** The total nucleon number ($A$) and total proton number ($Z$) are conserved before and after the reaction.\n    *   **Chain Reaction:** The neutrons released during fission can induce further fission reactions in nearby nuclei, potentially leading to a self-sustaining chain reaction if a \"critical mass\" of fissile material is present.\n    *   **Nuclear Reactor:** A device that controls a nuclear fission chain reaction to produce heat (e.g., for power generation). Key components include:\n        *   **Control rods:** (e.g., boron) absorb neutrons to regulate the reaction rate.\n        *   **Moderator:** (e.g., graphite) slows down fast fission neutrons, making them more likely to cause further fission.\n        *   **Coolant:** (e.g., carbon dioxide gas) transfers heat generated by the fission reaction.\n        *   **Heat exchanger:** Uses the heat to produce steam for turbines.\n*   **Nuclear Fusion:**\n    *   **Process:** Two light nuclei combine to form a heavier nucleus, releasing a tremendous amount of energy.\n    *   **Conditions:** Requires extremely high temperatures (over 100 million $^\\circ$C) and pressures to overcome the electrostatic repulsion between the positively charged nuclei, allowing them to fuse.\n    *   **Thermonuclear Fusion:** A self-sustaining fusion reaction where the energy released is sufficient to maintain the high temperatures required for the reaction to continue.\n    *   **Example:** The Sun's energy is produced by nuclear fusion (e.g., the \"hydrogen burning\" sequence).\n    *   **Example Reaction (Deuterium-Tritium):** $^{2}_{1}\\text{H} + ^{3}_{1}\\text{H} \\rightarrow ^{4}_{2}\\text{He} + ^{1}_{0}\\text{n} + \\text{energy}$.",
+    "chapter_concepts": [
+        {
+            "concept_id": "737b5b37-5cb8-4678-a26d-f9bb51297d17",
+            "concept_question": "What is the plum-pudding model?",
+            "concept_answer": "It depicts the atom as a positively charged sphere with embedded electrons distributed throughout.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "37855077-fd40-4a9b-8221-a77c393a63b8",
+            "concept_question": "What is the modern nuclear model?",
+            "concept_answer": "It describes an atom with a dense nucleus at its center and electrons orbiting in a surrounding cloud.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8f01ced6-94f4-4885-bda3-4eb807ea1c94",
+                "68abbbec-bde7-44ba-b56f-cc2d5b8f01a5"
+            ]
+        },
+        {
+            "concept_id": "e610543e-36e3-456e-a6dc-ece8abe7bd44",
+            "concept_question": "What is the Rutherford scattering experiment?",
+            "concept_answer": "It demonstrated that atoms are mostly empty space with mass and positive charge concentrated in a tiny nucleus.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8f01ced6-94f4-4885-bda3-4eb807ea1c94",
+                "08fafa16-5c26-466d-b07f-7acf618d7e71",
+                "54d96c88-f3e0-4960-acb4-9bb3b98fcd5b"
+            ]
+        },
+        {
+            "concept_id": "c160fbab-1084-4e19-9e11-26bb14e17d31",
+            "concept_question": "What is a neutral atom?",
+            "concept_answer": "It is an atom with no net electrical charge because its protons equal its electrons.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2568b574-c836-4b6a-ab6e-1ea29fabba96",
+                "68abbbec-bde7-44ba-b56f-cc2d5b8f01a5"
+            ]
+        },
+        {
+            "concept_id": "fa82c3c6-3fb0-4678-bd5e-ec71b63cc950",
+            "concept_question": "What is a positive ion?",
+            "concept_answer": "It is a charged atom that has lost one or more electrons, resulting in a net positive charge.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "c160fbab-1084-4e19-9e11-26bb14e17d31",
+                "68abbbec-bde7-44ba-b56f-cc2d5b8f01a5"
+            ]
+        },
+        {
+            "concept_id": "70bb259d-d789-4cf3-ba98-ff98c8ea67a6",
+            "concept_question": "What is a negative ion?",
+            "concept_answer": "It is a charged atom that has gained extra electrons, giving it a net negative charge.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "c160fbab-1084-4e19-9e11-26bb14e17d31",
+                "68abbbec-bde7-44ba-b56f-cc2d5b8f01a5"
+            ]
+        },
+        {
+            "concept_id": "83e4ba63-865f-4309-9ec7-bf5a40130c14",
+            "concept_question": "What is the Rutherford-Bohr model?",
+            "concept_answer": "It proposes that electrons orbit the nucleus in specific, discrete energy levels.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8f01ced6-94f4-4885-bda3-4eb807ea1c94",
+                "68abbbec-bde7-44ba-b56f-cc2d5b8f01a5"
+            ]
+        },
+        {
+            "concept_id": "7dc0005e-d655-4b45-86b5-d0fa8489d97a",
+            "concept_question": "What is ionisation energy?",
+            "concept_answer": "It is the minimum energy required for an electron to escape an atom and form an ion.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "83e4ba63-865f-4309-9ec7-bf5a40130c14",
+                "c160fbab-1084-4e19-9e11-26bb14e17d31"
+            ]
+        },
+        {
+            "concept_id": "1f5ba261-716e-44f9-af4d-cb41743f6ef6",
+            "concept_question": "What is the Schr\u00f6dinger model?",
+            "concept_answer": "It describes electrons with probabilistic, hazy clouds instead of fixed orbits.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8f01ced6-94f4-4885-bda3-4eb807ea1c94",
+                "68abbbec-bde7-44ba-b56f-cc2d5b8f01a5"
+            ]
+        },
+        {
+            "concept_id": "45f7fa26-a558-4661-b5a9-4b1d19853af4",
+            "concept_question": "What are line spectra?",
+            "concept_answer": "They are discrete emission lines produced when electrons transition between specific energy levels.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "00ff3ee0-f45f-4238-9426-08db0e207911",
+            "concept_question": "What are continuous spectra?",
+            "concept_answer": "They are continuous bands of colors produced by energy changes in many atoms.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1f5ba261-716e-44f9-af4d-cb41743f6ef6"
+            ]
+        },
+        {
+            "concept_id": "68abbbec-bde7-44ba-b56f-cc2d5b8f01a5",
+            "concept_question": "What is an electron?",
+            "concept_answer": "It is a negatively charged subatomic particle that orbits the nucleus.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "2568b574-c836-4b6a-ab6e-1ea29fabba96",
+            "concept_question": "What is a proton?",
+            "concept_answer": "It is a positively charged particle located within the atomic nucleus.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "80c45936-e015-46b3-ba71-962630daf341",
+            "concept_question": "What is a neutron?",
+            "concept_answer": "It is an electrically neutral subatomic particle found in the nucleus.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "8f01ced6-94f4-4885-bda3-4eb807ea1c94",
+            "concept_question": "What is the atomic nucleus?",
+            "concept_answer": "It is the small, dense center of an atom composed of protons and neutrons.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2568b574-c836-4b6a-ab6e-1ea29fabba96",
+                "80c45936-e015-46b3-ba71-962630daf341"
+            ]
+        },
+        {
+            "concept_id": "2a3fe2ff-41d3-4b89-b49a-65eced8fb72b",
+            "concept_question": "What are the subatomic particle charges?",
+            "concept_answer": "Protons carry a positive charge, electrons a negative charge, while neutrons are neutral.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2568b574-c836-4b6a-ab6e-1ea29fabba96",
+                "80c45936-e015-46b3-ba71-962630daf341",
+                "68abbbec-bde7-44ba-b56f-cc2d5b8f01a5"
+            ]
+        },
+        {
+            "concept_id": "6ba5e686-0a7a-4fcc-8c35-5d7414609138",
+            "concept_question": "What are the relative masses of subatomic particles?",
+            "concept_answer": "Protons and neutrons are roughly 1836 and 1839 times heavier than electrons, respectively.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2568b574-c836-4b6a-ab6e-1ea29fabba96",
+                "80c45936-e015-46b3-ba71-962630daf341",
+                "68abbbec-bde7-44ba-b56f-cc2d5b8f01a5"
+            ]
+        },
+        {
+            "concept_id": "bc7ad055-7748-4115-bcf4-ac0b0aaa550f",
+            "concept_question": "What is atomic number (Z)?",
+            "concept_answer": "It is the number of protons in an atom\u2019s nucleus and uniquely identifies the element.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2568b574-c836-4b6a-ab6e-1ea29fabba96",
+                "8f01ced6-94f4-4885-bda3-4eb807ea1c94"
+            ]
+        },
+        {
+            "concept_id": "83080da0-7f55-4037-98ac-b1d833645165",
+            "concept_question": "What is nucleon number (A)?",
+            "concept_answer": "It is the total count of protons and neutrons in an atomic nucleus.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2568b574-c836-4b6a-ab6e-1ea29fabba96",
+                "80c45936-e015-46b3-ba71-962630daf341",
+                "8f01ced6-94f4-4885-bda3-4eb807ea1c94"
+            ]
+        },
+        {
+            "concept_id": "fb0ad570-8b70-4f1e-95f4-6cdf79d8f580",
+            "concept_question": "How is the neutron number determined?",
+            "concept_answer": "It is calculated by subtracting the atomic number from the nucleon number.",
+            "concept_formula": [
+                "$!$A - Z$!$"
+            ],
+            "pre-requisites": [
+                "83080da0-7f55-4037-98ac-b1d833645165",
+                "bc7ad055-7748-4115-bcf4-ac0b0aaa550f"
+            ]
+        },
+        {
+            "concept_id": "5a3b0668-1aea-4c8e-9e1b-26be2f20998f",
+            "concept_question": "What is nuclide notation?",
+            "concept_answer": "It is the representation of an atom using its mass number above and atomic number below the symbol.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "83080da0-7f55-4037-98ac-b1d833645165",
+                "bc7ad055-7748-4115-bcf4-ac0b0aaa550f"
+            ]
+        },
+        {
+            "concept_id": "002be2d6-27cb-4973-b34b-a9412704a235",
+            "concept_question": "What is nuclear charge?",
+            "concept_answer": "It is the total positive charge of a nucleus determined by its proton count.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bc7ad055-7748-4115-bcf4-ac0b0aaa550f"
+            ]
+        },
+        {
+            "concept_id": "0f09cd2a-9fd9-474b-a934-f58993194758",
+            "concept_question": "How is nuclear mass estimated?",
+            "concept_answer": "It is approximately equal to the nucleon number multiplied by the mass of a proton.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "83080da0-7f55-4037-98ac-b1d833645165"
+            ]
+        },
+        {
+            "concept_id": "dd4bf0ff-7267-48a8-9340-465b7a5de27e",
+            "concept_question": "What are isotopes?",
+            "concept_answer": "They are atoms of the same element that have different numbers of neutrons.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bc7ad055-7748-4115-bcf4-ac0b0aaa550f",
+                "fb0ad570-8b70-4f1e-95f4-6cdf79d8f580"
+            ]
+        },
+        {
+            "concept_id": "03f0d341-5b03-4a49-8b11-55711b3b3eaa",
+            "concept_question": "What is a nuclide?",
+            "concept_answer": "It is a specific type of atomic nucleus defined by its unique combination of protons and neutrons.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2568b574-c836-4b6a-ab6e-1ea29fabba96",
+                "80c45936-e015-46b3-ba71-962630daf341",
+                "8f01ced6-94f4-4885-bda3-4eb807ea1c94"
+            ]
+        },
+        {
+            "concept_id": "db7e6e1a-74bd-42b7-9f96-0cb40847ba28",
+            "concept_question": "What are radioisotopes?",
+            "concept_answer": "They are unstable isotopes that undergo radioactive decay.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "dd4bf0ff-7267-48a8-9340-465b7a5de27e"
+            ]
+        },
+        {
+            "concept_id": "31f50ed6-edee-486c-bcff-f2fa35c2084a",
+            "concept_question": "What is mass-energy equivalence?",
+            "concept_answer": "It states that mass and energy are interconvertible.",
+            "concept_formula": [
+                "$!$E = m c^2$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "57f7ef4b-d189-444a-90e5-fa87e8ba53fd",
+            "concept_question": "What is mass defect?",
+            "concept_answer": "It is the loss of mass during nuclear reactions that is converted into energy.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "31f50ed6-edee-486c-bcff-f2fa35c2084a"
+            ]
+        },
+        {
+            "concept_id": "2c36a758-1439-4f35-859d-7b9138527137",
+            "concept_question": "What is nuclear fission?",
+            "concept_answer": "It is the splitting of a heavy, unstable nucleus into smaller nuclei with energy release.",
+            "concept_formula": [
+                "$!$^{235}_{92}U + ^{1}_{0}n \\to ^{144}_{56}Ba + ^{90}_{36}Kr + 2^{1}_{0}n + \\text{energy}$!$"
+            ],
+            "pre-requisites": [
+                "8f01ced6-94f4-4885-bda3-4eb807ea1c94",
+                "31f50ed6-edee-486c-bcff-f2fa35c2084a",
+                "57f7ef4b-d189-444a-90e5-fa87e8ba53fd"
+            ]
+        },
+        {
+            "concept_id": "fdb059bc-153c-4c73-8d1d-a43901dcfe52",
+            "concept_question": "What is a nuclear reactor?",
+            "concept_answer": "It is a device that controls a nuclear fission chain reaction to produce heat.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2c36a758-1439-4f35-859d-7b9138527137"
+            ]
+        },
+        {
+            "concept_id": "502d14d7-283b-4fae-b16a-c46c4db6f194",
+            "concept_question": "What are control rods?",
+            "concept_answer": "They are components that absorb neutrons to regulate the rate of a nuclear reaction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fdb059bc-153c-4c73-8d1d-a43901dcfe52"
+            ]
+        },
+        {
+            "concept_id": "feffda51-6d96-410c-86fc-6f456d196a92",
+            "concept_question": "What is a moderator?",
+            "concept_answer": "It is a material used to slow down fast neutrons in a nuclear reactor.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fdb059bc-153c-4c73-8d1d-a43901dcfe52"
+            ]
+        },
+        {
+            "concept_id": "3878d623-fcae-4cb4-9860-0dfcd74f758f",
+            "concept_question": "What is a coolant?",
+            "concept_answer": "It is a substance that transfers heat away from the nuclear core.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fdb059bc-153c-4c73-8d1d-a43901dcfe52"
+            ]
+        },
+        {
+            "concept_id": "056c71f3-a4ad-4c84-9310-eff72e8ca230",
+            "concept_question": "What is a heat exchanger?",
+            "concept_answer": "It is a system that uses reactor heat to produce steam for turbines.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fdb059bc-153c-4c73-8d1d-a43901dcfe52"
+            ]
+        },
+        {
+            "concept_id": "c089fa70-4786-427d-977a-b2918b3a2e33",
+            "concept_question": "What is thermonuclear fusion?",
+            "concept_answer": "It is a self-sustaining fusion reaction where the energy released maintains the high temperatures necessary for fusion.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "08fafa16-5c26-466d-b07f-7acf618d7e71",
+            "concept_question": "What is an alpha particle?",
+            "concept_answer": "It is a positively charged particle used in scattering experiments.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "54d96c88-f3e0-4960-acb4-9bb3b98fcd5b",
+            "concept_question": "What is electrostatic repulsion?",
+            "concept_answer": "It is the force that causes particles with like charges to repel each other.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2a3fe2ff-41d3-4b89-b49a-65eced8fb72b"
+            ]
+        },
+        {
+            "concept_id": "bcd22eda-e3fc-4706-ae1b-75a61ddfa14c",
+            "concept_question": "What is the conservation of nucleon number in fission?",
+            "concept_answer": "It states that the total number of nucleons (protons and neutrons) remains constant in a nuclear fission reaction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "83080da0-7f55-4037-98ac-b1d833645165"
+            ]
+        },
+        {
+            "concept_id": "330c3def-e9aa-4091-9342-5aec6ea7d127",
+            "concept_question": "What is the conservation of proton number in fission?",
+            "concept_answer": "It indicates that the number of protons (atomic number) remains unchanged during a nuclear fission reaction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bc7ad055-7748-4115-bcf4-ac0b0aaa550f"
+            ]
+        }
+    ]
+}

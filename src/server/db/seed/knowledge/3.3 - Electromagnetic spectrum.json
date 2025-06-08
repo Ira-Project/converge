@@ -1,0 +1,715 @@
+{
+    "name": "Electromagnetic Spectrum",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "fa7d786ccc7c4d2c9b1fb",
+            "concepts": [
+                "fd076d14-b840-4cc9-839b-7e2b14a7954a",
+                "b78454ea-1649-4348-b125-05c30dc2759b",
+                "5d5da45c-d891-4924-b19e-6cedeb57827b"
+            ],
+            "variants": [
+                {
+                    "id": "4340b34492c04958a7bc8",
+                    "question": "Which of the following statements are true regarding electromagnetic waves?",
+                    "options": [
+                        {
+                            "option_text": "Electromagnetic waves are continuous waves originating from electron energy changes in atoms.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electromagnetic waves travel faster in denser mediums.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electromagnetic waves travel at approximately $!$3 x 10^8 m/s$!$ in a vacuum.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electromagnetic waves are longitudinal waves.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "258d8f288cd74f098bdab",
+                    "question": "Which of the following statements is NOT true regarding electromagnetic waves?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Electromagnetic waves are continuous waves originating from electron energy changes in atoms.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electromagnetic waves travel faster in denser mediums.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electromagnetic waves travel at approximately $!$3 x 10^8 m/s$!$ in a vacuum.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electromagnetic waves are transverse waves.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3e21c424fcbe43cab4e3f",
+                    "question": "Select all the statements that are true regarding electromagnetic waves.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Electromagnetic waves are continuous waves originating from electron energy changes in atoms.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electromagnetic waves travel faster in denser mediums.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electromagnetic waves travel at approximately $!$3 x 10^8 m/s$!$ in a vacuum.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electromagnetic waves are longitudinal waves.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "249dd10b18e64de389df7",
+            "concepts": [
+                "ac9e6112-e5e7-48ec-bb82-50fa7044d14a",
+                "5d5da45c-d891-4924-b19e-6cedeb57827b",
+                "ad755d70-94fb-44f0-8af1-57ca223ac8ac",
+                "f0cc2703-26e8-45e2-98af-6f53003b0ead"
+            ],
+            "variants": [
+                {
+                    "id": "c0389722db3e4cd4a4208",
+                    "question": "What is the relationship between frequency ($!$f$!$), wavelength ($!$\\lambda$!$), and speed ($!$v$!$) of an electromagnetic wave?",
+                    "options": [
+                        {
+                            "option_text": "$!$v = f\\lambda$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$f = v\\lambda$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\lambda = vf$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = \\frac{f}{\\lambda}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "765eb1ac1daa4430aba67",
+                    "question": "If the frequency ($!$f$!$) of an electromagnetic wave is doubled while its speed ($!$v$!$) remains constant, what happens to its wavelength ($!$\\lambda$!$)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The wavelength is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The wavelength is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wavelength remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wavelength is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1d4f3286bf944c4085738",
+                    "question": "Select all the equations that correctly relate the speed ($!$v$!$), frequency ($!$f$!$), and wavelength ($!$\\lambda$!$) of an electromagnetic wave.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$v = f\\lambda$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$f = \\frac{v}{\\lambda}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\lambda = \\frac{f}{v}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\lambda = \\frac{v}{f}$!$",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "2d14a314a9d34d1ea8b67",
+            "concepts": [
+                "6b1e47b3-ea98-4785-8093-26bd6fe50903",
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337",
+                "5b194c28-6816-4a73-89ec-3ec41f81f11c"
+            ],
+            "variants": [
+                {
+                    "id": "31476fb77ae94a11a877e",
+                    "question": "Which of the following are characteristics of ultraviolet (UV) radiation?",
+                    "options": [
+                        {
+                            "option_text": "UV radiation has wavelengths shorter than visible light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "UV radiation is primarily used for heating purposes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "UV radiation is emitted by the sun and mercury lamps.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "UV radiation has longer wavelengths than infrared radiation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "19fe6b574a8545be86a21",
+                    "question": "Which of the following statements is correct regarding ultraviolet (UV) radiation?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "UV radiation has wavelengths longer than visible light.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "UV radiation has wavelengths shorter than visible light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "UV radiation is not emitted by the sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "UV radiation is primarily used for communication purposes.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "59cb429a15154d3c8d174",
+                    "question": "Which of the following apply to ultraviolet (UV) radiation? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "UV radiation is a form of electromagnetic radiation.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "UV radiation can cause sunburns and skin damage.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "UV radiation is completely blocked by the Earth's atmosphere.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "UV radiation has longer wavelengths than radio waves.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "2d5383e5bed34f5f8987f",
+            "concepts": [
+                "c8acbe81-46b4-43f1-b4fc-b8acd2debfda",
+                "2bc67fec-52e1-4c05-83e8-955f740a9a5e"
+            ],
+            "variants": [
+                {
+                    "id": "0f00a10ae50641158ac81",
+                    "question": "Which of the following statements best describes Very High Frequency (VHF) waves?",
+                    "options": [
+                        {
+                            "option_text": "VHF waves are used for long-distance communication due to their reflection by the ionosphere.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "VHF waves require a clear line-of-sight for local broadcasts.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "VHF waves have the longest wavelengths in the electromagnetic spectrum.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "VHF waves are a type of microwave radiation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ba55235143b8492db5615",
+                    "question": "Which of the following characteristics are TRUE about Very High Frequency (VHF) waves? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They are effectively used for long-distance communication due to ionospheric reflection.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They necessitate a clear line-of-sight for efficient local broadcasts.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They are characterized by having shorter wavelengths compared to High Frequency (HF) waves.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They fall within the microwave radiation spectrum.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "1dcd3cb8fdbe4c9798361",
+                    "question": "Which of the following is an INCORRECT statement regarding Very High Frequency (VHF) waves?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "VHF waves are suitable for line-of-sight communication.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "VHF waves are often used in FM radio broadcasting.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "VHF waves have longer wavelengths than Ultra High Frequency (UHF) waves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "VHF waves can travel great distances by refracting off the Earth's surface.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "9c8cea6d7cb144ee87c6e",
+            "concepts": [
+                "4b84bd30-676d-4661-8923-c0e47b0b38f2",
+                "ca267a91-82d8-4380-9566-c0f289e2698f"
+            ],
+            "variants": [
+                {
+                    "id": "29d60a05cc7b47e8a9bc0",
+                    "question": "Which of the following is a primary advantage of using digital signaling over analog signaling in communication systems?",
+                    "options": [
+                        {
+                            "option_text": "Digital signaling allows for faster data processing and transmission.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Digital signals are continuously variable in voltage or current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Digital signaling is more susceptible to noise interference.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Digital signaling is limited to shorter transmission distances.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "35ef14e21a2e41dbafda4",
+                    "question": "Select all of the following that are advantages of digital signaling compared to analog signaling:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Improved noise immunity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Simpler circuitry",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Faster data transmission rates",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Lower bandwidth requirements",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "8a947bde900143ef80962",
+                    "question": "Which of the following statements is NOT a disadvantage of analog signaling when compared to digital signaling?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Analog signals are more susceptible to noise and interference.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Analog signals are difficult to encrypt and secure.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Analog signaling is easier to process and store.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Analog signal quality degrades over long distances.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "892c693560a4499ea3440",
+            "concepts": [
+                "e622f934-f570-4002-809e-e602761d6f25",
+                "ca267a91-82d8-4380-9566-c0f289e2698f"
+            ],
+            "variants": [
+                {
+                    "id": "cdc5e85f6fc84d1a9ac61",
+                    "question": "How does digital signalling improve communication quality?",
+                    "options": [
+                        {
+                            "option_text": "It enables longer distance communication with reduced noise interference.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It reduces the number of voltage levels in signals.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It eliminates the need for signal modulation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It increases the speed of signal attenuation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b54311df8c0e4539a7c09",
+                    "question": "Which of the following is NOT an advantage of using digital signaling in communication systems?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Improved immunity to noise and interference.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ability to transmit signals over longer distances with minimal signal degradation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Simplified signal processing and error detection.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increased susceptibility to signal distortion.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3fd9a0ec496f4837b54d8",
+                    "question": "Select all of the following that are advantages of digital signaling over analog signaling:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Better noise immunity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Simpler processing.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Lower bandwidth requirements.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Susceptibility to signal attenuation over long distances.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "4cc083da5d6546c5a8407",
+            "concepts": [
+                "b59785e6-91a2-4233-9609-ba7a25f65393",
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337"
+            ],
+            "variants": [
+                {
+                    "id": "da5554ffe4364d5fbd489",
+                    "question": "Which electromagnetic waves are used in radar systems?",
+                    "options": [
+                        {
+                            "option_text": "Microwaves",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radio waves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Infrared radiation",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ultraviolet radiation",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0c0d0b9796b64c02ac24c",
+                    "question": "Which of the following statements about electromagnetic waves used in radar systems is correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Microwaves are used because they can penetrate atmospheric conditions and reflect off objects.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radio waves are preferred for high-resolution imaging in radar systems.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Infrared radiation is used in radar systems for long-range detection.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ultraviolet radiation is the primary electromagnetic wave used in radar systems.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6ad573240bd041a3a755f",
+                    "question": "Select all electromagnetic waves that can be used in radar systems under specific applications or conditions.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Microwaves",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radio waves",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Infrared radiation",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ultraviolet radiation",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3734581aa1d542df8d1b0",
+            "concepts": [
+                "9e39db25-1583-4dd8-b341-43a86b2ae093",
+                "fd076d14-b840-4cc9-839b-7e2b14a7954a",
+                "5b194c28-6816-4a73-89ec-3ec41f81f11c"
+            ],
+            "variants": [
+                {
+                    "id": "edbe99ff88b14a93b9493",
+                    "question": "What potential health risks are associated with high exposure to electromagnetic radiation?",
+                    "options": [
+                        {
+                            "option_text": "Burns",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Cellular Damage",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Cancer",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increased Vitamin D production",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "3f2e7930ecd5448ebf6ed",
+                    "question": "Which of the following is NOT a potential health risk associated with high exposure to electromagnetic radiation?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Burns",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Cellular Damage",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Cancer",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increased Vitamin D production",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c01d3b69c09e47e7afd21",
+                    "question": "Which of the following health risks are associated with high exposure to electromagnetic radiation? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Burns",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Cellular Damage",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Cancer",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Decreased Melatonin Production",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "e001ccac146d445bbb064",
+            "concepts": [
+                "9cb93525-7655-41d9-b8ac-2ff4d1c7bd56",
+                "2bc67fec-52e1-4c05-83e8-955f740a9a5e",
+                "4c75e2ef-c84a-44bd-ae71-fb87bb889640",
+                "b59785e6-91a2-4233-9609-ba7a25f65393",
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337"
+            ],
+            "variants": [
+                {
+                    "id": "e8aa32284b624046b0fd4",
+                    "question": "Match the type of electromagnetic wave with its description:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Gamma rays",
+                            "optionB": "High-energy electromagnetic waves from radioactive matter."
+                        },
+                        {
+                            "optionA": "Radio waves",
+                            "optionB": "Electromagnetic waves with the longest wavelengths, used for transmitting information."
+                        },
+                        {
+                            "optionA": "Infrared radiation",
+                            "optionB": "Electromagnetic energy detected as heat and used in thermal imaging."
+                        },
+                        {
+                            "optionA": "Microwaves",
+                            "optionB": "Electromagnetic waves used in telecommunications, radar, and cooking."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9303ec3fcf28418ca8166",
+            "concepts": [
+                "cfaaec8e-6592-4842-a7ac-1de07fe495ed",
+                "ca267a91-82d8-4380-9566-c0f289e2698f",
+                "440558dd-71b9-44e5-9be2-ac0685fb47e2"
+            ],
+            "variants": [
+                {
+                    "id": "d27d6a0a35ab4fd98b1f6",
+                    "question": "Match the signal type with its characteristics:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Analogue signal",
+                            "optionB": "Continuously variable voltages or currents."
+                        },
+                        {
+                            "optionA": "Digital signal",
+                            "optionB": "Uses two distinct voltage levels representing high and low states."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

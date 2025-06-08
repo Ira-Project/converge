@@ -1,0 +1,423 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "qmp6nj4brvy3idopjx1c5",
+    "topicIdProd": "",
+    "chapter_text": "### 4.3.1 Circuit diagrams and components\n*   Circuit diagrams use conventional symbols to represent various electrical components.\n*   Common components include cells, batteries, lamps, resistors, ammeters, voltmeters, thermistors, light-dependent resistors (LDRs), relays, light-emitting diodes (LEDs), and semiconductor diodes.\n\n### 4.3.2 Series and parallel circuits\n\n**Current and Potential Difference**\n*   **Series Circuit:**\n    *   Current is the same at every point in the circuit.\n    *   The total potential difference (p.d.) across components is the sum of the individual p.d.s across each component:\n        $V = V_1 + V_2 + V_3$\n*   **Parallel Circuit:**\n    *   Components are connected side by side, allowing current to split into alternative paths and then recombine.\n    *   The current from the source is larger than the current in each branch.\n    *   The p.d. across devices connected in parallel is equal.\n*   **Current at a Junction:**\n    *   The sum of the currents into a junction equals the sum of the currents out of the junction.\n\n**Cells, Batteries, and Electromotive Force (e.m.f.)**\n*   A battery consists of two or more electric cells.\n*   For cells joined in series (positive terminal of one to negative of the next), their e.m.f.s add together to give the combined e.m.f.\n*   For cells connected in parallel, the e.m.f. at the terminals remains the same, but the battery lasts longer.\n*   The p.d. at the terminals of a battery decreases slightly when current is drawn due to internal resistance.\n*   When no current is drawn (open circuit), the terminal p.d. is maximum and equals the e.m.f. of the battery.\n*   Potential difference (or e.m.f.) is defined as the work done ($W$) per unit charge ($Q$):\n    $V = \\frac{W}{Q}$\n\n**Resistance**\n*   **Resistors in Series:**\n    *   The same current flows through each resistor.\n    *   The total voltage across all resistors is the sum of the separate voltages across them:\n        $V = V_1 + V_2 + V_3$\n    *   The combined (total) resistance ($R$) is the sum of individual resistances:\n        $R = R_1 + R_2 + R_3$\n*   **Resistors in Parallel:**\n    *   The voltage across the ends of each resistor is the same.\n    *   The total current ($I$) equals the sum of the currents in the separate branches:\n        $I = I_1 + I_2 + I_3$\n    *   The combined resistance ($R$) is given by:\n        $\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$\n    *   For two resistors in parallel, the combined resistance can be calculated as:\n        $R = \\frac{R_1 R_2}{R_1 + R_2}$ (product over sum)\n    *   The combined resistance of two resistors in parallel is less than that of either resistor alone.\n\n**Advantages of Parallel Circuits (e.g., Lighting)**\n*   The p.d. across each lamp is fixed at the supply p.d., ensuring consistent brightness.\n*   Each lamp can be turned on and off independently.\n*   If one lamp fails, the others can still operate.\n\n### 4.3.3 Action and use of circuit components\n\n**Resistance and Potential Dividers**\n*   **Increase in Resistance of a Conductor:**\n    *   In metals, resistance increases with temperature because atoms vibrate faster, hindering electron flow.\n    *   For a constant current, if resistance ($R$) increases, the potential difference ($V$) across the conductor increases (from Ohm's Law $V=IR$).\n*   **Variable Potential Divider:**\n    *   A circuit arrangement that divides the supply voltage into a smaller output voltage.\n    *   The current ($I$) in a series potential divider with total voltage $V$ and resistors $R_1, R_2$ is:\n        $I = \\frac{V}{(R_1 + R_2)}$\n    *   The voltage across resistor $R_1$ ($V_1$) is:\n        $V_1 = V \\frac{R_1}{(R_1 + R_2)}$\n    *   The voltage across resistor $R_2$ ($V_2$) is:\n        $V_2 = V \\frac{R_2}{(R_1 + R_2)}$\n    *   The ratio of voltages across resistors is equal to the ratio of their resistances:\n        $\\frac{V_1}{V_2} = \\frac{R_1}{R_2}$\n    *   Moving the contact on a variable resistor changes the output p.d.\n\n**Specific Components**\n*   **Light-Dependent Resistor (LDR):**\n    *   A semiconductor device whose resistance decreases as the intensity of light falling on it increases.\n    *   Used in applications like photographic exposure meters and light-operated alarms.\n*   **Thermistor (Negative Temperature Coefficient - NTC):**\n    *   A semiconductor device whose resistance decreases significantly as its temperature rises.\n    *   Used for temperature measurement and in switching circuits (e.g., temperature alarms).\n*   **Relays:**\n    *   An electromagnetic switch that allows a small current in a control circuit to operate a larger current in another circuit.\n    *   Provides electrical isolation between the control circuit and the switched appliance (e.g., mains supply).\n*   **Light-Emitting Diode (LED):**\n    *   A semiconductor diode that emits light when forward-biased.\n    *   **Forward-biased:** Current flows, cathode (C) connected to negative, anode (A) to positive.\n    *   **Reverse-biased:** No current flows; can be damaged if reverse bias voltage is too high.\n    *   Requires a series resistor to limit current.\n    *   Applications: Indicator lamps, numerical displays, diode lasers.\n*   **Semiconductor Diode:**\n    *   A non-ohmic conductor that allows current to pass in one direction only.\n    *   **Forward-biased:** Anode connected to positive, cathode to negative; resistance is small, current flows.\n    *   **Reverse-biased:** Connections are reversed; resistance is large, no current flows.\n    *   Primary application: Rectifier (converts alternating current to direct current).",
+    "chapter_concepts": [
+        {
+            "concept_id": "733ce9e5-968c-4dd7-968a-36e5e06e19e2",
+            "concept_question": "What do circuit diagrams represent?",
+            "concept_answer": "They represent various electrical components using conventional symbols.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "a7a81e0b-dd96-4f20-8a29-de2a714b5200",
+            "concept_question": "What are common electrical components?",
+            "concept_answer": "They include cells, batteries, lamps, resistors, ammeters, voltmeters, thermistors, LDRs, relays, LEDs, and semiconductor diodes.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "9ba1468a-07ca-4a64-a924-aad02f20e701",
+            "concept_question": "What is true about series circuit current?",
+            "concept_answer": "The current is the same at every point in a series circuit.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "110aa7fa-d568-4492-a7c8-73c4b24bb887",
+            "concept_question": "How is series circuit p.d. calculated? (Explanation)",
+            "concept_answer": "It is the sum of individual component potential differences.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1487464f-8dbb-4559-bc0e-c0cac13dfe37",
+                "b22bf2bb-d990-4a7e-842c-1282e7cde553"
+            ]
+        },
+        {
+            "concept_id": "fa88ef1e-98b6-4ec1-a68b-524ce5b90ca5",
+            "concept_question": "Formula for series circuit p.d. calculation",
+            "concept_answer": "The formula is: V = V_1 + V_2 + V_3",
+            "concept_formula": [
+                "$!$V = V_1 + V_2 + V_3$!$"
+            ],
+            "pre-requisites": [
+                "1487464f-8dbb-4559-bc0e-c0cac13dfe37",
+                "b22bf2bb-d990-4a7e-842c-1282e7cde553"
+            ]
+        },
+        {
+            "concept_id": "4f3fb6d6-fd60-491b-83f8-8994af3fe367",
+            "concept_question": "What is a parallel circuit's configuration?",
+            "concept_answer": "Components are connected side by side to allow current splitting and recombination.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b3eafbb9-0b40-4805-9512-0fd24cfd02f7",
+            "concept_question": "How does parallel circuit source current compare?",
+            "concept_answer": "The source current is larger than each branch current due to current division.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "14433c91-f1d3-40a5-97dc-3039b29cf8eb",
+            "concept_question": "What is true about parallel circuit p.d.?",
+            "concept_answer": "The potential difference across all parallel devices is equal.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "9ca76b6e-9ace-41d1-95e6-774aeb585050",
+            "concept_question": "What is current conservation at a junction?",
+            "concept_answer": "The sum of currents entering a junction equals the sum leaving it.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "84b4aa12-aab4-43cc-9ab9-c319fcfc8307",
+            "concept_question": "What is a battery?",
+            "concept_answer": "A battery is composed of two or more electric cells.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "320b0a47-989b-4366-9676-1f34e540ac09",
+            "concept_question": "How do series-connected cells combine e.m.f.? (Explanation)",
+            "concept_answer": "Their e.m.f.s add together to provide a larger electromotive force.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "84b4aa12-aab4-43cc-9ab9-c319fcfc8307"
+            ]
+        },
+        {
+            "concept_id": "b14dd40f-3728-4962-ae52-1fb9c050b293",
+            "concept_question": "Formula for series-connected cells e.m.f. combination",
+            "concept_answer": "The formula is: E = E_1 + E_2 + E_3",
+            "concept_formula": [
+                "$!$E = E_1 + E_2 + E_3$!$"
+            ],
+            "pre-requisites": [
+                "84b4aa12-aab4-43cc-9ab9-c319fcfc8307"
+            ]
+        },
+        {
+            "concept_id": "5ba8d962-7c60-4c2d-9292-78edb5fe387a",
+            "concept_question": "How do parallel-connected cells affect e.m.f.?",
+            "concept_answer": "They retain the same e.m.f. while extending battery lifetime.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "84b4aa12-aab4-43cc-9ab9-c319fcfc8307"
+            ]
+        },
+        {
+            "concept_id": "dafb8efd-f03d-4795-80b9-43bfd2de2b38",
+            "concept_question": "What effect does internal resistance have on battery p.d.?",
+            "concept_answer": "It causes a slight drop in terminal potential difference when current is drawn.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "84b4aa12-aab4-43cc-9ab9-c319fcfc8307"
+            ]
+        },
+        {
+            "concept_id": "028e8f60-c811-4d67-bd5a-46a96e32147e",
+            "concept_question": "What is a battery's open circuit p.d.?",
+            "concept_answer": "It is maximum and equal to the battery's electromotive force.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "84b4aa12-aab4-43cc-9ab9-c319fcfc8307"
+            ]
+        },
+        {
+            "concept_id": "1487464f-8dbb-4559-bc0e-c0cac13dfe37",
+            "concept_question": "What is potential difference? (Concept explanation)",
+            "concept_answer": "It is the work done per unit charge.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b22bf2bb-d990-4a7e-842c-1282e7cde553",
+            "concept_question": "Formula for potential difference",
+            "concept_answer": "The formula is: V = W/Q",
+            "concept_formula": [
+                "$!$V = \\frac{W}{Q}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "237e59f6-be5d-4d06-a42f-1707b7ce31f0",
+            "concept_question": "What is true about series resistors current?",
+            "concept_answer": "The same current flows through every resistor in series.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "ef179d77-ce25-4b81-88a7-095bfcaace17",
+            "concept_question": "How is voltage across series resistors calculated? (Explanation)",
+            "concept_answer": "It is the sum of voltages across individual resistors.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1487464f-8dbb-4559-bc0e-c0cac13dfe37",
+                "b22bf2bb-d990-4a7e-842c-1282e7cde553"
+            ]
+        },
+        {
+            "concept_id": "a4a2fca8-79b6-477a-af5f-dd7bcee145cc",
+            "concept_question": "Formula for voltage across series resistors",
+            "concept_answer": "The formula is: V = V_1 + V_2 + V_3",
+            "concept_formula": [
+                "$!$V = V_1 + V_2 + V_3$!$"
+            ],
+            "pre-requisites": [
+                "1487464f-8dbb-4559-bc0e-c0cac13dfe37",
+                "b22bf2bb-d990-4a7e-842c-1282e7cde553"
+            ]
+        },
+        {
+            "concept_id": "e516b01d-3612-45be-8c77-c1a1e7c940a3",
+            "concept_question": "How is total series resistance computed? (Explanation)",
+            "concept_answer": "It is the sum of the individual resistances.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "645d12e6-f285-44a1-9369-1085f03dc8f0",
+            "concept_question": "Formula for total series resistance",
+            "concept_answer": "The formula is: R = R_1 + R_2 + R_3",
+            "concept_formula": [
+                "$!$R = R_1 + R_2 + R_3$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "0345f5f9-af34-41dd-aaa5-03676d2cc0df",
+            "concept_question": "What is true about voltage in parallel resistors?",
+            "concept_answer": "The voltage across each resistor in parallel is the same.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "6daeb620-0439-43db-9def-e0c700d4d4f1",
+            "concept_question": "How is total current in parallel resistors determined? (Explanation)",
+            "concept_answer": "It is equal to the sum of the currents in each branch.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "fa9fa2f1-8189-499c-8fe5-7f285a84850f",
+            "concept_question": "Formula for total current in parallel resistors",
+            "concept_answer": "The formula is: I = I_1 + I_2 + I_3",
+            "concept_formula": [
+                "$!$I = I_1 + I_2 + I_3$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "8dce019c-0fdd-4467-b9de-15a4145ee719",
+            "concept_question": "How is parallel resistance calculated? (Explanation)",
+            "concept_answer": "Its reciprocal equals the sum of reciprocals of individual resistances.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "d752f5e5-d93f-4a67-ba77-44d771335b78",
+            "concept_question": "Formula for parallel resistance calculation",
+            "concept_answer": "The formula is: 1/R = 1/R_1 + 1/R_2 + 1/R_3",
+            "concept_formula": [
+                "$!$\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "5768c278-867b-4c81-b4e9-271edec49a63",
+            "concept_question": "How is two-resistor parallel resistance computed? (Explanation)",
+            "concept_answer": "It is computed using the product-over-sum formula.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "95926967-0938-4937-939b-4a7966133f59",
+            "concept_question": "Product-over-sum formula for two-resistor parallel resistance",
+            "concept_answer": "The formula is: R = (R_1 R_2) / (R_1 + R_2)",
+            "concept_formula": [
+                "$!$R = \\frac{R_1 R_2}{R_1 + R_2}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "af2e08ea-ada8-4c88-9364-0fd5e1c148d7",
+            "concept_question": "What is a property of two parallel resistors?",
+            "concept_answer": "Their combined resistance is less than either resistor's resistance.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "c957fcc0-ea7b-4b45-a06d-792f430e2dda",
+            "concept_question": "What ensures lamp brightness uniformity?",
+            "concept_answer": "Each lamp has a fixed potential difference equal to the supply p.d., ensuring consistent brightness.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b2f1b8c4-98f1-4891-bc7d-48c7c8bcf539",
+            "concept_question": "What is the independent control benefit in parallel circuits?",
+            "concept_answer": "Each lamp can be switched on or off independently.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "acbc02cc-51b0-4df7-a9e7-1a28eed9e0ed",
+            "concept_question": "What is the fault tolerance in parallel circuits?",
+            "concept_answer": "The failure of one lamp does not affect the operation of others.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "5df7f051-afdf-469c-803c-b24c232ba072",
+            "concept_question": "How does temperature affect metal resistance?",
+            "concept_answer": "Metal resistance increases with rising temperature due to faster atomic vibrations.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "34994757-bda1-43a6-ba06-c1d600412720",
+            "concept_question": "What happens to p.d. when resistance increases? (Explanation)",
+            "concept_answer": "The potential difference increases as resistance increases for a constant current.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3726a9ff-2bdf-4c8c-a24b-f19fcc73a73b",
+                "1532d048-087f-4857-82bf-a6919d28c16c"
+            ]
+        },
+        {
+            "concept_id": "28c404a4-6bdf-4bb6-a5cd-a9658fb71d7e",
+            "concept_question": "Formula relating p.d. and resistance increase",
+            "concept_answer": "The formula is: V = IR",
+            "concept_formula": [
+                "$!$V = IR$!$"
+            ],
+            "pre-requisites": [
+                "3726a9ff-2bdf-4c8c-a24b-f19fcc73a73b",
+                "1532d048-087f-4857-82bf-a6919d28c16c"
+            ]
+        },
+        {
+            "concept_id": "3726a9ff-2bdf-4c8c-a24b-f19fcc73a73b",
+            "concept_question": "What is Ohm's Law? (Explanation)",
+            "concept_answer": "Ohm's Law states that potential difference is proportional to current times resistance.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "1532d048-087f-4857-82bf-a6919d28c16c",
+            "concept_question": "Formula of Ohm's Law",
+            "concept_answer": "The formula is: V = IR",
+            "concept_formula": [
+                "$!$V = IR$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "beb100f4-dcc2-4412-8547-760dfed49574",
+            "concept_question": "What is a variable potential divider?",
+            "concept_answer": "It is a circuit that divides supply voltage into a smaller output voltage.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "9eb53fd6-048e-47f9-9abe-1cf126748480",
+            "concept_question": "How is voltage across resistor R2 determined? (Explanation)",
+            "concept_answer": "It is computed as the supply voltage times the ratio of R2 to total resistance.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "beb100f4-dcc2-4412-8547-760dfed49574",
+                "3726a9ff-2bdf-4c8c-a24b-f19fcc73a73b",
+                "1532d048-087f-4857-82bf-a6919d28c16c"
+            ]
+        },
+        {
+            "concept_id": "769fd15e-b379-43a1-b7a8-6c022fe74eca",
+            "concept_question": "Formula for voltage across resistor R2",
+            "concept_answer": "The formula is: V_2 = V (R_2/(R_1+R_2))",
+            "concept_formula": [
+                "$!$V_2 = V \\frac{R_2}{(R_1 + R_2)}$!$"
+            ],
+            "pre-requisites": [
+                "beb100f4-dcc2-4412-8547-760dfed49574",
+                "3726a9ff-2bdf-4c8c-a24b-f19fcc73a73b",
+                "1532d048-087f-4857-82bf-a6919d28c16c"
+            ]
+        },
+        {
+            "concept_id": "4581535c-7ab0-4789-8cf7-7fb90b827be8",
+            "concept_question": "What is the voltage ratio in a potential divider? (Explanation)",
+            "concept_answer": "The ratio of voltages equals the ratio of the corresponding resistances.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "beb100f4-dcc2-4412-8547-760dfed49574",
+                "3726a9ff-2bdf-4c8c-a24b-f19fcc73a73b",
+                "1532d048-087f-4857-82bf-a6919d28c16c"
+            ]
+        },
+        {
+            "concept_id": "6b5aab32-0067-485d-a844-70ba371cf8f8",
+            "concept_question": "Formula for voltage ratio in a potential divider",
+            "concept_answer": "The formula is: V_1/V_2 = R_1/R_2",
+            "concept_formula": [
+                "$!$\\frac{V_1}{V_2} = \\frac{R_1}{R_2}$!$"
+            ],
+            "pre-requisites": [
+                "beb100f4-dcc2-4412-8547-760dfed49574",
+                "3726a9ff-2bdf-4c8c-a24b-f19fcc73a73b",
+                "1532d048-087f-4857-82bf-a6919d28c16c"
+            ]
+        },
+        {
+            "concept_id": "96e73658-a709-447f-8985-70561e70a02a",
+            "concept_question": "What effect does adjusting a variable resistor have?",
+            "concept_answer": "Moving the contact changes the output potential difference of the divider.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "beb100f4-dcc2-4412-8547-760dfed49574",
+                "3726a9ff-2bdf-4c8c-a24b-f19fcc73a73b",
+                "1532d048-087f-4857-82bf-a6919d28c16c"
+            ]
+        },
+        {
+            "concept_id": "1f9c837e-aa58-492d-a676-fd41c0ebb656",
+            "concept_question": "What is a light-dependent resistor?",
+            "concept_answer": "It is a semiconductor device whose resistance decreases with increased light intensity.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "7c33287e-a5a8-4782-ac47-8d91de38a8f5",
+            "concept_question": "What is an NTC thermistor?",
+            "concept_answer": "It is a semiconductor device whose resistance decreases as temperature rises.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e50b1168-c7ff-487c-862d-51f29c435e20",
+            "concept_question": "What is a relay?",
+            "concept_answer": "A relay is an electromagnetic switch that controls a large current with a small one.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f280c8d7-b51c-4a01-b506-157a0212fa75",
+            "concept_question": "What is a LED?",
+            "concept_answer": "A LED is a diode that emits light when forward-biased and uses a resistor for current limiting.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "7cde1132-4288-4ec0-834c-081c9cd087e5",
+            "concept_question": "What is a semiconductor diode?",
+            "concept_answer": "It is a device that permits current flow in only one direction.",
+            "concept_formula": [],
+            "pre-requisites": []
+        }
+    ]
+}

@@ -1,0 +1,206 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "pha3tvjk42t8ly3dtvpfu",
+    "topicIdProd": "",
+    "chapter_text": "**General Pressure Concepts**\n\n*   **Definition:** Pressure ($p$) is defined as the force ($F$) acting per unit area ($A$).\n    $\\qquad p = \\frac{F}{A}$\n*   **Unit:** The SI unit of pressure is the pascal (Pa), which is equivalent to 1 newton per square metre (N/m\u00b2).\n*   **Relationship:** Pressure increases with an increase in the applied force and decreases with an increase in the area over which the force acts.\n*   **Examples:** The concept of pressure explains why camels have large feet (reducing pressure on sand), skis prevent sinking in snow, nails have sharp points (increasing pressure for penetration), tractors have wide wheels (reducing pressure on soft ground), and walnuts can be cracked by squeezing two together (small contact area increases pressure).\n\n**Liquid Pressure Concepts**\n\n*   **Depth Dependence:** Pressure in a liquid increases with depth because the deeper you go, the greater the weight of liquid above.\n*   **Directional Property:** At any given depth, pressure in a liquid acts equally in all directions.\n*   **Leveling Property:** A liquid finds its own level. The pressure at the foot of a liquid column depends only on its vertical depth and not on the width or shape of the containing tube.\n*   **Density Dependence:** Pressure also depends on the density ($\\rho$) of the liquid; a denser liquid will exert greater pressure at the same depth.\n*   **Formula for Pressure Change with Depth:** The change in pressure ($\\Delta p$) at a depth $\\Delta h$ below the surface of a liquid of density $\\rho$ is given by:\n    $\\qquad \\Delta p = \\rho g \\Delta h$\n    where $g$ is the gravitational field strength. The pressure value is in Pascals (Pa) if $\\Delta h$ is in metres (m) and $\\rho$ is in kilograms per cubic metre (kg/m\u00b3).\n*   **Applications:** These principles are crucial for understanding water supply systems (reservoirs on high ground, dam construction where walls are thicker at the bottom due to high pressure).\n\n**Hydraulic Systems**\n\n*   **Principle:** Hydraulic machines utilize the properties that liquids are almost incompressible and transmit applied pressure equally throughout the fluid.\n*   **Force Multiplication:** A smaller force ($f$) applied to a piston of smaller area ($a$) creates a pressure ($p = \\frac{f}{a}$), which is transmitted to a larger piston of area ($A$), resulting in a larger output force ($F$).\n*   **Force Equation:** The output force is calculated as:\n    $\\qquad F = p \\times A = \\frac{f}{a} \\times A$\n*   **Multiplying Factor:** The hydraulic system acts as a force multiplier, with the multiplying factor being $\\frac{A}{a}$.\n*   **Applications:** Hydraulic jacks, fork-lift trucks, loaders, and car brake systems are common examples of hydraulic machines.\n\n**Pressure Measurement Devices**\n\n*   **Pressure Gauges:** Devices designed to measure the pressure exerted by a fluid (liquid or gas).\n*   **Bourdon Gauge:** This type of gauge works by using a curved metal tube that tends to straighten when fluid pressure is applied, thereby rotating a pointer over a scale. Examples include car oil-pressure gauges and gas cylinder gauges.\n*   **Mercury Barometer:** A specific type of manometer used to measure atmospheric pressure. The atmospheric pressure supports a column of mercury, and the vertical height of this mercury column measures the atmospheric pressure.\n*   **U-tube Manometer:** Used to measure gas pressure by observing the difference in liquid levels within a U-shaped tube. The gas pressure can be determined by adding the pressure due to the height difference of the liquid column ($h \\rho g$) to the atmospheric pressure.",
+    "chapter_concepts": [
+        {
+            "concept_id": "e9bdb536-49c3-414a-80bf-cb6802a6e530",
+            "concept_question": "What is pressure definition?",
+            "concept_answer": "Pressure is the force per unit area.",
+            "concept_formula": [
+                "$!$p = \\frac{F}{A}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "eb81a8c6-e84d-4852-9078-86ba33aa930f",
+            "concept_question": "What is the SI unit of pressure?",
+            "concept_answer": "The SI unit of pressure is the pascal, equal to one newton per square meter.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "bf2abe12-6703-47dc-b419-e074c85a910a",
+            "concept_question": "How does force affect pressure?",
+            "concept_answer": "Pressure increases with greater force.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+            ]
+        },
+        {
+            "concept_id": "abcabcf7-2075-45f7-8f12-cb178563152a",
+            "concept_question": "How does area affect pressure?",
+            "concept_answer": "Pressure decreases with larger area.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+            ]
+        },
+        {
+            "concept_id": "a9162b39-ac84-4b0f-892f-01c1070a1e2c",
+            "concept_question": "What examples illustrate pressure effects?",
+            "concept_answer": "Examples include camels' large feet, skis, sharp nails, wide wheels, and walnut cracking.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530",
+                "bf2abe12-6703-47dc-b419-e074c85a910a",
+                "abcabcf7-2075-45f7-8f12-cb178563152a"
+            ]
+        },
+        {
+            "concept_id": "921c2915-8116-4288-a6a9-292284065919",
+            "concept_question": "How does depth affect liquid pressure?",
+            "concept_answer": "Liquid pressure increases with depth due to the additional weight of the overlying liquid.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+            ]
+        },
+        {
+            "concept_id": "47fe0f09-39cc-4be8-b532-4db0be322b42",
+            "concept_question": "How does liquid pressure act directionally?",
+            "concept_answer": "At a given depth, liquid pressure acts equally in all directions.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+            ]
+        },
+        {
+            "concept_id": "52ff3fbd-17c1-4159-98ce-7e62ef0dcc97",
+            "concept_question": "What determines base liquid pressure?",
+            "concept_answer": "Liquid pressure at the base depends solely on vertical depth, not on container shape.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "921c2915-8116-4288-a6a9-292284065919"
+            ]
+        },
+        {
+            "concept_id": "305ef332-500d-4c4e-9da1-1adecb3649db",
+            "concept_question": "How does liquid density affect pressure?",
+            "concept_answer": "A denser liquid exerts higher pressure at the same depth.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+            ]
+        },
+        {
+            "concept_id": "6e4fee54-46fc-49c0-8e54-8fd3c224082a",
+            "concept_question": "What is liquid pressure change formula?",
+            "concept_answer": "Pressure change equals liquid density multiplied by gravity and depth change.",
+            "concept_formula": [
+                "$!$\\Delta p = \\rho g \\Delta h$!$"
+            ],
+            "pre-requisites": [
+                "921c2915-8116-4288-a6a9-292284065919",
+                "305ef332-500d-4c4e-9da1-1adecb3649db"
+            ]
+        },
+        {
+            "concept_id": "842bce22-33ed-4df9-a7b2-429bbb733f54",
+            "concept_question": "What are liquid pressure applications: water supply?",
+            "concept_answer": "Liquid pressure principles are applied in water supply system design.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "921c2915-8116-4288-a6a9-292284065919",
+                "52ff3fbd-17c1-4159-98ce-7e62ef0dcc97",
+                "305ef332-500d-4c4e-9da1-1adecb3649db",
+                "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+            ]
+        },
+        {
+            "concept_id": "6467eb38-82a3-4d5f-ac34-cdc648c38cd6",
+            "concept_question": "What are liquid pressure applications: dam construction?",
+            "concept_answer": "Liquid pressure principles are applied in dam construction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "921c2915-8116-4288-a6a9-292284065919",
+                "52ff3fbd-17c1-4159-98ce-7e62ef0dcc97",
+                "305ef332-500d-4c4e-9da1-1adecb3649db",
+                "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+            ]
+        },
+        {
+            "concept_id": "75b2454a-3e89-448c-8620-428c8222bebb",
+            "concept_question": "What is the hydraulic system principle?",
+            "concept_answer": "Hydraulic systems use near-incompressible fluids to transmit pressure uniformly.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+            ]
+        },
+        {
+            "concept_id": "460ceb3c-03d1-4066-a770-99b3ac24df2d",
+            "concept_question": "How do hydraulics multiply force?",
+            "concept_answer": "A small force on a small piston produces a larger force on a larger piston.",
+            "concept_formula": [
+                "$!$F = \\frac{f}{a} \\times A$!$"
+            ],
+            "pre-requisites": [
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530",
+                "75b2454a-3e89-448c-8620-428c8222bebb"
+            ]
+        },
+        {
+            "concept_id": "7a1b6bbe-80bb-494c-8186-73f5a812ceed",
+            "concept_question": "What is the hydraulic multiplying factor?",
+            "concept_answer": "The multiplying factor is the ratio of the output piston area to the input piston area.",
+            "concept_formula": [
+                "$!$\\frac{A}{a}$!$"
+            ],
+            "pre-requisites": [
+                "460ceb3c-03d1-4066-a770-99b3ac24df2d"
+            ]
+        },
+        {
+            "concept_id": "32df63a2-161a-4c50-ae37-0afb6dcaec27",
+            "concept_question": "What are hydraulic system applications?",
+            "concept_answer": "Hydraulic systems are used in jacks, forklifts, loaders, and brake systems.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "75b2454a-3e89-448c-8620-428c8222bebb",
+                "460ceb3c-03d1-4066-a770-99b3ac24df2d"
+            ]
+        },
+        {
+            "concept_id": "943fbde4-4b9b-4ca1-91f7-1c11c3181b01",
+            "concept_question": "What do pressure gauges measure?",
+            "concept_answer": "Pressure gauges measure the pressure exerted by a fluid.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+            ]
+        },
+        {
+            "concept_id": "7292d8ea-9e53-4fe5-91b5-3730c675ab14",
+            "concept_question": "What is a Bourdon gauge?",
+            "concept_answer": "A Bourdon gauge measures pressure via a curved tube that straightens under pressure.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "943fbde4-4b9b-4ca1-91f7-1c11c3181b01"
+            ]
+        },
+        {
+            "concept_id": "0de6d2af-cf68-4ef8-add3-856bd6bb09be",
+            "concept_question": "What is a mercury barometer?",
+            "concept_answer": "A mercury barometer measures atmospheric pressure using the height of a mercury column.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "943fbde4-4b9b-4ca1-91f7-1c11c3181b01"
+            ]
+        },
+        {
+            "concept_id": "9c478936-0e37-4906-9156-3da0bb228a9e",
+            "concept_question": "What is a U-tube manometer?",
+            "concept_answer": "A U-tube manometer measures gas pressure by the difference in liquid levels.",
+            "concept_formula": [
+                "$!$p = p_{atm} + \\rho g h$!$"
+            ],
+            "pre-requisites": [
+                "943fbde4-4b9b-4ca1-91f7-1c11c3181b01",
+                "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+            ]
+        }
+    ]
+}

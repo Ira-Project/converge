@@ -1,0 +1,1547 @@
+{
+    "name": "Radioactivity",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "792f4cbaf2fb4166ad851",
+            "concepts": [
+                "f51d492d-2a42-4651-9ad4-d71fb0fbf14f"
+            ],
+            "variants": [
+                {
+                    "id": "00fa5d8fa7c44217bd168",
+                    "question": "Which of the following correctly describes background radiation?",
+                    "options": [
+                        {
+                            "option_text": "Radiation solely from man-made sources.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Continuous exposure to radiation from natural and artificial sources.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiation only from cosmic rays.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiation emitted by radioactive materials only.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d91c6ee484ad48aab8076",
+                    "question": "Which of the following are examples of sources that contribute to background radiation? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Cosmic rays from space",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Medical X-rays",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Naturally occurring radioactive materials in the ground",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mobile phone signals",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "0767cd86440941ccbde64",
+                    "question": "Which of the following statements about background radiation is NOT correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Background radiation is always harmful and should be completely avoided.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Background radiation includes radiation from both natural and artificial sources.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Background radiation levels vary depending on location.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radon gas in homes is a significant contributor to background radiation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "1552326fdc4b4635b1083",
+            "concepts": [
+                "1fd8b69e-39f2-42fa-aafd-82cded94e23f"
+            ],
+            "variants": [
+                {
+                    "id": "e90d8055c0a1417d8921f",
+                    "question": "Which principle is radiation detection based on?",
+                    "options": [
+                        {
+                            "option_text": "Radiation causing fluorescence.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiation ionising air molecules to create ions.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiation heating the surrounding air.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiation creating sound waves.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bbd7ce2250b0494a9f202",
+                    "question": "Which of the following processes is a direct result of radiation interacting with matter and is utilized in radiation detection?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Emission of heat due to increased molecular kinetic energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ionization of atoms, leading to the creation of charged particles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Induction of chemical reactions in surrounding materials.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Alteration of the gravitational field in the vicinity of the radiation source.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "78502be391e34783a7afc",
+                    "question": "Select all of the following mechanisms that are commonly exploited in radiation detection:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Radiation causing ionization.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiation inducing nuclear fission in the detector material.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiation exciting atoms, leading to the emission of photons (scintillation).",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiation increasing the temperature of the detector material.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "eba1b32590444d429db0e",
+            "concepts": [
+                "b9ca20c3-e249-4bc5-8d94-4d2bceee779d",
+                "b3af226b-8a8b-486d-99ee-0fe1d83d69fe",
+                "fa3800a7-72ec-4818-94cc-82ee52894e18"
+            ],
+            "variants": [
+                {
+                    "id": "fa8697b138de4a6ab07cb",
+                    "question": "What does a decay curve illustrate?",
+                    "options": [
+                        {
+                            "option_text": "The linear increase in radioactive activity over time.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The exponential decrease in radioactive activity over time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The constant level of radioactive activity over time.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The irregular fluctuations in radioactive activity over time.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "389c1ea7f1a04214b45a0",
+                    "question": "Which of the following statements accurately describes the information conveyed by a radioactive decay curve?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It demonstrates the initial radioactive activity of a sample.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It illustrates how the half-life of a substance changes over time.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It displays the exponential reduction in radioactive material over time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It shows the point at which a radioactive substance becomes stable.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e2d8640e99a94245b6c01",
+                    "question": "Select all the statements that accurately describe a decay curve:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It represents the number of unstable nuclei remaining in a sample as a function of time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It depicts the rate of nuclear decay as a straight line.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It shows that the decay rate decreases over time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It indicates the total number of particles emitted during decay.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3aa2124dde6e43d79c713",
+            "concepts": [
+                "f1d534d8-5807-448d-a7f6-a14fe853c6ca",
+                "1fd8b69e-39f2-42fa-aafd-82cded94e23f",
+                "1a272b3c-c77b-4711-936c-559e929a9f27"
+            ],
+            "variants": [
+                {
+                    "id": "6385ed02db4542bfb36c3",
+                    "question": "Which application uses alpha particles to detect smoke?",
+                    "options": [
+                        {
+                            "option_text": "Thickness gauge",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Smoke alarms",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiotherapy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gamma sterilisation",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "df7c5538210e488da0ec8",
+                    "question": "Select all the applications that utilize alpha particles:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Thickness gauge",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Smoke alarms",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiotherapy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gamma sterilization",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "6c26c343af2d454ab63b0",
+                    "question": "Which of the following is NOT an application of alpha particles?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Smoke alarms",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Thickness gauge",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiotherapy",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Cancer treatment",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "4c454da9bae14b37b68cb",
+            "concepts": [
+                "b9ca20c3-e249-4bc5-8d94-4d2bceee779d",
+                "8e01fd5d-a47c-437f-bbb5-977ed7dc55fb"
+            ],
+            "variants": [
+                {
+                    "id": "126311b6ef534eed806ae",
+                    "question": "What is the role of radioisotope tracers in various fields?",
+                    "options": [
+                        {
+                            "option_text": "To enhance the strength of materials.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To track processes by using weak radioactive substances.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To generate electrical energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To accelerate nuclear reactions.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7627123f235e45a0bc706",
+                    "question": "Which of the following is NOT a typical application of radioisotope tracers?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Tracking the flow of liquids in industrial pipelines.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Medical imaging to diagnose diseases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Sterilizing surgical equipment.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Determining the uptake of fertilizers in plants.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cf827124fcfa4cc6893d0",
+                    "question": "Select all the applications where radioisotope tracers are commonly used:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Medical diagnostics",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Industrial process monitoring",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Generating electricity in nuclear power plants",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Environmental studies",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "90601922026745008873b",
+            "concepts": [
+                "4155cf8d-a685-412f-a57d-90ded1a7d24e"
+            ],
+            "variants": [
+                {
+                    "id": "b4329bf4fbe14c7b9bee4",
+                    "question": "What does nuclear stability depend on?",
+                    "options": [
+                        {
+                            "option_text": "The total number of electrons in a nucleus.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The neutron-to-proton ratio in a nucleus.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The atomic mass of the element.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The temperature of the nucleus.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d471c1399d7a4ca499a85",
+                    "question": "Which of the following factors influences the stability of a nucleus?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The ratio of neutrons to protons.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The number of electrons orbiting the nucleus.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total number of protons in the nucleus.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The kinetic energy of the nucleus.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8796f7239b0a462bb03d7",
+                    "question": "Select all the factors that contribute to the stability of a nucleus.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Optimal neutron-to-proton ratio.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "High electron density.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Specific 'magic numbers' of neutrons or protons.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Low binding energy per nucleon.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c4732f92aa9f43238ce50",
+            "concepts": [
+                "1fd8b69e-39f2-42fa-aafd-82cded94e23f",
+                "4c27b349-eef5-4a61-92e0-309c9c4956fd"
+            ],
+            "variants": [
+                {
+                    "id": "c74df0fd10814293a8ac9",
+                    "question": "What are potential dangers associated with exposure to ionising radiation?",
+                    "options": [
+                        {
+                            "option_text": "Increased bone density",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Cell damage, cancers, and genetic mutations",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Improved eyesight",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Enhanced physical strength",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "19d355f19ed1424abfe11",
+                    "question": "Which of the following are potential effects of exposure to ionizing radiation? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Cell damage",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increased bone density",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Genetic mutations",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Improved eyesight",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "fea13adf306b496c967be",
+                    "question": "Which of the following is NOT a potential danger associated with exposure to ionizing radiation?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Increased risk of cancer",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Cell damage",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Enhanced physical strength",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Genetic mutations",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "88b7c092d4a049d1bc640",
+            "concepts": [
+                "c728548a-59bf-4b01-bc28-1c8bd6a81b8a",
+                "57b3c9d5-2512-4c78-9d8b-c006c39cdb1b"
+            ],
+            "variants": [
+                {
+                    "id": "ca5306a002cf40b083689",
+                    "question": "Which of the following is the correct formula for beta decay?",
+                    "options": [
+                        {
+                            "option_text": "$!$\\ce{_Z^A X -> _{Z+1}^A Y + _{-1}^0 e}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\ce{_Z^A X -> _{Z-1}^A Y + _{1}^0 e}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\ce{_Z^A X -> _{Z}^A Y + _{0}^0 \\gamma}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\ce{_Z^A X -> _{Z-2}^{A-4} Y + _2^4 \\alpha}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "601ea982d03a4074855ef",
+                    "question": "Which of the following equations correctly represents a beta-minus decay process?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$\\ce{^{14}_6C -> ^{14}_7N + _{-1}^0e + \\bar{\\nu}_e}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\ce{^{234}_{92}U -> ^{230}_{90}Th + ^4_2He}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\ce{^{40}_{19}K -> ^{40}_{18}Ar + ^0_1e + \\nu_e}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\ce{^{226}_{88}Ra -> ^{222}_{86}Rn + ^4_2He}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "84ac97c430e94c0996ea4",
+                    "question": "Select all of the following statements that are TRUE regarding beta decay.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The mass number (A) remains unchanged.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The atomic number (Z) decreases by 1.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A neutron in the nucleus is converted into a proton and an electron.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The emitted particle is a helium nucleus.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "553e7cee8a7242dfb472d",
+            "concepts": [
+                "57b3c9d5-2512-4c78-9d8b-c006c39cdb1b",
+                "bb3412ca-9252-4c83-a220-d57cb79a518e",
+                "180c47ae-f5cd-4e84-8aa7-9efe1a929522"
+            ],
+            "variants": [
+                {
+                    "id": "4b0f73e5ded34ca6b524c",
+                    "question": "Which particles are emitted during beta decay to conserve energy and momentum?",
+                    "options": [
+                        {
+                            "option_text": "Alpha particles",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Neutrinos and antineutrinos",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gamma rays",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Protons",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a59871d34d1a495e9f67a",
+                    "question": "During beta decay, which of the following particles are emitted? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Electrons",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Neutrinos",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Alpha particles",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gamma rays",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "39215a1a56454b7cb6594",
+                    "question": "Which of the following best describes the role of antineutrinos in beta decay?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They carry away excess mass.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They help conserve lepton number.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They balance the charge of the nucleus.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They increase the decay rate.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "f3969fd82b3c41a2bdd5f",
+            "concepts": [
+                "c728548a-59bf-4b01-bc28-1c8bd6a81b8a",
+                "14069f95-b500-4727-a35c-e0bf05576681",
+                "c99665ac-48a6-40f4-b63a-10478d11bca6"
+            ],
+            "variants": [
+                {
+                    "id": "b9b276ded47649a6bd630",
+                    "question": "Which application uses radioisotopes to measure material thickness by assessing radiation absorption?",
+                    "options": [
+                        {
+                            "option_text": "Radiotherapy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Thickness gauge",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiocarbon dating",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Nuclear medicine diagnosis",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d218365cb39448ebaa87c",
+                    "question": "Select all applications that utilize radioisotopes:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Radiotherapy",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Thickness gauge",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiocarbon dating",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Nuclear medicine diagnosis",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "fef6da8b1e29415b9d8c9",
+                    "question": "Which of the following methods is NOT an application of radioisotopes?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Measuring material thickness",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiocarbon dating",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Nuclear medicine diagnosis",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Spectroscopy",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "73f88cac97f24623aa875",
+            "concepts": [
+                "14069f95-b500-4727-a35c-e0bf05576681",
+                "608534ad-e998-442a-bd3c-136ad04d93b6"
+            ],
+            "variants": [
+                {
+                    "id": "693b94fe37934a1ebe7cd",
+                    "question": "Which diagnostic technique uses gamma-emitting radioisotopes as tracers for imaging and detecting conditions?",
+                    "options": [
+                        {
+                            "option_text": "Flaw detection",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Nuclear medicine diagnosis",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiotherapy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radioisotope tracers",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4f37b8303b4d4b29aa2be",
+                    "question": "Which of the following applications correctly utilizes gamma-emitting radioisotopes?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Nuclear medicine diagnosis",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Flaw detection in materials",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiotherapy treatment",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radioisotope dating",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c07d2fd382f64c139abb6",
+                    "question": "Select all of the following techniques that utilize radioactive tracers:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Nuclear medicine imaging",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiotherapy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Flaw detection in metal castings",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Magnetic Resonance Imaging (MRI)",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3394cc6a8ca34d5b83956",
+            "concepts": [
+                "14069f95-b500-4727-a35c-e0bf05576681",
+                "3961f3c7-7f4b-4e9e-995e-0a34ed104636"
+            ],
+            "variants": [
+                {
+                    "id": "92359d6df0d74ecc9c256",
+                    "question": "What principle is applied in radiotherapy to target cancerous cells?",
+                    "options": [
+                        {
+                            "option_text": "Using focused beams of alpha particles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Using focused high-energy gamma beams.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Applying microwaves to heat tissues.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Cooling tissues to slow down cell division.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1a1202679ecd4a8292033",
+                    "question": "Which of the following statements accurately describes the principle behind radiotherapy's effectiveness in targeting cancerous cells?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Radiotherapy uses precisely directed beams of alpha particles to destroy cancer cells while minimizing damage to surrounding tissues.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiotherapy employs focused high-energy gamma beams to damage the DNA of cancer cells, preventing their replication and causing cell death.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiotherapy utilizes microwaves to generate heat, selectively targeting cancerous tissues for destruction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiotherapy involves cooling tissues to significantly reduce cell division rates, thereby halting the proliferation of cancer cells.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1ef797317ccc4317821de",
+                    "question": "Select all of the following options that correctly describe the applications of radiation in cancer treatment.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Using focused beams of alpha particles to destroy cancerous cells.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Using focused high-energy gamma beams to damage the DNA of cancerous cells.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Applying microwaves to heat tissues and selectively destroy cancer cells.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Using radiation to reduce the blood supply to the tumor.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c4daef1c22fe49e6acfef",
+            "concepts": [
+                "b9ca20c3-e249-4bc5-8d94-4d2bceee779d",
+                "4ba46951-f583-43e5-8ee2-7582647271d3"
+            ],
+            "variants": [
+                {
+                    "id": "b40cb15cb4874795a8fe9",
+                    "question": "Which method estimates the age of organic remains by measuring the decay of Carbon-14?",
+                    "options": [
+                        {
+                            "option_text": "Radioisotope tracers",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiocarbon dating",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gamma sterilisation",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Thickness gauge",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d39a0713e4664d1c9a880",
+                    "question": "Which of the following methods uses the radioactive decay of Carbon-14 to determine the age of a sample?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Carbon dating",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Potassium-argon dating",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Uranium-lead dating",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Rubidium-strontium dating",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "703063762cf647f280fa2",
+                    "question": "Select all the options that are true about Radiocarbon dating.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is used to estimate the age of organic materials.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It measures the decay of Carbon-14.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It can be used to date rocks older than billions of years.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is based on the principle that living organisms constantly replenish their carbon supply.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c19d612c027b4187ac048",
+            "concepts": [
+                "1fd8b69e-39f2-42fa-aafd-82cded94e23f",
+                "cbd5c0c5-c980-477a-bd06-252f54a97475",
+                "d4267ca5-7636-4063-a198-592ad336fc0e",
+                "189887c1-5a31-4e51-8b22-561a409375aa",
+                "cd21c147-6509-4ea0-9658-f91028886945",
+                "8fb7b705-6852-4e33-9e80-d661ec49bbc7"
+            ],
+            "variants": [
+                {
+                    "id": "0e2ee2c6091f42048ba99",
+                    "question": "Which of the following is NOT a method for visualizing radiation paths?",
+                    "options": [
+                        {
+                            "option_text": "Cloud chamber",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Bubble chamber",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electroscopes",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ratemeter",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "54a777d18c874938b164e",
+                    "question": "Which of the following methods are used for visualizing radiation paths? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Cloud chamber",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Bubble chamber",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electroscopes",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ratemeter",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "555530f21e7b4d38abd77",
+                    "question": "Which of the following instruments directly visualizes the PATH of ionizing radiation?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Cloud chamber",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ratemeter",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Geiger counter",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electrometer",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "460e563fd183494798355",
+            "concepts": [
+                "b9ca20c3-e249-4bc5-8d94-4d2bceee779d",
+                "17ff318c-910f-447a-bc4f-4bfc9b07a0b1"
+            ],
+            "variants": [
+                {
+                    "id": "5c4d8e1fd2644044a45c7",
+                    "question": "How variable are the half-lives of radioisotopes?",
+                    "options": [
+                        {
+                            "option_text": "Half-lives are constant for all radioisotopes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Half-lives vary widely from microseconds to billions of years.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Half-lives are all within the range of seconds to minutes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Half-lives are always close to one year.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "772d8a86ca6b4e8db39b7",
+                    "question": "Which of the following statements accurately describes the range of half-lives for radioisotopes?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "All radioisotopes decay at the same rate, resulting in uniform half-lives.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radioisotope half-lives span an extensive range, varying from microseconds to billions of years.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radioisotope half-lives are clustered within a narrow range of a few seconds to minutes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radioisotope half-lives generally approximate one year.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cd89c37ff8c24164b7055",
+                    "question": "Select all the statements that correctly describe the variability of half-lives among different radioisotopes.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Half-lives are constant and uniform across all radioisotopes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Half-lives can vary widely, ranging from microseconds to billions of years.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Half-lives are primarily concentrated within a short duration, typically seconds to minutes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "There is a substantial variation in half-lives among radioisotopes.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "72cfbe3609cf4688b35bc",
+            "concepts": [
+                "b3af226b-8a8b-486d-99ee-0fe1d83d69fe"
+            ],
+            "variants": [
+                {
+                    "id": "866587f9ca014cff897e7",
+                    "question": "What determines how quickly a radioactive sample decays?",
+                    "options": [
+                        {
+                            "option_text": "Temperature of the sample",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Activity of the sample",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "External pressure applied",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Volume of the sample",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "eb64d369e63b46ca81181",
+                    "question": "Which of the following factors affect the half-life of a radioactive sample?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Initial amount of the radioactive isotope",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Decay constant of the radioactive isotope",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Volume of the sample",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "External pressure applied",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4e45ea907a7945e885126",
+                    "question": "Select all the factors that influence the rate of decay in a radioactive material.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The specific isotope's decay constant",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "External magnetic field",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The number of radioactive nuclei present",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Chemical composition of the sample",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "a1fbc73e4faa44548117e",
+            "concepts": [
+                "14069f95-b500-4727-a35c-e0bf05576681",
+                "ce07b236-183e-4952-9290-b84e68e03891"
+            ],
+            "variants": [
+                {
+                    "id": "95234be38efd4f02957cd",
+                    "question": "What is the purpose of gamma sterilisation?",
+                    "options": [
+                        {
+                            "option_text": "To measure material thickness.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To kill bacteria on medical instruments and food.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To detect flaws in materials.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To treat cancer.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e6d1b384c5b246bab504b",
+                    "question": "Which of the following are applications of gamma sterilisation? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Sterilising medical instruments",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Measuring material thickness",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Treating certain types of cancer",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Detecting flaws in materials",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a8032e3930e1405083388",
+                    "question": "Which of the following statements about gamma sterilisation is NOT correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Gamma sterilisation is effective in killing bacteria.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gamma sterilisation is used for sterilising food products.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gamma sterilisation measures the thickness of materials.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gamma sterilisation uses gamma radiation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "69cb662ba21a41fa874c0",
+            "concepts": [
+                "0e5f9b5b-0dc0-4afa-9b4c-7618c140e84d"
+            ],
+            "variants": [
+                {
+                    "id": "d7c84acbb67b4550b210e",
+                    "question": "Which application identifies internal material defects by measuring variations in radiation transmission?",
+                    "options": [
+                        {
+                            "option_text": "Gamma Sterilisation",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radiotherapy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Flaw detection",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radioisotope Tracers",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4dffb54dee074f53af200",
+                    "question": "Which of the following is NOT a common application of radiation?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Flaw detection in materials",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Radioisotope tracers in medicine",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Enhancing the taste of food",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gamma sterilization of medical equipment",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5dc70744c8a748258ea0e",
+                    "question": "Select all the applications that utilize radiation:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Gamma Sterilisation",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Radiotherapy",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Flaw detection",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Baking a cake",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "285d63fdf97c46b89569d",
+            "concepts": [
+                "f1d534d8-5807-448d-a7f6-a14fe853c6ca",
+                "c728548a-59bf-4b01-bc28-1c8bd6a81b8a",
+                "14069f95-b500-4727-a35c-e0bf05576681"
+            ],
+            "variants": [
+                {
+                    "id": "db69223d781840808a562",
+                    "question": "Match the radiation type with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Alpha Particle",
+                            "optionB": "Doubly charged helium nuclei with high ionising power."
+                        },
+                        {
+                            "optionA": "Beta Particle",
+                            "optionB": "High-energy electron with moderate penetration."
+                        },
+                        {
+                            "optionA": "Gamma Radiation",
+                            "optionB": "High-frequency electromagnetic waves with high penetration."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "38e8b9801d7543efb947b",
+            "concepts": [
+                "1fd8b69e-39f2-42fa-aafd-82cded94e23f",
+                "189887c1-5a31-4e51-8b22-561a409375aa",
+                "cd21c147-6509-4ea0-9658-f91028886945",
+                "e59b06a1-31fe-4701-8be9-618560fab381",
+                "8fb7b705-6852-4e33-9e80-d661ec49bbc7"
+            ],
+            "variants": [
+                {
+                    "id": "63a98ae7f6cb4898af2c8",
+                    "question": "Match the device with its function in detecting radiation.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Electroscopes",
+                            "optionB": "Discharges near an ionising source as its charge is neutralised."
+                        },
+                        {
+                            "optionA": "Geiger-M\u00fcller tube",
+                            "optionB": "Detects radiation by producing electrical pulses in a gas-filled tube."
+                        },
+                        {
+                            "optionA": "Scaler",
+                            "optionB": "Counts the total number of electrical pulses from a radiation detector over time."
+                        },
+                        {
+                            "optionA": "Ratemeter",
+                            "optionB": "Displays the radiation count-rate directly, often accompanied by audible clicks."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "b2c3b3428f884b48a4026",
+            "concepts": [
+                "4c27b349-eef5-4a61-92e0-309c9c4956fd",
+                "384ba4e3-83fe-418e-b39c-7e31609ef595",
+                "7dd06e30-3e3b-44fe-8099-3a6d97be3f52",
+                "68fb5d53-1eb4-4a84-bdc8-a549e14030c0"
+            ],
+            "variants": [
+                {
+                    "id": "60a365c0da734bdc8d687",
+                    "question": "Match the safety principle with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Time",
+                            "optionB": "Minimising exposure duration reduces the radiation dose received."
+                        },
+                        {
+                            "optionA": "Distance",
+                            "optionB": "Increasing distance from a radiation source decreases the intensity of exposure."
+                        },
+                        {
+                            "optionA": "Shielding",
+                            "optionB": "Using dense materials like lead or concrete to block radiation improves safety."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

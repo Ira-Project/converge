@@ -1,0 +1,235 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "dtqx5youzceuf2zvq6tbh",
+    "topicIdProd": "",
+    "chapter_text": "**I. Fundamental Properties of Magnets**\n*   All magnets possess two poles: a North (N) pole and a South (S) pole.\n*   **Law of Magnetic Poles:** Like poles repel (N-N, S-S), while unlike poles attract (N-S).\n*   The magnetic force between poles diminishes as their separation increases.\n*   When freely suspended, the N pole of a magnet consistently points towards the Earth's geographical north, enabling its use as a compass.\n\n**II. Magnetic Materials**\n*   **Magnetic (Ferromagnetic) Materials:** These materials (e.g., iron, steel, nickel, cobalt) are attracted by magnets and can be magnetised, either temporarily or permanently.\n*   **Non-Magnetic Materials:** These materials (e.g., aluminium, wood) are neither attracted by magnets nor can they be magnetised.\n*   **Magnetic Poles:** These are the regions on a magnet, typically near its ends, to which magnetic materials are most strongly attracted. They always occur in pairs of equal strength.\n\n**III. Induced Magnetism**\n*   An unmagnetised magnetic material becomes magnetised when it touches or is brought close to a pole of a permanent magnet.\n*   When induced, the end of the material closest to the inducing pole acquires the opposite polarity, and the far end acquires the same polarity.\n\n**IV. Magnetisation and Demagnetisation**\n*   **Temporary Magnets:** Made from soft magnetic materials (e.g., soft iron), these magnetise easily but also lose their magnetism readily.\n*   **Permanent Magnets:** Made from hard magnetic materials (e.g., steel), these are harder to magnetise but retain their magnetism for a long time.\n*   **Methods of Magnetisation:**\n    *   Placing a ferromagnetic material inside a solenoid and gradually increasing a direct current (d.c.) through the coil.\n    *   Hammering a magnetic material while it is within a magnetic field.\n    *   Stroking a magnetic material repeatedly in the same direction with one pole of a magnet.\n*   **Methods of Demagnetisation:**\n    *   Placing a magnet inside a solenoid and passing an alternating current (a.c.) through it, which is then gradually reduced.\n    *   Dropping or heating a magnet.\n    *   Hammering a magnetic material in the absence of a magnetic field.\n\n**V. Magnetic Fields**\n*   **Definition:** A magnetic field is the region of space surrounding a magnet where a magnetic force can be detected.\n*   **Representation:** Magnetic fields are represented by lines of force, or field lines.\n*   **Direction:** The direction of a magnetic field at any point is defined as the direction of the force that would be exerted on a hypothetical isolated N pole placed at that point. Arrows on field lines point away from N poles and towards S poles.\n*   **Strength:** The strength of a magnetic field is indicated by the density of the field lines; regions with closer field lines signify a stronger field, while widely spaced lines indicate a weaker field.\n*   Magnetic forces arise from the interaction of magnetic fields.\n*   **Plotting Magnetic Fields:**\n    *   **Plotting Compass Method:** A small pivoted compass needle is used to trace the path of field lines by aligning its poles and marking points.\n    *   **Iron Filings Method:** Iron filings sprinkled onto a sheet of paper over a magnet align themselves along the field lines when the paper is gently tapped.\n*   **Neutral Point:** A specific point within a combined magnetic field (typically between like poles) where the magnetic fields from opposing magnets cancel each other out, resulting in zero net magnetic field and no field lines.\n\n**VI. Electromagnets**\n*   **Construction:** An electromagnet consists of a coil of wire wound around a soft iron core, which becomes magnetised when an electrical current passes through the coil.\n*   **Properties:** Electromagnets are temporary magnets whose strength can be varied by changing the current, and their magnetism can be switched on or off.\n*   **Factors Affecting Strength:** The strength of an electromagnet increases if:\n    *   The current flowing through the coil increases.\n    *   The number of turns in the coil increases.\n    *   The poles of the core are moved closer together (e.g., in C-core or horseshoe electromagnets).\n\n**VII. Uses of Magnets**\n*   **Permanent Magnets:** Used in applications requiring a constant magnetic field without continuous power input. Examples include compasses, computer hard disks, electric motors, electricity generators, microphones, loudspeakers, and credit/debit cards.\n*   **Electromagnets:** Employed where variable, temporary, or switchable magnetic fields are needed. Examples include cranes for lifting heavy iron objects, electric bells, magnetic locks, relays, and as components in motors and generators.\n*   **Magnetic Shielding:** Ferromagnetic materials (e.g., steel, mu-metal) are used for magnetic screening to protect sensitive electronic equipment from external magnetic fields.\n\n**VIII. Earth's Magnetic Field**\n*   The Earth possesses a vast magnetic field, which, in a horizontal plane, can be approximated by parallel straight lines running from the geographical south to the geographical north.\n*   **Declination:** The Earth's magnetic north pole does not perfectly coincide with its geographical north pole, resulting in an angle of declination between magnetic north and true north at most locations.",
+    "chapter_concepts": [
+        {
+            "concept_id": "e625400c-cecd-44f8-9fee-04be34ee0768",
+            "concept_question": "What poles do magnets have?",
+            "concept_answer": "Magnets have a north and a south pole.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "ed17e37d-0a52-421d-a526-94bc9028515d",
+            "concept_question": "What is the law of magnetic poles?",
+            "concept_answer": "Like poles repel and unlike poles attract.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e625400c-cecd-44f8-9fee-04be34ee0768"
+            ]
+        },
+        {
+            "concept_id": "214aa4d2-bf24-45be-bba0-260324c16ae0",
+            "concept_question": "How does magnetic force vary with separation?",
+            "concept_answer": "The magnetic force decreases as the distance between poles increases.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e625400c-cecd-44f8-9fee-04be34ee0768",
+                "ed17e37d-0a52-421d-a526-94bc9028515d"
+            ]
+        },
+        {
+            "concept_id": "c040b3c4-ffe3-40f7-827d-8c7b57dae6c5",
+            "concept_question": "What magnetic property allows compass use?",
+            "concept_answer": "A freely suspended magnet\u2019s north pole aligns with Earth\u2019s north.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e625400c-cecd-44f8-9fee-04be34ee0768",
+                "58e105bd-e6ed-4f09-a699-8980193347c2"
+            ]
+        },
+        {
+            "concept_id": "1d764edf-4258-47e3-9a80-857302ecae68",
+            "concept_question": "What are ferromagnetic materials?",
+            "concept_answer": "Ferromagnetic materials are attracted by magnets and can be magnetised.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "ee2bf276-2a7a-4342-9de2-af9b3268177c",
+            "concept_question": "What are non-magnetic materials?",
+            "concept_answer": "Non-magnetic materials are neither attracted by magnets nor can be magnetised.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "01dd19e8-9328-4018-9b32-a7579d1434c9",
+            "concept_question": "What are magnetic poles on a magnet?",
+            "concept_answer": "Magnetic poles are regions near a magnet\u2019s ends with strong attraction that always occur in pairs.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e625400c-cecd-44f8-9fee-04be34ee0768"
+            ]
+        },
+        {
+            "concept_id": "8a372061-436a-445c-81a8-daed558a8553",
+            "concept_question": "What is induced magnetism?",
+            "concept_answer": "An unmagnetised material becomes magnetised when placed near a permanent magnet.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1d764edf-4258-47e3-9a80-857302ecae68"
+            ]
+        },
+        {
+            "concept_id": "375a944f-8f6a-4dad-91f8-9c4adcaa942f",
+            "concept_question": "What is polarity in induced magnetism?",
+            "concept_answer": "The end closest to the inducing pole acquires opposite polarity while the far end gains the same polarity.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8a372061-436a-445c-81a8-daed558a8553",
+                "ed17e37d-0a52-421d-a526-94bc9028515d"
+            ]
+        },
+        {
+            "concept_id": "c5d3f2b0-0f26-4f93-9eef-07651f0cc5f4",
+            "concept_question": "What characterizes temporary magnets?",
+            "concept_answer": "Temporary magnets, made from soft magnetic materials, magnetise easily but lose magnetism quickly.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1d764edf-4258-47e3-9a80-857302ecae68"
+            ]
+        },
+        {
+            "concept_id": "914b3ad8-534b-46f3-93a1-0addf4db4a2f",
+            "concept_question": "What characterizes permanent magnets?",
+            "concept_answer": "Permanent magnets, made from hard magnetic materials, retain their magnetism for a long duration.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1d764edf-4258-47e3-9a80-857302ecae68"
+            ]
+        },
+        {
+            "concept_id": "a1359784-abf1-402c-833c-c1c6fc69e3bd",
+            "concept_question": "What is a magnetic field?",
+            "concept_answer": "A magnetic field is the region around a magnet where its magnetic force can be detected.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e625400c-cecd-44f8-9fee-04be34ee0768"
+            ]
+        },
+        {
+            "concept_id": "018136fe-d68c-4040-9976-4e91be2db8ef",
+            "concept_question": "How are magnetic fields represented?",
+            "concept_answer": "Magnetic fields are depicted by lines of force that show the field\u2019s direction and strength.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a1359784-abf1-402c-833c-c1c6fc69e3bd"
+            ]
+        },
+        {
+            "concept_id": "faac01ab-052c-44f9-8022-aac02f36ae36",
+            "concept_question": "How is magnetic field direction defined?",
+            "concept_answer": "The field direction is defined by the force on a hypothetical north pole placed within the field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a1359784-abf1-402c-833c-c1c6fc69e3bd",
+                "e625400c-cecd-44f8-9fee-04be34ee0768"
+            ]
+        },
+        {
+            "concept_id": "95cfa4d7-ee9a-45e6-9ff4-37ec397ce36f",
+            "concept_question": "How is magnetic field strength indicated?",
+            "concept_answer": "Magnetic field strength is indicated by the density of the field lines.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a1359784-abf1-402c-833c-c1c6fc69e3bd",
+                "018136fe-d68c-4040-9976-4e91be2db8ef"
+            ]
+        },
+        {
+            "concept_id": "aafe216d-a3cd-4cb8-b777-7f500221042f",
+            "concept_question": "What causes magnetic forces?",
+            "concept_answer": "Magnetic forces result from the interactions between magnetic fields.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a1359784-abf1-402c-833c-c1c6fc69e3bd"
+            ]
+        },
+        {
+            "concept_id": "eebc2d0f-50bd-4348-b8b2-0c450b9d87de",
+            "concept_question": "What is a neutral point?",
+            "concept_answer": "A neutral point is where opposing magnetic fields cancel each other, yielding zero net field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a1359784-abf1-402c-833c-c1c6fc69e3bd"
+            ]
+        },
+        {
+            "concept_id": "2b80accc-87b6-41fc-b295-4358926533a5",
+            "concept_question": "What is an electromagnet?",
+            "concept_answer": "An electromagnet is a coiled wire around a soft iron core that becomes magnetised when current flows.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e625400c-cecd-44f8-9fee-04be34ee0768",
+                "1d764edf-4258-47e3-9a80-857302ecae68"
+            ]
+        },
+        {
+            "concept_id": "1705a6ee-7b77-47c3-b662-0a4f0ad61125",
+            "concept_question": "What property distinguishes electromagnets?",
+            "concept_answer": "Electromagnets are temporary magnets with adjustable strength that can be switched on or off.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2b80accc-87b6-41fc-b295-4358926533a5",
+                "c5d3f2b0-0f26-4f93-9eef-07651f0cc5f4"
+            ]
+        },
+        {
+            "concept_id": "4e6d249c-7ac0-4506-88df-2d52e8c63cb9",
+            "concept_question": "What factors affect electromagnet strength?",
+            "concept_answer": "Electromagnet strength increases with higher current, more coil turns, and closer core poles.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2b80accc-87b6-41fc-b295-4358926533a5",
+                "1705a6ee-7b77-47c3-b662-0a4f0ad61125"
+            ]
+        },
+        {
+            "concept_id": "a1d6847f-3a5f-4aa4-8765-7234769dfa10",
+            "concept_question": "What are uses of permanent magnets?",
+            "concept_answer": "Permanent magnets are used in devices that require a constant magnetic field without continuous power.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "914b3ad8-534b-46f3-93a1-0addf4db4a2f"
+            ]
+        },
+        {
+            "concept_id": "14093db8-19bd-4c43-9d30-01e46638fee8",
+            "concept_question": "What are uses of electromagnets?",
+            "concept_answer": "Electromagnets are employed in applications that need variable, temporary, or switchable magnetic fields.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1705a6ee-7b77-47c3-b662-0a4f0ad61125"
+            ]
+        },
+        {
+            "concept_id": "72965de1-d8fc-4d39-b6aa-eae82dc06c8f",
+            "concept_question": "What is magnetic shielding?",
+            "concept_answer": "Magnetic shielding uses ferromagnetic materials to protect sensitive equipment from external magnetic fields.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1d764edf-4258-47e3-9a80-857302ecae68"
+            ]
+        },
+        {
+            "concept_id": "58e105bd-e6ed-4f09-a699-8980193347c2",
+            "concept_question": "What is Earth's magnetic field?",
+            "concept_answer": "Earth's magnetic field is vast and can be approximated by parallel horizontal lines running from south to north.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a1359784-abf1-402c-833c-c1c6fc69e3bd"
+            ]
+        },
+        {
+            "concept_id": "f85e1810-5e9c-4a1c-b841-3d34ab3f3b84",
+            "concept_question": "What is magnetic declination?",
+            "concept_answer": "Magnetic declination is the angle between Earth's magnetic north and true north.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "58e105bd-e6ed-4f09-a699-8980193347c2"
+            ]
+        }
+    ]
+}

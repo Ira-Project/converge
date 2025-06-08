@@ -1,0 +1,105 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "xzoz3nl7f872i3qyjmr6t",
+    "topicIdProd": "",
+    "chapter_text": "**Definition and Fundamental Concepts**\n*   Density is defined as the mass per unit volume of a substance.\n*   The SI unit for density is kilograms per cubic metre ($\\text{kg/m}^3$). Grams per cubic centimetre ($\\text{g/cm}^3$) is also a common unit; to convert from $\\text{g/cm}^3$ to $\\text{kg/m}^3$, multiply by $10^3$.\n*   The fundamental relationship for density ($\\rho$) is:\n    *   $\\rho = \\frac{m}{V}$\n    *   where $m$ is mass and $V$ is volume.\n*   This formula can be rearranged to calculate mass ($m$) or volume ($V$):\n    *   $m = V \\times \\rho$\n    *   $V = \\frac{m}{\\rho}$\n\n**Measurement of Density**\n*   **Regularly Shaped Solids:** Mass ($m$) is found using a balance, and volume ($V$) is determined by measuring its dimensions with a ruler.\n*   **Irregularly Shaped Solids:** Mass ($m$) is found using a balance. Volume ($V$) is determined by displacement methods:\n    *   **Method 1:** Immerse the object in a measuring cylinder containing liquid and calculate the volume as the difference between the initial and final liquid levels.\n    *   **Method 2:** Immerse the object in an overflow can filled with liquid (e.g., water) and collect the displaced liquid in a measuring cylinder. The volume of the collected liquid equals the object's volume.\n*   **Liquids:** Mass ($m$) is found by weighing an empty beaker, then weighing the beaker with a known volume of liquid transferred from a burette or measuring cylinder, and subtracting the mass of the empty beaker. Volume ($V$) is measured using the burette or measuring cylinder.\n*   **Gases (e.g., Air):** Mass ($m$) is found by weighing a flask full of the gas, then evacuating the flask with a vacuum pump and re-weighing it; the difference is the mass of the gas. Volume ($V$) is found by filling the flask with water and pouring the water into a measuring cylinder.\n\n**Floating and Sinking Principles**\n*   An object will **sink** in a liquid if its density is greater than the density of the liquid.\n*   An object will **float** (partly or wholly submerged) in a liquid if its density is less than the density of the liquid.\n*   For composite objects (e.g., an iron ship), their buoyancy is determined by their *average* density, which includes any enclosed low-density substances like air.\n*   When two liquids do not mix, the liquid with the **lower density** will float on top of the liquid with the **higher density**.",
+    "chapter_concepts": [
+        {
+            "concept_id": "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18",
+            "concept_question": "What is density?",
+            "concept_answer": "Density is the mass per unit volume of a substance.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "77c37268-e0ae-4eac-b7fd-27f2417e395e",
+            "concept_question": "What is the SI unit of density?",
+            "concept_answer": "The SI unit of density is kilograms per cubic metre, though grams per cubic centimetre is also common.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18"
+            ]
+        },
+        {
+            "concept_id": "51a5b849-b39b-4d24-99b2-599b0caa884c",
+            "concept_question": "What is the conversion factor from g/cm^3 to kg/m^3?",
+            "concept_answer": "To convert density from grams per cubic centimetre to kilograms per cubic metre, multiply by 10^3.",
+            "concept_formula": [
+                "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\times 10^3$!$"
+            ],
+            "pre-requisites": [
+                "77c37268-e0ae-4eac-b7fd-27f2417e395e"
+            ]
+        },
+        {
+            "concept_id": "70870073-1178-47d6-a764-fd91afde7460",
+            "concept_question": "What is density formula?",
+            "concept_answer": "The density formula expresses density as the ratio of mass to volume.",
+            "concept_formula": [
+                "$!$\\rho = \\frac{m}{V}$!$"
+            ],
+            "pre-requisites": [
+                "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18"
+            ]
+        },
+        {
+            "concept_id": "0bcbc0d9-3537-4386-9a81-b8d3ca195bae",
+            "concept_question": "What is mass formula using density?",
+            "concept_answer": "Mass is calculated by multiplying volume with density.",
+            "concept_formula": [
+                "$!$m = V \\times \\rho$!$"
+            ],
+            "pre-requisites": [
+                "70870073-1178-47d6-a764-fd91afde7460"
+            ]
+        },
+        {
+            "concept_id": "cddeec9b-8762-49d2-a00f-804e55671c52",
+            "concept_question": "What is volume formula using density?",
+            "concept_answer": "Volume is obtained by dividing mass by density.",
+            "concept_formula": [
+                "$!$V = \\frac{m}{\\rho}$!$"
+            ],
+            "pre-requisites": [
+                "70870073-1178-47d6-a764-fd91afde7460"
+            ]
+        },
+        {
+            "concept_id": "aab4d3be-217f-4eb1-9025-b48ff48b15f7",
+            "concept_question": "When does an object sink?",
+            "concept_answer": "An object sinks when its density exceeds the liquid's density.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18"
+            ]
+        },
+        {
+            "concept_id": "0d3e7a7e-88cc-4897-bfb0-50c099ee9dd7",
+            "concept_question": "When does an object float?",
+            "concept_answer": "An object floats when its density is less than the liquid's density.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18"
+            ]
+        },
+        {
+            "concept_id": "2bfff920-f1a0-48dc-ba35-d8ad0e64e878",
+            "concept_question": "How is composite buoyancy determined?",
+            "concept_answer": "Composite buoyancy is determined by the average density including enclosed low-density substances.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18"
+            ]
+        },
+        {
+            "concept_id": "ad8e0905-7afb-40b6-97cd-bb748fc1df61",
+            "concept_question": "How do immiscible liquids stratify by density?",
+            "concept_answer": "For immiscible liquids, the lower density liquid floats on top of the higher density liquid.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18",
+                "0d3e7a7e-88cc-4897-bfb0-50c099ee9dd7"
+            ]
+        }
+    ]
+}

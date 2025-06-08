@@ -1,0 +1,2255 @@
+{
+    "name": "Physical Quantities and Measurement Techniques",
+    "topicId": "fmiaarsg581im9jlmflvc",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "4b11db6e3f5b4ef383002",
+            "concepts": [
+                "18dabf56-7a2e-4d93-b761-db7e7979444c"
+            ],
+            "variants": [
+                {
+                    "id": "e0b51e99e5ff4f30a6516",
+                    "question": "Which of the following options correctly describes physical quantities?",
+                    "options": [
+                        {
+                            "option_text": "Physical quantities use numbers to describe space and time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Physical quantities are descriptive measures without numerical representation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Physical quantities are only relevant in theoretical physics.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Physical quantities are not measurable.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "962c3065302443ac831c1",
+                    "question": "Which of the following statements about physical quantities are correct? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Physical quantities must be measurable.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Physical quantities can be expressed using numbers and units.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Physical quantities are only used to describe fundamental forces.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Physical quantities cannot be used to describe derived quantities.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "663e005b331246679d6f0",
+                    "question": "Which of the following is NOT a characteristic of physical quantities?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They can be quantified.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They have no units.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They can be used to describe the laws of physics.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They can be measured.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6c984dc6c4fc43618d43e",
+            "concepts": [
+                "3beb156a-9f31-4e4c-ad07-2f8d28429c9b",
+                "18dabf56-7a2e-4d93-b761-db7e7979444c"
+            ],
+            "variants": [
+                {
+                    "id": "72dbd09ea5da47d299712",
+                    "question": "What are the fundamental physical quantities in physics?",
+                    "options": [
+                        {
+                            "option_text": "Length, mass, and time",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Area, volume, and density",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Speed, velocity, and acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Force, energy and work",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "dabdeea0afcb4854b5d17",
+                    "question": "Which of the following are considered fundamental physical quantities? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Length",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Volume",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Mass",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Time",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "86011b871925483096d12",
+                    "question": "Which of the following units are derived from fundamental physical quantities?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Kilogram",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Meter",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Second",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Newton",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "8e70dc315ab242099622e",
+            "concepts": [
+                "895db375-9913-481e-94b5-9afb808dce51"
+            ],
+            "variants": [
+                {
+                    "id": "248efe665bf448bab13c1",
+                    "question": "Which statement accurately describes the SI unit system?",
+                    "options": [
+                        {
+                            "option_text": "The SI system is a decimal system of metric units.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The SI system is based on imperial units.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The SI system uses fractions instead of decimals.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The SI system varies from country to country.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1428071dad194e8291337",
+                    "question": "Which of the following is NOT a base unit in the SI system?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Kilogram",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Second",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Newton",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mole",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b072c5c352f540f3a6a12",
+                    "question": "Which of the following statements about SI prefixes are correct? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The prefix 'kilo' represents a factor of 1000.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The prefix 'milli' represents a factor of 100.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The prefix 'centi' represents a factor of 0.01.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The prefix 'mega' represents a factor of 1,000,000.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "4bc7339040254ad9ad17c",
+            "concepts": [
+                "1d75f047-d095-467b-bee2-9d7d27a3e3e5"
+            ],
+            "variants": [
+                {
+                    "id": "b9a5f4d96bdd494e9c8d3",
+                    "question": "Why is a standard unit necessary for measurements?",
+                    "options": [
+                        {
+                            "option_text": "To make measurements meaningful and comparable",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To avoid using numbers in measurements",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To make measurements more complex",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To make measurements independent of the observer",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cb66d15353614d01b1808",
+                    "question": "Which of the following statements are correct regarding the use of standard units in measurements? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They ensure uniformity and consistency in measurements.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They allow for easy comparison and communication of measurements across different locations and people.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They make measurements dependent on the observer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They complicate the process of measurement.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "f44c7910ea8b42e799721",
+                    "question": "Which of the following is NOT a reason for using standard units in measurement?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "To ensure consistency across measurements.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To make communication of measured values easier.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To make measurements more ambiguous.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To facilitate comparison of measurements.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "411d87d8dd1d4b47a4a86",
+            "concepts": [
+                "3474184d-fe1b-4c7e-b099-9213ddedc947"
+            ],
+            "variants": [
+                {
+                    "id": "116d56457ecc45e8baddc",
+                    "question": "Which of the following is a true statement regarding measurement errors?",
+                    "options": [
+                        {
+                            "option_text": "Every measurement has an associated error due to inherent uncertainties.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Measurement errors can always be completely eliminated.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Measurement errors only occur in scientific experiments.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Measurement errors are always the fault of the person taking the measurement.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "36f86a8f815f4d1a86302",
+                    "question": "Which of the following statements about systematic errors is/are correct? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Systematic errors are random fluctuations in measurements.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Systematic errors can be reduced by repeating measurements.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Systematic errors are consistent and repeatable errors.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Systematic errors can arise from faulty equipment or calibration.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a41c8109f5024ce188c47",
+                    "question": "A student measures the length of a table three times and obtains the following measurements: 1.50 m, 1.52 m, and 1.49 m. Which statement is most accurate regarding the errors in this measurement?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The measurements are precise but not necessarily accurate.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The measurements are accurate but not precise.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The measurements are both accurate and precise.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The measurements have no errors.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "a514937f732e4e44b6e34",
+            "concepts": [
+                "f5c2f8fa-fd31-4013-bafa-9ea0e69eb1c6"
+            ],
+            "variants": [
+                {
+                    "id": "be5d28e7db7547cb84b3e",
+                    "question": "What causes parallax error in measurements?",
+                    "options": [
+                        {
+                            "option_text": "Reading a scale from an angle instead of directly",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Using an incorrectly calibrated instrument",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Environmental conditions affecting the instrument",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Random fluctuations in readings",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "42df46f1bae046818258b",
+                    "question": "Which of the following scenarios describes a situation where parallax error is most likely to occur?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Measuring the length of an object by viewing the ruler from a side angle.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Using a weighing scale that consistently shows a slightly higher weight than the actual weight.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Taking multiple temperature readings of a liquid and observing small variations.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Measuring the current in a circuit with a multimeter that has a damaged display.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d6a8db819ba14124a8537",
+                    "question": "Select all the factors that contribute to parallax error in measurements.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Incorrect positioning of the observer's eye while reading the scale.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Calibrating the instrument incorrectly.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Viewing the measuring scale at an oblique angle.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Using a perfectly aligned instrument and scale.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "f0f8249e7fa04dabb3d17",
+            "concepts": [
+                "8eae554f-89f2-47e3-8d04-053129768b82"
+            ],
+            "variants": [
+                {
+                    "id": "e9ef7429aa8f4cba91f9f",
+                    "question": "What is systematic error?",
+                    "options": [
+                        {
+                            "option_text": "An error introduced by the measurement system itself.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Random fluctuations in readings.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Errors due to parallax.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Errors caused by human mistake.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1327a413cf904c33b7c48",
+                    "question": "Which of the following is an example of a systematic error in a laboratory experiment?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A balance that consistently reads 0.5 grams too high.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Variations in room temperature during the experiment.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Inconsistent readings due to the observer's judgment.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Random fluctuations in the power supply.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8ea75f6046dc4b9f9345a",
+                    "question": "Select all of the following statements that are TRUE regarding systematic errors:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Systematic errors can be reduced by repeating measurements.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Systematic errors consistently shift measurements in the same direction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Systematic errors are caused by limitations in the measuring instrument or experimental design.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Systematic errors can be identified through statistical analysis of the data.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "61b32bc5d3be4515a3cb6",
+            "concepts": [
+                "1a846b8d-02f9-4b06-803f-5f77f8448358"
+            ],
+            "variants": [
+                {
+                    "id": "e18ec0bb78894327bd525",
+                    "question": "What do significant figures indicate in a measurement?",
+                    "options": [
+                        {
+                            "option_text": "The precision of a measurement by the number of determined digits.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The type of units used in measurement.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The estimated cost of the measuring instrument.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The potential errors in measurement.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a842194386054ac4a1597",
+                    "question": "Which of the following statements accurately describes the role of significant figures in measurements?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They reflect the uncertainty in a calculated result based on measured values.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They determine the conversion factor between different units.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They ensure that measurements are aligned with theoretical expectations.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They represent the maximum possible value that can be measured.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1e03a6535f88473a9d5f8",
+                    "question": "Select all the statements that correctly describe the purpose or importance of significant figures:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They help in representing the precision of a measurement.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They guide the rounding of calculated values to maintain appropriate precision.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They indicate the type of measuring instrument used.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They minimize computational errors.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "caa5c2960efe46ef9eb10",
+            "concepts": [
+                "0dc608c2-ebe9-4a93-88fb-b038a2e64ec6",
+                "1a846b8d-02f9-4b06-803f-5f77f8448358"
+            ],
+            "variants": [
+                {
+                    "id": "bbae6a91c33240a8b244a",
+                    "question": "How many significant figures should be present in a calculated answer?",
+                    "options": [
+                        {
+                            "option_text": "The same number as in the least precise measurement.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The sum of significant figures in all measurements.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An arbitrary number chosen by the calculator.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The maximum number of significant figures available.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a8b77190cee14b68bfe19",
+                    "question": "Which of the following rules correctly describes how to determine the number of significant figures in a calculated result?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The result should have the same number of significant figures as the measurement with the fewest significant figures.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The result should have the same number of decimal places as the measurement with the fewest decimal places.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The result should have the same number of significant figures as the measurement with the most significant figures.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The result should have the sum of the significant figures from all the measurements.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2d25d56d73b942948b52e",
+                    "question": "Select all the statements that are correct regarding significant figures in calculations:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "When multiplying or dividing, the result should have the same number of significant figures as the factor with the fewest significant figures.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "When adding or subtracting, the result should have the same number of decimal places as the number with the fewest decimal places.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "When rounding, if the digit to be dropped is less than 5, the preceding digit is rounded up.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Exact numbers, like conversion factors, do not limit the number of significant figures in the result.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c3f716830ba745fbb6562",
+            "concepts": [
+                "b8b4e525-408c-4b95-96a3-38202342dc11",
+                "1a846b8d-02f9-4b06-803f-5f77f8448358"
+            ],
+            "variants": [
+                {
+                    "id": "5708e8519f1940a99f875",
+                    "question": "Which statement best describes standard notation?",
+                    "options": [
+                        {
+                            "option_text": "Standard notation is a concise method to write numbers using powers of ten.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Standard notation is only used for very large numbers.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Standard notation is identical to decimal notation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Standard notation is used for historical documents only.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e70d709e38c64940bcb64",
+                    "question": "Which of the following are advantages of using standard notation? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It provides a concise way to represent very large and very small numbers.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It simplifies calculations involving very large and very small numbers.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is more complicated than decimal notation for common calculations.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is only used for small whole numbers.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "46a665eee1ef435b94d22",
+                    "question": "Which of the following numbers is NOT written in standard notation?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$3.2 \\times 10^5$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$9.11 \\times 10^{-31}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.5 \\times 10^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$1.0 \\times 10^0$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ec655b5963014b8aabac8",
+            "concepts": [
+                "e6868814-e32a-4459-bbc4-754ba83014d2"
+            ],
+            "variants": [
+                {
+                    "id": "ca443aade8024bb39af31",
+                    "question": "What is the SI unit of length?",
+                    "options": [
+                        {
+                            "option_text": "Metre",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kilogram",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Second",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Newton",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "968ab82038b14f9a8f858",
+                    "question": "Which of the following is NOT a unit of length?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Meter",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kilometer",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Centimeter",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kilogram",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f2126eb2264b48aaa76fc",
+                    "question": "Select all the units that are used to measure length.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Meter",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kilogram",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Second",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Centimeter",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "e42fc35e91e4473594190",
+            "concepts": [
+                "657d980a-2067-4648-b088-b118b7c5e0a4",
+                "e6868814-e32a-4459-bbc4-754ba83014d2"
+            ],
+            "variants": [
+                {
+                    "id": "0eb60dfb70ea49cdbd2c1",
+                    "question": "What is the current definition of a metre?",
+                    "options": [
+                        {
+                            "option_text": "The distance light travels in vacuum over a specific time interval.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The length of a specific metal bar kept in France.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average distance from the North Pole to the Equator.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance light travels in air in one second.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "465e4a3fa0d04846bdf4d",
+                    "question": "Which of the following statements accurately describes the current definition of a meter?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The distance light travels in a vacuum in 1/299,792,458 of a second.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The length of the standard platinum-iridium bar kept at the International Bureau of Weights and Measures.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "One ten-millionth of the distance from the equator to the North Pole along a meridian passing through Paris.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance sound travels in air in one second at standard temperature and pressure.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7de00c4940544f489d146",
+                    "question": "Select all the statements that correctly describe the modern definition or historical context of the meter:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is currently defined based on the speed of light in a vacuum.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It was formerly defined as the length of a prototype metal bar.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is defined by the average size of the Earth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is based on the distance light travels through a glass prism.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "4058460574d448c9b0832",
+            "concepts": [
+                "6071a0d9-3fb4-49f5-95a9-e5ee6886d6a7",
+                "68fff499-90c9-4872-81e2-8f306a1643ed",
+                "e6868814-e32a-4459-bbc4-754ba83014d2"
+            ],
+            "variants": [
+                {
+                    "id": "42c5795909094db8a6e8d",
+                    "question": "What is the area of a rectangle with a length of 5 metres and a breadth of 3 metres?",
+                    "options": [
+                        {
+                            "option_text": "$!$15\\,\\text{m}^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$8\\,\\text{m}^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$16\\,\\text{m}^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$20\\,\\text{m}^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "10b4a4c819404f4e8eefc",
+                    "question": "A rectangle has an area of $!$24\\,\\text{m}^2$!$ and its breadth is $!$4\\,\\text{m}$!$. What is the length of the rectangle?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$6\\,\\text{m}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$8\\,\\text{m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$10\\,\\text{m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$12\\,\\text{m}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fa2f1a13fc0846c291a39",
+                    "question": "Which of the following statements are correct for a rectangle with length $!$10\\,\\text{m}$!$ and breadth $!$5\\,\\text{m}$!$?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Area of the rectangle is $!$50\\,\\text{m}^2$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Perimeter of the rectangle is $!$30\\,\\text{m}$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Area of the rectangle is $!$25\\,\\text{m}^2$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Perimeter of the rectangle is $!$15\\,\\text{m}$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "252bb2fc24d94ac8a66a3",
+            "concepts": [
+                "ecaff3e3-51db-4b62-8550-ddffc20484f7"
+            ],
+            "variants": [
+                {
+                    "id": "6e4b3ac57cd8441ead3db",
+                    "question": "Which of the following statements correctly describes volume?",
+                    "options": [
+                        {
+                            "option_text": "Volume is the measure of the space occupied by an object.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Volume measures the size of a surface.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Volume is measured in square meters.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Volume is a dimensionless quantity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6b4e276c8573445193a34",
+                    "question": "A rectangular box has dimensions of 5 cm, 10 cm, and 2 cm. What is the volume of the box?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "100 $!$\\text{cm}^3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "17 $!$\\text{cm}^3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "50 $!$\\text{cm}^3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "200 $!$\\text{cm}^3$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3ae29926685d4c8ca6f12",
+                    "question": "Select all of the following statements that are correct regarding volume:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Volume is measured in cubic units.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Volume is the amount of space an object occupies.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Volume can only be calculated for rectangular objects.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Volume is a measure of area.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "e6bcf6a0a24d4e9184fb5",
+            "concepts": [
+                "e97688be-4e79-4c98-a9e5-238664302dba",
+                "ecaff3e3-51db-4b62-8550-ddffc20484f7"
+            ],
+            "variants": [
+                {
+                    "id": "6ce8869de7214e6a8428b",
+                    "question": "What is the SI unit of volume?",
+                    "options": [
+                        {
+                            "option_text": "Cubic metre",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Square metre",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Litre",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kilogram",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e68a85f2db834a6f99b75",
+                    "question": "Which of the following is NOT a unit of volume?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Cubic centimeter",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Liter",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kilogram",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Cubic meter",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c9628de6328f46e99c37b",
+                    "question": "Select all the units that can be used to measure volume.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Cubic metre",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Litre",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kilogram",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Millilitre",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "eda8c403fd6c442eb4585",
+            "concepts": [
+                "5019a5fa-0ef6-41b7-9c92-8a9c074870d4",
+                "ecaff3e3-51db-4b62-8550-ddffc20484f7",
+                "e6868814-e32a-4459-bbc4-754ba83014d2"
+            ],
+            "variants": [
+                {
+                    "id": "2ae4f797eaff477a9bd0e",
+                    "question": "A rectangular block has the following dimensions: length = 2 m, breadth = 1 m, and height = 0.5 m. What is its volume?",
+                    "options": [
+                        {
+                            "option_text": "$!$1 \\text{ m}^3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$2 \\text{ m}^3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2.5 \\text{ m}^3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$3.5 \\text{ m}^3$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8ee6b9bb59d541aabc99a",
+                    "question": "A rectangular block has a breadth of 2 m and a height of 0.5 m. If the volume of the block is $!$3 \\text{ m}^3$!$, what is the length of the block?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$1 \\text{ m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2 \\text{ m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$3 \\text{ m}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$4 \\text{ m}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "42c98628471e4a5a97a7d",
+                    "question": "A rectangular block has the following dimensions: length = 4 m, breadth = 2 m, and height = 1 m. If the height is doubled, which of the following statements is correct about the volume?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The volume will be doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The volume will be halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The volume will remain the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The volume will be tripled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "a9c4a7921c0d497d903d6",
+            "concepts": [
+                "6fa152a6-8189-44ad-960b-7ea4c0259b61"
+            ],
+            "variants": [
+                {
+                    "id": "e73a89c1c0264e04881a1",
+                    "question": "What is the meniscus in liquid measurements?",
+                    "options": [
+                        {
+                            "option_text": "The curved surface of a liquid in a container",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The bottom of a measuring cylinder",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The top of a measuring cylinder",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A type of measuring instrument",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "31a989dc34b049a5a74b9",
+                    "question": "Which of the following statements correctly describes the meniscus?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is the curved surface of a liquid that appears in a container.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It refers to the flat surface of the liquid in a narrow tube.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the lowest point of a liquid in any container.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the highest point of a liquid in any container.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "26cbe65322554342a5886",
+                    "question": "Select all the statements that accurately describe why a meniscus forms when measuring liquids in a glass cylinder.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Due to the surface tension of the liquid.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Due to adhesive forces between the liquid and the glass.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Due to the weight of the measuring cylinder.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Due to the cohesive forces within the liquid.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "665fecfed6264fffaa9f1",
+            "concepts": [
+                "68353e2c-cf62-43d7-afd4-694bbbfa7dcc"
+            ],
+            "variants": [
+                {
+                    "id": "2f7900f66b6c41a099cb3",
+                    "question": "What is the SI unit of time?",
+                    "options": [
+                        {
+                            "option_text": "Second",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Minute",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Hour",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Day",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cc48f4609c014b1080ca0",
+                    "question": "Which of the following units is the SI unit for measuring time?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Second",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Minute",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Hour",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Millisecond",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "74ed93c9efdd4e30a25ed",
+                    "question": "Select all of the following units that can be used to measure time.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Second",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Minute",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kilogram",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Hour",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "48552a80fe74433589422",
+            "concepts": [
+                "f05d5300-d29e-429f-9152-550fd571ff4c",
+                "68353e2c-cf62-43d7-afd4-694bbbfa7dcc"
+            ],
+            "variants": [
+                {
+                    "id": "170882e906b9414ab0d6e",
+                    "question": "How is a second defined?",
+                    "options": [
+                        {
+                            "option_text": "Based on a specific number of energy transitions in the caesium atom.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Based on Earth's rotation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Based on a fraction of a year.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Based on the swing of a pendulum.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9c4b7bfa95154694a7c0a",
+                    "question": "Which of the following is the correct definition of a second?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The duration of 9,192,631,770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the caesium-133 atom.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The time it takes for the Earth to complete one rotation on its axis.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1/86,400 of a mean solar day.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The time it takes for a simple pendulum of a certain length to complete one full swing.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cd1b50967dcc44bd99972",
+                    "question": "Select all the statements that correctly describe the definition of a second:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is based on the vibrations of the caesium-133 atom.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is based on the Earth's rotation around the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the SI unit of time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is defined as a fraction of a year.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "76b7cf8f61944fe9a26cf",
+            "concepts": [
+                "a3897007-1879-4f59-a174-c8a8d297d091",
+                "e6868814-e32a-4459-bbc4-754ba83014d2"
+            ],
+            "variants": [
+                {
+                    "id": "de0528946e8e45c1adf08",
+                    "question": "Which of the following devices is used for precise measurement of small dimensions?",
+                    "options": [
+                        {
+                            "option_text": "Micrometer screw gauge",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ruler",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Measuring tape",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Protractor",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3b37dd29bddf4b3caf718",
+                    "question": "Which of the following are suitable for precise measurements of small dimensions? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Micrometer screw gauge",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ruler",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Vernier calipers",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Measuring tape",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "4b1f7fccb353443184dde",
+                    "question": "Which of the following is NOT typically used for precise measurements of small dimensions?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Micrometer screw gauge",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Vernier calipers",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ruler",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Optical microscope with calibrated eyepiece",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "3b98a7c1194e4125b7a5b",
+            "concepts": [
+                "9a4da118-2c7f-416d-9990-5c7e8ca6e378",
+                "d0d3a50d-d928-453d-8819-ec5a85bfcd82",
+                "a3897007-1879-4f59-a174-c8a8d297d091"
+            ],
+            "variants": [
+                {
+                    "id": "f8a471e8745d445c90c33",
+                    "question": "What is zero error in measuring instruments?",
+                    "options": [
+                        {
+                            "option_text": "An offset in a measuring instrument that must be accounted for.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The error when the instrument reads zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The maximum error an instrument can have.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The systematic error in an instrument.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "913dddd3459241c0bdba8",
+                    "question": "Which of the following statements accurately describes 'zero error' in measuring instruments?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is a systematic error inherent in all measuring instruments.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It refers to the instrument reading zero when it should be measuring a non-zero quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is an offset or deviation in the instrument's reading that needs to be corrected for accurate measurements.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It represents the random errors associated with the measurement process.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bb09fc381df741488adb4",
+                    "question": "Select all that apply: Which of the following are consequences of zero error in a measuring instrument?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Inaccurate measurements",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Systematic errors in readings",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Random variations in measurements",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Consistent overestimation or underestimation of true values",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "ab17b4ca010f4813b442d",
+            "concepts": [
+                "e42d0019-0d88-4f56-982b-a464e9e78030"
+            ],
+            "variants": [
+                {
+                    "id": "955a73ce7bf34aa2a4849",
+                    "question": "Which of the following describes a scalar quantity?",
+                    "options": [
+                        {
+                            "option_text": "A physical quantity that has only magnitude.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A physical quantity that has direction only.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A physical quantity that has both magnitude and direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A quantity that cannot be measured.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "19a15c4c55fe4e3f8163a",
+                    "question": "Which of the following are scalar quantities? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Displacement",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Velocity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Distance",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "51b44d5bc76d49e9a7173",
+                    "question": "Which of the following statements about scalar and vector quantities is correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Scalar quantities have both magnitude and direction, while vector quantities have only magnitude.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Scalar quantities have only magnitude, while vector quantities have both magnitude and direction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Both scalar and vector quantities have magnitude and direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Neither scalar nor vector quantities have direction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "89e1db086d2a419e91c32",
+            "concepts": [
+                "51f219b3-2872-4fd4-8786-c040ebd06c8c"
+            ],
+            "variants": [
+                {
+                    "id": "b12990f359d24507b0349",
+                    "question": "What is a vector quantity?",
+                    "options": [
+                        {
+                            "option_text": "A physical quantity that possesses both magnitude and direction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A physical quantity that has only magnitude.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A quantity with direction but no magnitude.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A quantity that cannot be added.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e94581aa58df480392344",
+                    "question": "Which of the following is NOT a characteristic of a vector quantity?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It has magnitude.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It has direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It can be completely described by its magnitude.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It obeys the laws of vector addition.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e3e5b3eebb934372a7446",
+                    "question": "Select all the physical quantities from the following options that are vector quantities:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Velocity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mass",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c69a14e5ddc54a84b84c0",
+            "concepts": [
+                "6771120e-5136-4d30-8465-2fdb7f31de85",
+                "e42d0019-0d88-4f56-982b-a464e9e78030"
+            ],
+            "variants": [
+                {
+                    "id": "86764bfae3544b0c9952c",
+                    "question": "How are scalar quantities added?",
+                    "options": [
+                        {
+                            "option_text": "Using ordinary arithmetic operations.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Geometrically, taking direction into account.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "By vector addition rules.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They cannot be added.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ede0dc3137984a5cb6d74",
+                    "question": "Which of the following is NOT a scalar quantity?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Temperature",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Force",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Time",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ae8dfcaeda5f4f8bb847a",
+                    "question": "Select all the statements that correctly describe scalar addition:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Scalar quantities are added using ordinary arithmetic.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The direction of scalar quantities must be taken into account during addition.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Scalar addition always results in a larger magnitude.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Scalars with opposite signs can result in a reduced magnitude upon addition.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "11f23c3188a74d1293c26",
+            "concepts": [
+                "48a24970-a5fd-46fe-8338-25a5ba0ab766",
+                "51f219b3-2872-4fd4-8786-c040ebd06c8c"
+            ],
+            "variants": [
+                {
+                    "id": "b1e163f06cd74751aa906",
+                    "question": "How are vector quantities added?",
+                    "options": [
+                        {
+                            "option_text": "Geometrically, taking both magnitude and direction into account.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Using ordinary arithmetic operations.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "By multiplying their magnitudes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Vectors cannot be added.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3570609caef6477abae0e",
+                    "question": "Which of the following statements correctly describes how vector quantities are added?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Vector quantities are added geometrically, considering both magnitude and direction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Vector quantities are added using ordinary arithmetic operations, similar to scalar quantities.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Vector quantities are added by simply multiplying their magnitudes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Vector quantities can only be added if they are in the same direction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c9c3fb1240a245ca8c6ad",
+                    "question": "Select all the statements that correctly describe the addition of vector quantities.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Vector quantities are added geometrically.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The direction of the vectors must be taken into account when adding them.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Vector addition is the same as scalar addition.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Only the magnitudes of the vectors are important during addition.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "1e327805596b4d55991a5",
+            "concepts": [
+                "beb69599-eb7b-4356-8d08-85261b652171",
+                "51f219b3-2872-4fd4-8786-c040ebd06c8c"
+            ],
+            "variants": [
+                {
+                    "id": "4e09671f4b664c82b2b2b",
+                    "question": "What is the formula for the magnitude of the resultant of two perpendicular vectors $!$F_x$!$ and $!$F_y$!$?",
+                    "options": [
+                        {
+                            "option_text": "$!$F = \\sqrt{F_x^2 + F_y^2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$F = F_x + F_y$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = F_x - F_y$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$F = F_x \\times F_y$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ee1ab130515b4b41bda46",
+                    "question": "Two perpendicular vectors have magnitudes $!$F_x = 3$!$ units and $!$F_y = 4$!$ units. What is the magnitude of their resultant vector?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$5$!$ units",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$7$!$ units",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1$!$ unit",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$12$!$ units",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "03bcc02bdba64af6a12dd",
+                    "question": "Which of the following statements correctly describes how to find the magnitude of the resultant vector ($!$R$!$) formed by two perpendicular vectors, $!$A$!$ and $!$B$!$?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The magnitude of $!$R$!$ is the square root of the sum of the squares of the magnitudes of $!$A$!$ and $!$B$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnitude of $!$R$!$ is the sum of the magnitudes of $!$A$!$ and $!$B$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnitude of $!$R$!$ is the difference between the magnitudes of $!$A$!$ and $!$B$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnitude of $!$R$!$ is the product of the magnitudes of $!$A$!$ and $!$B$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "da31d99b34184a6482f7f",
+            "concepts": [
+                "be577f77-39ae-4a8c-8eaa-78a825ca391a",
+                "51f219b3-2872-4fd4-8786-c040ebd06c8c"
+            ],
+            "variants": [
+                {
+                    "id": "2b68df7c7ddb403db6eab",
+                    "question": "How is the direction of a resultant vector determined?",
+                    "options": [
+                        {
+                            "option_text": "By the tangent ratio of its perpendicular components.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "By simply adding the magnitudes of component vectors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "By subtracting the smaller component from the larger.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Direction is not applicable for a resultant vector.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3640f16d39d54a639133f",
+                    "question": "Which of the following methods can be used to determine the direction of the resultant vector? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Using the tangent of the angle formed by its perpendicular components.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Adding the magnitudes of the component vectors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Subtracting the magnitudes of the component vectors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Using the inverse tangent of the ratio of the perpendicular components.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "208a484f5e194e7da9c85",
+                    "question": "If a resultant vector has components $!$V_x = 3$!$ units and $!$V_y = 4$!$ units, what is the angle (in degrees) that the resultant vector makes with the x-axis (horizontal)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Approximately 36.87 degrees",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Approximately 53.13 degrees",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Approximately 45 degrees",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Approximately 90 degrees",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "9fc5d969c107413ca8d43",
+            "concepts": [
+                "97df9a78-627f-40ae-8aef-c68ba9dd9ec7",
+                "a6cd9f7a-103c-4472-8ee5-b311df777c95",
+                "6737c81e-089f-4993-b5a6-e0b8ea8af72a",
+                "b4687dc9-602e-4949-b1c3-103625088cef",
+                "e6868814-e32a-4459-bbc4-754ba83014d2"
+            ],
+            "variants": [
+                {
+                    "id": "4aac69e98f0c420abfdf5",
+                    "question": "Match the unit prefixes with their corresponding values in meters:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Millimetre",
+                            "optionB": "$!$10^{-3}\\text{ m}$!$"
+                        },
+                        {
+                            "optionA": "Centimetre",
+                            "optionB": "$!$10^{-2}\\text{ m}$!$"
+                        },
+                        {
+                            "optionA": "Micrometre",
+                            "optionB": "$!$10^{-6}\\text{ m}$!$"
+                        },
+                        {
+                            "optionA": "Kilometre",
+                            "optionB": "$!$10^{3}\\text{ m}$!$"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "9f22873dbe3e46c684f95",
+            "concepts": [
+                "6071a0d9-3fb4-49f5-95a9-e5ee6886d6a7",
+                "4e8fd4a1-469e-4261-b1b5-1681fd0675e5",
+                "6431a0f2-a918-45c2-b2f1-1b114ffc8e72",
+                "68fff499-90c9-4872-81e2-8f306a1643ed"
+            ],
+            "variants": [
+                {
+                    "id": "7295eda288fb4238aa0ae",
+                    "question": "Match the following shapes with their corresponding area formulas:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Rectangle",
+                            "optionB": "$!$\\text{length} \\times \\text{breadth}$!$"
+                        },
+                        {
+                            "optionA": "Triangle",
+                            "optionB": "$!$\\frac{1}{2} \\times \\text{base} \\times \\text{height}$!$"
+                        },
+                        {
+                            "optionA": "Circle",
+                            "optionB": "$!$\\pi r^2$!$"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "93adeaab9d234670b0762",
+            "concepts": [
+                "b26a064a-bd31-4d44-bb05-ea090349f30b",
+                "a1f5caf2-47d6-4c91-9217-9992e084fe0e",
+                "d9e40ae5-8c64-4c82-986e-52f2fcb9a017",
+                "21f0fbb9-77a3-4b37-93a5-82d053ef2e44"
+            ],
+            "variants": [
+                {
+                    "id": "6677a46ce8594feb96654",
+                    "question": "Match the units of volume with their equivalent in cubic meters:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "1 cubic centimetre",
+                            "optionB": "$!$10^{-6} \\text{ m}^3$!$"
+                        },
+                        {
+                            "optionA": "1 milliliter",
+                            "optionB": "1 cubic centimetre"
+                        },
+                        {
+                            "optionA": "1 litre",
+                            "optionB": "1000 cubic centimetres"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

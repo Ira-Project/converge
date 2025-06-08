@@ -1,0 +1,525 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "8nk62ezhe12ou0stz3l41",
+    "topicIdProd": "",
+    "chapter_text": "### 4.2.1 Electric Charge\n\n*   **Types of Charge**: There are two types of electrostatic charge: positive (+) and negative (-).\n*   **Interaction of Charges**:\n    *   Like charges repel (e.g., positive repels positive, negative repels negative).\n    *   Opposite charges attract (e.g., positive attracts negative).\n*   **Charging by Friction**: Electrostatic charges arise when electrons are transferred between objects by rubbing. It is only electrons which move; protons remain fixed.\n    *   An object that loses electrons becomes positively charged.\n    *   An object that gains electrons becomes negatively charged.\n*   **Conductors and Insulators**:\n    *   **Conductors**: Materials where some electrons are free to move from atom to atom (e.g., metals, carbon, water, human body, Earth). Charge flows away to neutralise.\n    *   **Insulators**: Materials where all electrons are bound firmly to their atoms (e.g., plastics, dry air, wood, paper, cotton). Charge remains static.\n*   **Unit of Charge**: Charge is measured in coulombs (C).\n    *   The charge on an electron $e = 1.6 \\times 10^{-19}$ C.\n*   **Electric Field**: The region of space where an electric charge experiences a force due to other charges.\n    *   It exerts an action-at-a-distance force.\n    *   **Direction of an Electric Field**: The direction of the force on a small positive charge placed in the field. (Negative charges experience a force in the opposite direction.)\n    *   It is a vector quantity (has both magnitude and direction).\n    *   **Field Patterns**:\n        *   **Uniform Electric Field**: Produced between two oppositely charged parallel metal plates, represented by evenly spaced parallel lines perpendicular to the surfaces.\n        *   **Point Charge/Charged Sphere**: Field lines radiate outwards for positive charges and inwards for negative charges, emerging at right angles to a conducting surface.\n\n### 4.2.2 Electric Current\n\n*   **Definition**: An electric current consists of moving electric charges.\n*   **Electrical Conduction in Metals**: Occurs due to the drift of free electrons from the negative to the positive terminal of a power source.\n*   **Electric Current Equation**: The charge passing a point per unit time.\n    *   $I = \\frac{Q}{t}$ (where $I$ is current in amperes (A), $Q$ is charge in coulombs (C), and $t$ is time in seconds (s)).\n*   **Unit of Current**: Ampere (A).\n*   **Unit of Charge (redefined)**: One coulomb (C) is the charge passing any point in a circuit when a steady current of 1 ampere flows for 1 second. Therefore, $1 \\text{ C} = 1 \\text{ As}$.\n*   **Effects of Current**: Heating, magnetic, and chemical effects.\n*   **Measurement**: An ammeter is used to measure current and must be placed in series in a circuit.\n*   **Conventional Current vs. Electron Flow**:\n    *   **Conventional Current**: Flows from positive to negative terminals (historical agreement).\n    *   **Electron Flow**: Flows from negative to positive terminals (actual direction of electron movement).\n*   **Types of Current**:\n    *   **Direct Current (d.c.)**: Electrons flow in one direction only (can be steady or varying). Produced by batteries.\n    *   **Alternating Current (a.c.)**: The direction of flow reverses regularly. Produced by generators.\n    *   **Frequency of a.c.**: The number of complete alternations or cycles in 1 second, measured in hertz (Hz).\n\n### 4.2.3 Electromotive Force and Potential Difference\n\n*   **Electromotive Force (e.m.f.)**: The electrical work done by a source in moving a unit charge around a complete circuit.\n    *   $E = \\frac{W}{Q}$ (where $E$ is e.m.f. in volts (V), $W$ is electrical work/energy transferred in joules (J), and $Q$ is charge in coulombs (C)).\n*   **Potential Difference (p.d.)**: The work done by a unit charge passing through a component in a circuit.\n    *   $V = \\frac{W}{Q}$ (where $V$ is p.d. in volts (V), $W$ is work/energy transferred in joules (J), and $Q$ is charge in coulombs (C)).\n*   **Unit of e.m.f. and p.d.** : Volt (V). $1 \\text{ V} = 1 \\text{ J/C}$.\n*   **Energy Transferred**:\n    *   $W = Q \\times E$ (for source)\n    *   $W = Q \\times V$ (for component)\n    *   If current $I$ flows for time $t$, then $Q = I \\times t$, so $W = I \\times t \\times V$.\n*   **Measurement**: A voltmeter is used to measure p.d. and must be placed in parallel with the component across which the p.d. is to be measured.\n\n### 4.2.4 Resistance\n\n*   **Definition**: The opposition of a conductor to current flow.\n*   **Unit**: Ohm ($\\Omega$).\n*   **Ohm's Law**: The current in a metallic conductor is directly proportional to the p.d. across its ends if the temperature and other conditions are constant.\n    *   **Resistance Equation**: $R = \\frac{V}{I}$ (where $R$ is resistance in ohms ($\\Omega$), $V$ is p.d. in volts (V), and $I$ is current in amperes (A)).\n    *   Derived forms: $V = IR$ and $I = \\frac{V}{R}$.\n    *   One ohm is the resistance of a conductor in which the current is 1 ampere when a voltage of 1 volt is applied across it ($1 \\Omega = 1 \\text{ V/A}$).\n*   **Factors Affecting Resistance of a Metallic Wire**:\n    *   Directly proportional to its length ($R \\propto l$).\n    *   Inversely proportional to its cross-sectional area ($R \\propto \\frac{1}{A}$).\n    *   Depends on the material (resistivity).\n*   **I-V Graphs**:\n    *   **Ohmic (Linear) Conductors**: Metals (at constant temperature) show a straight line through the origin, indicating constant resistance.\n    *   **Non-Ohmic Conductors**:\n        *   **Filament Lamp**: Curve flattens (resistance increases as temperature rises due to higher current/voltage).\n        *   **Semiconductor Diode**: Allows current in one direction, but has very high resistance in the reverse direction.\n        *   **Thermistor**: Resistance decreases as temperature rises.\n        *   **Light-Dependent Resistor (LDR)**: Resistance decreases as light intensity increases.\n*   **Resistors**: Components designed to have specific resistance values.\n*   **Variable Resistors**:\n    *   **Rheostat**: Used to change the current in a circuit.\n    *   **Potential Divider**: Used to change the potential difference applied to a device.\n\n### 4.2.5 Electrical Working\n\n*   **Energy Transfer in Circuits**: Electrical energy is transferred from a source to circuit components, which then transfer energy to the surroundings (e.g., as light and heat).\n*   **Power Definition**: The rate at which electrical energy is transferred.\n    *   $P = \\frac{W}{t}$ (where $P$ is power in watts (W), $W$ is energy transferred in joules (J), and $t$ is time in seconds (s)).\n*   **Electrical Power Equation**:\n    *   $P = IV$ (where $I$ is current in amperes (A), and $V$ is p.d. in volts (V)).\n    *   Units: $1 \\text{ W} = 1 \\text{ A} \\times 1 \\text{ V}$.\n    *   Other forms for a resistor $R$: $P = I^2R$ and $P = \\frac{V^2}{R}$.\n*   **Electrical Energy Transferred Equation**:\n    *   $E = Pt$ (where $E$ is energy in joules (J)).\n    *   Also: $E = IVt$.\n*   **Units of Power**: Kilowatt (kW) $= 1000 \\text{ W}$, Megawatt (MW) $= 1,000,000 \\text{ W}$.\n*   **Paying for Electricity (Kilowatt-hour)**:\n    *   **Kilowatt-hour (kWh)**: The electrical energy used by a 1 kW appliance in 1 hour (often referred to as a \"unit\" of electricity).\n    *   **Conversion**: $1 \\text{ kWh} = 1000 \\text{ J/s} \\times 3600 \\text{ s} = 3,600,000 \\text{ J} = 3.6 \\text{ MJ}$.\n    *   Electricity meters measure energy consumption in kWh.",
+    "chapter_concepts": [
+        {
+            "concept_id": "cb82939c-2599-42b8-a0c3-21c0b092e98a",
+            "concept_question": "What types of electrostatic charge exist?",
+            "concept_answer": "Electrostatic charge comes in two types: positive and negative.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "64fc1ac1-bae3-4f2c-98e0-f7857b33ac4b",
+            "concept_question": "What is the behavior of like charges?",
+            "concept_answer": "Like charges repel.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb82939c-2599-42b8-a0c3-21c0b092e98a"
+            ]
+        },
+        {
+            "concept_id": "c85f3cc4-fd98-4ce3-85c8-d14f8f74ac28",
+            "concept_question": "What is the behavior of opposite charges?",
+            "concept_answer": "Opposite charges attract.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb82939c-2599-42b8-a0c3-21c0b092e98a"
+            ]
+        },
+        {
+            "concept_id": "e340d493-7497-4954-b597-2eb05509d4a7",
+            "concept_question": "What causes charging by friction?",
+            "concept_answer": "Charging by friction occurs when electrons are transferred between objects.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb82939c-2599-42b8-a0c3-21c0b092e98a"
+            ]
+        },
+        {
+            "concept_id": "b82bd4d6-f1ef-4b27-b00e-0e6386613ceb",
+            "concept_question": "What results from losing or gaining electrons?",
+            "concept_answer": "An object becomes positively charged when it loses electrons and negatively charged when it gains them.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e340d493-7497-4954-b597-2eb05509d4a7"
+            ]
+        },
+        {
+            "concept_id": "6d7433e3-0e02-485a-b50a-0dc084721ad6",
+            "concept_question": "What are conductors?",
+            "concept_answer": "Conductors are materials in which some electrons are free to move between atoms.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb82939c-2599-42b8-a0c3-21c0b092e98a"
+            ]
+        },
+        {
+            "concept_id": "020ce6eb-43c8-461e-90dc-9309859fbfa0",
+            "concept_question": "What are insulators?",
+            "concept_answer": "Insulators are materials where electrons are tightly bound to atoms and do not flow.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb82939c-2599-42b8-a0c3-21c0b092e98a"
+            ]
+        },
+        {
+            "concept_id": "9ee5e6d1-2e74-4176-b14e-6c8e6d4f176a",
+            "concept_question": "What is the unit of electric charge?",
+            "concept_answer": "Electric charge is measured in coulombs.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "33c6999a-8052-4c17-98b0-6c11dc46bd5c",
+            "concept_question": "What is the charge of an electron?",
+            "concept_answer": "The charge of an electron is approximately 1.6\u00d710^{-19} coulombs.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "9ee5e6d1-2e74-4176-b14e-6c8e6d4f176a"
+            ]
+        },
+        {
+            "concept_id": "43c123c7-46e3-4f3f-b2d7-b1f6ba87e845",
+            "concept_question": "What is an electric field?",
+            "concept_answer": "An electric field is a region in which a charge experiences a force.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb82939c-2599-42b8-a0c3-21c0b092e98a"
+            ]
+        },
+        {
+            "concept_id": "37dee45a-7665-4600-8e1f-943c169488b5",
+            "concept_question": "How is the direction of an electric field defined?",
+            "concept_answer": "The direction is defined by the force acting on a small positive test charge.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "43c123c7-46e3-4f3f-b2d7-b1f6ba87e845"
+            ]
+        },
+        {
+            "concept_id": "096cd4bc-6dde-4105-a89a-fbe9d3c7b3a9",
+            "concept_question": "What is a uniform electric field?",
+            "concept_answer": "A uniform electric field has constant magnitude and direction, typically found between parallel plates.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "43c123c7-46e3-4f3f-b2d7-b1f6ba87e845"
+            ]
+        },
+        {
+            "concept_id": "f9795900-989a-47cc-97b0-8c6634e01dd3",
+            "concept_question": "What is the field pattern for a point charge?",
+            "concept_answer": "Field lines radiate outward from positive charges and inward toward negative ones.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "43c123c7-46e3-4f3f-b2d7-b1f6ba87e845"
+            ]
+        },
+        {
+            "concept_id": "7b150707-632a-4542-9bbe-a567f986e2bb",
+            "concept_question": "What is electric current?",
+            "concept_answer": "Electric current is the flow of electric charges through a conductor.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cb82939c-2599-42b8-a0c3-21c0b092e98a"
+            ]
+        },
+        {
+            "concept_id": "c06aac4a-3f34-4b0a-9a9b-5c0cd5ea158a",
+            "concept_question": "What is the electric current equation?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$I = \\frac{Q}{t}$!$"
+            ],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb"
+            ]
+        },
+        {
+            "concept_id": "017b35eb-d1a9-4439-a765-bf33d55f9f97",
+            "concept_question": "What is the unit of electric current?",
+            "concept_answer": "The unit of electric current is the ampere.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "d37fd5dc-bcc0-4ce6-9c2b-e665aebf6791",
+            "concept_question": "What defines one coulomb in a circuit?",
+            "concept_answer": "One coulomb is the charge passing a point when a 1 ampere current flows for 1 second.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "9ee5e6d1-2e74-4176-b14e-6c8e6d4f176a",
+                "017b35eb-d1a9-4439-a765-bf33d55f9f97"
+            ]
+        },
+        {
+            "concept_id": "ea1063a0-3ca7-40b2-99ff-e5e5ed11ce8d",
+            "concept_question": "What is the heating effect of electric current?",
+            "concept_answer": "Electric current produces heating effects.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb"
+            ]
+        },
+        {
+            "concept_id": "fb248ce7-c931-43e9-946c-7a9d057394c6",
+            "concept_question": "What are the magnetic and chemical effects of electric current?",
+            "concept_answer": "Electric current produces magnetic and chemical effects.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb"
+            ]
+        },
+        {
+            "concept_id": "a27680fb-ecb4-4fe3-9451-13cb0745e30c",
+            "concept_question": "What does an ammeter measure?",
+            "concept_answer": "An ammeter measures the electric current.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb"
+            ]
+        },
+        {
+            "concept_id": "1391743a-50a1-434c-8ba0-104f941a3be8",
+            "concept_question": "How is an ammeter connected in a circuit?",
+            "concept_answer": "An ammeter is connected in series in a circuit.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb"
+            ]
+        },
+        {
+            "concept_id": "b361865f-4f19-40f6-aae9-2644bcd136de",
+            "concept_question": "What is conventional current flow?",
+            "concept_answer": "Conventional current is defined as flowing from the positive to the negative terminal.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb"
+            ]
+        },
+        {
+            "concept_id": "82c44e90-7259-4034-8a57-e123848c42ec",
+            "concept_question": "What is electron flow?",
+            "concept_answer": "Electron flow is the actual movement of electrons from the negative to the positive terminal.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb"
+            ]
+        },
+        {
+            "concept_id": "289d04a9-ea5c-4a98-906e-afe70cd17baf",
+            "concept_question": "What is direct current (DC)?",
+            "concept_answer": "Direct current is characterized by electrons flowing steadily in one constant direction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb"
+            ]
+        },
+        {
+            "concept_id": "61b7eaf3-8c77-4952-8594-27d6b97ed869",
+            "concept_question": "What is alternating current (AC)?",
+            "concept_answer": "Alternating current reverses its direction of flow regularly.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb"
+            ]
+        },
+        {
+            "concept_id": "39cddb06-4f11-4840-bfc1-88f88436754c",
+            "concept_question": "What is AC frequency?",
+            "concept_answer": "AC frequency is the number of complete cycles or alternations per second.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "61b7eaf3-8c77-4952-8594-27d6b97ed869"
+            ]
+        },
+        {
+            "concept_id": "3e5d6af5-17f7-42b5-9958-d873f31c5ef1",
+            "concept_question": "What is electromotive force (EMF)?",
+            "concept_answer": "EMF is the work done per unit charge by a source around a complete circuit.",
+            "concept_formula": [
+                "$!$E = \\frac{W}{Q}$!$"
+            ],
+            "pre-requisites": [
+                "9ee5e6d1-2e74-4176-b14e-6c8e6d4f176a"
+            ]
+        },
+        {
+            "concept_id": "f4580280-fb4d-4456-9a23-027f64bd51ac",
+            "concept_question": "What is potential difference (PD)?",
+            "concept_answer": "Potential difference is the work done per unit charge across a circuit component.",
+            "concept_formula": [
+                "$!$V = \\frac{W}{Q}$!$"
+            ],
+            "pre-requisites": [
+                "9ee5e6d1-2e74-4176-b14e-6c8e6d4f176a"
+            ]
+        },
+        {
+            "concept_id": "dc8bdfb5-e016-4fcc-816b-91768b39df19",
+            "concept_question": "What is the unit for electromotive force (EMF)?",
+            "concept_answer": "EMF is measured in volts, where one volt equals one joule per coulomb.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3e5d6af5-17f7-42b5-9958-d873f31c5ef1",
+                "f4580280-fb4d-4456-9a23-027f64bd51ac"
+            ]
+        },
+        {
+            "concept_id": "6316e451-261a-40d8-bbe5-da0cb2a22b6e",
+            "concept_question": "What is the unit for potential difference (PD)?",
+            "concept_answer": "Potential difference is measured in volts, where one volt equals one joule per coulomb.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3e5d6af5-17f7-42b5-9958-d873f31c5ef1",
+                "f4580280-fb4d-4456-9a23-027f64bd51ac"
+            ]
+        },
+        {
+            "concept_id": "99a0b0a1-cb7d-434b-910a-ca7fece30624",
+            "concept_question": "What is the energy transfer formula using charge and EMF?",
+            "concept_answer": "Energy transferred can be calculated as W = Q \u00d7 E.",
+            "concept_formula": [
+                "$!$W = Q\\times E$!$"
+            ],
+            "pre-requisites": [
+                "3e5d6af5-17f7-42b5-9958-d873f31c5ef1",
+                "f4580280-fb4d-4456-9a23-027f64bd51ac",
+                "c06aac4a-3f34-4b0a-9a9b-5c0cd5ea158a"
+            ]
+        },
+        {
+            "concept_id": "68f2c8fd-ab58-4b63-b4c7-8500efc0da26",
+            "concept_question": "What is the energy transfer formula using charge and potential difference?",
+            "concept_answer": "Energy transferred can be calculated as W = Q \u00d7 V.",
+            "concept_formula": [
+                "$!$W = Q\\times V$!$"
+            ],
+            "pre-requisites": [
+                "3e5d6af5-17f7-42b5-9958-d873f31c5ef1",
+                "f4580280-fb4d-4456-9a23-027f64bd51ac",
+                "c06aac4a-3f34-4b0a-9a9b-5c0cd5ea158a"
+            ]
+        },
+        {
+            "concept_id": "ea2b6388-e3ef-4379-ad2d-5c1a2505b8a2",
+            "concept_question": "What is the energy transfer formula using current, voltage, and time?",
+            "concept_answer": "Energy transferred can be calculated as W = I \u00d7 V \u00d7 t.",
+            "concept_formula": [
+                "$!$W = I\\times t\\times V$!$"
+            ],
+            "pre-requisites": [
+                "3e5d6af5-17f7-42b5-9958-d873f31c5ef1",
+                "f4580280-fb4d-4456-9a23-027f64bd51ac",
+                "c06aac4a-3f34-4b0a-9a9b-5c0cd5ea158a"
+            ]
+        },
+        {
+            "concept_id": "7bef5a67-8114-4f03-ae8d-6b149b725a60",
+            "concept_question": "What does a voltmeter measure?",
+            "concept_answer": "A voltmeter measures the potential difference across a component.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f4580280-fb4d-4456-9a23-027f64bd51ac"
+            ]
+        },
+        {
+            "concept_id": "fbd48feb-f12f-4d90-b915-ddccbd3f2cc8",
+            "concept_question": "How is a voltmeter connected in a circuit?",
+            "concept_answer": "A voltmeter is connected in parallel.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f4580280-fb4d-4456-9a23-027f64bd51ac"
+            ]
+        },
+        {
+            "concept_id": "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3",
+            "concept_question": "What is resistance in a circuit?",
+            "concept_answer": "Resistance is the opposition offered by a conductor to the flow of electric current.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb"
+            ]
+        },
+        {
+            "concept_id": "f502ac6e-d9bc-475b-a9c0-bb2844d00da3",
+            "concept_question": "What is the unit of resistance?",
+            "concept_answer": "Resistance is measured in ohms.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "846f5219-eb07-42b9-91bb-4fe3cc6ad952",
+            "concept_question": "What does Ohm's law state?",
+            "concept_answer": "Ohm's law states that the current through a conductor is directly proportional to the voltage across it, at constant conditions.",
+            "concept_formula": [
+                "$!$R = \\frac{V}{I}$!$",
+                "$!$V = I\\times R$!$",
+                "$!$I = \\frac{V}{R}$!$"
+            ],
+            "pre-requisites": [
+                "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3"
+            ]
+        },
+        {
+            "concept_id": "4436079f-ef34-493a-8270-448d0e6ffbb9",
+            "concept_question": "How does the length of a conductor affect its resistance?",
+            "concept_answer": "Resistance increases with the length of a conductor.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3"
+            ]
+        },
+        {
+            "concept_id": "b0671a5e-0501-43da-891f-beb3af9ff64a",
+            "concept_question": "How does the cross-sectional area of a conductor affect its resistance?",
+            "concept_answer": "Resistance decreases with an increase in cross-sectional area.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3"
+            ]
+        },
+        {
+            "concept_id": "840b251a-57e4-4ec5-b666-a82c0ac22883",
+            "concept_question": "How does the material of a conductor affect its resistance?",
+            "concept_answer": "Resistance depends on the material's resistivity.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3"
+            ]
+        },
+        {
+            "concept_id": "8daf854a-6b01-4950-b992-ba27e445734c",
+            "concept_question": "What is the I-V characteristic of ohmic conductors?",
+            "concept_answer": "Ohmic conductors show a linear current-voltage relationship, indicating constant resistance.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "846f5219-eb07-42b9-91bb-4fe3cc6ad952"
+            ]
+        },
+        {
+            "concept_id": "d16165e0-390e-464d-9d9f-9435070e1b97",
+            "concept_question": "What is the I-V behavior of a filament lamp?",
+            "concept_answer": "A filament lamp exhibits a non-linear I-V curve with flattening due to rising resistance from heat.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "846f5219-eb07-42b9-91bb-4fe3cc6ad952"
+            ]
+        },
+        {
+            "concept_id": "6d5f1636-0712-4c58-88fb-849b5ea74b2a",
+            "concept_question": "What is the behavior of a semiconductor diode?",
+            "concept_answer": "A semiconductor diode permits current flow in one direction while offering high resistance in reverse.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "846f5219-eb07-42b9-91bb-4fe3cc6ad952"
+            ]
+        },
+        {
+            "concept_id": "971ad813-b5e5-4ae1-b494-82201de20a4e",
+            "concept_question": "What is the behavior of a thermistor?",
+            "concept_answer": "A thermistor's resistance decreases as its temperature rises.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "846f5219-eb07-42b9-91bb-4fe3cc6ad952"
+            ]
+        },
+        {
+            "concept_id": "b3e64791-5c8f-4096-ab5c-ebb0f8aac383",
+            "concept_question": "What is the behavior of a light-dependent resistor?",
+            "concept_answer": "A light-dependent resistor's resistance decreases as the intensity of incident light increases.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "846f5219-eb07-42b9-91bb-4fe3cc6ad952"
+            ]
+        },
+        {
+            "concept_id": "55ffc8b4-2d29-4431-b5c5-2e8c1d866671",
+            "concept_question": "What are resistors in circuits?",
+            "concept_answer": "Resistors are components designed to provide a specific resistance value in a circuit.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3"
+            ]
+        },
+        {
+            "concept_id": "4e631f77-f2d3-4974-8c82-ff4a4eee4fad",
+            "concept_question": "What is a rheostat?",
+            "concept_answer": "A rheostat is a type of variable resistor used to adjust the current in a circuit.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "55ffc8b4-2d29-4431-b5c5-2e8c1d866671"
+            ]
+        },
+        {
+            "concept_id": "f745ac5c-483b-400d-bdbe-a51433e2a64b",
+            "concept_question": "What is a potential divider?",
+            "concept_answer": "A potential divider is a variable resistor network used to adjust the voltage across a device.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "55ffc8b4-2d29-4431-b5c5-2e8c1d866671"
+            ]
+        },
+        {
+            "concept_id": "37d35261-8232-43a6-81d3-8ff25b3b958a",
+            "concept_question": "What is electrical power?",
+            "concept_answer": "Electrical power is the rate at which electrical energy is transferred.",
+            "concept_formula": [
+                "$!$P = \\frac{W}{t}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "99fbfc61-bb8d-4a75-bcaf-718f1ada2b5d",
+            "concept_question": "What is the electrical power equation?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$P = I\\times V$!$",
+                "$!$P = I^2\\times R$!$",
+                "$!$P = \\frac{V^2}{R}$!$"
+            ],
+            "pre-requisites": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb",
+                "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3",
+                "017b35eb-d1a9-4439-a765-bf33d55f9f97"
+            ]
+        },
+        {
+            "concept_id": "15c5df66-c6ab-4495-9350-ccce161c6439",
+            "concept_question": "What is the electrical energy equation?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$E = P\\times t$!$",
+                "$!$E = I\\times V\\times t$!$"
+            ],
+            "pre-requisites": [
+                "37d35261-8232-43a6-81d3-8ff25b3b958a"
+            ]
+        },
+        {
+            "concept_id": "3e2e0411-58e5-47a3-9ee9-608b460c3a4c",
+            "concept_question": "What are the units of power?",
+            "concept_answer": "Power is measured in watts, with kilowatts and megawatts as larger units.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "37d35261-8232-43a6-81d3-8ff25b3b958a"
+            ]
+        },
+        {
+            "concept_id": "7765704e-c4fb-4586-a505-42409d04ff97",
+            "concept_question": "What is a kilowatt-hour?",
+            "concept_answer": "A kilowatt-hour is the energy consumed by a 1 kW appliance operating for 1 hour.",
+            "concept_formula": [
+                "$!$1 \\text{ kWh } = 1000 \\text{ J/s } \\times 3600 \\text{ s}$!$",
+                "$!$1 \\text{ kWh } = 3,600,000 \\text{ J}$!$",
+                "$!$1 \\text{ kWh } = 3.6 \\text{ MJ}$!$"
+            ],
+            "pre-requisites": [
+                "37d35261-8232-43a6-81d3-8ff25b3b958a",
+                "3e2e0411-58e5-47a3-9ee9-608b460c3a4c"
+            ]
+        }
+    ]
+}

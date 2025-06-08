@@ -1,0 +1,490 @@
+{
+    "name": "Momentum",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "f292a276cbfd4309a17b4",
+            "concepts": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312",
+                "70a4ada0-1f39-4310-b868-ba316ea07460",
+                "01822a98-a784-4a78-9939-c1cb1dc7f104"
+            ],
+            "variants": [
+                {
+                    "id": "b15c2c0bff1f4f029cf5c",
+                    "question": "Which of the following statements correctly describe momentum?",
+                    "options": [
+                        {
+                            "option_text": "Momentum is the product of mass and velocity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Momentum is a scalar quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The SI unit of momentum is kg m/s.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Momentum is the rate of change of velocity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "1bb799ca849049ffa41fe",
+                    "question": "A 2 kg ball is moving at 3 m/s. What is its momentum?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "5 kg m/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "6 kg m/s",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1 kg m/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "2/3 kg m/s",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d39acd45e7954ca293d57",
+                    "question": "Which of the following statements about momentum are correct? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Momentum is conserved in a closed system.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Momentum is a scalar quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Momentum is calculated as mass times velocity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Momentum only exists when an object is accelerating.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "6b15f61749c849618733f",
+            "concepts": [
+                "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+            ],
+            "variants": [
+                {
+                    "id": "bd04327caabf4b5c9c7ac",
+                    "question": "According to the principle of conservation of momentum, which of the following is true for a closed system?",
+                    "options": [
+                        {
+                            "option_text": "The total momentum remains constant if no external forces act.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total momentum always increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total momentum decreases over time.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total momentum is always zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "907f85c5f2054438a1c92",
+                    "question": "A system consists of two objects. Object A has a mass of $!$m_A$!$ and velocity $!$v_A$!$, and object B has a mass of $!$m_B$!$ and velocity $!$v_B$!$. If no external forces act on the system, which of the following statements correctly describes the conservation of momentum?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total momentum $!$m_A v_A + m_B v_B$!$ remains constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total kinetic energy of the system remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The momentum of object A equals the momentum of object B.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The sum of the magnitudes of the individual momenta decreases.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0107bb723c7a41afbf223",
+                    "question": "Consider a closed system where two objects collide. Which of the following statements about the system's momentum are correct? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total momentum of the system before the collision is equal to the total momentum after the collision.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The kinetic energy of the system is always conserved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If one object gains momentum, the other object must lose an equal amount of momentum.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total momentum of the system changes if internal forces act.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "32cfbbc8b5d24543a9afc",
+            "concepts": [
+                "0cff987b-9ac1-4733-be5c-9195e98115de",
+                "d942bfc1-dceb-4ac6-bb12-b1319ba8ccca",
+                "e4ef5aa5-8a7b-4dff-94c6-a453dacf33f5",
+                "1a227599-b55c-4dde-ab9a-1062a5fb942c"
+            ],
+            "variants": [
+                {
+                    "id": "02367e376a4c4f76b48e3",
+                    "question": "How does increasing the time of impact during a collision affect the force experienced?",
+                    "options": [
+                        {
+                            "option_text": "Increases the average force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Decreases the average force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Does not affect the average force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force becomes zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c2bd2c0841884b1da9e87",
+                    "question": "Which of the following statements correctly describes the relationship between impact time and force in a collision, assuming the change in momentum remains constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Increasing the impact time increases the average force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increasing the impact time decreases the average force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Decreasing the impact time decreases the average force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The impact time has no effect on the average force.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d54285a6d38c4819ae43e",
+                    "question": "A ball with a momentum change of $!$\\Delta p = 10 \\text{ kg m/s}$!$ strikes a wall. Which of the following impact times would result in the smallest average force on the wall?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "0.01 seconds",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "0.1 seconds",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1 second",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "0.001 seconds",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "aeae8dcd27e44d09945a9",
+            "concepts": [
+                "d0ca7520-7a41-4abf-aff3-ecfbfc6099e0",
+                "aa777ab4-cce5-47ce-81a9-d6a0548f1137",
+                "4f5342fe-16d8-4ba2-b9d4-5c7917118144",
+                "eb2f76a7-4c38-468d-b7dd-2f8dc4135942",
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+            ],
+            "variants": [
+                {
+                    "id": "97c2979a967b4a1cbd85d",
+                    "question": "Which of the following statements accurately describe the relationship between impulse and momentum change?",
+                    "options": [
+                        {
+                            "option_text": "Impulse is equal to the change in momentum.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Impulse is the force applied over a time interval.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Impulse is equal to the final momentum.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Impulse is always zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "412f9a689b0c447886cc8",
+                    "question": "A 2 kg ball's velocity changes from $!$\\vec{v_i} = 10 \\frac{m}{s} \\hat{i}$!$ to $!$\\vec{v_f} = -5 \\frac{m}{s} \\hat{i}$!$ in 0.2 seconds upon hitting a wall. What is the magnitude of the impulse experienced by the ball?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "20 Ns",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "30 Ns",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "10 Ns",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "5 Ns",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "479078e3f4fd422db03ad",
+                    "question": "Which of the following statements correctly relates how the change in momentum of an object is affected when the impulse applied to it is doubled, assuming the mass of the object remains constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The change in momentum is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The change in momentum is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The change in momentum remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The change in momentum is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "61f753306397480293157",
+            "concepts": [
+                "04e60e58-7f93-4f78-9eb6-3811b370f7c4",
+                "34d48320-1612-4b4f-8c9c-9470ad55e71f",
+                "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+            ],
+            "variants": [
+                {
+                    "id": "4dea2a1a631d4b13b98fb",
+                    "question": "In an explosion, what happens to the total momentum of the system?",
+                    "options": [
+                        {
+                            "option_text": "The total momentum increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total momentum decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total momentum remains zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total momentum changes direction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b4bc145e19ee44f6905a2",
+                    "question": "A stationary object explodes into three pieces. Which of the following statements are correct regarding the total momentum of the system immediately after the explosion?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total momentum is zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total momentum is equal to the sum of the magnitudes of the individual momenta.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total momentum is equal to the initial momentum of the object.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total momentum's direction is unpredictable.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "121a2b117a82424b9f8f2",
+                    "question": "A firework of mass 1 kg explodes into two pieces. One piece of mass 0.4 kg moves to the right with a velocity of 20 m/s. What is the velocity (magnitude and direction) of the other piece?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "13.33 m/s to the left",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "20 m/s to the right",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "10 m/s to the left",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "33.33 m/s to the right",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "e1d280e35c2943e5b3651",
+            "concepts": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312",
+                "d0ca7520-7a41-4abf-aff3-ecfbfc6099e0",
+                "aa777ab4-cce5-47ce-81a9-d6a0548f1137",
+                "e4ef5aa5-8a7b-4dff-94c6-a453dacf33f5",
+                "1a227599-b55c-4dde-ab9a-1062a5fb942c"
+            ],
+            "variants": [
+                {
+                    "id": "b59cea1268f7466fa112e",
+                    "question": "Match the following concepts with their appropriate descriptions:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Momentum ($!$p$!$)",
+                            "optionB": "Product of mass and velocity"
+                        },
+                        {
+                            "optionA": "Impulse ($!$J$!$)",
+                            "optionB": "Change in momentum"
+                        },
+                        {
+                            "optionA": "Resultant Force ($!$F$!$)",
+                            "optionB": "Rate of change of momentum"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "77770d30585042aebfcdd",
+            "concepts": [
+                "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                "337bf447-29fe-4758-8ae6-d7d83eb262d7",
+                "0c48a071-fbe9-414e-8781-92e761847ec1",
+                "a072fc46-b6ef-4b82-ab4a-27e9b2d1702a",
+                "04e60e58-7f93-4f78-9eb6-3811b370f7c4",
+                "34d48320-1612-4b4f-8c9c-9470ad55e71f",
+                "4f5342fe-16d8-4ba2-b9d4-5c7917118144",
+                "eb2f76a7-4c38-468d-b7dd-2f8dc4135942"
+            ],
+            "variants": [
+                {
+                    "id": "a8ba3097749f4762b48fd",
+                    "question": "Match the scenarios with the physics principle that best explains them:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "A ball bouncing off a wall",
+                            "optionB": "Conservation of momentum"
+                        },
+                        {
+                            "optionA": "An airbag deploying in a car crash",
+                            "optionB": "Impulse-momentum relationship"
+                        },
+                        {
+                            "optionA": "Explosion of a stationary object into fragments",
+                            "optionB": "Momentum in explosions"
+                        },
+                        {
+                            "optionA": "Collision of two objects that stick together",
+                            "optionB": "Inelastic collisions"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

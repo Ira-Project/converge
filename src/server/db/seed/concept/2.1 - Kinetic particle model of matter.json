@@ -1,0 +1,304 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "7sxflbimfquvnkxr5x1ia",
+    "topicIdProd": "",
+    "chapter_text": "**States of Matter and Particle Properties**\n\n*   **Matter Composition:** Matter is composed of tiny particles (atoms, molecules, ions, electrons) that are in continuous motion.\n*   **General Particle Behavior:** Particles exert strong attractive and repulsive electric forces on one another; attractive forces hold particles together, while repulsive forces cause matter to resist compression.\n\n*   **Solids:**\n    *   **Properties:** Possess a definite shape and volume; are not easily compressed.\n    *   **Particle Structure:** Particles are closely packed in fixed positions, vibrating about these positions; often arranged in a regular, repeating pattern (crystalline).\n    *   **Intermolecular Forces:** Strong attractive and repulsive forces between neighboring molecules balance.\n\n*   **Liquids:**\n    *   **Properties:** Have a definite volume but their shape conforms to the container; are more easily compressed or stretched than solids; expand more readily when heated; can flow.\n    *   **Particle Structure:** Particles are slightly further apart than in solids, maintaining a definite volume; they have a less ordered structure, vibrate, and can move rapidly, slipping past each other.\n    *   **Intermolecular Forces:** Weaker than in solids, allowing greater particle movement.\n\n*   **Gases:**\n    *   **Properties:** Possess no definite shape or volume, taking on the dimensions of their container; have a much lower density than liquids; are easily compressed; expand significantly more than solids or liquids when heated.\n    *   **Particle Structure:** Particles are much further apart (approximately ten times) than in solids or liquids; they have no ordered structure and move about freely in a rapid, random manner.\n    *   **Intermolecular Forces:** Interactions between particles are minimal due to high speeds and large distances, with forces only acting during brief collisions.\n\n**Changes of State**\n\n*   **Melting:** The process by which a solid changes into a liquid, occurring when sufficient heat is supplied to increase the distance between particles.\n*   **Solidification (Freezing):** The process by which a liquid changes back into a solid when cooled sufficiently.\n*   **Evaporation:** The process where particles escape from the surface of a liquid to become a gas (or vapor).\n*   **Boiling:** A more vigorous process where a liquid turns into a gas throughout its volume when sufficient heat is supplied.\n*   **Condensation:** The process where a gas turns back into a liquid when cooled sufficiently.\n\n**Temperature and Particle Motion**\n\n*   **Temperature-Kinetic Energy Relationship:** As the temperature of a substance increases, the particles within it vibrate more strongly (in solids) or move faster (in liquids and gases), leading to an increase in their average kinetic energy.\n*   **Absolute Zero:** The theoretical lowest possible temperature, defined as $-273^\\circ\\text{C}$ ($0\\text{ K}$), at which particle motion ceases and their kinetic energy is zero.\n\n**Gas Pressure**\n\n*   **Mechanism:** The pressure exerted by a gas on the surfaces of its container results from the rapid, random motion of gas particles repeatedly colliding with and rebounding from these surfaces.\n*   **Temperature Effect:** An increase in gas temperature raises the average speed and kinetic energy of the particles, leading to more frequent and more forceful collisions with the container surfaces, consequently increasing the gas pressure.\n*   **Volume Effect (Constant Temperature):** Reducing the volume of a fixed mass of gas increases the number of particles per unit volume, resulting in a higher frequency of collisions with the container surfaces and thus an increase in pressure.\n\n**Brownian Motion**\n\n*   **Description:** The observed random, haphazard movement of microscopic particles (e.g., smoke particles) suspended in a fluid (gas or liquid).\n*   **Explanation:** This motion is caused by the random, imbalanced collisions of the larger, visible microscopic particles with numerous much lighter, invisible, fast-moving fluid molecules.\n*   **Significance:** Brownian motion provides crucial evidence for the kinetic particle model of matter, confirming the continuous random motion of unseen particles.\n\n**Gas Laws (for a fixed mass of gas)**\n\n*   **Boyle's Law (Constant Temperature):**\n    *   **Statement:** The pressure of a fixed mass of gas is inversely proportional to its volume, provided its temperature is kept constant.\n    *   **Formula:** $p \\propto \\frac{1}{V}$ or $pV = \\text{constant}$\n    *   **For two states:** $P_1V_1 = P_2V_2$\n*   **Charles' Law (Constant Pressure):**\n    *   **Statement:** The volume of a fixed mass of gas is directly proportional to its absolute temperature, provided its pressure is kept constant.\n    *   **Formula:** $V \\propto T$ or $\\frac{V}{T} = \\text{constant}$\n*   **Pressure Law (Gay-Lussac's Law) (Constant Volume):**\n    *   **Statement:** The pressure of a fixed mass of gas is directly proportional to its absolute temperature, provided its volume is kept constant.\n    *   **Formula:** $p \\propto T$ or $\\frac{p}{T} = \\text{constant}$\n*   **Combined Gas Law:**\n    *   **Description:** Combines Boyle's, Charles', and the Pressure Laws into a single relationship.\n    *   **Formula:** $\\frac{pV}{T} = \\text{constant}$\n    *   **For two states:** $\\frac{P_1V_1}{T_1} = \\frac{P_2V_2}{T_2}$ (Note: Temperatures $\\text{T}_1$ and $\\text{T}_2$ must be in Kelvin).\n\n**Temperature Scales**\n\n*   **Celsius Scale ($\\theta$):** A common temperature scale where $0^\\circ\\text{C}$ is the freezing point of water and $100^\\circ\\text{C}$ is its boiling point at standard atmospheric pressure.\n*   **Kelvin (Absolute) Scale ($T$):**\n    *   This scale is based on absolute zero ($0\\text{ K} = -273^\\circ\\text{C}$) as its starting point.\n    *   Units are \"kelvins\" (K), which are exactly the same size as Celsius degrees.\n    *   **Conversion Formula:** $T(\\text{in K}) = 273 + \\theta(\\text{in }^\\circ\\text{C})$",
+    "chapter_concepts": [
+        {
+            "concept_id": "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+            "concept_question": "What composes matter?",
+            "concept_answer": "Matter is composed of tiny continuously moving particles like atoms, molecules, ions, and electrons.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "765efe05-bebc-4258-a92c-f0d3af6c7e24",
+            "concept_question": "What is general particle behavior?",
+            "concept_answer": "Particles exert both attractive and repulsive electric forces on each other.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d"
+            ]
+        },
+        {
+            "concept_id": "b6d5ea81-234d-486d-ad9d-277f8428a4a6",
+            "concept_question": "What gives solids their definite shape?",
+            "concept_answer": "Solids have a definite shape due to the fixed positions of their constituent particles in a structured arrangement.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "ac4662d8-555f-46ae-a248-9e18ff9929be",
+            "concept_question": "How do solids maintain a definite volume and resist compression?",
+            "concept_answer": "Solids maintain a definite volume and are not easily compressed because their particles are closely packed with strong intermolecular forces.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "227a59a6-c722-4b8b-9e61-0878dc9d6f90",
+            "concept_question": "What is solids' particle structure?",
+            "concept_answer": "Particles in solids are closely packed in fixed positions and arranged in a regular crystalline pattern while vibrating.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "8a7dd583-2bdf-49b7-8d90-c56483c56283",
+            "concept_question": "What are solids' intermolecular forces?",
+            "concept_answer": "In solids, strong and balanced attractive and repulsive forces between neighboring particles hold them in fixed positions.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24",
+                "b6d5ea81-234d-486d-ad9d-277f8428a4a6",
+                "ac4662d8-555f-46ae-a248-9e18ff9929be"
+            ]
+        },
+        {
+            "concept_id": "8baff9e1-a2c9-4a20-aec5-2fa0cc04dfda",
+            "concept_question": "What is the definite volume property of liquids?",
+            "concept_answer": "Liquids have a definite volume as their particles are close enough to maintain a fixed volume despite lacking a fixed shape.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "bcdb6108-e684-4645-adc9-191ee9f0b8ee",
+            "concept_question": "How do liquids flow and adapt to container shape?",
+            "concept_answer": "Liquids can flow and take the shape of their container due to weaker intermolecular forces that allow particles to slide past one another.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "0b09f69f-bcaa-45e7-8757-cf79cc5122eb",
+            "concept_question": "What is liquids' particle structure?",
+            "concept_answer": "Particles in liquids are slightly further apart than in solids, less ordered, and move by slipping past each other.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "cb40b7f6-563b-405b-a685-b7ad43b72776",
+            "concept_question": "What are liquids' intermolecular forces?",
+            "concept_answer": "Liquids exhibit weaker intermolecular forces than solids, allowing greater movement of their particles.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24",
+                "8a7dd583-2bdf-49b7-8d90-c56483c56283"
+            ]
+        },
+        {
+            "concept_id": "884694dd-2ab6-44ec-aed9-f3a11d3a9464",
+            "concept_question": "What are gases' properties?",
+            "concept_answer": "Gases have no definite shape or volume, are low in density, easily compressed, and expand when heated.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "b3fbe75e-a3a8-4bd8-be71-d6c7d5b95356",
+            "concept_question": "What is gases' particle structure?",
+            "concept_answer": "Gas particles are much farther apart, lack an ordered structure, and move rapidly in a random manner.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "a66aedd5-cda9-488e-bae3-9667267c68bf",
+            "concept_question": "What are gases' intermolecular forces?",
+            "concept_answer": "In gases, intermolecular forces are minimal due to high speeds and large distances between particles.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24",
+                "884694dd-2ab6-44ec-aed9-f3a11d3a9464",
+                "b3fbe75e-a3a8-4bd8-be71-d6c7d5b95356"
+            ]
+        },
+        {
+            "concept_id": "6d8df52d-412e-48a3-933f-d18a961c927e",
+            "concept_question": "What is melting?",
+            "concept_answer": "Melting is the transition from a solid to a liquid when sufficient heat increases particle separation.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b6d5ea81-234d-486d-ad9d-277f8428a4a6",
+                "ac4662d8-555f-46ae-a248-9e18ff9929be",
+                "227a59a6-c722-4b8b-9e61-0878dc9d6f90",
+                "8baff9e1-a2c9-4a20-aec5-2fa0cc04dfda",
+                "bcdb6108-e684-4645-adc9-191ee9f0b8ee"
+            ]
+        },
+        {
+            "concept_id": "66e6def4-0008-413a-8c78-29225f90b157",
+            "concept_question": "What is boiling?",
+            "concept_answer": "Boiling is a vigorous liquid-to-gas transformation that occurs throughout the liquid when heated.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8baff9e1-a2c9-4a20-aec5-2fa0cc04dfda",
+                "bcdb6108-e684-4645-adc9-191ee9f0b8ee",
+                "884694dd-2ab6-44ec-aed9-f3a11d3a9464"
+            ]
+        },
+        {
+            "concept_id": "d0f40b28-3841-46ff-87ec-e6c54cc662c1",
+            "concept_question": "What is the temperature-kinetic energy relationship?",
+            "concept_answer": "An increase in temperature raises particle kinetic energy, causing faster vibrations or movement.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "432338ea-ada7-4779-baea-9e1c30d910ad",
+            "concept_question": "What is absolute zero?",
+            "concept_answer": "Absolute zero is the lowest temperature at which particle motion ceases and kinetic energy is zero.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d0f40b28-3841-46ff-87ec-e6c54cc662c1"
+            ]
+        },
+        {
+            "concept_id": "73027466-fca4-45fa-92c9-707b910c5abf",
+            "concept_question": "What is the gas pressure mechanism?",
+            "concept_answer": "Gas pressure arises from rapid, random collisions of gas particles against container surfaces.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "884694dd-2ab6-44ec-aed9-f3a11d3a9464",
+                "b3fbe75e-a3a8-4bd8-be71-d6c7d5b95356",
+                "d0f40b28-3841-46ff-87ec-e6c54cc662c1"
+            ]
+        },
+        {
+            "concept_id": "2b27f7a4-8d1b-426a-922e-67c7f92308fc",
+            "concept_question": "How does volume affect gas pressure?",
+            "concept_answer": "Reducing gas volume increases particle collision frequency, which in turn elevates pressure.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "884694dd-2ab6-44ec-aed9-f3a11d3a9464",
+                "73027466-fca4-45fa-92c9-707b910c5abf"
+            ]
+        },
+        {
+            "concept_id": "885d940a-3a9a-454c-b3c5-5a2ba6490a15",
+            "concept_question": "What is Brownian motion?",
+            "concept_answer": "Brownian motion is the random, haphazard movement of microscopic particles suspended in a fluid.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "1645425d-20f2-4b29-a7fb-c81309ab0127",
+            "concept_question": "What causes Brownian motion?",
+            "concept_answer": "It is caused by imbalanced, random collisions between larger visible particles and fast-moving, lighter molecules.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "885d940a-3a9a-454c-b3c5-5a2ba6490a15",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ]
+        },
+        {
+            "concept_id": "a8123b4c-8210-4245-906b-8cc4741d99a2",
+            "concept_question": "What is Brownian motion's significance?",
+            "concept_answer": "Brownian motion provides evidence for the kinetic particle model by confirming continuous random motion.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "885d940a-3a9a-454c-b3c5-5a2ba6490a15",
+                "d0f40b28-3841-46ff-87ec-e6c54cc662c1"
+            ]
+        },
+        {
+            "concept_id": "48d3e9c2-aae4-4e24-bc52-cfc7e11907a8",
+            "concept_question": "What is Boyle's Law?",
+            "concept_answer": "Boyle's Law states that gas pressure is inversely proportional to volume at constant temperature.",
+            "concept_formula": [
+                "$!$p \\propto \\frac{1}{V}$!$",
+                "$!$pV = \\text{constant}$!$",
+                "$!$P_1V_1 = P_2V_2$!$"
+            ],
+            "pre-requisites": [
+                "884694dd-2ab6-44ec-aed9-f3a11d3a9464",
+                "b3fbe75e-a3a8-4bd8-be71-d6c7d5b95356",
+                "73027466-fca4-45fa-92c9-707b910c5abf"
+            ]
+        },
+        {
+            "concept_id": "cffdad6f-c8ef-43e8-ae56-1c965be687b7",
+            "concept_question": "What is Charles' Law?",
+            "concept_answer": "Charles' Law states that the volume of gas is directly proportional to its absolute temperature at constant pressure.",
+            "concept_formula": [
+                "$!$V \\propto T$!$",
+                "$!$\\frac{V}{T} = \\text{constant}$!$"
+            ],
+            "pre-requisites": [
+                "884694dd-2ab6-44ec-aed9-f3a11d3a9464",
+                "d0f40b28-3841-46ff-87ec-e6c54cc662c1"
+            ]
+        },
+        {
+            "concept_id": "2adfd026-0718-4727-9c26-9492969f7ec0",
+            "concept_question": "What is Gay-Lussac's Law?",
+            "concept_answer": "Gay-Lussac's Law states that gas pressure is directly proportional to its absolute temperature at constant volume.",
+            "concept_formula": [
+                "$!$p \\propto T$!$",
+                "$!$\\frac{p}{T} = \\text{constant}$!$"
+            ],
+            "pre-requisites": [
+                "884694dd-2ab6-44ec-aed9-f3a11d3a9464",
+                "d0f40b28-3841-46ff-87ec-e6c54cc662c1"
+            ]
+        },
+        {
+            "concept_id": "4de2ef8c-1b20-4a89-9188-19a9356ef54d",
+            "concept_question": "What is the Combined Gas Law?",
+            "concept_answer": "The Combined Gas Law relates pressure, volume, and temperature of a fixed mass of gas.",
+            "concept_formula": [
+                "$!$\\frac{pV}{T} = \\text{constant}$!$",
+                "$!$\\frac{P_1V_1}{T_1} = \\frac{P_2V_2}{T_2}$!$"
+            ],
+            "pre-requisites": [
+                "48d3e9c2-aae4-4e24-bc52-cfc7e11907a8",
+                "cffdad6f-c8ef-43e8-ae56-1c965be687b7",
+                "2adfd026-0718-4727-9c26-9492969f7ec0"
+            ]
+        },
+        {
+            "concept_id": "cfa65469-32ab-41bb-ba28-7a4efd72bea1",
+            "concept_question": "What is the Celsius scale?",
+            "concept_answer": "The Celsius scale defines 0\u00b0C as water's freezing point and 100\u00b0C as its boiling point.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f4186011-be31-4acd-ae74-62cc65bae364",
+            "concept_question": "What is the Kelvin scale?",
+            "concept_answer": "The Kelvin scale is an absolute temperature scale starting at absolute zero with units equal to Celsius degrees.",
+            "concept_formula": [
+                "$!$T = 273 + \\theta$!$"
+            ],
+            "pre-requisites": [
+                "cfa65469-32ab-41bb-ba28-7a4efd72bea1",
+                "432338ea-ada7-4779-baea-9e1c30d910ad"
+            ]
+        }
+    ]
+}

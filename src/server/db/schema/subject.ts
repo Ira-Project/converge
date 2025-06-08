@@ -10,7 +10,7 @@ import { relations } from "drizzle-orm";
 import { classrooms } from "./classroom";
 import { users } from "./user";
 import { activity } from "./activity";
-import { concepts } from "./concept";
+import { concepts, conceptsToSubjects, conceptsToCourses } from "./concept";
 
 // Import assignment-to-course mapping tables
 import { knowledgeZapAssignmentToCourse, knowledgeZapAssignmentToSubject } from "./knowledgeZap/knowledgeZapAssignment";
@@ -42,6 +42,7 @@ export type Subjects = typeof subjects.$inferSelect;
 export const subjectRelations = relations(subjects, ({ many }) => ({
   courses: many(courses),
   teachers: many(users),
+  conceptsToSubjects: many(conceptsToSubjects),
   knowledgeZapAssignmentMappings: many(knowledgeZapAssignmentToSubject),
   stepSolveTemplateMappings: many(stepSolveAssignmentTemplateToSubject),
   readAndRelayAssignmentMappings: many(readAndRelayAssignmentToSubject),
@@ -74,7 +75,7 @@ export const courseRelations = relations(courses, ({ one, many }) => ({
   topics: many(topics),
   classrooms: many(classrooms),
   teachers: many(users),
-  // Assignment-to-course relations
+  conceptsToCourses: many(conceptsToCourses),
   knowledgeZapAssignmentMappings: many(knowledgeZapAssignmentToCourse),
   stepSolveTemplateMappings: many(stepSolveAssignmentTemplateToCourse),
   readAndRelayAssignmentMappings: many(readAndRelayAssignmentToCourse),

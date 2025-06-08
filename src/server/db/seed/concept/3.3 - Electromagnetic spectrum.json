@@ -1,0 +1,266 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "7oawesg05t7dv2b0d3odt",
+    "topicIdProd": "",
+    "chapter_text": "### General Properties of Electromagnetic Waves\n\n*   **Definition**: Electromagnetic (EM) waves are a continuous spectrum of waves, including visible light, all originating from electrons in atoms undergoing energy changes.\n*   **Nature**: They are progressive transverse waves, consisting of oscillating electric and magnetic fields perpendicular to each other and to the direction of wave travel.\n*   **Speed**: All EM waves travel at the same high speed in a vacuum, approximately $3 \\times 10^8$ m/s, which is also approximately their speed in air.\n*   **Wave Properties**: They exhibit reflection, refraction, and diffraction.\n*   **Energy**: EM waves carry energy. The energy associated with an EM wave increases with its frequency.\n*   **Spectrum Order**: The EM spectrum ranges from radio waves (longest wavelength, lowest frequency, lowest energy) through microwaves, infrared, visible light, ultraviolet, X-rays, to gamma rays (shortest wavelength, highest frequency, highest energy).\n    *   Wavelengths are typically measured in nanometers (nm, $10^{-9}$ m) or micrometers ($\\mu$m, $10^{-6}$ m).\n\n### Wave Equation\n\n*   **Relationship**: The speed ($v$), frequency ($f$), and wavelength ($\\lambda$) of an EM wave are related by the wave equation:\n    $$v = f\\lambda$$\n*   **Implication**: Since the speed ($v$) of an EM wave in a particular medium is constant, a large frequency ($f$) corresponds to a small wavelength ($\\lambda$), and vice-versa.\n\n### Regions of the Electromagnetic Spectrum\n\n*   **Gamma Rays**\n    *   **Properties**: Most penetrating and dangerous due to highest frequency/energy.\n    *   **Source**: Radioactive matter.\n    *   **Uses**: Diagnose and treat cancer, sterilize surgical instruments and food (kill bacteria), detect flaws in metals.\n    *   **Dangers**: Cause mutation and damage to cells, leading to cancer. Machines are shielded with lead.\n*   **X-rays**\n    *   **Production**: High-speed electrons striking a metal target in an X-ray tube.\n    *   **Properties**: Shorter wavelengths than UV. Can penetrate some solid objects and affect photographic film. Absorbed by living cells.\n    *   **Source**: X-ray tube.\n    *   **Uses**: Dentistry, medicine (detect broken bones), security (luggage, body scanners), industry (inspect welded joints).\n    *   **Dangers**: Cause mutation and damage to cells, leading to cancer. Machines are shielded with lead.\n*   **Ultraviolet (UV) Radiation**\n    *   **Properties**: Shorter wavelengths than visible light.\n    *   **Source**: Mercury vapour lamps, Sun.\n    *   **Uses**: Cause suntan and vitamin production in skin, fluorescent paints/clothes (fluorescence), security marking (invisible signatures, fake note detection), water sterilization.\n    *   **Dangers**: High exposure can be harmful, causing sunburn, skin cancer, and eye damage.\n*   **Visible Light**\n    *   **Wavelengths**: Red light has the longest wavelength (approx. 0.7 $\\mu$m), violet light has the shortest (approx. 0.4 $\\mu$m).\n    *   **Colour Determination**: The frequency of light determines its colour.\n    *   **Monochromatic Light**: Light of a single colour and frequency.\n    *   **Dispersion**: Different frequencies (colours) travel at different speeds through transparent media and refract by different amounts.\n    *   **Intensity**: The amplitude of a light wave determines its intensity (brightness).\n    *   **Uses**: Vision, illumination, photography, optical instruments (microscopes, telescopes).\n*   **Infrared (IR) Radiation**\n    *   **Properties**: Detected by its heating effect on skin ('radiant heat').\n    *   **Source**: Anything hot (even non-glowing), electric fires. Hotter objects emit more IR and visible light (e.g., red hot, white hot).\n    *   **Uses**: Thermal imaging (hot spots, images in dark), weather forecasting, land use monitoring, assessing heat loss from buildings, intruder alarms, locating earthquake victims, drying paint, muscular complaints, remote controls (short-range communication), optical fibre communication (long-range data transmission).\n    *   **Dangers**: Can cause burns to skin and eye damage at high intensity.\n*   **Microwaves**\n    *   **Wavelengths**: A few centimeters.\n    *   **Source**: Microwave oven, aerials.\n    *   **Uses**: International telecommunications, direct broadcast satellite TV, mobile phone networks, radar (detection of ships, aircraft, speed traps), cooking (cause water molecules in food to vibrate vigorously).\n    *   **Dangers**: Produce heat when absorbed by water in living cells, potentially damaging/killing cells. Debate about mobile phone harm.\n*   **Radio Waves**\n    *   **Wavelengths**: Longest in the EM spectrum.\n    *   **Source**: Transmitting aerials.\n    *   **Uses**: Carry sound, pictures, and other information over long distances.\n    *   **Long, Medium, and Short Waves (2 km to 10 m)**:\n        *   **Properties**: Diffract around obstacles, reflected by the ionosphere (layers of charged particles in the upper atmosphere).\n        *   **Uses**: Long-distance radio reception.\n    *   **VHF (Very High Frequency) and UHF (Ultra High Frequency) Waves (10 m to 10 cm)**:\n        *   **Properties**: Require a clear, straight-line path to the receiver; not reflected by the ionosphere.\n        *   **Uses**: Local radio, television transmissions, Radio Frequency Identification (RFID) systems, radio telescopes (astronomy).\n\n### Dangers of Electromagnetic Radiation (General)\n\n*   High exposure to EM radiation can cause harmful effects, ranging from burns to cell damage and cancer, depending on the frequency and intensity.\n\n### Communication Systems\n\n*   **Reliance**: Many communication systems rely on EM radiation.\n*   **Microwaves**: Used for mobile phones and wireless internet due to short aerials and ability to penetrate walls.\n*   **Radio Waves**: Weakened by walls, suitable for short-range applications like Bluetooth.\n*   **Optical Fibres**: Carry high-speed broadband internet and cable television signals using visible light and shortwave infrared. Higher frequencies allow faster data transmission.\n*   **Signal Types**: Information is transmitted as either analogue or digital signals.\n    *   **Analogue Signals**: Voltages (and currents) can vary smoothly and continuously over a certain range.\n    *   **Digital Signals**: Voltages have only two discrete values, typically 'high' (e.g., 5V) or 'low' (e.g., near 0V), transmitted as pulses.\n    *   **Advantages of Digital Signalling**:\n        *   Faster transmission rate.\n        *   Can be sent over longer distances due to accurate intermittent regeneration.\n        *   Less affected by noise.\n        *   Analogue signals can be electronically converted to digital for transmission.",
+    "chapter_concepts": [
+        {
+            "concept_id": "fd076d14-b840-4cc9-839b-7e2b14a7954a",
+            "concept_question": "What are electromagnetic waves?",
+            "concept_answer": "Electromagnetic waves are continuous waves originating from electron energy changes in atoms.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b78454ea-1649-4348-b125-05c30dc2759b",
+            "concept_question": "What is the nature of electromagnetic waves?",
+            "concept_answer": "They are transverse waves with oscillating electric and magnetic fields perpendicular to each other and the direction of travel.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fd076d14-b840-4cc9-839b-7e2b14a7954a"
+            ]
+        },
+        {
+            "concept_id": "5d5da45c-d891-4924-b19e-6cedeb57827b",
+            "concept_question": "What is the speed of electromagnetic waves?",
+            "concept_answer": "Electromagnetic waves travel at approximately 3 x 10^8 m/s in a vacuum and in air.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fd076d14-b840-4cc9-839b-7e2b14a7954a"
+            ]
+        },
+        {
+            "concept_id": "d885e4a9-dda4-4727-9b00-e748f36cad65",
+            "concept_question": "What are the wave properties of electromagnetic waves?",
+            "concept_answer": "They exhibit reflection, refraction, and diffraction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fd076d14-b840-4cc9-839b-7e2b14a7954a"
+            ]
+        },
+        {
+            "concept_id": "5b194c28-6816-4a73-89ec-3ec41f81f11c",
+            "concept_question": "What is the energy relation in electromagnetic waves?",
+            "concept_answer": "The energy carried by an electromagnetic wave increases with its frequency.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fd076d14-b840-4cc9-839b-7e2b14a7954a"
+            ]
+        },
+        {
+            "concept_id": "a6fc4b11-20b5-4a50-b5c3-f237bad8c337",
+            "concept_question": "What is the electromagnetic spectrum order?",
+            "concept_answer": "The spectrum is ordered from radio waves to gamma rays with increasing frequency and energy.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fd076d14-b840-4cc9-839b-7e2b14a7954a"
+            ]
+        },
+        {
+            "concept_id": "ad755d70-94fb-44f0-8af1-57ca223ac8ac",
+            "concept_question": "What unit is used to measure electromagnetic wavelengths in the nanometer scale?",
+            "concept_answer": "Nanometers are used to measure shorter electromagnetic wavelengths, particularly in the visible and ultraviolet ranges.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337"
+            ]
+        },
+        {
+            "concept_id": "f0cc2703-26e8-45e2-98af-6f53003b0ead",
+            "concept_question": "What unit is used to measure electromagnetic wavelengths in the micrometer scale?",
+            "concept_answer": "Micrometers are used to measure longer electromagnetic wavelengths, particularly in the infrared region.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337"
+            ]
+        },
+        {
+            "concept_id": "ac9e6112-e5e7-48ec-bb82-50fa7044d14a",
+            "concept_question": "What is the wave equation for electromagnetic waves?",
+            "concept_answer": "The speed of an electromagnetic wave equals the product of its frequency and wavelength.",
+            "concept_formula": [
+                "$!$v = f\\lambda$!$"
+            ],
+            "pre-requisites": [
+                "5d5da45c-d891-4924-b19e-6cedeb57827b",
+                "ad755d70-94fb-44f0-8af1-57ca223ac8ac",
+                "f0cc2703-26e8-45e2-98af-6f53003b0ead"
+            ]
+        },
+        {
+            "concept_id": "9e724590-d6e2-4d2e-a9bc-b273255ede51",
+            "concept_question": "What is the relation between frequency and wavelength?",
+            "concept_answer": "For a constant wave speed, a higher frequency results in a shorter wavelength.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+            ]
+        },
+        {
+            "concept_id": "9cb93525-7655-41d9-b8ac-2ff4d1c7bd56",
+            "concept_question": "What are gamma rays?",
+            "concept_answer": "Gamma rays are high-energy electromagnetic waves from radioactive matter that are highly penetrating and dangerous.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337",
+                "5b194c28-6816-4a73-89ec-3ec41f81f11c"
+            ]
+        },
+        {
+            "concept_id": "e797618b-078d-4dbf-9925-3e0cf50fb99c",
+            "concept_question": "What are X-rays?",
+            "concept_answer": "X-rays are short-wavelength electromagnetic waves produced by high-speed electrons striking a metal target and used in imaging.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337",
+                "5b194c28-6816-4a73-89ec-3ec41f81f11c"
+            ]
+        },
+        {
+            "concept_id": "6b1e47b3-ea98-4785-8093-26bd6fe50903",
+            "concept_question": "What is ultraviolet radiation?",
+            "concept_answer": "Ultraviolet radiation is electromagnetic energy with wavelengths shorter than visible light, emitted by the sun and mercury lamps, and poses health risks.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337",
+                "5b194c28-6816-4a73-89ec-3ec41f81f11c"
+            ]
+        },
+        {
+            "concept_id": "87636329-0ed1-4531-8a21-eaccdb01a0a9",
+            "concept_question": "What is visible light?",
+            "concept_answer": "Visible light is the electromagnetic radiation perceived by the human eye with wavelengths approximately between 0.4 and 0.7 micrometers.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337",
+                "ad755d70-94fb-44f0-8af1-57ca223ac8ac",
+                "f0cc2703-26e8-45e2-98af-6f53003b0ead"
+            ]
+        },
+        {
+            "concept_id": "4c75e2ef-c84a-44bd-ae71-fb87bb889640",
+            "concept_question": "What is infrared radiation?",
+            "concept_answer": "Infrared radiation is electromagnetic energy detected as heat, emitted by hot objects, and used in thermal imaging and remote controls.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337",
+                "5b194c28-6816-4a73-89ec-3ec41f81f11c",
+                "ad755d70-94fb-44f0-8af1-57ca223ac8ac",
+                "f0cc2703-26e8-45e2-98af-6f53003b0ead"
+            ]
+        },
+        {
+            "concept_id": "b59785e6-91a2-4233-9609-ba7a25f65393",
+            "concept_question": "What are microwaves?",
+            "concept_answer": "Microwaves are electromagnetic waves with centimeter wavelengths used in telecommunications, radar, and cooking.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337",
+                "ad755d70-94fb-44f0-8af1-57ca223ac8ac",
+                "f0cc2703-26e8-45e2-98af-6f53003b0ead"
+            ]
+        },
+        {
+            "concept_id": "2bc67fec-52e1-4c05-83e8-955f740a9a5e",
+            "concept_question": "What are radio waves?",
+            "concept_answer": "Radio waves are electromagnetic waves with the longest wavelengths used for transmitting information.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a6fc4b11-20b5-4a50-b5c3-f237bad8c337",
+                "ad755d70-94fb-44f0-8af1-57ca223ac8ac",
+                "f0cc2703-26e8-45e2-98af-6f53003b0ead"
+            ]
+        },
+        {
+            "concept_id": "251724d9-674c-4d45-b538-6e0f14d00f58",
+            "concept_question": "What are long, medium, and short radio waves?",
+            "concept_answer": "These radio waves diffract around obstacles and are reflected by the ionosphere, enabling long-distance reception.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2bc67fec-52e1-4c05-83e8-955f740a9a5e"
+            ]
+        },
+        {
+            "concept_id": "c8acbe81-46b4-43f1-b4fc-b8acd2debfda",
+            "concept_question": "What are VHF waves?",
+            "concept_answer": "Very High Frequency (VHF) waves are radio waves used for local broadcasts that require a clear line-of-sight and are not reflected by the ionosphere.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2bc67fec-52e1-4c05-83e8-955f740a9a5e"
+            ]
+        },
+        {
+            "concept_id": "f80ce0fa-d925-4da4-a2f1-2adad7e9e6a9",
+            "concept_question": "What are UHF waves?",
+            "concept_answer": "Ultra High Frequency (UHF) waves are radio waves used for local broadcasts that require a clear line-of-sight and are not reflected by the ionosphere.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2bc67fec-52e1-4c05-83e8-955f740a9a5e"
+            ]
+        },
+        {
+            "concept_id": "9e39db25-1583-4dd8-b341-43a86b2ae093",
+            "concept_question": "What are the dangers of electromagnetic radiation?",
+            "concept_answer": "High exposure to electromagnetic radiation can cause burns, cellular damage, and cancer.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fd076d14-b840-4cc9-839b-7e2b14a7954a",
+                "5b194c28-6816-4a73-89ec-3ec41f81f11c"
+            ]
+        },
+        {
+            "concept_id": "4ea832a7-f984-491e-a7ba-1a045dbc7f0d",
+            "concept_question": "What role do EM waves play in communication?",
+            "concept_answer": "Electromagnetic waves are essential for transmitting information in various communication systems.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fd076d14-b840-4cc9-839b-7e2b14a7954a"
+            ]
+        },
+        {
+            "concept_id": "440558dd-71b9-44e5-9be2-ac0685fb47e2",
+            "concept_question": "What types of signals are used in communications?",
+            "concept_answer": "Communications use either analogue signals that vary continuously or digital signals with discrete levels.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4ea832a7-f984-491e-a7ba-1a045dbc7f0d"
+            ]
+        },
+        {
+            "concept_id": "cfaaec8e-6592-4842-a7ac-1de07fe495ed",
+            "concept_question": "What are analogue signals?",
+            "concept_answer": "Analogue signals are electrical signals with continuously variable voltages or currents.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "440558dd-71b9-44e5-9be2-ac0685fb47e2"
+            ]
+        },
+        {
+            "concept_id": "ca267a91-82d8-4380-9566-c0f289e2698f",
+            "concept_question": "What are digital signals?",
+            "concept_answer": "Digital signals use two distinct voltage levels representing high and low states.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "440558dd-71b9-44e5-9be2-ac0685fb47e2"
+            ]
+        },
+        {
+            "concept_id": "4b84bd30-676d-4661-8923-c0e47b0b38f2",
+            "concept_question": "What advantage of digital signalling contributes to faster transmission?",
+            "concept_answer": "Digital signalling allows for faster data processing and transmission due to its discrete signal levels.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ca267a91-82d8-4380-9566-c0f289e2698f"
+            ]
+        },
+        {
+            "concept_id": "e622f934-f570-4002-809e-e602761d6f25",
+            "concept_question": "How does digital signalling improve communication quality?",
+            "concept_answer": "Digital signalling enables longer distance communication and reduced noise interference compared to analogue signalling.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ca267a91-82d8-4380-9566-c0f289e2698f"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1360 @@
+{
+    "name": "Energy, Work and Power",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "b7d7fb7f912543a99c546",
+            "concepts": [
+                "b005ab6a-4474-41c7-9980-e3447d36787a"
+            ],
+            "variants": [
+                {
+                    "id": "4a29d5bd39a0433faca8d",
+                    "question": "Which of the following is the best definition of energy?",
+                    "options": [
+                        {
+                            "option_text": "The rate at which work is done.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The capacity to do work or cause change.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force applied over a distance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total amount of heat in a system.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d7093d2566404d1db1960",
+                    "question": "Which of the following statements accurately describes the concept of energy?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Energy is the ability to do work.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Energy is measured in Newtons.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy is a force that causes acceleration.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy is the rate of doing work.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "890908cf50cf41eca4ffd",
+                    "question": "Select all the options that correctly describe the forms or effects of energy:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Energy can cause a change in temperature.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Energy is the capacity to do work.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Energy is a tangible substance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy can be stored in chemical bonds.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "fa87e279d5694dfcb7315",
+            "concepts": [
+                "acd1f9bc-61c7-4aa4-9bca-d7d96961b423",
+                "df4f743c-14ab-4c56-825e-a9c4be5e1900",
+                "d8ff39bd-980d-49a4-8750-2c03b30e3047"
+            ],
+            "variants": [
+                {
+                    "id": "5bf3eb8fb6b24e62b709e",
+                    "question": "Which methods are considered ways in which energy can be transferred?",
+                    "options": [
+                        {
+                            "option_text": "Mechanical methods",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Wave methods",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electrical methods",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Chemical reaction",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "85d5c9ab815e449a99ecc",
+                    "question": "Which of the following is NOT a way in which energy can be transferred?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Conduction",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Mechanical waves",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Chemical reaction",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electrical working",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7b42261a0b8c482385342",
+                    "question": "Select all the methods that are considered ways in which energy can be transferred.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Mechanical waves",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electrical working",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Heating",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Chemical weathering",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "0baff8ca73d14c3eb92f7",
+            "concepts": [
+                "0b62fdcb-6d96-4a9d-8420-89bab148a05a",
+                "9125e02d-eac5-43e7-80a8-eff51006df63"
+            ],
+            "variants": [
+                {
+                    "id": "f21438b57ca14959af525",
+                    "question": "What does the following equation represent: $!$W = Fd$!$?",
+                    "options": [
+                        {
+                            "option_text": "The formula for power, where $!$W$!$ is work, $!$F$!$ is force, and $!$d$!$ is distance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The formula for efficiency, where $!$W$!$ is work done.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The formula for work, where $!$W$!$ is work, $!$F$!$ is force, and $!$d$!$ is distance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The formula for kinetic energy, where $!$W$!$ is work, $!$F$!$ is force, and $!$d$!$ is distance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ec3860b750e6404eb7837",
+                    "question": "A force of 50 N is applied to an object, causing it to move a distance of 10 meters. Calculate the work done on the object using the formula $!$W = Fd$!$.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "500 Joules",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "5 Joules",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "60 Joules",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "5000 Joules",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3198ff08d355417fb2c7c",
+                    "question": "Which of the following statements correctly describe the relationship between work ($!$W$!$), force ($!$F$!$), and distance ($!$d$!$) in the equation $!$W = Fd$!$?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Work is directly proportional to both force and distance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Work is inversely proportional to force and directly proportional to distance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Work is directly proportional to force and inversely proportional to distance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Work is inversely proportional to both force and distance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "1a68c255e761481dbdeb2",
+            "concepts": [
+                "53acfc54-53a3-4296-9228-6a3577aa30b8",
+                "0b62fdcb-6d96-4a9d-8420-89bab148a05a",
+                "9125e02d-eac5-43e7-80a8-eff51006df63",
+                "f093a546-8db4-44fa-9763-df65c6e6db0e"
+            ],
+            "variants": [
+                {
+                    "id": "e1c144bba6374352bebb7",
+                    "question": "What is the correct definition and formula for Power ($!$P$!$)?",
+                    "options": [
+                        {
+                            "option_text": "The rate at which work is done; $!$P = \\frac{W}{t}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The amount of energy transferred; $!$P = Fd$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force applied over a distance; $!$P = ma$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The energy an object possesses due to its motion; $!$P = \\frac{1}{2}mv^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e40629085a314c50af5b8",
+                    "question": "Which of the following statements accurately describe the concept of Power ($!$P$!$) and its related formula? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Power is the rate at which work is done, and it can be calculated using the formula $!$P = \\frac{W}{t}$!$, where $!$W$!$ is work and $!$t$!$ is time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Power is the total energy transferred regardless of time, described by $!$P = Fd$!$, with $!$F$!$ being force and $!$d$!$ being distance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Power represents the force applied to an object, which can be determined by $!$P = ma$!$, where $!$m$!$ is mass and $!$a$!$ is acceleration.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Power is the measure of kinetic energy an object has, calculated by $!$P = \\frac{1}{2}mv^2$!$, where $!$m$!$ is mass and $!$v$!$ is velocity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "6742979ba19945b78e69a",
+                    "question": "If the time taken to perform a certain amount of work is halved, what happens to the power if the work done remains the same? Given that Power ($!$P$!$) is defined as $!$P = \\frac{W}{t}$!$.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Power is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Power is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Power remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Power is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ad93e40169af4d7d831af",
+            "concepts": [
+                "e81af2a5-f99d-4f3d-9f93-56032d62ff3f",
+                "53acfc54-53a3-4296-9228-6a3577aa30b8",
+                "0ad3afcb-7a28-4e8a-a991-6220f80b5c85"
+            ],
+            "variants": [
+                {
+                    "id": "65747cbc30a544248b4aa",
+                    "question": "Which of the following correctly defines the Watt (W)?",
+                    "options": [
+                        {
+                            "option_text": "The power unit equal to one Newton per meter.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The power unit equal to one Joule per second.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The energy unit equal to one kilogram meter squared per second squared.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force unit equal to one kilogram meter per second squared.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "862e8a515bcd436392279",
+                    "question": "Which of the following statements about the Watt (W) is incorrect?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is the SI unit of power.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is equivalent to one Joule per second.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It measures the rate at which energy is transferred or converted.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the unit of energy.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d341d8b9dc6649e5b85af",
+                    "question": "Select all the options that correctly represent 1 Watt.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "1 Joule per second",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1 Newton-meter",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1 (Kilogram * $!$\\frac{meter^2}{second^3}$!$)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1 Ampere-Volt",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3c5d777ccfc341179860d",
+            "concepts": [
+                "47e39fc8-df8e-4da5-87be-82041539f512",
+                "793d145f-41ee-4e27-ac1e-8fb00d3b806d",
+                "e81af2a5-f99d-4f3d-9f93-56032d62ff3f",
+                "53acfc54-53a3-4296-9228-6a3577aa30b8"
+            ],
+            "variants": [
+                {
+                    "id": "9da1c085914047bc88f6e",
+                    "question": "Which of the following are units of power?",
+                    "options": [
+                        {
+                            "option_text": "Watt ($!$W$!$)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kilowatt ($!$kW$!$)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Megawatt ($!$MW$!$)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Joule ($!$J$!$)",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "5a2ca60a915d485f8a1ad",
+                    "question": "Which of the following is NOT a unit of power?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Watt ($!$W$!$)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kilowatt ($!$kW$!$)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Megawatt ($!$MW$!$)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Joule ($!$J$!$)",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "80a4081e752f45e9a7834",
+                    "question": "A device consumes 2000 Joules of energy in 10 seconds. What is its power consumption?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "200 Watts",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "20 Watts",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "20000 Watts",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "0.005 Watts",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "120bf8b6e1a14f91a55c1",
+            "concepts": [
+                "fc0d555c-2163-4fe2-afbd-49a23453751c",
+                "f867675c-ee2a-45a2-bee3-7fb244468612"
+            ],
+            "variants": [
+                {
+                    "id": "937b5d241e284198a8e07",
+                    "question": "What does the equation $!$E_k = \\frac{1}{2}mv^2$!$ represent?",
+                    "options": [
+                        {
+                            "option_text": "Gravitational potential energy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic energy",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Work done",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Power",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1c22aff51961417080947",
+                    "question": "A ball of mass 2 kg is moving with a velocity of 5 m/s. What is its kinetic energy, using the equation $!$E_k = \\frac{1}{2}mv^2$!$?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "10 J",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "25 J",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "50 J",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "100 J",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "aab24b8dae374a24a2a20",
+                    "question": "Which of the following statements correctly describe kinetic energy, represented by the equation $!$E_k = \\frac{1}{2}mv^2$!$?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Kinetic energy is directly proportional to the mass of the object.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kinetic energy is directly proportional to the square of the velocity of the object.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kinetic energy is inversely proportional to the mass of the object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic energy is inversely proportional to the velocity of the object.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3709f90d127c4672a6890",
+            "concepts": [
+                "7bde3299-9507-451b-9501-1d15837d3927",
+                "8af41638-67d0-4304-afe4-278a3e5c24b8"
+            ],
+            "variants": [
+                {
+                    "id": "79cf60f0675143dbb0183",
+                    "question": "What does the equation $!$\\Delta E_p = mg\\Delta h$!$ represent?",
+                    "options": [
+                        {
+                            "option_text": "Change in Gravitational Potential Energy",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kinetic Energy",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Work Done",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Power",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ab064ea267154b6c98091",
+                    "question": "An object with a mass of 2 kg is lifted vertically. If the change in its gravitational potential energy ($!$\\Delta E_p$!$) is 100 J and the gravitational acceleration ($!$g$!$) is 9.8 m/s\u00b2, what is the change in height ($!$\\Delta h$!$)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "5.10 m",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "20 m",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "10 m",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "0.2 m",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9ffaf87ed2f34c15a94cf",
+                    "question": "Which of the following scenarios correctly demonstrates the principle behind the equation $!$\\Delta E_p = mg\\Delta h$!$? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A ball rolling on a flat surface with constant speed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A book being lifted from the floor to a shelf.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A car moving at a constant velocity on a highway.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A weightlifter lifting a barbell above their head.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "1218a0b7a02f44c8b813a",
+            "concepts": [
+                "04c473de-691a-45ba-8075-eddfb865607a",
+                "b005ab6a-4474-41c7-9980-e3447d36787a",
+                "acd1f9bc-61c7-4aa4-9bca-d7d96961b423"
+            ],
+            "variants": [
+                {
+                    "id": "36a68bcae9f34714a5889",
+                    "question": "What is the principle of conservation of energy?",
+                    "options": [
+                        {
+                            "option_text": "Energy can be created from nothing.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy can be destroyed but not created.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy can be created or destroyed, but it remains constant in a closed system.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy cannot be created or destroyed, only transformed or dissipated.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b8297df970b14955abb4b",
+                    "question": "Which of the following statements accurately describes the principle of conservation of energy?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total energy in an isolated system decreases over time.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy can be converted from one form to another, but the total energy remains constant in a closed system.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Energy can be both created and destroyed depending on the process.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy is always lost as heat due to friction and cannot be recovered.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5d5d82f15afa45afadaaa",
+                    "question": "Select all the statements that are consistent with the principle of conservation of energy:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total energy of an isolated system remains constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Energy can be transformed from one form to another without loss or gain.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Energy can be created from nothing in certain situations.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy can be neither created nor destroyed.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "18b6cf40237840708d83b",
+            "concepts": [
+                "50186d66-9a79-4184-98a1-ed9c63b1845a",
+                "fc0d555c-2163-4fe2-afbd-49a23453751c",
+                "04c473de-691a-45ba-8075-eddfb865607a"
+            ],
+            "variants": [
+                {
+                    "id": "0d6ff35322a5498b94de4",
+                    "question": "How does kinetic energy change in collisions?",
+                    "options": [
+                        {
+                            "option_text": "Kinetic energy is always conserved in all collisions.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic energy is partly converted to thermal energy and sound in collisions, though conserved in elastic collisions.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kinetic energy is always converted to potential energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic energy is created in collisions.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "669548adff624e5e984f0",
+                    "question": "Which of the following statements accurately describes the behavior of kinetic energy in inelastic collisions?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Kinetic energy is fully conserved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic energy is partly converted to other forms of energy, such as thermal energy and sound.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kinetic energy increases during the collision.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic energy is completely converted into potential energy.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9b92cfa2efad4bf3ab5c6",
+                    "question": "Consider a collision where the velocity of one object doubles. Assuming the mass remains constant, what happens to the kinetic energy of this object?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Kinetic energy doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic energy quadruples.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kinetic energy halves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic energy remains the same.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "25ac55f239484706b49bb",
+            "concepts": [
+                "3fdbd1ea-d91a-4d04-8215-c73f83a26b8b"
+            ],
+            "variants": [
+                {
+                    "id": "0d8c960c16ca4b7b82cbd",
+                    "question": "What does the term 'stopping distance' refer to in the context of vehicle safety?",
+                    "options": [
+                        {
+                            "option_text": "The distance a vehicle travels while the driver reacts to a hazard.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance a vehicle travels during braking.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total distance a vehicle travels from hazard perception to a complete stop.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The distance between two vehicles to ensure safety.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ddce3ee4671a4668aeb8f",
+                    "question": "Which of the following components contribute to the total stopping distance of a vehicle? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Thinking distance (distance traveled during reaction time)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Braking distance (distance traveled while braking)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The distance traveled before the driver perceives the hazard",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance between the vehicle and the vehicle behind it.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "b95c1c0f98ea46e9b2943",
+                    "question": "A car is traveling at a certain speed. How is the total stopping distance affected if the car's initial speed is doubled, assuming all other factors remain constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total stopping distance doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total stopping distance quadruples.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total stopping distance is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total stopping distance remains the same.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6a6502d46bab4ad79e6fe",
+            "concepts": [
+                "22cb5984-2bee-4068-9d45-f3332a62284a",
+                "3fdbd1ea-d91a-4d04-8215-c73f83a26b8b"
+            ],
+            "variants": [
+                {
+                    "id": "918a39fd86f14ccbb0d43",
+                    "question": "How does a vehicle's speed affect its braking distance?",
+                    "options": [
+                        {
+                            "option_text": "Braking distance decreases proportionally to the vehicle's speed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Braking distance increases linearly with the vehicle's speed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Braking distance increases proportionally to the square of the vehicle's speed.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Braking distance is not affected by the vehicle's speed.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5ef68d2f993c46828b1df",
+                    "question": "Which of the following statements accurately describes the relationship between a vehicle's speed and its braking distance?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The braking distance decreases as the vehicle's speed increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The braking distance increases linearly with the vehicle's speed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The braking distance increases proportionally to the square of the vehicle's speed.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The braking distance is independent of the vehicle's speed.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bcac278fa67346ee812a8",
+                    "question": "If the speed of a vehicle doubles, what happens to its braking distance, assuming all other factors remain constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The braking distance halves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The braking distance doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The braking distance quadruples.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The braking distance remains the same.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "691ebd098e854e0a969e7",
+            "concepts": [
+                "9b01016b-fcf6-4fd9-bb33-3a500b46e546",
+                "3ed4c842-35db-4ba6-8bf2-d84fb72e3254"
+            ],
+            "variants": [
+                {
+                    "id": "22215f8687994aedb90c2",
+                    "question": "Which factors are involved in evaluating energy sources?",
+                    "options": [
+                        {
+                            "option_text": "Economic costs",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Environmental impacts",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Supply reliability",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Social effects",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "725b0d521daa400bae310",
+                    "question": "Which of the following is NOT a primary factor considered when evaluating energy sources?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Environmental impacts",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Supply reliability",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Aesthetic appeal",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Economic costs",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9f34a6368dcb401197e3f",
+                    "question": "Which of the following statements correctly describe factors involved in the evaluation of energy sources? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Economic costs are a crucial factor, as the affordability of an energy source significantly affects its accessibility and widespread adoption.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Environmental impacts, including emissions and resource depletion, are not considered during energy source evaluations.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Supply reliability ensures a consistent energy supply, crucial for meeting demand and minimizing disruptions.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Social effects, including job creation, community impacts, and public health considerations, play a role in evaluating energy sources.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "7bf914b01fc34007889cb",
+            "concepts": [
+                "7baf1260-ef38-4aeb-9d3a-8fe6f22fc938",
+                "fc0d555c-2163-4fe2-afbd-49a23453751c",
+                "50186d66-9a79-4184-98a1-ed9c63b1845a"
+            ],
+            "variants": [
+                {
+                    "id": "a79978259ec646bc85132",
+                    "question": "What is the function of car safety features in collisions?",
+                    "options": [
+                        {
+                            "option_text": "To increase the kinetic energy of the occupants.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To convert all kinetic energy into sound.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To absorb kinetic energy gradually, reducing occupant injury.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To make the car lighter.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4c0ca5ed87bb4f069406a",
+                    "question": "Which of the following statements correctly describes the function of car safety features during a collision? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "To absorb kinetic energy gradually, reducing the force of impact on occupants.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To minimize the deformation of the vehicle's frame.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To evenly distribute impact forces across the vehicle's structure.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To instantaneously stop the vehicle's motion.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "d693c7c7369e43d4b3602",
+                    "question": "A car's safety features are designed to manage kinetic energy during a collision. Which of the following is the primary goal of these features?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "To increase the kinetic energy transferred to the occupants.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To rapidly decelerate the vehicle, minimizing occupant displacement.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To extend the time over which deceleration occurs, thereby reducing the forces experienced by occupants.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To eliminate all kinetic energy instantaneously upon impact.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "4373151558c64588941a3",
+            "concepts": [
+                "60a7c0b3-ad7d-46f9-899c-1be7dc42968b",
+                "acd1f9bc-61c7-4aa4-9bca-d7d96961b423"
+            ],
+            "variants": [
+                {
+                    "id": "04e30ab2e80e452ea7f64",
+                    "question": "What is energy transfer efficiency?",
+                    "options": [
+                        {
+                            "option_text": "The amount of energy wasted during a transfer.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The percentage of input energy that is usefully transferred.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total energy input.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total energy output.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d517d0b1763546fd891d8",
+                    "question": "Which of the following statements accurately describes energy transfer efficiency?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It's the ratio of useful energy output to total energy input.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It's the amount of energy converted to unusable forms like heat.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It's the total energy consumed by a system.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It's the rate at which energy is transferred.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e393475205aa466fbaef8",
+                    "question": "A device consumes 100 J of energy and produces 60 J of useful work. What is the energy transfer efficiency?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "40%",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "60%",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "100%",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "160%",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ae149ee554a04ccd83893",
+            "concepts": [
+                "8bd37a30-0ed2-43d5-846f-8c8290941dbd",
+                "60a7c0b3-ad7d-46f9-899c-1be7dc42968b"
+            ],
+            "variants": [
+                {
+                    "id": "029daa7133694776ae632",
+                    "question": "Which equations can be used to calculate efficiency?",
+                    "options": [
+                        {
+                            "option_text": "$!$\\text{Efficiency} = \\frac{\\text{useful energy output}}{\\text{total energy input}} \\times 100\\%$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\text{Efficiency} = \\frac{\\text{useful power output}}{\\text{total power input}} \\times 100\\%$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\text{Efficiency} = \\frac{\\text{total energy input}}{\\text{useful energy output}} \\times 100\\%$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\text{Efficiency} = \\frac{\\text{total power input}}{\\text{useful power output}} \\times 100\\%$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "ced3d301164f43d9bc3cf",
+                    "question": "Which of the following statements about efficiency are correct? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Efficiency can be greater than 100%.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Efficiency is a ratio of useful output energy to total input energy, expressed as a percentage.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Efficiency indicates how much of the input energy or power is converted into the desired form.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Efficiency is calculated by dividing the total energy input by the useful energy output and multiplying by 100%.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "18990442bc064e6dbc692",
+                    "question": "A machine has an efficiency of 50%. If the total energy input is doubled, while the useful energy output remains the same, what happens to the efficiency?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The efficiency is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The efficiency is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The efficiency remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The efficiency becomes four times the original.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "8ce6312533734701a5ebd",
+            "concepts": [
+                "e2f48e8a-905a-4c94-857d-2a9b5573d128",
+                "fc0d555c-2163-4fe2-afbd-49a23453751c",
+                "7bde3299-9507-451b-9501-1d15837d3927"
+            ],
+            "variants": [
+                {
+                    "id": "bb041ce553884025aeebe",
+                    "question": "Match the energy store with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Kinetic energy",
+                            "optionB": "Energy of motion"
+                        },
+                        {
+                            "optionA": "Gravitational potential energy",
+                            "optionB": "Energy due to an object's position in a gravitational field"
+                        },
+                        {
+                            "optionA": "Chemical energy",
+                            "optionB": "Energy stored in the bonds of chemical compounds"
+                        },
+                        {
+                            "optionA": "Elastic potential energy",
+                            "optionB": "Energy stored in a stretched or compressed object"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "82dfe70fe9f545ecb7a9a",
+            "concepts": [
+                "3ed4c842-35db-4ba6-8bf2-d84fb72e3254",
+                "4a24b72e-20e9-45bf-b554-99a135d25f1d",
+                "2cd3e933-435a-44ad-8149-e69723f9cd79",
+                "434dc7a9-4f27-4202-a76a-4abdc59b2691"
+            ],
+            "variants": [
+                {
+                    "id": "fa80687b2eb1427f8da1e",
+                    "question": "Match each energy resource type with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Non-renewable energy resources",
+                            "optionB": "Finite materials that deplete faster than they form."
+                        },
+                        {
+                            "optionA": "Renewable energy resources",
+                            "optionB": "Naturally replenished sources such as solar and wind."
+                        },
+                        {
+                            "optionA": "Solar energy",
+                            "optionB": "Energy derived from the Sun's nuclear fusion."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

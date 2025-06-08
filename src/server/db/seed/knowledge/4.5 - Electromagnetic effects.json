@@ -1,0 +1,876 @@
+{
+    "name": "Electromagnetic Effects",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "0b509dcf02e944ffa78ac",
+            "concepts": [
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9",
+                "29a00d69-11c3-4c64-8f98-75d87579aeea",
+                "7c995179-8aae-4a1d-96de-4c78925943a8",
+                "02e21b8a-e47a-4a5e-9792-730e2096a8ba"
+            ],
+            "variants": [
+                {
+                    "id": "b74340ad1a4943ceb5878",
+                    "question": "Which of the following statements are true regarding electromagnetic induction?",
+                    "options": [
+                        {
+                            "option_text": "Electromagnetic induction is the induction of an electromotive force by the relative motion or a changing magnetic field.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electromagnetic induction was discovered by Oersted.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Induction occurs only when the conductor is stationary in the magnetic field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The induced emf can be affected by speed of motion and number of coil turns.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "d7336d1168584bffb422a",
+                    "question": "Which of the following is NOT a factor that affects the magnitude of the induced electromotive force (EMF) in electromagnetic induction?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The strength of the magnetic field",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of the relative motion between the conductor and the magnetic field",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The number of turns in the coil",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The resistance of the conducting wire",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e850533aa25240cc8abe1",
+                    "question": "Select all of the following statements that correctly describe electromagnetic induction.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A changing magnetic field induces an electromotive force (EMF).",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A stationary magnetic field moving away from a conductor does not induce any EMF.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnitude of the induced EMF is directly proportional to the rate of change of magnetic flux.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electromagnetic induction is the principle behind the operation of generators and transformers.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "48ef6f5cb0684fb980d53",
+            "concepts": [
+                "fe22ccc5-f0b6-49f5-965f-37bdb653d858",
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+            ],
+            "variants": [
+                {
+                    "id": "193087b81cf14f0390fb0",
+                    "question": "According to Lenz's law, what is the direction of the induced electromotive force (emf)?",
+                    "options": [
+                        {
+                            "option_text": "The induced emf always aids the change causing it.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The induced emf always opposes the change causing it.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The induced emf is always parallel to the magnetic field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The induced emf is independent of the magnetic field.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "25e04447abd1471e95ca9",
+                    "question": "Which of the following statements accurately describes Lenz's Law?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The induced EMF creates a magnetic field that reinforces the original magnetic field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The induced current flows in a direction that opposes the change in magnetic flux that produced it.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The induced EMF is directly proportional to the rate of change of electric flux.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Lenz's Law states that the induced EMF is independent of the magnetic field.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "704e2f8d875449f08b79f",
+                    "question": "A conducting loop is placed in a changing magnetic field. According to Lenz's law, which of the following statements are correct? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The direction of the induced current will create a magnetic field that opposes the change in the external magnetic field.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnitude of the induced EMF is proportional to the rate of change of magnetic flux.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The induced current will flow in a direction that enhances the external magnetic field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "No current will be induced if the magnetic field is changing uniformly.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "301c32c74299449899f74",
+            "concepts": [
+                "53ee8df5-97c6-4254-a1c8-e106ea81ea5c",
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+            ],
+            "variants": [
+                {
+                    "id": "61bbb81fa9774f42b95b5",
+                    "question": "Which rule helps determine the direction of induced current in electromagnetic induction?",
+                    "options": [
+                        {
+                            "option_text": "Fleming's left-hand rule",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Fleming's right-hand rule",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Right-hand screw rule",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Right-hand grip rule",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "dc901fb8877e4f39bbcc1",
+                    "question": "Which of the following rules can be used to determine the direction of the induced current in a generator?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Fleming's Left-hand rule",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Fleming's Right-hand rule",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Right-hand thumb rule",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Left-hand thumb rule",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "bb2e24f917c847b68ba8e",
+                    "question": "Select all the rules that can be applied to find the direction of induced current:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Fleming's Left-Hand Rule",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Fleming's Right-Hand Rule",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Right-Hand Thumb Rule",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Lenz's Law",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "508665ae5d134365bbc6a",
+            "concepts": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ],
+            "variants": [
+                {
+                    "id": "026a65d3dc784c998918d",
+                    "question": "Oersted's experiment demonstrated that:",
+                    "options": [
+                        {
+                            "option_text": "An electric current produces a magnetic field around it.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A magnetic field produces an electric current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A changing magnetic field induces an emf.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A static charge produces a magnetic field.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fb572d25236b446aaa556",
+                    "question": "Which of the following statements accurately describes the fundamental discovery from Oersted's experiment?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A magnetic field is generated in the vicinity of a moving electric charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A static magnetic field can induce a flow of electric current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A changing electric field generates a static magnetic field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Static electric charges create static magnetic fields.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "befb912b12e844c79d949",
+                    "question": "Select all the options that are demonstrated by Oersted's experiment.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Electric current creates magnetic field.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Magnetic fields always require physical magnets; electric currents have no impact.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A wire carrying electric current can deflect a compass needle.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Static electric charges produce magnetic fields.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "8c9d0ef37609494598fa9",
+            "concepts": [
+                "eba301ec-6d61-403f-bef1-c95112449b73",
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ],
+            "variants": [
+                {
+                    "id": "1b4ba66482544d8685b47",
+                    "question": "Which of the following statements correctly describes the magnetic field pattern produced by a straight wire carrying current?",
+                    "options": [
+                        {
+                            "option_text": "Concentric magnetic circles whose strength decreases with distance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Straight field lines perpendicular to the wire.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A uniform magnetic field throughout space.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "No magnetic field is produced.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "aea69a0bb1c04cd4b5443",
+                    "question": "If the current in a straight wire is doubled, what happens to the strength of the magnetic field at a fixed distance from the wire?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The magnetic field strength doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnetic field strength halves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic field strength remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic field strength quadruples.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0aa26670427340b091966",
+                    "question": "Select all the statements that correctly describe the magnetic field produced by a straight wire carrying current.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The magnetic field lines are concentric circles around the wire.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnetic field strength is constant throughout space.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic field strength decreases with distance from the wire.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnetic field lines are straight lines parallel to the wire.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "f6278aab32894ef8b5cf6",
+            "concepts": [
+                "6cb984c4-c135-4dc8-9487-1f13fe35f451",
+                "f888816f-05e8-43cd-82e1-d811cd7b8eb8",
+                "eba301ec-6d61-403f-bef1-c95112449b73"
+            ],
+            "variants": [
+                {
+                    "id": "6266e70a7eea43eb8c143",
+                    "question": "Which factor does NOT affect the magnetic field strength of a straight wire carrying current?",
+                    "options": [
+                        {
+                            "option_text": "The magnitude of the current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance from the wire.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The material of the wire.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The color of the wire.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "22e66cc27d4441c4aadec",
+                    "question": "A straight wire carries a current of $!$I$!$. Which of the following factors affect the magnetic field strength at a point near the wire? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The magnitude of the current $!$I$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The distance $!$r$!$ from the wire to the point.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The material of the wire.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The color of the wire.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "8379f9f6a9684dcc8f585",
+                    "question": "The magnetic field strength at a distance of 2 cm from a straight wire carrying a current is $!$B$!$. If the current is doubled, what is the magnetic field strength at the same distance from the wire?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$B/2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$B$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2B$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$4B$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "39afc41e2ee541e7aa3cb",
+            "concepts": [
+                "35f929af-a81f-44aa-965c-0b418cc741f5",
+                "2529d0fa-bcab-40a3-8ddf-2f8d654856b9"
+            ],
+            "variants": [
+                {
+                    "id": "aa6c4f96cef642169b721",
+                    "question": "What is the function of slip rings and carbon brushes in an AC generator?",
+                    "options": [
+                        {
+                            "option_text": "To provide electrical contact between the rotating coil and the external circuit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To convert mechanical energy into electrical energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To rectify AC to DC.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To increase the magnetic field strength.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f05ef95d73f24946b2ff3",
+                    "question": "Which of the following is NOT a function typically associated with slip rings and carbon brushes in an AC generator?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Providing electrical contact between the rotating coil and the external circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Converting AC to DC.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Facilitating the flow of current from the armature.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Maintaining a continuous connection as the rotor spins.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0e04a0ca075346bab0fc4",
+                    "question": "Select all the statements that correctly describe the function of slip rings and carbon brushes in an AC generator:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They provide a stationary electrical connection to the rotating armature.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They facilitate the transfer of electrical power from the rotating coil to the external circuit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They convert the generated AC voltage to DC voltage.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They maintain continuous electrical contact between the rotor and the external circuit.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "b4b3efa384014f7b9b15b",
+            "concepts": [
+                "7b21da81-6937-4f1d-b767-7b5c34311beb",
+                "c853c3d8-6f65-42c7-8ff1-bfc6351293b9"
+            ],
+            "variants": [
+                {
+                    "id": "d77e09848b4349ef810ec",
+                    "question": "How is the magnitude of force on a current-carrying conductor in a magnetic field affected by the strength of the field and the current?",
+                    "options": [
+                        {
+                            "option_text": "Force increases with stronger magnetic fields and higher current.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Force decreases with stronger magnetic fields and higher current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Force is independent of magnetic field strength and current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Force is inversely proportional to the magnetic field and current.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b3fe11a246054e55b66ea",
+                    "question": "Which of the following statements accurately describes the relationship between the magnetic force ($!$F$!$), magnetic field strength ($!$B$!$), current ($!$I$!$), and the length ($!$L$!$) of a conductor within the field?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The magnetic force is directly proportional to both the magnetic field strength and the current ($!$F \u221d B * I$!$).",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The magnetic force is inversely proportional to the magnetic field strength and directly proportional to the current ($!$F \u221d I / B$!$).",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic force is directly proportional to the magnetic field strength and inversely proportional to the current ($!$F \u221d B / I$!$).",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The magnetic force is inversely proportional to both the magnetic field strength and the current ($!$F \u221d 1 / (B * I)$!$).",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "426d9e2afefc466e9f18f",
+                    "question": "Select all the conditions that will result in an increased magnetic force on a current-carrying conductor placed in a magnetic field.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Increasing the strength of the magnetic field.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Decreasing the current flowing through the conductor.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increasing the current flowing through the conductor.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Decreasing the strength of the magnetic field.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "d79b37d053a649f09bf64",
+            "concepts": [
+                "ca87e119-3ea3-4a55-a681-bf48b601d2bc",
+                "fee07ea5-0b7f-48ae-a3cd-afd650f215ba",
+                "7a84e288-311b-4ee9-8759-17e881095487",
+                "be15be8f-7057-4f55-b5b0-a7eb16de24a5",
+                "708bc8fc-5bd9-4b42-8bb1-752fef3aea8d"
+            ],
+            "variants": [
+                {
+                    "id": "039dee5234ac4ed9a1e9a",
+                    "question": "Which of the following is correct about the relationship between coil turns and voltage in a transformer?",
+                    "options": [
+                        {
+                            "option_text": "In a step-up transformer, the secondary coil has fewer turns than the primary coil.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In a step-down transformer, the secondary coil has more turns than the primary coil.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In a step-up transformer, the secondary coil has more turns than the primary coil.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The number of turns does not affect the voltage in a transformer.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8d13bcfcf1f34bf6a1c9f",
+                    "question": "Select all the statements that correctly describe the relationship between the number of turns in a coil and the voltage in a transformer.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "In a step-up transformer, the secondary coil has fewer turns than the primary coil.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In a step-down transformer, the secondary coil has more turns than the primary coil.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In a step-up transformer, the secondary coil has more turns than the primary coil.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "In a step-down transformer, the secondary coil has fewer turns than the primary coil.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "09c793525f334898b0469",
+                    "question": "In a transformer, if the number of turns in the secondary coil is doubled while keeping the primary coil turns and input voltage constant, what happens to the secondary voltage?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The secondary voltage doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The secondary voltage is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The secondary voltage remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The secondary voltage becomes four times the original voltage.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "9249086839324369ab23f",
+            "concepts": [
+                "d9445e5b-f0cb-4ce2-9b3d-44e2992300ec"
+            ],
+            "variants": [
+                {
+                    "id": "151e81ecca314d2ba0c49",
+                    "question": "What are the benefits of transmitting electrical power at high voltages?",
+                    "options": [
+                        {
+                            "option_text": "Reduces current and minimizes power losses due to resistance in cables.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increases current and power losses in transmission lines.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Simplifies the transmission process, eliminating the need for transformers.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increases the size and cost of transmission cables.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f49e940fd0874c3f91303",
+                    "question": "Which of the following statements are correct regarding the transmission of electrical power at high voltages? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It reduces the current in the transmission lines for a given power level.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It minimizes power losses due to the resistance in the transmission cables.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It increases the current, thereby increasing power loss.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It allows for the use of thinner, less expensive transmission cables.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "853aa50ae1dd4325a1391",
+                    "question": "If the voltage at which electrical power is transmitted is doubled, what happens to the current in the transmission line, assuming the power remains constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The current is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The current doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The current remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The current quadruples.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "53ea007109f043599ffe3",
+            "concepts": [
+                "0e290639-b983-408b-a2f1-eae4ce2fc09f",
+                "b781bb66-bb42-44a6-b022-fc91498bfbd2",
+                "b56799c6-b7b2-4f73-a168-810f61e8c606",
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ],
+            "variants": [
+                {
+                    "id": "6de60584651a45a488cc4",
+                    "question": "Match the device with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Relay",
+                            "optionB": "Electromagnet that acts as a switch."
+                        },
+                        {
+                            "optionA": "Loudspeaker",
+                            "optionB": "Converts electrical signals into sound vibrations."
+                        },
+                        {
+                            "optionA": "Electric Bell",
+                            "optionB": "Electromagnet actuates a hammer to strike a gong."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7d794cf4224b4cedbebd5",
+            "concepts": [
+                "ca87e119-3ea3-4a55-a681-bf48b601d2bc",
+                "fee07ea5-0b7f-48ae-a3cd-afd650f215ba",
+                "7a84e288-311b-4ee9-8759-17e881095487",
+                "be15be8f-7057-4f55-b5b0-a7eb16de24a5",
+                "708bc8fc-5bd9-4b42-8bb1-752fef3aea8d",
+                "d9445e5b-f0cb-4ce2-9b3d-44e2992300ec"
+            ],
+            "variants": [
+                {
+                    "id": "81ea1947419643839d122",
+                    "question": "Match the Transformer Type to its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Step-up Transformer",
+                            "optionB": "Increases voltage from primary to secondary coil."
+                        },
+                        {
+                            "optionA": "Step-down Transformer",
+                            "optionB": "Decreases voltage from primary to secondary coil."
+                        },
+                        {
+                            "optionA": "Ideal Transformer",
+                            "optionB": "Operates at 100% efficiency with equal input and output power."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

@@ -1,0 +1,475 @@
+{
+    "name": "Pressure",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "8b5b767283f44eeab0049",
+            "concepts": [
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+            ],
+            "variants": [
+                {
+                    "id": "897a52f0c56b424cb84be",
+                    "question": "Which of the following statements correctly describes the concept of pressure?",
+                    "options": [
+                        {
+                            "option_text": "Pressure is the force exerted per unit area.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Pressure is directly proportional to the area on which the force is applied.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pressure is measured in Newtons.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pressure is a scalar quantity.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "c7fcb9302b6c4e9ab399d",
+                    "question": "A force of $!$100 N$!$ is applied to an area of $!$2 m^2$!$. What is the pressure exerted on the area?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$200 Pa$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$50 Pa$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$102 Pa$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$98 Pa$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f9ef4290dbba45a7b5ab5",
+                    "question": "If the area on which a force is applied is doubled, what happens to the pressure, assuming the force remains constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Pressure is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Pressure is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pressure remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pressure is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6046b3b4cc8b495990f65",
+            "concepts": [
+                "eb81a8c6-e84d-4852-9078-86ba33aa930f"
+            ],
+            "variants": [
+                {
+                    "id": "c9b8393433434ee2ae289",
+                    "question": "What is the SI unit of pressure?",
+                    "options": [
+                        {
+                            "option_text": "Pascal (Pa)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Newton (N)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kilogram (kg)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Meter (m)",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1f95e152d4054b3591b80",
+                    "question": "Which of the following units is equivalent to Pascal (Pa), the SI unit of pressure?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Newton per square meter ($!$N/m^2$!$)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kilogram per square meter ($!$kg/m^2$!$)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Joule per meter ($!$J/m$!$)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Watt ($!$W$!$)",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "76bbd073628d4056b6ba1",
+                    "question": "Select all the units that can be used to measure pressure.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Pascal (Pa)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Bar",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Newton (N)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kilogram (kg)",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "82f46280c3984971bc3f5",
+            "concepts": [
+                "921c2915-8116-4288-a6a9-292284065919",
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+            ],
+            "variants": [
+                {
+                    "id": "79e69183756a4146bac0a",
+                    "question": "How does the depth of a liquid affect the pressure exerted by the liquid?",
+                    "options": [
+                        {
+                            "option_text": "Pressure increases with depth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Pressure decreases with depth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pressure remains constant with depth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pressure is independent of depth.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7f4f289bf9ce475e97265",
+                    "question": "Which of the following statements accurately describes the relationship between liquid depth and pressure?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The pressure exerted by a liquid decreases as the depth increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The pressure exerted by a liquid increases as the depth increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The pressure exerted by a liquid remains constant regardless of depth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The pressure exerted by a liquid is independent of depth.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "85fea8b4c9b7440c851e4",
+                    "question": "If the depth of a liquid is doubled, how is the pressure exerted by the liquid affected?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The pressure is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The pressure doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The pressure remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The pressure quadruples.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "8b761c6a1e0f47898e11a",
+            "concepts": [
+                "75b2454a-3e89-448c-8620-428c8222bebb",
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+            ],
+            "variants": [
+                {
+                    "id": "7d7b6c42ad32435692fe6",
+                    "question": "What is the principle behind hydraulic systems?",
+                    "options": [
+                        {
+                            "option_text": "Using near-incompressible fluids to transmit pressure uniformly.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Using compressible gases to amplify force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Using levers to reduce the required force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Using pulleys to change the direction of force.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "632fe368bd344e109ec72",
+                    "question": "Which of the following statements accurately describes the principle behind hydraulic systems?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Hydraulic systems use compressible gases to transmit pressure.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Hydraulic systems use near-incompressible fluids to transmit pressure uniformly.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Hydraulic systems rely on levers to amplify force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Hydraulic systems use pulleys to change the direction of force.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d5ce7720387545d1ad7ad",
+                    "question": "Select all that apply: Which of the following are characteristics of hydraulic systems?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They utilize near-incompressible fluids.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They transmit pressure uniformly in all directions.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They use highly compressible gases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They rely on mechanical linkages for force transmission.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "8917dd66394a4bd39c74d",
+            "concepts": [
+                "32df63a2-161a-4c50-ae37-0afb6dcaec27",
+                "75b2454a-3e89-448c-8620-428c8222bebb",
+                "460ceb3c-03d1-4066-a770-99b3ac24df2d"
+            ],
+            "variants": [
+                {
+                    "id": "e81245be8bc34a3cbc133",
+                    "question": "Which of the following are applications of hydraulic systems?",
+                    "options": [
+                        {
+                            "option_text": "Jacks",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Forklifts",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Simple scales",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pulleys",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e5748703494d402483743",
+                    "question": "A hydraulic system is used in a machine to lift heavy objects. Which of the following is NOT a typical component of such a hydraulic system?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Fluid reservoir",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gearbox",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Piston",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Hydraulic pump",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f837e65a34df4b7a9dd79",
+                    "question": "Which of the following use Pascal's principle as a primary operational concept? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Hydraulic brakes in a car",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A simple lever",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Hydraulic lifts",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A screw jack",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "87e556ee301945f597364",
+            "concepts": [
+                "a9162b39-ac84-4b0f-892f-01c1070a1e2c",
+                "abcabcf7-2075-45f7-8f12-cb178563152a",
+                "bf2abe12-6703-47dc-b419-e074c85a910a",
+                "e9bdb536-49c3-414a-80bf-cb6802a6e530",
+                "6467eb38-82a3-4d5f-ac34-cdc648c38cd6",
+                "921c2915-8116-4288-a6a9-292284065919",
+                "52ff3fbd-17c1-4159-98ce-7e62ef0dcc97",
+                "305ef332-500d-4c4e-9da1-1adecb3649db",
+                "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+            ],
+            "variants": [
+                {
+                    "id": "68c20aabd8e14516858d4",
+                    "question": "Match the examples with the concepts they illustrate about pressure:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Camels' large feet",
+                            "optionB": "Decreasing pressure by increasing area"
+                        },
+                        {
+                            "optionA": "Sharp nails",
+                            "optionB": "Increasing pressure by decreasing area"
+                        },
+                        {
+                            "optionA": "Dam construction",
+                            "optionB": "Application of liquid pressure principles"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "413afbc2fbdf40b48b903",
+            "concepts": [
+                "943fbde4-4b9b-4ca1-91f7-1c11c3181b01",
+                "7292d8ea-9e53-4fe5-91b5-3730c675ab14",
+                "0de6d2af-cf68-4ef8-add3-856bd6bb09be",
+                "9c478936-0e37-4906-9156-3da0bb228a9e",
+                "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+            ],
+            "variants": [
+                {
+                    "id": "b3805fe3299042dbb186c",
+                    "question": "Match the pressure measuring device with its principle of operation:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Bourdon gauge",
+                            "optionB": "Measures pressure via a curved tube"
+                        },
+                        {
+                            "optionA": "Mercury barometer",
+                            "optionB": "Measures atmospheric pressure using mercury column height"
+                        },
+                        {
+                            "optionA": "U-tube manometer",
+                            "optionB": "Measures gas pressure by liquid level difference"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

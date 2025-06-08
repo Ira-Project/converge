@@ -1,0 +1,238 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "mo1lq25iwflv3io9icvwj",
+    "topicIdProd": "",
+    "chapter_text": "### Fundamental Wave Concepts\n*   Waves are disturbances that transfer energy from one point to another without transferring matter.\n*   **Mechanical waves** are produced by a disturbance (e.g., vibrating object) in a material medium, with particles vibrating about a fixed position. Examples include waves on a rope or spring, water waves, and sound waves.\n*   A **progressive wave** or **travelling wave** is a disturbance that carries energy from one place to another without transferring matter.\n\n### Types of Waves\n*   **Transverse waves**: The direction of the disturbance (vibration) is at right angles (perpendicular) to the direction of propagation (wave travel).\n    *   Examples: Waves on a rope, water waves, seismic S-waves, electromagnetic radiations.\n*   **Longitudinal waves**: The direction of the disturbance (vibration) is along the same line as (parallel to) the direction of propagation (wave travel).\n    *   Characterized by **compressions** (regions where particles are closer together) and **rarefactions** (regions where particles are further apart).\n    *   Examples: Sound waves, seismic P-waves.\n\n### Key Wave Properties\n*   **Wavelength ($\\lambda$)**: The distance between successive corresponding points on a wave, such as two consecutive crests or troughs, in a displacement-distance graph.\n*   **Frequency ($f$)**: The number of complete waves generated per second. The unit of frequency is the Hertz (Hz). The frequency of a wave is equal to the frequency of its source.\n*   **Wave speed ($v$)**: The distance traveled by a crest (or any point) on the wave in one second in the direction of wave travel.\n*   **Amplitude ($a$)**: The maximum displacement of a particle from its undisturbed (equilibrium) position, measured as the height of a crest or the depth of a trough.\n*   **Phase**: Describes the relative positions of different points on a wave. Points with the same speed and direction of vibration are said to be **in phase**. Points with opposite directions of vibration are **out of phase**.\n\n### Wave Equation\n*   The relationship between wave speed ($v$), frequency ($f$), and wavelength ($\\lambda$) is given by the wave equation:\n    *   $v = f\\lambda$\n\n### Wave Phenomena\n*   **Wavefronts**: Lines or surfaces on which all points of a disturbance have the same phase (e.g., the crests of water waves).\n*   **Rays**: Lines drawn at right angles to wavefronts, indicating the direction of wave travel.\n*   **Reflection**: The bouncing back of a wave when it strikes a surface.\n    *   The angle of incidence is equal to the angle of reflection.\n*   **Refraction**: The change in direction of a wave when it passes from one medium to another, caused by a change in its speed and wavelength.\n    *   When waves move from a deeper to a shallower medium, their speed decreases, and their wavelength shortens, causing them to bend towards the normal.\n    *   The frequency of the wave remains unchanged during refraction.\n*   **Diffraction**: The spreading out of waves as they pass through a gap or around the edge of an obstacle.\n    *   **Effect of gap size**:\n        *   **Narrow gap** (width approximately equal to wavelength): Waves spread out significantly, forming circular wavefronts after passing through.\n        *   **Wide gap** (width much larger than wavelength): Waves continue mostly straight, with only slight spreading at the edges.\n    *   **Effect of wavelength**: Diffraction is more noticeable for longer wavelengths (relative to the obstacle or gap size).\n\n### Advanced Wave Concepts\n*   **Huygens' Construction**: A method used to determine the future position of a wavefront by considering every point on the current wavefront as a source of secondary spherical wavelets. The new wavefront is the tangent to these wavelets. This principle helps explain reflection, refraction, and diffraction.\n*   **Interference (Superposition)**: The combination of two or more waves.\n    *   When crests meet crests (or troughs meet troughs), they are **in phase**, resulting in constructive interference (a larger amplitude).\n    *   When a crest meets a trough, they are **out of phase**, resulting in destructive interference (cancellation if amplitudes are equal, leading to an undisturbed region).\n*   **Polarisation**: A phenomenon that occurs only with transverse waves, where the vibrations of the wave are confined to a single plane.",
+    "chapter_concepts": [
+        {
+            "concept_id": "1cfa5c7c-7983-4456-8229-8a41874c357c",
+            "concept_question": "What is a wave?",
+            "concept_answer": "A wave is a disturbance that transfers energy without transferring matter.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f624b288-958d-4583-869c-8aebb8e4e519",
+            "concept_question": "What is a mechanical wave?",
+            "concept_answer": "A mechanical wave is produced by a disturbance in a material medium with vibrating particles.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ]
+        },
+        {
+            "concept_id": "41c3a3ce-9d9e-43b2-ad58-47c8d4fc902e",
+            "concept_question": "What is a progressive wave?",
+            "concept_answer": "A progressive wave is a disturbance that carries energy from one location to another.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ]
+        },
+        {
+            "concept_id": "c8893bf2-37ac-4ad1-8120-9cd2c567f9fb",
+            "concept_question": "What is a transverse wave?",
+            "concept_answer": "A transverse wave has vibrations perpendicular to the direction of wave travel.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ]
+        },
+        {
+            "concept_id": "ba382e59-0647-4ae8-85ef-ca76fd71001a",
+            "concept_question": "What is a longitudinal wave?",
+            "concept_answer": "A longitudinal wave has vibrations parallel to the direction of travel and shows compressions and rarefactions.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ]
+        },
+        {
+            "concept_id": "894ecb77-0c29-49ff-ac41-10e2c1cb7bde",
+            "concept_question": "What is compression in waves?",
+            "concept_answer": "Compression is a region in a longitudinal wave where particles are closer together.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ba382e59-0647-4ae8-85ef-ca76fd71001a"
+            ]
+        },
+        {
+            "concept_id": "7da51eec-b490-4190-95a2-2c714996b3a4",
+            "concept_question": "What is rarefaction in waves?",
+            "concept_answer": "Rarefaction is a region in a longitudinal wave where particles are farther apart.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ba382e59-0647-4ae8-85ef-ca76fd71001a"
+            ]
+        },
+        {
+            "concept_id": "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85",
+            "concept_question": "What is wavelength?",
+            "concept_answer": "Wavelength is the distance between successive corresponding points on a wave.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ]
+        },
+        {
+            "concept_id": "91d66318-1623-4c88-b48c-56e3cfc2c189",
+            "concept_question": "What is frequency?",
+            "concept_answer": "Frequency is the number of complete waves generated per second.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ]
+        },
+        {
+            "concept_id": "c76dc2d1-7988-4901-a0e0-fda851b381a7",
+            "concept_question": "What is wave speed?",
+            "concept_answer": "Wave speed is the distance a wave crest travels in one second.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ]
+        },
+        {
+            "concept_id": "70f05650-ebb2-4b01-96c2-de4cc40c3b02",
+            "concept_question": "What is amplitude?",
+            "concept_answer": "Amplitude is the maximum displacement of a particle from its equilibrium position.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ]
+        },
+        {
+            "concept_id": "9af39160-8eec-4685-bd62-195f8fcaa629",
+            "concept_question": "What is phase in waves?",
+            "concept_answer": "Phase describes the relative position of points on a wave during their vibration cycles.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ]
+        },
+        {
+            "concept_id": "e2484863-f982-4229-94d2-b6df0b9b92ca",
+            "concept_question": "What is the wave equation?",
+            "concept_answer": "The wave equation relates wave speed, frequency, and wavelength.",
+            "concept_formula": [
+                "$!$v = f\\lambda$!$"
+            ],
+            "pre-requisites": [
+                "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85",
+                "91d66318-1623-4c88-b48c-56e3cfc2c189",
+                "c76dc2d1-7988-4901-a0e0-fda851b381a7"
+            ]
+        },
+        {
+            "concept_id": "95d98f95-8dd3-479d-b509-ed5002535f29",
+            "concept_question": "What are wavefronts?",
+            "concept_answer": "Wavefronts are surfaces where all points of a disturbance have the same phase.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "9af39160-8eec-4685-bd62-195f8fcaa629"
+            ]
+        },
+        {
+            "concept_id": "668f18d1-36c0-408d-b97f-e55412b62565",
+            "concept_question": "What are rays in waves?",
+            "concept_answer": "Rays are lines drawn perpendicular to wavefronts that indicate the wave travel direction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "95d98f95-8dd3-479d-b509-ed5002535f29"
+            ]
+        },
+        {
+            "concept_id": "56c92c0a-9a1f-4b88-8b6b-8a7541f4d657",
+            "concept_question": "What is the law of reflection?",
+            "concept_answer": "The law of reflection states that the angle of incidence equals the angle of reflection.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "381ea933-cde7-4d68-b8f0-c1890609e36a",
+            "concept_question": "What is refraction?",
+            "concept_answer": "Refraction is the bending of a wave as it passes from one medium to another.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ]
+        },
+        {
+            "concept_id": "5ab05d16-762d-4aba-b853-f5d7306de1e7",
+            "concept_question": "What is diffraction?",
+            "concept_answer": "Diffraction is the spreading of waves as they pass through gaps or around obstacles.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c",
+                "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85"
+            ]
+        },
+        {
+            "concept_id": "dbf85a98-bd4f-4500-bf4e-804c262f3791",
+            "concept_question": "How does gap size affect diffraction?",
+            "concept_answer": "Narrow gaps cause significant wave spreading while wide gaps cause minimal spreading.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5ab05d16-762d-4aba-b853-f5d7306de1e7"
+            ]
+        },
+        {
+            "concept_id": "b59ee601-8ece-4ba7-a5bb-f7888aeb4ffd",
+            "concept_question": "How does wavelength affect diffraction?",
+            "concept_answer": "Diffraction is more pronounced for longer wavelengths relative to gap or obstacle size.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5ab05d16-762d-4aba-b853-f5d7306de1e7",
+                "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85"
+            ]
+        },
+        {
+            "concept_id": "6b7de45c-7a91-4926-8923-7848b6e9c94a",
+            "concept_question": "What is Huygens' Construction?",
+            "concept_answer": "Huygens' Construction uses secondary spherical wavelets from a wavefront to form a new wavefront.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "95d98f95-8dd3-479d-b509-ed5002535f29"
+            ]
+        },
+        {
+            "concept_id": "d75bf3fc-6ad7-42b8-8fce-1f60d10ef022",
+            "concept_question": "What is interference?",
+            "concept_answer": "Interference is the phenomenon where overlapping waves combine to modify amplitude.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c",
+                "9af39160-8eec-4685-bd62-195f8fcaa629"
+            ]
+        },
+        {
+            "concept_id": "bed61e1f-0139-43bf-bd58-f76c5fc55a51",
+            "concept_question": "What is constructive interference?",
+            "concept_answer": "Constructive interference occurs when in-phase waves combine to increase amplitude.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d75bf3fc-6ad7-42b8-8fce-1f60d10ef022",
+                "9af39160-8eec-4685-bd62-195f8fcaa629"
+            ]
+        },
+        {
+            "concept_id": "87e41c44-c408-43f0-ab16-8c446470b289",
+            "concept_question": "What is destructive interference?",
+            "concept_answer": "Destructive interference occurs when out-of-phase waves combine to cancel amplitude.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d75bf3fc-6ad7-42b8-8fce-1f60d10ef022",
+                "9af39160-8eec-4685-bd62-195f8fcaa629"
+            ]
+        },
+        {
+            "concept_id": "654edbfa-3f4c-4113-9b56-583c41cb13f7",
+            "concept_question": "What is polarisation?",
+            "concept_answer": "Polarisation is the confinement of a transverse wave's vibrations to a single plane.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "c8893bf2-37ac-4ad1-8120-9cd2c567f9fb"
+            ]
+        }
+    ]
+}

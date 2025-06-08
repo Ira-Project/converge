@@ -1,0 +1,810 @@
+{
+    "name": "Light",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "ec3e3ff7e2cf49448d6b0",
+            "concepts": [
+                "07e9bccb-cb8f-4695-9cf9-6ba1fa7d8249"
+            ],
+            "variants": [
+                {
+                    "id": "810fc14ecbab48be91045",
+                    "question": "Which of the following are examples of luminous sources?",
+                    "options": [
+                        {
+                            "option_text": "The Sun",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Lamps",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Candles",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "d976c2f8109a4f3e91e62",
+                    "question": "Which of the following objects does NOT produce its own light?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A star",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A light bulb",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Moon",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A candle flame",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "69a308ed688149dd802a0",
+                    "question": "Select all of the following that are luminous objects.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A mirror",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A burning match",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A computer screen",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A wooden table",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "7eba63750ee043caad60b",
+            "concepts": [
+                "f780df30-5df3-4c3d-ad82-4f86a89f8144",
+                "341aeec2-f2c0-45b2-8daf-3a7a1064bff8",
+                "45b03404-83cf-4caf-8030-36925bc857fb"
+            ],
+            "variants": [
+                {
+                    "id": "b1a86a203af54d1f8d32d",
+                    "question": "What happens to a light ray when it travels from a less dense medium to a denser medium?",
+                    "options": [
+                        {
+                            "option_text": "It bends towards the normal.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It bends away from the normal.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It remains undeviated.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It undergoes total internal reflection.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b6bd2108e0db4ceebed43",
+                    "question": "Which of the following statements are correct regarding the behavior of light when it travels from air to glass?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The light ray bends towards the normal.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of light decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The light ray bends away from the normal.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of light increases.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "f451953f64ba4668b3053",
+                    "question": "A ray of light is incident on a glass slab ($!$\\mu = 1.5$!$) from air at an angle of $!$30^\\circ$!$. What is the angle of refraction inside the glass?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$\\sin^{-1}(0.333)$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\sin^{-1}(0.667)$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\sin^{-1}(0.5)$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\sin^{-1}(0.75)$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "3b804145cad84de68ab88",
+            "concepts": [
+                "e5a8bffd-4dbd-4732-b0f1-3d3377535c80",
+                "2a2a94a7-2cbd-48e4-8bbe-e6261bbd57e3",
+                "2504420c-994c-4969-a532-05df5546b31f",
+                "e93d9d67-63fc-404d-bd49-feafaf44eefe"
+            ],
+            "variants": [
+                {
+                    "id": "2898cb29700444f1819b7",
+                    "question": "According to the laws of reflection, which statements are correct?",
+                    "options": [
+                        {
+                            "option_text": "The angle of incidence is equal to the angle of reflection.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The incident ray, the reflected ray, and the normal all lie in the same plane.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The angle of incidence is always greater than the angle of reflection.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The angle of reflection can be greater than 90 degrees.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "643ee325c1894299b7cce",
+                    "question": "A ray of light is incident on a plane mirror at an angle of 30 degrees with the normal. What is the angle of reflection?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "30 degrees",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "60 degrees",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "90 degrees",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "15 degrees",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "032bcb9b81264b0d847ec",
+                    "question": "Which of the following statements are INCORRECT regarding the laws of reflection? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The angle of incidence is equal to the angle of refraction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The incident ray, the reflected ray, and the normal at the point of incidence lie in different planes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The angle of incidence is equal to the angle of reflection.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The incident ray, the reflected ray, and the normal at the point of incidence all lie in the same plane.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c89b729f894f40058ba89",
+            "concepts": [
+                "0fd432f9-88af-4d36-8e87-5eae4916e921",
+                "12c39f67-6487-45a1-ad1c-9b2d008d49da",
+                "3803fa1a-4cc3-421c-8c92-58e6d303f533",
+                "6ddf2e08-d4d6-4e3d-b861-8b1dc6f39fb9",
+                "cc329632-c50c-404f-8c13-efa1b030ea81",
+                "35bd44aa-c565-4ca4-ab12-bac2f94d1284"
+            ],
+            "variants": [
+                {
+                    "id": "3c71b0b860c64b1f8dfa7",
+                    "question": "Which of the following are examples of applications using total internal reflection?",
+                    "options": [
+                        {
+                            "option_text": "Totally reflecting prisms",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Light pipes",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Optical fibres",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Pinhole camera",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "355c1599204e49c2922f2",
+                    "question": "Which of the following statements is correct regarding applications of total internal reflection?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Total internal reflection is the underlying principle in the functioning of optical fibres, which are used for high-speed data transmission.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Pinhole cameras use the principle of total internal reflection to form images.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Totally reflecting prisms do not utilize total internal reflection.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Light pipes use refraction instead of total internal reflection.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7003a6a4ab774c09809db",
+                    "question": "Select all the applications which utilize the phenomenon of total internal reflection:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Totally reflecting prisms",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Light pipes",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Optical fibres",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Simple mirrors",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "795e6c1be3594bf596602",
+            "concepts": [
+                "1d416989-a109-4cdd-8a7b-bdc3f9665fd3",
+                "7e51a527-9086-4473-b4df-c57a80affa40",
+                "8927c2c5-e341-499e-b374-a6840929aa51",
+                "4aef37c9-b90c-469e-8d2d-af931ffa70a2"
+            ],
+            "variants": [
+                {
+                    "id": "b419da675e3c41cbaca08",
+                    "question": "Which statements are true regarding a virtual image formed by a lens?",
+                    "options": [
+                        {
+                            "option_text": "It is formed where light rays appear to come from.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It can be projected on a screen.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is formed by a diverging lens.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is always inverted.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "2753b6f8fb2946e59d909",
+                    "question": "A virtual image is formed by a lens with a focal length of $!$15$!$ cm. If the object is placed $!$10$!$ cm from the lens, what is the image distance?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$-30$!$ cm",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$30$!$ cm",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$-6$!$ cm",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$6$!$ cm",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "efc801c1642a4cd3ba62d",
+                    "question": "Which of the following statements about virtual images are INCORRECT?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Virtual images are formed by the actual intersection of light rays.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Virtual images cannot be projected onto a screen.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Virtual images can be formed by diverging lenses.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Virtual images are always upright.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "dffc02782a5f4a1cbe715",
+            "concepts": [
+                "4941a3ad-ddee-4260-a925-3ada3fa69fad",
+                "d29bdea5-e23b-4607-8992-3db2033bca77"
+            ],
+            "variants": [
+                {
+                    "id": "1a8e25127d8c491dafe92",
+                    "question": "Which of the following is true about the penumbra?",
+                    "options": [
+                        {
+                            "option_text": "It is the completely dark region of a shadow.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the partially shadowed region where some light reaches.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is formed when an opaque object completely blocks light.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is not affected by the size of the light source.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c8d4638c189342aeb9985",
+                    "question": "Select all of the following statements that correctly describe the penumbra.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It's the region of a shadow where light is partially blocked.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the darkest part of the shadow.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the completely shadowed region where no light reaches.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It's a region of partial shadow.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "bb7ec9ab90324c32b9a71",
+                    "question": "Which of the following scenarios would result in a larger penumbra?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Using a smaller light source.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Using a larger light source.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Moving the object closer to the light source.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Moving the object farther away from the screen where the shadow is projected.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "2ffb5004d1d04b35bcf3c",
+            "concepts": [
+                "1d416989-a109-4cdd-8a7b-bdc3f9665fd3",
+                "575a2f55-3227-4f5f-98e2-cb50af7d410d",
+                "4aef37c9-b90c-469e-8d2d-af931ffa70a2",
+                "18256ab4-bf79-49c1-8ded-1884f802c0cf"
+            ],
+            "variants": [
+                {
+                    "id": "9a64de5d2b5c40528286a",
+                    "question": "Which of the following can be used to correct hyperopia?",
+                    "options": [
+                        {
+                            "option_text": "Converging lenses",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Diverging lenses",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pinhole glasses",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Prisms",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "962cca6c1ffb4af8ad18b",
+                    "question": "Which of the following statements about hyperopia is correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The image is focused behind the retina.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The image is focused in front of the retina.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Hyperopia is also known as nearsightedness.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Hyperopia occurs when the eyeball is too long.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7bf1d0ced9e84f61ad8c1",
+                    "question": "Select all of the following options that are true regarding hyperopia:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is a refractive error.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Distant objects appear blurred.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It can be corrected using converging lenses.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is also known as myopia.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "eb6f370e846d4f0ea1011",
+            "concepts": [
+                "0fd432f9-88af-4d36-8e87-5eae4916e921",
+                "341aeec2-f2c0-45b2-8daf-3a7a1064bff8",
+                "a697b893-20d1-4948-a89b-4d8300235fef"
+            ],
+            "variants": [
+                {
+                    "id": "dc02a5e859ab4fc7a2f5e",
+                    "question": "What is the relationship between refractive index ($!$n$!$), angle of incidence ($!$i$!$), and angle of refraction ($!$r$!$) as stated by Snell's Law?",
+                    "options": [
+                        {
+                            "option_text": "$!$n = \\frac{\\sin i}{\\sin r}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$n = \\frac{\\sin r}{\\sin i}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$n = \\sin i \\times \\sin r$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$n = \\frac{1}{\\sin i \\times \\sin r}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "38a79373f62d4cf2be2e9",
+                    "question": "A light ray travels from air into a medium with a refractive index of 1.5. If the angle of incidence is 45 degrees, what is the angle of refraction (in degrees)? (Use Snell's Law: $!$n = \\frac{\\sin i}{\\sin r}$!$)",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "28.1",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "30",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "67.5",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "45",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e3365d89a9074b2b889b1",
+                    "question": "Which of the following statements correctly describe Snell's Law? (Select all that apply)",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The ratio of the sines of the angles of incidence and refraction is equal to the refractive index.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Snell's Law relates the angle of incidence, angle of refraction, and refractive index of the media.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The refractive index is the same for all materials.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Snell's Law only applies when light travels from a denser to a rarer medium.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "f6bcf8424ac5412388032",
+            "concepts": [
+                "f780df30-5df3-4c3d-ad82-4f86a89f8144",
+                "0fd432f9-88af-4d36-8e87-5eae4916e921",
+                "d484ad33-f1ed-40aa-b991-962edf2e4722",
+                "1d47d686-a62c-4de9-b384-283877e567b9"
+            ],
+            "variants": [
+                {
+                    "id": "4f3c46f1f3d24a3fa8553",
+                    "question": "Which of the following is true about dispersion of light?",
+                    "options": [
+                        {
+                            "option_text": "It is the separation of white light into its constituent colours.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It occurs due to varying refractive indices.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It does not occur in prisms.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It results in monochromatic light.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "f97264d18055427b99c18",
+                    "question": "Which of the following statements accurately describes the phenomenon of dispersion of light?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Dispersion is the process by which monochromatic light splits into multiple colors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Dispersion is the separation of light into its constituent colors due to differences in refractive index for different wavelengths.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Dispersion only occurs with laser light.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Dispersion is the bending of light as it passes from one medium to another at an angle.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "07ac78d6a44d47a6bed2a",
+                    "question": "Select all of the following statements that are true regarding the dispersion of white light:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Dispersion is the separation of white light into its component colors.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Dispersion occurs because the refractive index of a material varies with the wavelength of light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Dispersion causes all colors of light to bend at the same angle when passing through a prism.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Dispersion can result in the formation of a spectrum.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "99f571227cae4ccba2379",
+            "concepts": [
+                "b96b3901-e549-47a7-a458-92500c00e900",
+                "e2958a02-7d87-481e-ad88-8a440be627a7",
+                "6feefaf9-4fff-445b-839e-49a98c249846",
+                "73de425e-0832-46d7-b336-a69a00c5181b"
+            ],
+            "variants": [
+                {
+                    "id": "e6df16d5a2e04d088eeaa",
+                    "question": "Match the type of light beam with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Parallel beam",
+                            "optionB": "Rays travel parallel to each other."
+                        },
+                        {
+                            "optionA": "Diverging beam",
+                            "optionB": "Rays spread out."
+                        },
+                        {
+                            "optionA": "Converging beam",
+                            "optionB": "Rays converge to a point."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "b3014d6be9c145858619e",
+            "concepts": [
+                "f780df30-5df3-4c3d-ad82-4f86a89f8144",
+                "45b03404-83cf-4caf-8030-36925bc857fb",
+                "488995d9-0418-437b-afe1-5c283e6346b8",
+                "1ffcf95f-8305-41cc-8a9a-29f6ec2dc99a",
+                "0fd432f9-88af-4d36-8e87-5eae4916e921",
+                "12c39f67-6487-45a1-ad1c-9b2d008d49da",
+                "341aeec2-f2c0-45b2-8daf-3a7a1064bff8"
+            ],
+            "variants": [
+                {
+                    "id": "554a58db86d4472aa5e43",
+                    "question": "Match the term related to refraction with its description.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Real depth",
+                            "optionB": "Actual physical depth of an object submerged in water"
+                        },
+                        {
+                            "optionA": "Apparent depth",
+                            "optionB": "Perceived shallower depth of an object submerged in water"
+                        },
+                        {
+                            "optionA": "Refractive index",
+                            "optionB": "Ratio of the speed of light in a vacuum to its speed in a medium"
+                        },
+                        {
+                            "optionA": "Critical angle",
+                            "optionB": "Incidence angle in a denser medium for which the refracted ray makes a 90 degree angle with the normal"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

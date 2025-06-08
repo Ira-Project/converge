@@ -1,0 +1,260 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "ju40e7myi5muulwdw3ygd",
+    "topicIdProd": "",
+    "chapter_text": "### Nature of Sound\n\n*   Sound waves are produced by **vibrating sources** (e.g., vocal cords, guitar strings, loudspeakers).\n*   Sound waves are **longitudinal waves**, meaning the particles of the transmitting medium vibrate back and forth along the same direction as the wave's travel.\n*   Sound requires a **medium** (solids, liquids, or gases) to travel; it cannot travel through a vacuum.\n*   Sound waves progress by local **compression** (molecules closer together) and **rarefaction** (molecules further apart) of the transmitting medium.\n*   Sound waves transfer energy.\n*   The relationship between wave speed, frequency, and wavelength is given by: $v = f\\lambda$\n*   The **speed of sound** varies significantly between materials: it is fastest in solids, slower in liquids, and slowest in gases (e.g., ~340 m/s in air, ~1400 m/s in water, ~5000 m/s in concrete, ~6000 m/s in steel).\n*   In air, the speed of sound increases with temperature and decreases at high altitudes, but is unaffected by atmospheric pressure.\n\n### Properties of Sound Waves\n\n*   **Reflection**: Sound waves reflect well from hard, flat surfaces, forming an **echo**. The laws of reflection are similar to light.\n*   **Reverberation**: Occurs when echoes join the original sound, prolonging it, if the reflecting surface is less than ~15 m away.\n*   Sound also exhibits **refraction** and **diffraction**.\n*   **Limits of Audibility**: The approximate range of frequencies audible to humans is 20 Hz to 20000 Hz (the upper limit decreases with age).\n*   **Musical Notes vs. Noise**: Regular vibrations produce musical notes, while irregular vibrations cause noise.\n*   **Pitch**: Determined by the **frequency** of the sound wave. Higher frequency means higher pitch (and shorter wavelength). An octave means a frequency ratio of 2:1.\n*   **Loudness**: Determined by the **amplitude** of the sound wave. Larger amplitude means more sound energy enters the ear per second, resulting in a louder sound.\n*   **Quality (Timbre)**: Refers to how notes from different instruments sound different, even at the same pitch. It's determined by the presence and relative strength of **overtones** (harmonics), which are exact multiples of the fundamental frequency.\n\n### Measurement of Sound Speed\n\n*   **Echo Method**:\n    *   Involves timing the total time ($t$) for sound to travel to a distant reflecting surface (distance $d$) and back.\n    *   Formula: $\\text{speed of sound in air} = \\frac{2d}{t}$\n*   **Direct Method**:\n    *   Involves measuring the time ($t$) taken for a sound to travel a known distance ($d$) between two points (e.g., using microphones and a digital timer).\n    *   Formula: $\\text{speed of sound in air} = \\frac{d}{t}$\n\n### Ultrasound\n\n*   **Definition**: Sound with a frequency higher than 20 kHz (above the human hearing range).\n*   **Production/Detection**: Typically produced and detected by a vibrating quartz crystal, which can act as both transmitter and receiver, emitting narrow beams.\n*   **Applications (Ultrasound Echo Techniques)**: Exploits the partial or total reflection of ultrasound waves at boundaries where the medium's density changes.\n    *   **Non-destructive testing**: Used to detect flaws in materials.\n    *   **Sonar (Sound Navigation And Ranging)**: Used by ships to determine seabed depth or locate objects (like fish shoals) underwater. The distance ($d$) is calculated from the speed ($v$) and round-trip time ($t$): $d = \\frac{vt}{2}$\n    *   **Medical imaging**: Used in antenatal clinics to monitor fetal development and image internal organs. It is non-harmful to human tissue.\n*   **Other Uses**: Ultrasound drills for cutting hard materials (glass, steel) and ultrasonic cleaners for jewellery and other objects.\n\n### Seismic Waves\n\n*   Earthquakes produce **seismic waves**, which include longitudinal (P-waves) and transverse (S-waves).\n*   They travel through the Earth at speeds up to 13000 m/s with frequencies less than 100 Hz.\n*   Seismic waves can cause structural damage and, if originating under the sea, can generate **tsunami waves**.",
+    "chapter_concepts": [
+        {
+            "concept_id": "1ebbf03c-ba68-41ab-8144-64b8d3a45991",
+            "concept_question": "What produces sound waves?",
+            "concept_answer": "Sound waves are produced by vibrating sources such as vocal cords, guitar strings, and loudspeakers.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "c8a0c81d-b232-437e-b6dc-f5156e480298",
+            "concept_question": "What type are sound waves?",
+            "concept_answer": "Sound waves are longitudinal, meaning the particles vibrate parallel to the wave\u2019s travel direction.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f661324b-ded1-431d-9b0e-d445755e6187",
+            "concept_question": "What medium is required for sound travel?",
+            "concept_answer": "A medium such as a solid, liquid, or gas is required for sound to travel.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "7ec678a2-44f4-43b4-935c-012093103d50",
+            "concept_question": "What do sound waves transfer?",
+            "concept_answer": "Sound waves transfer energy from one location to another through a medium.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "345dd24e-4f58-4324-829c-4e8719c533e4",
+            "concept_question": "What is the relation among speed, frequency, and wavelength?",
+            "concept_answer": "The wave speed is given by the product of frequency and wavelength.",
+            "concept_formula": [
+                "$!$v = f\\lambda$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "ec2121b4-4e11-451b-8bef-c56b3500807d",
+            "concept_question": "How does sound speed vary by medium?",
+            "concept_answer": "Sound travels fastest in solids, slower in liquids, and slowest in gases.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f661324b-ded1-431d-9b0e-d445755e6187"
+            ]
+        },
+        {
+            "concept_id": "2ba5ff20-2f55-4ade-8188-8b9b939a0062",
+            "concept_question": "How is sound speed affected in air?",
+            "concept_answer": "In air, sound speed increases with temperature and decreases at high altitudes, while remaining independent of atmospheric pressure.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f661324b-ded1-431d-9b0e-d445755e6187",
+                "ec2121b4-4e11-451b-8bef-c56b3500807d"
+            ]
+        },
+        {
+            "concept_id": "9bca8217-27ef-44c5-b64b-ef37442edaf2",
+            "concept_question": "How do sound waves reflect?",
+            "concept_answer": "Sound waves reflect off hard, flat surfaces, which can result in echoes.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "a7d9e9a0-5753-43ec-a3b2-d4b7b36af074",
+            "concept_question": "What is an echo?",
+            "concept_answer": "An echo is the reflection of sound waves from a surface.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "9bca8217-27ef-44c5-b64b-ef37442edaf2"
+            ]
+        },
+        {
+            "concept_id": "7df57c6c-fbd2-4782-85b4-b287e0fe82d1",
+            "concept_question": "What is reverberation?",
+            "concept_answer": "Reverberation occurs when multiple echoes merge with the original sound, prolonging its duration.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a7d9e9a0-5753-43ec-a3b2-d4b7b36af074"
+            ]
+        },
+        {
+            "concept_id": "d9318e57-b54d-48a5-bc89-17031df823a3",
+            "concept_question": "What is sound refraction?",
+            "concept_answer": "Sound refraction is the bending of sound waves when they pass through regions with different conditions.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "a85d97ce-8aaa-446d-8e1a-de20e6b8f989",
+            "concept_question": "What is sound diffraction?",
+            "concept_answer": "Sound diffraction is the phenomenon where sound waves spread out around obstacles or through openings.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "1eb7758a-80c9-4b0f-b315-612026ad668b",
+            "concept_question": "What are limits of audibility?",
+            "concept_answer": "The human audible frequency range is approximately 20 Hz to 20,000 Hz.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "60a3fe0c-a7a4-402e-8bb3-ea3d3f578fb7",
+            "concept_question": "How do musical notes differ from noise?",
+            "concept_answer": "Musical notes arise from regular vibrations while noise results from irregular vibrations.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "6cc3ca53-fa7c-4a7f-b51c-ac387399f048",
+            "concept_question": "What determines sound pitch?",
+            "concept_answer": "Pitch is determined by the frequency of a sound wave, with higher frequencies producing higher tones.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "22595252-93b1-4ead-a22a-7b000ad821a8",
+            "concept_question": "What is an octave?",
+            "concept_answer": "An octave is a musical interval in which one frequency is double another.",
+            "concept_formula": [
+                "$!$f_{high} = 2f_{low}$!$"
+            ],
+            "pre-requisites": [
+                "6cc3ca53-fa7c-4a7f-b51c-ac387399f048"
+            ]
+        },
+        {
+            "concept_id": "48b3df02-7929-400c-a121-dd87480c7ef7",
+            "concept_question": "What determines sound loudness?",
+            "concept_answer": "Loudness is determined by the amplitude of the sound wave.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "6b3bc84d-20dc-463e-936d-30fb6596feb4",
+            "concept_question": "What determines sound timbre?",
+            "concept_answer": "Timbre is defined by the unique quality of a sound, influenced by its overtones.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1d2d075b-c511-41ac-a980-0545c5315cc7"
+            ]
+        },
+        {
+            "concept_id": "1d2d075b-c511-41ac-a980-0545c5315cc7",
+            "concept_question": "What are overtones?",
+            "concept_answer": "Overtones are harmonic frequencies that occur as exact multiples of a sound wave's fundamental frequency.",
+            "concept_formula": [
+                "$!$f_{n} = n f_{0}$!$"
+            ],
+            "pre-requisites": [
+                "6cc3ca53-fa7c-4a7f-b51c-ac387399f048"
+            ]
+        },
+        {
+            "concept_id": "7510aab3-42e9-4db6-accd-a1602faf624b",
+            "concept_question": "What is ultrasound?",
+            "concept_answer": "Ultrasound is sound with a frequency higher than 20 kHz, beyond the range of human hearing.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e983b115-32c3-4ac0-850a-64bae7c90232",
+            "concept_question": "How is ultrasound produced?",
+            "concept_answer": "Ultrasound is typically produced by a vibrating quartz crystal.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7510aab3-42e9-4db6-accd-a1602faf624b"
+            ]
+        },
+        {
+            "concept_id": "e1d7f026-8590-4db0-ae56-890217e6ca78",
+            "concept_question": "How is ultrasound detected?",
+            "concept_answer": "Ultrasound is typically detected by a vibrating quartz crystal that acts as a receiver.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7510aab3-42e9-4db6-accd-a1602faf624b"
+            ]
+        },
+        {
+            "concept_id": "e2c25978-6b80-4be3-bccb-a5bcd1833121",
+            "concept_question": "What are ultrasound echo techniques?",
+            "concept_answer": "Ultrasound echo techniques exploit the reflection of high-frequency sound waves at boundaries where the medium's density changes.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7510aab3-42e9-4db6-accd-a1602faf624b",
+                "9bca8217-27ef-44c5-b64b-ef37442edaf2"
+            ]
+        },
+        {
+            "concept_id": "670671d3-985c-4a23-9178-05e06ebd3f7b",
+            "concept_question": "What is sonar?",
+            "concept_answer": "Sonar uses sound echo techniques to determine underwater distances and locate objects.",
+            "concept_formula": [
+                "$!$d = \\frac{vt}{2}$!$"
+            ],
+            "pre-requisites": [
+                "e2c25978-6b80-4be3-bccb-a5bcd1833121"
+            ]
+        },
+        {
+            "concept_id": "93a255fd-08b1-444f-b3c0-931c79dceb23",
+            "concept_question": "What is medical ultrasound imaging?",
+            "concept_answer": "Medical ultrasound imaging employs high-frequency sound waves to visualize internal structures without harming tissue.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7510aab3-42e9-4db6-accd-a1602faf624b"
+            ]
+        },
+        {
+            "concept_id": "ebec6d69-8712-4ae3-a3f3-b6550fefdc8e",
+            "concept_question": "What are ultrasound uses in cutting hard materials?",
+            "concept_answer": "Ultrasound is used in drills for cutting hard materials.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7510aab3-42e9-4db6-accd-a1602faf624b"
+            ]
+        },
+        {
+            "concept_id": "a717cf74-4011-4de8-a13c-e438815f6b33",
+            "concept_question": "What are ultrasound uses in cleaning objects?",
+            "concept_answer": "Ultrasound is used in cleaners for jewelry and other objects.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7510aab3-42e9-4db6-accd-a1602faf624b"
+            ]
+        },
+        {
+            "concept_id": "6be5d9a6-9d7a-4ca3-b78d-7423e062e245",
+            "concept_question": "What are seismic waves?",
+            "concept_answer": "Seismic waves are vibrations generated by earthquakes, including both longitudinal P-waves and transverse S-waves.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "92a4f967-9bcb-4938-8c17-9aeca6915a60",
+            "concept_question": "What are seismic wave speeds?",
+            "concept_answer": "Seismic waves travel through the Earth at speeds up to 13,000 m/s.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6be5d9a6-9d7a-4ca3-b78d-7423e062e245"
+            ]
+        },
+        {
+            "concept_id": "ae28547c-f5ca-465b-aa1d-045060cc3062",
+            "concept_question": "What are seismic wave frequencies?",
+            "concept_answer": "Seismic waves generally have frequencies below 100 Hz.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6be5d9a6-9d7a-4ca3-b78d-7423e062e245"
+            ]
+        }
+    ]
+}
