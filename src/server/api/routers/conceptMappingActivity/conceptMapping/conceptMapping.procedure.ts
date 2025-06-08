@@ -7,6 +7,10 @@ export const conceptMappingRouter = createTRPCRouter({
     .input(inputs.createAttemptSchema)
     .mutation(({ ctx, input }) => services.createAttempt(ctx, input)),
 
+  createAssignmentAttempt: protectedProcedure
+    .input(inputs.createAssignmentAttemptSchema)
+    .mutation(({ ctx, input }) => services.createAssignmentAttempt(ctx, input)),
+
   submitAttempt: protectedProcedure
     .input(inputs.submitAttemptSchema)  
     .mutation(({ ctx, input }) => services.submitAttempt(ctx, input)),
@@ -26,4 +30,8 @@ export const conceptMappingRouter = createTRPCRouter({
   getConceptMappingActivity: protectedProcedure
     .input(inputs.getConceptMappingActivityInput)
     .query(({ ctx, input }) => services.getConceptMappingActivity(ctx, input)),
+
+  getConceptMappingAssignmentById: protectedProcedure
+    .input(inputs.getConceptMappingAssignmentByIdInput)
+    .query(({ ctx, input }) => services.getConceptMappingAssignmentById(ctx, input)),
 });
