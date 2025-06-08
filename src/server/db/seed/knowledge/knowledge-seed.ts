@@ -26,7 +26,22 @@ import { topics } from "../../schema/subject";
 import { concepts, conceptTracking } from "../../schema/concept";
 import { users } from "../../schema/user";
 
-export async function createKnowledgeZapAssignment(topicName: string) {
+import { 
+  mapKnowledgeZapAssignmentToCourse,
+  mapKnowledgeZapAssignmentToGrade,
+  mapKnowledgeZapAssignmentToSubject
+} from "../assignmentMapping-seed";
+
+export async function createKnowledgeZapAssignment(
+  topicName: string,
+  options?: {
+    courseIds?: string[];
+    subjectIds?: string[];
+    grades?: string[];
+  }
+) {
+  const { courseIds, subjectIds, grades } = options ?? {};
+
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
 
   const topic = await db.select().from(topics).where(eq(topics.name, json.name as string))
@@ -311,9 +326,41 @@ export async function createKnowledgeZapAssignment(topicName: string) {
 
   console.log("Knowledge Zap creation complete");
   console.log("--------------------------------");
+
+  // Create mappings to courses
+  if (courseIds && courseIds.length > 0) {
+    console.log("Creating course mappings...");
+    for (const courseId of courseIds) {
+      await mapKnowledgeZapAssignmentToCourse(knowledgeZapAssignment.id, courseId);
+    }
+  }
+
+  // Create mappings to subjects
+  if (subjectIds && subjectIds.length > 0) {
+    console.log("Creating subject mappings...");
+    for (const subjectId of subjectIds) {
+      await mapKnowledgeZapAssignmentToSubject(knowledgeZapAssignment.id, subjectId);
+    }
+  }
+
+  // Create mappings to grades
+  if (grades && grades.length > 0) {
+    console.log("Creating grade mappings...");
+    for (const grade of grades) {
+      await mapKnowledgeZapAssignmentToGrade(knowledgeZapAssignment.id, grade);
+    }
+  }
 }
 
-export async function updateKnowledgeZapAssignment(topicName: string) {
+export async function updateKnowledgeZapAssignment(
+  topicName: string,
+  options?: {
+    courseIds?: string[];
+    subjectIds?: string[];
+    grades?: string[];
+  }
+) {
+  const { courseIds, subjectIds, grades } = options ?? {};
 
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
   const topic = await db.select().from(topics).where(eq(topics.name, json.name as string))
@@ -648,6 +695,30 @@ export async function updateKnowledgeZapAssignment(topicName: string) {
 
   console.log("Knowledge Zap creation complete");
   console.log("--------------------------------");
+
+  // Create mappings to courses
+  if (courseIds && courseIds.length > 0) {
+    console.log("Creating course mappings...");
+    for (const courseId of courseIds) {
+      await mapKnowledgeZapAssignmentToCourse(knowledgeZapAssignment.id, courseId);
+    }
+  }
+
+  // Create mappings to subjects
+  if (subjectIds && subjectIds.length > 0) {
+    console.log("Creating subject mappings...");
+    for (const subjectId of subjectIds) {
+      await mapKnowledgeZapAssignmentToSubject(knowledgeZapAssignment.id, subjectId);
+    }
+  }
+
+  // Create mappings to grades
+  if (grades && grades.length > 0) {
+    console.log("Creating grade mappings...");
+    for (const grade of grades) {
+      await mapKnowledgeZapAssignmentToGrade(knowledgeZapAssignment.id, grade);
+    }
+  }
 }
 
 export async function deleteKnowledgeZapAssignment(assignmentId: string) {
@@ -1162,7 +1233,16 @@ export async function printConceptScores() {
   // })));
 }
 
-export async function createGeneratedKnowledgeZapAssignment(topicName: string, userId: string) {
+export async function createGeneratedKnowledgeZapAssignment(
+  topicName: string, 
+  userId: string,
+  options?: {
+    courseIds?: string[];
+    subjectIds?: string[];
+    grades?: string[];
+  }
+) {
+  const { courseIds, subjectIds, grades } = options ?? {};
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
 
   const topic = await db.select().from(topics).where(eq(topics.name, json.name as string))
@@ -1432,6 +1512,30 @@ export async function createGeneratedKnowledgeZapAssignment(topicName: string, u
 
   console.log("Generated Knowledge Zap creation complete");
   console.log("--------------------------------");
+
+  // Create mappings to courses
+  if (courseIds && courseIds.length > 0) {
+    console.log("Creating course mappings...");
+    for (const courseId of courseIds) {
+      await mapKnowledgeZapAssignmentToCourse(knowledgeZapAssignment.id, courseId);
+    }
+  }
+
+  // Create mappings to subjects
+  if (subjectIds && subjectIds.length > 0) {
+    console.log("Creating subject mappings...");
+    for (const subjectId of subjectIds) {
+      await mapKnowledgeZapAssignmentToSubject(knowledgeZapAssignment.id, subjectId);
+    }
+  }
+
+  // Create mappings to grades
+  if (grades && grades.length > 0) {
+    console.log("Creating grade mappings...");
+    for (const grade of grades) {
+      await mapKnowledgeZapAssignmentToGrade(knowledgeZapAssignment.id, grade);
+    }
+  }
   
   return knowledgeZapAssignment;
 }

@@ -52,7 +52,7 @@ export function AppSidebar({ classroom, classrooms, user, activities, students, 
     },
     {
       title: role === Roles.Student ? "Activities" : "Activities",
-      url: `${classroom?.id}${Paths.Activities}`,
+      url: `/${classroom?.id}${Paths.Activities}`,
       icon: BookOpen,
       isActive: true,
       items: filteredActivities.map((topic) => ({

@@ -10,6 +10,9 @@ export interface Assignment {
   order: number;
   dueDate: string | null;
   createdAt: Date;
+  courses: { id: string; name: string }[];
+  grades: string[];
+  subjects: { id: string; name: string }[];
 }
 
 // Topic interface for assignments - similar to activities topic

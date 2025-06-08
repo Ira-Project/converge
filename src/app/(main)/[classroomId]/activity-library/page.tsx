@@ -33,7 +33,7 @@ export default async function ActivityLibraryPage(props: { params: Promise<{ cla
       <ClassroomHeader classroom={classroom} />
 
       {/* Topics */}
-      <div className="px-4 mt-40 flex flex-col gap-8 w-full">
+      <div className="px-8 mt-40 flex flex-col gap-8 w-full">
         <div className="flex flex-col gap-2">
           <h1 className="text-xl font-semibold">Activity Library</h1>
           <p className="text-muted-foreground">
@@ -44,6 +44,7 @@ export default async function ActivityLibraryPage(props: { params: Promise<{ cla
           topics={assignments ?? []} 
           role={userToClassroom?.role ?? Roles.Student} 
           classroomId={params.classroomId}
+          classroom={classroom}
         />
       </div>
 

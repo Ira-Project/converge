@@ -37,7 +37,7 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
       <ClassroomHeader classroom={classroom} />
 
       {/* Topics */}
-      <div className="px-4 mt-40 flex flex-col gap-8 w-full">
+      <div className="px-8 mt-40 flex flex-col gap-8 w-full">
         <TopicList 
           topics={topics ?? []} 
           role={userToClassroom?.role ?? Roles.Student} 

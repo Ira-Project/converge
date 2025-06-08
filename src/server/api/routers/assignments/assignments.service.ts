@@ -12,7 +12,7 @@ import { reasoningAssignments } from "@/server/db/schema/reasoning/reasoningAssi
 import { explainAssignments } from "@/server/db/schema/learnByTeaching/explainAssignment";
 
 export const getAssignments = async (ctx: ProtectedTRPCContext, _input: GetAssignmentsInput) => {
-  // Fetch all assignments from different types with their topic information
+  // Fetch all assignments from different types with their topic information and mappings
   const [
     knowledgeZapAssignmentsList,
     stepSolveAssignmentsList,
@@ -45,6 +45,45 @@ export const getAssignments = async (ctx: ProtectedTRPCContext, _input: GetAssig
             slug: true,
             order: true,
           }
+        },
+        assignmentToCourses: {
+          columns: {
+            courseId: true,
+          },
+          with: {
+            course: {
+              columns: {
+                id: true,
+                name: true,
+              },
+              with: {
+                subject: {
+                  columns: {
+                    id: true,
+                    name: true,
+                  }
+                }
+              }
+            }
+          }
+        },
+        assignmentToGrades: {
+          columns: {
+            grade: true,
+          }
+        },
+        assignmentToSubjects: {
+          columns: {
+            subjectId: true,
+          },
+          with: {
+            subject: {
+              columns: {
+                id: true,
+                name: true,
+              }
+            }
+          }
         }
       }
     }),
@@ -69,6 +108,45 @@ export const getAssignments = async (ctx: ProtectedTRPCContext, _input: GetAssig
             description: true,
             slug: true,
             order: true,
+          }
+        },
+        templateToCourses: {
+          columns: {
+            courseId: true,
+          },
+          with: {
+            course: {
+              columns: {
+                id: true,
+                name: true,
+              },
+              with: {
+                subject: {
+                  columns: {
+                    id: true,
+                    name: true,
+                  }
+                }
+              }
+            }
+          }
+        },
+        templateToGrades: {
+          columns: {
+            grade: true,
+          }
+        },
+        templateToSubjects: {
+          columns: {
+            subjectId: true,
+          },
+          with: {
+            subject: {
+              columns: {
+                id: true,
+                name: true,
+              }
+            }
           }
         }
       }
@@ -95,6 +173,45 @@ export const getAssignments = async (ctx: ProtectedTRPCContext, _input: GetAssig
             slug: true,
             order: true,
           }
+        },
+        assignmentToCourses: {
+          columns: {
+            courseId: true,
+          },
+          with: {
+            course: {
+              columns: {
+                id: true,
+                name: true,
+              },
+              with: {
+                subject: {
+                  columns: {
+                    id: true,
+                    name: true,
+                  }
+                }
+              }
+            }
+          }
+        },
+        assignmentToGrades: {
+          columns: {
+            grade: true,
+          }
+        },
+        assignmentToSubjects: {
+          columns: {
+            subjectId: true,
+          },
+          with: {
+            subject: {
+              columns: {
+                id: true,
+                name: true,
+              }
+            }
+          }
         }
       }
     }),
@@ -119,6 +236,45 @@ export const getAssignments = async (ctx: ProtectedTRPCContext, _input: GetAssig
             description: true,
             slug: true,
             order: true,
+          }
+        },
+        assignmentToCourses: {
+          columns: {
+            courseId: true,
+          },
+          with: {
+            course: {
+              columns: {
+                id: true,
+                name: true,
+              },
+              with: {
+                subject: {
+                  columns: {
+                    id: true,
+                    name: true,
+                  }
+                }
+              }
+            }
+          }
+        },
+        assignmentToGrades: {
+          columns: {
+            grade: true,
+          }
+        },
+        assignmentToSubjects: {
+          columns: {
+            subjectId: true,
+          },
+          with: {
+            subject: {
+              columns: {
+                id: true,
+                name: true,
+              }
+            }
           }
         }
       }
@@ -145,6 +301,45 @@ export const getAssignments = async (ctx: ProtectedTRPCContext, _input: GetAssig
             slug: true,
             order: true,
           }
+        },
+        assignmentToCourses: {
+          columns: {
+            courseId: true,
+          },
+          with: {
+            course: {
+              columns: {
+                id: true,
+                name: true,
+              },
+              with: {
+                subject: {
+                  columns: {
+                    id: true,
+                    name: true,
+                  }
+                }
+              }
+            }
+          }
+        },
+        assignmentToGrades: {
+          columns: {
+            grade: true,
+          }
+        },
+        assignmentToSubjects: {
+          columns: {
+            subjectId: true,
+          },
+          with: {
+            subject: {
+              columns: {
+                id: true,
+                name: true,
+              }
+            }
+          }
         }
       }
     }),
@@ -170,43 +365,137 @@ export const getAssignments = async (ctx: ProtectedTRPCContext, _input: GetAssig
             slug: true,
             order: true,
           }
+        },
+        assignmentToCourses: {
+          columns: {
+            courseId: true,
+          },
+          with: {
+            course: {
+              columns: {
+                id: true,
+                name: true,
+              },
+              with: {
+                subject: {
+                  columns: {
+                    id: true,
+                    name: true,
+                  }
+                }
+              }
+            }
+          }
+        },
+        assignmentToGrades: {
+          columns: {
+            grade: true,
+          }
+        },
+        assignmentToSubjects: {
+          columns: {
+            subjectId: true,
+          },
+          with: {
+            subject: {
+              columns: {
+                id: true,
+                name: true,
+              }
+            }
+          }
         }
       }
     }),
   ]);
 
-  // Combine all assignments with their types
+  // Helper function to extract courses, grades, and subjects from assignment mappings
+  const extractMappingData = (assignment: {
+    assignmentToCourses?: { course: { id: string; name: string } }[];
+    templateToCourses?: { course: { id: string; name: string } }[];
+    assignmentToGrades?: { grade: string }[];
+    templateToGrades?: { grade: string }[];
+    assignmentToSubjects?: { subject: { id: string; name: string } }[];
+    templateToSubjects?: { subject: { id: string; name: string } }[];
+  }) => {
+    const courses = assignment.assignmentToCourses?.map(mapping => mapping.course) ?? 
+                   assignment.templateToCourses?.map(mapping => mapping.course) ?? [];
+    const grades = assignment.assignmentToGrades?.map(mapping => mapping.grade) ?? 
+                   assignment.templateToGrades?.map(mapping => mapping.grade) ?? [];
+    const subjects = assignment.assignmentToSubjects?.map(mapping => mapping.subject) ?? 
+                     assignment.templateToSubjects?.map(mapping => mapping.subject) ?? [];
+
+    return { courses, grades, subjects };
+  };
+
+  // Combine all assignments with their types and mapping data
   const allAssignments = [
-    ...knowledgeZapAssignmentsList.map(assignment => ({
-      ...assignment,
-      typeText: ActivityType.KnowledgeZap,
-      dueDate: null, // assignments don't have due dates, activities do
-    })),
-    ...stepSolveAssignmentsList.map(assignment => ({
-      ...assignment,
-      typeText: ActivityType.StepSolve,
-      dueDate: null,
-    })),
-    ...readAndRelayAssignmentsList.map(assignment => ({
-      ...assignment,
-      typeText: ActivityType.ReadAndRelay,
-      dueDate: null,
-    })),
-    ...conceptMappingAssignmentsList.map(assignment => ({
-      ...assignment,
-      typeText: ActivityType.ConceptMapping,
-      dueDate: null,
-    })),
-    ...reasoningAssignmentsList.map(assignment => ({
-      ...assignment,
-      typeText: ActivityType.ReasonTrace,
-      dueDate: null,
-    })),
-    ...explainAssignmentsList.map(assignment => ({
-      ...assignment,
-      typeText: ActivityType.LearnByTeaching,
-      dueDate: null,
-    })),
+    ...knowledgeZapAssignmentsList.map(assignment => {
+      const { courses, grades, subjects } = extractMappingData(assignment);
+      return {
+        ...assignment,
+        typeText: ActivityType.KnowledgeZap,
+        dueDate: null, // assignments don't have due dates, activities do
+        courses,
+        grades,
+        subjects,
+      };
+    }),
+    ...stepSolveAssignmentsList.map(assignment => {
+      const { courses, grades, subjects } = extractMappingData(assignment);
+      return {
+        ...assignment,
+        typeText: ActivityType.StepSolve,
+        dueDate: null,
+        courses,
+        grades,
+        subjects,
+      };
+    }),
+    ...readAndRelayAssignmentsList.map(assignment => {
+      const { courses, grades, subjects } = extractMappingData(assignment);
+      return {
+        ...assignment,
+        typeText: ActivityType.ReadAndRelay,
+        dueDate: null,
+        courses,
+        grades,
+        subjects,
+      };
+    }),
+    ...conceptMappingAssignmentsList.map(assignment => {
+      const { courses, grades, subjects } = extractMappingData(assignment);
+      return {
+        ...assignment,
+        typeText: ActivityType.ConceptMapping,
+        dueDate: null,
+        courses,
+        grades,
+        subjects,
+      };
+    }),
+    ...reasoningAssignmentsList.map(assignment => {
+      const { courses, grades, subjects } = extractMappingData(assignment);
+      return {
+        ...assignment,
+        typeText: ActivityType.ReasonTrace,
+        dueDate: null,
+        courses,
+        grades,
+        subjects,
+      };
+    }),
+    ...explainAssignmentsList.map(assignment => {
+      const { courses, grades, subjects } = extractMappingData(assignment);
+      return {
+        ...assignment,
+        typeText: ActivityType.LearnByTeaching,
+        dueDate: null,
+        courses,
+        grades,
+        subjects,
+      };
+    }),
   ];
 
   // Group assignments by topic
@@ -225,6 +514,9 @@ export const getAssignments = async (ctx: ProtectedTRPCContext, _input: GetAssig
       order: number;
       dueDate: string | null;
       createdAt: Date;
+      courses: { id: string; name: string }[];
+      grades: string[];
+      subjects: { id: string; name: string }[];
     }[];
   }> = {};
 
@@ -253,6 +545,9 @@ export const getAssignments = async (ctx: ProtectedTRPCContext, _input: GetAssig
       order: assignment.order ?? 0,
       dueDate: assignment.dueDate,
       createdAt: assignment.createdAt,
+      courses: assignment.courses,
+      grades: assignment.grades,
+      subjects: assignment.subjects,
     });
   }
 
