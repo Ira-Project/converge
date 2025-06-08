@@ -21,6 +21,29 @@ import { deleteClassroom, deleteUser, checkUsersWithInvalidDefaultClassrooms, fi
 import { createTopics } from "./topics/topic-seed";
 import { createConcepts, createGeneratedConcepts } from "./concept/concept-seed";
 import { addActivityToAssignment, deleteNonLiveActivitiesFromAllClassrooms } from "./activity";
+import { 
+  mapKnowledgeZapAssignmentToCourse, 
+  mapKnowledgeZapAssignmentToGrade, 
+  mapKnowledgeZapAssignmentToSubject,
+  mapStepSolveTemplateToCourse,
+  mapStepSolveTemplateToGrade,
+  mapStepSolveTemplateToSubject,
+  mapReadAndRelayAssignmentToCourse,
+  mapReadAndRelayAssignmentToGrade,
+  mapReadAndRelayAssignmentToSubject,
+  mapConceptMappingAssignmentToCourse,
+  mapConceptMappingAssignmentToGrade,
+  mapConceptMappingAssignmentToSubject,
+  mapReasoningAssignmentToCourse,
+  mapReasoningAssignmentToGrade,
+  mapReasoningAssignmentToSubject,
+  mapExplainAssignmentToCourse,
+  mapExplainAssignmentToGrade,
+  mapExplainAssignmentToSubject,
+  mapAllAssignmentsToCourse,
+  mapAllAssignmentsToSubject,
+  mapAllAssignmentsToGrade,
+} from "./assignmentMapping-seed";
 
 if(process.env.ENVIRONMENT === "prod") {
   console.log("WARNING: Running in production");
@@ -95,3 +118,8 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createStepSolveAssignmentTemplate();
 // await updateStepSolveActivityAssignmentIds();
 // await deleteNonLiveActivitiesFromAllClassrooms();
+
+// await mapAllAssignmentsToSubject("ligzM4%#9I0wtF7&FT7b7");
+// await mapAllAssignmentsToGrade("11");
+// await mapAllAssignmentsToGrade("12");
+// await mapAllAssignmentsToCourse("^uu%O4vEaah&hrxpSwfV%")
