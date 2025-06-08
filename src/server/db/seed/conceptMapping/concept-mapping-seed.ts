@@ -10,7 +10,12 @@ import { activity, activityToAssignment } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 import { ActivityType } from "@/lib/constants";
 
-import { conceptMappingAssignments } from "../../schema/conceptMapping/conceptMappingAssignments";
+import { 
+  conceptMappingAssignments,
+  conceptMappingAssignmentToCourse, 
+  conceptMappingAssignmentToGrade, 
+  conceptMappingAssignmentToSubject 
+} from "../../schema/conceptMapping/conceptMappingAssignments";
 import { conceptMappingEdges, conceptMappingNodeHandles, conceptMappingNodes } from "../../schema/conceptMapping/conceptMappingQuestions";
 import { conceptMappingAttempts, conceptMappingAttemptNodes, conceptMappingAttemptEdges, conceptMappingMapAttempt } from "../../schema/conceptMapping/conceptMappingAttempts";
 
@@ -176,42 +181,6 @@ export async function createConceptMappingAssignment() {
     });
   }
 
-  // Add the assignment to all classrooms
-  console.log("Adding assignment to all classrooms");
-  const classes= await db.select().from(classrooms);
-  for(const classroom of classes) {
-    // Check if activity already exists in the classroom
-    const existingActivity = await db.select().from(activity).where(
-      and(
-        eq(activity.assignmentId, assignmentId),
-        eq(activity.classroomId, classroom.id)
-      )
-    )
-
-    // If activity does not exist, create it
-    if(existingActivity.length === 0) {
-      console.log("Adding assignment to classroom. Creating activity", assignmentId, classroom.id);
-      const activityId = generateId(21);
-      await db.insert(activity).values({
-        id: activityId,
-        assignmentId: assignmentId,
-        classroomId: classroom.id,
-        name: assignmentName,
-        topicId: topicId,
-        typeText: ActivityType.ConceptMapping,
-        order: 0,
-        points: 100,
-      })
-      await db.insert(activityToAssignment).values({
-        id: generateId(21),
-        activityId: activityId,
-        conceptMappingAssignmentId: assignmentId,
-      })
-      console.log("Activity created", assignmentId, classroom.id);
-
-    }
-  }
-
   console.log("Concept mapping creation complete");
   console.log("--------------------------------");
 
@@ -225,6 +194,18 @@ export async function deleteConceptMappingAssignment(assignmentId: string) {
     console.log("Concept mapping assignment not found");
     return;
   }
+
+  // Delete associated assignment-to-course mappings
+  console.log("Deleting concept mapping assignment to course mappings", assignmentId);
+  await db.delete(conceptMappingAssignmentToCourse).where(eq(conceptMappingAssignmentToCourse.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-grade mappings
+  console.log("Deleting concept mapping assignment to grade mappings", assignmentId);
+  await db.delete(conceptMappingAssignmentToGrade).where(eq(conceptMappingAssignmentToGrade.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-subject mappings
+  console.log("Deleting concept mapping assignment to subject mappings", assignmentId);
+  await db.delete(conceptMappingAssignmentToSubject).where(eq(conceptMappingAssignmentToSubject.assignmentId, assignmentId));
 
   const attempts = await db.select().from(conceptMappingAttempts).where(eq(conceptMappingAttempts.assignmentId, assignmentId));
   for (const attempt of attempts) {

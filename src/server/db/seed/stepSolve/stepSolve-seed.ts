@@ -10,7 +10,14 @@ import { topics } from "../../schema/subject";
 import { classrooms, usersToClassrooms } from "../../schema/classroom";
 
 import { stepSolveQuestions, stepSolveQuestionToAssignment, stepSolveStep, stepSolveStepConcepts, stepSolveStepOptions } from "../../schema/stepSolve/stepSolveQuestions";
-import { stepSolveAssignmentAttempts, stepSolveAssignments, stepSolveAssignmentTemplates } from "../../schema/stepSolve/stepSolveAssignment";
+import { 
+  stepSolveAssignmentAttempts, 
+  stepSolveAssignments, 
+  stepSolveAssignmentTemplates,
+  stepSolveAssignmentTemplateToCourse,
+  stepSolveAssignmentTemplateToGrade,
+  stepSolveAssignmentTemplateToSubject
+} from "../../schema/stepSolve/stepSolveAssignment";
 import { stepSolveQuestionAttempts, stepSolveQuestionAttemptSteps } from "../../schema/stepSolve/stepSolveQuestionAttempts";
 import { activity, activityToAssignment } from "../../schema/activity";
 import { ActivityType, Roles } from "@/lib/constants";
@@ -179,60 +186,60 @@ export async function createStepSolveAssignment(topicName: string) {
 
   }
 
-  const classes= await db.select().from(classrooms);
-  for(const classroom of classes) {
-    // Check if activity already exists in the classroom
+  // Find or create template for this topic
+  console.log("Finding or creating template for topic", topic[0].id, topic[0].name);
+  
+  const existingTemplate = await db.select().from(stepSolveAssignmentTemplates).where(
+    eq(stepSolveAssignmentTemplates.topicId, topic[0].id)
+  );
 
-    console.log("Checking if activity exists in classroom", topic[0].id, classroom.id);
-
-    const existingActivity = await db.select().from(activity).where(
-      and(
-        eq(activity.topicId, topic[0].id),
-        eq(activity.classroomId, classroom.id),
-        eq(activity.typeText, ActivityType.StepSolve)
-      )
-    )
-
-    console.log("Existing activity", existingActivity);
-
-    // If activity does not exist, create it
-    if(existingActivity.length === 0) {
-      console.log("Adding assignment to classroom. Creating activity", stepSolveAssignment.id, classroom.id);
-      const activityId = generateId(21);
-      await db.insert(activity).values({
-        id: activityId,
-        classroomId: classroom.id,
-        name: json.name as string,
-        topicId: topic[0].id,
-        typeText: ActivityType.StepSolve,
-        order: 0,
-        points: 100,
-      })
-      console.log("Adding assignment to activity", stepSolveAssignment.id, activityId);
-      await db.insert(activityToAssignment).values({
-        id: generateId(21),
-        activityId: activityId,
-        stepSolveAssignmentId: stepSolveAssignment.id,
-      })
-    } else {
-      const assignmentToActivities = await db.select().from(activityToAssignment).where(
-        and(
-          eq(activityToAssignment.activityId, existingActivity[0]?.id ?? ""),
-          eq(activityToAssignment.stepSolveAssignmentId, stepSolveAssignment.id)
-        )
-      );
-      if(assignmentToActivities.length === 0) {
-        console.log("Adding assignment to classroom. Activity already exists, but no assignment to activities", stepSolveAssignment.id, classroom.id);
-        await db.insert(activityToAssignment).values({
-          id: generateId(21),
-          activityId: existingActivity[0]?.id ?? "",
-          stepSolveAssignmentId: stepSolveAssignment.id,
+  let templateId: string;
+  
+  if (existingTemplate.length > 0) {
+    console.log("Template already exists for topic", topic[0].name);
+    templateId = existingTemplate[0]?.id ?? "";
+    
+    // Add this assignment to the template's assignment list if not already present
+    const currentAssignmentIds = existingTemplate[0]?.assignmentIds ?? [];
+    if (!currentAssignmentIds.includes(stepSolveAssignment.id)) {
+      const updatedAssignmentIds = [...currentAssignmentIds, stepSolveAssignment.id];
+      await db.update(stepSolveAssignmentTemplates)
+        .set({
+          assignmentIds: updatedAssignmentIds,
+          updatedAt: new Date()
         })
-      } else {
-        console.log("Assignment to activity already exists", stepSolveAssignment.id, existingActivity[0]?.id ?? "");
-      }
+        .where(eq(stepSolveAssignmentTemplates.id, templateId));
+      console.log("Added assignment to existing template", stepSolveAssignment.id, templateId);
+    } else {
+      console.log("Assignment already in template", stepSolveAssignment.id, templateId);
     }
+  } else {
+    // Create new template
+    templateId = generateId(21);
+    console.log("Creating new template for topic", topic[0].name, templateId);
+    
+    await db.insert(stepSolveAssignmentTemplates).values({
+      id: templateId,
+      assignmentIds: [stepSolveAssignment.id],
+      name: `${json.name} Template`,
+      description: `Template for ${topic[0].name}`,
+      topicId: topic[0].id,
+      generated: false,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+    console.log("Created new template", templateId, "for topic", topic[0].name);
   }
+
+  // Link the assignment to the template
+  await db.update(stepSolveAssignments)
+    .set({
+      templateId: templateId,
+      updatedAt: new Date()
+    })
+    .where(eq(stepSolveAssignments.id, stepSolveAssignment.id));
+  
+  console.log("Linked assignment to template", stepSolveAssignment.id, templateId);
 
   console.log("Step solve creation complete");
   console.log("--------------------------------");
@@ -260,6 +267,19 @@ export async function deleteStepSolveAssignment(stepSolveAssignmentId: string) {
   if (stepSolveAssignment.length === 0) {
     console.log("Step solve assignment not found");
     return;
+  }
+
+  // Delete associated assignment-to-course mappings (for templates)
+  const templateId = stepSolveAssignment[0]?.templateId;
+  if (templateId) {
+    console.log("Deleting step solve assignment template to course mappings", templateId);
+    await db.delete(stepSolveAssignmentTemplateToCourse).where(eq(stepSolveAssignmentTemplateToCourse.templateId, templateId));
+
+    console.log("Deleting step solve assignment template to grade mappings", templateId);
+    await db.delete(stepSolveAssignmentTemplateToGrade).where(eq(stepSolveAssignmentTemplateToGrade.templateId, templateId));
+
+    console.log("Deleting step solve assignment template to subject mappings", templateId);
+    await db.delete(stepSolveAssignmentTemplateToSubject).where(eq(stepSolveAssignmentTemplateToSubject.templateId, templateId));
   }
 
   const stepSolveQuestionsToAssignment = await db.select().from(stepSolveQuestionToAssignment).where(eq(stepSolveQuestionToAssignment.assignmentId, stepSolveAssignmentId));

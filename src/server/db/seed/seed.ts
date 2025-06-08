@@ -71,7 +71,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // await addConceptsToQuestions();
 
 // KNOWLEDGE ZAP CREATION
-// await deleteKnowledgeZapAssignment("tovzd9jjxz0s8wxodxkyv");
+// await deleteKnowledgeZapAssignment("axnrhjik9hckrukfa6qnn");
 // await createKnowledgeZapAssignment("kinematics");
 // await updateKnowledgeZapAssignment("thermodynamics2");
 // await addConceptsToKnowledgeZapQuestions("thermal_energy_transfers");
@@ -88,8 +88,6 @@ if(process.env.ENVIRONMENT === "prod") {
 // await printConceptScores();
 
 // STEP SOLVE CREATION AND DELETION 
-
-// await deleteStepSolveAssignment("a38f5437a89b48bdbc033");
 // await createStepSolveAssignment("A1 - Kinematics");
 
 
@@ -101,14 +99,15 @@ if(process.env.ENVIRONMENT === "prod") {
 // await createStepSolveToAssignment();
 
 // READ AND RELAY CREATION AND DELETION
+// await deleteReadAndRelayAssignment("na4cd9hfjx69milzqal6s");
 // await createReadAndRelayAssignment();
 
 // CONCEPT MAPPING CREATION AND DELETION
-// await deleteConceptMappingAssignment("lwycgx4fs6lyx1ug3h94w");
+// await deleteConceptMappingAssignment("x68pe8l66n9nacdiz7ufz");
 // await createConceptMappingAssignment();
 
 // USER DELETION
-// await deleteUser("vigfb9295@gmail.com");
+// await deleteUser("vignesh@iraproject.com");
 // await deleteClassroom("3eiin0pujtyg28x8gyiqp");
 
 // MIGRATE ACTIVITY TYPE TO TEXT

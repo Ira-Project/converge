@@ -20,6 +20,7 @@ import { classrooms } from "../../schema/classroom";
 import { ActivityType } from "@/lib/constants";
 import { knowledgeZapAssignments } from "../../schema/knowledgeZap/knowledgeZapAssignment";
 import { readAndRelayAttempts, readAndRelayCheatSheets, readAndRelayComputedAnswers } from "../../schema/readAndRelay/readAndRelayAttempts";
+import { readAndRelayAssignmentToCourse, readAndRelayAssignmentToGrade, readAndRelayAssignmentToSubject } from "../../schema/readAndRelay/readAndRelayAssignments";
 
 export async function createReadAndRelayAssignment() {
 
@@ -88,38 +89,6 @@ export async function createReadAndRelayAssignment() {
     })
   }  
 
-  const classes= await db.select().from(classrooms);
-  for(const classroom of classes) {
-    // Check if activity already exists in the classroom
-    const existingActivity = await db.select().from(activity).where(
-      and(
-        eq(activity.assignmentId, assignmentId),
-        eq(activity.classroomId, classroom.id)
-      )
-    )
-
-    // If activity does not exist, create it
-    if(existingActivity.length === 0) {
-      console.log("Adding assignment to classroom. Creating activity", assignmentId, classroom.id);
-      const activityId = generateId(21);
-      await db.insert(activity).values({
-        id: activityId,
-        assignmentId: assignmentId,
-        classroomId: classroom.id,
-        name: json.name,
-        topicId: topicId,
-        typeText: ActivityType.ReadAndRelay,
-        order: 0,
-        points: 100,
-      })
-      await db.insert(activityToAssignment).values({
-        id: generateId(21),
-        activityId: activityId,
-        readAndRelayAssignmentId: assignmentId,
-      })
-    }
-  }
-
   console.log("Read and Relay creation complete");
   console.log("--------------------------------");
 
@@ -135,6 +104,18 @@ export async function deleteReadAndRelayAssignment(assignmentId: string) {
     console.log("Assignment not found")
     return 
   }
+
+  // Delete associated assignment-to-course mappings
+  console.log("Deleting read and relay assignment to course mappings", assignmentId);
+  await db.delete(readAndRelayAssignmentToCourse).where(eq(readAndRelayAssignmentToCourse.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-grade mappings
+  console.log("Deleting read and relay assignment to grade mappings", assignmentId);
+  await db.delete(readAndRelayAssignmentToGrade).where(eq(readAndRelayAssignmentToGrade.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-subject mappings
+  console.log("Deleting read and relay assignment to subject mappings", assignmentId);
+  await db.delete(readAndRelayAssignmentToSubject).where(eq(readAndRelayAssignmentToSubject.assignmentId, assignmentId));
 
   const activities = await db.select().from(activity).where(eq(activity.assignmentId, assignmentId));
 

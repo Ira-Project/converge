@@ -15,7 +15,12 @@ type QuestionType = {
 } 
 
 import json from "./electric_charge.json";
-import { explainAssignments } from "../../schema/learnByTeaching/explainAssignment";
+import { 
+  explainAssignments,
+  explainAssignmentToCourse,
+  explainAssignmentToGrade,
+  explainAssignmentToSubject
+} from "../../schema/learnByTeaching/explainAssignment";
 import { ActivityType } from "@/lib/constants";
 import { activity, activityToAssignment } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
@@ -77,40 +82,6 @@ export async function createLearnByTeachingAssignment() {
     console.log("Linked question to assignment:", questionId, "->", assignmentId);
   }
 
-  console.log("Adding assignment to all classrooms");
-  const classes= await db.select().from(classrooms);
-  for(const classroom of classes) {
-    // Check if activity already exists in the classroom
-    const existingActivity = await db.select().from(activity).where(
-      and(
-        eq(activity.assignmentId, assignmentId),
-        eq(activity.classroomId, classroom.id)
-      )
-    )
-    console.log("Existing activity check for classroom", classroom.id, ":", existingActivity.length > 0 ? "exists" : "does not exist");
-
-    // If activity does not exist, create it
-    if(existingActivity.length === 0) {
-      console.log("Adding assignment to classroom. Creating activity", assignmentId, classroom.id);
-      const activityId = generateId(21);
-      await db.insert(activity).values({
-        id: activityId,
-        assignmentId: assignmentId,
-        classroomId: classroom.id,
-        name: json.name,
-        topicId: topicId,
-        typeText: ActivityType.LearnByTeaching,
-        order: 0,
-        points: 100,
-      })
-      await db.insert(activityToAssignment).values({
-        id: generateId(21),
-        activityId: activityId,
-        learnByTeachingAssignmentId: assignmentId,
-      })
-      console.log("Created activity for classroom:", classroom.id);
-    }
-  }
   console.log("Learn By Teaching assignment creation completed");
   console.log("-------------------------");
 }
@@ -163,4 +134,62 @@ export async function addConceptsToQuestions() {
       }
     }
   }
+}
+
+export async function deleteLearnByTeachingAssignment(assignmentId: string) {
+  const assignment = await db.select().from(explainAssignments).where(eq(explainAssignments.id, assignmentId));
+  if(assignment.length === 0) {
+    console.log("Learn by teaching assignment not found");
+    return;
+  }
+
+  // Delete associated assignment-to-course mappings
+  console.log("Deleting learn by teaching assignment to course mappings", assignmentId);
+  await db.delete(explainAssignmentToCourse).where(eq(explainAssignmentToCourse.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-grade mappings
+  console.log("Deleting learn by teaching assignment to grade mappings", assignmentId);
+  await db.delete(explainAssignmentToGrade).where(eq(explainAssignmentToGrade.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-subject mappings
+  console.log("Deleting learn by teaching assignment to subject mappings", assignmentId);
+  await db.delete(explainAssignmentToSubject).where(eq(explainAssignmentToSubject.assignmentId, assignmentId));
+
+  const questionsToAssignment = await db.select().from(explainQuestionToAssignment).where(eq(explainQuestionToAssignment.assignmentId, assignmentId));
+  for(const questionToAssignment of questionsToAssignment) {
+
+    const question = await db.select().from(explainQuestions).where(eq(explainQuestions.id, questionToAssignment.questionId));
+
+    if(!question[0]?.id) {
+      console.log("Question not found", questionToAssignment.questionId);
+      continue;
+    }
+
+    console.log("Deleting explain question concepts", question[0].question.substring(0, 30));
+    await db.delete(explainQuestionConcepts).where(eq(explainQuestionConcepts.questionId, question[0].id));
+
+    console.log("Deleting explain answers", question[0].question.substring(0, 30));
+    await db.delete(explainAnswers).where(eq(explainAnswers.questionId, question[0].id));
+
+    console.log("Deleting explain question to assignment", questionToAssignment.id);
+    await db.delete(explainQuestionToAssignment).where(eq(explainQuestionToAssignment.id, questionToAssignment.id));
+
+    console.log("Deleting explain question", question[0].question.substring(0, 30));
+    await db.delete(explainQuestions).where(eq(explainQuestions.id, question[0].id));
+  }
+
+  console.log("Deleting activity to assignment", assignmentId);
+  await db.delete(activityToAssignment).where(eq(activityToAssignment.learnByTeachingAssignmentId, assignmentId));
+
+  const activities = await db.select().from(activity).where(eq(activity.assignmentId, assignmentId));
+  for(const act of activities) {
+    console.log("Deleting activity", act.id);
+    await db.delete(activity).where(eq(activity.id, act.id));
+  }
+
+  console.log("Deleting learn by teaching assignment", assignmentId);
+  await db.delete(explainAssignments).where(eq(explainAssignments.id, assignmentId));
+
+  console.log("Learn by teaching assignment deletion complete");
+  console.log("--------------------------------");
 }

@@ -6,7 +6,13 @@ import { db } from "../..";
 import { and, eq, not, isNull } from "drizzle-orm";
 import { generateId } from "lucia";
 
-import { knowledgeZapAssignmentAttempts, knowledgeZapAssignments } from "../../schema/knowledgeZap/knowledgeZapAssignment";
+import { 
+  knowledgeZapAssignmentAttempts, 
+  knowledgeZapAssignments, 
+  knowledgeZapAssignmentToCourse, 
+  knowledgeZapAssignmentToGrade, 
+  knowledgeZapAssignmentToSubject 
+} from "../../schema/knowledgeZap/knowledgeZapAssignment";
 import { multipleChoiceAnswerOptions, multipleChoiceAttempt, multipleChoiceQuestions } from "../../schema/knowledgeZap/multipleChoiceQuestions";
 import { ActivityType, KnowledgeZapQuestionType, Roles } from "@/lib/constants";
 import { knowledgeZapQuestionAttempts, knowledgeZapQuestions, knowledgeZapQuestionsToConcepts, knowledgeZapQuestionToAssignment } from "../../schema/knowledgeZap/knowledgeZapQuestions";
@@ -301,38 +307,6 @@ export async function createKnowledgeZapAssignment(topicName: string) {
       isDeleted: false,
       deletedAt: null,
     })
-  }
-
-  const classes= await db.select().from(classrooms);
-  for(const classroom of classes) {
-    // Check if activity already exists in the classroom
-    const existingActivity = await db.select().from(activity).where(
-      and(
-        eq(activity.assignmentId, knowledgeZapAssignment.id),
-        eq(activity.classroomId, classroom.id)
-      )
-    )
-
-    // If activity does not exist, create it
-    if(existingActivity.length === 0) {
-      console.log("Adding assignment to classroom. Creating activity", knowledgeZapAssignment.id, classroom.id);
-      const activityId = generateId(21);
-      await db.insert(activity).values({
-        id: activityId,
-        assignmentId: knowledgeZapAssignment.id,
-        classroomId: classroom.id,
-        name: json.name,
-        topicId: topicId,
-        typeText: ActivityType.KnowledgeZap,
-        order: 0,
-        points: 100,
-      })
-      await db.insert(activityToAssignment).values({
-        id: generateId(21),
-        activityId: activityId,
-        knowledgeZapAssignmentId: knowledgeZapAssignment.id,
-      })
-    }
   }
 
   console.log("Knowledge Zap creation complete");
@@ -682,6 +656,18 @@ export async function deleteKnowledgeZapAssignment(assignmentId: string) {
     console.log("Knowledge Zap assignment not found");
     return;
   }
+
+  // Delete associated assignment-to-course mappings
+  console.log("Deleting knowledge zap assignment to course mappings", assignmentId);
+  await db.delete(knowledgeZapAssignmentToCourse).where(eq(knowledgeZapAssignmentToCourse.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-grade mappings
+  console.log("Deleting knowledge zap assignment to grade mappings", assignmentId);
+  await db.delete(knowledgeZapAssignmentToGrade).where(eq(knowledgeZapAssignmentToGrade.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-subject mappings
+  console.log("Deleting knowledge zap assignment to subject mappings", assignmentId);
+  await db.delete(knowledgeZapAssignmentToSubject).where(eq(knowledgeZapAssignmentToSubject.assignmentId, assignmentId));
 
   const questionsToAssignment = await db.select().from(knowledgeZapQuestionToAssignment).where(eq(knowledgeZapQuestionToAssignment.assignmentId, assignmentId));
   for(const questionToAssignment of questionsToAssignment) {
