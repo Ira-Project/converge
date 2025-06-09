@@ -75,7 +75,7 @@ if(process.env.ENVIRONMENT === "prod") {
 // CONCEPT CREATION
 // await createConcepts("A3 - Work, Energy and Power");
 const options = {
-  "courseIds": ["22", "23"],
+  "courseIds": ["22", "23"], // TO DO: Need to replace this with IGCSE
   "subjectIds": ["2"],
   "grades": ["9", "10"],
 }
@@ -114,9 +114,9 @@ const fileNames = [
 //   await createConcepts(fileName, options);
 // }
 
-// await mapAllConceptsToSubjects(["ligzM4%#9I0wtF7&FT7b7"]);
-// await mapAllConceptsToGrades(["11", "12"]);
-// await mapAllConceptsToCourses(["^uu%O4vEaah&hrxpSwfV%"]);
+await mapAllConceptsToSubjects(["2"]);
+await mapAllConceptsToGrades(["11", "12"]);
+await mapAllConceptsToCourses(["22", "23"]);
 
 
 // LEARN BY TEACHING CREATION
@@ -177,7 +177,7 @@ const fileNames = [
 // await clearStepSolveAssignmentTemplates();
 // await createStepSolveAssignmentTemplate();
 // await updateStepSolveActivityAssignmentIds();
-await deleteNonLiveActivitiesFromAllClassrooms();
+// await deleteNonLiveActivitiesFromAllClassrooms();
 
 // await mapAllAssignmentsToSubject("2");
 // await mapAllAssignmentsToGrade("11");

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { MultiSelect } from '@/components/ui/multi-select';
 import { Button } from '@/components/ui/button';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
@@ -29,8 +29,8 @@ export default function ActivityLibraryFilters({ topics, classroom, onFilterChan
   const [selectedGrades, setSelectedGrades] = useState<string[]>([]);
   const [selectedSubjects, setSelectedSubjects] = useState<string[]>([]);
 
-  // Extract unique options from assignments
-  const allCourses = Array.from(
+  // Extract unique options from assignments - memoized to prevent infinite re-renders
+  const allCourses = useMemo(() => Array.from(
     new Map(
       topics.flatMap(topic => 
         topic.assignments.flatMap(assignment => 
@@ -38,17 +38,17 @@ export default function ActivityLibraryFilters({ topics, classroom, onFilterChan
         )
       )
     ).values()
-  );
+  ), [topics]);
 
-  const allGrades = Array.from(
+  const allGrades = useMemo(() => Array.from(
     new Set(
       topics.flatMap(topic => 
         topic.assignments.flatMap(assignment => assignment.grades)
       )
     )
-  ).sort();
+  ).sort(), [topics]);
 
-  const allSubjects = Array.from(
+  const allSubjects = useMemo(() => Array.from(
     new Map(
       topics.flatMap(topic => 
         topic.assignments.flatMap(assignment => 
@@ -56,34 +56,43 @@ export default function ActivityLibraryFilters({ topics, classroom, onFilterChan
         )
       )
     ).values()
-  );
+  ), [topics]);
 
   // Set default filters based on classroom details
   useEffect(() => {
-    if (classroom) {
+    if (classroom && allCourses.length > 0 && allSubjects.length > 0) {
+      const newCourses: string[] = [];
+      const newGrades: string[] = [];
+      const newSubjects: string[] = [];
+
       // Find matching course by name
       if (classroom.course?.name) {
         const matchingCourse = allCourses.find(course => course.name === classroom.course?.name);
         if (matchingCourse) {
-          setSelectedCourses([matchingCourse.id]);
+          newCourses.push(matchingCourse.id);
         }
       }
       // Set grade filter
       if (classroom.grade) {
-        setSelectedGrades([classroom.grade.toString()]);
+        newGrades.push(classroom.grade.toString());
       }
       // Find matching subject by name
       if (classroom.course?.subject?.name) {
         const matchingSubject = allSubjects.find(subject => subject.name === classroom.course?.subject?.name);
         if (matchingSubject) {
-          setSelectedSubjects([matchingSubject.id]);
+          newSubjects.push(matchingSubject.id);
         }
       }
+
+      // Only update state if values have changed to prevent unnecessary re-renders
+      setSelectedCourses(prev => JSON.stringify(prev) !== JSON.stringify(newCourses) ? newCourses : prev);
+      setSelectedGrades(prev => JSON.stringify(prev) !== JSON.stringify(newGrades) ? newGrades : prev);
+      setSelectedSubjects(prev => JSON.stringify(prev) !== JSON.stringify(newSubjects) ? newSubjects : prev);
     }
   }, [classroom, allCourses, allSubjects]);
 
-  // Apply filters whenever filter state changes
-  useEffect(() => {
+  // Memoize the filter function to prevent unnecessary re-renders
+  const applyFilters = useCallback(() => {
     const filteredTopics = topics.map(topic => {
       const filteredAssignments = topic.assignments.filter(assignment => {
         // Check course filter
@@ -109,6 +118,11 @@ export default function ActivityLibraryFilters({ topics, classroom, onFilterChan
 
     onFilterChange(filteredTopics);
   }, [topics, selectedCourses, selectedGrades, selectedSubjects, onFilterChange]);
+
+  // Apply filters whenever filter state changes
+  useEffect(() => {
+    applyFilters();
+  }, [applyFilters]);
 
   return (
     <Popover>
