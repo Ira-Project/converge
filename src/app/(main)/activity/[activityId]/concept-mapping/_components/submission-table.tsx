@@ -16,13 +16,13 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
   const submissions = await api.conceptMapping.getSubmissions.query({ activityId });
 
   return (
-    <div>
-      <Table>
+    <div className="overflow-x-auto">
+      <Table className="min-w-full">
         <TableHeader>
-          <TableRow className="grid grid-cols-[1fr_250px_200px]">
-            <TableHead className="flex items-center">Student Name</TableHead>
-            <TableHead className="flex items-center">Submitted At</TableHead>
-            <TableHead className="flex items-center">Score</TableHead>
+          <TableRow>
+            <TableHead className="min-w-[200px]">Student Name</TableHead>
+            <TableHead className="min-w-[120px] whitespace-nowrap">Submitted At</TableHead>
+            <TableHead className="min-w-[80px]">Score</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -34,14 +34,14 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
             </TableRow>
           ) : (
             submissions.map((submission) => (
-              <TableRow className="grid grid-cols-[1fr_250px_200px]" key={submission.id}>
-                <TableCell>{submission.user?.name}</TableCell>
-                <TableCell>
+              <TableRow key={submission.id}>
+                <TableCell className="min-w-[200px]">{submission.user?.name}</TableCell>
+                <TableCell className="min-w-[120px] whitespace-nowrap">
                   {submission.submittedAt ? 
                     formatDateShort(submission.submittedAt) : ""
                   }
                 </TableCell>
-                <TableCell>{submission.score ? `${(submission.score * 100).toFixed(2)}%` : "0%"}</TableCell>
+                <TableCell className="min-w-[80px]">{submission.score ? `${(submission.score * 100).toFixed(2)}%` : "0%"}</TableCell>
               </TableRow>
             ))
           )}
