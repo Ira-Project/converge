@@ -810,7 +810,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                         currentState?.part === 'part3' && (
                           <div className="px-2 sm:px-4 rounded-lg">
                             <h3 className="font-semibold mb-4 text-center">Available Steps</h3>
-                            <div className="grid grid-cols-1 gap-y-4 gap-x-6 text-center">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6 text-center">
                               {currentQuestion?.question.answerOptions
                                 .filter((option) => !currentState?.errorAnalysisUsedSteps.some(step => step.id === option.id))
                                 .map((option) => (
