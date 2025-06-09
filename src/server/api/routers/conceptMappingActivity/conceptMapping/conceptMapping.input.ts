@@ -29,3 +29,13 @@ export const getConceptMappingActivityInput = z.object({
   activityId: z.string(),
 });
 export type GetConceptMappingActivityInput = z.infer<typeof getConceptMappingActivityInput>;
+
+export const getConceptMappingAssignmentByIdInput = z.object({
+  assignmentId: z.string(),
+});
+export type GetConceptMappingAssignmentByIdInput = z.infer<typeof getConceptMappingAssignmentByIdInput>;
+
+export const createAssignmentAttemptSchema = z.object({
+  assignmentId: z.string(),
+});
+export type CreateAssignmentAttemptInput = z.infer<typeof createAssignmentAttemptSchema>;

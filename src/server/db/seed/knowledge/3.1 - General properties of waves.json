@@ -1,0 +1,673 @@
+{
+    "name": "General Properties of Waves",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "cd6eff376b854d689c72b",
+            "concepts": [
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ],
+            "variants": [
+                {
+                    "id": "a6611f7f3e7a4039ab351",
+                    "question": "Which of the following describe a wave?",
+                    "options": [
+                        {
+                            "option_text": "A disturbance that transfers energy",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A transfer of matter",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A periodic motion",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A constant velocity",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e945664efd334b59862c9",
+                    "question": "Which of the following statements accurately describe properties of waves? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Waves transfer energy.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Waves always involve the transfer of matter.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Waves can exhibit periodic motion.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Waves always travel at a constant velocity regardless of the medium.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "b41948f4928c4bb6967de",
+                    "question": "A wave's speed is dependent on its wavelength ($!$\\lambda$!$) and frequency ($!$f$!$). If the frequency of a wave is doubled while the wavelength remains constant, what happens to the wave's speed?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The wave's speed doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The wave's speed is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wave's speed remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wave's speed quadruples.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "fc04aef7af8b49e0a59e0",
+            "concepts": [
+                "ba382e59-0647-4ae8-85ef-ca76fd71001a",
+                "894ecb77-0c29-49ff-ac41-10e2c1cb7bde",
+                "7da51eec-b490-4190-95a2-2c714996b3a4"
+            ],
+            "variants": [
+                {
+                    "id": "a19e8a33f52442cd81a7c",
+                    "question": "Which of the following are regions associated with longitudinal waves?",
+                    "options": [
+                        {
+                            "option_text": "Compression",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Rarefaction",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Crest",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Trough",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "102121359b46404e8d88b",
+                    "question": "Which of the following statements accurately describes a region of compression in a longitudinal wave?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is a region where particles are spread further apart, resulting in lower density.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is a region where particles are closer together, resulting in higher density and pressure.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the lowest point of displacement in the wave.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the region of maximum displacement in the wave.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6b7e430d325940dfb8913",
+                    "question": "Select all of the following that are characteristic of longitudinal waves:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Particles oscillate parallel to the direction of energy propagation.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They have crests and troughs.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They have compressions and rarefactions.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Particles oscillate perpendicular to the direction of energy propagation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "b5ec813a8a3748c3be800",
+            "concepts": [
+                "5ab05d16-762d-4aba-b853-f5d7306de1e7",
+                "dbf85a98-bd4f-4500-bf4e-804c262f3791",
+                "b59ee601-8ece-4ba7-a5bb-f7888aeb4ffd",
+                "1cfa5c7c-7983-4456-8229-8a41874c357c",
+                "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85"
+            ],
+            "variants": [
+                {
+                    "id": "f32fee8b48f944a0bb6f5",
+                    "question": "Which factor affects the extent of diffraction the MOST?",
+                    "options": [
+                        {
+                            "option_text": "Gap size relative to wavelength",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Wave amplitude",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Wave frequency",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Wave intensity",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b85cfa49e7d2467689e06",
+                    "question": "Which of the following parameters will result in the GREATEST amount of diffraction for a wave passing through a single slit?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A wide gap and a short wavelength",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A narrow gap and a long wavelength",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A wide gap and a long wavelength",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A narrow gap and a short wavelength",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d304a5791413453e94bed",
+                    "question": "Select all the options that correctly describe the relationship between wavelength, gap size and the amount of diffraction.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Greater the wavelength compared to the gap size, more the diffraction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Smaller the wavelength compared to the gap size, more the diffraction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Diffraction is independent of the wavelength and gap size.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Diffraction is maximum when the wavelength is equal to the gap size.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "eb5875ae76874b1ab3837",
+            "concepts": [
+                "6b7de45c-7a91-4926-8923-7848b6e9c94a",
+                "95d98f95-8dd3-479d-b509-ed5002535f29"
+            ],
+            "variants": [
+                {
+                    "id": "91549ccc632640f39879a",
+                    "question": "Which of the following describe the principle of Huygens' Construction?",
+                    "options": [
+                        {
+                            "option_text": "Every point on a wavefront is a source of secondary wavelets",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "New wavefronts are formed by tangent lines to the wavelets",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Rays are parallel to wavefronts",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy transfer is reversed in wavelets",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "3102e85f3f9e440b914f4",
+                    "question": "According to Huygens' principle, which of the following statements is NOT correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Every point on a wavefront can be considered as a source of secondary wavelets that spread out in all directions with a speed equal to the speed of propagation of the wave.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The new wavefront at a later time is given by the tangential surface to these secondary wavelets.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wavelets advance only in the forward direction.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The amplitude of the secondary wavelets is uniform in all directions.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "90fe5de742dc4b69867cd",
+                    "question": "Imagine a wave propagating through a medium. According to Huygens' principle, if the initial wavefront at time t = 0 is a circle with radius $!$r$!$, what will be the shape of the wavefront at a later time $!$t$!$?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A straight line",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A circle with radius $!$r + vt$!$, where $!$v$!$ is the speed of the wave",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A square with side length $!$2r$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An ellipse with major axis $!$2r$!$ and minor axis $!$2vt$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "344d79b5c37444029448b",
+            "concepts": [
+                "e2484863-f982-4229-94d2-b6df0b9b92ca",
+                "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85",
+                "91d66318-1623-4c88-b48c-56e3cfc2c189",
+                "c76dc2d1-7988-4901-a0e0-fda851b381a7"
+            ],
+            "variants": [
+                {
+                    "id": "a1da454523f74087af8e0",
+                    "question": "Which of the following is true about Wave equation?",
+                    "options": [
+                        {
+                            "option_text": "Wave speed = frequency $!$\\times$!$ wavelength",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Frequency = Wave speed $!$\\times$!$ wavelength",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Wavelength = Wave speed $!$\\times$!$ frequency",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The equation is $!$v = f + \\lambda$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2194fc29e61f49e8b8f41",
+                    "question": "Which of the following equations correctly represents the relationship between wave speed ($!$v$!$), frequency ($!$f$!$), and wavelength ($!$\\lambda$!$)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$v = f \\times \\lambda$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$f = v \\times \\lambda$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\lambda = v \\times f$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = f / \\lambda$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8c5c22b4585b4f69b7232",
+                    "question": "Select all the equations that correctly relate wave speed ($!$v$!$), frequency ($!$f$!$), and wavelength ($!$\\lambda$!$).",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$v = f \\lambda$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\lambda = \\frac{v}{f}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$f = v\\lambda$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = \\frac{\\lambda}{f}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "7d59b28ff1414cd4b5045",
+            "concepts": [
+                "bed61e1f-0139-43bf-bd58-f76c5fc55a51",
+                "d75bf3fc-6ad7-42b8-8fce-1f60d10ef022",
+                "9af39160-8eec-4685-bd62-195f8fcaa629"
+            ],
+            "variants": [
+                {
+                    "id": "4da8e8e37bce490ab66bb",
+                    "question": "What happens during constructive interference?",
+                    "options": [
+                        {
+                            "option_text": "In-phase waves combine to increase amplitude",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Out-of-phase waves combine to cancel amplitude",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Waves pass through each other without effect",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Waves change direction",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0732eec075c74b37932f8",
+                    "question": "Which of the following statements accurately describes constructive interference?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Waves combine in phase, resulting in a larger amplitude.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Waves combine out of phase, resulting in a smaller amplitude.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Waves cancel each other out completely.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Waves change their frequency.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e4473195c0bd400b9bfbe",
+                    "question": "Select all of the following that are characteristics of constructive interference:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Increased amplitude of the resultant wave.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Waves are in phase.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Decreased amplitude of the resultant wave.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Waves are out of phase.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "a7e050022d7140e0b4e81",
+            "concepts": [
+                "654edbfa-3f4c-4113-9b56-583c41cb13f7",
+                "c8893bf2-37ac-4ad1-8120-9cd2c567f9fb"
+            ],
+            "variants": [
+                {
+                    "id": "b921257fb5a544958877a",
+                    "question": "What is the defining characteristic of polarisation?",
+                    "options": [
+                        {
+                            "option_text": "Confinement of transverse wave vibrations to a single plane",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increase in wave amplitude",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Change in wave frequency",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Change in wavelength",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fe2c5d3b602b40eea32e3",
+                    "question": "Which of the following statements accurately describes what happens to a transverse wave when it is polarised?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The vibrations of the wave are confined to a single plane.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The amplitude of the wave increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The frequency of the wave changes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wavelength of the wave is altered.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8eeb36ac450d4e7a809f6",
+                    "question": "Select all the statements that apply to the polarization of a wave:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It confines the vibrations of a transverse wave to a single plane.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It can occur in longitudinal waves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It demonstrates the wave nature of light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It increases the speed of the wave.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "7c108206917b491f8de91",
+            "concepts": [
+                "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85",
+                "91d66318-1623-4c88-b48c-56e3cfc2c189",
+                "70f05650-ebb2-4b01-96c2-de4cc40c3b02",
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ],
+            "variants": [
+                {
+                    "id": "3019b013d21c49c4b8c54",
+                    "question": "Match the wave property with its description:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Wavelength",
+                            "optionB": "Distance between successive corresponding points on a wave"
+                        },
+                        {
+                            "optionA": "Frequency",
+                            "optionB": "Number of complete waves generated per second"
+                        },
+                        {
+                            "optionA": "Amplitude",
+                            "optionB": "Maximum displacement of a particle from its equilibrium position"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "d965fee0da5e4baf97970",
+            "concepts": [
+                "c8893bf2-37ac-4ad1-8120-9cd2c567f9fb",
+                "ba382e59-0647-4ae8-85ef-ca76fd71001a",
+                "f624b288-958d-4583-869c-8aebb8e4e519",
+                "1cfa5c7c-7983-4456-8229-8a41874c357c"
+            ],
+            "variants": [
+                {
+                    "id": "4cc227d9d4ff4b5d974a7",
+                    "question": "Match each wave type with its characteristic:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Transverse Wave",
+                            "optionB": "Vibrations perpendicular to wave travel direction"
+                        },
+                        {
+                            "optionA": "Longitudinal Wave",
+                            "optionB": "Vibrations parallel to wave travel direction"
+                        },
+                        {
+                            "optionA": "Mechanical Wave",
+                            "optionB": "Requires a medium for propagation"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "b57cfe6f4e2b46c493506",
+            "concepts": [
+                "56c92c0a-9a1f-4b88-8b6b-8a7541f4d657",
+                "381ea933-cde7-4d68-b8f0-c1890609e36a",
+                "5ab05d16-762d-4aba-b853-f5d7306de1e7",
+                "d75bf3fc-6ad7-42b8-8fce-1f60d10ef022",
+                "1cfa5c7c-7983-4456-8229-8a41874c357c",
+                "9af39160-8eec-4685-bd62-195f8fcaa629",
+                "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85"
+            ],
+            "variants": [
+                {
+                    "id": "ef746dade1764cdf94db6",
+                    "question": "Match the phenomenon with its description:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Reflection",
+                            "optionB": "Bouncing of a wave off a surface"
+                        },
+                        {
+                            "optionA": "Refraction",
+                            "optionB": "Bending of a wave as it passes through different mediums"
+                        },
+                        {
+                            "optionA": "Diffraction",
+                            "optionB": "Spreading of waves as they pass through gaps"
+                        },
+                        {
+                            "optionA": "Interference",
+                            "optionB": "Overlapping waves combining to modify amplitude"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

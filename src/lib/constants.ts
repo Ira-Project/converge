@@ -10,6 +10,7 @@ export const Paths = {
   Signup: "/signup",
   Onboarding: "/onboarding",
   Activities: "/activities",
+  ActivityLibrary: "/activity-library",
   GeneratedActivities: "/generated-activities",
   Documentation: "/documentation",
   Leaderboard: "/leaderboard",
@@ -28,6 +29,7 @@ export const Paths = {
   ConceptMapping: "/concept-mapping/",
   CreateAssignment: "/create-assignment/",
   Activity: "/activity/",
+  ActivityPreview: "/activity-preview/",
   LiveActivity: "live",
 } as const;
 

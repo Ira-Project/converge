@@ -1,0 +1,420 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "ltouhsvysd0x59xnkr3pd",
+    "topicIdProd": "",
+    "chapter_text": "**Introduction to Forces & Effects**\n*   A force is defined as a push or a pull.\n*   Forces can alter an object's speed, direction of travel, shape, or size.\n*   Multiple forces acting on an object can be combined into a single **resultant force**, which describes their combined effect.\n*   **Friction** and **drag** (including **air resistance**) are forces that oppose motion and convert kinetic energy into thermal energy.\n\n**Springs and Hooke's Law**\n*   The extension of a spring is directly proportional to the stretching force applied to it, provided the **limit of proportionality** is not exceeded.\n*   The **limit of proportionality** is the point on a load-extension graph where the relationship ceases to be linear.\n*   The **spring constant** ($k$) quantifies a spring's stiffness and is defined as the force per unit extension.\n*   Formula: $F = kx$, where $F$ is the force, $k$ is the spring constant, and $x$ is the extension. This can also be expressed as $k = \\frac{F}{x}$.\n\n**Forces and Resultants (Newton's First Law)**\n*   Forces possess both magnitude (size) and direction.\n*   When forces act along the same straight line, their resultant is found by simple addition or subtraction.\n*   For forces acting at a point but not in a straight line, the **parallelogram law** can be used: if two forces are represented by the sides of a parallelogram, their resultant is represented by the diagonal drawn from the same point.\n*   **Newton's First Law of Motion**: An object will remain at rest or continue moving at a constant speed in a straight line unless acted upon by a **resultant force**.\n*   **Inertia** is the property of matter that resists changes in its state of motion; mass is a measure of inertia.\n*   An object is in **equilibrium** when the forces acting on it balance, resulting in no resultant force and no change in its motion.\n\n**Newton's Second Law of Motion**\n*   The acceleration ($a$) of an object is directly proportional to the resultant force ($F$) applied to it and inversely proportional to its mass ($m$).\n*   Formula: $F = ma$, where $F$ is the resultant force in Newtons (N), $m$ is the mass in kilograms (kg), and $a$ is the acceleration in metres per second squared (m/s$^2$).\n*   One Newton (N) is defined as the force required to give a mass of 1 kg an acceleration of 1 m/s$^2$.\n*   The acceleration produced is always in the same direction as the resultant force.\n\n**Friction**\n*   **Friction** is a force that opposes the motion, or attempted motion, between two surfaces in contact.\n*   It causes kinetic energy to be converted into thermal energy (heat).\n*   **Static friction** is the maximum frictional force before motion begins.\n*   **Sliding (dynamic) friction** is the frictional force during motion, typically less than static friction.\n*   **Drag** and **air resistance** are forms of friction experienced by objects moving through fluids (gases or liquids).\n\n**Newton's Third Law of Motion**\n*   **Newton's Third Law of Motion**: For every action, there is an equal and opposite reaction. This means forces always occur in pairs, acting on *different* objects.\n\n**Circular Motion & Centripetal Force**\n*   An object in circular motion is continuously changing direction, and therefore its velocity is changing, indicating it is accelerating.\n*   **Centripetal force** (centre-seeking force) is the force that acts towards the centre of the circular path, maintaining the object's circular motion.\n*   A larger centripetal force is required to maintain circular motion if:\n    *   The speed ($v$) of the object increases (mass and radius constant).\n    *   The radius ($r$) of the circle decreases (mass and speed constant).\n    *   The mass ($m$) of the object increases (speed and radius constant).\n*   If the centripetal force is removed, the object will move in a straight line tangent to the circle at the point of release.\n*   Satellites utilize centripetal force (provided by Earth's gravity) to orbit the Earth.\n\n**Turning Effect of Forces (Moments)**\n*   The **moment of a force** is its turning effect about a pivot.\n*   It depends on the force's magnitude and its perpendicular distance from the pivot.\n*   Formula: moment of a force = force $\\times$ perpendicular distance from the pivot.\n*   The unit of moment is the Newton metre (Nm).\n*   A **lever** is a device that turns about a pivot (fulcrum), using an effort force to overcome a load force.\n\n**Principle of Moments & Equilibrium**\n*   **Principle of Moments (Law of Moments)**: When an object is in equilibrium, the sum of all clockwise moments about any pivot point is equal to the sum of all anticlockwise moments about the same point.\n*   Conditions for an object to be in **equilibrium**:\n    *   The sum of forces in one direction equals the sum of forces in the opposite direction (no resultant force).\n    *   There is no resultant moment (the principle of moments applies).\n\n**Centre of Gravity**\n*   The **centre of gravity (CG)**, also known as the centre of mass, is the single point where an object's entire weight can be considered to act.\n*   For a symmetrical object with uniform density, the CG is at its geometric centre.\n*   When an object is suspended freely and comes to rest, its centre of gravity will lie vertically below the point of suspension.\n\n**Stability & Toppling**\n*   An object **topples** when the vertical line passing through its centre of gravity falls outside its base of support.\n*   The **stability** of an object is increased by:\n    *   Lowering its centre of gravity.\n    *   Increasing the area of its base.\n*   Types of equilibrium:\n    *   **Stable equilibrium**: The object returns to its original position after a slight displacement (its CG rises).\n    *   **Unstable equilibrium**: The object moves further away from its original position after a slight displacement (its CG falls).\n    *   **Neutral equilibrium**: The object remains in its new position after a displacement (its CG neither rises nor falls).",
+    "chapter_concepts": [
+        {
+            "concept_id": "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+            "concept_question": "What is force?",
+            "concept_answer": "A force is a push or a pull.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e82678cc-f310-40da-9e78-4c5e20d0f8ad",
+            "concept_question": "What are the effects of forces?",
+            "concept_answer": "Forces can alter an object's speed, direction, shape, or size.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+            ]
+        },
+        {
+            "concept_id": "3e20303c-d807-4753-b313-0259b2682a2e",
+            "concept_question": "What is resultant force?",
+            "concept_answer": "It is the combined force representing the net effect of multiple forces.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+            ]
+        },
+        {
+            "concept_id": "d08947a9-6137-4fd0-9510-194af95db5f5",
+            "concept_question": "What is friction (in the context of forces discussed in C4)?",
+            "concept_answer": "Friction opposes motion and converts kinetic energy into thermal energy.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+            ]
+        },
+        {
+            "concept_id": "89d22f36-3d5a-4a57-85fb-932b8f095195",
+            "concept_question": "What is drag (as considered in C4)?",
+            "concept_answer": "Drag is the force that opposes motion, particularly experienced by objects moving through a fluid.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+            ]
+        },
+        {
+            "concept_id": "2943a771-25bf-4ed1-ae4e-a7e35cbf1756",
+            "concept_question": "What does Hooke's Law state?",
+            "concept_answer": "Spring extension is proportional to the applied force up to the limit of proportionality.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+            ]
+        },
+        {
+            "concept_id": "28f35840-f502-4353-aa15-1a75ad190463",
+            "concept_question": "What is the limit of proportionality?",
+            "concept_answer": "It is the point on a load-extension graph where the relationship ceases to be linear.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2943a771-25bf-4ed1-ae4e-a7e35cbf1756"
+            ]
+        },
+        {
+            "concept_id": "4163b1d6-96ec-41a8-a8ff-f1883bd74931",
+            "concept_question": "What is the spring constant?",
+            "concept_answer": "It measures a spring's stiffness as the force per unit extension.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2943a771-25bf-4ed1-ae4e-a7e35cbf1756"
+            ]
+        },
+        {
+            "concept_id": "14c57299-796f-4df6-927f-383e9d5c44b6",
+            "concept_question": "What is the Hooke's law formula?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$F = kx$!$",
+                "$!$k = \\frac{F}{x}$!$"
+            ],
+            "pre-requisites": [
+                "2943a771-25bf-4ed1-ae4e-a7e35cbf1756",
+                "4163b1d6-96ec-41a8-a8ff-f1883bd74931"
+            ]
+        },
+        {
+            "concept_id": "f5896b20-1c3e-4db4-bc63-ee2a2bbb7b90",
+            "concept_question": "What are forces' properties?",
+            "concept_answer": "Forces have both magnitude and direction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+            ]
+        },
+        {
+            "concept_id": "c0449886-709b-4208-921e-fad974610993",
+            "concept_question": "What is the parallelogram law?",
+            "concept_answer": "It states that the resultant of two forces is the diagonal of the parallelogram they form.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "3e20303c-d807-4753-b313-0259b2682a2e",
+                "f5896b20-1c3e-4db4-bc63-ee2a2bbb7b90"
+            ]
+        },
+        {
+            "concept_id": "e5f2bcc0-804a-4ce1-aac1-ccbc27903601",
+            "concept_question": "What is Newton's First Law?",
+            "concept_answer": "It states that an object remains at rest or in uniform motion unless acted upon by a net force.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3e20303c-d807-4753-b313-0259b2682a2e"
+            ]
+        },
+        {
+            "concept_id": "2b9c31ac-1129-4fad-aa8a-1cfd77412d64",
+            "concept_question": "What is inertia?",
+            "concept_answer": "It is the property of matter that resists changes in its motion, with mass as its measure.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+            ]
+        },
+        {
+            "concept_id": "259589dd-4c8e-4938-9dde-4a0c9930e92e",
+            "concept_question": "What is equilibrium?",
+            "concept_answer": "Equilibrium is the state where forces balance, resulting in no net force on an object.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3e20303c-d807-4753-b313-0259b2682a2e"
+            ]
+        },
+        {
+            "concept_id": "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+            "concept_question": "What is Newton's Second Law?",
+            "concept_answer": "It states that an object's acceleration is proportional to the net force and inversely proportional to its mass.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "3e20303c-d807-4753-b313-0259b2682a2e",
+                "2b9c31ac-1129-4fad-aa8a-1cfd77412d64"
+            ]
+        },
+        {
+            "concept_id": "356d493b-02b5-4b95-b7b5-f34b9ec99aa1",
+            "concept_question": "What is Newton's Second Law formula?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$F = ma$!$"
+            ],
+            "pre-requisites": [
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+            ]
+        },
+        {
+            "concept_id": "f53acf30-2c06-4f4a-9916-c8a000b422b3",
+            "concept_question": "What is one Newton?",
+            "concept_answer": "One Newton is the force required to accelerate 1 kg of mass by 1 m/s\u00b2.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+            ]
+        },
+        {
+            "concept_id": "673d32c2-d74f-4e5e-8a7e-2e5df66ce844",
+            "concept_question": "What is the force-acceleration direction relation?",
+            "concept_answer": "Acceleration occurs in the same direction as the applied net force.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+            ]
+        },
+        {
+            "concept_id": "4716e065-7ace-4fe7-b41a-02e362138b04",
+            "concept_question": "What is friction?",
+            "concept_answer": "Friction is the force that opposes motion between two surfaces in contact.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+            ]
+        },
+        {
+            "concept_id": "4deaaef0-963f-41d9-b2b3-11d2724c3b9e",
+            "concept_question": "What does friction do?",
+            "concept_answer": "It converts kinetic energy into thermal energy.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4716e065-7ace-4fe7-b41a-02e362138b04"
+            ]
+        },
+        {
+            "concept_id": "b9d9a427-ac45-470c-beb9-78cc051848a3",
+            "concept_question": "What is static friction?",
+            "concept_answer": "Static friction is the maximum frictional force before motion begins.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4716e065-7ace-4fe7-b41a-02e362138b04"
+            ]
+        },
+        {
+            "concept_id": "b206e290-77de-4e81-91b0-ee6a4a7a84b9",
+            "concept_question": "What is sliding friction?",
+            "concept_answer": "Sliding friction is the frictional force during motion, typically lower than static friction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4716e065-7ace-4fe7-b41a-02e362138b04"
+            ]
+        },
+        {
+            "concept_id": "238be296-cc67-4b9f-90f2-77ce6f81bc0b",
+            "concept_question": "What is drag (in the context of frictional forces)?",
+            "concept_answer": "Drag is the frictional force acting on an object moving through a fluid.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4716e065-7ace-4fe7-b41a-02e362138b04"
+            ]
+        },
+        {
+            "concept_id": "87299170-0973-4be7-930f-997504cef932",
+            "concept_question": "What is air resistance?",
+            "concept_answer": "Air resistance is the frictional force opposing motion through air.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4716e065-7ace-4fe7-b41a-02e362138b04"
+            ]
+        },
+        {
+            "concept_id": "822cbd3c-ba65-4bb4-a5a6-0e446921e50f",
+            "concept_question": "What is Newton's Third Law?",
+            "concept_answer": "It states that every action force has an equal and opposite reaction force acting on different objects.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+            ]
+        },
+        {
+            "concept_id": "05341b97-d591-4486-bac4-48c336dea59d",
+            "concept_question": "What is circular motion?",
+            "concept_answer": "Circular motion involves continuous change in direction, causing acceleration.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+            ]
+        },
+        {
+            "concept_id": "774ffc0d-cf72-4145-a42f-24801ee68ac7",
+            "concept_question": "What is centripetal force?",
+            "concept_answer": "It is the inward force that maintains an object's circular path.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "05341b97-d591-4486-bac4-48c336dea59d"
+            ]
+        },
+        {
+            "concept_id": "b095d8bc-9094-4e54-b789-7081a1194a32",
+            "concept_question": "What factors affect centripetal force?",
+            "concept_answer": "Centripetal force increases with higher speed and mass and decreases with a larger radius.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "774ffc0d-cf72-4145-a42f-24801ee68ac7",
+                "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+            ]
+        },
+        {
+            "concept_id": "23b1559b-5838-4eb7-9e9d-3520690b116e",
+            "concept_question": "What happens if centripetal force is removed?",
+            "concept_answer": "The object will move in a straight line tangent to its circular path.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "774ffc0d-cf72-4145-a42f-24801ee68ac7"
+            ]
+        },
+        {
+            "concept_id": "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c",
+            "concept_question": "What is the moment of a force?",
+            "concept_answer": "It is the turning effect produced by a force about a pivot point.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+            ]
+        },
+        {
+            "concept_id": "fc4039b7-567c-4fce-b003-f431055dfc9b",
+            "concept_question": "What factors determine a force's moment?",
+            "concept_answer": "A force's moment depends on its magnitude and its perpendicular distance from the pivot.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c"
+            ]
+        },
+        {
+            "concept_id": "7637f898-6bb7-44dc-9a1d-7c91f0ab93e7",
+            "concept_question": "What is the moment formula?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$M = Fd$!$"
+            ],
+            "pre-requisites": [
+                "fc4039b7-567c-4fce-b003-f431055dfc9b"
+            ]
+        },
+        {
+            "concept_id": "d23d0575-69c3-4bd9-814c-465f69e60325",
+            "concept_question": "What is the unit of moment?",
+            "concept_answer": "The moment is measured in Newton metres (Nm).",
+            "concept_formula": [],
+            "pre-requisites": [
+                "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c"
+            ]
+        },
+        {
+            "concept_id": "b0958c62-2a52-4d8a-907e-1590dc5bd045",
+            "concept_question": "What is a lever?",
+            "concept_answer": "A lever is a pivoting device that uses an effort force to overcome a load.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c"
+            ]
+        },
+        {
+            "concept_id": "b740ddfa-3ad8-4e38-b850-124c5bb429fe",
+            "concept_question": "What is the principle of moments?",
+            "concept_answer": "It states that for equilibrium, the sum of clockwise moments equals the sum of anticlockwise moments.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "259589dd-4c8e-4938-9dde-4a0c9930e92e",
+                "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c"
+            ]
+        },
+        {
+            "concept_id": "bfadea22-2150-46b6-a059-bc3f7abca23e",
+            "concept_question": "What are the force conditions for equilibrium?",
+            "concept_answer": "An object is in equilibrium when the net force is zero.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "259589dd-4c8e-4938-9dde-4a0c9930e92e",
+                "b740ddfa-3ad8-4e38-b850-124c5bb429fe"
+            ]
+        },
+        {
+            "concept_id": "26608215-6830-407e-a1a7-5687a1407c67",
+            "concept_question": "What are the moment conditions for equilibrium?",
+            "concept_answer": "An object is in equilibrium when the net moment is zero.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "259589dd-4c8e-4938-9dde-4a0c9930e92e",
+                "b740ddfa-3ad8-4e38-b850-124c5bb429fe"
+            ]
+        },
+        {
+            "concept_id": "d6f2546f-bb52-486e-9e50-b82b5aeb5c87",
+            "concept_question": "What is the centre of gravity?",
+            "concept_answer": "It is the point where an object's entire weight is considered to act.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "105af5c0-e9a1-4e0d-8b01-c569979641fa",
+            "concept_question": "Where is the centre of gravity for uniform objects?",
+            "concept_answer": "For symmetrical objects with uniform density, the centre of gravity is at the geometric centre.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d6f2546f-bb52-486e-9e50-b82b5aeb5c87"
+            ]
+        },
+        {
+            "concept_id": "5a3c4744-48ad-49cf-979d-b7422aeeb403",
+            "concept_question": "Where does the centre of gravity lie when suspended?",
+            "concept_answer": "When suspended, the centre of gravity lies vertically below the point of suspension.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d6f2546f-bb52-486e-9e50-b82b5aeb5c87"
+            ]
+        },
+        {
+            "concept_id": "ecd41a85-3b88-48ed-bba8-67df1aac012d",
+            "concept_question": "What causes toppling?",
+            "concept_answer": "Toppling occurs when the vertical line through the centre of gravity falls outside the base of support.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d6f2546f-bb52-486e-9e50-b82b5aeb5c87"
+            ]
+        },
+        {
+            "concept_id": "00c8f7a3-fbbc-4466-8a4b-bad05e8bbde4",
+            "concept_question": "How does lowering the centre of gravity enhance stability?",
+            "concept_answer": "Lowering the centre of gravity reduces the chance of the vertical line of action falling outside the base, thus enhancing stability.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d6f2546f-bb52-486e-9e50-b82b5aeb5c87",
+                "ecd41a85-3b88-48ed-bba8-67df1aac012d"
+            ]
+        },
+        {
+            "concept_id": "613388a7-a97b-44c4-ab33-7674f596cb08",
+            "concept_question": "How does increasing the base area enhance stability?",
+            "concept_answer": "Increasing the base area provides a larger support region, which helps maintain stability.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d6f2546f-bb52-486e-9e50-b82b5aeb5c87",
+                "ecd41a85-3b88-48ed-bba8-67df1aac012d"
+            ]
+        },
+        {
+            "concept_id": "97424a55-7e94-475c-8b5a-838cd232ce7d",
+            "concept_question": "What are the types of equilibrium?",
+            "concept_answer": "Equilibrium can be stable, unstable, or neutral based on the object's response to displacement.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "259589dd-4c8e-4938-9dde-4a0c9930e92e",
+                "d6f2546f-bb52-486e-9e50-b82b5aeb5c87"
+            ]
+        }
+    ]
+}

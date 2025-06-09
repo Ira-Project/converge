@@ -2,11 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import TopicSection from './topic-section';
-import { type Roles } from '@/lib/constants';
+import { Roles, Paths } from '@/lib/constants';
 import { Input } from '@/components/ui/input';
 import { Search } from 'lucide-react';
 import { useHashNavigation } from '@/lib/utils';
 import { type Topic } from '../types';
+import Link from 'next/link';
 
 interface TopicListProps {
   topics: Topic[];
@@ -40,17 +41,37 @@ export default function TopicList({ topics, role, classroomId }: TopicListProps)
         />
       </div>
 
-      <div className="flex flex-col gap-8">
-        {filteredTopics.map((topic) => (
-          <div key={topic.slug}>
-            <TopicSection 
-              topic={topic} 
-              role={role} 
-              classroomId={classroomId}
-            />
-          </div>
-        ))}
-      </div>
+      {filteredTopics.length > 0 ? (
+        <div className="flex flex-col gap-8">
+          {filteredTopics.map((topic) => (
+            <div key={topic.slug}>
+              <TopicSection 
+                topic={topic} 
+                role={role} 
+                classroomId={classroomId}
+              />
+            </div>
+          ))}
+        </div>
+      ) : (
+        <div className="flex items-center justify-center min-h-[300px] text-center w-3/4 mx-auto">
+          {searchQuery ? (
+            <p className="text-muted-foreground">
+              No topics found matching "{searchQuery}". Try a different search term or check in our<Link href={`${Paths.Classroom}${classroomId}${Paths.ActivityLibrary}`} className="underline mx-1">activity library</Link>.
+            </p>
+          ) : role === Roles.Student ? (
+            <p className="text-muted-foreground">No activities assigned</p>
+          ) : (
+            <p className="text-muted-foreground">
+              <span>You haven't assigned any activities to your students. Choose from our</span>
+              <Link href={`${Paths.Classroom}${classroomId}${Paths.ActivityLibrary}`} className="underline mx-1">
+                activity library
+              </Link>
+              <span> to get started.</span>
+            </p>
+          )}
+        </div>
+      )}
     </div>
   );
 } 

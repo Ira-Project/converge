@@ -1,26 +1,34 @@
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
-import type { CreateAttemptInput, GetSubmissionsInput, GetStudentHighlightsInput, GetAnalyticsCardsInput, GetReadAndRelayActivityInput, SubmitAttemptSchema } from "./readAndRelay.input";
+import type { CreateAttemptInput, GetSubmissionsInput, GetStudentHighlightsInput, GetAnalyticsCardsInput, GetReadAndRelayActivityInput, SubmitAttemptSchema, GetReadAndRelayAssignmentByIdInput } from "./readAndRelay.input";
 import { readAndRelayAttempts } from "@/server/db/schema/readAndRelay/readAndRelayAttempts";
 import { eq } from "drizzle-orm";
 import { ActivityType, Roles } from "@/lib/constants";
 
 export const createAttempt = async (ctx: ProtectedTRPCContext, input: CreateAttemptInput) => { 
   const id = generateId(21);
-  const activity = await ctx.db.query.activity.findFirst({
-    where: (activity, { eq }) => eq(activity.id, input.activityId),
-  });
+  if(input.activityId) {
+    const activity = await ctx.db.query.activity.findFirst({
+      where: (activity, { eq }) => eq(activity.id, input.activityId!),
+    });
 
-  if(!activity) {
-    throw new Error("Activity not found");
+    if(!activity) {
+      throw new Error("Activity not found");
+    }
+
+    await ctx.db.insert(readAndRelayAttempts).values({
+      id, 
+      activityId: activity.id,
+      assignmentId: activity.assignmentId,
+      userId: ctx.user.id,
+    })
+  } else {
+    await ctx.db.insert(readAndRelayAttempts).values({
+      id, 
+      assignmentId: input.assignmentId,
+      userId: ctx.user.id,
+    })
   }
-
-  await ctx.db.insert(readAndRelayAttempts).values({
-    id, 
-    activityId: input.activityId,
-    assignmentId: activity.assignmentId,
-    userId: ctx.user.id,
-  })
   return id;
 };
 
@@ -229,3 +237,35 @@ export const getReadAndRelayActivity = async (ctx: ProtectedTRPCContext, input: 
   return assignment;
 
 }
+
+export const getReadAndRelayAssignmentById = async (ctx: ProtectedTRPCContext, input: GetReadAndRelayAssignmentByIdInput) => {
+  const assignment = await ctx.db.query.readAndRelayAssignments.findFirst({
+    where: (assignment, { eq }) => eq(assignment.id, input.assignmentId),
+    with: {
+      questionsToAssignment: {
+        with: {
+          question: {
+            with: {
+              readAndRelayAnswers: true,
+            }
+          },
+        },
+        orderBy: (questionsToAssignment, { asc }) => [asc(questionsToAssignment.order)],
+      },
+      topic: {
+        columns: {
+          id: true,
+          name: true,
+          description: true,
+          slug: true,
+        }
+      }
+    }
+  });
+
+  if (!assignment) {
+    throw new Error("Read and Relay assignment not found");
+  }
+
+  return assignment;
+};

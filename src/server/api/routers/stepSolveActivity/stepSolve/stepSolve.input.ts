@@ -6,8 +6,8 @@ export const getStepSolveAssignmentSchema = z.object({
 export type GetStepSolveAssignmentInput = z.infer<typeof getStepSolveAssignmentSchema>;
 
 export const createStepSolveAssignmentAttemptSchema = z.object({
-  assignmentId: z.string().optional(),
   activityId: z.string().optional(),
+  assignmentId: z.string().optional(),
 });
 export type CreateStepSolveAssignmentAttemptInput = z.infer<typeof createStepSolveAssignmentAttemptSchema>;
 
@@ -47,3 +47,13 @@ export const getStepSolveAssignmentConceptsSchema = z.object({
   activityId: z.string(),
 });
 export type GetStepSolveAssignmentConceptsInput = z.infer<typeof getStepSolveAssignmentConceptsSchema>;
+
+export const getStepSolveAssignmentByIdSchema = z.object({
+  assignmentId: z.string(),
+});
+export type GetStepSolveAssignmentByIdInput = z.infer<typeof getStepSolveAssignmentByIdSchema>;
+
+export const getStepSolveAssignmentConceptsByIdSchema = z.object({
+  assignmentId: z.string(),
+});
+export type GetStepSolveAssignmentConceptsByIdInput = z.infer<typeof getStepSolveAssignmentConceptsByIdSchema>;

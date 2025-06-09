@@ -1,0 +1,456 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "wva9s3hukeututofn0h6q",
+    "topicIdProd": "",
+    "chapter_text": "Here are the key concepts from Section 3.2 - Light:\n\n### 3.2.1 Reflection of light\n\n*   **Sources of Light:**\n    *   **Luminous sources:** Objects that make their own light (e.g., Sun, lamps, candles). Atoms become 'excited' and emit light.\n    *   **Non-luminous objects:** Objects that reflect light from luminous sources, making them visible (e.g., this page, Moon).\n*   **Rays and Beams:**\n    *   **Ray:** The direction of light's path, represented by a straight line with an arrow.\n    *   **Beam:** A stream of light, which can be:\n        *   **Parallel:** Rays travel parallel to each other.\n        *   **Diverging:** Rays spread out.\n        *   **Converging:** Rays get narrower, coming to a point.\n*   **Pinhole Camera:** Forms an image by allowing light through a small hole. Images are real, inverted, and can be smaller/larger depending on distance.\n*   **Shadows:** Formed by opaque objects blocking light.\n    *   **Umbra:** The central, completely dark region of a shadow (from a point source or the darkest part from an extended source).\n    *   **Penumbra:** A region of partial shadow where some light reaches (from an extended source).\n*   **Reflection of Light (Plane Mirrors):**\n    *   **Normal:** A line perpendicular to the mirror surface at the point where the incident ray strikes.\n    *   **Angle of incidence ($i$):** The angle between the incident ray and the normal.\n    *   **Angle of reflection ($r$):** The angle between the reflected ray and the normal.\n    *   **Law of reflection:**\n        *   The angle of incidence is equal to the angle of reflection: $i = r$.\n        *   The incident ray, the reflected ray, and the normal all lie in the same plane.\n    *   **Regular reflection:** Occurs when light reflects from a smooth surface (e.g., plane mirror), reflecting a parallel beam as a parallel beam.\n    *   **Diffuse reflection:** Occurs when light reflects from a rough surface, reflecting rays in many directions.\n*   **Properties of Image in a Plane Mirror:**\n    *   **Virtual:** Cannot be formed on a screen; produced by rays that seem to come from it but do not actually pass through it.\n    *   As far behind the mirror as the object is in front, with the line joining corresponding points on object and image being perpendicular to the mirror.\n    *   Same size as the object.\n    *   **Laterally inverted:** Left and right are interchanged.\n    *   Orientation depends on object's alignment: same orientation if parallel to mirror, $180^\\circ$ relative if parallel to normal.\n*   **Periscope:** Uses two parallel plane mirrors fixed at $45^\\circ$ to turn light through $90^\\circ$ at each reflection, allowing observation over obstacles.\n\n### 3.2.2 Refraction of light\n\n*   **Refraction:** The bending of light when it passes from one transparent medium to another due to a change in speed.\n    *   **Angle of refraction ($r$):** The angle between the refracted ray and the normal to the surface.\n*   **Facts about Refraction:**\n    *   Light bends *towards* the normal when entering an optically denser medium (e.g., air to glass).\n    *   Light bends *away* from the normal when entering an optically less dense medium (e.g., glass to air).\n    *   A ray traveling along the normal is not refracted.\n    *   A ray emerging from a parallel-sided block is parallel to the entering ray but displaced sideways.\n*   **Real and Apparent Depth:** Refraction causes objects submerged in water to appear shallower than their real depth.\n*   **Refractive Index ($n$):**\n    *   **Definition:** The ratio of the speed of light in a vacuum (or air) to its speed in the medium.\n        $$n = \\frac{\\text{speed of light in air (or a vacuum)}}{\\text{speed of light in medium}}$$\n    *   It is also related to the angles of incidence and refraction (Snell's Law):\n        $$n = \\frac{\\sin i}{\\sin r}$$\n    *   A higher refractive index means light slows down more and bends more.\n*   **Critical Angle ($c$):**\n    *   **Definition:** The angle of incidence in an optically denser medium for which the angle of refraction in the less dense medium is $90^\\circ$. The refracted ray passes along the boundary.\n    *   Relationship with refractive index:\n        $$n = \\frac{1}{\\sin c}$$\n*   **Total Internal Reflection (TIR):** When the angle of incidence in the denser medium is greater than the critical angle, all incident light is reflected back into the denser medium.\n*   **Totally Reflecting Prisms:** Use TIR (e.g., $45^\\circ$ right-angled glass prisms) to turn light through $90^\\circ$ or $180^\\circ$, overcoming mirror defects. Used in periscopes and binoculars.\n*   **Light Pipes and Optical Fibres:** Use total internal reflection to 'trap' and guide light along curved paths.\n    *   **Uses:** Endoscopes (medical imaging), telecommunication (high-speed data transmission).\n    *   **Advantages over copper cables:** Higher data rate, more secure (unaffected by electronic interference), lower power loss over long distances, lighter, thinner, cheaper, easier to handle/install.\n    *   **Disadvantage:** Less robust, can break if bent too much.\n\n### 3.2.3 Thin lenses\n\n*   **Types of Lenses:**\n    *   **Converging (convex) lens:** Thicker in the middle, bends light inwards, brings parallel rays to a real focus. Used as a magnifying glass.\n    *   **Diverging (concave) lens:** Thinner in the middle, spreads light out, forms a diminished virtual image.\n*   **Lens Terminology:**\n    *   **Optical centre (C):** The central point of the lens.\n    *   **Principal axis:** The line passing through the optical centre at right angles to the lens.\n    *   **Principal focus (F) / Focal point:** For a converging lens, the point on the principal axis where parallel rays converge after refraction. For a diverging lens, the point from which refracted parallel rays appear to diverge.\n    *   **Focal length ($f$):** The distance between the optical centre (C) and the principal focus (F). A shorter focal length means a more powerful lens.\n*   **Image Formation by a Converging Lens:** The characteristics (real/virtual, enlarged/diminished, upright/inverted) depend on the object's position relative to F and 2F.\n    *   **Real image:** Can be formed on a screen; rays actually pass through it.\n    *   **Virtual image:** Cannot be formed on a screen; rays appear to come from it but do not actually pass through.\n*   **Ray Diagrams for Lenses:** Uses specific rays to locate images:\n    *   A ray parallel to the principal axis refracts through F.\n    *   A ray through the optical centre C is undeviated.\n    *   A ray through F refracts parallel to the principal axis.\n*   **Magnification ($M$):** The ratio of image size to object size, or image distance to object distance.\n    $$M = \\frac{\\text{image size}}{\\text{object size}} = \\frac{\\text{distance of image from lens}}{\\text{distance of object from lens}}$$\n*   **Power of a Lens ($P$):** A measure of how much a lens converges or diverges light.\n    $$P = \\frac{1}{f}$$\n    where $f$ is the focal length in metres.\n*   **Magnifying Glass:** A converging lens used to produce an enlarged, upright, virtual image of a close object (object placed between F and C).\n*   **Spectacles:** Lenses used to correct vision defects:\n    *   **Short-sight (myopia):** Image forms in front of the retina. Corrected by a **diverging lens**.\n    *   **Long-sight (hyperopia):** Image forms behind the retina. Corrected by a **converging lens**.\n\n### 3.2.4 Dispersion of light\n\n*   **Refraction by a Prism:** Light bends upon entering and exiting a prism. The overall change in direction is called **deviation**. Unlike parallel-sided blocks, the emergent ray is not parallel to the incident ray.\n*   **Dispersion:** The separation of white light into its constituent colours (a **spectrum**) when it passes through a medium like a prism.\n    *   Occurs because the refractive index of the medium is different for different colours (wavelengths/frequencies).\n    *   Violet light has the shortest wavelength, highest frequency, and is refracted most.\n    *   Red light has the longest wavelength, lowest frequency, and is refracted least.\n    *   The traditional order of colours in the visible spectrum (increasing wavelength): Violet, Indigo, Blue, Green, Yellow, Orange, Red.\n*   **Monochromatic Light:** Light of one colour and therefore of one frequency.",
+    "chapter_concepts": [
+        {
+            "concept_id": "07e9bccb-cb8f-4695-9cf9-6ba1fa7d8249",
+            "concept_question": "What are luminous sources?",
+            "concept_answer": "Luminous sources are objects that produce their own light, such as the Sun, lamps, and candles.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "4ee1de57-dd82-4d8e-8295-8be10457a918",
+            "concept_question": "What are non-luminous objects?",
+            "concept_answer": "Non-luminous objects are those that reflect light from luminous sources to become visible.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "07e9bccb-cb8f-4695-9cf9-6ba1fa7d8249"
+            ]
+        },
+        {
+            "concept_id": "c9fcddef-ce58-4959-9aed-935e7138da3b",
+            "concept_question": "What is a ray?",
+            "concept_answer": "A ray is the direction of light\u2019s path represented by a straight line with an arrow.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "b96b3901-e549-47a7-a458-92500c00e900",
+            "concept_question": "What is a beam?",
+            "concept_answer": "A beam is a stream of light consisting of many rays.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "c9fcddef-ce58-4959-9aed-935e7138da3b"
+            ]
+        },
+        {
+            "concept_id": "e2958a02-7d87-481e-ad88-8a440be627a7",
+            "concept_question": "What is a parallel beam?",
+            "concept_answer": "A parallel beam is a stream of light where the rays travel parallel to each other.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b96b3901-e549-47a7-a458-92500c00e900"
+            ]
+        },
+        {
+            "concept_id": "6feefaf9-4fff-445b-839e-49a98c249846",
+            "concept_question": "What is a diverging beam?",
+            "concept_answer": "A diverging beam is a stream of light in which the rays spread out.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b96b3901-e549-47a7-a458-92500c00e900"
+            ]
+        },
+        {
+            "concept_id": "73de425e-0832-46d7-b336-a69a00c5181b",
+            "concept_question": "What is a converging beam?",
+            "concept_answer": "A converging beam is a stream of light where the rays get closer and converge to a point.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b96b3901-e549-47a7-a458-92500c00e900"
+            ]
+        },
+        {
+            "concept_id": "3f18c231-1575-43df-88a2-e24f87cb5de3",
+            "concept_question": "What is a pinhole camera?",
+            "concept_answer": "A pinhole camera forms an inverted real image by allowing light through a small hole.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "4941a3ad-ddee-4260-a925-3ada3fa69fad",
+            "concept_question": "What is a shadow?",
+            "concept_answer": "A shadow is the dark area formed when an opaque object blocks light.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "7a35be94-9c83-415f-8207-626c37d1120f",
+            "concept_question": "What is umbra?",
+            "concept_answer": "Umbra is the central, completely dark region of a shadow.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4941a3ad-ddee-4260-a925-3ada3fa69fad"
+            ]
+        },
+        {
+            "concept_id": "d29bdea5-e23b-4607-8992-3db2033bca77",
+            "concept_question": "What is penumbra?",
+            "concept_answer": "Penumbra is the partially shadowed region where some light reaches.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4941a3ad-ddee-4260-a925-3ada3fa69fad"
+            ]
+        },
+        {
+            "concept_id": "e5a8bffd-4dbd-4732-b0f1-3d3377535c80",
+            "concept_question": "What is the normal?",
+            "concept_answer": "The normal is a line perpendicular to a surface at the point where light strikes.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "2a2a94a7-2cbd-48e4-8bbe-e6261bbd57e3",
+            "concept_question": "What is the angle of incidence?",
+            "concept_answer": "The angle of incidence is formed between the incident ray and the normal.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e5a8bffd-4dbd-4732-b0f1-3d3377535c80"
+            ]
+        },
+        {
+            "concept_id": "2504420c-994c-4969-a532-05df5546b31f",
+            "concept_question": "What is the angle of reflection?",
+            "concept_answer": "The angle of reflection is defined as the angle between the reflected ray and the normal.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e5a8bffd-4dbd-4732-b0f1-3d3377535c80"
+            ]
+        },
+        {
+            "concept_id": "e93d9d67-63fc-404d-bd49-feafaf44eefe",
+            "concept_question": "What is the law of reflection?",
+            "concept_answer": "The law of reflection states that the angle of incidence equals the angle of reflection and all lie in the same plane.",
+            "concept_formula": [
+                "$!$i = r$!$"
+            ],
+            "pre-requisites": [
+                "e5a8bffd-4dbd-4732-b0f1-3d3377535c80",
+                "2a2a94a7-2cbd-48e4-8bbe-e6261bbd57e3",
+                "2504420c-994c-4969-a532-05df5546b31f"
+            ]
+        },
+        {
+            "concept_id": "deb5b9eb-941c-4517-a60c-92bb1e520500",
+            "concept_question": "What is regular reflection?",
+            "concept_answer": "Regular reflection occurs when light reflects off a smooth surface, preserving a parallel beam.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e93d9d67-63fc-404d-bd49-feafaf44eefe"
+            ]
+        },
+        {
+            "concept_id": "86188c24-dc72-486a-8779-75a6f35510e0",
+            "concept_question": "What is diffuse reflection?",
+            "concept_answer": "Diffuse reflection happens when light scatters in many directions after hitting a rough surface.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e93d9d67-63fc-404d-bd49-feafaf44eefe"
+            ]
+        },
+        {
+            "concept_id": "35b150a9-aeeb-4f0e-89a8-a124c32bad80",
+            "concept_question": "What are plane mirror image properties?",
+            "concept_answer": "An image in a plane mirror is virtual, laterally inverted, of the same size as the object and appears symmetrically behind the mirror.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e93d9d67-63fc-404d-bd49-feafaf44eefe"
+            ]
+        },
+        {
+            "concept_id": "edcf694e-b930-4c53-8cca-1221f5ab95df",
+            "concept_question": "What is a periscope?",
+            "concept_answer": "A periscope uses two plane mirrors to turn light through 90 degrees for observing over obstacles.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "35b150a9-aeeb-4f0e-89a8-a124c32bad80"
+            ]
+        },
+        {
+            "concept_id": "f780df30-5df3-4c3d-ad82-4f86a89f8144",
+            "concept_question": "What is refraction?",
+            "concept_answer": "Refraction is the bending of light as it passes from one transparent medium to another due to a change in speed.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "341aeec2-f2c0-45b2-8daf-3a7a1064bff8",
+            "concept_question": "What is the angle of refraction?",
+            "concept_answer": "The angle of refraction is the angle between the refracted ray and the normal to the surface.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f780df30-5df3-4c3d-ad82-4f86a89f8144",
+                "e5a8bffd-4dbd-4732-b0f1-3d3377535c80"
+            ]
+        },
+        {
+            "concept_id": "45b03404-83cf-4caf-8030-36925bc857fb",
+            "concept_question": "What is the bending behavior in refraction?",
+            "concept_answer": "Light bends towards the normal in a denser medium and away from it in a less dense medium, with rays along the normal remaining undeviated.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f780df30-5df3-4c3d-ad82-4f86a89f8144",
+                "341aeec2-f2c0-45b2-8daf-3a7a1064bff8"
+            ]
+        },
+        {
+            "concept_id": "488995d9-0418-437b-afe1-5c283e6346b8",
+            "concept_question": "What is real depth?",
+            "concept_answer": "Real depth is the actual physical depth of an object submerged in water.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f780df30-5df3-4c3d-ad82-4f86a89f8144",
+                "45b03404-83cf-4caf-8030-36925bc857fb"
+            ]
+        },
+        {
+            "concept_id": "1ffcf95f-8305-41cc-8a9a-29f6ec2dc99a",
+            "concept_question": "What is apparent depth?",
+            "concept_answer": "Apparent depth is the perceived shallower depth of an object submerged in water due to refraction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f780df30-5df3-4c3d-ad82-4f86a89f8144",
+                "45b03404-83cf-4caf-8030-36925bc857fb"
+            ]
+        },
+        {
+            "concept_id": "0fd432f9-88af-4d36-8e87-5eae4916e921",
+            "concept_question": "What is refractive index?",
+            "concept_answer": "The refractive index is the ratio of the speed of light in a vacuum to its speed in a medium.",
+            "concept_formula": [
+                "$!$n = \\frac{\\text{speed of light in air}}{\\text{speed of light in medium}}$!$",
+                "$!$n = \\frac{\\sin i}{\\sin r}$!$"
+            ],
+            "pre-requisites": [
+                "f780df30-5df3-4c3d-ad82-4f86a89f8144"
+            ]
+        },
+        {
+            "concept_id": "12c39f67-6487-45a1-ad1c-9b2d008d49da",
+            "concept_question": "What is the critical angle?",
+            "concept_answer": "The critical angle is the incidence angle in a denser medium for which the refracted ray makes a 90 degree angle with the normal.",
+            "concept_formula": [
+                "$!$n = \\frac{1}{\\sin c}$!$"
+            ],
+            "pre-requisites": [
+                "0fd432f9-88af-4d36-8e87-5eae4916e921",
+                "341aeec2-f2c0-45b2-8daf-3a7a1064bff8"
+            ]
+        },
+        {
+            "concept_id": "3803fa1a-4cc3-421c-8c92-58e6d303f533",
+            "concept_question": "What is total internal reflection?",
+            "concept_answer": "Total internal reflection occurs when light in a denser medium is completely reflected back when the incidence angle exceeds the critical angle.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "12c39f67-6487-45a1-ad1c-9b2d008d49da",
+                "0fd432f9-88af-4d36-8e87-5eae4916e921"
+            ]
+        },
+        {
+            "concept_id": "6ddf2e08-d4d6-4e3d-b861-8b1dc6f39fb9",
+            "concept_question": "What are totally reflecting prisms?",
+            "concept_answer": "Totally reflecting prisms use total internal reflection to redirect light through specific angles.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3803fa1a-4cc3-421c-8c92-58e6d303f533"
+            ]
+        },
+        {
+            "concept_id": "cc329632-c50c-404f-8c13-efa1b030ea81",
+            "concept_question": "What are light pipes?",
+            "concept_answer": "Light pipes guide light along curved paths using total internal reflection and are commonly used in lighting applications.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3803fa1a-4cc3-421c-8c92-58e6d303f533"
+            ]
+        },
+        {
+            "concept_id": "35bd44aa-c565-4ca4-ab12-bac2f94d1284",
+            "concept_question": "What are optical fibres?",
+            "concept_answer": "Optical fibres guide light along curved paths using total internal reflection and are widely used in telecommunications and medical imaging.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3803fa1a-4cc3-421c-8c92-58e6d303f533"
+            ]
+        },
+        {
+            "concept_id": "1d416989-a109-4cdd-8a7b-bdc3f9665fd3",
+            "concept_question": "What is a converging lens?",
+            "concept_answer": "A converging lens, or convex lens, is thicker in the middle and bends light inwards to a real focus.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "7e51a527-9086-4473-b4df-c57a80affa40",
+            "concept_question": "What is a diverging lens?",
+            "concept_answer": "A diverging lens, or concave lens, is thinner in the middle and spreads light out to form a virtual image.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "4d178a60-0440-4e31-9c4a-2e04076d1f87",
+            "concept_question": "What is the optical centre?",
+            "concept_answer": "The optical centre is the central point of a lens through which light passes without deviation.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1d416989-a109-4cdd-8a7b-bdc3f9665fd3",
+                "7e51a527-9086-4473-b4df-c57a80affa40"
+            ]
+        },
+        {
+            "concept_id": "7cd856de-9d0e-4cce-9b4f-03e3cc715eb3",
+            "concept_question": "What is the principal axis?",
+            "concept_answer": "The principal axis is the straight line that passes through the optical centre and is perpendicular to the lens.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4d178a60-0440-4e31-9c4a-2e04076d1f87"
+            ]
+        },
+        {
+            "concept_id": "ec9e3ae9-f36d-4eb8-a4fc-2300955ec655",
+            "concept_question": "What is the principal focus?",
+            "concept_answer": "The principal focus is the point on the principal axis where parallel rays converge or seem to diverge after refraction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7cd856de-9d0e-4cce-9b4f-03e3cc715eb3"
+            ]
+        },
+        {
+            "concept_id": "8927c2c5-e341-499e-b374-a6840929aa51",
+            "concept_question": "What is focal length?",
+            "concept_answer": "Focal length is the distance between the optical centre and the principal focus of a lens.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4d178a60-0440-4e31-9c4a-2e04076d1f87",
+                "ec9e3ae9-f36d-4eb8-a4fc-2300955ec655"
+            ]
+        },
+        {
+            "concept_id": "575a2f55-3227-4f5f-98e2-cb50af7d410d",
+            "concept_question": "What is a real image formed by a lens?",
+            "concept_answer": "A real image is formed when light converges and can be projected on a screen.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1d416989-a109-4cdd-8a7b-bdc3f9665fd3",
+                "8927c2c5-e341-499e-b374-a6840929aa51"
+            ]
+        },
+        {
+            "concept_id": "4aef37c9-b90c-469e-8d2d-af931ffa70a2",
+            "concept_question": "What is a virtual image formed by a lens?",
+            "concept_answer": "A virtual image is one where the light rays appear to come from a location but do not actually converge there.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1d416989-a109-4cdd-8a7b-bdc3f9665fd3",
+                "7e51a527-9086-4473-b4df-c57a80affa40",
+                "8927c2c5-e341-499e-b374-a6840929aa51"
+            ]
+        },
+        {
+            "concept_id": "cac54d69-cd90-40c6-bd41-2229d19e1dc3",
+            "concept_question": "What is magnification?",
+            "concept_answer": "Magnification is the ratio indicating how much larger or smaller the image is compared to the object.",
+            "concept_formula": [
+                "$!$M = \\frac{\\text{image size}}{\\text{object size}}$!$",
+                "$!$M = \\frac{\\text{distance of image from lens}}{\\text{distance of object from lens}}$!$"
+            ],
+            "pre-requisites": [
+                "8927c2c5-e341-499e-b374-a6840929aa51",
+                "575a2f55-3227-4f5f-98e2-cb50af7d410d",
+                "4aef37c9-b90c-469e-8d2d-af931ffa70a2"
+            ]
+        },
+        {
+            "concept_id": "579e3fe9-1690-465b-b0c6-32a60dc7075a",
+            "concept_question": "What is the power of a lens?",
+            "concept_answer": "The power of a lens measures its ability to converge or diverge light.",
+            "concept_formula": [
+                "$!$P = \\frac{1}{f}$!$"
+            ],
+            "pre-requisites": [
+                "8927c2c5-e341-499e-b374-a6840929aa51"
+            ]
+        },
+        {
+            "concept_id": "fa05dadd-50ec-4c67-86b4-ea1f9f9b4583",
+            "concept_question": "What is a magnifying glass?",
+            "concept_answer": "A magnifying glass is a converging lens used to produce an enlarged, upright, virtual image of a close object.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1d416989-a109-4cdd-8a7b-bdc3f9665fd3",
+                "8927c2c5-e341-499e-b374-a6840929aa51"
+            ]
+        },
+        {
+            "concept_id": "cafce598-9e75-4148-9359-dcbff52ab5ee",
+            "concept_question": "What is myopia?",
+            "concept_answer": "Myopia is a vision defect where images form in front of the retina and are corrected with diverging lenses.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "575a2f55-3227-4f5f-98e2-cb50af7d410d",
+                "4aef37c9-b90c-469e-8d2d-af931ffa70a2"
+            ]
+        },
+        {
+            "concept_id": "18256ab4-bf79-49c1-8ded-1884f802c0cf",
+            "concept_question": "What is hyperopia?",
+            "concept_answer": "Hyperopia is a vision defect where images form behind the retina and are corrected with converging lenses.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "575a2f55-3227-4f5f-98e2-cb50af7d410d",
+                "4aef37c9-b90c-469e-8d2d-af931ffa70a2"
+            ]
+        },
+        {
+            "concept_id": "d484ad33-f1ed-40aa-b991-962edf2e4722",
+            "concept_question": "What is refraction by a prism?",
+            "concept_answer": "Refraction by a prism is the bending of light when it enters and exits the prism, resulting in a deviation.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f780df30-5df3-4c3d-ad82-4f86a89f8144"
+            ]
+        },
+        {
+            "concept_id": "1d47d686-a62c-4de9-b384-283877e567b9",
+            "concept_question": "What is dispersion?",
+            "concept_answer": "Dispersion is the separation of white light into its constituent colours due to varying refractive indices.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "0fd432f9-88af-4d36-8e87-5eae4916e921",
+                "d484ad33-f1ed-40aa-b991-962edf2e4722"
+            ]
+        },
+        {
+            "concept_id": "2928e5dd-8adf-4e29-955b-91b374c3e363",
+            "concept_question": "What is the visible spectrum order?",
+            "concept_answer": "The visible spectrum order from shortest to longest wavelength is Violet, Indigo, Blue, Green, Yellow, Orange, and Red.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "1d47d686-a62c-4de9-b384-283877e567b9"
+            ]
+        },
+        {
+            "concept_id": "ccc6c623-7aa9-409c-95e5-6c6552d07b3a",
+            "concept_question": "What is monochromatic light?",
+            "concept_answer": "Monochromatic light consists of a single colour and frequency.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "a697b893-20d1-4948-a89b-4d8300235fef",
+            "concept_question": "What is Snell's Law?",
+            "concept_answer": "Snell's Law relates the refractive index to the sines of the angles of incidence and refraction.",
+            "concept_formula": [
+                "$!$n = \\frac{\\sin i}{\\sin r}$!$"
+            ],
+            "pre-requisites": [
+                "0fd432f9-88af-4d36-8e87-5eae4916e921",
+                "341aeec2-f2c0-45b2-8daf-3a7a1064bff8"
+            ]
+        }
+    ]
+}

@@ -2,7 +2,7 @@ import { boolean, integer, pgTableCreator, timestamp, varchar, text, doublePreci
 import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { users } from "../user";
 import { relations } from "drizzle-orm";
-import { topics } from "../subject";
+import { topics, courses, subjects } from "../subject";
 import { reasoningQuestionToAssignment } from "./reasoningQuestions";
 import { activity } from "../activity";
 import { reasoningAttemptFinalAnswer, reasoningPathwayAttempts } from "./reasoningQuestionAttempts";
@@ -36,6 +36,9 @@ export const reasoningAssignmentRelations = relations(reasoningAssignments, ({ o
     references: [topics.id],
   }),
   reasoningQuestions: many(reasoningQuestionToAssignment),
+  assignmentToCourses: many(reasoningAssignmentToCourse),
+  assignmentToGrades: many(reasoningAssignmentToGrade),
+  assignmentToSubjects: many(reasoningAssignmentToSubject),
 }));
 
 /**
@@ -72,6 +75,86 @@ export const reasoningAssignmentAttemptRelations = relations(reasoningAssignment
   user: one(users, {
     fields: [reasoningAssignmentAttempts.userId],
     references: [users.id],
+  }),
+}));
+
+/**
+ * Junction table for many-to-many relationship between Reasoning assignments and courses
+ * Allows one assignment to be mapped to multiple courses
+ */
+export const reasoningAssignmentToCourse = pgTable(
+  "reasoning_assignment_to_course",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    assignmentId: varchar("assignment_id", { length: 21 }).notNull().references(() => reasoningAssignments.id),
+    courseId: varchar("course_id", { length: 21 }).notNull().references(() => courses.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+);
+
+export const reasoningAssignmentToCourseRelations = relations(reasoningAssignmentToCourse, ({ one }) => ({
+  assignment: one(reasoningAssignments, {
+    fields: [reasoningAssignmentToCourse.assignmentId],
+    references: [reasoningAssignments.id],
+  }),
+  course: one(courses, {
+    fields: [reasoningAssignmentToCourse.courseId],
+    references: [courses.id],
+  }),
+}));
+
+/**
+ * Junction table for many-to-many relationship between Reasoning assignments and grades
+ * Allows one assignment to be mapped to multiple grades
+ */
+export const reasoningAssignmentToGrade = pgTable(
+  "reasoning_assignment_to_grade",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    assignmentId: varchar("assignment_id", { length: 21 }).notNull().references(() => reasoningAssignments.id),
+    grade: varchar("grade").notNull(),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+);
+
+export const reasoningAssignmentToGradeRelations = relations(reasoningAssignmentToGrade, ({ one }) => ({
+  assignment: one(reasoningAssignments, {
+    fields: [reasoningAssignmentToGrade.assignmentId],
+    references: [reasoningAssignments.id],
+  }),
+}));
+
+/**
+ * Junction table for many-to-many relationship between Reasoning assignments and subjects
+ * Allows one assignment to be mapped to multiple subjects (direct mapping, in addition to the indirect topic->course->subject)
+ */
+export const reasoningAssignmentToSubject = pgTable(
+  "reasoning_assignment_to_subject",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    assignmentId: varchar("assignment_id", { length: 21 }).notNull().references(() => reasoningAssignments.id),
+    subjectId: varchar("subject_id", { length: 21 }).notNull().references(() => subjects.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+);
+
+export const reasoningAssignmentToSubjectRelations = relations(reasoningAssignmentToSubject, ({ one }) => ({
+  assignment: one(reasoningAssignments, {
+    fields: [reasoningAssignmentToSubject.assignmentId],
+    references: [reasoningAssignments.id],
+  }),
+  subject: one(subjects, {
+    fields: [reasoningAssignmentToSubject.subjectId],
+    references: [subjects.id],
   }),
 }));
 

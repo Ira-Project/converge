@@ -1,0 +1,307 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "wphmricohpp8jxsmgv7je",
+    "topicIdProd": "",
+    "chapter_text": "**Thermal Expansion**\n\n*   **General Principles:** When thermal energy is transferred to a material, its particles tend to move further apart, leading to an increase in volume (expansion). Conversely, cooling causes contraction.\n*   **Relative Magnitudes:** The magnitude of expansion for a given temperature rise is smallest for solids, greater for liquids, and largest for gases.\n*   **Kinetic Particle Model Explanation:**\n    *   **Solids/Liquids:** Particles are in constant vibration. When heated, they vibrate faster, forcing each other slightly further apart.\n    *   **Gases:** Particles are free to move rapidly. When heated, their average speed increases, leading to more frequent collisions with container surfaces. To maintain constant pressure, the volume must increase.\n*   **Everyday Applications & Consequences:**\n    *   Allowances for expansion are crucial in railway tracks (gaps, tapered overlapping joints in welded rails) and engineered structures like bridges to prevent distortion.\n    *   \"Shrink-fitting\" uses cooling (e.g., liquid nitrogen) to contract parts for a tight fit upon regaining normal temperature.\n    *   Hot water can loosen tight metal lids on glass jars by expanding the lid.\n    *   Expanding gases drive pistons in car engines.\n*   **Bimetallic Strips:**\n    *   **Definition:** Two different metals (e.g., copper and iron) of equal length riveted together.\n    *   **Principle:** When heated, metals expand at different rates. The strip bends with the metal that expands more on the outside.\n    *   **Applications:** Fire alarms (bend to complete a circuit), car direction indicators, and thermostats.\n*   **Thermostats:** Use a bimetallic strip to maintain a constant temperature by bending to break or make an electrical heating circuit.\n*   **Linear Expansivity (Going Further):**\n    *   **Definition:** The increase in length of 1 meter of a substance for a 1\u00b0C rise in temperature.\n    *   **Formula:** $\\text{expansion} = \\text{linear expansivity} \\times \\text{original length} \\times \\text{temperature rise}$\n*   **Anomalous Expansion of Water:**\n    *   **Behavior:** Water contracts as it cools to 4\u00b0C, but then surprisingly expands as it cools further from 4\u00b0C to 0\u00b0C.\n    *   **Maximum Density:** Water has its maximum density at 4\u00b0C.\n    *   **Freezing Expansion:** At 0\u00b0C, water freezes and undergoes a considerable volume expansion (e.g., 100 cm$^3$ of water becomes 109 cm$^3$ of ice).\n    *   **Consequences:** Bursting water pipes in cold weather, ice floating on water (due to lower density than cold water), and fish surviving in frozen ponds (water near the bottom remains at 4\u00b0C).\n    *   **Particle Explanation:** The expansion between 4\u00b0C and 0\u00b0C is due to the breaking up of water particle groups, requiring a larger volume.\n*   **Liquid-in-Glass Thermometers:**\n    *   **Mechanism:** A liquid in a glass bulb expands up a narrow capillary tube when heated, indicating temperature.\n    *   **Liquid Properties:** Must be easily seen, expand/contract rapidly and significantly over a wide temperature range, and not stick to the tube.\n    *   **Common Liquids:** Mercury (toxic, range -39\u00b0C to 357\u00b0C), colored alcohol (lower freezing point, -115\u00b0C to 78\u00b0C), and Galinstan (wider range, -19\u00b0C to 1300\u00b0C).\n*   **Temperature Scales (Going Further):**\n    *   **Definition:** A scale is established by choosing two fixed points and dividing the range between them into equal divisions (degrees).\n    *   **Celsius Scale:** Uses the melting point of pure ice (0\u00b0C) and the boiling point of water (100\u00b0C at normal atmospheric pressure, $10^5 \\text{ Pa}$) as fixed points, divided into 100 degrees.\n\n**Specific Heat Capacity**\n\n*   **Internal Energy:**\n    *   **Definition:** The energy associated with the motion of all particles within an object.\n    *   **Relationship to Temperature:** An object's internal energy increases when its temperature rises, as the average kinetic energy of its particles increases (they move faster).\n*   **Thermal Energy vs. Temperature:**\n    *   **Distinction:** Temperature is a measure of the average kinetic energy of particles, while thermal energy refers to the total energy of particles (kinetic and potential).\n    *   **Transfer:** Thermal energy flows from a body at a higher temperature to one at a lower temperature until their particles have the same average kinetic energy (same temperature).\n*   **Specific Heat Capacity ($c$):**\n    *   **Definition:** The energy required per unit mass to raise the temperature of a particular substance by one degree Celsius (or Kelvin).\n    *   **Formula:** $c = \\frac{\\Delta E}{m \\Delta \\theta}$\n        *   Where $\\Delta E$ is the energy supplied (in Joules, J), $m$ is the mass (in kilograms, kg), and $\\Delta \\theta$ is the temperature rise (in degrees Celsius, \u00b0C).\n    *   **Rearranged Formula:** $\\Delta E = mc\\Delta \\theta$\n    *   **Unit:** Joules per kilogram per degree Celsius ($\\text{J kg}^{-1} \\text{ \u00b0C}^{-1}$).\n*   **Practical Measurements:** Experiments involve heating a substance (e.g., water or an aluminum block) with a heater of known power for a measured time, recording the mass and temperature rise, and then calculating specific heat capacity.\n*   **Importance of Water's High Specific Heat Capacity:** Water has a high specific heat capacity (e.g., 4200 $\\text{J kg}^{-1} \\text{ \u00b0C}^{-1}$), meaning it requires a large amount of energy to change its temperature. This property accounts for:\n    *   The moderating effect on temperatures in coastal regions and islands.\n    *   Its use as a coolant in engines and central heating systems.\n*   **Energy Transfer in Mixtures:** When substances at different temperatures are mixed, energy flows from the hotter substance to the colder one until they reach thermal equilibrium. Assuming no energy loss to surroundings, the energy given out by the hotter substance equals the energy taken in by the colder substance.\n\n**Melting, Boiling and Evaporation**\n\n*   **Changes of State:**\n    *   **Melting:** Solid to liquid (requires energy input).\n    *   **Boiling (Vaporisation):** Liquid to gas (requires energy input).\n    *   **Solidification (Freezing):** Liquid to solid (releases heat).\n    *   **Condensation:** Gas to liquid (releases heat).\n*   **Temperature During Phase Change:** During a change of state (melting, boiling, solidification, condensation) for a pure substance, the temperature remains constant even though energy is being transferred. This is often observed as a flat section (plateau) on a cooling or heating curve.\n*   **Kinetic Particle Model for Phase Changes:**\n    *   **Melting/Solidification:** Energy absorbed during melting enables particles to overcome intermolecular forces and move more freely. This energy increases the potential energy ($\\Delta E_p$) of the particles, not their average kinetic energy ($\\Delta E_k$). In solidification, potential energy is released.\n    *   **Vaporisation/Condensation:** A large amount of energy is required for particles to overcome forces and move independently as gas particles. This energy increases the potential energy of particles and is also used to push back the surrounding atmosphere during expansion. In condensation, potential energy is released.\n*   **Latent Heat of Fusion ($\\text{l}_f$) (Going Further):**\n    *   **Definition:** The quantity of heat needed to change unit mass of a substance from solid to liquid without temperature change.\n    *   **Formula:** $\\Delta E = m l_f$\n    *   **Unit:** Joules per kilogram ($\\text{J kg}^{-1}$).\n*   **Latent Heat of Vaporisation ($\\text{l}_v$) (Going Further):**\n    *   **Definition:** The quantity of heat needed to change unit mass of a substance from liquid to vapor without temperature change.\n    *   **Formula:** $\\Delta E = m l_v$\n    *   **Unit:** Joules per kilogram ($\\text{J kg}^{-1}$).\n    *   **Significance:** Scalds from steam are more serious than from boiling water because steam contains a significant amount of latent heat that is released upon condensation.\n*   **Boiling:**\n    *   **Characteristics:** Occurs at a definite boiling temperature (100\u00b0C for water at standard atmospheric pressure) and is accompanied by bubbles forming throughout the liquid, containing the gaseous form of the substance.\n    *   **Energy Storage:** Energy is stored in the vapor during boiling and released upon condensation.\n*   **Evaporation:**\n    *   **Definition:** The process where energetic particles at the surface of a liquid escape and become gas particles.\n    *   **Occurrence:** Occurs at all temperatures, not just the boiling point.\n    *   **Conditions Affecting Rate:**\n        *   **Higher Temperature:** More particles have sufficient energy to escape.\n        *   **Larger Surface Area:** More particles are exposed to the surface, increasing the chance of escape.\n        *   **Wind/Draught:** Carries away vapor particles, preventing them from returning to the liquid and allowing more liquid particles to escape.\n        *   **Evaporation into Vacuum:** Occurs much more rapidly.\n*   **Cooling by Evaporation:**\n    *   **Explanation:** When faster-moving, more energetic particles escape from the liquid surface, the average kinetic energy of the remaining particles decreases, leading to a drop in the liquid's temperature.\n    *   **Cooling by Contact:** If an object is in contact with the evaporating liquid, thermal energy flows from the object to the liquid, causing the object to cool.\n    *   **Uses:** Sweating for body temperature regulation, ether as a local anesthetic, and in refrigeration/air-conditioning systems.",
+    "chapter_concepts": [
+        {
+            "concept_id": "bf59124c-7d02-40a2-b1e4-87e55482ee03",
+            "concept_question": "What is thermal expansion?",
+            "concept_answer": "Thermal expansion is the increase in volume of a material when its particles move further apart due to heat.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "cc7c4488-72be-4be3-8131-e36aafc8cdc8",
+            "concept_question": "How does expansion vary among states?",
+            "concept_answer": "For a given temperature rise, solids expand least, liquids more, and gases most.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bf59124c-7d02-40a2-b1e4-87e55482ee03"
+            ]
+        },
+        {
+            "concept_id": "c1bf2a35-1a8b-4fbc-adcc-f576136a6634",
+            "concept_question": "What is the kinetic model for solids?",
+            "concept_answer": "In solids, heating increases particle vibrations which force particles slightly apart.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bf59124c-7d02-40a2-b1e4-87e55482ee03"
+            ]
+        },
+        {
+            "concept_id": "a3bddfa9-c146-4dcb-ab29-a24d37b217fe",
+            "concept_question": "What is the kinetic model for liquids?",
+            "concept_answer": "In liquids, heating increases particle vibrations that reduce cohesive forces, allowing molecules to move further apart.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bf59124c-7d02-40a2-b1e4-87e55482ee03"
+            ]
+        },
+        {
+            "concept_id": "04a61cbf-20ce-4d98-b573-2dcad8faed55",
+            "concept_question": "What is the kinetic model for gases?",
+            "concept_answer": "For gases, heating raises particle speeds and collision frequency, necessitating volume increase at constant pressure.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bf59124c-7d02-40a2-b1e4-87e55482ee03"
+            ]
+        },
+        {
+            "concept_id": "97a78e8c-1b1d-4b5c-908c-f58bb8755895",
+            "concept_question": "What are thermal expansion applications?",
+            "concept_answer": "Thermal expansion is accounted for in railway tracks, shrink-fitting, jar lids, and engine pistons.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bf59124c-7d02-40a2-b1e4-87e55482ee03"
+            ]
+        },
+        {
+            "concept_id": "cce6fc72-7144-4ef6-9889-0ff19ba68c33",
+            "concept_question": "What is a bimetallic strip?",
+            "concept_answer": "A bimetallic strip is two dissimilar metals bonded together that bend when heated due to differing expansion rates.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bf59124c-7d02-40a2-b1e4-87e55482ee03"
+            ]
+        },
+        {
+            "concept_id": "a3101df3-9fbc-42df-9773-3a9e7851046f",
+            "concept_question": "What is linear expansivity?",
+            "concept_answer": "Linear expansivity is the increase in length per unit length per degree Celsius temperature rise.",
+            "concept_formula": [
+                "$!$expansion = linear expansivity \\times original length \\times temperature rise$!$"
+            ],
+            "pre-requisites": [
+                "bf59124c-7d02-40a2-b1e4-87e55482ee03"
+            ]
+        },
+        {
+            "concept_id": "34285efd-08f5-4017-9cd9-30adacf3bd1e",
+            "concept_question": "What is anomalous expansion of water?",
+            "concept_answer": "Water shows anomalous expansion by contracting down to 4\u00b0C then expanding as it cools further to 0\u00b0C.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bf59124c-7d02-40a2-b1e4-87e55482ee03"
+            ]
+        },
+        {
+            "concept_id": "8d718d96-af61-49ea-9ffb-75dfa2ff7e7d",
+            "concept_question": "What is water\u2019s maximum density temperature?",
+            "concept_answer": "Water reaches its maximum density at 4\u00b0C.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "34285efd-08f5-4017-9cd9-30adacf3bd1e"
+            ]
+        },
+        {
+            "concept_id": "7f0b2dc2-a40c-4fb3-8004-9683082508bb",
+            "concept_question": "What is freezing expansion in water?",
+            "concept_answer": "When water freezes at 0\u00b0C, it expands significantly, as seen when 100 cm\u00b3 water becomes 109 cm\u00b3 ice.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "34285efd-08f5-4017-9cd9-30adacf3bd1e"
+            ]
+        },
+        {
+            "concept_id": "bea75482-a003-4920-b9b4-0f3158762f5a",
+            "concept_question": "Why does water expand between 4\u00b0C and 0\u00b0C?",
+            "concept_answer": "The breakup of water particle groups between 4\u00b0C and 0\u00b0C forces the liquid to occupy a larger volume.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "34285efd-08f5-4017-9cd9-30adacf3bd1e"
+            ]
+        },
+        {
+            "concept_id": "7018ab8e-636f-4685-929f-fd1c5783c8f2",
+            "concept_question": "What are consequences of water\u2019s anomalous expansion?",
+            "concept_answer": "Anomalous water expansion can cause bursting pipes, floating ice, and create warmer water refuges for fish.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "34285efd-08f5-4017-9cd9-30adacf3bd1e"
+            ]
+        },
+        {
+            "concept_id": "2e8423b7-3bdf-4cd8-9cd7-a6031a6d1b9e",
+            "concept_question": "What is a liquid-in-glass thermometer?",
+            "concept_answer": "A liquid-in-glass thermometer indicates temperature by the expansion of a liquid moving up a narrow capillary tube.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "bf59124c-7d02-40a2-b1e4-87e55482ee03"
+            ]
+        },
+        {
+            "concept_id": "617980fc-b967-4e90-bbec-ffbd8352aa97",
+            "concept_question": "What is a temperature scale?",
+            "concept_answer": "A temperature scale is defined by selecting two fixed reference points and dividing the range into equal degrees.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e08094ac-d208-4844-86e3-86278de7a057",
+            "concept_question": "What defines the Celsius scale?",
+            "concept_answer": "The Celsius scale sets 0\u00b0C at ice melting and 100\u00b0C at water boiling under standard pressure.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "617980fc-b967-4e90-bbec-ffbd8352aa97"
+            ]
+        },
+        {
+            "concept_id": "55a369f8-4e2a-4d94-aeb3-0470428a2cb3",
+            "concept_question": "What is internal energy?",
+            "concept_answer": "Internal energy is the total energy associated with all the motion of an object's particles.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "cf54b36e-32b8-4ffa-a87c-db90c27d34d2",
+            "concept_question": "What is temperature?",
+            "concept_answer": "Temperature is a measure of the average kinetic energy of particles in a substance.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "55a369f8-4e2a-4d94-aeb3-0470428a2cb3"
+            ]
+        },
+        {
+            "concept_id": "a3095cdf-c67d-42ee-8106-eeb31aa90b15",
+            "concept_question": "What is thermal energy?",
+            "concept_answer": "Thermal energy is the sum of kinetic and potential energies of the particles in a substance.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "55a369f8-4e2a-4d94-aeb3-0470428a2cb3"
+            ]
+        },
+        {
+            "concept_id": "1645974f-6a67-463a-815d-9b9fa70103cd",
+            "concept_question": "What is the direction of thermal energy flow?",
+            "concept_answer": "Thermal energy flows from a higher temperature body to a lower temperature body until equilibrium is reached.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "55a369f8-4e2a-4d94-aeb3-0470428a2cb3"
+            ]
+        },
+        {
+            "concept_id": "81aff587-ab8e-447b-a084-49ff29038b01",
+            "concept_question": "What is specific heat capacity?",
+            "concept_answer": "Specific heat capacity is the energy required per unit mass to raise a substance\u2019s temperature by one degree Celsius.",
+            "concept_formula": [
+                "$!$c = \\frac{\\Delta E}{m \\Delta \\theta}$!$",
+                "$!$\\Delta E = m c \\Delta \\theta$!$"
+            ],
+            "pre-requisites": [
+                "55a369f8-4e2a-4d94-aeb3-0470428a2cb3"
+            ]
+        },
+        {
+            "concept_id": "2be62925-38b8-4332-9eae-aa7871d02fd7",
+            "concept_question": "How does water's specific heat capacity affect climate?",
+            "concept_answer": "Water's high specific heat capacity moderates climate by absorbing and releasing heat slowly.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "81aff587-ab8e-447b-a084-49ff29038b01"
+            ]
+        },
+        {
+            "concept_id": "f0e24e8f-254e-445d-bb7a-0ddf437ab82b",
+            "concept_question": "How does water's specific heat capacity impact cooling systems?",
+            "concept_answer": "Water's high specific heat capacity makes it effective at storing thermal energy, useful in cooling systems.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "81aff587-ab8e-447b-a084-49ff29038b01"
+            ]
+        },
+        {
+            "concept_id": "6bde9fe5-33cf-43dd-8c0e-1020f01fd878",
+            "concept_question": "What is boiling?",
+            "concept_answer": "Boiling is the conversion of a liquid to a gas that requires energy input.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "dc04b1d0-cc01-4794-8400-9863ad8a90b4",
+            "concept_question": "How does temperature behave during phase changes?",
+            "concept_answer": "During a phase change, a pure substance's temperature remains constant despite energy transfer.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6bde9fe5-33cf-43dd-8c0e-1020f01fd878"
+            ]
+        },
+        {
+            "concept_id": "633abb0a-c629-41d6-b7d2-98fcce41eb7b",
+            "concept_question": "What happens to particle energy during melting?",
+            "concept_answer": "During melting, the absorbed energy increases particle potential energy, breaking intermolecular bonds.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "5d6372d4-af09-4778-bbea-a0589131cce9",
+            "concept_question": "What happens to particle energy during solidification?",
+            "concept_answer": "During solidification, particle potential energy decreases as energy is released.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "023f6ddb-3e15-4f7e-a82c-d6ea578fc711",
+            "concept_question": "What is the particle energy change during vaporisation?",
+            "concept_answer": "Vaporisation requires substantial energy to overcome intermolecular forces, raising particle potential energy; condensation reverses this.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6bde9fe5-33cf-43dd-8c0e-1020f01fd878"
+            ]
+        },
+        {
+            "concept_id": "2fec6a81-86f6-4200-8740-36c3113e03c6",
+            "concept_question": "What is latent heat of fusion?",
+            "concept_answer": "Latent heat of fusion is the heat required per unit mass to convert a solid to a liquid at constant temperature.",
+            "concept_formula": [
+                "$!$\\Delta E = m l_f$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "fae93955-b4f5-47ea-86c9-025fd7da14c6",
+            "concept_question": "What is latent heat of vaporisation?",
+            "concept_answer": "Latent heat of vaporisation is the heat required per unit mass to change a liquid to vapor without temperature change.",
+            "concept_formula": [
+                "$!$\\Delta E = m l_v$!$"
+            ],
+            "pre-requisites": [
+                "6bde9fe5-33cf-43dd-8c0e-1020f01fd878"
+            ]
+        },
+        {
+            "concept_id": "3a635ee7-8d3b-4068-b147-fe1138325e30",
+            "concept_question": "What happens to energy during boiling?",
+            "concept_answer": "During boiling, energy is stored in the vapor and later released upon condensation.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "6bde9fe5-33cf-43dd-8c0e-1020f01fd878",
+                "fae93955-b4f5-47ea-86c9-025fd7da14c6"
+            ]
+        },
+        {
+            "concept_id": "b9729a7f-126b-4bb9-a6e7-56163ea74619",
+            "concept_question": "How do temperature and ambient pressure affect evaporation rate?",
+            "concept_answer": "Higher temperature increases evaporation rate, whereas lower ambient pressure facilitates it.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "61d646e9-7f4a-4c81-91ca-97193e63ed3d",
+            "concept_question": "How do surface area and wind speed affect evaporation rate?",
+            "concept_answer": "A larger surface area and increased wind speed enhance evaporation by allowing more liquid molecules to escape.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "9ebb63ca-44da-45f2-8344-790cdf1afa9e",
+            "concept_question": "What is evaporative cooling?",
+            "concept_answer": "Evaporative cooling occurs when escaping high-energy particles lower the liquid's average kinetic energy, reducing temperature.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b9729a7f-126b-4bb9-a6e7-56163ea74619",
+                "61d646e9-7f4a-4c81-91ca-97193e63ed3d"
+            ]
+        }
+    ]
+}

@@ -3,7 +3,7 @@ import { DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { users } from "../user";
 import { relations } from "drizzle-orm";
 
-import { topics } from "../subject";
+import { topics, courses, subjects } from "../subject";
 import { knowledgeZapQuestionAttempts } from "./knowledgeZapQuestions";
 import { knowledgeZapQuestionToAssignment } from "./knowledgeZapQuestions";
 import { activity } from "../activity";
@@ -35,6 +35,9 @@ export const knowledgeZapAssignmentRelations = relations(knowledgeZapAssignments
     references: [topics.id],
   }),
   questionToAssignment: many(knowledgeZapQuestionToAssignment),
+  assignmentToCourses: many(knowledgeZapAssignmentToCourse),
+  assignmentToGrades: many(knowledgeZapAssignmentToGrade),
+  assignmentToSubjects: many(knowledgeZapAssignmentToSubject),
 }));
 
 /**
@@ -73,6 +76,86 @@ export const knowledgeZapAssignmentAttemptRelations = relations(knowledgeZapAssi
     references: [users.id],
   }),
   questionAttempts: many(knowledgeZapQuestionAttempts),
+}));
+
+/**
+ * Junction table for many-to-many relationship between Knowledge Zap assignments and courses
+ * Allows one assignment to be mapped to multiple courses
+ */
+export const knowledgeZapAssignmentToCourse = pgTable(
+  "knowledge_zap_assignment_to_course",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    assignmentId: varchar("assignment_id", { length: 21 }).notNull().references(() => knowledgeZapAssignments.id),
+    courseId: varchar("course_id", { length: 21 }).notNull().references(() => courses.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+);
+
+export const knowledgeZapAssignmentToCourseRelations = relations(knowledgeZapAssignmentToCourse, ({ one }) => ({
+  assignment: one(knowledgeZapAssignments, {
+    fields: [knowledgeZapAssignmentToCourse.assignmentId],
+    references: [knowledgeZapAssignments.id],
+  }),
+  course: one(courses, {
+    fields: [knowledgeZapAssignmentToCourse.courseId],
+    references: [courses.id],
+  }),
+}));
+
+/**
+ * Junction table for many-to-many relationship between Knowledge Zap assignments and grades
+ * Allows one assignment to be mapped to multiple grades
+ */
+export const knowledgeZapAssignmentToGrade = pgTable(
+  "knowledge_zap_assignment_to_grade",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    assignmentId: varchar("assignment_id", { length: 21 }).notNull().references(() => knowledgeZapAssignments.id),
+    grade: varchar("grade").notNull(),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+);
+
+export const knowledgeZapAssignmentToGradeRelations = relations(knowledgeZapAssignmentToGrade, ({ one }) => ({
+  assignment: one(knowledgeZapAssignments, {
+    fields: [knowledgeZapAssignmentToGrade.assignmentId],
+    references: [knowledgeZapAssignments.id],
+  }),
+}));
+
+/**
+ * Junction table for many-to-many relationship between Knowledge Zap assignments and subjects
+ * Allows one assignment to be mapped to multiple subjects (direct mapping, in addition to the indirect topic->course->subject)
+ */
+export const knowledgeZapAssignmentToSubject = pgTable(
+  "knowledge_zap_assignment_to_subject",
+  {
+    id: varchar("id", { length: 21 }).primaryKey(),
+    assignmentId: varchar("assignment_id", { length: 21 }).notNull().references(() => knowledgeZapAssignments.id),
+    subjectId: varchar("subject_id", { length: 21 }).notNull().references(() => subjects.id),
+    createdAt: timestamp("created_at").defaultNow().notNull(),
+    updatedAt: timestamp("updated_at", { mode: "date" }).$onUpdate(() => new Date()),
+    isDeleted: boolean("is_deleted").default(false).notNull(),
+    deletedAt: timestamp("deleted_at", { mode: "date" }),
+  }
+);
+
+export const knowledgeZapAssignmentToSubjectRelations = relations(knowledgeZapAssignmentToSubject, ({ one }) => ({
+  assignment: one(knowledgeZapAssignments, {
+    fields: [knowledgeZapAssignmentToSubject.assignmentId],
+    references: [knowledgeZapAssignments.id],
+  }),
+  subject: one(subjects, {
+    fields: [knowledgeZapAssignmentToSubject.subjectId],
+    references: [subjects.id],
+  }),
 }));
 
 

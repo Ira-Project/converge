@@ -1,0 +1,642 @@
+{
+    "name": "Kinetic Particle Model of Matter",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "528bb5bcfdf645a8abaf4",
+            "concepts": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24"
+            ],
+            "variants": [
+                {
+                    "id": "e564beba13ea4c09807ef",
+                    "question": "Which of the following statements correctly describes the behavior of particles in matter?",
+                    "options": [
+                        {
+                            "option_text": "Particles are stationary and do not interact with each other.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Particles exert both attractive and repulsive electric forces on each other.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Particles only exert attractive forces on each other.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Particles only exert repulsive forces on each other.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c585682b7a674cc58a073",
+                    "question": "Select all of the following statements that accurately describe the forces between particles in matter:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Particles exert attractive forces on each other.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Particles exert repulsive forces on each other.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Particles do not exert forces on each other.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The strength of the forces between particles depends on the distance between them.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "6c1f57410c924a16a2e0d",
+                    "question": "Which of the following statements INCORRECTLY describes the behavior of particles in matter?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Particles exert both attractive and repulsive electric forces on each other.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Particles are in constant motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Particles are stationary and do not interact with each other.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The kinetic energy of particles increases with temperature.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "651a0c4dec414b55bcc0a",
+            "concepts": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24",
+                "b6d5ea81-234d-486d-ad9d-277f8428a4a6"
+            ],
+            "variants": [
+                {
+                    "id": "d128cd2cd9b94907a3ada",
+                    "question": "What is the primary reason solids have a definite shape?",
+                    "options": [
+                        {
+                            "option_text": "Their constituent particles are in fixed positions in a structured arrangement.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Their constituent particles move freely.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They lack intermolecular forces.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Their particles have minimal kinetic energy.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "12143940ca804246a1c56",
+                    "question": "Which of the following statements accurately describes the arrangement of particles in solids that contributes to their definite shape?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Particles are loosely packed and can move freely.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Particles are in fixed positions due to strong intermolecular forces.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Particles have high kinetic energy, allowing them to flow easily.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Particles are arranged randomly without any specific order.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4855eda566c149ceb9a55",
+                    "question": "Select all the factors that contribute to solids having a definite shape and volume.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Strong intermolecular forces",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Fixed positions of constituent particles",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "High kinetic energy of particles",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Free movement of particles",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c56cd7879dd04637840ec",
+            "concepts": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24",
+                "884694dd-2ab6-44ec-aed9-f3a11d3a9464",
+                "b3fbe75e-a3a8-4bd8-be71-d6c7d5b95356"
+            ],
+            "variants": [
+                {
+                    "id": "a653f7f63c1442dd97e3d",
+                    "question": "Which of the following statements are true regarding the properties of gases?",
+                    "options": [
+                        {
+                            "option_text": "Gases have a definite shape and volume.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gases are easily compressed and expand when heated.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gases have high density.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gas particles are much farther apart and lack an ordered structure.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "3df4bbbad76e400d98b35",
+                    "question": "Which of the following is NOT a property of gases?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They are easily compressed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They expand when heated.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They have a definite volume.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Their particles are far apart.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a82860bca5c545118a540",
+                    "question": "Select all the statements that accurately describe the behavior of gases:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Gases maintain a fixed volume regardless of the container.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gases expand to fill the available volume.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gases can be easily compressed due to the large spaces between particles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gas density is generally high compared to solids and liquids.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "4278aa7631a345f1b9f2d",
+            "concepts": [
+                "b6d5ea81-234d-486d-ad9d-277f8428a4a6",
+                "ac4662d8-555f-46ae-a248-9e18ff9929be",
+                "227a59a6-c722-4b8b-9e61-0878dc9d6f90",
+                "8baff9e1-a2c9-4a20-aec5-2fa0cc04dfda",
+                "bcdb6108-e684-4645-adc9-191ee9f0b8ee",
+                "6d8df52d-412e-48a3-933f-d18a961c927e"
+            ],
+            "variants": [
+                {
+                    "id": "5606f74dc7aa444f9ce9c",
+                    "question": "Which statement accurately describes melting?",
+                    "options": [
+                        {
+                            "option_text": "The transition from a liquid to a gas.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The transition from a solid to a liquid where increased heat separates particles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The direct transition from a solid to a gas.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The transition from a gas to a liquid.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "66557f1dd3f54aa9842c2",
+                    "question": "Which of the following statements accurately describe the process of melting? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Melting involves the transition from a solid to a liquid.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Melting is a process where a substance changes directly from a solid to a gas.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "During melting, heat energy is absorbed, increasing the kinetic energy of the particles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Melting involves a decrease in temperature of the substance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "67290129aa1743958c418",
+                    "question": "What happens to the rate of melting if the amount of heat supplied to a solid substance is doubled?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The rate of melting will be halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The rate of melting will remain the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The rate of melting will double.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The rate of melting will quadruple.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "7f05b2e5307f4afbb3164",
+            "concepts": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "765efe05-bebc-4258-a92c-f0d3af6c7e24",
+                "885d940a-3a9a-454c-b3c5-5a2ba6490a15",
+                "d0f40b28-3841-46ff-87ec-e6c54cc662c1",
+                "a8123b4c-8210-4245-906b-8cc4741d99a2"
+            ],
+            "variants": [
+                {
+                    "id": "5858a33e1896419599433",
+                    "question": "What is the significance of Brownian motion?",
+                    "options": [
+                        {
+                            "option_text": "It proves that particles in liquids are stationary.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It demonstrates the existence of intermolecular forces in solids.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It provides evidence for the kinetic particle model by confirming continuous random motion.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It describes the movement of particles in a vacuum.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a7271603181c415b98934",
+                    "question": "Which of the following is NOT a direct observation or conclusion related to Brownian motion?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Particles suspended in a fluid move randomly and continuously.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Brownian motion provides indirect evidence for the existence of atoms and molecules.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Brownian motion is caused by gravitational forces acting on the particles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increased temperature leads to more vigorous Brownian motion.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "aaef847595ad464e817c6",
+                    "question": "Select all the statements that correctly describe the significance or implications of Brownian motion:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It provides direct visual evidence of molecular motion.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It disproves the kinetic theory of matter.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It supports the idea that fluids are made up of constantly moving particles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is caused by the convection currents within the liquid.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "c8f543b991e74bebbbfdd",
+            "concepts": [
+                "48d3e9c2-aae4-4e24-bc52-cfc7e11907a8",
+                "cffdad6f-c8ef-43e8-ae56-1c965be687b7",
+                "2adfd026-0718-4727-9c26-9492969f7ec0",
+                "4de2ef8c-1b20-4a89-9188-19a9356ef54d"
+            ],
+            "variants": [
+                {
+                    "id": "af1fe46c1b4547e4b8cdb",
+                    "question": "What does the Combined Gas Law relate?",
+                    "options": [
+                        {
+                            "option_text": "Pressure and volume at constant temperature.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Volume and temperature at constant pressure.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pressure, volume, and temperature of a fixed mass of gas.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Pressure and temperature at constant volume.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ea9c3ce2b1aa4f2182def",
+                    "question": "A gas has an initial pressure $!$P_1$!$, volume $!$V_1$!$, and temperature $!$T_1$!$. If the pressure is changed to $!$P_2$!$ and the temperature is changed to $!$T_2$!$, what is the new volume $!$V_2$!$ according to the combined gas law?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$V_2 = \\frac{P_1V_1T_2}{P_2T_1}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$V_2 = \\frac{P_1V_1T_1}{P_2T_2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$V_2 = \\frac{P_2V_1T_1}{P_1T_2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$V_2 = \\frac{P_2V_1T_2}{P_1T_1}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "187eeb8dd1134879a423d",
+                    "question": "Select all the conditions that the combined gas law relates.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Pressure",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Volume",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Temperature",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Number of moles",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "55ced30ca9a84899bb7d9",
+            "concepts": [
+                "cfa65469-32ab-41bb-ba28-7a4efd72bea1",
+                "432338ea-ada7-4779-baea-9e1c30d910ad",
+                "f4186011-be31-4acd-ae74-62cc65bae364"
+            ],
+            "variants": [
+                {
+                    "id": "cdfd7366baf3484eb69a3",
+                    "question": "What characterizes the Kelvin scale?",
+                    "options": [
+                        {
+                            "option_text": "It is a relative temperature scale starting at 0\textdegree C.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is an absolute temperature scale starting at absolute zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It uses the same units as Fahrenheit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It defines 0 K as the boiling point of water.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "deff3b4c3bc84cee8edde",
+                    "question": "Which of the following statements accurately describe the Kelvin scale? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is an absolute temperature scale.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It starts at absolute zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It uses the same degree size as the Celsius scale.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is a relative scale based on the freezing point of water.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "bce9176026784f74b551a",
+                    "question": "If a substance has a temperature of 273.15 K, what is its temperature in degrees Celsius ($!$\textdegree C$!$)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "0 $!$\textdegree C$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "100 $!$\textdegree C$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "273.15 $!$\textdegree C$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "-273.15 $!$\textdegree C$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "27042292b336458887774",
+            "concepts": [
+                "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d",
+                "b6d5ea81-234d-486d-ad9d-277f8428a4a6",
+                "8baff9e1-a2c9-4a20-aec5-2fa0cc04dfda",
+                "884694dd-2ab6-44ec-aed9-f3a11d3a9464"
+            ],
+            "variants": [
+                {
+                    "id": "4053f82f2c8a4a91906f8",
+                    "question": "Match the state of matter with its properties:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Solid",
+                            "optionB": "Definite shape and volume."
+                        },
+                        {
+                            "optionA": "Liquid",
+                            "optionB": "Definite volume but no definite shape."
+                        },
+                        {
+                            "optionA": "Gas",
+                            "optionB": "No definite shape or volume."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "bef1418057cc4f33a6b40",
+            "concepts": [
+                "48d3e9c2-aae4-4e24-bc52-cfc7e11907a8",
+                "cffdad6f-c8ef-43e8-ae56-1c965be687b7",
+                "2adfd026-0718-4727-9c26-9492969f7ec0"
+            ],
+            "variants": [
+                {
+                    "id": "b1b5090847a14d69a96c5",
+                    "question": "Match each gas law with its mathematical relationship (where p=pressure, V=volume, T=temperature):",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Boyle's Law",
+                            "optionB": "$!$p_1V_1 = p_2V_2$!$"
+                        },
+                        {
+                            "optionA": "Charles' Law",
+                            "optionB": "$!$\\frac{V_1}{T_1} = \\frac{V_2}{T_2}$!$"
+                        },
+                        {
+                            "optionA": "Gay-Lussac's Law",
+                            "optionB": "$!$\\frac{p_1}{T_1} = \\frac{p_2}{T_2}$!$"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

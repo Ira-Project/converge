@@ -1,7 +1,7 @@
 import { and, desc, eq, isNotNull } from "drizzle-orm";
 import { activity } from "@/server/db/schema/activity";
 import type { ProtectedTRPCContext } from "../../trpc";
-import type { GetActivitiesInput, GetActivityInput, GetLiveActivitiesInput, GetRandomActivitiesInput, MakeActivityLiveInput, GetGeneratedActivitiesInput, GetAllActivitiesInput } from "./activities.input";
+import type { GetActivitiesInput, GetActivityInput, GetLiveActivitiesInput, GetRandomActivitiesInput, MakeActivityLiveInput, GetGeneratedActivitiesInput, GetAllActivitiesInput, CreateActivityInput } from "./activities.input";
 import { Roles, ActivityType } from "@/lib/constants";
 import { knowledgeZapAssignmentAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
 import { stepSolveAssignmentAttempts } from "@/server/db/schema/stepSolve/stepSolveAssignment";
@@ -9,6 +9,7 @@ import { reasoningAssignmentAttempts } from "@/server/db/schema/reasoning/reason
 import { readAndRelayAttempts } from "@/server/db/schema/readAndRelay/readAndRelayAttempts";
 import { conceptMappingAttempts } from "@/server/db/schema/conceptMapping/conceptMappingAttempts";
 import { explainTestAttempts } from "@/server/db/schema/learnByTeaching/explainTestAttempt";
+import { generateId } from "lucia";
 
 export const getActivities = async (ctx: ProtectedTRPCContext, input: GetActivitiesInput) => {
 
@@ -457,6 +458,42 @@ export const getAllActivities = async (ctx: ProtectedTRPCContext, input: GetAllA
   groupedActivitiesList.sort((a, b) => a.order.localeCompare(b.order));
   return groupedActivitiesList;
 }
+
+export const createActivity = async (ctx: ProtectedTRPCContext, input: CreateActivityInput) => {
+  // Check if user has permission to create activities in this classroom
+  if (ctx.user.role !== Roles.Teacher) {
+    throw new Error("Only teachers can create activities");
+  }
+
+  // Get the highest order for activities in this classroom to set the new activity order
+  const existingActivities = await ctx.db.query.activity.findMany({
+    where: eq(activity.classroomId, input.classroomId),
+    columns: { order: true },
+  });
+  
+  const maxOrder = existingActivities.length > 0 
+    ? Math.max(...existingActivities.map(a => a.order))
+    : 0;
+
+  const newActivity = await ctx.db.insert(activity).values({
+    id: generateId(21),
+    name: input.activityName,
+    description: `${input.activityType} activity`,
+    typeText: input.activityType,
+    assignmentId: input.assignmentId,
+    classroomId: input.classroomId,
+    isLive: true, // Automatically make it live when assigned
+    isLocked: false,
+    dueDate: input.dueDate,
+    order: maxOrder + 1,
+    points: 100, // Default points
+    topicId: input.topicId,
+    generated: false,
+    createdBy: ctx.user.id,
+  }).returning();
+
+  return newActivity[0];
+};
 
 
 

@@ -1,0 +1,323 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "j14lwmub11e4cz6t0kevh",
+    "topicIdProd": "",
+    "chapter_text": "**I. Energy Stores**\n*   **Definition:** Energy is the capacity to do work or cause change, and can be stored in various forms.\n*   **Types:** Kinetic, Gravitational Potential, Chemical, Elastic (Strain), Nuclear, Electrostatic, and Internal (Thermal) energy.\n\n**II. Energy Transfers**\n*   **Process:** Energy can be transferred from one store to another.\n*   **Methods:** Transfers occur via mechanical working (action of a force), electrical working (electric current), waves (electromagnetic, sound), and heating (conduction, convection, radiation).\n*   **Representation:** Flow diagrams and Sankey diagrams illustrate energy transfers, with Sankey diagrams using bar thickness to represent the size of energy transfers.\n\n**III. Work**\n*   **Definition:** In a scientific context, work is done when a force causes motion; it serves as a measure of the amount of energy transferred.\n*   **Formula:** $$W = Fd = \\Delta E$$ where $W$ is the work done, $F$ is the force applied, $d$ is the distance moved in the direction of the force, and $\\Delta E$ is the energy transferred.\n*   **Unit:** The Joule (J), defined as the work done when a force of 1 Newton moves an object 1 metre ($1 \\text{ J} = 1 \\text{ N} \\cdot \\text{m}$). No work is done if there is no motion.\n\n**IV. Power**\n*   **Definition:** Power is the rate at which work is done or energy is transferred.\n*   **Formulas:**\n    *   $$P = \\frac{W}{t}$$ where $P$ is power, $W$ is work done, and $t$ is the time taken.\n    *   $$P = \\frac{\\Delta E}{t}$$ where $\\Delta E$ is the energy transferred.\n*   **Unit:** The Watt (W), defined as 1 Joule per second ($1 \\text{ W} = 1 \\text{ J/s}$).\n*   **Larger Units:** Kilowatt ($1 \\text{ kW} = 10^3 \\text{ W}$) and Megawatt ($1 \\text{ MW} = 10^6 \\text{ W}$).\n\n**V. Forms of Energy with Formulas**\n*   **Kinetic Energy ($E_k$):** The energy an object possesses due to its motion.\n    *   **Formula:** $$E_k = \\frac{1}{2}mv^2$$ where $m$ is the mass and $v$ is the velocity of the object.\n*   **Gravitational Potential Energy ($\\Delta E_p$):** The energy an object has due to its position in a gravitational field.\n    *   **Formula for Change in GPE:** $$\\Delta E_p = mg\\Delta h$$ where $m$ is the mass, $g$ is the gravitational field strength, and $\\Delta h$ is the change in vertical height.\n\n**VI. Principles of Energy Conservation**\n*   **Principle of Conservation of Energy:** A fundamental law stating that energy cannot be created or destroyed. It is always conserved, though it can be transferred between stores. However, useful energy can be \"lost\" or dissipated as non-useful thermal energy, often due to friction.\n*   **Collisions:** In any collision, some kinetic energy is typically converted into thermal energy and sound. In a perfectly elastic collision, kinetic energy is conserved.\n\n**VII. Energy Resources**\n*   **Definition:** Raw materials used to produce useful energy.\n*   **Types:**\n    *   **Non-renewable:** Finite resources that are consumed much faster than they are formed (e.g., fossil fuels like coal, oil, natural gas; nuclear fuels like uranium). They offer high energy density and are readily available.\n    *   **Renewable:** Resources that are naturally replenished (e.g., solar, wind, wave, tidal, hydroelectric, geothermal, biofuels). They are generally less polluting.\n*   **Solar Energy:** The Sun's nuclear fusion is the primary source for most energy resources on Earth, directly for solar power and indirectly for wind, hydroelectric, and biofuels, as well as fossil fuels.\n*   **Power Station Mechanisms:**\n    *   **Thermal Power Stations (Non-renewable):** Burn fossil fuels or use nuclear fission to heat water and produce high-pressure steam. This steam drives turbines, which in turn power generators to produce electricity. They typically have low overall efficiency (around 30% for fossil fuels), with significant energy loss as waste heat (e.g., through cooling towers).\n    *   **Renewable Energy Power Stations:** Directly harness natural phenomena (e.g., wind turbines, hydroelectric dams, tidal barrages, geothermal plants) to drive generators. They generally boast higher efficiencies due to fewer energy conversion steps.\n    *   **Pumped Storage Hydroelectricity:** A method of energy storage where off-peak electricity is used to pump water from a lower to a higher reservoir. During peak demand, the water is released, converting its gravitational potential energy back into kinetic energy, which then drives turbines to generate electricity.\n\n**VIII. Efficiency of Energy Transfers**\n*   **Definition:** The measure of how effectively energy is converted from one form to another or transferred from one store to another. It is expressed as the percentage of the total energy input that is usefully transferred.\n*   **Formulas:**\n    *   $$\\text{Efficiency} = \\frac{\\text{useful energy output}}{\\text{total energy input}} \\times 100\\%$$\n    *   $$\\text{Efficiency} = \\frac{\\text{useful power output}}{\\text{total power input}} \\times 100\\%$$\n*   An efficient device maximizes the useful energy output while minimizing energy lost to non-useful forms, such as thermal energy due to friction.\n\n**IX. Societal and Environmental Aspects of Energy**\n*   **Considerations:** When evaluating energy sources, economic costs (capital, fuel), environmental impacts (polluting emissions, waste disposal), reliability of supply, and social implications (noise, visual impact, habitat destruction) must be weighed.\n*   **Car Safety:** Modern car designs incorporate features like crumple zones, seat belts, airbags, and head restraints. These devices function by absorbing kinetic energy gradually over an extended time, thereby reducing the forces exerted on occupants during a collision and minimizing injuries.\n*   **Stopping Distance:** The total distance a vehicle travels from when a hazard is perceived until it comes to a complete stop, calculated as: `stopping distance = thinking distance + braking distance`. Braking distance increases significantly with speed, specifically with the square of the speed.",
+    "chapter_concepts": [
+        {
+            "concept_id": "b005ab6a-4474-41c7-9980-e3447d36787a",
+            "concept_question": "What is energy?",
+            "concept_answer": "Energy is the capacity to do work or cause change.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e2f48e8a-905a-4c94-857d-2a9b5573d128",
+            "concept_question": "What types of energy stores exist?",
+            "concept_answer": "Energy stores include kinetic, gravitational potential, chemical, elastic, nuclear, electrostatic, and internal energy.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b005ab6a-4474-41c7-9980-e3447d36787a"
+            ]
+        },
+        {
+            "concept_id": "acd1f9bc-61c7-4aa4-9bca-d7d96961b423",
+            "concept_question": "What is energy transfer?",
+            "concept_answer": "Energy transfer is the movement of energy from one store to another.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b005ab6a-4474-41c7-9980-e3447d36787a"
+            ]
+        },
+        {
+            "concept_id": "df4f743c-14ab-4c56-825e-a9c4be5e1900",
+            "concept_question": "What are mechanical and electrical methods of energy transfer?",
+            "concept_answer": "Energy is transferred via mechanical and electrical methods.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "acd1f9bc-61c7-4aa4-9bca-d7d96961b423"
+            ]
+        },
+        {
+            "concept_id": "d8ff39bd-980d-49a4-8750-2c03b30e3047",
+            "concept_question": "What are wave and heating methods of energy transfer?",
+            "concept_answer": "Energy is transferred via wave and heating methods.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "acd1f9bc-61c7-4aa4-9bca-d7d96961b423"
+            ]
+        },
+        {
+            "concept_id": "72cbfc4d-f061-46ff-9f94-7578def2a4b7",
+            "concept_question": "How are flow diagrams used to represent energy transfers?",
+            "concept_answer": "Flow diagrams illustrate energy transfer magnitude.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "acd1f9bc-61c7-4aa4-9bca-d7d96961b423"
+            ]
+        },
+        {
+            "concept_id": "8f4006cd-6f77-4223-a1d5-a7e7976dc0b2",
+            "concept_question": "How are Sankey diagrams used to represent energy transfers?",
+            "concept_answer": "Sankey diagrams illustrate the proportion of energy transfer.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "acd1f9bc-61c7-4aa4-9bca-d7d96961b423"
+            ]
+        },
+        {
+            "concept_id": "0b62fdcb-6d96-4a9d-8420-89bab148a05a",
+            "concept_question": "What is work?",
+            "concept_answer": "Work is the energy transferred when a force causes motion.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b005ab6a-4474-41c7-9980-e3447d36787a"
+            ]
+        },
+        {
+            "concept_id": "9125e02d-eac5-43e7-80a8-eff51006df63",
+            "concept_question": "What is work equation?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$W = Fd = \\Delta E$!$"
+            ],
+            "pre-requisites": [
+                "0b62fdcb-6d96-4a9d-8420-89bab148a05a"
+            ]
+        },
+        {
+            "concept_id": "0ad3afcb-7a28-4e8a-a991-6220f80b5c85",
+            "concept_question": "How is the Joule defined?",
+            "concept_answer": "The Joule is the work done by a 1 Newton force moving an object 1 metre.",
+            "concept_formula": [
+                "$!$1 J = 1 N \\cdot m$!$"
+            ],
+            "pre-requisites": [
+                "0b62fdcb-6d96-4a9d-8420-89bab148a05a",
+                "9125e02d-eac5-43e7-80a8-eff51006df63"
+            ]
+        },
+        {
+            "concept_id": "53acfc54-53a3-4296-9228-6a3577aa30b8",
+            "concept_question": "What is power?",
+            "concept_answer": "Power measures the rate at which work is done or energy is transferred.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "0b62fdcb-6d96-4a9d-8420-89bab148a05a"
+            ]
+        },
+        {
+            "concept_id": "f093a546-8db4-44fa-9763-df65c6e6db0e",
+            "concept_question": "What is power formula?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$P = \\frac{W}{t}$!$",
+                "$!$P = \\frac{\\Delta E}{t}$!$"
+            ],
+            "pre-requisites": [
+                "53acfc54-53a3-4296-9228-6a3577aa30b8",
+                "9125e02d-eac5-43e7-80a8-eff51006df63"
+            ]
+        },
+        {
+            "concept_id": "e81af2a5-f99d-4f3d-9f93-56032d62ff3f",
+            "concept_question": "How is the Watt defined?",
+            "concept_answer": "The Watt is the power unit equal to one Joule per second.",
+            "concept_formula": [
+                "$!$1 W = 1 J/s$!$"
+            ],
+            "pre-requisites": [
+                "53acfc54-53a3-4296-9228-6a3577aa30b8",
+                "0ad3afcb-7a28-4e8a-a991-6220f80b5c85"
+            ]
+        },
+        {
+            "concept_id": "47e39fc8-df8e-4da5-87be-82041539f512",
+            "concept_question": "What is the Kilowatt?",
+            "concept_answer": "The Kilowatt is equal to 10^3 W.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e81af2a5-f99d-4f3d-9f93-56032d62ff3f"
+            ]
+        },
+        {
+            "concept_id": "793d145f-41ee-4e27-ac1e-8fb00d3b806d",
+            "concept_question": "What is the Megawatt?",
+            "concept_answer": "The Megawatt is equal to 10^6 W.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e81af2a5-f99d-4f3d-9f93-56032d62ff3f"
+            ]
+        },
+        {
+            "concept_id": "fc0d555c-2163-4fe2-afbd-49a23453751c",
+            "concept_question": "What is kinetic energy?",
+            "concept_answer": "Kinetic energy is the energy an object possesses due to its motion.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b005ab6a-4474-41c7-9980-e3447d36787a"
+            ]
+        },
+        {
+            "concept_id": "f867675c-ee2a-45a2-bee3-7fb244468612",
+            "concept_question": "What is kinetic energy equation?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$E_k = \\frac{1}{2}mv^2$!$"
+            ],
+            "pre-requisites": [
+                "fc0d555c-2163-4fe2-afbd-49a23453751c"
+            ]
+        },
+        {
+            "concept_id": "7bde3299-9507-451b-9501-1d15837d3927",
+            "concept_question": "What is gravitational potential energy?",
+            "concept_answer": "Gravitational potential energy is the energy an object has due to its position in a gravitational field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b005ab6a-4474-41c7-9980-e3447d36787a"
+            ]
+        },
+        {
+            "concept_id": "8af41638-67d0-4304-afe4-278a3e5c24b8",
+            "concept_question": "What is gravitational potential energy change equation?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$\\Delta E_p = mg\\Delta h$!$"
+            ],
+            "pre-requisites": [
+                "7bde3299-9507-451b-9501-1d15837d3927"
+            ]
+        },
+        {
+            "concept_id": "04c473de-691a-45ba-8075-eddfb865607a",
+            "concept_question": "What is conservation of energy?",
+            "concept_answer": "Conservation of energy states that energy cannot be created or destroyed, only transformed or dissipated.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b005ab6a-4474-41c7-9980-e3447d36787a",
+                "acd1f9bc-61c7-4aa4-9bca-d7d96961b423"
+            ]
+        },
+        {
+            "concept_id": "50186d66-9a79-4184-98a1-ed9c63b1845a",
+            "concept_question": "What is collision energy change?",
+            "concept_answer": "In collisions, kinetic energy is partly converted to thermal energy and sound, though it is conserved in elastic collisions.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fc0d555c-2163-4fe2-afbd-49a23453751c",
+                "04c473de-691a-45ba-8075-eddfb865607a"
+            ]
+        },
+        {
+            "concept_id": "3ed4c842-35db-4ba6-8bf2-d84fb72e3254",
+            "concept_question": "What are energy resources?",
+            "concept_answer": "Energy resources are raw materials used to produce useful energy.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "b005ab6a-4474-41c7-9980-e3447d36787a"
+            ]
+        },
+        {
+            "concept_id": "4a24b72e-20e9-45bf-b554-99a135d25f1d",
+            "concept_question": "What are non-renewable energy resources?",
+            "concept_answer": "Non-renewable energy resources are finite materials like fossil fuels and uranium that deplete faster than they form.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3ed4c842-35db-4ba6-8bf2-d84fb72e3254"
+            ]
+        },
+        {
+            "concept_id": "2cd3e933-435a-44ad-8149-e69723f9cd79",
+            "concept_question": "What are renewable energy resources?",
+            "concept_answer": "Renewable energy resources are naturally replenished sources such as solar, wind, and geothermal energy.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3ed4c842-35db-4ba6-8bf2-d84fb72e3254"
+            ]
+        },
+        {
+            "concept_id": "434dc7a9-4f27-4202-a76a-4abdc59b2691",
+            "concept_question": "What is solar energy?",
+            "concept_answer": "Solar energy is derived from the Sun's nuclear fusion and supports various energy forms.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3ed4c842-35db-4ba6-8bf2-d84fb72e3254"
+            ]
+        },
+        {
+            "concept_id": "0566db5b-8164-462f-9b7d-64ee7c24ea39",
+            "concept_question": "What is thermal power station efficiency?",
+            "concept_answer": "Thermal power stations typically operate at around 30 percent efficiency due to waste heat loss.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3ed4c842-35db-4ba6-8bf2-d84fb72e3254"
+            ]
+        },
+        {
+            "concept_id": "3c7b4ccc-6f3d-490b-bab2-4f918aec0f40",
+            "concept_question": "What are renewable energy power stations?",
+            "concept_answer": "Renewable energy power stations directly harness natural phenomena and generally achieve higher efficiencies.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3ed4c842-35db-4ba6-8bf2-d84fb72e3254"
+            ]
+        },
+        {
+            "concept_id": "60a7c0b3-ad7d-46f9-899c-1be7dc42968b",
+            "concept_question": "What is energy transfer efficiency?",
+            "concept_answer": "Energy transfer efficiency is the percentage of input energy that is usefully transferred.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "acd1f9bc-61c7-4aa4-9bca-d7d96961b423"
+            ]
+        },
+        {
+            "concept_id": "8bd37a30-0ed2-43d5-846f-8c8290941dbd",
+            "concept_question": "What is the efficiency equation?",
+            "concept_answer": "",
+            "concept_formula": [
+                "$!$\\text{Efficiency} = \\frac{\\text{useful energy output}}{\\text{total energy input}} \\times 100\\%$!$",
+                "$!$\\text{Efficiency} = \\frac{\\text{useful power output}}{\\text{total power input}} \\times 100\\%$!$"
+            ],
+            "pre-requisites": [
+                "60a7c0b3-ad7d-46f9-899c-1be7dc42968b"
+            ]
+        },
+        {
+            "concept_id": "9b01016b-fcf6-4fd9-bb33-3a500b46e546",
+            "concept_question": "What are energy source considerations?",
+            "concept_answer": "Evaluating energy sources involves weighing economic costs, environmental impacts, supply reliability, and social effects.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3ed4c842-35db-4ba6-8bf2-d84fb72e3254"
+            ]
+        },
+        {
+            "concept_id": "7baf1260-ef38-4aeb-9d3a-8fe6f22fc938",
+            "concept_question": "What is car safety in collisions?",
+            "concept_answer": "Car safety features reduce occupant injury by absorbing kinetic energy gradually during collisions.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fc0d555c-2163-4fe2-afbd-49a23453751c",
+                "50186d66-9a79-4184-98a1-ed9c63b1845a"
+            ]
+        },
+        {
+            "concept_id": "3fdbd1ea-d91a-4d04-8215-c73f83a26b8b",
+            "concept_question": "What is stopping distance?",
+            "concept_answer": "Stopping distance is the total distance a vehicle travels from hazard perception to a complete stop.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "22cb5984-2bee-4068-9d45-f3332a62284a",
+            "concept_question": "How does speed affect braking distance?",
+            "concept_answer": "Braking distance increases proportionally to the square of a vehicle's speed.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "3fdbd1ea-d91a-4d04-8215-c73f83a26b8b"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,578 @@
+{
+    "name": "Mass and Weight",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "f108c3039e734efdb6039",
+            "concepts": [
+                "57f9767a-efd0-4e39-9da5-7a711127092b",
+                "a8bc0dd5-246d-40c2-a509-ac9658a3f04c"
+            ],
+            "variants": [
+                {
+                    "id": "ac65348f0c3c495d820ed",
+                    "question": "Which of the following statements are correct regarding mass?",
+                    "options": [
+                        {
+                            "option_text": "Mass is a measure of the quantity of matter in an object.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The standard unit of mass is the kilogram.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mass is measured using a spring balance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Mass varies with gravitational conditions.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "3fd735519f7248589308e",
+                    "question": "Which of the following statements is incorrect regarding mass?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Mass is a fundamental property of an object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Mass is conserved in chemical reactions.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Mass is a vector quantity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mass is independent of temperature.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cb10e4eebd9843fdb3c61",
+                    "question": "A block has a mass of 5 kg. If a force of 10 N is applied to it, what will be the acceleration of the block?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "0.5 $!$\\text{m/s}^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "2 $!$\\text{m/s}^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "5 $!$\\text{m/s}^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "10 $!$\\text{m/s}^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "45f4076c688f4afdb798a",
+            "concepts": [
+                "0e162bf0-0cec-4c8e-a70d-df85506735b7",
+                "a8bc0dd5-246d-40c2-a509-ac9658a3f04c"
+            ],
+            "variants": [
+                {
+                    "id": "0582d72a8b9f4ab2953d0",
+                    "question": "Which of the following is equivalent to one gram?",
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{1}{100}$!$ kilogram",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{1}{1000}$!$ kilogram",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "100 kilograms",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1000 kilograms",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e33732b04bae4db3bafa6",
+                    "question": "Select all of the following that are equivalent to one gram.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{1}{100}$!$ kilogram",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{1}{1000}$!$ kilogram",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "0.001 kilogram",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1000 milligrams",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "4d238100a94c4c2d8bced",
+                    "question": "Which of the following is NOT equivalent to one gram?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{1}{1000}$!$ kilogram",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1000 milligrams",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "0.001 kilogram",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1000 kilograms",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "377757b296a34069a53b7",
+            "concepts": [
+                "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                "57f9767a-efd0-4e39-9da5-7a711127092b"
+            ],
+            "variants": [
+                {
+                    "id": "9dd47b4debc64f9e9bb87",
+                    "question": "Which of the following statements accurately describe weight?",
+                    "options": [
+                        {
+                            "option_text": "Weight is the gravitational force on an object with mass.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Weight is a vector quantity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Weight remains constant regardless of location.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Weight is measured in kilograms.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "9044a3ca45fb4fc5a25aa",
+                    "question": "Which of the following statements about weight is NOT correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Weight is the gravitational force on an object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Weight is a vector quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Weight depends on the gravitational field strength.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Weight is the same as mass.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "123ce7dd602343a5b23c3",
+                    "question": "If the gravitational acceleration on a planet is doubled compared to Earth, what happens to the weight of an object on that planet, assuming its mass remains constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The weight will be doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The weight will be halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The weight will remain the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The weight will be quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "62cc7fb450fb47bb91ef7",
+            "concepts": [
+                "efb9ade3-2bd8-44d5-b33c-4d8798cb03da",
+                "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                "55de6a44-2990-4e22-84f1-9fc49af4017c"
+            ],
+            "variants": [
+                {
+                    "id": "0c9afadd473b4fa6bccec",
+                    "question": "What factors influence an object's weight?",
+                    "options": [
+                        {
+                            "option_text": "Changes in gravitational field strength.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Geographic location.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mass of the object.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Volume of the object.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a1cab03400eb409faf242",
+                    "question": "An object weighs 10 N on Earth. Which of the following changes would cause its weight to decrease?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Moving the object to the Moon, where the gravitational field strength is weaker.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increasing the mass of the object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Moving the object to a location on Earth with a slightly higher gravitational field strength.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Compressing the object to decrease its volume.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9de147fef10f4748a6b89",
+                    "question": "Which of the following statements about weight are correct? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Weight is a measure of the force of gravity acting on an object.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "An object's weight is the same on Earth and on the Moon.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Weight is directly proportional to an object's mass.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Weight is measured in kilograms (kg).",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "73a2db3fb4874c35a3aa8",
+            "concepts": [
+                "55de6a44-2990-4e22-84f1-9fc49af4017c",
+                "6594eafb-c0a8-4df4-ab73-8744fd1b58e8",
+                "add3b897-7a8a-478a-9a8f-e5c1543b7dd9"
+            ],
+            "variants": [
+                {
+                    "id": "c49ab6e50b794c5fbcdbd",
+                    "question": "Which of the following is true about gravitational field strength?",
+                    "options": [
+                        {
+                            "option_text": "It is the force experienced per unit mass.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is a scalar quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is equivalent to the acceleration of free fall.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is measured using a spring balance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "f991d35823dc488e889ac",
+                    "question": "Which of the following statements about gravitational field strength are INCORRECT? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is the force experienced per unit mass.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is a scalar quantity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is equivalent to the acceleration of free fall.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is measured using a spring balance.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a14b786d6bc1418c8ab40",
+                    "question": "If the mass of a planet is doubled and the radius is halved, by what factor does the gravitational field strength on its surface change?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It increases by a factor of 8",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It increases by a factor of 2",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It decreases by a factor of 2",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It decreases by a factor of 8",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "0ea135c4b3b3460ca6e17",
+            "concepts": [
+                "745d924d-c471-4506-b389-3b40aefa092c",
+                "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                "01d1e541-9807-4bb0-a823-3dbf8a09d733"
+            ],
+            "variants": [
+                {
+                    "id": "e09fac22f4454ba692e74",
+                    "question": "What is the approximate weight of a 1 kg object on Earth's surface?",
+                    "options": [
+                        {
+                            "option_text": "9.8 Newtons",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1 Newton",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1 kg",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "0 Newtons",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fd72e641eed14d48b70b6",
+                    "question": "Which of the following statements accurately describes the relationship between mass and weight on Earth's surface?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The weight of an object with a mass of 1 kg is approximately 9.8 Newtons.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The mass of an object is measured in Newtons.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Weight and mass are the same physical quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The weight of an object is independent of the gravitational acceleration.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b65c83a84de940febc873",
+                    "question": "A box weighs approximately 98 N on Earth. Which of the following masses is closest to the mass of the box?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "10 kg",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1 kg",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "98 kg",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "9.8 kg",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "701498897c224adbbd7a9",
+            "concepts": [
+                "57f9767a-efd0-4e39-9da5-7a711127092b",
+                "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                "55de6a44-2990-4e22-84f1-9fc49af4017c"
+            ],
+            "variants": [
+                {
+                    "id": "bf8d0ffe17ba431c98252",
+                    "question": "Match the terms related to mass and weight with their descriptions.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Mass",
+                            "optionB": "Measure of the quantity of matter in an object"
+                        },
+                        {
+                            "optionA": "Weight",
+                            "optionB": "Gravitational force on an object"
+                        },
+                        {
+                            "optionA": "Gravitational Field Strength",
+                            "optionB": "Force experienced per unit mass"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "e2017b0a6ffa4b3d91d46",
+            "concepts": [
+                "a8bc0dd5-246d-40c2-a509-ac9658a3f04c",
+                "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                "55de6a44-2990-4e22-84f1-9fc49af4017c"
+            ],
+            "variants": [
+                {
+                    "id": "3c2eb024bb0347e487ede",
+                    "question": "Match the units with their corresponding quantities.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Kilogram",
+                            "optionB": "Mass"
+                        },
+                        {
+                            "optionA": "Newton",
+                            "optionB": "Weight"
+                        },
+                        {
+                            "optionA": "N/kg",
+                            "optionB": "Gravitational Field Strength"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "b8711638b5b14856996fd",
+            "concepts": [
+                "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                "d60cd260-94c1-4f20-80b5-343d30836919",
+                "57f9767a-efd0-4e39-9da5-7a711127092b",
+                "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                "55de6a44-2990-4e22-84f1-9fc49af4017c"
+            ],
+            "variants": [
+                {
+                    "id": "041e942f764f442fa3234",
+                    "question": "Match the following concepts with their mathematical expressions.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Weight ($!$W$!$)",
+                            "optionB": "$!$mg$!$"
+                        },
+                        {
+                            "optionA": "Gravitational Field Strength ($!$g$!$)",
+                            "optionB": "$!$\\frac{W}{m}$!$"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

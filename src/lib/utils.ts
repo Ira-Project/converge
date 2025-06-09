@@ -58,7 +58,7 @@ export function scrollToHashElement(hash: string, options?: {
  * @param offset Optional vertical offset in pixels from the element
  * @returns A cleanup function to remove the event listener
  */
-export function useHashNavigation(dependencies: React.DependencyList = [], offset = 0) {
+export function useHashNavigation(_dependencies: React.DependencyList = [], offset = 0) {
   const handleHashScroll = () => {
     const hash = window.location.hash.substring(1);
     if (hash) {

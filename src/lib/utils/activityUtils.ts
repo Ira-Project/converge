@@ -13,7 +13,39 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
   citations: string[];
   colour: string;
   isActive: boolean;
+  getPreviewPageUrl: (assignmentId: string, classroomId: string) => string;
 } {
+
+  // Function to generate preview page URL in format: classroomId/activity-preview/assignmentId/activity-type
+  const getPreviewPageUrl = (assignmentId: string, classroomId: string): string => {
+    let activityTypePath = "";
+    
+    switch(activityType) {
+      case ActivityType.KnowledgeZap:
+        activityTypePath = "knowledge-zap";
+        break;
+      case ActivityType.LearnByTeaching:
+        activityTypePath = "learn-by-teaching";
+        break;
+      case ActivityType.StepSolve:
+        activityTypePath = "step-solve";
+        break;
+      case ActivityType.ReasonTrace:
+        activityTypePath = "reason-trace";
+        break;
+      case ActivityType.ReadAndRelay:
+        activityTypePath = "read-and-relay";
+        break;
+      case ActivityType.ConceptMapping:
+        activityTypePath = "concept-mapping";
+        break;
+      default:
+        // Fallback to activity page if no preview available
+        return `${Paths.Activity}${assignmentId}`;
+    }
+    
+    return `/${classroomId}${Paths.ActivityPreview}${assignmentId}/${activityTypePath}`;
+  };
 
   switch(activityType) {
     case ActivityType.LearnByTeaching:
@@ -26,15 +58,16 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         tags: [SkillType.APPLYING, SkillType.UNDERSTANDING],
         colour: "amber",
         description: "Learn by teaching Ira, iterating on your explanation until Ira is able to answer a set of questions correctly.",
-        descriptionLong: "In this innovative learning activity, students have to teach an AI instead of solving a set of questions. For a given topic, they have to explain concepts and provide corresponding formulas (if required) to the AI. The AI then uses this explanation to attempt a set of questions and responds with it’s solution and working. The students have to iterate on their explanations till the AI is able to solve all the given questions. We ensure that the AI's response serves as scaffolding to guide the learners to the correct explanation rather than providing it directly. \nThis activity leverages the Feynman method of learning, which posits that teaching others is one of the most effective ways to learn [1, 2, 3, 4, 5]. There is no penalization for incorrect explanations and the students are encouraged to iteratively improve their understanding of the topic, develop communication skills, build metacognition, and hone their organizational abilities.",
+        descriptionLong: "In this innovative learning activity, students have to teach an AI instead of solving a set of questions. For a given topic, they have to explain concepts and provide corresponding formulas (if required) to the AI. The AI then uses this explanation to attempt a set of questions and responds with it's solution and working. The students have to iterate on their explanations till the AI is able to solve all the given questions. We ensure that the AI's response serves as scaffolding to guide the learners to the correct explanation rather than providing it directly. \nThis activity leverages the Feynman method of learning, which posits that teaching others is one of the most effective ways to learn [1, 2, 3, 4, 5]. There is no penalization for incorrect explanations and the students are encouraged to iteratively improve their understanding of the topic, develop communication skills, build metacognition, and hone their organizational abilities.",
         citations: [
-          "Ronnel Ian A Ambion, Rainier Santi C De Leon, Alfonso Pio Angelo R Mendoza, and Reinier M Navarro. The utilization of the feynman technique in paired team teaching towards enhancing grade 10 anhs students’ academic achievement in science. In 2020 IEEE Integrated STEM Education Conference (ISEC), pages 1–3. IEEE, 2020.",
+          "Ronnel Ian A Ambion, Rainier Santi C De Leon, Alfonso Pio Angelo R Mendoza, and Reinier M Navarro. The utilization of the feynman technique in paired team teaching towards enhancing grade 10 anhs students' academic achievement in science. In 2020 IEEE Integrated STEM Education Conference (ISEC), pages 1–3. IEEE, 2020.",
           "Tzu-Chieh Yu, Nichola C Wilson, Primal P Singh, Daniel P Lemanu, Susan J Hawken, and Andrew G Hill. Medical students-as-teachers: a systematic review of peer-assisted teaching during medical school. Advances in medical education and practice, pages 157–172, 2011.",
           "Englevert P Reyes, Ron Mhel Francis L Blanco, Defanee Rose L Doroon, Jay Lord B Limana, and Ana Marie A Torcende. Feynman technique as a heutagogical learning strategy for independent and remote learning. Recoletos Multidisciplinary Research Journal, 9(2):1–13, 2021.",
           "Kristiana Nathalia Wea, Yohanes Sudarmo Dua, and Agustina Elizabeth. An exploratory study to investigate the implementation of feynman learning method in a physics classroom setting. Journal of Innovative Science Education, 12(3):331–339, 2023.",
           "Brett Williams and Priya Reddy. Does peer-assisted learning improve academic performance? a scoping review. Nurse education today, 42:23–29, 2016.",
         ],
         isActive: true,
+        getPreviewPageUrl: getPreviewPageUrl,
       }
     case ActivityType.ReasonTrace:
         return {
@@ -46,13 +79,14 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
           tags: [SkillType.EVALUATING, SkillType.CREATING],
           colour: "rose",
           description: "A spin on the popular 'Wordle' game. Spot the flaw in Ira's reasoning and correct it.",
-          descriptionLong: "This is a 2-step activity that starts by presenting the students with a question and it’s answer which has been computed incorrectly by an AI. The AI is designed to avoid any numerical mistakes while computing an answer to ensure that the incorrect answer is a result of an error in reasoning rather than an error in calculation. In the first step, the students have to identify the exact order of reasoning that the AI used to arrive at that incorrect answer. In the second step, they have to correct the reasoning of the AI so that it is able to solve the question.\nTo complete this activity, students have to use divergent thinking [1] to generate and explore multiple different reasoning pathways for a single question. This method of thinking is often contrasted with convergent thinking, which focuses solely on arriving at a single, correct solution to a problem. As divergent thinking has been shown to be a valid indicator for creative thought [2, 3], this activity allows the students to build creativity.",
+          descriptionLong: "This is a 2-step activity that starts by presenting the students with a question and it's answer which has been computed incorrectly by an AI. The AI is designed to avoid any numerical mistakes while computing an answer to ensure that the incorrect answer is a result of an error in reasoning rather than an error in calculation. In the first step, the students have to identify the exact order of reasoning that the AI used to arrive at that incorrect answer. In the second step, they have to correct the reasoning of the AI so that it is able to solve the question.\nTo complete this activity, students have to use divergent thinking [1] to generate and explore multiple different reasoning pathways for a single question. This method of thinking is often contrasted with convergent thinking, which focuses solely on arriving at a single, correct solution to a problem. As divergent thinking has been shown to be a valid indicator for creative thought [2, 3], this activity allows the students to build creativity.",
           citations: [
             "Joy P Guilford. Creativity: Yesterday, today and tomorrow. The Journal of Creative Behavior, 1(1):3–14, 1967",
             "Mathias Benedek, Tanja Könen, and Aljoscha C Neubauer. Associative abilities underlying creativity. Psychology of Aesthetics, Creativity, and the Arts, 6(3):273, 2012.",
             "Sietske W Kleibeuker, Carsten KW De Dreu, and Eveline A Crone. Creativity development in adolescence: Insight from behavior, brain, and training studies. New directions for child and adolescent development, 2016(151):73–84, 2016.",
           ],
           isActive: true,
+          getPreviewPageUrl: getPreviewPageUrl,
         }
     case ActivityType.KnowledgeZap:
       return {
@@ -64,7 +98,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         tags: [SkillType.REMEMBERING, SkillType.UNDERSTANDING],
         colour: "lime",
         description: "Test your knowledge on a topic by answering some multiple choice questions.",
-        descriptionLong: "This activity is a derivative of standard assessments involving multiple-choice questions (MCQs). For any given topic, students have to correctly answer a set of questions that span three possible formats - MCQs, match-the-following questions, and arrange-in-order questions. If the student provides an incorrect answer, the corresponding question (along with it’s options) is automatically rephrased and added to the end of set. The activity is completed when the student answers the entire set of questions correctly.\nThis activity aims to leverage the concept of spaced repetition and interleaving. Spaced repetition is a learning technique that involves increasing the time intervals between reviewing the same piece of information and has been shown to significantly enhance retention and recall of information [1, 2, 3]. Interleaving involves mixing different types of problems or sub-topics during a learning session and has been shown to enhance long-term retention and understanding of material and promote better discernment between concepts [4, 3, 5].",
+        descriptionLong: "This activity is a derivative of standard assessments involving multiple-choice questions (MCQs). For any given topic, students have to correctly answer a set of questions that span three possible formats - MCQs, match-the-following questions, and arrange-in-order questions. If the student provides an incorrect answer, the corresponding question (along with it's options) is automatically rephrased and added to the end of set. The activity is completed when the student answers the entire set of questions correctly.\nThis activity aims to leverage the concept of spaced repetition and interleaving. Spaced repetition is a learning technique that involves increasing the time intervals between reviewing the same piece of information and has been shown to significantly enhance retention and recall of information [1, 2, 3]. Interleaving involves mixing different types of problems or sub-topics during a learning session and has been shown to enhance long-term retention and understanding of material and promote better discernment between concepts [4, 3, 5].",
         citations: [
           "Paul Smolen, Yili Zhang, and John H Byrne. The right time to learn: mechanisms and optimization of spaced learning. Nature Reviews Neuroscience, 17(2):77–88, 2016.",
           "David P Ausubel and Mohamed Youssef. The effect of spaced repetition on meaningful retention. The Journal of General Psychology, 73(1):147–150, 1965.",
@@ -73,6 +107,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
           "Gregory M Donoghue and John AC Hattie. A meta-analysis of ten learning techniques. In Frontiers in Education, volume 6, page 581216. Frontiers Media SA, 2021.",
         ],
         isActive: true,
+        getPreviewPageUrl: getPreviewPageUrl,
       }
     case ActivityType.StepSolve:
       return {
@@ -90,6 +125,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
           "John Sweller. Cognitive load during problem solving: Effects on learning. Cognitive science, 12(2):257–285,1988."
         ],
         isActive: true,
+        getPreviewPageUrl: getPreviewPageUrl,
       }
     case ActivityType.ReadAndRelay:
       return {
@@ -104,6 +140,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         descriptionLong: "",
         citations: [],
         isActive: false,
+        getPreviewPageUrl: getPreviewPageUrl,
       }
     case ActivityType.ConceptMapping:
       return {
@@ -118,6 +155,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         descriptionLong: "",
         citations: [],
         isActive: false,
+        getPreviewPageUrl: getPreviewPageUrl,
       }
     default:
       return {
@@ -132,6 +170,7 @@ export function getMetaDataFromActivityType(activityType?: ActivityType, id?: st
         citations: [],
         colour: "gray",
         isActive: false,
+        getPreviewPageUrl: getPreviewPageUrl,
       }
   }
 

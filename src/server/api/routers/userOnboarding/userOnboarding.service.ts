@@ -14,6 +14,11 @@ export const updateUser = async (ctx: ProtectedTRPCContext, input: updateUserInp
     .set({notOnboarded: false})
     .where(eq(preloadedUsers.email, input.email.toLowerCase()));
   
+  // Delete existing teacher data to prevent duplicates
+  await ctx.db.delete(teacherCourses).where(eq(teacherCourses.userId, ctx.user.id));
+  await ctx.db.delete(teacherSubjects).where(eq(teacherSubjects.userId, ctx.user.id));
+  await ctx.db.delete(teacherGrades).where(eq(teacherGrades.userId, ctx.user.id));
+
   for(const course of input.courses) {
     await ctx.db.insert(teacherCourses).values({
       id: generateId(21),

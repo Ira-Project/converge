@@ -1,10 +1,10 @@
-import { asc, eq, sql, inArray } from "drizzle-orm";
+import { asc, eq, sql } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../../trpc";
 import { generateId } from "lucia";
 import { ActivityType, MAX_CONCEPTS_TO_REVIEW_STEP_SOLVE, Roles } from "@/lib/constants";
 import { stepSolveQuestionToAssignment, stepSolveStep } from "@/server/db/schema/stepSolve/stepSolveQuestions";
-import type { CreateStepSolveAssignmentAttemptInput, GetStepSolveAssignmentAnalyticsInput, GetStepSolveAssignmentInput, GetStepSolveAssignmentQuestionAnalyticsInput, GetStepSolveAssignmentSubmissionsInput, GetStepSolveRevisionActivityInput, SubmitStepSolveAssignmentAttemptInput, GetStepSolveAssignmentConceptsInput } from "./stepSolve.input";
-import { stepSolveAssignmentAttempts,  } from "@/server/db/schema/stepSolve/stepSolveAssignment";
+import type { CreateStepSolveAssignmentAttemptInput, GetStepSolveAssignmentAnalyticsInput, GetStepSolveAssignmentInput, GetStepSolveAssignmentQuestionAnalyticsInput, GetStepSolveAssignmentSubmissionsInput, GetStepSolveRevisionActivityInput, SubmitStepSolveAssignmentAttemptInput, GetStepSolveAssignmentConceptsInput, GetStepSolveAssignmentByIdInput, GetStepSolveAssignmentConceptsByIdInput } from "./stepSolve.input";
+import { stepSolveAssignmentAttempts } from "@/server/db/schema/stepSolve/stepSolveAssignment";
 
 // Utility function to shuffle an array using Fisher-Yates algorithm
 function shuffleArray<T>(array: T[]): T[] {
@@ -21,32 +21,51 @@ function shuffleArray<T>(array: T[]): T[] {
 export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: GetStepSolveAssignmentInput) => {
   
   console.log("Getting step solve assignment", input.activityId);
-  const activityToAssignments = await ctx.db.query.activityToAssignment.findMany({
-    where: (table, { eq }) => eq(table.activityId, input.activityId),
-    with: {
-      stepSolveAssignment: true
+  
+  // Get the activity to find the template ID
+  const activity = await ctx.db.query.activity.findFirst({
+    where: (table, { eq }) => eq(table.id, input.activityId),
+    columns: {
+      id: true,
+      assignmentId: true, // This now contains the template ID
     }
   });
 
-  console.log("Activity to assignments", activityToAssignments);
+  if (!activity?.assignmentId) {
+    throw new Error("Activity or template not found");
+  }
+
+  // Get the step solve template
+  const template = await ctx.db.query.stepSolveAssignmentTemplates.findFirst({
+    where: (table, { eq }) => eq(table.id, activity.assignmentId!),
+    columns: {
+      id: true,
+      assignmentIds: true,
+    }
+  });
+
+  if (!template?.assignmentIds?.length) {
+    throw new Error("Template or assignments not found");
+  }
+
+  console.log("Template assignments", template.assignmentIds);
 
   // Check if we're in development environment
   const isDev = process.env.ENVIRONMENT === "dev";
   
-  if (isDev && activityToAssignments.length > 1) {
+  if (isDev && template.assignmentIds.length > 1) {
     console.log("Development environment detected. Combining questions from all assignments.");
     
-    // Use the first assignment as the base
-    const firstAssignment = activityToAssignments[0]?.stepSolveAssignment;
-    const assignmentId = firstAssignment?.id;
+    // Get the first assignment for base details
+    const firstAssignmentId = template.assignmentIds[0];
     
-    if (!assignmentId) {
+    if (!firstAssignmentId) {
       throw new Error("Assignment not found");
     }
     
     // Get the base assignment details
     const baseAssignment = await ctx.db.query.stepSolveAssignments.findFirst({
-      where: (table, { eq }) => eq(table.id, assignmentId),
+      where: (table, { eq }) => eq(table.id, firstAssignmentId),
       columns: {
         id: true,
         name: true,
@@ -67,15 +86,12 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
       throw new Error("Base assignment not found");
     }
     
-    // Collect all questions from all assignments
+    // Collect all questions from all assignments in the template
     const allQuestions = [];
     
-    for (const activityAssignment of activityToAssignments) {
-      const assignment = activityAssignment.stepSolveAssignment;
-      if (!assignment?.id) continue;
-      
+    for (const assignmentId of template.assignmentIds) {
       const assignmentWithQuestions = await ctx.db.query.stepSolveAssignments.findFirst({
-        where: (table, { eq }) => eq(table.id, assignment.id),
+        where: (table, { eq }) => eq(table.id, assignmentId),
         with: {
           stepSolveQuestions: {
             orderBy: [asc(stepSolveQuestionToAssignment.order)],
@@ -137,16 +153,15 @@ export const getStepSolveAssignment = async (ctx: ProtectedTRPCContext, input: G
       stepSolveQuestions: allQuestions,
     } as typeof baseAssignment & { stepSolveQuestions: typeof allQuestions };
   } else {
-    // Get a random assignment from the activity (original behavior)
-    const randomAssignment = activityToAssignments[Math.floor(Math.random() * activityToAssignments.length)];
-    const assignmentId = randomAssignment?.stepSolveAssignment?.id;
+    // Get a random assignment from the template (original behavior)
+    const randomAssignmentId = template.assignmentIds[Math.floor(Math.random() * template.assignmentIds.length)];
 
-    if (!assignmentId) {
+    if (!randomAssignmentId) {
       throw new Error("Assignment not found");
     }
 
     const assignment = await ctx.db.query.stepSolveAssignments.findFirst({
-      where: (table, { eq }) => eq(table.id, assignmentId),
+      where: (table, { eq }) => eq(table.id, randomAssignmentId),
       columns: {
         id: true,
         name: true,
@@ -467,27 +482,49 @@ export const getStepSolveAssignmentSubmissions = async (ctx: ProtectedTRPCContex
 }
 
 export const getStepSolveAssignmentQuestionAnalytics = async (ctx: ProtectedTRPCContext, input: GetStepSolveAssignmentQuestionAnalyticsInput) => {
-  // Get all assignments for this activity directly from activityToAssignment
-  const activityAssignments = await ctx.db.query.activityToAssignment.findMany({
-    where: (table, { eq }) => eq(table.activityId, input.activityId),
+  // Get the activity to find the template ID
+  const activity = await ctx.db.query.activity.findFirst({
+    where: (table, { eq }) => eq(table.id, input.activityId),
+    columns: {
+      id: true,
+      assignmentId: true, // This now contains the template ID
+    }
+  });
+
+  if (!activity?.assignmentId) {
+    throw new Error("Activity or template not found");
+  }
+
+  // Get the step solve template
+  const template = await ctx.db.query.stepSolveAssignmentTemplates.findFirst({
+    where: (table, { eq }) => eq(table.id, activity.assignmentId!),
+    columns: {
+      id: true,
+      assignmentIds: true,
+    }
+  });
+
+  if (!template?.assignmentIds?.length) {
+    throw new Error("Template or assignments not found");
+  }
+
+  // Get all assignments from the template
+  const assignments = await ctx.db.query.stepSolveAssignments.findMany({
+    where: (table, { inArray }) => inArray(table.id, template.assignmentIds),
     with: {
-      stepSolveAssignment: {
+      stepSolveQuestions: {
         with: {
-          stepSolveQuestions: {
+          q: {
+            columns: {
+              id: true,
+              questionText: true,
+            },
             with: {
-              q: {
+              steps: {
                 columns: {
                   id: true,
-                  questionText: true,
-                },
-                with: {
-                  steps: {
-                    columns: {
-                      id: true,
-                      stepNumber: true,
-                      stepText: true,
-                    }
-                  }
+                  stepNumber: true,
+                  stepText: true,
                 }
               }
             }
@@ -497,8 +534,8 @@ export const getStepSolveAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
     }
   });
 
-  if (!activityAssignments.length) {
-    throw new Error("No assignments found for this activity");
+  if (!assignments.length) {
+    throw new Error("No assignments found for this template");
   }
 
   // Get all submissions for this activity
@@ -568,8 +605,8 @@ export const getStepSolveAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
   }>();
 
   // Initialize the map with questions and steps from all assignments
-  activityAssignments.forEach(assignment => {
-    assignment.stepSolveAssignment?.stepSolveQuestions.forEach(sq => {
+  assignments.forEach(assignment => {
+    assignment.stepSolveQuestions.forEach(sq => {
       const question = sq.q;
       questionAnalytics.set(question.id, {
         questionText: question.questionText,
@@ -939,30 +976,52 @@ export const getStepSolveAssignmentConcepts = async (ctx: ProtectedTRPCContext, 
   
   console.log("Getting step solve assignment concepts", input.activityId);
   
-  // Step 1: Get activity to assignments
-  const activityToAssignments = await ctx.db.query.activityToAssignment.findMany({
-    where: (table, { eq }) => eq(table.activityId, input.activityId),
+  // Step 1: Get the activity to find the template ID
+  const activity = await ctx.db.query.activity.findFirst({
+    where: (table, { eq }) => eq(table.id, input.activityId),
+    columns: {
+      id: true,
+      assignmentId: true, // This now contains the template ID
+    }
+  });
+
+  if (!activity?.assignmentId) {
+    throw new Error("Activity or template not found");
+  }
+
+  // Step 2: Get the step solve template
+  const template = await ctx.db.query.stepSolveAssignmentTemplates.findFirst({
+    where: (table, { eq }) => eq(table.id, activity.assignmentId!),
+    columns: {
+      id: true,
+      assignmentIds: true,
+    }
+  });
+
+  if (!template?.assignmentIds?.length) {
+    throw new Error("Template or assignments not found");
+  }
+
+  // Step 3: Get all assignments from the template
+  const assignments = await ctx.db.query.stepSolveAssignments.findMany({
+    where: (table, { inArray }) => inArray(table.id, template.assignmentIds),
     with: {
-      stepSolveAssignment: {
-        with: {
-          stepSolveQuestions: {
-            columns: {
-              id: true,
-              questionId: true,
-            }
-          }
+      stepSolveQuestions: {
+        columns: {
+          id: true,
+          questionId: true,
         }
       }
     }
   });
 
-  if (!activityToAssignments.length) {
-    throw new Error("Assignment not found");
+  if (!assignments.length) {
+    throw new Error("Assignments not found");
   }
 
-  // Step 2: Get all question IDs from all assignments
-  const questionIds = activityToAssignments.flatMap(activityAssignment => 
-    activityAssignment.stepSolveAssignment?.stepSolveQuestions.map(q => q.questionId) ?? []
+  // Step 4: Get all question IDs from all assignments
+  const questionIds = assignments.flatMap(assignment => 
+    assignment.stepSolveQuestions.map(q => q.questionId)
   );
 
   const uniqueQuestionIds = [...new Set(questionIds)];
@@ -982,31 +1041,305 @@ export const getStepSolveAssignmentConcepts = async (ctx: ProtectedTRPCContext, 
   // Step 4: Get all step IDs
   const stepIds = questions.flatMap(q => q.steps.map(s => s.id));
 
-  // Step 5: Get step concepts
+  // Step 5: Get concepts for these steps
   const stepConcepts = await ctx.db.query.stepSolveStepConcepts.findMany({
     where: (stepConcept, { inArray }) => inArray(stepConcept.stepId, stepIds),
-    columns: {
-      id: true,
-      conceptId: true,
+    with: {
+      concept: {
+        columns: {
+          id: true,
+          text: true,
+        }
+      }
     }
   });
 
-  // Step 6: Get all concept IDs
-  const conceptIds = stepConcepts
-    .map(sc => sc.conceptId)
-    .filter((id): id is string => id !== null);
+  // Step 6: Extract unique concepts
+  const uniqueConcepts = stepConcepts.reduce((acc, stepConcept) => {
+    const concept = stepConcept.concept;
+    if (concept && !acc.some(c => c.id === concept.id)) {
+      acc.push({ id: concept.id, name: concept.text });
+    }
+    return acc;
+  }, [] as { id: string; name: string }[]);
 
-  const uniqueConceptIds = [...new Set(conceptIds)];
+  return uniqueConcepts;
+};
 
-  // Step 7: Get the actual concept data
-  const concepts = await ctx.db.query.concepts.findMany({
-    where: (concept, { inArray }) => inArray(concept.id, uniqueConceptIds),
+export const getStepSolveAssignmentById = async (ctx: ProtectedTRPCContext, input: GetStepSolveAssignmentByIdInput) => {
+  
+  console.log("Getting step solve assignment by ID", input.assignmentId);
+  
+  // Get the step solve template directly
+  const template = await ctx.db.query.stepSolveAssignmentTemplates.findFirst({
+    where: (table, { eq }) => eq(table.id, input.assignmentId),
     columns: {
       id: true,
-      text: true,
-      answerText: true,
+      name: true,
+      assignmentIds: true,
+      topicId: true,
+    },
+    with: {
+      topic: {
+        columns: {
+          name: true,
+        }
+      }
     }
   });
 
-  return concepts;
+  if (!template?.assignmentIds?.length) {
+    throw new Error("Template or assignments not found");
+  }
+
+  console.log("Template assignments", template.assignmentIds);
+
+  // Check if we're in development environment
+  const isDev = process.env.ENVIRONMENT === "dev";
+  
+  if (isDev && template.assignmentIds.length > 1) {
+    console.log("Development environment detected. Combining questions from all assignments.");
+    
+    // Collect all questions from all assignments in the template
+    const allQuestions = [];
+    
+    for (const assignmentId of template.assignmentIds) {
+      const assignmentWithQuestions = await ctx.db.query.stepSolveAssignments.findFirst({
+        where: (table, { eq }) => eq(table.id, assignmentId),
+        with: {
+          stepSolveQuestions: {
+            orderBy: [asc(stepSolveQuestionToAssignment.order)],
+            with: {
+              q: {
+                columns: {
+                  id: true,
+                  questionText: true,
+                  questionImage: true,
+                },
+                with: {
+                  steps: {
+                    orderBy: [asc(stepSolveStep.stepNumber)],
+                    columns: {
+                      id: true,
+                      stepText: true,
+                      stepTextPart2: true,
+                      stepImage: true,
+                      stepNumber: true,
+                      stepSolveAnswer: true,
+                      stepSolveAnswerUnits: true,
+                    },
+                    with: {
+                      opt: {
+                        columns: {
+                          id: true,
+                          optionText: true,
+                          optionImage: true,
+                        }
+                      },
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      });
+      
+      if (assignmentWithQuestions?.stepSolveQuestions) {
+        // Shuffle the options for each step
+        const questionsWithShuffledOptions = assignmentWithQuestions.stepSolveQuestions.map(question => ({
+          ...question,
+          q: {
+            ...question.q,
+            steps: question.q.steps.map(step => ({
+              ...step,
+              opt: shuffleArray(step.opt)
+            }))
+          }
+        }));
+        allQuestions.push(...questionsWithShuffledOptions);
+      }
+    }
+    
+    // Return the combined assignment
+    return {
+      id: template.id,
+      name: template.name,
+      assignmentId: template.id,
+      topicId: template.topicId,
+      topic: template.topic,
+      stepSolveQuestions: allQuestions,
+    } as {
+      id: string;
+      name: string | null;
+      assignmentId: string;
+      topicId: string;
+      topic: { name: string; } | null;
+      stepSolveQuestions: typeof allQuestions;
+    };
+  } else {
+    // Get a random assignment from the template (original behavior)
+    const randomAssignmentId = template.assignmentIds[Math.floor(Math.random() * template.assignmentIds.length)];
+
+    if (!randomAssignmentId) {
+      throw new Error("Assignment not found");
+    }
+
+    const assignment = await ctx.db.query.stepSolveAssignments.findFirst({
+      where: (table, { eq }) => eq(table.id, randomAssignmentId),
+      columns: {
+        id: true,
+        name: true,
+        createdAt: true,
+        createdBy: true,
+        description: true,
+      },
+      with: {
+        topic: {
+          columns: {
+            name: true,
+          }
+        },
+        stepSolveQuestions: {
+          orderBy: [asc(stepSolveQuestionToAssignment.order)],
+          with: {
+            q: {
+              columns: {
+                id: true,
+                questionText: true,
+                questionImage: true,
+              },
+              with: {
+                steps: {
+                  orderBy: [asc(stepSolveStep.stepNumber)],
+                  columns: {
+                    id: true,
+                    stepText: true,
+                    stepTextPart2: true,
+                    stepImage: true,
+                    stepNumber: true,
+                    stepSolveAnswer: true,
+                    stepSolveAnswerUnits: true,
+                  },
+                  with: {
+                    opt: {
+                      columns: {
+                        id: true,
+                        optionText: true,
+                        optionImage: true,
+                      }
+                    },
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    });
+
+    if (!assignment) {
+      throw new Error("Assignment not found");
+    }
+
+    // Shuffle options for each step
+    const shuffledAssignment = {
+      ...assignment,
+      assignmentId: template.id,
+      topicId: template.topicId,
+      stepSolveQuestions: assignment.stepSolveQuestions.map(question => ({
+        ...question,
+        q: {
+          ...question.q,
+          steps: question.q.steps.map(step => ({
+            ...step,
+            opt: shuffleArray(step.opt)
+          }))
+        }
+      }))
+    };
+
+    return shuffledAssignment;
+  }
+};
+
+export const getStepSolveAssignmentConceptsById = async (ctx: ProtectedTRPCContext, input: GetStepSolveAssignmentConceptsByIdInput) => {
+  
+  console.log("Getting step solve assignment concepts by ID", input.assignmentId);
+  
+  // Get the step solve template
+  const template = await ctx.db.query.stepSolveAssignmentTemplates.findFirst({
+    where: (table, { eq }) => eq(table.id, input.assignmentId),
+    columns: {
+      id: true,
+      assignmentIds: true,
+    }
+  });
+
+  if (!template?.assignmentIds?.length) {
+    throw new Error("Template or assignments not found");
+  }
+
+  // Get all assignments from the template
+  const assignments = await ctx.db.query.stepSolveAssignments.findMany({
+    where: (table, { inArray }) => inArray(table.id, template.assignmentIds),
+    with: {
+      stepSolveQuestions: {
+        columns: {
+          id: true,
+          questionId: true,
+        }
+      }
+    }
+  });
+
+  if (!assignments.length) {
+    throw new Error("Assignments not found");
+  }
+
+  // Get all question IDs from all assignments
+  const questionIds = assignments.flatMap(assignment => 
+    assignment.stepSolveQuestions.map(q => q.questionId)
+  );
+
+  const uniqueQuestionIds = [...new Set(questionIds)];
+
+  // Get questions with their steps
+  const questions = await ctx.db.query.stepSolveQuestions.findMany({
+    where: (question, { inArray }) => inArray(question.id, uniqueQuestionIds),
+    with: {
+      steps: {
+        columns: {
+          id: true,
+        }
+      }
+    }
+  });
+
+  // Get all step IDs
+  const stepIds = questions.flatMap(q => q.steps.map(s => s.id));
+
+  // Get concepts for these steps
+  const stepConcepts = await ctx.db.query.stepSolveStepConcepts.findMany({
+    where: (stepConcept, { inArray }) => inArray(stepConcept.stepId, stepIds),
+    with: {
+      concept: {
+        columns: {
+          id: true,
+          text: true,
+        }
+      }
+    }
+  });
+
+  // Extract unique concepts
+  const uniqueConcepts = stepConcepts.reduce((acc, stepConcept) => {
+    const concept = stepConcept.concept;
+    if (concept && !acc.some(c => c.id === concept.id)) {
+      acc.push({ id: concept.id, name: concept.text });
+    }
+    return acc;
+  }, [] as { id: string; name: string }[]);
+
+  return uniqueConcepts;
 };

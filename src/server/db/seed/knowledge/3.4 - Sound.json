@@ -1,0 +1,465 @@
+{
+    "name": "Sound",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "9e784742e64d499a85177",
+            "concepts": [
+                "2ba5ff20-2f55-4ade-8188-8b9b939a0062",
+                "f661324b-ded1-431d-9b0e-d445755e6187",
+                "ec2121b4-4e11-451b-8bef-c56b3500807d"
+            ],
+            "variants": [
+                {
+                    "id": "6421007f3722481aa3a1e",
+                    "question": "Which of the following factors affect the speed of sound in air?",
+                    "options": [
+                        {
+                            "option_text": "Temperature",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Altitude",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Atmospheric pressure",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Wavelength",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e1dffa6db97d4483a2c63",
+                    "question": "Which of the following statements is correct regarding the speed of sound in air?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The speed of sound in air increases with an increase in temperature.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of sound in air decreases with an increase in altitude.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of sound in air is directly proportional to the atmospheric pressure.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of sound in air is dependent on its wavelength.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0a4f8a82dfa846f886247",
+                    "question": "Select all the factors that affect the speed of sound in air:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Temperature",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Altitude",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Atmospheric pressure",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Humidity",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "32f4b701f69549319b394",
+            "concepts": [
+                "345dd24e-4f58-4324-829c-4e8719c533e4"
+            ],
+            "variants": [
+                {
+                    "id": "50eb6fc87cfc4c21bcd9d",
+                    "question": "Which of the following statements are true regarding the relationship between frequency, wavelength, and speed of sound?",
+                    "options": [
+                        {
+                            "option_text": "Speed of sound is the product of frequency and wavelength.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Frequency is inversely proportional to wavelength when the speed is constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Wavelength is independent of the speed of sound.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Speed of sound is the sum of frequency and wavelength.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "126153a8d3454946833f6",
+                    "question": "If the frequency of a sound wave is 440 Hz and its wavelength is 0.75 meters, what is the speed of the sound wave?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "330 m/s",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "587 m/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "440.75 m/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1.67 m/s",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2d13de83cb16411c880c3",
+                    "question": "Which of the following scenarios would result in an increase in the speed of sound (assuming the medium remains constant)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Decreasing the frequency while holding the wavelength constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increasing the wavelength while holding the frequency constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Decreasing both the frequency and the wavelength proportionally.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of sound does not depend on frequency or wavelength.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "dde22249ad944c0796b7d",
+            "concepts": [
+                "60a3fe0c-a7a4-402e-8bb3-ea3d3f578fb7"
+            ],
+            "variants": [
+                {
+                    "id": "f51ff75fd51c4ed7a4e95",
+                    "question": "What are the characteristics of musical notes and noise?",
+                    "options": [
+                        {
+                            "option_text": "Musical notes are from regular vibrations, noise from irregular vibrations.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Musical notes result from irregular vibrations, noise from regular vibrations.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both musical notes and noise are always regular vibrations.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both musical notes and noise are always irregular vibrations.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "10b5dd3d6bec49c9ae62b",
+                    "question": "Which of the following statements accurately describe the nature of musical notes versus noise?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Musical notes are produced by consistent, repeating sound wave patterns, while noise is characterized by random and non-repeating sound wave patterns.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Musical notes and noise both exhibit consistent, repeating sound wave patterns, differing only in amplitude.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Musical notes are created by random sound wave patterns, whereas noise is generated through consistent, repeating patterns.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Neither musical notes nor noise demonstrate any clear sound wave patterns; both are inherently unpredictable.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b6968e335b2b4a5e9ee93",
+                    "question": "Select all the statements that correctly describe the characteristics of musical notes and noise.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Musical notes are primarily characterized by regular and periodic waveforms.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Noise is primarily characterized by irregular and aperiodic waveforms.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Musical notes always have higher amplitudes than noise.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Noise can sometimes exhibit regular patterns, but these patterns are less consistent than those in musical notes.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "82da0eca27d64650b9886",
+            "concepts": [
+                "48b3df02-7929-400c-a121-dd87480c7ef7"
+            ],
+            "variants": [
+                {
+                    "id": "05f3aa1eb4ac424c93b6a",
+                    "question": "Which of the following affects the loudness of a sound?",
+                    "options": [
+                        {
+                            "option_text": "Frequency",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Amplitude",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Wavelength",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Timbre",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4202db5e5ec54125a9fe0",
+                    "question": "Which of the following characteristics of a sound wave is most directly related to the perceived loudness?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Frequency",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Amplitude",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Wavelength",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Speed",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "accbf1e9cc7f4fe2944b4",
+                    "question": "Select all of the following factors that influence the loudness of a sound.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Amplitude of the sound wave",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Frequency of the sound wave",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Distance from the sound source",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Medium through which the sound travels",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "92d37ef564354e6d92d47",
+            "concepts": [
+                "7510aab3-42e9-4db6-accd-a1602faf624b"
+            ],
+            "variants": [
+                {
+                    "id": "b724032da3c84b2494638",
+                    "question": "Which of the following are true about ultrasound?",
+                    "options": [
+                        {
+                            "option_text": "Ultrasound has a frequency above 20 kHz.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ultrasound can be used in medical imaging.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ultrasound cannot travel through solids.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ultrasound frequencies are below human hearing range.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "d8f9f9a4415f47dbb6707",
+                    "question": "Which of the following statements about ultrasound is NOT correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Ultrasound has frequencies higher than the audible range for humans.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ultrasound is used in various medical applications such as fetal imaging.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ultrasound is a form of mechanical wave.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ultrasound can travel through various mediums, including solids, liquids, and gases.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "7b4f11a819fc4671b40d2",
+                    "question": "If the frequency of an ultrasound wave is doubled, what happens to its wavelength, assuming the speed of sound remains constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The wavelength is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wavelength is halved.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The wavelength remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The wavelength is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "511587882afd4e1dae7b3",
+            "concepts": [
+                "7df57c6c-fbd2-4782-85b4-b287e0fe82d1",
+                "d9318e57-b54d-48a5-bc89-17031df823a3",
+                "a85d97ce-8aaa-446d-8e1a-de20e6b8f989"
+            ],
+            "variants": [
+                {
+                    "id": "f96596b3fa724cd790db9",
+                    "question": "Match the term to its definition.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Reverberation",
+                            "optionB": "Multiple echoes merging, prolonging sound."
+                        },
+                        {
+                            "optionA": "Refraction",
+                            "optionB": "Bending of sound waves due to changing conditions."
+                        },
+                        {
+                            "optionA": "Diffraction",
+                            "optionB": "Spreading of sound waves around obstacles."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "e47a319eec2445c6b17eb",
+            "concepts": [
+                "670671d3-985c-4a23-9178-05e06ebd3f7b",
+                "93a255fd-08b1-444f-b3c0-931c79dceb23",
+                "6be5d9a6-9d7a-4ca3-b78d-7423e062e245"
+            ],
+            "variants": [
+                {
+                    "id": "e141cac639514be694f3f",
+                    "question": "Match the application to the type of wave.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Sonar",
+                            "optionB": "Sound echo techniques"
+                        },
+                        {
+                            "optionA": "Medical imaging",
+                            "optionB": "Ultrasound"
+                        },
+                        {
+                            "optionA": "Earthquake study",
+                            "optionB": "Seismic waves"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

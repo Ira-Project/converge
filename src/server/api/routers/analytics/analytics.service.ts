@@ -282,44 +282,135 @@ export const getConceptTracking = async (ctx: ProtectedTRPCContext, input: GetSu
     where: (table, { eq }) => eq(table.classroomId, input.classroomId),
   });
 
-  // Get the teachers of this classroom
-  const classroomTeachers = await ctx.db.query.usersToClassrooms.findMany({
-    where: (table, { eq, and }) => and(
-      eq(table.classroomId, input.classroomId),
-      eq(table.role, Roles.Teacher),
-      eq(table.isDeleted, false)
-    ),
-    columns: {
-      userId: true,
-    }
+  // Get live activities for the classroom
+  const activities = await ctx.db.query.activity.findMany({
+    where: (table, { eq }) => and(eq(table.classroomId, input.classroomId), eq(table.isLive, true)),
   });
+
+  // Extract unique concepts from live activities based on activity type
+  const conceptsSet = new Set<string>();
+  const concepts: Array<{
+    id: string;
+    text: string;
+    answerText: string | null;
+    conceptsToTopics: Array<{
+      id: string;
+      conceptId: string | null;
+      topicId: string | null;
+      createdAt: Date;
+      updatedAt: Date | null;
+      isDeleted: boolean;
+      deletedAt: Date | null;
+    }>;
+  }> = [];
   
-  const teacherIds = classroomTeachers.map(teacher => teacher.userId);
+  for (const activity of activities) {
+    switch (activity.typeText) {
+      case ActivityType.KnowledgeZap:
+        // Get assignment with questions
+        const kzAssignment = await ctx.db.query.knowledgeZapAssignments.findFirst({
+          where: (table, { eq }) => eq(table.id, activity.assignmentId!),
+          with: {
+            questionToAssignment: {
+              columns: {
+                questionId: true,
+              }
+            }
+          }
+        });
+        
+        if (kzAssignment?.questionToAssignment?.length) {
+          const questionIds = kzAssignment.questionToAssignment.map(qta => qta.questionId);
+          
+          // Get questions with their concepts
+          const questions = await ctx.db.query.knowledgeZapQuestions.findMany({
+            where: (question, { inArray }) => inArray(question.id, questionIds),
+            with: {
+              questionsToConcepts: {
+                with: {
+                  concept: {
+                    with: {
+                      conceptsToTopics: true,
+                    }
+                  }
+                }
+              }
+            }
+          });
+          
+          // Add concepts to collection
+          for (const question of questions) {
+            for (const qtc of question.questionsToConcepts) {
+              if (qtc.concept && !conceptsSet.has(qtc.concept.id)) {
+                conceptsSet.add(qtc.concept.id);
+                concepts.push(qtc.concept);
+              }
+            }
+          }
+        }
+        break;
 
-  const allConcepts = await ctx.db.query.concepts.findMany({
-    with: {
-      conceptsToTopics: true,
-    }
-  });
+      case ActivityType.StepSolve:
+        // Get assignment with questions and steps
+        const ssAssignment = await ctx.db.query.stepSolveAssignments.findFirst({
+          where: (table, { eq }) => eq(table.id, activity.assignmentId!),
+          with: {
+            stepSolveQuestions: {
+              columns: {
+                questionId: true,
+              }
+            }
+          }
+        });
+        
+        if (ssAssignment?.stepSolveQuestions?.length) {
+          const questionIds = ssAssignment.stepSolveQuestions.map(q => q.questionId);
+          
+                     // Get questions with their steps
+          const questions = await ctx.db.query.stepSolveQuestions.findMany({
+            where: (question, { inArray }) => inArray(question.id, questionIds),
+            with: {
+              steps: {
+                with: {
+                  concepts: {
+                    with: {
+                      concept: {
+                        with: {
+                          conceptsToTopics: true,
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          });
+          
+          // Add concepts to collection
+          for (const question of questions) {
+            for (const step of question.steps) {
+              for (const stepConcept of step.concepts) {
+                if (stepConcept.concept && !conceptsSet.has(stepConcept.concept.id)) {
+                  conceptsSet.add(stepConcept.concept.id);
+                  concepts.push(stepConcept.concept);
+                }
+              }
+            }
+          }
+        }
+        break;
 
-  // Filter concepts to exclude generated ones unless created by a teacher of this classroom
-  const concepts = allConcepts.filter(concept => {
-    // If it's not generated, include it
-    if (!concept.generated) {
-      return true;
+      // For other activity types, we'll skip concept extraction for now
+      // as they may not have direct concept relationships or need different handling
+      default:
+        break;
     }
-    // If it's generated and created by a teacher of this classroom, include it
-    if (concept.generated && concept.createdBy && teacherIds.includes(concept.createdBy)) {
-      return true;
-    }
-    // Otherwise, exclude it
-    return false;
-  });
+  }
 
   const edges = await ctx.db.query.conceptEdges.findMany();
   
   // Filter edges to only include those where both conceptId and relatedConceptId 
-  // are in the filtered concepts list
+  // are in the concepts from live activities
   const conceptIds = new Set(concepts.map(concept => concept.id));
   const filteredEdges = edges.filter(edge => 
     conceptIds.has(edge.conceptId!) && conceptIds.has(edge.relatedConceptId!)

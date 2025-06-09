@@ -10,7 +10,15 @@ import { relations } from "drizzle-orm";
 import { classrooms } from "./classroom";
 import { users } from "./user";
 import { activity } from "./activity";
-import { concepts } from "./concept";
+import { concepts, conceptsToSubjects, conceptsToCourses } from "./concept";
+
+// Import assignment-to-course mapping tables
+import { knowledgeZapAssignmentToCourse, knowledgeZapAssignmentToSubject } from "./knowledgeZap/knowledgeZapAssignment";
+import { stepSolveAssignmentTemplateToCourse, stepSolveAssignmentTemplateToSubject } from "./stepSolve/stepSolveAssignment";
+import { readAndRelayAssignmentToCourse, readAndRelayAssignmentToSubject } from "./readAndRelay/readAndRelayAssignments";
+import { conceptMappingAssignmentToCourse, conceptMappingAssignmentToSubject } from "./conceptMapping/conceptMappingAssignments";
+import { reasoningAssignmentToCourse, reasoningAssignmentToSubject } from "./reasoning/reasoningAssignment";
+import { explainAssignmentToCourse, explainAssignmentToSubject } from "./learnByTeaching/explainAssignment";
 
 export const pgTable = pgTableCreator((name) => `${prefix}_${name}`);
 
@@ -34,6 +42,13 @@ export type Subjects = typeof subjects.$inferSelect;
 export const subjectRelations = relations(subjects, ({ many }) => ({
   courses: many(courses),
   teachers: many(users),
+  conceptsToSubjects: many(conceptsToSubjects),
+  knowledgeZapAssignmentMappings: many(knowledgeZapAssignmentToSubject),
+  stepSolveTemplateMappings: many(stepSolveAssignmentTemplateToSubject),
+  readAndRelayAssignmentMappings: many(readAndRelayAssignmentToSubject),
+  conceptMappingAssignmentMappings: many(conceptMappingAssignmentToSubject),
+  reasoningAssignmentMappings: many(reasoningAssignmentToSubject),
+  explainAssignmentMappings: many(explainAssignmentToSubject),
 }));
 
 export const courses = pgTable(
@@ -60,6 +75,13 @@ export const courseRelations = relations(courses, ({ one, many }) => ({
   topics: many(topics),
   classrooms: many(classrooms),
   teachers: many(users),
+  conceptsToCourses: many(conceptsToCourses),
+  knowledgeZapAssignmentMappings: many(knowledgeZapAssignmentToCourse),
+  stepSolveTemplateMappings: many(stepSolveAssignmentTemplateToCourse),
+  readAndRelayAssignmentMappings: many(readAndRelayAssignmentToCourse),
+  conceptMappingAssignmentMappings: many(conceptMappingAssignmentToCourse),
+  reasoningAssignmentMappings: many(reasoningAssignmentToCourse),
+  explainAssignmentMappings: many(explainAssignmentToCourse),
 }));
 
 export const topics = pgTable(

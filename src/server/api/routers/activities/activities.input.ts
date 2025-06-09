@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { ActivityType } from "@/lib/constants";
 
 export const getActivitiesSchema = z.object({
   classroomId: z.string(),
@@ -25,6 +26,16 @@ export const makeActivityLiveSchema = z.object({
   dueDate: z.date().min(new Date()),
 });
 export type MakeActivityLiveInput = z.infer<typeof makeActivityLiveSchema>;
+
+export const createActivitySchema = z.object({
+  classroomId: z.string(),
+  assignmentId: z.string(),
+  activityType: z.nativeEnum(ActivityType),
+  activityName: z.string(),
+  topicId: z.string(),
+  dueDate: z.date().min(new Date()),
+});
+export type CreateActivityInput = z.infer<typeof createActivitySchema>;
 
 export const getLiveActivitiesSchema = z.object({
   classroomId: z.string(),

@@ -1,0 +1,167 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "er16e2cmu94sbzbg8jnki",
+    "topicIdProd": "",
+    "chapter_text": "**Mass**\n*   Mass is a measure of the quantity of matter in an object at rest relative to an observer.\n*   The standard unit of mass is the kilogram (kg).\n*   The gram (g) is one-thousandth of a kilogram: $1\\text{ g} = \\frac{1}{1000}\\text{ kg} = 10^{-3}\\text{ kg} = 0.001\\text{ kg}$.\n*   Mass is distinct from weight and remains constant regardless of location.\n*   Mass is measured using balances (e.g., beam balance, lever balance, digital top-pan balance).\n\n**Weight**\n*   Weight is a gravitational force on an object that has mass, experienced as the pull of gravity.\n*   It is a vector quantity and is measured in newtons (N).\n*   Weight is measured using a spring balance.\n*   The weight of an object of mass $m$ is calculated by the formula: $W = mg$, where $g$ is the gravitational field strength.\n*   On most of Earth's surface, an object of mass 1 kg has a weight of approximately 9.8 N (often taken as 10 N).\n*   Weight varies depending on the strength of the gravitational field (e.g., less on the Moon than Earth), and slightly on Earth's surface (greater at the poles than the equator).\n\n**Gravitational Field**\n*   A gravitational field is the region around a mass (like Earth) that exerts a gravitational force on other objects within it. It is an invisible, action-at-a-distance force.\n*   Gravitational field strength ($g$) is defined as the force acting per unit mass.\n*   The formula for gravitational field strength is: $g = \\frac{W}{m}$.\n*   Gravitational field strength is a vector quantity, possessing both magnitude and direction.\n*   The value of $g$ is equivalent to the acceleration of free fall.\n*   On Earth's surface, $g \\approx 9.8\\text{ N/kg}$ or $9.8\\text{ m/s}^2$ (often approximated as 10 N/kg).\n*   The weight of an object is directly proportional to its mass, explaining why the acceleration due to gravity ($g$) is the same for all objects (due to greater inertia offsetting greater force for more massive objects).",
+    "chapter_concepts": [
+        {
+            "concept_id": "57f9767a-efd0-4e39-9da5-7a711127092b",
+            "concept_question": "What is mass?",
+            "concept_answer": "Mass is a measure of the quantity of matter in an object at rest relative to an observer.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "a8bc0dd5-246d-40c2-a509-ac9658a3f04c",
+            "concept_question": "What is the standard mass unit?",
+            "concept_answer": "The kilogram (kg) is the standard unit of mass.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "0e162bf0-0cec-4c8e-a70d-df85506735b7",
+            "concept_question": "How is a gram defined in kilograms?",
+            "concept_answer": "A gram is one-thousandth of a kilogram.",
+            "concept_formula": [
+                "$!$1\\text{ g} = \\frac{1}{1000}\\text{ kg}$!$",
+                "$!$1\\text{ g} = 10^{-3}\\text{ kg}$!$",
+                "$!$1\\text{ g} = 0.001\\text{ kg}$!$"
+            ],
+            "pre-requisites": [
+                "a8bc0dd5-246d-40c2-a509-ac9658a3f04c"
+            ]
+        },
+        {
+            "concept_id": "28034604-e5cb-4e23-a703-53057fb8df4d",
+            "concept_question": "How is mass distinct from weight?",
+            "concept_answer": "Mass remains constant regardless of location, unlike weight which varies with gravitational conditions.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "57f9767a-efd0-4e39-9da5-7a711127092b",
+                "8ba59395-c583-4414-8a6f-d62d5e02032f"
+            ]
+        },
+        {
+            "concept_id": "8ba59395-c583-4414-8a6f-d62d5e02032f",
+            "concept_question": "What is weight?",
+            "concept_answer": "Weight is the gravitational force on an object with mass, defined as a vector quantity measured in newtons.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "57f9767a-efd0-4e39-9da5-7a711127092b"
+            ]
+        },
+        {
+            "concept_id": "ae7dfea8-c801-496d-b459-5a91ade72e0e",
+            "concept_question": "How is weight measured?",
+            "concept_answer": "Weight is measured using a spring balance.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8ba59395-c583-4414-8a6f-d62d5e02032f"
+            ]
+        },
+        {
+            "concept_id": "8d226301-62d9-45bd-adc3-ee9c883348c6",
+            "concept_question": "What is the weight formula?",
+            "concept_answer": "Weight is calculated by multiplying mass with gravitational field strength.",
+            "concept_formula": [
+                "$!$W = mg$!$"
+            ],
+            "pre-requisites": [
+                "57f9767a-efd0-4e39-9da5-7a711127092b",
+                "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                "55de6a44-2990-4e22-84f1-9fc49af4017c"
+            ]
+        },
+        {
+            "concept_id": "745d924d-c471-4506-b389-3b40aefa092c",
+            "concept_question": "What is weight of 1 kg on Earth?",
+            "concept_answer": "An object with a mass of 1 kg weighs approximately 9.8 newtons on Earth's surface.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                "01d1e541-9807-4bb0-a823-3dbf8a09d733"
+            ]
+        },
+        {
+            "concept_id": "efb9ade3-2bd8-44d5-b33c-4d8798cb03da",
+            "concept_question": "How does weight vary?",
+            "concept_answer": "Weight varies with changes in gravitational field strength and geographic location.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                "55de6a44-2990-4e22-84f1-9fc49af4017c"
+            ]
+        },
+        {
+            "concept_id": "a7d6cc17-81d5-49ff-91bb-fe4afeb5905c",
+            "concept_question": "What is a gravitational field?",
+            "concept_answer": "A gravitational field is the invisible region around a mass that exerts a force at a distance.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "55de6a44-2990-4e22-84f1-9fc49af4017c",
+            "concept_question": "What is gravitational field strength?",
+            "concept_answer": "Gravitational field strength is the force experienced per unit mass.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "a7d6cc17-81d5-49ff-91bb-fe4afeb5905c"
+            ]
+        },
+        {
+            "concept_id": "d60cd260-94c1-4f20-80b5-343d30836919",
+            "concept_question": "What is gravitational field strength formula?",
+            "concept_answer": "It is defined as the ratio of weight to mass.",
+            "concept_formula": [
+                "$!$g = \\frac{W}{m}$!$"
+            ],
+            "pre-requisites": [
+                "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                "57f9767a-efd0-4e39-9da5-7a711127092b",
+                "55de6a44-2990-4e22-84f1-9fc49af4017c"
+            ]
+        },
+        {
+            "concept_id": "6594eafb-c0a8-4df4-ab73-8744fd1b58e8",
+            "concept_question": "Is gravitational field strength a vector?",
+            "concept_answer": "Yes, gravitational field strength is a vector quantity with magnitude and direction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "55de6a44-2990-4e22-84f1-9fc49af4017c"
+            ]
+        },
+        {
+            "concept_id": "add3b897-7a8a-478a-9a8f-e5c1543b7dd9",
+            "concept_question": "What is g equivalent to?",
+            "concept_answer": "Gravitational field strength is equivalent to the acceleration of free fall.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "55de6a44-2990-4e22-84f1-9fc49af4017c"
+            ]
+        },
+        {
+            "concept_id": "01d1e541-9807-4bb0-a823-3dbf8a09d733",
+            "concept_question": "What is Earth's gravitational field strength?",
+            "concept_answer": "On Earth's surface, gravitational field strength is approximately 9.8 N/kg or 9.8 m/s\u00b2.",
+            "concept_formula": [
+                "$!$g \\approx 9.8\\,\\text{N/kg}$!$",
+                "$!$g \\approx 9.8\\,\\text{m/s}^2$!$",
+                "$!$g \\approx 10\\,\\text{N/kg}$!$"
+            ],
+            "pre-requisites": [
+                "d60cd260-94c1-4f20-80b5-343d30836919"
+            ]
+        },
+        {
+            "concept_id": "fc043c17-c49b-4544-a694-3cf0e5561152",
+            "concept_question": "How does weight relate to mass?",
+            "concept_answer": "Weight is directly proportional to mass, resulting in a uniform acceleration due to gravity.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "57f9767a-efd0-4e39-9da5-7a711127092b",
+                "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                "55de6a44-2990-4e22-84f1-9fc49af4017c"
+            ]
+        }
+    ]
+}

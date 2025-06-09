@@ -1,0 +1,298 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "f3h69pvdi8lclltr9gjla",
+    "topicIdProd": "",
+    "chapter_text": "**I. Fundamental Concepts of Momentum**\n*   Momentum is defined as the product of a body's mass and its velocity.\n    *   Formula: `p = mv`\n*   Momentum is a vector quantity, possessing both magnitude and direction.\n*   Units of momentum are kilogram metre per second (kgm/s) or newton second (Ns).\n*   Change in momentum is represented as `\\Delta p = \\Delta(mv)`.\n\n**II. Conservation of Momentum**\n*   The Principle of Conservation of Momentum states that when two or more bodies interact (e.g., in a collision or explosion), their total momentum remains constant, provided no external forces act on the system.\n*   In collisions where bodies couple, the total momentum before the collision equals the total momentum after.\n*   In explosions, such as a rifle firing, the initial total momentum is zero, and the final total momentum also sums to zero, with parts moving in equal and opposite directions.\n*   This principle is applied in rocket and jet propulsion, where expelling high-momentum gas in one direction imparts equal and opposite momentum to the craft.\n\n**III. Force and Impulse**\n*   A steady force `F` acting on an object for a time `\\Delta t` causes a change in its momentum.\n    *   Relationship: `F = \\frac{m(v - u)}{\\Delta t} = \\frac{mv - mu}{\\Delta t}`\n*   Impulse is defined as the product of the force and the time for which the force acts.\n    *   Formula: `\\text{impulse} = F\\Delta t`\n*   The impulse acting on an object is equal to the change in its momentum.\n    *   Formula: `F\\Delta t = mv - mu = \\Delta(mv)`\n*   The resultant force is defined as the rate of change in momentum per unit time, serving as an alternative statement of Newton's second law.\n    *   Formula: `F = \\frac{\\Delta(mv)}{\\Delta t} = \\frac{\\Delta p}{\\Delta t}`\n\n**IV. Practical Applications of Impulse and Collision Time**\n*   **Increasing Momentum:** Techniques like \"following through\" in sports (e.g., cricket, tennis) increase the collision time (`\\Delta t`), thereby increasing the impulse (`F\\Delta t`) and resulting in a greater change in momentum for the ball.\n*   **Decreasing Force (for a given change in momentum):**\n    *   Drawing back hands when catching a ball, using sand in long jumps, and employing crumple zones and extensible seat belts in cars all extend the collision time (`\\Delta t`).\n    *   By extending `\\Delta t`, the average force (`F = \\frac{\\Delta p}{\\Delta t}`) required to achieve a certain change in momentum (`\\Delta p`) is reduced, thereby minimizing \"sting\" or injury.",
+    "chapter_concepts": [
+        {
+            "concept_id": "91ed7799-921a-496d-9265-b55b278a0bb9",
+            "concept_question": "What is momentum? (Theory)",
+            "concept_answer": "Momentum is the product of a body's mass and its velocity. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "cb2fb9ab-0661-426b-8ed1-18f42da83312",
+            "concept_question": "What is momentum? (Application)",
+            "concept_answer": "Momentum is the product of a body's mass and its velocity. Formulas are applied here.",
+            "concept_formula": [
+                "$!$p = mv$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "70a4ada0-1f39-4310-b868-ba316ea07460",
+            "concept_question": "Is momentum a scalar or vector? (Theory)",
+            "concept_answer": "Momentum is a vector that possesses both magnitude and direction. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+            ]
+        },
+        {
+            "concept_id": "09e425f6-34d4-4e33-8839-fc4c89e01ccd",
+            "concept_question": "Is momentum a scalar or vector? (Application)",
+            "concept_answer": "Momentum is a vector that possesses both magnitude and direction. Application details might be considered.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+            ]
+        },
+        {
+            "concept_id": "01822a98-a784-4a78-9939-c1cb1dc7f104",
+            "concept_question": "What are the units of momentum? (Theory)",
+            "concept_answer": "Momentum is measured in kilogram metre per second or newton second. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+            ]
+        },
+        {
+            "concept_id": "2864ac00-d579-410b-bd83-5d9ae0ebec05",
+            "concept_question": "What are the units of momentum? (Application)",
+            "concept_answer": "Momentum is measured in kilogram metre per second or newton second. Application details may include unit conversion.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+            ]
+        },
+        {
+            "concept_id": "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+            "concept_question": "What is change in momentum? (Theory)",
+            "concept_answer": "Change in momentum is the variation in a body's momentum resulting from changes in mass or velocity. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+            ]
+        },
+        {
+            "concept_id": "04c41e33-e440-4c28-98c2-3bb76709f5f6",
+            "concept_question": "What is change in momentum? (Application)",
+            "concept_answer": "Change in momentum is the variation in a body's momentum resulting from changes in mass or velocity. See formula application.",
+            "concept_formula": [
+                "$!$\\Delta p = \\Delta(mv)$!$"
+            ],
+            "pre-requisites": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+            ]
+        },
+        {
+            "concept_id": "cad79986-bd73-4543-b34c-949a1d71cd5a",
+            "concept_question": "What is conservation of momentum? (Theory)",
+            "concept_answer": "Conservation of momentum means that in an isolated system, the total momentum remains constant. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+            ]
+        },
+        {
+            "concept_id": "337bf447-29fe-4758-8ae6-d7d83eb262d7",
+            "concept_question": "What is conservation of momentum? (Application)",
+            "concept_answer": "Conservation of momentum means that in an isolated system, the total momentum remains constant. See practical examples.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+            ]
+        },
+        {
+            "concept_id": "0c48a071-fbe9-414e-8781-92e761847ec1",
+            "concept_question": "What happens in inelastic collisions? (Theory)",
+            "concept_answer": "In inelastic collisions, the total momentum before collision equals the total momentum after collision. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+            ]
+        },
+        {
+            "concept_id": "a072fc46-b6ef-4b82-ab4a-27e9b2d1702a",
+            "concept_question": "What happens in inelastic collisions? (Application)",
+            "concept_answer": "In inelastic collisions, the total momentum before collision equals the total momentum after collision. Application details.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+            ]
+        },
+        {
+            "concept_id": "04e60e58-7f93-4f78-9eb6-3811b370f7c4",
+            "concept_question": "What is momentum in explosions? (Theory)",
+            "concept_answer": "In explosions, even though parts move in opposite directions, the net momentum remains zero. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+            ]
+        },
+        {
+            "concept_id": "34d48320-1612-4b4f-8c9c-9470ad55e71f",
+            "concept_question": "What is momentum in explosions? (Application)",
+            "concept_answer": "In explosions, even though parts move in opposite directions, the net momentum remains zero. Application insights.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+            ]
+        },
+        {
+            "concept_id": "f2d98f26-6fce-48c8-9c72-de7ca0803fce",
+            "concept_question": "How does force change momentum? (Theory)",
+            "concept_answer": "A steady force applied over time changes an object's momentum. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312",
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+            ]
+        },
+        {
+            "concept_id": "bf1af9ab-964b-4b5c-a723-12840b0874c3",
+            "concept_question": "How does force change momentum? (Application)",
+            "concept_answer": "A steady force applied over time changes an object's momentum. Refer to the formula for details.",
+            "concept_formula": [
+                "$!$F = \\frac{m(v-u)}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "91ed7799-921a-496d-9265-b55b278a0bb9",
+                "cb2fb9ab-0661-426b-8ed1-18f42da83312",
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+            ]
+        },
+        {
+            "concept_id": "d0ca7520-7a41-4abf-aff3-ecfbfc6099e0",
+            "concept_question": "What is impulse? (Theory)",
+            "concept_answer": "Impulse is the product of a force and the time interval during which it acts. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f2d98f26-6fce-48c8-9c72-de7ca0803fce",
+                "bf1af9ab-964b-4b5c-a723-12840b0874c3"
+            ]
+        },
+        {
+            "concept_id": "aa777ab4-cce5-47ce-81a9-d6a0548f1137",
+            "concept_question": "What is impulse? (Application)",
+            "concept_answer": "Impulse is the product of a force and the time interval during which it acts. Refer to formula for application.",
+            "concept_formula": [
+                "$!$\\text{impulse} = F\\Delta t$!$"
+            ],
+            "pre-requisites": [
+                "f2d98f26-6fce-48c8-9c72-de7ca0803fce",
+                "bf1af9ab-964b-4b5c-a723-12840b0874c3"
+            ]
+        },
+        {
+            "concept_id": "4f5342fe-16d8-4ba2-b9d4-5c7917118144",
+            "concept_question": "What is impulse-momentum relationship? (Theory)",
+            "concept_answer": "The impulse applied to an object is equal to its change in momentum. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d0ca7520-7a41-4abf-aff3-ecfbfc6099e0",
+                "aa777ab4-cce5-47ce-81a9-d6a0548f1137",
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+            ]
+        },
+        {
+            "concept_id": "eb2f76a7-4c38-468d-b7dd-2f8dc4135942",
+            "concept_question": "What is impulse-momentum relationship? (Application)",
+            "concept_answer": "The impulse applied to an object is equal to its change in momentum. See formulas for detailed application.",
+            "concept_formula": [
+                "$!$F\\Delta t = mv - mu$!$",
+                "$!$F\\Delta t = \\Delta(mv)$!$"
+            ],
+            "pre-requisites": [
+                "d0ca7520-7a41-4abf-aff3-ecfbfc6099e0",
+                "aa777ab4-cce5-47ce-81a9-d6a0548f1137",
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+            ]
+        },
+        {
+            "concept_id": "e4ef5aa5-8a7b-4dff-94c6-a453dacf33f5",
+            "concept_question": "What is resultant force? (Theory)",
+            "concept_answer": "Resultant force is defined as the rate of change of momentum per unit time. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6",
+                "f2d98f26-6fce-48c8-9c72-de7ca0803fce",
+                "bf1af9ab-964b-4b5c-a723-12840b0874c3"
+            ]
+        },
+        {
+            "concept_id": "1a227599-b55c-4dde-ab9a-1062a5fb942c",
+            "concept_question": "What is resultant force? (Application)",
+            "concept_answer": "Resultant force is defined as the rate of change of momentum per unit time. See formulas for application.",
+            "concept_formula": [
+                "$!$F = \\frac{\\Delta(mv)}{\\Delta t}$!$",
+                "$!$F = \\frac{\\Delta p}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6",
+                "f2d98f26-6fce-48c8-9c72-de7ca0803fce",
+                "bf1af9ab-964b-4b5c-a723-12840b0874c3"
+            ]
+        },
+        {
+            "concept_id": "c20c14b5-523f-4657-b14f-b00df75006a9",
+            "concept_question": "What is effect of increased collision time on momentum? (Theory)",
+            "concept_answer": "Increasing collision time increases impulse, thereby producing a greater change in momentum. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d0ca7520-7a41-4abf-aff3-ecfbfc6099e0",
+                "aa777ab4-cce5-47ce-81a9-d6a0548f1137",
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+            ]
+        },
+        {
+            "concept_id": "c99ce8e6-daa0-430e-b730-a948172b1485",
+            "concept_question": "What is effect of increased collision time on momentum? (Application)",
+            "concept_answer": "Increasing collision time increases impulse, thereby producing a greater change in momentum. Application considerations.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d0ca7520-7a41-4abf-aff3-ecfbfc6099e0",
+                "aa777ab4-cce5-47ce-81a9-d6a0548f1137",
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+            ]
+        },
+        {
+            "concept_id": "0cff987b-9ac1-4733-be5c-9195e98115de",
+            "concept_question": "How does collision time affect average force? (Theory)",
+            "concept_answer": "Extending the collision time reduces the average force required for a given momentum change. [Theory explanation]",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e4ef5aa5-8a7b-4dff-94c6-a453dacf33f5",
+                "1a227599-b55c-4dde-ab9a-1062a5fb942c",
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+            ]
+        },
+        {
+            "concept_id": "d942bfc1-dceb-4ac6-bb12-b1319ba8ccca",
+            "concept_question": "How does collision time affect average force? (Application)",
+            "concept_answer": "Extending the collision time reduces the average force required for a given momentum change. Refer to formula for calculation.",
+            "concept_formula": [
+                "$!$F = \\frac{\\Delta p}{\\Delta t}$!$"
+            ],
+            "pre-requisites": [
+                "e4ef5aa5-8a7b-4dff-94c6-a453dacf33f5",
+                "1a227599-b55c-4dde-ab9a-1062a5fb942c",
+                "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0",
+                "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+            ]
+        }
+    ]
+}

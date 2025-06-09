@@ -1,0 +1,422 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "8jyu810j5of9p266qr7lb",
+    "topicIdProd": "",
+    "chapter_text": "### Electromagnetic Induction\n\n*   **Definition:** An electromotive force (e.m.f.) is induced in a conductor when it moves across a magnetic field or when a changing magnetic field links with the conductor.\n*   **Discovery:** First observed by Faraday in 1831, leading to the development of electrical generators.\n*   **Conditions for Induction:**\n    *   Relative motion between the conductor and the magnetic field.\n    *   The conductor must cut magnetic field lines (not move parallel to them).\n*   **Factors Affecting the Magnitude of Induced e.m.f.:** The induced e.m.f. increases with:\n    *   The speed of relative motion between the conductor and the magnetic field lines.\n    *   The number of turns on the coil (if a coil is used).\n    *   The strength of the magnet/magnetic field.\n*   **Direction of Induced e.m.f. (Lenz's Law):** The direction of the induced e.m.f. (and resulting current) is always such as to oppose the change (motion or flux change) causing it, in accordance with the principle of conservation of energy.\n*   **Fleming's Right-Hand Rule (Dynamo Rule):** Used to determine the relative directions of motion, magnetic field, and induced current for a straight conductor:\n    *   **Thumb:** Direction of Motion (or Force on conductor).\n    *   **First Finger:** Direction of Field.\n    *   **Second Finger:** Direction of Induced Current.\n\n### Magnetic Effect of a Current\n\n*   **Discovery:** Hans Oersted (1819) discovered that an electric current produces a magnetic field around it.\n*   **Magnetic Field Patterns:**\n    *   **Straight Wire:** Concentric circles around the wire, with the field strength decreasing with distance from the wire.\n    *   **Circular Coil:** Field lines are straight and perpendicular to the plane of the coil at its center.\n    *   **Solenoid:** Produces a magnetic field pattern similar to that of a bar magnet, with distinct North and South poles. The field is strongest inside the solenoid.\n*   **Rules for Determining Field Direction:**\n    *   **Right-Hand Screw Rule:** If a right-handed screw moves forward in the direction of the (conventional) current, the direction of rotation of the screw gives the direction of the magnetic field lines.\n    *   **Right-Hand Grip Rule (for Solenoid):** If the fingers of the right hand grip the solenoid in the direction of the (conventional) current, the thumb points to the North pole.\n*   **Factors Affecting Magnetic Field Strength:**\n    *   **Straight Wire:** Increases with current, decreases with distance.\n    *   **Solenoid:** Increases with the number of turns, the current, and the presence of a soft iron core.\n*   **Applications:**\n    *   **Relay:** An electromagnet acts as a switch, allowing a low-power circuit to control a high-power circuit.\n    *   **Reed Switch:** Magnetic reeds in a glass tube close a circuit when magnetized by a current or external magnet.\n    *   **Loudspeaker:** Varying audio current in a coil interacts with a permanent magnet's field, causing the coil (and attached cone) to vibrate and produce sound waves.\n    *   **Electric Bell:** An electromagnet intermittently attracts an armature, causing a hammer to strike a gong and simultaneously break/remake the circuit for continuous ringing.\n\n### Force on a Current-Carrying Conductor (Motor Effect)\n\n*   **Principle:** A current-carrying conductor placed in a magnetic field experiences a force, provided it is not parallel to the field lines.\n*   **Factors Affecting the Force:** The force increases with:\n    *   The strength of the magnetic field.\n    *   The magnitude of the current.\n    *   The length of the conductor in the field.\n*   **Fleming's Left-Hand Rule (Motor Rule):** Used to determine the relative directions of force, magnetic field, and current for a conductor experiencing a force:\n    *   **Thumb:** Direction of Thrust (Force).\n    *   **First Finger:** Direction of Field.\n    *   **Second Finger:** Direction of Current.\n*   **Force on Charged Particles:** Beams of charged particles (e.g., electrons) moving through a magnetic field also experience a force, which can cause them to follow a circular path if moving perpendicular to the field. The direction of force is given by Fleming's Left-Hand Rule (using conventional current direction).\n\n### A.C. Generator (Alternator)\n\n*   **Principle:** When a coil rotates in a magnetic field, its sides continuously cut magnetic field lines, inducing an e.m.f.\n*   **Construction:** A simple a.c. generator consists of a rectangular coil rotating between the poles of a magnet, with its ends connected to slip rings and carbon brushes.\n*   **Action:**\n    *   e.m.f. is zero when the coil sides move parallel to the field lines (vertical position).\n    *   e.m.f. is maximum when the coil sides move perpendicular to the field lines (horizontal position).\n    *   The direction of the induced e.m.f. (and current) reverses every half rotation, producing alternating current (a.c.).\n*   **Frequency:** The number of complete cycles per second, measured in Hertz (Hz).\n*   **Practical Generators:** In power stations, large generators use rotating electromagnets (rotor) and stationary coils (stator) to induce high e.m.f. and currents efficiently.\n\n### D.C. Motor\n\n*   **Principle (Turning Effect):** A current-carrying coil in a magnetic field experiences forces on its sides, creating a turning effect (torque).\n*   **Factors Affecting Turning Effect:** The turning effect increases with:\n    *   The number of turns on the coil.\n    *   The current flowing in the coil.\n    *   The strength of the magnetic field.\n*   **Construction:** A simple d.c. motor consists of a rectangular coil rotating between magnet poles, connected to a split-ring commutator and carbon brushes.\n*   **Action:**\n    *   Forces on the coil sides (due to Fleming's Left-Hand Rule) produce a turning effect.\n    *   The split-ring commutator reverses the direction of current in the coil every half rotation, ensuring the turning effect is always in the same direction, leading to continuous rotation.\n*   **Practical Motors:** Utilize armatures (coils wound on soft iron cores), multiple coils, and electromagnets for increased power and smoother operation.\n\n### Transformer\n\n*   **Principle (Mutual Induction):** A changing current in a primary coil creates a changing magnetic field, which induces an alternating voltage and current in a nearby secondary coil.\n*   **Construction:** Consists of a primary coil and a secondary coil wound on a common soft iron core (either stacked or on separate limbs).\n*   **Transformer Equation (for ideal transformer):** Relates voltages and turns ratios:\n    \\[ \\frac{V_p}{V_s} = \\frac{N_p}{N_s} \\]\n    where \\(V_p\\) is primary voltage, \\(V_s\\) is secondary voltage, \\(N_p\\) is number of primary turns, and \\(N_s\\) is number of secondary turns.\n*   **Types:**\n    *   **Step-up Transformer:** Has more turns on the secondary coil ($N_s > N_p$), so it increases voltage ($V_s > V_p$).\n    *   **Step-down Transformer:** Has fewer turns on the secondary coil ($N_s < N_p$), so it decreases voltage ($V_s < V_p$).\n*   **Energy Losses in Real Transformers:**\n    *   **Resistance of Windings:** Heat loss ($P = I^2R$) due to resistance of copper wires.\n    *   **Eddy Currents:** Induced currents within the iron core cause heating. Minimized by using a laminated (layered and insulated) core.\n    *   **Leakage of Field Lines:** Not all magnetic field lines from the primary coil link with the secondary coil. Minimized by good core design.\n*   **Ideal Transformer Efficiency:** Assumed 100% efficient, meaning power in primary equals power in secondary:\n    \\[ I_p V_p = I_s V_s \\]\n    where \\(I_p\\) is primary current and \\(I_s\\) is secondary current.\n*   **High-Voltage Transmission (National Grid):**\n    *   Electricity is generated at lower voltages (e.g., 25 kV), then stepped up to very high voltages (e.g., 275 kV or 400 kV) for long-distance transmission.\n    *   **Advantages:**\n        *   **Reduced Power Loss:** Power loss in transmission cables is given by \\(P_{\\text{loss}} = I^2R\\). By stepping up voltage, the current \\(I\\) is drastically reduced for the same transmitted power (\\(P_{\\text{transmitted}} = IV\\)), thus significantly reducing \\(I^2R\\) heat losses.\n        *   **Thinner Cables:** Lower currents mean thinner, cheaper cables can be used, which are easier to handle.\n    *   Voltages are then stepped down by substation transformers for local distribution.\n*   **Applications of Eddy Currents:**\n    *   **Car Speedometer:** A rotating magnet induces eddy currents in an aluminum disc, causing it to rotate against a spring, indicating speed.\n    *   **Metal Detector:** A primary coil's alternating magnetic field induces eddy currents in hidden metal objects, which in turn induce a current in a secondary coil, signaling the presence of metal.",
+    "chapter_concepts": [
+        {
+            "concept_id": "d647fb6f-2be1-48e5-8bbf-c044180cfbb9",
+            "concept_question": "What is electromagnetic induction?",
+            "concept_answer": "It is the induction of an electromotive force by the relative motion or a changing magnetic field.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "29a00d69-11c3-4c64-8f98-75d87579aeea",
+            "concept_question": "Who discovered electromagnetic induction?",
+            "concept_answer": "Faraday discovered electromagnetic induction in 1831, which led to the development of electrical generators.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+            ]
+        },
+        {
+            "concept_id": "7c995179-8aae-4a1d-96de-4c78925943a8",
+            "concept_question": "What are induction conditions?",
+            "concept_answer": "Induction occurs when there is relative motion between the conductor and magnetic field such that the conductor cuts the field lines.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+            ]
+        },
+        {
+            "concept_id": "02e21b8a-e47a-4a5e-9792-730e2096a8ba",
+            "concept_question": "How do speed and coil turns affect induced emf magnitude?",
+            "concept_answer": "The induced emf increases with the speed of motion and the number of coil turns.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9",
+                "7c995179-8aae-4a1d-96de-4c78925943a8"
+            ]
+        },
+        {
+            "concept_id": "64ec9c91-cb4f-4870-8048-68c7fbc8911b",
+            "concept_question": "How does magnetic field strength affect induced emf magnitude?",
+            "concept_answer": "The induced emf increases with higher magnetic field strength.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9",
+                "7c995179-8aae-4a1d-96de-4c78925943a8"
+            ]
+        },
+        {
+            "concept_id": "fe22ccc5-f0b6-49f5-965f-37bdb653d858",
+            "concept_question": "What is Lenz's law?",
+            "concept_answer": "Lenz's law states that the induced emf always opposes the change causing it.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+            ]
+        },
+        {
+            "concept_id": "53ee8df5-97c6-4254-a1c8-e106ea81ea5c",
+            "concept_question": "What is Fleming's right-hand rule?",
+            "concept_answer": "It assigns the thumb for motion, the first finger for the magnetic field, and the second for induced current.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+            ]
+        },
+        {
+            "concept_id": "135f6c8f-c8f1-4317-a18e-e4dada373cc3",
+            "concept_question": "What magnetic effect did Oersted find?",
+            "concept_answer": "Oersted found that an electric current produces a magnetic field around it.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "eba301ec-6d61-403f-bef1-c95112449b73",
+            "concept_question": "What is straight wire field pattern?",
+            "concept_answer": "A straight wire produces concentric magnetic circles whose strength decreases with distance.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ]
+        },
+        {
+            "concept_id": "23f6ec88-8a71-4767-864f-153a5cfe1290",
+            "concept_question": "What is circular coil field pattern?",
+            "concept_answer": "A circular coil has field lines that are straight and perpendicular to the coil's center.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ]
+        },
+        {
+            "concept_id": "828a3e2a-fabd-4441-97c4-8c5b2e69846b",
+            "concept_question": "What is solenoid field pattern?",
+            "concept_answer": "A solenoid creates a field similar to a bar magnet with distinct north and south poles and a strong interior field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ]
+        },
+        {
+            "concept_id": "f3bff897-d628-4146-b112-ddbf1868bec7",
+            "concept_question": "What is the right-hand screw rule?",
+            "concept_answer": "It states that if a right-handed screw moves with the conventional current, its rotation indicates the magnetic field direction.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ]
+        },
+        {
+            "concept_id": "ae6a5fda-cc33-4a42-a29a-bdad944faa39",
+            "concept_question": "What is the right-hand grip rule?",
+            "concept_answer": "For a solenoid, if you grip it in the current's direction, your thumb points to the north pole.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3",
+                "828a3e2a-fabd-4441-97c4-8c5b2e69846b"
+            ]
+        },
+        {
+            "concept_id": "6cb984c4-c135-4dc8-9487-1f13fe35f451",
+            "concept_question": "How does current affect the magnetic field strength of a straight wire?",
+            "concept_answer": "An increase in current strengthens the magnetic field of a straight wire.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "eba301ec-6d61-403f-bef1-c95112449b73"
+            ]
+        },
+        {
+            "concept_id": "f888816f-05e8-43cd-82e1-d811cd7b8eb8",
+            "concept_question": "How does distance affect the magnetic field strength of a straight wire?",
+            "concept_answer": "The magnetic field strength decreases with increasing distance from the wire.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "eba301ec-6d61-403f-bef1-c95112449b73"
+            ]
+        },
+        {
+            "concept_id": "0e290639-b983-408b-a2f1-eae4ce2fc09f",
+            "concept_question": "What is a relay?",
+            "concept_answer": "A relay is an electromagnet acting as a switch to control a high-power circuit.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ]
+        },
+        {
+            "concept_id": "71efbba7-b563-4de9-a995-ec11c05d1e71",
+            "concept_question": "What is a reed switch?",
+            "concept_answer": "A reed switch uses magnetic reeds that close a circuit when magnetized.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ]
+        },
+        {
+            "concept_id": "b781bb66-bb42-44a6-b022-fc91498bfbd2",
+            "concept_question": "What is a loudspeaker?",
+            "concept_answer": "A loudspeaker converts varying audio currents and magnetic interactions into sound vibrations.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ]
+        },
+        {
+            "concept_id": "b56799c6-b7b2-4f73-a168-810f61e8c606",
+            "concept_question": "What is an electric bell?",
+            "concept_answer": "An electric bell uses an electromagnet to intermittently actuate a hammer that strikes a gong.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ]
+        },
+        {
+            "concept_id": "7b21da81-6937-4f1d-b767-7b5c34311beb",
+            "concept_question": "What force acts on a current-carrying conductor?",
+            "concept_answer": "A current-carrying conductor experiences a magnetic force when it is not parallel to the magnetic field lines.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ]
+        },
+        {
+            "concept_id": "c853c3d8-6f65-42c7-8ff1-bfc6351293b9",
+            "concept_question": "What affects force on a conductor?",
+            "concept_answer": "The force increases with stronger magnetic fields, higher current, and a longer conductor within the field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b21da81-6937-4f1d-b767-7b5c34311beb"
+            ]
+        },
+        {
+            "concept_id": "45d46490-24e9-4bd0-9e71-156780d75509",
+            "concept_question": "What is Fleming's left-hand rule?",
+            "concept_answer": "It assigns the thumb for force, the first finger for the magnetic field, and the second for current direction in motors.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b21da81-6937-4f1d-b767-7b5c34311beb"
+            ]
+        },
+        {
+            "concept_id": "fc1dbbb7-7461-433b-a22b-16338943f295",
+            "concept_question": "What force do charged particles experience?",
+            "concept_answer": "Charged particles moving perpendicularly in a magnetic field experience a force that can cause circular motion.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b21da81-6937-4f1d-b767-7b5c34311beb",
+                "45d46490-24e9-4bd0-9e71-156780d75509"
+            ]
+        },
+        {
+            "concept_id": "2529d0fa-bcab-40a3-8ddf-2f8d654856b9",
+            "concept_question": "What is an AC generator?",
+            "concept_answer": "An AC generator induces an emf by rotating a coil in a magnetic field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9",
+                "135f6c8f-c8f1-4317-a18e-e4dada373cc3"
+            ]
+        },
+        {
+            "concept_id": "f5b70336-c073-4c50-b6e0-c6199c0c8365",
+            "concept_question": "What is the coil and magnet arrangement in AC generator construction?",
+            "concept_answer": "It consists of a rectangular coil rotating between magnet poles.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2529d0fa-bcab-40a3-8ddf-2f8d654856b9"
+            ]
+        },
+        {
+            "concept_id": "35f929af-a81f-44aa-965c-0b418cc741f5",
+            "concept_question": "What components ensure electrical contact in AC generator construction?",
+            "concept_answer": "Slip rings and carbon brushes provide electrical contact.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2529d0fa-bcab-40a3-8ddf-2f8d654856b9"
+            ]
+        },
+        {
+            "concept_id": "42472c11-1b1a-4a2b-b4c6-722489ab9007",
+            "concept_question": "How does AC generator emf vary?",
+            "concept_answer": "The emf is zero when the coil is parallel to the field, maximum when perpendicular, and reverses every half rotation.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2529d0fa-bcab-40a3-8ddf-2f8d654856b9"
+            ]
+        },
+        {
+            "concept_id": "30458dd3-540e-487e-ba44-79d51244e7be",
+            "concept_question": "What is frequency?",
+            "concept_answer": "Frequency is the number of complete cycles per second measured in Hertz.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "11e47c9f-4d1e-4f76-9b7d-d5e525288c97",
+            "concept_question": "How do rotating electromagnets contribute to practical AC generator design?",
+            "concept_answer": "Rotating electromagnets efficiently generate a varying magnetic field.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2529d0fa-bcab-40a3-8ddf-2f8d654856b9"
+            ]
+        },
+        {
+            "concept_id": "7f551604-c02d-43ae-b0ea-2628b39fa084",
+            "concept_question": "How do stationary coils contribute to practical AC generator design?",
+            "concept_answer": "Stationary coils effectively capture the induced emf.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "2529d0fa-bcab-40a3-8ddf-2f8d654856b9"
+            ]
+        },
+        {
+            "concept_id": "64ca9430-041b-4763-8f47-957fc06903bb",
+            "concept_question": "What causes a DC motor's turning effect?",
+            "concept_answer": "A current-carrying coil in a magnetic field experiences forces on its sides that generate torque.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7b21da81-6937-4f1d-b767-7b5c34311beb"
+            ]
+        },
+        {
+            "concept_id": "1ed72357-335a-4cf5-bd42-356439446c45",
+            "concept_question": "How do coil turns and current affect the DC motor turning effect?",
+            "concept_answer": "Increasing the coil turns and current enhances the motor's turning effect.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "64ca9430-041b-4763-8f47-957fc06903bb"
+            ]
+        },
+        {
+            "concept_id": "f3b068fd-964a-41e5-a11d-ab528027a1f3",
+            "concept_question": "How does magnetic field strength affect the DC motor turning effect?",
+            "concept_answer": "A stronger magnetic field increases the turning effect.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "64ca9430-041b-4763-8f47-957fc06903bb"
+            ]
+        },
+        {
+            "concept_id": "1d08b8ef-ca9f-45ed-a28f-19c6aa551337",
+            "concept_question": "What is DC motor construction?",
+            "concept_answer": "A DC motor consists of a rectangular coil between magnet poles connected to a split\u2010ring commutator and brushes.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "64ca9430-041b-4763-8f47-957fc06903bb"
+            ]
+        },
+        {
+            "concept_id": "20427538-2902-42e0-9225-dcd9f19523c6",
+            "concept_question": "What is practical DC motor design?",
+            "concept_answer": "Practical DC motors use armatures, multiple coils, and electromagnets for improved power and smoother operation.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "ca87e119-3ea3-4a55-a681-bf48b601d2bc",
+            "concept_question": "What is transformer mutual induction?",
+            "concept_answer": "A changing current in the primary coil creates a magnetic field that induces voltage in a nearby secondary coil.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+            ]
+        },
+        {
+            "concept_id": "fee07ea5-0b7f-48ae-a3cd-afd650f215ba",
+            "concept_question": "What is transformer construction?",
+            "concept_answer": "A transformer is built with primary and secondary coils wound on a common soft iron core.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ca87e119-3ea3-4a55-a681-bf48b601d2bc"
+            ]
+        },
+        {
+            "concept_id": "7a84e288-311b-4ee9-8759-17e881095487",
+            "concept_question": "What is the ideal transformer equation?",
+            "concept_answer": "The voltage ratio equals the turns ratio between the primary and secondary coils.",
+            "concept_formula": [
+                "$!$\\frac{V_p}{V_s} = \\frac{N_p}{N_s}$!$"
+            ],
+            "pre-requisites": [
+                "fee07ea5-0b7f-48ae-a3cd-afd650f215ba"
+            ]
+        },
+        {
+            "concept_id": "be15be8f-7057-4f55-b5b0-a7eb16de24a5",
+            "concept_question": "What is a step-up transformer?",
+            "concept_answer": "A step-up transformer increases voltage by having more secondary turns than primary.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7a84e288-311b-4ee9-8759-17e881095487"
+            ]
+        },
+        {
+            "concept_id": "708bc8fc-5bd9-4b42-8bb1-752fef3aea8d",
+            "concept_question": "What is a step-down transformer?",
+            "concept_answer": "A step-down transformer decreases voltage by having fewer secondary turns than primary.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "7a84e288-311b-4ee9-8759-17e881095487"
+            ]
+        },
+        {
+            "concept_id": "17e88ac7-7e49-4d2f-b006-4fbf6dc7e029",
+            "concept_question": "How do winding resistance losses occur in transformers?",
+            "concept_answer": "Energy is lost as heat due to the resistance of windings (P=I^2R).",
+            "concept_formula": [
+                "$!$P=I^2R$!$"
+            ],
+            "pre-requisites": [
+                "fee07ea5-0b7f-48ae-a3cd-afd650f215ba"
+            ]
+        },
+        {
+            "concept_id": "1970c636-c176-4025-80a3-716c7402f884",
+            "concept_question": "How do eddy current losses occur in transformers?",
+            "concept_answer": "Changing magnetic fields induce currents in the core that lead to power losses.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fee07ea5-0b7f-48ae-a3cd-afd650f215ba"
+            ]
+        },
+        {
+            "concept_id": "0ecf09cf-435f-46b5-aad4-ffe1a3856ce0",
+            "concept_question": "How do magnetic field leakage losses occur in transformers?",
+            "concept_answer": "Losses occur when magnetic field lines do not fully couple between primary and secondary coils.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "fee07ea5-0b7f-48ae-a3cd-afd650f215ba"
+            ]
+        },
+        {
+            "concept_id": "d9445e5b-f0cb-4ce2-9b3d-44e2992300ec",
+            "concept_question": "What describes ideal transformer efficiency?",
+            "concept_answer": "An ideal transformer operates at 100% efficiency, with equal primary and secondary power.",
+            "concept_formula": [
+                "$!$I_p V_p = I_s V_s$!$"
+            ],
+            "pre-requisites": [
+                "7a84e288-311b-4ee9-8759-17e881095487",
+                "17e88ac7-7e49-4d2f-b006-4fbf6dc7e029",
+                "1970c636-c176-4025-80a3-716c7402f884",
+                "0ecf09cf-435f-46b5-aad4-ffe1a3856ce0"
+            ]
+        },
+        {
+            "concept_id": "dd07a275-c894-405e-89a2-6d367dfcda60",
+            "concept_question": "What are high-voltage transmission advantages?",
+            "concept_answer": "High-voltage transmission reduces current, minimizing power losses and allowing the use of thinner cables.",
+            "concept_formula": [
+                "$!$P_{loss} = I^2R$!$",
+                "$!$P = IV$!$"
+            ],
+            "pre-requisites": [
+                "d9445e5b-f0cb-4ce2-9b3d-44e2992300ec"
+            ]
+        }
+    ]
+}

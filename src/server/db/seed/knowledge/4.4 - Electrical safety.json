@@ -1,0 +1,1106 @@
+{
+    "name": "Electrical Safety",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "26287ef5b1ea4b43bbafc",
+            "concepts": [
+                "4be978de-11c7-4a0a-8fb5-aadad7e092e8"
+            ],
+            "variants": [
+                {
+                    "id": "992375efc9f14e5d84f58",
+                    "question": "Why is it important to handle electricity with caution?",
+                    "options": [
+                        {
+                            "option_text": "It transfers large amounts of energy.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It can cause overheating.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It can damage insulation.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is not harmful if handled properly.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "efbdf387a48a43d7840c1",
+                    "question": "Which of the following statements explain why electricity should be handled with caution? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Electricity transfers a significant amount of energy, which can be dangerous.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Improper handling of electricity can lead to overheating of electrical components.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mishandling electricity can damage insulation, increasing the risk of shocks and fires.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electricity is completely safe to handle under any circumstances.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "7db54d54c64b405b9fa06",
+                    "question": "Which of the following is NOT a reason why electricity should be handled with caution?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It can transfer large amounts of energy.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It can cause overheating.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It can damage insulation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is not harmful if handled properly.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ee866a427bef46eca1181",
+            "concepts": [
+                "e8d1c812-35bb-43ab-b60e-efe9698abff2"
+            ],
+            "variants": [
+                {
+                    "id": "7a311f3b8f524e25b49ab",
+                    "question": "Which of the following are considered electrical hazards?",
+                    "options": [
+                        {
+                            "option_text": "Damaged insulation",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Overheated cables",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Dry conditions",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Excess current",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "0931286efe3d41289e74c",
+                    "question": "Which of the following conditions does NOT typically contribute to electrical hazards in a workplace?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Exposed wiring",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Overloaded circuits",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Dry environment",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Improper grounding",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0342ee1e609c4a1f936fd",
+                    "question": "Which of the following scenarios would MOST likely lead to an electrical hazard?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Using a power tool with a properly grounded extension cord.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Operating electrical equipment in a damp environment.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Replacing a damaged fuse with one of the same amperage.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Regularly inspecting electrical cords for wear and tear.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "4c20b2d4ce2f4fc186d1e",
+            "concepts": [
+                "70bb1da6-4754-4837-8606-4678ecac620c"
+            ],
+            "variants": [
+                {
+                    "id": "78358393d091402dade41",
+                    "question": "How does moisture affect skin resistance?",
+                    "options": [
+                        {
+                            "option_text": "Moisture increases skin resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Moisture reduces skin resistance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Moisture has no effect on skin resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Moisture only affects resistance in high voltage situations.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "68fca59db19f408d93301",
+                    "question": "Which of the following statements correctly describes the relationship between skin moisture and skin resistance?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Increased skin moisture leads to decreased skin resistance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increased skin moisture leads to increased skin resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Skin moisture has no effect on skin resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Skin resistance is only affected by skin dryness.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f5e98d051fd64b4daf92d",
+                    "question": "Select all the statements that correctly describe the effect of moisture on skin resistance:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Moisture decreases the skin's resistance to electrical current.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Dry skin has a higher resistance compared to moist skin.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Moisture increases skin resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Skin moisture does not affect resistance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "f5c601a32dbe4ddd9b12d",
+            "concepts": [
+                "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+            ],
+            "variants": [
+                {
+                    "id": "0b78b575b23340afa715d",
+                    "question": "According to Ohm's Law, if the resistance in a circuit increases, what happens to the current if voltage remains constant?",
+                    "options": [
+                        {
+                            "option_text": "The current increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The current decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The current remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The current fluctuates erratically.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "daa0f2037ba8462ebd93b",
+                    "question": "A circuit has a voltage of 12V and a resistance of $!$4\\Omega$!$. If the resistance is changed to $!$6\\Omega$!$, what is the new current in the circuit according to Ohm's Law?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "2 Amperes",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "3 Amperes",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "4 Amperes",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "6 Amperes",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b7bd26055d874fafaac67",
+                    "question": "Which of the following statements accurately describe the relationship between voltage, current, and resistance in a circuit, according to Ohm's Law? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "If the voltage increases and the resistance remains constant, the current increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the resistance increases and the voltage remains constant, the current increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If the voltage decreases and the resistance remains constant, the current decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the resistance decreases and the voltage remains constant, the current decreases.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "7e915feb13b1407ea80aa",
+            "concepts": [
+                "a6e4bec1-8492-419f-9a78-e751da5b2346",
+                "361f8b09-0c07-4f23-9523-39459c82e9e4"
+            ],
+            "variants": [
+                {
+                    "id": "84b1691f752f489bb1e30",
+                    "question": "A current of 90 mA passes through a person's chest. Is this current likely to be fatal?",
+                    "options": [
+                        {
+                            "option_text": "No, it is a safe current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Yes, it is potentially fatal.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It might cause a slight tingle.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Only if the person has a pre-existing condition.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "3b8eca5535224a4f87e12",
+                    "question": "Which of the following statements accurately describes the potential effects of a 90 mA current passing through a person's chest?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is generally considered a safe current level.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It poses a significant risk of being fatal.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It will only cause a minor tingling sensation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is only dangerous for individuals with pre-existing heart conditions.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d1e71808cc8c45808f4a9",
+                    "question": "Select all the effects that a 90 mA current passing through a person's chest can cause.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Ventricular fibrillation",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mild tingling sensation",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Respiratory arrest",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "No noticeable effect",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "817cb7f886424894a5e48",
+            "concepts": [
+                "7438fcb5-3fdf-4b54-bbb0-b001ce74700b",
+                "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+            ],
+            "variants": [
+                {
+                    "id": "cc70b18fd2d04b9d912eb",
+                    "question": "What formula accurately describes the relationship between heat production ($!$P$!$), current ($!$I$!$), and resistance ($!$R$!$)?",
+                    "options": [
+                        {
+                            "option_text": "$!$P = I^2R$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$P = \\frac{V}{R}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$P = IR$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$P = V^2R$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5a6f532f458649dfa8ad7",
+                    "question": "If the current flowing through a resistor is doubled, how does the heat production change, assuming the resistance remains constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The heat production quadruples.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The heat production doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The heat production remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The heat production is halved.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6361759538704ed589858",
+                    "question": "Which of the following statements correctly describe the relationship between heat production ($!$P$!$), current ($!$I$!$), and resistance ($!$R$!$) in a resistor? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Heat production is directly proportional to the square of the current.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Heat production is inversely proportional to the resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Heat production is directly proportional to the resistance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Heat production is directly proportional to the current.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "11b4a079583a44e8a70e4",
+            "concepts": [
+                "f4906163-4e4a-4328-a4b4-11fe9f6ae1e9"
+            ],
+            "variants": [
+                {
+                    "id": "ce20d7eec66c4b469b175",
+                    "question": "Which wires are typically included in mains supply wires?",
+                    "options": [
+                        {
+                            "option_text": "Live, neutral, and earth",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Only live and neutral",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Live, earth, and signal",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Neutral and earth only",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "497d56bcb46f42f4ade0d",
+                    "question": "Which of the following statements about the function of wires in a mains supply are correct? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The live wire carries the alternating potential difference from the supply.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The neutral wire completes the circuit and is at or close to earth potential.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The earth wire carries the current during normal operation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The earth wire provides a path for current to flow to earth in case of a fault.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a92863668acc462199dd6",
+                    "question": "What is the primary function of the earth wire in a mains electricity supply?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "To carry the main current in the circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To provide a low-resistance path for current to flow to the earth in the event of a fault.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To maintain a constant voltage level in the circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To act as a return path for the current, similar to the neutral wire.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "aa9a257ac472401d84b0d",
+            "concepts": [
+                "c933d8bf-b948-4c22-9e65-83622a687534",
+                "f4906163-4e4a-4328-a4b4-11fe9f6ae1e9"
+            ],
+            "variants": [
+                {
+                    "id": "665dc5e2d2864c8eb10b8",
+                    "question": "In a parallel circuit, how is the voltage distributed across the appliances?",
+                    "options": [
+                        {
+                            "option_text": "Voltage is divided equally among appliances.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Each appliance receives the full mains voltage.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Voltage varies depending on the resistance of the appliance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Voltage is reduced for each subsequent appliance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0fb5bcc9faf1432bae3ca",
+                    "question": "Which of the following statements accurately describes the voltage distribution in a parallel circuit?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The voltage is divided proportionally among the appliances based on their resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The voltage across each appliance is the same and equal to the source voltage.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The voltage decreases sequentially across each appliance in the circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The voltage is inversely proportional to the number of appliances in the circuit.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c9be8f90697e4a16ad953",
+                    "question": "Select all of the following statements that are true regarding voltage in a parallel circuit.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total voltage drop across the circuit is the sum of the voltage drops across each branch.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The voltage across each branch is the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Each appliance in the circuit receives the full supply voltage.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The voltage distribution depends on the individual resistances of the appliances.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "11316a810cd34d9e8514f",
+            "concepts": [
+                "ca464fd2-c3f5-4506-ab1e-15ab647cbc3a"
+            ],
+            "variants": [
+                {
+                    "id": "e296029acebf45b1b005d",
+                    "question": "Why is the switch placed in the live wire of a circuit?",
+                    "options": [
+                        {
+                            "option_text": "To fully de-energize the circuit when turned off.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To reduce the risk of short circuits.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "For easier access.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To comply with international standards.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9919a4bae08d450b95a76",
+                    "question": "Which of the following statements accurately describes the primary reason for placing a switch in the live wire of an electrical circuit?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "To completely cut off the power supply to the appliance when the switch is in the OFF position.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To minimize the chances of overheating the wires in the circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To allow for easier repairs and maintenance of the appliance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To reduce energy consumption when the appliance is not in use.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c1abb59a1d314f98940de",
+                    "question": "Select all of the reasons why switches are placed on live wires in a circuit.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "To completely disconnect the appliance from the power source when the switch is off.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To ensure the neutral wire is always grounded.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To make the circuit more energy-efficient.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To prevent electric shock when working on the appliance.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "73439bb219db415c94c8a",
+            "concepts": [
+                "1d43d11a-1d06-400b-a2db-c14f2e20319b"
+            ],
+            "variants": [
+                {
+                    "id": "b64979932f94496b939c6",
+                    "question": "What is the function of a fuse in an electrical circuit?",
+                    "options": [
+                        {
+                            "option_text": "To regulate voltage.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To provide a continuous power supply.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To break the circuit when current exceeds a safe limit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To increase the circuit's efficiency.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ca7f47699f5240f292975",
+                    "question": "Which of the following scenarios describes a situation where a fuse would likely blow (break the circuit)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A device is drawing its normal operating current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "There is a short circuit in the wiring.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The circuit is operating at a lower voltage than specified.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The ambient temperature is slightly elevated.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "31322b77419f4f8c87aab",
+                    "question": "Select all the statements that correctly describe the function or characteristics of a fuse in an electrical circuit.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It protects the circuit from overcurrent situations.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It has a specific current rating; exceeding this rating causes it to break the circuit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It typically regulates the voltage in a circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is a reusable component that can be reset after tripping.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "b2f3a378a0eb4610b41d4",
+            "concepts": [
+                "9b6731ea-3a10-4320-b77b-a729fcfd2577",
+                "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+            ],
+            "variants": [
+                {
+                    "id": "0ee4f61d2121466d8498e",
+                    "question": "A device operates at 240V and consumes 1200W. What is the appropriate fuse current rating to use?",
+                    "options": [
+                        {
+                            "option_text": "2 A",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "5 A",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "10 A",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "13 A",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b748f4baa48e4a1599176",
+                    "question": "An electric heater is rated at 2200W when connected to a 220V supply. Which of the following fuse ratings is most suitable for this heater?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "5 A",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "10 A",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "13 A",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "20 A",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "56f6d44f7f304233b351c",
+                    "question": "A device connected to a 240V mains supply has a fuse rated at 13A. What is the maximum power, in Watts, that the device can consume without blowing the fuse? (Assume power factor = 1)",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "1200 W",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "2400 W",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "3120 W",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "4800 W",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "b31588fb014a4d01a7134",
+            "concepts": [
+                "181cebdc-4e96-42ff-9c52-f966b71e0e71"
+            ],
+            "variants": [
+                {
+                    "id": "c7d7fac365e84c97a51f8",
+                    "question": "What is a key characteristic of a trip switch that differentiates it from a fuse?",
+                    "options": [
+                        {
+                            "option_text": "It melts to break the circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It can be reset after tripping.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It operates only on high voltage circuits.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is less sensitive to current overloads.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "31b6669e23c34fe6bfa2a",
+                    "question": "Which of the following statements accurately describe a key advantage of using a trip switch over a fuse? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A trip switch can be manually reset after it trips, unlike a fuse which needs replacement.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A trip switch melts to break the circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Trip switches are generally cheaper to install and maintain than fuses.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Trip switches offer faster response times to overcurrent situations compared to fuses.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "89a16f2bd6c34a6eba195",
+                    "question": "A circuit is experiencing frequent overloads. Which characteristic of a trip switch makes it a better choice than a fuse for protecting this circuit?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Its ability to be reset and reused after each overload.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Its higher current carrying capacity compared to fuses.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its lower cost of installation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Its complete immunity to damage from overloads.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "1ff4a0c9f62241c2821cc",
+            "concepts": [
+                "02d8d0eb-f236-4fbc-9eab-262ff2ac9f12"
+            ],
+            "variants": [
+                {
+                    "id": "e2dd7f1555cd4b1faf687",
+                    "question": "What is the primary function of double insulation in electrical appliances?",
+                    "options": [
+                        {
+                            "option_text": "To reduce energy consumption.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To protect users from electric shock in non-earthed appliances.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To increase the appliance's power output.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "To make the appliance waterproof.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "98147f66de4b4a0cb0aca",
+                    "question": "Which of the following describes a situation where double insulation is MOST necessary?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "In an appliance with a metal casing that is connected to earth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In an appliance with a plastic casing that is NOT connected to earth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "In an appliance that operates at a very low voltage.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In an appliance that is used outdoors in wet conditions.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ac6a565184de459682cdc",
+                    "question": "Which of the following are benefits of using double insulation in electrical appliances? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Reduces the risk of electric shock in case of a single insulation failure.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Eliminates the need for an earth connection.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increases the appliance's operating voltage.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Improves the appliance's energy efficiency.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "5ec808ab4d9546f3ad5c4",
+            "concepts": [
+                "1d43d11a-1d06-400b-a2db-c14f2e20319b",
+                "55bd213f-8f70-4b10-9fef-f4d74916f31e",
+                "ae73793b-cea5-4b41-a458-d2f5e7494eee"
+            ],
+            "variants": [
+                {
+                    "id": "fde873745a5c4425837c1",
+                    "question": "Match the electrical safety components with their functions.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Fuse",
+                            "optionB": "Melts to break circuit on excessive current"
+                        },
+                        {
+                            "optionA": "RCCB/RCD",
+                            "optionB": "Detects imbalances between live and neutral currents"
+                        },
+                        {
+                            "optionA": "Earthing",
+                            "optionB": "Connects appliance casing to ground for safety"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "17df9457c9324da8b647c",
+            "concepts": [
+                "361f8b09-0c07-4f23-9523-39459c82e9e4",
+                "ec9334df-1b87-4cde-8ba3-db2e48408a2e",
+                "a6e4bec1-8492-419f-9a78-e751da5b2346",
+                "f456635e-71a7-47cd-8413-c959e204e8a4",
+                "f4906163-4e4a-4328-a4b4-11fe9f6ae1e9",
+                "c933d8bf-b948-4c22-9e65-83622a687534"
+            ],
+            "variants": [
+                {
+                    "id": "9198ebdf130740778cf84",
+                    "question": "Match the terms with their descriptions.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Electric Shock",
+                            "optionB": "Current passing through the body"
+                        },
+                        {
+                            "optionA": "Ohm's Law",
+                            "optionB": "$!$I = \\frac{V}{R}$!$"
+                        },
+                        {
+                            "optionA": "Lethal Current",
+                            "optionB": "100 mA through the heart"
+                        },
+                        {
+                            "optionA": "Ring Main Circuit",
+                            "optionB": "Loops live and neutral wires around a house"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

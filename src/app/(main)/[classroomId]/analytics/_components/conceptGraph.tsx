@@ -16,7 +16,7 @@ export const ConceptGraph = ({ concepts, edges, trackedConcepts, numberOfStudent
   const fgRef = useRef<ForceGraphMethods>();
 
   useEffect(() => {
-    if (fgRef.current) {
+  if (fgRef.current) {
       const fg = fgRef.current;
       // Adjust force parameters
       // eslint-disable-next-line 
@@ -42,6 +42,36 @@ export const ConceptGraph = ({ concepts, edges, trackedConcepts, numberOfStudent
   if(selectedTopics.length > 0) {
     filteredEdges = edges.filter(edge => filteredConceptIds.includes(edge.conceptId ?? "") && filteredConceptIds.includes(edge.relatedConceptId ?? ""));
   }
+
+  // Check if there are no concepts to display (either no concepts at all or no filtered concepts)
+  if (filteredConcepts.length === 0) {
+    const isFiltered = selectedTopics.length > 0 && concepts.length > 0;
+    
+    return (
+      <div className="bg-white rounded-lg px-4 py-2 mx-auto border border-muted h-full flex flex-col justify-center">
+        <div className="flex flex-col items-center justify-center min-h-[600px] p-8 text-center">          
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">
+            {isFiltered ? "No Concepts for Selected Topics" : "No Concepts Assigned Yet"}
+          </h3>
+          
+          <p className="text-gray-600 max-w-md mx-auto mb-6">
+            {isFiltered 
+              ? "Try selecting different topics or clear the filter to see all available concepts."
+              : "Concepts will appear here once students start completing activities that track learning objectives."
+            }
+          </p>
+          
+          <div className="text-sm text-gray-500">
+            {isFiltered 
+              ? "Concept relationships are shown based on the selected topic filters."
+              : "Create and assign activities to see concept progress visualization."
+            }
+          </div>
+        </div>
+      </div>
+    );
+  }
+
   // Transform the data into the format expected by ForceGraph2D
   const graphData = {
     nodes: filteredConcepts.map(concept => {

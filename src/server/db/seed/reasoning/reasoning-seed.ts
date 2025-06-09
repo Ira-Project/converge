@@ -9,7 +9,13 @@ import { topics } from "../../schema/subject";
 
 import reasoningJson from "./thermal_energy_transfers.json";
 import { reasoningAnswerOptions, reasoningPathway, reasoningPathwayStep, reasoningQuestions, reasoningQuestionToAssignment } from "../../schema/reasoning/reasoningQuestions";
-import { reasoningAssignmentAttempts, reasoningAssignments, } from "../../schema/reasoning/reasoningAssignment";
+import { 
+  reasoningAssignmentAttempts, 
+  reasoningAssignments,
+  reasoningAssignmentToCourse, 
+  reasoningAssignmentToGrade, 
+  reasoningAssignmentToSubject 
+} from "../../schema/reasoning/reasoningAssignment";
 import { activity, activityToAssignment } from "../../schema/activity";
 import { classrooms } from "../../schema/classroom";
 import { ActivityType } from "@/lib/constants";
@@ -171,38 +177,6 @@ export async function createReasoningAssignment() {
     });
   }
 
-  const classes = await db.select().from(classrooms);
-  for (const classroom of classes) {
-    // Check if activity already exists in the classroom
-    const existingActivity = await db.select().from(activity).where(
-      and(
-        eq(activity.assignmentId, assignmentId),
-        eq(activity.classroomId, classroom.id)
-      )
-    )
-
-    // If activity does not exist, create it
-    if (existingActivity.length === 0) {
-      const activityId = generateId(21);
-      console.log("Adding assignment to classroom. Creating activity", assignmentId, classroom.id);
-      await db.insert(activity).values({
-        id: activityId,
-        assignmentId: assignmentId,
-        classroomId: classroom.id,
-        name: assignmentName,
-        topicId: topicId,
-        typeText: ActivityType.ReasonTrace,
-        order: 0,
-        points: 100,
-      })
-      await db.insert(activityToAssignment).values({
-        id: generateId(21),
-        activityId: activityId,
-        reasonTraceAssignmentId: assignmentId,
-      })
-    }
-  }
-
   console.log("Reasoning creation complete");
   console.log("--------------------------------");
 
@@ -216,6 +190,18 @@ export async function deleteReasoningAssignment(assignmentId: string) {
     console.log("Reasoning assignment not found");
     return;
   }
+
+  // Delete associated assignment-to-course mappings
+  console.log("Deleting reasoning assignment to course mappings", assignmentId);
+  await db.delete(reasoningAssignmentToCourse).where(eq(reasoningAssignmentToCourse.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-grade mappings
+  console.log("Deleting reasoning assignment to grade mappings", assignmentId);
+  await db.delete(reasoningAssignmentToGrade).where(eq(reasoningAssignmentToGrade.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-subject mappings
+  console.log("Deleting reasoning assignment to subject mappings", assignmentId);
+  await db.delete(reasoningAssignmentToSubject).where(eq(reasoningAssignmentToSubject.assignmentId, assignmentId));
 
   const questionsToAssignment = await db.select().from(reasoningQuestionToAssignment).where(eq(reasoningQuestionToAssignment.assignmentId, assignmentId));
   for (const questionToAssignment of questionsToAssignment) {

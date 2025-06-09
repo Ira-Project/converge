@@ -42,7 +42,7 @@ const LiveActivitiesList: React.FC<LiveActivitiesListProps> = ({ activities, rol
         <div className="flex items-center justify-center h-3/4 text-center w-3/4 mx-auto">
           <p className="text-muted-foreground gap-1">
             <span>You haven’t assigned an activity to your students. Choose from our</span>
-            <Link href={`${Paths.Classroom}${classroomId}${Paths.Activities}`} className="underline mx-1">
+            <Link href={`${Paths.Classroom}${classroomId}${Paths.ActivityLibrary}`} className="underline mx-1">
               activity library
             </Link>
             <span>to get started.</span>

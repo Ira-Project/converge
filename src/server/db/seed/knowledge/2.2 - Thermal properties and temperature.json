@@ -1,0 +1,549 @@
+{
+    "name": "Thermal Properties and Temperature",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "be9692ebf8dd4666b2d28",
+            "concepts": [
+                "97a78e8c-1b1d-4b5c-908c-f58bb8755895",
+                "bf59124c-7d02-40a2-b1e4-87e55482ee03"
+            ],
+            "variants": [
+                {
+                    "id": "49578044be5148d781ccf",
+                    "question": "Which of the following is/are example(s) of applications that take thermal expansion into account?",
+                    "options": [
+                        {
+                            "option_text": "Railway tracks with gaps",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Shrink-fitting of metal parts",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Jar lids loosening under hot water",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Insulated containers",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "9d4f9e584dcc489093a80",
+                    "question": "Which of the following applications does NOT primarily take thermal expansion into account?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Railway tracks with gaps",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Shrink-fitting of metal parts",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Jar lids loosening under hot water",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Insulated containers",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c84c85ccd2ae478fa6b15",
+                    "question": "Which of the following applications primarily take thermal expansion into account? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Railway tracks with gaps",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Shrink-fitting of metal parts",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Jar lids loosening under hot water",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Insulated containers",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "79b7553bfe1f46c68d63f",
+            "concepts": [
+                "7018ab8e-636f-4685-929f-fd1c5783c8f2",
+                "34285efd-08f5-4017-9cd9-30adacf3bd1e"
+            ],
+            "variants": [
+                {
+                    "id": "fb3c7834d5af42a485918",
+                    "question": "What is/are the effect(s) of anomalous expansion of water?",
+                    "options": [
+                        {
+                            "option_text": "Bursting of water pipes in cold weathers",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Sinking of ice in water",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Warmer water refuges for fish in frozen lakes",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increased rate of evaporation",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "3721f7fd06c74f8c9b4e9",
+                    "question": "Which of the following effects is NOT a consequence of the anomalous expansion of water?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Bursting of water pipes in cold weather",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Sinking of ice in water",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Warmer water refuges for fish in frozen lakes",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Survival of aquatic life in cold climates",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d98b1a8e6ef04a16b526e",
+                    "question": "Select all of the following statements that correctly describe a consequence of the anomalous expansion of water.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Water pipes may burst in freezing temperatures.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ice sinks to the bottom of lakes and rivers.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Aquatic life can survive in frozen lakes due to warmer water at the bottom.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Water becomes denser as its temperature increases from 0$!$\\degree$!$C to 4$!$\\degree$!$C.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "6e2102b2f4674feeb99e0",
+            "concepts": [
+                "cf54b36e-32b8-4ffa-a87c-db90c27d34d2",
+                "55a369f8-4e2a-4d94-aeb3-0470428a2cb3"
+            ],
+            "variants": [
+                {
+                    "id": "348958a8e9e04de6b40bd",
+                    "question": "What does temperature measure?",
+                    "options": [
+                        {
+                            "option_text": "The total internal energy of a substance",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average potential energy of particles in a substance",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average kinetic energy of particles in a substance",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The sum of kinetic and potential energies of particles in a substance",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "174853b484ff46b9abf48",
+                    "question": "Which of the following statements accurately describes what temperature measures?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total internal energy of a substance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average potential energy of the particles in a substance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average kinetic energy of the particles in a substance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The sum of the kinetic and potential energies of the particles in a substance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "39b358fbf77b4095b7529",
+                    "question": "Select all of the following statements that accurately describe the concept of temperature.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Temperature is a measure of the total energy contained within a substance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Temperature is directly proportional to the average kinetic energy of the particles in a substance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Temperature reflects the hotness or coldness of a substance relative to a standard.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Temperature is independent of the motion of particles within a substance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "dcc383df206e4adea5453",
+            "concepts": [
+                "61d646e9-7f4a-4c81-91ca-97193e63ed3d",
+                "b9729a7f-126b-4bb9-a6e7-56163ea74619"
+            ],
+            "variants": [
+                {
+                    "id": "1d068e513d8944b6b6e1d",
+                    "question": "What factors increase the rate of evaporation?",
+                    "options": [
+                        {
+                            "option_text": "Lower temperature",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Higher ambient pressure",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Larger surface area",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Increased wind speed",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "5a6a3aa5c9ed4db486b23",
+                    "question": "Which of the following conditions will decrease the rate of evaporation?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Increased surface area",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Higher humidity",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Higher temperature",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Increased wind speed",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4ed6ad042add4f98984b7",
+                    "question": "If the surface area of a liquid is doubled, what happens to the rate of evaporation, assuming all other factors remain constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The rate of evaporation doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The rate of evaporation is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The rate of evaporation remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The rate of evaporation decreases to one-fourth of its original value.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6ecad509b26a4d8089010",
+            "concepts": [
+                "81aff587-ab8e-447b-a084-49ff29038b01",
+                "55a369f8-4e2a-4d94-aeb3-0470428a2cb3"
+            ],
+            "variants": [
+                {
+                    "id": "c1d6c531fe3e45798a94e",
+                    "question": "A $!$2\\,$!$kg$!$ metal block absorbs $!$4600\\,$!$J$!$ of heat, and its temperature rises by $!$5\\,$!$^{\\circ}C$!$. What is the specific heat capacity of the metal?",
+                    "options": [
+                        {
+                            "option_text": "$!$460\\,\\frac{J}{kg \\cdot {^{\\circ}C}}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$920\\,\\frac{J}{kg \\cdot {^{\\circ}C}}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1150\\,\\frac{J}{kg \\cdot {^{\\circ}C}}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$23000\\,\\frac{J}{kg \\cdot {^{\\circ}C}}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e87e02dc95904ddb9be7d",
+                    "question": "A $!$2\\,kg$!$ metal block absorbs $!$4600\\,J$!$ of heat. If the specific heat capacity of the metal is $!$460\\,\\frac{J}{kg \\cdot {^{\\circ}C}}$!$, what is the change in temperature of the metal?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$5\\,{^{\\circ}C}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$10\\,{^{\\circ}C}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2.5\\,{^{\\circ}C}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2300\\,{^{\\circ}C}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c6333f9a14534636ad8bd",
+                    "question": "A metal block absorbs $!$4600\\,J$!$ of heat, and its temperature rises by $!$5\\,{^{\\circ}C}$!$. If the mass of the block is doubled, what will be the new specific heat capacity of the metal?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The specific heat capacity will remain the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The specific heat capacity will be doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The specific heat capacity will be halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The specific heat capacity will be quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "302173504a3645849b606",
+            "concepts": [
+                "dc04b1d0-cc01-4794-8400-9863ad8a90b4",
+                "633abb0a-c629-41d6-b7d2-98fcce41eb7b",
+                "5d6372d4-af09-4778-bbea-a0589131cce9"
+            ],
+            "variants": [
+                {
+                    "id": "87b978cec1bd4c11b2192",
+                    "question": "Which of the following statements is/are TRUE regarding phase changes?",
+                    "options": [
+                        {
+                            "option_text": "During a phase change, the temperature of a pure substance remains constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "During melting, absorbed energy increases particle potential energy.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "During solidification, particle potential energy increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Temperature always increases during boiling.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "9f83097092144aac876e6",
+                    "question": "Which of the following is INCORRECT regarding the energy changes during phase transitions?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Energy is absorbed during melting.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy is released during condensation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy is absorbed during sublimation.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy is released during melting.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "02e95e0b49184e0990bdc",
+                    "question": "Select all the statements that correctly describe what happens at the particle level during boiling.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The average kinetic energy of the particles increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The potential energy of the particles increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The temperature of the substance remains constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The particles move closer together.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "2525a98b85b948b89f863",
+            "concepts": [
+                "c1bf2a35-1a8b-4fbc-adcc-f576136a6634",
+                "a3bddfa9-c146-4dcb-ab29-a24d37b217fe",
+                "04a61cbf-20ce-4d98-b573-2dcad8faed55"
+            ],
+            "variants": [
+                {
+                    "id": "d9a8f36582484d95990be",
+                    "question": "Match the state of matter with the correct description of particle behavior upon heating:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Solid",
+                            "optionB": "Increased particle vibrations force particles slightly apart."
+                        },
+                        {
+                            "optionA": "Liquid",
+                            "optionB": "Increased particle vibrations reduce cohesive forces, allowing molecules to move further apart."
+                        },
+                        {
+                            "optionA": "Gas",
+                            "optionB": "Increased particle speeds and collision frequency necessitate volume increase at constant pressure."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "cb995c841bf446be8d193",
+            "concepts": [
+                "2fec6a81-86f6-4200-8740-36c3113e03c6",
+                "fae93955-b4f5-47ea-86c9-025fd7da14c6",
+                "6bde9fe5-33cf-43dd-8c0e-1020f01fd878"
+            ],
+            "variants": [
+                {
+                    "id": "843562ebaab04ef4aab62",
+                    "question": "Match the term related to phase changes with its correct definition:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Latent heat of fusion",
+                            "optionB": "Heat required per unit mass to convert a solid to a liquid at constant temperature."
+                        },
+                        {
+                            "optionA": "Latent heat of vaporisation",
+                            "optionB": "Heat required per unit mass to change a liquid to vapor without temperature change."
+                        },
+                        {
+                            "optionA": "Boiling",
+                            "optionB": "Conversion of a liquid to a gas that requires energy input."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

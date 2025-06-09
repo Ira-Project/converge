@@ -1,0 +1,455 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "08p271kg5n1iclexu4ch6",
+    "topicIdProd": "",
+    "chapter_text": "**Speed and Velocity**\n\n*   **Speed** is the distance travelled per unit time. It is a scalar quantity.\n    *   Formula: $v = \\frac{s}{t}$\n    *   Average speed: $\\text{average speed} = \\frac{\\text{total distance travelled}}{\\text{total time taken}}$\n*   **Velocity** is the distance travelled per unit time in a given direction. It is a vector quantity.\n    *   Formula: $\\text{velocity} = \\frac{\\text{distance moved in a given direction}}{\\text{time taken}}$\n    *   Alternatively, velocity is the change in displacement per unit time: $\\text{velocity} = \\frac{\\text{change in displacement}}{\\text{time taken}}$.\n*   **Uniform or Constant Velocity** implies steady speed in a straight line.\n*   **Displacement** is the distance moved in a stated direction, a vector quantity.\n*   Units for both speed and velocity are typically km/h or m/s.\n\n**Acceleration**\n\n*   **Acceleration** is defined as the change of velocity in unit time. It is a vector quantity.\n    *   Formula: $\\text{acceleration} = \\frac{\\text{change of velocity}}{\\text{time taken for change}} = \\frac{\\Delta v}{\\Delta t}$\n*   Positive acceleration means velocity increases.\n*   Negative acceleration means velocity decreases and is also called **deceleration** or **retardation**.\n*   Units: m/s\u00b2.\n\n**Speed-Time Graphs**\n\n*   A plot of speed against time, used to solve motion problems.\n*   **Constant Speed:** Represented by a horizontal straight line.\n*   **Constant Acceleration:** Represented by a straight line with a positive gradient.\n*   **Constant Deceleration:** Represented by a straight line with a negative gradient.\n*   **Changing Acceleration:** Represented by a curved line, where the gradient changes over time.\n*   The **gradient** of a speed-time graph represents the **acceleration** of the object.\n*   The **area under** a speed-time graph measures the **distance travelled** by the object.\n*   An object at rest has zero speed and zero acceleration; its speed-time graph is a straight line along the horizontal axis.\n\n**Distance-Time Graphs**\n\n*   A plot of distance against time.\n*   **Constant Speed:** Represented by a straight line with a positive gradient.\n*   **At Rest:** Represented by a horizontal straight line (distance does not change).\n*   **Accelerating:** Represented by an upward curve with an increasing gradient.\n*   **Decelerating:** Represented by an upward curve with a decreasing gradient.\n*   The **gradient** of a distance-time graph represents the **speed** of the object.\n*   The speed at any instant is the gradient of the tangent to the graph at that point.\n\n**Equations for Constant Acceleration (SUVAT)**\n\nThese equations relate initial speed ($u$), final speed ($v$), acceleration ($a$), displacement ($s$), and time ($t$) for objects moving with constant acceleration in a straight line.\n\n*   First Equation: $v = u + at$\n*   Second Equation: $s = \\frac{(u+v)t}{2}$ (derived from average speed $\\text{average speed} = \\frac{u+v}{2}$ and $s = \\text{average speed} \\times t$)\n*   Third Equation: $s = ut + \\frac{1}{2}at^2$\n*   Fourth Equation: $v^2 = u^2 + 2as$\n\n**Falling Bodies and Acceleration of Free Fall**\n\n*   In a vacuum, all objects fall at the same rate, regardless of mass, due to the absence of air resistance.\n*   In air, **air resistance** (fluid friction) opposes motion and disproportionately affects lighter or larger-surface-area bodies.\n*   **Acceleration of Free Fall ($g$)**: The constant acceleration experienced by objects falling freely under the force of gravity near the Earth's surface.\n    *   Its value is approximately $9.8 \\, \\text{m/s}^2$ (often approximated as $10 \\, \\text{m/s}^2$).\n    *   In calculations, $g$ replaces $a$. It is positive ($+g$) for falling bodies and negative ($-g$) for rising bodies (deceleration).\n*   For an object falling freely from rest, its distance-time relationship is $s = \\frac{1}{2}gt^2$. A graph of $s$ vs $t$ is a curve, while $s$ vs $t^2$ is a straight line through the origin.\n\n**Projectiles**\n\n*   The vertical acceleration of a projectile (due to gravity) is independent of its horizontal motion.\n*   The horizontal and vertical components of motion can be treated separately.\n*   The range (horizontal distance travelled) of a projectile depends on the speed and angle of projection.\n*   Neglecting air resistance, the maximum range is achieved when the angle of projection is $45^\\circ$.\n\n**Air Resistance and Terminal Velocity**\n\n*   As an object falls, air resistance increases with its speed, reducing its acceleration.\n*   **Terminal Velocity** is reached when the upward air resistance force equals the downward gravitational force (weight). At this point, the resultant force is zero, and the object falls at a constant velocity.\n*   Terminal velocity depends on the object's size, shape, and weight. Dense, streamlined objects have high terminal velocities, while light objects with large surface areas (like parachutes) have low terminal velocities.\n*   Objects falling in liquids exhibit similar behavior.",
+    "chapter_concepts": [
+        {
+            "concept_id": "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+            "concept_question": "What is speed?",
+            "concept_answer": "Speed is the distance travelled per unit time and is a scalar quantity.",
+            "concept_formula": [
+                "$!$v = \\frac{s}{t}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "a7a72a73-91d0-4f19-a0fb-f00f03a3c856",
+            "concept_question": "What is average speed?",
+            "concept_answer": "Average speed is the total distance travelled divided by total time taken.",
+            "concept_formula": [
+                "$!$\\text{average speed} = \\frac{\\text{total distance travelled}}{\\text{total time taken}}$!$"
+            ],
+            "pre-requisites": [
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+            ]
+        },
+        {
+            "concept_id": "8130968f-0368-4a88-b0fb-a4166c96b710",
+            "concept_question": "What is velocity?",
+            "concept_answer": "Velocity is the displacement per unit time in a specific direction and is a vector quantity.",
+            "concept_formula": [
+                "$!$\\text{velocity} = \\frac{\\text{distance moved in a given direction}}{\\text{time taken}}$!$",
+                "$!$\\text{velocity} = \\frac{\\text{change in displacement}}{\\text{time taken}}$!$"
+            ],
+            "pre-requisites": [
+                "aceb7823-1dfa-4ff3-9934-9581408ded5d"
+            ]
+        },
+        {
+            "concept_id": "df9bdabd-16e6-47a0-ab2f-361b19f6c9db",
+            "concept_question": "What is uniform velocity?",
+            "concept_answer": "Uniform velocity means moving at a constant speed in a straight line.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "8130968f-0368-4a88-b0fb-a4166c96b710"
+            ]
+        },
+        {
+            "concept_id": "aceb7823-1dfa-4ff3-9934-9581408ded5d",
+            "concept_question": "What is displacement?",
+            "concept_answer": "Displacement is the distance moved in a stated direction and is a vector quantity.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "fccc7fd3-aef8-4e22-8961-1cb8af2f6426",
+            "concept_question": "What are the units for speed?",
+            "concept_answer": "The units for speed are typically km/h or m/s.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+                "8130968f-0368-4a88-b0fb-a4166c96b710"
+            ]
+        },
+        {
+            "concept_id": "b1a9e970-51f1-4aad-b096-d8f4738b226c",
+            "concept_question": "What are the units for velocity?",
+            "concept_answer": "The units for velocity are typically km/h or m/s.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+                "8130968f-0368-4a88-b0fb-a4166c96b710"
+            ]
+        },
+        {
+            "concept_id": "e012005a-91bd-4bce-8500-cb07fad78628",
+            "concept_question": "What is acceleration?",
+            "concept_answer": "Acceleration is the change of velocity per unit time and is a vector quantity.",
+            "concept_formula": [
+                "$!$\\text{acceleration} = \\frac{\\Delta v}{\\Delta t}$!$",
+                "$!$\\text{acceleration} = \\frac{\\text{change of velocity}}{\\text{time taken for change}}$!$"
+            ],
+            "pre-requisites": [
+                "8130968f-0368-4a88-b0fb-a4166c96b710"
+            ]
+        },
+        {
+            "concept_id": "6c06e7b0-ef49-4bc6-b29b-9d294accb212",
+            "concept_question": "What is positive acceleration?",
+            "concept_answer": "Positive acceleration means that an object's velocity is increasing.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e012005a-91bd-4bce-8500-cb07fad78628"
+            ]
+        },
+        {
+            "concept_id": "f69faddb-2951-4918-b529-8a8581e540f5",
+            "concept_question": "What is negative acceleration?",
+            "concept_answer": "Negative acceleration, or deceleration, means that an object's velocity is decreasing.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e012005a-91bd-4bce-8500-cb07fad78628"
+            ]
+        },
+        {
+            "concept_id": "267da5e8-a2de-44ba-9810-27eccacef419",
+            "concept_question": "What are the units of acceleration?",
+            "concept_answer": "Acceleration is measured in m/s\u00b2.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "e012005a-91bd-4bce-8500-cb07fad78628"
+            ]
+        },
+        {
+            "concept_id": "f87be26e-ceb5-4d4b-8268-3f90078ec2e5",
+            "concept_question": "What is a speed-time graph?",
+            "concept_answer": "A speed-time graph is a plot of speed against time.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+            ]
+        },
+        {
+            "concept_id": "677405c6-f085-417b-bd33-eaef90ecd9bc",
+            "concept_question": "What does a constant speed graph look like?",
+            "concept_answer": "A constant speed graph is represented by a horizontal straight line.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f87be26e-ceb5-4d4b-8268-3f90078ec2e5"
+            ]
+        },
+        {
+            "concept_id": "83d75d75-3a40-4973-a55c-c39dfad801f1",
+            "concept_question": "What does a constant acceleration graph look like?",
+            "concept_answer": "A constant acceleration graph is a straight line with a positive gradient.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f87be26e-ceb5-4d4b-8268-3f90078ec2e5",
+                "e012005a-91bd-4bce-8500-cb07fad78628"
+            ]
+        },
+        {
+            "concept_id": "67da2a71-bc3d-43d8-9a22-048b11de1f46",
+            "concept_question": "What does constant deceleration graph appear as?",
+            "concept_answer": "Constant deceleration is shown as a straight line with a negative gradient.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f87be26e-ceb5-4d4b-8268-3f90078ec2e5",
+                "e012005a-91bd-4bce-8500-cb07fad78628"
+            ]
+        },
+        {
+            "concept_id": "c73f1c8a-eeff-4da2-9cac-2a5882764bde",
+            "concept_question": "What does a changing acceleration speed-time graph show?",
+            "concept_answer": "A changing acceleration graph is represented by a curved line with a varying gradient.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f87be26e-ceb5-4d4b-8268-3f90078ec2e5"
+            ]
+        },
+        {
+            "concept_id": "335c7d00-bf11-4451-8009-e9003ff522eb",
+            "concept_question": "What does the gradient of a speed-time graph represent?",
+            "concept_answer": "The gradient of a speed-time graph represents the object's acceleration.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f87be26e-ceb5-4d4b-8268-3f90078ec2e5",
+                "e012005a-91bd-4bce-8500-cb07fad78628"
+            ]
+        },
+        {
+            "concept_id": "5fadf3e9-25eb-4d0c-b4c6-ba8237b81823",
+            "concept_question": "What does the area under a speed-time graph represent?",
+            "concept_answer": "The area under a speed-time graph measures the distance travelled by the object.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f87be26e-ceb5-4d4b-8268-3f90078ec2e5",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+            ]
+        },
+        {
+            "concept_id": "1d033891-89eb-4920-8916-6a107f65da8c",
+            "concept_question": "How is an object at rest represented on a speed-time graph?",
+            "concept_answer": "An object at rest is depicted as a horizontal line at zero speed and zero acceleration.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f87be26e-ceb5-4d4b-8268-3f90078ec2e5"
+            ]
+        },
+        {
+            "concept_id": "5d92fbae-09f9-47bb-b469-2584fdc7e08b",
+            "concept_question": "What is a distance-time graph?",
+            "concept_answer": "A distance-time graph is a plot of distance against time.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "56d6eba3-4f0f-4ae9-8889-059c4452a3e8",
+            "concept_question": "What represents constant speed on a distance-time graph?",
+            "concept_answer": "Constant speed appears as a straight line with a positive gradient on a distance-time graph.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5d92fbae-09f9-47bb-b469-2584fdc7e08b",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+            ]
+        },
+        {
+            "concept_id": "2fc7ef70-5477-440e-872e-bf3bb3937194",
+            "concept_question": "What does a distance-time graph show for an object at rest?",
+            "concept_answer": "An object at rest is shown by a horizontal line where distance remains unchanged.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5d92fbae-09f9-47bb-b469-2584fdc7e08b"
+            ]
+        },
+        {
+            "concept_id": "229b2e8f-97dd-488e-8629-0e3d3225cc27",
+            "concept_question": "How is accelerating motion depicted on a distance-time graph?",
+            "concept_answer": "Accelerating motion is represented by an upward curve with an increasing gradient on a distance-time graph.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5d92fbae-09f9-47bb-b469-2584fdc7e08b",
+                "e012005a-91bd-4bce-8500-cb07fad78628"
+            ]
+        },
+        {
+            "concept_id": "666c9323-84f6-410c-9057-99de7a70c400",
+            "concept_question": "How is decelerating motion shown on a distance-time graph?",
+            "concept_answer": "Decelerating motion is depicted as an upward curve with a decreasing gradient on a distance-time graph.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5d92fbae-09f9-47bb-b469-2584fdc7e08b",
+                "e012005a-91bd-4bce-8500-cb07fad78628"
+            ]
+        },
+        {
+            "concept_id": "5d526a4c-1680-4789-aa23-25e48aa58944",
+            "concept_question": "What does the gradient of a distance-time graph represent?",
+            "concept_answer": "The gradient of a distance-time graph represents the speed of the object.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5d92fbae-09f9-47bb-b469-2584fdc7e08b",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+            ]
+        },
+        {
+            "concept_id": "9da32034-4386-40dd-bdfd-cab990be3e39",
+            "concept_question": "How is instantaneous speed determined on a distance-time graph?",
+            "concept_answer": "Instantaneous speed is the gradient of the tangent to the distance-time graph at a given point.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "5d92fbae-09f9-47bb-b469-2584fdc7e08b"
+            ]
+        },
+        {
+            "concept_id": "42a327e0-041f-45f5-b694-73ab9a05eafc",
+            "concept_question": "What is the first SUVAT equation?",
+            "concept_answer": "It states that final speed equals initial speed plus acceleration times time.",
+            "concept_formula": [
+                "$!$v = u + at$!$"
+            ],
+            "pre-requisites": [
+                "e012005a-91bd-4bce-8500-cb07fad78628",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+            ]
+        },
+        {
+            "concept_id": "179ede05-df7e-4af4-9feb-c4f73b52158f",
+            "concept_question": "What is the second SUVAT equation?",
+            "concept_answer": "It relates displacement to the average of initial and final speeds multiplied by time.",
+            "concept_formula": [
+                "$!$s = \\frac{(u+v)t}{2}$!$"
+            ],
+            "pre-requisites": [
+                "e012005a-91bd-4bce-8500-cb07fad78628",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+                "aceb7823-1dfa-4ff3-9934-9581408ded5d"
+            ]
+        },
+        {
+            "concept_id": "62c89459-f987-4165-a252-bef784e2a2f0",
+            "concept_question": "What is the third SUVAT equation?",
+            "concept_answer": "It expresses displacement as initial speed times time plus half the product of acceleration and squared time.",
+            "concept_formula": [
+                "$!$s = ut + \\frac{1}{2}at^2$!$"
+            ],
+            "pre-requisites": [
+                "e012005a-91bd-4bce-8500-cb07fad78628",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+                "aceb7823-1dfa-4ff3-9934-9581408ded5d"
+            ]
+        },
+        {
+            "concept_id": "a0d90090-575c-4da3-801b-a286406bd77c",
+            "concept_question": "What is the fourth SUVAT equation?",
+            "concept_answer": "It states that the square of final speed equals the square of initial speed plus twice acceleration times displacement.",
+            "concept_formula": [
+                "$!$v^2 = u^2 + 2as$!$"
+            ],
+            "pre-requisites": [
+                "e012005a-91bd-4bce-8500-cb07fad78628",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+                "aceb7823-1dfa-4ff3-9934-9581408ded5d"
+            ]
+        },
+        {
+            "concept_id": "c4e123ba-7a77-4096-88fd-c98898623ec4",
+            "concept_question": "How do falling bodies behave in a vacuum?",
+            "concept_answer": "All objects in a vacuum fall at the same rate regardless of mass.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "37b96553-0db7-45ed-9978-becb4cfbc9eb",
+            "concept_question": "What is the effect of air resistance on falling objects?",
+            "concept_answer": "Air resistance opposes motion in free fall.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e1ad5395-96d8-4dc7-8276-f84672f16c39",
+            "concept_question": "How do size and surface area influence air resistance in free fall?",
+            "concept_answer": "Objects with larger surface areas or lighter mass experience more air resistance.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc",
+            "concept_question": "What is acceleration of free fall?",
+            "concept_answer": "It is the constant gravitational acceleration experienced by objects near Earth\u2019s surface.",
+            "concept_formula": [
+                "$!$g \\approx 9.8 \\, m/s^2$!$",
+                "$!$g \\approx 10 \\, m/s^2$!$"
+            ],
+            "pre-requisites": [
+                "e012005a-91bd-4bce-8500-cb07fad78628"
+            ]
+        },
+        {
+            "concept_id": "bf356ebf-0c10-4ac7-83ad-d295081f17bf",
+            "concept_question": "What is the free fall distance-time relationship?",
+            "concept_answer": "For an object falling from rest, distance equals half gravitational acceleration times time squared.",
+            "concept_formula": [
+                "$!$s = \\frac{1}{2}gt^2$!$"
+            ],
+            "pre-requisites": [
+                "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc"
+            ]
+        },
+        {
+            "concept_id": "e7e68cc6-d63c-4b7c-b4d5-5be3342fe166",
+            "concept_question": "What is the shape of the free fall distance-time graph?",
+            "concept_answer": "The s versus t graph for free fall is curved.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc"
+            ]
+        },
+        {
+            "concept_id": "4000d55e-a3a3-463f-b8a3-bbdf13ea7f0e",
+            "concept_question": "What is observed when plotting free fall distance against time squared?",
+            "concept_answer": "Plotting s against t^2 for free fall yields a straight line.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc"
+            ]
+        },
+        {
+            "concept_id": "be05edcd-33ad-4028-a75c-79df196cd994",
+            "concept_question": "What is the vertical acceleration of a projectile?",
+            "concept_answer": "The vertical acceleration of a projectile is due to gravity and is constant.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc"
+            ]
+        },
+        {
+            "concept_id": "021d66a3-a98a-491f-b18e-a3bcc17a3cde",
+            "concept_question": "How is the horizontal motion of a projectile treated?",
+            "concept_answer": "The horizontal component is treated as motion with constant velocity, ignoring air resistance.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "be05edcd-33ad-4028-a75c-79df196cd994"
+            ]
+        },
+        {
+            "concept_id": "81b05737-f472-4fe5-82dc-467920dee628",
+            "concept_question": "How is the vertical motion of a projectile treated?",
+            "concept_answer": "The vertical component is treated as motion under constant gravitational acceleration.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "be05edcd-33ad-4028-a75c-79df196cd994"
+            ]
+        },
+        {
+            "concept_id": "dc6dabd1-d269-4f6a-927c-df01749682ae",
+            "concept_question": "How does the initial speed affect a projectile's range?",
+            "concept_answer": "A higher initial speed increases the range of a projectile.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "021d66a3-a98a-491f-b18e-a3bcc17a3cde",
+                "81b05737-f472-4fe5-82dc-467920dee628"
+            ]
+        },
+        {
+            "concept_id": "08e5b857-0800-48b0-a3a3-b38278aa2b48",
+            "concept_question": "How does the angle of projection influence a projectile's range?",
+            "concept_answer": "The range of a projectile is maximized at a 45 degree angle.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "021d66a3-a98a-491f-b18e-a3bcc17a3cde",
+                "81b05737-f472-4fe5-82dc-467920dee628"
+            ]
+        },
+        {
+            "concept_id": "cb3792a4-1a4b-410d-9bc9-adaf514363ef",
+            "concept_question": "When is a projectile's range maximized?",
+            "concept_answer": "The maximum range is achieved at a 45 degree projection angle neglecting air resistance.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "dc6dabd1-d269-4f6a-927c-df01749682ae",
+                "08e5b857-0800-48b0-a3a3-b38278aa2b48"
+            ]
+        },
+        {
+            "concept_id": "ca5f6c70-de52-4c82-b1a1-63eb5eaa1f4d",
+            "concept_question": "What is terminal velocity?",
+            "concept_answer": "Terminal velocity is reached when air resistance balances gravitational force, causing constant falling speed.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "37b96553-0db7-45ed-9978-becb4cfbc9eb",
+                "e1ad5395-96d8-4dc7-8276-f84672f16c39",
+                "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc"
+            ]
+        },
+        {
+            "concept_id": "906d63a6-5264-420e-86ae-9f7edc619471",
+            "concept_question": "What affects an object's terminal velocity?",
+            "concept_answer": "Terminal velocity varies based on an object\u2019s size, shape, and weight.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ca5f6c70-de52-4c82-b1a1-63eb5eaa1f4d"
+            ]
+        },
+        {
+            "concept_id": "741d4bf2-d72f-4a45-8ebc-55aace106d8e",
+            "concept_question": "Do objects exhibit terminal velocity in liquids?",
+            "concept_answer": "Objects falling in liquids display terminal velocity similar to that experienced in air.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "ca5f6c70-de52-4c82-b1a1-63eb5eaa1f4d"
+            ]
+        }
+    ]
+}

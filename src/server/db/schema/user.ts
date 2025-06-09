@@ -2,7 +2,7 @@ import {
   pgTableCreator,
   serial,
   boolean,
-  index,
+index,
   timestamp,
   varchar,
   pgEnum,

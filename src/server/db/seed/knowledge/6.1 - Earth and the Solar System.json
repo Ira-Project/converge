@@ -1,0 +1,1983 @@
+{
+    "name": "Earth and the Solar System",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "363f3d0ade1b409f9b709",
+            "concepts": [
+                "dba8ca5a-36be-43ba-aed7-13bdc9a3dc2a",
+                "c983e787-3ce4-41b2-9aa8-b68318f8d3f6"
+            ],
+            "variants": [
+                {
+                    "id": "b0c7f081d9cb4cd8a1d7e",
+                    "question": "Which of the following statements are true regarding Earth's rotation and its effects?",
+                    "options": [
+                        {
+                            "option_text": "Earth's rotation on its axis causes day and night.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Sun's apparent daily motion from east to west is due to Earth's rotation.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The seasons are caused by Earth's rotation alone.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Moon's phases are caused by Earth's rotation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "8abd3c7d6eb44ce0a9b9b",
+                    "question": "If Earth's rotation rate significantly slowed down, which of the following would be the most likely consequence?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Days and nights would become much shorter.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The length of a day would increase.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The seasons would become more intense.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The apparent path of the Sun across the sky would reverse.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f9dc3571d50d4037a527b",
+                    "question": "Select all of the following statements that accurately describe the effects of Earth's rotation:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It causes the Coriolis effect, influencing weather patterns and ocean currents.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the primary cause of the Earth's seasons.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It results in the apparent rising and setting of the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It dictates the phases of the Moon.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "b71a7de9480f406289676",
+            "concepts": [
+                "73bb5b21-22b0-488c-9219-92ebc101456b"
+            ],
+            "variants": [
+                {
+                    "id": "5d62dfabed1b43dfb07ac",
+                    "question": "Which factors contribute to the Earth's seasons?",
+                    "options": [
+                        {
+                            "option_text": "The Earth's distance from the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Earth's nearly circular orbit around the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Earth's 23.5$!$^{\\circ}$!$ axial tilt.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of Earth's rotation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e1e3ac92f3894c69b0cb3",
+                    "question": "Select all the factors that contribute to the Earth's seasons:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The Earth's distance from the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Earth's nearly circular orbit around the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Earth's 23.5$!$^{\\circ}$!$ axial tilt.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of Earth's rotation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "bdb2cfb5c81a42c1bebb6",
+                    "question": "Which of the following statements accurately describes a factor that contributes to the Earth's seasons?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The Earth's varying distance from the Sun throughout the year is the primary cause of seasons.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Earth's elliptical orbit around the Sun is the main reason for seasonal changes.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Earth's rotational speed affects the length of the seasons.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Earth's axial tilt of 23.5$!$^{\\circ}$!$ relative to its orbital plane is a key factor in the creation of seasons.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ebe12b273eda473c9a6d7",
+            "concepts": [
+                "cce89da2-82cb-4710-a98b-57510947034a",
+                "73bb5b21-22b0-488c-9219-92ebc101456b"
+            ],
+            "variants": [
+                {
+                    "id": "c4f01627f1d542c7a138d",
+                    "question": "Which of the following statements correctly describe the effects of Earth's axial tilt?",
+                    "options": [
+                        {
+                            "option_text": "A hemisphere tilted toward the Sun receives more concentrated sunlight and warmth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A hemisphere tilted away from the Sun receives more concentrated sunlight and warmth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The axial tilt has no effect on weather patterns.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The opposite tilt brings cooler weather to a hemisphere.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "2be796d792b64518bab86",
+                    "question": "Select all of the following statements that accurately describe the impact of Earth's axial tilt on the seasons:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The hemisphere tilted towards the Sun experiences summer due to increased solar intensity and longer daylight hours.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The hemisphere tilted away from the Sun experiences winter due to decreased solar intensity and shorter daylight hours.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Earth's axial tilt has minimal impact on the distribution of solar energy across the planet.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The axial tilt causes a uniform climate across the globe throughout the year.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "b4b45580274a43e999a79",
+                    "question": "Which of the following statements best explains why the Northern and Southern Hemispheres experience opposite seasons?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The Earth's distance from the Sun varies throughout the year, causing seasonal changes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Earth's axial tilt causes different hemispheres to receive varying amounts of direct sunlight throughout the year.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Earth's rotation speed changes throughout the year, affecting the amount of sunlight received.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The gravitational pull of the Moon on the Earth causes seasonal variations.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "eac876d917c04649bb8c5",
+            "concepts": [
+                "0193afc1-d229-4a27-a7ca-f34fa413fe63",
+                "73bb5b21-22b0-488c-9219-92ebc101456b"
+            ],
+            "variants": [
+                {
+                    "id": "b65df6d8fa464cbb8aa78",
+                    "question": "What are the characteristics of an equinox?",
+                    "options": [
+                        {
+                            "option_text": "Earth's axis is tilted at its maximum toward the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Earth's axis is neither tilted toward nor away from the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Day and night are of equal length.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It marks the longest day of the year.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "5eec09b6446e4358ad969",
+                    "question": "Which of the following statements accurately describe the position of Earth's axis during an equinox? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Earth's axis is tilted at its maximum toward the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Earth's axis is neither tilted toward nor away from the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Earth's axis is tilted at its maximum away from the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Earth's axis has no tilt.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "c5d8e24fae2f493b80bd2",
+                    "question": "Which of the following is NOT a characteristic of an equinox?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Day and night are of equal length.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Earth's axis is neither tilted toward nor away from the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It marks the longest day of the year.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Sun crosses the celestial equator.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "e66e9110898544a2b607f",
+            "concepts": [
+                "0d016f00-77a7-4749-8c3f-0d07898d933c",
+                "05c95b02-f7b6-4f87-a3b7-a11d0beae4d1"
+            ],
+            "variants": [
+                {
+                    "id": "1cdcbdde02f34e3386558",
+                    "question": "Which of the following statements are true regarding the Moon's orbit and visibility?",
+                    "options": [
+                        {
+                            "option_text": "The Moon orbits Earth approximately every 27 days.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon produces its own light.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Moon is visible because it reflects sunlight.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon's orbital path is perfectly circular.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "cef4a8c3211c447390888",
+                    "question": "Which of the following statements about the Moon's phases is incorrect?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The phases of the Moon are caused by the Earth's shadow.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A lunar month (time between successive new moons) is about 29.5 days.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The 'New Moon' phase occurs when the Moon is between the Earth and the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "We always see the same side of the Moon from Earth.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "15acb38c2c74461483f9f",
+                    "question": "Select all of the following statements that accurately describe the Moon.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The Moon has a significant atmosphere.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Moon's gravity influences Earth's tides.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon is tidally locked with Earth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon is the largest moon in the solar system.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "380759e98846431786dad",
+            "concepts": [
+                "a5621361-7df6-4585-a7d4-f437507e85e8",
+                "0d016f00-77a7-4749-8c3f-0d07898d933c",
+                "05c95b02-f7b6-4f87-a3b7-a11d0beae4d1"
+            ],
+            "variants": [
+                {
+                    "id": "0d74e4a7ab544152aad69",
+                    "question": "What are the key characteristics of the New Moon phase?",
+                    "options": [
+                        {
+                            "option_text": "The Moon lies between the Sun and Earth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon's illuminated side is hidden from Earth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon appears fully illuminated.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "About half of the Moon's surface is illuminated and visible.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "ba305dda92284b369105f",
+                    "question": "Which of the following statements accurately describe the position of the Moon during the New Moon phase? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The Moon is positioned between the Sun and the Earth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The side of the Moon facing Earth is not illuminated.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon is on the opposite side of the Earth from the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Moon appears as a full, bright disk in the night sky.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "b10d2df3f3534e98ad88d",
+                    "question": "Which of the following is NOT a characteristic of the New Moon phase?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The Moon is nearly invisible from Earth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Moon lies in the same general direction as the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Moon appears fully illuminated from Earth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The New Moon is the first phase in the lunar cycle.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ecccb2d79c6d44fe94143",
+            "concepts": [
+                "e2561b2a-ca27-4259-85a6-84152f5b624f",
+                "0d016f00-77a7-4749-8c3f-0d07898d933c",
+                "05c95b02-f7b6-4f87-a3b7-a11d0beae4d1"
+            ],
+            "variants": [
+                {
+                    "id": "b2a69ca9ee5b4f54bc2ee",
+                    "question": "Which of the following are true about the Full Moon phase?",
+                    "options": [
+                        {
+                            "option_text": "The Moon is opposite the Sun from Earth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon appears fully illuminated.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon is between the Earth and the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Only a crescent of the Moon is visible.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "22870733137c4a3bbc0fe",
+                    "question": "Which of the following is NOT true about the Full Moon phase?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The Moon is opposite the Sun from Earth.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Moon appears fully illuminated.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Moon is between the Earth and the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Only a crescent of the Moon is visible.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "0589f149167944469d9fa",
+                    "question": "Select all of the following statements that are true regarding the appearance and position of the Moon during the Full Moon phase.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The Moon is opposite the Sun from Earth.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon appears fully illuminated.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Moon is between the Earth and the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Only a crescent of the Moon is visible.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "a25c76dcfef54b3496d1d",
+            "concepts": [
+                "adc2e666-a4b5-4e5e-a471-48bb5c2629a2"
+            ],
+            "variants": [
+                {
+                    "id": "34bd464c18a2426c91624",
+                    "question": "What formula is used to calculate average orbital speed?",
+                    "options": [
+                        {
+                            "option_text": "$!$v = \\frac{T}{2\\pi r}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = \\frac{2\\pi r}{T}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$v = \\frac{\\pi r^2}{T}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v = \\frac{T}{\\pi r^2}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "653ba9548b2c40c6b6d33",
+                    "question": "If the orbital radius of a satellite is doubled, and its orbital period is also doubled, what happens to its average orbital speed?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The average orbital speed remains the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The average orbital speed is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average orbital speed is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average orbital speed is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fce4420917084e29a192a",
+                    "question": "A satellite orbits a planet with a period $!$T$!$ and orbital radius $!$r$!$. If the orbital radius is $!$2r$!$ and the period is $!$4T$!$, what is the average orbital speed?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$\\frac{\\pi r}{T}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\frac{4 \\pi r}{T}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{\\pi r}{4T}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{4 \\pi r}{4T}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "d4814370770f44acafe3b",
+            "concepts": [
+                "72b9d4f3-fd1d-4546-af35-20393acff64c"
+            ],
+            "variants": [
+                {
+                    "id": "9818384b40084714872cc",
+                    "question": "Why do objects orbit stars?",
+                    "options": [
+                        {
+                            "option_text": "Magnetic forces provide the centripetal force.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravitational attraction provides the necessary centripetal force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electromagnetic forces balance the motion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Nuclear forces drive the orbital motion.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cd02bfeacc914b66b65a3",
+                    "question": "Which of the following statements correctly explains why objects orbit stars?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Magnetic forces counteract the gravitational pull.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravitational attraction provides the centripetal force necessary for orbit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Inertia alone keeps objects in orbit around stars.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Nuclear forces push the orbiting objects away from the star.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "5d2ab2ee0a6b44d786675",
+                    "question": "Select all of the following that are crucial for an object to maintain a stable orbit around a star.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A balance between the object's inertia and the star's gravitational pull.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Sufficient velocity to counteract the star's gravity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's magnetic field interacting with the star's magnetic field.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The star's nuclear fusion process providing a constant outward force.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "95f5682710124445b5697",
+            "concepts": [
+                "b6742730-8508-48cd-b5df-7ae913270ba0"
+            ],
+            "variants": [
+                {
+                    "id": "420aedc7bd3244a6a32d4",
+                    "question": "How does distance affect gravitational force and orbital speed?",
+                    "options": [
+                        {
+                            "option_text": "Gravitational force increases with increasing distance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravitational force decreases with increasing distance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Orbital speeds are higher at greater distances.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Orbital periods are longer at greater distances.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e28f2303f459498e91838",
+                    "question": "Which of the following statements accurately describe the relationship between distance, gravitational force, and orbital speed? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Gravitational force is inversely proportional to the square of the distance between two objects.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "As the distance from a planet increases, the orbital speed decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gravitational force increases linearly with distance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Orbital speed is independent of the distance from the central body.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "ef00ff37e0c44614b0971",
+                    "question": "If the distance between two objects is doubled, what happens to the gravitational force between them?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The gravitational force is quadrupled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The gravitational force is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The gravitational force is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The gravitational force is reduced to one-fourth of its original value.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "d30fedd913a542acbf8d5",
+            "concepts": [
+                "9cd98ea0-b9e6-4f4a-9278-7a71a5600392"
+            ],
+            "variants": [
+                {
+                    "id": "afe3bca83b274aff8b148",
+                    "question": "What does conservation of energy in orbits imply?",
+                    "options": [
+                        {
+                            "option_text": "Gravitational potential energy converts to kinetic energy as an object moves closer to the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kinetic energy converts to gravitational potential energy as an object moves closer to the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Total energy remains constant in an orbit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Energy is lost as heat due to friction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e7a8667fb3394e2daab36",
+                    "question": "Which of the following statements accurately describe the implications of the conservation of energy in the context of planetary orbits? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "As a planet moves closer to the Sun, its gravitational potential energy is converted into kinetic energy.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total mechanical energy (kinetic + potential) of a planet remains constant throughout its orbit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A planet's kinetic energy is highest when it is farthest from the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Energy is continuously lost from the planet-Sun system due to gravitational friction.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "f74f2e01d579445caba1c",
+                    "question": "A satellite's orbit around a planet is elliptical. What happens to the satellite's kinetic energy as its distance from the planet increases?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Kinetic energy increases, and gravitational potential energy decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Kinetic energy decreases, and gravitational potential energy increases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Kinetic energy remains constant, and gravitational potential energy decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both kinetic energy and gravitational potential energy increase.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "893ecdc5811b4399ba6fe",
+            "concepts": [
+                "fdc2ee77-27f4-4067-953a-95ef88c5fe4c"
+            ],
+            "variants": [
+                {
+                    "id": "805f0ab442794652b8d95",
+                    "question": "What are the main components of the Solar System?",
+                    "options": [
+                        {
+                            "option_text": "The Sun, eight planets, and dwarf planets.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Asteroids, moons, and comets.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Only the Sun and the planets.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Stars and gas clouds.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "3270f4c15f6643a686192",
+                    "question": "Which of the following are main components of the Solar System? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The Sun, eight planets, and dwarf planets.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Asteroids, moons, and comets.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Only the Sun and the planets.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Stars and gas clouds.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "443bc260e56b4ef5bfd93",
+                    "question": "Which of the following best describes the primary celestial body at the center of our Solar System?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A dwarf planet.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A star.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A large gas giant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "An asteroid.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "77bd48542aa14056a4f2d",
+            "concepts": [
+                "c3a3e221-578f-4cb9-b777-938e3bd756de",
+                "adc2e666-a4b5-4e5e-a471-48bb5c2629a2"
+            ],
+            "variants": [
+                {
+                    "id": "ab07307212bd4a65b8842",
+                    "question": "Which of the following describes how bodies orbit the Sun in our Solar System?",
+                    "options": [
+                        {
+                            "option_text": "Circular paths with the Sun at the center.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Elliptical paths with the Sun at one focus.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Straight lines through space.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Random, unpredictable paths.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "163e5831532d426abd9d1",
+                    "question": "Which of the following statements accurately describe the orbits of planets in our Solar System? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Planets move in elliptical paths.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Sun is located at one focus of a planet's elliptical orbit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Planets orbit the Sun in perfect circles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Planetary orbits are linear.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "aaf1c5ae58e34d46943ff",
+                    "question": "If the path of a celestial body's orbit around the Sun were perfectly circular instead of elliptical, which of the following statements would be true?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The distance between the body and the Sun would remain constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The body's speed would vary significantly throughout its orbit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The body would move in a straight line.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Sun would be at the center of the circular path.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "9e37c6528c234e17bb6bd",
+            "concepts": [
+                "971df646-9625-4926-99cf-d7fd33c4a90d"
+            ],
+            "variants": [
+                {
+                    "id": "1cc877815fdd4a54a7dba",
+                    "question": "What does the Accretion Model propose regarding the formation of the Solar System?",
+                    "options": [
+                        {
+                            "option_text": "The Solar System formed recently from captured planets.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Solar System formed 4500 million years ago from a collapsing rotating nebula.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Solar System was formed from a single large explosion.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Solar System was formed from the collision of two stars.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "76cb893959df413ba3d01",
+                    "question": "Which of the following statements accurately describes the Accretion Model's explanation of Solar System formation? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The Solar System formed from a collapsing, rotating nebula.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Solar System resulted from the collision of two stars.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Solar System formed recently by capturing planets from other systems.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Solar System originated from a supernova explosion.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "82e4adcb634248bb82d6f",
+                    "question": "According to the Accretion Model, approximately how long ago did the Solar System form?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "4500 million years ago",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1000 million years ago",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "100 million years ago",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "10 million years ago",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "df11f7259b3c4ec4b7eb3",
+            "concepts": [
+                "1736a843-c697-48c8-b099-c4395f62fce7",
+                "fdc2ee77-27f4-4067-953a-95ef88c5fe4c"
+            ],
+            "variants": [
+                {
+                    "id": "b8e77b6384bf406eace2a",
+                    "question": "Which of the following are characteristics of inner planets?",
+                    "options": [
+                        {
+                            "option_text": "Small and rocky.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gaseous and low in density.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Large and gaseous.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Dense with layered structures.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "86f125117b51449899543",
+                    "question": "Which of the following statements is NOT a characteristic of inner planets?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They are primarily composed of rock and metal.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They have fewer moons compared to the outer planets.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They have ring systems.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They have a higher density.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "92fa9bd0cd2949fd86e5c",
+                    "question": "If a planet is small, rocky, and has a high density, which type of planet is it most likely to be?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Gas giant",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ice giant",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Inner planet",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Dwarf planet",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "83d13670911e43559cc96",
+            "concepts": [
+                "6c95ae31-a49d-4c27-a63d-7f35c7ab9f58",
+                "fdc2ee77-27f4-4067-953a-95ef88c5fe4c"
+            ],
+            "variants": [
+                {
+                    "id": "0dad3ddb8f264e5e9d068",
+                    "question": "What are the general characteristics of outer planets?",
+                    "options": [
+                        {
+                            "option_text": "Small, rocky, and dense.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Large, gaseous, and low in density.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Few moons and no rings.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Many moons and rings.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "dcef597ada2049f5906d9",
+                    "question": "Which of the following statements accurately describe characteristics of the outer planets? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "They are primarily composed of gas.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They are relatively small and rocky.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "They possess ring systems.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "They have fewer moons compared to the inner planets.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "86c5b79defa449cc96fb2",
+                    "question": "Which of the following is NOT a characteristic of the outer planets?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Gaseous composition",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "High density",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Numerous moons",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Presence of rings",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "039fd56d1aa04739bcbba",
+            "concepts": [
+                "17b92c4a-6637-49ce-a128-a44653884885",
+                "fdc2ee77-27f4-4067-953a-95ef88c5fe4c"
+            ],
+            "variants": [
+                {
+                    "id": "ff06b29e3d2041d3a11cd",
+                    "question": "What defines a dwarf planet according to the established criteria?",
+                    "options": [
+                        {
+                            "option_text": "It must have cleared its orbital neighborhood.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It orbits the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is spherical due to its gravity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It does not have enough gravity to clear its orbital neighborhood.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "f86b197f1a2942d1a4626",
+                    "question": "Which of the following characteristics is NOT a criterion for classifying a celestial body as a dwarf planet?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It orbits the Sun directly.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It has sufficient mass for its self-gravity to overcome rigid body forces so that it assumes a hydrostatic equilibrium (nearly round) shape.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It has cleared the neighbourhood around its orbit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is not a satellite.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "705acdc1642f4c8886c6a",
+                    "question": "Select all of the following statements that accurately describe the criteria for a celestial body to be classified as a dwarf planet.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It must orbit a planet.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It must be in direct orbit around the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It has not cleared its orbital neighborhood of other objects.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Its own gravity has pulled it into a nearly round shape.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3f7804918aa74f7ba717e",
+            "concepts": [
+                "1e25f1b2-2b27-465f-9b2e-3c08ba701277",
+                "fdc2ee77-27f4-4067-953a-95ef88c5fe4c"
+            ],
+            "variants": [
+                {
+                    "id": "5416b8a3a85c45d4991e5",
+                    "question": "Where are asteroids primarily located in the Solar System?",
+                    "options": [
+                        {
+                            "option_text": "Throughout the Solar System.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In the belt between Mars and Jupiter.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Beyond the orbit of Neptune.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Close to the Sun.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "28b22c051b894ede9eaf2",
+                    "question": "Which of the following statements accurately describes the primary location of asteroids?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Asteroids are uniformly distributed throughout the Solar System.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Asteroids are mostly found in the asteroid belt located between Mars and Jupiter.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Asteroids are concentrated in the Kuiper Belt, beyond Neptune's orbit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Asteroids are primarily located in the Oort Cloud, far beyond the Solar System's planets.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "318e2cdc44f54fda8ecb6",
+                    "question": "Select all the regions in the Solar System where significant populations of asteroids are found.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The asteroid belt between Mars and Jupiter",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The Oort Cloud",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The Kuiper Belt",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Trojan asteroids near Jupiter's orbit",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3c4cdaea198a44228a75e",
+            "concepts": [
+                "a39b1258-f160-4832-9605-798bd0d0acb8",
+                "fdc2ee77-27f4-4067-953a-95ef88c5fe4c"
+            ],
+            "variants": [
+                {
+                    "id": "6ec91ae510ed46b6ac234",
+                    "question": "What are comets primarily composed of?",
+                    "options": [
+                        {
+                            "option_text": "Rock and metal.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Dust and ice.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gases and liquids.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Plasma and radiation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cce2df94e0384e5082656",
+                    "question": "Which of the following best describes the composition of a comet's nucleus?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Primarily rocky material with a thin icy coating.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A mixture of dust, ice, and frozen gases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Mostly metallic core surrounded by a gaseous atmosphere.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A dense ball of plasma and electromagnetic radiation.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2d8af38118894acdb6bcc",
+                    "question": "Select all of the following materials that are major components of a comet:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Dust",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Ice",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Molten Lava",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Liquid Iron",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "87b586e4f5ae4394aa2b2",
+            "concepts": [
+                "f28b5d17-8075-4043-86af-e8675f38f1e4",
+                "fdc2ee77-27f4-4067-953a-95ef88c5fe4c"
+            ],
+            "variants": [
+                {
+                    "id": "0463966c7cfd456bbea35",
+                    "question": "Which of the following statements are true regarding comets?",
+                    "options": [
+                        {
+                            "option_text": "Comets follow circular orbits.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Comets follow highly elliptical orbits.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Comets develop bright heads and tails near the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Comets are always visible from Earth.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "f042226bca6941c78ee28",
+                    "question": "Which of the following statements is incorrect regarding comets?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Comets follow highly elliptical orbits around the Sun.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Comets develop bright heads and tails when they are far away from the Sun.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Comets are celestial bodies composed primarily of ice, dust, and rock.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Comets can have periods ranging from a few years to thousands of years.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4471772c8bc84c0ca5882",
+                    "question": "Select all the statements that correctly describe the orbits and behavior of comets.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Cometary orbits are typically circular, similar to planetary orbits.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Comets follow highly elliptical orbits, bringing them close to the Sun and then far away.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "As a comet approaches the Sun, it heats up and can develop a visible coma and tail.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Comets remain consistently bright throughout their entire orbit.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "0961bb539abd4c1087a7b",
+            "concepts": [
+                "ebe78b42-00d2-4a69-8d3b-77ab32737ddf",
+                "fdc2ee77-27f4-4067-953a-95ef88c5fe4c"
+            ],
+            "variants": [
+                {
+                    "id": "85f969604e984b4e84829",
+                    "question": "What is a unique characteristic of the Sun in the Solar System?",
+                    "options": [
+                        {
+                            "option_text": "It is the largest planet.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the only star.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It produces its own light.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It reflects sunlight.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "9c7685757e494068b125f",
+                    "question": "Which of the following statements accurately describe unique characteristics of the Sun?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is the largest object in the Solar System.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the only star in our Solar System.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It generates its own energy through nuclear fusion.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It revolves around the Earth.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "21ea90e4df88437981f92",
+                    "question": "Which of the following is NOT a characteristic of the Sun?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is a star.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the center of the Solar System.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It orbits around another star.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It provides light and heat to the planets.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "5b7c74c58a21417bbfb56",
+            "concepts": [
+                "5a0ec4e3-040a-4222-a722-cea9401e58a7"
+            ],
+            "variants": [
+                {
+                    "id": "4e3aa1abc4e24d13943e5",
+                    "question": "How are gravitational field strength, masses, and distance related?",
+                    "options": [
+                        {
+                            "option_text": "Gravitational field strength is directly proportional to the masses.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Gravitational field strength is inversely proportional to the masses.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravitational field strength is directly proportional to the square of the distance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Gravitational field strength is inversely proportional to the square of the distance.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "9652ced8202549329bec2",
+                    "question": "Which of the following statements correctly describes the relationship between gravitational field strength ($!$g$!$), mass ($!$m$!$), distance ($!$r$!$), and the gravitational constant ($!$G$!$)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$g = G \\frac{m}{r^2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$g = G \\frac{r^2}{m}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$g = G \\frac{m^2}{r}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$g = \\frac{G}{m r^2}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cc35bf07f5cc482ca41f4",
+                    "question": "If the distance between two objects is doubled, how does the gravitational field strength between them change?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is quartered.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "ff60c7610a3f4618ade3e",
+            "concepts": [
+                "613636b3-0ae8-4a7d-b7b3-a3b03cbc9952"
+            ],
+            "variants": [
+                {
+                    "id": "2a6c01430e3148bab2e61",
+                    "question": "Which of the following statements are true about the speed of light?",
+                    "options": [
+                        {
+                            "option_text": "Light travels at an infinite speed.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Light travels at a finite speed.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Light speed causes observable delays over interplanetary distances.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Light speed has no effect on astronomical observations.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "22a99e0b8f4a4f9db8502",
+                    "question": "Select all the statements that correctly describe the implications of the speed of light being finite:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Interplanetary communication experiences delays due to the time it takes for light to travel.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Astronomical observations provide a snapshot of the past, not the present.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The speed of light is considered infinite for all practical purposes.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The finite speed of light has no impact on the timing of events in space.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a8e91f3608df4d8d86509",
+                    "question": "Which of the following statements is INCORRECT regarding the speed of light?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The speed of light is a finite value, approximately $!$3 \\times 10^8$!$ meters per second.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The observation of distant astronomical objects provides information about the past due to the travel time of light.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The speed of light is infinite, allowing for instantaneous communication across any distance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The delay caused by the finite speed of light is significant in interplanetary communications.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "37989be66bfc4c269ca4d",
+            "concepts": [
+                "50d7e88d-ebc2-4bb8-a6d9-a4634fe1e452",
+                "613636b3-0ae8-4a7d-b7b3-a3b03cbc9952"
+            ],
+            "variants": [
+                {
+                    "id": "e732ddad9fa947d8aede3",
+                    "question": "What formula is used to calculate light travel time?",
+                    "options": [
+                        {
+                            "option_text": "$!$\\text{time} = \\frac{\\text{distance}}{\\text{speed}}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\text{time} = \\text{distance} \\times \\text{speed}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\text{time} = \\frac{\\text{speed}}{\\text{distance}}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\text{time} = \\text{distance} + \\text{speed}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e08c605d62044354aab9c",
+                    "question": "Select all the formulas that can be used to calculate the light travel time.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$\\text{time} = \\frac{\\text{distance}}{\\text{speed}}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\text{time} = \\text{distance} \\times \\text{speed}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\text{distance} = \\text{speed} \\times \\text{time}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$\\text{speed} = \\frac{\\text{distance}}{\\text{time}}$!$",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "a8bc590ff5f44fbf9cc5c",
+                    "question": "If the distance is doubled, what happens to the light travel time, assuming the speed of light remains constant?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Light travel time doubles",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Light travel time is halved",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Light travel time remains the same",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Light travel time quadruples",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "2730622ccbe743de9eaef",
+            "concepts": [
+                "dba8ca5a-36be-43ba-aed7-13bdc9a3dc2a",
+                "73bb5b21-22b0-488c-9219-92ebc101456b",
+                "0d016f00-77a7-4749-8c3f-0d07898d933c",
+                "05c95b02-f7b6-4f87-a3b7-a11d0beae4d1"
+            ],
+            "variants": [
+                {
+                    "id": "8a93a97c70704bbc8a08b",
+                    "question": "Match the celestial phenomenon with its cause:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Day and Night",
+                            "optionB": "Earth's rotation on its axis"
+                        },
+                        {
+                            "optionA": "Seasons",
+                            "optionB": "Earth's axial tilt and orbit around the Sun"
+                        },
+                        {
+                            "optionA": "Moon phases",
+                            "optionB": "Moon's orbit around the Earth and the varying angles at which we view its illuminated surface"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "86787b8069554cb3973a1",
+            "concepts": [
+                "fdc2ee77-27f4-4067-953a-95ef88c5fe4c",
+                "17b92c4a-6637-49ce-a128-a44653884885",
+                "1e25f1b2-2b27-465f-9b2e-3c08ba701277",
+                "a39b1258-f160-4832-9605-798bd0d0acb8"
+            ],
+            "variants": [
+                {
+                    "id": "c2fdb068f08f4c9cadf8d",
+                    "question": "Match the term with its description related to planetary orbits:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Dwarf Planet",
+                            "optionB": "Orbits the Sun and is spherical due to its gravity but has not cleared its orbital neighborhood"
+                        },
+                        {
+                            "optionA": "Asteroid",
+                            "optionB": "Rocky fragments mainly found in the belt between Mars and Jupiter"
+                        },
+                        {
+                            "optionA": "Comet",
+                            "optionB": "Composed of dust and ice"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

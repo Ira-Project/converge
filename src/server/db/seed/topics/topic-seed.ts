@@ -5,7 +5,7 @@ import { generateId } from "lucia";
 import { topics } from "../../schema/subject";
 
 
-import json from "./ib-physics.json";
+import json from "./igcse-physics.json";
 
 export async function createTopics() {
   // Parameters for assignment creation
@@ -13,7 +13,7 @@ export async function createTopics() {
   
   for (const t of json.topics) {
 
-    const topicObject = t as { name: string, slug: string, description: string };
+    const topicObject = t as { name: string, slug: string, description: string, order: string };
 
     // Check if topic already exists
     const existingTopic = await db.select().from(topics).where(
@@ -32,6 +32,7 @@ export async function createTopics() {
       name: topicObject.name,
       slug: topicObject.slug,
       description: topicObject.description,
+      order: topicObject.order,
     })
 
     topicList.push({
@@ -39,6 +40,7 @@ export async function createTopics() {
       name: topicObject.name,
       slug: topicObject.slug,
       description: topicObject.description,
+      order: topicObject.order,
     })
   }
 

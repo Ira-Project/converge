@@ -1,6 +1,6 @@
 import { asc, eq, sql } from "drizzle-orm";
 import type { ProtectedTRPCContext } from "../../../trpc";
-import type { CreateReasoningAssignmentAttemptInput, GetReasoningAssignmentInput, SubmitReasoningAssignmentAttemptInput, GetReasoningAssignmentAnalyticsInput, GetReasoningAssignmentSubmissionsInput, GetReasoningAssignmentQuestionAnalyticsInput } from "./reasonTrace.input";
+import type { CreateReasoningAssignmentAttemptInput, GetReasoningAssignmentInput, SubmitReasoningAssignmentAttemptInput, GetReasoningAssignmentAnalyticsInput, GetReasoningAssignmentSubmissionsInput, GetReasoningAssignmentQuestionAnalyticsInput, GetReasoningAssignmentByIdInput } from "./reasonTrace.input";
 import { reasoningAssignmentAttempts } from "@/server/db/schema/reasoning/reasoningAssignment";
 import { reasoningQuestionToAssignment } from "@/server/db/schema/reasoning/reasoningQuestions";
 import { generateId } from "lucia";
@@ -68,6 +68,7 @@ export const createReasoningAssignmentAttempt = async (ctx: ProtectedTRPCContext
   await ctx.db.insert(reasoningAssignmentAttempts).values({
     id: id,
     activityId: input.activityId,
+    assignmentId: input.assignmentId,
     userId: ctx.user.id,
   });
   return id;
@@ -371,4 +372,52 @@ export const getReasoningAssignmentQuestionAnalytics = async (ctx: ProtectedTRPC
     step2: result.step2.total > 0 ? result.step2.correct / result.step2.total : 0,
     step3: result.step3.total > 0 ? result.step3.correct / result.step3.total : 0,
   }));
+}
+
+export const getReasoningAssignmentById = async (ctx: ProtectedTRPCContext, input: GetReasoningAssignmentByIdInput) => {
+  return await ctx.db.query.reasoningAssignments.findFirst({
+    where: (table, { eq }) => eq(table.id, input.assignmentId),
+    columns: {
+      id: true,
+      name: true,
+      createdAt: true,
+      createdBy: true,
+      description: true,
+      topicId: true,
+    },
+    with : {
+      topic: {
+        columns: {
+          name: true,
+        }
+      },
+      reasoningQuestions: {
+        orderBy: [asc(reasoningQuestionToAssignment.order)],
+        with: {
+          question: {  
+            columns: {
+              id: true,
+              topText: true,
+              topImage: true,
+              questionText: true,
+              questionImage: true,
+              answerText: true,
+              answerImage: true,
+              correctAnswersUnit: true,
+              numberOfSteps: true,
+            },
+            with: {
+              answerOptions: {
+                columns: {
+                  id: true,
+                  optionText: true,
+                  optionImage: true,
+                },
+              }
+            }
+          },
+        }
+      },
+    }
+  });
 }

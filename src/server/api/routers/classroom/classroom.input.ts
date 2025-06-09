@@ -1,5 +1,4 @@
 import { z } from "zod";
-import { Roles } from "@/lib/constants"
 
 export const getClassroomSchema = z.object({
   id: z.string(),

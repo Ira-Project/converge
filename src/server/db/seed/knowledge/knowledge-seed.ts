@@ -6,7 +6,13 @@ import { db } from "../..";
 import { and, eq, not, isNull } from "drizzle-orm";
 import { generateId } from "lucia";
 
-import { knowledgeZapAssignmentAttempts, knowledgeZapAssignments } from "../../schema/knowledgeZap/knowledgeZapAssignment";
+import { 
+  knowledgeZapAssignmentAttempts, 
+  knowledgeZapAssignments, 
+  knowledgeZapAssignmentToCourse, 
+  knowledgeZapAssignmentToGrade, 
+  knowledgeZapAssignmentToSubject 
+} from "../../schema/knowledgeZap/knowledgeZapAssignment";
 import { multipleChoiceAnswerOptions, multipleChoiceAttempt, multipleChoiceQuestions } from "../../schema/knowledgeZap/multipleChoiceQuestions";
 import { ActivityType, KnowledgeZapQuestionType, Roles } from "@/lib/constants";
 import { knowledgeZapQuestionAttempts, knowledgeZapQuestions, knowledgeZapQuestionsToConcepts, knowledgeZapQuestionToAssignment } from "../../schema/knowledgeZap/knowledgeZapQuestions";
@@ -20,7 +26,22 @@ import { topics } from "../../schema/subject";
 import { concepts, conceptTracking } from "../../schema/concept";
 import { users } from "../../schema/user";
 
-export async function createKnowledgeZapAssignment(topicName: string) {
+import { 
+  mapKnowledgeZapAssignmentToCourse,
+  mapKnowledgeZapAssignmentToGrade,
+  mapKnowledgeZapAssignmentToSubject
+} from "../assignmentMapping-seed";
+
+export async function createKnowledgeZapAssignment(
+  topicName: string,
+  options?: {
+    courseIds?: string[];
+    subjectIds?: string[];
+    grades?: string[];
+  }
+) {
+  const { courseIds, subjectIds, grades } = options ?? {};
+
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
 
   const topic = await db.select().from(topics).where(eq(topics.name, json.name as string))
@@ -303,43 +324,43 @@ export async function createKnowledgeZapAssignment(topicName: string) {
     })
   }
 
-  const classes= await db.select().from(classrooms);
-  for(const classroom of classes) {
-    // Check if activity already exists in the classroom
-    const existingActivity = await db.select().from(activity).where(
-      and(
-        eq(activity.assignmentId, knowledgeZapAssignment.id),
-        eq(activity.classroomId, classroom.id)
-      )
-    )
+  console.log("Knowledge Zap creation complete");
+  console.log("--------------------------------");
 
-    // If activity does not exist, create it
-    if(existingActivity.length === 0) {
-      console.log("Adding assignment to classroom. Creating activity", knowledgeZapAssignment.id, classroom.id);
-      const activityId = generateId(21);
-      await db.insert(activity).values({
-        id: activityId,
-        assignmentId: knowledgeZapAssignment.id,
-        classroomId: classroom.id,
-        name: json.name,
-        topicId: topicId,
-        typeText: ActivityType.KnowledgeZap,
-        order: 0,
-        points: 100,
-      })
-      await db.insert(activityToAssignment).values({
-        id: generateId(21),
-        activityId: activityId,
-        knowledgeZapAssignmentId: knowledgeZapAssignment.id,
-      })
+  // Create mappings to courses
+  if (courseIds && courseIds.length > 0) {
+    console.log("Creating course mappings...");
+    for (const courseId of courseIds) {
+      await mapKnowledgeZapAssignmentToCourse(knowledgeZapAssignment.id, courseId);
     }
   }
 
-  console.log("Knowledge Zap creation complete");
-  console.log("--------------------------------");
+  // Create mappings to subjects
+  if (subjectIds && subjectIds.length > 0) {
+    console.log("Creating subject mappings...");
+    for (const subjectId of subjectIds) {
+      await mapKnowledgeZapAssignmentToSubject(knowledgeZapAssignment.id, subjectId);
+    }
+  }
+
+  // Create mappings to grades
+  if (grades && grades.length > 0) {
+    console.log("Creating grade mappings...");
+    for (const grade of grades) {
+      await mapKnowledgeZapAssignmentToGrade(knowledgeZapAssignment.id, grade);
+    }
+  }
 }
 
-export async function updateKnowledgeZapAssignment(topicName: string) {
+export async function updateKnowledgeZapAssignment(
+  topicName: string,
+  options?: {
+    courseIds?: string[];
+    subjectIds?: string[];
+    grades?: string[];
+  }
+) {
+  const { courseIds, subjectIds, grades } = options ?? {};
 
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
   const topic = await db.select().from(topics).where(eq(topics.name, json.name as string))
@@ -674,6 +695,30 @@ export async function updateKnowledgeZapAssignment(topicName: string) {
 
   console.log("Knowledge Zap creation complete");
   console.log("--------------------------------");
+
+  // Create mappings to courses
+  if (courseIds && courseIds.length > 0) {
+    console.log("Creating course mappings...");
+    for (const courseId of courseIds) {
+      await mapKnowledgeZapAssignmentToCourse(knowledgeZapAssignment.id, courseId);
+    }
+  }
+
+  // Create mappings to subjects
+  if (subjectIds && subjectIds.length > 0) {
+    console.log("Creating subject mappings...");
+    for (const subjectId of subjectIds) {
+      await mapKnowledgeZapAssignmentToSubject(knowledgeZapAssignment.id, subjectId);
+    }
+  }
+
+  // Create mappings to grades
+  if (grades && grades.length > 0) {
+    console.log("Creating grade mappings...");
+    for (const grade of grades) {
+      await mapKnowledgeZapAssignmentToGrade(knowledgeZapAssignment.id, grade);
+    }
+  }
 }
 
 export async function deleteKnowledgeZapAssignment(assignmentId: string) {
@@ -682,6 +727,18 @@ export async function deleteKnowledgeZapAssignment(assignmentId: string) {
     console.log("Knowledge Zap assignment not found");
     return;
   }
+
+  // Delete associated assignment-to-course mappings
+  console.log("Deleting knowledge zap assignment to course mappings", assignmentId);
+  await db.delete(knowledgeZapAssignmentToCourse).where(eq(knowledgeZapAssignmentToCourse.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-grade mappings
+  console.log("Deleting knowledge zap assignment to grade mappings", assignmentId);
+  await db.delete(knowledgeZapAssignmentToGrade).where(eq(knowledgeZapAssignmentToGrade.assignmentId, assignmentId));
+
+  // Delete associated assignment-to-subject mappings
+  console.log("Deleting knowledge zap assignment to subject mappings", assignmentId);
+  await db.delete(knowledgeZapAssignmentToSubject).where(eq(knowledgeZapAssignmentToSubject.assignmentId, assignmentId));
 
   const questionsToAssignment = await db.select().from(knowledgeZapQuestionToAssignment).where(eq(knowledgeZapQuestionToAssignment.assignmentId, assignmentId));
   for(const questionToAssignment of questionsToAssignment) {
@@ -1176,7 +1233,16 @@ export async function printConceptScores() {
   // })));
 }
 
-export async function createGeneratedKnowledgeZapAssignment(topicName: string, userId: string) {
+export async function createGeneratedKnowledgeZapAssignment(
+  topicName: string, 
+  userId: string,
+  options?: {
+    courseIds?: string[];
+    subjectIds?: string[];
+    grades?: string[];
+  }
+) {
+  const { courseIds, subjectIds, grades } = options ?? {};
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
 
   const topic = await db.select().from(topics).where(eq(topics.name, json.name as string))
@@ -1446,6 +1512,30 @@ export async function createGeneratedKnowledgeZapAssignment(topicName: string, u
 
   console.log("Generated Knowledge Zap creation complete");
   console.log("--------------------------------");
+
+  // Create mappings to courses
+  if (courseIds && courseIds.length > 0) {
+    console.log("Creating course mappings...");
+    for (const courseId of courseIds) {
+      await mapKnowledgeZapAssignmentToCourse(knowledgeZapAssignment.id, courseId);
+    }
+  }
+
+  // Create mappings to subjects
+  if (subjectIds && subjectIds.length > 0) {
+    console.log("Creating subject mappings...");
+    for (const subjectId of subjectIds) {
+      await mapKnowledgeZapAssignmentToSubject(knowledgeZapAssignment.id, subjectId);
+    }
+  }
+
+  // Create mappings to grades
+  if (grades && grades.length > 0) {
+    console.log("Creating grade mappings...");
+    for (const grade of grades) {
+      await mapKnowledgeZapAssignmentToGrade(knowledgeZapAssignment.id, grade);
+    }
+  }
   
   return knowledgeZapAssignment;
 }

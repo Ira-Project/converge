@@ -8,9 +8,16 @@ import { topics } from "../../schema/subject";
 
 import { concepts } from "../../schema/concept";
 import { conceptEdges } from "../../schema/concept";
-import { conceptsToTopics } from "../../schema/concept";
+import { conceptsToTopics, conceptsToSubjects, conceptsToCourses, conceptsToGrades } from "../../schema/concept";
 
-export async function createConcepts(topicName: string) {
+export async function createConcepts(
+  topicName: string, 
+  options?: {
+    courseIds?: string[];
+    subjectIds?: string[];
+    grades?: string[];
+  }
+) {
   // Parameters for assignment creation
   const { default: data } = await import( `./${topicName}.json`, { assert: { type: "json" } });
   
@@ -24,7 +31,7 @@ export async function createConcepts(topicName: string) {
     return
   }
 
-  if(!topicName.includes(topic?.[0].name)) {
+  if(!(topicName.toLowerCase()).includes(topic?.[0].name.toLowerCase())) {
     console.log("Topic name does not match")
     return
   }
@@ -66,6 +73,75 @@ export async function createConcepts(topicName: string) {
         conceptId: concept.concept_id,
         topicId: topicId as string,
       });
+    }
+
+    // Map to courses if provided
+    if (options?.courseIds && options.courseIds.length > 0) {
+      for (const courseId of options.courseIds) {
+        // Check if concept-course mapping already exists
+        const existingMapping = await db.select()
+          .from(conceptsToCourses)
+          .where(and(
+            eq(conceptsToCourses.conceptId, concept.concept_id as string),
+            eq(conceptsToCourses.courseId, courseId),
+            eq(conceptsToCourses.isDeleted, false)
+          ));
+
+        if (existingMapping.length === 0) {
+          await db.insert(conceptsToCourses).values({
+            id: generateId(21),
+            conceptId: concept.concept_id,
+            courseId: courseId,
+          });
+          console.log(`Mapped concept ${concept.concept_id} to course ${courseId}`);
+        }
+      }
+    }
+
+    // Map to subjects if provided
+    if (options?.subjectIds && options.subjectIds.length > 0) {
+      for (const subjectId of options.subjectIds) {
+        // Check if concept-subject mapping already exists
+        const existingMapping = await db.select()
+          .from(conceptsToSubjects)
+          .where(and(
+            eq(conceptsToSubjects.conceptId, concept.concept_id as string),
+            eq(conceptsToSubjects.subjectId, subjectId),
+            eq(conceptsToSubjects.isDeleted, false)
+          ));
+
+        if (existingMapping.length === 0) {
+          await db.insert(conceptsToSubjects).values({
+            id: generateId(21),
+            conceptId: concept.concept_id,
+            subjectId: subjectId,
+          });
+          console.log(`Mapped concept ${concept.concept_id} to subject ${subjectId}`);
+        }
+      }
+    }
+
+    // Map to grades if provided
+    if (options?.grades && options.grades.length > 0) {
+      for (const grade of options.grades) {
+        // Check if concept-grade mapping already exists
+        const existingMapping = await db.select()
+          .from(conceptsToGrades)
+          .where(and(
+            eq(conceptsToGrades.conceptId, concept.concept_id as string),
+            eq(conceptsToGrades.grade, grade),
+            eq(conceptsToGrades.isDeleted, false)
+          ));
+
+        if (existingMapping.length === 0) {
+          await db.insert(conceptsToGrades).values({
+            id: generateId(21),
+            conceptId: concept.concept_id,
+            grade: grade,
+          });
+          console.log(`Mapped concept ${concept.concept_id} to grade ${grade}`);
+        }
+      }
     }
   }  
 
@@ -200,4 +276,182 @@ export async function createGeneratedConcepts(topicName: string, userId: string)
     }
   }
   console.log(`Completed seeding generated concepts for topic: ${topicName} by user: ${userId}`)
+}
+
+export async function mapAllConceptsToCourses(courseIds: string[]) {
+  console.log(`Mapping all concepts to ${courseIds.length} courses...`);
+  
+  // Get all concepts
+  const allConcepts = await db.select({ id: concepts.id }).from(concepts);
+  console.log(`Found ${allConcepts.length} concepts to map`);
+
+  for (const concept of allConcepts) {
+    for (const courseId of courseIds) {
+      // Check if concept-course mapping already exists
+      const existingMapping = await db.select()
+        .from(conceptsToCourses)
+        .where(and(
+          eq(conceptsToCourses.conceptId, concept.id),
+          eq(conceptsToCourses.courseId, courseId),
+          eq(conceptsToCourses.isDeleted, false)
+        ));
+
+      if (existingMapping.length === 0) {
+        await db.insert(conceptsToCourses).values({
+          id: generateId(21),
+          conceptId: concept.id,
+          courseId: courseId,
+        });
+        console.log(`Mapped concept ${concept.id} to course ${courseId}`);
+      }
+    }
+  }
+  
+  console.log(`Completed mapping all concepts to courses`);
+}
+
+export async function mapAllConceptsToSubjects(subjectIds: string[]) {
+  console.log(`Mapping all concepts to ${subjectIds.length} subjects...`);
+  
+  // Get all concepts
+  const allConcepts = await db.select({ id: concepts.id }).from(concepts);
+  console.log(`Found ${allConcepts.length} concepts to map`);
+
+  for (const concept of allConcepts) {
+    for (const subjectId of subjectIds) {
+      // Check if concept-subject mapping already exists
+      const existingMapping = await db.select()
+        .from(conceptsToSubjects)
+        .where(and(
+          eq(conceptsToSubjects.conceptId, concept.id),
+          eq(conceptsToSubjects.subjectId, subjectId),
+          eq(conceptsToSubjects.isDeleted, false)
+        ));
+
+      if (existingMapping.length === 0) {
+        await db.insert(conceptsToSubjects).values({
+          id: generateId(21),
+          conceptId: concept.id,
+          subjectId: subjectId,
+        });
+        console.log(`Mapped concept ${concept.id} to subject ${subjectId}`);
+      }
+    }
+  }
+  
+  console.log(`Completed mapping all concepts to subjects`);
+}
+
+export async function mapAllConceptsToGrades(grades: string[]) {
+  console.log(`Mapping all concepts to ${grades.length} grades...`);
+  
+  // Get all concepts
+  const allConcepts = await db.select({ id: concepts.id }).from(concepts);
+  console.log(`Found ${allConcepts.length} concepts to map`);
+
+  for (const concept of allConcepts) {
+    for (const grade of grades) {
+      // Check if concept-grade mapping already exists
+      const existingMapping = await db.select()
+        .from(conceptsToGrades)
+        .where(and(
+          eq(conceptsToGrades.conceptId, concept.id),
+          eq(conceptsToGrades.grade, grade),
+          eq(conceptsToGrades.isDeleted, false)
+        ));
+
+      if (existingMapping.length === 0) {
+        await db.insert(conceptsToGrades).values({
+          id: generateId(21),
+          conceptId: concept.id,
+          grade: grade,
+        });
+        console.log(`Mapped concept ${concept.id} to grade ${grade}`);
+      }
+    }
+  }
+  
+  console.log(`Completed mapping all concepts to grades`);
+}
+
+export async function mapAllConceptsToCoursesSubjectsAndGrades(options: {
+  courseIds?: string[];
+  subjectIds?: string[];
+  grades?: string[];
+}) {
+  console.log(`Mapping all concepts to courses, subjects, and grades...`);
+  
+  // Get all concepts
+  const allConcepts = await db.select({ id: concepts.id }).from(concepts);
+  console.log(`Found ${allConcepts.length} concepts to map`);
+
+  for (const concept of allConcepts) {
+    // Map to courses if provided
+    if (options.courseIds && options.courseIds.length > 0) {
+      for (const courseId of options.courseIds) {
+        // Check if concept-course mapping already exists
+        const existingMapping = await db.select()
+          .from(conceptsToCourses)
+          .where(and(
+            eq(conceptsToCourses.conceptId, concept.id),
+            eq(conceptsToCourses.courseId, courseId),
+            eq(conceptsToCourses.isDeleted, false)
+          ));
+
+        if (existingMapping.length === 0) {
+          await db.insert(conceptsToCourses).values({
+            id: generateId(21),
+            conceptId: concept.id,
+            courseId: courseId,
+          });
+        }
+      }
+    }
+
+    // Map to subjects if provided
+    if (options.subjectIds && options.subjectIds.length > 0) {
+      for (const subjectId of options.subjectIds) {
+        // Check if concept-subject mapping already exists
+        const existingMapping = await db.select()
+          .from(conceptsToSubjects)
+          .where(and(
+            eq(conceptsToSubjects.conceptId, concept.id),
+            eq(conceptsToSubjects.subjectId, subjectId),
+            eq(conceptsToSubjects.isDeleted, false)
+          ));
+
+        if (existingMapping.length === 0) {
+          await db.insert(conceptsToSubjects).values({
+            id: generateId(21),
+            conceptId: concept.id,
+            subjectId: subjectId,
+          });
+        }
+      }
+    }
+
+    // Map to grades if provided
+    if (options.grades && options.grades.length > 0) {
+      for (const grade of options.grades) {
+        // Check if concept-grade mapping already exists
+        const existingMapping = await db.select()
+          .from(conceptsToGrades)
+          .where(and(
+            eq(conceptsToGrades.conceptId, concept.id),
+            eq(conceptsToGrades.grade, grade),
+            eq(conceptsToGrades.isDeleted, false)
+          ));
+
+        if (existingMapping.length === 0) {
+          await db.insert(conceptsToGrades).values({
+            id: generateId(21),
+            conceptId: concept.id,
+            grade: grade,
+          });
+        }
+      }
+    }
+  }
+  
+  console.log(`Completed mapping all concepts to courses, subjects, and grades`);
 }

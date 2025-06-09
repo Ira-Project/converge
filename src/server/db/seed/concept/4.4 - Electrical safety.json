@@ -1,0 +1,144 @@
+{
+    "delimeter": "$!$",
+    "topicIdDev": "exkh2v4g07yn6im331gn6",
+    "topicIdProd": "",
+    "chapter_text": "**Electrical Safety Principles**\n\n*   Electricity transfers substantial energy, necessitating caution and safety measures due to potential hazards like overheated wires, damaged insulation, damp conditions, and excess current. Safety features include fuses, trip switches, double insulation, and earthing.\n\n**Dangers of Electricity**\n\n*   **Hazards**: Damaged insulation, overheated cables, damp conditions, excess current from overloaded plugs, extension leads, and single/multiple sockets.\n*   **Electric Shock**:\n    *   Occurs when current flows through the body to earth, typically due to damaged insulation or faulty wiring.\n    *   Skin resistance: Dry skin is approximately $10000 \\, \\Omega$, wet skin is about $1000 \\, \\Omega$ (water is a good conductor).\n    *   Current calculation: $I = V/R$. For a 240V supply, dry skin current is $240/10000 = 0.024 \\, \\text{A} = 24 \\, \\text{mA}$, while wet skin current can reach $240/1000 = 0.24 \\, \\text{A} = 240 \\, \\text{mA}$ (potentially lethal).\n    *   Severity depends on current size and duration; $100 \\, \\text{mA}$ through the heart is often fatal. Damp conditions increase severity by lowering resistance.\n    *   **Prevention**: Switch off supply before repairs, use plugs with earth pins and cord grips (preferably rubber/plastic cases), avoid contact with water.\n    *   **Action for Electric Shock**: Switch off supply, call medical assistance, perform CPR if breathing/heartbeat stops.\n*   **Fire Risks**:\n    *   Caused by flammable material near hot appliances or overheated electrical wiring.\n    *   Heat production rate: $P = I^2R$.\n    *   **Prevention**: Use correct fuse, avoid connecting too many appliances via extension leads or adapters, do not overload circuits, use thick wires for high-current appliances (like heaters) and connect them to appropriate circuits. Damaged insulation or faulty wiring causing current to earth through flammable material can also start fires.\n\n**House Circuits and Components**\n\n*   **Mains Supply Wires**: Live (L), Neutral (N), and Earth (E).\n    *   Neutral wire is earthed at the sub-station, having no potential difference with earth.\n    *   Earth wire connects to the top socket of power points and is earthed.\n    *   Supply is alternating current (a.c.).\n*   **Circuits in Parallel**:\n    *   Appliances are connected in parallel across the live and neutral wires, receiving the full mains potential difference (e.g., 230V).\n    *   **Advantages**: Fixed voltage (consistent brightness), independent operation, and if one appliance fails, others remain operational.\n*   **Switches**: Always placed in the live wire to ensure the circuit is fully de-energized when switched off, preventing \"live\" components.\n*   **Ring Main Circuit**: Live and neutral wires run in complete rings around the house, with power sockets tapped off.\n    *   Allows current to flow from two directions, enabling thinner wires.\n    *   Protected by a 30A fuse. Total current must not exceed this limit to prevent overheating.\n\n**Safety Devices**\n\n*   **Fuses**:\n    *   **Function**: Protects a circuit from excessive current, always placed in the live wire.\n    *   **Mechanism**: A short length of low-melting-point wire (e.g., tinned copper) that melts and breaks the circuit when current exceeds a set value.\n    *   **Causes of Excess Current**: Short circuits (due to worn insulation) and overloaded circuits.\n    *   **Purpose**: Prevents wiring overheating and fire, ensures current-carrying capacity of wiring is not exceeded.\n    *   **Replacement**: Always switch off supply and replace with a fuse of the same recommended value.\n    *   **Ratings**: 3A (for appliances up to 720W), 13A (for appliances between 720W and 3kW).\n    *   Current calculation for fuse choice: $I = P/V$.\n*   **Trip Switches (Circuit Breakers)**:\n    *   **Function**: Modern alternative to fuses in consumer units.\n    *   **Mechanism**: Contains an electromagnet that, when current exceeds its rated value, becomes strong enough to separate contacts and break the circuit.\n    *   **Advantages**: Operate faster than fuses, and are resettable by pressing a button.\n    *   **Setting**: Chosen to be slightly higher than the device's normal operating current.\n*   **Residual Current Circuit Breaker (RCCB) / Residual Current Device (RCD)**:\n    *   **Purpose**: Used when the earth path resistance is insufficient to blow a fuse or trip a circuit breaker.\n    *   **Mechanism**: Detects any difference between the currents in the live and neutral wires (indicating an earth fault where current is leaking to earth). Breaks the circuit quickly to prevent danger.\n    *   **Use Cases**: Recommended for portable appliances (e.g., lawnmowers) where the user might make a good earth connection, increasing electrocution risk.\n\n**Appliance Safety Features**\n\n*   **Earthing**:\n    *   **Purpose**: Safety precaution to prevent electric shock if an appliance develops a fault.\n    *   **Mechanism**: The earth pin on a three-pin plug connects the metal casing of the appliance to earth (via the house's earthing system, e.g., metal water pipes or supply cable earth).\n    *   **Benefit**: If a live wire touches the metal casing, a large current flows directly to earth, blowing the fuse and preventing the casing from becoming \"live\" and dangerous to touch.\n*   **Double Insulation**:\n    *   **Purpose**: Reduces electric shock risk for appliances that do not have an earth wire.\n    *   **Mechanism**: Appliance uses a two-core insulated cable (no earth wire) and is enclosed in a non-conducting plastic case. Internal electrical parts are isolated from any metal parts that the user might touch.\n    *   **Benefit**: Eliminates the risk of shock even if an internal fault occurs.",
+    "chapter_concepts": [
+        {
+            "concept_id": "4be978de-11c7-4a0a-8fb5-aadad7e092e8",
+            "concept_question": "Why must electricity be handled cautiously?",
+            "concept_answer": "Electricity transfers large amounts of energy, posing hazards like overheating and insulation damage.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "e8d1c812-35bb-43ab-b60e-efe9698abff2",
+            "concept_question": "What are electrical hazards?",
+            "concept_answer": "Electrical hazards include damaged insulation, overheated cables, damp conditions, and excess current from overloaded sources.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "361f8b09-0c07-4f23-9523-39459c82e9e4",
+            "concept_question": "What is electric shock?",
+            "concept_answer": "Electric shock occurs when electric current passes through the body to earth.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "70bb1da6-4754-4837-8606-4678ecac620c",
+            "concept_question": "How does moisture affect skin resistance?",
+            "concept_answer": "Moisture reduces skin resistance, making wet skin significantly more conductive than dry skin.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "ec9334df-1b87-4cde-8ba3-db2e48408a2e",
+            "concept_question": "What is Ohm's Law?",
+            "concept_answer": "Ohm's Law states that electric current is the ratio of voltage to resistance.",
+            "concept_formula": [
+                "$!$I=\\frac{V}{R}$!$"
+            ],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "a6e4bec1-8492-419f-9a78-e751da5b2346",
+            "concept_question": "What is the lethal current threshold?",
+            "concept_answer": "A current of around 100 mA passing through the heart is often fatal.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "361f8b09-0c07-4f23-9523-39459c82e9e4"
+            ]
+        },
+        {
+            "concept_id": "7438fcb5-3fdf-4b54-bbb0-b001ce74700b",
+            "concept_question": "What is the heat production formula?",
+            "concept_answer": "Heat production is determined by the current squared times the resistance.",
+            "concept_formula": [
+                "$!$P=I^2R$!$"
+            ],
+            "pre-requisites": [
+                "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+            ]
+        },
+        {
+            "concept_id": "f4906163-4e4a-4328-a4b4-11fe9f6ae1e9",
+            "concept_question": "What are mains supply wires?",
+            "concept_answer": "Mains supply wires include live, neutral, and earth wires, with the neutral earthed at the substation and the earth providing a safety ground.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "c933d8bf-b948-4c22-9e65-83622a687534",
+            "concept_question": "What is a parallel circuit?",
+            "concept_answer": "In parallel circuits, appliances receive the full mains voltage and operate independently.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f4906163-4e4a-4328-a4b4-11fe9f6ae1e9"
+            ]
+        },
+        {
+            "concept_id": "ca464fd2-c3f5-4506-ab1e-15ab647cbc3a",
+            "concept_question": "Why is the switch placed in the live wire?",
+            "concept_answer": "Placing the switch in the live wire fully de-energizes the circuit when turned off.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "f456635e-71a7-47cd-8413-c959e204e8a4",
+            "concept_question": "What is a ring main circuit?",
+            "concept_answer": "A ring main circuit loops live and neutral wires around a house with multiple socket taps and fuse protection.",
+            "concept_formula": [],
+            "pre-requisites": [
+                "f4906163-4e4a-4328-a4b4-11fe9f6ae1e9",
+                "c933d8bf-b948-4c22-9e65-83622a687534"
+            ]
+        },
+        {
+            "concept_id": "1d43d11a-1d06-400b-a2db-c14f2e20319b",
+            "concept_question": "What is a fuse in an electrical circuit?",
+            "concept_answer": "A fuse is a safety device that melts to break the circuit when current exceeds a safe limit.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "9b6731ea-3a10-4320-b77b-a729fcfd2577",
+            "concept_question": "What is the fuse current calculation formula?",
+            "concept_answer": "Fuse current is determined by dividing power by voltage.",
+            "concept_formula": [
+                "$!$I=\\frac{P}{V}$!$"
+            ],
+            "pre-requisites": [
+                "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+            ]
+        },
+        {
+            "concept_id": "181cebdc-4e96-42ff-9c52-f966b71e0e71",
+            "concept_question": "What is a trip switch?",
+            "concept_answer": "A trip switch is a circuit breaker that uses an electromagnet to interrupt excessive current and is resettable.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "55bd213f-8f70-4b10-9fef-f4d74916f31e",
+            "concept_question": "What does an RCCB or RCD do?",
+            "concept_answer": "An RCCB or RCD detects imbalances between live and neutral currents and disconnects the circuit to prevent shock.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "ae73793b-cea5-4b41-a458-d2f5e7494eee",
+            "concept_question": "What is earthing in appliances?",
+            "concept_answer": "Earthing connects an appliance's metal casing to ground, safely diverting fault currents.",
+            "concept_formula": [],
+            "pre-requisites": []
+        },
+        {
+            "concept_id": "02d8d0eb-f236-4fbc-9eab-262ff2ac9f12",
+            "concept_question": "What is double insulation?",
+            "concept_answer": "Double insulation uses two layers of insulation to protect users from electric shock in non-earthed appliances.",
+            "concept_formula": [],
+            "pre-requisites": []
+        }
+    ]
+}

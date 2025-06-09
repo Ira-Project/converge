@@ -19,7 +19,10 @@ import { knowledgeZapAssignmentAttempts } from "../../schema/knowledgeZap/knowle
 import { explainTestAttempts } from "../../schema/learnByTeaching/explainTestAttempt";
 import { explainComputedAnswers, explanations } from "../../schema/learnByTeaching/explanations";
 import { conceptMappingAttemptEdges, conceptMappingAttemptNodes, conceptMappingAttempts, conceptMappingMapAttempt } from "../../schema/conceptMapping/conceptMappingAttempts";
-import { conceptTracking } from "../../schema/concept";
+import { conceptTracking, concepts, conceptEdges, conceptsToTopics } from "../../schema/concept";
+import { explainQuestionConcepts } from "../../schema/learnByTeaching/explainQuestions";
+import { stepSolveStepConcepts } from "../../schema/stepSolve/stepSolveQuestions";
+import { knowledgeZapQuestionsToConcepts } from "../../schema/knowledgeZap/knowledgeZapQuestions";
 
 
 async function deleteStepSolveAttempt(attemptId: string) {
@@ -171,6 +174,49 @@ async function deleteConceptMappingAttempt(attemptId: string) {
 
   await db.delete(conceptMappingAttempts)
     .where(eq(conceptMappingAttempts.id, attemptId));
+}
+
+async function deleteUserConcepts(userId: string) {
+  console.log(`Deleting concepts created by user: ${userId}`);
+  
+  // Get all concepts created by the user
+  const userConcepts = await db.select().from(concepts)
+    .where(eq(concepts.createdBy, userId));
+  console.log(`Found ${userConcepts.length} concepts to delete`);
+
+  for (const concept of userConcepts) {
+    if (!concept.id) continue;
+
+    // Delete all junction table references to this concept
+    await db.delete(conceptsToTopics)
+      .where(eq(conceptsToTopics.conceptId, concept.id));
+    
+    await db.delete(explainQuestionConcepts)
+      .where(eq(explainQuestionConcepts.conceptId, concept.id));
+    
+    await db.delete(stepSolveStepConcepts)
+      .where(eq(stepSolveStepConcepts.conceptId, concept.id));
+    
+    await db.delete(knowledgeZapQuestionsToConcepts)
+      .where(eq(knowledgeZapQuestionsToConcepts.conceptId, concept.id));
+
+    // Delete concept tracking records for this concept
+    await db.delete(conceptTracking)
+      .where(eq(conceptTracking.conceptId, concept.id));
+
+    // Delete concept edges where this concept is either the source or target
+    await db.delete(conceptEdges)
+      .where(eq(conceptEdges.conceptId, concept.id));
+    
+    await db.delete(conceptEdges)
+      .where(eq(conceptEdges.relatedConceptId, concept.id));
+  }
+
+  // Finally delete the concepts themselves
+  await db.delete(concepts)
+    .where(eq(concepts.createdBy, userId));
+
+  console.log(`Successfully deleted ${userConcepts.length} concepts and related data`);
 }
 
 export async function deleteClassroom(classroomId: string) {
@@ -328,6 +374,9 @@ export async function deleteUser(email: string) {
     if (!attempt.id) continue;
     await deleteConceptMappingAttempt(attempt.id);
   }
+
+  // Delete all concepts created by the user
+  await deleteUserConcepts(userId);
 
   // Delete all classrooms created by the user
   const classes = await db.select().from(classrooms).where(eq(classrooms.createdBy, userId));

@@ -1,0 +1,388 @@
+{
+    "name": "Density",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "a0a3289713b8463bae5ab",
+            "concepts": [
+                "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18"
+            ],
+            "variants": [
+                {
+                    "id": "97c0ec36965a4bed8da1f",
+                    "question": "Which of the following is/are correct regarding the definition of density?",
+                    "options": [
+                        {
+                            "option_text": "Density is the mass per unit volume.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Density is the volume per unit mass.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Density is a measure of how tightly packed a substance is.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Density is only applicable to solids.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "30852cbe833a4385a3ea1",
+                    "question": "A substance has a mass of $!$100 g$!$ and a volume of $!$50 cm^3$!$. What is its density in $!$g/cm^3$!$?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$0.5 g/cm^3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$2 g/cm^3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$5000 g/cm^3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$150 g/cm^3$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "2efe12cb42654dc5ac35b",
+                    "question": "If the volume of a substance is doubled while its mass remains constant, what happens to its density?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Density doubles.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Density halves.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Density remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Density quadruples.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "704b2a94e515439abe494",
+            "concepts": [
+                "77c37268-e0ae-4eac-b7fd-27f2417e395e",
+                "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18"
+            ],
+            "variants": [
+                {
+                    "id": "96eed8c9f97a4e8983f79",
+                    "question": "Which of the following is the SI unit of density?",
+                    "options": [
+                        {
+                            "option_text": "Kilograms per cubic meter ($!$\\text{kg/m}^3$!$)",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Grams per cubic centimeter ($!$\\text{g/cm}^3$!$)",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Pounds per cubic inch",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Grams per milliliter ($!$\\text{g/mL}$!$)",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "9f2cea38870b45c39cf5d",
+                    "question": "A substance has a mass of 1000 kg and a volume of 1 cubic meter. What is its density in SI units?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "1000 $!$\\text{kg/m}^3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1 $!$\\text{kg/m}^3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1000 $!$\\text{g/cm}^3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1 $!$\\text{g/cm}^3$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "35a4ea62a85c47bfa30bb",
+                    "question": "Which of the following statements are correct regarding density? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Density is defined as mass per unit volume.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The SI unit of density is $!$\\text{kg/m}^3$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Density is a measure of how much space an object occupies.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Density is independent of temperature and pressure.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "882c7eb7125944b89c27c",
+            "concepts": [
+                "51a5b849-b39b-4d24-99b2-599b0caa884c",
+                "77c37268-e0ae-4eac-b7fd-27f2417e395e",
+                "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18"
+            ],
+            "variants": [
+                {
+                    "id": "f62c785a02834c5f90e43",
+                    "question": "What is the correct conversion factor to convert density from grams per cubic centimeter ($!$\\text{g/cm}^3$!$) to kilograms per cubic meter ($!$\\text{kg/m}^3$!$)?",
+                    "options": [
+                        {
+                            "option_text": "Multiply by 10",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Multiply by 100",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Multiply by 1000",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Divide by 1000",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "996ad521ede54c1b9442c",
+                    "question": "A substance has a density of 5 $!$\\text{g/cm}^3$!$. What is its density in $!$\\text{kg/m}^3$!$?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "0.005 $!$\\text{kg/m}^3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "500 $!$\\text{kg/m}^3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "5000 $!$\\text{kg/m}^3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "50000 $!$\\text{kg/m}^3$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a89a68edebac40279b3a6",
+                    "question": "Which of the following statements correctly describes the conversion between grams per cubic centimeter ($!$\\text{g/cm}^3$!$) and kilograms per cubic meter ($!$\\text{kg/m}^3$!$)? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "To convert from $!$\\text{g/cm}^3$!$ to $!$\\text{kg/m}^3$!$, multiply by 1000.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "To convert from $!$\\text{kg/m}^3$!$ to $!$\\text{g/cm}^3$!$, multiply by 1000.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1 $!$\\text{g/cm}^3$!$ is equal to 1000 $!$\\text{kg/m}^3$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "1 $!$\\text{kg/m}^3$!$ is equal to 1000 $!$\\text{g/cm}^3$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "08cec9d4726541898ff90",
+            "concepts": [
+                "2bfff920-f1a0-48dc-ba35-d8ad0e64e878",
+                "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18"
+            ],
+            "variants": [
+                {
+                    "id": "22c41437dcce4ea788eea",
+                    "question": "Which scenario best describes the principle of composite buoyancy?",
+                    "options": [
+                        {
+                            "option_text": "A solid block of steel floating in water.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A hollow metal ship floats because the enclosed air lowers the average density.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A rock sinks in water due to its high density.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Density of two liquids is being compared.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cafe6ecb0cda453aacb8b",
+                    "question": "Which of the following is NOT a factor in determining whether an object will float, according to the principle of buoyancy?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The object's volume.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's shape.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The average density of the object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The color of the object.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a078d76bfdde4bd9b513b",
+                    "question": "Select all of the following statements that correctly describe how composite buoyancy allows a ship to float.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The overall density of the ship, including the air inside, is less than the density of water.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The weight of the water displaced by the ship is equal to the weight of the ship.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The metal hull of the ship is less dense than water.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ships are able to change the density of the water around them.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "97828f138cee46abb4dc9",
+            "concepts": [
+                "70870073-1178-47d6-a764-fd91afde7460",
+                "0bcbc0d9-3537-4386-9a81-b8d3ca195bae",
+                "cddeec9b-8762-49d2-a00f-804e55671c52"
+            ],
+            "variants": [
+                {
+                    "id": "c44e84b7e96b424d95366",
+                    "question": "Match the formula with the corresponding quantity it calculates:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Density",
+                            "optionB": "$!$\\rho = \\frac{m}{V}$!$"
+                        },
+                        {
+                            "optionA": "Mass",
+                            "optionB": "$!$m = V \\times \\rho$!$"
+                        },
+                        {
+                            "optionA": "Volume",
+                            "optionB": "$!$V = \\frac{m}{\\rho}$!$"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "88c717b93665430588455",
+            "concepts": [
+                "aab4d3be-217f-4eb1-9025-b48ff48b15f7",
+                "0d3e7a7e-88cc-4897-bfb0-50c099ee9dd7",
+                "ad8e0905-7afb-40b6-97cd-bb748fc1df61"
+            ],
+            "variants": [
+                {
+                    "id": "fc648bd388bc4432a5a83",
+                    "question": "Match the conditions with the outcome for an object immersed in a liquid:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Object's density > Liquid's density",
+                            "optionB": "Object Sinks"
+                        },
+                        {
+                            "optionA": "Object's density < Liquid's density",
+                            "optionB": "Object Floats"
+                        },
+                        {
+                            "optionA": "Lower density liquid over Higher density liquid",
+                            "optionB": "Liquids Stratify"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

@@ -1,0 +1,149 @@
+{
+  "name": "IGCSE Physics",
+  "topics": [
+    {
+      "name": "Physical Quantities and Measurement Techniques",
+      "slug": "physical-quantities-and-measurement-techniques",
+      "description": "Introduces measurement methods (ruler, caliper, stopwatch), scalar vs vector quantities, and graphical interpretation of data.",
+      "order": "1.1"
+    },
+    {
+      "name": "Motion",
+      "slug": "motion",
+      "description": "Covers speed, velocity, acceleration, equations of motion, and interpretation of distance‑time and velocity‑time graphs.",
+      "order": "1.2"
+    },
+    {
+      "name": "Mass and Weight",
+      "slug": "mass-and-weight",
+      "description": "Explains the difference between mass and weight, measurement methods, gravitational field strength, and the relation W = m g.",
+      "order": "1.3"
+    },
+    {
+      "name": "Density",
+      "slug": "density",
+      "description": "Defines density, how to determine density experimentally, and its applications in buoyancy and material identification.",
+      "order": "1.4"
+    },
+    {
+      "name": "Forces",
+      "slug": "forces",
+      "description": "Introduces types of forces (contact and non‑contact), Newton’s laws, resultant forces, friction, and tension.",
+      "order": "1.5"
+    },
+    {
+      "name": "Momentum",
+      "slug": "momentum",
+      "description": "Covers impulse, linear momentum, and conservation of momentum in collisions and interactions.",
+      "order": "1.6"
+    },
+    {
+      "name": "Energy, Work and Power",
+      "slug": "energy-work-and-power",
+      "description": "Explores energy stores, work done, power, efficiency, and energy transfer calculations.",
+      "order": "1.7"
+    },
+    {
+      "name": "Pressure",
+      "slug": "pressure",
+      "description": "Examines pressure in solids and fluids, including calculations, atmospheric pressure, and applications like hydraulic systems.",
+      "order": "1.8"
+    },
+    {
+      "name": "Kinetic Particle Model of Matter",
+      "slug": "kinetic-particle-model-of-matter",
+      "description": "Introduces the particle model in solids, liquids, and gases and links microscopic motion to macroscopic properties.",
+      "order": "2.1"
+    },
+    {
+      "name": "Thermal Properties and Temperature",
+      "slug": "thermal-properties-and-temperature",
+      "description": "Discusses temperature, heat capacity, specific heat, latent heat, and their measurement and applications.",
+      "order": "2.2"
+    },
+    {
+      "name": "Transfer of Thermal Energy",
+      "slug": "transfer-of-thermal-energy",
+      "description": "Covers conduction, convection and radiation of heat, including insulation and the greenhouse effect.",
+      "order": "2.3"
+    },
+    {
+      "name": "General Properties of Waves",
+      "slug": "general-properties-of-waves",
+      "description": "Defines waves, wavelength, frequency, amplitude, wave speed and behaviours like reflection, refraction and diffraction.",
+      "order": "3.1"
+    },
+    {
+      "name": "Light",
+      "slug": "light",
+      "description": "Explores properties of light, reflection and refraction in mirrors and lenses, and how optical instruments work.",
+      "order": "3.2"
+    },
+    {
+      "name": "Electromagnetic Spectrum",
+      "slug": "electromagnetic-spectrum",
+      "description": "Covers the EM spectrum, properties and uses of different bands (radio, microwave, IR, UV, X‑ray, gamma).",
+      "order": "3.3"
+    },
+    {
+      "name": "Sound",
+      "slug": "sound",
+      "description": "Examines production, transmission and detection of sound, speed of sound in different media, and acoustic applications.",
+      "order": "3.4"
+    },
+    {
+      "name": "Simple Phenomena of Magnetism",
+      "slug": "simple-phenomena-of-magnetism",
+      "description": "Looks at magnetic fields, attraction/repulsion, Earth’s magnetism, and behaviour of simple magnets.",
+      "order": "4.1"
+    },
+    {
+      "name": "Electrical Quantities",
+      "slug": "electrical-quantities",
+      "description": "Introduces electric charge, current, voltage, resistance, and the relationships between them (Ohm’s Law).",
+      "order": "4.2"
+    },
+    {
+      "name": "Electric Circuits",
+      "slug": "electric-circuits",
+      "description": "Analyzes series and parallel circuits, circuit diagrams, and calculations involving current, voltage and resistance.",
+      "order": "4.3"
+    },
+    {
+      "name": "Electrical Safety",
+      "slug": "electrical-safety",
+      "description": "Covers precautions and practical safety measures in electrical work, including fuses, earthing, and circuit protection.",
+      "order": "4.4"
+    },
+    {
+      "name": "Electromagnetic Effects",
+      "slug": "electromagnetic-effects",
+      "description": "Explores magnetic fields around currents, electromagnetic induction, and the operation of motors and generators.",
+      "order": "4.5"
+    },
+    {
+      "name": "Nuclear Model of the Atom",
+      "slug": "nuclear-model-of-the-atom",
+      "description": "Outlines the structure of the atom, including protons, neutrons, electrons and concepts of isotopes.",
+      "order": "5.1"
+    },
+    {
+      "name": "Radioactivity",
+      "slug": "radioactivity",
+      "description": "Covers types of radiation (alpha, beta, gamma), decay, half‑life, and applications and safety of nuclear radiation.",
+      "order": "5.2"
+    },
+    {
+      "name": "Earth and the Solar System",
+      "slug": "earth-and-the-solar-system",
+      "description": "Investigates the Earth–Moon–Sun system, orbits, eclipses, seasons, and basic calculations using the speed of light.",
+      "order": "6.1"
+    },
+    {
+      "name": "Stars and the Universe",
+      "slug": "stars-and-the-universe",
+      "description": "Explores star formation, life cycles, H-R diagrams, galaxies, Big Bang theory, redshift and cosmology.",
+      "order": "6.2"
+    }
+  ]
+}

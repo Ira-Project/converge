@@ -1,0 +1,928 @@
+{
+    "name": "Motion",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "8869c8c4eb0341279046c",
+            "concepts": [
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+                "fccc7fd3-aef8-4e22-8961-1cb8af2f6426"
+            ],
+            "variants": [
+                {
+                    "id": "e5ffffeb618e4e03832d8",
+                    "question": "Which of the following statements are true about speed?",
+                    "options": [
+                        {
+                            "option_text": "Speed is the distance travelled per unit time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Speed is a vector quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Speed can be calculated using the formula $!$v = \\frac{s}{t}$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The units for speed are typically m/s$!$^2$!$.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "e81ff8a71c8d4f12b51b5",
+                    "question": "A car travels a distance of 200 meters in 10 seconds. Calculate its speed.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "10 m/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "20 m/s",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "30 m/s",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "40 m/s",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "f9dcd153f12e4f3e8e18b",
+                    "question": "Which of the following statements about speed are INCORRECT? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Speed is a scalar quantity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Speed is the rate of change of displacement.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Speed is always equal to or greater than the magnitude of the velocity.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The standard unit of speed is m/s$!$^2$!$.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "440aa8299ec244db9032d",
+            "concepts": [
+                "906d63a6-5264-420e-86ae-9f7edc619471",
+                "ca5f6c70-de52-4c82-b1a1-63eb5eaa1f4d",
+                "37b96553-0db7-45ed-9978-becb4cfbc9eb",
+                "e1ad5395-96d8-4dc7-8276-f84672f16c39",
+                "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc"
+            ],
+            "variants": [
+                {
+                    "id": "32f15c9e9e874184bd523",
+                    "question": "Which of the following influences an object's terminal velocity?",
+                    "options": [
+                        {
+                            "option_text": "Size",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Shape",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Weight",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Initial velocity",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "00f35262855f426085910",
+                    "question": "Which of the following will NOT influence an object's terminal velocity?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Size",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Shape",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Weight",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Initial velocity",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "21215864e18a4cd9bc5df",
+                    "question": "Select all the factors that influence an object's terminal velocity:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Size",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Shape",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Weight",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Initial velocity",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "8d5ff019a1194dbead87b",
+            "concepts": [
+                "021d66a3-a98a-491f-b18e-a3bcc17a3cde",
+                "81b05737-f472-4fe5-82dc-467920dee628",
+                "be05edcd-33ad-4028-a75c-79df196cd994",
+                "08e5b857-0800-48b0-a3a3-b38278aa2b48",
+                "cb3792a4-1a4b-410d-9bc9-adaf514363ef",
+                "dc6dabd1-d269-4f6a-927c-df01749682ae",
+                "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc"
+            ],
+            "variants": [
+                {
+                    "id": "540cf9cc08744aa592808",
+                    "question": "Which statements describe the motion of a projectile when air resistance is ignored?",
+                    "options": [
+                        {
+                            "option_text": "The vertical acceleration is constant due to gravity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The horizontal motion has constant velocity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The horizontal acceleration is constant and non-zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The range is always maximized at a 60-degree projection angle.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "58f0c80fb4004e68a0419",
+                    "question": "A projectile is launched with an initial velocity of $!$v_0$!$ at an angle $!$\\theta$!$ with respect to the horizontal, neglecting air resistance. Which of the following is true regarding the projectile's velocity components during its flight?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The horizontal velocity component remains constant, and the vertical velocity component changes due to gravity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Both the horizontal and vertical velocity components remain constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The horizontal velocity component changes due to gravity, and the vertical velocity component remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both the horizontal and vertical velocity components change due to gravity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "77fb4cbdcde84991ab258",
+                    "question": "A projectile is fired at an angle of 30 degrees with an initial velocity of 20 m/s. Ignoring air resistance, which of the following statements about its acceleration are correct? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The horizontal acceleration is 0 m/s\u00b2. ",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The vertical acceleration is approximately -9.8 m/s\u00b2.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The horizontal acceleration is approximately 9.8 m/s\u00b2.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The vertical acceleration is 0 m/s\u00b2.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "90d6ae7e66fb4e03a06a0",
+            "concepts": [
+                "42a327e0-041f-45f5-b694-73ab9a05eafc",
+                "62c89459-f987-4165-a252-bef784e2a2f0",
+                "a0d90090-575c-4da3-801b-a286406bd77c",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+                "e012005a-91bd-4bce-8500-cb07fad78628",
+                "aceb7823-1dfa-4ff3-9934-9581408ded5d"
+            ],
+            "variants": [
+                {
+                    "id": "1183c97f27524dcd9d8df",
+                    "question": "Which of the following statements correctly describe SUVAT equations?",
+                    "options": [
+                        {
+                            "option_text": "$!$v = u + at$!$ relates final velocity to initial velocity, acceleration, and time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$s = ut + \\frac{1}{2}at^2$!$ relates displacement to initial velocity, time, and acceleration.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$s = vt$!$ represents the average speed over time.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v^2 = u^2 + 2as$!$ relates final velocity, initial velocity, acceleration, and displacement.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "7d07d06eddff41358411b",
+                    "question": "An object accelerates uniformly from an initial velocity $!$u = 5 m/s$!$ to a final velocity $!$v = 15 m/s$!$ in a time $!$t = 4 s$!$. Use SUVAT equations to calculate the acceleration of the object.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$2.5 m/s^2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$5 m/s^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$10 m/s^2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$20 m/s^2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "42bbc9352fe94932a4166",
+                    "question": "Which of the following statements about SUVAT equations is INCORRECT?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "SUVAT equations are applicable only for constant acceleration.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$s = ut + \\frac{1}{2}at^2$!$ is used to find displacement when final velocity is unknown.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$v^2 = u^2 + 2as$!$ can be used to find the time of flight.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$v = u + at$!$ is used when displacement is not involved.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "b573b2c6d98d489cb3815",
+            "concepts": [
+                "e012005a-91bd-4bce-8500-cb07fad78628",
+                "6c06e7b0-ef49-4bc6-b29b-9d294accb212",
+                "f69faddb-2951-4918-b529-8a8581e540f5",
+                "267da5e8-a2de-44ba-9810-27eccacef419",
+                "8130968f-0368-4a88-b0fb-a4166c96b710"
+            ],
+            "variants": [
+                {
+                    "id": "d725cca1d32f4b7b895b7",
+                    "question": "Which of the following statements is/are correct about acceleration?",
+                    "options": [
+                        {
+                            "option_text": "Acceleration is the rate of change of velocity.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Negative acceleration means that an object's velocity is decreasing.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Acceleration is measured in m/s.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Positive acceleration means the object is slowing down.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "018350dff43d4bc2942eb",
+                    "question": "A car accelerates from rest to 20 m/s in 5 seconds. What is the magnitude of its acceleration?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "2 m/s$!$^!2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "4 m/s$!$^!2$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "5 m/s$!$^!2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "10 m/s$!$^!2$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ce89a29cb63d465395817",
+                    "question": "Which of the following scenarios involves an object experiencing acceleration?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "A car traveling at a constant speed on a straight road.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A ball at rest on the floor.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A bicycle slowing down as it approaches a stop sign.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "A train moving with constant velocity.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "80d601ec4be840e18923b",
+            "concepts": [
+                "c4e123ba-7a77-4096-88fd-c98898623ec4",
+                "37b96553-0db7-45ed-9978-becb4cfbc9eb",
+                "e1ad5395-96d8-4dc7-8276-f84672f16c39"
+            ],
+            "variants": [
+                {
+                    "id": "e6e9cbc0f315422f9f1c7",
+                    "question": "Which statement accurately describes the motion of objects in a vacuum under the influence of gravity?",
+                    "options": [
+                        {
+                            "option_text": "All objects fall at the same rate regardless of mass.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Heavier objects fall faster than lighter objects.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Lighter objects fall faster than heavier objects.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Objects with larger surface areas fall faster due to less air resistance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e22f9cc8931547a69fb83",
+                    "question": "Consider two objects, one with a mass of 1 kg and another with a mass of 10 kg, are dropped simultaneously in a vacuum. Which of the following statements is correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The 10 kg object will reach the ground significantly before the 1 kg object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The 1 kg object will reach the ground significantly before the 10 kg object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Both objects will fall at the same rate and reach the ground at the same time.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The rate of fall will depend on the shape of the objects.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6ca700da987b496f85cab",
+                    "question": "Which of the following statements are correct regarding the acceleration of objects falling in a vacuum due to gravity? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The acceleration due to gravity is approximately $!$9.8 m/s^2$!$ near the Earth's surface.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The acceleration due to gravity depends on the mass of the falling object.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "In a vacuum, the acceleration due to gravity is constant for all objects.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The acceleration is higher for heavier objects and lower for lighter objects.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "3d8176c933874765a1471",
+            "concepts": [
+                "677405c6-f085-417b-bd33-eaef90ecd9bc",
+                "f87be26e-ceb5-4d4b-8268-3f90078ec2e5"
+            ],
+            "variants": [
+                {
+                    "id": "f78e577fe12f41a3ab32c",
+                    "question": "On a speed-time graph, what does a horizontal line represent?",
+                    "options": [
+                        {
+                            "option_text": "Constant speed",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Constant acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Constant deceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Changing acceleration",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c2c5285f744f4c05a769c",
+                    "question": "Which of the following statements is correct regarding a horizontal line on a speed-time graph?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The object is moving at a constant speed.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's acceleration is constant and non-zero.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object is decelerating at a constant rate.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's speed is changing.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "cf2176b71dd34857a79d3",
+                    "question": "On a speed-time graph, if the line is horizontal, what happens to the distance traveled by the object if the time is doubled?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The distance traveled is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The distance traveled remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance traveled is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance traveled is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "1548438d65484057ac4ae",
+            "concepts": [
+                "5fadf3e9-25eb-4d0c-b4c6-ba8237b81823",
+                "f87be26e-ceb5-4d4b-8268-3f90078ec2e5",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+            ],
+            "variants": [
+                {
+                    "id": "a995a4fcd32b475ab8271",
+                    "question": "What does the area under a speed-time graph represent?",
+                    "options": [
+                        {
+                            "option_text": "Distance travelled",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Velocity",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Time",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e40f2124e8a6493d8d24b",
+                    "question": "A car moves with a variable speed. The area under its speed-time graph, between two time instances $!$t_1$!$ and $!$t_2$!$, is found to be 100 m. Which of the following statements is correct?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The car has traveled 100 m between the times $!$t_1$!$ and $!$t_2$!$.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The car's acceleration is 100 m/s$!$^2$!$ between the times $!$t_1$!$ and $!$t_2$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The car's average velocity is 100 m/s between the times $!$t_1$!$ and $!$t_2$!$.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The time interval between $!$t_1$!$ and $!$t_2$!$ is 100 seconds.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ed49c91c745d4b26884f5",
+                    "question": "How is the distance travelled by an object related to the area under its speed-time graph?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The distance travelled is equal to the area under the speed-time graph.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The distance travelled is the square of the area under the speed-time graph.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance travelled is the square root of the area under the speed-time graph.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The distance travelled is inversely proportional to the area under the speed-time graph.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "0b6c201fe4b84435bf378",
+            "concepts": [
+                "56d6eba3-4f0f-4ae9-8889-059c4452a3e8",
+                "5d92fbae-09f9-47bb-b469-2584fdc7e08b",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+            ],
+            "variants": [
+                {
+                    "id": "e5fb34419cdb4159a088e",
+                    "question": "What does a straight line with a positive gradient represent on a distance-time graph?",
+                    "options": [
+                        {
+                            "option_text": "Constant speed",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Constant acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Decelerating motion",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Object at rest",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1e485526b1184451979ae",
+                    "question": "Which of the following is represented by a straight line with a negative gradient on a distance-time graph?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Constant speed",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Decelerating motion",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Constant acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Object at rest",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "b1a2318a83b049f5989e1",
+                    "question": "Select all of the following that are represented by a straight line on a distance-time graph:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Constant speed",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Object at rest",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Constant acceleration",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Changing acceleration",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "6453244b8cad425a9f2d9",
+            "concepts": [
+                "ca5f6c70-de52-4c82-b1a1-63eb5eaa1f4d",
+                "37b96553-0db7-45ed-9978-becb4cfbc9eb",
+                "e1ad5395-96d8-4dc7-8276-f84672f16c39",
+                "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc"
+            ],
+            "variants": [
+                {
+                    "id": "41ca1e7f602d400e932a8",
+                    "question": "What happens to an object's velocity when it reaches terminal velocity?",
+                    "options": [
+                        {
+                            "option_text": "It becomes constant.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It becomes zero.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a955fd593e9c40de85859",
+                    "question": "An object falling through the air reaches terminal velocity. Which of the following statements accurately describes its state at terminal velocity?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The object's acceleration is zero.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The object's velocity is constantly increasing.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object's weight is greater than the air resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The object comes to a complete stop.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "dd0fe54bd5454bfca64fa",
+                    "question": "A skydiver reaches terminal velocity during a jump. What happens to the skydiver's velocity if their surface area is increased (e.g., by deploying a parachute)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The velocity decreases.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The velocity increases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The velocity remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The velocity becomes zero instantaneously.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "eb72b1b02dc84291a76d5",
+            "concepts": [
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+                "8130968f-0368-4a88-b0fb-a4166c96b710",
+                "e012005a-91bd-4bce-8500-cb07fad78628",
+                "aceb7823-1dfa-4ff3-9934-9581408ded5d"
+            ],
+            "variants": [
+                {
+                    "id": "5de92216a83641419f7e0",
+                    "question": "Match the following terms with their definitions.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Speed",
+                            "optionB": "Distance travelled per unit time."
+                        },
+                        {
+                            "optionA": "Velocity",
+                            "optionB": "Displacement per unit time in a specific direction."
+                        },
+                        {
+                            "optionA": "Acceleration",
+                            "optionB": "Change of velocity per unit time."
+                        },
+                        {
+                            "optionA": "Displacement",
+                            "optionB": "Distance moved in a stated direction."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "c2d7ae66502f4e2fbb0b9",
+            "concepts": [
+                "f87be26e-ceb5-4d4b-8268-3f90078ec2e5",
+                "e012005a-91bd-4bce-8500-cb07fad78628",
+                "5d92fbae-09f9-47bb-b469-2584fdc7e08b",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+                "4000d55e-a3a3-463f-b8a3-bbdf13ea7f0e",
+                "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc"
+            ],
+            "variants": [
+                {
+                    "id": "66aca5d86b6e4173a0fe1",
+                    "question": "Match the following graph types with what their gradient represents.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Speed-time graph",
+                            "optionB": "Acceleration"
+                        },
+                        {
+                            "optionA": "Distance-time graph",
+                            "optionB": "Speed"
+                        },
+                        {
+                            "optionA": "Free fall distance against time squared",
+                            "optionB": "Straight line"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "1fef7e1ac74f44fba13c9",
+            "concepts": [
+                "5d92fbae-09f9-47bb-b469-2584fdc7e08b",
+                "56d6eba3-4f0f-4ae9-8889-059c4452a3e8",
+                "2fc7ef70-5477-440e-872e-bf3bb3937194",
+                "229b2e8f-97dd-488e-8629-0e3d3225cc27",
+                "358fa7d0-ba78-4a9a-9ad6-af05cca12b29",
+                "e012005a-91bd-4bce-8500-cb07fad78628"
+            ],
+            "variants": [
+                {
+                    "id": "5dd5663bffcc41e79be20",
+                    "question": "Match the scenarios with the type of motion represented on a distance-time graph.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Object at rest",
+                            "optionB": "Horizontal line"
+                        },
+                        {
+                            "optionA": "Constant speed",
+                            "optionB": "Straight line with a positive gradient"
+                        },
+                        {
+                            "optionA": "Accelerating motion",
+                            "optionB": "Upward curve with increasing gradient"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

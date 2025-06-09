@@ -68,7 +68,7 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
 
 
         {/* Random Activities */}
-        {
+        {/* {
           userToClassroom?.role === Roles.Teacher && (
             <ActivityLibrarySample 
               classroomId={params.classroomId}
@@ -76,7 +76,7 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
               role={userToClassroom?.role ?? Roles.Student} 
             />
           )
-        }
+        } */}
 
         {/* Upload Lesson Plan */}
         {userToClassroom?.role === Roles.Teacher && (

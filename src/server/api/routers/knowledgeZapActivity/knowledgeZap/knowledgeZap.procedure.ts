@@ -23,6 +23,10 @@ export const knowledgeZapRouter = createTRPCRouter({
     .input(inputs.getKnowledgeZapActivityInput)
     .query(({ ctx, input }) => services.getKnowledgeZapActivity(ctx, input)),
 
+  getKnowledgeZapAssignment: protectedProcedure
+    .input(inputs.getKnowledgeZapAssignmentInput)
+    .query(({ ctx, input }) => services.getKnowledgeZapAssignment(ctx, input)),
+
   getHeatMap: protectedProcedure
     .input(inputs.getHeatMapInput)
     .query(({ ctx, input }) => services.getHeatMap(ctx, input)),
@@ -34,4 +38,8 @@ export const knowledgeZapRouter = createTRPCRouter({
   getAssignmentConcepts: protectedProcedure
     .input(inputs.getAssignmentConceptsInput)
     .query(({ ctx, input }) => services.getAssignmentConcepts(ctx, input)),
+
+  getAssignmentConceptsById: protectedProcedure
+    .input(inputs.getAssignmentConceptsByIdInput)
+    .query(({ ctx, input }) => services.getAssignmentConceptsById(ctx, input)),
 });

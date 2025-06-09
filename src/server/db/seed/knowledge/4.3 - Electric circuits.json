@@ -1,0 +1,832 @@
+{
+    "name": "Electric Circuits",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "954bebee77b3458ea9d22",
+            "concepts": [
+                "9ba1468a-07ca-4a64-a924-aad02f20e701",
+                "110aa7fa-d568-4492-a7c8-73c4b24bb887",
+                "1487464f-8dbb-4559-bc0e-c0cac13dfe37",
+                "b22bf2bb-d990-4a7e-842c-1282e7cde553",
+                "fa88ef1e-98b6-4ec1-a68b-524ce5b90ca5"
+            ],
+            "variants": [
+                {
+                    "id": "40fd7b8ae0a949e685d9d",
+                    "question": "Which of the following are true about series circuits?",
+                    "options": [
+                        {
+                            "option_text": "The current is the same at every point in the circuit.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total potential difference is the sum of individual component potential differences.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The potential difference across all devices is equal.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The current splits and recombines at each component.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "5b7d70d7e86841c98ccf7",
+                    "question": "A series circuit consists of a 12V battery connected to three resistors in series. The resistors have the following values: $!$R_1 = 10 \\Omega$!$, $!$R_2 = 20 \\Omega$!$, and $!$R_3 = 30 \\Omega$!$. What is the current flowing through the circuit?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "0.2 A",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "0.4 A",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "0.6 A",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1.2 A",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "27ed5df1ddcc440085bf9",
+                    "question": "Which of the following statements is incorrect regarding series circuits?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The current is constant throughout the circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total resistance is the sum of individual resistances.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The voltage drop across each resistor is the same.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total voltage is the sum of the individual voltage drops.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "524f41f92cf9442d90561",
+            "concepts": [
+                "ef179d77-ce25-4b81-88a7-095bfcaace17",
+                "1487464f-8dbb-4559-bc0e-c0cac13dfe37",
+                "b22bf2bb-d990-4a7e-842c-1282e7cde553",
+                "a4a2fca8-79b6-477a-af5f-dd7bcee145cc"
+            ],
+            "variants": [
+                {
+                    "id": "c38b6a0f93664fdfb61be",
+                    "question": "Which of the following formulas correctly describes the potential difference across series resistors?",
+                    "options": [
+                        {
+                            "option_text": "$!$V = V_1 + V_2 + V_3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$V = \\frac{W}{Q}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$V = IR$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "ee7a4746b9474ce6920a2",
+                    "question": "Which of the following statements are correct regarding potential difference in a series circuit? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total potential difference is the sum of potential differences across individual resistors: $!$V = V_1 + V_2 + V_3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The potential difference is the same across all resistors.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The reciprocal of the equivalent resistance is the sum of reciprocals of individual resistances: $!$\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2} + \\frac{1}{R_3}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Ohm's law, $!$V = IR$!$, applies to the entire series combination.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "02d9c867bd9740daabce7",
+                    "question": "In a series circuit, if the potential difference across each resistor remains constant but the number of resistors is doubled, what happens to the total potential difference across the series combination?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total potential difference doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total potential difference remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total potential difference is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total potential difference quadruples.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "114b92ebfd13427a9a47c",
+            "concepts": [
+                "e516b01d-3612-45be-8c77-c1a1e7c940a3",
+                "645d12e6-f285-44a1-9369-1085f03dc8f0"
+            ],
+            "variants": [
+                {
+                    "id": "76d8fea9a7034e608c7a3",
+                    "question": "What happens to the total resistance when resistors are connected in series?",
+                    "options": [
+                        {
+                            "option_text": "The total resistance is the sum of the individual resistances.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total resistance decreases.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total resistance remains constant.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total resistance is the reciprocal of the sum of the reciprocals of the individual resistances.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "c93d2fc1904744e29183c",
+                    "question": "Three resistors with resistances $!$R_1 = 10\\ \\Omega$!$, $!$R_2 = 20\\ \\Omega$!$, and $!$R_3 = 30\\ \\Omega$!$ are connected in series. What is the total resistance of the series combination?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$60\\ \\Omega$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$6\\ \\Omega$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.0183\\ \\Omega$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$30\\ \\Omega$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "fa8c5ea2b885431ea60e6",
+                    "question": "Which of the following statements are correct regarding resistors connected in series? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The same current flows through each resistor.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The voltage drop is the same across each resistor.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total resistance is the sum of individual resistances.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total resistance is less than the smallest individual resistance.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "0892434857534bf08bee0",
+            "concepts": [
+                "4f3fb6d6-fd60-491b-83f8-8994af3fe367",
+                "b3eafbb9-0b40-4805-9512-0fd24cfd02f7",
+                "14433c91-f1d3-40a5-97dc-3039b29cf8eb"
+            ],
+            "variants": [
+                {
+                    "id": "b818ab11a79242dfb1a68",
+                    "question": "Which of the following are true regarding parallel circuits?",
+                    "options": [
+                        {
+                            "option_text": "The potential difference across all devices is equal.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The source current is larger than each branch current due to current division.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The source current is same at every point in a parallel circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The components are connected in a single path.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "043714c08d364baba5aee",
+                    "question": "A parallel circuit consists of three resistors with the following values: $!$R_1 = 10 \\Omega$!$, $!$R_2 = 20 \\Omega$!$, and $!$R_3 = 30 \\Omega$!$. If the voltage source is 12V, what is the total current flowing through the circuit?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "0.6 A",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "2.2 A",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "3.6 A",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "1.0 A",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a2abfb23ffe54e6ab2940",
+                    "question": "Select all of the following statements that are INCORRECT about parallel circuits:",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The voltage drop is different across each component.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total resistance is the sum of individual resistances.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The current is the same through each branch.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The reciprocal of the total resistance is the sum of the reciprocals of individual resistances.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "a5dac9ffb0a3477e91d50",
+            "concepts": [
+                "3726a9ff-2bdf-4c8c-a24b-f19fcc73a73b",
+                "1532d048-087f-4857-82bf-a6919d28c16c",
+                "34994757-bda1-43a6-ba06-c1d600412720",
+                "28c404a4-6bdf-4bb6-a5cd-a9658fb71d7e"
+            ],
+            "variants": [
+                {
+                    "id": "8fd5683b58d34c4482ee7",
+                    "question": "According to Ohm's Law, what is the relationship between potential difference ($!$V$!$), current ($!$I$!$) and resistance ($!$R$!$)?",
+                    "options": [
+                        {
+                            "option_text": "$!$V = IR$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$V = \\frac{I}{R}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$I = VR$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R = VI$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "4ba5086c8beb48c59cec0",
+                    "question": "A circuit has a resistance of $!$10 \\Omega$!$ and a current of $!$2 A$!$. Using Ohm's Law, calculate the potential difference ($!$V$!$) across the resistor.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$20 V$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$5 V$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$12 V$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.2 V$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "6229e726baa54916b0e78",
+                    "question": "Which of the following statements correctly describes the relationship between potential difference ($!$V$!$), current ($!$I$!$), and resistance ($!$R$!$) according to Ohm's Law? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "If the resistance is constant, the potential difference is directly proportional to the current.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the potential difference is constant, the current is directly proportional to the resistance.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "If the current is constant, the potential difference is directly proportional to the resistance.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "If the resistance increases, the current will increase for a constant potential difference.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "539cb16ce5d640e795147",
+            "concepts": [
+                "320b0a47-989b-4366-9676-1f34e540ac09",
+                "84b4aa12-aab4-43cc-9ab9-c319fcfc8307",
+                "b14dd40f-3728-4962-ae52-1fb9c050b293"
+            ],
+            "variants": [
+                {
+                    "id": "07a810c4539443c5a1913",
+                    "question": "What is the formula for calculating the total electromotive force ($!$E$!$) of cells connected in series?",
+                    "options": [
+                        {
+                            "option_text": "$!$E = E_1 + E_2 + E_3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$E = \\frac{1}{E_1} + \\frac{1}{E_2} + \\frac{1}{E_3}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E = E_1 = E_2 = E_3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E = \\frac{E_1 E_2}{E_1 + E_2}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "1e65476b8248436383a59",
+                    "question": "Three cells with electromotive forces $!$E_1$!$, $!$E_2$!$, and $!$E_3$!$ are connected in series. Which of the following equations correctly represents the total electromotive force $!$E$!$ of the combination?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$E = E_1 + E_2 + E_3$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$E = E_1 = E_2 = E_3$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E = \\frac{1}{E_1} + \\frac{1}{E_2} + \\frac{1}{E_3}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$E = \\frac{E_1 + E_2 + E_3}{3}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "a351879359d340de91482",
+                    "question": "If the electromotive force of each individual cell in a series connection is doubled, what happens to the total electromotive force ($!$E$!$) of the series combination?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The total electromotive force is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The total electromotive force is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total electromotive force remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total electromotive force is quadrupled.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "6a460a65b8f84d5f8eab5",
+            "concepts": [
+                "5768c278-867b-4c81-b4e9-271edec49a63",
+                "95926967-0938-4937-939b-4a7966133f59"
+            ],
+            "variants": [
+                {
+                    "id": "162aadc728f84bedbf014",
+                    "question": "Which formula is used to calculate the total resistance ($!$R$!$) of two resistors ($!$R_1$!$ and $!$R_2$!$) in parallel using the product-over-sum method?",
+                    "options": [
+                        {
+                            "option_text": "$!$R = \\frac{R_1 R_2}{R_1 + R_2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$R = R_1 + R_2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2}$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R = \\frac{R_1 + R_2}{R_1 R_2}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "55df1382cb414c9f915ae",
+                    "question": "Two resistors, $!$R_1 = 6 \\Omega$!$ and $!$R_2 = 3 \\Omega$!$, are connected in parallel. What is the total resistance of the circuit?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$2 \\Omega$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$9 \\Omega$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.5 \\Omega$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$18 \\Omega$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "63d60425a3b74d49b64ba",
+                    "question": "Select all the equations that can be used to calculate the total resistance of two resistors in parallel.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$R = \\frac{R_1 R_2}{R_1 + R_2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$R = R_1 + R_2$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$\\frac{1}{R} = \\frac{1}{R_1} + \\frac{1}{R_2}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$R = \\frac{R_1 + R_2}{R_1 R_2}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        },
+        {
+            "id": "398b29069c7a4dd3a1be8",
+            "concepts": [
+                "1487464f-8dbb-4559-bc0e-c0cac13dfe37",
+                "b22bf2bb-d990-4a7e-842c-1282e7cde553"
+            ],
+            "variants": [
+                {
+                    "id": "f57bcbb0b2d34a9f8a990",
+                    "question": "Which of the following best describes the behavior of potential difference ($!$V$!$)?",
+                    "options": [
+                        {
+                            "option_text": "Work done per unit charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Rate of flow of electric charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The total amount of charge in a circuit.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The opposition to the flow of current.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8eca1a0250bc44a5902bb",
+                    "question": "Which of the following statements accurately describe the concept of potential difference ($!$V$!$)? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "It is the work done per unit charge.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the rate of flow of electric charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "It is the difference in electrical potential energy between two points.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "It is the total amount of charge in a circuit.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "b0d8b2e1a7ae42f9acf94",
+                    "question": "If the work done to move a unit charge between two points in an electric field is doubled, what happens to the potential difference ($!$V$!$) between those points?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The potential difference doubles.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The potential difference halves.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The potential difference remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The potential difference becomes four times the original value.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "0007bdb925c94c8b89d27",
+            "concepts": [
+                "733ce9e5-968c-4dd7-968a-36e5e06e19e2"
+            ],
+            "variants": [
+                {
+                    "id": "2d06b40a32614b21a7d10",
+                    "question": "A circuit diagram uses conventional symbols to represent:",
+                    "options": [
+                        {
+                            "option_text": "Various electrical components.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The flow of water in a pipe.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The chemical reactions in a cell.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The temperature distribution in the circuit.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "27046732d2d3417a9e6eb",
+                    "question": "Which of the following is NOT represented by conventional symbols in a circuit diagram?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Resistors",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Capacitors",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The direction of electron flow",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Batteries",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "144c9e722cc644ee91ba1",
+                    "question": "Which of the following electrical components are commonly represented by conventional symbols in a circuit diagram? Select all that apply.",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Resistors",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Capacitors",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Wires",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Transistors",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "57b93538452348efac58d",
+            "concepts": [
+                "f280c8d7-b51c-4a01-b506-157a0212fa75",
+                "7c33287e-a5a8-4782-ac47-8d91de38a8f5",
+                "1f9c837e-aa58-492d-a676-fd41c0ebb656",
+                "7cde1132-4288-4ec0-834c-081c9cd087e5"
+            ],
+            "variants": [
+                {
+                    "id": "36c39b18ccca46a1b722b",
+                    "question": "Match the circuit component with its function or property:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "LED",
+                            "optionB": "Emits light when forward-biased."
+                        },
+                        {
+                            "optionA": "NTC Thermistor",
+                            "optionB": "Resistance decreases as temperature rises."
+                        },
+                        {
+                            "optionA": "Light-Dependent Resistor",
+                            "optionB": "Resistance decreases with increased light intensity."
+                        },
+                        {
+                            "optionA": "Semiconductor Diode",
+                            "optionB": "Permits current flow in only one direction."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "433b5e638c3541f38be5c",
+            "concepts": [
+                "6daeb620-0439-43db-9def-e0c700d4d4f1",
+                "fa9fa2f1-8189-499c-8fe5-7f285a84850f",
+                "8dce019c-0fdd-4467-b9de-15a4145ee719",
+                "d752f5e5-d93f-4a67-ba77-44d771335b78",
+                "0345f5f9-af34-41dd-aaa5-03676d2cc0df"
+            ],
+            "variants": [
+                {
+                    "id": "e19214bcd4894aac8b3bf",
+                    "question": "Match the term with its description in a parallel circuit:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Total Current",
+                            "optionB": "Sum of the currents in each branch."
+                        },
+                        {
+                            "optionA": "Total Resistance",
+                            "optionB": "Reciprocal equals the sum of reciprocals of individual resistances."
+                        },
+                        {
+                            "optionA": "Voltage",
+                            "optionB": "The voltage across each resistor is the same."
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "e15e8d74b5354031a783c",
+            "concepts": [
+                "84b4aa12-aab4-43cc-9ab9-c319fcfc8307",
+                "beb100f4-dcc2-4412-8547-760dfed49574",
+                "e50b1168-c7ff-487c-862d-51f29c435e20"
+            ],
+            "variants": [
+                {
+                    "id": "ee492d98e69946cfaf8ba",
+                    "question": "Match the component with its circuit symbol representation:",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Battery",
+                            "optionB": "Composed of two or more electric cells."
+                        },
+                        {
+                            "optionA": "Variable Potential Divider",
+                            "optionB": "Divides supply voltage into a smaller output voltage."
+                        },
+                        {
+                            "optionA": "Relay",
+                            "optionB": "Electromagnetic switch that controls a large current with a small one."
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}

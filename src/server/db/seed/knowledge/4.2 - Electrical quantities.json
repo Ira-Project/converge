@@ -1,0 +1,598 @@
+{
+    "name": "Electrical Quantities",
+    "topicId": "",
+    "latexDelimiter": "$!$",
+    "multipleChoiceQuestions": [
+        {
+            "id": "6d2bf32f68074a878aeb9",
+            "concepts": [
+                "cb82939c-2599-42b8-a0c3-21c0b092e98a",
+                "64fc1ac1-bae3-4f2c-98e0-f7857b33ac4b",
+                "c85f3cc4-fd98-4ce3-85c8-d14f8f74ac28",
+                "9ee5e6d1-2e74-4176-b14e-6c8e6d4f176a"
+            ],
+            "variants": [
+                {
+                    "id": "45cba3c0bbb544e2a3322",
+                    "question": "Which of the following statements are true regarding electric charges?",
+                    "options": [
+                        {
+                            "option_text": "There are two types of electric charge: positive and negative.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Like charges repel each other.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Opposite charges attract each other.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Charges are measured in Amperes.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "af4c887e4f8549e7b7b20",
+                    "question": "Which of the following statements is incorrect regarding electric charges?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "There are two types of electric charge: positive and negative.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Like charges repel each other.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Opposite charges attract each other.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Charges are measured in Amperes.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "8ecc7be28ea24d51aab72",
+                    "question": "Two charged objects, A and B, are placed near each other. Object A has a charge of +$!$3 \\times 10^{-6}$!$ C, and object B has a charge of -$!$6 \\times 10^{-6}$!$ C. Which of the following statements is true about the force between them?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The force is attractive.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The force is repulsive.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "There is no force between them.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The force is first attractive and then repulsive.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "49c96e1b151647e09e631",
+            "concepts": [
+                "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3",
+                "4436079f-ef34-493a-8270-448d0e6ffbb9",
+                "b0671a5e-0501-43da-891f-beb3af9ff64a",
+                "840b251a-57e4-4ec5-b666-a82c0ac22883"
+            ],
+            "variants": [
+                {
+                    "id": "3fafdb750303492b854dc",
+                    "question": "Which of the following factors affect the resistance of a conductor?",
+                    "options": [
+                        {
+                            "option_text": "The length of the conductor.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The cross-sectional area of the conductor.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The material of the conductor.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The direction of the electric field.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "0dd6b49552ac4214b699f",
+                    "question": "If the length of a conductor is doubled and the cross-sectional area is halved, how does the resistance change?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The resistance is quadrupled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The resistance is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The resistance is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The resistance remains the same.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "80d694d57c0c444b8cc7f",
+                    "question": "Which of the following statements correctly describe the relationship between the resistance ($!$R$!$) of a conductor and its physical properties?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$R$!$ is directly proportional to the length and inversely proportional to the cross-sectional area.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$R$!$ is directly proportional to the cross-sectional area and inversely proportional to the length.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R$!$ is independent of the material of the conductor.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$R$!$ decreases with increasing temperature for all conductors.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "04c0486d20424252bdd2b",
+            "concepts": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb",
+                "ea1063a0-3ca7-40b2-99ff-e5e5ed11ce8d",
+                "fb248ce7-c931-43e9-946c-7a9d057394c6",
+                "9ee5e6d1-2e74-4176-b14e-6c8e6d4f176a"
+            ],
+            "variants": [
+                {
+                    "id": "4384d103bb8a4bf28a519",
+                    "question": "Which of the following statements is correct regarding electric current?",
+                    "options": [
+                        {
+                            "option_text": "Electric current is the flow of electric charges through a conductor.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Electric current always flows from the negative to the positive terminal.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electric current is measured in coulombs.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electric current produces heating, magnetic, and chemical effects.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "dd8079de24d04e0f83f91",
+                    "question": "A wire carries a current of 2 A. How much charge passes through a cross-section of the wire in 5 seconds?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "10 Coulombs",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "2.5 Coulombs",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "0.4 Coulombs",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "7 Coulombs",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "e7ff3ed144ea45b2a15b9",
+                    "question": "Which of the following statements about the flow of current in a circuit is incorrect?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Current flows from higher potential to lower potential.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electrons flow opposite to the direction of conventional current.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Current is the rate of flow of charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Current flows from the negative terminal to the positive terminal in the external circuit.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "f6c501794938472196a92",
+            "concepts": [
+                "846f5219-eb07-42b9-91bb-4fe3cc6ad952",
+                "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3"
+            ],
+            "variants": [
+                {
+                    "id": "246d1c97523c481787cc5",
+                    "question": "According to Ohm's Law, which of the following relationships are correct?",
+                    "options": [
+                        {
+                            "option_text": "$!$R = \\frac{V}{I}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$V = I \\times R$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$I = \\frac{V}{R}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$V = \\frac{I}{R}$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "0472ad18d72e439193ce4",
+                    "question": "If the voltage across a resistor is doubled and the resistance remains constant, what happens to the current?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The current is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The current is doubled.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The current remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The current becomes four times the original value.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "d3985a9ddbae4a0688f68",
+                    "question": "A circuit has a voltage of $!$12V$!$ and a resistance of $!$4 \\Omega$!$. What is the current in the circuit?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$3 A$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$48 A$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.33 A$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$8 A$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "e9fc66bb479b41dcb56d1",
+            "concepts": [
+                "37d35261-8232-43a6-81d3-8ff25b3b958a",
+                "99fbfc61-bb8d-4a75-bcaf-718f1ada2b5d",
+                "7b150707-632a-4542-9bbe-a567f986e2bb",
+                "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3",
+                "017b35eb-d1a9-4439-a765-bf33d55f9f97"
+            ],
+            "variants": [
+                {
+                    "id": "ee70ba9487b54dbb83d20",
+                    "question": "Which of the following are correct formulas for electrical power ($!$P$!$)?",
+                    "options": [
+                        {
+                            "option_text": "$!$P = I \\times V$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$P = I^2 \\times R$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$P = \\frac{V^2}{R}$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$P = I \\times R$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "ab8344154ebb4e83ba3e0",
+                    "question": "A circuit has a current ($!$I$!$) of 2 Amperes and a voltage ($!$V$!$) of 12 Volts. What is the electrical power ($!$P$!$) dissipated in the circuit?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "6 Watts",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "14 Watts",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "24 Watts",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "48 Watts",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "151da69100e147d181ddc",
+                    "question": "In a circuit, if the voltage ($!$V$!$) is doubled and the resistance ($!$R$!$) remains constant, what happens to the electrical power ($!$P$!$)?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "The power is halved.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The power remains the same.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The power is doubled.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "The power is quadrupled.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        },
+        {
+            "id": "29f5a14192c44bda85bb4",
+            "concepts": [
+                "43c123c7-46e3-4f3f-b2d7-b1f6ba87e845",
+                "37dee45a-7665-4600-8e1f-943c169488b5",
+                "096cd4bc-6dde-4105-a89a-fbe9d3c7b3a9",
+                "f9795900-989a-47cc-97b0-8c6634e01dd3",
+                "cb82939c-2599-42b8-a0c3-21c0b092e98a"
+            ],
+            "variants": [
+                {
+                    "id": "9e19ee978774444796b2b",
+                    "question": "Which of the following statements are true regarding electric fields?",
+                    "options": [
+                        {
+                            "option_text": "An electric field is a region in which a charge experiences a force.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "The direction of an electric field is defined by the force acting on a small negative test charge.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "A uniform electric field has constant magnitude and direction.",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "Field lines radiate inward from positive charges.",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": false
+                },
+                {
+                    "id": "879f9990c366411298c72",
+                    "question": "Which of the following statements is INCORRECT regarding the direction of electric field lines?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "Electric field lines point away from positive charges.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electric field lines point in the direction a positive test charge would accelerate.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electric field lines point toward negative charges.",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "Electric field lines point in the direction a negative test charge would accelerate.",
+                            "is_correct": true
+                        }
+                    ],
+                    "single_correct": true
+                },
+                {
+                    "id": "823dcafdc35c42438fca9",
+                    "question": "The electric force on a test charge of $!$q = +2 \\mu C$!$ at a certain point is $!$4 \\times 10^{-6} N$!$ in the positive x-direction. What is the magnitude of the electric field at that point?",
+                    "image": null,
+                    "options": [
+                        {
+                            "option_text": "$!$2 N/C$!$",
+                            "is_correct": true
+                        },
+                        {
+                            "option_text": "$!$8 N/C$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$0.5 N/C$!$",
+                            "is_correct": false
+                        },
+                        {
+                            "option_text": "$!$1 N/C$!$",
+                            "is_correct": false
+                        }
+                    ],
+                    "single_correct": true
+                }
+            ]
+        }
+    ],
+    "matchingQuestions": [
+        {
+            "id": "6c98307f4c79402d8dd5d",
+            "concepts": [
+                "6d7433e3-0e02-485a-b50a-0dc084721ad6",
+                "020ce6eb-43c8-461e-90dc-9309859fbfa0",
+                "6d5f1636-0712-4c58-88fb-849b5ea74b2a",
+                "846f5219-eb07-42b9-91bb-4fe3cc6ad952"
+            ],
+            "variants": [
+                {
+                    "id": "65f09461124049aa81cb1",
+                    "question": "Match the type of material with its electrical property.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Conductor",
+                            "optionB": "Electrons are free to move between atoms"
+                        },
+                        {
+                            "optionA": "Insulator",
+                            "optionB": "Electrons are tightly bound and do not flow"
+                        },
+                        {
+                            "optionA": "Semiconductor Diode",
+                            "optionB": "Permits current flow in one direction"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "bd65b5907c464e05a5b2d",
+            "concepts": [
+                "7b150707-632a-4542-9bbe-a567f986e2bb",
+                "3e5d6af5-17f7-42b5-9958-d873f31c5ef1",
+                "f4580280-fb4d-4456-9a23-027f64bd51ac",
+                "70f5ffc4-48ad-48e4-bdf6-d514d75aafc3"
+            ],
+            "variants": [
+                {
+                    "id": "35341109633c4568bc5ef",
+                    "question": "Match the term with its definition.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Electric Current",
+                            "optionB": "Flow of electric charges through a conductor"
+                        },
+                        {
+                            "optionA": "Electromotive Force (EMF)",
+                            "optionB": "Work done per unit charge by a source"
+                        },
+                        {
+                            "optionA": "Potential Difference (PD)",
+                            "optionB": "Work done per unit charge across a component"
+                        },
+                        {
+                            "optionA": "Resistance",
+                            "optionB": "Opposition to the flow of electric current"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "36a936c7d69f4a84be250",
+            "concepts": [
+                "a27680fb-ecb4-4fe3-9451-13cb0745e30c",
+                "7b150707-632a-4542-9bbe-a567f986e2bb",
+                "7bef5a67-8114-4f03-ae8d-6b149b725a60",
+                "f4580280-fb4d-4456-9a23-027f64bd51ac",
+                "4e631f77-f2d3-4974-8c82-ff4a4eee4fad",
+                "55ffc8b4-2d29-4431-b5c5-2e8c1d866671"
+            ],
+            "variants": [
+                {
+                    "id": "a93c9ffc55e649bb847fe",
+                    "question": "Match the device with what it measures.",
+                    "image": null,
+                    "options": [
+                        {
+                            "optionA": "Ammeter",
+                            "optionB": "Electric Current"
+                        },
+                        {
+                            "optionA": "Voltmeter",
+                            "optionB": "Potential Difference"
+                        },
+                        {
+                            "optionA": "Rheostat",
+                            "optionB": "Adjusts current in a circuit"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "orderingQuestions": []
+}
