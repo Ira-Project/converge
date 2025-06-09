@@ -4,7 +4,7 @@ import { Roles } from '@/lib/constants';
 import { redirect } from "next/navigation";
 import ClassroomSettingsForm from "./_components/classroom-settings-form";
 import StudentsList from "./_components/students-list";
-import { ClassroomHeader } from "../_components/classroom-header";
+import { ClassroomHeader } from "../(dashboard)/_components/classroom-header";
 import { NoAccessEmptyState } from "@/components/no-access-empty-state";
 
 export default async function SettingsPage(props: { params: Promise<{ classroomId: string }> }) {
@@ -46,7 +46,7 @@ export default async function SettingsPage(props: { params: Promise<{ classroomI
       {/* Header */}
       <ClassroomHeader classroom={classroom} />
 
-      <div className="px-8 mt-40 space-y-8">
+      <div className="px-4 md:px-8 mt-40 space-y-8 pb-8">
         <h2 className="text-xl font-semibold">Classroom Settings</h2>
         
         <ClassroomSettingsForm 

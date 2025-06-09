@@ -51,6 +51,7 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
         order: index + 1,
         option: option.option,
       })),
+      classroomId: classroomId,
     });
     setIsCorrect(result.correct);
     setIsSubmitted(true);
@@ -106,8 +107,8 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
       </div>
       
       <p className="text-sm text-center text-muted-foreground">Drag the items to order them correctly</p>
-      <div className="flex flex-col items-center gap-6">
-        <div className="flex flex-col gap-4 items-center">
+      <div className="flex flex-col items-center gap-6 px-4">
+        <div className="flex flex-col gap-4 items-center w-full">
           <div className="flex flex-col gap-2 items-center justify-center">
             <div className="flex flex-row gap-2 items-center text-sm font-medium text-gray-600">
               <span>{topLabel}</span>
@@ -116,7 +117,7 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
             <div className="border-l-2 border-gray-300 h-8"></div>
           </div>
           
-          <div className="flex flex-col gap-2 w-full min-w-64">
+          <div className="flex flex-col gap-2 w-full max-w-md">
             {order.map((option, index) => (
               <div
                 key={option.id}

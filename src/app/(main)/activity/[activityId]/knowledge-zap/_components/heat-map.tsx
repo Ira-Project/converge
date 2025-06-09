@@ -19,12 +19,12 @@ const HeatMap = async ({ activityId }: { activityId: string }) => {
 
   return (
     <div className="overflow-x-auto">
-      <Table className="border-collapse">
+      <Table className="border-collapse min-w-max">
         <TableHeader>   
           <TableRow>
-            <TableHead className="border border-gray-200">Student Name</TableHead>
+            <TableHead className="border border-gray-200 min-w-[150px]">Student Name</TableHead>
             {Array.from({ length: noOfQuestions }, (_, index) => (
-              <TableHead key={index} className="border border-gray-200">Question {index + 1}</TableHead>
+              <TableHead key={index} className="border border-gray-200 min-w-[120px]">Question {index + 1}</TableHead>
             ))}
           </TableRow>
         </TableHeader>
@@ -38,11 +38,11 @@ const HeatMap = async ({ activityId }: { activityId: string }) => {
           ) : (
             heatMap.map((submission) => (
               <TableRow key={submission.attemptId}>
-                <TableCell className="border border-gray-200">{submission.name}</TableCell>
+                <TableCell className="border border-gray-200 min-w-[150px]">{submission.name}</TableCell>
                 {submission.questionAttempts.map((questionAttempt) => (
                   <TableCell 
                     key={questionAttempt.id} 
-                    className={`border border-gray-200 ${getCellColor(questionAttempt.attempts, questionAttempt.isCorrect)}`}
+                    className={`border border-gray-200 min-w-[120px] ${getCellColor(questionAttempt.attempts, questionAttempt.isCorrect)}`}
                   >
                     {questionAttempt.attempts > 1 ? `${questionAttempt.attempts} attempts` : ''}
                   </TableCell>

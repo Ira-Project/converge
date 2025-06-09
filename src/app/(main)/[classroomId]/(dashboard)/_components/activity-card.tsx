@@ -1,6 +1,6 @@
 import React from 'react';
-import { type Activity } from '../types';
-import { getMetaDataFromActivityType } from '../../../../lib/utils/activityUtils';
+import { type Activity } from '../../types';
+import { getMetaDataFromActivityType } from '../../../../../lib/utils/activityUtils';
 import Image from 'next/image';
 import { ExternalLinkIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
@@ -17,14 +17,14 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role }) => {
   const { url, iconImage, title, colour, description } = getMetaDataFromActivityType(typeText as ActivityType ?? undefined, id);
 
   return (
-    <div className="border rounded-2xl p-6 w-full min-w-[300px]">
-      <div className="flex items-start justify-between mb-4">
+    <div className="border rounded-2xl p-4 md:p-6 w-full min-w-[260px] max-w-[280px] md:min-w-[300px] md:max-w-none flex-shrink-0">
+      <div className="flex items-start justify-between mb-3 md:mb-4">
         <div>
-          <Image src={iconImage} alt={title} width={60} height={60} />
+          <Image src={iconImage} alt={title} width={50} height={50} className="md:w-[60px] md:h-[60px]" />
         </div>
       </div>
       <div className={cn(
-        "flex text-md my-auto font-bold",
+        "flex text-sm md:text-md my-auto font-bold",
         {
           "text-amber-700": colour === "amber",
           "text-rose-700": colour === "rose",
@@ -36,20 +36,20 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role }) => {
       )}> 
         {title}
       </div>
-      <h4 className="font-medium text-lg mt-2 mb-4 flex items-center">
+      <h4 className="font-medium text-base md:text-lg mt-2 mb-3 md:mb-4 flex items-center">
         {topic?.name ?? "No topic"}
       </h4>
       
-      <p className="text-sm text-muted-foreground mb-4 h-[60px] line-clamp-3">{description}</p>
-      <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
+      <p className="text-xs md:text-sm text-muted-foreground mb-3 md:mb-4 h-[50px] md:h-[60px] line-clamp-3">{description}</p>
+      <div className="flex items-center justify-between text-xs md:text-sm text-gray-500 mb-3 md:mb-4">
         {dueDate ? formatDateShort(new Date(dueDate)) : "No due date"}
       </div>
-      <div className="flex gap-3 my-auto items-start vertical-align-middle">
+      <div className="flex gap-2 md:gap-3 my-auto items-start vertical-align-middle">
         <Link href={`${url}${Paths.LiveActivity}`} className="p-0 underline text-xs my-auto">
           { role === Roles.Teacher ? "Preview" : "Start Activity"}
         </Link>
-        <Link href={url} className="my-auto mx-2">
-          <ExternalLinkIcon className="w-5 h-5" />
+        <Link href={url} className="my-auto mx-1 md:mx-2">
+          <ExternalLinkIcon className="w-4 h-4 md:w-5 md:h-5" />
         </Link>
       </div>
     </div>

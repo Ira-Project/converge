@@ -1,7 +1,7 @@
 'use client';
 import ForceGraph2D, { type ForceGraphMethods } from "react-force-graph-2d";
 import { type RouterOutputs } from "@/trpc/shared";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 interface ConceptGraphProps {
   concepts: RouterOutputs["analytics"]["getConceptTracking"]["concepts"];
@@ -12,16 +12,63 @@ interface ConceptGraphProps {
 
 export const ConceptGraph = ({ concepts, edges, trackedConcepts, numberOfStudents }: ConceptGraphProps) => {
 
-  const fgRef = useRef<ForceGraphMethods>();
+  const fgRef = useRef<ForceGraphMethods<{ id: string; name: string; color: string }, { source: string; target: string; color: string }>>();
+  const [mobileTooltip, setMobileTooltip] = useState<{
+    visible: boolean;
+    conceptName: string;
+    x: number;
+    y: number;
+  }>({
+    visible: false,
+    conceptName: '',
+    x: 0,
+    y: 0
+  });
+  
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     if (fgRef.current) {
       const fg = fgRef.current;
       // Adjust force parameters
-      // eslint-disable-next-line 
-      fg.d3Force('charge')?.distanceMax(100);
+      if (isMobile) {
+        // eslint-disable-next-line 
+        fg.d3Force('charge')?.distanceMax(50);
+      } else {
+        // eslint-disable-next-line 
+        fg.d3Force('charge')?.distanceMax(100);
+      }
     }
   }, [])
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Handle node click for mobile tooltip
+  const handleNodeClick = (node: { id: string; name: string; color: string }, event: MouseEvent) => {
+    // Only show tooltip on mobile/touch devices
+    if (window.innerWidth <= 768) {
+      setMobileTooltip({
+        visible: true,
+        conceptName: node.name,
+        x: event.clientX,
+        y: event.clientY
+      });
+    }
+  };
+
+  // Hide tooltip when clicking elsewhere
+  const handleGraphClick = () => {
+    setMobileTooltip(prev => ({ ...prev, visible: false }));
+  };
 
   // Check if there are no concepts to display
   if (concepts.length === 0) {
@@ -94,7 +141,7 @@ export const ConceptGraph = ({ concepts, edges, trackedConcepts, numberOfStudent
   };
 
   return (
-    <div className="bg-white rounded-lg p-4 mx-auto border h-full flex flex-col justify-center w-full max-w-full">
+    <div className="bg-white rounded-lg p-4 mx-auto border h-full flex flex-col justify-center w-full max-w-full relative">
       <p className="text-lg font-bold mb-4">
         Concepts
       </p>
@@ -103,16 +150,18 @@ export const ConceptGraph = ({ concepts, edges, trackedConcepts, numberOfStudent
           graphData={graphData}
           nodeLabel="name"
           height={300}
-          width={500}
+          width={isMobile ? 300 : 500}
           linkDirectionalArrowLength={0}
           linkCurvature={0.1}
           linkWidth={0.5}
           linkColor="#000"
           nodeRelSize={3}
           nodeColor="color"
+          onNodeClick={handleNodeClick}
+          onBackgroundClick={handleGraphClick}
           ref={fgRef}
         />
-        <div className="flex flex-col flex-1 min-w-0">
+        <div className="hidden md:flex flex-col flex-1 min-w-0">
           <div className="space-y-2 max-h-[300px] overflow-y-auto pr-2 w-full">
             {graphData.nodes
               .map(node => {
@@ -142,6 +191,20 @@ export const ConceptGraph = ({ concepts, edges, trackedConcepts, numberOfStudent
           </div>
         </div>
       </div>
+      
+      {/* Mobile-only tooltip */}
+      {mobileTooltip.visible && (
+        <div
+          className="fixed z-50 md:hidden bg-gray-800 text-white px-2 py-1 rounded text-sm shadow-lg pointer-events-none"
+          style={{
+            left: `${mobileTooltip.x}px`,
+            top: `${mobileTooltip.y - 40}px`,
+            transform: 'translateX(-50%)'
+          }}
+        >
+          {mobileTooltip.conceptName}
+        </div>
+      )}
     </div>
   );
 };

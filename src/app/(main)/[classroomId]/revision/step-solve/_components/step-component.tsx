@@ -112,7 +112,7 @@ const StepSolveStepComponent = ({
                 render={({ field }) => (
                 <FormItem>
                   <FormControl>
-                    <div className="grid grid-cols-2 gap-4 w-full mx-auto">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full mx-auto">
                       {options.map((option) => (
                         <button
                           disabled={isDisabled}

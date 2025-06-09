@@ -34,53 +34,98 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
   return (
     <main className="flex flex-col">
       {/* Header */}
-      <div className="mb-8 p-8 bg-teal-100">
-        <div className="flex items-center gap-4 mb-4">
-          <div className="flex flex-row gap-4">
-            <Image src={activityMetaData.iconImage} alt={activityMetaData.title} width={60} height={60} />
-            <div className="flex flex-col my-auto">
-              <h1 className="text-2xl font-bold text-teal-700">{activityMetaData.title}</h1>
-              <p className="text-teal-700">{activity?.topic?.name}</p>
+      <div className="w-full border-b border-slate-200 bg-teal-100">
+        <div className="px-4 sm:px-8 py-4 sm:py-6">
+          {/* Mobile: 2x2 Grid Layout */}
+          <div className="grid grid-cols-2 grid-rows-2 gap-3 sm:hidden">
+            {/* Row 1, Col 1: Step Solve Title */}
+            <div className="flex items-center">
+              <h1 className="text-base font-semibold text-teal-700 whitespace-nowrap">
+                {activityMetaData.title}
+              </h1>
             </div>
-          </div>
-          <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-            { userToClassroom?.role !== Roles.Teacher ?
-              <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
-                <Button className="bg-teal-700 text-white">
-                  Start
-                </Button>
-              </Link>
-              : 
-              <div className="flex flex-row gap-2 my-auto">
+            
+            {/* Row 1, Col 2: Action Button */}
+            <div className="flex justify-end">
+              { userToClassroom?.role !== Roles.Teacher ?
                 <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
-                  <Button variant="link">
-                    Preview
+                  <Button size="sm" className="bg-teal-700 text-white">
+                    Start
                   </Button>
                 </Link>
-                {activity && <AssignmentShareModal 
-                  activityId={activity.id}
-                  isLive={activity.isLive} />}
+                : 
+                <div className="flex flex-row gap-2">
+                  <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
+                    <Button size="sm" variant="link">
+                      Preview
+                    </Button>
+                  </Link>
+                  {activity && <AssignmentShareModal 
+                    activityId={activity.id}
+                    isLive={activity.isLive} />}
+                </div>
+              }
+            </div>
+            
+            {/* Row 2, Col 1-2: Topic and Description */}
+            <div className="col-span-2 flex flex-col gap-1">
+              <p className="text-sm font-medium text-teal-700">{activity?.topic?.name}</p>
+              <p className="text-xs text-teal-600">{activityMetaData.description}</p>
+            </div>
+          </div>
+
+          {/* Desktop: Horizontal Layout */}
+          <div className="hidden sm:flex sm:flex-col sm:gap-4">
+            {/* Top row - Main header info */}
+            <div className="flex flex-row items-center gap-4">
+              <div className="flex flex-row gap-4">
+                <Image src={activityMetaData.iconImage} alt={activityMetaData.title} width={60} height={60} />
+                <div className="flex flex-col my-auto">
+                  <h1 className="text-2xl font-bold text-teal-700">{activityMetaData.title}</h1>
+                  <p className="text-teal-700">{activity?.topic?.name}</p>
+                </div>
               </div>
-            }
+              <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
+                { userToClassroom?.role !== Roles.Teacher ?
+                  <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
+                    <Button className="bg-teal-700 text-white">
+                      Start
+                    </Button>
+                  </Link>
+                  : 
+                  <div className="flex flex-row gap-2 my-auto">
+                    <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
+                      <Button variant="link">
+                        Preview
+                      </Button>
+                    </Link>
+                    {activity && <AssignmentShareModal 
+                      activityId={activity.id}
+                      isLive={activity.isLive} />}
+                  </div>
+                }
+              </div>
+            </div>
+            {/* Bottom row - Description */}
+            <p className="text-muted-foreground text-sm">{activityMetaData.description}</p>
           </div>
         </div>
-        <p className="text-muted-foreground text-sm">{activityMetaData.description}</p>
       </div>
 
       {/* Analytics */}
-      <div className="mb-12 px-8 flex flex-col gap-4">
+      <div className="mb-8 sm:mb-12 px-4 sm:px-8 py-6 sm:py-0 sm:pt-8 flex flex-col gap-4">
         <div className="flex flex-row gap-2">
           <BarChartIcon className="w-4 h-4 my-auto" />
           <p className="text-lg font-medium">Activity Analytics</p>
         </div>
-        <div className="grid grid-cols-[300px_1fr] gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-4">
           {activity && <AnalyticsCards activityId={activity.id} />}
           {activity && <UnderstandingGaps activityId={activity.id} />}
         </div>
       </div>
 
       {/* Submissions */}
-      <div className="mb-8 px-8 flex flex-col gap-4">
+      <div className="mb-8 px-4 sm:px-8 flex flex-col gap-4">
         <div className="flex flex-row gap-2">
           <FileTextIcon className="w-4 h-4 my-auto" />
           <p className="text-lg font-medium">Submissions</p>

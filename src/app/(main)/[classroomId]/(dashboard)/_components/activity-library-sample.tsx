@@ -1,6 +1,6 @@
 import React from 'react';
 import ActivityCard from './activity-card';
-import { type Activity, } from '../types';
+import { type Activity, } from '../../types';
 import { Paths, Roles } from '@/lib/constants';
 import Link from 'next/link';
 
@@ -13,7 +13,7 @@ interface ActivityLibrarySampleProps {
 const ActivityLibrarySample: React.FC<ActivityLibrarySampleProps> = ({ activities, role, classroomId }) => {
   
   return (
-    <div className="max-w-full min-h-[300px] px-8">
+    <div className="max-w-full min-h-[300px] px-2 md:px-8">
       <div className="flex items-center justify-between">
         <p className="text-xl font-bold mb-4">
           Sample Activities

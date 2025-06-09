@@ -146,7 +146,7 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
   );
 
   // Fetch concepts for teachers
-  const { data: concepts = [] } = api.knowledgeZap.getAssignmentConcepts.useQuery(
+  const { data: concepts = [], isLoading: isConceptsLoading } = api.knowledgeZap.getAssignmentConcepts.useQuery(
     { activityId }, 
     { enabled: role === Roles.Teacher }
   );
@@ -180,78 +180,194 @@ const KnowledgeZapAssignment: React.FC<KnowledgeZapAssignmentViewProps> = ({
 
   const dueDatePassed = dueDate && new Date() > new Date(dueDate);
 
+  // Helper function to render lightning bolt progress indicator
+  const renderProgressIndicator = () => {
+    const totalQuestions = questionStack.length;
+    if (totalQuestions === 0) return null;
+
+    const maxIconsToShow = 5;
+    const shouldShowEllipsis = totalQuestions > maxIconsToShow;
+    const iconsToRender = shouldShowEllipsis ? 3 : Math.min(totalQuestions, maxIconsToShow);
+    
+    return (
+      <div className="flex flex-row items-center gap-1 w-full justify-center mx-auto my-6">
+        <AnimatePresence mode="popLayout">
+          {questionStack.slice(0, iconsToRender).map((question, index) => (
+            <motion.div
+              key={question.id}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              layout
+            >
+              <LightningBoltIcon className="text-lime-700 h-6 w-6 sm:h-8 sm:w-8"/>
+            </motion.div>
+          ))}
+          {shouldShowEllipsis && (
+            <motion.div
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              className="flex items-center"
+            >
+              <span className="text-lime-700 text-lg font-bold mx-2">...</span>
+            </motion.div>
+          )}
+          {shouldShowEllipsis && questionStack.slice(-2).map((question) => (
+            <motion.div
+              key={question.id}
+              initial={{ scale: 0, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0, opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              layout
+            >
+              <LightningBoltIcon className="text-lime-700 h-6 w-6 sm:h-8 sm:w-8"/>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
+    );
+  };
+
   return (
     <div className="flex flex-col min-h-full h-full">
       {/* Header */}
-      <div className="grid grid-cols-2 w-full h-12 border-b-slate-200 border-b pl-8 pr-4">
-        <div className="flex flex-row gap-4 flex-start mr-auto h-8 my-auto">
-          <p className="text-lg font-semibold my-auto text-lime-700">
-            Knowledge Zap
-          </p>
-          {dueDatePassed && (
-            <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded my-auto">PAST DUE</span>
-          )}
-          <Separator orientation="vertical" className="h-6 w-px my-auto" />
-          <p className="text-sm my-auto">
-            {topic}
-          </p>
-        </div>
-        <SubmissionModal open={submissionModalOpen} />
-        <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-          { role !== Roles.Teacher ?
-            <>
-              {knowledgeZapAttemptId.length > 0 && <AssignmentTutorialModal 
-                topic={topic}
-                classroomId={classroomId} />}
-              {!dueDatePassed && (
-                <ConfirmationModal 
-                  onSubmit={submitAssignment} 
-                  loading={submissionMutation.isLoading}
+      <div className="w-full border-b border-slate-200 bg-white">
+        <div className="px-4 sm:px-8 py-4 sm:py-3">
+          {/* Mobile: 2x2 Grid Layout */}
+          <div className="grid grid-cols-2 grid-rows-2 gap-3 sm:hidden">
+            {/* Row 1, Col 1: Knowledge Zap Title */}
+            <div className="flex items-center">
+              <h1 className="text-base font-semibold text-lime-700 whitespace-nowrap">
+                Knowledge Zap
+              </h1>
+            </div>
+            
+            {/* Row 1, Col 2: Submit Activity Button */}
+            <div className="flex justify-end">
+              { role !== Roles.Teacher ? (
+                // Student: Submit button (if not past due)
+                !dueDatePassed && (
+                  <ConfirmationModal 
+                    onSubmit={submitAssignment} 
+                    loading={submissionMutation.isLoading}
+                    />
+                )
+              ) : (
+                // Teacher: Share button
+                <AssignmentShareModal 
+                  activityId={activityId}
+                  isLive={isLive} />
+              )}
+            </div>
+            
+            {/* Row 2, Col 1: Topic + Status Badge */}
+            <div className="flex items-center gap-2">
+              <p className="text-sm font-medium text-slate-700 truncate">
+                {topic}
+              </p>
+              {dueDatePassed && (
+                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full whitespace-nowrap font-medium">
+                  PAST DUE
+                </span>
+              )}
+            </div>
+            
+            {/* Row 2, Col 2: Help Modal */}
+            <div className="flex justify-end">
+              { role !== Roles.Teacher ? (
+                // Student: Tutorial/Help modal
+                knowledgeZapAttemptId.length > 0 && <AssignmentTutorialModal 
+                  topic={topic}
+                  classroomId={classroomId} 
+                  isMobileLayout={true} />
+              ) : (
+                // Teacher: Concepts modal
+                knowledgeZapAttemptId.length > 0 && <ConceptsModal 
+                  topic={topic}
+                  classroomId={classroomId}
+                  concepts={concepts}
+                  activityType="Knowledge Zap"
+                  isLoading={isConceptsLoading}
+                  isMobileLayout={true}
                   />
               )}
-            </>
-            : 
-            <>
-              {knowledgeZapAttemptId.length > 0 && <ConceptsModal 
-                topic={topic}
-                classroomId={classroomId}
-                concepts={concepts}
-                activityType="Knowledge Zap"
-                />}
-              <AssignmentShareModal 
-                activityId={activityId}
-                isLive={isLive} />
-            </>
-          }
+            </div>
+          </div>
+
+          {/* Desktop: Horizontal Layout */}
+          <div className="hidden sm:flex sm:flex-row sm:items-center sm:justify-between gap-6">
+            {/* Left section - Main info */}
+            <div className="flex flex-row items-center gap-4 min-w-0">
+              <div className="flex items-center gap-3">
+                <h1 className="text-lg font-semibold text-lime-700 whitespace-nowrap">
+                  Knowledge Zap
+                </h1>
+                {dueDatePassed && (
+                  <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full whitespace-nowrap font-medium">
+                    PAST DUE
+                  </span>
+                )}
+              </div>
+              <div className="flex items-center gap-3">
+                <Separator orientation="vertical" className="h-4 w-px" />
+                <div className="flex items-center gap-2">
+                  <p className="text-base font-medium text-slate-700 truncate">
+                    {topic}
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right section - Actions */}
+            <SubmissionModal open={submissionModalOpen} />
+            <div className="flex flex-row justify-end gap-3 flex-shrink-0">
+              { role !== Roles.Teacher ?
+                <>
+                  {knowledgeZapAttemptId.length > 0 && <AssignmentTutorialModal 
+                    topic={topic}
+                    classroomId={classroomId} 
+                    isMobileLayout={false} />}
+                  {!dueDatePassed && (
+                    <ConfirmationModal 
+                      onSubmit={submitAssignment} 
+                      loading={submissionMutation.isLoading}
+                      />
+                  )}
+                </>
+                : 
+                <>
+                  {knowledgeZapAttemptId.length > 0 && <ConceptsModal 
+                    topic={topic}
+                    classroomId={classroomId}
+                    concepts={concepts}
+                    activityType="Knowledge Zap"
+                    isLoading={isConceptsLoading}
+                    isMobileLayout={false}
+                    />}
+                  <AssignmentShareModal 
+                    activityId={activityId}
+                    isLive={isLive} />
+                </>
+              }
+            </div>
+          </div>
         </div>
       </div>      
-      <div className="w-full mx-auto bg-lime-50 min-h-[calc(100vh-48px)]">
-        <div className="m-16">
-          <div className="flex flex-row gap-2 w-full justify-center mx-auto my-4">
-            <AnimatePresence mode="popLayout">
-              {questionStack.map((question) => (
-                <motion.div
-                  key={question.id}
-                  initial={{ scale: 0, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  exit={{ scale: 0, opacity: 0 }}
-                  transition={{ duration: 0.5 }}
-                  layout
-                >
-                  <LightningBoltIcon className="text-lime-700 h-8 w-8"/>
-                </motion.div>
-              ))}
-            </AnimatePresence>
-          </div>
-          <Card className="px-12 py-12">
+      
+      <div className="w-full mx-auto bg-lime-50 min-h-[calc(100vh-80px)]">
+        <div className="p-4 sm:p-8 lg:p-16">
+          {renderProgressIndicator()}
+          <Card className="px-4 py-8 sm:px-12 sm:py-12">
             <CardContent className="flex flex-col gap-8">
               {questionStack.length > 0 ? (
                 <div className="flex flex-col gap-4">
                   {questionStack[0] && renderQuestion(questionStack[0], assignmentAttemptId, stackPush, stackPop, classroomId)}
                 </div>
               ) : (
-                <div className="flex flex-col gap-4 px-16 py-32">
-                  <p className="text-center text-2xl">
+                <div className="flex flex-col gap-4 px-4 py-16 sm:px-16 sm:py-32">
+                  <p className="text-center text-lg sm:text-2xl">
                     Congratulations! You have completed the activity. <br /> 
                     Make sure hit the submit button to record your score.
                   </p>                  

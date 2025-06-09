@@ -3,7 +3,7 @@ import { api } from '@/trpc/server';
 import { validateRequest } from '@/lib/auth/validate-request';
 import { type RouterOutputs } from '@/trpc/shared';
 import { AnalyticsDashboard } from './_components/AnalyticsDashboard';
-import { ClassroomHeader } from '../_components/classroom-header';
+import { ClassroomHeader } from '../(dashboard)/_components/classroom-header';
 import { BarChart3 } from 'lucide-react';
 
 export default async function AnalyticsPage(props: { params: Promise<{ classroomId: string }> }) {
@@ -26,11 +26,11 @@ export default async function AnalyticsPage(props: { params: Promise<{ classroom
   }
 
   return (
-    <div>
+    <div className="min-h-screen">
       {/* Header */}
       <ClassroomHeader classroom={classroom} />
 
-      <div className="mt-40">
+      <div className="mt-32 md:mt-40 px-2 md:px-0">
         {submissions && submissions.length > 0 && conceptData ? (
           <AnalyticsDashboard
             submissions={submissions}
