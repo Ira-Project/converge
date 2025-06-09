@@ -51,6 +51,7 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
         order: index + 1,
         option: option.option,
       })),
+      classroomId: classroomId,
     });
     setIsCorrect(result.correct);
     setIsSubmitted(true);
@@ -106,7 +107,7 @@ const OrderingQuestion: React.FC<OrderingQuestionProps> = ({
       </div>
       
       <p className="text-sm text-center text-muted-foreground">Put it in the correct order</p>
-      <div className="flex flex-row gap-8 px-32 relative w-full">
+      <div className="flex flex-row gap-4 md:gap-8 px-4 md:px-8 relative w-full">
         <div className="flex flex-col justify-center">
           <div className="h-full flex items-center">
             <div className="w-1 h-full bg-lime-700 relative">

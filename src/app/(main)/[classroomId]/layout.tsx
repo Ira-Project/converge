@@ -1,10 +1,10 @@
 import { Paths, Roles } from "@/lib/constants";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { SidebarProvider } from "@/components/ui/sidebar"
 
 import { validateRequest } from "@/lib/auth/validate-request";
 import { api } from "@/trpc/server";
 import { redirect } from "next/navigation";
-import { AppSidebar } from "./_components/sidebar/app-sidebar";
+import { AppSidebar } from "./(dashboard)/_components/sidebar/app-sidebar";
 
 export default async function MainLayout(props: { params: Promise<{ classroomId: string }>, children: React.ReactNode }) {
 
@@ -33,7 +33,6 @@ export default async function MainLayout(props: { params: Promise<{ classroomId:
       <SidebarProvider>
         <AppSidebar role={usersToClassrooms?.role ?? Roles.Student} classrooms={classrooms ?? []} classroom={classroom} user={user ?? undefined} activities={activities ?? []} students={students ?? []} />
         <main className="w-full">
-          <SidebarTrigger className="text-white" />
           {props.children}
         </main>
       </SidebarProvider>

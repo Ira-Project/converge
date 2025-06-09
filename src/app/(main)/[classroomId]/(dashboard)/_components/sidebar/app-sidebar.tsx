@@ -74,7 +74,7 @@ export function AppSidebar({ classroom, classrooms, user, activities, students, 
     }] : []),
     {
       title: "Documentation",
-      url: `${classroom?.id}${Paths.Documentation}`,
+      url: `/${classroom?.id}${Paths.Documentation}`,
       icon: FileText,
       isActive: true,
     },

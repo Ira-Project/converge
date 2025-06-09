@@ -54,6 +54,7 @@ const MatchingQuestion: React.FC<MatchingQuestionProps> = ({
       matchingQuestionId: matchingQuestionId,
       questionId: questionId,
       answer: matches,
+      classroomId: classroomId,
     });
     setIsCorrect(result.correct);
     setIsSubmitted(true);
