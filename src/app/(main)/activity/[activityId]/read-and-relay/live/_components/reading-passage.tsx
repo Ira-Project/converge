@@ -51,6 +51,19 @@ const ReadingPassage: React.FC<Props> = ({
   const [segments, setSegments] = useState<ContentSegment[]>([]);
   const [segmentHighlights, setSegmentHighlights] = useState<Record<string, SegmentHighlight[]>>({});
   const [currentColor, setCurrentColor] = useState<HighlightColor>('yellow');
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Detect if user is on mobile device
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768 || 'ontouchstart' in window);
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
 
   useEffect(() => {
     setSegments(parseContent(content));
@@ -334,6 +347,18 @@ const ReadingPassage: React.FC<Props> = ({
     selection.removeAllRanges();
   };
 
+  // Enhanced mobile handling with touch events
+  const handleMobileTextInteraction = (e: React.TouchEvent | React.MouseEvent) => {
+    // For mobile, we need to wait a bit for text selection to complete
+    if (isMobile) {
+      setTimeout(() => {
+        handleTextSelection();
+      }, 100);
+    } else {
+      handleTextSelection();
+    }
+  };
+
   const renderSegment = (segment: ContentSegment) => {
     if (segment.type === 'latex') {
       try {
@@ -350,11 +375,18 @@ const ReadingPassage: React.FC<Props> = ({
           <span
             id={segment.id}
             key={segment.id}
-            className={`inline-block cursor-pointer mx-1 px-1 rounded ${
+            className={`inline-block cursor-pointer mx-1 px-1 rounded transition-colors ${
               hasHighlight ? 
-              currentSegmentHighlights[0]?.color === 'yellow' ? 'bg-yellow-200' : 'bg-green-200' : ''
+              currentSegmentHighlights[0]?.color === 'yellow' ? 'bg-yellow-200' : 'bg-green-200' : 
+              'hover:bg-gray-100'
             }`}
             onMouseUp={() => {
+              const selection = window.getSelection();
+              if(selection?.toString()) {
+                toast.error("Partial highlight not supported for LaTeX")
+              }
+            }}
+            onTouchEnd={() => {
               const selection = window.getSelection();
               if(selection?.toString()) {
                 toast.error("Partial highlight not supported for LaTeX")
@@ -385,8 +417,15 @@ const ReadingPassage: React.FC<Props> = ({
         id={segment.id}
         key={segment.id}
         data-segment-id={segment.id}
-        className="inline"
-        onMouseUp={() => handleTextSelection()}
+        className="inline select-text"
+        style={{ 
+          userSelect: 'text',
+          WebkitUserSelect: 'text',
+          MozUserSelect: 'text',
+          msUserSelect: 'text'
+        }}
+        onMouseUp={handleMobileTextInteraction}
+        onTouchEnd={handleMobileTextInteraction}
       >
         <TextWithHighlights
           text={segment.content}
@@ -399,49 +438,72 @@ const ReadingPassage: React.FC<Props> = ({
 
   return (
     <div className="mx-auto relative h-full">
-      <div className="mb-6 bg-white rounded-lg shadow-md p-4 h-full">
-        <div className="h-full overflow-y-auto" id="reading-passage">
+      <div className="mb-6 bg-white rounded-lg shadow-md p-4 h-full relative">
+        <div 
+          className="h-full overflow-y-auto select-text" 
+          id="reading-passage"
+          style={{ 
+            userSelect: 'text',
+            WebkitUserSelect: 'text',
+            MozUserSelect: 'text',
+            msUserSelect: 'text'
+          }}
+        >
           {segments.map(segment => renderSegment(segment))}
         </div>
-      </div>
 
-      {/* Floating Action Buttons */}
-      <div className="absolute bottom-4 right-4 flex flex-col gap-2">
-        <div className="group relative flex items-center">
-          <div className="absolute right-full mr-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-            Concept Highlighter
+        {/* Highlight Buttons - Inside the box */}
+        <div className={`absolute bottom-4 right-4 flex ${isMobile ? 'flex-row' : 'flex-col'} gap-3 z-10`}>
+          <div className="group relative flex items-center">
+            {!isMobile && (
+              <div className="absolute right-full mr-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Concept Highlighter
+              </div>
+            )}
+            <button
+              onClick={() => setCurrentColor('yellow')}
+              className={`${isMobile ? 'w-12 h-12' : 'w-10 h-10'} rounded-full shadow-lg flex items-center justify-center transition-all ${
+                currentColor === 'yellow' 
+                  ? 'bg-yellow-200 ring-2 ring-yellow-400' 
+                  : 'bg-yellow-100 hover:bg-yellow-200'
+              }`}
+              type="button"
+              title="Concept Highlighter"
+            >
+              <span className={`${isMobile ? 'w-7 h-7' : 'w-6 h-6'} bg-yellow-400 rounded-full`}></span>
+            </button>
+            {isMobile && (
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded whitespace-nowrap opacity-0 group-active:opacity-100 transition-opacity">
+                Concepts
+              </div>
+            )}
           </div>
-          <button
-            onClick={() => setCurrentColor('yellow')}
-            className={`w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all ${
-              currentColor === 'yellow' 
-                ? 'bg-yellow-200 ring-2 ring-yellow-400' 
-                : 'bg-yellow-100 hover:bg-yellow-200'
-            }`}
-            type="button"
-            title="Concept Highlighter"
-          >
-            <span className="w-6 h-6 bg-yellow-400 rounded-full"></span>
-          </button>
-        </div>
-        <div className="group relative flex items-center">
-          <div className="absolute right-full mr-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
-            Formula Highlighter
+          <div className="group relative flex items-center">
+            {!isMobile && (
+              <div className="absolute right-full mr-2 px-2 py-1 bg-gray-800 text-white text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+                Formula Highlighter
+              </div>
+            )}
+            <button
+              onClick={() => setCurrentColor('green')}
+              className={`${isMobile ? 'w-12 h-12' : 'w-10 h-10'} rounded-full shadow-lg flex items-center justify-center transition-all ${
+                currentColor === 'green' 
+                  ? 'bg-green-200 ring-2 ring-green-400' 
+                  : 'bg-green-100 hover:bg-green-200'
+              }`}
+              type="button"
+              title="Formula Highlighter"
+            >
+              <span className={`${isMobile ? 'w-7 h-7' : 'w-6 h-6'} bg-green-400 rounded-full`}></span>
+            </button>
+            {isMobile && (
+              <div className="absolute -top-8 left-1/2 transform -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded whitespace-nowrap opacity-0 group-active:opacity-100 transition-opacity">
+                Formulas
+              </div>
+            )}
           </div>
-          <button
-            onClick={() => setCurrentColor('green')}
-            className={`w-10 h-10 rounded-full shadow-lg flex items-center justify-center transition-all ${
-              currentColor === 'green' 
-                ? 'bg-green-200 ring-2 ring-green-400' 
-                : 'bg-green-100 hover:bg-green-200'
-            }`}
-            type="button"
-            title="Formula Highlighter"
-          >
-            <span className="w-6 h-6 bg-green-400 rounded-full"></span>
-          </button>
         </div>
-      </div> 
+      </div>
     </div>
   );
 };

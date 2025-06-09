@@ -7,7 +7,7 @@ export default function RevisionLayout({
 }) {
   return (
     <>
-      <SidebarTrigger className="text-white" />
+      <SidebarTrigger className="text-black" />
       {children}
     </>
   );

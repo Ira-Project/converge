@@ -23,6 +23,7 @@ import posthog from 'posthog-js';
 import { type Part2ComputeCorrectAnswerInput, part2ComputeCorrectAnswerSchema } from '@/server/api/routers/reasoningActivity/reasoning/reasoning.input';
 import AssignmentTutorialModal from '@/app/(main)/activity/[activityId]/reason-trace/live/_components/reason-assignment-tutorial-modal';
 import { AssignActivityModal } from '@/app/(main)/[classroomId]/activity-preview/[assignmentId]/_components/assign-activity-modal';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 
 interface ReasoningAssignmentViewProps {
@@ -79,6 +80,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [draggedItem, setDraggedItem] = useState<{ id: string; text: string } | null>(null);
   const [draggedIdx, setDraggedIdx] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   const currentQuestion = reasoningAssignment?.reasoningQuestions?.[currentQuestionIndex];
   const currentState = questionStates[currentQuestionIndex];
@@ -88,16 +90,39 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   const part2Mutation = api.reasoning.part2ComputeCorrectAnswer.useMutation();
   const part3Mutation = api.reasoning.part3ErrorAnalysis.useMutation();
 
+  // Prevent scrolling during drag operations
+  React.useEffect(() => {
+    const preventScroll = (e: TouchEvent) => {
+      if (isDragging) {
+        e.preventDefault();
+      }
+    };
+
+    if (isDragging) {
+      document.addEventListener('touchmove', preventScroll, { passive: false });
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.removeEventListener('touchmove', preventScroll);
+      document.body.style.overflow = 'auto';
+    }
+
+    return () => {
+      document.removeEventListener('touchmove', preventScroll);
+      document.body.style.overflow = 'auto';
+    };
+  }, [isDragging]);
 
   const handleDragStart = (e: React.DragEvent, option: { id: string; text: string }, index: number | null): void => {
     setIsDragging(true);
     setDraggedItem(option);
     setDraggedIdx(index);
     e.dataTransfer.setData('text/plain', JSON.stringify(option));
+    e.dataTransfer.effectAllowed = 'move';
   };
 
   const handleDragOver = (e: React.DragEvent): void => {
     e.preventDefault();
+    e.dataTransfer.dropEffect = 'move';
   };
 
   const handleDrop = (e: React.DragEvent, index: number): void => {
@@ -141,6 +166,59 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
       incorrectSteps: currentState?.incorrectSteps,
       part2Error: currentState?.part2Error,
       part3Error: currentState?.part3Error
+    };
+    setQuestionStates(newQuestionStates);
+  };
+
+  // Mobile click handlers for adding steps to topmost empty slot
+  const handleMobileStepClick = (option: { id: string; text: string }): void => {
+    if (!isMobile || currentState?.part !== 'part1') return;
+    
+    posthog.capture("reason_trace_mobile_step_clicked");
+    
+    // Find the first empty slot
+    const firstEmptyIndex = currentState.correctPathwayOptions.findIndex(step => step === null);
+    
+    if (firstEmptyIndex === -1) return; // No empty slots
+    
+    const newCorrectPathwayOptions = [...currentState.correctPathwayOptions];
+    const newUsedSteps = [...currentState.usedSteps];
+    
+    // Add step to the first empty slot
+    newCorrectPathwayOptions[firstEmptyIndex] = { ...option, result: ReasoningPathwayStepResult.PENDING };
+    newUsedSteps.push(option);
+    
+    const newQuestionStates = [...questionStates];
+    newQuestionStates[currentQuestionIndex] = {
+      ...currentState,
+      correctPathwayOptions: newCorrectPathwayOptions,
+      usedSteps: newUsedSteps,
+    };
+    setQuestionStates(newQuestionStates);
+  };
+
+  const handleMobilePart3StepClick = (option: { id: string; text: string }): void => {
+    if (!isMobile || currentState?.part !== 'part3') return;
+    
+    posthog.capture("reason_trace_mobile_part3_step_clicked");
+    
+    // Find the first empty slot in error analysis
+    const firstEmptyIndex = currentState.errorAnalysisOptions.findIndex(step => step === null);
+    
+    if (firstEmptyIndex === -1) return; // No empty slots
+    
+    const newErrorAnalysisOptions = [...currentState.errorAnalysisOptions];
+    const newErrorAnalysisUsedSteps = [...currentState.errorAnalysisUsedSteps];
+    
+    // Add step to the first empty slot
+    newErrorAnalysisOptions[firstEmptyIndex] = { ...option, result: ReasoningPathwayStepResult.PENDING };
+    newErrorAnalysisUsedSteps.push(option);
+    
+    const newQuestionStates = [...questionStates];
+    newQuestionStates[currentQuestionIndex] = {
+      ...currentState,
+      errorAnalysisOptions: newErrorAnalysisOptions,
+      errorAnalysisUsedSteps: newErrorAnalysisUsedSteps,
     };
     setQuestionStates(newQuestionStates);
   };
@@ -309,39 +387,100 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col min-h-full h-full">
       {/* Header */}
-      <div className="grid grid-cols-2 w-full h-12 border-b-slate-200 border-b pl-8 pr-4">
-        <div className="flex flex-row gap-4 flex-start mr-auto h-8 my-auto">
-          <p className="text-lg font-semibold my-auto text-rose-700">
-            Reason Trace
-          </p>
-          <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded my-auto">PREVIEW</span>
-          <Separator orientation="vertical" className="h-6 w-px my-auto" />
-          <p className="text-sm my-auto">
-            {topic}
-          </p>
-        </div>
-        <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-          { role == Roles.Teacher &&
-            <>
-              <AssignmentTutorialModal 
-                topic={topic}
-                classroomId={classroomId} />
-              <AssignActivityModal 
-                classroomId={classroomId}
-                assignmentId={reasoningAssignment?.id ?? ''}
-                activityType={ActivityType.ReasonTrace}
-                activityName={reasoningAssignment?.name ?? ''}
-                topicId={topicId}
-                />
-            </>
-          }
+      <div className="w-full border-b border-slate-200 bg-white">
+        <div className="px-4 sm:px-8 py-4 sm:py-3">
+          {/* Mobile: 2x2 Grid Layout */}
+          <div className="grid grid-cols-2 grid-rows-2 gap-3 sm:hidden">
+            {/* Row 1, Col 1: Reason Trace Title */}
+            <div className="flex items-center">
+              <h1 className="text-base font-semibold text-rose-700 whitespace-nowrap">
+                Reason Trace
+              </h1>
+            </div>
+            
+            {/* Row 1, Col 2: Assign Activity Button */}
+            <div className="flex justify-end">
+              { role == Roles.Teacher && (
+                <AssignActivityModal 
+                  classroomId={classroomId}
+                  assignmentId={reasoningAssignment?.id ?? ''}
+                  activityType={ActivityType.ReasonTrace}
+                  activityName={reasoningAssignment?.name ?? ''}
+                  topicId={topicId}
+                  />
+              )}
+            </div>
+            
+            {/* Row 2, Col 1: Topic + Preview Badge */}
+            <div className="flex items-center gap-2">
+              <p className="text-sm font-medium text-slate-700 truncate">
+                {topic}
+              </p>
+              <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full whitespace-nowrap font-medium">
+                PREVIEW
+              </span>
+            </div>
+            
+            {/* Row 2, Col 2: Tutorial Modal */}
+            <div className="flex justify-end">
+              { role == Roles.Teacher && (
+                <AssignmentTutorialModal 
+                  topic={topic}
+                  classroomId={classroomId}
+                  isMobileLayout={true} />
+              )}
+            </div>
+          </div>
+
+          {/* Desktop: Horizontal Layout */}
+          <div className="hidden sm:flex sm:flex-row sm:items-center sm:justify-between gap-6">
+            {/* Left section - Main info */}
+            <div className="flex flex-row items-center gap-4 min-w-0">
+              <div className="flex items-center gap-3">
+                <h1 className="text-lg font-semibold text-rose-700 whitespace-nowrap">
+                  Reason Trace
+                </h1>
+                <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full whitespace-nowrap font-medium">
+                  PREVIEW
+                </span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Separator orientation="vertical" className="h-4 w-px" />
+                <div className="flex items-center gap-2">
+                  <p className="text-base font-medium text-slate-700 truncate">
+                    {topic}
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right section - Actions */}
+            <div className="flex flex-row justify-end gap-3 flex-shrink-0">
+              { role == Roles.Teacher &&
+                <>
+                  <AssignmentTutorialModal 
+                    topic={topic}
+                    classroomId={classroomId}
+                    isMobileLayout={false} />
+                  <AssignActivityModal 
+                    classroomId={classroomId}
+                    assignmentId={reasoningAssignment?.id ?? ''}
+                    activityType={ActivityType.ReasonTrace}
+                    activityName={reasoningAssignment?.name ?? ''}
+                    topicId={topicId}
+                    />
+                </>
+              }
+            </div>
+          </div>
         </div>
       </div>
+      
       <div className="w-full mx-auto bg-rose-50">
-        <Card className="m-16 px-12 py-8">
-          <CardContent className="flex flex-col gap-8">
+        <Card className="m-4 sm:m-16 px-2 sm:px-12 py-4 sm:py-8">
+          <CardContent className="flex flex-col gap-6 sm:gap-8">
             {/* Part 1 */}
             <>
               {
@@ -426,11 +565,11 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
               {/* Available Steps */}
               {
                 currentState?.part === 'part1' &&
-                <div className="px-8 rounded-lg">
+                <div className="px-2 sm:px-4 rounded-lg">
                   <p className="font-semibold mb-4 mx-auto text-center">
                     Available Steps
                   </p>
-                  <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-6 text-center">
                   {
                     currentQuestion?.question.answerOptions
                     .filter((option) => !currentState?.usedSteps.some(step => step.id === option.id))
@@ -439,6 +578,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                         key={option.id}
                         step={option.optionText}
                         onDragStart={(e) => handleDragStart(e, { id: option.id, text: option.optionText }, null)}
+                        onClick={isMobile ? () => handleMobileStepClick({ id: option.id, text: option.optionText }) : undefined}
                       />
                     ))
                     }
@@ -588,31 +728,26 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                         </div>
                       </div>
                       
-                      <div className={`grid ${currentState.part === 'complete' ? 'grid-cols-[1fr_auto_1fr]' : 'grid-cols-1'} gap-8`}>
+                      <div className={`grid grid-cols-1 gap-8`}>
                         {currentState?.part === 'complete' && (
-                          <>
-                            <div className="space-y-2">
-                              <p className="font-medium text-center text-green-700">✅ Correct Reasoning</p>
-                              <p className="text-center text-sm text-green-600 mb-4">
-                                Led to: {currentState.finalAnswer}
-                                {currentQuestion?.question.correctAnswersUnit && (
-                                  <span className="ml-1">
-                                    <FormattedText text={currentQuestion?.question.correctAnswersUnit} />
-                                  </span>
-                                )}
-                              </p>
-                              {currentState.correctPathwayOptions.map((step, index) => (
-                                <StaticStep
-                                  key={index}
-                                  text={step?.text ?? ''}
-                                  status={ReasoningPathwayStepResult.CORRECT}
-                                />
-                              ))}
-                            </div>
-                            <div className="text-center text-lg flex items-center justify-center">
-                              <span className="text-sm">vs</span>
-                            </div>
-                          </>
+                          <div className="space-y-2">
+                            <p className="font-medium text-center text-green-700">✅ Correct Reasoning</p>
+                            <p className="text-center text-sm text-green-600 mb-4">
+                              Led to: {currentState.finalAnswer}
+                              {currentQuestion?.question.correctAnswersUnit && (
+                                <span className="ml-1">
+                                  <FormattedText text={currentQuestion?.question.correctAnswersUnit} />
+                                </span>
+                              )}
+                            </p>
+                            {currentState.correctPathwayOptions.map((step, index) => (
+                              <StaticStep
+                                key={index}
+                                text={step?.text ?? ''}
+                                status={ReasoningPathwayStepResult.CORRECT}
+                              />
+                            ))}
+                          </div>
                         )}
                         
                         <div className="space-y-2">
@@ -673,9 +808,9 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                       </div>
                       {
                         currentState?.part === 'part3' && (
-                          <div className="px-8 rounded-lg">
+                          <div className="px-2 sm:px-4 rounded-lg">
                             <h3 className="font-semibold mb-4 text-center">Available Steps</h3>
-                            <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-6 text-center">
                               {currentQuestion?.question.answerOptions
                                 .filter((option) => !currentState?.errorAnalysisUsedSteps.some(step => step.id === option.id))
                                 .map((option) => (
@@ -683,6 +818,7 @@ const ReasoningStepsAssignment: React.FC<ReasoningAssignmentViewProps> = ({
                                     key={option.id}
                                     step={option.optionText}
                                     onDragStart={(e) => handleDragStart(e, { id: option.id, text: option.optionText }, null)}
+                                    onClick={isMobile ? () => handleMobilePart3StepClick({ id: option.id, text: option.optionText }) : undefined}
                                   />
                                 ))}
                             </div>
