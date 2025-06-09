@@ -15,14 +15,15 @@ interface Props {
     name: string;
     id: string;
   } | null;
+  isMobileLayout?: boolean;
 }
 
-export default function AssignmentTutorialModal({ classroom, topic }: Props) {  
+export default function AssignmentTutorialModal({ classroom, topic, isMobileLayout = false }: Props) {  
 
   const { tutorialUrl } = getMetaDataFromActivityType(ActivityType.LearnByTeaching, "");
 
   return (
-    <Dialog defaultOpen onOpenChange={(open) => {
+    <Dialog defaultOpen={isMobileLayout} onOpenChange={(open) => {
       if (open) {
         posthog.capture("learn_by_teaching_tutorial_opened");
       } else {
@@ -62,7 +63,7 @@ export default function AssignmentTutorialModal({ classroom, topic }: Props) {
         <DialogDescription className="m-0 mx-auto font-medium">
           How to do the activity?
         </DialogDescription>
-        <div className="px-16">
+        <div className={isMobileLayout ? "px-0" : "px-16"}>
           <div className="relative pb-[56%] h-0 border-0">
             <iframe 
               src={tutorialUrl} 

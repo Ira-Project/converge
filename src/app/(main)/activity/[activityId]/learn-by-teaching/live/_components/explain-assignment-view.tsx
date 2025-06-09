@@ -148,84 +148,145 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
 
   return (
     <div className="flex flex-col">
-      <div className="grid grid-cols-2 w-full h-12 border-b-slate-200 border-b pl-8 pr-4">
-        <div className="flex flex-row gap-4 flex-start mr-auto h-8 my-auto">
-          <p className="text-lg font-semibold my-auto text-amber-700">
-            Learn by Teaching
-          </p>
-          {dueDatePassed && (
-            <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded my-auto">PAST DUE</span>
-          )}
-          <Separator orientation="vertical" className="h-6 w-px my-auto" />
-          <p className="text-sm my-auto">
-            {topic}
-          </p>
-        </div>
-        <SubmissionModal open={submissionModalOpen} />
-        <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-          { role !== Roles.Teacher ?
-            <>
-              { testAttemptId.length > 0 && 
-                <AssignmentTutorialModal 
-                  topic={topic}
-                  classroom={classroom} />
-              }
-              {!dueDatePassed && (
-                <ConfirmationModal 
-                  onSubmit={submitAssignment} 
-                  loading={submissionMutation.isLoading}
-                  />
+      <SubmissionModal open={submissionModalOpen} />
+      {/* Header */}
+      <div className="w-full border-b border-slate-200 bg-white">
+        <div className="px-4 sm:px-8 py-4 sm:py-3">
+          {/* Mobile: 2x2 Grid Layout */}
+          <div className="grid grid-cols-2 grid-rows-2 gap-3 sm:hidden">
+            {/* Row 1, Col 1: Learn by Teaching Title */}
+            <div className="flex items-center">
+              <h1 className="text-base font-semibold text-amber-700 whitespace-nowrap">
+                Learn by Teaching
+              </h1>
+            </div>
+            
+            {/* Row 1, Col 2: Submit Activity Button */}
+            <div className="flex justify-end">
+              { role !== Roles.Teacher ? (
+                // Student: Submit button (if not past due)
+                !dueDatePassed && (
+                  <ConfirmationModal 
+                    onSubmit={submitAssignment} 
+                    loading={submissionMutation.isLoading}
+                    />
+                )
+              ) : (
+                // Teacher: Share button
+                <AssignmentShareModal 
+                  activityId={activityId}
+                  isLive={isLive} />
               )}
-            </>
-            : 
-            <>
-              { testAttemptId.length > 0 && 
+            </div>
+            
+            {/* Row 2, Col 1: Topic + Status Badge */}
+            <div className="flex items-center gap-2">
+              <p className="text-sm font-medium text-slate-700 truncate">
+                {topic}
+              </p>
+              {dueDatePassed && (
+                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full whitespace-nowrap font-medium">
+                  PAST DUE
+                </span>
+              )}
+            </div>
+            
+            {/* Row 2, Col 2: Help Modal */}
+            <div className="flex justify-end">
+              { testAttemptId.length > 0 && (
                 <AssignmentTutorialModal 
                   topic={topic}
-                  classroom={classroom} />
+                  classroom={classroom}
+                  isMobileLayout={true} />
+              )}
+            </div>
+          </div>
+
+          {/* Desktop: Horizontal Layout */}
+          <div className="hidden sm:grid sm:grid-cols-2 w-full h-12">
+            <div className="flex flex-row gap-4 flex-start mr-auto h-8 my-auto">
+              <p className="text-lg font-semibold my-auto text-amber-700">
+                Learn by Teaching
+              </p>
+              {dueDatePassed && (
+                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded my-auto">PAST DUE</span>
+              )}
+              <Separator orientation="vertical" className="h-6 w-px my-auto" />
+              <p className="text-sm my-auto">
+                {topic}
+              </p>
+                         </div>
+             <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
+              { role !== Roles.Teacher ?
+                <>
+                  { testAttemptId.length > 0 && 
+                    <AssignmentTutorialModal 
+                      topic={topic}
+                      classroom={classroom}
+                      isMobileLayout={false} />
+                  }
+                  {!dueDatePassed && (
+                    <ConfirmationModal 
+                      onSubmit={submitAssignment} 
+                      loading={submissionMutation.isLoading}
+                      />
+                  )}
+                </>
+                : 
+                <>
+                  { testAttemptId.length > 0 && 
+                    <AssignmentTutorialModal 
+                      topic={topic}
+                      classroom={classroom}
+                      isMobileLayout={false} />
+                  }
+                  <AssignmentShareModal 
+                    activityId={activityId}
+                    isLive={isLive} />
+                </>
               }
-              <AssignmentShareModal 
-                activityId={activityId}
-                isLive={isLive} />
-            </>
-          }
+            </div>
+          </div>
         </div>
       </div>
-      <div className="grid grid-cols-[0.9fr_1.1fr] h-[calc(100vh-48px)] overflow-y-hidden">
-        <div className="flex flex-col gap-4 w-full px-8 py-8 overflow-y-hidden border-r-slate-200 border-r bg-amber-50">
+      
+      {/* Main Content */}
+      <div className="flex flex-col lg:grid lg:grid-cols-[0.9fr_1.1fr] min-h-[calc(100vh-80px)] lg:h-[calc(100vh-48px)]">
+        {/* Explanation Section */}
+        <div className="flex flex-col gap-4 w-full px-4 sm:px-8 py-4 sm:py-8 border-b lg:border-b-0 lg:border-r border-slate-200 bg-amber-50 lg:overflow-y-hidden">
             <Form {...form}>
               <form 
                 onSubmit={onSubmit} 
-                className="h-full grid grid-rows-[32px_1fr_auto_32px]">
+                className="h-full flex flex-col lg:grid lg:grid-rows-[32px_1fr_auto_32px] gap-4 lg:gap-0">
                 <p className="font-medium text-sm">Enter Explanation Below</p>
-                <div className="mb-8 bg-white max-h-full overflow-hidden">
+                <div className="flex-1 lg:mb-8 bg-white min-h-[200px] lg:max-h-full lg:overflow-hidden">
                   <RichInput 
                     updateValue={(value: string) => form.setValue('explanation', value)}/>
                 </div>
-                <div className="mb-4 overflow-scroll">
+                <div className="lg:mb-4 lg:overflow-scroll">
                   <FormulaInput 
                     formulaList={form.getValues('formula')}
                     updateValue={(value: string[]) => form.setValue('formula', value)}/>
                 </div>
-                <div className="w-full grid grid-cols-[1fr__auto]">
+                <div className="w-full flex flex-col gap-2 lg:grid lg:grid-cols-[1fr__auto]">
                   {
                     form.formState.errors.explanation ?
-                    <ul className="list-disc rounded-sm bg-destructive/40 p-2 text-[0.8rem] font-medium truncate  text-ellipsis mr-2">
+                    <ul className="list-disc rounded-sm bg-destructive/40 p-2 text-[0.8rem] font-medium lg:truncate lg:text-ellipsis lg:mr-2">
                       {form.formState.errors.explanation.message}
                     </ul>
                     : 
                     explanationMutation.error &&
-                    <ul className="list-disc rounded-lș bg-destructive/40 p-2 text-[0.8rem] font-medium truncate text-ellipsis mr-2">
+                    <ul className="list-disc rounded-lș bg-destructive/40 p-2 text-[0.8rem] font-medium lg:truncate lg:text-ellipsis lg:mr-2">
                       {explanationMutation.error.message}
                     </ul>
                   }
-                  <div className="ml-auto flex flex-row justify-end">
+                  <div className="w-full lg:ml-auto flex flex-row justify-center lg:justify-end">
                     <LoadingButton 
                       variant="link"
                       dontShowChildrenWhileLoading
                       disabled={explanationMutation.isLoading || !isSubscribed} 
                       loading={explanationMutation.isLoading || !isSubscribed}
-                      className="p-2 bottom-0 right-0 mt-auto ml-auto hover:no-underline"
+                      className="p-2 lg:bottom-0 lg:right-0 lg:mt-auto lg:ml-auto hover:no-underline"
                       type="submit">
                         <div className="flex flex-row gap-2">
                         <span className="my-auto font-semibold">
@@ -244,12 +305,14 @@ export const AssignmentView = ({ activityId, topic, questions, testAttemptId, as
               </form>
             </Form>
         </div>
-        <div className="flex flex-col gap-4 w-full px-8 py-8 h-full overflow-y-hidden">
+        
+        {/* Questions Section */}
+        <div className="flex flex-col gap-4 w-full px-4 sm:px-8 py-4 sm:py-8 min-h-[400px] lg:h-full lg:overflow-y-hidden">
           <div className="flex flex-col gap-2"> 
             <p className="font-medium text-sm"> Questions </p>
             <p className="text-sm text-muted-foreground"> Ira will answer these questions based on your explanation </p>
           </div>
-          <ScrollArea className="grid overflow-y-auto max-h-full">
+          <ScrollArea className="flex-1 lg:grid lg:overflow-y-auto lg:max-h-full">
             <div className="flex flex-col gap-4">
               <Accordion type="single" collapsible className="w-full">
                 <Suspense fallback={<Skeleton className="w-full h-16"/>}>
