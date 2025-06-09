@@ -75,8 +75,8 @@ if(process.env.ENVIRONMENT === "prod") {
 // CONCEPT CREATION
 // await createConcepts("A3 - Work, Energy and Power");
 const options = {
-  "courseIds": ["EpIa!JC8*Gh^Q@0QuC&#G"],
-  "subjectIds": ["ligzM4%#9I0wtF7&FT7b7"],
+  "courseIds": ["22", "23"],
+  "subjectIds": ["2"],
   "grades": ["9", "10"],
 }
 
@@ -126,10 +126,10 @@ const fileNames = [
 // KNOWLEDGE ZAP CREATION
 // await deleteKnowledgeZapAssignment("eh5amb2jb5vs4vi8u2qo6");
 
-for (const fileName of fileNames) {
-  console.log(`Processing Knowledge Zap file: ${fileName}`);
-  await createKnowledgeZapAssignment(fileName, options);
-}
+// for (const fileName of fileNames) {
+//   console.log(`Processing Knowledge Zap file: ${fileName}`);
+//   await createKnowledgeZapAssignment(fileName, options);
+// }
 
 
 // await createKnowledgeZapAssignment("kinematics");
@@ -177,9 +177,10 @@ for (const fileName of fileNames) {
 // await clearStepSolveAssignmentTemplates();
 // await createStepSolveAssignmentTemplate();
 // await updateStepSolveActivityAssignmentIds();
-// await deleteNonLiveActivitiesFromAllClassrooms();
+await deleteNonLiveActivitiesFromAllClassrooms();
 
-// await mapAllAssignmentsToSubject("ligzM4%#9I0wtF7&FT7b7");
+// await mapAllAssignmentsToSubject("2");
 // await mapAllAssignmentsToGrade("11");
 // await mapAllAssignmentsToGrade("12");
-// await mapAllAssignmentsToCourse("^uu%O4vEaah&hrxpSwfV%")
+// await mapAllAssignmentsToCourse("22");
+// await mapAllAssignmentsToCourse("23");

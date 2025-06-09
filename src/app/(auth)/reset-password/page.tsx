@@ -21,8 +21,8 @@ export default async function ForgotPasswordPage() {
   if (user?.classroomId) redirect(`${Paths.Classroom}${user.classroomId}`); 
 
   return (
-    <Card className="w-full max-w-md">
-      <CardHeader>
+    <Card className="w-full max-w-md mx-auto">
+      <CardHeader className="text-center">
         <CardTitle>Forgot password?</CardTitle>
         <CardDescription>
           Password reset link will be sent to your email.

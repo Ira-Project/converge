@@ -29,30 +29,34 @@ export function SendResetEmail() {
   }, [state?.error, state?.success]);
 
   return (
-    <form className="space-y-4" action={formAction}>
+    <form className="space-y-6" action={formAction}>
       <div className="space-y-2">
-        <Label>Your Email</Label>
+        <Label htmlFor="email">Your Email</Label>
         <Input
+          id="email"
           required
           placeholder="email@example.com"
           autoComplete="email"
           name="email"
           type="email"
+          className="h-11"
         />
       </div>
 
-      <div className="flex flex-wrap justify-between">
+      <div className="flex flex-col sm:flex-row sm:flex-wrap sm:justify-between gap-2">
         <Link href={Paths.Signup}>
-          <Button variant={"link"} size={"sm"} className="p-0">
+          <Button variant={"link"} size={"sm"} className="p-0 h-auto text-sm">
             Not signed up? Sign up now
           </Button>
         </Link>
       </div>
 
-      <SubmitButton className="w-full">Reset Password</SubmitButton>
-      <Button variant="outline" className="w-full" asChild>
-        <Link href={Paths.Login}>Cancel</Link>
-      </Button>
+      <div className="space-y-3">
+        <SubmitButton className="w-full h-11">Reset Password</SubmitButton>
+        <Button variant="outline" className="w-full h-11" asChild>
+          <Link href={Paths.Login}>Cancel</Link>
+        </Button>
+      </div>
     </form>
   );
 }

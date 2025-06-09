@@ -22,32 +22,38 @@ export const SignUpForm: React.FC<{ onSuccess?: () => void }> = ({ onSuccess }) 
           if (onSuccess) onSuccess();
         }}
         className="grid gap-4">
-        <div className="space-y-1.5">
-          <Label>Name</Label>
+        <div className="space-y-2">
+          <Label htmlFor="name">Name</Label>
           <Input
+            id="name"
             placeholder="Enter your full name (optional)"
             autoComplete="name"
             name="name"
+            className="h-11"
           />
         </div>
-        <div className="space-y-1.5">
-          <Label>Email</Label>
+        <div className="space-y-2">
+          <Label htmlFor="email">Email</Label>
           <Input
+            id="email"
             required
             placeholder="email@example.com"
             autoComplete="email"
             name="email"
             type="email"
+            className="h-11"
           />
         </div>
 
-        <div className="space-y-1.5">
-          <Label>Password</Label>
+        <div className="space-y-2">
+          <Label htmlFor="password">Password</Label>
           <PasswordInput
+            id="password"
             name="password"
             required
             autoComplete="current-password"
             placeholder="********"
+            className="h-11"
           />
         </div>
 
@@ -59,7 +65,7 @@ export const SignUpForm: React.FC<{ onSuccess?: () => void }> = ({ onSuccess }) 
     
 
         {state?.fieldError ? (
-          <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">
+          <ul className="list-disc space-y-1 rounded-lg border bg-destructive/10 p-3 text-sm font-medium text-destructive">
             {Object.values(state.fieldError).map((err) => (
               <li className="ml-4" key={err}>
                 {err}
@@ -67,11 +73,11 @@ export const SignUpForm: React.FC<{ onSuccess?: () => void }> = ({ onSuccess }) 
             ))}
           </ul>
         ) : state?.formError ? (
-          <p className="rounded-lg border bg-destructive/10 p-2 text-[0.8rem] font-medium text-destructive">
+          <p className="rounded-lg border bg-destructive/10 p-3 text-sm font-medium text-destructive">
             {state?.formError}
           </p>
         ) : null}
-        <SubmitButton className="w-full">Sign Up</SubmitButton>
+        <SubmitButton className="w-full h-11">Sign Up</SubmitButton>
       </form>
     </>
   )
