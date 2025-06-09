@@ -1,5 +1,5 @@
 import { Paths, Roles } from "@/lib/constants";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
+import { SidebarProvider } from "@/components/ui/sidebar"
 
 import { validateRequest } from "@/lib/auth/validate-request";
 import { api } from "@/trpc/server";
