@@ -113,41 +113,58 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
   return (
     <div className="flex flex-col">
       {/* Header */}
-      <div className="grid grid-cols-2 w-full h-12 border-b-slate-200 border-b pl-8 pr-4">
-        <div className="flex flex-row gap-4 flex-start mr-auto h-8 my-auto">
-          <p className="text-lg font-semibold my-auto text-teal-700">
-            Step Solve
-          </p>
-          {dueDatePassed && (
-            <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded my-auto">PAST DUE</span>
-          )}
-          <Separator orientation="vertical" className="h-6 w-px my-auto" />
-          <p className="text-sm my-auto">
-            {topic}
-          </p>
-        </div>
-        <SubmissionModal open={submissionModalOpen} />
-        <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-          {role !== Roles.Teacher ?
-            <>
-              {
-                stepSolveAttemptId.length > 0 &&
-                <AssignmentTutorialModal
-                  topic={topic}
-                  classroomId={classroomId} />
-              }
-              {!dueDatePassed && (
-                <ConfirmationModal
-                  onSubmit={submitAssignment}
-                  loading={submissionMutation.isLoading}
-                />
+      <div className="w-full border-b border-slate-200 bg-white">
+        <div className="px-4 sm:px-8 py-4 sm:py-3">
+          {/* Mobile: 2x2 Grid Layout */}
+          <div className="grid grid-cols-2 grid-rows-2 gap-3 sm:hidden">
+            {/* Row 1, Col 1: Step Solve Title */}
+            <div className="flex items-center">
+              <h1 className="text-base font-semibold text-teal-700 whitespace-nowrap">
+                Step Solve
+              </h1>
+            </div>
+            
+            {/* Row 1, Col 2: Submit Activity Button */}
+            <div className="flex justify-end">
+              { role !== Roles.Teacher ? (
+                // Student: Submit button (if not past due)
+                !dueDatePassed && (
+                  <ConfirmationModal 
+                    onSubmit={submitAssignment} 
+                    loading={submissionMutation.isLoading}
+                    />
+                )
+              ) : (
+                // Teacher: Share button
+                <AssignmentShareModal 
+                  activityId={activityId}
+                  isLive={isLive} />
               )}
-            </>
-            :
-            <>
-              {
-                stepSolveAttemptId.length > 0 &&
-                <ConceptsModal
+            </div>
+            
+            {/* Row 2, Col 1: Topic + Status Badge */}
+            <div className="flex items-center gap-2">
+              <p className="text-sm font-medium text-slate-700 truncate">
+                {topic}
+              </p>
+              {dueDatePassed && (
+                <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full whitespace-nowrap font-medium">
+                  PAST DUE
+                </span>
+              )}
+            </div>
+            
+            {/* Row 2, Col 2: Help Modal */}
+            <div className="flex justify-end">
+              { role !== Roles.Teacher ? (
+                // Student: Tutorial/Help modal
+                stepSolveAttemptId.length > 0 && <AssignmentTutorialModal 
+                  topic={topic}
+                  classroomId={classroomId} 
+                  isMobileLayout={true} />
+              ) : (
+                // Teacher: Concepts modal
+                stepSolveAttemptId.length > 0 && <ConceptsModal 
                   topic={topic}
                   classroomId={classroomId}
                   concepts={concepts.map(c => ({
@@ -157,23 +174,83 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
                   }))}
                   activityType="Step Solve"
                   isLoading={isConceptsLoading}
-                />
+                  isMobileLayout={true}
+                  />
+              )}
+            </div>
+          </div>
+
+          {/* Desktop: Horizontal Layout */}
+          <div className="hidden sm:flex sm:flex-row sm:items-center sm:justify-between gap-6">
+            {/* Left section - Main info */}
+            <div className="flex flex-row items-center gap-4 min-w-0">
+              <div className="flex items-center gap-3">
+                <h1 className="text-lg font-semibold text-teal-700 whitespace-nowrap">
+                  Step Solve
+                </h1>
+                {dueDatePassed && (
+                  <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full whitespace-nowrap font-medium">
+                    PAST DUE
+                  </span>
+                )}
+              </div>
+              <div className="flex items-center gap-3">
+                <Separator orientation="vertical" className="h-4 w-px" />
+                <div className="flex items-center gap-2">
+                  <p className="text-base font-medium text-slate-700 truncate">
+                    {topic}
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right section - Actions */}
+            <SubmissionModal open={submissionModalOpen} />
+            <div className="flex flex-row justify-end gap-3 flex-shrink-0">
+              { role !== Roles.Teacher ?
+                <>
+                  {stepSolveAttemptId.length > 0 && <AssignmentTutorialModal 
+                    topic={topic}
+                    classroomId={classroomId} 
+                    isMobileLayout={false} />}
+                  {!dueDatePassed && (
+                    <ConfirmationModal 
+                      onSubmit={submitAssignment} 
+                      loading={submissionMutation.isLoading}
+                      />
+                  )}
+                </>
+                : 
+                <>
+                  {stepSolveAttemptId.length > 0 && <ConceptsModal 
+                    topic={topic}
+                    classroomId={classroomId}
+                    concepts={concepts.map(c => ({
+                      id: c.id,
+                      text: c.name ?? "",
+                      answerText: c.name ?? "",
+                    }))}
+                    activityType="Step Solve"
+                    isLoading={isConceptsLoading}
+                    isMobileLayout={false}
+                    />}
+                  <AssignmentShareModal 
+                    activityId={activityId}
+                    isLive={isLive} />
+                </>
               }
-              <AssignmentShareModal
-                activityId={activityId}
-                isLive={isLive} />
-            </>
-          }
+            </div>
+          </div>
         </div>
       </div>
-      <div className="w-full mx-auto bg-teal-50 min-h-[calc(100vh-48px)]">
-        <div className="m-16">
+      <div className="w-full mx-auto bg-teal-50 min-h-[calc(100vh-80px)]">
+        <div className="p-4 sm:p-8 lg:p-16">
           {/* Question Progress Indicators */}
-          <div className="flex justify-center gap-4 mb-4">
+          <div className="flex justify-center gap-2 sm:gap-4 mb-4 sm:mb-6">
             {stepSolveAssignment?.stepSolveQuestions?.map((_, index) => (
               <div
                 key={index}
-                className={`w-4 h-4 rounded-full flex items-center justify-center border-2 
+                className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full flex items-center justify-center border-2 
                   ${index === currentQuestionIndex
                     ? 'border-teal-600 bg-teal-600 text-white'
                     : 'border-teal-600 bg-white'
@@ -181,7 +258,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
               />
             ))}
           </div>
-          <Card className="px-12 py-8">
+          <Card className="px-4 py-8 sm:px-12 sm:py-12">
             <CardContent className="flex flex-col gap-8">
               <>
                 <div className="text-center text-lg">
