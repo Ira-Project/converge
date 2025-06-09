@@ -20,15 +20,21 @@ const QuestionAnalytics = async ({ activityId }: { activityId: string }) => {
   }
 
   return (
-    <div className="flex flex-col gap-4 border rounded-xl p-4 pt-2 h-full">      
-      <Tabs defaultValue="q1" className="w-full">
-        <TabsList className="grid w-full grid-cols-5">
-          {data.map((_, index) => (
-            <TabsTrigger key={`q${index + 1}`} value={`q${index + 1}`}>
-              Question {index + 1}
-            </TabsTrigger>
-          ))}
-        </TabsList>
+    <div className="flex flex-col gap-4 border rounded-xl p-4 pt-2 h-full max-w-full overflow-hidden">      
+      <Tabs defaultValue="q1" className="w-full max-w-full">
+        <div className="overflow-x-auto overflow-y-hidden">
+          <TabsList className="inline-flex">
+            {data.map((_, index) => (
+              <TabsTrigger 
+                key={`q${index + 1}`} 
+                value={`q${index + 1}`} 
+                className="flex-shrink-0 px-4 py-2 text-sm w-32"
+              >
+                Q{index + 1}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+        </div>
 
         {data.map((questionData, index) => (
           <TabsContent key={`q${index + 1}`} value={`q${index + 1}`}>

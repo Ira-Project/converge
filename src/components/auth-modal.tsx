@@ -117,7 +117,11 @@ export default function AuthModal({ user, mode = 'login' }: {
 
   return (
     <Dialog open={isOpen} modal>
-      <DialogTitle />
+      <DialogTitle className="sr-only">
+        {currentMode === 'verify' ? 'Verify Email' : 
+         currentMode === 'reset' ? 'Reset Password' : 
+         currentMode === 'signup' ? 'Sign Up' : 'Login'}
+      </DialogTitle>
       <DialogContent className="sm:max-w-[400px]" hideCloseButton>
         <Card className="w-full border-none shadow-none">
           <CardHeader className="flex items-center mb-4">

@@ -78,29 +78,63 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
   return (
     <div className="flex flex-col">
       {/* Header */}
-      <div className="grid grid-cols-2 w-full h-12 border-b-slate-200 border-b pl-8 pr-4">
-        <div className="flex flex-row gap-4 flex-start mr-auto h-8 my-auto">
-          <p className="text-lg font-semibold my-auto text-teal-700">
-            Step Solve
-          </p>
-          <Separator orientation="vertical" className="h-6 w-px my-auto" />
-          <p className="text-sm my-auto">
-            Revision
-          </p>
-        </div>
-        <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
-          <AssignmentTutorialModal 
-            classroomId={classroomId} />
+      <div className="w-full border-b border-slate-200 bg-white">
+        <div className="px-4 sm:px-8 py-4 sm:py-3">
+          {/* Mobile: 2x1 Grid Layout */}
+          <div className="grid grid-cols-2 grid-rows-1 gap-3 sm:hidden">
+            {/* Row 1, Col 1: Step Solve Title */}
+            <div className="flex items-center">
+              <h1 className="text-base font-semibold text-teal-700 whitespace-nowrap">
+                Step Solve | Revision
+              </h1>
+            </div>
+            
+            {/* Row 1, Col 2: Tutorial Button */}
+            <div className="flex justify-end">
+              <AssignmentTutorialModal 
+                classroomId={classroomId} 
+                isMobileLayout={true} />
+            </div>
+          </div>
+
+          {/* Desktop: Horizontal Layout */}
+          <div className="hidden sm:flex sm:flex-row sm:items-center sm:justify-between gap-6">
+            {/* Left section - Main info */}
+            <div className="flex flex-row items-center gap-4 min-w-0">
+              <div className="flex items-center gap-3">
+                <h1 className="text-lg font-semibold text-teal-700 whitespace-nowrap">
+                  Step Solve
+                </h1>
+              </div>
+              <div className="flex items-center gap-3">
+                <Separator orientation="vertical" className="h-4 w-px" />
+                <div className="flex items-center gap-2">
+                  <p className="text-base font-medium text-slate-700 truncate">
+                    Revision
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Right section - Actions */}
+            <div className="flex flex-row justify-end gap-3 flex-shrink-0">
+              <>
+                <AssignmentTutorialModal 
+                  classroomId={classroomId} 
+                  isMobileLayout={false} />
+              </>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="w-full mx-auto bg-teal-50 min-h-[calc(100vh-48px)]">
-        <div className="m-16">
+      <div className="w-full mx-auto bg-teal-50 min-h-[calc(100vh-80px)]">
+        <div className="p-4 sm:p-8 lg:p-16">
           {/* Question Progress Indicators */}
-          <div className="flex justify-center gap-4 mb-4">
+          <div className="flex justify-center gap-2 sm:gap-4 mb-4 sm:mb-6">
             {stepSolveAssignment?.stepSolveQuestions?.map((_, index) => (
               <div
                 key={index}
-                className={`w-4 h-4 rounded-full flex items-center justify-center border-2 
+                className={`w-3 h-3 sm:w-4 sm:h-4 rounded-full flex items-center justify-center border-2 
                   ${index === currentQuestionIndex 
                     ? 'border-teal-600 bg-teal-600 text-white' 
                     : 'border-teal-600 bg-white'
@@ -108,7 +142,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
               />
             ))}
           </div>
-          <Card className="px-12 py-8">
+          <Card className="px-4 py-8 sm:px-12 sm:py-12">
             <CardContent className="flex flex-col gap-8">
               <>
                 <div className="text-center text-lg">
@@ -172,15 +206,15 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
                     </Button>
                   </div>
                 ) : (
-                  <div className="flex flex-col gap-4 px-16 py-32">
+                  <div className="flex flex-col gap-4 px-4 py-16 sm:px-16 sm:py-32">
                   {
                     stepSolveAssignment?.stepSolveQuestions?.length > 0 ? (
-                      <p className="text-center text-2xl">
+                      <p className="text-center text-lg sm:text-2xl">
                         Congratulations! You have completed your revision. <br /> 
                         You can always revisit this activity to revise your concepts.
                       </p>                  
                     ) : (
-                      <p className="text-center text-2xl">
+                      <p className="text-center text-lg sm:text-2xl">
                         No questions to revise. Please check back later when activities are assigned.
                       </p>
                     )

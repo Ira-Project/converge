@@ -39,7 +39,7 @@ export function AnalyticsDashboard({ submissions, conceptTracking }: AnalyticsDa
 
   return (
     <>
-      <div className="px-8 mb-8 flex flex-row gap-2 ml-auto justify-end">
+      <div className="px-4 md:px-8 mb-6 md:mb-8 flex flex-row gap-2 ml-auto justify-end">
         <FilterIcon className="w-4 h-4 my-auto" />
         <MultiSelect
           options={topics.map(topic => ({ label: topic.name, value: topic.id }))}
@@ -54,35 +54,35 @@ export function AnalyticsDashboard({ submissions, conceptTracking }: AnalyticsDa
         />
       </div>
 
-      <div className="px-8 mb-8">
+      <div className="px-4 md:px-8 mb-6 md:mb-8">
         <div className="flex flex-row gap-2 mb-4">
           <p className="text-lg font-medium">Skills</p>
         </div>
         <SkillsRadarCard submissions={filteredSubmissions} />
       </div>
 
-      <div className="px-8 mb-8">
+      <div className="px-4 md:px-8 mb-6 md:mb-8">
         <div className="flex flex-row gap-2 mb-4">
           <p className="text-lg font-medium">Engagement</p>
         </div>
-        <div className="flex flex-row gap-4">
-          <div className="w-3/5 h-[400px]">
+        <div className="flex flex-col lg:flex-row gap-4">
+          <div className="w-full lg:w-3/5 h-[300px] md:h-[400px]">
             <MonthlySubmissionsChart submissions={filteredSubmissions} />
           </div>
-          <div className="w-2/5 h-[400px]">
+          <div className="w-full lg:w-2/5 h-[300px] md:h-[400px]">
             <RecentSubmissionsList submissions={filteredSubmissions} />
           </div>
         </div>
       </div>
 
-      <div className="px-8 mb-8">
+      <div className="px-4 md:px-8 mb-6 md:mb-8">
         <div className="flex flex-row gap-2 mb-4">
           <p className="text-lg font-medium">Topic Breakdown</p>
         </div>
         <TopicBreakdownChart submissions={filteredSubmissions} />
       </div>
 
-      <div className="px-8 mb-8">
+      <div className="px-4 md:px-8 mb-6 md:mb-8">
         <div className="flex flex-row gap-2 mb-4">
           <p className="text-lg font-medium">Concept Graph</p>
         </div>

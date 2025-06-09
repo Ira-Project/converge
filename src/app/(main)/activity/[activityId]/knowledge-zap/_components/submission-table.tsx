@@ -16,10 +16,10 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
   const submissions = await api.knowledgeZap.getSubmissions.query({ activityId });
 
   return (
-    <div>
-      <Table>
+    <div className="overflow-x-auto">
+      <Table className="min-w-[800px]">
         <TableHeader>
-          <TableRow className="grid grid-cols-[1fr_200px_250px_200px_200px]">
+          <TableRow className="grid grid-cols-[minmax(150px,1fr)_200px_250px_200px_200px]">
             <TableHead className="flex items-center">Student Name</TableHead>
             <TableHead className="flex items-center">Submitted At</TableHead>
             <TableHead className="flex items-center">Questions Completed</TableHead>
@@ -41,8 +41,8 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
                 : 0;
 
               return (
-                <TableRow className="grid grid-cols-[1fr_200px_250px_200px_200px]" key={submission.id}>
-                  <TableCell>{submission.user?.name}</TableCell>
+                <TableRow className="grid grid-cols-[minmax(150px,1fr)_200px_250px_200px_200px]" key={submission.id}>
+                  <TableCell className="truncate">{submission.user?.name}</TableCell>
                   <TableCell>
                     {submission.submittedAt ? 
                       formatDateShort(submission.submittedAt) : ""

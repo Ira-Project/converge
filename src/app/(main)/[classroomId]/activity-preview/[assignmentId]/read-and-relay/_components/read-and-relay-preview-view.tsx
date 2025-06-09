@@ -20,7 +20,7 @@ import { TrashIcon } from "@/components/icons";
 import { LoadingButton } from "@/components/loading-button";
 import Image from "next/image";
 import posthog from "posthog-js";
-import { AssignActivityModal } from '@/app/(main)/activity-preview/_components/assign-activity-modal';
+import { AssignActivityModal } from '@/app/(main)/[classroomId]/activity-preview/[assignmentId]/_components/assign-activity-modal';
 import ReadAndRelayTutorialModal from "@/app/(main)/activity/[activityId]/read-and-relay/live/_components/read-and-relay-tutorial-modal";
 
 interface Props {

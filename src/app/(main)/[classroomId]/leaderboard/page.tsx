@@ -4,7 +4,7 @@ import { validateRequest } from '@/lib/auth/validate-request';
 import { type RouterOutputs } from '@/trpc/shared';
 import { Leaderboard } from './_components/leaderboard';
 import { ChartNoAxesColumn } from 'lucide-react';
-import { ClassroomHeader } from '../_components/classroom-header';
+import { ClassroomHeader } from '../(dashboard)/_components/classroom-header';
 
 export default async function LeaderboardPage(props: { params: Promise<{ classroomId: string }> }) {
 

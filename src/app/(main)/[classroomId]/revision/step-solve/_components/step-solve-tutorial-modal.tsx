@@ -6,19 +6,36 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbP
 import { ActivityType, Paths } from "@/lib/constants";
 import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils";
 import posthog from "posthog-js";
+import { useState, useEffect } from 'react';
 
 const Dialog = dynamic(() => import('@/components/ui/dialog').then((mod) => mod.Dialog), { ssr: false });
 
 interface Props {
   classroomId: string;
+  isMobileLayout?: boolean;
 }
 
-export default function AssignmentTutorialModal({ classroomId }: Props) {  
+export default function AssignmentTutorialModal({ classroomId, isMobileLayout = false }: Props) {  
 
   const { tutorialUrl } = getMetaDataFromActivityType(ActivityType.StepSolve, "");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 640); // sm breakpoint
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
+  // Only set defaultOpen if this modal matches the current screen size
+  const shouldOpenByDefault = isMobileLayout ? isMobile : !isMobile;
 
   return (
-    <Dialog defaultOpen onOpenChange={(open) => {
+    <Dialog defaultOpen={shouldOpenByDefault} onOpenChange={(open) => {
       if (open) {
         posthog.capture("step_solve_tutorial_opened");
       } else {
@@ -55,13 +72,13 @@ export default function AssignmentTutorialModal({ classroomId }: Props) {
             Revision
           </div>
         </DialogTitle>
-        <DialogDescription className="m-0 mx-auto px-16 font-small text-center">
+        <DialogDescription className="m-0 mx-auto px-4 sm:px-16 font-small text-center">
           This activity will help you revise your weakest concepts and introduce you to new concepts that you haven't attempted yet. Our algorithm will keep track of your progress and generate new questions for you based on your performance. You can take this activity as many times as you want to keep practicing. 
         </DialogDescription>
         <DialogDescription className="m-0 mx-auto font-medium">
           How to do the activity?
         </DialogDescription>
-        <div className="px-16">
+        <div className="px-0 sm:px-16">
           <div className="relative pb-[56.19%] h-0 border-0">
             <iframe 
               src={tutorialUrl} 

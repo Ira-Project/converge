@@ -38,14 +38,15 @@ export const ActivityWikiCard: React.FC<ActivityWikiCardProps> = ({ type }) => {
                 }
               )}>  
                 <Image src={iconImage} alt={title} width={60} height={60} />
-                <div className="text-2xl font-semibold my-auto mr-8">{title}</div>
-                  <div className="flex gap-2">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 md:gap-4 flex-1">
+                  <div className="text-2xl font-semibold">{title}</div>
+                  <div className="flex gap-2 flex-wrap">
                     {tags.map((tag) => (
                       <Badge 
                         key={tag}   
                         variant="secondary"
                         className={cn(
-                          "h-5 my-auto text-white",
+                          "h-5 text-white",
                           {
                             "bg-amber-700": colour === "amber",
                             "bg-rose-700": colour === "rose",
@@ -57,6 +58,7 @@ export const ActivityWikiCard: React.FC<ActivityWikiCardProps> = ({ type }) => {
                         {tag}
                       </Badge>
                     ))}
+                  </div>
                 </div>
               </div>  
               <div className="text-sm space-y-4">

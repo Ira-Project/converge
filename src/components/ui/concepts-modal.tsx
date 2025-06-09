@@ -8,7 +8,9 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils";
 import { cn } from "@/lib/utils";
+import { AnimatedSpinner } from "@/components/icons";
 import posthog from "posthog-js";
+import { useEffect, useState } from "react";
 
 const Dialog = dynamic(() => import('@/components/ui/dialog').then((mod) => mod.Dialog), { ssr: false });
 
@@ -22,6 +24,8 @@ interface ConceptsModalProps {
   }>;
   activityType: string;
   modalTriggerClassName?: string;
+  isLoading?: boolean;
+  isMobileLayout?: boolean;
 }
 
 export default function ConceptsModal({ 
@@ -29,13 +33,30 @@ export default function ConceptsModal({
   classroomId, 
   concepts, 
   activityType,
-  modalTriggerClassName = ""
+  modalTriggerClassName = "",
+  isLoading = false,
+  isMobileLayout = false
 }: ConceptsModalProps) {  
 
   const { colour } = getMetaDataFromActivityType(activityType as ActivityType);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 640); // sm breakpoint
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
+  // Only set defaultOpen if this modal matches the current screen size
+  const shouldOpenByDefault = isMobileLayout ? isMobile : !isMobile;
 
   return (
-    <Dialog defaultOpen onOpenChange={(open) => {
+    <Dialog defaultOpen={shouldOpenByDefault} onOpenChange={(open) => {
       if (open) {
         posthog.capture("concepts_modal_opened");
       } else {
@@ -91,7 +112,14 @@ export default function ConceptsModal({
         
         <div className="flex-1 overflow-y-auto px-4 min-h-0">
           <div className="space-y-4">
-            {concepts.length === 0 ? (
+            {isLoading ? (
+              <Card>
+                <CardContent className="p-6 text-center">
+                  <AnimatedSpinner className="h-8 w-8 mx-auto mb-4" />
+                  <p className="text-gray-500">Loading concepts...</p>
+                </CardContent>
+              </Card>
+            ) : concepts.length === 0 ? (
               <Card>
                 <CardContent className="p-6 text-center">
                   <p className="text-gray-500">No concepts found for this assignment.</p>
