@@ -53,7 +53,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
   );
 
   // Fetch concepts for teachers
-  const { data: concepts = [] } = api.stepSolve.getAssignmentConcepts.useQuery(
+  const { data: concepts = [], isLoading: isConceptsLoading } = api.stepSolve.getAssignmentConcepts.useQuery(
     { activityId },
     { enabled: role === Roles.Teacher }
   );
@@ -156,6 +156,7 @@ const StepSolveActivityView: React.FC<StepSolveActivityViewProps> = ({
                     answerText: c.name ?? "",
                   }))}
                   activityType="Step Solve"
+                  isLoading={isConceptsLoading}
                 />
               }
               <AssignmentShareModal

@@ -4,7 +4,7 @@ import Image from "next/image";
 import { validateRequest } from '@/lib/auth/validate-request';
 import { ComponentIds, Paths, Roles } from '@/lib/constants';
 import TopicList from '../activities/_components/topic-list';
-import { ClassroomHeader } from '../_components/classroom-header';
+import { ClassroomHeader } from '../(dashboard)/_components/classroom-header';
 import { NoAccessEmptyState } from '@/components/no-access-empty-state';
 import { redirect } from "next/navigation";
 

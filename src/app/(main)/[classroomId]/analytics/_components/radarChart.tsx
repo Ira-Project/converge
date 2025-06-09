@@ -97,33 +97,35 @@ export function SkillsRadarCard(props: {
   }));
 
   return (
-    <div className="flex flex-col md:flex-row bg-white rounded-lg mx-auto border border-muted">
+    <div className="flex flex-col lg:flex-row bg-white rounded-lg mx-auto border border-muted">
       {/* Left section with radar chart */}
-      <div className="w-full md:w-3/5 p-4 flex items-center justify-center text-xs">
-        <ResponsiveContainer height={"100%"}>
-          <RadarChart outerRadius="70%" data={chartData}>
-            <PolarGrid />
-            <PolarAngleAxis dataKey="subject"/>
-            <PolarRadiusAxis 
-              domain={[0, 10]} 
-              tickCount={6}
-              style={{ display: 'none' }}
-            />
-            <Radar
-              name="Skills"
-              dataKey="A"
-              stroke="#E82D5C"
-              fill="#E82D5C"
-              fillOpacity={0.7}
-            />
-          </RadarChart>
-        </ResponsiveContainer>
+      <div className="w-full lg:w-3/5 p-2 md:p-4">
+        <div className="w-full h-[250px] md:h-[300px]">
+          <ResponsiveContainer width="100%" height="100%">
+            <RadarChart outerRadius="60%" data={chartData} margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
+              <PolarGrid />
+              <PolarAngleAxis dataKey="subject" tick={{ fontSize: 10 }} />
+              <PolarRadiusAxis 
+                domain={[0, 10]} 
+                tickCount={6}
+                style={{ display: 'none' }}
+              />
+              <Radar
+                name="Skills"
+                dataKey="A"
+                stroke="#E82D5C"
+                fill="#E82D5C"
+                fillOpacity={0.7}
+              />
+            </RadarChart>
+          </ResponsiveContainer>
+        </div>
       </div>
       
       {/* Right section with skill descriptions */}
-      <div className="flex flex-col w-full md:w-2/5 p-6 my-auto justify-center space-y-4">
+      <div className="flex flex-col w-full lg:w-2/5 p-4 md:p-6 my-auto justify-center space-y-3 md:space-y-4">
         {skillsData.map((skill, index) => (
-          <p key={index} className="text-xs text-muted-foreground mb-2">
+          <p key={index} className="text-xs md:text-sm text-muted-foreground mb-2">
             <strong>{skill.name}</strong> - {skill.description}
           </p>
         ))}

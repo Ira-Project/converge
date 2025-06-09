@@ -57,6 +57,7 @@ const MultipleChoiceQuestion: React.FC<MultipleChoiceQuestionProps> = ({
       multipleChoiceQuestionId: multipleChoiceQuestionId,
       questionId: questionId,
       answerOptionId: selected ?? '',
+      classroomId: classroomId,
     });
     setIsCorrect(result.correct);
     setIsSubmitted(true);

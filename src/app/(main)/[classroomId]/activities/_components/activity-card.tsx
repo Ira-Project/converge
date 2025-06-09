@@ -20,7 +20,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role, classroomId
   const dueDatePassed = dueDate && new Date() > new Date(dueDate);
 
   return (
-    <div className="border rounded-2xl p-6 w-[400px]">
+    <div className="border rounded-2xl p-4 md:p-6 w-full min-w-[260px] max-w-[280px] md:w-[400px] md:max-w-none flex-shrink-0">
       <div className="flex items-start justify-between mb-4">
         <div className="mb-4">
           <Image src={iconImage} alt={title} width={60} height={60} />

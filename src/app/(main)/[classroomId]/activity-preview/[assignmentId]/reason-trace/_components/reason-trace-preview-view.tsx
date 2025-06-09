@@ -22,7 +22,7 @@ import { ImageModal } from '@/components/image-modal';
 import posthog from 'posthog-js';
 import { type Part2ComputeCorrectAnswerInput, part2ComputeCorrectAnswerSchema } from '@/server/api/routers/reasoningActivity/reasoning/reasoning.input';
 import AssignmentTutorialModal from '@/app/(main)/activity/[activityId]/reason-trace/live/_components/reason-assignment-tutorial-modal';
-import { AssignActivityModal } from '@/app/(main)/activity-preview/_components/assign-activity-modal';
+import { AssignActivityModal } from '@/app/(main)/[classroomId]/activity-preview/[assignmentId]/_components/assign-activity-modal';
 
 
 interface ReasoningAssignmentViewProps {

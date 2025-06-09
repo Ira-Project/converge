@@ -115,16 +115,16 @@ export const UploadLessonPlanForm = () => {
 
   return (
     <Form {...form} >
-      <form onSubmit={onSubmit} className="flex flex-col gap-4">
-        <div className="flex flex-col gap-2">
+      <form onSubmit={onSubmit} className="flex flex-col gap-3 md:gap-4">
+        <div className="flex flex-col gap-3 md:gap-4">
           <FormField
             control={form.control}
             name="topicName"
             render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Topic Name</FormLabel>
+                <FormLabel className="text-sm md:text-base">Topic Name</FormLabel>
                 <FormControl>
-                  <Input {...field} type="text" placeholder="Enter topic name" />
+                  <Input {...field} type="text" placeholder="Enter topic name" className="text-sm md:text-base" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -136,7 +136,7 @@ export const UploadLessonPlanForm = () => {
             name="skills"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>What skills do you want to target?</FormLabel>
+                <FormLabel className="text-sm md:text-base">What skills do you want to target?</FormLabel>
                 <FormControl>
                   <MultiSelect
                     onValueChange={(value) => {
@@ -155,7 +155,7 @@ export const UploadLessonPlanForm = () => {
             name="file"
             render={({ field }) => (
               <FormItem className="flex-1">
-                <FormLabel>Lesson Plan or Curriculum (Optional)</FormLabel>
+                <FormLabel className="text-sm md:text-base">Lesson Plan or Curriculum (Optional)</FormLabel>
                 <FormControl>
                   <Input 
                     {...field} 
@@ -170,7 +170,8 @@ export const UploadLessonPlanForm = () => {
                         && e.target.files[0]?.name
                         && setFileName(e.target.files[0]?.name)
                       }}
-                    type="file" />
+                    type="file" 
+                    className="text-sm md:text-base" />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -190,7 +191,7 @@ export const UploadLessonPlanForm = () => {
         <LoadingButton 
           disabled={!form.formState.isDirty || getPresignedUrl.isLoading || uploadLessonPlan.isLoading || loading}
           loading={getPresignedUrl.isLoading || uploadLessonPlan.isLoading || loading}
-          className="w-fit ml-auto">
+          className="w-full md:w-fit md:ml-auto text-sm md:text-base">
             Submit
         </LoadingButton>
       </form>

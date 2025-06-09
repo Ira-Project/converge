@@ -53,32 +53,32 @@ export default function MonthlySubmissionsChart(props: {
   }, [maxSubmissions]);
 
   return (
-    <div className="bg-white rounded-lg px-4 py-2 mx-auto border border-muted h-full flex flex-col justify-center">
-      <p className="text-md font-medium text-gray-800 mb-4">Submissions</p>
-      <ResponsiveContainer width="100%" height={325}>
+    <div className="bg-white rounded-lg px-2 md:px-4 py-2 mx-auto border border-muted h-full flex flex-col justify-center">
+      <p className="text-sm md:text-md font-medium text-gray-800 mb-2 md:mb-4">Submissions</p>
+      <ResponsiveContainer width="100%" height="85%">
         <BarChart
           data={submissionsData}
-          margin={{ top: 10, right: 10, left: -20, bottom: 10 }}
+          margin={{ top: 10, right: 5, left: -25, bottom: 10 }}
         >
           <CartesianGrid vertical={false} strokeDasharray="0" stroke="#eee" />
           <XAxis 
             dataKey="month" 
             axisLine={false} 
             tickLine={false}
-            tick={{ fill: '#666666', fontSize: 12 }}
+            tick={{ fill: '#666666', fontSize: 10 }}
           />
           <YAxis 
             domain={[0, maxSubmissions]}
             ticks={yAxisTicks}
             axisLine={false} 
             tickLine={false}
-            tick={{ fill: '#666666', fontSize: 12 }}
+            tick={{ fill: '#666666', fontSize: 10 }}
           />
           <Bar 
             dataKey="submissions" 
             fill="#FECC5E" 
             radius={[4, 4, 0, 0]} 
-            barSize={75} 
+            barSize={60} 
           />
         </BarChart>
       </ResponsiveContainer>

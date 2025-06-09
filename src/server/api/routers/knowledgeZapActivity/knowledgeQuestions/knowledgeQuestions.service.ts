@@ -8,22 +8,10 @@ import { multipleChoiceAttempt, multipleChoiceQuestions } from "@/server/db/sche
 import { orderingAttempt, orderingAttemptSelection, orderingQuestions } from "@/server/db/schema/knowledgeZap/orderingQuestions";
 import { conceptTracking } from "@/server/db/schema/concept";
 import { ActivityType, Roles } from "@/lib/constants";
-import { knowledgeZapAssignmentAttempts } from "@/server/db/schema/knowledgeZap/knowledgeZapAssignment";
 import { sendMail, EmailTemplate } from "@/lib/email";
 
 export const checkMatchingAnswer = async (ctx: ProtectedTRPCContext, input: CheckMatchingAnswerInput) => {
-  const { assignmentAttemptId, matchingQuestionId, questionId, answer } = input;
-
-  const assignmentAttempt = await ctx.db.query.knowledgeZapAssignmentAttempts.findFirst({
-    where: eq(knowledgeZapAssignmentAttempts.id, assignmentAttemptId),
-    with: {
-      activity: true
-    }
-  });
-
-  if (!assignmentAttempt?.activity?.classroomId) {
-    throw new Error("Classroom ID not found for this activity");
-  }
+  const { assignmentAttemptId, matchingQuestionId, questionId, answer, classroomId } = input;
 
   const matchingQuestion = await ctx.db.query.matchingQuestions.findFirst({
     where: eq(matchingQuestions.id, matchingQuestionId),
@@ -88,7 +76,7 @@ export const checkMatchingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
           id: generateId(21),
           conceptId: concept.conceptId,
           userId: ctx.user.id,
-          classroomId: assignmentAttempt?.activity?.classroomId,
+          classroomId: classroomId,
           activityType: ActivityType.KnowledgeZap,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -105,18 +93,7 @@ export const checkMatchingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
 };
 
 export const checkMultipleChoiceAnswer = async (ctx: ProtectedTRPCContext, input: CheckMultipleChoiceAnswerInput) => {
-  const { assignmentAttemptId, multipleChoiceQuestionId, questionId, answerOptionId } = input;
-
-  const assignmentAttempt = await ctx.db.query.knowledgeZapAssignmentAttempts.findFirst({
-    where: eq(knowledgeZapAssignmentAttempts.id, assignmentAttemptId),
-    with: {
-      activity: true
-    }
-  });
-
-  if (!assignmentAttempt?.activity?.classroomId) {
-    throw new Error("Classroom ID not found for this activity");
-  }
+  const { assignmentAttemptId, multipleChoiceQuestionId, questionId, answerOptionId, classroomId } = input;
 
   const multipleChoiceQuestion = await ctx.db.query.multipleChoiceQuestions.findFirst({
     where: eq(multipleChoiceQuestions.id, multipleChoiceQuestionId),
@@ -156,7 +133,7 @@ export const checkMultipleChoiceAnswer = async (ctx: ProtectedTRPCContext, input
           id: generateId(21),
           conceptId: concept.conceptId,
           userId: ctx.user.id,
-          classroomId: assignmentAttempt?.activity?.classroomId,
+          classroomId: classroomId,
           activityType: ActivityType.KnowledgeZap,
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -173,18 +150,7 @@ export const checkMultipleChoiceAnswer = async (ctx: ProtectedTRPCContext, input
 };
 
 export const checkOrderingAnswer = async (ctx: ProtectedTRPCContext, input: CheckOrderingAnswerInput) => {
-  const { assignmentAttemptId, orderingQuestionId, questionId, answer } = input;
-
-  const assignmentAttempt = await ctx.db.query.knowledgeZapAssignmentAttempts.findFirst({
-    where: eq(knowledgeZapAssignmentAttempts.id, assignmentAttemptId),
-    with: {
-      activity: true
-    }
-  });
-
-  if (!assignmentAttempt?.activity?.classroomId) {
-    throw new Error("Classroom ID not found for this activity");
-  }
+  const { assignmentAttemptId, orderingQuestionId, questionId, answer, classroomId } = input;
 
   const orderingQuestion = await ctx.db.query.orderingQuestions.findFirst({
     where: eq(orderingQuestions.id, orderingQuestionId),
@@ -246,7 +212,7 @@ export const checkOrderingAnswer = async (ctx: ProtectedTRPCContext, input: Chec
           id: generateId(21),
           conceptId: concept.conceptId,
           userId: ctx.user.id,
-          classroomId: assignmentAttempt?.activity?.classroomId,
+          classroomId: classroomId,
           activityType: ActivityType.KnowledgeZap,
           createdAt: new Date(),
           updatedAt: new Date(),

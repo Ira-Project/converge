@@ -4,7 +4,7 @@ import Image from "next/image";
 import { validateRequest } from '@/lib/auth/validate-request';
 import { ComponentIds, Roles } from '@/lib/constants';
 import TopicList from './_components/topic-list';
-import { ClassroomHeader } from '../_components/classroom-header';
+import { ClassroomHeader } from '../(dashboard)/_components/classroom-header';
 import { NoAccessEmptyState } from '@/components/no-access-empty-state';
 
 export default async function ClassroomPage(props: { params: Promise<{ classroomId: string }> }) {
@@ -37,7 +37,7 @@ export default async function ClassroomPage(props: { params: Promise<{ classroom
       <ClassroomHeader classroom={classroom} />
 
       {/* Topics */}
-      <div className="px-8 mt-40 flex flex-col gap-8 w-full">
+      <div className="px-2 md:px-8 mt-40 flex flex-col gap-8 w-full">
         <TopicList 
           topics={topics ?? []} 
           role={userToClassroom?.role ?? Roles.Student} 

@@ -60,52 +60,55 @@ export default function TopicBreakdownChart(props: {
   }, [data]);
 
   return (
-    <div className="bg-white rounded-lg p-4 mx-auto border border-muted">
-      <ResponsiveContainer width="100%" height={400}>
+    <div className="bg-white rounded-lg p-2 md:p-4 mx-auto border border-muted">
+      <ResponsiveContainer width="100%" height={350}>
         <LineChart
           data={data}
-          margin={{ top: 20, bottom: 20 }}
+          margin={{ top: 20, right: 20, bottom: 20, left: 10 }}
         >
           <CartesianGrid stroke="#eee" vertical={false} />
           <XAxis 
             dataKey="topic" 
             tickLine={false}
-            tick={{ fill: '#666', fontSize: 8, width: "700px" }}
+            tick={{ fill: '#666', fontSize: 8 }}
             interval={0}
-            padding={{ left: 50, right: 50 }}
+            padding={{ left: 20, right: 20 }}
+            angle={-45}
+            textAnchor="end"
+            height={60}
           />
           <YAxis 
-            label={{ value: 'Submissions', angle: -90, fontSize: 12 }}
+            label={{ value: 'Submissions', angle: -90, fontSize: 10 }}
             yAxisId="left"
             axisLine={false}
             tickLine={false}
-            tick={{ fill: '#666', fontSize: 12 }}
+            tick={{ fill: '#666', fontSize: 10 }}
             domain={[0, maxSubmissions]}
             ticks={submissionTicks}
             tickFormatter={(value: number) => value.toFixed(0)}
           />
           <YAxis 
-            label={{ value: 'Average Score', angle: -90, fontSize: 12 }}
+            label={{ value: 'Avg Score', angle: -90, fontSize: 10 }}
             yAxisId="right"
             orientation="right"
             axisLine={false}
             tickLine={false}
-            tick={{ fill: '#666', fontSize: 12 }}
+            tick={{ fill: '#666', fontSize: 10 }}
             domain={[0, 10]}
             ticks={[0, 2.5, 5, 7.5, 10]}
           />
           <Tooltip />
           <Legend 
-            align="right"
+            align="center"
             verticalAlign="top"
-            wrapperStyle={{ paddingBottom: '32px', paddingRight: '20px', fontSize: '12px' }}
+            wrapperStyle={{ paddingBottom: '16px', fontSize: '10px' }}
           />
           <Line 
             yAxisId="left" 
             dataKey="submissions" 
             stroke="#FECC5E"
-            strokeWidth={1}
-            dot={{ fill: '#FECC5E', r: 2 }}
+            strokeWidth={2}
+            dot={{ fill: '#FECC5E', r: 3 }}
             activeDot={{ r: 4 }}
             name="Submissions"
           />
@@ -113,8 +116,8 @@ export default function TopicBreakdownChart(props: {
             yAxisId="right" 
             dataKey="averageScore" 
             stroke="#E82D5C" 
-            strokeWidth={1}
-            dot={{ fill: '#E82D5C', r: 2 }}
+            strokeWidth={2}
+            dot={{ fill: '#E82D5C', r: 3 }}
             activeDot={{ r: 4 }}
             name="Average Score"
           />

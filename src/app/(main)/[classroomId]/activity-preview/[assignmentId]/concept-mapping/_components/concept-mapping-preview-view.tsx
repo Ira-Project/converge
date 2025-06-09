@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { AssignActivityModal } from '@/app/(main)/activity-preview/_components/assign-activity-modal';
+import { AssignActivityModal } from '@/app/(main)/[classroomId]/activity-preview/[assignmentId]/_components/assign-activity-modal';
 import { type RouterOutputs } from '@/trpc/shared';
 import { type ActivityType, Roles } from "@/lib/constants";
 import { Separator } from '@/components/ui/separator';

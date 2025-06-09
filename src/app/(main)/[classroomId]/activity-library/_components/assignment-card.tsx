@@ -22,7 +22,7 @@ const AssignmentCard: React.FC<AssignmentCardProps> = ({ assignment, role, class
   const assignmentUrl = getPreviewPageUrl(id, classroomId);
 
   return (
-    <div className="border rounded-2xl p-6 w-80">
+    <div className="border rounded-2xl p-4 md:p-6 w-full min-w-[260px] max-w-[280px] md:w-80 md:max-w-none flex-shrink-0">
       <div className="flex items-start justify-between mb-4">
         <div>
           <Image src={iconImage} alt={title} width={60} height={60} />

@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import { AssignActivityModal } from '@/app/(main)/activity-preview/_components/assign-activity-modal';
+import { AssignActivityModal } from '@/app/(main)/[classroomId]/activity-preview/[assignmentId]/_components/assign-activity-modal';
 import ConceptsModal from '@/components/ui/concepts-modal';
 import { type RouterOutputs } from '@/trpc/shared';
 import { type ActivityType, Roles } from "@/lib/constants";
@@ -55,7 +55,7 @@ const StepSolvePreview: React.FC<StepSolvePreviewViewProps> = ({
   const currentState = questionStates[currentQuestionIndex];
 
   // Fetch concepts for teachers
-  const { data: concepts = [] } = api.stepSolve.getStepSolveAssignmentConceptsById.useQuery(
+  const { data: concepts = [], isLoading: isConceptsLoading } = api.stepSolve.getStepSolveAssignmentConceptsById.useQuery(
     { assignmentId }, 
     { enabled: role === Roles.Teacher }
   );
@@ -120,6 +120,7 @@ const StepSolvePreview: React.FC<StepSolvePreviewViewProps> = ({
                   answerText: c.name,
                 }))}
                 activityType="Step Solve"
+                isLoading={isConceptsLoading}
                 />}
               <AssignActivityModal 
                 classroomId={classroomId}

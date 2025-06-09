@@ -21,7 +21,7 @@ import dynamic from 'next/dynamic';
 import { Separator } from "@/components/ui/separator";
 import Image from "next/image";
 import posthog from "posthog-js";
-import { AssignActivityModal } from '@/app/(main)/activity-preview/_components/assign-activity-modal';
+import { AssignActivityModal } from '@/app/(main)/[classroomId]/activity-preview/[assignmentId]/_components/assign-activity-modal';
 import { RichInput } from "@/app/(main)/activity/[activityId]/learn-by-teaching/live/_components/rich-input";
 import AssignmentTutorialModal from "@/app/(main)/activity/[activityId]/learn-by-teaching/live/_components/explain-assignment-tutorial-modal";
 
