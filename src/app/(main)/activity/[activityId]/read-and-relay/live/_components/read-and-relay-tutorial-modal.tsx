@@ -6,6 +6,7 @@ import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbP
 import { ActivityType, Paths } from "@/lib/constants";
 import { getMetaDataFromActivityType } from "@/lib/utils/activityUtils";
 import posthog from "posthog-js";
+import { useEffect, useState } from "react";
 
 const Dialog = dynamic(() => import('@/components/ui/dialog').then((mod) => mod.Dialog), { ssr: false });
 
@@ -15,14 +16,30 @@ interface Props {
     name: string;
     id: string;
   } | null;
+  isMobileLayout?: boolean;
 }
 
-export default function ReadAndRelayTutorialModal({ classroom, topic }: Props) {  
+export default function ReadAndRelayTutorialModal({ classroom, topic, isMobileLayout = false }: Props) {  
 
   const { tutorialUrl } = getMetaDataFromActivityType(ActivityType.ReadAndRelay, "");
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 640); // sm breakpoint
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
+  // Only set defaultOpen if this modal matches the current screen size
+  const shouldOpenByDefault = isMobileLayout ? isMobile : !isMobile;
 
   return (
-    <Dialog defaultOpen onOpenChange={(open) => {
+    <Dialog defaultOpen={shouldOpenByDefault} onOpenChange={(open) => {
       if (open) {
         posthog.capture("read_and_relay_tutorial_opened");
       } else {
@@ -62,7 +79,7 @@ export default function ReadAndRelayTutorialModal({ classroom, topic }: Props) {
         <DialogDescription className="m-0 mx-auto font-medium">
           How to do the activity?
         </DialogDescription>
-        <div className="px-16">
+        <div className="px-0 sm:px-16">
           <div className="relative pb-[56%] h-0 border-0">
             <iframe 
               src={tutorialUrl} 

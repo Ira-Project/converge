@@ -14,12 +14,16 @@ import {
 import { type RouterOutputs } from "@/trpc/shared";
 import { useState } from "react";
 import AddStudentsModal from "./add-students-modal";
+import { Roles } from "@/lib/constants";
+
 export function NavStudents({
   classroomId,
   students,
+  role,
 }: {
   classroomId: string;
   students: RouterOutputs["classroom"]["students"];
+  role: Roles;
 }) {
   const [showAll, setShowAll] = useState(false)
 
@@ -58,7 +62,9 @@ export function NavStudents({
           </>
         )}
       </SidebarMenu>
-      <AddStudentsModal classroomId={classroomId} />
+      {role === Roles.Teacher && (
+        <AddStudentsModal classroomId={classroomId} />
+      )}
     </SidebarGroup>
   )
 }

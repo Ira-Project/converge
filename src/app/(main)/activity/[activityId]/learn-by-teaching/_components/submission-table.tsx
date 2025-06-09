@@ -16,10 +16,10 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
   const submissions = await api.learnByTeaching.getSubmissions.query({ activityId });
 
   return (
-    <div>
-      <Table>
+    <div className="overflow-x-auto">
+      <Table className="min-w-[600px]">
         <TableHeader>
-          <TableRow className="grid grid-cols-[1fr_250px_200px]">
+          <TableRow className="grid grid-cols-[minmax(150px,1fr)_250px_200px]">
             <TableHead className="flex items-center">Student Name</TableHead>
             <TableHead className="flex items-center">Submitted At</TableHead>
             <TableHead className="flex items-center">Score</TableHead>
@@ -34,8 +34,8 @@ const SubmissionsTable = async ({ activityId }: { activityId: string }) => {
             </TableRow>
           ) : (
             submissions.map((submission) => (
-              <TableRow className="grid grid-cols-[1fr_250px_200px]" key={submission.id}>
-                <TableCell>{submission.user.name}</TableCell>
+              <TableRow className="grid grid-cols-[minmax(150px,1fr)_250px_200px]" key={submission.id}>
+                <TableCell className="truncate">{submission.user.name}</TableCell>
                 <TableCell>
                   {submission.submittedAt ? 
                     formatDateShort(submission.submittedAt) : ""
