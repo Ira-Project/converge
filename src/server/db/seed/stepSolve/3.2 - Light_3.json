@@ -1,0 +1,242 @@
+{
+    "id": "eea638596bb44eff8786b",
+    "name": "Light",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "bb3339e5fd304f74868ee",
+            "questionText": "In a marine research submarine, an optical fibre has a core with a refractive index of $!$1.60$!$, and the critical angle for total internal reflection at the interface between the core and the cladding is $!$60^\\circ$!$. Assuming the speed of light in air is $!$3.0 \\times 10^8 \\text{ m/s}$!$, calculate the speed of light in the cladding.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9281da211baf41499bd13",
+                    "stepText": "Let's start by identifying the correct relation between the critical angle and the refractive indices of the core and cladding. Which formula best represents this relation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "12c39f67-6487-45a1-ad1c-9b2d008d49da"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\sin c = \\frac{n_{cladding}}{n_{core}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\sin c = \\frac{n_{core}}{n_{cladding}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\sin c = n_{cladding} \\cdot n_{core}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b3b2b717039e4b28a5cff",
+                    "stepText": "Now, using the relation and the given values $!$n_{core} = 1.60$!$ and $!$c = 60^\\circ$!$, calculate the refractive index of the cladding. (Remember that you will need to compute $!$\\sin60^\\circ$!$ as part of this step.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.386"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "12c39f67-6487-45a1-ad1c-9b2d008d49da"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "0c6393b61778491eb491a",
+                    "stepText": "Great, now that you have the refractive index of the cladding, identify the proper formula that relates the refractive index of a medium to the speed of light in air and the speed of light in that medium.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0fd432f9-88af-4d36-8e87-5eae4916e921"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$n = \\frac{\\text{speed of light in air}}{\\text{speed of light in medium}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$n = \\frac{\\text{speed of light in medium}}{\\text{speed of light in air}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$n = \\text{speed of light in air} \\times \\text{speed of light in medium}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e3acf11290ea406bb2e6d",
+                    "stepText": "Finally, using the formula selected and the calculated refractive index for the cladding, compute the speed of light in the cladding. Substitute the given speed of light in air $!$3.0 \\times 10^8 \\text{ m/s}$!$ and the refractive index you found earlier.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.16e8"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "0fd432f9-88af-4d36-8e87-5eae4916e921"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "0fb84c9f197c480983e4f",
+            "questionText": "A physics classroom uses a converging lens as a magnifying glass. A non-luminous pencil is placed at a certain distance from the optical center such that the resulting virtual image is $!$4$!$ times larger than the object. The lens has a power of $!$25 \\text{ D}$!$, and the magnifying glass follows the formula $!$\\frac{1}{f} = \\frac{1}{u} - \\frac{1}{v}$!$, where $!$u$!$ is the object distance, $!$v$!$ is the image distance, and $!$f$!$ is the focal length of the lens. Given this information, determine the distance at which the pencil was placed from the lens.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b17a2dad79344f5da1ab6",
+                    "stepText": "Let's start by identifying the type of lens and its usage in this scenario. Which option best describes the lens used when it functions as a magnifying glass?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1d416989-a109-4cdd-8a7b-bdc3f9665fd3",
+                        "fa05dadd-50ec-4c67-86b4-ea1f9f9b4583"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Converging lens (convex lens)}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Diverging lens (concave lens)}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Plane mirror}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fe682a5698704c248463a",
+                    "stepText": "Great! Now, the magnification $!$m$!$ is given as 4. Recall that for a lens the magnification is defined by the ratio of the image distance to the object distance. Which expression correctly represents the relationship between the image distance $!$v$!$ and the object distance $!$u$!$, considering that the image is virtual?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cac54d69-cd90-40c6-bd41-2229d19e1dc3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = -\\,4\\,u$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = 4\\,u$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{u}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b8c5aa6bc3ed41568354a",
+                    "stepText": "Moving on, a key relation for lenses is provided in the problem. Which of the following formulas is correctly used to relate the focal length $!$f$!$, the object distance $!$u$!$, and the image distance $!$v$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{1}{f} = \\frac{1}{u} - \\frac{1}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{f} = \\frac{1}{v} - \\frac{1}{u}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = u + v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "81419a23dd4542119e2b7",
+                    "stepText": "Next, the focal length needs to be determined from the given power of the lens. What is the correct formula for calculating the focal length $!$f$!$ from the lens power $!$P$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "579e3fe9-1690-465b-b0c6-32a60dc7075a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f = \\frac{1}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = P$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = P^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2925dd97207a4b8ba7d5f",
+                    "stepText": "Finally, substitute the relation $!$v = -4u$!$ and the focal length into the lens formula. Show that the object distance $!$u$!$ can be expressed in terms of the focal length, and then compute its numerical value using $!$f = 0.04 \\text{ m}$!$. What is the value of $!$u$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.05"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

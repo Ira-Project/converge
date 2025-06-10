@@ -1,0 +1,143 @@
+{
+    "id": "0e78a02909c9469fb03b6",
+    "name": "Electrical Quantities",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "0f38da45cc4e4b9aaca9b",
+            "questionText": "A negatively charged cloud has a charge of $!$Q = -5~\\text{C}$!$, and a small positive test charge of $!$q = 0.1~\\text{C}$!$ is placed at a distance of $!$r = 10~\\text{m}$!$ from the cloud. Using Coulomb's law $!$F = k \\frac{|q Q|}{r^2}$!$ with $!$k = 9 \\times 10^9~\\text{N}\\cdot\\text{m}^2/\\text{C}^2$!$, calculate the magnitude of the electrostatic force experienced by the test charge.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "65d1e5c949a849b598bd5",
+                    "stepText": "Let's begin by selecting the correct formula that will allow you to calculate the electrostatic force between the charges. Which one of the following formulas represents Coulomb's law for the magnitude of the force?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$F = k \\frac{|qQ|}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = k \\frac{qQ}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{|qQ|}{kr^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "747d308ee84f4d93907bb",
+                    "stepText": "Great. Now, using the given charges $!$q = 0.1~\\text{C}$!$ and $!$Q = -5~\\text{C}$!$, compute the product of their magnitudes, $!$|qQ|$!$. What numerical value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.5"
+                    ],
+                    "stepSolveAnswerUnits": "C^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7cc221c8b2ee4b71b46cd",
+                    "stepText": "Next, determine the square of the distance between the charges by computing $!$r^2$!$ for $!$r = 10~\\text{m}$!$. What is the value of $!$r^2$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ca32e522962d42e081c98",
+                    "stepText": "Finally, substitute the values for the constant $!$k = 9 \\times 10^9~\\text{N}\\cdot\\text{m}^2/\\text{C}^2$!$, the product $!$|qQ|$!$, and $!$r^2$!$ into the formula to calculate the magnitude of the force. What is the force computed from these values?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.5e7"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "de17bdcebd5045958f904",
+            "questionText": "A homeowner operates an electric oven at $!$230 \\text{ V}$!$ AC drawing a current of $!$15 \\text{ A}$!$ when active. If the oven is used for $!$2$!$ hours each day for $!$30$!$ days, calculate the total charge (in coulombs) that passes through the oven during this period.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "97935b6195b04be5a87e0",
+                    "stepText": "Let's start by identifying the formula that relates charge, current, and time. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c06aac4a-3f34-4b0a-9a9b-5c0cd5ea158a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = I \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = \\frac{I}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = I + t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5f2e4897bb5b4051bbd93",
+                    "stepText": "Great! Now, calculate the total operating time in seconds. The oven is used for 2 hours each day over 30 days. First, compute the total hours and then convert them into seconds (remember, $!$1 \\text{ hour } = 3600 \\text{ s}$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "216000"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "022449e9e870473594b2c",
+                    "stepText": "Now that you have the total time in seconds, multiply this time by the oven's current of 15 A to find the total charge that passes through the oven. What is the numerical result in coulombs?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3240000"
+                    ],
+                    "stepSolveAnswerUnits": "C",
+                    "stepConcepts": [
+                        "c06aac4a-3f34-4b0a-9a9b-5c0cd5ea158a"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

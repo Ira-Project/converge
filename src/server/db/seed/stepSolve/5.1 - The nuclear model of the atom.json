@@ -1,0 +1,195 @@
+{
+    "id": "2f4f8f19b06941efbf6fc",
+    "name": "Nuclear Model of the Atom",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "dd9a0dae24fb4a308ae1a",
+            "questionText": "A neutral oxygen atom ($!$O$!$) has an atomic number ($!$Z$!$) of 8, meaning it has 8 protons in its nucleus. When it loses 3 electrons, it becomes a positive ion. By how many does the nuclear charge (given solely by the number of protons) of this oxygen ion exceed the nuclear charge of a neutral carbon atom ($!$C$!$) with an atomic number ($!$Z$!$) of 6?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d8421d5bf9a24a4ab49bd",
+                    "stepText": "Let's start by recalling what determines the nuclear charge of an atom. Which of the following statements correctly describes nuclear charge?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "002be2d6-27cb-4973-b34b-a9412704a235"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Nuclear charge is determined solely by the number of protons in the nucleus.$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Nuclear charge is determined by the number of neutrons in the nucleus.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Nuclear charge depends on both electrons and protons in the atom.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "371ba9e7fbfe401ba12af",
+                    "stepText": "Great, now consider the oxygen ion. Even though it has lost some electrons, its nuclear charge remains based on the number of protons. What is the atomic number (and hence the nuclear charge) of the oxygen ion?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bc7ad055-7748-4115-bcf4-ac0b0aaa550f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5b21b69781b549ec89844",
+                    "stepText": "Next, let's determine the nuclear charge of a neutral carbon atom. Remember, for a neutral atom, the nuclear charge equals its atomic number. What is the atomic number of carbon?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bc7ad055-7748-4115-bcf4-ac0b0aaa550f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c6626c7aa3a540feb84d3",
+                    "stepText": "Finally, calculate the difference between the nuclear charge of the oxygen ion and that of the carbon atom by subtracting the atomic number of carbon from that of oxygen. What is the numerical difference?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "730d197bc9b94481b4081",
+            "questionText": "Engineers at a nuclear power plant are monitoring the reactor's operations. They explain that electricity is generated through controlled nuclear fission of $!$^{235}_{92}U$!$ in a reaction where it absorbs a $!$^{1}_{0}n$!$ and then undergoes fission, producing $!$^{144}_{56}Ba$!$ and $!$^{90}_{36}Kr$!$. Using the principles of conservation of nucleon number and conservation of proton number, determine the number of additional neutrons released during this reaction.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6924d6d90b0d4566afc26",
+                    "stepText": "Let's start by identifying the principle that ensures the total number of nucleons (protons and neutrons) remains constant in the fission reaction. Select the appropriate concept that governs this principle.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bcd22eda-e3fc-4706-ae1b-75a61ddfa14c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Conservation of nucleon number in fission",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Conservation of proton number in fission",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Mass-energy equivalence",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "09d70507000841a697f47",
+                    "stepText": "Great, now calculate the total number of nucleons on the left-hand side of the reaction by adding the nucleons of the $!$^{235}_{92}U$!$ nucleus and the incident $!$^{1}_{0}n$!$. What is the sum?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "236"
+                    ],
+                    "stepSolveAnswerUnits": "nucleons",
+                    "stepConcepts": [
+                        "bcd22eda-e3fc-4706-ae1b-75a61ddfa14c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "75b84ecc99df4a8680a4b",
+                    "stepText": "Next, determine the total number of nucleons provided by the fission products $!$^{144}_{56}Ba$!$ and $!$^{90}_{36}Kr$!$. Add these nucleons together. What do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "234"
+                    ],
+                    "stepSolveAnswerUnits": "nucleons",
+                    "stepConcepts": [
+                        "bcd22eda-e3fc-4706-ae1b-75a61ddfa14c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "707cb4759616402ba578a",
+                    "stepText": "Using the values obtained, find the difference between the total nucleons on the left-hand side and the sum of nucleons in the fission products. This difference will tell you the number of additional neutrons released. What is the numerical value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "neutrons",
+                    "stepConcepts": [
+                        "bcd22eda-e3fc-4706-ae1b-75a61ddfa14c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "0ebfb72299e645cea30c1",
+                    "stepText": "Finally, it's important to verify that the reaction also conserves charge. Identify the principle that ensures the total proton number remains constant throughout the reaction.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "330c3def-e9aa-4091-9342-5aec6ea7d127"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Conservation of proton number in fission",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Conservation of nucleon number in fission",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Mass-energy equivalence",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

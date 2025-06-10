@@ -1,0 +1,174 @@
+{
+    "id": "480e98c5d86c414c95c26",
+    "name": "Electric Circuits",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "aa8252c86260466c95ef4",
+            "questionText": "A car owner observes a headlight issue in which one of the headlights is significantly dimmer and occasionally flickers. The car's mechanic inspects the lighting system and finds that the two headlights, connected in parallel, draw a total current of $!$8~A$!$ from the battery. The battery consists of $!$6$!$ cells connected in series, where each cell has an electromotive force (e.m.f.) of $!$2.2~V$!$ and an internal resistance of $!$0.05~\\Omega$!$. Calculate the terminal potential difference across the battery when the headlights are operating.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1ab60359a80b4a728f79c",
+                    "stepText": "Let's start by determining the total electromotive force (e.m.f.) of the battery. Since the cells are connected in series, their individual e.m.f.s add up. Please identify the correct formula that shows how to combine these e.m.f.s.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "320b0a47-989b-4366-9676-1f34e540ac09",
+                        "b14dd40f-3728-4962-ae52-1fb9c050b293"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = E_1 \\times E_2 \\times ... \\times E_n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = E_1 + E_2 + ... + E_n$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{E_1}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "603f97e5a54b4269a8311",
+                    "stepText": "Now, calculate the total internal resistance of the battery. Remember that for cells connected in series, the internal resistances add up. Compute the product of the number of cells and the resistance of one cell.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.3"
+                    ],
+                    "stepSolveAnswerUnits": "\\Omega",
+                    "stepConcepts": [
+                        "645d12e6-f285-44a1-9369-1085f03dc8f0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a243573c6341470c85e75",
+                    "stepText": "Next, the battery's internal resistance causes a voltage drop when current is drawn. Identify the proper formula that relates voltage drop to current and resistance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1532d048-087f-4857-82bf-a6919d28c16c",
+                        "28c404a4-6bdf-4bb6-a5cd-a9658fb71d7e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V_{drop} = I \\times R_{total}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V_{drop} = I + R_{total}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_{drop} = \\frac{I}{R_{total}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "36f20a48e6d64d8e9674d",
+                    "stepText": "Finally, to find the terminal potential difference across the battery, subtract the voltage drop (found using the previous step) from the total e.m.f. of the battery. Calculate this difference using the numerical values you obtained.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10.8"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "320b0a47-989b-4366-9676-1f34e540ac09",
+                        "645d12e6-f285-44a1-9369-1085f03dc8f0",
+                        "1532d048-087f-4857-82bf-a6919d28c16c",
+                        "28c404a4-6bdf-4bb6-a5cd-a9658fb71d7e"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "68840540253241cbb674e",
+            "questionText": "A family is decorating their house with a new string of LED lights. The LED string has $!$50$!$ identical LEDs connected in parallel across an adapter. Each individual LED has a resistance of $!$100 \\Omega$!$. When all LEDs are functional, the total current drawn from the adapter is $!$0.6 \\text{ A}$!$. Calculate the equivalent resistance of the entire LED string.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ca2e196603b14f0faa173",
+                    "stepText": "Let's start by identifying the correct formula for calculating the equivalent resistance in a parallel circuit. Which of the following expressions correctly represents the method to compute the equivalent resistance $!$R_{eq}$!$ for multiple resistors connected in parallel?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d752f5e5-d93f-4a67-ba77-44d771335b78"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R_{eq} = \\frac{R_1 + R_2 + ... + R_n}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{R_{eq}} = \\frac{1}{R_1} + \\frac{1}{R_2} + ... + \\frac{1}{R_n}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R_{eq} = R_1 \\times R_2 \\times ... \\times R_n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2d0f29e57e934b2c8fb8e",
+                    "stepText": "Great, now that we've identified the formula, let's calculate the sum of the reciprocals of the individual LED resistances. Given that there are 50 identical LEDs each of resistance $!$100 \\Omega$!$, compute the value of $!$\\frac{50}{100}$!$. What is the numerical value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.5"
+                    ],
+                    "stepSolveAnswerUnits": "\u03a9\u207b\u00b9",
+                    "stepConcepts": [
+                        "d752f5e5-d93f-4a67-ba77-44d771335b78"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e0174a3e33e04633a4c8f",
+                    "stepText": "Now, use the result from the previous step to determine the equivalent resistance of the entire LED string. Calculate the equivalent resistance by taking the reciprocal of the sum obtained. What is the numerical value of $!$R_{eq} = \\frac{1}{0.5}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "\u03a9",
+                    "stepConcepts": [
+                        "d752f5e5-d93f-4a67-ba77-44d771335b78"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

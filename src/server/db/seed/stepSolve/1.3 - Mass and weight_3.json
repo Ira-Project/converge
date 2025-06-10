@@ -1,0 +1,144 @@
+{
+    "id": "10c29f629e3045088e6ef",
+    "name": "Mass and Weight",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "3a5e1a6d733f4ba68d18c",
+            "questionText": "An intergalactic cargo ship is transporting a piece of equipment with a mass of $!$150\\,\\text{kg}$!$. On Earth, the gravitational field strength is $!$9.8\\,\\text{N/kg}$!$, and on Mars, it is $!$3.7\\,\\text{N/kg}$!$. Calculate the absolute difference in the equipment's weight on Earth compared to its weight on Mars.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a6f63de341ad4be5bee95",
+                    "stepText": "Let's start by selecting the appropriate formula used to calculate weight from mass and gravitational field strength. Which formula should be used?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                        "8ba59395-c583-4414-8a6f-d62d5e02032f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = m+g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = mg$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{m}{g}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3e02f3b3bdbc4d099f719",
+                    "stepText": "Great, now that you have the weight formula, calculate the weight of the equipment on Earth by multiplying its mass with Earth\u2019s gravitational field strength. What is the weight on Earth?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1470"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                        "01d1e541-9807-4bb0-a823-3dbf8a09d733"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d7f38fdb9e6446aaa2942",
+                    "stepText": "Now, apply the same formula to compute the weight of the equipment on Mars using Mars\u2019 gravitational field strength. What is the weight on Mars?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "555"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b86bf4fa06ef40c1a8270",
+                    "stepText": "Finally, calculate the absolute difference between the weight on Earth and the weight on Mars. What is the absolute difference in weight?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "915"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "743daa98769748a3940f5",
+            "questionText": "An astrophysicist is tracking a newly discovered asteroid with an estimated mass of $!$2 \\times 10^{12}\\text{ kilograms}$!$. As it passes close to Earth, it enters Earth's gravitational field, and the astrophysicist calculates the temporary increase in its weight due to Earth's pull to be $!$1.96 \\times 10^{13}\\text{ newtons}$!$. Gravitational field strength is defined as the force per unit mass. Based on these values, determine the gravitational field strength experienced by the asteroid in $!$\\text{N/kg}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "769b8f7d9a5e4baeaff37",
+                    "stepText": "Let's start by identifying the correct formula for gravitational field strength. Which of the following formulas represents the gravitational field strength correctly?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                        "d60cd260-94c1-4f20-80b5-343d30836919"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$g = W/m$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$g = m/W$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$g = W + m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e40ba02b96e64c60814ad",
+                    "stepText": "Great, now that you have identified the correct formula, substitute the given values into the formula $!$g = W/m$!$ and calculate the gravitational field strength. Perform the division using the provided values: mass $!$2 \\times 10^{12}\\text{ kg}$!$ and weight $!$1.96 \\times 10^{13}\\text{ N}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "9.8"
+                    ],
+                    "stepSolveAnswerUnits": "N/kg",
+                    "stepConcepts": [
+                        "57f9767a-efd0-4e39-9da5-7a711127092b",
+                        "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                        "d60cd260-94c1-4f20-80b5-343d30836919",
+                        "01d1e541-9807-4bb0-a823-3dbf8a09d733"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

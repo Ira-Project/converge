@@ -1,0 +1,225 @@
+{
+    "id": "c72fc8c1ce764e09936a5",
+    "name": "Motion",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "76f194a692114412a2cc0",
+            "questionText": "A high-speed train departs from a station. It undergoes a period of constant positive acceleration, then maintains a uniform velocity, and finally experiences constant negative acceleration (deceleration) as it approaches the next station, coming to a complete stop. In the first phase, the train accelerates uniformly from rest ($!$0 \\text{ m/s}$!$) to ($!$30 \\text{ m/s}$!$) in ($!$10 \\text{ s}$!$). It then maintains this uniform velocity for ($!$120 \\text{ s}$!$). In the final phase, the train decelerates uniformly from ($!$30 \\text{ m/s}$!$) to ($!$0 \\text{ m/s}$!$) in ($!$5 \\text{ s}$!$). Calculate the total distance travelled by the train during its entire journey.",
+            "imageText": "A speed-time graph illustrating three phases of train motion: initial acceleration, constant velocity, and final deceleration.",
+            "steps": [
+                {
+                    "id": "6f18b9772b0c4b54a20ba",
+                    "stepText": "Let's begin by identifying the appropriate formula to calculate the distance covered during a period of uniform acceleration from an initial speed to a final speed over a given time interval. Which formula best fits this scenario?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "179ede05-df7e-4af4-9feb-c4f73b52158f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = \\frac{(u+v)t}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = v \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "95d1efd858a74ea69d642",
+                    "stepText": "Now that you have identified the formula, calculate the distance traveled during the acceleration phase. Use the average of the initial speed ($!$0 \\text{ m/s}$!$) and final speed ($!$30 \\text{ m/s}$!$) over a time of $!$10 \\text{ s}$!$. What is the distance (in meters)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "150"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "179ede05-df7e-4af4-9feb-c4f73b52158f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "75139c65693d4ceb83ddd",
+                    "stepText": "Great, now let\u2019s move to the phase where the train moves at a constant velocity. Identify the correct approach to calculate the distance when the speed is constant.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$s = v \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = \\frac{(u+v)t}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1f6cd1a712044111b4616",
+                    "stepText": "Based on the method for constant speed, compute the distance travelled during the uniform velocity phase, given a speed of $!$30 \\text{ m/s}$!$ for $!$120 \\text{ s}$!$. What is the distance (in meters)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3600"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "cc2df8ec7fd047e6b1163",
+                    "stepText": "Now, consider the deceleration phase where the train slows uniformly from $!$30 \\text{ m/s}$!$ to $!$0 \\text{ m/s}$!$ in $!$5 \\text{ s}$!$. Identify the formula that applies to calculate the distance covered during this deceleration phase.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "179ede05-df7e-4af4-9feb-c4f73b52158f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$s = v \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = \\frac{(u+v)t}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        }
+                    ]
+                },
+                {
+                    "id": "99d37c5f6bf142c79c3ed",
+                    "stepText": "Finally, calculate the distance covered during the deceleration phase using the average speed from $!$30 \\text{ m/s}$!$ to $!$0 \\text{ m/s}$!$ over $!$5 \\text{ s}$!$, and then sum up all the distances from the three phases to find the total distance travelled by the train. What is the total distance (in meters)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3825"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "022d69b0de8b4c0aab9e6",
+            "questionText": "An athlete runs a $!$400\\text{-meter}$!$ race on a circular track, completing the race in $!$45\\text{ seconds}$!$. Calculate the athlete's average speed for the entire race.",
+            "imageText": "An athlete running on a circular track, starting and finishing at the same point.",
+            "steps": [
+                {
+                    "id": "a4aec07b43dd43a48a7ef",
+                    "stepText": "Let's start by identifying the appropriate formula to calculate the average speed. Please choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a7a72a73-91d0-4f19-a0fb-f00f03a3c856"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{average speed} = \\frac{\\text{total distance travelled}}{\\text{total time taken}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{average speed} = \\text{total distance travelled} \\times \\text{total time taken}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{average speed} = \\frac{\\text{total time taken}}{\\text{total distance travelled}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e2e8fa51e44445f48aa1d",
+                    "stepText": "Now, determine the total distance covered by the athlete as provided in the question.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "400"
+                    ],
+                    "stepSolveAnswerUnits": "meters",
+                    "stepConcepts": [
+                        "a7a72a73-91d0-4f19-a0fb-f00f03a3c856"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "47ec0854e99345efbc5a7",
+                    "stepText": "Next, identify the total time taken by the athlete to complete the race.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "45"
+                    ],
+                    "stepSolveAnswerUnits": "seconds",
+                    "stepConcepts": [
+                        "a7a72a73-91d0-4f19-a0fb-f00f03a3c856"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6222ff82d248491c96d65",
+                    "stepText": "Finally, using the formula you selected, calculate the average speed by dividing the total distance by the total time. Compute this value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8.89"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "a7a72a73-91d0-4f19-a0fb-f00f03a3c856"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

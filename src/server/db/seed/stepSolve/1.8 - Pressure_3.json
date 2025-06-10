@@ -1,0 +1,184 @@
+{
+    "id": "0c93bd5d6dd445939b9bc",
+    "name": "Pressure",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "bb78dfdda61f4d5bbccb4",
+            "questionText": "A city's water utility department uses a U-tube manometer to measure the pressure of gas in a sealed section of their pipe network for leak detection. The manometer contains mercury with a density of $!$13600 \\text{ kg/m}^3$!$. One side of the manometer is open to the atmosphere, where the atmospheric pressure is $!$101325 \\text{ Pa}$!$. The mercury level on the side connected to the gas is $!$20 \\text{ cm}$!$ lower than the mercury level on the open side. Assuming the acceleration due to gravity is $!$9.8 \\text{ m/s}^2$!$, calculate the absolute pressure of the gas in the pipe.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4026d379cd67408da68bf",
+                    "stepText": "Let's start by identifying the appropriate manometer formula used to determine the absolute pressure of the gas. Please choose from the options below the formula that relates atmospheric pressure, liquid density, gravitational acceleration, and height difference.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9c478936-0e37-4906-9156-3da0bb228a9e",
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p = p_{atm} + \\rho g h$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = p_{atm} - \\rho g h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = \\rho g h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "df0275a8f2cc4844a76e3",
+                    "stepText": "Great, now convert the given height difference from centimeters to meters to ensure consistency in units. What is the height difference in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.20"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "3f919acb767f43ff942bc",
+                    "stepText": "Next, compute the gauge pressure contribution by multiplying the liquid density, the gravitational acceleration, and the converted height difference. What is the gauge pressure (in Pascals)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "26656"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a",
+                        "305ef332-500d-4c4e-9da1-1adecb3649db"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4af995e60fda49afb7714",
+                    "stepText": "Finally, add the atmospheric pressure to the gauge pressure contribution to find the absolute pressure of the gas. What is the final absolute pressure (in Pascals)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "127981"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "9c478936-0e37-4906-9156-3da0bb228a9e"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "7f7f14e02fd14e3980240",
+            "questionText": "A mechanic is using a hydraulic jack to lift a car. The jack's small input piston has a radius of $!$2 \\text{ cm}$!$, and the large output piston, which lifts the car, has a radius of $!$10 \\text{ cm}$!$. If the mechanic applies a force of $!$150 \\text{ N}$!$ to the small piston, calculate the maximum force in newtons that the large piston can exert to lift the car. Assume the hydraulic fluid is incompressible and pressure is transmitted uniformly.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c2413169173146a2b67e6",
+                    "stepText": "Let's begin by identifying the principle behind how a hydraulic jack multiplies force. Please select the formula that represents this hydraulic multiplication principle.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "460ceb3c-03d1-4066-a770-99b3ac24df2d",
+                        "7a1b6bbe-80bb-494c-8186-73f5a812ceed"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{f}{a} \\times A$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = f \\times (A + a)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{A}{a} + f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{f \\times a}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b01a1717d28846ffada57",
+                    "stepText": "Now, calculate the area of the small input piston using the circle area formula $!$A = \\pi r^2$!$. Remember to convert the radius from centimeters to meters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.00126"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "e9a214f62b7741ac94f34",
+                    "stepText": "Next, compute the area of the large output piston using the same area formula. Ensure you convert the given radius to meters before calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.03142"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "cb7f1a3fe6e04cb3a6abe",
+                    "stepText": "Great, now determine the multiplying factor by finding the ratio of the large piston area to the small piston area.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "25"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a1b6bbe-80bb-494c-8186-73f5a812ceed"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "269d9ca830b24794af19c",
+                    "stepText": "Finally, use the multiplication factor to compute the output force by multiplying it with the input force of $!$150 \\text{ N}$!$. What is the maximum force that the large piston can exert?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3750"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "75b2454a-3e89-448c-8620-428c8222bebb",
+                        "460ceb3c-03d1-4066-a770-99b3ac24df2d"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

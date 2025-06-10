@@ -1,0 +1,161 @@
+{
+    "id": "62f6e420a81c44f79b5a9",
+    "name": "Earth and the Solar System",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "af50d05a280b4942862e2",
+            "questionText": "Astronauts on the Moon are conducting experiments and need to communicate with Mission Control on Earth. Given that the average distance between the Moon and Earth is $!$384{,}400 \\text{ km}$!$ and radio signals travel at the speed of light, $!$3.00 \\times 10^8 \\text{ m/s}$!$, calculate the total round-trip time delay (in seconds) for a message sent from the Moon to Earth and for Mission Control's reply to reach the astronauts.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b775d2da27b34cbc8bd3c",
+                    "stepText": "Let's start by identifying the correct formula to compute the light travel time. Which of the following formulas correctly expresses the relationship between time, distance, and speed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "50d7e88d-ebc2-4bb8-a6d9-a4634fe1e452"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ t = \\frac{d}{v} $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ t = d \\times v $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ t = \\frac{v}{d} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2b74ec226fb641a59c92e",
+                    "stepText": "Great, now that we have the formula, convert the given distance from kilometers to meters. Recall that $!$1 \\text{ km} = 1000 \\text{ m}$!$. What is the distance in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "384400000"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "c97919b80b9a4ade92fad",
+                    "stepText": "Now, using the correct formula from step 1 and the converted distance, compute the one-way travel time. Divide the distance in meters by the speed of light. What is the one-way time in seconds?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.28"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "50d7e88d-ebc2-4bb8-a6d9-a4634fe1e452"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6f33299e4b8f475d8e274",
+                    "stepText": "Finally, since the message travels from the Moon to Earth and then back, calculate the total round-trip time by doubling the one-way travel time. What is the final round-trip time delay in seconds?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.56"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "cb7c713559824ebd95cc8",
+            "questionText": "An observer at a latitude of $!$45^\\text{o}$!$ North is studying the effects of Earth's $!$23.5^\\text{o}$!$ axial tilt and nearly circular orbit on the duration of daylight. Assuming a circular orbit and ignoring atmospheric refraction, calculate the length of daylight (in hours) on the summer solstice.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0ec6e0f43b7141db85c0e",
+                    "stepText": "Let's start by identifying the proper formula that relates daylight duration, observer's latitude, and the Sun's declination. Please choose the correct formula below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fbd1f851",
+                        "73bb5b21",
+                        "dba8ca5a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Daylight} = \\frac{2}{15} \\times \\arccos(-\\tan(\\text{latitude}) \\times \\tan(\\text{declination}))$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Daylight} = \\frac{2}{15} \\times \\arcsin(-\\tan(\\text{latitude}) \\times \\tan(\\text{declination}))$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Daylight} = \\frac{2}{15} \\times \\arccos(\\tan(\\text{latitude}) \\times \\tan(\\text{declination}))$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f6ace3e4723646e3b02b2",
+                    "stepText": "Great, now that you've selected the proper formula, let's calculate the product $!$\\tan(\\text{latitude}) \\times \\tan(\\text{declination})$!$ given that at 45\u00b0 the tangent is 1 and at 23.5\u00b0 the tangent is approximately 0.4348. Compute this product.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.4348"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "73bb5b21"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6056922d2b7b4c038804c",
+                    "stepText": "Now, using the product obtained, determine the angle by calculating $!$\\arccos(-\\text{product})$!$. This angle is measured in degrees. What is the approximate value of this angle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "115.8"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7e45096b78d24e50989d7",
+                    "stepText": "Finally, use the angle from the previous step to calculate the length of daylight. Multiply the angle by 2 and then divide by 15 according to the formula. What is the daylight duration in hours?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15.44"
+                    ],
+                    "stepSolveAnswerUnits": "hours",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

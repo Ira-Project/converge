@@ -1,0 +1,182 @@
+{
+    "id": "64eae72920bf46dc86be7",
+    "name": "Stars and the Universe",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "519ac87dc6234717af7a3",
+            "questionText": "Given that the planetary nebula is observed at a distance of $!$9.5 \\times 10^{15} \\text{ m}$!$, compute its distance in light-years. Use the conversion factor that $!$1 \\text{ light-year} = 9.461 \\times 10^{15} \\text{ m}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fa5336436600470596012",
+                    "stepText": "Let's start by identifying the correct conversion approach. Which expression correctly represents the conversion from a distance in meters to light-years?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "97e4ba3a-38d3-43c2-99e7-b74649b32c41"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Distance in ly} = \\frac{\\text{Distance in m}}{9.461 \\times 10^{15}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Distance in ly} = \\text{Distance in m} \\times 9.461 \\times 10^{15}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Distance in ly} = \\text{Distance in m} - 9.461 \\times 10^{15}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cb197c84a3aa48179a107",
+                    "stepText": "Great. Now, use the conversion by dividing the given distance $!$9.5 \\times 10^{15}\\text{ m}$!$ by $!$9.461 \\times 10^{15}\\text{ m}$!$. Compute the resulting numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.0041"
+                    ],
+                    "stepSolveAnswerUnits": "light-years",
+                    "stepConcepts": [
+                        "97e4ba3a-38d3-43c2-99e7-b74649b32c41"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ed026941198a49ee90085",
+                    "stepText": "Excellent work. Now round your computed value to a reasonable level of precision (to the nearest whole number) to express the distance in light-years.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1"
+                    ],
+                    "stepSolveAnswerUnits": "light-year",
+                    "stepConcepts": [
+                        "97e4ba3a-38d3-43c2-99e7-b74649b32c41"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "d38e5f510c3140df8d477",
+            "questionText": "A research team observes a distant galaxy exhibiting significant redshift in its light spectrum. Using Hubble's Law, they determine its recession speed to be $!$2100 \\text{ km/s}$!$ and its distance to be $!$30 \\text{ Mpc}$!$. Calculate, based on these observations, the estimated age of the Universe in billions of years.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4f8c37db1d5049b183585",
+                    "stepText": "Let's start by identifying the correct concept formula that connects a galaxy's recession speed with its distance to compute the Hubble Constant ($!$H_0$!$). Please choose the formula that reflects this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c413a452-cd00-445d-b07a-3c69cb5d60aa",
+                        "ae5906b8-745a-436d-8695-00ba2c22369f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = H_0 d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = H_0 v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$H_0 = v d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$H_0 = \\frac{d}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4543e691a6c9496a908be",
+                    "stepText": "Great! Now, using the relationship from Hubble's Law, calculate the value of the Hubble Constant ($!$H_0$!$) with the observed values $!$v = 2100 \\text{ km/s}$!$ and $!$d = 30 \\text{ Mpc}$!$. Please provide the numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "70"
+                    ],
+                    "stepSolveAnswerUnits": "km/s/Mpc",
+                    "stepConcepts": [
+                        "c413a452-cd00-445d-b07a-3c69cb5d60aa",
+                        "ae5906b8-745a-436d-8695-00ba2c22369f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c30d0da674a243f9a1ceb",
+                    "stepText": "Now that we have calculated the Hubble Constant, let's identify the formula that relates it to the estimated age of the Universe. Which of the following formulas shows that the age of the Universe is inversely proportional to the Hubble Constant?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6e3fb287-cc65-4984-afe0-467e153ff20c",
+                        "ae5906b8-745a-436d-8695-00ba2c22369f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Age} = \\frac{1}{H_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Age} = H_0$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Age} = H_0^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Age} = \\sqrt{H_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2d47d7b5c4aa4b07bf799",
+                    "stepText": "Finally, applying the inverse relationship between the Hubble Constant and the age of the Universe, calculate the estimated age in billions of years based on our computed $!$H_0$!$. What is your final numerical answer?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "14"
+                    ],
+                    "stepSolveAnswerUnits": "billion years",
+                    "stepConcepts": [
+                        "6e3fb287-cc65-4984-afe0-467e153ff20c"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

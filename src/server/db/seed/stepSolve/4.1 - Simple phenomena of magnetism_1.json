@@ -1,0 +1,257 @@
+{
+    "id": "1e3adf0679da49c2b806d",
+    "name": "Simple Phenomena of Magnetism",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "16eb933fedc54d118eaf6",
+            "questionText": "The current question asks for multiple explanations. Please provide the missing numerical values (such as the magnets' magnetic moments, the required attractive force in newtons, and any relevant distance parameters) so that we can refine the question to ask for a single numerical value. For instance, if you wish to determine the optimal separation distance between the magnets that produces the required holding force, please supply the necessary values and formulas involved.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0141ced34e7e4a88be89b",
+                    "stepText": "Let's start by identifying the qualitative behavior of magnetic force with distance. Which statement correctly describes the effect of increasing separation distance between magnets on the magnetic force?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "214aa4d2-bf24-45be-bba0-260324c16ae0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Magnetic force increases as the magnets are moved farther apart.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Magnetic force decreases as the magnets are moved farther apart.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Magnetic force remains constant regardless of the separation distance.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bfdb504f3b7945c5a9414",
+                    "stepText": "Great, now consider which specific numerical values are missing that would be necessary to convert the qualitative discussion into a quantitative problem. Which set of quantities would you need?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "Magnetic moments (in A\u00b7m\u00b2), required attractive force (in N), and separation distance (in m).",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Charges (in C), current (in A), and voltage (in V).",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Mass (in kg), gravitational acceleration (in m/s\u00b2), and height (in m).",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cd6d6af690a646d5a3f3a",
+                    "stepText": "Now, let's identify the formula that typically relates the magnetic moments of magnets and their separation distance to the force between them. Choose the expression that best represents a dipole-dipole interaction scenario.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$F \\propto \\frac{m_1 m_2}{r^4}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F \\propto \\frac{m_1 m_2}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F \\propto m_1 + m_2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "859494cb904a4df2a3c2c",
+                    "stepText": "Finally, considering our discussion so far, what conclusion best summarizes the current problem setup?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "The current problem setup only allows for a qualitative discussion because it lacks specific numerical values and a defined quantitative formula.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The solution can be determined using the provided qualitative concepts without any additional numerical information.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The provided concepts include all the required numerical values and formulas for a full numerical solution.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2f4c01694e9b45718a2ad",
+            "questionText": "A scout team uses a compass that normally aligns with Earth\u2019s magnetic field. However, when a large, magnetized ferromagnetic tool is nearby, the tool produces a local magnetic field that interferes with Earth\u2019s magnetic field and causes the compass needle to deviate by an angle \\(\\theta\\) from magnetic north. Suppose that at the compass location, Earth\u2019s magnetic field has a magnitude of \\(B_e\\) Tesla and the interfering field from the tool has a magnitude of \\(B_i\\) Tesla, where the interfering field is perpendicular to Earth\u2019s field. Calculate the deviation angle \\(\\theta\\) of the compass needle in degrees. (Use \\(\\tan \\theta = \\frac{B_i}{B_e}\\) for the calculation.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c1efc7f5c15e45c396a14",
+                    "stepText": "Let's start by recognizing that the compass needle aligns with the net magnetic field which is the vector sum of Earth\u2019s field and the interfering field. Identify the relation that expresses the tangent of the deviation angle \\(\\theta\\) in terms of these fields. Which of the following formulas correctly relates \\(\\tan \\theta\\) to \\(B_i\\) and \\(B_e\\)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a1359784-abf1-402c-833c-c1c6fc69e3bd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\tan \\theta = \\frac{B_i}{B_e}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\tan \\theta = \\frac{B_e}{B_i}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\sin \\theta = \\frac{B_i}{B_e}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "eb09e667488a4cdca2223",
+                    "stepText": "Great, now that we have the tangent relation, the next step is to express the deviation angle \\(\\theta\\) in terms of this relation. Which of the following formulas uses the inverse tangent (arctan) to obtain \\(\\theta\\) (in radians) from \\(\\tan \\theta\\)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a1359784-abf1-402c-833c-c1c6fc69e3bd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\theta = \\arctan\\left(\\frac{B_i}{B_e}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\theta = \\arcsin\\left(\\frac{B_i}{B_e}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\theta = \\arccos\\left(\\frac{B_i}{B_e}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "55cc3ea405aa4712ad8b9",
+                    "stepText": "Now, we need to convert the angle from radians to degrees, because the final answer should be in degrees. Which of the following conversion formulas is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a1359784-abf1-402c-833c-c1c6fc69e3bd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\theta(^{\\circ}) = \\theta(\\text{rad}) \\times \\frac{180}{\\pi}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\theta(^{\\circ}) = \\theta(\\text{rad}) \\times \\frac{\\pi}{180}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\theta(^{\\circ}) = \\theta(\\text{rad}) \\times \\pi$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "896a983013304d2a8c315",
+                    "stepText": "Finally, combine your findings from the previous steps. Write the complete expression that gives the deviation angle \\(\\theta\\) in degrees in terms of \\(B_i\\) and \\(B_e\\). Choose the option that correctly represents this final expression.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a1359784-abf1-402c-833c-c1c6fc69e3bd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\theta(^{\\circ}) = \\arctan\\left(\\frac{B_i}{B_e}\\right) \\times \\frac{180}{\\pi}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\theta(^{\\circ}) = \\arctan\\left(\\frac{B_e}{B_i}\\right) \\times \\frac{180}{\\pi}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\theta(^{\\circ}) = \\arcsin\\left(\\frac{B_i}{B_e}\\right) \\times \\frac{180}{\\pi}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

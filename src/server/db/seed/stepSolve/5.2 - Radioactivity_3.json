@@ -1,0 +1,141 @@
+{
+    "id": "8d815aca3ea845fb8f9ed",
+    "name": "Radioactivity",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "fbd68bda746a4d9095c5a",
+            "questionText": "A specialized hazardous materials team uses a Geiger-Muller tube connected to a ratemeter to survey a decommissioned industrial site. The baseline background radiation level is measured as $!$20$!$ counts per minute, and upon entering a contaminated area, the ratemeter reading increases to $!$120$!$ counts per minute. If the team uses a scaler to record the radiation for $!$10$!$ minutes in this contaminated area, calculate the total number of counts that are purely due to the radioactive source, after accounting for the background radiation.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7d1fbeee6a0d4ec698d45",
+                    "stepText": "Let's start by identifying the operation needed to isolate the radiation solely from the source. You need to determine how to adjust the contaminated reading by accounting for the background radiation. Which of the following operations correctly represents this procedure?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f51d492d-2a42-4651-9ad4-d71fb0fbf14f",
+                        "cd21c147-6509-4ea0-9658-f91028886945"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$120 - 20$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$120 + 20$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$120 \\times 20$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "652996ed9cfc47d499079",
+                    "stepText": "Great! Now, based on the chosen operation, calculate the net count rate (in counts per minute) that is due solely to the radioactive source by subtracting the background radiation from the contaminated reading.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100"
+                    ],
+                    "stepSolveAnswerUnits": "counts per minute",
+                    "stepConcepts": [
+                        "f51d492d-2a42-4651-9ad4-d71fb0fbf14f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "050af8e8a700440daf279",
+                    "stepText": "Now that you have the net count rate, determine the total number of counts recorded by the scaler over the 10 minute period. Multiply the net count rate by the time of measurement.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1000"
+                    ],
+                    "stepSolveAnswerUnits": "counts",
+                    "stepConcepts": [
+                        "e59b06a1-31fe-4701-8be9-618560fab381"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "5fd483c1f7bf4dbcbe843",
+            "questionText": "During a public safety demonstration, an expert explains that common smoke alarms contain a small amount of Americium-241 ($!$_{95}^{241}Am$!$), which undergoes alpha decay ($!$_{2}^{4}He$!$). If a new smoke alarm contains $!$1000$!$ Bq of Americium-241 and the half-life of Americium-241 is $!$432.2$!$ years, calculate the activity (in Bq) of the Americium-241 source in the smoke alarm after $!$864.4$!$ years.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0e84cc48c118497f99704",
+                    "stepText": "Let's start by figuring out how many half-lives have elapsed. Using $!$t = 864.4$!$ years and the half-life $!$T_{1/2} = 432.2$!$ years, calculate $!$n = \\frac{t}{T_{1/2}}$!$. What is the value of $!$n$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b9ca20c3-e249-4bc5-8d94-4d2bceee779d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c44d41e4cf8141f1a8444",
+                    "stepText": "Great, now select the correct formula to calculate the remaining fraction of activity after $!$n$!$ half-lives have passed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b9ca20c3-e249-4bc5-8d94-4d2bceee779d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 \\times \\left(\\frac{1}{2}\\right)^n$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 \\times n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = \\frac{A_0}{n!}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c6c62b47739141db9bcb7",
+                    "stepText": "Finally, use the formula you selected with the initial activity of $!$1000$!$ Bq and the number of half-lives determined to compute the final activity after $!$864.4$!$ years.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "250"
+                    ],
+                    "stepSolveAnswerUnits": "Bq",
+                    "stepConcepts": [
+                        "b9ca20c3-e249-4bc5-8d94-4d2bceee779d",
+                        "b3af226b-8a8b-486d-99ee-0fe1d83d69fe"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

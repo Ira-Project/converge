@@ -1,0 +1,199 @@
+{
+    "id": "de3c97cd2d1245e4887cf",
+    "name": "Physical Quantities and Measurement Techniques",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "7bd2341c328749a0942c9",
+            "questionText": "A biomedical researcher uses a micrometer screw gauge to measure the diameter of a microscopic fiber. The gauge exhibits a zero error of $!$+0.0002\\,mm$!$, and the observed reading is $!$0.0235\\,mm$!$. Calculate the actual diameter of the fiber in $!$nm$!$, expressing your answer in standard notation with the correct number of significant figures.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "168819b106f14254a35af",
+                    "stepText": "Let's start by correcting the observed reading by removing the zero error. Identify the formula that correctly represents the correction needed when a measuring instrument shows a zero error.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9a4da118-2c7f-416d-9990-5c7e8ca6e378"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Corrected reading} = \\text{Observed reading} + \\text{Zero error}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Corrected reading} = \\text{Observed reading} - \\text{Zero error}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Corrected reading} = \\text{Observed reading} \\times \\text{Zero error}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ea77fa0e7176430a95b18",
+                    "stepText": "Great, now use the selected formula to calculate the corrected reading by subtracting the zero error from the observed reading.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0233"
+                    ],
+                    "stepSolveAnswerUnits": "mm",
+                    "stepConcepts": [
+                        "9a4da118-2c7f-416d-9990-5c7e8ca6e378"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "985de91701114acb8e600",
+                    "stepText": "Next, we need to convert the corrected reading from millimetres to nanometres. Choose the correct conversion factor for converting $!$mm$!$ to $!$nm$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "97df9a78-627f-40ae-8aef-c68ba9dd9ec7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,mm = 10^3\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,mm = 10^6\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,mm = 10^9\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "556777ead6e34111ab3b4",
+                    "stepText": "Now, calculate the actual diameter in nanometres by applying the conversion factor you chose to the corrected reading.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "23300"
+                    ],
+                    "stepSolveAnswerUnits": "nm",
+                    "stepConcepts": [
+                        "97df9a78-627f-40ae-8aef-c68ba9dd9ec7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "08fe12ed10374b96a0b0e",
+                    "stepText": "Finally, express your answer in standard notation with the appropriate number of significant figures. Select the option that correctly represents the answer in standard notation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b8b4e525-408c-4b95-96a3-38202342dc11"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$2.33\\times10^4\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$23.3\\times10^3\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$23300\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ced81956c53c459bbb11a",
+            "questionText": "A drone is programmed to deliver a package by flying two distinct legs. First, it flies $!$2.5\\,km$!$ due East and then turns to fly $!$1.8\\,km$!$ due North to avoid an obstacle. Calculate the magnitude of the drone's total displacement from its starting point in $!$km$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8622d4d14ac644ea92bcd",
+                    "stepText": "Let's start by determining the appropriate formula to calculate the magnitude of a resultant displacement when the two components are perpendicular. Please choose the formula that correctly represents the magnitude of two perpendicular vectors.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "beb69599-eb7b-4356-8d08-85261b652171"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F=\\sqrt{F_x^2+F_y^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F=F_x+F_y$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F=\\frac{F_x+F_y}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f61ba3ab901f451c8e97e",
+                    "stepText": "Great! Now, using the selected formula, compute the sum of the squares of the two displacement components. That is, calculate $!$2.5^2$!$ and $!$1.8^2$!$, then add these two results.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "9.49"
+                    ],
+                    "stepSolveAnswerUnits": "km^2",
+                    "stepConcepts": [
+                        "beb69599-eb7b-4356-8d08-85261b652171"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bd163ddef1d54bd88c7e9",
+                    "stepText": "Finally, take the square root of the sum obtained in the previous step to get the magnitude of the total displacement.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.08"
+                    ],
+                    "stepSolveAnswerUnits": "km",
+                    "stepConcepts": [
+                        "beb69599-eb7b-4356-8d08-85261b652171"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,215 @@
+{
+    "id": "df8e4e7faacb45609d219",
+    "name": "Stars and the Universe",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "47e27e448a394e8d84881",
+            "questionText": "A newly discovered celestial object has a surface temperature of $!$20,000^{\\circ}\\text{C}$!$. Convert this temperature to Kelvin.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b833b79e4ef342e79b404",
+                    "stepText": "Let's start by identifying the correct conversion formula for transforming a temperature from $!$^{\\circ}C$!$ to Kelvin. Choose the formula that correctly expresses this conversion.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f4f99f5b-01f4-45fa-b6a7-34af17a4fa55"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$K = C + 273.15$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$K = C - 273.15$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$K = C \\times 273.15$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "04d3218c0293401bb0b86",
+                    "stepText": "Now that we've selected the appropriate conversion formula, apply it by adding $!$273.15$!$ to the given temperature in Celsius ($!$20,000^{\\circ}C$!$) to convert it to Kelvin. Compute the resulting value and round it if necessary.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20273"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "f4f99f5b-01f4-45fa-b6a7-34af17a4fa55"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "10f51aac8f624c978d8c0",
+            "questionText": "A research team observes a distant galaxy with a recession speed of $!$49000\\ \\text{ km/s}$!$ at a distance of $!$7 \\times 10^8\\ \\text{ light-years}$!$. Given that $!$1\\ \\text{ light-year } = 9.5 \\times 10^{12}\\ \\text{ km}$!$, $!$1\\ \\text{ Mpc} = 3.086 \\times 10^{19}\\ \\text{ km}$!$, and $!$1\\ \\text{ year} = 3.1536 \\times 10^7\\ \\text{ seconds}$!$, calculate the age of the Universe in $!$\\text{years}$!$ using the Hubble constant in $!$\\text{km/s/Mpc}$!$ derived from these observations.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "772a0790e35b42b485bd4",
+                    "stepText": "Let's start by converting the distance from light-years to kilometers. Identify the correct conversion factor that relates light-years to kilometers.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "97e4ba3a-38d3-43c2-99e7-b74649b32c41"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1 \\text{ light-year } = 9.5 \\times 10^{12}\\ \\text{ km }$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1 \\text{ light-year } = 9.46 \\times 10^{12}\\ \\text{ km }$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1 \\text{ light-year } = 1.0 \\times 10^{13}\\ \\text{ km }$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ebb92802a8eb4e22a9366",
+                    "stepText": "Using the conversion factor from the previous step, calculate the distance in kilometers for a galaxy located at $!$7 \\times 10^8$!$ light-years.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.65e21"
+                    ],
+                    "stepSolveAnswerUnits": "km",
+                    "stepConcepts": [
+                        "97e4ba3a-38d3-43c2-99e7-b74649b32c41"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1a12834d896f455ca0aa2",
+                    "stepText": "Next, we need to express that distance in megaparsecs (Mpc). Identify the proper relation to convert kilometers to Mpc.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "97e4ba3a-38d3-43c2-99e7-b74649b32c41"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d(\\text{Mpc}) = \\frac{d(\\text{km})}{3.086 \\times 10^{19}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d(\\text{Mpc}) = d(\\text{km}) \\times 3.086 \\times 10^{19}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d(\\text{Mpc}) = \\frac{3.086 \\times 10^{19}}{d(\\text{km})}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "495f71754fa24d798c067",
+                    "stepText": "Now, calculate the distance in Mpc by converting your kilometers result from step 2.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "215.3"
+                    ],
+                    "stepSolveAnswerUnits": "Mpc",
+                    "stepConcepts": [
+                        "97e4ba3a-38d3-43c2-99e7-b74649b32c41"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "cec8e68a95bb4fcebf053",
+                    "stepText": "With the distance now in Mpc, recall Hubble's Law. Identify the correct formula from Hubble's Law that relates recession velocity, distance, and the Hubble constant $!$H_0$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c413a452-cd00-445d-b07a-3c69cb5d60aa",
+                        "ae5906b8-745a-436d-8695-00ba2c22369f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$H_0 = \\frac{v}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$H_0 = v \\times d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$H_0 = \\frac{d}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7907a4a80a32473eb0c7e",
+                    "stepText": "Next, compute the Hubble constant using the recession speed of $!$49000\\ \\text{ km/s}$!$ and the Mpc distance from step 4.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "227.5"
+                    ],
+                    "stepSolveAnswerUnits": "km/s/Mpc",
+                    "stepConcepts": [
+                        "c413a452-cd00-445d-b07a-3c69cb5d60aa",
+                        "ae5906b8-745a-436d-8695-00ba2c22369f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bb5fe28019784603bbc4b",
+                    "stepText": "Finally, estimate the age of the Universe by converting the inverse of the Hubble constant into time. First, the inverse gives a time in seconds when considering the conversion from Mpc to km, and then use the conversion factor for seconds to years. Calculate the age of the Universe in years.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.30e9"
+                    ],
+                    "stepSolveAnswerUnits": "years",
+                    "stepConcepts": [
+                        "6e3fb287-cc65-4984-afe0-467e153ff20c"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

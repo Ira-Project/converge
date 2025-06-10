@@ -1,0 +1,177 @@
+{
+    "id": "590c8180b18b40d3a6f44",
+    "name": "Energy, Work and Power",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "c4eea80185854a58a817e",
+            "questionText": "A car traveling at $!$10 \\text{ m/s}$!$ has a braking distance of $!$10 \\text{ m}$!$ and a driver's reaction time of $!$0.8 \\text{ s}$!$. Assuming that the braking force remains constant, calculate the braking distance when the car's speed doubles to $!$20 \\text{ m/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "19f90f58725f49f688159",
+                    "stepText": "Let's start by identifying the relationship between braking distance and speed when the braking force is constant. Select the correct principle that shows how braking distance depends on the speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "22cb5984-2bee-4068-9d45-f3332a62284a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Braking distance} \\propto v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Braking distance} \\propto v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Braking distance} \\propto v^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "456984321fe44c97b623a",
+                    "stepText": "Great! Now, calculate the ratio of the new speed to the original speed. The car\u2019s speed increases from $!$10 \\text{ m/s}$!$ to $!$20 \\text{ m/s}$!$. What is this ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "9e673a2f6e8241bb8e5b1",
+                    "stepText": "Now that you have the speed ratio, apply the proportionality principle. Determine the factor by which the braking distance increases by squaring the speed ratio. What is the computed squared factor?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "22cb5984-2bee-4068-9d45-f3332a62284a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b40648491adf4aaa86262",
+                    "stepText": "Finally, use the original braking distance and the squared factor to calculate the new braking distance. Multiply the original braking distance of $!$10 \\text{ m}$!$ by the factor you calculated. What is the new braking distance?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "40"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "22cb5984-2bee-4068-9d45-f3332a62284a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "6f258597ddbc4a7992271",
+            "questionText": "A remote community is considering a new solar farm that is designed to produce the same useful electrical power output as an existing coal-fired thermal power station. The coal plant takes $!$800 \\text{ MJ}$!$ of chemical energy from coal as input over a period of one minute and operates with an energy transfer efficiency of $!$30\\%$!$. The solar farm operates with an efficiency of $!$75\\%$!$. Calculate the total solar energy input required per second for the solar farm in kilowatts.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2e660e54efd143caa50eb",
+                    "stepText": "Let's start by establishing the relation between the useful energy output, the total chemical energy input, and the efficiency. Select the correct efficiency formula for energy transfer from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8bd37a30-0ed2-43d5-846f-8c8290941dbd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Useful\\ Energy = Efficiency \\times Total\\ Energy\\ Input$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Total\\ Energy\\ Input = Efficiency \\times Useful\\ Energy$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Useful\\ Energy = Total\\ Energy\\ Input / Efficiency$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cdd3d27255f948d5a2d5c",
+                    "stepText": "Now, using the selected efficiency relation, calculate the useful energy produced by the coal-fired plant. (Hint: Multiply the total chemical energy input of $!$800\\,MJ$!$ by its efficiency of $!$0.30$!$.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "240"
+                    ],
+                    "stepSolveAnswerUnits": "MJ",
+                    "stepConcepts": [
+                        "8bd37a30-0ed2-43d5-846f-8c8290941dbd"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1991747d352e462bbae91",
+                    "stepText": "Next, determine the average power output of the coal plant. This is obtained by dividing the useful energy by the total time (60 seconds). Calculate the power output in megawatts.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4"
+                    ],
+                    "stepSolveAnswerUnits": "MW",
+                    "stepConcepts": [
+                        "f093a546-8db4-44fa-9763-df65c6e6db0e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6da6a2021c75464392495",
+                    "stepText": "For the solar farm to deliver the same useful power output, we need to compute the required solar energy input given its efficiency of $!$75\\%$!$. Divide the coal station's power output by the solar farm's efficiency (in decimal form) to obtain the solar input in megawatts.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.33"
+                    ],
+                    "stepSolveAnswerUnits": "MW",
+                    "stepConcepts": [
+                        "8bd37a30-0ed2-43d5-846f-8c8290941dbd"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5272dc82bd6d4cf592c4f",
+                    "stepText": "Finally, convert the calculated solar energy input from megawatts to kilowatts. (Remember, $!$1\\,MW = 1000\\,kW$!$.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5333"
+                    ],
+                    "stepSolveAnswerUnits": "kW",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

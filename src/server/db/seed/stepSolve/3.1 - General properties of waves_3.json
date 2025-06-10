@@ -1,0 +1,180 @@
+{
+    "id": "c7506561b04f431ea05b2",
+    "name": "General Properties of Waves",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "171dbd5007434ad6ae99a",
+            "questionText": "A seismic P-wave travels from a rock layer with a speed of $!$6\\,km/s$!$ into another with a speed of $!$8\\,km/s$!$. If the incidence angle is $!$30^\\circ$!$, calculate the refraction angle $!$\\theta_2$!$ in the second layer using Snell's law given by $!$\\frac{\\sin \\theta_1}{V_{p1}} = \\frac{\\sin \\theta_2}{V_{p2}}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "45c1be5545914b278b04f",
+                    "stepText": "Let's start by identifying the relevant formula to relate the incidence and refraction angles. Please choose the correct formula from the options.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "381ea933-cde7-4d68-b8f0-c1890609e36a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{\\sin \\theta_1}{V_{p1}} = \\frac{\\sin \\theta_2}{V_{p2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{\\sin \\theta_1}{V_{p2}} = \\frac{\\sin \\theta_2}{V_{p1}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{V_{p1}}{\\sin \\theta_1} = \\frac{V_{p2}}{\\sin \\theta_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "904ebd50bd264c99bd020",
+                    "stepText": "Great, now that we've identified the formula, compute the value of $!$\\sin(30^\\circ)$!$. What is the sine of 30 degrees?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.5"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7d84e2fc4cc4429b9dbd9",
+                    "stepText": "Next, substitute the given wave speeds and the computed value of $!$\\sin(30^\\circ)$!$ into the formula. Rearranging the formula to solve for $!$\\sin \\theta_2$!$, compute its value using the relation $!$\\sin \\theta_2 = \\frac{V_{p2}}{V_{p1}} \\cdot \\sin(30^\\circ)$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.667"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "91b023fc586642c193964",
+                    "stepText": "Finally, determine the refraction angle $!$\\theta_2$!$ by finding the inverse sine (arcsin) of the computed value. Calculate $!$\\theta_2 = \\sin^{-1}(0.667)$!$ to get the refraction angle in degrees.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "41.81"
+                    ],
+                    "stepSolveAnswerUnits": "\u00b0",
+                    "stepConcepts": [
+                        "381ea933-cde7-4d68-b8f0-c1890609e36a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "72427597ab7f45278890d",
+            "questionText": "Engineers are designing a new sonar system that emits high-frequency sound pulses. The system emits a pulse with a frequency of $!$50 \\text{ kHz }$!$ and the speed of sound in water is $!$1500 \\text{ m/s }$!$. Calculate the wavelength of this sound pulse.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e96dbd605c304029a4fb0",
+                    "stepText": "Let's start by identifying the wave equation that relates the wave speed, frequency, and wavelength. Which option represents the correct wave equation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = f\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\lambda / f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = v\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b8cc4b6409ad41e7a7b0d",
+                    "stepText": "Great! Now, the given frequency is in kilohertz. Please convert $!$50\\,\\text{kHz}$!$ to hertz. (Hint: Multiply by 1000)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "50000"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "91d66318-1623-4c88-b48c-56e3cfc2c189"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3620cede36c5418ab4ce9",
+                    "stepText": "Now, using the wave equation from step 1, we need to rearrange it to solve for wavelength. Which option shows the correct rearranged formula to find wavelength?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{v}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = v \\times f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{f}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "575b1019720b4fcbb4157",
+                    "stepText": "Finally, substitute the values for the speed of sound ($!$1500\\,\\text{m/s}$!$) and the converted frequency ($!$50000\\,\\text{Hz}$!$) into the rearranged formula to calculate the wavelength. What is the wavelength of the sound pulse?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.03"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "c76dc2d1-7988-4901-a0e0-fda851b381a7",
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

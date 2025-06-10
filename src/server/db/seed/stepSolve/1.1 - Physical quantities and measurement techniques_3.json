@@ -1,0 +1,200 @@
+{
+    "id": "c0a975e752ed42d4bcb10",
+    "name": "Physical Quantities and Measurement Techniques",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "c33bf8d19bdb4bdba0645",
+            "questionText": "A biomedical researcher uses a micrometer screw gauge to measure the diameter of a microscopic fiber. The instrument has a positive zero error of $!$0.02\\,mm$!$ and gives an uncorrected reading of $!$1.28\\,mm$!$. The instrument measures to $!$0.01\\,mm$!$. Calculate the actual diameter of the fiber in metres, expressing your answer in standard notation with the appropriate number of significant figures.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3f496a0f36e948e79be14",
+                    "stepText": "Let's start by determining how to adjust the uncorrected reading for the positive zero error. Identify the correct operation needed to obtain the corrected measurement.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9a4da118-2c7f-416d-9990-5c7e8ca6e378"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Corrected reading} = \\text{Uncorrected reading} - \\text{Zero error}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Corrected reading} = \\text{Uncorrected reading} + \\text{Zero error}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Corrected reading} = \\text{Uncorrected reading}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "97dd8003a90f40f5a3af0",
+                    "stepText": "Great! Now that you know to subtract the zero error, perform the numerical calculation to obtain the corrected diameter in millimetres. Then, convert this value from millimetres to metres using the fact that $!$1\\,mm=10^{-3}\\,m$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.26e-3"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "97df9a78-627f-40ae-8aef-c68ba9dd9ec7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "db43788e6e46469694e27",
+                    "stepText": "Finally, express your answer in standard notation with the appropriate number of significant figures. Select the option that correctly represents the final answer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b8b4e525-408c-4b95-96a3-38202342dc11",
+                        "0dc608c2-ebe9-4a93-88fb-b038a2e64ec6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1.26 \\times 10^{-3}\\,m$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1.26 \\times 10^{-2}\\,m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1.28 \\times 10^{-3}\\,m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "0f587973b31b4317b4edb",
+            "questionText": "A technician dispensed $!$500\\,mL$!$ of a solvent and then added $!$0.02\\,L$!$ of a viscous liquid. Calculate the total volume of the final solution in cubic metres.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "41124a732b514ae39fb18",
+                    "stepText": "Let's start by converting the solvent volume from mL to cm\u00b3. Identify the conversion factor between mL and cm\u00b3.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a1f5caf2-47d6-4c91-9217-9992e084fe0e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,mL=1\\,cm^3$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,mL=0.1\\,cm^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,mL=10\\,cm^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7431eabb5c10498198d8e",
+                    "stepText": "Now, convert the added liquid from litres to mL. Which conversion factor is correct for converting L to mL?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d9e40ae5-8c64-4c82-986e-52f2fcb9a017"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,L=1000\\,mL$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,L=10\\,mL$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,L=100\\,mL$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "61ede20c786b456d8370c",
+                    "stepText": "Great, now calculate the total volume in mL (or cm\u00b3). The technician used 500 mL of solvent and added 20 mL (after converting 0.02 L). What is the sum?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "520"
+                    ],
+                    "stepSolveAnswerUnits": "mL",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "98a395b065604e75bb740",
+                    "stepText": "Finally, convert the total volume from cm\u00b3 to cubic metres using the appropriate conversion factor. Identify the correct conversion factor for converting cm\u00b3 to m\u00b3.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.20e-4"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [
+                        "b26a064a-bd31-4d44-bb05-ea090349f30b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,cm^3=10^{-6}\\,m^3$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,cm^3=10^{-3}\\,m^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,cm^3=10^{-9}\\,m^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

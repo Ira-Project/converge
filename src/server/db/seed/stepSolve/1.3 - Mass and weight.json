@@ -1,0 +1,160 @@
+{
+    "id": "4789f6b070234604a09af",
+    "name": "Mass and Weight",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "bd09651756c947dc86be7",
+            "questionText": "A packaging company is designing boxes for a new electronics gadget that has a mass of $!$5.5\\,\\text{kg}$!$. Determine the weight of the gadget on a celestial body where the gravitational field strength is $!$2 \\times 9.8\\,\\text{N/kg}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9fe689dc20174a29ac694",
+                    "stepText": "Let's start by identifying the correct formula that relates the mass of an object to its weight under a gravitational field. Which of the following formulas is used to calculate weight?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = mg$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = m/g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = m + g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f86ad9acbee045129d87b",
+                    "stepText": "Now that you've considered the weight formula, let's calculate the gravitational field strength on the celestial body. Multiply the given factor by $!$9.8\\,\\text{N/kg}$!$ to find the effective gravitational field strength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "19.6"
+                    ],
+                    "stepSolveAnswerUnits": "N/kg",
+                    "stepConcepts": [
+                        "01d1e541-9807-4bb0-a823-3dbf8a09d733"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5b75301b8fc541ccafdcd",
+                    "stepText": "Great! Now use the mass of the gadget and the gravitational field strength you calculated to determine the weight. Multiply these two values to get the weight of the gadget.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "107.8"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "57f9767a-efd0-4e39-9da5-7a711127092b",
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                        "8ba59395-c583-4414-8a6f-d62d5e02032f"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "42427dd680814f9ea1fc0",
+            "questionText": "A sports scientist is analyzing an athlete with a mass of $!$70\\,\\text{kg}$!$. When the athlete stands on a spring balance on a newly discovered exoplanet, the balance reads a weight of $!$1050\\,\\text{N}$!$. Calculate the acceleration of free fall ($!$g$!$) on this exoplanet.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fd40acb6c44d47b2812a3",
+                    "stepText": "Let's start by selecting the formula that relates weight, mass, and gravitational acceleration. Which formula correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "57f9767a-efd0-4e39-9da5-7a711127092b",
+                        "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = mg$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = m/g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = g/m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3d1c3065581a40f5ba66c",
+                    "stepText": "Great! Now that you have identified the weight formula, rearrange the formula to isolate $!$g$!$. Which of the following expressions is equivalent to this rearrangement?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d60cd260-94c1-4f20-80b5-343d30836919",
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$g = W/m$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$g = m/W$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$g = W - m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "57ea86033c4e47f88e634",
+                    "stepText": "Now, substitute the given values into the rearranged formula to compute $!$g$!$. Use the values: mass = 70 kg and weight = 1050 N. What is the numerical value of $!$g$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15"
+                    ],
+                    "stepSolveAnswerUnits": "m/s^2",
+                    "stepConcepts": [
+                        "01d1e541-9807-4bb0-a823-3dbf8a09d733"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

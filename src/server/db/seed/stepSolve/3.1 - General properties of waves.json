@@ -1,0 +1,223 @@
+{
+    "id": "95dcc0f863e94de199074",
+    "name": "General Properties of Waves",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "d4f83a1a60d94f66a296a",
+            "questionText": "During an earthquake, the Earth's crust generates various types of seismic waves. A seismological station detects the P-wave $!$35$!$ seconds before the S-wave. The P-wave travels at $!$6.0\\ \\text{km/s}$!$ and the S-wave at $!$3.5\\ \\text{km/s}$!$. If the earthquake generates P-waves with a wavelength of $!$12.0\\ \\text{km}$!$, calculate the wavelength of the S-waves when they reach the station.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7110c120eef4455997959",
+                    "stepText": "Let's start by identifying the correct wave equation that relates wave speed, frequency, and wavelength. Which of the following formulas is the correct one?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca",
+                        "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85",
+                        "91d66318-1623-4c88-b48c-56e3cfc2c189",
+                        "c76dc2d1-7988-4901-a0e0-fda851b381a7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = f\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = \\frac{\\lambda}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = v \\cdot f^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "050efb005ac34ca19e697",
+                    "stepText": "Great! Now, using the formula from the previous step for the P-waves, calculate the frequency. Use the P-wave speed $!$6.0\\ \\text{km/s}$!$ and wavelength $!$12.0\\ \\text{km}$!$ in the relation $!$v = f\\lambda$!$. What is the frequency?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.5"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca",
+                        "91d66318-1623-4c88-b48c-56e3cfc2c189",
+                        "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "70bf983f7a19467785724",
+                    "stepText": "Now that we have the frequency, let's determine the wavelength of the S-waves when they reach the station. Using the S-wave speed $!$3.5\\ \\text{km/s}$!$ and the same frequency, apply the wave equation. What is the wavelength of the S-waves?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.0"
+                    ],
+                    "stepSolveAnswerUnits": "km",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca",
+                        "c76dc2d1-7988-4901-a0e0-fda851b381a7",
+                        "91d66318-1623-4c88-b48c-56e3cfc2c189"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "674d05ce80e040d99f705",
+                    "stepText": "Finally, consider the fact that the P-wave arrives 35 seconds before the S-wave. What does this time difference indicate about the waves generated from the same earthquake?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "91d66318-1623-4c88-b48c-56e3cfc2c189"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "The time difference confirms that even though the speeds are different, both waves have the same frequency as they originate from the same event.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "It indicates that the frequency of the waves is different, with the S-wave having a higher frequency.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "It suggests that the wavelength difference is caused by the time gap in their arrival.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8e1cc605ca8148e19bd9a",
+            "questionText": "An incident sound wave with an amplitude of $!$0.8\\,\\text{Pa}$!$ strikes a wall with acoustic panels that absorb $!$75\\%$!$ of its energy. Assuming the intensity of a sound wave is proportional to the square of its amplitude ($!$I \\propto A^2$!$), calculate the amplitude of the sound wave that is reflected from the wall.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8d99ab38149a4ef7bd7e2",
+                    "stepText": "Let's start by identifying the relationship between the intensity of a sound wave and its amplitude. Please select the correct formula that represents this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca",
+                        "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85",
+                        "91d66318-1623-4c88-b48c-56e3cfc2c189"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I \\propto A^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I \\propto A$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I \\propto A^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "31e522b1cbe44c528603f",
+                    "stepText": "Great. Now consider that the wall absorbs 75% of the incident energy. What fraction of the original energy is reflected? Please choose the correct factor.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$0.25$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$0.75$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$0.5$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "45f7102c95124bc2b556e",
+                    "stepText": "Now, using the proportional relationship $!$I \\propto A^2$!$, set up an equation that relates the square of the reflected amplitude to the square of the initial amplitude multiplied by the reflected energy fraction. Choose the correctly set up equation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A_{r}^2 = 0.25 \\times (0.8)^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A_{r} = 0.25 \\times (0.8)^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A_{r}^2 = 0.75 \\times (0.8)^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "67f93361f9484e77a7fc6",
+                    "stepText": "Now, solve for the reflected amplitude by taking the square root of both sides of the equation. Compute the numerical value for the reflected amplitude.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.4"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca",
+                        "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

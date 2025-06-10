@@ -1,0 +1,169 @@
+{
+    "id": "36a69ca2ed9d49a298cca",
+    "name": "Transfer of Thermal Energy",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "dfc1ac1e99294d158e1ef",
+            "questionText": "The current question asks for an explanation rather than a single numerical answer. To refine it into a question asking for a single numerical answer, we need to quantify a relevant property. For example, if we assume that the subjective 'coldness' is due to the rate of heat transfer from the skin to the countertop, we can ask: \n\n\"Given that the thermal conductivity of stainless steel is $!$k_{ss}=16~W/(m\\cdot K)$!$ and that of wood is $!$k_{wood}=0.13~W/(m\\cdot K)$!$, the contact surface area between the hand and the countertop is $!$A=0.01~m^2$!$, and the temperature difference between the hand and the countertop is $!$\\Delta T=5~K$!$, calculate the ratio of the rate of heat transfer per unit time from a human hand touched to the stainless steel countertop to that from a wooden countertop. Assume that the rate of heat transfer $!$Q$!$ can be approximated by Fourier's law in the form $!$Q=k A (\\Delta T)/d$!$. For simplicity, assume the effective thickness $!$d$!$ through which the heat is conducted is the same for both materials. Provide your answer as a single numerical ratio.\" \n\nIf any necessary values or assumptions need to be adjusted, please provide the missing details.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1079e7e6de19426aa3d74",
+                    "stepText": "Let's start by identifying the correct conduction formula. Which of the following options represents Fourier's law for heat conduction?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q=k A (\\Delta T)/d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q=k A \\Delta T \\cdot d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q=A (\\Delta T)/(k\\cdot d)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0c52e64c021546ad81552",
+                    "stepText": "Great! Now that you have the correct conduction formula, note that the area, temperature difference, and thickness are the same for both materials. Which statement best explains how this simplifies the ratio of heat transfer rates between stainless steel and wood?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1e9bf3f1-c78d-4858-9c86-3df3db5f5414"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Since $!$A$!$, $!$\\Delta T$!$, and $!$d$!$ are identical, the ratio of $!$Q$!$ for stainless steel to wood reduces to the ratio of their thermal conductivities $!$k$!$.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The area $!$A$!$ doubles the rate of heat transfer for stainless steel compared to wood.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The temperature difference $!$\\Delta T$!$ cancels with the thickness $!$d$!$, leaving $!$Q$!$ independent of $!$k$!$.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6159f7ccb8b6464fb05f4",
+                    "stepText": "Now, calculate the ratio of the rate of heat transfer using the given thermal conductivities: stainless steel $!$k_{ss}=16~W/(m\\cdot K)$!$ and wood $!$k_{wood}=0.13~W/(m\\cdot K)$!$. What is $!$\\frac{k_{ss}}{k_{wood}}$!$? Provide your answer as a numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "123.08"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "38c064f89596468baf4ed",
+            "questionText": "A modern vacuum flask uses a vacuum layer and shiny, reflective surfaces to reduce heat loss. In a container without these features, the radiative heat loss from a hot beverage is $!$20\\, \\text{W}$!$. The reflective coating in the flask reduces radiative heat transfer by $!$95\\%$!$. Calculate the radiative heat loss (in watts) from the hot beverage in the vacuum flask.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "91b5d52fbe474976802fa",
+                    "stepText": "Let's start by recalling the relevant concept that explains how a vacuum flask reduces radiative heat transfer. Please choose the option that best relates to the method used in a vacuum flask.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c054f96f-9922-424d-9d29-0d6dc477efdf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{A vacuum flask reduces heat radiation by using reflective surfaces and vacuum insulation.}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Heat loss by conduction in metals.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Heat transfer by convection currents in fluids.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c3c101b5eb864f59a2ef3",
+                    "stepText": "Now, the flask's reflective coating reduces the radiative heat loss by 95%. Identify the fraction of the original heat loss that remains after this reduction.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c054f96f-9922-424d-9d29-0d6dc477efdf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$0.05$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$0.95$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$0.50$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3f40a9ffaabd442e9fb0f",
+                    "stepText": "Great, now that you've identified the remaining fraction, calculate the heat loss from the hot beverage inside the vacuum flask by multiplying the original loss ($!$20\\,\\text{W}$!$) with the remaining fraction from the previous step.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,167 @@
+{
+    "id": "8531081a998e4f6ca9bbe",
+    "name": "Transfer of Thermal Energy",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "df6cef9928464cca88a01",
+            "questionText": "An aluminum saucepan has a bottom with a cross-sectional area of $!$0.03 \\text{ m}^2$!$, a thickness of $!$0.002 \\text{ m}$!$, and is heated such that the temperature difference between its bottom and the surface in contact with the stove is $!$80^{\\circ}\\text{C}$!$. Given that the thermal conductivity of aluminum is $!$205 \\text{ W/(mK)}$!$, calculate the rate of heat transfer (in Watts) through the bottom of the saucepan due to conduction using the formula $!$\\frac{Q}{t} = \\frac{kA\\Delta T}{L}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1dc15b2c587e4567b7af8",
+                    "stepText": "Let's start by identifying the correct formula that relates the rate of heat transfer through a material by conduction. Please select the correct conduction formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{Q}{t}=\\frac{kA\\Delta T}{L}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{Q}{t}=\\frac{A\\Delta T}{kL}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q/t = kA\\Delta T L$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "44a482e528734119a53f9",
+                    "stepText": "Great! Now, using the selected formula, substitute the known values for the thermal conductivity ($!$k=205\\,W/(mK)$!$), cross-sectional area ($!$A=0.03\\,m^2$!$) and temperature difference ($!$\\Delta T=80\\,^{\\circ}C$!$). Calculate the product $!$k\\times A\\times \\Delta T$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "492"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ba6b99fda5dd4ce989861",
+                    "stepText": "Now, incorporate the thickness of the saucepan's bottom ($!$L=0.002\\,m$!$) by dividing the product from the previous step by $!$L$!$. Compute $!$\\frac{492}{0.002}$!$ to obtain the rate of heat transfer in Watts.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "246000"
+                    ],
+                    "stepSolveAnswerUnits": "Watts",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "6c641d5742c649d580055",
+            "questionText": "A room is heated by direct solar radiation through a glass window. Given that the solar irradiance is $!$I$!$ (in $!$\\mathrm{W/m^2}$!$), the window area is $!$A$!$ (in $!$\\mathrm{m^2}$!$), the glass transmission coefficient is $!$\\tau$!$, and the radiation is incident steadily for a duration of $!$t$!$ seconds, the mass of the room air is $!$m$!$ (in kilograms), and the specific heat capacity of air is $!$c_p$!$ (in $!$\\mathrm{J/(kg \\cdot ^\\circ C)}$!$). Calculate the single numerical value of the increase in the room's air temperature (in $!$^\\circ C$!$) after time $!$t$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fe774bba611249aea5fcd",
+                    "stepText": "Let's start by determining the total energy absorbed by the room from the sun. Identify the correct formula that represents the energy delivered by solar radiation through the window over the time period. Which option correctly expresses this energy?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3b13c682-91e3-450a-a4bb-e41f482703bd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = I \\times A \\times \\tau \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = I \\times A \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = I \\times \\tau \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4a69e7e99ecb4531931a2",
+                    "stepText": "Great, now that you have the energy expression, determine how this energy affects the temperature of the room air. Identify the correct relationship that links the energy input to the temperature increase, using the mass of the air and its specific heat capacity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta T = \\frac{E}{m \\cdot c_p}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta T = \\frac{E}{m} + c_p$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta T = \\frac{E}{c_p}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "239b9acb904f49aa86743",
+                    "stepText": "Now, combine the expressions from the previous steps to obtain the final formula for the increase in the room\u2019s air temperature. Choose the option that correctly represents this substitution into the temperature equation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta T = \\frac{I \\times A \\times \\tau \\times t}{m \\times c_p}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta T = I \\times A \\times \\tau \\times t \\times m \\times c_p$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta T = \\frac{I \\times A \\times t}{m \\times c_p}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

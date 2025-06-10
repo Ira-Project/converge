@@ -1,0 +1,169 @@
+{
+    "id": "a24d8d166d434255b25d0",
+    "name": "Sound",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "102e696b95594128b0762",
+            "questionText": "During a symphony orchestra performance, a violin string vibrates at a fundamental frequency of $!$440$!$ Hz, producing a clear A4 note. The sound waves travel through the concert hall at a speed of $!$343$!$ m/s. The unique timbre of the violin is due to its overtones. Calculate the wavelength of the second overtone (that is, the $!$n=3$!$ harmonic) produced by this violin.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "90a9cf35bfd142aa802c0",
+                    "stepText": "Let's start by determining the frequency of the $!$n=3$!$ harmonic. Select the correct formula that relates the harmonic's frequency to the fundamental frequency.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1d2d075b-c511-41ac-a980-0545c5315cc7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f_{n}=n\\,f_{0}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f_{n}=f_{0}/n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f_{n}=f_{0}+n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3bebf56a82bd4a169097f",
+                    "stepText": "Great! Now that you have determined the formula for the harmonic frequency, use it to calculate the frequency of the $!$n=3$!$ harmonic. Multiply the fundamental frequency $!$440\\,Hz$!$ by 3.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1320"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "1d2d075b-c511-41ac-a980-0545c5315cc7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c7295befe5f34a29a2a53",
+                    "stepText": "Now, let's find the wavelength. Identify the correct relationship among wave speed, frequency, and wavelength that you need to use.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "345dd24e-4f58-4324-829c-4e8719c533e4"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{v}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = v \\times f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{f}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5b6a983798444d2ea85c1",
+                    "stepText": "Excellent! Now use the relationship $!$\\lambda = \\frac{v}{f}$!$ with $!$v = 343\\,m/s$!$ and the harmonic frequency you calculated ($!$1320\\,Hz$!$) to find the wavelength of the overtone.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.26"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "345dd24e-4f58-4324-829c-4e8719c533e4"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "457a87ab5dc7455c8e1a5",
+            "questionText": "During a medical ultrasound imaging scan, a transducer emits high-frequency sound waves that travel through soft tissue at an average speed of $!$1540\\,m/s$!$. The transducer detects an echo from a fetal structure $!$0.00013\\,s$!$ after emitting the pulse. Calculate the distance to the structure.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f97a93d293594f1cb7f23",
+                    "stepText": "Let's start by identifying which equation relates the distance to the speed of sound and the echo time in ultrasound imaging, keeping in mind that the echo represents a round trip. Please choose the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "670671d3-985c-4a23-9178-05e06ebd3f7b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d = \\frac{v t}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = v t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = \\frac{2 v t}{1}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cec9ac2818af4a25bec5a",
+                    "stepText": "Great, now that you have selected an appropriate formula, substitute the given values for the speed of sound in soft tissue ($!$1540\\,m/s$!$) and the echo time ($!$0.00013\\,s$!$). First, calculate the product $!$1540 \\times 0.00013$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.2002"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "345dd24e-4f58-4324-829c-4e8719c533e4"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "88a852bd95aa4db681ed8",
+                    "stepText": "Now, to account for the round-trip nature of the echo, divide the product you obtained by 2. What is the calculated distance to the structure?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1001"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "670671d3-985c-4a23-9178-05e06ebd3f7b"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

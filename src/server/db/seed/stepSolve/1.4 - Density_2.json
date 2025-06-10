@@ -1,0 +1,184 @@
+{
+    "id": "2454c5f18ea743a689f38",
+    "name": "Density",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "04ae6e7fb2574616a34bf",
+            "questionText": "At a chemical processing plant, a heavy solvent has a density of $!$1.25\\,\\text{g/cm}^3$!$. Calculate the density of the heavy solvent in SI units ($!$\\text{kg/m}^3$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5e2e410928c149168488d",
+                    "stepText": "Let's start by identifying the conversion factor needed to convert density from $!$\\text{g/cm}^3$!$ to $!$\\text{kg/m}^3$!$. Which of the following relationships is used for this conversion?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "51a5b849-b39b-4d24-99b2-599b0caa884c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\times 10^3$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\div 10^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1e0c7c4fa1334152916c7",
+                    "stepText": "Great! Now that you have chosen the correct conversion factor, use it to convert the heavy solvent's density from $!$\\text{g/cm}^3$!$ to $!$\\text{kg/m}^3$!$. Multiply the given density by the conversion factor. What is the resulting value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1250"
+                    ],
+                    "stepSolveAnswerUnits": "kg/m^3",
+                    "stepConcepts": [
+                        "51a5b849-b39b-4d24-99b2-599b0caa884c"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "a46d531ed50747e384abd",
+            "questionText": "A logging company needs to transport a large raft of freshly cut timber down a river. The timber is pine with a density of $!$650 \\; \\text{kg/m}^3$!$. The raft is made up of $!$500$!$ cylindrical logs, each with a diameter of $!$0.5 \\; \\text{m}$!$ and a length of $!$10 \\; \\text{m}$!$. In addition, the company adds machinery with a total mass of $!$5000 \\; \\text{kg}$!$ (with negligible volume compared to the timber). Calculate the average density in $!$\\text{kg/m}^3$!$ of the composite raft (timber plus machinery).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e34b2890fa844fdeb7cbc",
+                    "stepText": "Let's start by recalling the basic definition of density. Please select the correct formula for density from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "70870073-1178-47d6-a764-fd91afde7460"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\rho = \\frac{m}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\rho = m \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\rho = \\frac{V}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "61342eaa1f164e398ca67",
+                    "stepText": "Great! Now, to calculate the volume of a cylindrical log, we need its volume formula. Identify the correct formula for the volume of a cylinder from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$V = \\pi r^2h$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = 2\\pi rh$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = \\pi rh^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "093f059e9e3f4448ac422",
+                    "stepText": "Now, using the correct cylinder volume formula and the log's dimensions (diameter = $!$0.5 \\; \\text{m}$!$, which gives a radius $!$r = 0.25 \\; \\text{m}$!$, and height $!$h = 10 \\; \\text{m}$!$), calculate the volume of one log.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.9635"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ad2ae3eb379c44bb891c4",
+                    "stepText": "Next, multiply the volume of one log by the total number of logs (500) to find the total timber volume.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "981.75"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "a17b535b9298421f90c56",
+                    "stepText": "Now, use the mass formula with density to determine the mass of the timber. Multiply the total timber volume by the pine density ($!$650 \\; \\text{kg/m}^3$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "638137.5"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "0bcbc0d9-3537-4386-9a81-b8d3ca195bae"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "70efeefca65346b5abfe6",
+                    "stepText": "Then, add the machinery mass of $!$5000 \\; \\text{kg}$!$ to the timber mass to get the total mass of the composite raft.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "643137.5"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ec5d122168b64684918e0",
+                    "stepText": "Finally, calculate the average density of the composite raft by dividing the total mass by the total timber volume.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "655"
+                    ],
+                    "stepSolveAnswerUnits": "kg/m^3",
+                    "stepConcepts": [
+                        "70870073-1178-47d6-a764-fd91afde7460"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

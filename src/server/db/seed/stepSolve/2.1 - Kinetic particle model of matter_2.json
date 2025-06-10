@@ -1,0 +1,228 @@
+{
+    "id": "e924943b171a4f069b962",
+    "name": "Kinetic Particle Model of Matter",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "b3e14b5abf404d46b38f4",
+            "questionText": "An intricate ice sculpture's water particles exhibit kinetic energy directly related to temperature. Calculate the temperature difference in Kelvin between the point where the water particles would cease all motion (absolute zero) and the temperature at which the ice sculpture begins to melt ($!$0^\\circ C$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "140c36a66f9b44e9a1bc7",
+                    "stepText": "Let's start by identifying the temperature that represents the state where all particle motion ceases. Please select the temperature corresponding to absolute zero on the Kelvin scale.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "432338ea-ada7-4779-baea-9e1c30d910ad"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$0\\;K$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$273\\;K$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$100\\;K$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "56b725e6bbb9492b95e49",
+                    "stepText": "Next, let's recall the conversion to change a temperature from degrees Celsius to Kelvin. Identify the correct conversion formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T=273+\\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T=\\theta-273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T=\\theta\\times273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bada6808d2204232a540c",
+                    "stepText": "Great. Now, use the conversion formula you selected to calculate the Kelvin temperature for the melting point of the ice sculpture, given as $!$0^\\circ C$!$. Perform the calculation where you add the Celsius temperature to the constant as indicated in the formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "273"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "0626b20508584720a9213",
+                    "stepText": "Finally, determine the temperature difference between absolute zero and the melting point of the ice sculpture in Kelvin. Using your previous findings, subtract the Kelvin temperature corresponding to absolute zero from the Kelvin melting point.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "273"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "432338ea-ada7-4779-baea-9e1c30d910ad",
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "09eb2d6aae4b44fa986c9",
+            "questionText": "A warning on an aerosol can advises against storing it in direct sunlight. Inside, the product is propelled by a gas. The can, being a fixed volume container, initially holds gas at a pressure of $!$1.5 \\times 10^5 Pa$!$ and an absolute temperature of $!$293 K$!$. If the can is left in direct sunlight and the temperature rises to $!$323 K$!$, calculate the new pressure inside the can.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fabe44df25fb4c31bc785",
+                    "stepText": "Let's start by identifying the principle that applies to a gas in a fixed volume where pressure and absolute temperature are directly related. Which of the following expressions best represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p \\propto T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p \\propto \\frac{1}{T}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p \\propto V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d526c41d57284d51b60b9",
+                    "stepText": "Great! Now, choose the correct formula that expresses the proportionality between pressure and temperature for a fixed volume gas.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{p}{T} = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p \\times T = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$pV = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "dddddecb1efd4099b92e0",
+                    "stepText": "Based on the proportional relationship, rearrange the formula to express the new pressure ($!$p_2$!$) in terms of the initial pressure ($!$p_1$!$) and the temperature ratio. Which of the following expressions correctly represents this rearrangement?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p_2 = p_1 \\times \\frac{T_2}{T_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p_2 = p_1 \\times \\frac{T_1}{T_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p_2 = p_1 + \\frac{T_2}{T_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a0a01aee83924ae9b15e2",
+                    "stepText": "Now, calculate the ratio $!$\\frac{T_2}{T_1}$!$ using the given temperatures ($!$T_1 = 293 K$!$ and $!$T_2 = 323 K$!$). What is the numerical value of this ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.102"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "0f197c7014944149a0999",
+                    "stepText": "Finally, multiply the initial pressure by the calculated temperature ratio to determine the new pressure inside the can. What is the new pressure?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.65e5"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

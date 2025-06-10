@@ -1,0 +1,213 @@
+{
+    "id": "518d6be017944a08b3863",
+    "name": "Radioactivity",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "e671ba7ef28f41dc926b1",
+            "questionText": "An archaeological team unearths an ancient textile sample weighing $!$100$!$ grams from a tomb. To determine its age, a radiocarbon analysis is performed. The half-life of Carbon-14 is $!$5730$!$ years. A living organism's carbon exhibits an initial activity of $!$226$!$ Bq per $!$100$!$ grams of carbon. The textile sample displays a measured activity of $!$28$!$ Bq, which includes a background radiation level of $!$4$!$ Bq. Calculate the age of the textile in years.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "db8dab33135245f4bc657",
+                    "stepText": "Let's start by finding the net activity due to Carbon-14 decay. Subtract the background radiation from the measured activity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "24"
+                    ],
+                    "stepSolveAnswerUnits": "Bq",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "04218446cd96447b8ffdf",
+                    "stepText": "Great, now compute the ratio of the net activity to the initial activity of living carbon. This ratio is unitless. What is the value of $!$A/A_0$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1062"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7f8a2a905ae94d2f87572",
+                    "stepText": "Now, to use the radiocarbon decay law, we need to identify the correct formula that represents exponential decay based on half-life. Please choose the correct decay formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4ba46951-f583-43e5-8ee2-7582647271d3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 \\times (1/2)^{(t/T_{1/2})}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 \\times e^{-t/T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = A_0 - t \\times (1/2)^{T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4e0e955f69b04c45abf09",
+                    "stepText": "Continuing, we need the rearranged version of the decay formula to solve for the time $!$t$!$. Identify the correct rearranged formula from the following options.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4ba46951-f583-43e5-8ee2-7582647271d3",
+                        "b9ca20c3-e249-4bc5-8d94-4d2bceee779d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$t = T_{1/2} \\times \\frac{\\ln(A/A_0)}{\\ln(1/2)}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$t = T_{1/2} \\times \\ln(A/A_0)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = \\ln((1/2)^{A/A_0}) \\times T_{1/2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "96d369c9bd2e4a7c9be4e",
+                    "stepText": "Next, calculate the ratio of logarithms, that is $!$\\frac{\\ln(A/A_0)}{\\ln(1/2)}$!$, using your earlier computed ratio $!$A/A_0 \\approx 0.1062$!$. What value is obtained (approximately)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.234"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "338b5271b8dc4c0ba732f",
+                    "stepText": "Finally, use the rearranged decay formula with the half-life and the logarithmic ratio you computed to determine the age of the textile. Multiply the half-life ($!$5730$!$ years) by your logarithmic ratio. What is the approximate age of the textile in years?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "18520"
+                    ],
+                    "stepSolveAnswerUnits": "years",
+                    "stepConcepts": [
+                        "b9ca20c3-e249-4bc5-8d94-4d2bceee779d",
+                        "4ba46951-f583-43e5-8ee2-7582647271d3"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "81d659372fcf4082a52c5",
+            "questionText": "A typical residential smoke alarm contains $!$0.9$!$ microcuries of Americium-241. Given that $!$1$!$ curie is defined as $!$3.7 \\times 10^{10}$!$ disintegrations per second, calculate the number of alpha particles emitted per second by the Americium-241 in the smoke alarm. (Give your answer in disintegrations per second, rounding to the nearest whole number.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e273bbda9c72499b876d7",
+                    "stepText": "Let's start by converting the amount from microcuries to curies. Identify the factor that relates microcuries to curies. Which of the following options correctly expresses the conversion factor?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$10^{-6}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$10^{-3}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$10^{6}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$10^{-9}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a1b0faccff4e4e6c906a5",
+                    "stepText": "Great. Now, using the conversion from the previous step, multiply the quantity in curies by the disintegration rate per curie. Identify the correct disintegration rate provided for 1 curie.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$3.7 \\times 10^{10}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$3.7 \\times 10^{8}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$3.7 \\times 10^{12}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$3.7 \\times 10^{6}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "712d1f69f1e74040b604f",
+                    "stepText": "Now that you have the converted value in curies and the disintegration rate per curie, calculate the total number of disintegrations (or alpha particles emitted) per second by performing the multiplication. Round your final answer to the nearest whole number. What is the computed value in disintegrations per second?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "33300"
+                    ],
+                    "stepSolveAnswerUnits": "disintegrations per second",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,159 @@
+{
+    "id": "88bc438b7f1840de9d848",
+    "name": "Light",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "46abf61f76f74d078cce9",
+            "questionText": "A marine research submarine uses optical fibres for deep-sea data transmission. The fibre core is made of glass with a refractive index of $!$n_1 = 1.50$!$ and is surrounded by cladding with a refractive index of $!$n_2 = 1.30$!$. Calculate the critical angle (in degrees) for light traveling from the core to the cladding for total internal reflection.",
+            "imageText": "Diagram of an optical fibre showing light rays undergoing total internal reflection at the core-cladding interface.",
+            "steps": [
+                {
+                    "id": "d592c8b8c4634300b4ae2",
+                    "stepText": "Let's start by recalling the definition of the critical angle in a medium transition and identify the correct formula that relates the refractive indices to the sine of the critical angle. Which formula correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "12c39f67-6487-45a1-ad1c-9b2d008d49da",
+                        "0fd432f9-88af-4d36-8e87-5eae4916e921",
+                        "3803fa1a-4cc3-421c-8c92-58e6d303f533"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ \\sin c = \\frac{n_2}{n_1} $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ \\sin c = \\frac{n_1}{n_2} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ c = \\frac{n_2}{n_1} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5133ab163bf44b359b103",
+                    "stepText": "Great, now that you've identified the correct formula, use the given refractive indices $!$n_1 = 1.50$!$ and $!$n_2 = 1.30$!$ to calculate the value of $!$\\sin c$!$. Compute the ratio $!$\\frac{n_2}{n_1}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.8667"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0fd432f9-88af-4d36-8e87-5eae4916e921"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "102546bab8cd4584991fb",
+                    "stepText": "Now, using the value of $!$\\sin c$!$ that you just computed, determine the critical angle by applying the inverse sine function. What is the critical angle in degrees?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [
+                        "12c39f67-6487-45a1-ad1c-9b2d008d49da"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "ad270eab2e714e2d8a59e",
+            "questionText": "During an eye examination, an optometrist determines that a patient suffers from myopia with a far point of $!$2.5 \\text{ m}$!$. To enable the patient to see distant objects clearly, the optometrist prescribes eyeglasses with diverging lenses. Calculate the power (in diopters) of the corrective lens required for this patient to see distant objects clearly, using the formula $!$P = \\frac{-1}{f}$!$, where $!$f$!$ is the focal length in meters.",
+            "imageText": "Diagram illustrating myopia and its correction using a diverging lens.",
+            "steps": [
+                {
+                    "id": "17ab0fdf3594430787773",
+                    "stepText": "Let's start by identifying the formula that relates the power of a lens to its focal length. Please select the correct formula for calculating the power of a corrective lens.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "579e3fe9-1690-465b-b0c6-32a60dc7075a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = \\frac{-1}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{1}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = -f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5079fa0a8d014b71ab501",
+                    "stepText": "Great, now recall that in a myopic eye the far point is the maximum distance at which the patient can see clearly. Determine the correct focal length value to use in the formula from the available options.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cafce598-9e75-4148-9359-dcbff52ab5ee",
+                        "579e3fe9-1690-465b-b0c6-32a60dc7075a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f = 2.5 \\text{ m}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = \\infty$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = -2.5 \\text{ m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4e0879dab0324e3abb7e7",
+                    "stepText": "Now, using the formula and the appropriate focal length, calculate the power of the corrective lens required. Substitute the selected focal length into the formula and compute the numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-0.4"
+                    ],
+                    "stepSolveAnswerUnits": "diopters",
+                    "stepConcepts": [
+                        "579e3fe9-1690-465b-b0c6-32a60dc7075a",
+                        "cafce598-9e75-4148-9359-dcbff52ab5ee"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

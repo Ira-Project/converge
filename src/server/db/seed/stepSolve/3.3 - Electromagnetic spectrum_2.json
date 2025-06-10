@@ -1,0 +1,164 @@
+{
+    "id": "855c3dcf57ee482b96a81",
+    "name": "Electromagnetic Spectrum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "7d6b2e3dc03f48b1a5896",
+            "questionText": "Given that the frequency ranges for visible light, X-rays, and gamma rays are $!$4.0 \\times 10^{14}$!$ Hz to $!$8.0 \\times 10^{14}$!$ Hz, $!$3.0 \\times 10^{16}$!$ Hz to $!$3.0 \\times 10^{19}$!$ Hz, and $!$3.0 \\times 10^{19}$!$ Hz to $!$3.0 \\times 10^{23}$!$ Hz respectively, calculate the ratio of the maximum frequency of a gamma ray to the maximum frequency of an X-ray, which represents how many times greater the maximum energy of a gamma ray is compared to that of an X-ray.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "09e7afe01fc34687bc2a7",
+                    "stepText": "Let's start by identifying which arithmetic operation you should use to compute the ratio of the maximum frequencies. Which operation would correctly compare the gamma ray maximum frequency to the X-ray maximum frequency?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5b194c28-6816-4a73-89ec-3ec41f81f11c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Division$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Addition$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Multiplication$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Subtraction$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "339551b2158b4dc1b6a13",
+                    "stepText": "Now, use the provided maximum frequency values of $!$3.0 \\times 10^{23}$!$ Hz for gamma rays and $!$3.0 \\times 10^{19}$!$ Hz for X-rays to calculate the ratio by applying the operation you identified. What numerical value do you obtain for this ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10000"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5b194c28-6816-4a73-89ec-3ec41f81f11c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c3ce2172cced444f9f66e",
+                    "stepText": "Finally, based on the relationship between frequency and energy in electromagnetic waves, decide what this ratio implies about the energy of a gamma ray compared to an X-ray. Which statement best reflects the implication of your calculated ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5b194c28-6816-4a73-89ec-3ec41f81f11c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Gamma rays have approximately 10,000 times higher energy than X-rays.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Gamma rays have approximately 10,000 times lower energy than X-rays.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Gamma rays and X-rays have nearly the same energy.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Gamma rays have only about twice the energy of X-rays.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ec5fc6f2db704d65bdf8a",
+            "questionText": "An air traffic controller relies on a radar system that emits pulses of microwaves to track aircraft. These electromagnetic waves travel at the speed of light. The engineers ensure precise frequency and wavelength, understanding that a higher frequency results in a shorter wavelength, crucial for detailed target resolution according to the wave equation. If the radar system emits microwaves with a wavelength of $!$0.03 \\text{ m}$!$ and receives the reflected pulse from an aircraft $!$0.0001 \\text{ s}$!$ after emission, calculate the distance of the aircraft from the radar. Assume the speed of electromagnetic waves in air is $!$3 \\times 10^8 \\text{ m/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e824bcab42be4fa289889",
+                    "stepText": "Let's start by analyzing the time measurement. The time provided is for the pulse's round-trip journey (to the aircraft and back). To determine the time taken for a one-way trip, divide the total time by 2. Please calculate the one-way travel time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.00005"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "fdada81ee4f04b6eb63a0",
+                    "stepText": "Great, now that you've computed the one-way travel time, recall the basic distance relation used in these situations. Which of the following formulas correctly relates distance, speed, and time?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48f1-b4fc-b8acd2debfda",
+                        "9e724590-d6e2-4d2e-a9bc-b273255ede51"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Distance} = \\text{Speed} \\times \\text{Time}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Distance} = \\frac{\\text{Speed}}{\\text{Time}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Distance} = \\frac{\\text{Time}}{\\text{Speed}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0449c9262e594139bdab5",
+                    "stepText": "Now, use the one-way time and the given speed of electromagnetic waves to calculate the one-way distance to the aircraft. Multiply the speed by the one-way travel time to arrive at the distance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15000"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "5d5da45c-d891-4924-b19e-6cedeb57827b"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

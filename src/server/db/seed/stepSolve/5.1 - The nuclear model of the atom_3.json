@@ -1,0 +1,194 @@
+{
+    "id": "ecdf80978bb344a6912c8",
+    "name": "Nuclear Model of the Atom",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "13d7c6a321fa46cc913eb",
+            "questionText": "A chemist in a forensics lab is using mass spectrometry to identify unknown elements. She focuses on carbon isotopes, specifically Carbon-14 ($!$^{14}_{6}C$!$), which have the same atomic number but different nucleon numbers due to varying neutron numbers, confirming they are isotopes of the same element. In her analysis, she considers a Carbon-14 ion that has gained two electrons. Calculate the total number of subatomic particles (i.e., protons, neutrons, and electrons) in this specific Carbon-14 ion.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ba42497ca7854980b3f22",
+                    "stepText": "Let's start by determining the number of protons in the Carbon-14 ion. Please select the concept that helps us understand how the atomic number relates to the number of protons.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bc7ad055-7748-4115-bcf4-ac0b0aaa550f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Atomic number (Z) is the number of protons in an atom$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Nucleon number (A) represents the total of protons and neutrons$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Mass defect indicates the loss of mass during nuclear reactions$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "72d23da56b714bd18662a",
+                    "stepText": "Now, to find the number of neutrons in this nuclide, we need to use a formula that relates the nucleon number and the atomic number. Identify the correct formula that shows this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fb0ad570-8b70-4f1e-95f4-6cdf79d8f580"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A - Z$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A + Z$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Z - A$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "95b10dcd0226441bbb447",
+                    "stepText": "Great, now use the formula $!$A - Z$!$ to calculate the number of neutrons for Carbon-14, given that $!$A = 14$!$ and $!$Z = 6$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fb0ad570-8b70-4f1e-95f4-6cdf79d8f580"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c668eb89aef94ffd9fa04",
+                    "stepText": "Next, consider the electrons. In a neutral Carbon atom, the number of electrons would equal the number of protons. However, this Carbon-14 ion has gained two extra electrons. Calculate the total number of electrons in the ion.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "70bb259d-d789-4cf3-ba98-ff98c8ea67a6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "82bd38bf26f5443d9c73f",
+                    "stepText": "Finally, sum the numbers of protons, neutrons, and electrons to determine the total number of subatomic particles in the Carbon-14 ion.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "22"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "012362d216b44d83a3272",
+            "questionText": "Using Rutherford's gold foil experiment data, calculate the radius of the gold nucleus in meters. Assume that an alpha particle with kinetic energy $!$E$!$ (in joules) is scattered at a large angle $!$\\theta$!$ (in degrees) and that the distance of closest approach is $!$d$!$ (in meters). (If any of these values are missing, please provide appropriate numerical values.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b34f468fd6634ec69ddf8",
+                    "stepText": "Let's start by identifying the correct energy\u2010balance formula used in Rutherford's scattering experiment. This formula equates the kinetic energy $!$E$!$ of the alpha particle to the electrostatic potential energy at the point of closest approach $!$d$!$, involving the Coulomb constant $!$1/(4\\pi\\epsilon_0)$!$, the charge of the alpha particle, and the charge of the gold nucleus. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e610543e-36e3-456e-a6dc-ece8abe7bd44"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = \\frac{1}{4\\pi\\epsilon_0} \\times \\frac{2 \\times 79 \\times e^2}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{1}{4\\pi\\epsilon_0} \\times \\frac{79 \\times e^2}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{2 \\times 79 \\times e^2}{4\\pi\\epsilon_0 \\times d^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{d}{1/(4\\pi\\epsilon_0) \\times 2 \\times 79 \\times e^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "832eed50ba114ecb89383",
+                    "stepText": "Now, using the assumed numerical values, calculate the product $!$2 \\times 79 \\times (1.60\\times10^{-19})^2$!$. This product represents the combined charge effect in the energy balance. Enter the resulting numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.04e-36"
+                    ],
+                    "stepSolveAnswerUnits": "C^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "bbbd28b8ca794762ad031",
+                    "stepText": "Great, next multiply the value you obtained by the Coulomb constant $!$(1/(4\\pi\\epsilon_0))$!$, which is approximately $!$9.0\\times10^9$!$ N\u00b7m\u00b2/C\u00b2. This step gives you the numerator in the expression for the distance $!$d$!$. Calculate this multiplication.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.64e-26"
+                    ],
+                    "stepSolveAnswerUnits": "N\u00b7m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "1417fcfe0301480abae71",
+                    "stepText": "Finally, divide the result from the previous step by the kinetic energy $!$E$!$, taken here as $!$5.0\\times10^{-13}$!$ J, to obtain the distance of closest approach (which we identify with the nuclear radius). Compute this division to find the final numerical estimate of the nucleus radius.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.3e-14"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

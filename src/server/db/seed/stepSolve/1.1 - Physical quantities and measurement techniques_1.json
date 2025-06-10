@@ -1,0 +1,265 @@
+{
+    "id": "a4b1b821be33453996eb8",
+    "name": "Physical Quantities and Measurement Techniques",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "01085e8ce7f9459bae91b",
+            "questionText": "A technician in a pharmaceutical laboratory uses a graduated cylinder to dispense $!$500\\,mL$!$ of a solvent. They align their eye level with the bottom of the meniscus. Calculate the volume of the solvent in cubic metres ($!$m^3$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e8e273970c584f2cba796",
+                    "stepText": "Let's start by confirming the equivalence between milliliters and cubic centimetres. Please select the correct conversion from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a1f5caf2-47d6-4c91-9217-9992e084fe0e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,mL=1\\,cm^3$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,mL=10\\,cm^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,mL=1000\\,cm^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b4cbff6da86c4b72b61da",
+                    "stepText": "Great, now let's establish the conversion between cubic centimetres and cubic metres. Which of the following correctly represents this conversion?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b26a064a-bd31-4d44-bb05-ea090349f30b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,cm^3=10^{-6}\\,m^3$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,cm^3=10^{-3}\\,m^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,cm^3=10^{-9}\\,m^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0756878f09d94c77aaa44",
+                    "stepText": "Now, using the established conversions, calculate the volume in cubic metres by multiplying the volume in cubic centimetres by the conversion factor. Enter your numerical answer (in scientific notation if needed).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5e-4"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [
+                        "b26a064a-bd31-4d44-bb05-ea090349f30b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bb1da97de0f240539c5aa",
+                    "stepText": "Finally, reflect on the measurement technique used. Why is aligning the eye level with the bottom of the meniscus important when reading the volume? Please select the most appropriate reason from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f5c2f8fa-fd31-4013-bafa-9ea0e69eb1c6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "It helps to avoid parallax error when reading the liquid level.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "It increases the actual volume of the liquid.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "It changes the shape of the meniscus to show a higher reading.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "e33c57296d7841b59fa1c",
+            "questionText": "A construction manager measures the length of a rectangular foundation as $!$10.500\\,m$!$ and the width as $!$5.200\\,m$!$ using a laser distance meter. However, the meter consistently underreads by $!$5\\,mm$!$. Calculate the actual area of the foundation in square metres ($!$m^2$!$) and express your answer with the correct number of significant figures.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7007920508914002bcf9e",
+                    "stepText": "Let's start by determining how to correct a measurement that underreads. Identify which mathematical operation should be used to adjust the measured value when a known underreading error is present.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3474184d-fe1b-4c7e-b099-9213ddedc947"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Addition}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Subtraction}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Multiplication}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "449c8dceab6b4deaa2470",
+                    "stepText": "Now, using the operation you selected, calculate the actual length by adding the underread correction of $!$0.005\\,m$!$ to the measured length $!$10.500\\,m$!$. What is the corrected length?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10.505"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "84c8e731d74c474daf8c7",
+                    "stepText": "Similarly, compute the actual width by adding the correction of $!$0.005\\,m$!$ to the measured width $!$5.200\\,m$!$. What is the corrected width?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.205"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ec689b1ad30c4a129a3b3",
+                    "stepText": "Great, now that you have the corrected dimensions, identify the correct formula to calculate the area of a rectangle.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6071a0d9-3fb4-49f5-95a9-e5ee6886d6a7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Area} = \\text{length} \\times \\text{width}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Area} = 2(\\text{length} + \\text{width})$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Area} = \\text{length} + \\text{width}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "eb697878cf084758b2ce4",
+                    "stepText": "Using the corrected values from the earlier steps, multiply the actual length and width to compute the raw area of the foundation. What is the calculated area before rounding?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "54.6815"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "07a181057a8d47b5bee9e",
+                    "stepText": "Now, determine the rule for handling significant figures in multiplication. Which statement correctly describes the appropriate approach?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0dc608c2-ebe9-4a93-88fb-b038a2e64ec6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{The final answer should have as many significant figures as the measurement with the least significant figures.}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{The final answer should be rounded to the highest number of significant figures among the factors.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{The final answer should have the average number of significant figures of the factors.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c09e753a8e7d4a669d6c3",
+                    "stepText": "Finally, round the computed area of $!$54.6815\\,m^2$!$ to the appropriate number of significant figures based on your previous selection. What is the final area of the foundation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "54.68"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

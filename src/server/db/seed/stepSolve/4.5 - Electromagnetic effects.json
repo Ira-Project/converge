@@ -1,0 +1,172 @@
+{
+    "id": "3ba38c78c0804678a9318",
+    "name": "Electromagnetic Effects",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "2bc9ab03506746109909e",
+            "questionText": "Consider a regenerative braking system in a modern electric vehicle, where the traction motor works as a generator during braking. Using Faraday's law, the induced electromotive force (EMF) in the motor can be given by the formula $!$EMF = N \\cdot \\frac{\\Delta \\phi}{\\Delta t}$!$, where $!$N$!$ is the number of turns in the motor's coil and $!$\\frac{\\Delta \\phi}{\\Delta t}$!$ is the rate of change of magnetic flux through one coil. Calculate the numerical value of the induced EMF. Please provide the following values: the number of turns $!$N$!$ and the rate of change of magnetic flux $!$\\frac{\\Delta \\phi}{\\Delta t}$!$ (in Weber per second).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e4b16e4568374324ad5c8",
+                    "stepText": "Let's start by identifying the correct formula based on Faraday's law of electromagnetic induction needed to calculate the induced EMF. Please choose the formula that correctly relates the EMF with the number of turns and the rate of change of magnetic flux.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$EMF = N \\cdot \\frac{\\Delta \\phi}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$EMF = \\frac{N}{\\Delta t} \\cdot \\Delta \\phi$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$EMF = \\frac{\\Delta \\phi}{N \\cdot \\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3b7f1f216ac84c6f83939",
+                    "stepText": "Great! Now, based on the problem's context, what is the assumed number of turns $!$N$!$ in the motor's coil?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "200"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "c106ab9947b242a8a0b39",
+                    "stepText": "Now determine the rate of change of magnetic flux $!$\\frac{\\Delta \\phi}{\\Delta t}$!$ in Weber per second that is provided in the problem.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.05"
+                    ],
+                    "stepSolveAnswerUnits": "Wb/s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "3afe9c11b3294a6ab63e1",
+                    "stepText": "Finally, use the values from the previous steps to calculate the induced EMF by multiplying the number of turns by the rate of change of magnetic flux. What is the induced EMF in Volts?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "a6a61b96ebfb48978cc19",
+            "questionText": "A loudspeaker's voice coil has a total active length of $!$L=0.5 \\text{ m}$!$ and is placed in a uniform magnetic field of magnitude $!$B=0.2 \\text{ T}$!$. If an electrical current of $!$I=0.3 \\text{ A}$!$ flows through the coil and the angle between the direction of the current and the magnetic field is $!$90^\\circ$!$, compute the magnitude of the force on the voice coil using the formula $!$F=I \\times L \\times B \\times \\sin \\theta$!$. Provide your answer in Newtons (N) as a single numerical value.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "26d7c892e1614e96b758b",
+                    "stepText": "Let's start by identifying the correct formula needed to calculate the force on a current-carrying conductor in a magnetic field. Please select the formula that you think correctly relates the force (F) to the current (I), the active length (L), the magnetic field (B), and the angle (\u03b8).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7b21da81-6937-4f1d-b767-7b5c34311beb"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F=I \\cdot L \\cdot B \\cdot \\sin\\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F=I+L+B+\\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F=\\frac{I \\cdot L \\cdot B}{\\sin\\theta}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F=I \\cdot L \\cdot \\cos\\theta \\cdot B$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c9118fc6c9274442b9946",
+                    "stepText": "Great, now that we have the formula, let's consider the trigonometric part. What is the value of $!$\\sin(90^\\circ)$!$? Please choose the correct value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$1$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$0$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$0.5$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$undefined$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "23715b04dc704c17a5a91",
+                    "stepText": "Now, substitute the given numerical values into the formula. Multiply the current ($!$0.3\\,A$!$), the active length ($!$0.5\\,m$!$), the magnetic field strength ($!$0.2\\,T$!$), and the sine of $!$90^\\circ$!$ to find the force. Compute the product.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.03"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "7b21da81-6937-4f1d-b767-7b5c34311beb",
+                        "c853c3d8-6f65-42c7-8ff1-bfc6351293b9"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

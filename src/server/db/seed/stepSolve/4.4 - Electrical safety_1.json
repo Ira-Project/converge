@@ -1,0 +1,151 @@
+{
+    "id": "4e8834838d7f4014a8f9d",
+    "name": "Electrical Safety",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "258e0c8cee03427899a79",
+            "questionText": "An office worker needs to connect a new high-power laser printer rated at $!$1500\\,W$!$ to a $!$230\\,V$!$ mains supply. The worker mistakenly uses an extension lead fitted with a $!$3\\,A$!$ fuse, which blows instantly upon plugging in the printer. Realizing the mistake, they attempt to plug the printer directly into another wall socket on the same ring main. However, this time, the entire circuit trips, as the circuit breaker rated at $!$32\\,A$!$ has activated. Given that the computers and monitors already connected to the circuit draw a combined current of $!$10\\,A$!$, determine the total current flowing through the circuit breaker when the printer and the existing computers/monitors are all operational on this circuit.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "bda0c6f7ad2c474dacffd",
+                    "stepText": "Let's start by identifying the formula needed to calculate the current drawn by the printer. Which of the following formulas correctly relates power, voltage, and current?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9b6731ea-3a10-4320-b77b-a729fcfd2577"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I=\\frac{P}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I=PV$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I=\\frac{V}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "88300458e6f744e6a2fe4",
+                    "stepText": "Great, now that you have identified the correct formula, calculate the current drawn by the printer using the formula $!$I=\\frac{P}{V}$!$. Divide the printer's power of $!$1500\\,W$!$ by the voltage of $!$230\\,V$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.52"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "9b6731ea-3a10-4320-b77b-a729fcfd2577"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "aa1507b1a1bb4d0e9546c",
+                    "stepText": "Now, add the current drawn by the computers and monitors (which is $!$10\\,A$!$) to the printer's current you just calculated to find the total current through the circuit breaker.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "16.52"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "4bdc6f0ce6504d8186d0a",
+            "questionText": "During a DIY renovation, a homeowner mistakenly installed a new light switch by connecting the neutral wire to the switch terminal intended for the live wire. As a result, even when the switch is in the off position, the internal components of the light fixture remain energized. Given that the live voltage is $!$230~V$!$, calculate the voltage present at the light fixture's internal components when the switch is off.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3754cc012d3248f49f868",
+                    "stepText": "Let's start by recalling the standard wiring principle for light switches. Which of the following statements best describes why the switch should be placed in the live wire?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ca464fd2-c3f5-4506-ab1e-15ab647cbc3a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Placing the switch in the live wire ensures that the entire circuit is de-energized when the switch is off.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Placing the switch in the neutral wire completely disconnects the live voltage from the circuit.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The switch placement does not affect circuit energization; it only controls current flow.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b7a7c262559c4cda96f85",
+                    "stepText": "Great, now that we've recalled the proper wiring method, consider the mistake made in this installation. Which of the following outcomes best explains what happens when the neutral wire is connected to the switch terminal instead of the live wire?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f4906163-4e4a-4328-a4b4-11fe9f6ae1e9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "The live wire remains continuously connected to the light fixture\u2019s internal components, keeping them energized.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The light fixture becomes completely de-energized when the switch is off.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The voltage is evenly split between live and neutral, reducing the energization.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3d3ac411dc524c39949f3",
+                    "stepText": "Now, using your understanding of the wiring error and the provided live voltage of $!$230~V$!$, calculate the voltage present at the light fixture's internal components when the switch is off.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "230"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

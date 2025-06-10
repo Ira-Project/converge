@@ -1,0 +1,144 @@
+{
+    "id": "46f8136965ad45ddba03a",
+    "name": "Mass and Weight",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "00e9bd3abac147f6b34db",
+            "questionText": "A sports scientist is analyzing an athlete's vertical jump. The athlete has a mass of $!$70\\text{ kg}$!$. On Earth, the gravitational field strength is $!$9.8\\text{ N/kg}$!$, and on Mars, it is $!$3.7\\text{ N/kg}$!$. Calculate the difference in the athlete's weight (in $!$\\text{N}$!$) between Earth and the simulated Martian environment.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fafa0d976c64463981607",
+                    "stepText": "Let's start by identifying which formula lets us calculate weight given mass and gravitational field strength. Can you choose the correct formula?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = mg$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = m + g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{m}{g}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c72c74341a7b4cb1b0a0f",
+                    "stepText": "Great, now that we have identified the weight formula, compute the weight of the athlete on Earth by multiplying the mass by Earth\u2019s gravitational field strength. What is the result?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "686"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "57f9767a-efd0-4e39-9da5-7a711127092b",
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                        "01d1e541-9807-4bb0-a823-3dbf8a09d733"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "119f350b0dc541e58e9fa",
+                    "stepText": "Now, apply the same method to calculate the weight of the athlete on Mars using the given Martian gravitational field strength. What value do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "259"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "57f9767a-efd0-4e39-9da5-7a711127092b",
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b3a8a388b34d4daeb1ee0",
+                    "stepText": "Finally, determine the difference in the athlete's weight between Earth and Mars by subtracting the Mars weight from the Earth weight. What is the difference?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "427"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "d6f234fb3fb34091acd35",
+            "questionText": "A packaging company is managing inventory for a new electronics gadget with a mass of $!$5.5\\text{ kg}$!$. Convert the mass of the gadget into grams. Assume that $!$1\\text{ kg} = 1000\\text{ g}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fdf3a3b7b670412b8d6af",
+                    "stepText": "Let's start by identifying the correct conversion factor from kilograms to grams. Choose the formula that correctly represents this conversion.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a8bc0dd5-246d-40c2-a509-ac9658a3f04c",
+                        "0e162bf0-0cec-4c8e-a70d-df85506735b7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\text{ kg} = 1000\\text{ g}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\text{ kg} = 10\\text{ g}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\text{ g} = 1000\\text{ kg}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "49588ea031d04d2a92133",
+                    "stepText": "Great! Now that you have the conversion factor, multiply the mass of the gadget in kilograms by the conversion factor to get the mass in grams.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5500"
+                    ],
+                    "stepSolveAnswerUnits": "g",
+                    "stepConcepts": [
+                        "a8bc0dd5-246d-40c2-a509-ac9658a3f04c",
+                        "0e162bf0-0cec-4c8e-a70d-df85506735b7"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

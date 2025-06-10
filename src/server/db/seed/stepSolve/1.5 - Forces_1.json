@@ -1,0 +1,229 @@
+{
+    "id": "b25221c9d22b4417800fb",
+    "name": "Forces",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "13105e6ae05d4076b508e",
+            "questionText": "A construction crane is designed to lift a maximum load of $!$20000 \\text{ N}$!$. This load is lifted at a horizontal distance of $!$10 \\text{ m}$!$ from the crane's pivot point. To prevent the crane from toppling, counterweights are used to create an opposing moment. If a counterweight is placed at a horizontal distance of $!$4 \\text{ m}$!$ from the pivot, what is the minimum mass of the counterweight (in kilograms) required to maintain rotational equilibrium? Assume the acceleration due to gravity is $!$9.8 \\text{ m/s}^2$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "81073417de2e4f9fb1f63",
+                    "stepText": "Let's start by recalling the formula used to calculate the moment (turning effect) when a force acts at a distance from a pivot. Please choose the correct moment formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c",
+                        "7637f898-6bb7-44dc-9a1d-7c91f0ab93e7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$M = F \\times d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$M = \\frac{F}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$M = F + d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2360ce5a9a6e4bc3b16c2",
+                    "stepText": "Great! Now, using the chosen formula, calculate the moment caused by the load. Multiply the load ($!$20000 \\text{ N}$!$) by its distance from the pivot ($!$10 \\text{ m}$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "200000"
+                    ],
+                    "stepSolveAnswerUnits": "Nm",
+                    "stepConcepts": [
+                        "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c",
+                        "7637f898-6bb7-44dc-9a1d-7c91f0ab93e7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d50db4d3b2da428691227",
+                    "stepText": "Next, think about the moment produced by the counterweight. The counterweight creates a moment by its weight acting at a distance from the pivot. Which formula correctly represents the moment provided by the counterweight?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c",
+                        "7637f898-6bb7-44dc-9a1d-7c91f0ab93e7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$M = m \\times g \\times d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$M = m \\times d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$M = m \\times g + d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bdc717e2b8f546c186212",
+                    "stepText": "Finally, to maintain equilibrium, the counterweight's moment must balance the load's moment. Using the expression from the previous step, set up the equation $!$m \\times 9.8 \\times 4 = 200000$!$ and solve for the mass m of the counterweight.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5102.04"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "b740ddfa-3ad8-4e38-b850-124c5bb429fe"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "5d7b8461aca04a0ab572a",
+            "questionText": "A driver is navigating a sharp bend in a car. The car has a mass of $!$1200 \\; kg$!$ and is attempting to take a circular bend with a radius of $!$40 \\; m$!$ at a speed of $!$54 \\; km/h$!$. Calculate the minimum coefficient of static friction required between the tires and the road surface for the car to safely make this turn without skidding, given that the acceleration due to gravity is $!$g = 9.8 \\; m/s^2$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "22427148ef674d97bdac9",
+                    "stepText": "Let's start by converting the car's speed from $!$km/h$!$ to $!$m/s$!$. Calculate the speed in $!$m/s$!$ given that $!$54 \\; km/h$!$ is equivalent to a certain value in $!$m/s$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "0ebf734bc8de40f9b7356",
+                    "stepText": "Great, now identify the correct formula that represents the centripetal force required for circular motion. Which of the following formulas correctly represents this force?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "774ffc0d-cf72-4145-a42f-24801ee68ac7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{mv^2}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{mv}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = mvr$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "30d62eca52174ae28e9f2",
+                    "stepText": "Now, determine the formula for the maximum static frictional force available between the tires and the road. Which option represents this correctly?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b9d9a427-ac45-470c-beb9-78cc051848a3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\mu mg$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\mu m g^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{mg}{\\mu}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cdd7dcbb14d34abea2a04",
+                    "stepText": "After recognizing both the centripetal force and the frictional force formulas, equate the frictional force to the centripetal force. Which expression correctly gives the coefficient of static friction, $!$\\mu$!$, in terms of speed, radius, and gravitational acceleration?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "774ffc0d-cf72-4145-a42f-24801ee68ac7",
+                        "b9d9a427-ac45-470c-beb9-78cc051848a3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\mu = \\frac{v^2}{rg}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\mu = \\frac{rg}{v^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\mu = \\frac{v}{rg}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8f7c04e6bbe141a1828b4",
+                    "stepText": "Now, substitute the values into the identified expression. Use the converted speed $!$15 \\; m/s$!$, radius $!$40 \\; m$!$, and $!$g = 9.8 \\; m/s^2$!$ to calculate the minimum coefficient of static friction. What numerical value do you obtain (rounded appropriately)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.57"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}
