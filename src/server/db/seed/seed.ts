@@ -80,32 +80,31 @@ const options = {
   "grades": ["9", "10"],
 }
 
-// Create concepts for all files from 1.1 to 6.2
 const fileNames = [
   "1.1 - Physical quantities and measurement techniques",
-  // "1.2 - Motion",
-  // "1.3 - Mass and weight", 
-  // "1.4 - Density",
-  // "1.5 - Forces",
-  // "1.6 - Momentum",
-  // "1.7 - Energy, work and power",
-  // "1.8 - Pressure",
-  // "2.1 - Kinetic particle model of matter",
-  // "2.2 - Thermal properties and temperature", 
-  // "2.3 - Transfer of thermal energy",
-  // "3.1 - General properties of waves",
-  // "3.2 - Light",
-  // "3.3 - Electromagnetic spectrum",
-  // "3.4 - Sound",
-  // "4.1 - Simple phenomena of magnetism",
-  // "4.2 - Electrical quantities",
-  // "4.3 - Electric circuits", 
-  // "4.4 - Electrical safety",
-  // "4.5 - Electromagnetic effects",
-  // "5.1 - The nuclear model of the atom",
-  // "5.2 - Radioactivity",
-  // "6.1 - Earth and the Solar System",
-  // "6.2 - Stars and the Universe"
+  "1.2 - Motion",
+  "1.3 - Mass and weight", 
+  "1.4 - Density",
+  "1.5 - Forces",
+  "1.6 - Momentum",
+  "1.7 - Energy, work and power",
+  "1.8 - Pressure",
+  "2.1 - Kinetic particle model of matter",
+  "2.2 - Thermal properties and temperature", 
+  "2.3 - Transfer of thermal energy",
+  "3.1 - General properties of waves",
+  "3.2 - Light",
+  "3.3 - Electromagnetic spectrum",
+  "3.4 - Sound",
+  "4.1 - Simple phenomena of magnetism",
+  "4.2 - Electrical quantities",
+  "4.3 - Electric circuits", 
+  "4.4 - Electrical safety",
+  "4.5 - Electromagnetic effects",
+  "5.1 - The nuclear model of the atom",
+  "5.2 - Radioactivity",
+  "6.1 - Earth and the Solar System",
+  "6.2 - Stars and the Universe"
 ];
 
 // Process each concept file
@@ -151,7 +150,7 @@ const fileNames = [
 // STEP SOLVE CREATION AND DELETION 
 // await createStepSolveAssignment("1.1 0");
 
-// // Create step solve assignments for all file names with different suffixes
+// Create step solve assignments for all file names with different suffixes
 for (const fileName of fileNames) {
   console.log(`Processing Step Solve file: ${fileName}`);
   
@@ -160,14 +159,14 @@ for (const fileName of fileNames) {
   
   // Create numbered variants (file_name_1.json to file_name_4.json)
   for (let i = 1; i <= 4; i++) {
-    if(i === 2) continue;
     const numberedFileName = `${fileName}_${i}`;
     console.log(`Processing Step Solve file: ${numberedFileName}`);
     await createStepSolveAssignment(numberedFileName, options);
   }
 }
 
-// await deleteStepSolveAssignment("a598d77eb7004c39aa3d3");
+// await deleteStepSolveAssignment("c0a975e752ed42d4bcb10");
+
 
 
 // await findConceptsWithoutStepSolveSteps();
