@@ -23,7 +23,10 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
       name: true,
       code: true,
       description: true,
+      courseId: true,
+      subjectId: true,
       grade: true,
+      gradeText: true,
       showLeaderboardStudents: true,
       showLeaderboardTeachers: true,
       year: true,
@@ -32,11 +35,13 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
     with: {
       course: {
         columns: {
+          id: true,
           name: true,
         },
         with: {
           subject: {
             columns: {
+              id: true,
               name: true,
             }
           }
@@ -335,7 +340,7 @@ export const getOrCreateUserToClassroom = async (ctx: ProtectedTRPCContext, inpu
 export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateClassroomInput) => {
   const { generateId } = await import("lucia/dist/crypto");
   
-  const { name, description } = input;
+  const { name, description, gradeText, courseId, subjectId } = input;
   
   const classroom = await ctx.db.insert(classrooms).values({
     id: generateId(21),
@@ -344,6 +349,9 @@ export const createClassroom = async (ctx: ProtectedTRPCContext, input: CreateCl
     description: description ?? "",
     code: generateId(6),
     createdBy: ctx.user.id,
+    gradeText: gradeText,
+    courseId: courseId,
+    subjectId: subjectId,
   }).returning({
     id: classrooms.id,
   });
@@ -559,16 +567,22 @@ export const updateClassroom = async (ctx: ProtectedTRPCContext, input: UpdateCl
     throw new TRPCClientError("You don't have permission to update this classroom");
   }
 
+  // Prepare update data
+  const updateData = {
+    name: input.name,
+    description: input.description ?? "",
+    year: input.year,
+    showLeaderboardStudents: input.showLeaderboardStudents,
+    showLeaderboardTeachers: input.showLeaderboardTeachers,
+    courseId: input.courseId !== "" ? input.courseId : null,
+    subjectId: input.subjectId !== "" ? input.subjectId : null,
+    gradeText: input.gradeText ?? null,
+    updatedAt: new Date(),
+  };
+
   // Update the classroom
   const [updatedClassroom] = await ctx.db.update(classrooms)
-    .set({
-      name: input.name,
-      description: input.description ?? "",
-      year: input.year,
-      showLeaderboardStudents: input.showLeaderboardStudents,
-      showLeaderboardTeachers: input.showLeaderboardTeachers,
-      updatedAt: new Date(),
-    })
+    .set(updateData)
     .where(eq(classrooms.id, input.id))
     .returning();
 

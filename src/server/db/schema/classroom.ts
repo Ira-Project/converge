@@ -11,7 +11,7 @@ import {
 } from "drizzle-orm/pg-core";
 import { Roles, DATABASE_PREFIX as prefix } from "@/lib/constants";
 import { relations } from "drizzle-orm";
-import { courses } from "./subject";
+import { courses, subjects } from "./subject";
 import { users } from "./user";
 import { explainAssignments } from "./learnByTeaching/explainAssignment";
 
@@ -26,6 +26,7 @@ export const classrooms = pgTable(
     name: text("name").notNull(),
     description: text("description"),
     courseId: varchar("course_id", { length: 21 }).references(() => courses.id),
+    subjectId: varchar("subject_id", { length: 21 }).references(() => subjects.id),
     grade: integer("grade"),
     gradeText: varchar("gradeText", { length: 50 }),
     year: integer("year").default(2024).notNull(),
