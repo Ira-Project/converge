@@ -25,7 +25,6 @@ export const getClassroom = async (ctx: ProtectedTRPCContext, input: GetClassroo
       description: true,
       courseId: true,
       subjectId: true,
-      grade: true,
       gradeText: true,
       showLeaderboardStudents: true,
       showLeaderboardTeachers: true,

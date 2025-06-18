@@ -27,7 +27,6 @@ export const classrooms = pgTable(
     description: text("description"),
     courseId: varchar("course_id", { length: 21 }).references(() => courses.id),
     subjectId: varchar("subject_id", { length: 21 }).references(() => subjects.id),
-    grade: integer("grade"),
     gradeText: varchar("gradeText", { length: 50 }),
     year: integer("year").default(2024).notNull(),
     isActive: boolean("is_active").default(true).notNull(),

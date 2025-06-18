@@ -16,7 +16,7 @@ interface Classroom {
       name: string;
     } | null;
   } | null;
-  grade?: number | null;
+  gradeText?: string | null;
 }
 
 interface AssignmentTopicListProps {
