@@ -39,6 +39,25 @@ export const getUserSettings = async (ctx: ProtectedTRPCContext) => {
           isDeleted: true,
           code: true,
           year: true,
+          courseId: true,
+          subjectId: true,
+          gradeText: true,
+        },
+        with: {
+          course: {
+            columns: {
+              id: true,
+              name: true,
+            },
+            with: {
+              subject: {
+                columns: {
+                  id: true,
+                  name: true,
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -54,6 +73,10 @@ export const getUserSettings = async (ctx: ProtectedTRPCContext) => {
       code: uc.classroom?.code ?? "",
       role: uc.role,
       year: uc.classroom.year,
+      courseId: uc.classroom?.courseId ?? "",
+      subjectId: uc.classroom?.subjectId ?? "",
+      gradeText: uc.classroom?.gradeText ?? "",
+      course: uc.classroom?.course,
       isActive: uc.classroom?.isActive ?? false,
       isArchived: !uc.classroom?.isActive,
       isUserRemoved: uc.isDeleted,

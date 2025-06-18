@@ -15,7 +15,7 @@ interface Classroom {
       name: string;
     } | null;
   } | null;
-  grade?: number | null;
+  gradeText?: string | null;
 }
 
 interface ActivityLibraryFiltersProps {
@@ -73,8 +73,8 @@ export default function ActivityLibraryFilters({ topics, classroom, onFilterChan
         }
       }
       // Set grade filter
-      if (classroom.grade) {
-        newGrades.push(classroom.grade.toString());
+      if (classroom.gradeText) {
+        newGrades.push(classroom.gradeText);
       }
       // Find matching subject by name
       if (classroom.course?.subject?.name) {

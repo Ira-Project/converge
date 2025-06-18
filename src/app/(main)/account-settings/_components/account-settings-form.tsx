@@ -288,6 +288,16 @@ export function AccountSettingsForm({ initialData }: AccountSettingsFormProps) {
                         <span className="text-xs text-muted-foreground">
                           Year: {formatAcademicYear(classroom.year)}
                         </span>
+                        {classroom.course && (
+                          <span className="text-xs text-muted-foreground">
+                            • {classroom.course.subject?.name} • {classroom.course.name}
+                          </span>
+                        )}
+                        {classroom.gradeText && (
+                          <span className="text-xs text-muted-foreground">
+                            • Grade {classroom.gradeText}
+                          </span>
+                        )}
                       </div>
                     </div>
                     
