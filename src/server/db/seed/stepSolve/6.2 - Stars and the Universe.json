@@ -1,0 +1,249 @@
+{
+    "id": "40d5379c90c4494abaf27",
+    "name": "Stars and the Universe",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "888ee735b456448c8d947",
+            "questionText": "A research team observes a distant galaxy exhibiting significant redshift in its light spectrum, indicating it is moving away from Earth. They measure its recession speed to be $!$700\\ \\text{ km/s }$!$ and its distance to be $!$10\\ \\text{ Mpc }$!$. Given that $!$1\\ \\text{ Mpc } = 3.086 \\times 10^{19}\\ \\text{ km }$!$ and $!$1\\ \\text{ year } = 3.1536 \\times 10^7\\ \\text{ s }$!$, calculate the approximate age of the Universe in years based on this data.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "188d9952ea8448ec948b1",
+                    "stepText": "Let's start by identifying the proper conversion factor to change the distance from megaparsecs (Mpc) to kilometers (km). Which one of the following options is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$1 \\ \\text{ Mpc } = 3.086 \\times 10^{19}\\ \\text{ km }$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1 \\ \\text{ Mpc } = 3.086 \\times 10^{18}\\ \\text{ km }$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1 \\ \\text{ Mpc } = 3.086 \\times 10^{20}\\ \\text{ km }$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f676240b5d41470587c6f",
+                    "stepText": "Now convert 10 Mpc to kilometers using the conversion factor from the previous step.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.086e20"
+                    ],
+                    "stepSolveAnswerUnits": "km",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "80412f933eb54b4f9b4a4",
+                    "stepText": "Great. Next, identify the correct expression of Hubble's Law that relates a galaxy's recession speed to its distance. Which of the following formulas should be used?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c413a452-cd00-445d-b07a-3c69cb5d60aa"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = H_0 \\; d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$H_0 = v \\; d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = H_0 \\; v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e83e50b0119c45b6b382b",
+                    "stepText": "Using the relationship you identified, calculate the Hubble Constant $!$H_0$!$ using the recession speed of $!$700\\ \\text{ km/s }$!$ and the distance in kilometers from Step 2.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.268e-18"
+                    ],
+                    "stepSolveAnswerUnits": "s^-1",
+                    "stepConcepts": [
+                        "ae5906b8-745a-436d-8695-00ba2c22369f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "cafd3398d4ee494d9d338",
+                    "stepText": "Now, to estimate the age of the Universe from the Hubble Constant, identify the correct formula that relates $!$H_0$!$ to the age. Which option below is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6e3fb287-cc65-4984-afe0-467e153ff20c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Age} = \\frac{1}{H_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Age} = H_0$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Age} = H_0^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "386250162b344f5aa8ffc",
+                    "stepText": "Compute the age of the Universe in seconds by taking the inverse of the Hubble Constant you calculated in Step 4.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.409e17"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "6e3fb287-cc65-4984-afe0-467e153ff20c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "188901eeb0ce4d0e81f8f",
+                    "stepText": "Finally, convert the age from seconds to years using the conversion factor $!$1\\ \\text{ year } = 3.1536 \\times 10^7\\ \\text{ s }$!$. What is the age of the Universe in years?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.398e10"
+                    ],
+                    "stepSolveAnswerUnits": "years",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "a808ab22514d4ffd988dd",
+            "questionText": "Given a star with a surface temperature of $!$20000 \\degree C$!$ and a mass equal to that of our Sun, calculate the estimated total lifetime of the star (in billion years) from its formation until it becomes a white dwarf. Assume that all necessary astrophysical constants are known.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "58dee212fab4409cb48a4",
+                    "stepText": "Let's start by identifying the key nuclear process that fuels a star and governs its lifetime. Please select the concept that best explains how stellar energy is produced through transformation of elements.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "027e5718-acbb-4f21-b252-06a5529f9219"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Nuclear fusion: conversion of hydrogen into helium, releasing energy.}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Gravitational collapse in protostars.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Hubble\\'s Law, which relates velocity and distance.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3f15791210f34cc0a9bb4",
+                    "stepText": "Now, consider the star's high surface temperature. Which concept explains that stars with temperatures in the range $!$6000\\text{ to }25000 \\degree C$!$ are more luminous and burn their fuel faster, thereby reducing their lifetimes? Please choose the correct concept.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f4f99f5b-01f4-45fa-b6a7-34af17a4fa55"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Star temperature classifications: hotter stars are more luminous and evolve faster.}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Red giant phase resulting from later-stage evolution.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Cosmic Microwave Background Radiation (CMBR).}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1bac856bb91048caa548d",
+                    "stepText": "Great, now compare this to a Sun-like star, which has an estimated lifetime of about $!$10\\text{ billion years}$!$. With a surface temperature of $!$20000 \\degree C$!$, the star burns its nuclear fuel more rapidly. Calculate the approximate total lifetime (in billion years) for this star due to the enhanced fusion rate.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5"
+                    ],
+                    "stepSolveAnswerUnits": "billion years",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "bbd02c638e224ee6a2622",
+                    "stepText": "Finally, taking into account the star's similar mass to the Sun and its accelerated evolution due to the higher temperature, consolidate your findings. What is your final estimated total lifetime (in billion years) from formation until it becomes a white dwarf?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5"
+                    ],
+                    "stepSolveAnswerUnits": "billion years",
+                    "stepConcepts": [
+                        "61970e3a-0a91-44f7-8bcf-f61e859d8bb2"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

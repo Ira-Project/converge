@@ -1,0 +1,230 @@
+{
+    "id": "32c274e186074f84bf1f1",
+    "name": "Electromagnetic Effects",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "7919a639451c48749213f",
+            "questionText": "A hydroelectric power plant generates AC power at $!$15\\ \\text{kV}$!$. This power is then stepped up using a transformer with $!$2500$!$ turns in its primary coil and $!$50000$!$ turns in its secondary coil for long-distance transmission. Before reaching residential areas, the high-voltage power passes through a step\u2010down transformer. This step\u2010down transformer has $!$100000$!$ turns in its primary coil and needs to reduce the voltage to $!$240\\ \\text{V}$!$ for household use. Assuming ideal transformers, calculate the number of turns required in the secondary coil of the step\u2010down transformer.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6ce3be511dcb43539b394",
+                    "stepText": "Let's start by identifying the correct relation between the voltages and the number of turns for an ideal transformer. Which of the following formulas represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a84e288-311b-4ee9-8759-17e881095487"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{V_p}{V_s} = \\frac{N_p}{N_s}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V_p \\times V_s = N_p \\times N_s$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{N_p}{N_s} = \\frac{V_s}{V_p}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_p - V_s = N_p - N_s$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9e0df33e0750492abcf68",
+                    "stepText": "Next, calculate the voltage multiplication factor provided by the step\u2010up transformer using its turns. Remember to use the turns ratio for this calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a84e288-311b-4ee9-8759-17e881095487"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9f8dbfaebd6c445b91f17",
+                    "stepText": "Now, using the multiplication factor obtained, determine the transmission voltage after the step\u2010up transformer. Multiply the generated voltage by the factor.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "300"
+                    ],
+                    "stepSolveAnswerUnits": "kV",
+                    "stepConcepts": [
+                        "7a84e288-311b-4ee9-8759-17e881095487"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e29332fc6eb24737b1114",
+                    "stepText": "For the step\u2010down transformer, we again rely on the ideal transformer relation between voltage and turns. Please select the correct formula that applies here.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a84e288-311b-4ee9-8759-17e881095487"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{V_p}{V_s} = \\frac{N_p}{N_s}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V_p + V_s = N_p + N_s$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_p - V_s = N_p - N_s$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_p \\times V_s = N_p \\times N_s$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "928d82b4691b48a3a35a7",
+                    "stepText": "Finally, use the ideal transformer relation to compute the number of turns in the secondary coil of the step\u2010down transformer. Use the formula $!$N_s = N_p \\times \\frac{V_s}{V_p}$!$, and substitute the values: $!$N_p = 100000$!$, the primary voltage $!$V_p = 300\\ \\text{kV}$!$, and the desired secondary voltage $!$V_s = 240\\ \\text{V}$!$. What number do you obtain for $!$N_s$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "80000"
+                    ],
+                    "stepSolveAnswerUnits": "turns",
+                    "stepConcepts": [
+                        "7a84e288-311b-4ee9-8759-17e881095487"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "1712aa2a5d87426a9d82b",
+            "questionText": "Calculate the induced electromotive force $!$E$!$ (in volts) generated during regenerative braking in a modern electric vehicle. Assume the following formula applies: $!$E = N \\cdot B \\cdot \\ell \\cdot v$!$, where $!$N$!$ is the number of turns in the coil, $!$B$!$ is the magnetic flux density (in tesla), $!$\\ell$!$ is the effective length of the conductor within the magnetic field (in meters), and $!$v$!$ is the relative speed between the conductor and the magnetic field (in meters per second). Provide a single numerical value for $!$E$!$. (If any values are missing, please supply them.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c8b4331f3c4c41dd8c90e",
+                    "stepText": "Let's start by identifying the correct formula that relates the induced emf to the number of turns, magnetic flux density, conductor length, and speed. Please select the correct equation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d647fb6f-2be1-48e5-8bbf-c044180cfbb9",
+                        "7c995179-8aae-4a1d-96de-4c78925943a8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = N \\cdot B \\cdot \\ell \\cdot v$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{N \\cdot B}{\\ell \\cdot v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = N + B + \\ell + v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6507fd8d9d8d49b2811cc",
+                    "stepText": "Great, now that you've recalled the correct formula, let's assign a reasonable value for the number of turns ($!$N$!$) in the coil. What would be a suitable assumption for $!$N$!$ in a modern electric vehicle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100"
+                    ],
+                    "stepSolveAnswerUnits": "turns",
+                    "stepConcepts": [
+                        "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "358054c1709f49018b36f",
+                    "stepText": "Moving on, we need a value for the magnetic flux density ($!$B$!$) in tesla. Choose a reasonable assumption for $!$B$!$ encountered during regenerative braking.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.5"
+                    ],
+                    "stepSolveAnswerUnits": "tesla",
+                    "stepConcepts": [
+                        "64ec9c91-cb4f-4870-8048-68c7fbc8911b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3f06c4ebfa8a4f4bb2719",
+                    "stepText": "Next, determine a plausible value for the effective length ($!$\\ell$!$ in meters) of the conductor within the magnetic field. What value could you use here?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.2"
+                    ],
+                    "stepSolveAnswerUnits": "meters",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "91a69821ac4b42dc85636",
+                    "stepText": "Now, select a suitable value for the relative speed ($!$v$!$ in meters per second) between the conductor and the magnetic field during braking.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "3799176b23364d77809d3",
+                    "stepText": "Finally, combine the values you have chosen using the identified formula to compute the induced emf $!$E$!$. Multiply the number of turns, the magnetic flux density, the effective length, and the relative speed to find the final answer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100"
+                    ],
+                    "stepSolveAnswerUnits": "volts",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

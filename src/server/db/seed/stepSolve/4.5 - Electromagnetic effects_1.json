@@ -1,0 +1,213 @@
+{
+    "id": "777cce32522440218a213",
+    "name": "Electromagnetic Effects",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "fcf4edf7fb834674ab3d8",
+            "questionText": "The current question asks for an explanation of adjustments to improve microphone sensitivity, but it does not provide any numerical values. Could you please provide the necessary numerical details (such as the number of turns in the coil, the magnetic field strength of the magnet, the coil area, and the vibration speed of the diaphragm) so that we can formulate a single numerical calculation for the induced electromotive force ($!$\\text{emf}$!$) after optimization?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "27d448f0f10a43e38bec4",
+                    "stepText": "Let's start by identifying the key physical principle behind the calculation of induced emf. Which concept fundamentally explains how an emf is produced in a moving coil within a magnetic field?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Electromagnetic Induction$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Ohm's Law$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Newton's Second Law$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c8fa3c410fdd4dbcac7bb",
+                    "stepText": "Great. Now, select the formula that best expresses Faraday's law for induced emf in a coil. Which of the following formulas correctly relates the induced emf to the number of turns and the rate of change of magnetic flux?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{emf} = -N\\frac{d\\Phi}{dt}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{emf} = I \\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{emf} = \\frac{d\\Phi}{dt}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0b05f4e5ce6b4d54b4c03",
+                    "stepText": "Now, using the provided optimized numerical details for the microphone, compute the product of the magnetic field strength $!$B$!$, the coil area $!$A$!$, and the diaphragm vibration speed $!$v$!$. (Hint: Multiply the values as provided.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.5e-5"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ff96095617be41518d734",
+                    "stepText": "Next, incorporate the effect of the coil's number of turns. Multiply the product from the previous step by the number of turns provided to determine the overall induced emf. What is the resulting numerical value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.5e-3"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "d647fb6f-2be1-48e5-8bbf-c044180cfbb9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e4b4ba120957464dba116",
+                    "stepText": "Finally, reflect on the role of coil turns in enhancing the induced emf. Which concept best explains why increasing the number of coil turns can improve microphone sensitivity by producing a greater emf?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7c995179-8aae-4a1d-96de-4c78925943a8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$More coil turns increase the number of times the magnetic flux is intercepted, thus amplifying the induced emf.$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$More coil turns decrease the magnetic field strength, which leads to a lower induced emf.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$More coil turns reduce the rate of flux change across the coil.$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2dab982703ec4c2289fc7",
+            "questionText": "Calculate the torque (in $!$Nm$!$) produced in a DC traction motor when the following conditions are met: a current of $!$10\\,A$!$ flows through an armature coil that has $!$100$!$ turns, the effective length of the coil is $!$0.2\\,m$!$, and it is placed in a uniform magnetic field of strength $!$0.5\\,T$!$. Assume that the torque can be approximated by the product $!$\\tau = N \\times I \\times B \\times L$!$ where $!$N$!$ is the number of turns, $!$I$!$ is the current, $!$B$!$ is the magnetic field, and $!$L$!$ is the effective length of the coil. Provide your final numerical answer.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e3d135fedadc49ccab680",
+                    "stepText": "Let's start by identifying the correct formula needed to calculate the torque in a DC motor. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "64ca9430-041b-4763-8f47-957fc06903bb"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\tau = N \\times I \\times B \\times L$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\tau = I \\times B$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\tau = N \\times B$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "452a441cdf0e4c53a764b",
+                    "stepText": "Great, now that you have the correct formula, compute the product of the current ($!$I$!$) and the magnetic field strength ($!$B$!$). What is the value of $!$I \\times B$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7c995179-8aae-4a1d-96de-4c78925943a8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b9114b9b3c86460ea1c75",
+                    "stepText": "Now, multiply the result from the previous step by the number of turns ($!$N$!$) in the coil. What is the value of this multiplication?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "500"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1ed72357-335a-4cf5-bd42-356439446c45"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "999e12d3f3244f2f87c7d",
+                    "stepText": "Finally, incorporate the effective length of the coil ($!$L$!$) by multiplying it with the result obtained in the previous step. This gives you the torque. What is the final value of the torque in $!$Nm$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100"
+                    ],
+                    "stepSolveAnswerUnits": "Nm",
+                    "stepConcepts": [
+                        "64ca9430-041b-4763-8f47-957fc06903bb"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

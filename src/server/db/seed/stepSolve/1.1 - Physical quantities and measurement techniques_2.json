@@ -1,0 +1,319 @@
+{
+    "id": "a598d77eb7004c39aa3d3",
+    "name": "Physical Quantities and Measurement Techniques",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "668ea2f736c64382ad0b3",
+            "questionText": "A construction manager is calculating the amount of concrete needed for a new foundation. The measurements obtained using a laser distance meter are: length = $!$12.550\\,m$!$, width = $!$8.200\\,m$!$, and depth = $!$0.300\\,m$!$. It is known that the laser meter consistently reads $!$5\\,mm$!$ short due to miscalibration. Calculate the actual volume of the concrete foundation in cubic metres, ensuring that the final answer is presented with the appropriate number of significant figures based on the precision of the measurements.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4a68847c52534b72811d3",
+                    "stepText": "Let's start by determining the correction value needed in metres for a reading error of 5 mm. Please identify the correct conversion factor from millimetres to metres.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.005"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "97df9a78-627f-40ae-8aef-c68ba9dd9ec7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$5 \\times 10^{-3}\\,m$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$5 \\times 10^{-2}\\,m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$0.5\\,m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ca047a6b01ff4d3db9989",
+                    "stepText": "Now, each measurement must be corrected by adding this conversion value. Which process correctly explains how to adjust a measurement that is consistently underread by a fixed amount?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9a4da118-2c7f-416d-9990-5c7e8ca6e378"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Corrected measurement = measured value + correction",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Corrected measurement = measured value - correction",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Corrected measurement = measured value \\times correction",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "629f94f7bef64c92bcfdb",
+                    "stepText": "After applying the correction of $!$0.005\\,m$!$, the dimensions become: length = $!$12.550 + 0.005 = 12.555\\,m$!$, width = $!$8.200 + 0.005 = 8.205\\,m$!$, and depth = $!$0.300 + 0.005 = 0.305\\,m$!$. Next, identify the correct formula to calculate the volume of a rectangular block.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5019a5fa-0ef6-41b7-9c92-8a9c074870d4"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = length \\times width \\times depth$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = length + width + depth$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{length \\times width}{depth}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2504ac52b6f14facb0559",
+                    "stepText": "Now calculate the volume using the corrected dimensions. Multiply the values: $!$12.555\\,m$!$, $!$8.205\\,m$!$, and $!$0.305\\,m$!$. What is the computed volume before rounding?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "31.42"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [
+                        "5019a5fa-0ef6-41b7-9c92-8a9c074870d4"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "923ea3740b93484db17d4",
+                    "stepText": "Finally, since the least precise measurement (depth = $!$0.300\\,m$!$) has 3 significant figures, the computed volume must be rounded accordingly. Please select the process that correctly applies this rounding.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "31.4"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [
+                        "0dc608c2-ebe9-4a93-88fb-b038a2e64ec6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Round the computed volume to 3 significant figures",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Round the computed volume to 4 significant figures",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Do not round the computed volume",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "1606718fa0da41e98ff07",
+            "questionText": "A biomedical researcher needs to precisely measure the diameter of a microscopic fiber. They use a micrometer screw gauge. Before measuring, they check for zero error by closing the jaws and find that the main scale reading is $!$0.00\\,mm$!$ and the thimble scale reading is $!$3$!$ divisions above the datum line, with each thimble division representing $!$0.01\\,mm$!$. This indicates a positive zero error. When measuring the fiber, the main scale shows $!$0.5\\,mm$!$ and the thimble scale aligns at $!$15$!$ divisions. They ensure their eye is directly perpendicular to the scale to avoid parallax error. Calculate the actual diameter of the fiber in nanometres ($!$nm$!$), expressing the final value in standard notation.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "42d44784594f41b49daf3",
+                    "stepText": "Let's start by identifying the method to compute the zero error from the micrometer reading when the jaws are closed. Please choose the expression that correctly relates the number of thimble divisions and the value per division.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9a4da118-2c7f-416d-9990-5c7e8ca6e378"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$3 \\times 0.01\\,mm$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$0.01 + 3\\,mm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$3 \\div 0.01\\,mm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "742ffe8e371643178ae20",
+                    "stepText": "Great, now calculate the zero error by multiplying the number of divisions by the value per division.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.03"
+                    ],
+                    "stepSolveAnswerUnits": "mm",
+                    "stepConcepts": [
+                        "9a4da118-2c7f-416d-9990-5c7e8ca6e378"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c0da23a38c7c4249a4e21",
+                    "stepText": "Next, let's identify the correct expression for obtaining the total measurement reading from the micrometer when measuring the fiber. Which formula correctly sums the main scale reading and the contribution from the thimble scale?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6771120e-5136-4d30-8465-2fdb7f31de85",
+                        "a3897007-1879-4f59-a174-c8a8d297d091"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$0.5\\,mm + (15 \\times 0.01\\,mm)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$15\\,mm + (0.5 \\div 0.01\\,mm)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$0.5\\,mm \\times (15 \\times 0.01\\,mm)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "24c98e85c9bb421c86ff0",
+                    "stepText": "Now, compute the total measured reading by adding the main scale value to the product of the thimble divisions and the division value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.65"
+                    ],
+                    "stepSolveAnswerUnits": "mm",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "f6ef58db527544f8b2b1b",
+                    "stepText": "Let's determine how to obtain the true measurement by correcting for the zero error. Please select the correct subtraction expression that removes the positive zero error from the measured reading.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9a4da118-2c7f-416d-9990-5c7e8ca6e378"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$0.65\\,mm - 0.03\\,mm$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$0.65\\,mm + 0.03\\,mm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$0.03\\,mm - 0.65\\,mm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e2b7aa8cb62c42a6a7be1",
+                    "stepText": "Now, perform the subtraction to calculate the actual diameter of the fiber.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.62"
+                    ],
+                    "stepSolveAnswerUnits": "mm",
+                    "stepConcepts": [
+                        "9a4da118-2c7f-416d-9990-5c7e8ca6e378"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ec99ac8973834f4fb5be5",
+                    "stepText": "Finally, convert the actual diameter from millimetres to nanometres and express your answer in standard notation. Identify the conversion relation used to change metres into nanometres.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.2 x 10^5"
+                    ],
+                    "stepSolveAnswerUnits": "nm",
+                    "stepConcepts": [
+                        "b4687dc9-602e-4949-b1c3-103625088cef",
+                        "a1f5caf2-47d6-4c91-9217-9992e084fe0e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,m = 10^9\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,m = 10^6\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,m = 10^3\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

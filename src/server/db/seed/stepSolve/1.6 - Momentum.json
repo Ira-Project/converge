@@ -1,0 +1,186 @@
+{
+    "id": "e1227fe464ff4d8d8f162",
+    "name": "Momentum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "f3a70081789442f980922",
+            "questionText": "During a head-on car collision, a heavier SUV with a mass of $!$2000$!$ $!$\\mathrm{kg}$!$ is traveling east at $!$15$!$ $!$\\mathrm{m/s}$!$, and a lighter sedan with a mass of $!$1000$!$ $!$\\mathrm{kg}$!$ is traveling west at $!$20$!$ $!$\\mathrm{m/s}$!$. After the collision, the two vehicles become entangled and move together as a single unit. Given that the collision lasts for $!$0.2$!$ $!$\\mathrm{s}$!$, calculate the magnitude of the average resultant force exerted on the sedan during the impact.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1964294d201e4b6c900f5",
+                    "stepText": "Let's start by determining the momentum of each vehicle. To calculate momentum you need to multiply the mass by the velocity. Please select the correct formula for momentum.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p = mv$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = m + v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = \\frac{m}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b1ce5e1b1349465b88344",
+                    "stepText": "Now that we have the individual momenta, remember that in a completely inelastic collision the two vehicles stick together. What formula correctly represents the conservation of momentum for the combined system? Choose the correct expression.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v_f = \\frac{p_{total}}{m_1+m_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v_f = p_{total} \\times (m_1+m_2)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v_f = \\frac{m_1+m_2}{p_{total}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0bf37177cfac4f6f860ad",
+                    "stepText": "Now, compute the change in momentum for the sedan. Use the initial momentum (based on its initial speed and direction) and the final momentum (after the collision, when it moves with the combined velocity). Calculate the numerical value for the change in momentum (\\(\\Delta p\\)).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "23333"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6f1f7053466f4e81a37bb",
+                    "stepText": "Next, we relate the change in momentum to the average force exerted during the collision using the impulse-momentum relationship. Which formula correctly links force, change in momentum and time? Please select the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bf1af9ab-964b-4b5c-a723-12840b0874c3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{\\Delta p}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\Delta p \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\Delta p - \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9c3d916e3fc646a8a0930",
+                    "stepText": "Finally, using the change in momentum from the sedan and the collision time of 0.2 s, calculate the numerical value of the average force exerted on the sedan. Provide the magnitude in Newtons.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "116665"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "bf1af9ab-964b-4b5c-a723-12840b0874c3",
+                        "1a227599-b55c-4dde-ab9a-1062a5fb942c"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "9b6129e0ad93446ba79ef",
+            "questionText": "A martial artist imparts a change in momentum of $!$60\\,kg\\cdot m/s$!$ to a heavy bag with a quick, sharp strike that has a contact time of $!$0.02\\,s$!$. Calculate the average force (in Newtons) exerted on the heavy bag during this punch.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "95fb7172a7084dc1bbccc",
+                    "stepText": "Let's start by identifying the impulse-momentum relationship formula that connects the change in momentum of an object to the force applied over a certain time interval. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eb2f76a7-4c38-468d-b7dd-2f8dc4135942"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{\\Delta p}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta p = \\frac{F}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\Delta p \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "95320de301b1459fbc70d",
+                    "stepText": "Great, now that you have identified the appropriate formula, substitute the given change in momentum $!$60\\,kg\\cdot m/s$!$ and contact time $!$0.02\\,s$!$ into that formula to calculate the average force. What numerical value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3000"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "eb2f76a7-4c38-468d-b7dd-2f8dc4135942"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

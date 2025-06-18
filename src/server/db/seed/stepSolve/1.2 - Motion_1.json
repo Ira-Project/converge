@@ -1,0 +1,225 @@
+{
+    "id": "16028872145b48bdbcf21",
+    "name": "Motion",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9d8d99b129854fcdb613d",
+            "questionText": "A high-speed train embarks on a journey consisting of three distinct phases. Initially, it accelerates uniformly from rest for $!$20$!$ seconds, reaching a speed of $!$30 \\ m/s$!$. Following this, it maintains a constant velocity of $!$30 \\ m/s$!$ for a period of $!$60$!$ seconds. Finally, as it approaches the next station, it undergoes uniform deceleration, coming to a complete stop in $!$10$!$ seconds. Calculate the total distance travelled by the train throughout its entire journey.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "82026afaa7d34691b11d7",
+                    "stepText": "Let's start by determining the acceleration during the first phase. To do so, identify the appropriate SUVAT equation that links the initial speed, final speed, time, and acceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "42a327e0-041f-45f5-b694-73ab9a05eafc",
+                        "e012005a-91bd-4bce-8500-cb07fad78628"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = u + at$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = \\frac{(u+v)t}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e94ab3bcc7654be48a4c9",
+                    "stepText": "Great, now use the acceleration found to calculate the distance covered during the acceleration phase. Assume the train starts from rest and use the appropriate displacement formula for uniformly accelerated motion.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "300"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "62c89459-f987-4165-a252-bef784e2a2f0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3f9b6ba1375644ba85fb1",
+                    "stepText": "Now, consider the phase when the train travels at a constant speed. Determine the distance covered during this phase by considering the relationship between speed and time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1800"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7b2952903924411cad802",
+                    "stepText": "Next, let's focus on the deceleration phase. Identify the correct SUVAT equation to calculate the deceleration when the train slows from its speed to a complete stop over the given time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "42a327e0-041f-45f5-b694-73ab9a05eafc",
+                        "e012005a-91bd-4bce-8500-cb07fad78628"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = u + at$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v^2 = u^2 + 2as$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "267ed2d0e85a4af78b8e4",
+                    "stepText": "Using the deceleration obtained, compute the distance covered during the deceleration phase. Use the formula that involves the average of the initial and final speeds multiplied by the time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "150"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "179ede05-df7e-4af4-9feb-c4f73b52158f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ce82186fc20c4167b0d22",
+                    "stepText": "Finally, add the distances found in all three phases to get the total distance travelled by the train.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2250"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "6da947c01cce41108da3b",
+            "questionText": "A cannon is positioned at the edge of a cliff, $!$100 \\text{ meters}$!$ above sea level. It fires a cannonball horizontally with an initial speed of $!$50 \\text{ m/s}$!$. Neglecting air resistance and using $!$g = 9.8 \\text{ m/s}^2$!$ for the acceleration due to gravity, calculate the horizontal distance from the base of the cliff that the cannonball travels before hitting the water below.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "909e12bffaf246eda5c37",
+                    "stepText": "Let's start by setting up the equation for the vertical motion of the cannonball. Since the cannonball is dropped from rest vertically, identify the free-fall distance-time relationship for an object starting from rest.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$s = \\frac{1}{2}gt^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = gt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = ut + gt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2301bf8ff2964c6d9ecb3",
+                    "stepText": "Great! Now, use the identified free-fall formula with the vertical displacement of $!$100 \\text{ m}$!$ and gravitational acceleration $!$9.8 \\text{ m/s}^2$!$ to calculate the time taken for the cannonball to fall. Compute the value of $!$t$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.52"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2a0c90576c944c30b8686",
+                    "stepText": "Now, to analyze the horizontal motion, select the correct relationship to compute the horizontal distance traveled given a constant horizontal speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{distance} = \\text{speed} \\times \\text{time}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{distance} = \\text{speed} + \\text{time}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{distance} = \\frac{\\text{speed}}{\\text{time}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "62a5905ccbce492c87159",
+                    "stepText": "Using the constant horizontal speed of $!$50 \\text{ m/s}$!$ and the time of fall calculated earlier, compute the horizontal distance the cannonball travels before reaching the water.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "226"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

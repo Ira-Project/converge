@@ -1,0 +1,141 @@
+{
+    "id": "47063d92628b4b9dacbb9",
+    "name": "Pressure",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "f3f93d8d5ec843cca3037",
+            "questionText": "An off-road vehicle weighs $!$25000\\ N$!$. The new wide tires must not exceed a maximum pressure of $!$75\\ kPa$!$. Calculate the minimum total contact area (in $!$\\mathrm{m^2}$!$) that the tires must have to ensure the pressure remains at or below the specified value.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "00acc85fda41469dba1e0",
+                    "stepText": "Let's start by recalling the basic definition of pressure. Identify which of the following formulas correctly defines pressure in terms of force and area.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p = \\frac{F}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = F \\times A$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = \\frac{A}{F}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a3bea8905b9d4c70a0e3f",
+                    "stepText": "Great, now convert the maximum allowable pressure from kilopascals to pascals since the force is given in newtons. What is the pressure in pascals?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "75000"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "eb81a8c6-e84d-4852-9078-86ba33aa930f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f1fa8c353c874e22a1162",
+                    "stepText": "Now, using the relationship between force and pressure, compute the minimum total contact area needed to ensure that the pressure does not exceed the maximum allowed value. Use a rearranged form of the pressure formula to complete your calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.33"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [
+                        "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "17b2bce0d6134e6db7e0c",
+            "questionText": "A city's water utility department uses U-tube manometers to measure the gas pressure in sealed sections of their pipe network for leak detection. One manometer contains mercury with a density of $!$13600\\,\\mathrm{kg/m^3}$!$ and shows a difference in mercury levels between its arms of $!$40\\,\\mathrm{cm}$!$ when one arm is open to the atmosphere at a pressure of $!$101325\\,\\mathrm{Pa}$!$. Assuming the acceleration due to gravity is $!$9.81\\,\\mathrm{m/s^2}$!$, calculate the absolute gas pressure, in Pascals, inside the pipe.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e265e24b31ee4cbdb4617",
+                    "stepText": "Let's start by identifying the appropriate formula for determining the gas pressure using a U-tube manometer. Which of the following formulas relates the pressure difference to the liquid density, gravitational acceleration, and height difference?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9c478936-0e37-4906-9156-3da0bb228a9e",
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p = p_{atm} + \\rho g h$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = p_{atm} - \\rho g h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = \\rho g h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b4bdc7e968884d7e9cede",
+                    "stepText": "Great. Now, to continue, calculate the pressure difference created by the mercury column. Use the quantities provided (note that the height difference must be in meters) to compute the product $!$\\rho g h$!$. What is the resulting pressure difference in Pascals?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "53366.4"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a",
+                        "305ef332-500d-4c4e-9da1-1adecb3649db"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a80af8dc382d4752af702",
+                    "stepText": "Now that you have the pressure difference, add this value to the atmospheric pressure to determine the absolute gas pressure inside the pipe. What is the resulting absolute pressure in Pascals?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "154691.4"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "9c478936-0e37-4906-9156-3da0bb228a9e"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,172 @@
+{
+    "id": "0b81648d668e42ef9036d",
+    "name": "Radioactivity",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "00f9d992e5d547ba87424",
+            "questionText": "An archaeological team unearths an ancient textile from a newly discovered tomb. To determine its age, they send a sample for radiocarbon dating. This technique relies on the known half-life of Carbon-14 ($!$\\ce{^{14}C}$!$), which is $!$5730$!$ years. When the textile was part of a living organism, its initial activity was $!$200$!$ disintegrations per minute ($!$dpm$!$). In the lab, a Geiger-Muller tube connected to a scaler measures the current activity of the sample, including background radiation, as $!$25.0$!$ $!$dpm$!$. The measured background radiation in the lab is $!$12.5$!$ $!$dpm$!$. Calculate the age of the ancient textile.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f2f3c7b854534bd5a3a99",
+                    "stepText": "Let's start by calculating the net activity of the sample by subtracting the background radiation from the measured activity. Compute $!$\\text{Net Activity} = \\text{Measured Activity} - \\text{Background}\\, \\text{dpm}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12.5"
+                    ],
+                    "stepSolveAnswerUnits": "dpm",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "5e8dc47d204142e08bf95",
+                    "stepText": "Next, identify the correct exponential decay formula used in radiocarbon dating. Which of the following formulas correctly represents the activity decay, where $!$A$!$ is the activity after time $!$t$!$, $!$A_0$!$ is the initial activity, and $!$T_{1/2}$!$ is the half-life?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b9ca20c3-e249-4bc5-8d94-4d2bceee779d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 e^{-kt}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = A_0 \\left(\\frac{1}{2}\\right)^{t/T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 - kt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d768d6ca77944110abf5f",
+                    "stepText": "Now, use the decay formula by isolating the decay factor. Divide the net activity by the initial activity. Calculate the ratio $!$\\frac{A}{A_0}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0625"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "08f965e3e5ce4eefa22c1",
+                    "stepText": "Recognize that the decay factor $!$0.0625$!$ can be expressed as a power of $!$\\frac{1}{2}$!$. Which exponent of $!$\\frac{1}{2}$!$ gives you $!$0.0625$!$? Select the correct exponent from the options.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b9ca20c3-e249-4bc5-8d94-4d2bceee779d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$5$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2e32ea4606204b34baa4a",
+                    "stepText": "Finally, equate the exponent from the decay factor to the ratio of the elapsed time to the half-life. Use the relation $!$\\frac{t}{5730} = \\text{number of half-lives}$!$ to solve for $!$t$!$. Calculate $!$t$!$ in years.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "22920"
+                    ],
+                    "stepSolveAnswerUnits": "years",
+                    "stepConcepts": [
+                        "4ba46951-f583-43e5-8ee2-7582647271d3",
+                        "b9ca20c3-e249-4bc5-8d94-4d2bceee779d"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "1880fc2b994349e584e5b",
+            "questionText": "A fire department expert mentions that radiation intensity from a point source follows the inverse square law, meaning that the intensity $!$I$!$ is proportional to $!$1/d^2$!$, where $!$d$!$ is the distance from the source. If the distance from an alpha or beta source is doubled to reduce exposure, by what numerical factor does the radiation intensity decrease?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "355d5cba73284157b60f5",
+                    "stepText": "Let's start by identifying the principle that expresses how the radiation intensity $!$I$!$ varies with the distance $!$d$!$. Which of the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$I \\propto \\frac{1}{d^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I \\propto \\frac{1}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I \\propto d^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I \\propto d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "82463f2b20a14e9ebf216",
+                    "stepText": "Great, now that you've identified the correct inverse square relationship, let's substitute a new distance by doubling $!$d$!$. Using the formula, determine the factor by which the intensity decreases when the distance is doubled.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

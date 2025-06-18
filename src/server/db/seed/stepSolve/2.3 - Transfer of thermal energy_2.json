@@ -1,0 +1,302 @@
+{
+    "id": "9b8235ba72d24e2a8eb30",
+    "name": "Transfer of Thermal Energy",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "456b4bc99bcb48099c3e4",
+            "questionText": "Consider a scenario where a homeowner replaces an old wooden countertop with a stainless steel one. It is known that metals generally have higher thermal conductivity than wood, affecting how quickly they exchange heat with the human skin. Given a stainless steel countertop with a thermal conductivity of $!$k_{SS} \\text{ W/m}\\cdot\\text{K}$!$ and an old wooden countertop with a thermal conductivity of $!$k_{wood} \\text{ W/m}\\cdot\\text{K}$!$, calculate the ratio $!$\\frac{k_{SS}}{k_{wood}}$!$. (Note: Please provide the numerical values for $!$k_{SS}$!$ and $!$k_{wood}$!$.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "398249b2b3674868bddff",
+                    "stepText": "Let's start by identifying the correct formula to calculate the ratio. Which expression correctly represents the ratio of the stainless steel thermal conductivity to the wood thermal conductivity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{k_{SS}}{k_{wood}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{k_{wood}}{k_{SS}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$k_{SS} - k_{wood}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "68b3ea8aa38a4e9db19b9",
+                    "stepText": "Great, now that we have the formula, let's determine the typical thermal conductivity value for stainless steel. Select the correct numerical value for $!$k_{SS}$!$ based on standard references.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a9e6b718-6274-49db-88c6-b0d303578f31",
+                        "de8bb866-9f5f-418f-a57f-4c027ccbe003"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "16",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "0.04",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "400",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a5c193ee50f2436892460",
+                    "stepText": "Now, let's identify the typical thermal conductivity value for wood. Choose the correct value for $!$k_{wood}$!$ from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "418ffa7f-b82f-4253-81af-f32cf743e98f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "0.04",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "16",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "400",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "67088adeef3c49b6a0987",
+                    "stepText": "Now that you have identified the correct values for $!$k_{SS}$!$ and $!$k_{wood}$!$, compute the ratio by dividing the stainless steel thermal conductivity by that of wood.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "400"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "b44bc469c54c4a65a766d",
+            "questionText": "An aluminum saucepan containing water is used to boil pasta. Assume that convective heat transfer is the primary mechanism responsible for the widespread heating of the water. Given that the bottom of the saucepan is maintained at a constant temperature of $!$T_b$!$ (in degrees Celsius) and that the water initially is at a uniform temperature of $!$T_i$!$, calculate the average convective heat transfer coefficient $!$h$!$ (in $!$W/(m^2 \\cdot K)$!$) required for the water to reach boiling (100\u00b0C) within $!$t$!$ seconds. You are provided with the following numerical values:\n\n- Surface area of the saucepan in contact with the water: $!$A$!$ (in $!$m^2$!$),\n- Total mass of the water: $!$m$!$ (in kg),\n- Specific heat capacity of water: $!$c$!$ (in $!$J/(kg \\cdot K)$!$).\n\nDetermine $!$h$!$ given these values.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d4cd521cfd30405da0f22",
+                    "stepText": "Let's start by determining the energy needed to raise the temperature of the water from its initial temperature $!$T_i$!$ to 100\u00b0C. Which of the following formulas correctly represents the energy required?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$Q=m c (100-T_i)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q=m c (T_b-100)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q=h A (T_b-T_i)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c9ded5c258e64009bcd5c",
+                    "stepText": "Great! Now, since convective heat transfer is the primary mechanism, we use Newton's law of cooling to describe the rate of heat transfer into the water. Which expression below correctly represents the convective heat transfer rate?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "452a9b79-05f2-46f8-ac08-2759977f90d2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{dQ}{dt}=h A (T_b-T)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{dQ}{dt}=h A (T-T_b)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{dQ}{dt}=\\frac{h}{A}(T_b-T)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2081a56b8ef14eee97975",
+                    "stepText": "Now, relate the energy input to the rate of change of temperature of the water. Identify the differential equation that correctly represents this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "452a9b79-05f2-46f8-ac08-2759977f90d2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$m c \\frac{dT}{dt}=h A (T_b-T)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m \\frac{dT}{dt}=h A (T_b-T)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$c \\frac{dT}{dt}=h A (T_b-T)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1a7ec54ae43c446c9fb46",
+                    "stepText": "By separating variables and integrating, we obtain an expression relating the temperature difference and time. Which of the following expressions results from this integration?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "452a9b79-05f2-46f8-ac08-2759977f90d2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\ln\\left(\\frac{T_b-T_i}{T_b-T}\\right)=\\frac{hA t}{mc}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\ln\\left(\\frac{T_b-T}{T_b-T_i}\\right)=\\frac{hA t}{mc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\ln\\left(\\frac{100-T_i}{T_b-T}\\right)=\\frac{hA t}{mc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2842dcd3edf94c0082a2e",
+                    "stepText": "At the moment the water reaches boiling (i.e., when $!$T=100$!$\u00b0C), substitute this into the integrated expression. Which of the following correctly represents the modified equation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\ln\\left(\\frac{T_b-T_i}{T_b-100}\\right)=\\frac{hA t}{mc}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\ln\\left(\\frac{100-T_i}{T_b-T_b}\\right)=\\frac{hA t}{mc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\ln\\left(\\frac{T_b-100}{T_b-T_i}\\right)=\\frac{hA t}{mc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "624f29fd4c6a4d2a83cf1",
+                    "stepText": "Finally, solve the above equation for the average convective heat transfer coefficient $!$h$!$. Which one of the formulas below correctly gives $!$h$!$ in terms of the given parameters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$h=\\frac{mc}{A t}\\ln\\left(\\frac{T_b-T_i}{T_b-100}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$h=\\frac{mc}{A t}\\ln\\left(\\frac{T_b-100}{T_b-T_i}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$h=\\frac{A t}{mc}\\ln\\left(\\frac{T_b-T_i}{T_b-100}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,201 @@
+{
+    "id": "88af09438b1d4db0a267b",
+    "name": "Energy, Work and Power",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "ae13f87a06014c1b9260e",
+            "questionText": "An athlete with a mass of $!$70\\,kg$!$ performs a box jump. They jump vertically, reaching a maximum height of $!$0.75\\,m$!$ above their initial standing position. The entire upward movement, from the start of the crouch to reaching maximum height, takes $!$0.6\\,s$!$. Assume the acceleration due to gravity is $!$9.81\\,m/s^2$!$. Calculate the average power output of the athlete during this upward movement.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3d4aa5c85cad4814ac9df",
+                    "stepText": "Let's start by identifying the formula that allows you to calculate the change in gravitational potential energy using the mass, gravitational acceleration, and height increase. Choose the correct option from the ones provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8af41638-67d0-4304-afe4-278a3e5c24b8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta E_p = mgh$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta E_p = \\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E_p = mg\\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "da7c3ccd1df44bf2b1fb2",
+                    "stepText": "Using the formula you selected, calculate the gravitational potential energy change by using the given values: mass = 70 kg, gravitational acceleration = 9.81 m/s\u00b2, and height = 0.75 m. What is the resulting energy (in Joules)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "514.73"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "8af41638-67d0-4304-afe4-278a3e5c24b8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "14678b683bcc4fb786966",
+                    "stepText": "Great, now let's identify the formula that relates the work (or energy change) with the time taken to calculate power. Which of the following expressions correctly represents the average power output?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f093a546-8db4-44fa-9763-df65c6e6db0e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = \\frac{\\Delta E}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\Delta E \\cdot t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{t}{\\Delta E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6c2a948b54f445a190924",
+                    "stepText": "Finally, use the energy calculated in Step 2 and the time period of 0.6 s to compute the average power output. What is the value of the average power output (in Watts)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "857.88"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "f093a546-8db4-44fa-9763-df65c6e6db0e"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "9bc9eb0c73084f5a8d2aa",
+            "questionText": "A high-speed train, with a total mass of $!$1.5 \\times 10^5 \\; kg$!$, approaches a station at a speed of $!$30 \\; m/s$!$. Its braking system combines mechanical friction and regenerative braking. During braking, $!$6.0 \\times 10^7 \\; J$!$ of energy is recovered and transferred back to the electrical grid. Calculate the efficiency of the train's braking system in converting its initial kinetic energy into useful recovered energy.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ecd96f3e695f4e8ea0fba",
+                    "stepText": "Let's start by identifying the relevant formula to compute the train's initial kinetic energy. Select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fc0d555c-2163-4fe2-afbd-49a23453751c",
+                        "f867675c-ee2a-45a2-bee3-7fb244468612"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_k=\\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_k=mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_k=\\frac{1}{2}mv$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "79a781140f2b45569edd8",
+                    "stepText": "Now, substitute the given mass ($!$1.5 \\times 10^5 \\; kg$!$) and speed ($!$30 \\; m/s$!$) into the kinetic energy formula to calculate the initial kinetic energy of the train. Compute the value using the expression.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.75e7"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "fc0d555c-2163-4fe2-afbd-49a23453751c",
+                        "f867675c-ee2a-45a2-bee3-7fb244468612"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "07d761bfaab340c39353a",
+                    "stepText": "Great, now choose the appropriate formula to calculate the efficiency of the braking system. Which of the following best represents the efficiency in terms of recovered energy and initial kinetic energy?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8bd37a30-0ed2-43d5-846f-8c8290941dbd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Efficiency}=\\frac{\\text{recovered energy}}{\\text{initial kinetic energy}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Efficiency}=\\frac{\\text{initial kinetic energy}}{\\text{recovered energy}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Efficiency}=\\text{recovered energy} - \\text{initial kinetic energy}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1de6357d94674f299f55b",
+                    "stepText": "Finally, substitute the value of the recovered energy ($!$6.0 \\times 10^7 \\; J$!$) and the calculated initial kinetic energy into the efficiency formula and compute the efficiency percentage.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "88.9"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "8bd37a30-0ed2-43d5-846f-8c8290941dbd"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

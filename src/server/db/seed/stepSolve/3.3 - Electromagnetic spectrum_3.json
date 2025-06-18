@@ -1,0 +1,210 @@
+{
+    "id": "5d69909db55a47adb1f2d",
+    "name": "Electromagnetic Spectrum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "4a67a514baa746e59647e",
+            "questionText": "During a sunny afternoon, a student observes various phenomena involving electromagnetic waves. All electromagnetic waves, including visible light, travel at approximately $!$3 \\times 10^8 \\text{ m/s}$!$ in air. Visible light is the electromagnetic radiation perceived by the human eye, with wavelengths typically measured in nanometers, approximately between $!$400 \\text{ nm}$!$ and $!$700 \\text{ nm}$!$. What is the numerical value of the difference between the highest frequency and the lowest frequency of visible light in air?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9c7e4e5b20964015af77a",
+                    "stepText": "Let's start by recalling the fundamental relation between the speed $!$v$!$, frequency $!$f$!$, and wavelength $!$\\lambda$!$ of electromagnetic waves. Please choose the correct formula that relates these quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = f\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = v\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\lambda/f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = v/\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f00c924a881a4fb68ad0c",
+                    "stepText": "Next, convert the shortest wavelength of visible light from nanometers to meters. What is the numerical value, in meters, corresponding to $!$400 \\text{ nm}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "ad755d70-94fb-44f0-8af1-57ca223ac8ac"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "0bc1fe4b7732474abff31",
+                    "stepText": "Similarly, convert the longest wavelength of visible light from nanometers to meters. What is the numerical value, in meters, corresponding to $!$700 \\text{ nm}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "ad755d70-94fb-44f0-8af1-57ca223ac8ac"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f37cbb8351334291924b3",
+                    "stepText": "Now, using the relation from step 1 and the converted value for the shortest wavelength, calculate the highest frequency (which corresponds to the shortest wavelength). What is the numerical value of this frequency in hertz?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.5e14"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1b503581d0414c11bf195",
+                    "stepText": "Similarly, calculate the lowest frequency using the longest wavelength from step 3. What is its numerical value in hertz?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.29e14"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "276ff7dff625485c999ac",
+                    "stepText": "Finally, compute the difference between the highest and lowest frequencies. What is the numerical value of this difference in hertz?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.21e14"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "d1a1a093e28d429bb9775",
+            "questionText": "A telecommunications engineer is designing a new communication network that uses microwaves for high-speed internet. Microwaves are electromagnetic waves characterized by their centimeter wavelengths. For precise network calibration, the engineer needs to work with different units. If a particular microwave signal has a wavelength of $!$6 \\text{ cm}$!$, calculate the numerical value of this wavelength in micrometers $!$(\\mu\\text{m})$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "aae18e180732493dbf077",
+                    "stepText": "Let's start by identifying the conversion factor from centimeters to meters. Select the correct conversion from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\text{ cm} = 10^{-2}\\text{ m}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\text{ cm} = 10^{-3}\\text{ m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\text{ cm} = 10^{2}\\text{ m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4f0b5dd5123a4f8cb6a56",
+                    "stepText": "Great, now determine the conversion factor from meters to micrometers. Choose the right conversion from the options provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f0cc2703-26e8-45e2-98af-6f53003b0ead"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\text{ m} = 10^{3}\\mu\\text{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\text{ m} = 10^{6}\\mu\\text{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\text{ m} = 10^{4}\\mu\\text{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ba0d6d26d8c443fe97a98",
+                    "stepText": "Now, combine the conversion factors from the previous steps to obtain the conversion factor from centimeters to micrometers by calculating $!$10^{-2} \\times 10^{6}$!$. Compute the numerical value for this conversion factor.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10000"
+                    ],
+                    "stepSolveAnswerUnits": "micrometers per centimeter",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "82d1cc5ea2bb458b85c3a",
+                    "stepText": "Finally, use the conversion factor you calculated to convert the given wavelength of $!$6\\text{ cm}$!$ into micrometers. Multiply 6 by the conversion factor to find the final answer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60000"
+                    ],
+                    "stepSolveAnswerUnits": "micrometers",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

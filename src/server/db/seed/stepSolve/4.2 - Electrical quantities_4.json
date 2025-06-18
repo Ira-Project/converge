@@ -1,0 +1,155 @@
+{
+    "id": "c812fd1774c8410f8272c",
+    "name": "Electrical Quantities",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "1d23d55f22a549ce9eaad",
+            "questionText": "During a thunderstorm, a person walking across a carpet accumulates a total charge of $!$-3.2 \\times 10^{-6}$!$ coulombs through friction. When the person touches a metal door handle, the charge discharges in $!$0.1$!$ milliseconds. Calculate the average electric current during the spark.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a7f773a4d83641baa2514",
+                    "stepText": "Let's start by identifying the correct formula to calculate the average electric current. Which one of the following formulas would be appropriate to use in this problem?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c06aac4a-3f34-4b0a-9a9b-5c0cd5ea158a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = \\frac{Q}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = Q \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{t}{Q}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = Q - t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "094688e3b68649768a3f2",
+                    "stepText": "Great! Now, before applying the formula, we need to ensure consistent units. Convert the given time of $!$0.1$!$ milliseconds into seconds. What is the time in seconds?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1e-4"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "01dd41c88a864ded8b142",
+                    "stepText": "Now that you have the correct formula and the time in seconds, calculate the average current by dividing the charge (given as $!$-3.2 \\times 10^{-6}$!$ coulombs) by the time (in seconds from the previous step). What is the magnitude of the average current?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.032"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "c06aac4a-3f34-4b0a-9a9b-5c0cd5ea158a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "f256f2e9e66d49698f0c8",
+            "questionText": "An electrical engineer designs a resistive heater for a laboratory and connects it to a $!$120\\ \\text{V}$!$ DC power supply. The engineer adjusts a rheostat so that a current of $!$2.5\\ \\text{A}$!$ flows through the heater. Calculate the total electrical energy consumed in kilowatt-hours ($!$\\text{kWh}$!$) in a month (assuming $!$30$!$ days), if the heater operates at this setting for $!$8$!$ hours each day.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e8d99c45d3584069a75bc",
+                    "stepText": "Let's start by identifying the appropriate formula to calculate the electric power using the current and voltage. Which of the following formulas correctly relates power ($!$P$!$), current ($!$I$!$), and voltage ($!$V$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "99fbfc61-bb8d-4a75-bcaf-718f1ada2b5d",
+                        "7b150707-632a-4542-9bbe-a567f986e2bb"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = I \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{V}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = I + V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7ec08fac73c94e569151b",
+                    "stepText": "Great, now that you have identified the correct formula, use it to calculate the power of the heater. Multiply the given current ($!$2.5\\ \\text{A}$!$) and the voltage ($!$120\\ \\text{V}$!$), and then convert the result from watts to kilowatts (remember that $!$1000\\ \\text{W} = 1\\ \\text{kW}$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.3"
+                    ],
+                    "stepSolveAnswerUnits": "kW",
+                    "stepConcepts": [
+                        "99fbfc61-bb8d-4a75-bcaf-718f1ada2b5d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d23e6a507c47407da4c6b",
+                    "stepText": "Next, let's calculate the total operating time in a month. If the heater runs for $!$8\\ \\text{hours}$!$ each day over $!$30\\ \\text{days}$!$, what is the total number of operating hours?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "240"
+                    ],
+                    "stepSolveAnswerUnits": "hours",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "25f4a62f2fb3470faab65",
+                    "stepText": "Finally, determine the total electrical energy consumed over the month by multiplying the power (in kilowatts) by the total operating time (in hours). What is the energy consumption in kilowatt-hours ($!$\\text{kWh}$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "72"
+                    ],
+                    "stepSolveAnswerUnits": "kWh",
+                    "stepConcepts": [
+                        "15c5df66-c6ab-4495-9350-ccce161c6439"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,234 @@
+{
+    "id": "e9e2d0faa5c84c109b2ac",
+    "name": "Stars and the Universe",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "1c4c34ea7f1440af94a6a",
+            "questionText": "Given that the recession speed of a galaxy is $!$2.85 \\times 10^4\\ \\text{km/s}$!$ and the Hubble Constant is $!$70\\ \\text{km/s/Mpc}$!$, calculate the distance to this galaxy in kilometers. Use the conversion $!$1\\ \\text{Mpc} = 3.26 \\times 10^6 \\ \\text{light-years}$!$ and $!$1 \\ \\text{light-year} = 9.5 \\times 10^{12} \\ \\text{km}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b247f84e6a2746e4a0a8c",
+                    "stepText": "Let's start by identifying the key formula that relates the recession speed of a galaxy to its distance using Hubble's Law. Which formula should we use for this step?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c413a452-cd00-445d-b07a-3c69cb5d60aa",
+                        "ae5906b8-745a-436d-8695-00ba2c22369f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = H_0 d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = v \\times H_0$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{d}{H_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e161011f812f40fabd46c",
+                    "stepText": "Great, now that we have the correct relationship, use it to compute the distance in megaparsecs (Mpc) by rearranging the equation to solve for distance. Use the given values: recession speed $!$v = 2.85 \\times 10^4 \\ \\text{km/s}$!$ and Hubble Constant $!$H_0 = 70 \\ \\text{km/s/Mpc}$!$. What is the distance in Mpc?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "407.14"
+                    ],
+                    "stepSolveAnswerUnits": "Mpc",
+                    "stepConcepts": [
+                        "c413a452-cd00-445d-b07a-3c69cb5d60aa",
+                        "ae5906b8-745a-436d-8695-00ba2c22369f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "afba3077717c422993a5f",
+                    "stepText": "Now, we need to convert the distance from megaparsecs to kilometers. To do that, we first need the conversion factor from 1 Mpc to kilometers. Identify the correct multiplication expression using the given conversions: $!$1\\ \\text{Mpc} = 3.26 \\times 10^6 \\ \\text{light-years}$!$ and $!$1\\ \\text{light-year} = 9.5 \\times 10^{12} \\ \\text{km}$!$. Which expression correctly represents the conversion from 1 Mpc to kilometers?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "97e4ba3a-38d3-43c2-99e7-b74649b32c41"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\ \\text{Mpc} = 3.26 \\times 10^6 \\ \\text{light-years} \\times 9.5 \\times 10^{12} \\ \\text{km/light-year}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\ \\text{Mpc} = \\frac{9.5 \\times 10^{12} \\ \\text{km}}{3.26 \\times 10^6 \\ \\text{light-years}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\ \\text{Mpc} = 3.26 \\times 10^6 \\ \\text{km} \\times 9.5 \\times 10^{12}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "387bddd14ac2441fb4d3a",
+                    "stepText": "Excellent! Finally, convert the distance from Mpc to kilometers by multiplying the distance you obtained in Mpc by the conversion factor (in km/Mpc) from the previous step. What is the distance to the galaxy in kilometers?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.26e22"
+                    ],
+                    "stepSolveAnswerUnits": "km",
+                    "stepConcepts": [
+                        "c413a452-cd00-445d-b07a-3c69cb5d60aa",
+                        "97e4ba3a-38d3-43c2-99e7-b74649b32c41"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "45eb7d91796344c09f167",
+            "questionText": "An astrophysicist is analyzing data from a newly discovered celestial object. The star has a surface temperature of $!$20,000 \\text{\\textdegree C}$!$ and its core contains $!$2.5 \\times 10^{29} \\text{ kg}$!$ of hydrogen fuel. If the star consumes its hydrogen fuel at a constant rate of $!$6 \\times 10^{11} \\text{ kg/s}$!$, calculate the number of years it will take for the star to consume $!$50\\%$!$ of its initial hydrogen fuel.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "af45e6cf28de4a1bba75f",
+                    "stepText": "Let's start by identifying the operation needed to compute 50% of the star's initial hydrogen fuel. Which operation should you use?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$0.5 \\times (\\text{fuel mass})$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$2 \\times (\\text{fuel mass})$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$(\\text{fuel mass}) + 50$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "31cd197b2ce5496f8ec7c",
+                    "stepText": "Now, calculate 50% of the given hydrogen fuel mass ($!$2.5\\times10^{29}\\text{ kg}$!$). Perform the multiplication to find this value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.25e29"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "9a59a1c64db64ce8a27b9",
+                    "stepText": "Next, determine the operation needed to find the time in seconds required for the star to consume this half fuel mass, knowing the fuel consumption rate. Which operation is appropriate?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Divide the fuel mass by the consumption rate.}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Multiply the fuel mass by the consumption rate.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Subtract the consumption rate from the fuel mass.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "db521476975a41729e4b5",
+                    "stepText": "Now, use your selected operation to compute the time in seconds by dividing the half fuel mass by the consumption rate ($!$6\\times10^{11}\\text{ kg/s}$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.0833e17"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "84f13f5543fc45278e959",
+                    "stepText": "Before converting seconds into years, identify the appropriate conversion factor. Which conversion factor should be used to convert seconds to years?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$3.15\\times10^{7}\\text{ s/year}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$3.15\\times10^{6}\\text{ s/year}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$3.15\\times10^{8}\\text{ s/year}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "74e53d8af808478cad96f",
+                    "stepText": "Finally, convert the time from seconds to years by dividing the time in seconds by the conversion factor $!$3.15\\times10^{7}\\text{ s/year}$!$. What is the time in years?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.61e9"
+                    ],
+                    "stepSolveAnswerUnits": "years",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

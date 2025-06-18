@@ -1,0 +1,125 @@
+{
+    "id": "f917247138494c21b89b8",
+    "name": "Motion",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "245a4b1e875f4411ad519",
+            "questionText": "An athlete runs a 400-meter race on a circular track, starting and finishing at the same point. The athlete completes the race in $!$50$!$ seconds. Calculate the athlete's average speed for the entire race.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c003e772af4045bebc1a3",
+                    "stepText": "Let's start by recalling the definition of average speed. Please select the correct formula that represents average speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a7a72a73-91d0-4f19-a0fb-f00f03a3c856"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{average speed} = \\frac{\\text{total distance travelled}}{\\text{total time taken}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{average speed} = \\text{total distance travelled} \\times \\text{total time taken}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{average speed} = \\frac{\\text{total time taken}}{\\text{total distance travelled}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "763a956737d748caae651",
+                    "stepText": "Great, now that you have identified the correct formula, substitute the total distance of $!$400\\,m$!$ and the total time of $!$50\\,s$!$ into the formula to compute the athlete's average speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "a7a72a73-91d0-4f19-a0fb-f00f03a3c856"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "b02471155d40433f8609b",
+            "questionText": "A heavy bowling ball is dropped from a height of $!$10\\text{ m}$!$. Calculate the time it takes for the bowling ball to hit the ground in a vacuum. Use $!$g=9.8\\text{ m/s}^2$!$ in your calculation.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "444bbebfedcc4fa1bd5b8",
+                    "stepText": "Let's start by identifying the correct free fall distance-time relationship for an object dropped from rest. Please choose which formula correctly relates the distance $!$s$!$, gravitational acceleration $!$g$!$, and time $!$t$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$s = \\frac{1}{2}gt^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = gt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = ut + \\frac{1}{2}gt^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7162d050f8b5463e9fb9c",
+                    "stepText": "Great, now that you've selected the formula, substitute the given values $!$s=10\\,m$!$ and $!$g=9.8\\,m/s^2$!$ into the formula and solve for $!$t^2$!$. What numerical value do you get for $!$t^2$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.04"
+                    ],
+                    "stepSolveAnswerUnits": "s^2",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "10f93f348eff42d8a0687",
+                    "stepText": "Now, use the value you obtained for $!$t^2$!$ to calculate $!$t$!$ by taking the square root. What is the approximate time taken for the ball to hit the ground?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.43"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

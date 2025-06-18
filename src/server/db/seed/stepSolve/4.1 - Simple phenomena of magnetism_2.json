@@ -1,0 +1,199 @@
+{
+    "id": "fee74f1dd25d4bfcad8da",
+    "name": "Simple Phenomena of Magnetism",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "26630133d7a449758c463",
+            "questionText": "A magnetic fishing rod with a uniform magnetic field strength of $!$B_0$!$ tesla is used to catch a steel paper clip that has a known magnetic susceptibility of $!$\\chi$!$ and an effective magnetic length of $!$L$!$ meters. Assuming the induced magnetization $!$M$!$ in the paper clip is given by $!$M=\\chi \\frac{B_0}{\\mu_0}$!$, where $!$\\mu_0$!$ is the permeability of free space ($!$4\\pi\\times10^{-7}$!$ H/m), calculate the numerical value of the induced magnetization $!$M$!$ (in A/m) on the side of the paper clip closest to the fishing rod's magnet. Please provide the values for $!$B_0$!$, $!$\\chi$!$, and $!$L$!$ if they are available.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "da52c47c467f49a5b98d8",
+                    "stepText": "Let's start by identifying the correct formula that relates the induced magnetization $!$M$!$ with the magnetic susceptibility $!$\\chi$!$, the magnetic field strength $!$B_0$!$, and the permeability of free space $!$\\mu_0$!$. Please select the correct relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8a372061-436a-445c-81a8-daed558a8553"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$M=\\chi \\frac{B_0}{\\mu_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$M=\\frac{B_0}{\\chi \\mu_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$M=\\chi \\mu_0 B_0$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7ec8893978324418a41b1",
+                    "stepText": "Great, now that we have the correct formula, let\u2019s calculate the fraction $!$\\frac{B_0}{\\mu_0}$!$ using the provided numerical value for $!$B_0$!$ if available. For example, if $!$B_0=0.1$!$ T and knowing $!$\\mu_0=4\\pi\\times10^{-7}$!$ H/m, compute $!$\\frac{B_0}{\\mu_0}$!$. Enter the computed numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "79577"
+                    ],
+                    "stepSolveAnswerUnits": "A/m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ba26909dc88843eb99d7a",
+                    "stepText": "Now, use the result from the previous step and multiply it by the magnetic susceptibility $!$\\chi$!$ to determine the induced magnetization $!$M$!$. For instance, if $!$\\chi=0.01$!$, what is the resulting numerical value of $!$M$!$ (remember, units are A/m)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "796"
+                    ],
+                    "stepSolveAnswerUnits": "A/m",
+                    "stepConcepts": [
+                        "8a372061-436a-445c-81a8-daed558a8553"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9d03f865eb6744a68a2ef",
+                    "stepText": "Finally, identify the parameter provided in the problem that does not affect the calculation of $!$M$!$ with the given formula. Please select the parameter that is extraneous.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$B_0$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\chi$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "19ee03b84a4643acaa3f7",
+            "questionText": "A furniture designer is testing a permanent child-proof cabinet latch that uses two identical bar magnets. The attractive force between the magnets is given by\n\n$!$F = k \\frac{m^2}{d^2}$!$,\n\nwhere $!$F$!$ is the force in newtons, $!$k = 1 \\times 10^{-7} \\; N\\,m^2/A^2$!$ is a constant, $!$m$!$ is the magnetic moment of each magnet in A\u00b7m\u00b2, and $!$d$!$ is the separation distance between the magnets in meters. If the designer needs the latch to exert an attractive force of $!$5\\;N$!$ and each magnet has a magnetic moment of $!$0.5\\;A\\,m^2$!$, calculate the required separation distance $!$d$!$ (in centimeters) between the magnets.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "af549d39259e434390029",
+                    "stepText": "Let's start by identifying the starting equation that relates the attractive force, the magnetic moment, and the separation distance between the magnets. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$F = k \\frac{m^2}{d^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = k \\frac{d^2}{m^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{kd^2}{m^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cd86cff3e3da49fa91ace",
+                    "stepText": "Great! Now, to solve for the separation distance, we need to rearrange the equation to isolate $!$d^2$!$. Which of the following rearranged expressions is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$d^2 = \\frac{k m^2}{F}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d^2 = \\frac{F m^2}{k}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d^2 = \\frac{k F}{m^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7319d65fdde542758c1e9",
+                    "stepText": "Excellent! Now substitute the given values $!$k = 1\\times10^{-7}$!$, $!$m = 0.5$!$, and $!$F = 5$!$ into the rearranged expression to calculate $!$d^2$!$. What numerical value do you get for $!$d^2$!$ in $!$m^2$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5e-9"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "113dbcb8a2a144dcae827",
+                    "stepText": "Now, take the square root of $!$d^2$!$ to find $!$d$!$ in meters. What value do you obtain for $!$d$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.07e-5"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "d6f0ad81857e44bd8d964",
+                    "stepText": "Finally, convert the separation distance from meters to centimeters. Recall that $!$1\\,m = 100\\,cm$!$. What is the final required distance in centimeters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.07e-3"
+                    ],
+                    "stepSolveAnswerUnits": "cm",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

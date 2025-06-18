@@ -1,0 +1,229 @@
+{
+    "id": "4dfd35faa3764c47a29fd",
+    "name": "Stars and the Universe",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9133c70cf76148639b609",
+            "questionText": "Calculate the approximate surface temperature of the celestial object in Kelvin, given that its estimated temperature is $!$20,000^\\circ\\text{C}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3962942ff4f146ad8d166",
+                    "stepText": "Let's start by identifying the correct conversion formula to change a temperature from degrees Celsius ($!$T_C$!$) to Kelvin ($!$T_K$!$). Which of the following formulas represents the proper conversion?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$T_K = T_C + 273$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T_K = T_C - 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T_K = 273 - T_C$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T_K = T_C \\times 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "76474e05a4574a098e9e7",
+                    "stepText": "Great! Now that you have the correct conversion formula, substitute the given Celsius temperature of $!$20,000$!$ into the formula and calculate the sum.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20273"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "6ffd64b1abb143629f749",
+            "questionText": "A research team observes a distant galaxy exhibiting redshift, indicating it is moving away from Earth. They measure its recession speed to be $!$500\\ \\text{km/s}$!$. Based on their observations, they estimate the galaxy's distance from Earth to be $!$2.5\\ \\text{million light-years}$!$. Given that $!$1\\ \\text{light-year} = 9.5 \\times 10^{12} \\ \\text{km}$!$, $!$1\\ \\text{Mpc} = 3.086 \\times 10^{19} \\ \\text{km}$!$, and $!$1 \\ \\text{year} = 3.1536 \\times 10^7 \\ \\text{seconds}$!$, first calculate the Hubble Constant $!$H_0$!$ in units of $!$\\text{km/s/Mpc}$!$ and then use this value to estimate the age of the Universe in years. Provide the final numerical value for the age of the Universe in years.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d08131bfc6ff4b3f957c3",
+                    "stepText": "Let's start by converting the galaxy's distance from light-years to kilometers. To do this, identify the proper conversion relation between light-years and kilometers.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "97e4ba3a-38d3-43c2-99e7-b74649b32c41"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$D(\\text{km}) = D(\\text{ly}) \\times 9.5 \\times 10^{12} \\text{ km}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$D(\\text{km}) = D(\\text{ly}) \\div 9.5 \\times 10^{12} \\text{ km}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$D(\\text{km}) = D(\\text{ly}) + 9.5 \\times 10^{12} \\text{ km}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "77f71865b69c468783bfa",
+                    "stepText": "Now convert the distance from kilometers to megaparsecs (Mpc). Which relation correctly converts kilometers to Mpc?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$D(\\text{Mpc}) = D(\\text{km}) \\div 3.086 \\times 10^{19} \\text{ km/Mpc}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$D(\\text{Mpc}) = D(\\text{km}) \\times 3.086 \\times 10^{19} \\text{ km/Mpc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$D(\\text{Mpc}) = D(\\text{km}) + 3.086 \\times 10^{19} \\text{ km/Mpc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "57f54b8815c34556875e9",
+                    "stepText": "With the distance now expressed in Mpc and the recession speed given, calculate the Hubble Constant $!$H_0$!$ using the relation $!$H_0=\\frac{v}{d}$!$. Provide the numerical value in $!$\\text{km/s/Mpc}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "650"
+                    ],
+                    "stepSolveAnswerUnits": "km/s/Mpc",
+                    "stepConcepts": [
+                        "c413a452-cd00-445d-b07a-3c69cb5d60aa",
+                        "ae5906b8-745a-436d-8695-00ba2c22369f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "70d20e1c0276474f90046",
+                    "stepText": "Next, to use the Hubble constant for determining the Universe's age, we need to convert $!$H_0$!$ from $!$\\text{km/s/Mpc}$!$ to $!$\\text{s}^{-1}$!$. Which conversion correctly applies for changing the units?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ae5906b8-745a-436d-8695-00ba2c22369f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$H_0(\\text{s}^{-1}) = \\frac{H_0(\\text{km/s/Mpc})}{3.086 \\times 10^{19} \\text{ km/Mpc}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$H_0(\\text{s}^{-1}) = H_0(\\text{km/s/Mpc}) \\times 3.086 \\times 10^{19} \\text{ km/Mpc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$H_0(\\text{s}^{-1}) = H_0(\\text{km/s/Mpc}) - 3.086 \\times 10^{19} \\text{ km/Mpc}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "10ac9e6b0f134816a7311",
+                    "stepText": "Now, calculate the age of the Universe in seconds by taking the inverse of $!$H_0$!$ in $!$\\text{s}^{-1}$!$. Provide the numerical result in seconds.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.75e16"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "6e3fb287-cc65-4984-afe0-467e153ff20c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b359a1ebf9124d9097dd5",
+                    "stepText": "Next, convert the age from seconds to years. Identify the correct conversion factor between seconds and years.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6e3fb287-cc65-4984-afe0-467e153ff20c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Age (years)} = \\text{Age (s)} \\div 3.1536 \\times 10^7 \\text{ s/year}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Age (years)} = \\text{Age (s)} \\times 3.1536 \\times 10^7 \\text{ s/year}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Age (years)} = \\text{Age (s)} - 3.1536 \\times 10^7 \\text{ s/year}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ddc255b92ac34130866f7",
+                    "stepText": "Finally, using the conversion factor from seconds to years, calculate the final estimated age of the Universe in years, and provide the numerical value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.5e9"
+                    ],
+                    "stepSolveAnswerUnits": "years",
+                    "stepConcepts": [
+                        "6e3fb287-cc65-4984-afe0-467e153ff20c"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,128 @@
+{
+    "id": "b534d3eba51c4d3bbc3e1",
+    "name": "Electrical Safety",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "38b4450a94d14c0daa7b5",
+            "questionText": "The current version of the question does not include any numerical values required for a calculation. Please provide additional fixed numerical values (for example, the supply voltage of the circuit, measured voltage at the fixture when wired incorrectly, and any other relevant electrical parameters) so that a refined question can be formulated asking for a single numerical answer.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d841444540c642a3af7a0",
+                    "stepText": "Let's start by identifying the correct formula you would use to calculate the current in an electrical circuit when you know the voltage across a component and its resistance. Which of the following formulas correctly represents Ohm's Law?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V=IR$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I=V/R$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R=V/I$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I=R/V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f0dbb6dd748a43b3a8f3c",
+                    "stepText": "Great, now that you have identified the formula, let's use it with the provided numerical values. The refined question states that the measured voltage across the fixture is $!$115\\,V$!$ and its resistance is $!$230\\,\\Omega$!$. Using the formula from the previous step, calculate the current flowing through the fixture.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.5"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "d0b3d8dd45d340629733f",
+            "questionText": "Assume the mains supply voltage is $!$230\\,\\text{V}$!$ and the resistance of wet human skin is $!$1\\,\\text{k}\\Omega$!$. Calculate the current that would pass through a student's body if they touched the live part of an appliance with wet skin. Express your answer in amperes.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8e4061f3ab884a7394c17",
+                    "stepText": "Let's start by identifying the correct formula that relates voltage, resistance, and current. Please choose the appropriate formula to use for this calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I=\\frac{V}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I=V\\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I=\\sqrt{\\frac{V}{R}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a1f3036a34704680b4f1f",
+                    "stepText": "Great, now consider the value given for resistance. The resistance is given as 1 k\u03a9 which may need to be converted into ohms. Calculate this conversion.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1000"
+                    ],
+                    "stepSolveAnswerUnits": "\\Omega",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "0c581c420fc9496ca9f5e",
+                    "stepText": "Now that you have identified the formula and the correctly converted resistance, substitute the supply voltage ($!$230\\,\\text{V}$!$) and the resistance (in ohms) into the formula to calculate the current. What is the resulting current in amperes?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.23"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,272 @@
+{
+    "id": "7d1e1fc49aac494b81d67",
+    "name": "Momentum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "fc0df405eaf34a1a933c0",
+            "questionText": "A massive rocket launches from Earth, expelling hot gases downwards at an extremely high velocity. Consider a rocket with an initial mass of $!$2.0 \\times 10^5 \\text{ kg}$!$ that expels hot gases at a constant exhaust velocity of $!$2500 \\text{ m/s}$!$, with a mass flow rate of $!$500 \\text{ kg/s}$!$. Assuming the rocket starts from rest and neglecting gravitational effects, calculate the numerical magnitude of the average resultant force exerted on the rocket during the initial $!$10 \\text{ seconds}$!$ of its launch.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "cbd5cdc43a5d49d681f36",
+                    "stepText": "Let's start by recalling how we define the average resultant force in terms of momentum. Identify the correct equation that relates force to the rate of change of momentum.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1a227599-b55c-4dde-ab9a-1062a5fb942c",
+                        "eb2f76a7-4c38-468d-b7dd-2f8dc4135942"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F=\\frac{\\Delta p}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F= m\\times a$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F=\\frac{mv}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F=\\frac{\\Delta(mv)}{m\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b4060306a4c84b7e836b9",
+                    "stepText": "Next, determine the expression for the momentum change per second due to the mass being expelled. Which equation correctly represents the rate at which momentum is being imparted by the expelled gases?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eb2f76a7-4c38-468d-b7dd-2f8dc4135942",
+                        "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\dot{m}\\,v_{exhaust}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\dot{m}^2\\,v_{exhaust}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\dot{m} + v_{exhaust}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{\\dot{m}}{v_{exhaust}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a8892dfe9b2c4100ba02a",
+                    "stepText": "Now, using the established expression, calculate the product of the mass flow rate and the exhaust velocity. Enter the numerical value you obtain.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.25e6"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "eb2f76a7-4c38-468d-b7dd-2f8dc4135942"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d116652953fb447e80824",
+                    "stepText": "Finally, reflect on why this computed force represents the average resultant force over the initial 10-second interval. Which explanation best supports that the value remains constant over the time period?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1a227599-b55c-4dde-ab9a-1062a5fb942c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Because the mass flow rate and exhaust velocity are constant, the rate of momentum change remains constant throughout the interval.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Because the rocket's mass remains unchanged during the interval, the force does not vary.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Because the 10-second duration is too short to influence the resulting force.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Because gravitational effects are negligible, the time interval does not impact the force calculation.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "8b1c7f90238149f89bec8",
+            "questionText": "In a football game, a $!$110 \\text{ kg}$!$ running back moving eastward at $!$8 \\text{ m/s}$!$ is tackled by a $!$95 \\text{ kg}$!$ linebacker moving westward at $!$7 \\text{ m/s}$!$. Upon impact, the two players collide and stick together, moving as a single unit. Determine the final velocity (magnitude and direction) of the combined players immediately after the tackle.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "49eaf8cc0b7b4f29b7dba",
+                    "stepText": "Let's start by identifying the correct formula to calculate a body's momentum. Which of the following formulas correctly represents momentum?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p=mv$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p=m+v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p=\\frac{m}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "92148d1a3d1f439c80559",
+                    "stepText": "Great! Now, calculate the momentum of the running back who has a mass of $!$110 \\text{ kg}$!$ and is moving eastward at $!$8 \\text{ m/s}$!$ (remember to use the appropriate sign for eastward).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "880"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "41c563558eb5468d992cc",
+                    "stepText": "Next, calculate the momentum of the linebacker who has a mass of $!$95 \\text{ kg}$!$ and is moving westward at $!$7 \\text{ m/s}$!$ (ensure you assign the correct sign for the westward direction).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-665"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1773517bc42040a7b12a1",
+                    "stepText": "Now, combine the momenta of the running back and the linebacker to determine the total initial momentum before the collision.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "215"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9365d3b470c54f879ee81",
+                    "stepText": "Compute the combined mass of the players after they stick together. Use the given masses of $!$110 \\text{ kg}$!$ and $!$95 \\text{ kg}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "205"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "88f01fda16fa4365b1a64",
+                    "stepText": "Now, select the correct conservation of momentum formula that relates the total initial momentum to the final momentum of the combined mass.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P_{initial}=m_{total}v_{final}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P_{initial}=\\frac{m_{total}}{v_{final}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P_{initial}=m_{total}+v_{final}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7d5c7a26c9a748f48a49b",
+                    "stepText": "Finally, use the conservation of momentum principle with your previous results to calculate the final velocity of the combined players.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.05"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

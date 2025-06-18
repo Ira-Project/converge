@@ -1,0 +1,184 @@
+{
+    "id": "c6ad6a53787d45978b801",
+    "name": "General Properties of Waves",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "b7ac7e2166ab40d488266",
+            "questionText": "An ocean wave approaches the shore. In deeper water, it has a frequency of $!$0.25$!$ $!$\\text{Hz}$!$ and a wavelength of $!$8.0$!$ $!$\\text{m}$!$. As the wave enters shallower water, its wavelength decreases to $!$5.0$!$ $!$\\text{m}$!$, while its frequency remains constant. Calculate the wave speed of the ocean wave in the shallower water in $!$\\text{m/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c5b2f2e208904f60b309f",
+                    "stepText": "Let's start by identifying the correct formula that relates wave speed, frequency, and wavelength. Please choose the option that you believe correctly represents this relation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = f \\times \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\lambda / f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = f / \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "af55c51fa63c4d6e936a1",
+                    "stepText": "Now, using the fact that the frequency remains constant at $!$0.25\\,\\text{Hz}$!$ and the new wavelength in shallower water is $!$5.0\\,\\text{m}$!$, substitute these values into the formula to calculate the wave speed. What is the resulting speed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.25"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "91d66318-1623-4c88-b48c-56e3cfc2c189",
+                        "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85",
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "45d9165539d4460697b9b",
+            "questionText": "Noise-cancelling headphones work by generating sound waves that reduce unwanted ambient noise. An external sound, which is a progressive mechanical longitudinal wave, reaches the headphone's microphone with an amplitude of $!$0.8\\,\\mathrm{Pa}$!$. The system then generates an \"anti-noise\" wave with an amplitude of $!$0.7\\,\\mathrm{Pa}$!$. Assuming both waves have the same frequency, calculate the resultant amplitude perceived by the user when the \"anti-noise\" wave is $!$180^\\circ$!$ out of phase with the external sound.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7ffaa9ce374242168a112",
+                    "stepText": "Let's start by identifying the interference phenomenon relevant for combining two waves that are $!$180^\\circ$!$ out of phase. Which interference principle applies here?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d75bf3fc-6ad7-42b8-8fce-1f60d10ef022",
+                        "87e41c44-c408-43f0-ab16-8c446470b289"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Constructive interference",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Destructive interference",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Diffraction interference",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fb708df5f9154d4da7a56",
+                    "stepText": "Great! Now, considering that the waves are $!$180^\\circ$!$ out of phase, determine the mathematical operation needed to combine their amplitudes. Should we add them, subtract them, multiply, or divide them?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "Addition",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Subtraction",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Multiplication",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Division",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0ea0ce0e7b654c61b18dc",
+                    "stepText": "Now, identify the formula that represents the resultant amplitude when two waves interfere destructively. Which of the following formulas is the correct one?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca",
+                        "87e41c44-c408-43f0-ab16-8c446470b289"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A_{R} = |A_{1} - A_{2}|$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A_{R} = A_{1} + A_{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A_{R} = A_{1} \\times A_{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A_{R} = \\frac{A_{1}}{A_{2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ab92b22620234e6e91b0b",
+                    "stepText": "Finally, using the concept of destructive interference, calculate the resultant amplitude by computing the absolute difference between the external sound amplitude $!$A_{1} = 0.8\\,\\mathrm{Pa}$!$ and the anti-noise amplitude $!$A_{2} = 0.7\\,\\mathrm{Pa}$!$. What is the numerical value of this resultant amplitude?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "87e41c44-c408-43f0-ab16-8c446470b289",
+                        "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

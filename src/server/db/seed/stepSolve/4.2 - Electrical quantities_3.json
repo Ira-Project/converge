@@ -1,0 +1,154 @@
+{
+    "id": "330c8c5ca82444b691e46",
+    "name": "Electrical Quantities",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "d1093cf1ee3f422bbf193",
+            "questionText": "A student is conducting an experiment with a Van de Graaff generator. When they touch the dome, the generator transfers electrons to their body, making their hair strands acquire the same type of electrostatic charge, which causes their hair to stand on end due to repulsion. If the student's body accumulates a total negative charge of $!$5.0 \\times 10^{-7}$!$ coulombs, calculate the number of electrons transferred to the student's body.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "794aa52343fd466dbd937",
+                    "stepText": "Let's start by identifying the formula that will help us find the number of electrons transferred. Which of the following formulas correctly relates the total charge to the number of electrons, given that each electron carries a fixed amount of charge?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "33c6999a-8052-4c17-98b0-6c11dc46bd5c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$N = \\frac{Q}{e}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$N = Q \\times e$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$N = \\frac{e}{Q}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "aba291b35f964f7f86a0c",
+                    "stepText": "Great. Now, to proceed with the calculation, determine the magnitude of the charge on a single electron. Which of the following values represents the charge of one electron?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "33c6999a-8052-4c17-98b0-6c11dc46bd5c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1.6 \\times 10^{-19}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1.6 \\times 10^{-16}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$2.0 \\times 10^{-19}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "97f9fa5a97ca4a3a82763",
+                    "stepText": "Now that you have identified both the correct formula and the known value for a single electron\u2019s charge, calculate the number of electrons transferred by dividing the total accumulated charge ($!$5.0 \\times 10^{-7}$!$ C) by the magnitude of the charge on one electron. What is the result of this division?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.125e12"
+                    ],
+                    "stepSolveAnswerUnits": "electrons",
+                    "stepConcepts": [
+                        "33c6999a-8052-4c17-98b0-6c11dc46bd5c"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "cd16fd8635214a7e9172a",
+            "questionText": "An electrical engineer is designing a new resistive heater for a laboratory. They connect the heater to a $!$12\\text{ V}$!$ DC power supply. A rheostat is integrated into the circuit to adjust the current flow, and thus the heating effect. The heater wire is an ohmic conductor at its operating temperature. If the total resistance of the heater circuit is set to $!$24\\ \\Omega$!$, calculate the power dissipated by the heater.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5d51e13e6e3a43638fde1",
+                    "stepText": "Let's start by identifying the appropriate formula to calculate the power dissipated by a resistor using the voltage and resistance. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "846f5219-eb07-42b9-91bb-4fe3cc6ad952",
+                        "99fbfc61-bb8d-4a75-bcaf-718f1ada2b5d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P=\\frac{V^2}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P=I\\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P=I^2\\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9e35e422554f4ca6a2648",
+                    "stepText": "Great, now that we have recalled the power formula, compute the square of the supply voltage. Using the given voltage value, square it to find the numerator of the formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "144"
+                    ],
+                    "stepSolveAnswerUnits": "V^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "60551080ea184e539c41c",
+                    "stepText": "Now, use the squared voltage from the previous step and the given resistance to compute the power dissipated by the heater by dividing the squared voltage by the resistance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "99fbfc61-bb8d-4a75-bcaf-718f1ada2b5d"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

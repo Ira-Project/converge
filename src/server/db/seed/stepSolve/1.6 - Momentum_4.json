@@ -1,0 +1,219 @@
+{
+    "id": "e72d4d1ba43741b2adafe",
+    "name": "Momentum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "b001f8fc60b740fc83b7a",
+            "questionText": "A large cannon with a mass of $!$1000 \\; \\text{kg}$!$ fires a $!$50 \\; \\text{kg}$!$ projectile horizontally at a speed of $!$200 \\; \\text{m/s}$!$. Assuming that the total momentum of the cannon-projectile system is conserved during the explosion, determine the recoil velocity (in m/s) of the cannon.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "826d2cb53de44dbb9e5da",
+                    "stepText": "Let's start by identifying the basic momentum formula that links an object's mass and velocity. Choose the correct formula that you would use to calculate momentum.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p = m \\times v$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = \\frac{v}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = m + v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8f8906c54bc541079cc81",
+                    "stepText": "Great! Now, calculate the momentum of the projectile by multiplying its mass and speed. Enter the numerical value you obtain.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10000"
+                    ],
+                    "stepSolveAnswerUnits": "kg\\cdot m/s",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "190e31c2f35445da9db1c",
+                    "stepText": "Next, consider that the cannon-projectile system started at rest, so the total initial momentum was zero. Which statement correctly reflects the conservation of momentum for this scenario?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                        "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$0 = m_{cannon} \\times v_{cannon} + m_{projectile} \\times v_{projectile}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m_{cannon} \\times v_{cannon} = m_{projectile} \\times v_{projectile}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$0 = m_{cannon} \\times v_{cannon} - m_{projectile} \\times v_{projectile}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e5803e1043bb4d26a405a",
+                    "stepText": "Finally, use the conservation principle to write an expression for the recoil velocity of the cannon by isolating its velocity term. Choose the correct expression from the options provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312",
+                        "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                        "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v_{cannon} = - \\frac{m_{projectile} \\times v_{projectile}}{m_{cannon}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v_{cannon} = \\frac{m_{projectile} \\times v_{projectile}}{m_{cannon}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v_{cannon} = \\frac{m_{projectile}}{m_{cannon} \\times v_{projectile}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "d7431da5ed1640c1ae3ba",
+            "questionText": "In a head-on car collision, a sedan, initially traveling at $!$15 \\text{ m/s}$!$, comes to a complete stop ($!$0 \\text{ m/s}$!$) due to the impact. An occupant inside the sedan, with a mass of $!$70 \\text{ kg}$!$, also experiences this change in velocity. Thanks to the crumple zones and airbags, the collision time for the occupant is extended to $!$0.2 \\text{ s}$!$. Calculate the average force (in Newtons) experienced by the occupant during this collision.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a305111368854ef68a0d9",
+                    "stepText": "Let's start by identifying the impulse-momentum relationship that connects force, change in momentum, and the collision time. Which of the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bf1af9ab-964b-4b5c-a723-12840b0874c3",
+                        "eb2f76a7-4c38-468d-b7dd-2f8dc4135942"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{\\Delta p}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = m(v-u) \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = m \\cdot a$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6c9de73c446c4c35ad47f",
+                    "stepText": "Great! Now, to determine the change in momentum experienced by the occupant, first identify the correct formula that gives the change in momentum for a given mass and its change in velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta p = m(v-u)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta p = m(u-v)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta p = m(v+u)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "24db4a2747234513a807c",
+                    "stepText": "Now that you have the correct formula for momentum change, calculate the magnitude of the change in momentum. Use the occupant's mass of $!$70 \\text{ kg}$!$, an initial velocity of $!$15 \\text{ m/s}$!$, and a final velocity of $!$0 \\text{ m/s}$!$. What is the computed magnitude (absolute value) of the momentum change?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1050"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6991e8c4d73e4e1fba092",
+                    "stepText": "Excellent! Now, apply the impulse-momentum formula by dividing the magnitude of the momentum change by the collision time. Given the momentum change you just computed and a collision time of $!$0.2 \\text{ s}$!$, what is the average force experienced by the occupant?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5250"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "1a227599-b55c-4dde-ab9a-1062a5fb942c"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

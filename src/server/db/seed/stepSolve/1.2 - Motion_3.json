@@ -1,0 +1,228 @@
+{
+    "id": "a56a4c0995df4dcfae227",
+    "name": "Motion",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a7cad08f6a5d40b883032",
+            "questionText": "A high-speed train departs from a station, starting from rest. It accelerates uniformly to a speed of $!$30 \\ m/s$!$ in the first $!$15 \\ seconds$!$, maintains this uniform velocity for $!$45 \\ seconds$!$, and then decelerates uniformly from $!$30 \\ m/s$!$ to a complete stop over $!$10 \\ seconds$!$. Calculate the total distance travelled by the train during its entire journey, assuming its motion can be represented by a speed-time graph.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "49ce91f3122c4266b3fcf",
+                    "stepText": "Let's start by identifying the concept that relates the area under a speed-time graph to the distance travelled. Please select the correct representation:",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5fadf3e9-25eb-4d0c-b4c6-ba8237b81823"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Distance = area under the speed-time graph}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Distance = speed \\times time}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Distance = acceleration \\times time}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Distance = speed \\div time}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "faf7201337224341a094a",
+                    "stepText": "Now, consider the acceleration phase where the train speeds up from 0 to $!$30 \\ m/s$!$ in $!$15 \\ s$!$. This portion of the graph forms a triangle. Which of the following is the correct formula for the area of a triangle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Area} = \\frac{1}{2} \\times \\text{base} \\times \\text{height}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Area} = \\text{base} \\times \\text{height}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Area} = \\frac{\\text{base} + \\text{height}}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Area} = \\text{base}^2 \\times \\text{height}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "68d584a719e64fb5aa206",
+                    "stepText": "Using the triangle area formula, compute the distance covered during the acceleration phase. Here, the base is the time ($!$15 \\ s$!$) and the height is the final speed ($!$30 \\ m/s$!$). Calculate the area.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "225"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "6c0af32641dc485aaa486",
+                    "stepText": "Next, consider the constant speed phase where the train travels at $!$30 \\ m/s$!$ for $!$45 \\ s$!$. Calculate the distance covered during this portion by multiplying the speed by the time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1350"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "fdd0a2eb253f44aa884aa",
+                    "stepText": "Now, analyze the deceleration phase where the train slows down from $!$30 \\ m/s$!$ to rest in $!$10 \\ s$!$. This again forms a triangle on the graph. Using the appropriate triangle area formula, compute the distance during deceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "150"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "25176780ee63435da4733",
+                    "stepText": "Finally, add the distances from all three phases (acceleration, constant speed, and deceleration) to determine the total distance travelled by the train. What is the sum of these distances?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1725"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "ea352620b2874baf8c8c2",
+            "questionText": "A cannon is positioned at the edge of a cliff, $!$100 \\text{ m}$!$ above sea level. It fires a cannonball horizontally with an initial speed of $!$50 \\text{ m/s}$!$. Neglecting air resistance, calculate the horizontal distance (range) from the base of the cliff where the cannonball lands. Assume the acceleration due to gravity is $!$g = 9.8 \\text{ m/s}^2$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7f37147c31b242c08530d",
+                    "stepText": "Let's start by identifying the appropriate free-fall equation that relates the distance fallen and the time of fall for an object starting from rest. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$s = \\frac{1}{2}gt^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = gt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = \\frac{s}{g}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "09809412f8194139bab58",
+                    "stepText": "Great! Now, using the free-fall formula you selected, compute the time taken by the cannonball to fall a vertical distance of $!$100 \\text{ m}$!$. (Hint: Rearrange the equation to solve for $!$t$!$ and substitute $!$s = 100 \\text{ m}$!$ and $!$g = 9.8 \\text{ m/s}^2$!$.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.52"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf",
+                        "4dfaa3d5-ea53-4fcf-abef-a1c95e17effc"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "287d3a44650b474383bc2",
+                    "stepText": "Now, let's identify the correct formula for calculating the horizontal distance traveled by an object moving at constant speed. Choose the formula that correctly relates horizontal distance, speed, and time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = vt + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = ut + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1f3e92301e5f4a6cafd51",
+                    "stepText": "Finally, using the constant horizontal speed of $!$50 \\text{ m/s}$!$ and the time of flight you calculated, determine the horizontal distance from the base of the cliff where the cannonball lands.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "226"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

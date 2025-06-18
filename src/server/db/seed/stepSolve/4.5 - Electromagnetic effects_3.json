@@ -1,0 +1,234 @@
+{
+    "id": "9f496bae52f54dc498a1c",
+    "name": "Electromagnetic Effects",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "b9e23d3c51aa4b72b446a",
+            "questionText": "In the Large Hadron Collider (LHC) at CERN, protons (charge $!$e = 1.602 \\times 10^{-19}$!$ C) are accelerated to velocities near the speed of light. Suppose protons moving at $!$0.99c$!$ ($!$c = 3.00 \\times 10^8$!$ m/s) enter a section of the accelerator where powerful superconducting solenoids generate a uniform magnetic field. To ensure these protons follow a circular path with a radius of $!$R = 1.0$!$ km, a centripetal force is required. The magnetic field exerts this force perpendicularly to the proton's velocity. If the magnetic field strength produced by the solenoids is known to be $!$5.0$!$ Tesla ($!$T$!$) when a current of $!$1000$!$ A flows through them, calculate the current required to keep the protons on the specified circular path, assuming the magnetic field strength is directly proportional to the current. The force required to maintain circular motion is given by $!$F = \\frac{mv^2}{R}$!$, where the mass of a proton is $!$m = 1.672 \\times 10^{-27}$!$ kg.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "77207d8f97c748588e789",
+                    "stepText": "Let's begin by establishing the force balance. We know that the magnetic force on a moving proton is given by $!$qvB$!$ and the centripetal force required is $!$\\frac{mv^2}{R}$!$. Which relation correctly equates these two forces?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$qvB = \\frac{mv^2}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$mvB = \\frac{qv^2}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$qv = \\frac{mv}{BR}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "60cc697a958e480e852a1",
+                    "stepText": "Great! Now, from the force balance $!$qvB = \\frac{mv^2}{R}$!$, rearrange to solve for the magnetic field $!$B$!$. Which expression correctly gives $!$B$!$ in terms of the other quantities?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$B = \\frac{mv}{qR}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$B = \\frac{qR}{mv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$B = \\frac{mv^2}{qR}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "45b45fc09ba145489af72",
+                    "stepText": "Let's determine the proton's speed. Given that the protons move at $!$0.99c$!$ and the speed of light $!$c$!$ is $!$3.00 \\times 10^8 \\text{ m/s}$!$, calculate the speed $!$v$!$ of the protons.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.97e8"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "84867b4ab97d435daaedc",
+                    "stepText": "Now, calculate the numerator of the magnetic field formula $!$B = \\frac{mv}{qR}$!$, which is the product of the proton's mass and speed. Compute $!$m \\times v$!$ using $!$m = 1.672 \\times 10^{-27} \\text{ kg}$!$ and the speed you just calculated.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.96e-19"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "b0bcf9b9534641be9265f",
+                    "stepText": "Next, determine the denominator of the expression for $!$B$!$, which is the product of the proton charge $!$q$!$ and the circular path radius $!$R$!$. Use $!$q = 1.602 \\times 10^{-19} \\text{ C}$!$ and convert the radius $!$R = 1.0 \\text{ km}$!$ to meters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.602e-16"
+                    ],
+                    "stepSolveAnswerUnits": "C\u00b7m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "aa31e7ecbe1e40c8a830c",
+                    "stepText": "Now, calculate the magnetic field strength $!$B$!$ using the expression $!$B = \\frac{mv}{qR}$!$ by dividing the numerator by the denominator you computed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.10e-3"
+                    ],
+                    "stepSolveAnswerUnits": "T",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "c639e762e52d471c8a87f",
+                    "stepText": "Finally, the solenoids produce $!$5.0 \\text{ T}$!$ when a current of $!$1000 \\text{ A}$!$ flows through them, and the field is directly proportional to the current. Using the proportionality $!$\\frac{I_{req}}{1000 \\text{ A}} = \\frac{B_{req}}{5.0 \\text{ T}}$!$, determine the required current $!$I_{req}$!$ that produces the calculated magnetic field $!$B_{req}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.62"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "0c4105b1bf41484199a2d",
+            "questionText": "Suppose a dynamic microphone has a coil with $!$200$!$ turns, which vibrates at an average speed of $!$0.5$!$ m/s within a uniform magnetic field of $!$0.8$!$ T. In this scenario, a single turn moving at $!$1$!$ m/s in a $!$1$!$ T field induces an emf of $!$0.01$!$ V. Given that the induced emf is directly proportional to the number of turns, the speed of motion, and the magnetic field strength, calculate the induced emf (in volts) when the coil vibrates at $!$0.5$!$ m/s.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6869aa5aab0c49f780318",
+                    "stepText": "Let's start by identifying the correct proportional relationship between the induced emf (E) and the parameters: number of turns (N), speed (v), and magnetic field strength (B). Which of the following formulas best represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d647fb6f-2be1-48e5-8bbf-c044180cfbb9",
+                        "7c995179-8aae-4a1d-96de-4c78925943a8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = E_0\\times(\\frac{N}{N_0})\\times(\\frac{v}{v_0})\\times(\\frac{B}{B_0})$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = E_0 + \\frac{N}{N_0} + \\frac{v}{v_0} + \\frac{B}{B_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = E_0\\times(\\frac{N+v+B}{N_0+v_0+B_0})$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e8c578cb36584f8aa2d8c",
+                    "stepText": "Great. Now, calculate the scaling factor for the number of turns by comparing the microphone coil's turns to the baseline. Compute $!$\\frac{N}{N_0}$!$ where $!$N=200$!$ and $!$N_0=1$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "200"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "76004ceabe8d45edbd4f7",
+                    "stepText": "Next, determine the scaling factor for the speed of motion. Compute $!$\\frac{v}{v_0}$!$ where $!$v=0.5$!$ m/s and $!$v_0=1$!$ m/s.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.5"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "a91c85c1a3754980ab3c4",
+                    "stepText": "Now, calculate the scaling factor for the magnetic field strength. Compute $!$\\frac{B}{B_0}$!$ where $!$B=0.8$!$ T and $!$B_0=1$!$ T.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.8"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "51648d988d414644b6517",
+                    "stepText": "Combine these individual scaling factors to get the overall multiplier. Multiply the factors from the previous steps: $!$200 \\times 0.5 \\times 0.8$!$. What value do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "80"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "bb0f200aefd4433399b8e",
+                    "stepText": "Finally, apply the overall scaling factor to the baseline emf of $!$0.01$!$ V to compute the induced emf for the dynamic microphone. What is the result of $!$0.01 \\times 80$!$ (in volts)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.8"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "d647fb6f-2be1-48e5-8bbf-c044180cfbb9",
+                        "02e21b8a-e47a-4a5e-9792-730e2096a8ba",
+                        "64ec9c91-cb4f-4870-8048-68c7fbc8911b"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

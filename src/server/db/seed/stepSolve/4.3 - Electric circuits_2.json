@@ -1,0 +1,153 @@
+{
+    "id": "6bdcc784fed7484093271",
+    "name": "Electric Circuits",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "c3bd261f296a47308696e",
+            "questionText": "A car's battery is composed of four identical cells connected in series, with each cell having an electromotive force of $!$3\\,\\text{V}$!$. Calculate the total electromotive force $!$E_{total}$!$ of the car's battery.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "df7b2862d3b94fcd9dd0c",
+                    "stepText": "Let's start by recalling the formula that we use for combining electromotive forces (e.m.f.) in cells connected in series. Which one of the following formulas correctly represents the total e.m.f. for cells connected in series?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "320b0a47-989b-4366-9676-1f34e540ac09",
+                        "b14dd40f-3728-4962-ae52-1fb9c050b293"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = E_1 + E_2 + E_3 + E_4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{E_1 + E_2 + E_3 + E_4}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = E_1 \\times E_2 \\times E_3 \\times E_4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cd2cf38708b240228f7cd",
+                    "stepText": "Great, now that you have identified how e.m.f.s add in series, let's calculate the total e.m.f. by multiplying the number of cells by the e.m.f. of one cell. What is the product when you multiply 4 by 3?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "320b0a47-989b-4366-9676-1f34e540ac09"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "adc6dd9232c24011b951f",
+                    "stepText": "Now that you have computed the multiplication, this gives you the total electromotive force of the battery. Ensure that your final result represents the total e.m.f. of the series-connected cells in the battery.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "f9d0611db2934bd2aacc6",
+            "questionText": "A smart garden lighting system uses a Light-Dependent Resistor (LDR) in a potential divider circuit to switch on LED lamps at dusk. The potential divider is supplied by a $!$12\\text{ V}$!$ battery. The LDR is connected in series with a fixed resistor of $!$R_{fixed} = 200\\text{ }\\Omega$!$. When the ambient light intensity decreases to a certain level at dusk, the resistance of the LDR increases to $!$R_{LDR} = 400\\text{ }\\\\Omega$!$. Calculate the potential difference across the LDR at this light level.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "88c3ce4cc3c5440d9e778",
+                    "stepText": "Let's start by identifying the formula that calculates the voltage across a resistor in a potential divider circuit. Which of the following formulas is the appropriate one for finding the voltage across the LDR?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "769fd15e-b379-43a1-b7a8-6c022fe74eca",
+                        "9eb53fd6-048e-47f9-9abe-1cf126748480"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V_{LDR} = V \\times \\frac{R_{LDR}}{R_{fixed} + R_{LDR}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V_{LDR} = I \\times R_{LDR}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_{LDR} = V - I \\times R_{LDR}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5386277876604bb7b62f0",
+                    "stepText": "Great! Now, compute the total resistance in the circuit by adding the fixed resistor and the LDR resistances. What is the sum of $!$200\\Omega$!$ and $!$400\\Omega$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "600"
+                    ],
+                    "stepSolveAnswerUnits": "\\Omega",
+                    "stepConcepts": [
+                        "645d12e6-f285-44a1-9369-1085f03dc8f0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a2b8d567c92942c8ae868",
+                    "stepText": "Now, calculate the ratio of the LDR resistance to the total resistance in the circuit. That is, determine $!$\\frac{R_{LDR}}{R_{fixed}+R_{LDR}}$!$ using the values provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.667"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "769fd15e-b379-43a1-b7a8-6c022fe74eca"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d8cca4af36cc4c599ff10",
+                    "stepText": "Finally, use the determined ratio and the battery's supply voltage to compute the potential difference across the LDR. Multiply the supply voltage by the ratio you just calculated. What numerical value do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "9eb53fd6-048e-47f9-9abe-1cf126748480"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

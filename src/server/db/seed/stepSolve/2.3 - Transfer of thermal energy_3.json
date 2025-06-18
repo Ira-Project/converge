@@ -1,0 +1,175 @@
+{
+    "id": "8de5c562cba2450585106",
+    "name": "Transfer of Thermal Energy",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "5557af055b694355b3da4",
+            "questionText": "Calculate the net rate of heat loss by radiation (in watts) from the outer surface of a vacuum flask using the Stefan\u2013Boltzmann equation\n\n$!$Q = A\\,\\epsilon\\,\\sigma\\,(T_{in}^4 - T_{ambient}^4)$!$, \n\nwhere:\n\n$!$A$!$ is the surface area of the flask (in m$!$^2$!$),\n\n$!$\\epsilon$!$ is the emissivity of the outer surface,\n\n$!$T_{in}$!$ is the absolute temperature of the beverage inside the flask (in K), and\n\n$!$T_{ambient}$!$ is the absolute ambient temperature (in K).\n\nPlease provide the numerical values for $!$A$!$, $!$\\epsilon$!$, $!$T_{in}$!$, and $!$T_{ambient}$!$ to compute a single numerical answer for $!$Q$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ce2df1a98b324c3c866a8",
+                    "stepText": "Let's start by recalling which equation expresses the net radiative heat loss from a surface. Identify the correct formulation from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3b13c682-91e3-450a-a4bb-e41f482703bd",
+                        "c054f96f-9922-424d-9d29-0d6dc477efdf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = A\\,\\epsilon\\,\\sigma\\,(T_{in}^4 - T_{ambient}^4)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = \\sigma\\,A\\,(T_{in} - T_{ambient})$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = \\epsilon\\,\\sigma\\,(T_{in}^2 - T_{ambient}^2)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "093e44c31fa845648d8d2",
+                    "stepText": "Now, using the chosen numerical values, first calculate the product of the surface area $!$A$!$ and the emissivity $!$\\epsilon$!$. Compute $!$0.05 \\times 0.04$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.002"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "1a7c1679571746c48fa91",
+                    "stepText": "Next, determine the product of the Stefan\u2013Boltzmann constant and the difference of the fourth powers of the temperatures, that is, calculate $!$\\sigma \\times (T_{in}^4 - T_{ambient}^4)$!$. Given the values, this multiplication should yield an approximate value. Compute $!$(5.67 \\times 10^{-8}) \\times (8.15 \\times 10^{9})$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "462.2"
+                    ],
+                    "stepSolveAnswerUnits": "W/m^2",
+                    "stepConcepts": [
+                        "3b13c682-91e3-450a-a4bb-e41f482703bd"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "41d8fefa52244051afb5b",
+                    "stepText": "Finally, multiply the result from the previous two steps to obtain the net rate of heat loss $!$Q$!$. Multiply the product from step 2 with the result from step 3, i.e., calculate $!$0.002 \\times 462.2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.9244"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "3b13c682-91e3-450a-a4bb-e41f482703bd"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "73873ae9bee140a99292a",
+            "questionText": "A stainless steel pot used for cooking has a wall thickness of $!$0.005\\,m$!$, an outer surface area of $!$0.2\\,m^2$!$, and the temperature difference between the inner and outer surfaces is $!$50\\,K$!$. Given that the thermal conductivity of stainless steel is $!$16\\,W/(m\\cdot K)$!$, calculate the rate of heat transfer through the pot wall (in Watts).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3e60b3564ed14aa983da8",
+                    "stepText": "Let's start by identifying the correct formula for conduction through a solid. Choose the formula that represents the rate of heat transfer as a function of thermal conductivity ($!$k$!$), area ($!$A$!$), temperature difference ($!$\\Delta T$!$), and thickness ($!$L$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15",
+                        "4c8cce13-2ea3-4a14-94e1-acdceb988dc9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ \\frac{kA\\Delta T}{L} $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ \\frac{k\\Delta T}{AL} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ \\frac{A\\Delta T}{kL} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ \\frac{kL}{A\\Delta T} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ec639bda2e744efe8a036",
+                    "stepText": "Great! Now, using the chosen formula, start by multiplying the thermal conductivity and the outer surface area of the pot. Compute $!$k \\times A$!$ using the given values.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.2"
+                    ],
+                    "stepSolveAnswerUnits": "$!$W\\cdot m/K$!$",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15",
+                        "4c8cce13-2ea3-4a14-94e1-acdceb988dc9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4bfacec2af384cf7a99fd",
+                    "stepText": "Now, multiply the result from the previous step by the temperature difference ($!$\\Delta T$!$) to continue building the numerator of the formula. What is the product of $!$3.2 \\times 50$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "160"
+                    ],
+                    "stepSolveAnswerUnits": "$!$W\\cdot m$!$",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15",
+                        "4c8cce13-2ea3-4a14-94e1-acdceb988dc9"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2cd3f4ad316a4e1b8566d",
+                    "stepText": "Finally, divide the product obtained in the previous step by the wall thickness ($!$L$!$) of the pot to find the rate of heat transfer. Compute $!$\\frac{160}{0.005}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "32000"
+                    ],
+                    "stepSolveAnswerUnits": "$!$W$!$",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15",
+                        "4c8cce13-2ea3-4a14-94e1-acdceb988dc9"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

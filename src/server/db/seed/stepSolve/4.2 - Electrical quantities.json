@@ -1,0 +1,123 @@
+{
+    "id": "0523f6323a3f448c88330",
+    "name": "Electrical Quantities",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "1ef72a745f6a4144a3d40",
+            "questionText": "A Van de Graaff generator is used in an experiment where it transfers a charge of $!$1.0 \\times 10^{-7}\\,$!$ coulombs to a student's body. Assuming that the entire transferred charge accumulates on the student, what is the net charge (in coulombs) acquired by the student?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7b8d0b767b2b4ec39f07a",
+                    "stepText": "Let's start by identifying the principle to use in this experiment. The student receives a transferred charge and if it all accumulates, the net charge on the student will be directly related to the transferred charge. Choose the correct reasoning to apply for the net charge.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9ee5e6d1-2e74-4176-b14e-6c8e6d4f176a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q_{net} = Q_{transferred}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q_{net} = 0.5\\times Q_{transferred}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q_{net} = 2\\times Q_{transferred}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2c75601f8b1d46d9807d0",
+                    "stepText": "Great, now that you have identified that the net charge equals the transferred charge, use the given value for the transferred charge to calculate the net charge acquired by the student. Provide the numerical value along with its units.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.0e-7"
+                    ],
+                    "stepSolveAnswerUnits": "coulombs",
+                    "stepConcepts": [
+                        "9ee5e6d1-2e74-4176-b14e-6c8e6d4f176a"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "53e273bf09d34712ad866",
+            "questionText": "An electrical technician is troubleshooting a circuit board. A filament lamp with a power rating of $!$60 \\text{ W}$!$ at $!$12 \\text{ V}$!$ is operating in a section of the circuit, but the technician observes that the potential difference across the lamp is $!$10 \\text{ V}$!$ and the current flowing through it is $!$4.5 \\text{ A}$!$. Calculate the total electrical energy consumed by the lamp in $!$5 \\text{ minutes}$!$ under these observed operating conditions.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b1d1477039ea4f778cf7a",
+                    "stepText": "Let's start by identifying the energy transfer formula that relates current $!$I$!$, potential difference $!$V$!$, and time $!$t$!$. Which of the following formulas is correct for calculating energy transferred in a circuit?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ea2b6388-e3ef-4379-ad2d-5c1a2505b8a2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = I \\times V \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = I + V + t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = V \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a667f495a00946eb829f0",
+                    "stepText": "Great. Now convert the given time from minutes to seconds. Remember that $!$1 \\text{ minute} = 60 \\text{ seconds}$!$. What is $!$5 \\text{ minutes}$!$ in seconds?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "300"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "dd2a78d4101348a08af57",
+                    "stepText": "Now, using the observed values for current $!$(4.5 A)$!$, potential difference $!$(10 V)$!$, and the converted time $!$(300 s)$!$, calculate the total electrical energy consumed by the lamp by substituting these values into the energy transfer formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "13500"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ea2b6388-e3ef-4379-ad2d-5c1a2505b8a2"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

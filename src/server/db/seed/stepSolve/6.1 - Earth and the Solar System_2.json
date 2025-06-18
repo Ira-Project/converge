@@ -1,0 +1,269 @@
+{
+    "id": "a639c69a580c4061af6df",
+    "name": "Earth and the Solar System",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "0ad3fda5f3f4485fa7dc6",
+            "questionText": "A group of amateur astronomers in the Northern Hemisphere observed that on June 21, the summer solstice, the Sun reaches its highest position in the sky at solar noon. Assuming that Earth's axial tilt is $!$23.5^{\\circ}$!$ and the observers are located at a latitude of $!$\\phi$!$ degrees (where $!$\\phi$!$ is a known value), calculate the Sun's maximum altitude at solar noon on the summer solstice. Provide a single numerical answer in degrees.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "68841dc8f86f49b990703",
+                    "stepText": "Let's start by identifying the Sun's declination on the summer solstice. Which of the following values correctly represents the Sun's declination on this day?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fbd1f851-4609-4e50-9c34-73233c0b64bb",
+                        "73bb5b21-22b0-488c-9219-92ebc101456b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$23.5^{\\circ}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$0^{\\circ}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$45^{\\circ}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$90^{\\circ}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9adfcfdb836c4a2fa6832",
+                    "stepText": "Great! Now, select the correct formula that relates the observer's latitude $!$\\phi$!$ and the Sun's declination $!$\\delta$!$ to give the Sun's maximum altitude at solar noon.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "dba8ca5a-36be-43ba-aed7-13bdc9a3dc2a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$a = 90^{\\circ} - |\\phi - \\delta|$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$a = 90^{\\circ} + |\\phi - \\delta|$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = |\\phi - \\delta|$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = \\phi + \\delta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "67ac94d2cabd441b95d3b",
+                    "stepText": "Now, substitute the known Sun's declination $!$\\delta = 23.5^{\\circ}$!$ into the formula. For observers in the Northern Hemisphere where $!$\\phi > 23.5^{\\circ}$!$, the absolute difference simplifies. Which operation correctly combines $!$90^{\\circ}$!$ and $!$23.5^{\\circ}$!$ to form the constant that will later be adjusted by $!$\\phi$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fbd1f851-4609-4e50-9c34-73233c0b64bb"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$113.5^{\\circ} - \\phi$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$90^{\\circ} - 23.5^{\\circ} + \\phi$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\phi - 113.5^{\\circ}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$90^{\\circ} + 23.5^{\\circ} + \\phi$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c15f6dd5f4e844beb33c6",
+                    "stepText": "To check the arithmetic, let\u2019s use an example. If $!$\\phi = 40^{\\circ}$!$, calculate the numerical result of $!$113.5^{\\circ} - 40^{\\circ}$!$. What is the Sun's maximum altitude in degrees?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "73.5"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "db9782d22c854c1aa88b2",
+                    "stepText": "Finally, summarize your result. Based on the steps, what expression correctly gives the Sun's maximum altitude at solar noon on the summer solstice for an observer at latitude $!$\\phi$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fbd1f851-4609-4e50-9c34-73233c0b64bb",
+                        "dba8ca5a-36be-43ba-aed7-13bdc9a3dc2a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$113.5^{\\circ} - \\phi$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$90^{\\circ} - \\phi$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\phi - 23.5^{\\circ}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\phi + 23.5^{\\circ}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ed81cf51ff444b518dd61",
+            "questionText": "If the space probe is at a distance of $!$6 \\times 10^9 \\text{ km}$!$ from Earth, and the speed of light is $!$3 \\times 10^8 \\text{ m/s}$!$, calculate the time (in seconds) it takes for a signal from the probe to reach Earth.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3e52d192ef3b407f80add",
+                    "stepText": "Let's start by converting the distance from kilometers to meters. Identify the correct conversion factor from kilometers to meters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$1000 \\text{ m} / \\text{km}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$100 \\text{ m} / \\text{km}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$10 \\text{ m} / \\text{km}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$10000 \\text{ m} / \\text{km}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "97c9366fa6714dc284385",
+                    "stepText": "Great, now that you know the conversion factor, multiply the given distance by this factor to convert the distance from kilometers to meters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6000000000000"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "2bcaeb6fadad44199b3ec",
+                    "stepText": "Next, to calculate the light travel time, select the appropriate formula that relates distance and speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "50d7e88d-ebc2-4bb8-a6d9-a4634fe1e452"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{time} = \\frac{\\text{distance}}{\\text{speed}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{time} = \\frac{\\text{speed}}{\\text{distance}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{time} = \\text{distance} \\times \\text{speed}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{time} = \\text{distance} - \\text{speed}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "70ab15352ded4caf8a8b0",
+                    "stepText": "Finally, use the selected formula along with the distance in meters and the given speed to calculate the travel time for the signal. Perform the division to obtain the time in seconds.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20000"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

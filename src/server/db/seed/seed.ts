@@ -75,12 +75,11 @@ if(process.env.ENVIRONMENT === "prod") {
 // CONCEPT CREATION
 // await createConcepts("A3 - Work, Energy and Power");
 const options = {
-  "courseIds": ["22", "23"], // TO DO: Need to replace this with IGCSE
-  "subjectIds": ["2"],
+  "courseIds": ["EpIa!JC8*Gh^Q@0QuC&#G"], // TO DO: Need to replace this with IGCSE
+  "subjectIds": ["ligzM4%#9I0wtF7&FT7b7"],
   "grades": ["9", "10"],
 }
 
-// Create concepts for all files from 1.1 to 6.2
 const fileNames = [
   "1.1 - Physical quantities and measurement techniques",
   "1.2 - Motion",
@@ -114,9 +113,9 @@ const fileNames = [
 //   await createConcepts(fileName, options);
 // }
 
-await mapAllConceptsToSubjects(["2"]);
-await mapAllConceptsToGrades(["11", "12"]);
-await mapAllConceptsToCourses(["22", "23"]);
+// await mapAllConceptsToSubjects(["2"]);
+// await mapAllConceptsToGrades(["11", "12"]);
+// await mapAllConceptsToCourses(["22", "23"]);
 
 
 // LEARN BY TEACHING CREATION
@@ -149,7 +148,25 @@ await mapAllConceptsToCourses(["22", "23"]);
 // await printConceptScores();
 
 // STEP SOLVE CREATION AND DELETION 
-// await createStepSolveAssignment("A1 - Kinematics");
+// await createStepSolveAssignment("1.1 0");
+
+// Create step solve assignments for all file names with different suffixes
+for (const fileName of fileNames) {
+  console.log(`Processing Step Solve file: ${fileName}`);
+  
+  // Create base file (file_name.json)
+  await createStepSolveAssignment(fileName, options);
+  
+  // Create numbered variants (file_name_1.json to file_name_4.json)
+  for (let i = 1; i <= 4; i++) {
+    const numberedFileName = `${fileName}_${i}`;
+    console.log(`Processing Step Solve file: ${numberedFileName}`);
+    await createStepSolveAssignment(numberedFileName, options);
+  }
+}
+
+// await deleteStepSolveAssignment("c0a975e752ed42d4bcb10");
+
 
 
 // await findConceptsWithoutStepSolveSteps();
