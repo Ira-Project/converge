@@ -19,7 +19,7 @@ import { knowledgeZapAssignmentAttempts } from "../../schema/knowledgeZap/knowle
 import { explainTestAttempts } from "../../schema/learnByTeaching/explainTestAttempt";
 import { explainComputedAnswers, explanations } from "../../schema/learnByTeaching/explanations";
 import { conceptMappingAttemptEdges, conceptMappingAttemptNodes, conceptMappingAttempts, conceptMappingMapAttempt } from "../../schema/conceptMapping/conceptMappingAttempts";
-import { conceptTracking, concepts, conceptEdges, conceptsToTopics } from "../../schema/concept";
+import { conceptTracking, concepts, conceptEdges, conceptsToTopics, conceptsToGrades, conceptsToSubjects, conceptsToCourses } from "../../schema/concept";
 import { explainQuestionConcepts } from "../../schema/learnByTeaching/explainQuestions";
 import { stepSolveStepConcepts } from "../../schema/stepSolve/stepSolveQuestions";
 import { knowledgeZapQuestionsToConcepts } from "../../schema/knowledgeZap/knowledgeZapQuestions";
@@ -190,6 +190,15 @@ async function deleteUserConcepts(userId: string) {
     // Delete all junction table references to this concept
     await db.delete(conceptsToTopics)
       .where(eq(conceptsToTopics.conceptId, concept.id));
+    
+    await db.delete(conceptsToSubjects)
+      .where(eq(conceptsToSubjects.conceptId, concept.id));
+    
+    await db.delete(conceptsToCourses)
+      .where(eq(conceptsToCourses.conceptId, concept.id));
+    
+    await db.delete(conceptsToGrades)
+      .where(eq(conceptsToGrades.conceptId, concept.id));
     
     await db.delete(explainQuestionConcepts)
       .where(eq(explainQuestionConcepts.conceptId, concept.id));

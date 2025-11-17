@@ -73,7 +73,7 @@ if(process.env.ENVIRONMENT === "prod") {
 
 
 // CONCEPT CREATION
-// await createConcepts("A3 - Work, Energy and Power");
+// await createConcepts("NCERT_VII Working with Fractions");
 const options = {
   "courseIds": ["EpIa!JC8*Gh^Q@0QuC&#G"],
   "subjectIds": ["ligzM4%#9I0wtF7&FT7b7"],
@@ -126,10 +126,10 @@ const fileNames = [
 // KNOWLEDGE ZAP CREATION
 // await deleteKnowledgeZapAssignment("eh5amb2jb5vs4vi8u2qo6");
 
-for (const fileName of fileNames) {
-  console.log(`Processing Knowledge Zap file: ${fileName}`);
-  await createKnowledgeZapAssignment(fileName, options);
-}
+// for (const fileName of fileNames) {
+//   console.log(`Processing Knowledge Zap file: ${fileName}`);
+//   await createKnowledgeZapAssignment(fileName, options);
+// }
 
 
 // await createKnowledgeZapAssignment("kinematics");
@@ -149,7 +149,7 @@ for (const fileName of fileNames) {
 // await printConceptScores();
 
 // STEP SOLVE CREATION AND DELETION 
-// await createStepSolveAssignment("A1 - Kinematics");
+// await createStepSolveAssignment("Working with Fractions_5");
 
 
 // await findConceptsWithoutStepSolveSteps();
@@ -168,7 +168,7 @@ for (const fileName of fileNames) {
 // await createConceptMappingAssignment();
 
 // USER DELETION
-// await deleteUser("vignesh@iraproject.com");
+await deleteUser("likhitnayak+1@gmail.com");
 // await deleteClassroom("3eiin0pujtyg28x8gyiqp");
 
 // MIGRATE ACTIVITY TYPE TO TEXT

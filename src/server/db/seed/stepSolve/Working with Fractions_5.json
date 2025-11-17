@@ -1,0 +1,160 @@
+{
+    "id": "ac3f7615b7264d2dbf257",
+    "name": "Working with Fractions",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "2a0278c975ec4dc792103",
+            "questionText": "A scientist has $!$\\frac{3}{4}$!$ liter of a chemical solution and conducts as many complete trials as possible, with each trial using $!$\\frac{1}{10}$!$ liter of the solution. After performing all possible complete trials, what is the remaining amount of the solution (in liters)?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "68358d7e68f0488a96ce2",
+                    "stepText": "Let's start by converting the division $!$\\frac{3}{4} \\div \\frac{1}{10}$!$ into a multiplication problem by using the reciprocal of the divisor. Which of the following options correctly represents this conversion?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ecf3fad0-e51a-4187-ae6e-5b625db0e8c9",
+                        "1851c8be-05c0-4b12-b95c-178c225defe4"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{3}{4} \\div \\frac{1}{10} = \\frac{3}{4} \\times \\frac{10}{1}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{3}{4} \\div \\frac{1}{10} = \\frac{3}{1} \\times \\frac{10}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{3}{4} \\div \\frac{1}{10} = \\frac{3}{4} \\times \\frac{1}{10}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e8c2b2904a044bf793ec9",
+                    "stepText": "Great, now that you've converted the division into multiplication, calculate the product $!$\\frac{3}{4} \\times \\frac{10}{1}$!$. What numerical result do you obtain?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.5"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5f178246-13d1-4cf3-9e3c-3787b7f38395"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9b396d2229db45b488a16",
+                    "stepText": "Remember, the scientist can only perform complete trials. From the product you obtained, determine the maximum whole number of complete trials possible. What is that number?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "b9f1e7654e444c1a8a7ca",
+                    "stepText": "Now, calculate the total amount of solution used in these complete trials by multiplying the number of trials by the amount of solution used per trial ($!$\\frac{1}{10}$!$ liter). What is the total solution consumed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.7"
+                    ],
+                    "stepSolveAnswerUnits": "liters",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "31bf18b7be614615b4545",
+                    "stepText": "Finally, subtract the total amount used in the trials from the initial amount of solution $!$\\frac{3}{4}$!$ liter to find the remaining solution. What is the remaining amount in liters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.05"
+                    ],
+                    "stepSolveAnswerUnits": "liters",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "b3e50e3f95d24223aa36a",
+            "questionText": "A farmer plans a rectangular field that is $!$\\frac{2}{3}$!$ km long and $!$\\frac{1}{2}$!$ km wide. If $!$\\frac{1}{4}$!$ of the total area is dedicated to drought-resistant crops, what is the area (in square km) allocated for these crops?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "62cc221fa7f74dacad089",
+                    "stepText": "Let's begin by determining the formula to calculate the area of a rectangle when the dimensions are fractions. Please select the correct concept that represents this multiplication.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "266001c6-29b1-4863-87dc-d06f94ccdfa0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Area} = \\text{length} \\times \\text{width}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Area} = \\frac{\\text{length} + \\text{width}}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Area} = \\text{length} - \\text{width}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "539ba817ad3b4110ab326",
+                    "stepText": "Great. Now, using the multiplication of fractions, calculate the total area of the rectangular field by multiplying the length $!$\\frac{2}{3}$!$ km by the width $!$\\frac{1}{2}$!$ km.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1/3"
+                    ],
+                    "stepSolveAnswerUnits": "km^2",
+                    "stepConcepts": [
+                        "266001c6-29b1-4863-87dc-d06f94ccdfa0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e12ca7ed9bac4e2b96436",
+                    "stepText": "Now that you have the total area, determine the area dedicated to drought-resistant crops by multiplying the total area by the fraction $!$\\frac{1}{4}$!$. Please perform this multiplication.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1/12"
+                    ],
+                    "stepSolveAnswerUnits": "km^2",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}
