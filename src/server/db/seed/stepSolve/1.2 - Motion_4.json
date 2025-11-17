@@ -1,0 +1,243 @@
+{
+    "id": "06c42284562249e08d0bf",
+    "name": "Motion",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "8c3f54de0ba2482198fca",
+            "questionText": "A heavy bowling ball is dropped from rest in a vacuum and takes $!$2\\,\\text{s}$!$ to reach the ground with an acceleration due to gravity of $!$g = 9.8\\,\\text{m/s}^2$!$. First, calculate the height from which it was dropped. Then, using this height, determine the difference in time between when a feather (which is dropped from the same height and experiences a constant downward acceleration of $!$1\\,\\text{m/s}^2$!$ due to air resistance) and the bowling ball reach the ground. Provide the difference in time as a single numerical value.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d65c5c7b1f4f4e6fbab1c",
+                    "stepText": "Let's start by selecting the appropriate free-fall formula that relates distance, acceleration, and time for an object dropped from rest. Identify which of the following formulas you would use.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = \\frac{1}{2}gt^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = gt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "61c6f874e33e4b3d8a3d0",
+                    "stepText": "Now, use the free-fall formula with the given values $!$t = 2\\,s$!$ and $!$g = 9.8\\,m/s^2$!$ to calculate the height from which the bowling ball was dropped.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "19.6"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "abd5a2fd491a43bdae587",
+                    "stepText": "Next, identify the free-fall formula appropriate for calculating the time taken by an object (dropped from rest) when a different constant acceleration is acting. Select the correct formula for this case with $!$a = 1\\,m/s^2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$s = \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$s = \\frac{1}{2}at$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7adb0c1d7ad64f32af0ce",
+                    "stepText": "Using the height from Step 2 and the chosen free-fall formula with $!$a=1\\,m/s^2$!$, calculate the time it takes for the feather to reach the ground.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.26"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "bf356ebf-0c10-4ac7-83ad-d295081f17bf"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "293144c4a1fb44369ca62",
+                    "stepText": "Finally, determine the difference in time between the feather and the bowling ball reaching the ground. (Hint: Subtract the bowling ball's time from the feather's time.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.3"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "97b4ef3e53ca47dd8bb73",
+            "questionText": "A cyclist begins a ride by accelerating from rest at a constant rate for $!$10$!$ seconds, reaching a speed of $!$15 \\text{ m/s}$!$. They then maintain this uniform velocity for $!$5 \\text{ minutes}$!$ before applying the brakes and decelerating uniformly to a stop in $!$50$!$ meters. Calculate the cyclist's average speed for the entire journey (in m/s).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "eb51a3301abb4647b0352",
+                    "stepText": "Let's start by finding the average speed during the acceleration phase. When an object accelerates uniformly from rest, we need to use the formula that relates the initial speed and final speed to the average speed. Please select the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a7a72a73-91d0-4f19-a0fb-f00f03a3c856",
+                        "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v_{\\text{avg}} = \\frac{u+v}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v_{\\text{avg}} = \\frac{s}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v_{\\text{avg}} = \\sqrt{uv}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d0b490f4462a48a0b509a",
+                    "stepText": "Now that you've identified the formula for average speed during uniform acceleration, calculate the distance traveled in this phase by multiplying this average speed by the time of acceleration ($!$10$!$ seconds). What is the computed distance?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "75"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a7a72a73-91d0-4f19-a0fb-f00f03a3c856"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ca2a1a3ed3fd4270b9fc2",
+                    "stepText": "Next, consider the phase where the cyclist maintains a constant speed. With a constant velocity of $!$15 \\text{ m/s}$!$ maintained for $!$5 \\text{ minutes}$!$, convert the time to seconds and compute the distance covered in this stage. What is this distance?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4500"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "99b4c98c8dea4fb183967",
+                    "stepText": "For the deceleration phase, the cyclist uniformly slows down from $!$15 \\text{ m/s}$!$ to rest over a known distance. Identify the SUVAT equation that relates initial speed, final speed, acceleration, and distance, which can be used to find the deceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a0d90090-575c-4da3-801b-a286406bd77c",
+                        "e012005a-91bd-4bce-8500-cb07fad78628"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v^2 = u^2 + 2as$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$s = ut + \\frac{1}{2}at^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = u + at$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e831be41bc13445c9b309",
+                    "stepText": "Using the information from the deceleration stage and the appropriate equations, calculate the time taken during deceleration. (Hint: After finding the deceleration using the chosen SUVAT equation, use the relation $!$v = u+at$!$ to compute the time.) What is the time taken?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.67"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "42a327e0-041f-45f5-b694-73ab9a05eafc",
+                        "e012005a-91bd-4bce-8500-cb07fad78628"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5a8d817390ce4da7895f6",
+                    "stepText": "Finally, combine the results from all stages. Add the distances from the acceleration, constant speed, and deceleration phases, and sum the corresponding times. Then, calculate the average speed for the entire journey by dividing the total distance by the total time. What is the cyclist's overall average speed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "14.61"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "a7a72a73-91d0-4f19-a0fb-f00f03a3c856",
+                        "358fa7d0-ba78-4a9a-9ad6-af05cca12b29"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState, useEffect } from 'react';
 import {
   ReactFlow,
   useNodesState,
@@ -57,11 +57,45 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
   const [nodeStatuses, setNodeStatuses] = useState<Record<string, 'correct' | 'incorrect' | null>>({});
   const [edgeStatuses, setEdgeStatuses] = useState<Record<string, 'correct' | 'incorrect' | null>>({});
 
+  // Add state for mobile tap interactions
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  const [selectedItem, setSelectedItem] = useState<{ id: string; text: string; type: 'node' | 'edge' } | null>(null);
+
+  // Detect mobile device
+  useEffect(() => {
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768 || 'ontouchstart' in window);
+    };
+    
+    checkIsMobile();
+    window.addEventListener('resize', checkIsMobile);
+    
+    return () => window.removeEventListener('resize', checkIsMobile);
+  }, []);
+
   const handleDragStart = (e: React.DragEvent, option: { id: string; text: string }, index: number | null): void => {
+    if (isMobile) return; // Prevent drag on mobile
     setIsDragging(true);
     setDraggedItem(option);
     setDraggedIdx(index);
     e.dataTransfer.setData('text/plain', JSON.stringify(option));
+  };
+
+  const handleItemSelect = (item: { id: string; text: string }, type: 'node' | 'edge') => {
+    if (!isMobile) return; // Only for mobile
+    setSelectedItem({ ...item, type });
+  };
+
+  const handleNodePlace = (nodeId: string) => {
+    if (!isMobile || !selectedItem || selectedItem.type !== 'node') return;
+    handleNodeDrop(nodeId, selectedItem.text);
+    setSelectedItem(null);
+  };
+
+  const handleEdgePlace = (edgeId: string) => {
+    if (!isMobile || !selectedItem || selectedItem.type !== 'edge') return;
+    handleEdgeLabelDrop(edgeId, selectedItem.text);
+    setSelectedItem(null);
   };
 
   const onStepUse = (step: string) => {
@@ -195,8 +229,10 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
     handleNodeReturn,
     handleEdgeLabelDrop,
     handleEdgeLabelReturn,
-    handleEdgeRemove
-  }), [handleNodeDrop, handleNodeReturn, handleEdgeLabelDrop, handleEdgeLabelReturn, handleEdgeRemove]);
+    handleEdgeRemove,
+    handleNodePlace,
+    handleEdgePlace
+  }), [handleNodeDrop, handleNodeReturn, handleEdgeLabelDrop, handleEdgeLabelReturn, handleEdgeRemove, handleNodePlace, handleEdgePlace]);
 
   // Then use the memoized handlers in nodeTypes and edgeTypes
   const nodeTypes = useMemo(() => ({
@@ -209,9 +245,12 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
     }) => <InputNode {...props} 
       data={{ ...props.data, status: nodeStatuses[props.id] ?? null }}
       onDrop={memoizedHandlers.handleNodeDrop}
-      onReturn={memoizedHandlers.handleNodeReturn}/>,
+      onReturn={memoizedHandlers.handleNodeReturn}
+      onPlace={memoizedHandlers.handleNodePlace}
+      isMobile={isMobile}
+      selectedItem={selectedItem}/>,
     static: StaticNode,
-  }), [nodeStatuses, memoizedHandlers]);
+  }), [nodeStatuses, memoizedHandlers, isMobile, selectedItem]);
 
   const edgeTypes = useMemo(() => ({
     'custom-edge': CustomEdge,
@@ -237,8 +276,11 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
         onLabelDrop={memoizedHandlers.handleEdgeLabelDrop}
         onLabelReturn={memoizedHandlers.handleEdgeLabelReturn}
         onEdgeRemove={memoizedHandlers.handleEdgeRemove}
+        onPlace={memoizedHandlers.handleEdgePlace}
+        isMobile={isMobile}
+        selectedItem={selectedItem}
         />
-  }), [edgeStatuses, memoizedHandlers]);
+  }), [edgeStatuses, memoizedHandlers, isMobile, selectedItem]);
 
   const handleEvaluateMap = async () => {
     posthog.capture("concept_mapping_evaluate_clicked"); 
@@ -277,8 +319,29 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
   }
 
   return (
-    <div className="flex flex-col gap-8">
-      <div className="w-[60vw] h-[40vh] mx-auto my-auto">
+    <div className="flex flex-col gap-4 md:gap-8">
+      {/* Selected Item Indicator for Mobile */}
+      {isMobile && selectedItem && (
+        <div className="bg-blue-100 border border-blue-300 rounded-lg p-3 text-center">
+          <p className="text-sm font-medium text-blue-800">
+            Selected: <span className="font-bold">"{selectedItem.text}"</span>
+          </p>
+          <p className="text-xs text-blue-600 mt-1">
+            {selectedItem.type === 'node' 
+              ? 'Tap on a concept box to place it there' 
+              : 'Tap on a connection line to place the label there'
+            }
+          </p>
+          <button
+            onClick={() => setSelectedItem(null)}
+            className="mt-2 text-xs text-blue-600 underline"
+          >
+            Cancel selection
+          </button>
+        </div>
+      )}
+
+      <div className="w-full md:w-[60vw] h-[30vh] md:h-[40vh] mx-auto my-auto">
         <ReactFlow
           nodeTypes={nodeTypes}
           edgeTypes={edgeTypes}
@@ -297,26 +360,19 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
       </div>
       {!success && (
         <>
-          {/* Available Headings */}
-          <div className="grid grid-cols-2 gap-8">
-            <div className="flex flex-col">
-              <p className="font-semibold text-center my-auto">
-                Concepts
-              </p>
-            </div>
-            <div className="flex flex-col">
-              <p className="font-semibold text-center">
-                Concept Relationships
-              </p>
-              <p className="text-xs text-muted-foreground text-center max-w-[300px] mx-auto">
-                (Create relationships by connecting concepts. You can click on the black circles to connect them. Drag the labels after connecting.)
-              </p>
-            </div>
-          </div>
-          {/* Available Steps Section */}
-          <div className="grid grid-cols-2 gap-8">
-            <div className="flex flex-col gap-4">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center">
+          {/* Mobile: Stacked Layout */}
+          <div className="flex flex-col gap-6 md:hidden">
+            {/* Concepts Section */}
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col">
+                <p className="font-semibold text-center">
+                  Concepts
+                </p>
+                <p className="text-xs text-muted-foreground text-center px-2 mt-1">
+                  Tap a concept, then tap on a concept box above to place it
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 text-center">
                 {availableNodeLabels
                   .filter(option => !usedSteps.includes(option.label))
                   .map((option) => (
@@ -324,12 +380,25 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
                       key={option.id}
                       step={option.label}
                       onDragStart={(e) => handleDragStart(e, { id: option.id, text: option.label }, null)}
+                      onSelect={() => handleItemSelect({ id: option.id, text: option.label }, 'node')}
+                      isSelected={selectedItem?.id === option.id && selectedItem?.type === 'node'}
+                      isMobile={isMobile}
                     />
                   ))}
               </div>
             </div>
-            <div className="flex flex-col">          
-              <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center">
+            
+            {/* Concept Relationships Section */}
+            <div className="flex flex-col gap-3">
+              <div className="flex flex-col">
+                <p className="font-semibold text-center">
+                  Concept Relationships
+                </p>
+                <p className="text-xs text-muted-foreground text-center max-w-[300px] mx-auto px-2">
+                  First connect concepts by tapping the circles, then tap a relationship label and tap on the connection line to label it
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4 text-center">
                 {availableEdgeLabels
                   .filter(option => !usedSteps.includes(option.label))
                   .map((option) => (
@@ -337,8 +406,66 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
                       key={option.id}
                       label={option.label}
                       onDragStart={(e) => handleDragStart(e, { id: option.id, text: option.label }, null)}
+                      onSelect={() => handleItemSelect({ id: option.id, text: option.label }, 'edge')}
+                      isSelected={selectedItem?.id === option.id && selectedItem?.type === 'edge'}
+                      isMobile={isMobile}
                     />  
                   ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Desktop: Side-by-Side Layout */}
+          <div className="hidden md:block">
+            {/* Available Headings */}
+            <div className="grid grid-cols-2 gap-8 mb-8">
+              <div className="flex flex-col">
+                <p className="font-semibold text-center my-auto">
+                  Concepts
+                </p>
+              </div>
+              <div className="flex flex-col">
+                <p className="font-semibold text-center">
+                  Concept Relationships
+                </p>
+                <p className="text-xs text-muted-foreground text-center max-w-[300px] mx-auto px-2">
+                  (Create relationships by connecting concepts. You can click on the black circles to connect them. Drag the labels after connecting.)
+                </p>
+              </div>
+            </div>
+            {/* Available Steps Section */}
+            <div className="grid grid-cols-2 gap-8">
+              <div className="flex flex-col gap-4">
+                <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center">
+                  {availableNodeLabels
+                    .filter(option => !usedSteps.includes(option.label))
+                    .map((option) => (
+                      <DraggableStep
+                        key={option.id}
+                        step={option.label}
+                        onDragStart={(e) => handleDragStart(e, { id: option.id, text: option.label }, null)}
+                        onSelect={() => handleItemSelect({ id: option.id, text: option.label }, 'node')}
+                        isSelected={false}
+                        isMobile={isMobile}
+                      />
+                    ))}
+                </div>
+              </div>
+              <div className="flex flex-col">          
+                <div className="grid grid-cols-2 gap-y-4 gap-x-6 text-center">
+                  {availableEdgeLabels
+                    .filter(option => !usedSteps.includes(option.label))
+                    .map((option) => (
+                      <DraggableEdgeLabel
+                        key={option.id}
+                        label={option.label}
+                        onDragStart={(e) => handleDragStart(e, { id: option.id, text: option.label }, null)}
+                        onSelect={() => handleItemSelect({ id: option.id, text: option.label }, 'edge')}
+                        isSelected={false}
+                        isMobile={isMobile}
+                      />  
+                    ))}
+                </div>
               </div>
             </div>
           </div>
@@ -346,7 +473,7 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
       )}
       {success ? (
         <div className="flex flex-col gap-4">
-          <p className="text-center text-green-500">
+          <p className="text-center text-green-500 px-4">
             Congratulations! You have successfully created the concept map.
           </p>
         </div>
@@ -359,7 +486,7 @@ export default function ConceptMap({ attemptId, assignmentId, initialNodes, init
           className="p-2 ml-auto hover:no-underline"
         >
           <div className="flex flex-row gap-2">
-            <span className="my-auto font-semibold">
+            <span className="my-auto font-semibold text-sm md:text-base">
               Evaluate Concept Map
             </span>
             <Image 

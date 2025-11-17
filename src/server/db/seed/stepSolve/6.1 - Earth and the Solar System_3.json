@@ -1,0 +1,204 @@
+{
+    "id": "f730696f099f4c8ebfb7f",
+    "name": "Earth and the Solar System",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9ff40f0c96d14e3797deb",
+            "questionText": "Calculate the approximate minimum round-trip communication delay (in seconds) for a signal sent from Earth to a probe located at Jupiter's average orbital distance from the Sun. Assume that Jupiter's average orbital distance is $!$7.78 \\times 10^8$!$ km, Earth's average orbital distance is $!$1.50 \\times 10^8$!$ km, and the speed of light is $!$3.00 \\times 10^8$!$ m/s. Assume that Earth and Jupiter are aligned on the same side of the Sun, and remember to convert units as necessary.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "97080eb074dc48dd878de",
+                    "stepText": "Let's start by finding the separation between Jupiter and Earth when aligned on the same side of the Sun. Subtract Earth\u2019s orbital distance from Jupiter\u2019s orbital distance (both given in kilometers). What is the resulting distance in kilometers?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.28e8"
+                    ],
+                    "stepSolveAnswerUnits": "km",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "88fa29e147a841c48c8c9",
+                    "stepText": "Great! Now, convert the separation you just found from kilometers to meters. Recall that $!$1 \\text{ km} = 10^3 \\text{ m}$!$. What is the converted distance in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.28e11"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7dc0d021dada4db4ade04",
+                    "stepText": "Now we need to calculate the time it takes for light to travel this distance. Please select the correct formula for light travel time from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "50d7e88d-ebc2-4bb8-a6d9-a4634fe1e452"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$t = \\frac{\\text{distance}}{\\text{speed}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$t = \\text{distance} \\times \\text{speed}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = \\frac{\\text{speed}}{\\text{distance}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = \\frac{\\text{distance}^2}{\\text{speed}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "219c4315eac043b29acc0",
+                    "stepText": "Now that you've recalled the necessary formula, use it to compute the one-way light travel time. Divide the converted distance (in meters) by the speed of light. What is the one-way travel time in seconds?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.09e3"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "50d7e88d-ebc2-4bb8-a6d9-a4634fe1e452"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "158fac19196443468e361",
+                    "stepText": "Finally, remember that the question asks for the round-trip delay. That means you need to double the one-way travel time. What is the approximate round-trip communication delay in seconds?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.18e3"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "97a1919c1d54439da3e1f",
+            "questionText": "Given that Earth orbits the Sun with an average orbital radius of $!$1.50 \\times 10^8$!$ kilometers and an orbital period of approximately $!$365.25$!$ days, calculate Earth's average orbital speed around the Sun in meters per second.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "10c22635660d4f03968f5",
+                    "stepText": "Let's start by identifying the correct formula to calculate average orbital speed. Please choose the correct formula from the options provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "adc2e666-a4b5-4e5e-a471-48bb5c2629a2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\frac{2\\pi r}{T}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{r}{T}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{T}{2\\pi r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c1b3877d8ae248bd865b2",
+                    "stepText": "Great! Now, convert the orbital radius from kilometers to meters. Recall that $!$1\\ \\text{km} = 1000\\ \\text{m}$!$. What is the orbital radius in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.50e11"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "858210e1cc6a42e3bf80b",
+                    "stepText": "Next, convert the orbital period from days to seconds. Hint: There are $!$86400\\ \\text{s}$!$ in one day. What is the orbital period in seconds?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.15576e7"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "83dc6dbf0ca441fdb405d",
+                    "stepText": "Now, identify the formula to calculate the orbital circumference using the orbital radius. Please choose the correct expression from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Circumference} = 2\\pi r$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Circumference} = \\pi r$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Circumference} = \\frac{r}{2\\pi}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8bc130512df04d27a59ea",
+                    "stepText": "Finally, use the orbital circumference and the orbital period (in seconds) to calculate Earth's average orbital speed around the Sun. Divide the circumference by the period to obtain the speed. What is the average orbital speed in meters per second?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.99e4"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "adc2e666-a4b5-4e5e-a471-48bb5c2629a2"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

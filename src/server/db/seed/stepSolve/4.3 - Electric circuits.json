@@ -1,0 +1,230 @@
+{
+    "id": "58cced5ff94e409ea0431",
+    "name": "Electric Circuits",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a82bca516a3c41c2ba084",
+            "questionText": "A family is decorating their house for the holidays with a new string of LED lights. These lights are designed with individual LED lamps connected in parallel. If there are $!$20$!$ identical LED lamps in the string, each with a resistance of $!$50 \\Omega$!$, and the entire string is powered by an adapter providing a potential difference of $!$10 \\text{V}$!$, calculate the total current drawn from the adapter when all lights are on.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8ca4eb98cebe4819ad5e3",
+                    "stepText": "Let's start by understanding the connection type of the LED lamps. In a parallel circuit, a particular electrical property is the same across each device. Please select the correct concept that represents this property.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "14433c91-f1d3-40a5-97dc-3039b29cf8eb"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$The potential difference across each parallel device is equal$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$The current through each parallel branch is equal$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Resistances in parallel add together$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "badf2f38e27841c8a1501",
+                    "stepText": "Now, to find the current through one LED lamp, we need to use a fundamental law relating voltage, current, and resistance. Please choose the correct formula that aligns with this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1532d048-087f-4857-82bf-a6919d28c16c",
+                        "3726a9ff-2bdf-4c8c-a24b-f19fcc73a73b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = IR$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = VR$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R = IV$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4566e9a1878943409bd29",
+                    "stepText": "Great, now apply the chosen formula using the values $!$V = 10 \\text{V}$!$ and $!$R = 50 \\Omega$!$ to calculate the current through one LED lamp.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.2"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "1532d048-087f-4857-82bf-a6919d28c16c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f8f00639b27444f9aefee",
+                    "stepText": "Next, consider how currents combine in a parallel circuit. Which concept best describes how the total current drawn from the adapter is obtained from the currents through the individual lamps?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9ca76b6e-9ace-41d1-95e6-774aeb585050"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$The total current is the sum of the currents in each branch$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$The total current is equal to the current of any single branch$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$The total current is the supply voltage divided by the total resistance$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1080b639bd72471f8232e",
+                    "stepText": "Finally, knowing the current through one lamp and the fact that there are 20 identical lamps connected in parallel, calculate the total current drawn from the adapter.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "e9df202bb52c4a578cfa6",
+            "questionText": "A smart garden lighting system is powered by a battery pack. This battery pack is constructed from individual cells, each with an electromotive force (\\(\\text{e.m.f.}\\)) of $!$1.5\\,\\text{V}$!$. To achieve the desired voltage, two identical sets of cells are connected in series. Each set consists of four cells connected in series. These two identical series sets are then connected in parallel with each other to extend the operational lifetime. Calculate the total \\(\\text{e.m.f.}\\) of this battery pack.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "80457cbee17f48c0b8a63",
+                    "stepText": "Let's start by considering the way cells in series combine their e.m.f. Please identify the correct formula that shows how electromotive forces add up when cells are connected in series.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "320b0a47-989b-4366-9676-1f34e540ac09",
+                        "b14dd40f-3728-4962-ae52-1fb9c050b293"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = E_1 + E_2 + E_3 + E_4$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = E_1 \\times E_2 \\times E_3 \\times E_4$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{E_1 + E_2 + E_3 + E_4}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "209be8a9db4c4c4885a69",
+                    "stepText": "Now, using the series connection property, calculate the total e.m.f. for one set of four cells if each has an e.m.f. of $!$1.5\\,\\text{V}$!$. What is the resultant value in volts?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.0"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "320b0a47-989b-4366-9676-1f34e540ac09",
+                        "b14dd40f-3728-4962-ae52-1fb9c050b293"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "928fbd407d2041edbc20a",
+                    "stepText": "Great, now consider the effect of connecting two identical series sets in parallel. Please identify which statement correctly reflects the relationship of total e.m.f. in a parallel connection.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "320b0a47-989b-4366-9676-1f34e540ac09"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "The total e.m.f. is the same as the e.m.f. of one series set.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The total e.m.f. becomes the sum of the e.m.f.s of both sets.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The total e.m.f. is the product of the e.m.f.s of the sets.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2300dc787cc440e1a077d",
+                    "stepText": "Finally, using your insights from the previous steps, determine the overall e.m.f. of the battery pack. What is your final answer in volts?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.0"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "320b0a47-989b-4366-9676-1f34e540ac09"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,187 @@
+{
+    "id": "1c6bd35d70d94710b0334",
+    "name": "Forces",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9a5c34381ff5411db80d7",
+            "questionText": "A rower is propelling a boat, with a combined mass of $!$150\\,\\text{kg}$!$. The rower applies a forward force of $!$200\\,\\text{N}$!$, while the boat experiences water resistance (drag) of $!$80\\,\\text{N}$!$ and air resistance of $!$20\\,\\text{N}$!$. Calculate the acceleration of the boat.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "24aed5d19edf4a0fb6f55",
+                    "stepText": "Let's start by determining the net force acting on the boat. Consider all forces acting in the forward and opposing directions and compute the resulting force.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "3e20303c-d807-4753-b313-0259b2682a2e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a2dcd961e2e346199d44a",
+                    "stepText": "Great, now that we have the net force, we need to relate this net force, the mass of the boat, and its acceleration. Which formula correctly expresses the relationship between these quantities?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+                        "356d493b-02b5-4b95-b7b5-f34b9ec99aa1"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = ma$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = m/a$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = a/m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "df1227d5fe374cce9f4b4",
+                    "stepText": "Now, using the relationship you selected, calculate the acceleration of the boat by dividing the net force by the mass.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.67"
+                    ],
+                    "stepSolveAnswerUnits": "m/s\u00b2",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "faccb1d8d4b64255bd8d1",
+            "questionText": "A car with a mass of $!$1200\\,\\text{kg}$!$ is negotiating a bend with a radius of $!$25\\,\\text{m}$!$. The road provides a maximum static friction force of $!$10000\\,\\text{N}$!$. Given that the centripetal force required for circular motion is $!$F_c = \\frac{mv^2}{r}$!$, where $!$m$!$ is the mass, $!$v$!$ is the speed, and $!$r$!$ is the radius, calculate the maximum speed (in meters per second) at which the car can travel without skidding.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "01809e1f1dde47a0a2845",
+                    "stepText": "Let's start by identifying the correct formula for centripetal force. Please choose the correct formula among the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F_c = \\frac{mv^2}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F_c = \\frac{m^2v}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F_c = \\frac{v^2}{mr}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0fe3c79eb2b847af89df4",
+                    "stepText": "Now, equate the maximum static friction force to the centripetal force. This leads to an equation of the form $!$10000 = \\frac{1200 \\times v^2}{25}$!$. To solve for $!$v^2$!$, we first need to rearrange the equation. Identify the correct rearranged formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+                        "2b9c31ac-1129-4fad-aa8a-1cfd77412d64"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v^2 = \\frac{10000 \\times 25}{1200}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v^2 = \\frac{1200 \\times 25}{10000}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v^2 = \\frac{10000}{1200 \\times 25}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a50d24f948234f7b830aa",
+                    "stepText": "Great, now that you have set up the equation correctly, calculate the value of $!$v^2$!$. Use the numbers: static friction force, radius, and mass to compute $!$v^2 = \\frac{10000 \\times 25}{1200}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "208.33"
+                    ],
+                    "stepSolveAnswerUnits": "m^2/s^2",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "76d079927510434cb0167",
+                    "stepText": "Finally, determine the maximum speed by taking the square root of the value calculated in the previous step. Identify the correct operation through the options provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "14.43"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\sqrt{208.33}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = 208.33^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{208.33}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

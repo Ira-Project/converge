@@ -53,7 +53,7 @@ export default function AssignmentShareModal({
 
   useEffect(() => {
     // Set the assignment link after component mounts
-    setAssignmentLink(`${window.location.origin}${Paths.Activity}${activityId}${Paths.ReasonTrace}${Paths.LiveActivity}`);
+    setAssignmentLink(`${window.location.origin}${Paths.Activity}${activityId}${Paths.ConceptMapping}${Paths.LiveActivity}`);
   }, [activityId]);
 
   const copyToClipboard = async () => {

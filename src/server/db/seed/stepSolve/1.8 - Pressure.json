@@ -1,0 +1,197 @@
+{
+    "id": "cc42704efb6749ff9c829",
+    "name": "Pressure",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "6ae14abc696a4e38a69ad",
+            "questionText": "A civil engineer is designing a hydroelectric dam. The reservoir has a maximum depth of $!$80 \\text{ m}$!$. The density of water is $!$1000 \\text{ kg/m^3}$!$, and the acceleration due to gravity is $!$9.8 \\text{ m/s^2}$!$. Calculate the hydrostatic pressure in Pascals exerted by the water at the base of the dam wall (assume atmospheric pressure is negligible).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "483a5515cbb64dfbbbad9",
+                    "stepText": "Let's start by identifying the correct liquid pressure change formula that you would use to calculate the hydrostatic pressure at the dam's base. Please choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta p = \\rho g \\Delta h$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = \\rho g \\Delta h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta p = \\rho \\Delta h / g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "621af8f87b4542f991f69",
+                    "stepText": "Great, now that you've chosen the correct formula, substitute the given values into it: density $!$1000\\,\\text{kg/m^3}$!$, gravitational acceleration $!$9.8\\,\\text{m/s^2}$!$, and depth $!$80\\,\\text{m}$!$. Calculate the product to find the hydrostatic pressure.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "784000"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "817892e0942245398dfc2",
+                    "stepText": "Finally, verify the SI unit for pressure. From the options provided, select the correct unit used to express the pressure you just calculated.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eb81a8c6-e84d-4852-9078-86ba33aa930f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Pascal}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Newton}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Joule}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "6e4511f01da6462ab5081",
+            "questionText": "A submersible is descending into the Mariana Trench. It has a square viewing port with sides of $!$0.5\\,\\text{m}$!$. At a certain depth, the external pressure on the hull is $!$105\\,\\text{MPa}$!$. Calculate the total force exerted by the water on this viewing port.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "dd13b92d23e842b0b807b",
+                    "stepText": "Let's begin by identifying the basic formula that defines pressure in terms of force and area. Which one of these formulas correctly represents that relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p = \\frac{F}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{p}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{A}{p}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ae167200cfe64aafbdde9",
+                    "stepText": "Now, using the pressure definition from earlier, which rearranged formula should you use to calculate the force acting on the port?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = p \\times A$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{A}{p}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{p}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d1cc1c22f7034c05bd0a5",
+                    "stepText": "Let's start by converting the given external pressure from MPa to Pa. Remember that $!$1\\,\\text{MPa} = 10^6\\,\\text{Pa}$!$. What is $!$105\\,\\text{MPa}$!$ in pascals?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "105000000"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "eb81a8c6-e84d-4852-9078-86ba33aa930f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "83725a75924c444fba860",
+                    "stepText": "Next, calculate the area of the square viewing port. Given that each side is $!$0.5\\,\\text{m}$!$, what is the area in square meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.25"
+                    ],
+                    "stepSolveAnswerUnits": "m\u00b2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "8af44d50bb094cd187ba2",
+                    "stepText": "Finally, using the correct formula for force (from Step 2) along with your calculated pressure in pascals and area in square meters, determine the total force exerted on the viewing port.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "26250000"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

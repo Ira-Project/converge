@@ -17,7 +17,7 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, role }) => {
   const { url, iconImage, title, colour, description } = getMetaDataFromActivityType(typeText as ActivityType ?? undefined, id);
 
   return (
-    <div className="border rounded-2xl p-4 md:p-6 w-full min-w-[260px] max-w-[280px] md:min-w-[300px] md:max-w-none flex-shrink-0">
+    <div className="border rounded-2xl p-4 md:p-6 w-[280px] md:w-[400px] flex-shrink-0">
       <div className="flex items-start justify-between mb-3 md:mb-4">
         <div>
           <Image src={iconImage} alt={title} width={50} height={50} className="md:w-[60px] md:h-[60px]" />

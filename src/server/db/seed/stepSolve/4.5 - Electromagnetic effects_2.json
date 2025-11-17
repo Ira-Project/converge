@@ -1,0 +1,178 @@
+{
+    "id": "ac4404be83904399be90f",
+    "name": "Electromagnetic Effects",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "51083f3d03ca43f2a67cf",
+            "questionText": "A modern electric vehicle uses a DC traction motor with an armature coil having $!$500$!$ turns. Initially, the motor operates with a current of $!$20$!$ A and within a magnetic field of strength $!$0.8$!$ T. Under rapid acceleration, the control system increases the current to $!$30$!$ A and boosts the magnetic field strength by $!$25\\%$!$. Calculate the percentage increase in the torque produced by the motor coil.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1cf2d4f7872a4569a4a9c",
+                    "stepText": "Let's start by identifying the relationship that describes the turning effect (torque) in a DC motor. Which formula correctly shows how the torque depends on the current, magnetic field strength, and number of coil turns?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "64ca9430-041b-4763-8f47-957fc06903bb",
+                        "1ed72357-335a-4cf5-bd42-356439446c45"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I \\times B \\times N$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I+B+N$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I \\times B / N$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "11886354734b4b10b60f0",
+                    "stepText": "Now, let\u2019s compute the initial effective value that determines the torque by multiplying the initial current by the initial magnetic field strength. What is the product of $!$20$!$ A and $!$0.8$!$ T?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "16"
+                    ],
+                    "stepSolveAnswerUnits": "arbitrary units",
+                    "stepConcepts": [
+                        "64ca9430-041b-4763-8f47-957fc06903bb"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e887ea2207d145f3ac9cc",
+                    "stepText": "Next, the magnetic field is boosted by 25%. To find the new magnetic field strength, select the correct formula that represents a $!$25\\%$!$ increase in the original field $!$B$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "64ca9430-041b-4763-8f47-957fc06903bb"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$B_{final} = B \\times 1.25$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$B_{final} = B + 0.25$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$B_{final} = B \\times 0.25$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "27a98c59998741e5a5281",
+                    "stepText": "Using the result from the previous step, calculate the new effective value by multiplying the accelerated current of $!$30$!$ A with the new magnetic field strength (found from the 25% boost). What is this product?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30"
+                    ],
+                    "stepSolveAnswerUnits": "arbitrary units",
+                    "stepConcepts": [
+                        "64ca9430-041b-4763-8f47-957fc06903bb"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "eca369ba818647b283152",
+                    "stepText": "Finally, determine the percentage increase in the torque. Use the formula for percentage change based on the initial and new effective values. What is the percentage increase?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "87.5"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "55fe9411a70443b09062d",
+            "questionText": "The Large Hadron Collider (LHC) at CERN uses powerful superconducting solenoids to control and accelerate subatomic particles. Protons are injected into a circular path where they move at near-light speeds, guided and focused by immense magnetic fields generated by these solenoids. If the initial current supplied to the solenoids is $!$10 \\text{ kA}$!$ and scientists determine they need to increase the magnetic force on the protons by $!$15\\%$!$ to maintain their precise trajectory, what new current, in kiloamperes ($!$\\text{kA}$!$), should be supplied to the solenoids, assuming all other parameters affecting the force remain constant?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a1c69e7859f04e96857ee",
+                    "stepText": "Let's start by considering the relationship between the magnetic field in a solenoid and the current flowing through it. Please select the option that correctly represents this proportionality.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6cb984c4-c135-4dc8-9487-1f13fe35f451"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$B \\propto I$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$B \\propto I^{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$B \\propto \\sqrt{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7a9533bf8f3341738903a",
+                    "stepText": "Great, now that we've established the direct proportionality, let's determine the multiplication factor that corresponds to a 15% increase in current. Please calculate the factor by which the original current should be multiplied.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.15"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "18f54f7fa6604c7899f20",
+                    "stepText": "Using the multiplication factor from the previous step, compute the new current by multiplying the initial current of $!$10 \\text{ kA}$!$ by this factor. What is the resulting current?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "11.5"
+                    ],
+                    "stepSolveAnswerUnits": "kA",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

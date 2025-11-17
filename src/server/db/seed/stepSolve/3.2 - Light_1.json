@@ -1,0 +1,215 @@
+{
+    "id": "f1a50ff7abcb4d67a3c4c",
+    "name": "Light",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "4be78d65b11442029ca48",
+            "questionText": "In a photography studio, a circular studio lamp with radius $!$R_l$!$ is placed $!$d_l$!$ away from an opaque subject of diameter $!$D_s$!$. A backdrop is positioned $!$d_b$!$ behind the subject. Assuming all distances are measured from the corresponding centers, calculate the diameter of the umbra (complete shadow) cast on the backdrop. Please provide numerical values for $!$R_l$!$, $!$d_l$!$, $!$D_s$!$, and $!$d_b$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fb1f6bcbc5be4fe5bffdd",
+                    "stepText": "Let's start by identifying the similar triangles relation for the half\u2010umbra. Choose the option that correctly represents the relationship for the half\u2010diameter of the umbra in terms of the subject diameter $!$D_s$!$, lamp radius $!$R_l$!$, distance from lamp to subject $!$d_l$!$, and distance from subject to backdrop $!$d_b$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a35be94-9c83-415f-8207-626c37d1120f",
+                        "4941a3ad-ddee-4260-a925-3ada3fa69fad"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{D_s}{2} + \\left(\\frac{D_s}{2} - R_l\\right)\\left(\\frac{d_b}{d_l}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{D_s}{2} - \\left(\\frac{D_s}{2} - R_l\\right)\\left(\\frac{d_b}{d_l}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{D_s}{2} + \\left(\\frac{D_s}{2} + R_l\\right)\\left(\\frac{d_b}{d_l}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e618aedb5ef644deaccb0",
+                    "stepText": "Great, now select the full umbra (shadow) diameter formula based on your previous choice. Which option correctly gives the full diameter of the umbra on the backdrop?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a35be94-9c83-415f-8207-626c37d1120f",
+                        "4941a3ad-ddee-4260-a925-3ada3fa69fad"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$D_s + \\left(D_s - 2R_l\\right)\\left(\\frac{d_b}{d_l}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$D_s + \\left(D_s - R_l\\right)\\left(\\frac{d_b}{d_l}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$D_s - \\left(D_s - 2R_l\\right)\\left(\\frac{d_b}{d_l}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9e3eb4bf496749aa8411e",
+                    "stepText": "Now, identify the correct numerical values for the parameters from the options below: lamp radius $!$R_l$!$, distance from lamp to subject $!$d_l$!$, subject diameter $!$D_s$!$, and distance from subject to backdrop $!$d_b$!$. Which set of values will you use?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "R_l = 10 cm, d_l = 100 cm, D_s = 30 cm, d_b = 150 cm",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "R_l = 15 cm, d_l = 90 cm, D_s = 25 cm, d_b = 140 cm",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "R_l = 12 cm, d_l = 110 cm, D_s = 35 cm, d_b = 160 cm",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cb8c6ac3f5f04858bf85d",
+                    "stepText": "Using the full umbra diameter formula you selected and the numerical values, substitute the numbers into the formula to compute the umbra diameter on the backdrop. Perform the necessary multiplication and addition.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "45"
+                    ],
+                    "stepSolveAnswerUnits": "cm",
+                    "stepConcepts": [
+                        "7a35be94-9c83-415f-8207-626c37d1120f",
+                        "4941a3ad-ddee-4260-a925-3ada3fa69fad"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "66d3cb268ed64b25a11f2",
+                    "stepText": "Finally, state the complete shadow (umbra) diameter on the backdrop based on your calculations.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "45"
+                    ],
+                    "stepSolveAnswerUnits": "cm",
+                    "stepConcepts": [
+                        "7a35be94-9c83-415f-8207-626c37d1120f",
+                        "4941a3ad-ddee-4260-a925-3ada3fa69fad"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "0780b287bdc64c94af42f",
+            "questionText": "A patient suffers from myopia, causing distant non-luminous objects to form a real image $!$1.5 \\text{ cm}$!$ in front of the retina. The retina is $!$2.5 \\text{ cm}$!$ from the eye's natural lens system. To correct this, an optometrist prescribes a diverging lens. Calculate the power of the prescribed diverging lens needed to form a clear image on the retina.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "049b0593b8f346d9a5076",
+                    "stepText": "Let's start by determining the distance between the position where the image forms and the retina. Subtract the position of the image from the distance of the retina from the lens. What is the far point of the eye (in cm)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.0"
+                    ],
+                    "stepSolveAnswerUnits": "cm",
+                    "stepConcepts": [
+                        "cafce598-9e75-4148-9359-dcbff52ab5ee"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2e80b8dab403413884475",
+                    "stepText": "Now, convert the far point distance from centimeters to meters to use it in lens calculations. What is the far point distance in meters, keeping in mind the sign convention for a diverging lens?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-0.01"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "7e51a527-9086-4473-b4df-c57a80affa40"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7282fbe049d34dce951e5",
+                    "stepText": "Great! Next, identify the correct formula to calculate the power of a lens in dioptres. Please select the appropriate formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "579e3fe9-1690-465b-b0c6-32a60dc7075a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = \\frac{1}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = \\frac{1}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "73aa79738a0544918e9f4",
+                    "stepText": "Finally, using the focal length calculated earlier and the formula for lens power, compute the power of the diverging lens in dioptres. What is the numerical value of the power?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-100"
+                    ],
+                    "stepSolveAnswerUnits": "dioptres",
+                    "stepConcepts": [
+                        "579e3fe9-1690-465b-b0c6-32a60dc7075a"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

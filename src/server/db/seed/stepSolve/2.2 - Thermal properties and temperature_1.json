@@ -1,0 +1,181 @@
+{
+    "id": "43565178387348bb8cd37",
+    "name": "Thermal Properties and Temperature",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "1e68afec704d4aa9abe3d",
+            "questionText": "A railway engineer inspects tracks. Each steel rail section is $!$15\\,\\text{m}$!$ long at $!$20^\\circ\\text{C}$!$. On a scorching summer day, the temperature of the rails rises to $!$50^\\circ\\text{C}$!$. The linear expansivity of steel is $!$1.2\\times10^{-5}\\,\\text{\\textdegree C}^{-1}$!$. Calculate the new length of each rail section at $!$50^\\circ\\text{C}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4664d69b1cea425ba5f08",
+                    "stepText": "Let's begin by calculating the change in temperature ($!$\\Delta \\theta$!$). Subtract the initial temperature from the final temperature.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30"
+                    ],
+                    "stepSolveAnswerUnits": "$!$^\\circ\\text{C}$!$",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "21bb877dda5a434da04c2",
+                    "stepText": "Great! Now, identify the correct formula to calculate linear expansion. Choose the option that correctly relates the expansion with the linear expansivity, the original length, and the temperature change.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta L = \\alpha L_0 \\Delta \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta L = \\alpha \\frac{L_0}{\\Delta \\theta}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta L = \\alpha \\frac{\\Delta \\theta}{L_0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8a4b60cae8354f37a265a",
+                    "stepText": "Now, use the formula to calculate the expansion. Multiply the given linear expansivity ($!$1.2\\times10^{-5}\\,\\text{\\textdegree C}^{-1}$!$), the original length ($!$15\\,\\text{m}$!$), and the temperature change ($!$30^\\circ\\text{C}$!$). What is the expansion in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0054"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "00f86fb964bf413fb9e4c",
+                    "stepText": "Finally, add the calculated expansion to the original length to obtain the new length of the rail. What is the new length in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15.0054"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "ba2988d59f4945b99544f",
+            "questionText": "Suppose $!$5000\\text{ kg}$!$ of water at the surface of a lake cools from $!$10\\text{ \\degree C}$!$ to $!$5\\text{ \\degree C}$!$. Given the specific heat capacity of water is $!$4200\\text{ J kg}^{-1} \\text{ \\degree C}^{-1}$!$, calculate the thermal energy (in joules) lost by this mass of water.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "29b637f11ed849d79eee0",
+                    "stepText": "Let's start by summarizing the given information. Identify the values provided for the mass ($!$m$!$), the specific heat capacity ($!$c$!$), and the initial and final temperatures.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "81aff587-ab8e-447b-a084-49ff29038b01"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Mass, specific heat capacity, and temperatures",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Pressure, volume, and density",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Frequency, wavelength, and amplitude",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "289f0fc33fb8478e9fa6d",
+                    "stepText": "Next, compute the change in temperature by subtracting the final temperature from the initial temperature. What is the temperature difference ($!$\\Delta \\theta$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5"
+                    ],
+                    "stepSolveAnswerUnits": "\\degree C",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "cb3956b3c25c4138b211b",
+                    "stepText": "Now, select the correct formula that relates the thermal energy change to the mass, specific heat capacity, and temperature change. Which formula is appropriate here?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "81aff587-ab8e-447b-a084-49ff29038b01"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta E = m \\times c \\times \\Delta \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta E = \\frac{m \\times c}{\\Delta \\theta}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E = m + c + \\Delta \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1c9ce463fb38479198ad6",
+                    "stepText": "Finally, use the values for the mass, specific heat capacity, and temperature difference to calculate the thermal energy lost by the water. Multiply these quantities together to find the answer in joules.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "105000000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "81aff587-ab8e-447b-a084-49ff29038b01"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

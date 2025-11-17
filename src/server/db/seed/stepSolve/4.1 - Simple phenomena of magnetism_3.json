@@ -1,0 +1,209 @@
+{
+    "id": "e1e8daff12874c08bd95e",
+    "name": "Simple Phenomena of Magnetism",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "8d50e1eb600a4a0d9da43",
+            "questionText": "An electromagnet has a lifting force given by the relation $!$F = k I^{2}$!$, where $!$F$!$ is the force in newtons, $!$I$!$ is the current in amperes, and $!$k$!$ is a constant equal to $!$0.5~\\text{N/A}^2$!$. If the electromagnet must provide a lifting force of $!$100~\\text{N}$!$ to successfully pick up iron scraps, calculate the minimum current $!$I$!$ (in amperes) required to achieve this force.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "29ff80cc2bb24c0cabafb",
+                    "stepText": "Let's start by identifying the relation between the lifting force, current, and the constant. Please choose the correct formula that represents this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4e6d249c-7ac0-4506-88df-2d52e8c63cb9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = k I^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = k I$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = I^2/k$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = I/k^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2e27bebd587845348636b",
+                    "stepText": "Great! Now, rearrange the identified formula to solve for the current $!$I$!$. Which of the following rearrangements is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4e6d249c-7ac0-4506-88df-2d52e8c63cb9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I^2 = F/k$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I^2 = k/F$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = F/k$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = k/F$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1ec6c65735b940d5afe9e",
+                    "stepText": "Now substitute the given values of $!$F=100~\\text{N}$!$ and $!$k=0.5~\\text{N/A}^2$!$ into the rearranged equation $!$I^2 = F/k$!$. Calculate the value of $!$I^2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "200"
+                    ],
+                    "stepSolveAnswerUnits": "A^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "cc9fd89ae6a14c398c7b7",
+                    "stepText": "Finally, take the square root of $!$I^2$!$ to determine the minimum current $!$I$!$ required. What is the approximate value of $!$I$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "14.14"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "54d1fb090a624d6593e18",
+            "questionText": "A fishing game uses a strong permanent magnet on a fishing rod and a fish containing a weak permanent magnet. Given that the magnetic moments of the rod magnet and the fish magnet are $!$\\mu_1$!$ and $!$\\mu_2$!$ (in A\\cdot m^2) respectively, and that the centers of the magnets are separated by a distance $!$r$!$ (in m), compute the net magnetic force (in N) between the two magnets using the dipole-dipole interaction formula $!$F = \\frac{3\\mu_0}{4\\pi r^4}(\\mu_1\\mu_2)$!$, where $!$\\mu_0$!$ is the permeability of free space. Assume the alignment of the magnets is such that the force is attractive. Provide a single numerical answer for $!$F$!$. (If any values are missing, please provide them so that a numerical answer can be calculated.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c3a8fa78ca604a2ba0703",
+                    "stepText": "Let's start by identifying the correct interaction formula needed to calculate the net force between the two magnets. Please select the dipole-dipole interaction formula that should be used.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{3\\mu_0}{4\\pi r^4}(\\mu_1\\mu_2)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{\\mu_0}{4\\pi}\\frac{2\\mu_1\\mu_2}{r^3}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{\\mu_0}{4\\pi}\\frac{\\mu_1\\mu_2}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6be186bee53e4fc78f622",
+                    "stepText": "Now that we have established the formula, we need to assume representative numerical values for the missing parameters. Please choose the set of values for $!$\\mu_1$!$, $!$\\mu_2$!$, and $!$r$!$ that we will use in our calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\mu_1 = 1.0\\,A\\cdot m^2,\\;\\mu_2 = 0.1\\,A\\cdot m^2,\\;r = 0.5\\,m$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\mu_1 = 0.5\\,A\\cdot m^2,\\;\\mu_2 = 0.2\\,A\\cdot m^2,\\;r = 1.0\\,m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\mu_1 = 2.0\\,A\\cdot m^2,\\;\\mu_2 = 0.5\\,A\\cdot m^2,\\;r = 0.2\\,m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "502c0ed235934803a14ed",
+                    "stepText": "Great, with the assumed value $!$r = 0.5\\,m$!$, let's compute $!$r^4$!$. Please calculate the value of $!$r^4$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0625"
+                    ],
+                    "stepSolveAnswerUnits": "m^4",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "eb7b947f29134dedb2c81",
+                    "stepText": "Next, using the chosen values of $!$\\mu_1$!$ and $!$\\mu_2$!$, compute their product $!$\\mu_1\\mu_2$!$. Please calculate this value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1"
+                    ],
+                    "stepSolveAnswerUnits": "A^2\u00b7m^4",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "97c5a7ac90a847f48ee1d",
+                    "stepText": "Finally, substitute the calculated values along with the constant $!$\\mu_0 = 4\\pi \\times 10^{-7}\\,N/A^2$!$ into the interaction formula and simplify to find the net magnetic force $!$F$!$. Please calculate the numerical value for $!$F$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.8e-7"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

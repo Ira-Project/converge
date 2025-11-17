@@ -1,0 +1,182 @@
+{
+    "id": "b250ddf2abc84099b68d3",
+    "name": "Transfer of Thermal Energy",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "71b8015153f04163a22b6",
+            "questionText": "Consider two flat surfaces at room temperature $!$20^\\circ\\text{C}$!$. A human finger at $!$30^\\circ\\text{C}$!$ comes into instantaneous contact with each surface over a contact area of $!$A=0.01\\ \\text{m}^2$!$ for a duration such that the steady-state conduction approximation applies. The stainless steel surface has a thermal conductivity of $!$k_{SS}=16\\ \\text{W/(m \\cdot K)}$!$, while the wooden surface has a thermal conductivity of $!$k_{wood}=0.12\\ \\text{W/(m \\cdot K)}$!$. Both surfaces have a thickness of $!$L=0.005\\ \\text{m}$!$, so that the rate of heat transfer by conduction can be approximated by $!$\\frac{Q}{t}=k\\,\\frac{A\\,(\\Delta T)}{L}$!$. Calculate the ratio of the heat transfer rate from the finger to the stainless steel surface to that from the finger to the wooden surface. Provide your numerical answer.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6779bc0458864c69a4f24",
+                    "stepText": "Let's start by identifying the correct conduction formula that applies to this scenario. Choose the option which represents the appropriate formula for rate of heat transfer by conduction.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{Q}{t}=k\\,\\frac{A\\,(\\Delta T)}{L}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{Q}{t}=m\\,c\\,(\\Delta T)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{Q}{t}=h\\,A\\,(T_{surface}-T_{ambient})$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6d84c348d793408ca31f4",
+                    "stepText": "Great, now observe that the only differing factor between the two cases is the thermal conductivity. Identify the expression that relates the ratio of the conduction heat transfer rates using the thermal conductivities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15",
+                        "1e9bf3f1-c78d-4858-9c86-3df3db5f5414"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Ratio}=\\frac{k_{SS}}{k_{wood}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Ratio}=\\frac{k_{wood}}{k_{SS}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Ratio}=\\frac{A\\,(\\Delta T)}{L}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c010f437ca124c359e1a6",
+                    "stepText": "Now, calculate the numerical value of the ratio by substituting the given thermal conductivities into the expression you selected. Compute $!$\\frac{16}{0.12}$!$ and provide your numerical answer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "133.33"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "26a7ec38-677b-496d-a6c0-d0b7dab41e15"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "81261cae00d0406f821fc",
+            "questionText": "Consider an oven whose interior surface has an emissivity of $!$\\epsilon_{oven} = 0.95$!$ due to its dark, dull black finish, while a highly reflective surface would have an emissivity of $!$\\epsilon_{ref} = 0.10$!$. Assuming that the net radiative heat transfer from a surface is directly proportional to its emissivity, by what factor is the radiative heat transfer increased when using the oven's dark surface compared to a reflective surface? Provide your answer as a numerical value.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "268edcf211054767b6586",
+                    "stepText": "Let's start by identifying the relationship between net radiative heat transfer and emissivity. Which of the following expressions correctly represents the statement that the net radiative heat transfer is directly proportional to the emissivity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "3b13c682-91e3-450a-a4bb-e41f482703bd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q \\propto \\epsilon$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q \\propto 1/\\epsilon$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q \\propto \\epsilon^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q \\propto 1/\\epsilon^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e5289ba80d87450295392",
+                    "stepText": "Great, now that you've recalled the proportional relationship, substitute the given emissivity values: $!$\\epsilon_{oven}=0.95$!$ and $!$\\epsilon_{ref}=0.10$!$ into the relation. What is the factor by which the radiative heat transfer increases for the dark surface compared to the reflective surface?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "9.5"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "de22969f-114a-4a29-99ab-3185359a6275"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b90d8565d5284b26b672d",
+                    "stepText": "Finally, reflect on the impact of your calculated factor. Considering the computed value, does this indicate that the oven's dark surface leads to a significantly higher radiative heat transfer compared to a reflective surface? Choose the statement that best aligns with your result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9a650c7e-201f-4c14-b566-5f76439e6be4"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Yes, the dark surface increases the radiative heat transfer substantially.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "No, the difference is minimal.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The emissivity only affects conduction, not radiation.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "It has a significant effect on convection rather than radiation.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

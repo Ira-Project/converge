@@ -1,0 +1,181 @@
+{
+    "id": "80c9e921f90d4c55b1fe2",
+    "name": "Kinetic Particle Model of Matter",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "31a3bf9a61324dfd9638e",
+            "questionText": "An aerosol can contains a gas initially at $!$2.5 \\text{ atm} $!$ and $!$25^\\circ \\text{ C}$!$. If the can is placed in direct sunlight and the temperature of the gas increases to $!$50^\\circ \\text{ C}$!$, with the volume remaining constant and assuming the gas behaves ideally, calculate the final pressure in atmospheres.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a0868b0cf25d4613abb35",
+                    "stepText": "Let's begin by identifying the gas law that relates pressure and temperature for a fixed volume. Please select the correct law from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{P}{T} = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P \\times V = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{V}{T} = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e80385265e454de3a6ec9",
+                    "stepText": "Great, now convert the initial temperature from degrees Celsius to Kelvin using the formula $!$T = \\theta + 273$!$. What is the initial temperature in Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "298"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6a71bd3f940a4ca6866f5",
+                    "stepText": "Now, convert the final temperature from degrees Celsius to Kelvin. Apply the same conversion formula. What is the final temperature in Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "323"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "6befaea4a3bf4061b45bd",
+                    "stepText": "Let's now establish the relation to compare initial and final states at constant volume. Please choose the correct mathematical relation that connects the pressures and temperatures.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{P_1}{T_1} = \\frac{P_2}{T_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P_1 \\times T_1 = P_2 \\times T_2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{T_1}{P_1} = \\frac{T_2}{P_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6f9bd6b33dbb4618b8e03",
+                    "stepText": "Finally, use the relation $!$P_2 = P_1 \\times \\frac{T_2}{T_1}$!$ to calculate the final pressure. With $!$P_1 = 2.5 \\text{ atm}$!$, $!$T_1 = 298\\text{ K}$!$, and $!$T_2 = 323\\text{ K}$!$, compute the final pressure in atmospheres.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.71"
+                    ],
+                    "stepSolveAnswerUnits": "atm",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "b27a0960432146c2b070f",
+            "questionText": "Given a tire with a fixed volume $!$V$!$ (in cubic meters), containing $!$n$!$ moles of air at an initial absolute temperature $!$T_1$!$ (in Kelvin) and an initial pressure $!$P_1$!$ (in Pascals), the air is heated so that its temperature increases to a final absolute temperature $!$T_2$!$ (in Kelvin). Using the ideal gas law, calculate the final pressure $!$P_2$!$ (in Pascals) inside the tire. Then, determine the pressure change $!$\\Delta P = P_2 - P_1$!$. Provide the numerical value of $!$\\Delta P$!$. (If any values such as $!$V$!$, $!$n$!$, $!$T_1$!$, $!$T_2$!$, or $!$P_1$!$ are missing, please supply them.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7c15d0ba8f7240fcbd050",
+                    "stepText": "Let's start by identifying the relationship between pressure and temperature for a fixed amount of gas at constant volume. Select the correct formula that expresses how the final pressure $!$P_2$!$ relates to the initial pressure $!$P_1$!$ and temperatures $!$T_1$!$ and $!$T_2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P_2 = P_1 \\times \\frac{T_2}{T_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P_2 = P_1 \\times \\frac{T_1}{T_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P_2 = P_1 + \\frac{T_2}{T_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5f4055e626bf47e8b7ce0",
+                    "stepText": "Great, now that you have identified the correct relationship, substitute the numerical values $!$P_1 = 100000 \\text{ Pa}, T_1 = 300 \\text{ K}, T_2 = 600 \\text{ K}$!$ into the formula to calculate the final pressure $!$P_2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "200000"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "818752d15e65460ca960c",
+                    "stepText": "Now, using the calculated final pressure, compute the pressure change $!$\\Delta P$!$ using the relation $!$\\Delta P = P_2 - P_1$!$. What is the numerical value of $!$\\Delta P$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100000"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+{
+    "id": "0442f302f688440f8d6cb",
+    "name": "Earth and the Solar System",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a211987b44594e67889b8",
+            "questionText": "Astronauts on the Moon are sending a signal to Mission Control on Earth. Given that the average distance between the Moon and Earth is $!$384{,}400\\ \\text{km}$!$ and that the speed of light is $!$3.00 \\times 10^8\\ \\text{m/s}$!$, calculate the approximate one-way time delay in seconds for the signal.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "31efc998777f46f3b2536",
+                    "stepText": "Let's start by identifying the correct formula needed to determine the light travel time. Please choose the formula that relates time to distance and speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "50d7e88d-ebc2-4bb8-a6d9-a4634fe1e452",
+                        "613636b3-0ae8-4a7d-b7b3-a3b03cbc9952"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$t = \\frac{\\text{distance}}{\\text{speed}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$t = \\frac{\\text{speed}}{\\text{distance}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = \\text{distance} \\times \\text{speed}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0c8a04e16fae4fc98bb24",
+                    "stepText": "Great! Now, we need to ensure that the units are consistent. Convert the given distance from kilometers to meters. (Remember: $!$1\\ \\text{km} = 1000\\ \\text{m}$!$)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "384400000"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "0a80b00a38294eec84d91",
+                    "stepText": "Now that we have the distance in meters, use the formula identified earlier to compute the one-way time delay by dividing the distance by the speed of light.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.28"
+                    ],
+                    "stepSolveAnswerUnits": "seconds",
+                    "stepConcepts": [
+                        "50d7e88d-ebc2-4bb8-a6d9-a4634fe1e452"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "0545b9a3f01e4b0ea01ca",
+            "questionText": "A group of amateur astronomers is tracking the phases of the Moon throughout 2024 from the Northern Hemisphere. They know that the Moon orbits Earth in approximately $!$27\\text{ days}$!$, and that a New Moon was observed on January 1st, 2024. Assuming the year has $!$365\\text{ days}$!$, compute the total number of First Quarter Moons that could be observed in 2024.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ee1b68450f4248259e35a",
+                    "stepText": "Let's start by confirming the Moon's orbital period. Identify the value that represents the Moon's orbital period from Earth in days.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d016f00-77a7-4749-8c3f-0d07898d933c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Approximately $!$27\\text{ days}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Approximately $!$30\\text{ days}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Approximately $!$20\\text{ days}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bfc97325546d47d8a0f7e",
+                    "stepText": "Now, calculate the total number of lunar cycles in 2024 by dividing the total days in the year by the lunar orbital period. Compute $!$365/27$!$ and determine the whole number part of the cycles.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "13"
+                    ],
+                    "stepSolveAnswerUnits": "cycles",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "9914f09f78ea414c92367",
+                    "stepText": "Next, determine the remaining days in 2024 after accounting for the complete lunar cycles. Subtract the days used by the full cycles from the total days (i.e., compute $!$365 - (13 \\times 27)$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "14"
+                    ],
+                    "stepSolveAnswerUnits": "days",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "deef5fcaa8564458a439f",
+                    "stepText": "Now, consider the time needed in a lunar cycle to reach the First Quarter phase. Identify the formula that represents the time required to reach the First Quarter from the New Moon phase.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "96d513e0-02bf-40d5-942e-7876926b2086"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Time} = \\frac{27}{4}\\text{ days}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Time} = \\frac{27}{3}\\text{ days}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Time} = \\frac{27}{2}\\text{ days}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "243360bd88a64284b5b8d",
+                    "stepText": "Finally, determine the total number of observable First Quarter Moons in 2024. Add the number from full lunar cycles to an additional one if the leftover days are sufficient for a First Quarter phase to occur.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "14"
+                    ],
+                    "stepSolveAnswerUnits": "phases",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

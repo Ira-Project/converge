@@ -29,6 +29,9 @@ export type GetOrCreateUserToClassroomInput = z.infer<typeof getOrCreateUserToCl
 export const createClassroomSchema = z.object({
   name: z.string(),
   description: z.string().optional(),
+  gradeText: z.string().optional(),
+  courseId: z.string().optional(),
+  subjectId: z.string().optional(),
 });
 export type CreateClassroomInput = z.infer<typeof createClassroomSchema>;
 
@@ -39,6 +42,9 @@ export const updateClassroomSchema = z.object({
   year: z.number().int().min(2000).max(2100).optional(),
   showLeaderboardStudents: z.boolean(),
   showLeaderboardTeachers: z.boolean(),
+  courseId: z.string().optional(),
+  gradeText: z.string().optional(),
+  subjectId: z.string().optional(),
 });
 
 export type UpdateClassroomInput = z.infer<typeof updateClassroomSchema>;

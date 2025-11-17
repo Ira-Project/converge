@@ -1,0 +1,216 @@
+{
+    "id": "a31e26e8463c4edb8552e",
+    "name": "Light",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "04bcd47ee2bf4d59af313",
+            "questionText": "Calculate the focal length (in meters) of a corrective lens with a power of $!$-2.5\\,D$!$. Use the lens power formula $!$P=\\frac{1}{f}$!$ to compute your answer.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "40481826e85a4b76be8f0",
+                    "stepText": "Let's start by identifying the correct relationship between the power of a lens and its focal length. Which of the following formulas relates the two quantities?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "579e3fe9-1690-465b-b0c6-32a60dc7075a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P=\\frac{1}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P\\times f=1$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P=f^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d16268c39cb541bc9b53d",
+                    "stepText": "Great! Now that you have the power formula, determine how to express the focal length $!$f$!$ in terms of the power $!$P$!$. Which of the following options correctly rearranges the formula?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "579e3fe9-1690-465b-b0c6-32a60dc7075a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f=\\frac{1}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f=P$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f=1-P$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fbb1f4a534734b00b4515",
+                    "stepText": "Now, substitute the given power value $!$-2.5\\,D$!$ into the rearranged formula to calculate the focal length. Compute the value of $!$f=\\frac{1}{P}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-0.4"
+                    ],
+                    "stepSolveAnswerUnits": "meters",
+                    "stepConcepts": [
+                        "579e3fe9-1690-465b-b0c6-32a60dc7075a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7a2816055e084ecbaff26",
+                    "stepText": "Finally, interpret the sign of the focal length. Which of the following statements best describes what the negative focal length indicates about the type of lens?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cafce598-9e75-4148-9359-dcbff52ab5ee"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A negative sign indicates a diverging lens (used for myopia)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A negative sign indicates a converging lens (used for hyperopia)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A negative sign indicates an abnormal lens with no specific corrective property$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "bc240ec0c38545a88d750",
+            "questionText": "A marine research submarine uses an advanced optical system utilizing optical fibres for data transmission. Given that the core of the optical fibre has a refractive index of $!$1.50$!$ and the cladding has a refractive index of $!$1.35$!$, calculate the critical angle for light traveling from the core to the cladding.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1792fb3e0bd34e648f00a",
+                    "stepText": "Let's start by selecting the correct formula that relates to the concept of the critical angle for total internal reflection. Which of the following formulas correctly represents the relationship between the sine of the critical angle and the refractive indices of the two media?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "12c39f67-6487-45a1-ad1c-9b2d008d49da",
+                        "0fd432f9-88af-4d36-8e87-5eae4916e921"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\sin(c) = \\frac{n_2}{n_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\sin(c) = \\frac{n_1}{n_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\cos(c) = \\frac{n_2}{n_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f53b082a41a44e0eafff2",
+                    "stepText": "Great, now that you have identified the formula, let\u2019s compute the ratio of the refractive indices (i.e., $!$n_2/n_1$!$) using the given values. What is the numerical value of this ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.9"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0fd432f9-88af-4d36-8e87-5eae4916e921"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c8dbfcad4fd3484b8e99e",
+                    "stepText": "Now, to find the critical angle, we need to determine which function will help us retrieve the angle from its sine value. Which of the following represents the correct process for obtaining the angle from the sine value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "12c39f67-6487-45a1-ad1c-9b2d008d49da"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$c = \\sin^{-1}(0.9)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$c = \\cos^{-1}(0.9)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$c = \\tan^{-1}(0.9)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1805069f43314c369d379",
+                    "stepText": "Finally, using your previous results, calculate the critical angle by applying the inverse sine function to the ratio. What is the approximate numerical value of the critical angle in degrees?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "64.16"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [
+                        "12c39f67-6487-45a1-ad1c-9b2d008d49da"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "id": "43440249be594916b18d3",
+    "name": "Mass and Weight",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "f976c65acd64460090789",
+            "questionText": "A sports scientist is analyzing an athlete's vertical jump. The athlete has a mass of $!$70\\ \\text{kg}$!$. On Earth, the gravitational field strength is approximately $!$9.8\\ \\text{N/kg}$!$. The scientist emphasizes that while their mass is a constant measure of their body's matter, the 'weight' they feel is directly related to the local gravitational field strength, which is equivalent to the acceleration of free fall. What is the athlete's mass in grams?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "cec72cb92e86401288e28",
+                    "stepText": "Let's start by identifying the athlete's mass given in kilograms from the problem statement.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "70"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "57f9767a-efd0-4e39-9da5-7a711127092b",
+                        "a8bc0dd5-246d-40c2-a509-ac9658a3f04c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a0f301050f15493189faa",
+                    "stepText": "Great, now determine the correct conversion factor that relates kilograms to grams. Which formula correctly defines the relationship between a gram and a kilogram?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0e162bf0-0cec-4c8e-a70d-df85506735b7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\text{ g} = 0.001\\text{ kg}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\text{ kg} = 0.001\\text{ g}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\text{ g} = 1000\\text{ kg}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "65d00c82fd4b468aa7a72",
+                    "stepText": "Now, using the conversion factor from the previous step, compute the athlete's mass in grams by multiplying the mass in kilograms by the appropriate factor.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "70000"
+                    ],
+                    "stepSolveAnswerUnits": "g",
+                    "stepConcepts": [
+                        "0e162bf0-0cec-4c8e-a70d-df85506735b7"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "8b3f6ad235b443bd918cd",
+            "questionText": "An intergalactic cargo ship is preparing for a journey from Earth to Mars. The crew needs to load a crucial piece of equipment with a mass of $!$150\\ \\text{ kg}$!$. Engineers on Earth determined its weight on Earth using a gravitational field strength of $!$9.8\\ \\text{ N/kg}$!$. Upon arrival on Mars, where the gravitational field strength is $!$3.7\\ \\text{ N/kg}$!$, the equipment's weight will change while its mass remains constant. If the cargo ship carries three identical pieces of this equipment, calculate the total weight measured by a spring balance on Mars, in newtons.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5780d86384ee41fdac351",
+                    "stepText": "Let's start by selecting the correct formula that relates weight, mass, and gravitational field strength. Which of the following formulas represents how to calculate weight?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                        "8ba59395-c583-4414-8a6f-d62d5e02032f",
+                        "57f9767a-efd0-4e39-9da5-7a711127092b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = mg$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{m}{g}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = g/m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "afd1ba50466a452bb3971",
+                    "stepText": "Great, now using the selected formula, calculate the weight of one piece of equipment on Mars by multiplying its mass with the gravitational field strength on Mars.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "555"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c92c83c536ea419c88a78",
+                    "stepText": "Now that you have determined the weight of a single piece of equipment on Mars, calculate the total weight for three pieces by multiplying the weight of one piece by 3.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1665"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

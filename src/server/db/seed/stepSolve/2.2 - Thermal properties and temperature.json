@@ -1,0 +1,166 @@
+{
+    "id": "4728e05fc44742869fbe5",
+    "name": "Thermal Properties and Temperature",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "580fd1e65bd84c19948ef",
+            "questionText": "Sarah is trying to open a tightly sealed glass jar of pickles. Her mother advises running the metal lid under hot water. The lid, made of a special alloy, has an initial diameter of $!$8.00\\text{ cm}$!$ at a refrigerator temperature of $!$4.0\\text{ ^\\circ C}$!$. After being run under hot water, its temperature rises to $!$84.0\\text{ ^\\circ C}$!$. Given that the linear expansivity of the metal alloy is $!$1.5 \\times 10^{-5}\\text{ ^\\circ C}^{-1}$!$, calculate the increase in the circumference of the metal lid.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c9ad12d1c48d4ecb83ce1",
+                    "stepText": "Let's start by identifying the appropriate formula that gives the change in a linear dimension due to a temperature change. Which of the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta L = L_0 + \\alpha \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta L = \\alpha L_0 \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta L = \\frac{\\alpha}{L_0 \\Delta T}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta L = L_0 (1+\\alpha \\Delta T)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "48749fdeca3b4384adb18",
+                    "stepText": "Great! Now, let's determine the initial circumference of the lid. You can calculate it using the relation involving the diameter. What is the value of the initial circumference using $!$C = \\pi d$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "25.13"
+                    ],
+                    "stepSolveAnswerUnits": "cm",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "424b25af920f41f1b8a1a",
+                    "stepText": "Now, calculate the change in temperature $!$\\Delta T$!$ by subtracting the initial temperature from the final temperature.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "80.0"
+                    ],
+                    "stepSolveAnswerUnits": "\\text{^\\circ C}",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "58774f02c36e474db29da",
+                    "stepText": "Using the formula you identified in Step 1 along with the initial circumference and the temperature change, compute the increase in the circumference ($!$\\Delta L$!$) of the lid.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.03016"
+                    ],
+                    "stepSolveAnswerUnits": "cm",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8105214abdac45879545e",
+                    "stepText": "Finally, conclude by stating the increase in circumference of the metal lid when it is heated from $!$4.0\\text{ ^\\circ C}$!$ to $!$84.0\\text{ ^\\circ C}$!$. What is your final result?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.03016"
+                    ],
+                    "stepSolveAnswerUnits": "cm",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "848e43adbc814297b6e6d",
+            "questionText": "A freshwater lake is cooling as winter approaches. A section of the lake contains $!$2500\\ \\text{kg}$!$ of water at $!$10\\ \\text{\\degree C}$!$. As the temperature drops to $!$0\\ \\text{\\degree C}$!$, this water begins to freeze. Given that water exhibits anomalous expansion, contracting until it reaches its maximum density at $!$4\\ \\text{\\degree C}$!$ and then expanding as it cools further to $!$0\\ \\text{\\degree C}$!$, and that upon freezing $!$100\\ \\text{cm}^3$!$ of water becomes $!$109\\ \\text{cm}^3$!$ of ice, calculate the volume of ice formed from the $!$2500\\ \\text{kg}$!$ of water. Assume the density of water at $!$0\\ \\text{\\degree C}$!$ is $!$1.00\\ \\text{g/cm}^3$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "fd7d9526ff124364b3c43",
+                    "stepText": "Let's start by converting the mass of water into its corresponding volume. Use the relation between mass, density, and volume. Identify the correct computation method.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2500000"
+                    ],
+                    "stepSolveAnswerUnits": "cm^3",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "e97698c8f80d402cb638e",
+                    "stepText": "Great, now recall that when water freezes, it expands. Identify the expansion factor that relates the volume of water to the volume of ice (i.e., what ratio should be used to convert water volume to ice volume when freezing occurs)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7f0b2dc2-a40c-4fb3-8004-9683082508bb"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{109}{100}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{100}{109}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1.00$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a2a239c24e994e16b0c6e",
+                    "stepText": "Now, multiply the initial water volume by the expansion factor you identified to determine the final volume of ice formed. Compute this multiplication to find the volume of ice.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2725000"
+                    ],
+                    "stepSolveAnswerUnits": "cm^3",
+                    "stepConcepts": [
+                        "7f0b2dc2-a40c-4fb3-8004-9683082508bb"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

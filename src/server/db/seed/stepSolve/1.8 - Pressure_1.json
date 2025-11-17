@@ -1,0 +1,214 @@
+{
+    "id": "91201f24340641929dc12",
+    "name": "Pressure",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "51ad9cda4da94cda8230b",
+            "questionText": "A city's water utility department is troubleshooting a problem with low water pressure in homes located on a hill compared to those in a valley. The main reservoir is located at a higher elevation. Homes in the valley are supplied with water from a point $!$50\\,\\text{m}$!$ vertically below the reservoir's water level, while homes on the hill receive water from a point $!$20\\,\\text{m}$!$ vertically below the reservoir's water level. Given that the density of water is $!$1000\\,\\text{kg/m}^3$!$ and the acceleration due to gravity is $!$9.8\\,\\text{m/s}^2$!$, calculate the pressure difference (in Pascals) between the water supply points for the valley homes and the hill homes.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8b800dab27694c4fa8390",
+                    "stepText": "Let's start by identifying the correct formula that links the change in liquid pressure to a change in depth. Please select the formula that correctly represents this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta p = \\rho g \\Delta h$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = \\frac{F}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = ma$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2e63d646479446c08c53a",
+                    "stepText": "Great! Now, calculate the difference in vertical depth between the valley homes and the hill homes. Use the provided water levels relative to the reservoir.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "921c2915-8116-4288-a6a9-292284065919"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1f6072244ca34c1580cb6",
+                    "stepText": "Now, using the formula you selected in the first step, multiply the water density, the acceleration due to gravity, and the difference in depth to find the pressure difference. Compute this final value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "294000"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a",
+                        "305ef332-500d-4c4e-9da1-1adecb3649db",
+                        "921c2915-8116-4288-a6a9-292284065919"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "ab5adb624ffd4c9ab5f43",
+            "questionText": "An automotive engineer is designing an off-road vehicle weighing $!$2400 \\text{ kg}$!$. The vehicle has four tires. Initially, it is equipped with standard tires, each having a contact area of $!$0.06 \\text{ m}^2$!$ with the ground; later, the tires are replaced with wide off-road tires, each having a contact area of $!$0.15 \\text{ m}^2$!$. Assuming the acceleration due to gravity is $!$9.8 \\text{ m/s}^2$!$, calculate the percentage reduction in the pressure exerted on the ground when using the wide off-road tires compared to the standard tires.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5b1aded93d5e47ba95587",
+                    "stepText": "Let's start by recalling how to calculate the weight (force due to gravity) of the vehicle. Please select the correct formula that is used to calculate this force.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = m + g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = m \\times g$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{m}{g}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "39a1e9d33706441e9529e",
+                    "stepText": "Now that you have the correct operation in mind, calculate the weight of the vehicle using $!$m = 2400 \\text{ kg}$!$ and $!$g = 9.8 \\text{ m/s}^2$!$. Multiply these values to find the force in newtons.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "23520"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "57d319d448084ac0bf2a8",
+                    "stepText": "Next, determine the total contact area for the standard tires. There are 4 tires, each with an area of $!$0.06 \\text{ m}^2$!$. Multiply the number of tires by the area of one tire.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.24"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [
+                        "abcabcf7-2075-45f7-8f12-cb178563152a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3e9965436df54c37be4cb",
+                    "stepText": "Identify the correct formula for pressure. Which option below correctly represents the relationship between force and area?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p = F \\times A$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = \\frac{F}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = \\frac{A}{F}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "87a07b98891046049ea13",
+                    "stepText": "Using the weight calculated earlier and the total contact area for the standard tires, compute the pressure exerted on the ground. Divide the force by the area.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "98000"
+                    ],
+                    "stepSolveAnswerUnits": "Pa",
+                    "stepConcepts": [
+                        "e9bdb536-49c3-414a-80bf-cb6802a6e530"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b2a895fe70744e4ab30fc",
+                    "stepText": "Now, calculate the total contact area when using the wide off-road tires. Multiply the number of tires (4) by the new area for each tire ($!$0.15 \\text{ m}^2$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.60"
+                    ],
+                    "stepSolveAnswerUnits": "m^2",
+                    "stepConcepts": [
+                        "abcabcf7-2075-45f7-8f12-cb178563152a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "999c7ca5793849099f51a",
+                    "stepText": "Finally, compute the pressure exerted with the wide off-road tires and then determine the percentage reduction in pressure. First, divide the weight by the new total area to get the new pressure, then find the difference from the standard pressure and calculate its percentage relative to the standard pressure.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "e9bdb536-49c3-414a-80bf-cb6802a6e530",
+                        "abcabcf7-2075-45f7-8f12-cb178563152a"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,274 @@
+{
+    "id": "e7cd5572fbaf486b86523",
+    "name": "Forces",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "fe515c0f101942b39be37",
+            "questionText": "A person with a mass of $!$60 \\text{ kg}$!$ causes a trampoline mat (which behaves like a spring obeying Hooke's Law) to stretch by $!$0.8 \\text{ m}$!$ when they jump on it. Given that $!$g = 9.81 \\text{ m/s}^2$!$, determine how much the mat would stretch if a person with a mass of $!$45 \\text{ kg}$!$ jumped on it.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6d6f695ee6954a2cbabb3",
+                    "stepText": "Let's start by identifying the formula used to calculate the gravitational force (weight) acting on an object. Select the appropriate formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb",
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = mg$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = m + g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{m}{g}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "714b42c124f84227a0e18",
+                    "stepText": "Now, calculate the gravitational force for the 60 kg person by multiplying the mass by the acceleration due to gravity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "588.6"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e82ddac61a864544bc2d0",
+                    "stepText": "Great. Next, we need to consider the spring behavior of the trampoline. Identify the correct formula that relates the force applied to a spring and its extension.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "14c57299-796f-4df6-927f-383e9d5c44b6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = kx$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{x}{k}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$k = Fx$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a30c9cfb1ff24cc6ba9d4",
+                    "stepText": "Now, using the weight force from step 2 and the given extension of 0.8 m, calculate the spring constant. (Hint: use the relation between force and extension.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "735.75"
+                    ],
+                    "stepSolveAnswerUnits": "N/m",
+                    "stepConcepts": [
+                        "14c57299-796f-4df6-927f-383e9d5c44b6",
+                        "4163b1d6-96ec-41a8-a8ff-f1883bd74931"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "25dc85b94fc74a3f9021a",
+                    "stepText": "Now, to determine the new displacement of the trampoline mat, identify the formula that relates the displacement of a spring, the applied force, and the spring constant.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "14c57299-796f-4df6-927f-383e9d5c44b6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$x = \\frac{F}{k}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$x = Fk$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$x = \\frac{k}{F}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "32ef99dcd529478088f61",
+                    "stepText": "Next, calculate the gravitational force for the 45 kg person by multiplying the mass of 45 kg by the acceleration due to gravity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "441.45"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a5ac6047270e4806b2abc",
+                    "stepText": "Finally, using the force obtained in step 6 and the spring constant from step 4, calculate the new extension of the trampoline mat.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.6"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "14c57299-796f-4df6-927f-383e9d5c44b6",
+                        "4163b1d6-96ec-41a8-a8ff-f1883bd74931"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "e7a45a0b26c749b885f97",
+            "questionText": "A skydiver with a mass of $!$75\\ \\text{kg}$!$ is falling. When they are moving downwards, they experience an air resistance of $!$300\\ \\text{N}$!$. Assuming $!$g = 9.81\\ \\text{m/s}^2$!$, calculate the skydiver's acceleration at that moment.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "209e19836739440ca070c",
+                    "stepText": "Let's start by identifying the formula you would use to calculate the gravitational force (weight) acting on an object, given its mass and the gravitational acceleration. Please select the correct formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = m g$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{m}{g}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = m + g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "44035f02339248ff8cd3d",
+                    "stepText": "Great! Now, use the formula you selected to calculate the gravitational force acting on the skydiver. Multiply the mass $!$75\\ \\text{kg}$!$ by the gravitational acceleration $!$9.81\\ \\text{m/s}^2$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "735.75"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "80c90407f0b54976974b2",
+                    "stepText": "Now, take into account the air resistance acting upward, which is $!$300\\ \\text{N}$!$. Determine the net force acting on the skydiver by subtracting the air resistance from the gravitational force you calculated.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "435.75"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ed4243b9ec5d4baf9b8d4",
+                    "stepText": "Excellent. Next, identify the proper formula that relates net force, mass, and acceleration. Please select the correct formula that you would use to calculate the skydiver's acceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "356d493b-02b5-4b95-b7b5-f34b9ec99aa1"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$a = \\frac{F}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$a = F \\times m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = F - m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5c96a5fa83314878b17f8",
+                    "stepText": "Finally, use the net force and the mass of the skydiver to calculate the acceleration. Divide the net force $!$435.75\\ \\text{N}$!$ by the mass $!$75\\ \\text{kg}$!$ to find the acceleration.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.81"
+                    ],
+                    "stepSolveAnswerUnits": "m/s^2",
+                    "stepConcepts": [
+                        "356d493b-02b5-4b95-b7b5-f34b9ec99aa1"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

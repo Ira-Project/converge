@@ -1,0 +1,158 @@
+{
+    "id": "6f9f996470904b9a94dd7",
+    "name": "General Properties of Waves",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "2bff8b72adf94853a900a",
+            "questionText": "During a live concert, sound engineers adjust settings to optimize the listening experience. If the sound waves propagate at a wave speed of $!$343\\,\\text{m/s}$!$ and a specific note has a frequency of $!$440\\,\\text{Hz}$!$, calculate the wavelength of this sound wave.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4ff046539e794c629040a",
+                    "stepText": "Let's start by identifying the fundamental relationship that connects wave speed, frequency, and wavelength. Please select the correct wave equation from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = f\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = v \\cdot f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = v/\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3b5d1bf5649249d080143",
+                    "stepText": "Great! Now, use the identified equation to express the wavelength in terms of wave speed and frequency. Which of the following rearranged formulas correctly represents the wavelength?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\lambda = \\frac{v}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\lambda = v \\cdot f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{f}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1135d314258342fcb6610",
+                    "stepText": "Now that you have the correct rearranged formula, substitute the given values for wave speed ($!$343\\,\\text{m/s}$!$) and frequency ($!$440\\,\\text{Hz}$!$) into the formula. Calculate the numerical value for the wavelength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.78"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "834e8f915dc1435db9374",
+            "questionText": "During a live concert, sound engineers work to prevent echoes by minimizing reflections off hard surfaces. Imagine a sound wave from a speaker hits a flat wall at an angle of incidence of $!$60^\\circ$!$. Calculate the angle of reflection.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "de4c86e68db44dfeabe2e",
+                    "stepText": "Let's start by identifying the principle that relates the angle of incidence to the angle of reflection. Which relation correctly describes this principle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "56c92c0a-9a1f-4b88-8b6b-8a7541f4d657"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\theta_i = \\theta_r$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\theta_i = 2\\theta_r$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\theta_i + \\theta_r = 90^\\circ$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\theta_i = \\theta_r + 10^\\circ$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c5b45b64c00642488c763",
+                    "stepText": "Great! Now, recall the given information: what is the measure of the angle of incidence from the sound wave hitting the wall?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "0fd4414134804f74bb671",
+                    "stepText": "Finally, using the principle from the first step and the measured angle of incidence, calculate the angle of reflection.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [
+                        "56c92c0a-9a1f-4b88-8b6b-8a7541f4d657"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

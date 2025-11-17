@@ -1,0 +1,133 @@
+{
+    "id": "fa254747e3de4bca99d19",
+    "name": "Sound",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "f0a66e6a6e4b4690945cd",
+            "questionText": "A research submarine is mapping the ocean floor using sonar. It uses ultrasound pulses that travel through water at a speed of $!$1500 \\text{ m/s}$!$ and takes $!$0.8 \\text{ s}$!$ for a pulse to travel to the ocean floor and back. Calculate the depth of the ocean floor.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c96361307a3444ecb05d1",
+                    "stepText": "Let's start by identifying the correct relation for calculating the distance using sonar, which involves the speed of sound, the time taken, and accounts for the fact that the pulse travels to the surface and back. Choose the correct formula:",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "670671d3-985c-4a23-9178-05e06ebd3f7b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d = \\frac{vt}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = \\frac{v}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0625e9aa80054dc7a721f",
+                    "stepText": "Great, now that you have the formula, let's calculate the total distance that the sonar pulse travels by multiplying the speed of sound in water by the total travel time. Compute the product $!$1500 \\text{ m/s} \\times 0.8 \\text{ s}$!$:",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1200"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ccc7d4822a7e404891b6f",
+                    "stepText": "Now, remember that the calculated distance represents the round-trip distance (to the ocean floor and back). To find the depth of the ocean floor, divide this total distance by 2. Calculate one-half of 1200 m:",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "600"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "79e7d886180649719e2e1",
+            "questionText": "On a hot summer day, hikers near a waterfall note that the sound of the waterfall displays diffraction. The air temperature is $!$25^\\circ\\mathrm{C}$!$. The speed of sound in air is given by $!$v = 331~\\mathrm{m/s} + (0.6~\\mathrm{m/s/\\circ C})T$!$, where $!$T$!$ is the temperature in degrees Celsius. If the fundamental frequency of the waterfall's rumble is $!$15~\\mathrm{Hz}$!$, calculate the frequency of its first overtone.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f019e7ff9a6a49db97871",
+                    "stepText": "Let's start by identifying the fundamental frequency provided in the problem. What is the value of $!$f_{0}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "21140d7575274219a5ea5",
+                    "stepText": "Great, now choose the correct formula that relates the overtones to the fundamental frequency. This relation is key to determining the first overtone.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1d2d075b-c511-41ac-a980-0545c5315cc7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f_{n} = n\\,f_{0}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f_{n} = \\frac{f_{0}}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f_{n} = f_{0} + n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "40b4443427634d7e80449",
+                    "stepText": "Now, using the selected formula and recalling that the first overtone corresponds to the second harmonic (i.e. it is twice the fundamental frequency), calculate the frequency of the first overtone.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "1d2d075b-c511-41ac-a980-0545c5315cc7"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

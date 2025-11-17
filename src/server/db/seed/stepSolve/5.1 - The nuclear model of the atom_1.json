@@ -1,0 +1,192 @@
+{
+    "id": "49110309ce0d4238a19c9",
+    "name": "Nuclear Model of the Atom",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "540d15f8a6004babb5846",
+            "questionText": "A high school physics teacher explains that Thomson's 'plum-pudding model' was replaced by the 'modern nuclear model' after Rutherford's gold foil experiment. In the modern nuclear model, an atom has a dense, positively charged nucleus and electrons orbiting it. Consider a neutral atom that has $!$17$!$ protons and $!$18$!$ neutrons in its nucleus. If this atom then loses $!$2$!$ electrons, calculate its net electrical charge in terms of the elementary charge $!$e$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b40320be80a743d4aeb01",
+                    "stepText": "Let's start by considering the definition of a neutral atom. In a neutral atom, the number of electrons equals the number of protons. Which of the following best describes a neutral atom?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c160fbab-1084-4e19-9e11-26bb14e17d31"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{The number of electrons equals the number of protons.}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{The number of electrons is greater than the number of protons.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{The number of electrons is less than the number of protons.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fe6310f475534729a3c84",
+                    "stepText": "Now that we know the atom is initially neutral with $!$17$!$ electrons (matching its $!$17$!$ protons), calculate the remaining number of electrons after the atom loses $!$2$!$ electrons.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15"
+                    ],
+                    "stepSolveAnswerUnits": "electrons",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "26474e5dbdd540c98483c",
+                    "stepText": "Great! Next, we need to determine which formula correctly represents the calculation for the net electrical charge of an atom, given that protons have a charge of $!$+e$!$ and electrons have a charge of $!$-e$!$. Which formula would you select?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2a3fe2ff-41d3-4b89-b49a-65eced8fb72b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$(N_p - N_e)e$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$(N_p + N_e)e$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$(N_e - N_p)e$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8e000738fa1c4cc3a2d1e",
+                    "stepText": "Now, using the numbers from the problem, compute the difference between the number of protons and the remaining electrons. What is the result of $!$17 - 15$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "d9a7afa3d9854a60983b4",
+                    "stepText": "Finally, apply the formula by combining the net difference with the elementary charge $!$e$!$ to find the net electrical charge. What is the net electrical charge of the atom expressed in terms of $!$e$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "e",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "b9beb142ca9d4f108ffd7",
+            "questionText": "Engineers at a nuclear power plant are overseeing the $!$^{235}_{92}U$!$ fission process. In one reaction, a neutron ($!$^{1}_{0}n$!$) strikes a $!$^{235}_{92}U$!$ nucleus, splitting it into Barium-144 ($!$^{144}_{56}Ba$!$), two neutrons ($!$2^{1}_{0}n$!$), and an unknown fission product $!$^{A}_{Z}X$!$. Using conservation of mass number, determine the nucleon number $!$A$!$ of the unknown fission product.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "74cea74ed5534a658d497",
+                    "stepText": "Let's start by identifying the key conservation principle used in nuclear fission reactions that asserts the total number of nucleons remains constant. Which of the following is the correct principle?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "bcd22eda-e3fc-4706-ae1b-75a61ddfa14c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Conservation of Energy}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Conservation of Momentum}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Conservation of Nucleon Number}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Conservation of Charge}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0baa93e78806480480378",
+                    "stepText": "Now, calculate the total mass number on the left side of the reaction by adding the mass numbers of the $!$^{235}_{92}U$!$ nucleus and the neutron $!$^{1}_{0}n$!$. What do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "236"
+                    ],
+                    "stepSolveAnswerUnits": "nucleons",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "b7904ee7c1ab4cd5af8f0",
+                    "stepText": "Great! Next, determine the sum of the known mass numbers on the right side by adding the mass number of Barium-144 and the mass numbers contributed by the two neutrons.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "146"
+                    ],
+                    "stepSolveAnswerUnits": "nucleons",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "42c5dfd60606426b91c2d",
+                    "stepText": "Finally, applying the conservation principle you identified earlier, set the total mass number on the left equal to the total mass number on the right. Subtract the sum on the right (excluding the unknown product) from the left side to find the nucleon number $!$A$!$ of the unknown fission product. What is the value of $!$A$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "90"
+                    ],
+                    "stepSolveAnswerUnits": "nucleons",
+                    "stepConcepts": [
+                        "bcd22eda-e3fc-4706-ae1b-75a61ddfa14c"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

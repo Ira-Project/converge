@@ -1,0 +1,222 @@
+{
+    "id": "bd82bf529fc542ffaf190",
+    "name": "Nuclear Model of the Atom",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "35aa30c8387e45e79ac90",
+            "questionText": "During a tour of a particle physics laboratory, a scientist describes a fission reaction in which a Uranium-235 nucleus ($!$^{235}_{92}U$!$) absorbs a neutron ($!$^{1}_{0}n$!$) and splits into Xenon-139 ($!$^{139}_{54}Xe$!$), two neutrons ($!$^{1}_{0}n$!$ each), and an unknown nuclide, X. Using the conservation of both nucleon number and proton number, determine the number of neutrons in the unknown nuclide X.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c51a10949f624fa5a6be9",
+                    "stepText": "Let's start by calculating the total nucleon number on the left side of the reaction by adding the mass number of Uranium-235 and the neutron.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "236"
+                    ],
+                    "stepSolveAnswerUnits": "nucleons",
+                    "stepConcepts": [
+                        "83080da0-7f55-4037-98ac-b1d833645165",
+                        "bcd22eda-e3fc-4706-ae1b-75a61ddfa14c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f2e23b622e884e12a9d1b",
+                    "stepText": "Now, write the nucleon number conservation equation by summing the mass numbers of Xenon-139, the free neutrons, and the unknown nuclide X. Please select the correct equation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "83080da0-7f55-4037-98ac-b1d833645165",
+                        "bcd22eda-e3fc-4706-ae1b-75a61ddfa14c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$139 + A + 2 = 236$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$139 + A = 236$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A + 2 = 236$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b6b35d61ee5b49858e72c",
+                    "stepText": "Using the selected conservation equation from the previous step, solve for the mass number (A) of the unknown nuclide X.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "95"
+                    ],
+                    "stepSolveAnswerUnits": "nucleons",
+                    "stepConcepts": [
+                        "83080da0-7f55-4037-98ac-b1d833645165",
+                        "bcd22eda-e3fc-4706-ae1b-75a61ddfa14c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bb08cbc29a5445d28e274",
+                    "stepText": "Next, apply proton number conservation. Considering that Uranium-235 provides 92 protons and Xenon-139 provides 54 protons, please select the appropriate conservation equation for proton number.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "330c3def-e9aa-4091-9342-5aec6ea7d127"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$54 + Z = 92$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$92 + Z = 54$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$54 + Z = 139$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9b854525b1cc4a1c80349",
+                    "stepText": "Solve for the atomic number (Z) of the unknown nuclide using the proton conservation equation from the previous step.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "38"
+                    ],
+                    "stepSolveAnswerUnits": "protons",
+                    "stepConcepts": [
+                        "330c3def-e9aa-4091-9342-5aec6ea7d127"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "bf2296b0cec1487d9f499",
+                    "stepText": "Finally, to determine the number of neutrons in the unknown nuclide X, subtract its atomic number (Z) from its mass number (A). Please calculate this value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "57"
+                    ],
+                    "stepSolveAnswerUnits": "neutrons",
+                    "stepConcepts": [
+                        "fb0ad570-8b70-4f1e-95f4-6cdf79d8f580"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "2ea8da9f348a4a45aea90",
+            "questionText": "In a Rutherford scattering experiment, an alpha particle with a kinetic energy of $!$5 \\text{ MeV}$!$ is deflected by the repulsive force of a gold nucleus with an atomic number of $!$79$!$. Assuming that the distance of closest approach $!$d$!$ can be expressed using the formula $!$d = \\frac{1}{4\\pi\\varepsilon_0} \\frac{2Ze^2}{E}$!$, where $!$Z$!$ is the atomic number, $!$e$!$ is the elementary charge ($!$1.60 \\times 10^{-19} \\text{ C}$!$), and $!$\\varepsilon_0$!$ is the vacuum permittivity ($!$8.85 \\times 10^{-12} \\text{ C}^2/\\text{N}\\cdot\\text{m}^2$!$), calculate the distance of closest approach $!$d$!$ in meters. Use $!$E = 5 \\text{ MeV}$!$ with $!$1 \\text{ MeV} = 1.60 \\times 10^{-13} \\text{ J}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "113c306e32874ef4a8b52",
+                    "stepText": "Let's start by writing down the appropriate formula for the distance of closest approach in a Rutherford scattering experiment. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e610543e-36e3-456e-a6dc-ece8abe7bd44"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d = \\frac{1}{4\\pi\\varepsilon_0} \\frac{2Ze^2}{E}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = \\frac{Ze^2}{4\\pi\\varepsilon_0 E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = \\frac{2Ze^2}{E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2f81506f8ff648e4aaf9b",
+                    "stepText": "Great! Now, convert the given kinetic energy from $!$\\text{MeV}$!$ to $!$\\text{J}$!$ using the conversion factor $!$1 \\text{ MeV} = 1.60 \\times 10^{-13} \\text{ J}$!$. What is the energy in joules?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8.0e-13"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "bfed31467504449d8d38a",
+                    "stepText": "Next, calculate the numerator part of the formula, which is $!$2Ze^2$!$. Substitute the values $!$Z = 79$!$ and $!$e = 1.60 \\times 10^{-19}$!$. What numerical value do you obtain for $!$2Ze^2$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.0448e-36"
+                    ],
+                    "stepSolveAnswerUnits": "C^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "c10732bf0e994dbd94034",
+                    "stepText": "Now, multiply the numerator from the previous step by the Coulomb constant $!$\\frac{1}{4\\pi\\varepsilon_0} \\approx 8.99 \\times 10^9$!$. What is the resulting intermediate value?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.64e-26"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "8ae36530b77b4d8f8b3b3",
+                    "stepText": "Finally, divide the value obtained in the previous step by the energy (in joules) calculated earlier to find the distance of closest approach $!$d$!$. What is the final value of $!$d$!$ in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.55e-14"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "e610543e-36e3-456e-a6dc-ece8abe7bd44"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

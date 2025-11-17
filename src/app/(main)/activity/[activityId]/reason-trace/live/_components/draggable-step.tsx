@@ -5,9 +5,10 @@ import FormattedText from '@/components/formatted-text';
 interface DraggableStepProps {
   step: string;
   onDragStart: (e: React.DragEvent<HTMLDivElement>, step: string, index: number | null) => void;
+  onClick?: () => void; // Optional click handler for mobile
 }
 
-const DraggableStep: React.FC<DraggableStepProps> = ({ step, onDragStart }) => (
+const DraggableStep: React.FC<DraggableStepProps> = ({ step, onDragStart, onClick }) => (
   <motion.div
     className="bg-rose-50 px-4 py-2 my-auto rounded-3xl text-sm cursor-move min-h-[56px] flex items-center justify-center"
     whileHover={{ scale: 1.02 }}
@@ -17,6 +18,7 @@ const DraggableStep: React.FC<DraggableStepProps> = ({ step, onDragStart }) => (
     }}
     draggable
     onDragStartCapture={(e: React.DragEvent<HTMLDivElement>) => onDragStart(e, step, null)}
+    onClick={onClick}
   >
     <div className="mx-auto text-center w-full">
       <FormattedText text={step} />

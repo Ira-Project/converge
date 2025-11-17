@@ -1,0 +1,178 @@
+{
+    "id": "ae0b500e06724c52b3b47",
+    "name": "Simple Phenomena of Magnetism",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "8cb51c7ccc3d46449b2cb",
+            "questionText": "A primary school teacher sets up a magnetic fishing game. Suppose that when the fishing rod's magnet (with a magnetic dipole moment of $!$\\mu_r = 1.2\\times10^3\\,A\\cdot m^2$!$) is held at a distance of $!$d = 0.25\\,m$!$ from a fish with a steel paper clip, the induced magnetic dipole in the paper clip has a moment of $!$\\mu_f = 3.5\\times10^{-2}\\,A\\cdot m^2$!$. Assuming that the interaction between the two magnetic dipoles is governed by the formula for the force between aligned dipoles along their axis, calculate the magnitude of the attractive force (in Newtons) between the fishing rod's magnet and the paper clip. Use the dipole-dipole force formula: $!$F = \\frac{3\\mu_0}{4\\pi}\\frac{\\mu_r \\mu_f}{d^4}$!$, where $!$\\mu_0 = 4\\pi\\times10^{-7}\\,N/A^2$!$. Provide your answer as a single numerical value.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7c52243df1024e9aa96a1",
+                    "stepText": "Let's start by simplifying the constant factor in the dipole-dipole force formula, which is $!$\\frac{3\\mu_0}{4\\pi}$!$. Given that $!$\\mu_0 = 4\\pi\\times10^{-7}\\,N/A^2$!$, select the simplified constant value from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$3\\times10^{-7}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$4\\times10^{-7}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$7\\times10^{-7}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c65b9194736149d4b9f22",
+                    "stepText": "Next, calculate the product of the magnetic dipole moments $!$\\mu_r$!$ and $!$\\mu_f$!$. Use the given values: $!$\\mu_r = 1.2\\times10^3\\,A\\cdot m^2$!$ and $!$\\mu_f = 3.5\\times10^{-2}\\,A\\cdot m^2$!$. What is the product $!$\\mu_r \\times \\mu_f$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "42"
+                    ],
+                    "stepSolveAnswerUnits": "A^2\\cdot m^4",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "a0930d5232ce4f9da3fc5",
+                    "stepText": "Now, compute the fourth power of the separation distance $!$d$!$. Given $!$d = 0.25\\,m$!$, calculate $!$d^4$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.00390625"
+                    ],
+                    "stepSolveAnswerUnits": "m^4",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "13fd444d0cf24a9fab930",
+                    "stepText": "With the product from Step 2 and the value from Step 3, divide the dipole moment product by $!$d^4$!$. What is the result of $!$\\frac{\\mu_r \\mu_f}{d^4}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10752"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "e3e0104aa53849a5a1025",
+                    "stepText": "Finally, combine the simplified constant from Step 1 with the result of Step 4 to get the attractive force using the formula $!$F = \\left(\\frac{3\\mu_0}{4\\pi}\\right) \\cdot \\frac{\\mu_r \\mu_f}{d^4}$!$. Multiply the constant (from your chosen option in Step 1) with the result obtained in Step 4. What is the magnitude of the attractive force?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.2256e-3"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "3143f3f1cede44138f33c",
+            "questionText": "The compass in a wilderness navigation exercise is being affected by the local magnetic field produced by a nearby magnetized iron mining tool. Assume that the compass needle aligns with the net magnetic field, which is the vector sum of Earth's magnetic field and the local field from the tool. Given that Earth's magnetic field has a magnitude of $!$B_E$!$ (in Tesla) directed toward geographic north and the local magnetic field has a magnitude of $!$B_L$!$ (in Tesla) directed at an angle of $!$\\theta_L$!$ relative to geographic north, calculate the deviation angle (in degrees) of the compass reading from geographic north. (If necessary, please provide values for $!$B_E$!$, $!$B_L$!$, and $!$\\theta_L$!$ so that a numerical answer can be computed.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c777d525f7814fd7928c4",
+                    "stepText": "Let's start by decomposing the local magnetic field $!$B_L$!$ into its north-south and east-west components. Which option correctly shows how to break down a vector given its magnitude and an angle $!$\\theta_L$!$ measured from north?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a1359784-abf1-402c-833c-c1c6fc69e3bd",
+                        "58e105bd-e6ed-4f09-a699-8980193347c2"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$B_L \\cos(\\theta_L)$!$ (north-south) and $!$B_L \\sin(\\theta_L)$!$ (east-west)",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$B_L \\sin(\\theta_L)$!$ (north-south) and $!$B_L \\cos(\\theta_L)$!$ (east-west)",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$B_L \\tan(\\theta_L)$!$ (north-south) and $!$B_L \\cot(\\theta_L)$!$ (east-west)",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a06bdf36373741ff82ca2",
+                    "stepText": "Given the values $!$B_L = 20\\,\\mu T$!$ and $!$\\theta_L = 30^\\circ$!$, calculate the north-south component of the local magnetic field using the appropriate trigonometric function.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "17.32"
+                    ],
+                    "stepSolveAnswerUnits": "\u03bcT",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "29f8ba3abfd444c699dd3",
+                    "stepText": "Next, calculate the east-west component of the local magnetic field using the sine function with the given values $!$B_L = 20\\,\\mu T$!$ and $!$\\theta_L = 30^\\circ$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10"
+                    ],
+                    "stepSolveAnswerUnits": "\u03bcT",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "33eb483c070e4dd5b651e",
+                    "stepText": "Now, combine the Earth's magnetic field and the north-south component of the local field to compute the net north-south component. Given $!$B_E = 50\\,\\mu T$!$, add it to the value obtained in the previous step.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "67.32"
+                    ],
+                    "stepSolveAnswerUnits": "\u03bcT",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7b368d4774a94c58a0ba1",
+                    "stepText": "Finally, determine the deviation angle of the compass by applying the arctan function to the ratio of the east-west component to the net north-south component. Using the computed values (east-west component = $!$10\\,\\mu T$!$ and net north-south component = $!$67.32\\,\\mu T$!$), compute the angle in degrees.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8.5"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

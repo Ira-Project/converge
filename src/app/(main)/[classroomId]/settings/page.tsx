@@ -39,6 +39,9 @@ export default async function SettingsPage(props: { params: Promise<{ classroomI
     year: classroom?.year ?? new Date().getFullYear(),
     showLeaderboardStudents: classroom?.showLeaderboardStudents ?? false,
     showLeaderboardTeachers: classroom?.showLeaderboardTeachers ?? false,
+    courseId: classroom?.courseId ?? "",
+    gradeText: classroom?.gradeText ?? "",
+    subjectId: classroom?.subjectId ?? "",
   };
 
   return (

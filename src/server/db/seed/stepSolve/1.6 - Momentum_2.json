@@ -1,0 +1,171 @@
+{
+    "id": "14d875778b6648dea193f",
+    "name": "Momentum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "70438f137b64403881b53",
+            "questionText": "A martial artist delivers a punch that changes the momentum of a heavy bag by $!$20\\,\\text{kg\\cdot m/s}$!$ over a collision time of $!$0.01\\,\\text{s}$!$. Calculate the average resultant force exerted on the heavy bag by this quick punch.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "78f9f1e8ab814f52bb040",
+                    "stepText": "Let's begin by selecting the appropriate formula that relates the change in momentum to the average force exerted over a given time. Which of the following formulas represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "eb2f76a7-4c38-468d-b7dd-2f8dc4135942",
+                        "1a227599-b55c-4dde-ab9a-1062a5fb942c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{\\Delta p}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\Delta p \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\Delta p - \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "722d9eb4d121453ea705e",
+                    "stepText": "Now that you have identified the correct formula, it's time to plug in the given values. The change in momentum (\\(\\Delta p\\)) is 20 kg\u00b7m/s and the collision time (\\(\\Delta t\\)) is 0.01 s. Using these values, calculate the average force.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2000"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "eb2f76a7-4c38-468d-b7dd-2f8dc4135942",
+                        "1a227599-b55c-4dde-ab9a-1062a5fb942c"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "cc29cce2316d4c809af5f",
+            "questionText": "In a football game, a $!$110~kg$!$ running back is moving eastward at $!$8~m/s$!$, and he is tackled by a $!$95~kg$!$ linebacker who is moving westward at $!$7~m/s$!$. Upon impact, the two players collide and stick together, moving as a single unit. Determine the combined velocity immediately after the collision.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1adc10977dc7452e9481e",
+                    "stepText": "Let's start by identifying the correct formula to compute the momentum for an object. Which one represents the momentum of an object correctly?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p = mv$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p = m+v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p = m/v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f08670983a604dce85761",
+                    "stepText": "Great! Now, using the momentum formula you selected, calculate the momentum of the running back who has a mass of $!$110~kg$!$ and a velocity of $!$8~m/s$!$ (eastward, considered positive). Multiply these two values.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "880"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c6195b4531144129a48c0",
+                    "stepText": "Next, determine the momentum of the linebacker. Remember to account for direction: the linebacker\u2019s velocity is $!$7~m/s$!$ westward, which should be taken as negative. Calculate his momentum using his mass of $!$95~kg$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-665"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c44d9c1b096b42ba85d43",
+                    "stepText": "Now, add the two momenta together to find the net momentum of the system before the collision. This net momentum will be used for finding the final velocity.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "215"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "cad79986-bd73-4543-b34c-949a1d71cd5a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b1b277fb48b04b3592e07",
+                    "stepText": "Finally, use the conservation of momentum principle. Divide the net momentum by the total mass of the two players (which is $!$110~kg + 95~kg$!$) to find the final velocity of the combined mass. What is this combined velocity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.05"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\frac{m_1v_1 + m_2v_2}{m_1 + m_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{m_1 + m_2}{m_1v_1 + m_2v_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = m_1v_1 + m_2v_2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

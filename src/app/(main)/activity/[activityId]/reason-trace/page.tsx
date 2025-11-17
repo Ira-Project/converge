@@ -34,16 +34,16 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
   return (
     <main className="flex flex-col">
       {/* Header */}
-      <div className="mb-8 p-8 bg-rose-100">
-        <div className="flex items-center gap-4 mb-4">
+      <div className="mb-8 p-4 md:p-8 bg-rose-100">
+        <div className="flex flex-col gap-4 mb-4">
           <div className="flex flex-row gap-4">
             <Image src={activityMetaData.iconImage} alt={activityMetaData.title} width={60} height={60} />
             <div className="flex flex-col my-auto">
-              <h1 className="text-2xl font-bold text-rose-700">{activityMetaData.title}</h1>
+              <h1 className="text-xl md:text-2xl font-bold text-rose-700">{activityMetaData.title}</h1>
               <p className="text-rose-700">{activity?.topic?.name}</p>
             </div>
           </div>
-          <div className="flex flex-row ml-auto mr-4 my-auto gap-4">
+          <div className="flex flex-row gap-4 md:ml-auto md:mr-4">
             { userToClassroom?.role !== Roles.Teacher ?
               <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
                 <Button className="bg-rose-700 text-white">
@@ -51,7 +51,7 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
                 </Button>
               </Link>
               : 
-              <div className="flex flex-row gap-2 my-auto">
+              <div className="flex flex-row gap-2">
                 <Link href={`${activityMetaData.url}${Paths.LiveActivity}`}>
                   <Button variant="link">
                     Preview
@@ -68,19 +68,19 @@ export default async function AssignmentPage(props: { params: Promise<{ activity
       </div>
 
       {/* Analytics */}
-      <div className="mb-12 px-8 flex flex-col gap-4">
+      <div className="mb-12 px-4 md:px-8 flex flex-col gap-4">
         <div className="flex flex-row gap-2">
           <BarChartIcon className="w-4 h-4 my-auto" />
           <p className="text-lg font-medium">Activity Analytics</p>
         </div>
-        <div className="grid grid-cols-[300px_1fr] gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-4">
           {activity && <AnalyticsCards activityId={activity.id} />}
           {activity && <UnderstandingGaps activityId={activity.id} />}
         </div>
       </div>
 
       {/* Submissions */}
-      <div className="mb-8 px-8 flex flex-col gap-4">
+      <div className="mb-8 px-4 md:px-8 flex flex-col gap-4">
         <div className="flex flex-row gap-2">
           <FileTextIcon className="w-4 h-4 my-auto" />
           <p className="text-lg font-medium">Submissions</p>

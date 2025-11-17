@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -16,6 +16,13 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import { Info } from "lucide-react";
 import { api } from "@/trpc/react";
 import { toast } from "sonner";
 import posthog from "posthog-js";
@@ -26,6 +33,9 @@ const formSchema = z.object({
   year: z.coerce.number().int().min(2000).max(2100).optional(),
   showLeaderboardStudents: z.boolean().default(false),
   showLeaderboardTeachers: z.boolean().default(false),
+  courseId: z.string().optional(),
+  gradeText: z.string().optional(),
+  subjectId: z.string().optional(),
 });
 
 interface ClassroomSettingsFormProps {
@@ -35,6 +45,9 @@ interface ClassroomSettingsFormProps {
     year: number;
     showLeaderboardStudents: boolean;
     showLeaderboardTeachers: boolean;
+    courseId: string;
+    gradeText: string;
+    subjectId?: string;
   };
   classroomId: string;
 }
@@ -44,6 +57,11 @@ export default function ClassroomSettingsForm({
   classroomId,
 }: ClassroomSettingsFormProps) {
   
+  const [selectedSubjectId, setSelectedSubjectId] = useState<string>(classroom.subjectId ?? "");
+  const [courses, setCourses] = useState<Array<{ id: string; name: string }>>([]);
+
+  console.log(classroom);
+  
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -52,8 +70,25 @@ export default function ClassroomSettingsForm({
       year: classroom?.year ?? new Date().getFullYear(),
       showLeaderboardStudents: classroom?.showLeaderboardStudents ?? false,
       showLeaderboardTeachers: classroom?.showLeaderboardTeachers ?? false,
+      courseId: classroom?.courseId !== null ? classroom?.courseId : undefined,
+      gradeText: classroom?.gradeText !== null ? classroom?.gradeText : undefined,
+      subjectId: classroom?.subjectId !== null ? classroom?.subjectId : undefined,
     },
   });
+
+  // Fetch subjects and courses
+  const { data: subjects } = api.subject.listSubjects.useQuery();
+  const { data: coursesBySubject } = api.subject.getCoursesBySubject.useQuery(
+    { subjectId: selectedSubjectId },
+    { enabled: !!selectedSubjectId }
+  );
+
+  // Update courses when subject changes
+  useEffect(() => {
+    if (coursesBySubject) {
+      setCourses(coursesBySubject);
+    }
+  }, [coursesBySubject]);
 
   const updateClassroom = api.classroom.update.useMutation({
     onSuccess: () => {
@@ -65,12 +100,18 @@ export default function ClassroomSettingsForm({
         year: formValues.year,
         show_leaderboard_students: formValues.showLeaderboardStudents,
         show_leaderboard_teachers: formValues.showLeaderboardTeachers,
+        course_id: formValues.courseId,
+        grade_text: formValues.gradeText,
+        subject_id: formValues.subjectId,
         changes_made: {
           name_changed: formValues.name !== classroom.name,
           description_changed: formValues.description !== classroom.description,
           year_changed: formValues.year !== classroom.year,
           leaderboard_students_changed: formValues.showLeaderboardStudents !== classroom.showLeaderboardStudents,
           leaderboard_teachers_changed: formValues.showLeaderboardTeachers !== classroom.showLeaderboardTeachers,
+          course_id_changed: formValues.courseId !== classroom.courseId,
+          grade_text_changed: formValues.gradeText !== classroom.gradeText,
+          subject_id_changed: formValues.subjectId !== classroom.subjectId,
         },
       });
       toast.success("Classroom settings updated successfully. Refresh the page to see the changes.");
@@ -113,6 +154,9 @@ export default function ClassroomSettingsForm({
       year: values.year,
       show_leaderboard_students: values.showLeaderboardStudents,
       show_leaderboard_teachers: values.showLeaderboardTeachers,
+      course_id: values.courseId,
+      grade_text: values.gradeText,
+      subject_id: values.subjectId,
     });
     
     updateClassroom.mutate({
@@ -195,6 +239,108 @@ export default function ClassroomSettingsForm({
           {form.formState.errors.year && (
             <p className="text-sm text-destructive">
               {form.formState.errors.year.message}
+            </p>
+          )}
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="subject">Subject</Label>
+          <Select
+            value={selectedSubjectId}
+            onValueChange={(value) => {
+              setSelectedSubjectId(value);
+              form.setValue("courseId", "", { shouldDirty: true });
+              form.setValue("subjectId", value, { shouldDirty: true });
+              posthog.capture("classroom_settings_subject_changed", {
+                classroom_id: classroomId,
+                subject_id: value,
+              });
+            }}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Select subject" />
+            </SelectTrigger>
+            <SelectContent>
+              {subjects?.map((subject) => (
+                <SelectItem key={subject.id} value={subject.id}>
+                  {subject.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <Label htmlFor="course">Course</Label>
+            {!selectedSubjectId && (
+              <TooltipProvider>
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Info className="h-4 w-4 text-muted-foreground cursor-help" />
+                  </TooltipTrigger>
+                  <TooltipContent>
+                    <p>Please select a subject first to see available courses</p>
+                  </TooltipContent>
+                </Tooltip>
+              </TooltipProvider>
+            )}
+          </div>
+          <Select
+            value={form.watch("courseId")}
+            onValueChange={(value) => {
+              form.setValue("courseId", value, { shouldDirty: true });
+              posthog.capture("classroom_settings_course_changed", {
+                classroom_id: classroomId,
+                course_id: value,
+              });
+            }}
+            disabled={!selectedSubjectId}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder={selectedSubjectId ? "Select course" : "Select subject first"} />
+            </SelectTrigger>
+            <SelectContent>
+              {courses.map((course) => (
+                <SelectItem key={course.id} value={course.id}>
+                  {course.name}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          {form.formState.errors.courseId && (
+            <p className="text-sm text-destructive">
+              {form.formState.errors.courseId.message}
+            </p>
+          )}
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="grade">Grade</Label>
+          <Select
+            value={form.watch("gradeText")}
+            onValueChange={(value) => {
+              form.setValue("gradeText", value, { shouldDirty: true });
+              posthog.capture("classroom_settings_grade_text_changed", {
+                classroom_id: classroomId,
+                grade_text: value,
+              });
+            }}
+          >
+            <SelectTrigger>
+              <SelectValue placeholder="Select grade" />
+            </SelectTrigger>
+            <SelectContent>
+              {Array.from({ length: 12 }, (_, i) => i + 1).map((grade) => (
+                <SelectItem key={grade} value={grade.toString()}>
+                  Grade {grade}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+          {form.formState.errors.gradeText && (
+            <p className="text-sm text-destructive">
+              {form.formState.errors.gradeText.message}
             </p>
           )}
         </div>

@@ -1,0 +1,183 @@
+{
+    "id": "1b7c04dc62f345c3857a5",
+    "name": "Sound",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "3c6de113993645b09fd6b",
+            "questionText": "A research submarine uses sonar to map the ocean floor. The submarine is $!$750\\text{ m}$!$ above the ocean floor, and it emits an ultrasound pulse with a frequency of $!$40\\text{ kHz}$!$ that produces an echo received after $!$1\\text{ s}$!$. Calculate the wavelength (in meters) of the sound waves in water.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c023a6a84a7d46aebdce5",
+                    "stepText": "Let's start by identifying the correct sonar echo formula that relates the distance to the ocean floor, the speed of sound, and the total travel time of the pulse. Choose the formula that is used for such echo-based distance calculations.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "670671d3-985c-4a23-9178-05e06ebd3f7b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ d = \\frac{v t}{2} $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ d = v t $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ d = \\frac{2v}{t} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b9a3cc1fb08946a5b371f",
+                    "stepText": "Great! Now, using the selected formula and the information provided (a distance of $!$750\\text{ m}$!$ and a total echo time of $!$1\\text{ s}$!$), calculate the speed of sound in water by rearranging the formula appropriately.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1500"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "670671d3-985c-4a23-9178-05e06ebd3f7b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d4945c69fae8494485046",
+                    "stepText": "Now that you have the speed, let\u2019s identify the correct relationship between the wave's speed, frequency, and wavelength. Select the formula that correctly relates these quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "345dd24e-4f58-4324-829c-4e8719c533e4"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$ v = f \\lambda $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$ \\lambda = f v $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$ v = \\frac{\\lambda}{f} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "154e0429772a4465a0114",
+                    "stepText": "Finally, using the correct wave relationship and the values you have (a speed of $!$1500\\; m/s$!$ and a frequency of $!$40,000\\; Hz$!$), calculate the wavelength of the sound waves in water.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0375"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "345dd24e-4f58-4324-829c-4e8719c533e4"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "76d482a7b8014daf86ef4",
+            "questionText": "A medical ultrasound transducer emits sound at a fundamental frequency of $!$2.5\\,\\text{MHz}$!$. Calculate the frequency in hertz (Hz) of its third overtone.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "17d67027778f4a37a489e",
+                    "stepText": "Let's start by converting the given frequency from megahertz to hertz. Identify the conversion factor needed for this step.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2500000"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,\\text{MHz} = 10^{6}\\,\\text{Hz}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,\\text{MHz} = 10^{3}\\,\\text{Hz}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,\\text{MHz} = 10^{9}\\,\\text{Hz}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a1e8a05ad6b749558ed90",
+                    "stepText": "Great, now that you've converted the frequency, determine the multiplier for the third overtone. Recall that overtones are harmonics of the fundamental frequency. Choose the correct relation that represents the multiplier for the third overtone.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1d2d075b-c511-41ac-a980-0545c5315cc7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$f = n f_{0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = (n+1) f_{0}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = (n-1) f_{0}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9f874c108e3c4740aaa06",
+                    "stepText": "Now use the results of the previous steps. Multiply the converted fundamental frequency by the appropriate multiplier for the third overtone to obtain the desired frequency.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10000000"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "1d2d075b-c511-41ac-a980-0545c5315cc7"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

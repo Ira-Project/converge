@@ -1,0 +1,163 @@
+{
+    "id": "bb7f092d418841c088fef",
+    "name": "Electrical Quantities",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9e8b621566be42b5b62d6",
+            "questionText": "A homeowner is concerned about the energy consumption of their electric oven, which operates at $!$230\\ \\text{V AC}$!$ and draws a current of $!$15\\ \\text{A}$!$ when active. If the oven is used for $!$2\\ \\text{hours}$!$ each day for a month ($!$30\\ \\text{days}$!$), calculate the total electrical energy consumed by the oven in kilowatt-hours ($!$\\text{kWh}$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9261db32751e4ea89960c",
+                    "stepText": "Let's start by identifying the correct formula for calculating electrical power using current and voltage. Please select the correct formula from the options below:",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "99fbfc61-bb8d-4a75-bcaf-718f1ada2b5d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = I \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = I^2 \\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{V}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3279ec27831840a7b50f0",
+                    "stepText": "Great! Now that you've selected the proper formula, use the given values $!$I = 15\\,A$!$ and $!$V = 230\\,V$!$ to calculate the electrical power in watts.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3450"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "99fbfc61-bb8d-4a75-bcaf-718f1ada2b5d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "922a10067830470d83a2b",
+                    "stepText": "Next, convert the electrical power from watts to kilowatts. Recall that $!$1\\,kW = 1000\\,W$!$. What is the power in kilowatts?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.45"
+                    ],
+                    "stepSolveAnswerUnits": "kW",
+                    "stepConcepts": [
+                        "99fbfc61-bb8d-4a75-bcaf-718f1ada2b5d"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a01b7fa2132144868996a",
+                    "stepText": "Now, calculate the total operating time for the oven in hours. The oven is used for $!$2\\,hours$!$ daily over $!$30$!$ days. What is the total operating time?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "hours",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "793e052fdf9b4e55bd21b",
+                    "stepText": "Finally, apply the energy transfer formula $!$E = P \\times t$!$ to compute the total electrical energy consumed by the oven in kilowatt-hours.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "207"
+                    ],
+                    "stepSolveAnswerUnits": "kWh",
+                    "stepConcepts": [
+                        "68f2c8fd-ab58-4b63-b4c7-8500efc0da26"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "3cda853d270849b9826ad",
+            "questionText": "An electrical technician measures a current of $!$2.5 \\text{ A}$!$ through a circuit section for a duration of $!$15 \\text{ minutes}$!$. Calculate the total electric charge, in coulombs ($!$\\text{C}$!$), that passes through the circuit during this time, given that $!$1 \\text{ A}$!$ equals $!$1 \\text{ C/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ca1b648b205c49eb86ee9",
+                    "stepText": "Let's begin by converting the time from minutes to seconds. What is the total time in seconds for 15 minutes?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "900"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "902947bb332d4cd986eb5",
+                    "stepText": "Great, now identify the correct formula that relates current, charge, and time. Which one of the following formulas should be used to compute the total electric charge passed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c06aac4a-3f34-4b0a-9a9b-5c0cd5ea158a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = I \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{Q}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = Q \\times I$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "090a86c9846840bb99f70",
+                    "stepText": "Now, using the identified formula and the values provided (current = 2.5 A and time = 900 s), calculate the total electric charge that passes through the circuit.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2250"
+                    ],
+                    "stepSolveAnswerUnits": "C",
+                    "stepConcepts": [
+                        "c06aac4a-3f34-4b0a-9a9b-5c0cd5ea158a"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

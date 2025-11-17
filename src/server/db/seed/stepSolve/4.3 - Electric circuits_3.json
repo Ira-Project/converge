@@ -1,0 +1,136 @@
+{
+    "id": "d7910a7d106b495bb63e0",
+    "name": "Electric Circuits",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "20717194819547c1a222c",
+            "questionText": "A farmer's automatic irrigation system uses a potential divider circuit to detect sufficient sunlight. The circuit consists of a light-dependent resistor (LDR) and a fixed resistor connected in series to a $!$12\\,V$!$ battery. When there is sufficient sunlight, the resistance of the LDR decreases to $!$100\\,\\Omega$!$, and the fixed resistor has a resistance of $!$200\\,\\Omega$!$. The output voltage $!$V_{LDR}$!$ is taken across the LDR. Calculate $!$V_{LDR}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2b5fd5b9eeff44bf8f72f",
+                    "stepText": "Let's start by identifying the correct formula that relates the output voltage in a potential divider to its resistances and the supply voltage. Please select the appropriate formula for a potential divider (output voltage taken across the resistor of interest).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "769fd15e-b379-43a1-b7a8-6c022fe74eca",
+                        "beb100f4-dcc2-4412-8547-760dfed49574"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V_{out}=V\\times\\frac{R_{desired}}{R_{other}+R_{desired}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V_{out}=V\\times\\frac{R_{other}}{R_{desired}+R_{other}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_{out}=V-\\frac{R_{desired}}{R_{other}+R_{desired}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2611f15529124d40b120b",
+                    "stepText": "Great, now that the potential divider concept is clear, calculate the total resistance of the circuit by adding the resistance of the LDR and the fixed resistor. What is $!$R_{total}=R_{LDR}+R_{fixed}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "300"
+                    ],
+                    "stepSolveAnswerUnits": "$!$\\Omega$!$",
+                    "stepConcepts": [
+                        "645d12e6-f285-44a1-9369-1085f03dc8f0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8bceacda4fc8433184856",
+                    "stepText": "Now, use the resistances to determine the fraction of the total resistance that is due to the LDR. Calculate the ratio $!$\\frac{R_{LDR}}{R_{total}}$!$. What value do you get?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.3333"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "90e97afc6a7d413683e0c",
+                    "stepText": "Finally, multiply the battery voltage by the ratio you just calculated to find the output voltage across the LDR. Calculate $!$V_{LDR}=V\\times\\frac{R_{LDR}}{R_{total}}$!$. What is the output voltage?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4"
+                    ],
+                    "stepSolveAnswerUnits": "$!$V$!$",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "9541a1b5907f4519bd3a6",
+            "questionText": "A family is decorating their house with a new string of LED lights designed with individual LED lamps connected in parallel. Each LED lamp draws a current of $!$20~mA$!$ when properly powered. If the string contains $!$20$!$ identical LED lamps, and assuming all lamps are functioning, calculate the total current drawn from the power supply by the entire string of lights.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b4a01e4f4f51417ea68d1",
+                    "stepText": "Let's start by identifying the correct concept to calculate the total current in a parallel circuit. Which formula correctly represents the method to compute the total current drawn by all parallel branches?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fa9fa2f1-8189-499c-8fe5-7f285a84850f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = I_1 + I_2 + I_3 + \\cdots$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = \\frac{I_1 + I_2 + I_3}{3}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = I_1 \\times I_2 \\times I_3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c062752d629e479cbe3b6",
+                    "stepText": "Great, now that you have identified the method to add the currents from each LED lamp, calculate the total current drawn. Multiply the current for one LED lamp by the number of LED lamps in the string.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "400"
+                    ],
+                    "stepSolveAnswerUnits": "mA",
+                    "stepConcepts": [
+                        "fa9fa2f1-8189-499c-8fe5-7f285a84850f"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,176 @@
+{
+    "id": "a0a2e16b384d4896b8d21",
+    "name": "Electrical Safety",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "8800d14c592b49b88eb13",
+            "questionText": "A construction worker is using a portable electric drill with a damaged casing and exposed live wires in a humid basement where his wet hands yield a skin resistance of $!$1{,}000\\,\\Omega$!$. Given that a current of $!$100\\, mA$!$ through the heart can be fatal, calculate the minimum voltage (in volts) that could deliver this lethal current to the worker using Ohm's law.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "cff7450e777247a8946d7",
+                    "stepText": "Let's start by determining the proper formula that relates voltage, current, and resistance. Identify the appropriate formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V=I\\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I=V\\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R=\\frac{V}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "74325ec155554874b407e",
+                    "stepText": "Great! Now, notice the fatal current is given as 100 mA. Convert this current into amperes to be consistent with Ohm's Law calculations.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "400eccfec9c9402ebf2a0",
+                    "stepText": "Now that you have the current in amperes and the given resistance of $!$1{,}000\\,\\Omega$!$, use the formula you identified to calculate the minimum voltage needed. Multiply the current by the resistance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e",
+                        "a6e4bec1-8492-419f-9a78-e751da5b2346"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "93c6ff1bd48d47c6ae3f6",
+            "questionText": "An office worker needs to connect a new high-power laser printer rated at $!$1500\\,W$!$ to the $!$230\\,V$!$ mains supply. The office uses a ring main circuit which is typically designed to carry a maximum current of $!$30\\,A$!$. Before the printer was connected, the circuit was already powering several computers and monitors. Determine the single numerical value of the maximum additional power, in $!$W$!$, that could have been drawn by the computers and monitors from this circuit before the printer was added, assuming the circuit was at its safe operating limit and the printer caused it to trip due to overload.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d9bad1622824438189f2c",
+                    "stepText": "Let's start by determining the formula to compute the current drawn by the printer from its power rating and supply voltage. Which of the following formulas correctly relates power, voltage, and current?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9b6731ea-3a10-4320-b77b-a729fcfd2577"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I=\\frac{P}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I=P\\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I=\\frac{V}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ed15e23b57074aa581801",
+                    "stepText": "Great. Now, using the formula you selected, calculate the current drawn by the printer. Use the printer's power of $!$1500\\,W$!$ and the mains supply voltage of $!$230\\,V$!$. What is the value of this current?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.52"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "9b6731ea-3a10-4320-b77b-a729fcfd2577"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e2df02befab24931aaf85",
+                    "stepText": "Now that you have the printer's current, determine the remaining allowable current for the computers and monitors by subtracting the printer's current from the circuit's maximum limit of $!$30\\,A$!$. What is the remaining current capacity?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "23.48"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "de1ec9926bfe44259ca23",
+                    "stepText": "Next, identify the correct formula to calculate power from voltage and current, which will be needed to find the additional power drawn. Which formula is appropriate for determining power?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$P=V\\times I$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P=\\frac{V}{I}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P=I^2\\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a458d6bc6e6a4e5b95232",
+                    "stepText": "Finally, use the remaining current capacity of $!$23.48\\,A$!$ along with the mains voltage of $!$230\\,V$!$ to calculate the maximum additional power (in watts) that the computers and monitors could draw. What is this power?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5400"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

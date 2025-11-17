@@ -1,0 +1,252 @@
+{
+    "id": "5170b96ea34d44868e689",
+    "name": "Electrical Safety",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "0229adc2b67e4739b0527",
+            "questionText": "A student is using an old electric kettle and a toaster simultaneously from a single, visibly damaged extension cord in their dormitory room. The kettle is rated at $!$2200\\,\\text{W}$!$ and the toaster at $!$1000\\,\\text{W}$!$. The mains supply voltage is $!$230\\,\\text{V}$!$. If the resistance of the extension cord is $!$0.5\\,\\Omega$!$, calculate the rate of heat produced by the extension cord.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c283d408ef5341e5ba829",
+                    "stepText": "Let's start by determining the total power demand by adding the power ratings of the kettle and toaster. Compute the sum of $!$2200\\,\\text{W}$!$ and $!$1000\\,\\text{W}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3200"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "8dc73760fc944ea58b345",
+                    "stepText": "Great, now that you have the total power, identify the correct formula that relates power, voltage, and current to determine the current drawn from the mains. Which formula should be used?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9b6731ea-3a10-4320-b77b-a729fcfd2577"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I=\\frac{P}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I=\\frac{V}{P}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I=P\\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I=\\frac{R}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2082f82a9be04db09305a",
+                    "stepText": "Using the total power calculated and the mains voltage of $!$230\\,\\text{V}$!$, calculate the current drawn. Use the formula you just identified.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "13.91"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "9b6731ea-3a10-4320-b77b-a729fcfd2577"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "eab9d3500a3a4feea90da",
+                    "stepText": "Now, to determine the heat produced in the extension cord, select the correct formula that relates heat production to the square of the current and the resistance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7438fcb5-3fdf-4b54-bbb0-b001ce74700b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P=I^2R$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P=IR$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P=\\frac{I}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P=I^2/R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b8f9d07d857b4e1a84cb0",
+                    "stepText": "Finally, using the current of approximately $!$13.91\\,\\text{A}$!$ and the extension cord's resistance of $!$0.5\\,\\Omega$!$, calculate the heat produced in the extension cord with the formula you selected.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "96.74"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "7438fcb5-3fdf-4b54-bbb0-b001ce74700b"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "05528ffc89d84377bb066",
+            "questionText": "A homeowner mistakenly connected the neutral wire of a domestic ring main circuit to the switch terminal intended for the live wire while replacing a light switch. Assume that the mains supply voltage is $!$240\\,V$!$ and that the effective impedance between the metallic casing of the light fixture and the earth ground is $!$R\\,\\Omega$!$. If the homeowner accidentally touches the casing when the switch is off, a current will flow through their body. Calculate the magnitude of the current (in amperes) that flows through the homeowner. (Note: If $!$R\\,\\Omega$!$ is not provided, please supply its numerical value.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f9dda6da94664664a414e",
+                    "stepText": "Let's start by understanding the wiring error. Based on the description, which of the following statements best characterizes the misconnection in the circuit?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f4906163-4e4a-4328-a4b4-11fe9f6ae1e9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "The neutral wire is mistakenly connected to the switch terminal, leaving the metal casing continuously live.",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The live wire is connected to the earth, which safely grounds the casing.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Both the live and neutral wires are correctly connected, and the switch isolates the circuit completely.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The switch is connected to earth instead of the live wire, thus de-energizing the circuit when off.",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ff7deec7934c4c58bbba5",
+                    "stepText": "Great. Now, to determine the current flowing through the homeowner's body, we need to use the basic relationship between voltage, current, and resistance. Which formula best represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I=\\frac{V}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I=V\\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I=\\frac{R}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I=V-R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f1c83a26dbf5486ba8416",
+                    "stepText": "Now, using the selected formula and the provided values ($!$V=240\\,V$!$) while assuming a typical effective body impedance of $!$1000\\,\\Omega$!$ if no value is given, calculate the current flowing through the homeowner.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.24"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5c5f6a98f1e5489a84bc2",
+                    "stepText": "Finally, consider safety: Electric shock becomes potentially lethal when the current exceeds a certain threshold. Which of the following values best represents this threshold?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a6e4bec1-8492-419f-9a78-e751da5b2346"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "100 mA",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "10 mA",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "500 mA",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "50 mA",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

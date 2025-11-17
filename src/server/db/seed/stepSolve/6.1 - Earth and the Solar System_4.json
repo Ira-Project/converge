@@ -1,0 +1,171 @@
+{
+    "id": "968c0984a8ba48a09016e",
+    "name": "Earth and the Solar System",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "4c06cfb992bb4463a5af3",
+            "questionText": "A group of amateur astronomers plans a year-long observational project from the Northern Hemisphere. They track the Moon's phases, noting that the Moon reflects sunlight, always shows the same face, and its orbital period is approximately $!$27$!$ days. Assuming the phases of the Moon are equally spaced in time, if they observe a Full Moon on October 1st, how many days later would they expect to observe the New Moon?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e8596459a8c24b03a95f3",
+                    "stepText": "Let's start by recalling the given orbital period of the Moon. From the project details, choose the option that correctly represents the Moon's orbital period.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0d016f00-77a7-4749-8c3f-0d07898d933c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$27\\;days$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$13.5\\;days$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$54\\;days$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$7\\;days$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "641c4a3ce5dd4434a2e22",
+                    "stepText": "Great! Now, consider that the Moon's phases are assumed to be equally spaced over its orbit. Identify the fraction of the cycle between a Full Moon and a New Moon (i.e., the half-cycle fraction).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{1}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{3}{4}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{1}{3}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5ef6de51608741a493383",
+                    "stepText": "Now, compute the number of days between a Full Moon and the subsequent New Moon by multiplying the Moon's orbital period by the fraction you identified.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "13.5"
+                    ],
+                    "stepSolveAnswerUnits": "days",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "753250594d5b46c88d81f",
+            "questionText": "An international space agency is planning a grand tour mission to study the outer Solar System. Assume that a probe is at Jupiter and that Earth is on the opposite side of the Sun. Given that the speed of light is $!$3.0 \\times 10^8 \\text{ m/s}$!$, the distance from the Sun to Earth is $!$1.5 \\times 10^{11} \\text{ m}$!$, and the distance from the Sun to Jupiter is approximately $!$5.2 \\text{ AU}$!$ (with $!$1 \\text{ AU} = 1.5 \\times 10^{11} \\text{ m}$!$), calculate the total time, in seconds, for a signal from the probe to reach Earth.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7d79857ee49e420aaa916",
+                    "stepText": "Let's start by converting Jupiter's distance from AU to meters. Multiply the given distance in AU by the conversion factor provided in the problem statement to obtain the distance in meters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.8e11"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "f71cb36acdac449ea2a53",
+                    "stepText": "Now, add the distance from the Sun to Earth to the distance you just calculated (from Jupiter to the Sun) to find the total distance the signal must travel.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "9.3e11"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "1a205a77cb5c410cb8a2c",
+                    "stepText": "Great! Next, to calculate the light travel time, identify the correct formula that relates distance, speed, and time. Choose the appropriate formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "50d7e88d-ebc2-4bb8-a6d9-a4634fe1e452"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$t = \\frac{d}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$t = d \\times v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = \\frac{v}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4241c23b1e7d49f9839ab",
+                    "stepText": "Finally, substitute the total distance and the speed of light into the formula you selected to compute the light travel time in seconds.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3100"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [
+                        "50d7e88d-ebc2-4bb8-a6d9-a4634fe1e452"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

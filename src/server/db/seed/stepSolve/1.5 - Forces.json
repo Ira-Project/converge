@@ -1,0 +1,172 @@
+{
+    "id": "55fa122c35c34b6796066",
+    "name": "Forces",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "f6749ebe819340b387563",
+            "questionText": "A rower applies a constant forward force of $!$350 \\text{ N}$!$ to propel a boat. The total mass of the boat and rower is $!$120 \\text{ kg}$!$. The boat experiences water resistance of $!$180 \\text{ N}$!$ and air resistance of $!$70 \\text{ N}$!$. Calculate the boat\\'s acceleration.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4166cc0922964fffad7ca",
+                    "stepText": "Let's start by finding the net force acting on the boat. Consider the forward force provided by the rower opposed by the water and air resistances. Calculate the net force by subtracting the total resistive force from the applied force.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "3e20303c-d807-4753-b313-0259b2682a2e"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d2a28b1784424d2eab3a2",
+                    "stepText": "Great, now that we have the net force, we need to identify the correct formula that relates net force, mass, and acceleration. Which one of the following formulas should be used in this situation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+                        "356d493b-02b5-4b95-b7b5-f34b9ec99aa1"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = ma$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = m + a$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = Fm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "45511555d94d4663a0439",
+                    "stepText": "Now that you have selected the appropriate formula, use it to compute the acceleration by dividing the net force by the total mass of the boat and rower.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.83"
+                    ],
+                    "stepSolveAnswerUnits": "m/s\u00b2",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "78961d0dc6c94d09b7eb9",
+            "questionText": "A construction crane is designed to lift heavy loads while maintaining rotational equilibrium. The crane pivots at a point where a steel beam with a weight of $!$150 \\mathrm{ kN}$!$ is located $!$20 \\mathrm{ m}$!$ from the pivot. To counteract this load, a counterweight is placed on the opposite side of the pivot at a horizontal distance of $!$8 \\mathrm{ m}$!$. Calculate the mass (in kg) of the required counterweight, assuming an acceleration due to gravity of $!$9.81 \\mathrm{ m/s^2}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3880ad49078648139d935",
+                    "stepText": "Let's start by identifying the fundamental principle used for rotational equilibrium. Which of the following formulas represents the principle where the sum of the moments around a pivot is zero?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b740ddfa-3ad8-4e38-b850-124c5bb429fe",
+                        "259589dd-4c8e-4938-9dde-4a0c9930e92e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Moment} = \\text{Force} \\times \\text{Distance}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = ma$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Weight} = \\text{mass} \\times \\text{gravity}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4288f472e26045529fba3",
+                    "stepText": "Next, calculate the moment produced by the steel beam. Convert the beam\u2019s weight from kilonewtons to newtons and multiply it by its distance from the pivot. What is the moment (in $!$Nm$!$) created by the beam?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3000000"
+                    ],
+                    "stepSolveAnswerUnits": "Nm",
+                    "stepConcepts": [
+                        "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "255d29b6e91d43769364b",
+                    "stepText": "Now, consider the counterweight side. The counterweight produces a moment given by its weight ($!$mg$!$) times its distance from the pivot. Which of the following formulas correctly represents the moment due to the counterweight?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$m \\times g \\times d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m \\times \\frac{g}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{m}{g \\times d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3c4a992dafb34d21a7032",
+                    "stepText": "With the moments on both sides of the pivot in equilibrium, set up the equation using the moment of the steel beam and that of the counterweight. Rearranging the equation, solve for the mass $!$m$!$. What is the required mass (in kg) of the counterweight?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "38220.66"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "b740ddfa-3ad8-4e38-b850-124c5bb429fe",
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

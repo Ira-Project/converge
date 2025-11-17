@@ -1,0 +1,178 @@
+{
+    "id": "7429462b49ca4c62a487a",
+    "name": "Electromagnetic Spectrum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "abd2a4c5c49244b38df7f",
+            "questionText": "On a sunny beach day, a person observes the vibrant colors of the ocean and sky, which are attributed to visible light. Given that visible light has wavelengths approximately between $!$0.4\\,\\mu\\text{m}$!$ and $!$0.7\\,\\mu\\text{m}$!$, calculate the difference between the maximum and minimum frequencies of visible light. Assume the speed of light in air is approximately $!$3\\times10^8\\,\\text{m/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "c392ee07a723493bbecd4",
+                    "stepText": "Let's start by identifying the electromagnetic wave equation that connects the speed, frequency, and wavelength. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = f\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\lambda / f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = v^2 \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "13e9a70acdbb4e47bbf8b",
+                    "stepText": "Great. Now, we need to convert the given wavelengths from micrometers to meters. Recall that $!$1\\,\\mu\\text{m} = 10^{-6}\\,\\text{m}$!$. Convert $!$0.4\\,\\mu\\text{m}$!$ and $!$0.7\\,\\mu\\text{m}$!$ respectively.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4e-7, 7e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "f0cc2703-26e8-45e2-98af-6f53003b0ead"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7d89624fc88042de86a99",
+                    "stepText": "Let's use the converted smallest wavelength (which gives the highest frequency) along with the wave equation. Using the speed of light $!$3\\times10^8\\,\\text{m/s}$!$ and the smallest wavelength you computed, determine the maximum frequency $!$f_{max}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "7.5e14"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a",
+                        "5d5da45c-d891-4924-b19e-6cedeb57827b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8c016417220e4bb2a64aa",
+                    "stepText": "Next, using the largest wavelength from your conversion, calculate the minimum frequency $!$f_{min}$!$ by applying the same wave equation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.29e14"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a",
+                        "5d5da45c-d891-4924-b19e-6cedeb57827b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1f28dcdd187c4090b478c",
+                    "stepText": "Finally, find the difference between the maximum and minimum frequencies by subtracting $!$f_{min}$!$ from $!$f_{max}$!$. What is the result of this subtraction?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.21e14"
+                    ],
+                    "stepSolveAnswerUnits": "Hz",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "905a3957554844fda41b9",
+            "questionText": "An air traffic controller relies on a radar system that emits pulses of microwaves to track aircraft. The system calculates the aircraft's distance based on the time taken for a pulse of microwaves to travel to the aircraft and return. If a pulse of microwaves takes $!$200 \\mu s$!$ to make the round trip, calculate the distance (in meters) of the aircraft from the radar system, given that the speed of light is $!$c = 3 \\times 10^8 \\text{ m/s}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "064035b496704cc0a3c5c",
+                    "stepText": "Let's start by converting the given round-trip time from microseconds to seconds. How many seconds are there in 200 $!$\\mu s$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0002"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "75fbb53aa74949e2a7b17",
+                    "stepText": "Next, identify the correct formula that relates distance, speed, and time for electromagnetic waves.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a",
+                        "5d5da45c-d891-4924-b19e-6cedeb57827b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = t/v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = v/t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "63135545bd254e778d3bc",
+                    "stepText": "Now, using the converted time from step 1 and the formula from step 2, calculate the total distance that the microwave pulse travels in its round trip.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60000"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9470b47571804e1da14da",
+                    "stepText": "Finally, since the pulse travels to the aircraft and back, determine the one-way distance from the radar to the aircraft.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30000"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,202 @@
+{
+    "id": "04dae5530d3b4bd795a58",
+    "name": "Simple Phenomena of Magnetism",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "832d2962fce54d1d8c46e",
+            "questionText": "The current question does not contain enough information to produce a single numerical answer. Please provide the numerical values for the necessary parameters such as the magnetic pole strengths, the specific distances between the poles, and any other relevant data needed to calculate the net magnetic force between two magnetic poles using the formula $!$F = \\frac{\\mu_0}{4\\pi} \\frac{|m_1 m_2|}{r^2}$!$. Once these values are provided, we can refine the question accordingly.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0c57bb4b7a3f48dba33ca",
+                    "stepText": "Let's start by reviewing the provided formula that relates the net magnetic force $!$F$!$ to the magnetic pole strengths $!$m_1$!$ and $!$m_2$!$ and the separation distance $!$r$!$. Please select the formula that is used to calculate the magnetic force between two poles.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e625400c-cecd-44f8-9fee-04be34ee0768"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{\\mu_0}{4\\pi} \\frac{|m_1 m_2|}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{m_1 m_2}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = G \\frac{M_1 M_2}{r^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f39766bd4fd9445180de8",
+                    "stepText": "Great. Now, examine the formula and identify which key parameters are required to compute a numerical value for $!$F$!$. Choose the option that correctly lists these parameters.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ed17e37d-0a52-421d-a526-94bc9028515d",
+                        "214aa4d2-bf24-45be-bba0-260324c16ae0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Magnetic pole strengths $!$m_1$!$ and $!$m_2$!$, and the separation distance $!$r$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "The masses of the magnets and the distance between them",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "The voltage across the magnets and the current through them",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a75724fe91dd45c08b83c",
+                    "stepText": "Now that you have identified the necessary parameters, consider the fact that without specific numerical values for $!$m_1$!$, $!$m_2$!$, and $!$r$!$, a single numerical answer for $!$F$!$ cannot be obtained. Which additional piece of information would most effectively refine this problem into a solvable numerical question?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "aafe216d-a3cd-4cb8-b777-7f500221042f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Providing the numerical values for $!$m_1$!$, $!$m_2$!$, and $!$r$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Estimating the weight of the magnets",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Specifying the temperature of the environment",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f3e03ea7ace44aefa4145",
+                    "stepText": "Finally, to refine the original question so that a numerical evaluation of the magnetic force is feasible, what should you do next?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "aafe216d-a3cd-4cb8-b777-7f500221042f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Provide the exact numerical values for the magnetic pole strengths and the distance between them, along with any other influencing parameters if applicable",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Assume standard values for all parameters without specifying them",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Ignore the formula and use a different method to estimate the force",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4c7e48cdf24d4a9294cb5",
+            "questionText": "The problem description outlines a scenario in which an electromagnet picks up ferromagnetic materials (iron scraps) but should not pick up non-magnetic materials (aluminum cans). To convert this into a question that asks for a single numerical answer, please provide the relevant numerical data, such as the threshold magnetic flux density (in Tesla) at which nearby iron parts of the conveyor belt become magnetised, the magnetic field strength generated by the electromagnet under current settings, and any conversion factors or constants needed. With these values, we can formulate a question like: \"Given that the threshold magnetic flux density for unwanted pickup is $!$B_{threshold} (in Tesla)$!$, what is the maximum allowable electromagnet strength (in Tesla) that ensures proper separation of materials and avoids magnetising nearby iron parts?\" Please provide the missing numerical values.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "544310cc8e9c44548d71b",
+                    "stepText": "Let's start by identifying the typical threshold magnetic flux density at which ferromagnetic parts (like iron on the conveyor belt) start to become magnetised. Provide a plausible numerical value in $!$Tesla$!$ that represents this threshold.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1"
+                    ],
+                    "stepSolveAnswerUnits": "Tesla",
+                    "stepConcepts": [
+                        "1d764edf-4258-47e3-9a80-857302ecae68"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f5e69a7a2e7544109cb8f",
+                    "stepText": "Great, now select the correct conversion factor to convert magnetic field units from $!$Tesla$!$ to $!$Gauss$!$. Identify the appropriate option from the list below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$1~T = 10,000~Gauss$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1~T = 1,000~Gauss$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1~T = 100,000~Gauss$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "13f27a39176745ab9b2cd",
+                    "stepText": "Finally, determine the maximum allowable electromagnet strength that ensures proper separation of materials and avoids unwanted magnetisation, given that the electromagnet should operate below the threshold value. Provide a plausible numerical value in $!$Tesla$!$ for the electromagnet strength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.08"
+                    ],
+                    "stepSolveAnswerUnits": "Tesla",
+                    "stepConcepts": [
+                        "2b80accc-87b6-41fc-b295-4358926533a5",
+                        "1705a6ee-7b77-47c3-b662-0a4f0ad61125",
+                        "4e6d249c-7ac0-4506-88df-2d52e8c63cb9"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

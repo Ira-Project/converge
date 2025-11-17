@@ -1,0 +1,232 @@
+{
+    "id": "db64d88b43d04c168c19e",
+    "name": "Nuclear Model of the Atom",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "c31f74b45835400183eb3",
+            "questionText": "The original question requests an explanatory, conceptual answer rather than a numerical one. To create a question that asks for a single numerical answer, please provide additional information or specify a parameter to calculate. For example, if you intend to ask for the calculation of the maximum deflection angle of an alpha particle in Rutherford's gold foil experiment, provide all necessary numerical values (such as the energy of the alpha particle, the charge and mass of the particles involved, and the impact parameter, if applicable). What specific numerical parameter do you want to calculate?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1d52a381f3604b898794d",
+                    "stepText": "Let's start by identifying the specific numerical parameter you wish to calculate in this problem. Which of the following best describes the parameter to compute?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e610543e-36e3-456e-a6dc-ece8abe7bd44"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Maximum deflection angle of an alpha particle}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Total kinetic energy of the alpha particle}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Distance of closest approach}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "77135936b19a4d86aaaed",
+                    "stepText": "Now, identify the key physical quantities needed for calculating the maximum deflection angle. Which set of variables is essential for this Rutherford scattering calculation?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e610543e-36e3-456e-a6dc-ece8abe7bd44"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Kinetic energy, charge on the gold nucleus, mass of the alpha particle, and the impact parameter}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Only the mass of the alpha particle and the distance from the nucleus}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Wavelength of the alpha particle and the reactor temperature}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "225f41ab6a9f45e4bb383",
+                    "stepText": "Great, now select the proper Rutherford scattering formula that relates these quantities to the maximum deflection angle. Which of the following formulas is appropriate?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e610543e-36e3-456e-a6dc-ece8abe7bd44"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\theta_{max} = 2\\arctan\\left(\\frac{Z_{\\alpha}Z_{\\text{Au}}e^2}{8\\pi\\epsilon_0 E b}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\theta_{max} = \\frac{Z_{\\alpha}Z_{\\text{Au}}e^2}{4\\pi\\epsilon_0 E} \\times b$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\theta_{max} = \\frac{4\\pi\\epsilon_0 E b}{Z_{\\alpha}Z_{\\text{Au}}e^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "aec94601585e41e0afbad",
+                    "stepText": "Next, assume that you have been provided with specific numerical values for the energy of the alpha particle, the charges of the alpha particle and gold nucleus, the mass of the alpha particle, and the impact parameter. Using these values and the selected formula, calculate the maximum deflection angle. (For example, if your computed result is 15, enter that value.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15"
+                    ],
+                    "stepSolveAnswerUnits": "degrees",
+                    "stepConcepts": [
+                        "e610543e-36e3-456e-a6dc-ece8abe7bd44"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "830d351cdf27417a9b0d0",
+                    "stepText": "Finally, review your work: ensure that all your numerical substitutions correctly reflect the physical scenario and that the computed angle is reasonable for a Rutherford scattering event. Which explanation best supports that your finalized numerical answer is consistent with the expected behavior of the scattering process?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e610543e-36e3-456e-a6dc-ece8abe7bd44"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{The calculated angle correctly represents the maximum deflection due to the strong electrostatic repulsion at small impact parameters.}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{The angle is too small because it should increase with increasing kinetic energy.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{The angle is unrelated to the interaction between the alpha particle and the nucleus.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ceabe85222f14ad0bab99",
+            "questionText": "Consider an isotope of sulfur with mass number $!$A=32$!$ and atomic number $!$Z=16$!$. For its negative ion with a charge of $!$-2$!$, what is the number of electrons in the ion? Provide your answer as a single integer.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "f8067c87a6a1492a83789",
+                    "stepText": "Let's start by thinking about a neutral atom. In a neutral atom, the number of electrons equals the atomic number. Please select the option that best represents this concept.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c160fbab-1084-4e19-9e11-26bb14e17d31"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{The number of electrons equals the atomic number.}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{The number of electrons is twice the atomic number.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{The number of electrons is half the atomic number.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e9b7f06311be49b6a7457",
+                    "stepText": "Great, now consider what a negative ion means. A negative ion has extra electrons compared to its neutral form. Which option correctly describes this idea?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "70bb259d-d789-4cf3-ba98-ff98c8ea67a6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{A negative ion has extra electrons.}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{A negative ion has fewer electrons.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{A negative ion has extra protons.}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "34eb249c31db469cb9b7d",
+                    "stepText": "Now, use the information from the previous steps. For a neutral sulfur atom (with atomic number $!$Z=16$!$), there are 16 electrons. A -2 charge indicates that the ion has 2 extra electrons. Add these values to find the total number of electrons.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "18"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "c160fbab-1084-4e19-9e11-26bb14e17d31",
+                        "70bb259d-d789-4cf3-ba98-ff98c8ea67a6"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

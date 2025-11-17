@@ -1,0 +1,252 @@
+{
+    "id": "fa65b5bc9e2c47e7a1565",
+    "name": "Momentum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "99a92a99a3504b61aff7c",
+            "questionText": "A sedan with a mass of $!$1200 \\text{ kg}$!$ traveling at $!$15 \\text{ m/s}$!$ collides head-on with an SUV of mass $!$2000 \\text{ kg}$!$ moving at $!$10 \\text{ m/s}$!$ in the opposite direction. After the collision, the vehicles become entangled and move together as a single unit. If the crumple zones in the sedan extend the collision time to $!$0.25 \\text{ s}$!$, calculate the magnitude of the average force exerted on the sedan during the collision.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "29bdc55a7f4d49aa8d43a",
+                    "stepText": "Let's start by identifying the correct formula for momentum. Which of the following options correctly represents momentum?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p=mv$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p=m+v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p=\\frac{m}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p=v-m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "469a215447934abe96dd1",
+                    "stepText": "Now, calculate the momentum of the sedan. Use its mass and speed. Input the numerical value of the sedan's momentum.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "18000"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312",
+                        "2864ac00-d579-410b-bd83-5d9ae0ebec05"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c8f96c27d24d4f6f9bf8d",
+                    "stepText": "Next, calculate the momentum of the SUV. Consider its mass and the fact that it moves in the opposite direction (remember to include the sign). What is its momentum?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-20000"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312",
+                        "2864ac00-d579-410b-bd83-5d9ae0ebec05"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d66b6c1426cd4558872a6",
+                    "stepText": "Combine the momenta of both vehicles to determine the total initial momentum of the system. Provide the numerical value of this total momentum.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-2000"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                        "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "267accc190344d90a827b",
+                    "stepText": "Since the collision is perfectly inelastic, the vehicles stick together. Which formula correctly relates the total momentum, the combined mass, and the final velocity after the collision?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cad79986-bd73-4543-b34c-949a1d71cd5a",
+                        "337bf447-29fe-4758-8ae6-d7d83eb262d7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v=\\frac{p_{total}}{m_{total}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v=p_{total}\\times m_{total}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v=\\frac{m_{total}}{p_{total}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v=\\frac{p_{total}}{m_{total}^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "32a11b29ece14e138e6cd",
+                    "stepText": "Determine the change in momentum of the sedan by subtracting its initial momentum from its final momentum (consider the sedan\u2019s final momentum as the product of its mass and the shared final velocity). What is the numerical value of this change in momentum?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "-18750"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "04c41e33-e440-4c28-98c2-3bb76709f5f6",
+                        "c9e4e3f6-76c2-4d5f-843c-c43f5dea57b0"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "408201affbc94adaa5980",
+                    "stepText": "Finally, to find the magnitude of the average force exerted on the sedan, identify the correct impulse-momentum relationship that connects force, collision time, and change in momentum. Then, using this relationship and the given collision time, calculate the force. What is the numerical magnitude of the average force?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "75000"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "aa777ab4-cce5-47ce-81a9-d6a0548f1137",
+                        "eb2f76a7-4c38-468d-b7dd-2f8dc4135942",
+                        "d942bfc1-dceb-4ac6-bb12-b1319ba8ccca"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F=\\frac{\\Delta p}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F=\\Delta p \\times \\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F=\\frac{\\Delta t}{\\Delta p}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F=\\Delta p+\\Delta t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "d5b8f83731d04823aa1c1",
+            "questionText": "A massive rocket launches from Earth, expelling hot gases downwards to generate thrust. The rocket has an initial total mass of $!$50000 \\text{ kg}$!$. It expels gases at a constant rate of $!$500 \\text{ kg/s}$!$ relative to the rocket, with an exhaust velocity of $!$2000 \\text{ m/s}$!$ downwards relative to the rocket. Calculate the magnitude of the average resultant force (thrust) exerted on the rocket during the first $!$1.0 \\text{ s}$!$ of its launch. Assume the change in the rocket's mass during this short interval is negligible for simplifying the resultant force calculation.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3b130711c1ed48faad200",
+                    "stepText": "Let's start by identifying the proper formula for calculating the resultant force based on the change in momentum over time. Please choose the formula that relates force to the change in momentum and time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "1a227599-b55c-4dde-ab9a-1062a5fb942c",
+                        "e4ef5aa5-8a7b-4dff-94c6-a453dacf33f5"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F=\\frac{\\Delta p}{\\Delta t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F=m\\times a$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F=\\frac{\\Delta p}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f440ede1e8054a22b66a0",
+                    "stepText": "Great, now that we have identified the correct concept, let's calculate the momentum of the expelled gases. Multiply the mass of the gases expelled in one second by the exhaust velocity. What is the resulting momentum?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1000000"
+                    ],
+                    "stepSolveAnswerUnits": "kg\u00b7m/s",
+                    "stepConcepts": [
+                        "cb2fb9ab-0661-426b-8ed1-18f42da83312",
+                        "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b56d6fd199d74176ad90f",
+                    "stepText": "Now, using the momentum you calculated and knowing the time interval is 1.0 s, compute the average resultant force (thrust) by dividing the momentum by the time. What value do you obtain for the force?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1000000"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "1a227599-b55c-4dde-ab9a-1062a5fb942c",
+                        "04c41e33-e440-4c28-98c2-3bb76709f5f6"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

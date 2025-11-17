@@ -1,0 +1,273 @@
+{
+    "id": "65f1ae55272849d6b8557",
+    "name": "Kinetic Particle Model of Matter",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "aa4018b3516547bc9729c",
+            "questionText": "A kettle contains $!$1.5$!$ liters of water initially at $!$25^\\text{o}C$!$. Calculate the total energy, in joules, required to heat the water to its boiling point ($!$100^\\text{o}C$!$) and completely convert it into steam. Assume the density of water is $!$1 \\, kg/L$!$, the specific heat capacity of water is $!$4.18 \\, J/(g \\, \\text{\u00b0C})$!$, and the latent heat of vaporization of water is $!$2260 \\, J/g$!$. (Note: $!$1 \\, kg = 1000 \\, g$!$.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5487676380a6476abb372",
+                    "stepText": "Let's begin by selecting the correct formula to compute the mass of the water from its volume and density. Which of the following formulas correctly relates mass (m), density (\u03c1), and volume (V)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$m = \\rho \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m = \\frac{V}{\\rho}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$m = \\rho + V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1f234ba74db644b0982c5",
+                    "stepText": "Now, use the formula you selected along with the given values: a volume of $!$1.5$!$ L and a density of $!$1 \\text{ kg/L}$!$. Remember to convert the mass from kilograms to grams (using $!$1 \\text{ kg} = 1000 \\text{ g}$!$). What is the mass of the water in grams?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1500"
+                    ],
+                    "stepSolveAnswerUnits": "g",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "f35921faebac45c6a0787",
+                    "stepText": "Great! Next, identify the proper formula to calculate the energy required to heat water. This formula should involve the mass (m), specific heat capacity (c), and the temperature change (\\(\\Delta T\\)). Which option correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = m \\times c \\times \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = \\frac{m}{c \\times \\Delta T}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = c \\times \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "438f6b24a8fb48cf9a910",
+                    "stepText": "Using the heating formula from the previous step, calculate the energy required to raise the temperature of the water from $!$25^\\text{o}C$!$ to $!$100^\\text{o}C$!$. Use the mass from Step 2 ($!$1500$!$ g), the specific heat capacity $!$4.18 \\text{ J/(g \\cdot \u00b0C)}$!$, and note that the temperature change \\(\\Delta T\\) is $!$(100 - 25)$!$ \u00b0C. What is the heating energy (Q\u2081) in joules?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "470250"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "97636e23afc24b7092e28",
+                    "stepText": "Now, select the correct formula for determining the energy required to convert boiling water into steam (phase change) using the latent heat of vaporization. Which of these formulas is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$Q = m \\times L$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q = \\frac{L}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q = m + L$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d4cd3aae61334ed29cfbf",
+                    "stepText": "Using the formula from Step 5, calculate the energy needed to vaporize the water. Use the mass from Step 2 ($!$1500$!$ g) and the latent heat of vaporization $!$2260 \\text{ J/g}$!$. What is the vaporization energy (Q\u2082) in joules?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3390000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "071dca367d064bbf8c298",
+                    "stepText": "Finally, choose the appropriate method to combine the energies calculated in Steps 4 and 6 to find the total energy required for both heating and vaporizing the water. Which formula correctly represents this total energy?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$Q_{total} = Q_{heating} + Q_{vaporization}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Q_{total} = Q_{heating} - Q_{vaporization}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Q_{total} = Q_{heating} \\times Q_{vaporization}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "dd2c3d76b48740819320b",
+            "questionText": "During a long summer drive, the air inside your car tires heats up significantly, causing the kinetic energy of the gas particles to increase and leading to more frequent and forceful collisions with the tire walls. An initially inflated car tire has a pressure of $!$2.0\\,\\text{atm}$!$ when the ambient temperature is $!$27^\\circ\\text{C}$!$. After driving, the tire temperature rises to $!$57^\\circ\\text{C}$!$. Assuming the volume of the tire remains constant, calculate the new pressure of the air inside the tire in $!$\\text{atm}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a8b41192c0e84b62baa33",
+                    "stepText": "Let's begin by recalling the law that relates pressure and temperature at constant volume. Please select the correct formula that describes this relationship.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p \\propto T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V \\propto T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$pV = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3364b18a3168415a901ed",
+                    "stepText": "Great! Now, convert the initial temperature from Celsius to Kelvin. Remember that you can convert by adding 273 to the Celsius temperature. Calculate the Kelvin temperature for 27\u00b0C.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "300"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "12b0701c201b48c6aafd0",
+                    "stepText": "Now, convert the final temperature from Celsius to Kelvin using the same conversion method. What is the Kelvin temperature for 57\u00b0C?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "330"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a582627a68164de3b760c",
+                    "stepText": "With the temperatures in Kelvin and knowing that pressure is directly proportional to temperature at constant volume, identify the correct rearranged formula to compute the new pressure. Which of the following formulas should you use?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p_2=p_1\\times\\left(\\frac{T_2}{T_1}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p_2=\\frac{p_1\\times T_1}{T_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p_2=\\frac{T_2}{p_1\\times T_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "ed628986646640c8a3aa2",
+                    "stepText": "Finally, using the rearranged formula and the values provided ($!$p_1=2.0\\,\\text{atm}$!$, $!$T_1=300\\,K$!$, $!$T_2=330\\,K$!$), perform the calculation to determine the new pressure inside the tire.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.2"
+                    ],
+                    "stepSolveAnswerUnits": "atm",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

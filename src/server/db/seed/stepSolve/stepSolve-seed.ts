@@ -26,7 +26,22 @@ import { concepts } from "../../schema/concept";
 import { knowledgeZapQuestionAttempts, knowledgeZapQuestionsToConcepts } from "../../schema/knowledgeZap/knowledgeZapQuestions";
 import { knowledgeZapQuestions } from "../../schema/knowledgeZap/knowledgeZapQuestions";
 
-export async function createStepSolveAssignment(topicName: string) {
+import { 
+  mapStepSolveTemplateToCourse,
+  mapStepSolveTemplateToGrade,
+  mapStepSolveTemplateToSubject
+} from "../assignmentMapping-seed";
+
+export async function createStepSolveAssignment(
+  topicName: string,
+  options?: {
+    courseIds?: string[];
+    subjectIds?: string[];
+    grades?: string[];
+  }
+) {
+  const { courseIds, subjectIds, grades } = options ?? {};
+
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
 
   const id = process.env.ENVIRONMENT === "prod" ? json.id : json.id;
@@ -243,6 +258,30 @@ export async function createStepSolveAssignment(topicName: string) {
 
   console.log("Step solve creation complete");
   console.log("--------------------------------");
+
+  // Create mappings to courses
+  if (courseIds && courseIds.length > 0) {
+    console.log("Creating course mappings...");
+    for (const courseId of courseIds) {
+      await mapStepSolveTemplateToCourse(templateId, courseId);
+    }
+  }
+
+  // Create mappings to subjects
+  if (subjectIds && subjectIds.length > 0) {
+    console.log("Creating subject mappings...");
+    for (const subjectId of subjectIds) {
+      await mapStepSolveTemplateToSubject(templateId, subjectId);
+    }
+  }
+
+  // Create mappings to grades
+  if (grades && grades.length > 0) {
+    console.log("Creating grade mappings...");
+    for (const grade of grades) {
+      await mapStepSolveTemplateToGrade(templateId, grade);
+    }
+  }
 }
 
 export async function createStepSolveToAssignment() {
@@ -575,7 +614,17 @@ export async function createConceptTrackerForAllStepAttempts() {
   }
 }
 
-export async function createGeneratedStepSolveAssignment(topicName: string, userId: string) {
+export async function createGeneratedStepSolveAssignment(
+  topicName: string, 
+  userId: string,
+  options?: {
+    courseIds?: string[];
+    subjectIds?: string[];
+    grades?: string[];
+  }
+) {
+  const { courseIds, subjectIds, grades } = options ?? {};
+
   const { default: json } = await import( `./${topicName}.json`, { assert: { type: "json" } });
 
   const id = process.env.ENVIRONMENT === "prod" ? json.id : json.id;
@@ -807,8 +856,88 @@ export async function createGeneratedStepSolveAssignment(topicName: string, user
     }
   }
 
+  // Find or create template for this topic (for generated assignments)
+  console.log("Finding or creating template for generated topic", topic[0].id, topic[0].name);
+  
+  const existingTemplate = await db.select().from(stepSolveAssignmentTemplates).where(
+    eq(stepSolveAssignmentTemplates.topicId, topic[0].id)
+  );
+
+  let templateId: string;
+  
+  if (existingTemplate.length > 0) {
+    console.log("Template already exists for topic", topic[0].name);
+    templateId = existingTemplate[0]?.id ?? "";
+    
+    // Add this assignment to the template's assignment list if not already present
+    const currentAssignmentIds = existingTemplate[0]?.assignmentIds ?? [];
+    if (!currentAssignmentIds.includes(stepSolveAssignment.id)) {
+      const updatedAssignmentIds = [...currentAssignmentIds, stepSolveAssignment.id];
+      await db.update(stepSolveAssignmentTemplates)
+        .set({
+          assignmentIds: updatedAssignmentIds,
+          updatedAt: new Date()
+        })
+        .where(eq(stepSolveAssignmentTemplates.id, templateId));
+      console.log("Added generated assignment to existing template", stepSolveAssignment.id, templateId);
+    } else {
+      console.log("Generated assignment already in template", stepSolveAssignment.id, templateId);
+    }
+  } else {
+    // Create new template for generated assignments
+    templateId = generateId(21);
+    console.log("Creating new template for generated topic", topic[0].name, templateId);
+    
+    await db.insert(stepSolveAssignmentTemplates).values({
+      id: templateId,
+      assignmentIds: [stepSolveAssignment.id],
+      name: `${json.name} Template`,
+      description: `Template for ${topic[0].name}`,
+      topicId: topic[0].id,
+      generated: true,
+      createdBy: userId,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
+    console.log("Created new template for generated assignment", templateId, "for topic", topic[0].name);
+  }
+
+  // Link the assignment to the template
+  await db.update(stepSolveAssignments)
+    .set({
+      templateId: templateId,
+      updatedAt: new Date()
+    })
+    .where(eq(stepSolveAssignments.id, stepSolveAssignment.id));
+  
+  console.log("Linked generated assignment to template", stepSolveAssignment.id, templateId);
+
   console.log("Generated step solve creation complete");
   console.log("--------------------------------");
+
+  // Create mappings to courses for generated assignments
+  if (courseIds && courseIds.length > 0) {
+    console.log("Creating course mappings for generated assignment...");
+    for (const courseId of courseIds) {
+      await mapStepSolveTemplateToCourse(templateId, courseId);
+    }
+  }
+
+  // Create mappings to subjects for generated assignments
+  if (subjectIds && subjectIds.length > 0) {
+    console.log("Creating subject mappings for generated assignment...");
+    for (const subjectId of subjectIds) {
+      await mapStepSolveTemplateToSubject(templateId, subjectId);
+    }
+  }
+
+  // Create mappings to grades for generated assignments
+  if (grades && grades.length > 0) {
+    console.log("Creating grade mappings for generated assignment...");
+    for (const grade of grades) {
+      await mapStepSolveTemplateToGrade(templateId, grade);
+    }
+  }
 }
 
 export async function createStepSolveAssignmentTemplate() {

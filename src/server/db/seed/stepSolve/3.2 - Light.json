@@ -1,0 +1,214 @@
+{
+    "id": "26c27495bff8410186465",
+    "name": "Light",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "813ad7f01af445b8acc6d",
+            "questionText": "A researcher inside a submarine observes an underwater rock. Light from the rock, originating in water ($!$n_{water}=1.33$!$) enters the air-filled tube ($!$n_{air}=1.00$!$) of the periscope. For a specific light ray from the rock, the angle of incidence in the water is $!$25^\\circ$!$ and as the ray enters the air, it refracts, making an angle of refraction of $!$33.8^\\circ$!$ with the normal. If the apparent depth of the rock as seen through the periscope is $!$1.5\\,m$!$, what is the actual real depth of the rock?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0a15eeae8e37494aa0138",
+                    "stepText": "Let's start by identifying the relationship between the real depth $!$d_{real}$!$ and the apparent depth $!$d_{apparent}$!$ of an object when viewed through a medium interface. Please choose the correct formula relating these two quantities that takes into account the refractive indices of water and air.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "488995d9-0418-437b-afe1-5c283e6346b8",
+                        "1ffcf95f-8305-41cc-8a9a-29f6ec2dc99a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d_{apparent} = d_{real} \\times \\frac{n_{air}}{n_{water}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d_{real} = d_{apparent} \\times \\frac{n_{air}}{n_{water}}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d_{real} = d_{apparent} \\times \\frac{n_{water}}{n_{air}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        }
+                    ]
+                },
+                {
+                    "id": "7e2d34eaaf884aae99d16",
+                    "stepText": "Great, now that you have identified the correct relationship, substitute the given values into the equation $!$d_{real} = d_{apparent} \\times (\\frac{n_{water}}{n_{air}})$!$. Calculate the product using the apparent depth $!$1.5\\,m$!$, water's refractive index $!$1.33$!$, and air's refractive index $!$1.00$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.995"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "0fd432f9-88af-4d36-8e87-5eae4916e921"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e7d3b9d586df44d09f986",
+                    "stepText": "Now, considering standard reporting conventions, round your computed result to a sensible number of significant figures. What is the final approximate real depth of the rock?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.0"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "8febb75953d740f0b9ce0",
+            "questionText": "The original question describes optical phenomena without asking for a numerical value. To refine the problem as a single numerical question, please provide additional numerical details. For example, supply numerical values for parameters such as: \n(1) the distance from the studio lamp to the subject, \n(2) the size (or radius) of the studio lamp, \n(3) the distance from the subject to the backdrop, and \n(4) the dimensions of the backdrop. \nOnce these values are provided, a refined question can be formulated that asks for a single numerical answer (e.g., the length of the umbra on the backdrop).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "de646fc2ae484504ac08c",
+                    "stepText": "Let's start by calculating the total distance from the studio lamp to the backdrop. Given that the lamp is 3.0 m away from the subject and the subject is 2.5 m in front of the backdrop, what is the total separation distance (in m) from the lamp to the backdrop?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.5"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "c981ca89722e461fa9444",
+                    "stepText": "Great, now identify the luminous source in this scenario. Which option best describes the studio lamp?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "07e9bccb-cb8f-4695-9cf9-6ba1fa7d8249"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Luminous source: an object that produces its own light$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Non-luminous object: an object that only reflects light$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Umbra: the completely shadowed region$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fdd8060e5ef840b7bd38c",
+                    "stepText": "Now, consider the shadow formation. What term describes the completely dark central region of the shadow cast by the subject on the backdrop?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a35be94-9c83-415f-8207-626c37d1120f",
+                        "4941a3ad-ddee-4260-a925-3ada3fa69fad"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Umbra: the central dark region$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Penumbra: the partially lit region$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Diffuse reflection: light scattering in many directions$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "cb7076e2df5444c898d16",
+                    "stepText": "Next, let's focus on the approach to calculate the umbra's length using geometry. Which of the following methods is most appropriate for relating the lamp's size and the given distances through proportional relationships?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a35be94-9c83-415f-8207-626c37d1120f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Using similar triangles to set up proportional relationships$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Using the law of reflection$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Applying Snell's Law for refraction$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "156cdcc2bfc44f28a5853",
+                    "stepText": "Finally, now that we have the key distances and have identified the essential concepts, determine the refined numerical question. Which option best represents the numerical question you would solve using the provided parameters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a35be94-9c83-415f-8207-626c37d1120f",
+                        "4941a3ad-ddee-4260-a925-3ada3fa69fad"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Calculate the vertical length of the umbra on the backdrop using the given distances and lamp size$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Determine the area of the penumbra on the backdrop$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Find the total brightness on the backdrop$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

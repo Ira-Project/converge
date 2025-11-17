@@ -131,7 +131,7 @@ export function AppSidebar({ classroom, classrooms, user, activities, students, 
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={navMain} />
-        <NavStudents students={students} classroomId={classroom?.id ?? ""} />
+        <NavStudents students={students} classroomId={classroom?.id ?? ""} role={role} />
       </SidebarContent>
       <SidebarFooter>
         <NavUser user={{

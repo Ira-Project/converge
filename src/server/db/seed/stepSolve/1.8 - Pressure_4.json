@@ -1,0 +1,206 @@
+{
+    "id": "249de2ab4af5462ea6aa0",
+    "name": "Pressure",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a4e8cf03789743b6b2c5b",
+            "questionText": "A mechanic uses a hydraulic jack to lift a car. They apply an input force of $!$150 \\textrm{ N}$!$ to a small piston with a radius of $!$2 \\textrm{ cm}$!$. If the larger output piston has a radius of $!$10 \\textrm{ cm}$!$, calculate the maximum force the jack can exert on the car.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d5957d730637430cbea2f",
+                    "stepText": "Let's start by identifying the hydraulic principle used to multiply force in this system. Please select the correct formula that relates the input force on the small piston to the output force on the larger piston.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "460ceb3c-03d1-4066-a770-99b3ac24df2d",
+                        "7a1b6bbe-80bb-494c-8186-73f5a812ceed"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = \\frac{f}{a} \\times A$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = f \\times \\frac{a}{A}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{f \\times A}{a^2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c47205c0ee50491f9a734",
+                    "stepText": "Great, now let's calculate the area of the small piston. Use the formula for the area of a circle $!$A = \\pi r^2$!$ with the given radius.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12.57"
+                    ],
+                    "stepSolveAnswerUnits": "cm^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "fe0428c3084a4a7f85bab",
+                    "stepText": "Now, calculate the area of the larger piston using the same area formula with its given radius.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "314.16"
+                    ],
+                    "stepSolveAnswerUnits": "cm^2",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "1d885b87e86b451593a27",
+                    "stepText": "Next, determine the multiplying factor by finding the ratio of the larger piston area to the small piston area.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "25"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7a1b6bbe-80bb-494c-8186-73f5a812ceed"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d6dc2773e28d48f3b8fec",
+                    "stepText": "Finally, use the multiplying factor and the input force to calculate the maximum output force the hydraulic jack can exert on the car.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3750"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "460ceb3c-03d1-4066-a770-99b3ac24df2d"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "8619245e61f847cc87ce7",
+            "questionText": "A submersible is currently at a depth of $!$3000 \\text{ m}$!$ in the Mariana Trench. The average density of seawater is $!$1025 \\text{ kg/m}^3$!$ and the acceleration due to gravity is $!$9.8 \\text{ m/s}^2$!$. If the submersible needs to reach a depth where the liquid pressure (pressure due to the water column only, excluding atmospheric pressure) is $!$5 \\times 10^7 \\text{ Pa}$!$, how much deeper must it descend from its current position to achieve this target pressure?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9facca3deebe47789dbf0",
+                    "stepText": "Let's start by recalling the relationship that links the change in liquid pressure to the density, gravity, and the change in depth. Identify the correct formula among the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta p = \\rho g \\Delta h $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta h = \\rho g \\Delta p $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta p = \\frac{\\rho}{g \\Delta h} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c57d0ef246094924af60b",
+                    "stepText": "Now that you have the pressure change formula, rearrange it to solve for the change in depth $!$\\Delta h$!$. Choose the correct rearranged formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta h = \\frac{\\Delta p}{\\rho g} $!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta h = \\Delta p \\times \\rho g $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta h = \\frac{\\rho g}{\\Delta p} $!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2a4550eaf9f445ccba1fe",
+                    "stepText": "Great, now calculate the product of the seawater density and the acceleration due to gravity, i.e., compute $!$1025 \\times 9.8$!$. What is the result of this multiplication?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10045"
+                    ],
+                    "stepSolveAnswerUnits": "Pa/m",
+                    "stepConcepts": [
+                        "305ef332-500d-4c4e-9da1-1adecb3649db"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4804d546d1644b0ba2b81",
+                    "stepText": "Using the rearranged formula and the result from the previous step, substitute the target pressure $!$5 \\times 10^7 \\text{ Pa}$!$ and the product (denominator) into the formula to compute the total change in depth $!$\\Delta h$!$. What numerical value do you get for $!$\\Delta h$!$ (in meters)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4977.6"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "6e4fee54-46fc-49c0-8e54-8fd3c224082a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "589247aaf283409681603",
+                    "stepText": "Finally, determine the extra depth the submersible must descend by subtracting its current depth of $!$3000 \\text{ m}$!$ from the total depth needed $!$\\Delta h$!$. What is the additional descent required (in meters)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1977.6"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

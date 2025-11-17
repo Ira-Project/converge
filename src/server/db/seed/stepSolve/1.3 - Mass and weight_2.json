@@ -1,0 +1,140 @@
+{
+    "id": "c4d6a2e0c8da408aa6d15",
+    "name": "Mass and Weight",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "fac272b18be64b4195c82",
+            "questionText": "An intergalactic cargo ship is preparing for a journey from Earth to Mars carrying a crucial piece of equipment with a mass of $!$150\\,\\text{kg}$!$. On Earth, where the gravitational field strength is $!$9.8\\,\\text{N/kg}$!$, the equipment weighs $!$150 \\times 9.8\\,\\text{N}$!$. On Mars, with a gravitational field strength of $!$3.7\\,\\text{N/kg}$!$, its weight is $!$150 \\times 3.7\\,\\text{N}$!$. Calculate the absolute difference in the equipment's weight between Earth and Mars.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9d0e017c2857484ba3e39",
+                    "stepText": "Let's start by identifying the appropriate formula to calculate weight. Which of these formulas correctly relates weight to mass and gravitational field strength?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                        "a8bc0dd5-246d-40c2-a509-ac9658a3f04c",
+                        "55de6a44-2990-4e22-84f1-9fc49af4017c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = m \\times g$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{m}{g}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = m + g$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3f3ffff0549a4ab3b0fd1",
+                    "stepText": "Great! Now using the selected weight formula, calculate the weight of the equipment on Earth given the mass $!$150\\,\\text{kg}$!$ and Earth's gravitational field strength $!$9.8\\,\\text{N/kg}$!$. What is the resulting weight?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1470"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6",
+                        "01d1e541-9807-4bb0-a823-3dbf8a09d733"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f794fe9f1e104acc99029",
+                    "stepText": "Now, apply the same weight formula to calculate the weight of the equipment on Mars using the Mars gravitational field strength $!$3.7\\,\\text{N/kg}$!$ and the same mass. What is the weight on Mars?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "555"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "8d226301-62d9-45bd-adc3-ee9c883348c6"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "462bb6dfef7e4b6fa38f1",
+                    "stepText": "Finally, determine the absolute difference between the weight on Earth and the weight on Mars. Use the values obtained in the previous steps to perform this calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "915"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "fcdf65f33b2448b19c369",
+            "questionText": "Convert $!$250\\,\\text{g}$!$ of a compound into its equivalent mass in $!$\\text{kg}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8ec553511c9f4f99899c9",
+                    "stepText": "Let's start by identifying the conversion factor that relates grams to kilograms. Which of the following expresses how many kilograms are in one gram?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0e162bf0-0cec-4c8e-a70d-df85506735b7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1 \\text{ g} = 0.001 \\text{ kg}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1 \\text{ g} = 0.01 \\text{ kg}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1 \\text{ g} = 0.1 \\text{ kg}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4098d9c768834129b5d9e",
+                    "stepText": "Great, now that you have identified the conversion factor, use it to convert 250 g to kilograms by multiplying the number of grams by the conversion factor. What is the resulting mass in kilograms?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.25"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "0e162bf0-0cec-4c8e-a70d-df85506735b7"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

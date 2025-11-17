@@ -17,6 +17,9 @@ interface InputEdgeProps {
   onLabelDrop: (edgeId: string, label: string) => void;
   onLabelReturn: (edgeId: string, label: string) => void;
   onEdgeRemove: (edgeId: string) => void;
+  onPlace?: (edgeId: string) => void;
+  isMobile?: boolean;
+  selectedItem?: { id: string; text: string; type: 'node' | 'edge' } | null;
 }
 
 export default function InputEdge({
@@ -29,6 +32,9 @@ export default function InputEdge({
   onLabelDrop,
   onLabelReturn,
   onEdgeRemove,
+  onPlace,
+  isMobile,
+  selectedItem,
 }: InputEdgeProps) {
   const [edgePath, labelX, labelY] = getStraightPath({
     sourceX,
@@ -59,6 +65,15 @@ export default function InputEdge({
     }
     onEdgeRemove(id);
   };
+
+  const handleMobilePlace = (e: React.MouseEvent | React.TouchEvent) => {
+    if (isMobile && selectedItem && selectedItem.type === 'edge' && !data?.label && onPlace) {
+      e.preventDefault();
+      e.stopPropagation();
+      onPlace(id);
+    }
+  };
+
   const getArrowColor = () => {
     if (!data?.label) return '#d9d9d9';
     switch (data.status) {
@@ -71,6 +86,8 @@ export default function InputEdge({
     }
   };
 
+  const canPlace = isMobile && selectedItem && selectedItem.type === 'edge' && !data?.label;
+
   return (
     <>
       <BaseEdge 
@@ -78,13 +95,16 @@ export default function InputEdge({
         path={edgePath} 
         markerEnd={`url(#${id}-arrow)`} 
         style={{
-          stroke: getArrowColor()
+          stroke: canPlace ? '#3b82f6' : getArrowColor(),
+          strokeWidth: canPlace ? 3 : 1,
         }}
       />
       <EdgeLabelRenderer>
         <motion.div
           onDrop={handleDrop}
           onDragOver={handleDragOver}
+          onClick={handleMobilePlace}
+          onTouchEnd={handleMobilePlace}
           className={`
             relative
             text-center
@@ -92,19 +112,33 @@ export default function InputEdge({
             pr-4
             bg-white
             ${data?.label ? '' : 'w-24 h-4' }
+            ${canPlace ? 'cursor-pointer' : ''}
             rounded-md
+            transition-all
           `}
           style={{
             position: 'absolute',
             transform: `translate(-50%, -50%) translate(${labelX}px,${labelY}px)`,
             pointerEvents: 'all',
-            boxShadow: data?.label ? 'none' : '0px 2px 4px rgba(0, 0, 0, 25%) inset',
-            border: data?.label ? 'none' : '1px solid #d9d9d9',
+            boxShadow: data?.label 
+              ? 'none' 
+              : canPlace 
+                ? '0 0 0 2px rgba(59, 130, 246, 0.5)' 
+                : '0px 2px 4px rgba(0, 0, 0, 25%) inset',
+            border: data?.label 
+              ? 'none' 
+              : canPlace 
+                ? '2px solid #3b82f6' 
+                : '1px solid #d9d9d9',
+            backgroundColor: canPlace ? '#dbeafe' : 'white',
           }}
+          whileTap={canPlace ? { scale: 0.95 } : {}}
         >
-          <p className="text text-muted-foreground max-w-24 text-center bg-white">
-            {data?.label}
-          </p>
+          {!data?.label && !canPlace && (
+            <p className="text text-muted-foreground max-w-24 text-center bg-white">
+              {data?.label}
+            </p>
+          )}
           <Button
             variant="ghost"
             onClick={handleRemove}

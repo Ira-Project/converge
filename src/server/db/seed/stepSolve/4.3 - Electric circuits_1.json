@@ -1,0 +1,158 @@
+{
+    "id": "ea96bca665ab4607a857b",
+    "name": "Electric Circuits",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "d93f849b07e844a782726",
+            "questionText": "A car's battery consists of 6 cells connected in series, each providing an electromotive force (\\(2.0\\ \\text{V}\\)), resulting in a total electromotive force. The battery has an internal resistance of \\(0.05\\ \\Omega\\)). When the two headlights are connected in parallel to this battery, they draw a total current of \\(10\\ \\text{A}\\)). Calculate the terminal potential difference across the car's headlights when they are operating.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "631d0b38619345e3a5685",
+                    "stepText": "Let's start by determining how the electromotive forces (e.m.f.s) of the cells add together when connected in series. Please select the correct formula for combining e.m.f.s in series.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "320b0a47-989b-4366-9676-1f34e540ac09",
+                        "b14dd40f-3728-4962-ae52-1fb9c050b293"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = E_1 + E_2 + \\ldots + E_n$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{E_1 + E_2 + \\ldots + E_n}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = E_1 \\times E_2 \\times \\ldots \\times E_n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3e93832d57b041288b3d4",
+                    "stepText": "Now, use the selected formula to calculate the total e.m.f. of the battery by multiplying the number of cells by the e.m.f. of each cell. What is the total e.m.f.?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12.0"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "320b0a47-989b-4366-9676-1f34e540ac09"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5002c33bb4494ada9edc5",
+                    "stepText": "Next, consider the drop in potential due to the battery\u2019s internal resistance when a current is drawn. Identify the correct formula that relates the voltage drop to current and resistance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "dafb8efd-f03d-4795-80b9-43bfd2de2b38",
+                        "28c404a4-6bdf-4bb6-a5cd-a9658fb71d7e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V_{drop} = I \\times r$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V_{drop} = \\frac{I}{r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V_{drop} = I + r$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1708898ff5984d119e447",
+                    "stepText": "Finally, calculate the terminal potential difference across the headlights by subtracting the voltage drop (from the battery's internal resistance) from the total e.m.f. of the battery. What is the terminal potential difference?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "11.5"
+                    ],
+                    "stepSolveAnswerUnits": "V",
+                    "stepConcepts": [
+                        "dafb8efd-f03d-4795-80b9-43bfd2de2b38",
+                        "320b0a47-989b-4366-9676-1f34e540ac09"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "a386f287381a47ac89433",
+            "questionText": "Calculate the total equivalent resistance of a string that consists of $!$20$!$ identical LED lamps connected in parallel, where each LED lamp has a resistance of $!$400\\ \\Omega$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "09f76d04e9b14704a7221",
+                    "stepText": "Let's start by identifying the correct formula for calculating the equivalent resistance of identical resistors connected in parallel. Please choose the formula that correctly relates the individual resistance $!$R$!$ and the number of resistors $!$n$!$ to the equivalent resistance $!$R_{eq}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "d752f5e5-d93f-4a67-ba77-44d771335b78"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$R_{eq} = \\frac{R}{n}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$R_{eq} = n \\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$R_{eq} = R - n$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5be41edb6f8948129d7d6",
+                    "stepText": "Great! Now that you've selected the proper formula, substitute the values $!$R = 400\\ \\Omega$!$ and $!$n = 20$!$ into it. What is the result of the division?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20"
+                    ],
+                    "stepSolveAnswerUnits": "\u03a9",
+                    "stepConcepts": [
+                        "d752f5e5-d93f-4a67-ba77-44d771335b78"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

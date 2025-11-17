@@ -29,21 +29,21 @@ export default async function VerifyEmailPage() {
   const subjects = await api.subject.listSubjects.query();
 
   return (
-    <Card className="w-full max-w-lg">
-      <CardHeader>
+    <Card className="w-full max-w-lg mx-auto">
+      <CardHeader className="text-center">
         <CardTitle>A Few More Details</CardTitle>
         <CardDescription>
           Just need a few more details from you so we can get to know you better!
         </CardDescription>
       </CardHeader>
-      <CardContent>
+      <CardContent className="space-y-4">
         <UpdateUserForm 
           courses={courses} 
           subjects={subjects} 
           email={user.email} 
           name={user.name ?? undefined} />
         <form action={logout}>
-          <SubmitButton variant="link" className="p-0 font-normal w-full mt-2 text-center text-muted-foreground">
+          <SubmitButton variant="link" className="p-0 font-normal w-full mt-2 text-center text-muted-foreground text-sm">
             Want to use a different email? Log out now.
           </SubmitButton>
         </form>

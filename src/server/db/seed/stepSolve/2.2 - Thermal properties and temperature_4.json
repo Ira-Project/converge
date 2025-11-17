@@ -1,0 +1,151 @@
+{
+    "id": "973b202c9b804ce28e597",
+    "name": "Thermal Properties and Temperature",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "26f8c3b9ba5a4220baaf8",
+            "questionText": "Sarah is trying to open a tightly sealed glass jar of pickles. The metal lid has an initial diameter of $!$8.00\\ \\text{cm}$!$ at a temperature of $!$4.0\\ \\text{\\degree C}$!$. After running it under hot water, the lid's temperature rises to $!$70.0\\ \\text{\\degree C}$!$. Given that the linear expansivity of the metal is $!$1.7\\times10^{-5}\\ \\text{\\degree C}^{-1}$!$, calculate the new diameter of the metal lid after heating.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e4fbad418a2a4188b6710",
+                    "stepText": "Let's start by calculating the temperature change, $!$\\Delta T$!$, experienced by the lid. Subtract the initial temperature from the final temperature.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "66.0"
+                    ],
+                    "stepSolveAnswerUnits": "$!$\\degree C$!$",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "04c14c9918f3402883a41",
+                    "stepText": "Great. Now, to determine how the lid expands, we need to identify the proper formula that relates the original length, linear expansivity, and temperature change. Which of the following formulas correctly represents this concept?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$L_{new} = L_{old} \\times (1 + \\alpha \\Delta T)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$L_{new} = L_{old} + \\alpha \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$L_{new} = L_{old} \\times \\alpha \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "dc09bbb69e0f416788473",
+                    "stepText": "Now that we have the correct formula in mind, calculate the multiplication factor given by $!$(1 + \\alpha \\Delta T)$!$. Use the linear expansivity $!$1.7\\times10^{-5}\\ \\text{\\degree C}^{-1}$!$ and the temperature change $!$66.0\\ \\text{\\degree C}$!$. What is the value of this factor?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.001122"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "4fab5c759d994a0eb107d",
+                    "stepText": "Finally, apply the multiplier to the original diameter of the lid to compute its new diameter after heating. Multiply $!$8.00\\ \\text{cm}$!$ by the factor computed in the previous step. What is the new diameter?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8.009"
+                    ],
+                    "stepSolveAnswerUnits": "$!$\\text{cm}$!$",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "4ff25468e70a47d7bf821",
+            "questionText": "In a critical shrink-fitting operation for a jet engine component, an inner shaft made of a specialized alloy with a mass of $!$5.0\\,\\text{kg}$!$ is cooled from an initial temperature of $!$25.0\\,^{\\circ}\\text{C}$!$ to a final temperature of $!$-196.0\\,^{\\circ}\\text{C}$!$ by immersing it in liquid nitrogen. Given that the specific heat capacity of the alloy is $!$480\\,\\text{J}\\,\\text{kg}^{-1}\\,^{\\circ}\\text{C}^{-1}$!$, calculate the total thermal energy removed from the shaft during the cooling process.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "9941a7cc6f84437aac5f2",
+                    "stepText": "Let's start by identifying the correct expression that relates the change in thermal energy to the mass, the specific heat capacity, and the temperature change. Please select the appropriate formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "81aff587-ab8e-447b-a084-49ff29038b01"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta E = m \\times c \\times \\Delta \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta E = \\frac{m \\times \\Delta \\theta}{c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E = m + c + \\Delta \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "31fc3afcea574592952cf",
+                    "stepText": "Great, now that you have the correct formula, calculate the magnitude of the temperature change. Remember to subtract the initial temperature from the final temperature (in terms of absolute difference) to get the temperature difference magnitude.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "221.0"
+                    ],
+                    "stepSolveAnswerUnits": "$!$^{\\circ}\\text{C}$!$",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "3bd882f9bdcc46b6943b7",
+                    "stepText": "Now, using the mass of the shaft, the specific heat capacity, and the temperature difference you calculated, determine the total thermal energy removed from the shaft. Multiply the mass, the specific heat capacity, and the magnitude of the temperature change to find the answer.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "530400"
+                    ],
+                    "stepSolveAnswerUnits": "$!$\\text{J}$!$",
+                    "stepConcepts": [
+                        "81aff587-ab8e-447b-a084-49ff29038b01"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

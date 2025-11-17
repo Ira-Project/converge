@@ -1,0 +1,198 @@
+{
+    "id": "37d59f2f44d946e59329a",
+    "name": "Sound",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "631b23cb2555402baed26",
+            "questionText": "Given that the ultrasound frequency in human tissue is $!$2.5\\ \\text{MHz}$!$ and the speed of sound in human tissue is $!$1540\\ \\text{m/s}$!$, while the highest frequency sound audible in air is $!$20000\\ \\text{Hz}$!$ with the speed of sound in air being $!$343\\ \\text{m/s}$!$, calculate how many times larger the wavelength of the highest frequency audible sound in air is compared to the wavelength of the ultrasound in human tissue.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "951a8a80ba5342c2a779f",
+                    "stepText": "Let's start by identifying the relationship between speed, frequency, and wavelength. Please select the correct formula that connects these quantities.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "345dd24e-4f58-4324-829c-4e8719c533e4"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = f\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$f = v\\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = v f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\lambda / f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1f507bb284cb4a4b8026a",
+                    "stepText": "Now, using the chosen relationship, calculate the wavelength of the ultrasound in human tissue using the given speed $!$1540\\ \\text{m/s}$!$ and frequency $!$2.5\\ \\text{MHz}$!$. (Remember to convert 2.5 MHz to Hz.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.000616"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "345dd24e-4f58-4324-829c-4e8719c533e4"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "33fc1348c2d54511b2626",
+                    "stepText": "Next, calculate the wavelength of the highest frequency audible sound in air using a speed $!$343\\ \\text{m/s}$!$ and a frequency of $!$20000\\ \\text{Hz}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.01715"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "345dd24e-4f58-4324-829c-4e8719c533e4"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "52431376f2994447ba8f3",
+                    "stepText": "Finally, determine how many times larger the wavelength in air is compared to the ultrasound wavelength in tissue by dividing the two computed wavelengths.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "27.8"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "ca673ccd538b493caa5b1",
+            "questionText": "A research submarine is mapping the ocean floor using sonar. The speed of sound in seawater is $!$1530\\, m/s$!$, and the submarine detects an echo from the ocean floor $!$0.8\\, s$!$ after emitting a pulse. In contrast, the speed of sound in air at sea level is $!$343\\, m/s$!$. Determine the difference in distance traveled by a sound pulse in air during $!$0.8\\, s$!$ and the one-way distance from the submarine to the ocean floor in water.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "767cf5f78b3e434db1dde",
+                    "stepText": "Let's start by identifying the correct formula to determine the one-way distance in a sonar application, where the echo time represents the round-trip time. Which of the following formulas represents the one-way distance (d) in terms of the speed (v) and the total time (t)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "670671d3-985c-4a23-9178-05e06ebd3f7b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d = \\frac{vt}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = \\frac{v}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d624c5502539421fbbc18",
+                    "stepText": "Great, now that we've determined the formula for the one-way distance in water, compute the one-way distance from the submarine to the ocean floor using the speed of sound in seawater ($!$1530\\, m/s$!$) and the total echo time ($!$0.8\\, s$!$). Remember to apply the formula correctly.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "612"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "670671d3-985c-4a23-9178-05e06ebd3f7b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f7ad23209ea94201a2212",
+                    "stepText": "Next, consider the sound travel in air. Identify the proper formula for calculating the distance traveled by a sound pulse moving through a medium over a given time. Which formula is applicable?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f661324b-ded1-431d-9b0e-d445755e6187"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = \\frac{vt}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = \\frac{v}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "05874563d5154c3180d98",
+                    "stepText": "Using the correct formula from the previous step, calculate the distance that a sound pulse travels in air during $!$0.8\\, s$!$ given the speed of sound in air ($!$343\\, m/s$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "274.4"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "f661324b-ded1-431d-9b0e-d445755e6187"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "46dcaaffe078449a9065e",
+                    "stepText": "Finally, find the difference in distance between the one-way distance from the submarine to the ocean floor in water and the distance traveled by the sound pulse in air over the same time period.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "337.6"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

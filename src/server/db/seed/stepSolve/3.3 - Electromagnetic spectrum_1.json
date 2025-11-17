@@ -1,0 +1,170 @@
+{
+    "id": "8b25dd493c3c414f916e8",
+    "name": "Electromagnetic Spectrum",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "f7934e62cd4e4036a6e8f",
+            "questionText": "Astronomers are observing a distant galaxy using a powerful telescope array. X-rays emitted from a black hole are detected with a frequency of $!$3 \\times 10^{18}$!$ Hz. Given that all electromagnetic waves travel at $!$3 \\times 10^8$!$ m/s in a vacuum, calculate the wavelength of the detected X-rays in nanometers.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "783358162e1e40d1a3ed7",
+                    "stepText": "Let's begin by identifying the equation that relates the speed of an electromagnetic wave to its frequency and wavelength. Please choose the correct formula from the options provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = \\frac{\\lambda}{f}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = f \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{f}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = \\lambda - f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "5fb97a81948a4f92a2fd4",
+                    "stepText": "Now that you have the correct relation, use it to calculate the wavelength in meters. Using $!$v = 3\\times10^8\\;m/s$!$ and $!$f = 3\\times10^{18}\\;Hz$!$, compute the wavelength by dividing the speed by the frequency. What is the wavelength in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1e-10"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "9507e283fc51498898dab",
+                    "stepText": "Great! Now convert the wavelength from meters to nanometers. Recall that $!$1\\;nm = 1\\times10^{-9}\\;m$!$. What is the wavelength in nanometers?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.1"
+                    ],
+                    "stepSolveAnswerUnits": "nm",
+                    "stepConcepts": [
+                        "ad755d70-94fb-44f0-8af1-57ca223ac8ac"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "36783a7f96e44e3e8e10e",
+            "questionText": "Calculate the energy, in electronvolts, of a single ultraviolet photon with a wavelength of $!$300\\,\\text{nm}$!$. Use $!$h = 6.626 \\times 10^{-34}\\,\\text{J}\\cdot\\text{s}$!$ for Planck's constant, $!$c = 3.00 \\times 10^{8}\\,\\text{m/s}$!$ for the speed of light, and recall that $!$1\\,\\text{eV} = 1.602 \\times 10^{-19}\\,\\text{J}$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b2f82dbb53714e689c433",
+                    "stepText": "Let's start by identifying the appropriate relation to calculate the energy of a photon. Select the formula that correctly relates the energy $!$E$!$, Planck's constant $!$h$!$, the speed of light $!$c$!$, and the wavelength $!$\\lambda$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E=\\frac{hc}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E=h\\lambda c$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E=\\frac{h}{\\lambda c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e75d464afa454b6680dc9",
+                    "stepText": "Next, convert the given wavelength from nanometers to meters. Recall that $!$1\\,\\text{nm} = 10^{-9}\\,\\text{m}$!$. What is $!$300\\,\\text{nm}$!$ expressed in meters?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3.00e-7"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "ad755d70-94fb-44f0-8af1-57ca223ac8ac"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "3223e335b7c249f3852f0",
+                    "stepText": "Now, calculate the product of Planck's constant $!$h$!$ and the speed of light $!$c$!$. Enter the resulting value in units of $!$\\text{J}\\cdot\\text{m}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.99e-25"
+                    ],
+                    "stepSolveAnswerUnits": "J\u00b7m",
+                    "stepConcepts": [
+                        "5d5da45c-d891-4924-b19e-6cedeb57827b"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "43067fc20ac24a1bba7fd",
+                    "stepText": "Using the relationship from step 1, divide the product obtained in step 3 by the wavelength in meters from step 2 to find the energy of the photon in joules. What is the energy in $!$\\text{J}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "6.63e-19"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "ac9e6112-e5e7-48ec-bb82-50fa7044d14a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8807b494ca824bc397610",
+                    "stepText": "Finally, convert the energy from joules to electronvolts using the conversion factor $!$1\\,eV=1.602\\times10^{-19}\\,J$!$. What is the energy of the photon in $!$eV$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.14"
+                    ],
+                    "stepSolveAnswerUnits": "eV",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

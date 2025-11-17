@@ -1,0 +1,187 @@
+{
+    "id": "c039d893502947b389a6f",
+    "name": "Forces",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "4bda2a46fe0f4ca09062e",
+            "questionText": "A rower applies a forward force of $!$180\\ N$!$ to propel a boat. Opposing forces include a drag force of $!$60\\ N$!$ and an air resistance of $!$20\\ N$!$. Given that the total mass of the boat and the rower is $!$100\\ kg$!$, calculate the acceleration of the boat.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3e5936b3f86c4c4492ba7",
+                    "stepText": "Let's start by calculating the net force acting on the boat. Begin by combining the opposing forces and then subtracting from the forward force applied by the rower. What is the net force?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "3e20303c-d807-4753-b313-0259b2682a2e",
+                        "f5896b20-1c3e-4db4-bc63-ee2a2bbb7b90"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "126a51679d6f4442adc6c",
+                    "stepText": "Great, now that we have the net force, identify which formula correctly relates net force, mass, and acceleration. Select the appropriate formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+                        "356d493b-02b5-4b95-b7b5-f34b9ec99aa1"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$F = ma$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$F = \\frac{m}{a}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$a = Fm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4f629ba5aafa4ec99ee22",
+                    "stepText": "Now, using the net force and the total mass of the boat and the rower, calculate the acceleration. What is the acceleration?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1"
+                    ],
+                    "stepSolveAnswerUnits": "m/s\u00b2",
+                    "stepConcepts": [
+                        "8e5c203a-4499-44a1-a7ba-01198c1c2525",
+                        "2b9c31ac-1129-4fad-aa8a-1cfd77412d64"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "1fc96471266e45eaa4384",
+            "questionText": "A construction crane has a pivot with a steel beam of mass $!$500$!$ $!$\\text{kg}$!$ located $!$12$!$ $!$\\text{m}$!$ horizontally from the pivot. To maintain rotational equilibrium, a counterweight is placed $!$5$!$ $!$\\text{m}$!$ from the pivot on the opposite side. Assuming a gravitational acceleration of $!$9.8$!$ $!$\\text{m/s}^2$!$, calculate the minimum mass (in $!$\\text{kg}$!$) required for the counterweight.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a58bebce8ffa4681ac7b6",
+                    "stepText": "Let's start by identifying the formula that relates force, distance, and the turning effect (moment). Please select the correct formula for moment from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7637f898-6bb7-44dc-9a1d-7c91f0ab93e7",
+                        "c021eadd-5a2d-4fa7-bd9a-8c7c7cfb939c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$M = F \\times d$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$M = F + d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$M = \\frac{F}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "2e3bdd08475546dcbc778",
+                    "stepText": "Great! Now calculate the weight of the steel beam by using its mass and the gravitational acceleration. What is the force due to gravity acting on the beam?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4900"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "495dedb8-9a0b-42f1-9fc9-74b3a6f3a0cb"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e3b335c7244c4571a6e95",
+                    "stepText": "Now, use the weight you just found and the horizontal distance from the pivot to determine the moment produced by the beam. Multiply the weight by the distance to get the moment.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "58800"
+                    ],
+                    "stepSolveAnswerUnits": "N\\cdot m",
+                    "stepConcepts": [
+                        "7637f898-6bb7-44dc-9a1d-7c91f0ab93e7"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b5e368bc18964cd3a2eae",
+                    "stepText": "Next, let\u2019s look at the counterweight. Identify the expression that gives the moment produced by the counterweight, where its mass is represented by m. Please choose the correct expression from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7637f898-6bb7-44dc-9a1d-7c91f0ab93e7"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$m \\times 9.8 \\times 5$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m + 9.8 + 5$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\frac{m}{9.8 \\times 5}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7e1b23e48a63435eae0ed",
+                    "stepText": "Finally, apply the principle of rotational equilibrium, where the moment due to the beam equals the moment due to the counterweight. Solve for m in the equation $!$m \\times 9.8 \\times 5 = 58800$!$. What is the minimum mass required for the counterweight?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1200"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "259589dd-4c8e-4938-9dde-4a0c9930e92e"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

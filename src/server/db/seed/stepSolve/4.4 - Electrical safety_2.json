@@ -1,0 +1,195 @@
+{
+    "id": "436a93938e0f4357b1eea",
+    "name": "Electrical Safety",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "3688b9864f8a4416aa903",
+            "questionText": "A student is using an electric kettle and a toaster simultaneously from a damaged extension cord in their dormitory room. The electric kettle is rated at $!$1800\\,\\mathrm{W}$!$ and the toaster at $!$900\\,\\mathrm{W}$!$. Both appliances are plugged into a $!$240\\,\\mathrm{V}$!$ mains supply through an extension cord that has a resistance of $!$0.5\\,\\Omega$!$. Given that the cord feels increasingly hot, calculate the rate at which heat (in $!$\\mathrm{W}$!$) is produced in the extension cord.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2b965fde9e5b457282ab1",
+                    "stepText": "Let's start by finding the total power drawn by the appliances. You need to combine the power ratings of the electric kettle and the toaster. What is the sum of their power values?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2700"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "eea7c9ee923f4e7ea93ba",
+                    "stepText": "Now, to determine the current in the circuit, identify the correct formula that relates power, voltage, and current. Which of the following formulas should you use?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e",
+                        "9b6731ea-3a10-4320-b77b-a729fcfd2577"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I = V/R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I = P/V$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I = P \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7b350d60f982416dbdc39",
+                    "stepText": "Great, now that you've chosen the correct relationship, calculate the current using the equation $!$I = \\frac{P}{V}$!$. Use the total power from Step 1 and the given mains voltage. What is the current in amperes?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "11.25"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e",
+                        "9b6731ea-3a10-4320-b77b-a729fcfd2577"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "d89a14f15ede4ddca6df5",
+                    "stepText": "Now, we need to establish how much heat is generated in the extension cord. Which formula relates the heat produced in a resistor to the current through it and its resistance?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "7438fcb5-3fdf-4b54-bbb0-b001ce74700b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = I \\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = I^2R$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{I^2}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "236010a35a334b39b5abf",
+                    "stepText": "Finally, apply the formula selected in the previous step using the current from Step 3 and the resistance of the extension cord. What is the rate at which heat is produced in the cord (in watts)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "63.28"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "7438fcb5-3fdf-4b54-bbb0-b001ce74700b"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "a7525fb762a0457fadf97",
+            "questionText": "A plumber is working in a basement with damp patches on the floor using an older, unmaintained electric power tool that has a metal casing. Unbeknownst to him, the tool's live wire has contacted its metal casing. The mains voltage is $!$240\\,\\mathrm{V}$!$. The resistance of human skin is typically $!$500000\\,\\Omega$!$ when dry but reduces significantly to $!$1000\\,\\Omega$!$ when wet. A current of $!$100\\,\\mathrm{mA}$!$ passing through the heart is considered lethal. Calculate the current that would flow through the plumber's body if he were to touch the live casing with wet hands. Based on your calculation, state whether this current is lethal.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "0c1b992d011d4db298b5c",
+                    "stepText": "Let's start by identifying the correct relationship between voltage, current, and resistance that you'll need to use for calculating the current. Please choose the right formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$I=\\frac{V}{R}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$I=V\\times R$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$I=\\frac{R}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "826a90e412ad401a83665",
+                    "stepText": "Great, now that you have the appropriate formula, use it to calculate the current flowing through the plumber's body when the mains voltage is $!$240\\,\\mathrm{V}$!$ and the resistance of wet skin is $!$1000\\,\\Omega$!$. Compute the numerical result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.24"
+                    ],
+                    "stepSolveAnswerUnits": "A",
+                    "stepConcepts": [
+                        "ec9334df-1b87-4cde-8ba3-db2e48408a2e",
+                        "70bb1da6-4754-4837-8606-4678ecac620c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a11f8b18860c48569652a",
+                    "stepText": "Now that you have calculated the current, compare your result with the known lethal threshold of $!$100\\,\\mathrm{mA}$!$ (which is equivalent to $!$0.1\\,\\mathrm{A}$!$). Based on your computation, select whether the current is likely to be lethal.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a6e4bec1-8492-419f-9a78-e751da5b2346"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Lethal",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Non-lethal",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,211 @@
+{
+    "id": "57ff6df30cbd4adb96a5c",
+    "name": "Thermal Properties and Temperature",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "14ce477c36f74c9780b40",
+            "questionText": "A liquid cooling system is used to cool a data center by reducing the temperature of water from $!$35^\\circ \\mathrm{C}$!$ to $!$25^\\circ \\mathrm{C}$!$ using evaporative cooling. Given that the system contains $!$1000 \\ \\mathrm{kg}$!$ of water, the specific heat capacity of water is $!$4200 \\ \\mathrm{J \\ kg^{-1} \\ ^\\circ C^{-1}}$!$, and the latent heat of vaporisation of water is $!$2.26 \\times 10^6 \\ \\mathrm{J \\ kg^{-1}}$!$, calculate the mass of water (in kilograms) that must evaporate to achieve the cooling.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "14e5b59918c54eb7ad6a0",
+                    "stepText": "Let's start by finding the change in temperature ($!$\\Delta \\theta$!$) of the water. Calculate the difference between the initial and final temperatures.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10"
+                    ],
+                    "stepSolveAnswerUnits": "\\circ C",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "a46405e5a49d40c9871c2",
+                    "stepText": "Great, now identify the correct formula to determine the energy removed from the water using its mass, specific heat capacity, and the temperature change. Please choose the appropriate formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "81aff587-ab8e-447b-a084-49ff29038b01"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta E = m \\times c \\times \\Delta \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta E = m \\times l_v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E = \\frac{\\Delta \\theta}{m \\times c}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e8d2bf5611e84cd69d640",
+                    "stepText": "Now, using the formula $!$\\Delta E = m \\times c \\times \\Delta \\theta$!$, compute the total energy that must be removed from the water. Multiply the mass of water, the specific heat capacity, and the temperature change.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "42000000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "81aff587-ab8e-447b-a084-49ff29038b01"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "a59a0fe93d20486c9dd71",
+                    "stepText": "Next, identify the correct formula that relates the energy removed by evaporation to the mass of water that evaporates, using the latent heat of vaporisation. Please select the appropriate formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "fae93955-b4f5-47ea-86c9-025fd7da14c6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$m_{evap} = \\frac{\\Delta E}{l_v}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m_{evap} = \\Delta E \\times l_v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$m_{evap} = \\frac{l_v}{\\Delta E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "565cb4de6bb54128bcb7c",
+                    "stepText": "Finally, use the formula $!$m_{evap} = \\frac{\\Delta E}{l_v}$!$ to calculate the mass of water that must evaporate, by dividing the energy removed by the latent heat of vaporisation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "18.6"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "fae93955-b4f5-47ea-86c9-025fd7da14c6"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "12ad63d47c6a47c9bea02",
+            "questionText": "An engineer is overseeing the assembly of a critical component for a jet engine that requires a precise shrink-fit. A solid outer ring of specialized alloy, with an original internal diameter of $!$25.000 \\text{ cm}$!$, is heated to expand. An inner shaft, made of a different alloy, with an original diameter of $!$25.100 \\text{ cm}$!$, is immersed in liquid nitrogen, cooling it to extreme cryogenic temperatures and causing it to contract. The outer ring is heated by $!$200\\,\\text{\\degree C}$!$ and has a linear expansivity of $!$1.2 \\times 10^{-5} \\; \\text{\\degree C}^{-1}$!$, while the inner shaft's alloy has a linear expansivity of $!$1.0 \\times 10^{-5} \\; \\text{\\degree C}^{-1}$!$. For the shrink-fit, the expanded ring's internal diameter must be $!$0.010 \\text{ cm}$!$ larger than the contracted shaft's diameter at the moment of insertion. Assuming that the initial temperature of both components before heating or cooling is the same and that diameter changes can be treated as linear, calculate the temperature decrease required for the inner shaft to achieve the specified clearance.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "81d39b2635f548b5bbb3a",
+                    "stepText": "Let's start by identifying the proper formula to calculate the change in a linear dimension due to a temperature change. Which of the following formulas correctly represents this relationship?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta L = \\alpha L \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta L = \\frac{L}{\\alpha} \\Delta T$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta L = L \\Delta T \\times \\alpha^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "0f048543f02c4f7b92371",
+                    "stepText": "Great! Now, using the selected linear expansion formula, calculate the increase in the outer ring's internal diameter when it is heated by $!$200\\,\\text{\\degree C}$!$. Use the values: original diameter $!$25.000 \\text{ cm}$!$ and linear expansivity $!$1.2 \\times 10^{-5} \\; \\text{\\degree C}^{-1}$!$. What is the expansion ($!$\\Delta d_{ring}$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.06"
+                    ],
+                    "stepSolveAnswerUnits": "cm",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "74117e1c7a6e45598fefb",
+                    "stepText": "Now, consider the clearance requirement for a proper shrink-fit. The expanded ring must be $!$0.010 \\text{ cm}$!$ larger than the contracted inner shaft. Select the equation that correctly represents the clearance condition, considering the contracted shaft's diameter is given by subtracting its contraction (using its linear expansivity and a temperature decrease $!$\\Delta T$!$) from its original diameter of $!$25.100 \\text{ cm}$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$25.06 - [25.100 - (1.0\\times10^{-5} \\times 25.100 \\times \\Delta T)] = 0.010$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$25.06 - [25.100 + (1.0\\times10^{-5} \\times 25.100 \\times \\Delta T)] = 0.010$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$[25.06 + (1.0\\times10^{-5} \\times 25.100 \\times \\Delta T)] - 25.100 = 0.010$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3f24e8bb052b4217a43b2",
+                    "stepText": "With the clearance equation set, simplify the equation to isolate the term containing $!$\\Delta T$!$. Once simplified, calculate the temperature decrease (in absolute value) required for the inner shaft. (Hint: You should first compute the product $!$(1.0 \\times 10^{-5}) \\times 25.100$!$ and then solve for $!$\\Delta T$!$.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "199.2"
+                    ],
+                    "stepSolveAnswerUnits": "\u00b0C",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

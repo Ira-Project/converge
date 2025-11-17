@@ -1,0 +1,317 @@
+{
+    "id": "5caf15de72c748d2a531b",
+    "name": "Kinetic Particle Model of Matter",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a243a540ac8d4e83bff5c",
+            "questionText": "A spoonful of sugar with a mass of $!$m_s$!$ grams is added to a cup of hot tea with a volume of $!$V_t$!$ mL at a temperature of $!$T_t$!$ \\( ^\\circ \\text{C} \\) (above which the sugar dissolves rapidly). Experimental data indicate that the sugar dissolves completely in the tea in $!$t$!$ seconds when $!$m_s$!$, $!$V_t$!$, and $!$T_t$!$ have the given values. Assuming that the time required for the sugar to dissolve, $!$t$!$, is directly proportional to the mass of the sugar and inversely proportional to both the volume and the temperature of the tea, determine the value of $!$t$!$ (in seconds) required for complete dissolution when the proportionality constant is $!$k$!$. Please provide the numerical values for $!$m_s$!$, $!$V_t$!$, $!$T_t$!$, and $!$k$!$ so that a single numerical answer for $!$t$!$ can be calculated.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "5ffef3834b554f6b9e62f",
+                    "stepText": "Let's start by recalling the relationship between the dissolution time $!$t$!$, the sugar mass $!$m_s$!$, the tea volume $!$V_t$!$, the tea temperature $!$T_t$!$, and the proportionality constant $!$k$!$. Choose the option that correctly represents the proportionality given in the problem.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6d8df52d-412e-48a3-933f-d18a961c927e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$t = k \\cdot \\frac{m_s}{V_t \\cdot T_t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$t = k \\cdot \\frac{V_t \\cdot T_t}{m_s}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$t = k \\cdot \\frac{m_s \\cdot V_t}{T_t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "63fcd97eb8144cc0b389b",
+                    "stepText": "Great, now that we have the proportionality set up, let's assign a typical value for the sugar mass $!$m_s$!$. Which of the following values would be appropriate for a spoonful of sugar?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5"
+                    ],
+                    "stepSolveAnswerUnits": "grams",
+                    "stepConcepts": [
+                        "6fed5788-4cda-4ed1-b4d9-7ee41e9bb39d"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "5",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "10",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "15",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "466530586c3d449c8d380",
+                    "stepText": "Next, consider the tea's volume $!$V_t$!$. Select the value that best represents the volume of one cup of tea.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "250"
+                    ],
+                    "stepSolveAnswerUnits": "mL",
+                    "stepConcepts": [
+                        "8baff9e1-a2c9-4a20-aec5-2fa0cc04dfda"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "250",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "500",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "100",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9489d92072aa418fbed77",
+                    "stepText": "Now, choose a typical temperature $!$T_t$!$ (in $!$^\\circ C$!$) for hot tea above which sugar dissolves rapidly.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "80"
+                    ],
+                    "stepSolveAnswerUnits": "\u00b0C",
+                    "stepConcepts": [
+                        "8baff9e1-a2c9-4a20-aec5-2fa0cc04dfda"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "80",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "60",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "100",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "685328f7e585408d98db6",
+                    "stepText": "Next, determine a reasonable value for the proportionality constant $!$k$!$ that would yield a realistic dissolution time. Choose the appropriate value from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "240000"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "240000",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "10000",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "500000",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c0780468395344a080ab2",
+                    "stepText": "Now that all the values are assigned, substitute them into the proportionality expression and calculate the dissolution time $!$t$!$. What is the numerical value you obtain (in seconds)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "seconds",
+                    "stepConcepts": [
+                        "6d8df52d-412e-48a3-933f-d18a961c927e"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "6e5c922f51d64dc4ab792",
+            "questionText": "During a long summer drive, the air inside your car tire, which is a gas, initially has a pressure of $!$200\\,\\text{kPa}$!$ at a temperature of $!$20^\\circ\\text{C}$!$. As the drive continues, the tire's temperature rises to $!$50^\\circ\\text{C}$!$ while the volume remains constant. Calculate the new pressure (in $!$\\text{kPa}$!$) of the air inside the tire using Gay-Lussac's Law, ensuring all temperatures are converted to Kelvin.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "eeab39d310e24fb6847ab",
+                    "stepText": "Let's start by identifying the correct temperature conversion formula from Celsius to Kelvin. Which of the following formulas correctly converts a temperature $!$\\theta$!$ in Celsius to Kelvin?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T = \\theta + 273$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T = \\theta - 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T = \\theta \\times 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1069a6aa9c024d489850b",
+                    "stepText": "Now, convert the initial temperature of $!$20^\\circ\\text{C}$!$ to Kelvin using the formula you identified.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "293"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "8ba5ca26787c491abdea2",
+                    "stepText": "Next, convert the final temperature of $!$50^\\circ\\text{C}$!$ to Kelvin using the same conversion formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "323"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "e2df52ba5fa94e04b47b1",
+                    "stepText": "Great, now identify the correct expression of Gay-Lussac's Law which relates pressure and temperature when the volume is constant. Which of the following options correctly represents Gay-Lussac's Law?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\frac{p}{T} = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p \\times T = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p - T = \\text{constant}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6b5705c324984d889bcd2",
+                    "stepText": "Now, rearrange Gay-Lussac's Law to solve for the new pressure $!$p_2$!$ in terms of the initial pressure and temperatures. Which of the following rearranged formulas is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p_2 = p_1 \\times \\frac{T_2}{T_1}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p_2 = p_1 \\times \\frac{T_1}{T_2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p_2 = p_1 + (T_2 - T_1)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7bdb10a92cf7406f88df3",
+                    "stepText": "Finally, use the expression you identified to calculate the new pressure $!$p_2$!$ by substituting the values: $!$p_1 = 200\\,\\text{kPa}$!$, $!$T_1 = 293\\,K$!$, and $!$T_2 = 323\\,K$!$. What is the new pressure?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "220.4"
+                    ],
+                    "stepSolveAnswerUnits": "kPa",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

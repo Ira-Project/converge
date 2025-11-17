@@ -1,0 +1,169 @@
+{
+    "id": "19146a7b25f44943a754c",
+    "name": "Radioactivity",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "624c440726ca4ebca4225",
+            "questionText": "Calculate the percentage reduction in the ionization current in a smoke alarm when smoke is present. Assume that the smoke causes the current to drop from an initial value of $!$I_0$!$ microamperes to a reduced value of $!$I$!$ microamperes. What is the percentage decrease? (Note: Please provide the numerical values for $!$I_0$!$ and $!$I$!$ if they differ from the context.)",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "180c5b6aad7e4975b6a37",
+                    "stepText": "Let's start by identifying the correct formula to calculate the percentage reduction in ionization current. Please select the appropriate formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Percentage Decrease} = \\frac{I_0 - I}{I_0} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Percentage Decrease} = \\frac{I - I_0}{I_0} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Percentage Decrease} = \\frac{I_0 - I}{I} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "05d0888c746444d7a3399",
+                    "stepText": "Assuming typical example values are provided where $!$I_0 = 10\\$!$ microamperes and $!$I = 7\\$!$ microamperes, calculate the difference $!$I_0 - I\\$!$. What is the numerical value of this difference?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3"
+                    ],
+                    "stepSolveAnswerUnits": "microamperes",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "e9f37087352e4468af397",
+                    "stepText": "Now, using the difference computed, determine the ratio of the decrease to the initial current $!$\\frac{I_0 - I}{I_0}\\$!$. What is the value of this ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.3"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "1b8ec268c4fa4cc0b1910",
+                    "stepText": "Finally, multiply the ratio by $!$100\\$!$ to convert it into a percentage. What is the calculated percentage reduction in the ionization current?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30"
+                    ],
+                    "stepSolveAnswerUnits": "percent",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "9d191ef509fd434db98ef",
+            "questionText": "An archaeological team uses radiocarbon dating to determine the age of an ancient textile. Given that the initial activity of Carbon-14 in living organisms is $!$250\\,\\mathrm{Bq}$!$, the half-life of Carbon-14 is $!$5730\\,\\mathrm{years}$!$, and the measured activity of the textile sample (after accounting for natural background radiation) is $!$31.25\\,\\mathrm{Bq}$!$, calculate the age of the textile.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "d975fc0227844e11b0391",
+                    "stepText": "Let's start by identifying the decay law used in radiocarbon dating. Which of the following expressions correctly represents the relationship between the remaining activity $!$A$!$, the initial activity $!$A_0$!$, the elapsed time $!$t$!$, and the half-life $!$T_{1/2}$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "4ba46951-f583-43e5-8ee2-7582647271d3"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$A = A_0 \\left(\\frac{1}{2}\\right)^{t/T_{1/2}}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$A = A_0 e^{-\\lambda t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$A = A_0 (1-\\lambda t)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "8b418498c76c45208420e",
+                    "stepText": "Great. Now, using the identified decay law, compute the ratio of the initial activity to the measured activity, that is, calculate $!$\\frac{A_0}{A}$!$ given $!$A_0 = 250\\,\\mathrm{Bq}$!$ and $!$A = 31.25\\,\\mathrm{Bq}$!$. What is the value of this ratio?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ddd880d4587b42e59dcc6",
+                    "stepText": "Now, to isolate the time variable in the decay law, we need to evaluate the logarithm of the ratio using a base that matches our decay expression. Which logarithmic function should be applied to $!$\\frac{A_0}{A}$!$ in this context?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$\\log_2\\left(\\frac{A_0}{A}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\ln\\left(\\frac{A_0}{A}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\log_{10}\\left(\\frac{A_0}{A}\\right)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "fbe7bb0c3ded4039bde9d",
+                    "stepText": "Finally, use the logarithm value obtained from the previous step and multiply it by the half-life $!$T_{1/2} = 5730\\,\\mathrm{years}$!$ to calculate the age $!$t$!$ of the textile sample. Compute $!$t = T_{1/2} \\times \\log_2\\left(\\frac{A_0}{A}\\right)$!$. What is the age in years?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "17190"
+                    ],
+                    "stepSolveAnswerUnits": "years",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

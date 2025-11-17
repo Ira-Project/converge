@@ -1,0 +1,219 @@
+{
+    "id": "5d9550b0c5564adab4f9e",
+    "name": "General Properties of Waves",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "999538815d6447b69a5bb",
+            "questionText": "During an earthquake, $!$P$!$-waves travel through the Earth's crust. Consider a $!$P$!$-wave traveling through a granite layer with a frequency of $!$25~\\text{Hz}$!$ and a wavelength of $!$250~\\text{m}$!$. The wave then enters a different rock layer where its speed changes to $!$7500~\\text{m/s}$!$. Calculate the new wavelength of the $!$P$!$-wave in the second rock layer.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7f6a264742d0400bb94e8",
+                    "stepText": "Let's start by identifying the wave equation that links wave speed, frequency, and wavelength. Please select the correct equation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = f \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\lambda / f$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = \\lambda / v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "96531e9e1cd449cea6622",
+                    "stepText": "Great, now consider what property remains unchanged when the $!$P$!$-wave passes from one rock layer to another. Choose the correct invariant property.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "91d66318-1623-4c88-b48c-56e3cfc2c189"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Frequency remains constant",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Wavelength remains constant",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Both frequency and wavelength change",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a98beca7d6e14cd59b20e",
+                    "stepText": "Now that you have selected the correct equation and identified the constant property, use the equation $!$v = f \\lambda$!$ to calculate the new wavelength. Substitute the new speed ($!$7500~\\text{m/s}$!$) and the constant frequency ($!$25~\\text{Hz}$!$) into the equation, and solve for the wavelength.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "300"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "e2484863-f982-4229-94d2-b6df0b9b92ca",
+                        "91d66318-1623-4c88-b48c-56e3cfc2c189"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "077e777042774c629bdd1",
+            "questionText": "An ocean wave, a transverse wave, approaches a vertical sea wall. The incoming wavefronts are parallel to each other and strike the wall such that the angle between the incident wavefronts and the sea wall is $!$30^\\circ$!$. The wave undergoes reflection from the sea wall. Calculate the angle between the reflected rays and the sea wall.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "17bac718038042a68d882",
+                    "stepText": "Let's start by understanding the relation between a wavefront and its ray. The wave is transverse and its ray is perpendicular to the wavefront. Which of the following options represents the correct principle regarding the direction of a ray relative to its wavefront?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "668f18d1-36c0-408d-b97f-e55412b62565",
+                        "95d98f95-8dd3-479d-b509-ed5002535f29"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$The ray is always perpendicular to the wavefront$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$The ray is parallel to the wavefront$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$The ray makes a 45^\\circ$!$ angle with the wavefront$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$The ray is randomly oriented with respect to the wavefront$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f180a36905f54fc1b0107",
+                    "stepText": "Now, knowing that the ray is perpendicular to the wavefront, use the complementary angle relationship. Given that the wavefront makes an angle of $!$30^\\circ$!$ with the sea wall, calculate the corresponding angle between the incident ray and the sea wall by subtracting the given angle from $!$90^\\circ$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "\u00b0",
+                    "stepConcepts": [
+                        "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "13bd97ce5a074c20a60ce",
+                    "stepText": "Next, apply the law of reflection to the situation. Which concept or principle states that the angle of incidence is equal to the angle of reflection?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "56c92c0a-9a1f-4b88-8b6b-8a7541f4d657"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Law of Reflection$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Huygens' Principle$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Diffraction Principle$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Wave Equation$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "009657a0f4de41eb95f9e",
+                    "stepText": "Finally, convert the angle of the reflected ray measured from the horizontal (wall's normal) back to the angle with the sea wall. If the reflected ray makes the same angle with the horizontal as the incident ray did, determine the complementary angle with respect to the sea wall by subtracting this angle from $!$90^\\circ$!$. Which of the following methods correctly describes this conversion?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "60"
+                    ],
+                    "stepSolveAnswerUnits": "\u00b0",
+                    "stepConcepts": [
+                        "56c92c0a-9a1f-4b88-8b6b-8a7541f4d657",
+                        "1e88a9b9-7a2e-4e44-b95a-bcdedbb9da85"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Subtract the angle with the horizontal from 90^\\circ$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Add the angle with the horizontal to 90^\\circ$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Multiply the angle with the horizontal by 90^\\circ$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Divide 90^\\circ by the angle with the horizontal$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,193 @@
+{
+    "id": "292a604183ec49d48e4f0",
+    "name": "Density",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "0ff4b2c1a0de4169abcdd",
+            "questionText": "A logging company needs to transport a large raft of freshly cut timber down a river. The timber is pine, which has a density of $!$0.65\\,g/cm^3$!$. The raft consists of $!$500$!$ logs, each cylindrical with a diameter of $!$0.5\\,m$!$ and a length of $!$10\\,m$!$. Additionally, the company adds machinery with a total mass of $!$5000\\,kg$!$ (its volume is negligible). Calculate the average density of the composite raft (timber and machinery) in $!$kg/m^3$!$, ensuring that all calculations use consistent units.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "92c11f04041e4be893473",
+                    "stepText": "Let's start by converting the given pine density from $!$g/cm^3$!$ to $!$kg/m^3$!$. Identify the conversion factor you would use for this conversion.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "51a5b849-b39b-4d24-99b2-599b0caa884c",
+                        "77c37268-e0ae-4eac-b7fd-27f2417e395e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\times 10^3$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\times 10^6$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\div 10^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "4f74293710f546dfbd999",
+                    "stepText": "Next, we need to compute the volume of one cylindrical log. Which of the following formulas correctly represents the volume of a cylinder?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$V = \\pi r^2 h$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = 2 \\pi r h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = \\pi r h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "08544832086f4f2288096",
+                    "stepText": "Now, calculate the total timber volume. First, compute the volume of one log using a radius of $!$0.25\\,m$!$ (half of the $!$0.5\\,m$!$ diameter) and a height of $!$10\\,m$!$, then multiply by the number of logs (500). Provide the numerical result (using the approximate value of $!$\\pi \\approx 3.1416$!$).",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "981.75"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "6c798928d35b488ca1703",
+                    "stepText": "Great, now find the mass of the timber by multiplying the total timber volume obtained in the previous step by the pine density in $!$kg/m^3$!$. What is the calculated mass of the timber?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "638137.5"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "0bcbc0d9-3537-4386-9a81-b8d3ca195bae"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b10609ece88d4566b43a8",
+                    "stepText": "After determining the timber mass, add the additional machinery mass of $!$5000\\,kg$!$ to obtain the composite mass of the raft. What is the total mass?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "643137.5"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "7fbd084270154a17ad496",
+                    "stepText": "Finally, calculate the average density of the composite raft by dividing the total composite mass by the timber volume (since the machinery's volume is negligible). What is the resulting average density in $!$kg/m^3$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "655.09"
+                    ],
+                    "stepSolveAnswerUnits": "kg/m^3",
+                    "stepConcepts": [
+                        "cddeec9b-8762-49d2-a00f-804e55671c52"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "cb85176ff7c6489fbb8ef",
+            "questionText": "A team of naval engineers is designing a new research submarine. Its total mass is $!$150,000\\,\\text{kg}$!$ when its ballast tanks are empty, and its total internal volume is $!$180\\,\\text{m}^3$!$. Given that the density of seawater is $!$1025\\,\\text{kg/m}^3$!$, calculate the exact mass of seawater that needs to be pumped into the ballast tanks for the submarine to achieve neutral buoyancy.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "8e271c753e784bb6a52fe",
+                    "stepText": "Let's start by identifying the correct formula to compute density. Choose the formula that expresses density as the ratio of mass to volume.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "70870073-1178-47d6-a764-fd91afde7460",
+                        "d29a5f0e-1b07-4134-a48b-dc7cb8c32d18"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\rho = \\frac{m}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\rho = m \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\rho = \\frac{V}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "025f4f83297345b7b320b",
+                    "stepText": "Now, using the density concept, calculate the total mass needed for neutral buoyancy by multiplying the density of seawater by the submarine's total volume. Compute $!$1025 \\times 180$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "184500"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "70870073-1178-47d6-a764-fd91afde7460"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "c95d9de6b89743108dc0c",
+                    "stepText": "Great, now determine the mass of seawater required by subtracting the submarine's empty mass from the total mass needed. Subtract $!$150000$!$ from your previous result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "34500"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "0bcbc0d9-3537-4386-9a81-b8d3ca195bae"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,211 @@
+{
+    "id": "930c3423d1e440e892c7d",
+    "name": "Density",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "f90d5470a013485492669",
+            "questionText": "At a chemical processing plant, a heavy solvent has a density of $!$1.25\\ \\text{g/cm}^3$!$ and a mass of $!$250\\ \\text{kg}$!$. First, convert the density of the heavy solvent to SI units ($!$kg/m^3$!$). Then, calculate the volume of the heavy solvent in cubic meters ($!$m^3$!$).",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e2229bf16e004f83a5ecd",
+                    "stepText": "Let's begin by identifying the correct conversion formula to change density from $!$\\text{g/cm}^3$!$ to $!$\\text{kg/m}^3$!$. Which formula correctly applies the conversion factor?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "51a5b849-b39b-4d24-99b2-599b0caa884c"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\times 10^3$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\div 10^3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\times 10^6$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "c81462cf440844fe9740c",
+                    "stepText": "Now, using the conversion factor you identified, calculate the density in $!$\\text{kg/m}^3$!$ by converting $!$1.25\\ \\text{g/cm}^3$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1250"
+                    ],
+                    "stepSolveAnswerUnits": "kg/m^3",
+                    "stepConcepts": [
+                        "51a5b849-b39b-4d24-99b2-599b0caa884c"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "28ef53baa01a4ffbaf552",
+                    "stepText": "Great, now let's identify the correct formula to determine the volume of a substance given its mass and density. Which formula appropriately relates mass, density, and volume?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "cddeec9b-8762-49d2-a00f-804e55671c52"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = \\frac{m}{\\rho}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = m \\times \\rho$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{\\rho}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "41c77377d58542cdbbdb0",
+                    "stepText": "Finally, calculate the volume of the heavy solvent in $!$m^3$!$ using its mass of $!$250\\ \\text{kg}$!$ and the converted density from the previous step.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.2"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [
+                        "cddeec9b-8762-49d2-a00f-804e55671c52"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "b5afff5c0691492c8d3b5",
+            "questionText": "A team of meteorologists is preparing to launch a weather balloon. The balloon is filled with helium with a density of $!$0.178 \\text{ kg/m}^3$!$, and the balloon along with its attached instruments and payload has a mass of $!$5 \\text{ kg}$!$. The balloon has a maximum volume of $!$30 \\text{ m}^3$!$. Calculate the composite density (in $!$\\text{kg/m}^3$!$) of the entire system when the balloon is filled to its maximum volume.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "6e1a30bd3495440482b60",
+                    "stepText": "Let's start by identifying the formula needed to calculate the mass of a substance when its density and volume are known. Which one of these formulas do you think is correct?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0bcbc0d9-3537-4386-9a81-b8d3ca195bae"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$m = \\frac{V}{\\rho}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$m = V \\times \\rho$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m = \\rho - V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3a15a17c440343fd9a106",
+                    "stepText": "Great! Now, using the formula from the previous step, calculate the mass of helium by multiplying its density by the volume of the balloon. Enter the computed mass of helium.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "5.34"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "0bcbc0d9-3537-4386-9a81-b8d3ca195bae"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "2ae04450f59349e380bed",
+                    "stepText": "Excellent. Now, add the mass of the payload (which is 5 kg) to the mass of the helium you calculated to obtain the total mass of the system. What is the total mass?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "10.34"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "9fa0a52127594708bedd4",
+                    "stepText": "Now, think about how to find the overall density of the system. Which of the following formulas correctly represents the relationship between mass, volume, and density?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "70870073-1178-47d6-a764-fd91afde7460"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\rho = \\frac{m}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\rho = m \\times V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\rho = \\frac{V}{m}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "440de140bb054623a6b17",
+                    "stepText": "Finally, calculate the composite density by dividing the total mass by the balloon's maximum volume. What is the composite density of the entire system?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.3447"
+                    ],
+                    "stepSolveAnswerUnits": "kg/m^3",
+                    "stepConcepts": [
+                        "70870073-1178-47d6-a764-fd91afde7460"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

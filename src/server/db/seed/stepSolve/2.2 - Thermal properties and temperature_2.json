@@ -1,0 +1,149 @@
+{
+    "id": "e5e8ce9204864a13a57b0",
+    "name": "Thermal Properties and Temperature",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "9798acf5587042ff98217",
+            "questionText": "A railway engineer observes that a section of steel railway track, which is $!$20.0\\ \\mathrm{m}$!$ long at $!$10^\\circ\\ \\mathrm{C}$!$, will be exposed to a maximum temperature of $!$40^\\circ\\ \\mathrm{C}$!$. Given that the linear expansivity of steel is $!$1.1 \\times 10^{-5}\\ \\mathrm{K}^{-1}$!$, calculate the total expansion in meters of a track composed of $!$50$!$ such sections laid end-to-end without any expansion gaps.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "cf7efafe810748c6a8adc",
+                    "stepText": "Let's start by identifying the correct formula for linear expansion. Please select the formula that relates expansion with linear expansivity, original length, and temperature change.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\, expansion = linear\\ expansivity \\times original\\ length \\times temperature\\ rise$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\, expansion = original\\ length \\div (linear\\ expansivity \\times temperature\\ rise)$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\, expansion = linear\\ expansivity + original\\ length + temperature\\ rise$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "584233a7387c4adaa3734",
+                    "stepText": "Great, now that we have the proper formula, calculate the temperature change $!$\\Delta T$!$ from the initial temperature to the maximum temperature.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "30"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "37c3955292e54a8bae826",
+                    "stepText": "Using the identified formula, calculate the expansion for one steel track section. Remember to use the values: linear expansivity $!$1.1 \\times 10^{-5} \\ \\mathrm{K}^{-1}$!$, original length $!$20.0\\ \\mathrm{m}$!$, and temperature change from the previous step.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0066"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "1250926fbfd94463884cb",
+                    "stepText": "Now, determine the total expansion by calculating the expansion for the entire track composed of 50 such sections. Multiply the expansion per section by the number of sections.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.33"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "a3101df3-9fbc-42df-9773-3a9e7851046f"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "8a2070bea7e643109148d",
+            "questionText": "A data center cooling system circulates $!$1500\\text{ kg}$!$ of water per minute. The water enters the system at $!$20^\\circ\\text{C}$!$ and absorbs $!$1.89 \\times 10^7\\text{ J}$!$ of thermal energy from the supercomputers. Given that the specific heat capacity of water is $!$4200\\text{ J kg}^{-1}\\text{ K}^{-1}$!$, calculate the temperature of the water before it enters the cooling tower.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "2cd05c157cb04627b0428",
+                    "stepText": "Let's start by identifying the relation that connects the energy absorbed with the mass, specific heat capacity, and change in temperature. Please choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "81aff587-ab8e-447b-a084-49ff29038b01"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta E = m c \\Delta \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta E = \\frac{m}{c \\Delta \\theta}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E = c \\Delta \\theta / m$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "a23d15a0e526424e843d3",
+                    "stepText": "Great, now using the selected formula, express the temperature change $!$\\Delta \\theta$!$ in terms of the absorbed energy $!$\\Delta E$!$, mass $!$m$!$, and specific heat capacity $!$c$!$. Calculate the numerical value for $!$\\Delta \\theta$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "3"
+                    ],
+                    "stepSolveAnswerUnits": "\\text{\\degree C}",
+                    "stepConcepts": [
+                        "81aff587-ab8e-447b-a084-49ff29038b01"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "b25e8624a818450080b11",
+                    "stepText": "Now, add the calculated temperature change to the initial temperature of the water to find the temperature of the water before it enters the cooling tower.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "23"
+                    ],
+                    "stepSolveAnswerUnits": "\\text{\\degree C}",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

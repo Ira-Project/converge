@@ -1,0 +1,201 @@
+{
+    "id": "39b0625dc3b24dac80691",
+    "name": "Density",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "a9ccfe9255334928bfb1c",
+            "questionText": "A team of naval engineers is designing a new research submarine. The submarine's total mass is $!$150,000$!$~kg when its ballast tanks are empty, and its total internal volume is $!$180$!$~m$!$^3$!$. To dive, they need to take in seawater with a density of $!$1025$!$~kg/m$!$^3$!$. Calculate the exact mass of seawater, in kilograms, that needs to be pumped into the ballast tanks to achieve neutral buoyancy.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e558c2a2f5fb47a7a2882",
+                    "stepText": "Let's start by identifying the formula needed to calculate the mass of displaced seawater. Which of the following formulas relates the mass of a substance to its density and volume?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "70870073-1178-47d6-a764-fd91afde7460",
+                        "0bcbc0d9-3537-4386-9a81-b8d3ca195bae"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\rho = \\frac{m}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$m = V \\times \\rho$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{m}{\\rho}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$m = V + \\rho$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "559410636b0d491fa790c",
+                    "stepText": "Great! Now that you have the correct formula, use the given density of seawater and the submarine's internal volume to calculate the mass of the seawater that would be displaced if the entire internal volume were filled. What is the product of $!$1025\\,kg/m^3$!$ and $!$180\\,m^3$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "184500"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [
+                        "0bcbc0d9-3537-4386-9a81-b8d3ca195bae"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "de2eb926537940759e05e",
+                    "stepText": "Now, consider that the submarine's current mass is $!$150,000\\,kg$!$. To achieve neutral buoyancy, the mass of the displaced seawater must equal the total mass of the submarine when submerged. Determine how much additional mass (from the seawater) is needed from the ballast tanks by finding the difference between the calculated displaced mass and the submarine's mass.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "34500"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "16d39c7919b74262bfd9e",
+            "questionText": "A logging company is transporting a raft of pine timber. The timber has a density of $!$0.65$!$ g/cm$!$^3$!$. The river water has a density of $!$1.00$!$ g/cm$!$^3$!$. The raft consists of $!$500$!$ cylindrical logs, each with a diameter of $!$0.5$!$ meters and a length of $!$10$!$ meters. They plan to add machinery with a total mass of $!$5000$!$ kg, considering its volume to be negligible. Calculate the average density of the composite raft (timber plus machinery) in kilograms per cubic meter.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "1c78b29a737e421d88712",
+                    "stepText": "Let's start by converting the timber density into SI units. Identify the correct conversion factor that you would use to convert density from $!$\\text{g/cm}^3$!$ to $!$\\text{kg/m}^3$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "51a5b849-b39b-4d24-99b2-599b0caa884c",
+                        "77c37268-e0ae-4eac-b7fd-27f2417e395e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\times 10^3$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\times 10^{-3}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{kg/m}^3 = \\text{g/cm}^3 \\times 100$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b7e6d2de789b4221ba7f4",
+                    "stepText": "Next, determine the volume of one cylindrical log. Please select the correct formula for the volume of a cylinder.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$V = \\pi r^2 L$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = 2\\pi rL$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = \\pi d^2 L$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d0102c5a82a343a182307",
+                    "stepText": "Now that you have the volume of a single log from the previous step, use the timber density (in SI units) to find the mass of one log. Identify the correct formula that relates mass, density, and volume.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0bcbc0d9-3537-4386-9a81-b8d3ca195bae",
+                        "70870073-1178-47d6-a764-fd91afde7460"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$m = V \\times \\rho$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$m = \\frac{V}{\\rho}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$m = \\frac{\\rho}{V}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "12c79721296e4a7aab1c6",
+                    "stepText": "Great, now that you have the mass of one log from the previous step, calculate the total mass of the raft. Remember, the total mass includes the mass of all logs plus the additional machinery mass. Enter the numerical value for total mass.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "642000"
+                    ],
+                    "stepSolveAnswerUnits": "kg",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "125f21e1e4f94b5aac628",
+                    "stepText": "Finally, compute the average density of the composite raft by dividing the total mass by the total volume (which is the combined volume of all the logs). Enter the numerical value for the average density.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "655"
+                    ],
+                    "stepSolveAnswerUnits": "kg/m^3",
+                    "stepConcepts": [
+                        "70870073-1178-47d6-a764-fd91afde7460"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,212 @@
+{
+    "id": "b81a1ae4a1674abdb7e42",
+    "name": "Energy, Work and Power",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "e735ff3c3e224375ba4f2",
+            "questionText": "A car with a mass of $!$1200\\ \\text{kg}$!$ is traveling at $!$72\\ \\text{km/h}$!$. Upon impact with a rigid barrier, its crumple zones deform, absorbing the car's kinetic energy and bringing it to a complete stop over a distance of $!$0.8\\ \\text{m}$!$. Calculate the average force in Newtons exerted on the car by the crumple zones during the impact.",
+            "imageText": "An image of a car with visible crumple zones after a frontal collision with a rigid barrier.",
+            "steps": [
+                {
+                    "id": "b541b19c323944fcb4849",
+                    "stepText": "Let's start by converting the car's speed from $!$km/h$!$ to $!$m/s$!$. Use the appropriate conversion factor to determine the speed in $!$m/s$!$. What is the converted speed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "926adb7daf894946a7faf",
+                    "stepText": "Great, now identify the formula you would use to calculate the car's kinetic energy. Please choose the correct kinetic energy formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f867675c-ee2a-45a2-bee3-7fb244468612"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_k = \\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_k = mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_k = m+v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "6ed640d83fd14dde96152",
+                    "stepText": "Using the kinetic energy formula and the converted speed, calculate the car's initial kinetic energy. What is the kinetic energy of the car?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "240000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "fc0d555c-2163-4fe2-afbd-49a23453751c",
+                        "f867675c-ee2a-45a2-bee3-7fb244468612"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "0b48710f853b405094799",
+                    "stepText": "Now, let\u2019s recall how work relates to force and displacement. Identify the formula that connects work, force, and distance.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9125e02d-eac5-43e7-80a8-eff51006df63"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$W = Fd$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$W = \\frac{F}{d}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$W = F+d$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "32b9d78be079425ea7065",
+                    "stepText": "Finally, use the work-energy principle where the work done by the crumple zones is equal to the initial kinetic energy. Calculate the average force by dividing the kinetic energy by the stopping distance. What is the average force exerted on the car?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "300000"
+                    ],
+                    "stepSolveAnswerUnits": "N",
+                    "stepConcepts": [
+                        "9125e02d-eac5-43e7-80a8-eff51006df63"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "0f894b3e4f1d422ebcb95",
+            "questionText": "In a hydroelectric power plant, water stored at a high elevation in a reservoir possesses substantial gravitational potential energy. This water then flows downwards from a height of $!$80 \\text{ m}$!$ to spin turbines that drive generators to produce electricity. The plant generates $!$150 \\text{ MW}$!$ of useful electrical power and operates with an overall efficiency of $!$85\\%$!$. Assuming the acceleration due to gravity is $!$9.8 \\text{ m/s}^2$!$, calculate the mass of water, in kilograms, that must flow through the turbines each second to maintain this power output.",
+            "imageText": "A diagram of a hydroelectric power plant showing a reservoir, dam, pipes, turbines, and a generator building with transmission lines.",
+            "steps": [
+                {
+                    "id": "5a26e78ec1364b45a6e53",
+                    "stepText": "Let's start by identifying the formula that gives the gravitational potential energy change of water falling from a height. Which of the following formulas correctly represents the change in gravitational potential energy?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8af41638-67d0-4304-afe4-278a3e5c24b8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta E_p = m \\cdot g \\cdot \\Delta h$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta E_p = \\frac{1}{2} m v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E_p = m \\cdot g / \\Delta h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3fb9d1e1242a4ab083f14",
+                    "stepText": "Great! Now, before relating the potential energy to the power output, we need to consider the efficiency of the hydroelectric plant. Which formula correctly represents the efficiency in terms of useful energy output and total energy input?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8bd37a30-0ed2-43d5-846f-8c8290941dbd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Efficiency} = \\frac{\\text{useful energy output}}{\\text{total energy input}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Efficiency} = \\frac{\\text{total energy input}}{\\text{useful energy output}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Efficiency} = \\frac{\\text{useful energy output} - \\text{energy losses}}{\\text{useful energy output}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "f89d2d4a34d149aa94247",
+                    "stepText": "Now that you have the correct efficiency concept, determine the total power input provided by the falling water. Use the relationship that the total power input is equal to the useful power output divided by the efficiency (expressed as a decimal). Calculate this total power input.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "176470588"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "8bd37a30-0ed2-43d5-846f-8c8290941dbd"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "5f49bad3e3274b829ae96",
+                    "stepText": "With the total power input known, we now relate it to the gravitational potential energy provided per second by the falling water. Using the formula $!$\\Delta E_p = m \\cdot g \\cdot \\Delta h$!$, set this equal to the total power input. To find the mass flow rate $!$m$!$, rearrange the equation to solve for $!$m = \\frac{\\text{Total Power Input}}{g \\cdot \\Delta h}$!$. Calculate the mass of water flowing per second.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "225290"
+                    ],
+                    "stepSolveAnswerUnits": "kg/s",
+                    "stepConcepts": [
+                        "8af41638-67d0-4304-afe4-278a3e5c24b8"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

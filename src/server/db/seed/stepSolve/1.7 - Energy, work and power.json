@@ -1,0 +1,209 @@
+{
+    "id": "ce1bbcca8f584eab84e5b",
+    "name": "Energy, Work and Power",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "7cf0d537427e4dd1a427b",
+            "questionText": "A car's braking distance is $!$20 \\text{ m}$!$ when traveling at $!$40 \\text{ km/h}$!$. If the car's speed is increased to $!$80 \\text{ km/h}$!$, what is the new braking distance?",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "142c65097d3c45e3bff05",
+                    "stepText": "Let's start by identifying how braking distance relates to speed. Which expression correctly shows the relationship between braking distance and speed?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "22cb5984-2bee-4068-9d45-f3332a62284a"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d \\propto v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d \\propto v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d \\propto \\sqrt{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "50a55153da9f448d894bf",
+                    "stepText": "Now, determine by what factor the speed has increased when going from $!$40 \\text{ km/h}$!$ to $!$80 \\text{ km/h}$!$. Calculate the ratio of the final speed to the initial speed.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "8979dde3a1a845ce9b065",
+                    "stepText": "Since braking distance increases with the square of the speed, calculate the multiplication factor for the braking distance using the square of the speed factor.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4"
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "22cb5984-2bee-4068-9d45-f3332a62284a"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "41d1384ca5d743bf98030",
+                    "stepText": "Finally, use the calculated factor to determine the new braking distance by multiplying the original distance by this factor.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "80"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "704c1c864c0d4376885f5",
+            "questionText": "A new high-speed train has a mass of $!$200,000 \\text{ kg}$!$. It accelerates from rest to $!$54 \\text{ km/h}$!$ in $!$15 \\text{ s}$!$. During this acceleration, its total electrical power input is $!$1.2 \\text{ MW}$!$. Calculate the efficiency of the train's energy conversion during this period as a single numerical value.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "4665c39d811a49059902a",
+                    "stepText": "Let's start by converting the final speed of the train from km/h to m/s. Identify the formula that appropriately converts km/h to m/s.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "15"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$v(\\text{m/s}) = \\frac{v(\\text{km/h}) \\times 1000}{3600}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v(\\text{m/s}) = v(\\text{km/h}) \\times 1000$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v(\\text{m/s}) = \\frac{v(\\text{km/h}) \\times 3600}{1000}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "e18d617d72364c26b729d",
+                    "stepText": "Great. Now, using the converted speed along with the train's mass, calculate the kinetic energy gained by the train. Please select the correct kinetic energy formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "22500000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "f867675c-ee2a-45a2-bee3-7fb244468612"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_k = \\frac{1}{2} m v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_k = m v$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_k = m v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "31a47446ac814beab4832",
+                    "stepText": "Next, determine the total electrical energy input using the supplied power and the time duration. Identify the relation that connects energy, power, and time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "18000000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "f093a546-8db4-44fa-9763-df65c6e6db0e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E = P \\times t$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E = \\frac{P}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E = P + t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "04687d4cd7a04cb997715",
+                    "stepText": "Finally, calculate the efficiency by comparing the kinetic energy output to the total electrical energy input. Choose the correct efficiency equation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "125"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "8bd37a30-0ed2-43d5-846f-8c8290941dbd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Efficiency} = \\frac{\\text{useful energy output}}{\\text{total energy input}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Efficiency} = \\frac{\\text{total energy input}}{\\text{useful energy output}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Efficiency} = \\frac{\\text{useful energy output} - \\text{total energy input}}{\\text{total energy input}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

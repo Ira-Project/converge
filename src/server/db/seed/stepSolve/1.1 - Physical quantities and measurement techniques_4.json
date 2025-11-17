@@ -1,0 +1,279 @@
+{
+    "id": "39d8b8593da741d4b97c0",
+    "name": "Physical Quantities and Measurement Techniques",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "95eb37fba85d4bb78a555",
+            "questionText": "A construction manager is calculating the volume of concrete required for a new foundation. The foundation's measured dimensions from a laser distance meter are a length of $!$12.550\\,m$!$, a width of $!$8.200\\,m$!$, and a specified height of $!$0.300\\,m$!$. Note that the laser meter consistently reads $!$5\\,mm$!$ short due to miscalibration. Calculate the corrected volume of concrete needed in cubic meters, ensuring that the systematic error is accounted for and that the final answer is expressed with the correct number of significant figures.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "b6e53a54d9ff4debb7b19",
+                    "stepText": "Let's start by considering the effect of the systematic error in the measurements. Identify the correct way to adjust a measured dimension when a consistent error is present.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8eae554f-89f2-47e3-8d04-053129768b82",
+                        "3474184d-fe1b-4c7e-b099-9213ddedc947"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$Corrected dimension = measured + error$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$Corrected dimension = measured - error$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$Corrected dimension = measured \\times error$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "707483b0df574cc59056b",
+                    "stepText": "Great, now use the adjustment rule from the previous step to calculate the corrected length. Add the error (in meters) to the measured length $!$12.550\\,m$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "12.555"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "30751bd09f0f4d7e9d143",
+                    "stepText": "Next, calculate the corrected width by adding the systematic error to the measured width $!$8.200\\,m$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "8.205"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "59631c9f458c4ca19c023",
+                    "stepText": "Similarly, compute the corrected height by adding the error to the measured height $!$0.300\\,m$!$.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.305"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "06967d64311443e0872b0",
+                    "stepText": "Now that you have the corrected dimensions, identify the appropriate formula for the volume of a rectangular block.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "5019a5fa-0ef6-41b7-9c92-8a9c074870d4"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$V = l \\times w \\times h$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$V = \\frac{1}{3}l \\times w \\times h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$V = l + w + h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "b32557f6cca04b1a88f09",
+                    "stepText": "Using the corrected dimensions from the previous steps, calculate the volume by multiplying the corrected length, width, and height.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "31.419"
+                    ],
+                    "stepSolveAnswerUnits": "m^3",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ca08fbf53b9742f98f6b9",
+                    "stepText": "Finally, considering that the least precise measurement has 4 significant figures, which rounding approach should you use to express your final answer?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "0dc608c2-ebe9-4a93-88fb-b038a2e64ec6"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "Round the final volume to 4 significant figures",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Round the final volume to 3 significant figures",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Round the final volume to 5 significant figures",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ae3bed5f2ff54c17ab0c9",
+            "questionText": "A biomedical researcher needs to precisely measure the diameter of a microscopic fiber using a micrometer screw gauge. Before taking the measurement, they check for zero error and find that the instrument has a positive zero error of $!$+0.2\\,\\mu m$!$. When measuring the fiber, the micrometer screw gauge displays a reading of $!$25.0\\,\\mu m$!$. They ensure their eye is directly perpendicular to the scale to avoid parallax error. Calculate the actual diameter of the fiber in nanometres, expressed in standard notation.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "a003b72ba69f4e119f76b",
+                    "stepText": "Let's start by identifying the correct approach to adjust the measurement for a positive zero error. Which procedure should be applied to the displayed reading?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "9a4da118-2c7f-416d-9990-5c7e8ca6e378"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Displayed reading } - \\text{ zero error }$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Displayed reading } + \\text{ zero error }$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Displayed reading } \\times \\text{ zero error }$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bf7a13d7dc1245a3b9811",
+                    "stepText": "Now, using the procedure from the previous step, calculate the actual measurement (in $!$\\mu m$!$) by correcting the instrument reading of $!$25.0\\,\\mu m$!$ with the zero error of $!$+0.2\\,\\mu m$!$. What is the corrected measurement?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "24.8"
+                    ],
+                    "stepSolveAnswerUnits": "$!$\\mu m$!$",
+                    "stepConcepts": [
+                        "9a4da118-2c7f-416d-9990-5c7e8ca6e378"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "788fa3e5d04a4237bd4e4",
+                    "stepText": "Next, we need to convert the corrected measurement from $!$\\mu m$!$ to nanometres (nm). Select the correct conversion factor that relates $!$\\mu m$!$ to nm.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "6737c81e-089f-4993-b5a6-e0b8ea8af72a",
+                        "5bd82197-19be-474a-88ba-a7c03a345de9"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$1\\,\\mu m=10^3\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$1\\,\\mu m=10^6\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$1\\,\\mu m=10^{-3}\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7d734fff052c4a72b9e74",
+                    "stepText": "Using the conversion factor chosen in the previous step, convert the actual diameter from $!$\\mu m$!$ to nanometres. Multiply the corrected measurement of $!$24.8\\,\\mu m$!$ by 1000. What is the result in nanometres?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "24800"
+                    ],
+                    "stepSolveAnswerUnits": "nm",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "3c5ce23591ba4add9d6ad",
+                    "stepText": "Finally, express the nanometre measurement in standard notation. Choose the correct representation from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "b8b4e525-408c-4b95-96a3-38202342dc11"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$2.48\\times10^4\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$24.8\\times10^3\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$248\\times10^2\\,nm$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

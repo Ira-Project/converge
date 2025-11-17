@@ -22,8 +22,8 @@ export default async function VerifyEmailPage() {
   if (user?.classroomId) redirect(`${Paths.Classroom}${user.classroomId}`); 
 
   return (
-    <Card className="w-full max-w-md">
-      <CardHeader>
+    <Card className="w-full max-w-md mx-auto">
+      <CardHeader className="text-center">
         <CardTitle>Verify Email</CardTitle>
         <CardDescription>
           Verification code was sent to <strong>{user.email}</strong>. Check

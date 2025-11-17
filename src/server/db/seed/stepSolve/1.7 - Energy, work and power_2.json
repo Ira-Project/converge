@@ -1,0 +1,251 @@
+{
+    "id": "4c0c2d074ab74963a64e0",
+    "name": "Energy, Work and Power",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "e027d496b6754c7382e1f",
+            "questionText": "A new high-speed train, with a mass of $!$500,000 \\text{ kg}$!$, accelerates from rest, converting electrical energy into kinetic energy. During this acceleration phase, the train reaches a speed of $!$72 \\text{ km/h}$!$. Simultaneously, its cooling systems dissipate $!$20 \\text{ MJ}$!$ of internal energy as heat due to friction and other inefficiencies. Based on this information, calculate the overall efficiency of the energy transfer from the supplied electrical energy to the useful kinetic energy gained by the train.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "3891d8e1e87b4616b70f5",
+                    "stepText": "Let's start by converting the train's speed from $!$km/h$!$ to $!$m/s$!$. Identify the correct conversion method to perform this change.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "Divide the speed by 3.6",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "Multiply the speed by 3.6",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "Subtract 3.6 from the speed",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "7293122883cb4982aa7f8",
+                    "stepText": "Using the conversion identified in the previous step, convert $!$72 \\text{ km/h}$!$ to $!$m/s$!$ by applying the appropriate calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "20"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "9fecd841b815469c8c43c",
+                    "stepText": "Now, choose the correct kinetic energy formula needed to calculate the energy acquired by the train.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f867675c-ee2a-45a2-bee3-7fb244468612"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$E_k = \\frac{1}{2}mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$E_k = mv^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$E_k = \\frac{mv}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "9ce09ef13f8d4442b4d45",
+                    "stepText": "With the mass of the train provided and the speed converted in m/s, calculate the kinetic energy using the identified formula.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "100000000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "f867675c-ee2a-45a2-bee3-7fb244468612"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "7a16769586454afba38d0",
+                    "stepText": "The problem mentions that $!$20 \\text{ MJ}$!$ of energy is lost as heat. Add this lost energy to the useful kinetic energy to determine the total energy input.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "120000000"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "420a24be1f114948b22c7",
+                    "stepText": "Next, identify the correct formula for calculating the efficiency of the energy transfer based on useful output and total input.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8bd37a30-0ed2-43d5-846f-8c8290941dbd"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\text{Efficiency} = \\frac{\\text{useful energy output}}{\\text{total energy input}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\text{Efficiency} = \\frac{\\text{total energy input}}{\\text{useful energy output}} \\times 100\\%$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\text{Efficiency} = \\text{useful energy output} - \\text{total energy input}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "31349dfe361249eba48fa",
+                    "stepText": "Finally, using the total energy input and the useful kinetic energy obtained, calculate the efficiency of the energy transfer as a percentage.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "83.33"
+                    ],
+                    "stepSolveAnswerUnits": "%",
+                    "stepConcepts": [
+                        "8bd37a30-0ed2-43d5-846f-8c8290941dbd"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "1d04d4293f2b4f2c99c99",
+            "questionText": "An athlete with a mass of $!$75\\,\\text{kg}$!$ performs a box jump. From the moment they push off the ground, they reach a peak height of $!$0.6\\,\\text{m}$!$ in $!$0.4\\,\\text{s}$!$. Assuming that the work done against gravity is the primary useful energy transfer, and taking the acceleration due to gravity as $!$9.8\\,\\text{m/s}^2$!$, calculate the average power (in watts) generated by the athlete during the ascent phase of the jump.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "df235d4ee3ac405883726",
+                    "stepText": "Let's start by identifying the correct formula for calculating the change in gravitational potential energy. Which of the following formulas represents the change in gravitational potential energy ($!$\\Delta E_p$!$) in terms of mass ($!$m$!$), gravitational acceleration ($!$g$!$), and change in height ($!$\\Delta h$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "8af41638-67d0-4304-afe4-278a3e5c24b8"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$\\Delta E_p = m \\cdot g \\cdot \\Delta h$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$\\Delta E_p = m + g + \\Delta h$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\Delta E_p = \\frac{1}{2} m \\cdot v^2$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "07b0d0684c594301afa6b",
+                    "stepText": "Great! Now, using the formula from the previous step, calculate the gravitational potential energy change by substituting the values: mass = $!$75\\,\\text{kg}$!$, gravitational acceleration = $!$9.8\\,\\text{m/s}^2$!$, and height change = $!$0.6\\,\\text{m}$!$. What is the energy in Joules?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "441"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [
+                        "8af41638-67d0-4304-afe4-278a3e5c24b8"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "ef53c256f14045299c4a0",
+                    "stepText": "Now that we have the energy value, let's select the correct formula for calculating average power. Which of the following formulas correctly relates power ($!$P$!$), energy change ($!$\\Delta E$!$), and time ($!$t$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f093a546-8db4-44fa-9763-df65c6e6db0e"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$P = \\frac{\\Delta E}{t}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$P = \\Delta E \\cdot t$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$P = \\frac{t}{\\Delta E}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "bb25b77614a54b07bfedc",
+                    "stepText": "Finally, using the energy value computed earlier and the time duration of $!$0.4\\,\\text{s}$!$, calculate the average power generated by the athlete during the ascent phase. What is the power in Watts?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1102.5"
+                    ],
+                    "stepSolveAnswerUnits": "W",
+                    "stepConcepts": [
+                        "f093a546-8db4-44fa-9763-df65c6e6db0e"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

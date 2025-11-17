@@ -1,0 +1,177 @@
+{
+    "id": "a6045ef52be64199a24b4",
+    "name": "Sound",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "70c99cd85b914c2b93ac2",
+            "questionText": "During a medical ultrasound imaging scan, high-frequency sound waves are used to visualize internal structures. A particular ultrasound pulse is emitted from a transducer and travels through the body, reflecting off a fetal structure. The reflected pulse is detected by the transducer after a total round-trip time of $!$40 \\mu s$!$. If the average speed of ultrasound in the tissue is $!$1540 \\text{ m/s}$!$, calculate the depth of the fetal structure from the transducer.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "7d16c628fe744f729576e",
+                    "stepText": "Let's start by identifying which formula relates the distance (one-way depth), the speed of sound, and the total round-trip time in echo-based measurements. Choose the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "670671d3-985c-4a23-9178-05e06ebd3f7b"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$d = \\frac{vt}{2}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$d = vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$d = 2vt$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d252628762304c0398173",
+                    "stepText": "Great, now that you have the formula in mind, calculate the one-way travel time of the ultrasound pulse. (Hint: Divide the total round-trip time by 2.)",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.00002"
+                    ],
+                    "stepSolveAnswerUnits": "s",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "ac6b0b488a164dd5b572f",
+                    "stepText": "Now use the one-way travel time and the given speed of ultrasound to compute the depth of the fetal structure. Multiply the speed by the one-way travel time.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "0.0308"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "670671d3-985c-4a23-9178-05e06ebd3f7b"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "2c66c78d1d2948d692922",
+            "questionText": "On a hot summer day, a hiker shouts into a canyon. The air temperature is $!$30^\\circ\\text{C}$!$. Given that the speed of sound in air can be approximated by the formula $!$v = 331.3 + 0.606 \\times T_C\\text{ m/s}$!$, where $!$T_C$!$ is the temperature in degrees Celsius, and that the hiker's shout has a fundamental frequency of $!$150\\text{ Hz}$!$, calculate the wavelength of this sound wave.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "e999b5c85f2841dea3589",
+                    "stepText": "Let's start by identifying the correct formula to calculate the speed of sound in air as a function of temperature. Please choose the correct expression from the options provided.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2ba5ff20-2f55-4ade-8188-8b9b939a0062"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = 331.3 + 0.606 \\times T_C$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = 331.3 \\times T_C$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = T_C + 331.3$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$v = 0.606 \\times T_C$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "444b29ec54024c2bb2924",
+                    "stepText": "Great! Now, use the selected formula to calculate the speed of sound when the air temperature is $!$30^\\circ\\text{C}$!$. Compute this value.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "349.48"
+                    ],
+                    "stepSolveAnswerUnits": "m/s",
+                    "stepConcepts": [
+                        "2ba5ff20-2f55-4ade-8188-8b9b939a0062"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "daf990532a9b4321919ce",
+                    "stepText": "Now that you have the speed of sound, let's identify the correct relationship between speed, frequency, and wavelength. Which formula correctly connects these three quantities?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "345dd24e-4f58-4324-829c-4e8719c533e4"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$v = f \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$v = \\frac{f}{\\lambda}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$f = v \\lambda$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$\\lambda = \\frac{f}{v}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "3b21da9f783a440bbb169",
+                    "stepText": "Excellent choice! Finally, calculate the wavelength of the sound wave using the speed you computed and the given frequency of $!$150\\text{ Hz}$!$. Use the relationship between speed, frequency, and wavelength to perform this calculation.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "2.33"
+                    ],
+                    "stepSolveAnswerUnits": "m",
+                    "stepConcepts": [
+                        "345dd24e-4f58-4324-829c-4e8719c533e4"
+                    ],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

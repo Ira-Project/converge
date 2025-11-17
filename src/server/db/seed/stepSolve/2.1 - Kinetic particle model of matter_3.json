@@ -1,0 +1,190 @@
+{
+    "id": "89ec65d4d5004f229b639",
+    "name": "Kinetic Particle Model of Matter",
+    "topicIdDev": "",
+    "topicIdProd": "",
+    "latexDelimiter": "$!$",
+    "questions": [
+        {
+            "id": "e360dc747c2a48ed9c3f5",
+            "questionText": "An aerosol can contains a gas at an initial pressure of $!$200\\,\\mathrm{kPa}$!$ and an initial temperature of $!$27^{\\circ}\\mathrm{C}$!$. The can is left in direct sunlight, causing its temperature to rise to $!$57^{\\circ}\\mathrm{C}$!$. Assuming the volume of the can remains constant and the gas behaves ideally, calculate the new pressure inside the can.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "ce443d5bced147e9b7f32",
+                    "stepText": "Let's start by identifying the conversion relationship from Celsius to Kelvin. Which of the following formulas correctly converts a temperature in Celsius ($!$\\theta\\,^{\\circ}\\mathrm{C}$!$) to Kelvin ($!$T\\,\\mathrm{K}$!$)?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364",
+                        "cfa65469-32ab-41bb-ba28-7a4efd72bea1"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$T = \\theta + 273$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$T = \\theta - 273$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$T = 273 - \\theta$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "d252219225024b9e85c95",
+                    "stepText": "Now, using the conversion relationship, convert the initial temperature of $!$27^{\\circ}\\mathrm{C}$!$ to Kelvin. Perform the addition without revealing the result.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "300"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "f59962b8ec654d9f8ec57",
+                    "stepText": "Next, convert the final temperature of $!$57^{\\circ}\\mathrm{C}$!$ to Kelvin using the same relationship. Calculate the sum to obtain the absolute temperature.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "330"
+                    ],
+                    "stepSolveAnswerUnits": "K",
+                    "stepConcepts": [
+                        "f4186011-be31-4acd-ae74-62cc65bae364"
+                    ],
+                    "options": []
+                },
+                {
+                    "id": "66da39cb517f417aaeb3d",
+                    "stepText": "Great, now that we have the absolute temperatures, which gas law relates pressure and temperature for a gas at constant volume? Choose the correct concept.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": [
+                        {
+                            "optionText": "$!$p \\propto T$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$p \\propto \\frac{1}{T}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$p \\propto V$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "1827f6d7de7e45fcb54a4",
+                    "stepText": "Finally, use the relationship $!$\\frac{p_1}{T_1} = \\frac{p_2}{T_2}$!$ to calculate the new pressure. Multiply the initial pressure by the ratio of the final to the initial absolute temperature. Compute the value without disclosing the correct formula details.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "220"
+                    ],
+                    "stepSolveAnswerUnits": "kPa",
+                    "stepConcepts": [
+                        "2adfd026-0718-4727-9c26-9492969f7ec0"
+                    ],
+                    "options": []
+                }
+            ]
+        },
+        {
+            "id": "80d339aba2f7422dac360",
+            "questionText": "Consider a cup of hot tea at a temperature of $!$353.15\\,K$!$ with a dynamic viscosity of $!$0.0005\\,Pa\\cdot s$!$. A sugar molecule dissolved in the tea can be approximated as a sphere with a radius of $!$5\\times10^{-10}\\,m$!$. Using the Einstein relation for diffusion $!$D=\\frac{k_B T}{6\\pi\\eta r}$!$ where the Boltzmann constant $!$k_B=1.38\\times10^{-23}\\,J/K$!$, calculate the diffusion coefficient $!$D$!$ of the sugar molecule in the tea. Provide your answer in $!$m^2/s$!$.",
+            "imageText": "",
+            "steps": [
+                {
+                    "id": "832384f99ace4d0a89485",
+                    "stepText": "Let's start by identifying the correct form of the Einstein relation for diffusion. Please select the correct formula from the options below.",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        ""
+                    ],
+                    "stepSolveAnswerUnits": "",
+                    "stepConcepts": [],
+                    "options": [
+                        {
+                            "optionText": "$!$D=\\frac{k_B T}{6\\pi\\eta r}$!$",
+                            "optionImage": "",
+                            "isCorrect": true
+                        },
+                        {
+                            "optionText": "$!$D=\\frac{k_B T}{3\\pi\\eta r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        },
+                        {
+                            "optionText": "$!$D=\\frac{k_B T}{4\\pi\\eta r}$!$",
+                            "optionImage": "",
+                            "isCorrect": false
+                        }
+                    ]
+                },
+                {
+                    "id": "32d99d5425ac4346ba7cd",
+                    "stepText": "Great, now let's compute the numerator of the Einstein relation, which is the product $!$k_B \\times T$!$. Use the values $!$k_B = 1.38\\times10^{-23}\\,J/K$!$ and $!$T = 353.15\\,K$!$. What is the result of this multiplication?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.88e-21"
+                    ],
+                    "stepSolveAnswerUnits": "J",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "759eb2ce9b7941aa886cb",
+                    "stepText": "Now, calculate the denominator of the relation given by $!$6\\pi\\eta r$!$. Here, $!$\\eta = 0.0005\\,Pa\\cdot s$!$ and $!$r = 5\\times10^{-10}\\,m$!$. What value do you obtain for the denominator?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "4.7125e-12"
+                    ],
+                    "stepSolveAnswerUnits": "Pa\u00b7s\u00b7m",
+                    "stepConcepts": [],
+                    "options": []
+                },
+                {
+                    "id": "eb11164e8d294ccd91756",
+                    "stepText": "Finally, determine the diffusion coefficient $!$D$!$ by dividing the numerator by the denominator. What is the diffusion coefficient in $!$m^2/s$!$?",
+                    "stepText2": "",
+                    "stepImage": "",
+                    "stepSolveAnswer": [
+                        "1.036e-9"
+                    ],
+                    "stepSolveAnswerUnits": "m^2/s",
+                    "stepConcepts": [],
+                    "options": []
+                }
+            ]
+        }
+    ]
+}

@@ -5,7 +5,7 @@ import { type HandleType, type Position } from '@xyflow/react';
 import { Handle } from '@xyflow/react';
 import { motion } from 'framer-motion';
 
-export default function InputNode({ data, id, onDrop, onReturn }: { 
+export default function InputNode({ data, id, onDrop, onReturn, onPlace, isMobile, selectedItem }: { 
   data: { 
     label: string, 
     handles: { type: string, id: string, position: Position }[], 
@@ -13,6 +13,9 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
   },
   onDrop?: (id: string, text: string) => void,
   onReturn?: (id: string, text: string) => void,
+  onPlace?: (id: string) => void,
+  isMobile?: boolean,
+  selectedItem?: { id: string; text: string; type: 'node' | 'edge' } | null,
   id: string 
 }) {
   const handleDrop = (e: React.DragEvent) => {
@@ -32,9 +35,20 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
       onReturn(id, data.label);
     }
   };
+
+  const handleMobilePlace = (e: React.MouseEvent | React.TouchEvent) => {
+    if (isMobile && selectedItem && selectedItem.type === 'node' && !data.label && onPlace) {
+      e.preventDefault();
+      e.stopPropagation();
+      onPlace(id);
+    }
+  };
   
   const getStatusStyles = () => {
-    if (!data.label) return 'bg-fuchsia-100';
+    if (!data.label) {
+      const canPlace = isMobile && selectedItem && selectedItem.type === 'node';
+      return canPlace ? 'bg-blue-100 border-blue-300 border-2' : 'bg-fuchsia-100';
+    }
     switch (data.status) {
       case 'correct':
         return 'bg-green-50 border-green-200';
@@ -44,6 +58,8 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
         return 'bg-fuchsia-50';
     }
   };
+
+  const canPlace = isMobile && selectedItem && selectedItem.type === 'node' && !data.label;
 
   return (
     <>
@@ -61,18 +77,31 @@ export default function InputNode({ data, id, onDrop, onReturn }: {
           justify-center
           w-48
           ${getStatusStyles()}
+          ${canPlace ? 'cursor-pointer' : ''}
+          transition-all
         `}
         style={{
           boxShadow: data.label 
             ? '4px 4px 8px rgba(247, 232, 233, 100), -4px -4px 8px rgba(255, 255, 255, 100)'
-            : '0px 2px 4px rgba(0, 0, 0, 25%) inset',
-          border: data.label ? 'none' : '1px solid #d9d9d9',
+            : canPlace 
+              ? '0 0 0 2px rgba(59, 130, 246, 0.5)'
+              : '0px 2px 4px rgba(0, 0, 0, 25%) inset',
+          border: data.label ? 'none' : canPlace ? '2px solid #3b82f6' : '1px solid #d9d9d9',
         }}
         onDrop={handleDrop}
         onDragOver={handleDragOver}
+        onClick={handleMobilePlace}
+        onTouchEnd={handleMobilePlace}
+        whileTap={canPlace ? { scale: 0.95 } : {}}
       >
         <div className="mx-auto text-center w-full line-clamp-2">
-          <FormattedText text={data.label} />
+          {!data.label && canPlace ? (
+            <span className="text-blue-600 text-sm font-medium">
+              Tap to place "{selectedItem?.text}"
+            </span>
+          ) : (
+            <FormattedText text={data.label} />
+          )}
         </div>
         {data.label && (
           <Button
