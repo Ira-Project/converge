@@ -13,6 +13,8 @@ import { toast } from "sonner";
 import { SkillType } from "@/lib/constants";
 import { MultiSelect } from "@/components/ui/multi-select";
 import posthog from "posthog-js";
+import { supabaseClient } from "@/lib/supabaseClient";
+import { env } from "@/env";
 
 const skillOptions = Object.values(SkillType).map((skill) => ({
   label: skill,
@@ -51,23 +53,22 @@ export const UploadLessonPlanForm = () => {
     
     try {
       if (values.file) {
-        const presignedUrl = await getPresignedUrl.mutateAsync({
+        const uploadTarget = await getPresignedUrl.mutateAsync({
           topicName: values.topicName,
           fileName: fileName,
           file: values.file,
           skills: values.skills,
         });
 
-        const result = await fetch(presignedUrl, {
-          method: 'PUT',
-          body: values.file
-        })
+        const result = await supabaseClient.storage
+          .from(env.NEXT_PUBLIC_SUPABASE_STORAGE_BUCKET)
+          .uploadToSignedUrl(uploadTarget.path, uploadTarget.token, values.file as File);
 
-        if (result.status !== 200 || !result.url) {
+        if (result.error) {
           posthog.capture("lesson_plan_file_upload_failed", {
             topic_name: values.topicName,
             file_name: fileName,
-            status: result.status,
+            error: "Supabase upload failed",
           });
           toast("An error occured while uploading your lesson plan. Please try again later");      
           setLoading(false);
@@ -80,7 +81,7 @@ export const UploadLessonPlanForm = () => {
         });
 
         await uploadLessonPlan.mutateAsync({
-          url: result.url, 
+          url: uploadTarget.publicUrl, 
           fileName: fileName,
           topicName: values.topicName,
           skills: values.skills,

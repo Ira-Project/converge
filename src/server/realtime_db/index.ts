@@ -4,7 +4,7 @@ import { env } from "@/env";
 
 import * as actions from "./schema/actions";
 
-export const client = postgres(env.REALTIME_DATABASE_URL, {
+export const client = postgres(env.DATABASE_URL, {
   max_lifetime: 10, 
   prepare: false,
 });

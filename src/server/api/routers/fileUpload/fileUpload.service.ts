@@ -1,40 +1,57 @@
 import { lessonPlanFiles } from "@/server/db/schema/lessonPlan";
 import type { ProtectedTRPCContext } from "../../trpc";
 import type { UploadFileInput, PreSignedUrlInput } from "./fileUpload.input";
-
-import { PutObjectCommand, S3Client } from "@aws-sdk/client-s3";
-import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
-
 import { generateId } from "lucia";
 import { EmailTemplate, sendMail } from "@/lib/email";
 import { EMAIL_SENDER } from "@/lib/constants";
 import { FileUploadType } from "@/lib/email/templates/file-uploaded";
-import { TRPCClientError } from "@trpc/client";
+import { supabaseAdmin } from "@/lib/supabaseAdmin";
+import { env } from "@/env";
+import { TRPCError } from "@trpc/server";
+
+const sanitizePathPart = (value: string) =>
+  value
+    .trim()
+    .toLowerCase()
+    .replace(/[^a-z0-9._-]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 
 export const getPreSignedUrl = async (ctx: ProtectedTRPCContext, input: PreSignedUrlInput) => {
-
-  if (!process.env.AWS_ACCESS_KEY_ID || !process.env.AWS_SECRET_ACCESS_KEY) {
-    throw new TRPCClientError('AWS credentials not found');
+  if (!input.fileName) {
+    throw new TRPCError({
+      code: "BAD_REQUEST",
+      message: "File name is required",
+    });
   }
 
-  const s3 = new S3Client({
-    region: 'ap-south-1',
-    credentials: {
-      accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
-    }
-  });
+  const bucket = env.NEXT_PUBLIC_SUPABASE_STORAGE_BUCKET;
+  const path = [
+    sanitizePathPart(ctx.user.id),
+    `${generateId(21)}-${sanitizePathPart(input.topicName)}-${sanitizePathPart(input.fileName)}`,
+  ].join("/");
 
-  const command = new PutObjectCommand(
-    { 
-      Bucket: 'converge-ira-project', 
-      Key: `${ctx.user.email}-${input.topicName}-${input.fileName}` 
-    }
-  );
-  const url = await getSignedUrl(s3, command, { expiresIn: 3600 });
-  return url;
+  const { data, error } = await supabaseAdmin.storage
+    .from(bucket)
+    .createSignedUploadUrl(path);
 
-}
+  if (error) {
+    throw new TRPCError({
+      code: "INTERNAL_SERVER_ERROR",
+      message: error.message,
+    });
+  }
+
+  const {
+    data: { publicUrl },
+  } = supabaseAdmin.storage.from(bucket).getPublicUrl(data.path);
+
+  return {
+    path: data.path,
+    signedUrl: data.signedUrl,
+    token: data.token,
+    publicUrl,
+  };
+};
 
 export const uploadLessonPlan = async (ctx: ProtectedTRPCContext, input: UploadFileInput) => {
   const id = generateId(21);
@@ -58,4 +75,4 @@ export const uploadLessonPlan = async (ctx: ProtectedTRPCContext, input: UploadF
     }
   );
   
-}
+};

@@ -12,6 +12,8 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { SkillType } from "@/lib/constants";
 import { MultiSelect } from "@/components/ui/multi-select";
+import { supabaseClient } from "@/lib/supabaseClient";
+import { env } from "@/env";
 
 const skillOptions = Object.values(SkillType).map((skill) => ({
   label: skill,
@@ -40,26 +42,25 @@ export const UploadLessonPlanForm = () => {
   const onSubmit = form.handleSubmit(async (values) => {
     setLoading(true);
     if (values.file) {
-      const presignedUrl = await getPresignedUrl.mutateAsync({
+      const uploadTarget = await getPresignedUrl.mutateAsync({
         topicName: values.topicName,
         fileName: fileName,
         file: values.file,
         skills: values.skills,
       });
 
-      const result = await fetch(presignedUrl, {
-        method: 'PUT',
-        body: values.file
-      })
+      const result = await supabaseClient.storage
+        .from(env.NEXT_PUBLIC_SUPABASE_STORAGE_BUCKET)
+        .uploadToSignedUrl(uploadTarget.path, uploadTarget.token, values.file as File);
 
-      if (result.status !== 200 || !result.url) {
+      if (result.error) {
         toast("An error occured while uploading your lesson plan. Please try again later");      
         setLoading(false);
         return;
       }
 
       await uploadLessonPlan.mutateAsync({
-        url: result.url, 
+        url: uploadTarget.publicUrl, 
         fileName: fileName,
         topicName: values.topicName,
         skills: values.skills,
